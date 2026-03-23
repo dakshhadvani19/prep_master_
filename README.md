@@ -1,6 +1,6 @@
 # **This is an AI powered University exam preparation tool to make students score more in their exams.**
 
-## **What it is** 🤔
+## **For what it usefull for** 🤔
 
 🚀 It gives ability to predict and practise more accurate questions for university exams.
 
@@ -11,7 +11,7 @@ Key Features : Robust accuracy , Syallbus relative , Review your tests , Easy to
 Live Here 👇🏼
 🌐 https://prepmaster-tau.vercel.app/
 
-⚡ Quick Start Guide : 
+## **Quick Start Guide** ⚡
 
 • Create an account .
 
@@ -23,7 +23,7 @@ Live Here 👇🏼
 
 • Upload Your supported files to get questions only from that Topic .
 
-## **Why this is different ?**💡
+##**Why this is different than AI's like Notebook lm , ChatGPT and etc?**💡
 
 • Accurate exam practise 
 
