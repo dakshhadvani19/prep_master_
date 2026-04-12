@@ -17,9 +17,9 @@ Live Here 👇🏼
 
 • Direct to Home / Landing page .
 
-• Select your domain , course .
+• Select your domain then course .
 
-• Look for you semester , subject and then you can start your test .
+• Look for you semester and subject and then you can start your test .
 
 • Upload Your supported files to get questions only from that Topic .
 
