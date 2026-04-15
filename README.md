@@ -1,6 +1,6 @@
 # **This is an AI powered University exam preparation tool to make students score more in their exams.**
 
-## **For what it usefull for** 🤔
+## **What it is ?** 🤔
 
 🚀 It gives ability to predict and practise more accurate questions for university exams.
 
