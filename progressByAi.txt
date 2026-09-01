@@ -1,0 +1,270 @@
+================================================================================
+  PROJECT: Global Exam Prep -- AI-Written Progress Log
+  Last Updated: 2026-08-31
+  Purpose: Full handoff document so any AI can pick up where we left off.
+================================================================================
+
+==============================================================================
+  1. PROJECT OVERVIEW
+==============================================================================
+
+"Global Exam Prep" is a web app for students preparing for exams.
+
+It allows students to:
+  - Browse courses/subjects organized by domain
+  - Take AI-generated exams (MCQ-style) with difficulty levels
+  - Review past exam performance on a dashboard
+  - Search across subjects and courses
+
+Stack:
+  - Framework : React 19 + Vite 7 (inside folder: global-exam-prep/)
+  - Routing   : react-router-dom v7
+  - Auth/DB   : Firebase (Auth + Firestore + Storage) v12
+  - AI        : Google Generative AI (@google/generative-ai)
+  - Animations: Framer Motion v12
+  - Icons     : Lucide React
+  - Deployment: Vercel
+
+Root folder structure:
+  First_Using_Antigravity/
+  |-- global-exam-prep/     <- The actual React app lives here
+  |-- SRS/                  <- Diagrams (DFD, ER, Use Case, Sequence, Flow Charts)
+  |   All diagrams are dated 25_8 (August 25). Always reference these.
+  |-- .gitignore
+  |-- vercel.json
+  |-- progress.txt          <- Human-written short notes
+  +-- progressByAi.txt      <- This file (AI-written full log)
+
+==============================================================================
+  2. IMPORTANT RULE -- ALWAYS READ SRS DIAGRAMS FIRST
+==============================================================================
+
+The SRS/ folder contains the official design reference:
+  - DFD0_last_updated_25_8.jpg          -> Level-0 Data Flow Diagram
+  - DFD1_last_updated_25_8.jpg          -> Level-1 DFD
+  - DFD2_last_updated_25_8.jpg          -> Level-2 DFD
+  - ER_Diagram_last_updated_25_8.jpg    -> DB Entity Relationships
+  - UseCase_Diagram_last_updated_25_8.jpg -> Use Cases
+  - adminflowchart_25_8.jpg             -> Admin flow
+  - finaladmin_25_8.jpg                 -> Final admin UI flow
+  - finalclass_25_8.jpg                 -> Class diagram
+  - sequenceadmin_25_8.jpg              -> Admin sequence diagram
+  - sequencestudent_25_8.jpg            -> Student sequence diagram
+  - studentfinal_25_8.jpg               -> Final student flow
+  - updated_student_flow_25_8.jpg       -> Updated student flow
+
+Before implementing ANY feature, read the relevant diagram(s) first.
+
+==============================================================================
+  3. APP STRUCTURE (global-exam-prep/src/)
+==============================================================================
+
+src/
+  App.jsx               <- Routing hub (all routes defined here)
+  main.jsx              <- Entry point
+  index.css             <- Global CSS / design tokens
+  App.css               <- App-level styles
+  firebase.js           <- Firebase init (auth, db, storage exported)
+
+  context/
+    AuthContext.jsx     <- All auth state + methods (see Section 4)
+
+  components/
+    Layout.jsx          <- Navbar + Outlet wrapper (full sidebar/header)
+    ProtectedRoute.jsx  <- Route guard (redirects unauthenticated users)
+
+  pages/
+    LandingPage.jsx     <- Home page (public)
+    LandingPage.css     <- Landing page specific styles
+    Signup.jsx          <- Combined signup + login page (see Section 5)
+    Login.jsx           <- DEPRECATED - redirects to /signup?mode=login
+    Auth.css            <- Shared auth page styles
+    CourseExplorer.jsx  <- Browse courses in a domain
+    SubjectDetails.jsx  <- View subjects in a course
+    ExamPortal.jsx      <- Take an exam (PROTECTED)
+    Dashboard.jsx       <- Student dashboard (PROTECTED)
+    ReviewPage.jsx      <- Review past exam (PROTECTED)
+    SearchResults.jsx   <- Search page
+    FeedbackPage.jsx    <- Feedback form
+    SyllabusAdmin.jsx   <- Admin syllabus management (PROTECTED)
+    UserGuide.jsx       <- How-to guide
+    UserGuide.css
+
+  utils/
+    hashUtil.js         <- SHA-256 password hashing + auto-increment studentId
+    otpService.js       <- OTP creation + verification (email OTP flow)
+    passwordStrength.js <- Password strength checker
+    geminiQuestions.js  <- AI question generation using Gemini API
+    syllabusStorage.js  <- Syllabus local/cloud storage helpers
+    fileParser.js       <- PDF/file parsing utilities
+
+==============================================================================
+  4. AUTHENTICATION SYSTEM (Current State as of 2026-08-31)
+==============================================================================
+
+FILE: src/context/AuthContext.jsx
+
+Firestore Collection: students
+  Each document ID = Firebase Auth UID
+  Fields:
+    - studentId    : number  (auto-incremented integer via getNextStudentId())
+    - uid          : string  (Firebase UID)
+    - fullName     : string
+    - email        : string  (lowercase trimmed)
+    - passwordHash : string  (SHA-256 of "password:email")
+    - isSpam       : boolean
+    - provider     : string  ('email' or 'google')
+    - providers    : string[] (['email'] or ['google'])
+    - createdAt    : string  (ISO timestamp)
+    - photoURL     : string or null
+
+Auth methods exposed via useAuth() hook:
+  - login(email, password)                    -> Firebase email/password sign-in
+  - signupWithEmail(email, password, name)    -> Creates Firebase user + Firestore doc
+  - signInWithGoogle()                        -> Google popup, returns { user, isNewUser }
+  - completeGoogleProfile(user, name, pass?)  -> Saves Google user to Firestore
+  - checkEmailExists(email)                   -> Checks Firestore 'students' collection
+  - sendPasswordReset(email)                  -> Firebase password reset email
+  - logout()                                  -> Clears localStorage + signs out
+
+Auth State available via useAuth():
+  - currentUser  : Firebase user object (null if not logged in)
+  - studentData  : Firestore student document data
+  - authLoading  : true while resolving initial auth state
+  - isAdmin      : HARDCODED false (admin system NOT implemented yet)
+  - isSuperAdmin : HARDCODED false (admin system NOT implemented yet)
+
+Email Signup flow:
+  Step 1 -> User enters email
+  Step 2 -> OTP sent to email (via otpService.js)
+  Step 3 -> User verifies OTP
+  Step 4 -> User fills name + password
+  Step 5 -> signupWithEmail() creates Firebase Auth user + Firestore student doc
+
+Google Signup flow:
+  Step 1 -> User clicks "Continue with Google" -> Google popup
+  Step 2 -> If new user: show name + optional password form
+  Step 3 -> completeGoogleProfile() saves to Firestore
+  Step 4 -> If returning user: navigate directly to /dashboard
+
+==============================================================================
+  5. ROUTING & AUTHENTICATION PAGES
+==============================================================================
+
+Routes defined in App.jsx:
+  /                                       -> LandingPage (public)
+  /login                                  -> Redirects to /signup?mode=login
+  /signup                                 -> Signup.jsx (combined auth page)
+  /signup?mode=login                      -> Shows login tab by default
+  /signup?mode=signup                     -> Shows signup tab by default
+  /domains/:domainId/courses              -> CourseExplorer (public)
+  /search                                 -> SearchResults (public)
+  /feedback                               -> FeedbackPage (public)
+  /guide                                  -> UserGuide (public)
+  /courses/:courseId/subjects             -> SubjectDetails (public)
+  /exams/:subjectId/:examType/:difficulty -> ExamPortal (PROTECTED)
+  /dashboard                              -> Dashboard (PROTECTED)
+  /review/:historyId                      -> ReviewPage (PROTECTED)
+  /admin/syllabus                         -> SyllabusAdmin (PROTECTED)
+
+IMPORTANT - Signup.jsx is the UNIFIED auth page:
+  - Contains a SegmentedControl (iOS-style tab): "Create account" | "Log in"
+  - Reads ?mode from URL to pre-select the correct tab on load
+  - Mode logic (Signup.jsx line ~107):
+      const [mode, setMode] = useState(urlMode === 'login' ? 'login' : 'signup');
+  - Also supports ?method=email (opens email form directly)
+  - Also supports ?method=google (auto-triggers Google popup)
+
+KNOWN BUG (as of 2026-08-31):
+  - ?mode=signup URL param is reportedly NOT working correctly
+  - The logic: if urlMode === 'login' -> 'login', else -> 'signup'
+  - So ?mode=signup SHOULD work (goes to else -> 'signup')
+  - Most likely the LandingPage is sending to the wrong URL for one of the buttons
+  - TO FIX: Check LandingPage.jsx to see what URLs the Login/Sign Up buttons use
+
+==============================================================================
+  6. PROTECTED ROUTES
+==============================================================================
+
+FILE: src/components/ProtectedRoute.jsx
+
+Behavior:
+  - If authLoading -> render null (AuthProvider shows its own full-page spinner)
+  - If not logged in -> redirect to /signup, preserving intended path in location.state
+  - If requiredRole='admin' and user is not admin -> redirect to /dashboard
+  - If requiredRole='superAdmin' and not superAdmin -> redirect appropriately
+  - If all checks pass -> render children
+
+==============================================================================
+  7. FIREBASE SETUP
+==============================================================================
+
+FILE: src/firebase.js
+  - Reads config from VITE_ environment variables
+  - Exports: auth, db, storage
+
+Firestore Collections:
+  - students  <- Main student user collection (in use)
+  - admins    <- Admin collection (created in DB but NOT implemented in code yet)
+
+Environment Variables (in global-exam-prep/.env.local):
+  VITE_FIREBASE_API_KEY
+  VITE_FIREBASE_AUTH_DOMAIN
+  VITE_FIREBASE_PROJECT_ID
+  VITE_FIREBASE_STORAGE_BUCKET
+  VITE_FIREBASE_MESSAGING_SENDER_ID
+  VITE_FIREBASE_APP_ID
+
+Firestore Security Rules: global-exam-prep/firestore.rules
+  (Keep rules in sync when adding new collections)
+
+==============================================================================
+  8. CURRENT OPEN TASKS / KNOWN ISSUES
+==============================================================================
+
+  [BUG - PRIORITY]
+    /signup?mode=signup URL param may not be defaulting correctly.
+    Check LandingPage.jsx to see what URLs the Login/Sign Up buttons point to.
+    Check Signup.jsx line ~107 for the useState initialization logic.
+
+  [TODO - DO NOT START YET]
+    Admin authentication system -- owner will give instructions later.
+    - The 'admins' Firestore collection exists.
+    - isAdmin and isSuperAdmin are hardcoded to false in AuthContext.
+    - DO NOT implement admin auth until explicitly told to.
+
+  [FOCUS]
+    Only work on STUDENT authentication for now.
+
+==============================================================================
+  9. HOW TO RUN LOCALLY
+==============================================================================
+
+  cd global-exam-prep
+  npm install        (only if node_modules is missing)
+  npm run dev        -> Vite dev server at http://localhost:5173
+
+==============================================================================
+  10. DEPLOYMENT
+==============================================================================
+
+  Deployed on Vercel.
+  Deploy command: npm run deploy  (runs: vercel --prod)
+  Config files: global-exam-prep/vercel.json and root vercel.json
+
+==============================================================================
+  11. CHANGE LOG
+==============================================================================
+
+  [2026-08-31]
+    - progressByAi.txt created with full project state for AI handoff.
+    - progress.txt and progressByAi.txt added to root .gitignore.
+    - Confirmed: /login redirects to /signup?mode=login (App.jsx line 62).
+    - Confirmed: Firestore 'students' collection schema documented above.
+    - Confirmed: 'admins' collection exists in Firestore but NOT used in code.
+    - Known bug documented: ?mode=signup URL needs verification in Signup.jsx.
+    - Admin auth system confirmed as NOT started -- will be told when to begin.
+
+================================================================================
+  END OF LOG -- Update the CHANGE LOG whenever significant changes are made.
+================================================================================

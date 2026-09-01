@@ -1,0 +1,1070 @@
+================================================================================
+  PREPMASTER — DEEP CODEBASE EXPLANATION
+  Global Exam Preparation Platform
+  Last Updated: April 2026
+================================================================================
+
+TABLE OF CONTENTS
+-----------------
+1.  Project Overview & Tech Stack
+2.  Folder Structure
+3.  Application Entry Point (main.jsx + App.jsx)
+4.  Routing System
+5.  Firebase Layer (firebase.js)
+6.  Auth System (AuthContext.jsx)
+7.  Components: Layout.jsx
+8.  Components: ProtectedRoute.jsx
+9.  Data Layer
+    9a. mockData.js
+    9b. universitySyllabus.js
+    9c. pdfSyllabus.js
+    9d. predicted_ai_syllabus.json
+10. Pages: LandingPage.jsx
+11. Pages: CourseExplorer.jsx
+12. Pages: SubjectDetails.jsx
+13. Pages: ExamPortal.jsx  <-- CORE / most complex
+14. Pages: Dashboard.jsx
+15. Pages: ReviewPage.jsx
+16. Pages: Login.jsx & Signup.jsx
+17. Pages: SyllabusAdmin.jsx
+18. Pages: FeedbackPage.jsx
+19. Pages: SearchResults.jsx
+20. Pages: UserGuide.jsx
+21. Utilities: geminiQuestions.js
+22. Utilities: fileParser.js
+23. Utilities: syllabusStorage.js
+24. API Edge Functions: api/ai.js
+25. API Server Function: api/feedback.js
+26. Complete Exam Flow (end-to-end walkthrough)
+27. Firebase Data Model
+28. CSS Design System (index.css)
+29. Key Architectural Decisions
+
+================================================================================
+1. PROJECT OVERVIEW & TECH STACK
+================================================================================
+
+PrepMaster is a university exam preparation web app. Students browse academic
+domains → courses → subjects, then launch AI-generated mock exams (MCQs or
+theory), submit answers, and review their performance history.
+
+TECH STACK:
+  - React 19          : UI framework
+  - React Router 7    : Client-side routing
+  - Vite 7            : Bundler / dev server
+  - Firebase v12      : Auth (email/Google/Apple), Firestore (data), Storage (PDFs)
+  - Groq API          : LLM backend (llama-3.1-8b-instant) — used for AI question gen
+  - Vercel            : Deployment host + Edge Functions runtime
+  - Framer Motion     : Animations (landing page hero, navbar pill)
+  - Lucide React      : Icon library
+  - pdfjs-dist        : PDF text extraction in browser
+  - JSZip             : PPTX text extraction (a PPTX is a ZIP of XML files)
+  - Nodemailer        : Email sending for feedback (server-side only)
+
+================================================================================
+2. FOLDER STRUCTURE
+================================================================================
+
+global-exam-prep/
+├── api/                         <- Vercel Serverless/Edge Functions
+│   ├── ai.js                    <- Groq LLM proxy (Edge Runtime)
+│   └── feedback.js              <- Email sender via Nodemailer
+├── src/
+│   ├── main.jsx                 <- React app entry point
+│   ├── App.jsx                  <- Root component with all routes
+│   ├── index.css                <- Global CSS design system (variables, classes)
+│   ├── firebase.js              <- Firebase SDK init — exports auth, db, storage
+│   ├── components/
+│   │   ├── Layout.jsx           <- Shared navbar + footer wrapper
+│   │   └── ProtectedRoute.jsx   <- Route guard (redirect to /login if not authed)
+│   ├── context/
+│   │   └── AuthContext.jsx      <- React context: auth state + user role
+│   ├── data/
+│   │   ├── mockData.js          <- All domains, courses, subjects, exam configs
+│   │   ├── universitySyllabus.js -> Local syllabus (chapters + concepts per subject)
+│   │   ├── pdfSyllabus.js       <- Pre-extracted PDF text keyed by subjectId
+│   │   ├── predicted_ai_syllabus.json <- AI-predicted topics per subject
+│   │   └── questionGenerator.js <- (Legacy) static question bank
+│   ├── pages/
+│   │   ├── LandingPage.jsx      <- Home hero + domain cards
+│   │   ├── CourseExplorer.jsx   <- List courses inside a domain
+│   │   ├── SubjectDetails.jsx   <- Semester/subject picker + exam config
+│   │   ├── ExamPortal.jsx       <- Actual exam UI (timer, questions, submit)
+│   │   ├── Dashboard.jsx        <- Exam history list
+│   │   ├── ReviewPage.jsx       <- Per-question answer review
+│   │   ├── Login.jsx            <- Login form
+│   │   ├── Signup.jsx           <- Signup form
+│   │   ├── SearchResults.jsx    <- Full search results page
+│   │   ├── FeedbackPage.jsx     <- Feedback form (sends email)
+│   │   ├── SyllabusAdmin.jsx    <- Admin: upload / delete PDF syllabuses
+│   │   └── UserGuide.jsx        <- Static how-to page
+│   └── utils/
+│       ├── geminiQuestions.js   <- Calls /api/ai → formats questions from Groq
+│       ├── fileParser.js        <- Extracts text from PDF/PPTX/CSV/TXT files
+│       └── syllabusStorage.js   <- Upload/fetch/delete syllabus PDFs in Firebase
+├── context/                     <- You are here (documentation folder)
+├── vercel.json                  <- Vercel deployment config
+└── vite.config.js               <- Vite bundler config
+
+================================================================================
+3. APPLICATION ENTRY POINT
+================================================================================
+
+FILE: src/main.jsx
+------------------
+The absolute root of the React app. Uses React 19's createRoot API.
+Renders <App /> inside <StrictMode> into the #root div in index.html.
+StrictMode double-invokes lifecycle hooks in development to catch side effects.
+
+FILE: src/App.jsx
+------------------
+The root component that:
+
+  1. WRAPS everything in <AuthProvider> — so auth state is available everywhere.
+  2. WRAPS everything in <BrowserRouter> — enables React Router v7.
+  3. USES <Suspense> with a centered spinner fallback — because ALL page components
+     are lazy-loaded (React.lazy). This means the JS bundle for each page is only
+     downloaded when the user actually navigates to it (code splitting).
+
+  ScrollToTop Component (inside App.jsx):
+     A tiny component that runs window.scrollTo(0,0) on every route change using
+     the useLocation hook + useEffect. This prevents the page from staying scrolled
+     when you navigate from one long page to another.
+
+  NotFound Component:
+     A simple inline 404 page rendered at the catch-all route path="*".
+
+  LAZY LOADING:
+     Every page import uses lazy(() => import('./pages/PageName')).
+     React.lazy + Suspense means each page's JS is split into a separate chunk.
+     The spinner fallback shows while the chunk is being downloaded.
+
+================================================================================
+4. ROUTING SYSTEM
+================================================================================
+
+All routes are nested under a single parent route path="/" which renders <Layout />.
+Layout renders <Outlet /> where child page content goes.
+
+ROUTE MAP:
+  /                              -> LandingPage
+  /login                         -> Login
+  /signup                        -> Signup
+  /domains/:domainId/courses     -> CourseExplorer  (e.g. /domains/engineering/courses)
+  /courses/:courseId/subjects    -> SubjectDetails  (e.g. /courses/btech-ce/subjects)
+  /search?q=...                  -> SearchResults
+  /feedback                      -> FeedbackPage
+  /guide                         -> UserGuide
+  /exams/:subjectId/:examType/:difficulty  -> ExamPortal  [PROTECTED]
+  /dashboard                     -> Dashboard  [PROTECTED]
+  /review/:historyId             -> ReviewPage  [PROTECTED]
+  /admin/syllabus                -> SyllabusAdmin  [PROTECTED]
+  *                              -> NotFound (404)
+
+PROTECTED routes are wrapped in <ProtectedRoute>. If the user is not logged in,
+they are redirected to /login with { state: { from: location } } so after login
+they can be sent back to where they were trying to go.
+
+NOTE: SyllabusAdmin is PROTECTED (requires login) but also does its own isAdmin
+check inside the component, redirecting to "/" if the user is not an admin.
+
+URL PARAMS:
+  :domainId      — e.g. "engineering", "management"
+  :courseId      — e.g. "btech-ce", "bca"
+  :subjectId     — e.g. "01ce1101" (subject code from university syllabus)
+  :examType      — "mid-1", "mid-2", or "final"
+  :difficulty    — "easy", "medium", or "hard"
+  :historyId     — numeric timestamp string used as Firestore document ID
+
+================================================================================
+5. FIREBASE LAYER (src/firebase.js)
+================================================================================
+
+Initializes the Firebase app using configuration from environment variables
+(set in .env.local for dev, and in Vercel dashboard for production).
+
+Exports three services:
+  - auth     : Firebase Authentication instance
+  - db       : Firestore database instance
+  - storage  : Firebase Storage instance
+
+These three are imported wherever needed (AuthContext, ExamPortal, Dashboard, etc.)
+The fallback dummy values in the config are just for syntax — they won't actually
+connect to any Firebase project without real env vars.
+
+================================================================================
+6. AUTH SYSTEM (src/context/AuthContext.jsx)
+================================================================================
+
+Creates a React Context (AuthContext) that holds the entire authentication state
+and exposes it to the full component tree via the useAuth() hook.
+
+STATE:
+  currentUser   : Firebase User object (or null if not logged in)
+  isAdmin       : boolean — true if user's Firestore doc has role === 'admin'
+  authLoading   : boolean — true while Firebase is checking the persisted session
+
+WHILE authLoading IS TRUE:
+  A full-screen dark spinner is rendered instead of the app children.
+  This prevents any route from flashing before we know if the user is logged in.
+
+METHODS EXPOSED:
+  signup(email, password, displayName):
+    - Creates Firebase Auth user
+    - In PARALLEL: updates the Auth profile displayName + creates a Firestore doc
+      in users/{uid} collection with role: 'student'
+    - Returns the user object
+
+  login(email, password):
+    - Calls signInWithEmailAndPassword – returns a Promise
+
+  signInWithGoogle():
+    - Opens Google OAuth popup
+    - Only creates a Firestore user doc if this is the FIRST sign-in (doc doesn't exist yet)
+    - Uses prompt: 'select_account' so Google always shows the account picker
+
+  signInWithApple():
+    - Same pattern as Google but uses Apple's OAuthProvider with email+name scopes
+
+  logout():
+    - Clears legacy localStorage key 'userExamHistory'
+    - Calls Firebase signOut()
+
+ADMIN DETECTION:
+  Inside the onAuthStateChanged listener, after a user logs in, it fetches the
+  user's Firestore document at users/{uid}. If it exists and data().role === 'admin',
+  isAdmin is set to true. This is the only way to become admin — someone must manually
+  set role: 'admin' in the Firebase console.
+
+================================================================================
+7. COMPONENTS: Layout.jsx
+================================================================================
+
+The shell component rendered at the "/" parent route. Contains:
+  1. A sticky navbar
+  2. <main> with <Outlet /> (where page content renders)
+  3. A footer
+
+NAVBAR FEATURES:
+
+  Logo:
+    BookOpen icon + "PrepMaster" text with a gradient on "Master".
+    Always links to "/".
+
+  Desktop Nav Pill (animated):
+    Four nav items: Home, Guide, Feedback, Contact.
+    Uses Framer Motion's layoutId="nav-desktop-pill" to animate a background
+    highlight that slides between items as you hover or navigate.
+    The "Contact" item is special — it's a button that scrolls to #contact on
+    the landing page. If you're already on "/" it scrollIntoView directly.
+    If you're on a different route, it navigates to "/" with
+    { state: { scrollToContact: true } }, and LandingPage picks up that state.
+
+  Search Bar:
+    - Embedded inline in the desktop nav
+    - A useMemo flattens all domains → courses → subjects into a searchable array
+      at component mount
+    - As you type, another useMemo filters and sorts results by exact match first,
+      then partial match, prioritized by type: Domain > Course > Subject
+    - Results dropdown appears below with max 6 items
+    - Pressing Enter or clicking Search icon navigates to /search?q=...
+    - Clicking a suggestion navigates directly to the item's route
+
+  Auth Buttons:
+    - If logged in: circular icon buttons for Dashboard and Logout
+    - If not logged in: "Log In" link + "Sign Up" pill button
+    - Admin users see a "Syllabus Admin" link in the mobile menu
+
+  Mobile Menu:
+    - Hamburger/X toggle button hidden on desktop (CSS media query)
+    - Dropdown with search, nav links, and auth buttons
+    - Closes automatically on route change (useEffect watching location.pathname)
+
+  Click Outside Handler:
+    useEffect adds a document mousedown listener. If the click target is outside
+    the searchRef element, suggestions are hidden.
+
+================================================================================
+8. COMPONENTS: ProtectedRoute.jsx
+================================================================================
+
+A tiny wrapper component. It consumes currentUser from useAuth().
+If currentUser is falsy (not logged in), renders <Navigate to="/login" .../>
+with the original location stored in state so after login the user is redirected
+back to where they tried to go. Otherwise renders children directly.
+
+================================================================================
+9. DATA LAYER
+================================================================================
+
+9a. src/data/mockData.js
+------------------------
+The PRIMARY data source for all academic content. A large exported constant:
+
+  domains: Array of domain objects
+    Each domain:
+      id          : string slug (e.g. "engineering")
+      title       : display name
+      icon        : Lucide icon name string
+      description : short text
+      courses     : Array of course objects
+        Each course:
+          id       : string slug (e.g. "btech-ce")
+          title    : display name
+          subjects : Array of subject objects
+            Each subject:
+              id    : subject code string (e.g. "01ce1101")
+              title : subject name
+              sem   : semester number (1, 2, 3 ...)
+              exams : array of exam type strings ["mid-1", "mid-2", "final"]
+
+  examPrompts: Object keyed by exam type
+    "mid-1": { title, timeMinutes, totalMarks, type: 'objective' }
+    "mid-2": same
+    "final": { title, timeMinutes, totalMarks, type: 'theory' }
+
+    This config drives the ExamPortal's timer, question count formula, and
+    whether to generate MCQs (objective) or open-ended questions (theory).
+
+  IMPORTANT: This is the single source of truth. All pages that need subject/
+  course data loop through this structure. The Layout search bar also uses this
+  to build the search index.
+
+9b. src/data/universitySyllabus.js
+-----------------------------------
+A large (~347KB) JavaScript file. Exports:
+  universitySyllabus: Object keyed by subjectId string
+
+Each entry looks like:
+  "01ce1101": {
+    chapters: [
+      { title: "Chapter 1 Name", concepts: ["concept1", "concept2", ...] },
+      ...
+    ]
+  }
+
+Used in ExamPortal as PRIORITY 3 syllabus source (after pdfSyllabus and Firestore PDF).
+The AI prompt is built by joining chapter titles and their concept lists into text.
+
+9c. src/data/pdfSyllabus.js
+----------------------------
+Exports: pdfSyllabus — Object keyed by subjectId
+
+Contains pre-extracted plain text from locally processed syllabus PDFs.
+Generated by the scripts (process-syllabuses.cjs etc.) that read university PDFs.
+Used in ExamPortal as PRIORITY 1 syllabus source — fastest, most accurate.
+
+9d. src/data/predicted_ai_syllabus.json
+-----------------------------------------
+A JSON file with AI-predicted topic lists for subjects that don't have a full
+syllabus. Structure per subject:
+  "subjectId": {
+    aiPromptContext: "context string",
+    topics: ["topic1", "topic2", ...]
+  }
+Used in ExamPortal as PRIORITY 4 (last resort before generic LLM prompt).
+
+================================================================================
+10. PAGES: LandingPage.jsx
+================================================================================
+
+The marketing home page. Key behaviors:
+
+  SEO Injection:
+    On mount, sets document.title and updates/creates the meta description tag.
+
+  Scroll-to-Contact:
+    Reads location.state.scrollToContact (set by the navbar Contact button when
+    navigating from another route). If true, finds #contact and scrollIntoView.
+    Then calls window.history.replaceState to clear the state (prevents re-scroll
+    on refresh).
+
+  Domain Cards:
+    Renders one card per domain from mockData.domains.
+    Each card links to /domains/:domainId/courses.
+    CSS custom property --mouse-x / --mouse-y are set from a mousemove handler
+    on the parent element, which LandingPage.css uses to create a spotlight
+    hover glow effect.
+
+  Developer "Like" Buttons:
+    Two heart/thumbs buttons persisted in localStorage (dev_liked, dev_liked_2).
+    Just a fun UI element — no server state involved.
+
+  Animations:
+    Framer Motion stagger animations for the domain cards grid.
+    Floating background icons (Code, Database, Activity, Cpu) with CSS keyframe
+    float animations defined in LandingPage.css.
+
+================================================================================
+11. PAGES: CourseExplorer.jsx
+================================================================================
+
+Reads :domainId from URL params, finds the matching domain in mockData.domains,
+and renders a grid of course cards. Each card links to /courses/:courseId/subjects.
+
+================================================================================
+12. PAGES: SubjectDetails.jsx
+================================================================================
+
+The exam configuration wizard. Users work through a sequential multi-step UI:
+
+  STEP 1 — Semester Picker:
+    Computes unique sorted semesters from course subjects via useMemo.
+    Clicking a semester tab filters the subject list.
+
+  STEP 2 — Subject Picker:
+    Shows subjects for the selected semester.
+    Click to select or deselect (toggle). Selecting a subject clears exam type
+    and mode state.
+
+  STEP 3 — Exam Type Picker:
+    Shows the exams array from the subject's mockData entry (mid-1, mid-2, final).
+    Maps these to labeled cards using examPrompts from mockData.
+
+  STEP 4 — Mode Picker:
+    Two options: "Auto" (AI generates from syllabus) or "Upload" (user uploads files).
+
+  STEP 5 — Difficulty Picker:
+    Three buttons: Easy / Medium / Hard.
+
+  START BUTTON:
+    Active only when all 4 selections are made (subject + examType + mode + difficulty).
+    Calls navigate() to /exams/:subjectId/:examType/:difficulty
+    and passes { state: { examMode: selectedMode } } in location state.
+    ExamPortal reads this state to know which mode to show.
+
+  DEEP LINK SUPPORT:
+    If the URL has a hash (e.g. /courses/btech-ce/subjects#01ce1101), the component
+    finds the subject by ID, auto-selects its semester, then after a 150ms delay
+    (to allow semester tab to render) auto-selects the subject. This is used by the
+    search suggestion links.
+
+================================================================================
+13. PAGES: ExamPortal.jsx  (THE CORE COMPONENT)
+================================================================================
+
+The most complex component in the app. Manages the complete exam lifecycle.
+
+STATE MACHINE:
+  examState: 'intro' | 'active' | 'submitted'
+
+  intro     -> user sees the pre-exam screen or upload UI
+  active    -> questions are displayed, timer is running
+  submitted -> exam is saved, navigating away
+
+KEY STATE:
+  aiQuestions     : Array of question objects from Groq AI (null = use fallback)
+  examMode        : 'auto' | 'upload' (read from location.state at mount)
+  timeLeft        : seconds remaining (counts down during 'active' state)
+  switchCount     : number of tab-switch violations
+  showWarning     : whether the anti-cheat modal is visible
+  forceSubmit     : boolean set to true when timer hits 0
+  retryCountdown  : seconds until AI rate limit expires
+
+SUBJECT LOOKUP:
+  On every render, it loops through all domains/courses/subjects in mockData to
+  find the subject + course + domain that match the :subjectId URL param.
+  This gives contextPrefix — a string passed into every AI prompt like:
+    "Academic Context: Domain: Engineering, Course: B.Tech CE, Subject: DBMS"
+
+SYLLABUS PRIORITY SYSTEM (inside startExam() ):
+  This is the logic that decides what content the AI uses to generate questions.
+  Checked in this order:
+
+  PRIORITY 1 — pdfSyllabus[subjectId]
+    Pre-extracted text from locally processed university PDFs.
+    Most accurate. Loaded directly from the JS import, no network call.
+
+  PRIORITY 2 — fetchSyllabus(subjectId, courseId) → Firestore
+    Admin-uploaded PDF. Fetches the 'syllabuses' Firestore collection.
+    Doc ID = "{courseId}__{subjectId}". Returns extractedText field.
+
+  PRIORITY 3 — universitySyllabus[subjectId]
+    Local JS chapters/concepts data. Also no network call.
+    Builds a text string: "Chapter: X\nConcepts: a, b, c\n\n..."
+
+  PRIORITY 4 — predictedSyllabus[subjectId]
+    AI-predicted topics from the JSON file.
+    Builds: "You MUST base questions on: [list of topics]"
+
+  PRIORITY 5 — Fallback prompt
+    Tells the AI: "Generate questions covering standard university curriculum
+    for this subject." — uses the LLM's training knowledge.
+
+QUESTION COUNT FORMULA:
+  Objective (MCQ):  easy=25, medium=30, hard=40
+  Theory:           mid-1/mid-2=4, final=7
+
+TIMER:
+  useEffect runs a setInterval every second decreasing timeLeft by 1.
+  Only runs when examState === 'active' AND showWarning is false
+  (timer pauses while the anti-cheat warning modal is open).
+  When timeLeft hits 0, sets forceSubmit=true. The ActiveExamInterface child
+  component watches this prop and triggers submission.
+
+TAB-SWITCH / ANTI-CHEAT:
+  useEffect adds event listeners only when examState === 'active':
+  - document visibilitychange: fires when the user returns to the tab
+    (not when they leave — document.visibilityState==='hidden' is ignored)
+  - contextmenu: fires on right-click
+  Each trigger increments switchCount and shows the warning modal.
+  The modal text changes tone based on switchCount (1=friendly, 2=firmer, 3=stern).
+
+FILE UPLOAD MODE:
+  If examMode === 'upload', the intro state shows a drag-and-drop zone.
+  - Files are validated: only PDF, PPTX, CSV, TXT
+  - Max 3 files, 10MB each
+  - On "Generate Questions": calls extractTextFromFile() for each file,
+    concatenates the text, requires at least 100 chars total,
+    then calls generateQuestionsFromText() sending combined text to the AI.
+
+EXAM SUBMISSION (submitExam function):
+  Called from the ActiveExamInterface child with (answers, questions).
+
+  1. Scores the exam:
+     - Objective: counts questions where answers[q.id] == q.answer (0-indexed)
+     - Theory: score is null (graded by teacher later)
+
+  2. Sanitizes data for Firestore:
+     - questionSnapshot: strips undefined fields, replaces undefined answer with null
+     - sanitizedAnswers: replaces undefined with "" (empty string)
+
+  3. Saves to Firestore:
+     Path: users/{currentUser.uid}/examHistory/{recordId}
+     recordId = Date.now() — a numeric timestamp used as both the doc ID and
+     record.id for the /review/:historyId route.
+
+     Stored fields: id, date, subjectId, examType, difficulty, type, score,
+                    totalMarks, questions (snapshot), userAnswers
+
+  4. Sets examState to 'submitted', then after 800ms navigates to /dashboard
+     passing { state: { justSubmitted: true } }.
+
+CHILD COMPONENT — ActiveExamInterface:
+  Rendered when examState === 'active'. Receives questions, answers, and callbacks.
+  Manages per-question answer state, question navigation, the progress bar,
+  the "Mark for Review" feature, the submit button, and watches forceSubmit.
+
+================================================================================
+14. PAGES: Dashboard.jsx
+================================================================================
+
+Displays the authenticated user's exam history.
+
+DATA LOADING:
+  On mount (and whenever currentUser.uid changes), fetches the user's
+  examHistory subcollection from Firestore:
+    collection(db, 'users', currentUser.uid, 'examHistory')
+  Ordered by 'date' descending (newest first).
+
+RECORD CARD:
+  Each history item shows:
+  - Subject name (looked up by looping mockData — same pattern as everywhere)
+  - Exam type name (from examPrompts[examType].title)
+  - Difficulty badge
+  - Date/time formatted with toLocaleDateString
+  - Score display:
+    - Objective exams: shows "X / Y" with color coding:
+        green  >= 80%
+        yellow >= 50%
+        red    < 50%
+      Plus "Passed" or "Needs Review" label
+    - Theory exams: shows "Subjective" label (no auto-score)
+  - "Review Answers" link → /review/{record.id} (only if questions data exists)
+
+JUST SUBMITTED BANNER:
+  If navigated here with location.state.justSubmitted === true,
+  shows a green success banner for 5 seconds, then fades it.
+
+================================================================================
+15. PAGES: ReviewPage.jsx
+================================================================================
+
+Shows a detailed per-question review of a submitted exam.
+
+DATA LOADING:
+  Fetches a single Firestore doc:
+    users/{currentUser.uid}/examHistory/{historyId}
+  Where historyId comes from the :historyId URL param.
+
+STATS BAR  (objective exams only):
+  Computed via useMemo from record.questions + record.userAnswers:
+  - Total Questions
+  - Attempted (correct + wrong)
+  - Correct count
+  - Wrong count
+  - Unattempted count
+
+LAYOUT:
+  Two-panel layout (flexbox, wraps on mobile):
+  LEFT: Question Palette
+    Grid of numbered buttons, one per question.
+    Color-coded by status: green=correct, red=wrong, grey=unattempted, blue=attempted
+    Click navigates to that question.
+    Currently selected question gets an extra outline ring.
+
+  RIGHT: Question Detail Panel
+    - Question number + status badge
+    - Question text in a padded box
+    - For MCQs: all 4 options rendered as rows
+        Correct answer: green background + CheckCircle icon
+        User's wrong choice: red background + XCircle icon
+        Other options: neutral
+    - For Theory: shows "Your Answer" as plain text (or "No answer provided.")
+    - Previous/Next navigation buttons disabled at boundaries
+
+STATUS LOGIC (getStatus function):
+  userAnswer = record.userAnswers[q.id]
+  if undefined or "" → 'unattempted'
+  if objective and ua == q.answer → 'correct'
+  if objective and ua != q.answer → 'wrong'
+  if theory and answered → 'attempted'
+
+================================================================================
+16. PAGES: Login.jsx & Signup.jsx
+================================================================================
+
+Login.jsx:
+  - Email/password form + Google OAuth button + Apple OAuth button
+  - On submit: calls login(email, password) from useAuth()
+  - On Google: calls signInWithGoogle() from useAuth()
+  - On Apple: calls signInWithApple() from useAuth()
+  - After success: navigates to location.state?.from?.pathname or "/dashboard"
+    (this is how ProtectedRoute return redirects work)
+
+Signup.jsx:
+  - Name + email + password + confirm password form + Google/Apple OAuth
+  - Validates passwords match client-side
+  - On submit: calls signup(displayName, email, password) from useAuth()
+  - After success: navigates to "/dashboard"
+
+Both pages redirect away if currentUser is already set (already logged in).
+
+================================================================================
+17. PAGES: SyllabusAdmin.jsx
+================================================================================
+
+Admin-only tool for uploading PDF syllabuses to Firebase.
+
+ACCESS CONTROL:
+  Double-gated: ProtectedRoute (requires login) + internal useEffect that redirects
+  to "/" if isAdmin === false after authLoading is done.
+
+SUBJECT SEARCH:
+  Builds a flat map of all subjects from mockData (buildSubjectMap function).
+  Text input filters this map by title/courseTitle/subjectId.
+  Clicking a suggestion selects the subject for upload.
+
+UPLOAD FLOW:
+  1. Admin selects a subject by searching
+  2. Admin picks a PDF file
+  3. Clicks "Upload PDF"
+  4. uploadSyllabusPDF() is called (from syllabusStorage.js):
+     a. Extracts text from PDF client-side using pdfjs-dist
+     b. Uploads the raw PDF file to Firebase Storage at:
+        syllabuses/{courseId}/{subjectId}/{timestamp}_{filename}
+     c. Gets the download URL
+     d. Saves to Firestore collection 'syllabuses' with doc ID:
+        "{courseId}__{subjectId}"
+        Stored fields: subjectId, courseId, subjectTitle, courseTitle,
+                       extractedText (capped at 50,000 chars), pdfStoragePath,
+                       pdfURL, pdfFileName, uploadedBy, uploadedAt
+
+UPLOADED LIST:
+  On mount (after admin check), fetches all docs from 'syllabuses' collection
+  using listAllSyllabuses(). Sorted by uploadedAt descending.
+  Each entry shows subject/course info, file name, upload date, and a delete button.
+
+DELETE FLOW:
+  Calls deleteSyllabus(subjectId, courseId, pdfStoragePath) which:
+  - Deletes the Firestore document
+  - Tries to delete the Storage file (suppresses error if file is missing)
+
+================================================================================
+18. PAGES: FeedbackPage.jsx
+================================================================================
+
+A feedback form that sends an email to the developer.
+
+FORM FIELDS:
+  - Feedback type (General / Bug Report / Feature Request / Content Issue / AI Quality)
+  - Star rating (1–5, with hover preview and label text)
+  - Subject (optional text)
+  - Message (required)
+  - Name (optional)
+  - Email (optional — used as Reply-To if provided)
+
+SUBMISSION:
+  POST to /api/feedback with the full formData object as JSON.
+  The API handler (api/feedback.js) sends an email via Nodemailer using Gmail SMTP.
+
+  Status flow: idle → loading → success (or error with message)
+  On success: shows a full-page thank-you screen with a "Back to Home" button.
+
+================================================================================
+19. PAGES: SearchResults.jsx
+================================================================================
+
+Full search page at /search?q=...
+
+Reads the q param from the URL via useSearchParams().
+Runs the same flattening + filtering logic as the Layout search bar but shows
+all results (not just 6) in a full-page list with richer cards.
+Each result links to the appropriate route.
+
+================================================================================
+20. PAGES: UserGuide.jsx
+================================================================================
+
+A static informational page explaining how to use PrepMaster.
+Covers: browsing domains, picking subjects, running exams, uploading files,
+reviewing results. Styled with CSS grid cards.
+
+================================================================================
+21. UTILITIES: src/utils/geminiQuestions.js
+================================================================================
+
+The function that talks to the AI API to generate exam questions.
+(Despite the filename containing "gemini", it actually calls Groq, not Gemini.)
+
+FUNCTION: generateQuestionsFromText({ text, difficulty, count, isObjective })
+
+INPUT PROCESSING:
+  truncated = text.slice(0, 6000)  — hard cap to avoid Vercel Edge timeout (502)
+
+PROMPT CONSTRUCTION:
+  Two different system messages + user prompts based on isObjective:
+
+  OBJECTIVE (MCQ):
+    System: "Always respond with JSON { questions: [{id, text, options[4], answer}] }"
+    User: "Generate exactly N MCQs. Difficulty: X. Rules: 4 distinct options, answer
+           is 0-based index, wrong options must be plausible."
+
+  THEORY (Subjective):
+    System: "Always respond with JSON { questions: [{id, text}] }. No answers."
+    User: "Generate exactly N open-ended questions. Rules: require descriptive answers.
+           Do NOT provide the answer."
+
+API CALL:
+  POST /api/ai (the Vercel Edge Function proxy — see section 24)
+  Body: { messages, model: 'llama-3.1-8b-instant', response_format: {type:'json_object'} }
+  response_format: json_object forces the LLM to always output valid JSON.
+
+RESPONSE PARSING:
+  1. Reads data.choices[0].message.content — the raw JSON string from Groq
+  2. JSON.parse(text) to get the object
+  3. Validates it has a 'questions' array key
+  4. For MCQs: filters out questions with wrong option count, validates answer index
+  5. Returns the cleaned questions array
+
+ERROR HANDLING:
+  If the response body contains a retryAfter value (Groq rate limit header),
+  throws an error object with err.retryAfter set — ExamPortal catches this
+  and starts the retryCountdown timer.
+  Otherwise throws a regular Error with the message.
+
+================================================================================
+22. UTILITIES: src/utils/fileParser.js
+================================================================================
+
+Client-side file text extraction. Handles 4 formats.
+
+PDF (via pdfjs-dist):
+  extractPdfText(arrayBuffer):
+    - Initializes pdfjs-dist with a Vite-bundled worker URL
+      (avoids CDN version mismatch issues)
+    - pdfjsLib.getDocument({ data: arrayBuffer }) opens the PDF
+    - Iterates every page, gets TextContent, joins item.str values with spaces
+    - Returns all pages joined by double newlines
+
+PPTX (via JSZip):
+  extractPptxText(arrayBuffer):
+    - A PPTX file is a ZIP archive of XML files
+    - JSZip extracts all files matching ppt/slides/slide*.xml
+    - DOMParser parses each XML, finds all <a:t> elements (text runs in DrawingML)
+    - Returns all slide texts joined by double newlines
+
+CSV:
+  extractCsvText(text):
+    - Splits into lines, parses header row
+    - Converts each data row into "Header: Value, Header: Value, ..." prose
+    - Prefixes with "Columns: col1, col2..." for context
+    - Returns human-readable text the AI can understand as study material
+
+TXT:
+  Just returns FileReader.readAsText result directly.
+
+MASTER DISPATCHER:
+  extractTextFromFile(file):
+    - Checks file extension
+    - Enforces 10MB size limit
+    - Routes to the appropriate extractor
+    - Throws for unsupported extensions
+
+================================================================================
+23. UTILITIES: src/utils/syllabusStorage.js
+================================================================================
+
+Firebase Storage + Firestore operations for admin-uploaded syllabus PDFs.
+
+DOCUMENT ID CONVENTION:
+  docId(courseId, subjectId) = "${courseId}__${subjectId}"
+  e.g. "btech-ce__01ce1101"
+  This ensures one-to-one mapping (one syllabus per subject per course).
+
+FUNCTIONS:
+
+  uploadSyllabusPDF({ file, subjectId, courseId, subjectTitle, courseTitle,
+                      uploaderUid, onProgress }):
+    1. Extracts text from PDF using extractPdfText from fileParser.js
+    2. Validates text is at least 50 chars
+    3. Uploads raw PDF bytes to Storage at syllabuses/{courseId}/{subjectId}/{ts}_{name}
+    4. Gets the download URL
+    5. setDoc to Firestore syllabuses/{docId} with all metadata + extractedText
+       (text is sliced to 50,000 chars max — Firestore has a 1MB doc limit)
+    Reports progress via the onProgress callback at each step.
+
+  fetchSyllabus(subjectId, courseId):
+    getDoc from syllabuses/{docId}. Returns data or null.
+    Used in ExamPortal before starting a question generation call.
+
+  deleteSyllabus(subjectId, courseId, pdfStoragePath):
+    deleteDoc from Firestore. Then deleteObject from Storage.
+    Storage delete failure is silently swallowed (in case file was orphaned).
+
+  listAllSyllabuses():
+    getDocs on the entire syllabuses collection. Used in SyllabusAdmin.
+
+================================================================================
+24. API EDGE FUNCTION: api/ai.js
+================================================================================
+
+A Vercel Edge Function (runs on Cloudflare Workers-compatible runtime at the edge,
+NOT in a traditional Node.js serverless function).
+
+WHY EDGE:
+  config = { runtime: 'edge' } makes Vercel deploy this as an edge function.
+  Edge functions start faster (no cold start), ideal for latency-sensitive AI calls.
+
+WHAT IT DOES:
+  Acts as a secure proxy between the browser and the Groq API.
+  The GROQ_API_KEY is never exposed to the browser — it only lives in Vercel env vars.
+
+REQUEST FLOW:
+  Browser → POST /api/ai  (with messages + model + response_format)
+  Edge Function → POST https://api.groq.com/openai/v1/chat/completions
+  Groq API → Edge Function (raw completion response)
+  Edge Function → Browser (passes response through unchanged)
+
+The function always sets temperature: 0.1 to keep AI output deterministic and
+consistent across question generation calls.
+
+Error handling: if Groq returns a non-200, the error JSON is forwarded back
+so the client can parse err.error.message.
+
+================================================================================
+25. API SERVER FUNCTION: api/feedback.js
+================================================================================
+
+A standard Vercel Serverless Function (Node.js runtime, NOT edge — because
+Nodemailer requires the full Node environment).
+
+  GMAIL_USER and GMAIL_APP_PASSWORD are read from Vercel env vars.
+  An App Password (not the real Gmail password) must be generated in Google
+  Account settings for Nodemailer SMTP to work.
+
+WHAT IT DOES:
+  Receives form data: type, rating, subject, message, name, email
+  Validates message is not empty.
+  Builds an HTML email with styled cards, the feedback type badge, star rating,
+  and all submitted fields.
+  Sends via Nodemailer createTransport('gmail') to the hardcoded TO_EMAIL address:
+    dakshpatel09765gy@gmail.com
+  If the user provided their email, it sets replyTo so the developer can reply.
+
+================================================================================
+26. COMPLETE EXAM FLOW (END-TO-END WALKTHROUGH)
+================================================================================
+
+Here is the full journey from landing page to exam history:
+
+STEP 1: Browse
+  User lands on "/" → sees domain cards.
+  Clicks "Engineering & Technology" → navigated to /domains/engineering/courses
+  CourseExplorer renders all B.Tech/Diploma etc. courses.
+  User clicks "B.Tech - Computer Engineering" → /courses/btech-ce/subjects
+
+STEP 2: Configure
+  SubjectDetails loads btech-ce from mockData.
+  User clicks Semester 3 tab → subjects filter to sem=3
+  User clicks "Data Structures" (id: some-subject-id)
+  User clicks "Mid 1" exam type
+  User clicks "Auto" mode
+  User clicks "Medium" difficulty
+  "Start Exam" button becomes active.
+
+STEP 3: Pre-Exam
+  navigate('/exams/some-subject-id/mid-1/medium', { state: { examMode: 'auto' } })
+  ExamPortal mounts. examState='intro'. examMode='auto'.
+  Shows intro screen with exam title, subject name, duration info.
+  User clicks "Start Exam".
+
+STEP 4: AI Question Generation
+  startExam() called.
+  setAutoProcessing(true) → spinner shown on button.
+  Builds syllabusText by checking pdfSyllabus → Firestore → universitySyllabus
+    → predictedSyllabus → generic fallback.
+  Calls generateQuestionsFromText({ text, difficulty:'medium', count:30, isObjective:true })
+  Which calls POST /api/ai → Groq llama-3.1-8b-instant → returns 30 MCQ objects.
+  setAiQuestions(questions)
+  setExamState('active')
+
+STEP 5: Active Exam
+  ActiveExamInterface renders with 30 questions.
+  Timer counts down (30 min for mid-1).
+  User selects answers (stored in local answers state map: { questionId: selectedIndex }).
+  If user switches tabs → visibilitychange event → warning modal.
+  User can navigate between questions via the palette or prev/next buttons.
+
+STEP 6: Submit
+  User clicks "Submit Exam" (or timer expires).
+  submitExam(answers, questions) called.
+  Score calculated: count(answers[q.id] == q.answer).
+  sanitized answers + question snapshot assembled.
+  setDoc to Firestore: users/{uid}/examHistory/{Date.now()}
+  setExamState('submitted') → green checkmark screen.
+  After 800ms: navigate('/dashboard', { state: { justSubmitted: true } })
+
+STEP 7: Dashboard
+  Dashboard fetches all examHistory docs for this user.
+  Shows the new record with score, colored by pass/fail.
+  "Review Answers" link appears.
+
+STEP 8: Review
+  navigate('/review/{recordId}')
+  ReviewPage fetches that single Firestore doc.
+  Shows question palette, stats bar (correct/wrong/unattempted).
+  User can click any question to see options highlighted in green/red.
+
+================================================================================
+27. FIREBASE DATA MODEL
+================================================================================
+
+COLLECTION: users
+  Document ID: {uid}
+  Fields: uid, email, displayName, photoURL?, createdAt, role ('student'|'admin')
+
+  SUBCOLLECTION: users/{uid}/examHistory
+    Document ID: {timestamp_number} (e.g. "1712345678901")
+    Fields:
+      id           : same timestamp number
+      date         : ISO string
+      subjectId    : string
+      examType     : 'mid-1' | 'mid-2' | 'final'
+      difficulty   : 'easy' | 'medium' | 'hard'
+      type         : 'objective' | 'theory'
+      score        : number (MCQ correct count) | null (theory)
+      totalMarks   : number
+      questions    : Array<{ id, text, options|null, answer|null, marks|null }>
+      userAnswers  : Object { [questionId]: selectedIndex | "" }
+
+COLLECTION: syllabuses
+  Document ID: "{courseId}__{subjectId}" (e.g. "btech-ce__01ce1101")
+  Fields:
+    subjectId, courseId, subjectTitle, courseTitle
+    extractedText   : string (max 50,000 chars of PDF text)
+    pdfStoragePath  : "syllabuses/{courseId}/{subjectId}/{timestamp}_{filename}"
+    pdfURL          : Firebase Storage download URL
+    pdfFileName     : original filename
+    uploadedBy      : admin uid
+    uploadedAt      : ISO string
+
+STORAGE: syllabuses/
+  Path: syllabuses/{courseId}/{subjectId}/{timestamp}_{originalFilename}
+  Content: raw PDF bytes
+  Purpose: backup copy accessible via pdfURL
+
+================================================================================
+28. CSS DESIGN SYSTEM (src/index.css)
+================================================================================
+
+Global CSS custom properties (variables) defined on :root:
+
+  --bg-primary        : #0f1115  (darkest background)
+  --bg-secondary      : #1a1d23  (card backgrounds)
+  --bg-tertiary       : #252832  (input backgrounds)
+  --text-primary      : #f1f5f9  (main text)
+  --text-secondary    : #94a3b8  (muted text)
+  --text-tertiary     : #475569  (very muted)
+  --accent-primary    : #3b82f6  (blue)
+  --accent-gradient   : linear-gradient(135deg, #3b82f6, #8b5cf6) (blue→purple)
+  --success           : #10b981  (green)
+  --warning           : #f59e0b  (amber)
+  --danger            : #ef4444  (red)
+  --glass-bg          : rgba(255,255,255,0.03)
+  --glass-border      : rgba(255,255,255,0.08)
+  --radius-sm         : 6px
+  --radius-md         : 10px
+  --radius-lg         : 16px
+  --radius-xl         : 20px
+  --radius-full       : 9999px  (pill shape)
+
+KEY REUSABLE CLASSES:
+  .container          : max-width 1200px centered with horizontal padding
+  .glass-panel        : frosted glass card (var(--glass-bg) bg + var(--glass-border) border)
+  .glass-card         : similar glass card variant
+  .spin               : CSS animation for spinning loader
+  .text-gradient      : applies the accent gradient as text fill
+  .animate-fade-in    : opacity 0 → 1 fade animation
+  .btn-primary        : blue gradient button
+  .btn-ghost          : transparent bordered button
+
+The dark theme (--bg-primary: #0f1115) is the only theme — no light mode toggle.
+
+================================================================================
+29. KEY ARCHITECTURAL DECISIONS
+================================================================================
+
+1. DATA LIVES IN JS FILES, NOT A CMS
+   All academic data (domains/courses/subjects) is hardcoded in mockData.js.
+   This makes the app fully static for this data — fast to read, no Firestore
+   reads needed for navigation. Trade-off: adding new courses requires a code deploy.
+
+2. AI QUESTIONS ARE GENERATED FRESH EVERY EXAM
+   No question caching in Firestore. Every exam call generates completely new
+   questions from Groq. This means question sets are always unique but always
+   require an API call. The 6000-char text truncation prevents Vercel Edge timeouts.
+
+3. SYLLABUS HIERARCHY GIVES GRACEFUL DEGRADATION
+   The 5-priority system means the app works for every subject even if no syllabus
+   material was specifically prepared. The generic LLM prompt is the last resort.
+
+4. EXAM HISTORY IS PER-USER SUBCOLLECTION
+   Storing history at users/{uid}/examHistory vs a top-level 'exams' collection
+   makes queries simple: no userId filter needed, and Firestore security rules
+   can be set to allow users to only read/write their own subcollection.
+
+5. TIMESTAMPS AS DOC IDs
+   Using Date.now() as the Firestore document ID for exam history serves two purposes:
+   - Uniqueness (millisecond timestamps rarely collide for a single user)
+   - The same value is navigated to as the :historyId URL param for ReviewPage,
+     so no secondary ID field is needed in the URL
+
+6. EDGE FUNCTION FOR AI, NODE FUNCTION FOR EMAIL
+   api/ai.js uses Edge runtime (fast, low latency for AI calls).
+   api/feedback.js uses Node.js runtime (required for Nodemailer SMTP).
+   These are separate files because they need different runtimes.
+
+7. CLIENT-SIDE PDF PARSING
+   PDF text extraction happens in the browser (pdfjs-dist, JSZip), not server-side.
+   This avoids the 10s Vercel serverless timeout for large file processing and
+   keeps the server functions simple. The browser's idle capacity does the heavy work.
+
+8. NO QUESTION ANSWERS STORED FOR THEORY EXAMS
+   For theory/subjective exams, score is null and there's no comparison logic.
+   Students write free-text answers, which are stored and reviewable, but grading
+   is implied to be manual (by a teacher reviewing the stored text).
+
+================================================================================
+END OF DOCUMENTATION
+================================================================================

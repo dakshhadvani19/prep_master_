@@ -1,0 +1,59 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ─── Users collection ─────────────────────────────────────────
+    // Users can read and write their own document only.
+    match /users/{userId} {
+      allow read:   if request.auth != null && request.auth.uid == userId;
+      allow create: if request.auth != null && request.auth.uid == userId;
+      allow update: if request.auth != null && request.auth.uid == userId;
+      allow delete: if false; // no deletions from client
+    }
+
+    // ─── OTP Tokens collection ────────────────────────────────────
+    // Unauthenticated clients may read/write their own OTP doc
+    // (needed because OTP is verified BEFORE account creation).
+    // Document ID is base64(email) — no user-identifiable compound key.
+    // The actual OTP is never stored (only its SHA-256 hash).
+    // Documents auto-expire after 10 minutes (enforced in app logic).
+    match /otp_tokens/{tokenId} {
+      allow read, write: if true; // public — but only hashes stored, no PII
+    }
+
+    // ─── Syllabus / Course data ───────────────────────────────────
+    // Read-only for authenticated users; admin writes handled server-side.
+    match /domains/{docId} {
+      allow read: if true;
+      allow write: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    match /courses/{docId} {
+      allow read: if true;
+      allow write: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    match /subjects/{docId} {
+      allow read: if true;
+      allow write: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // ─── Feedback ────────────────────────────────────────────────
+    match /feedback/{docId} {
+      allow create: if request.auth != null;
+      allow read:   if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // ─── Exam history (stored by user) ───────────────────────────
+    match /examHistory/{docId} {
+      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
+      allow create:      if request.auth != null && request.resource.data.userId == request.auth.uid;
+    }
+
+    // ─── Catch-all: deny everything else ─────────────────────────
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

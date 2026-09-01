@@ -1,0 +1,1176 @@
+/* ==========================================================================
+   PREPMASTER AUTH — "FOCUS RING" SYSTEM
+   Design language: exam-prep energy, told through one repeating motif —
+   a rotating amber progress ring. It shows up as the logo mark, the
+   password-strength meter, and the OTP countdown, so "time & progress"
+   reads as one visual idea instead of three unrelated widgets.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --bg-void: #050506;
+    --card-bg: rgba(12, 13, 17, 0.66);
+    --card-bg-solid: #101116;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(255, 255, 255, 0.2);
+    --text-primary: #f3f2f0;
+    --text-muted: #8a8a92;
+
+    /* Signature accent: highlighter amber — the "focus ring" color */
+    --accent: #ffb454;
+    --accent-soft: rgba(255, 180, 84, 0.14);
+    --accent-2: #8d7bff;
+
+    --error: #ff5d5d;
+    --error-soft: rgba(255, 93, 93, 0.12);
+    --success: #45d483;
+    --success-soft: rgba(69, 212, 131, 0.12);
+
+    --font-display: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    --ring-track: rgba(255, 255, 255, 0.08);
+    --radius-card: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-void);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+button {
+    font-family: inherit;
+    all: unset;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* Accessibility: `all: unset` above strips native focus rings, so every
+   interactive element gets an explicit one back here. */
+button:focus-visible,
+input:focus-visible,
+.otp-digit:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 6px;
+}
+
+/* ==========================================================================
+   1. Cinematic Mesh Background — grid + drifting blobs + grain
+   ========================================================================== */
+.mesh-bg {
+    position: fixed;
+    inset: 0;
+    background-color: #08080a;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Faint graph-paper grid — a quiet nod to answer sheets, not literal */
+.mesh-bg::before {
+    content: "";
+    position: absolute;
+    inset: -50px;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 34px 34px;
+    animation: grid-drift 40s linear infinite;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 75%);
+}
+
+@keyframes grid-drift {
+    to { transform: translate(34px, 34px); }
+}
+
+/* Film grain */
+.mesh-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><filter id="noiseFilter"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noiseFilter)"/></svg>');
+    opacity: 0.1;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+}
+
+.mesh-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.4;
+    animation: blob-float 25s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.blob-1 {
+    top: -10%; left: -10%;
+    width: 60vw; height: 60vw;
+    background: linear-gradient(to right, #4338ca, #312e81);
+}
+
+.blob-2 {
+    bottom: -20%; right: -10%;
+    width: 70vw; height: 70vw;
+    background: linear-gradient(to top, #7e22ce, #4c1d95);
+    animation-delay: -5s;
+}
+
+/* Amber third blob — warms the palette, echoes the focus-ring accent */
+.blob-3 {
+    top: 40%; left: 50%;
+    width: 38vw; height: 38vw;
+    background: radial-gradient(circle, rgba(255, 180, 84, 0.55), transparent 70%);
+    opacity: 0.25;
+    animation: blob-float 32s infinite alternate-reverse cubic-bezier(0.4, 0, 0.2, 1);
+    animation-delay: -12s;
+}
+
+@keyframes blob-float {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(5%, 8%) scale(1.1); }
+    100% { transform: translate(-3%, 4%) scale(0.95); }
+}
+
+/* ==========================================================================
+   2. Auth Container & Glass Card
+   ========================================================================== */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.premium-auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-card);
+    padding: 2.5rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    box-shadow:
+        0 30px 60px -12px rgba(0, 0, 0, 0.8),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    display: flex;
+    flex-direction: column;
+    animation: card-breathe 6s ease-in-out infinite;
+}
+
+@keyframes card-breathe {
+    0%, 100% { box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 0 0 1px rgba(255, 180, 84, 0.06); }
+    50%      { box-shadow: 0 30px 70px -10px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 42px 1px rgba(255, 180, 84, 0.16); }
+}
+
+/* Cursor spotlight — driven by --spot-x/--spot-y set from JS */
+.premium-auth-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(500px circle at var(--spot-x, 50%) var(--spot-y, 0%), rgba(255, 180, 84, 0.1), transparent 45%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.premium-auth-card:hover::before {
+    opacity: 1;
+}
+
+.premium-auth-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo */
+.auth-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+/* Perforated divider — a quiet "admit one ticket" nod under the logo */
+.auth-logo::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 1px;
+    background-image: repeating-linear-gradient(90deg, var(--border-subtle) 0 5px, transparent 5px 10px);
+}
+
+.auth-logo-ring {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.auth-logo-ring::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 14px;
+    background: conic-gradient(from 0deg, var(--accent), var(--accent-2), transparent 65%, var(--accent));
+    animation: logo-ring-spin 5s linear infinite;
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 5px), #000 calc(100% - 4px));
+}
+
+@keyframes logo-ring-spin {
+    to { transform: rotate(360deg); }
+}
+
+.auth-logo-mark {
+    width: 32px; height: 32px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-word {
+    white-space: nowrap;
+}
+
+.logo-accent {
+    color: var(--accent);
+}
+
+.auth-header {
+    margin-bottom: 1.75rem;
+}
+
+.auth-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.5rem;
+}
+
+.gradient-word {
+    /* Brand palette: amber → warm cream → electric violet */
+    background: linear-gradient(135deg, var(--accent) 0%, #ffdca8 40%, var(--accent-2) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* Animate the gradient shift for a shimmer effect */
+    background-size: 200% auto;
+    animation: gradient-shimmer 4s linear infinite;
+}
+
+@keyframes gradient-shimmer {
+    0%   { background-position: 0% center; }
+    50%  { background-position: 100% center; }
+    100% { background-position: 0% center; }
+}
+
+.auth-subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.auth-content-area {
+    position: relative;
+    /* FIX: allow animated children (email form expanding) to paint correctly */
+    overflow: visible;
+}
+
+/* ==========================================================================
+   3. Segmented Control (Mode Toggle)
+   ========================================================================== */
+.segmented-control {
+    display: flex;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 1.75rem;
+    position: relative;
+    /* FIX: clip the framer-motion layout animation so it never bleeds outside */
+    overflow: hidden;
+}
+
+.segment-btn {
+    flex: 1;
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-align: center;
+    z-index: 1;
+}
+
+.segment-btn.active {
+    /* Deep dark text so it reads well on the amber pill */
+    color: #1a0e00;
+}
+
+.segment-btn:not(.active):hover {
+    color: var(--accent);
+}
+
+.active-segment-bg {
+    position: absolute;
+    inset: 0;
+    /* Brand amber → gold gradient pill */
+    background: linear-gradient(135deg, var(--accent) 0%, #ffd08a 55%, #ffb454 100%);
+    border-radius: 8px;
+    box-shadow:
+        0 2px 14px rgba(255, 180, 84, 0.45),
+        0 0 0 1px rgba(255, 180, 84, 0.3) inset;
+    z-index: 0;
+}
+
+.segment-text {
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.01em;
+}
+
+/* ==========================================================================
+   4. Floating Label Inputs
+   ========================================================================== */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 1.25rem 2.75rem 0.4rem 1rem;
+    color: white;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.input-group label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    pointer-events: none;
+    transition: color 0.2s ease;
+}
+
+/* When focused or has value */
+.input-group input:focus,
+.input-group input:not(:placeholder-shown) {
+    border-color: var(--accent);
+    outline: none;
+    background: rgba(255, 180, 84, 0.04);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: 0.8rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--accent);
+}
+
+.input-group:focus-within .input-icon {
+    color: var(--accent);
+}
+
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    display: flex;
+    transition: color 0.2s;
+}
+
+.password-toggle:hover {
+    color: var(--accent);
+}
+
+/* ==========================================================================
+   5. Premium Buttons — brand-colored creative hover effects
+   ========================================================================== */
+
+/* --- Log In / Submit button: amber liquid-fill sweep --- */
+.premium-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    color: #0d0b08;
+    border-radius: 10px;
+    padding: 0.85rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(255, 255, 255, 0.12);
+    margin-top: 0.25rem;
+    transition: color 0.35s ease, box-shadow 0.35s ease;
+    isolation: isolate;
+}
+
+/* Amber fill that rises from the bottom on hover */
+.premium-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--accent) 0%, #ffd08a 55%, var(--accent-2) 100%);
+    background-size: 200% auto;
+    transform: translateY(100%);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: -1;
+    border-radius: inherit;
+}
+
+/* Shimmer sweep on top of the fill */
+.premium-btn::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -70%;
+    width: 45%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.55s ease;
+    z-index: 1;
+}
+
+.premium-btn:hover:not(:disabled) {
+    color: #0d0b08;
+    box-shadow: 0 6px 24px rgba(255, 180, 84, 0.45), 0 2px 8px rgba(141, 123, 255, 0.25);
+}
+
+.premium-btn:hover:not(:disabled)::before {
+    transform: translateY(0);
+}
+
+.premium-btn:hover:not(:disabled)::after {
+    left: 130%;
+}
+
+.premium-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* --- Google button: subtle border-glow on hover --- */
+.premium-google-btn {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 0.85rem;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.premium-google-btn:hover:not(:disabled) {
+    border-color: rgba(255, 255, 255, 0.28);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Continue with Email: brand amber outline-fill effect --- */
+.premium-email-btn {
+    width: 100%;
+    background: transparent;
+    border: 1.5px solid var(--border-subtle);
+    border-radius: 10px;
+    padding: 0.85rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.35s ease, border-color 0.35s ease;
+    isolation: isolate;
+}
+
+/* Amber color-fill that slides in from the left */
+.premium-email-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, var(--accent) 0%, #ffd08a 50%, rgba(141, 123, 255, 0.6) 100%);
+    background-size: 200% auto;
+    transform: translateX(-105%);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.premium-email-btn:hover:not(:disabled) {
+    color: #0d0b08;
+    border-color: var(--accent);
+}
+
+.premium-email-btn:hover:not(:disabled)::before {
+    transform: translateX(0);
+}
+
+.premium-email-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.auth-buttons-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin: 1.5rem 0;
+}
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.auth-divider span {
+    padding: 0 12px;
+}
+
+/* ==========================================================================
+   6. Step Dots — mirrors real progress through the signup flow
+   ========================================================================== */
+.step-dots {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.step-dot {
+    height: 4px;
+    width: 22px;
+    border-radius: 2px;
+    background: var(--ring-track);
+    transition: background 0.3s ease, width 0.3s ease;
+}
+
+.step-dot.active {
+    background: var(--accent);
+    width: 34px;
+}
+
+.step-dot.done {
+    background: var(--accent);
+    opacity: 0.5;
+}
+
+/* ==========================================================================
+   7. Fintech-Style OTP Inputs
+   ========================================================================== */
+.otp-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.otp-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-soft);
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.otp-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+}
+
+.otp-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 0.5rem;
+}
+
+.otp-desc strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.otp-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 1.5rem 0 1rem;
+    width: 100%;
+}
+
+.otp-digit {
+    width: 3.2rem;
+    height: 3.8rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    color: white;
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    caret-color: transparent;
+}
+
+.otp-digit:focus {
+    border-color: var(--accent);
+    background: rgba(255, 180, 84, 0.06);
+    box-shadow: 0 0 0 3px var(--accent-soft), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.otp-digit.filled {
+    border-color: rgba(255, 180, 84, 0.5);
+    animation: digit-pop 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes digit-pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.12); }
+    100% { transform: scale(1); }
+}
+
+.otp-timer-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.timer-divider {
+    opacity: 0.5;
+}
+
+.timer-ring-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.timer-ring {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.6s linear;
+}
+
+.timer-ring-inner {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--card-bg-solid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+}
+
+.timer-ring-wrap.expired .timer-ring-inner {
+    color: var(--error);
+}
+
+.timer-text {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+}
+
+.timer-text.expired {
+    color: var(--error);
+}
+
+.resend-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.resend-btn:disabled {
+    color: var(--text-muted);
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.resend-btn.spin-anim svg {
+    animation: spin 0.8s linear infinite;
+}
+
+/* ==========================================================================
+   8. Password Strength — ring meter
+   ========================================================================== */
+.strength-meter-container {
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.strength-ring-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.strength-ring {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.4s ease;
+}
+
+.strength-ring-inner {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--card-bg-solid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.strength-text {
+    font-size: 0.78rem;
+    line-height: 1.3;
+}
+
+/* ==========================================================================
+   9. Errors & Success & Utilities
+   ========================================================================== */
+.error-box {
+    background: var(--error-soft);
+    border: 1px solid rgba(255, 93, 93, 0.25);
+    color: var(--error);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+}
+
+.error-box svg {
+    flex-shrink: 0;
+    animation: icon-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes icon-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.auth-success {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--success);
+    background: var(--success-soft);
+    border: 1px solid rgba(69, 212, 131, 0.25);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.mini-spin {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top-color: currentColor;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    animation: spin 0.8s linear infinite;
+}
+
+.mini-spin.white {
+    border-color: rgba(255, 255, 255, 0.2);
+    border-top-color: white;
+}
+
+.mini-spin-dark {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top-color: black;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.forgot-link {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    transition: color 0.2s;
+    text-align: right;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+}
+.forgot-link:hover {
+    color: var(--accent);
+}
+
+.google-icon-svg {
+    width: 18px;
+    height: 18px;
+}
+
+.google-new-user-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.8);
+}
+
+.modal-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+}
+
+.modal-subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   10. Responsive
+   ========================================================================== */
+@media (max-width: 480px) {
+    .premium-auth-card {
+        padding: 1.75rem 1.25rem;
+        border-radius: 16px;
+    }
+    .otp-digit {
+        width: 2.6rem;
+        height: 3.3rem;
+        font-size: 1.25rem;
+    }
+    .auth-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   11. Motion accessibility
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==========================================================================
+   LAYOUT OVERRIDE: Auth page lives inside Layout's <main> which has
+   padding: 2rem 0. We need to negate that so the auth card is truly centered
+   in the viewport. The .auth-container already handles its own min-height.
+   ========================================================================== */
+main:has(.auth-container) {
+    padding: 0 !important;
+}
+
+/* ==========================================================================
+   12. New elements (signup v2)
+   ========================================================================== */
+
+/* "← Other sign-up options" back link */
+.back-method-btn {
+    all: unset;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    margin-bottom: 0.75rem;
+    transition: color 0.2s;
+}
+.back-method-btn:hover {
+    color: var(--accent);
+}
+
+/* Google profile modal — avatar */
+.modal-avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.modal-avatar-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid var(--border-subtle);
+    object-fit: cover;
+}
+.modal-avatar-placeholder {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    border: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+/* Success message box */
+.auth-success {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.65rem 1rem;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: var(--success-soft);
+    border: 1px solid rgba(69, 212, 131, 0.25);
+    color: var(--success);
+    width: 100%;
+}
+
+/* Resend button disabled state */
+.resend-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Success Overlay — Google Pay-inspired animated success screen
+   ========================================================================== */
+
+.success-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(5, 5, 6, 0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+/* The ripple rings that emanate outward */
+.success-ripple {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.6) 0%, rgba(139, 92, 246, 0.2) 60%, transparent 100%);
+    pointer-events: none;
+}
+
+/* The main card (circle + text) */
+.success-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* The circular container holding the ring SVG + checkmark */
+.success-circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Subtle inner glow matching gradient */
+    filter: drop-shadow(0 0 28px rgba(99, 102, 241, 0.55));
+}
+
+/* The spinning gradient ring */
+.success-ring-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    overflow: visible;
+}
+
+/* The checkmark SVG, centered over the ring */
+.success-check-svg {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    z-index: 2;
+}
+
+/* Background fill circle inside the ring */
+.success-circle::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border-radius: 50%;
+    background: radial-gradient(135deg, rgba(59, 130, 246, 0.18) 0%, rgba(139, 92, 246, 0.22) 60%, rgba(219, 39, 119, 0.12) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.success-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #f3f2f0;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.success-subtitle {
+    font-size: 0.925rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.65;
+    margin: 0;
+    max-width: 260px;
+}
+
+.success-redirect-hint {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    margin-top: 4px;
+}
