@@ -1174,3 +1174,59 @@ main:has(.auth-container) {
     display: inline-block;
     margin-top: 4px;
 }
+
+/* ==========================================================================
+   GREEN SUCCESS OVERLAY — PrepMaster
+   ========================================================================== */
+
+.success-overlay {
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(34, 197, 94, 0.08),
+            rgba(5, 10, 7, 0.94) 52%
+        );
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.success-ripple {
+    background:
+        radial-gradient(
+            circle,
+            rgba(34, 197, 94, 0.5) 0%,
+            rgba(16, 185, 129, 0.18) 55%,
+            transparent 100%
+        );
+}
+
+.success-circle {
+    filter:
+        drop-shadow(0 0 18px rgba(34, 197, 94, 0.32))
+        drop-shadow(0 0 46px rgba(22, 163, 74, 0.18));
+}
+
+.success-circle::before {
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            rgba(134, 239, 172, 0.18),
+            rgba(34, 197, 94, 0.11) 48%,
+            rgba(22, 163, 74, 0.06) 100%
+        );
+
+    border: 1px solid rgba(74, 222, 128, 0.24);
+
+    box-shadow:
+        inset 0 0 24px rgba(34, 197, 94, 0.08),
+        0 0 24px rgba(34, 197, 94, 0.08);
+}
+
+.success-title {
+    text-shadow:
+        0 0 28px rgba(34, 197, 94, 0.10);
+}
+
+.success-redirect-hint {
+    color: rgba(134, 239, 172, 0.50);
+}

@@ -5,10 +5,25 @@ import {
     Mail, Eye, EyeOff, Shield, AlertCircle,
     Clock, RefreshCw, CheckCircle2, ArrowLeft
 } from 'lucide-react';
+import {
+    GoogleAuthProvider,
+    getRedirectResult,
+    signInWithRedirect
+} from 'firebase/auth';
+import { auth } from '../firebase';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../firebase';
 import { useAuth } from '../context/AuthContext';
 import { createAndSendOTP, verifyOTP } from '../utils/otpService';
 import { checkPasswordStrength } from '../utils/passwordStrength';
 import './Auth.css';
+
+const GOOGLE_REDIRECT_PENDING_KEY = 'prepmaster_google_signup_pending';
+
+const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({
+    prompt: 'select_account',
+});
 
 // NOTE: This file has been patched — all animation race conditions fixed.
 
@@ -21,27 +36,36 @@ const SVG_DEFS = (
     <svg width="0" height="0" style={{ position: 'absolute' }}>
         <defs>
             <linearGradient id="pm-successGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#3b82f6" />
-                <stop offset="50%" stopColor="#8b5cf6" />
-                <stop offset="100%" stopColor="#db2777" />
+                <stop offset="0%" stopColor="#86efac" />
+                <stop offset="45%" stopColor="#34d399" />
+                <stop offset="100%" stopColor="#16a34a" />
             </linearGradient>
+
             <linearGradient id="pm-checkGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#60a5fa" />
-                <stop offset="100%" stopColor="#c084fc" />
+                <stop offset="0%" stopColor="#bbf7d0" />
+                <stop offset="100%" stopColor="#22c55e" />
             </linearGradient>
         </defs>
     </svg>
 );
 
 function SuccessOverlay({ userName, isLogin, onDone }) {
-    const [phase, setPhase] = useState('enter'); // 'enter' → 'fly'
+    const [phase, setPhase] = useState('enter');
 
     useEffect(() => {
-        const t1 = setTimeout(() => setPhase('fly'), 2100);
-        const t2 = setTimeout(() => onDone(), 2800);
-        return () => { clearTimeout(t1); clearTimeout(t2); };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+        const flyTimer = setTimeout(() => {
+            setPhase('fly');
+        }, 2200);
+
+        const doneTimer = setTimeout(() => {
+            onDone();
+        }, 3000);
+
+        return () => {
+            clearTimeout(flyTimer);
+            clearTimeout(doneTimer);
+        };
+    }, [onDone]);
 
     const firstName = (userName || 'there').split(' ')[0];
 
@@ -51,68 +75,110 @@ function SuccessOverlay({ userName, isLogin, onDone }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.35 }}
         >
             {SVG_DEFS}
 
-            {/* Ripple rings */}
             {phase === 'enter' && [
-                { delay: 0.55, s: 1.7, o: 0.20 },
-                { delay: 0.85, s: 2.4, o: 0.12 },
-                { delay: 1.15, s: 3.1, o: 0.07 },
+                { delay: 0.45, s: 1.65, o: 0.18 },
+                { delay: 0.75, s: 2.25, o: 0.12 },
+                { delay: 1.05, s: 2.9, o: 0.07 },
             ].map((r, i) => (
                 <motion.div
                     key={i}
                     className="success-ripple"
-                    initial={{ scale: 1, opacity: 0 }}
-                    animate={{ scale: r.s, opacity: [0, r.o, 0] }}
-                    transition={{ delay: r.delay, duration: 1.3, ease: 'easeOut' }}
+                    initial={{ scale: 0.7, opacity: 0 }}
+                    animate={{
+                        scale: r.s,
+                        opacity: [0, r.o, 0],
+                    }}
+                    transition={{
+                        delay: r.delay,
+                        duration: 1.35,
+                        ease: 'easeOut',
+                    }}
                 />
             ))}
 
             <motion.div
                 className="success-card"
-                initial={{ scale: 0.45, opacity: 0, y: 20 }}
-                animate={phase === 'fly'
-                    ? { scale: 0.2, opacity: 0, x: '44vw', y: '-44vh' }
-                    : { scale: 1, opacity: 1, y: 0 }
+                initial={{
+                    scale: 0.45,
+                    opacity: 0,
+                    y: 24,
+                }}
+                animate={
+                    phase === 'fly'
+                        ? {
+                            scale: 0.22,
+                            opacity: 0,
+                            x: '42vw',
+                            y: '-42vh',
+                        }
+                        : {
+                            scale: 1,
+                            opacity: 1,
+                            x: 0,
+                            y: 0,
+                        }
                 }
-                transition={phase === 'fly'
-                    ? { duration: 0.6, ease: [0.4, 0, 0.6, 1] }
-                    : { type: 'spring', stiffness: 180, damping: 16, delay: 0.1 }
+                transition={
+                    phase === 'fly'
+                        ? {
+                            duration: 0.7,
+                            ease: [0.32, 0.72, 0, 1],
+                        }
+                        : {
+                            type: 'spring',
+                            stiffness: 180,
+                            damping: 16,
+                            delay: 0.08,
+                        }
                 }
             >
                 <div className="success-circle">
-                    {/* Ring SVG — rotated via CSS so framer-motion only handles strokeDashoffset */}
                     <svg
                         className="success-ring-svg"
                         viewBox="0 0 100 100"
                         fill="none"
                         style={{ transform: 'rotate(-90deg)' }}
                     >
-                        <circle cx="50" cy="50" r="44"
-                            stroke="rgba(255,255,255,0.08)" strokeWidth="5"
+                        <circle
+                            cx="50"
+                            cy="50"
+                            r="44"
+                            stroke="rgba(255,255,255,0.08)"
+                            strokeWidth="5"
                         />
+
                         <motion.circle
-                            cx="50" cy="50" r="44"
+                            cx="50"
+                            cy="50"
+                            r="44"
                             stroke="url(#pm-successGrad)"
                             strokeWidth="5"
                             strokeLinecap="round"
                             strokeDasharray={276.46}
                             initial={{ strokeDashoffset: 276.46 }}
                             animate={{ strokeDashoffset: 0 }}
-                            transition={{ duration: 1.0, ease: [0.4, 0, 0.2, 1], delay: 0.25 }}
+                            transition={{
+                                duration: 1,
+                                ease: [0.4, 0, 0.2, 1],
+                                delay: 0.2,
+                            }}
                         />
                     </svg>
 
-                    {/* Checkmark SVG */}
                     <motion.svg
                         className="success-check-svg"
                         viewBox="0 0 52 52"
                         fill="none"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ delay: 1.0, duration: 0.15 }}
+                        transition={{
+                            delay: 0.85,
+                            duration: 0.2,
+                        }}
                     >
                         <motion.path
                             d="M13 27 L21 35 L39 18"
@@ -123,7 +189,11 @@ function SuccessOverlay({ userName, isLogin, onDone }) {
                             strokeDasharray={44}
                             initial={{ strokeDashoffset: 44 }}
                             animate={{ strokeDashoffset: 0 }}
-                            transition={{ duration: 0.5, ease: 'easeOut', delay: 1.05 }}
+                            transition={{
+                                duration: 0.55,
+                                ease: 'easeOut',
+                                delay: 0.9,
+                            }}
                         />
                     </motion.svg>
                 </div>
@@ -132,19 +202,34 @@ function SuccessOverlay({ userName, isLogin, onDone }) {
                     className="success-title"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1.35, duration: 0.45 }}
+                    transition={{
+                        delay: 1.15,
+                        duration: 0.45,
+                    }}
                 >
-                    {isLogin ? `Welcome back, ${firstName}!` : `Welcome, ${firstName}!`}
+                    {isLogin
+                        ? `Welcome back, ${firstName}!`
+                        : `Welcome, ${firstName}!`}
                 </motion.h2>
+
                 <motion.p
                     className="success-subtitle"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 1.55, duration: 0.45 }}
+                    transition={{
+                        delay: 1.35,
+                        duration: 0.45,
+                    }}
                 >
-                    {isLogin ? 'Logged in successfully.' : 'Account created successfully.'}
+                    {isLogin
+                        ? 'Logged in successfully.'
+                        : 'Your account has been created successfully.'}
+
                     <br />
-                    <span className="success-redirect-hint">Taking you to your dashboard…</span>
+
+                    <span className="success-redirect-hint">
+                        Opening your dashboard…
+                    </span>
                 </motion.p>
             </motion.div>
         </motion.div>
@@ -257,10 +342,13 @@ export default function Signup() {
     const [searchParams] = useSearchParams();
 
     const {
-        currentUser, login, signupWithEmail,
-        signInWithGoogle, completeGoogleProfile,
-        checkEmailExists, sendPasswordReset,
-    } = useAuth();
+    currentUser,
+    login,
+    signupWithEmail,
+    completeGoogleProfile,
+    checkEmailExists,
+    sendPasswordReset,
+} = useAuth();
 
     // Read ?mode=signup|login and ?method=email|google from URL
     const urlMode   = searchParams.get('mode');   // 'signup' | 'login'
@@ -287,15 +375,107 @@ export default function Signup() {
     // triggers our redirect useEffect. If React hasn't flushed setSuccessData yet,
     // the effect would see successData===null and redirect, skipping the animation.
     const successDataRef = useRef(null);
-    const authActionPending = useRef(false); // Blocks redirect while auth is resolving
-    const [successData, setSuccessData] = useState(null);
+
+const googleRedirectPendingOnLoad =
+    typeof window !== 'undefined' &&
+    sessionStorage.getItem(GOOGLE_REDIRECT_PENDING_KEY) === '1';
+
+const authActionPending = useRef(googleRedirectPendingOnLoad);
+
+const [successData, setSuccessData] = useState(null);
 
     // Atomic setter
     const showSuccess = useCallback((data) => {
         successDataRef.current = data;
         setSuccessData(data);
     }, []);
+// ============================================================================
+// Google Redirect Completion
+// ============================================================================
 
+useEffect(() => {
+    const pending =
+        typeof window !== 'undefined' &&
+        sessionStorage.getItem(GOOGLE_REDIRECT_PENDING_KEY) === '1';
+
+    if (!pending) return;
+
+    let cancelled = false;
+
+    authActionPending.current = true;
+    setGoogleLoading(true);
+    setGlobalError('');
+
+    const finishGoogleRedirect = async () => {
+        try {
+            // Firebase normally returns the redirect result here. On some
+            // browsers/setups the result can already have been consumed while
+            // auth.currentUser is still correctly populated. Support both.
+            let redirectResult = null;
+
+            try {
+                redirectResult = await getRedirectResult(auth);
+            } catch (redirectError) {
+                // If Firebase has already restored the authenticated user, the
+                // redirect itself succeeded. We can continue using currentUser.
+                if (!auth.currentUser) {
+                    throw redirectError;
+                }
+            }
+
+            if (cancelled) return;
+
+            const user = redirectResult?.user || auth.currentUser;
+
+            if (!user) {
+                sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
+                authActionPending.current = false;
+                setGlobalError('Google sign-in did not complete. Please try again.');
+                return;
+            }
+
+            // Determine new/existing user from our own source of truth: the
+            // students collection. This also works when getRedirectResult()
+            // returns null after Firebase restores the session.
+            const studentSnap = await getDoc(doc(db, 'students', user.uid));
+            const isNewUser = !studentSnap.exists();
+
+            if (isNewUser) {
+                await completeGoogleProfile(
+                    user,
+                    user.displayName || user.email || 'Student'
+                );
+            }
+
+            if (cancelled) return;
+
+            sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
+
+            showSuccess({
+                name: user.displayName || user.email || 'Student',
+                isLogin: !isNewUser,
+            });
+        } catch (err) {
+            if (cancelled) return;
+
+            sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
+            authActionPending.current = false;
+
+            const msg = getFriendlyError(err);
+            setGlobalError(msg || 'Google sign-in failed. Please try again.');
+        } finally {
+            if (!cancelled) {
+                setGoogleLoading(false);
+            }
+        }
+    };
+
+    finishGoogleRedirect();
+
+    return () => {
+        cancelled = true;
+    };
+}, [completeGoogleProfile, showSuccess]);
     // CRITICAL FIX: Check BOTH refs. If an action is pending or success overlay is active, DO NOT redirect yet.
     useEffect(() => {
         if (currentUser && !successDataRef.current && !authActionPending.current) {
@@ -310,34 +490,50 @@ export default function Signup() {
         navigate('/dashboard', { replace: true });
     }, [navigate]);
 
-    // Auto-trigger Google sign-in when ?method=google is in URL
+    // Auto-trigger Google redirect when ?method=google is in URL
     const googleAutoFired = useRef(false);
+
     useEffect(() => {
-        if (urlMethod === 'google' && !googleAutoFired.current && !currentUser) {
+        const redirectPending =
+            typeof window !== 'undefined' &&
+            sessionStorage.getItem(GOOGLE_REDIRECT_PENDING_KEY) === '1';
+
+        if (
+            urlMethod === 'google' &&
+            !googleAutoFired.current &&
+            !currentUser &&
+            !redirectPending
+        ) {
             googleAutoFired.current = true;
             handleGoogleSignIn();
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [urlMethod]);
+    }, [urlMethod, currentUser]);
 
-    // ─── Google Handler ──────────────────────────────────────────────────────
+    // ─── Google Redirect Sign-Up ─────────────────────────────────────────────
     const handleGoogleSignIn = async () => {
+        if (googleLoading) return;
+
         setGoogleLoading(true);
         setGlobalError('');
-        authActionPending.current = true; // Block auto-redirect
+        authActionPending.current = true;
+
+        // This survives the full-page redirect to Google and back.
+        sessionStorage.setItem(
+            GOOGLE_REDIRECT_PENDING_KEY,
+            '1'
+        );
+
         try {
-            const { user, isNewUser } = await signInWithGoogle();
-            if (isNewUser) {
-                // Auto-save to Firestore using Google profile data, no extra form
-                await completeGoogleProfile(user, user.displayName || '');
-            }
-            showSuccess({ name: user.displayName || user.email, isLogin: !isNewUser });
+            await signInWithRedirect(auth, googleProvider);
         } catch (err) {
-            authActionPending.current = false; // Unblock if failed
-            const msg = getFriendlyError(err);
-            if (msg) setGlobalError(msg);
-        } finally {
+            sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
+            authActionPending.current = false;
             setGoogleLoading(false);
+
+            const msg = getFriendlyError(err);
+            if (msg) {
+                setGlobalError(msg);
+            }
         }
     };
 
@@ -718,19 +914,32 @@ function SignupForm({ checkEmailExists, signupWithEmail, onShowSuccess, onAuthSt
                 name={name.trim()}
                 onBack={() => setStep('details')}
                 onSuccess={async () => {
-                    // CRITICAL FIX: call showSuccess (via onShowSuccess) BEFORE awaiting
-                    // signupWithEmail. This sets successDataRef synchronously so Firebase's
-                    // onAuthStateChanged callback sees the ref truthy and navigation is blocked.
-                    if (onAuthStart) onAuthStart(); // Block auto-redirect completely
-                    onShowSuccess({ name: name.trim(), isLogin: false });
+                    if (onAuthStart) onAuthStart();
+
                     try {
-                        await signupWithEmail(email, password, name.trim());
+                        await signupWithEmail(
+                            email,
+                            password,
+                            name.trim()
+                        );
+
+                        // Only show success after Firebase + Firestore succeed.
+                        onShowSuccess({
+                            name: name.trim(),
+                            isLogin: false,
+                        });
                     } catch (err) {
-                        if (onAuthEnd) onAuthEnd(); // Unblock
-                        // If account creation fails after OTP, hide overlay and show error
+                        if (onAuthEnd) onAuthEnd();
+
                         onShowSuccess(null);
+
                         const msg = getFriendlyError(err);
-                        setError(msg || 'Failed to create account. Please try again.');
+
+                        setError(
+                            msg ||
+                            'Failed to create account. Please try again.'
+                        );
+
                         setStep('details');
                     }
                 }}
