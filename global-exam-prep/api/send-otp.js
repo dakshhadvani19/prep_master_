@@ -1,5 +1,45 @@
 import nodemailer from 'nodemailer';
 
+// ─── Guards ──────────────────────────────────────────────────────────────────
+
+/** Minimal HTML escaping; the template interpolates this into the body. */
+function escapeHtml(value) {
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+const WINDOW_MS     = 10 * 60 * 1000;
+const MAX_PER_EMAIL = 5;   // codes per address per window
+const MAX_PER_IP     = 12;  // requests per IP per window
+const emailHits = new Map();
+const ipHits    = new Map();
+
+function slide(map, key, max) {
+    const now = Date.now();
+    const kept = (map.get(key) || []).filter(t => now - t < WINDOW_MS);
+    if (kept.length >= max) {
+        const retryIn = Math.ceil((WINDOW_MS - (now - kept[0])) / 1000);
+        map.set(key, kept);
+        return retryIn;
+    }
+    kept.push(now);
+    map.set(key, kept);
+    return 0;
+}
+
+function checkRateLimit(email, ip) {
+    // Evict occasionally so long-lived instances do not grow without bound.
+    if (emailHits.size > 5000 || ipHits.size > 5000) {
+        emailHits.clear();
+        ipHits.clear();
+    }
+    return Math.max(slide(emailHits, email, MAX_PER_EMAIL), slide(ipHits, ip, MAX_PER_IP));
+}
+
 export default async function handler(req, res) {
     // ─── CORS preflight ───────────────────────────────────────────────────────
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -20,6 +60,38 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: 'Missing email or OTP' });
     }
 
+    // ─── Validation ───────────────────────────────────────────────────────────
+    // This endpoint is unauthenticated, so it must not be usable as a generic
+    // mail relay or as an HTML-injection sink into our own email template.
+    const cleanEmail = String(email).trim().toLowerCase();
+
+    if (!/^[^@\s]{1,64}@[^@\s.]{1,253}$/.test(cleanEmail) || !cleanEmail.includes('.', cleanEmail.indexOf('@'))) {
+        return res.status(400).json({ error: 'Invalid email address.' });
+    }
+
+    // The OTP is rendered at 56px in a monospace block — it must be exactly
+    // 6 digits and nothing else, or it becomes arbitrary markup in the body.
+    if (!/^\d{6}$/.test(String(otp))) {
+        return res.status(400).json({ error: 'Invalid verification code.' });
+    }
+
+    // Stripped of tags/quotes and length-capped before it reaches the template.
+    const safeName = escapeHtml(
+        String(userName || '').replace(/\s+/g, ' ').trim().slice(0, 60)
+    ) || 'there';
+
+    // ─── Rate limit (per instance) ────────────────────────────────────────────
+    // Vercel edge instances are short-lived, so this is a blunt but real
+    // deterrent against hammering one address or spraying many. The client also
+    // enforces a 60s resend cooldown.
+    const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'unknown';
+    const limited = checkRateLimit(cleanEmail, ip);
+    if (limited) {
+        return res.status(429).json({
+            error: `Too many codes requested. Try again in ${limited}s.`,
+        });
+    }
+
     const gmailUser = process.env.GMAIL_USER;
     const gmailPass = process.env.GMAIL_APP_PASSWORD;
 
@@ -28,7 +100,7 @@ export default async function handler(req, res) {
     }
 
     // ─── Email HTML ───────────────────────────────────────────────────────────
-    const firstName = (userName || 'there').split(' ')[0];
+    const firstName = safeName.split(' ')[0];
 
     const html = `<!DOCTYPE html>
 <html lang="en">
@@ -138,7 +210,7 @@ export default async function handler(req, res) {
 
         const mailOptions = {
             from: `"PrepMaster" <${gmailUser}>`,
-            to: email,
+            to: cleanEmail,
             subject: `${otp} — your PrepMaster verification code`,
             html: html
         };

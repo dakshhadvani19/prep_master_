@@ -3,16 +3,50 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
-// Your web app's Firebase configuration
-// REPLACE WITH YOUR ACTUAL FIREBASE CONFIG
-const firebaseConfig = {
-    apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyDummyKeyForDevelopmentPurposes",
-    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "your-app.firebaseapp.com",
-    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "your-app",
-    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "your-app.appspot.com",
-    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "1234567890",
-    appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:1234567890:web:abcdef123456"
+// ---------------------------------------------------------------------------
+// Firebase configuration — supplied by VITE_FIREBASE_* environment variables.
+// Nothing secret lives here: these values are safe to expose to the browser
+// (that is how Firebase works); the thing that must stay private is the
+// Firestore security rules and the server-only GMAIL_* credentials used by
+// /api/send-otp.
+//
+// To find your values: Firebase console -> Project settings -> General ->
+// "Your apps" -> SDK setup and configuration -> Web app -> Config.
+// ---------------------------------------------------------------------------
+const rawConfig = {
+    apiKey:             import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain:         import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId:          import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket:      import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId:  import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId:              import.meta.env.VITE_FIREBASE_APP_ID,
 };
+
+const PLACEHOLDER = /AIzaSyDummyKeyForDevelopmentPurposes|your-app|1234567890:web|abcdef123456/i;
+
+const missingKeys = Object.entries(rawConfig)
+    .filter(([, value]) => !value || PLACEHOLDER.test(String(value)))
+    .map(([key]) => key);
+
+/**
+ * Non-null when the app has no usable Firebase project. AuthContext reads this
+ * so the UI can explain the problem instead of hanging on a loading spinner.
+ */
+export const firebaseConfigError = missingKeys.length
+    ? 'Firebase is not configured for this deployment. Set the VITE_FIREBASE_* '
+      + 'environment variables (see .env.example) and redeploy. Missing: '
+      + missingKeys.join(', ')
+    : null;
+
+// Fall back to inert placeholders so `initializeApp` cannot crash the whole
+// bundle at import time while a preview build is misconfigured. Importing this
+// module should always succeed; auth should fail loudly, not silently.
+const firebaseConfig = Object.fromEntries(
+    Object.entries(rawConfig).map(([key, value]) => [
+        key,
+        value && !PLACEHOLDER.test(String(value)) ? value : 'invalid-config',
+    ])
+);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -25,3 +59,5 @@ export const db = getFirestore(app);
 
 // Initialize Firebase Storage
 export const storage = getStorage(app);
+
+export { app };

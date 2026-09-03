@@ -1,15 +1,36 @@
 /**
- * OTP Service — generates, stores, and verifies one-time passwords.
+ * otpService.js — email one-time codes for student registration.
  *
- * Security model:
- *  - OTP is cryptographically random (crypto.getRandomValues)
- *  - Only the SHA-256 hash is stored in Firestore — raw OTP is never persisted
- *  - Email is used as document key (base64-encoded) → 1 active OTP per email at all times
- *  - Expires in 10 minutes; max 3 wrong attempts before automatic invalidation
+ * Security model
+ *  - OTP is 6 digits from crypto.getRandomValues (never Math.random).
+ *  - Only the SHA-256 digest is written to Firestore; the raw code is never
+ *    persisted and is sent straight to the /api/send-otp serverless function.
+ *  - Document ID is `<base64url(email)>~<random nonce>`.
+ *      The email half keeps one active challenge per address.
+ *      The nonce half is held by *this* browser in sessionStorage, so another
+ *      client cannot locate, read, overwrite, or pre-seed your pending
+ *      challenge, and cannot enumerate who is mid-signup. `otp_tokens` also has
+ *      `list` denied in firestore.rules, so the collection is unscrapeable.
+ *  - Expires after 10 minutes; 3 wrong attempts then the record is destroyed.
+ *    The attempt counter is advanced with a Firestore atomic increment because
+ *    firestore.rules only permits `attempts` to move up by 1, so a client can
+ *    no longer reset the lockout by rewriting the document.
  */
 
-import { doc, setDoc, getDoc, deleteDoc } from 'firebase/firestore';
+import {
+    doc,
+    setDoc,
+    getDoc,
+    deleteDoc,
+    updateDoc,
+    increment,
+} from 'firebase/firestore';
 import { db } from '../firebase';
+
+const OTP_TTL_MS      = 10 * 60 * 1000; // 10 minutes, matches the email copy
+const MAX_ATTEMPTS    = 3;
+const RESEND_COOLDOWN = 60;           // seconds; UI must not block for the TTL
+const NONCE_PREFIX    = 'pm_otp_nonce_';
 
 // ─── Crypto helpers ────────────────────────────────────────────────────────────
 
@@ -27,105 +48,207 @@ async function sha256(str) {
         .join('');
 }
 
-/** Converts an email address to a safe Firestore document ID */
-function emailToDocId(email) {
+function randomNonce() {
+    const arr = new Uint8Array(12);
+    crypto.getRandomValues(arr);
+    return Array.from(arr).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+/** base64url of the normalised email — the stable half of the document key. */
+function emailToKeyPart(email) {
     return btoa(email.trim().toLowerCase())
         .replace(/\//g, '-')
         .replace(/\+/g, '_')
         .replace(/=/g, '');
 }
 
+function nonceStorageKey(email) {
+    return NONCE_PREFIX + emailToKeyPart(email);
+}
+
+function rememberNonce(email, nonce) {
+    try { sessionStorage.setItem(nonceStorageKey(email), nonce); } catch { /* private mode */ }
+}
+
+function recallNonce(email) {
+    try { return sessionStorage.getItem(nonceStorageKey(email)); } catch { return null; }
+}
+
+function forgetNonce(email) {
+    try { sessionStorage.removeItem(nonceStorageKey(email)); } catch { /* noop */ }
+}
+
+/**
+ * Resolves the document ID for an in-flight challenge.
+ * A fresh ID is derived for issuing; verification requires the nonce this
+ * browser was given, so a challenge can never be resolved "blind".
+ */
+function docIdFor(email, nonce) {
+    return `${emailToKeyPart(email)}~${nonce}`;
+}
+
 // ─── Public API ────────────────────────────────────────────────────────────────
 
 /**
- * Creates an OTP record in Firestore and sends the email via the /api/send-otp serverless function.
- * Any previous OTP for this email is atomically overwritten.
+ * Issues a challenge, then emails it. A previous OTP for this address is
+ * superseded (its doc is deleted first) so exactly one is ever live.
  *
- * @param {string} email - Recipient email address
- * @param {string} userName - Display name for the email greeting
- * @returns {Promise<true>}
+ * @param {string} email
+ * @param {string} userName - first name used in the email greeting
+ * @returns {Promise<{sentAt: number, resendAfter: number, expiresAt: number}>}
+ * @throws {Error} user-facing message
  */
 export async function createAndSendOTP(email, userName) {
-    const otp     = generateOTP();
-    const otpHash = await sha256(otp);
-    const docId   = emailToDocId(email);
+    const cleanEmail = String(email || '').trim().toLowerCase();
 
-    const now       = new Date();
-    const expiresAt = new Date(now.getTime() + 10 * 60 * 1000); // +10 min
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(cleanEmail)) {
+        throw new Error('Please enter a valid email address.');
+    }
 
-    // Overwrite any existing OTP for this email (1-per-email guarantee)
+    // Throttle rapid re-issues (the API also rate-limits, this saves the round-trip).
+    const previousNonce = recallNonce(cleanEmail);
+    const now = Date.now();
+    if (previousNonce) {
+        const prev = await getDoc(doc(db, 'otp_tokens', docIdFor(cleanEmail, previousNonce)))
+            .catch(() => null);
+        const prevCreatedAt = prev?.exists() ? Date.parse(prev.data().createdAt) : 0;
+        if (prevCreatedAt && now - prevCreatedAt < RESEND_COOLDOWN * 1000) {
+            const wait = Math.ceil((RESEND_COOLDOWN * 1000 - (now - prevCreatedAt)) / 1000);
+            throw new Error(`Please wait ${wait}s before requesting another code.`);
+        }
+        // Supersede the old challenge so the emailed code stops working.
+        await deleteDoc(doc(db, 'otp_tokens', docIdFor(cleanEmail, previousNonce)))
+            .catch(() => {});
+    }
+
+    const otp       = generateOTP();
+    const otpHash   = await sha256(otp);
+    const nonce     = randomNonce();
+    const docId     = docIdFor(cleanEmail, nonce);
+    const createdAt = new Date(now);
+    const expiresAt = new Date(now + OTP_TTL_MS);
+
     await setDoc(doc(db, 'otp_tokens', docId), {
-        email:     email.trim().toLowerCase(),
+        email:     cleanEmail,
         otpHash,
-        createdAt: now.toISOString(),
+        createdAt: createdAt.toISOString(),
         expiresAt: expiresAt.toISOString(),
         attempts:  0,
     });
 
-    const res = await fetch('/api/send-otp', {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ email, otp, userName }),
-    });
+    try {
+        const res = await fetch('/api/send-otp', {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify({ email: cleanEmail, otp, userName }),
+        });
 
-    if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        // Roll back Firestore write so user can try again
+        if (!res.ok) {
+            const body = await res.json().catch(() => ({}));
+            throw new Error(body.error || 'Failed to send the verification email.');
+        }
+    } catch (err) {
+        // Roll back so the address is free to retry immediately.
         await deleteDoc(doc(db, 'otp_tokens', docId)).catch(() => {});
-        throw new Error(body.error || 'Failed to send verification email. Please try again.');
+        forgetNonce(cleanEmail);
+        throw new Error(
+            err instanceof Error && err.message
+                ? err.message
+                : 'Could not reach the email service. Please try again.'
+        );
     }
 
-    return true;
+    // Only remember the nonce once the code is demonstrably in flight.
+    rememberNonce(cleanEmail, nonce);
+
+    return {
+        sentAt:      now,
+        resendAfter: RESEND_COOLDOWN,
+        expiresAt:   expiresAt.getTime(),
+    };
 }
 
 /**
- * Verifies a submitted OTP against the stored hash.
+ * Checks a submitted code against the stored digest.
+ * Resolves with the verified email on success and destroys the challenge
+ * (single use). Throws a user-facing Error otherwise.
  *
- * @param {string} email - The email address to verify
- * @param {string} submittedOTP - The raw 6-digit code entered by the user
- * @returns {Promise<true>} Resolves on success
- * @throws {Error} With a user-friendly message on failure
+ * @param {string} email
+ * @param {string} submittedOTP
+ * @returns {Promise<string>} the verified, normalised email
  */
 export async function verifyOTP(email, submittedOTP) {
-    const docId  = emailToDocId(email);
-    const docRef = doc(db, 'otp_tokens', docId);
+    const cleanEmail = String(email || '').trim().toLowerCase();
+    const code       = String(submittedOTP || '').trim();
+
+    if (!/^\d{6}$/.test(code)) {
+        throw new Error('Enter the 6-digit code from your email.');
+    }
+
+    const nonce = recallNonce(cleanEmail);
+    if (!nonce) {
+        throw new Error('No verification is in progress. Please request a new code.');
+    }
+
+    const docRef = doc(db, 'otp_tokens', docIdFor(cleanEmail, nonce));
     const snap   = await getDoc(docRef);
 
     if (!snap.exists()) {
+        forgetNonce(cleanEmail);
         throw new Error('No verification code found. Please request a new one.');
     }
 
     const data = snap.data();
 
-    // ── Expiry check ──
-    if (new Date() > new Date(data.expiresAt)) {
-        await deleteDoc(docRef);
+    // Defence in depth: the digest must belong to this address.
+    if (data.email && data.email !== cleanEmail) {
+        await deleteDoc(docRef).catch(() => {});
+        forgetNonce(cleanEmail);
+        throw new Error('This verification request is invalid. Please start again.');
+    }
+
+    if (Date.now() > Date.parse(data.expiresAt)) {
+        await deleteDoc(docRef).catch(() => {});
+        forgetNonce(cleanEmail);
         throw new Error('Your code has expired. Please request a new one.');
     }
 
-    // ── Max attempts check ──
-    if (data.attempts >= 3) {
-        await deleteDoc(docRef);
+    const attempts = Number(data.attempts ?? 0);
+    if (attempts >= MAX_ATTEMPTS) {
+        await deleteDoc(docRef).catch(() => {});
+        forgetNonce(cleanEmail);
         throw new Error('Too many incorrect attempts. Please request a new code.');
     }
 
-    // ── Hash comparison ──
-    const submittedHash = await sha256(submittedOTP.trim());
+    const submittedHash = await sha256(code);
 
     if (submittedHash !== data.otpHash) {
-        const newAttempts = data.attempts + 1;
-        await setDoc(docRef, { ...data, attempts: newAttempts });
+        const remaining = MAX_ATTEMPTS - (attempts + 1);
 
-        if (newAttempts >= 3) {
-            await deleteDoc(docRef);
+        // Atomic increment: rules allow attempts to advance by exactly 1.
+        await updateDoc(docRef, { attempts: increment(1) }).catch(() => {});
+
+        if (remaining <= 0) {
+            await deleteDoc(docRef).catch(() => {});
+            forgetNonce(cleanEmail);
             throw new Error('Too many incorrect attempts. Please request a new code.');
         }
 
-        const remaining = 3 - newAttempts;
-        throw new Error(`Incorrect code — ${remaining} attempt${remaining === 1 ? '' : 's'} remaining.`);
+        throw new Error(
+            `Incorrect code — ${remaining} attempt${remaining === 1 ? '' : 's'} remaining.`
+        );
     }
 
-    // ── Success: delete the used token ──
-    await deleteDoc(docRef);
-    return true;
+    // Single use: burn the challenge before the caller creates the account.
+    await deleteDoc(docRef).catch(() => {});
+    forgetNonce(cleanEmail);
+
+    return cleanEmail;
 }
+
+/** Milliseconds left before a resend is allowed (0 when allowed now). */
+export function resendCooldownRemaining(msSinceSent) {
+    return Math.max(0, RESEND_COOLDOWN * 1000 - msSinceSent);
+}
+
+export { OTP_TTL_MS, MAX_ATTEMPTS, RESEND_COOLDOWN };

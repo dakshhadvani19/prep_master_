@@ -257,7 +257,7 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
     const submitExam = async (answers, questions) => {
         if (!examInfo || !questions || isSubmitting) return;
         if (!currentUser) {
-            navigate('/login', { state: { from: location }, replace: true });
+            navigate('/signup?mode=login', { state: { from: location }, replace: true });
             return;
         }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Mail, Eye, EyeOff, Shield, AlertCircle,
@@ -14,7 +14,7 @@ import { auth } from '../firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useAuth } from '../context/AuthContext';
-import { createAndSendOTP, verifyOTP } from '../utils/otpService';
+import { createAndSendOTP, verifyOTP, RESEND_COOLDOWN } from '../utils/otpService';
 import { checkPasswordStrength } from '../utils/passwordStrength';
 import './Auth.css';
 
@@ -241,25 +241,35 @@ function SuccessOverlay({ userName, isLogin, onDone }) {
 // 1. Reusable Components
 // ============================================================================
 
-const FloatingInput = ({ label, type = 'text', ...props }) => (
-    <div className="input-group">
-        <input required type={type} placeholder=" " {...props} />
-        <label>{label}</label>
-    </div>
-);
+const fieldId = (label) =>
+    `fld-${String(label).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
 
-const PasswordInput = ({ label, value, onChange }) => {
+const FloatingInput = ({ label, type = 'text', id, ...props }) => {
+    const inputId = id || fieldId(label);
+    return (
+        <div className="input-group">
+            <input id={inputId} required type={type} placeholder=" " {...props} />
+            <label htmlFor={inputId}>{label}</label>
+        </div>
+    );
+};
+
+const PasswordInput = ({ label, value, onChange, name, autoComplete }) => {
     const [show, setShow] = useState(false);
+    const inputId = fieldId(label);
     return (
         <div className="input-group">
             <input
+                id={inputId}
                 required
+                name={name}
                 type={show ? 'text' : 'password'}
                 value={value}
                 onChange={onChange}
+                autoComplete={autoComplete}
                 placeholder=" "
             />
-            <label>{label}</label>
+            <label htmlFor={inputId}>{label}</label>
             <motion.button
                 type="button"
                 className="password-toggle"
@@ -323,7 +333,7 @@ function getFriendlyError(err) {
     if (code.includes('email-already-in-use'))      return 'This email is already registered. Try logging in instead.';
     if (code.includes('user-not-found'))             return 'No account found with this email.';
     if (code.includes('wrong-password') || code.includes('invalid-credential')) return 'Incorrect email or password. Please try again.';
-    if (code.includes('weak-password'))              return 'Please choose a stronger password (at least 6 characters).';
+    if (code.includes('weak-password'))              return 'Please choose a stronger password (at least 8 characters).';
     if (code.includes('too-many-requests'))          return 'Too many attempts. Please wait a moment and try again.';
     if (code.includes('network-request-failed'))     return 'Connection issue. Please check your internet and try again.';
     if (code.includes('popup-closed-by-user') || code.includes('cancelled-popup-request')) return null; // silent
@@ -339,33 +349,59 @@ function getFriendlyError(err) {
 
 export default function Signup() {
     const navigate = useNavigate();
-    const [searchParams] = useSearchParams();
+    const location = useLocation();
+    const [searchParams, setSearchParams] = useSearchParams();
 
     const {
-    currentUser,
-    login,
-    signupWithEmail,
-    completeGoogleProfile,
-    checkEmailExists,
-    sendPasswordReset,
-} = useAuth();
+        currentUser,
+        login,
+        signupWithEmail,
+        completeGoogleProfile,
+        sendPasswordReset,
+    } = useAuth();
 
-    // Read ?mode=signup|login and ?method=email|google from URL
-    const urlMode   = searchParams.get('mode');   // 'signup' | 'login'
-    const urlMethod = searchParams.get('method'); // 'email'  | 'google'
+    // ─── The URL is the single source of truth ───────────────────────────────
+    //   ?mode=signup|login     -> which tab is showing
+    //   ?method=email|google   -> email form is open / Google popup was requested
+    //
+    // Both the tab and the email step are *derived* from the query string rather
+    // than mirrored into useState. Mirroring is what produced the reported bug:
+    // the navbar links pushed ?mode=... into the URL, a one-shot effect copied it
+    // into state on mount, and afterwards clicking a tab called setState without
+    // touching the URL. The two then disagreed, so a refresh (or a Google
+    // redirect round-trip) snapped the page back to whichever tab the stale URL
+    // named — looking exactly like "?mode=signup doesn't work".
+    const urlMode   = searchParams.get('mode') === 'login' ? 'login' : 'signup';
+    const urlMethod = searchParams.get('method'); // 'email' | 'google' | null
 
-    // emailOpen: whether to show the email form directly (skip button picker)
-    // IMPORTANT: declared BEFORE the URL-sync useEffect that calls setEmailOpen
-    const [emailOpen, setEmailOpen] = useState(urlMethod === 'email');
+    const mode      = urlMode;
+    const emailOpen = urlMethod === 'email';
 
-    const [mode, setMode] = useState(urlMode === 'login' ? 'login' : 'signup');
+    /** Patches the query string; pass null to drop a key. */
+    const writeParams = useCallback((patch, { replace = true } = {}) => {
+        setSearchParams((prev) => {
+            const next = new URLSearchParams(prev);
+            Object.entries(patch).forEach(([key, value]) => {
+                if (value === null || value === undefined) next.delete(key);
+                else next.set(key, value);
+            });
+            return next;
+        }, { replace });
+    }, [setSearchParams]);
 
-    // Sync mode when URL params change (e.g. /signup?mode=login redirect)
-    useEffect(() => {
-        setMode(urlMode === 'login' ? 'login' : 'signup');
-        setEmailOpen(urlMethod === 'email');
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [urlMode, urlMethod]);
+    // Selecting a tab now rewrites the URL, so the address bar, browser
+    // back/forward, refreshes and copy-pasted links always match the screen.
+    const setMode = useCallback((next) => {
+        writeParams({ mode: next === 'login' ? 'login' : 'signup', method: null });
+    }, [writeParams]);
+
+    const setEmailOpen = useCallback((open) => {
+        writeParams({ method: open ? 'email' : null });
+    }, [writeParams]);
+
+    // Where to land after a successful login/signup: the page that bounced the
+    // visitor here via ProtectedRoute, if there was one.
+    const resumePath = location.state?.from?.pathname || '/dashboard';
 
     const [googleLoading, setGoogleLoading] = useState(false);
     const [globalError,   setGlobalError]   = useState('');
@@ -479,16 +515,16 @@ useEffect(() => {
     // CRITICAL FIX: Check BOTH refs. If an action is pending or success overlay is active, DO NOT redirect yet.
     useEffect(() => {
         if (currentUser && !successDataRef.current && !authActionPending.current) {
-            navigate('/dashboard', { replace: true });
+            navigate(resumePath, { replace: true });
         }
-    }, [currentUser, navigate]);
+    }, [currentUser, navigate, resumePath]);
 
     // Callback when success animation finishes → navigate
     const handleSuccessDone = useCallback(() => {
         successDataRef.current = null;
         authActionPending.current = false;
-        navigate('/dashboard', { replace: true });
-    }, [navigate]);
+        navigate(resumePath, { replace: true });
+    }, [navigate, resumePath]);
 
     // Auto-trigger Google redirect when ?method=google is in URL
     const googleAutoFired = useRef(false);
@@ -505,6 +541,9 @@ useEffect(() => {
             !redirectPending
         ) {
             googleAutoFired.current = true;
+            // Clear the trigger before navigating away so a cancelled/failed
+            // round-trip cannot re-fire it on the next mount.
+            writeParams({ method: null });
             handleGoogleSignIn();
         }
     }, [urlMethod, currentUser]);
@@ -598,8 +637,10 @@ useEffect(() => {
                     <SegmentedControl
                         active={mode}
                         onChange={(newMode) => {
+                            // setMode writes ?mode= and clears ?method= in a
+                            // single navigation — do not follow it with another
+                            // setSearchParams() or the two updaters will fight.
                             setMode(newMode);
-                            setEmailOpen(false);
                             setGlobalError('');
                         }}
                     />
@@ -724,7 +765,6 @@ useEffect(() => {
                                             </button>
                                             <div className="auth-divider"><span>Enter your details</span></div>
                                             <SignupForm
-                                                checkEmailExists={checkEmailExists}
                                                 signupWithEmail={signupWithEmail}
                                                 onAuthStart={() => { authActionPending.current = true; }}
                                                 onAuthEnd={() => { authActionPending.current = false; }}
@@ -758,7 +798,7 @@ useEffect(() => {
 // ============================================================================
 // 3. Login Form
 // ============================================================================
-function LoginForm({ login, sendPasswordReset, onSuccess, onAuthStart, onAuthEnd }) {
+function LoginForm({ login, sendPasswordReset, onSuccess, onAuthStart, onAuthEnd, onSwitch }) {
     const [email,     setEmail]     = useState('');
     const [password,  setPassword]  = useState('');
     const [loading,   setLoading]   = useState(false);
@@ -830,7 +870,14 @@ function LoginForm({ login, sendPasswordReset, onSuccess, onAuthStart, onAuthEnd
                 )}
             </AnimatePresence>
 
-            <FloatingInput label="Email address" type="email" value={email} onChange={e => setEmail(e.target.value)} />
+            <FloatingInput
+                label="Email address"
+                type="email"
+                name="email"
+                autoComplete="email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+            />
 
             <AnimatePresence>
                 {!resetMode && (
@@ -841,7 +888,13 @@ function LoginForm({ login, sendPasswordReset, onSuccess, onAuthStart, onAuthEnd
                         exit={{ opacity: 0, height: 0 }}
                         style={{ overflow: 'hidden' }}
                     >
-                        <PasswordInput label="Password" value={password} onChange={e => setPassword(e.target.value)} />
+                        <PasswordInput
+                            label="Password"
+                            value={password}
+                            name="current-password"
+                            autoComplete="current-password"
+                            onChange={e => setPassword(e.target.value)}
+                        />
                     </motion.div>
                 )}
             </AnimatePresence>
@@ -863,6 +916,15 @@ function LoginForm({ login, sendPasswordReset, onSuccess, onAuthStart, onAuthEnd
             >
                 {loading ? <div className="mini-spin-dark" /> : (resetMode ? 'Send Reset Link' : 'Log in')}
             </motion.button>
+
+            {!resetMode && (
+                <div className="auth-switch-hint">
+                    <span>New to PrepMaster?</span>
+                    <button type="button" className="auth-switch-link" onClick={onSwitch}>
+                        Create an account
+                    </button>
+                </div>
+            )}
         </form>
     );
 }
@@ -870,7 +932,7 @@ function LoginForm({ login, sendPasswordReset, onSuccess, onAuthStart, onAuthEnd
 // ============================================================================
 // 4. Signup Form + OTP Logic
 // ============================================================================
-function SignupForm({ checkEmailExists, signupWithEmail, onShowSuccess, onAuthStart, onAuthEnd }) {
+function SignupForm({ signupWithEmail, onShowSuccess, onAuthStart, onAuthEnd, onSwitch }) {
     const [step, setStep] = useState('details');
 
     const [name,     setName]     = useState('');
@@ -879,29 +941,46 @@ function SignupForm({ checkEmailExists, signupWithEmail, onShowSuccess, onAuthSt
     const [loading,  setLoading]  = useState(false);
     const [error,    setError]    = useState('');
 
-    const [strengthState, setStrengthState] = useState({ score: 0, message: '', requirements: {} });
+    const [emailTaken, setEmailTaken] = useState(false);
+
+    // checkPasswordStrength() returns null while the field is empty, which is the
+    // only reason the meter stays hidden.
+    const [strengthState, setStrengthState] = useState(null);
     useEffect(() => {
-        setStrengthState(checkPasswordStrength(password) || { score: 0, message: '', requirements: {} });
+        setStrengthState(checkPasswordStrength(password));
     }, [password]);
 
     const handleDetailsSubmit = async (e) => {
         e.preventDefault();
         setError('');
+        setEmailTaken(false);
 
-        if (!name.trim())           return setError('Please enter your full name.');
-        if (strengthState.score < 2) return setError('Please choose a stronger password (score ≥ 2).');
+        if (!name.trim()) return setError('Please enter your full name.');
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(email).trim())) {
+            return setError('Please enter a valid email address.');
+        }
+        if (!strengthState?.isAcceptable) {
+            return setError('Please choose a stronger password (at least 8 characters, mix of cases, a number and a symbol).');
+        }
 
         setLoading(true);
         try {
-            const exists = await checkEmailExists(email);
-            if (exists) {
-                setError('An account with this email already exists. Try logging in.');
-                return;
-            }
+            // No "does this email exist?" pre-flight query: answering it from the
+            // client would need a public read on the students collection, which is
+            // an account-enumeration oracle. Firebase reports the collision itself
+            // (auth/email-already-in-use) once we try to create the account, and
+            // the OTP is deliberately sent *before* that, so a real collision is
+            // surfaced on the next step.
             await createAndSendOTP(email, name.trim());
             setStep('otp');
         } catch (err) {
-            setError(err.message || 'Failed to send OTP. Please try again.');
+            const message = err.message || 'Failed to send OTP. Please try again.';
+            if (err.code === 'auth/email-already-in-use') {
+                setError(message);
+                setEmailTaken(true);
+            } else {
+                setError(message);
+            }
         } finally {
             setLoading(false);
         }
@@ -935,12 +1014,18 @@ function SignupForm({ checkEmailExists, signupWithEmail, onShowSuccess, onAuthSt
 
                         const msg = getFriendlyError(err);
 
+                        if (err?.code === 'auth/email-already-in-use') {
+                            setEmailTaken(true);
+                            // The code was already consumed; keep the user on the
+                            // details step so they can log in with the existing
+                            // account instead of staring at a dead OTP screen.
+                            setStep('details');
+                        }
+
                         setError(
                             msg ||
                             'Failed to create account. Please try again.'
                         );
-
-                        setStep('details');
                     }
                 }}
             />
@@ -968,19 +1053,41 @@ function SignupForm({ checkEmailExists, signupWithEmail, onShowSuccess, onAuthSt
             <FloatingInput label="Email address"  type="email" value={email}    onChange={e => setEmail(e.target.value)} />
 
             <div style={{ width: '100%' }}>
-                <PasswordInput label="Create Password" value={password} onChange={e => setPassword(e.target.value)} />
+                <PasswordInput
+                label="Create Password"
+                value={password}
+                name="new-password"
+                autoComplete="new-password"
+                onChange={e => setPassword(e.target.value)}
+            />
                 {password && <PasswordStrength state={strengthState} />}
             </div>
+
+            {emailTaken && (
+                <div className="auth-switch-hint" role="status">
+                    <span>Already registered with this email?</span>
+                    <button type="button" className="auth-switch-link" onClick={onSwitch}>
+                        Log in instead
+                    </button>
+                </div>
+            )}
 
             <motion.button
                 type="submit"
                 className="premium-btn"
-                disabled={loading || strengthState.score < 2}
+                disabled={loading || !strengthState?.isAcceptable}
                 whileHover={{ y: -1 }}
                 whileTap={{ scale: 0.98 }}
             >
                 {loading ? <div className="mini-spin-dark" /> : 'Continue →'}
             </motion.button>
+
+            <div className="auth-switch-hint">
+                <span>Already have an account?</span>
+                <button type="button" className="auth-switch-link" onClick={onSwitch}>
+                    Log in
+                </button>
+            </div>
         </form>
     );
 }
@@ -992,15 +1099,23 @@ function OTPStep({ email, name, onBack, onSuccess }) {
     const [digits,   setDigits]   = useState(['', '', '', '', '', '']);
     const [loading,  setLoading]  = useState(false);
     const [error,    setError]    = useState('');
-    const [timeLeft, setTimeLeft] = useState(600); // 10 min
+    // Two separate clocks. The code is valid for 10 minutes; a *resend* is only
+    // allowed once a minute. Previously a single `timeLeft` (600) gated the
+    // resend button, so "Resend code" stayed dead for the full ten minutes even
+    // though the email itself promised a 10-minute window.
+    const [expiresIn, setExpiresIn] = useState(600); // code lifetime
+    const [cooldown,  setCooldown]  = useState(RESEND_COOLDOWN); // resend wait
     const inputRefs = useRef([]);
 
     // FIX: Prevent double-submission from auto-submit racing with button click
     const verifyingRef = useRef(false);
 
-    // Countdown timer
+    // Countdown timers
     useEffect(() => {
-        const timer = setInterval(() => setTimeLeft(t => t > 0 ? t - 1 : 0), 1000);
+        const timer = setInterval(() => {
+            setExpiresIn(t => (t > 0 ? t - 1 : 0));
+            setCooldown(c => (c > 0 ? c - 1 : 0));
+        }, 1000);
         return () => clearInterval(timer);
     }, []);
 
@@ -1061,7 +1176,8 @@ function OTPStep({ email, name, onBack, onSuccess }) {
         setLoading(true); setError('');
         try {
             await createAndSendOTP(email, name);
-            setTimeLeft(600);
+            setExpiresIn(600);
+            setCooldown(RESEND_COOLDOWN);
             setDigits(['', '', '', '', '', '']);
             verifyingRef.current = false;
         } catch (err) {
@@ -1116,18 +1232,25 @@ function OTPStep({ email, name, onBack, onSuccess }) {
             </div>
 
             <div className="otp-timer-row">
-                <TimerRing timeLeft={timeLeft} />
+                <TimerRing timeLeft={expiresIn} />
                 <span className="timer-divider">•</span>
                 <motion.button
                     type="button"
-                    className={`resend-btn ${timeLeft > 0 ? 'disabled' : ''}`}
+                    className={`resend-btn ${cooldown > 0 ? 'disabled' : ''}`}
                     onClick={handleResend}
-                    disabled={timeLeft > 0 || loading}
+                    disabled={cooldown > 0 || expiresIn <= 0 || loading}
                     whileTap={{ scale: 0.95 }}
                 >
-                    <RefreshCw size={14} /> Resend code
+                    <RefreshCw size={14} />
+                    {cooldown > 0 ? `Resend in ${cooldown}s` : 'Resend code'}
                 </motion.button>
             </div>
+
+            {expiresIn <= 0 && (
+                <p className="otp-expired" role="status">
+                    This code has expired. Request a new one to continue.
+                </p>
+            )}
 
             <div style={{ display: 'flex', gap: '10px', marginTop: '1rem' }}>
                 <motion.button
@@ -1175,23 +1298,45 @@ function StepDots({ step }) {
 }
 
 function PasswordStrength({ state }) {
-    if (!state?.message) return null;
-    const colors = ['#ff5d5d', '#ffb454', '#45d483', '#45d483'];
-    const pct    = (Math.max(state.score, 0) / 4) * 100;
-    const color  = state.score > 0 ? colors[state.score - 1] : 'rgba(255,255,255,0.15)';
+    // checkPasswordStrength() returns null for an empty field, which is the only
+    // case in which this renders nothing.
+    if (!state) return null;
+
+    const pct   = Math.max(0, Math.min(100, state.percent ?? 0));
+    const color = state.color || 'rgba(255,255,255,0.15)';
+    const checks = state.checks || {};
+
     return (
         <div className="strength-meter-container">
             <div className="strength-ring-wrap">
                 <div
                     className="strength-ring"
                     style={{ background: `conic-gradient(${color} ${pct}%, var(--ring-track) ${pct}%)` }}
+                    role="img"
+                    aria-label={`Password strength: ${state.label || 'unknown'}, ${pct}%`}
                 >
                     <div className="strength-ring-inner">{state.score}</div>
                 </div>
-                <div className="strength-text" style={{ color: state.score < 2 ? 'var(--error)' : 'var(--text-muted)' }}>
-                    {state.message}
+                <div
+                    className="strength-text"
+                    style={{ color: state.isAcceptable ? 'var(--text-muted)' : 'var(--error)' }}
+                >
+                    {state.label}
                 </div>
             </div>
+
+            {Object.keys(checks).length > 0 && (
+                <ul className="strength-requirements" aria-label="Password requirements">
+                    {Object.entries(checks).map(([key, item]) => (
+                        <li key={key} className={item.pass ? 'met' : 'unmet'}>
+                            {item.pass
+                                ? <CheckCircle2 size={12} aria-hidden="true" />
+                                : <AlertCircle size={12} aria-hidden="true" />}
+                            {item.label}
+                        </li>
+                    ))}
+                </ul>
+            )}
         </div>
     );
 }

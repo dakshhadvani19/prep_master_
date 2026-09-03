@@ -4,9 +4,9 @@
  * Wraps routes that require authentication (and optionally a specific role).
  *
  * Usage:
- *   <ProtectedRoute>                         – any authenticated user
- *   <ProtectedRoute requiredRole="admin">    – must be admin or superAdmin
- *   <ProtectedRoute requiredRole="superAdmin">– must be superAdmin only
+ *   <ProtectedRoute>                          – any signed-in student
+ *   <ProtectedRoute requiredRole="admin">     – admin or superAdmin
+ *   <ProtectedRoute requiredRole="superAdmin">– superAdmin only
  */
 
 import React from 'react';
@@ -14,25 +14,42 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 export default function ProtectedRoute({ children, requiredRole }) {
-    const { currentUser, isAdmin, isSuperAdmin, authLoading } = useAuth();
+    const { currentUser, hasRole, authLoading } = useAuth();
     const location = useLocation();
 
-    // Still resolving initial auth state — render nothing (spinner is in AuthProvider)
+    // Still resolving initial auth state — render nothing (AuthProvider shows
+    // its own full-page loader).
     if (authLoading) return null;
 
-    // Not logged in → send to signup, preserving intended destination
+    // Not logged in → send to the auth page with the Log in tab pre-selected,
+    // and remember where they were headed so signup/login can return them there.
+    // `mode=login` is written into the URL (not just state) so the tab survives
+    // a refresh and the link stays shareable.
     if (!currentUser) {
-        return <Navigate to="/signup" state={{ from: location }} replace />;
+        return (
+            <Navigate
+                to="/signup?mode=login"
+                state={{ from: location }}
+                replace
+            />
+        );
     }
 
-    // Role checks
-    if (requiredRole === 'superAdmin' && !isSuperAdmin) {
-        // Regular admin or student trying to access super-admin-only route
-        return <Navigate to={isAdmin ? '/admin/dashboard' : '/dashboard'} replace />;
+    // Role checks. Admin landing page is the syllabus manager until the admin
+    // area grows more pages — /admin/dashboard does not exist as a route, so
+    // sending anyone there produced a 404.
+    const adminHome = '/admin/syllabus';
+
+    if (requiredRole === 'superAdmin' && !hasRole('superAdmin')) {
+        return (
+            <Navigate
+                to={hasRole('admin') ? adminHome : '/dashboard'}
+                replace
+            />
+        );
     }
 
-    if (requiredRole === 'admin' && !isAdmin) {
-        // Student trying to access admin route
+    if (requiredRole === 'admin' && !hasRole('admin')) {
         return <Navigate to="/dashboard" replace />;
     }
 

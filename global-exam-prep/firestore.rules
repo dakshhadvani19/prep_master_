@@ -1,57 +1,212 @@
 rules_version = '2';
 
+// ============================================================================
+// PrepMaster Firestore Security Rules  (auth-complete student model)
+//
+// Schema reference: SRS/ER_Diagram_last_updated_25_8.jpg
+//   Students{ StudentId PK, FullName, Email, Password, IsSpam }
+//   Admins  { AdminId   PK, FullName, Email, Password, isSuperAdmin }
+//
+// In Firestore, `students/{uid}` is the student profile (doc ID = Firebase
+// Auth UID) and `passwordHash` satisfies the ER "Password" attribute — it
+// stores a salted PBKDF2 digest, never the raw password. Firebase Auth is the
+// credential that is actually verified at login; this field exists for the
+// ER-required attribute and for out-of-band recovery.
+//
+// Admin authentication is intentionally NOT wired up yet (owner's instruction).
+// Role checks below read `students/{uid}.role`, so an admin is bootstrapped by
+// flipping `role` to 'admin' / 'superAdmin' in the Firebase console (the
+// console bypasses rules, and the self-write rules below refuse to let a
+// student change their own role — no privilege escalation from the client).
+// ============================================================================
+
 service cloud.firestore {
   match /databases/{database}/documents {
 
-    // ─── Users collection ─────────────────────────────────────────
-    // Users can read and write their own document only.
-    match /users/{userId} {
-      allow read:   if request.auth != null && request.auth.uid == userId;
-      allow create: if request.auth != null && request.auth.uid == userId;
-      allow update: if request.auth != null && request.auth.uid == userId;
-      allow delete: if false; // no deletions from client
+    // ─── Shared helpers ─────────────────────────────────────────────────────
+    function isSignedIn() {
+      return request.auth != null;
     }
 
-    // ─── OTP Tokens collection ────────────────────────────────────
-    // Unauthenticated clients may read/write their own OTP doc
-    // (needed because OTP is verified BEFORE account creation).
-    // Document ID is base64(email) — no user-identifiable compound key.
-    // The actual OTP is never stored (only its SHA-256 hash).
-    // Documents auto-expire after 10 minutes (enforced in app logic).
+    function isSelf(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // Reads the caller's own profile. Wrapped so a missing profile never
+    // throws inside a rule evaluation.
+    function myProfile() {
+      return exists(/databases/$(database)/documents/students/$(request.auth.uid))
+        ? get(/databases/$(database)/documents/students/$(request.auth.uid)).data
+        : {};
+    }
+
+    function isAdmin() {
+      return isSignedIn() && myProfile().role in ['admin', 'superAdmin'];
+    }
+
+    function isSuperAdmin() {
+      return isSignedIn() && myProfile().role == 'superAdmin';
+    }
+
+    // A profile document must be internally consistent and must never carry a
+    // privilege the caller is not entitled to.
+    function validStudentProfile(userId) {
+      let p = request.resource.data;
+      return isSignedIn()
+        && request.auth.uid == userId
+        && p.uid == userId
+        && 'email' in request.auth.token
+        && p.email == request.auth.token.email.lower()
+        && p.studentId is int && p.studentId > 0
+        && p.fullName is string && p.fullName.size() > 0 && p.fullName.size() <= 120
+        && p.email is string && p.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
+        && p.isSpam is bool
+        && p.provider in ['email', 'google']
+        && p.providers is list
+        && p.createdAt is string
+        // Null-then-size ordering matters: rules have no optional chaining, so
+        // `p.x == null || p.x.size()` must be written in that exact order.
+        && (p.passwordHash == null || (p.passwordHash is string && p.passwordHash.size() <= 200))
+        && (p.photoURL == null || (p.photoURL is string && p.photoURL.size() <= 2048))
+        && !('isAdmin' in p.keys())
+        && !('isSuperAdmin' in p.keys());
+    }
+
+    // ─── Student profiles ───────────────────────────────────────────────────
+    // A signed-in student may read and create/update ONLY their own profile.
+    // Role is immutable from the client, which blocks self-promotion.
+    match /students/{userId} {
+      allow get:  if isSelf(userId) || isAdmin();
+      allow list: if isAdmin();
+
+      allow create: if validStudentProfile(userId)
+                    && request.resource.data.role == 'student';
+
+      allow update: if isSelf(userId)
+                    // Identity + entitlement fields are immutable from the client.
+                    && !request.resource.data.diff(resource.data)
+                         .affectedKeys()
+                         .hasAny(['role', 'uid', 'email', 'studentId', 'createdAt', 'provider'])
+                    && request.resource.data.role == resource.data.role;
+
+      // Accounts are deleted by an admin (or the console), never from a client.
+      allow delete: if isSuperAdmin();
+    }
+
+    // ─── Admin accounts (created in DB; admin auth flow not implemented) ────
+    match /admins/{adminId} {
+      allow read:  if isAdmin();
+      allow write: if isSuperAdmin();
+    }
+
+    // ─── Auto-increment counters (students/admins IDs) ──────────────────────
+    // Any signed-in user may allocate an ID when creating their own profile,
+    // but the counters may only ever move forward and only via these fields.
+    match /meta/{counterId} {
+      allow read: if isSignedIn();
+
+      allow create: if isSignedIn()
+                    && counterId == 'counters'
+                    && request.resource.data.diff({
+                         studentCount: 0, adminCount: 0
+                       }).affectedKeys().hasOnly(['studentCount', 'adminCount'])
+                    && request.resource.data.studentCount is int
+                    && request.resource.data.adminCount is int
+                    && request.resource.data.studentCount >= 0
+                    && request.resource.data.adminCount >= 0;
+
+      allow update: if isSignedIn()
+                    && counterId == 'counters'
+                    && request.resource.data.diff(resource.data)
+                         .affectedKeys().hasOnly(['studentCount', 'adminCount'])
+                    && request.resource.data.studentCount >= resource.data.studentCount
+                    && request.resource.data.adminCount >= resource.data.adminCount;
+    }
+
+    // ─── Email OTP tokens ───────────────────────────────────────────────────
+    // Document ID is `<base64url(email)>~<random nonce>`: the nonce is held by
+    // the browser that started the flow (sessionStorage), so a stranger cannot
+    // locate, pre-seed, or read another person's pending challenge.
+    // The raw OTP is NEVER stored — only a SHA-256 digest — and only
+    // single-document `get` is allowed, so the collection cannot be listed or
+    // scraped. `update` may only advance the attempt counter, so a client
+    // cannot reset the 3-strike lockout.
+    function otpShapeValid() {
+      let p = request.resource.data;
+      return p.keys().hasOnly(['email', 'otpHash', 'createdAt', 'expiresAt', 'attempts'])
+        && p.keys().hasAll(['email', 'otpHash', 'createdAt', 'expiresAt', 'attempts'])
+        && p.attempts == 0
+        && p.otpHash is string
+        && p.otpHash.matches('^[0-9a-f]{64}$')
+        && p.email is string
+        && p.email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
+        && p.createdAt is string
+        && p.expiresAt is string
+        && p.expiresAt > p.createdAt;
+    }
+
     match /otp_tokens/{tokenId} {
-      allow read, write: if true; // public — but only hashes stored, no PII
+      allow get:    if true;   // requires knowledge of the nonce in the ID
+      allow list:   if false;  // never enumerable
+      allow create: if otpShapeValid();
+      allow update: if request.resource.data.diff(resource.data)
+                        .affectedKeys().hasOnly(['attempts'])
+                    && request.resource.data.attempts == resource.data.attempts + 1
+                    && request.resource.data.attempts <= 3;
+      allow delete: if true;   // consumed on verify, or rolled back on send failure
     }
 
-    // ─── Syllabus / Course data ───────────────────────────────────
-    // Read-only for authenticated users; admin writes handled server-side.
+    // ─── Per-user exam history (subcollection of `users`) ────────────────────
+    // Dashboard / ExamPortal / ReviewPage read+write here.
+    match /users/{userId} {
+      allow read, write: if isSelf(userId);
+    }
+
+    match /users/{userId}/examHistory/{historyId} {
+      allow read:   if isSelf(userId);
+      allow create: if isSelf(userId)
+                    && request.resource.data.userId == userId;
+      allow update: if isSelf(userId)
+                    && request.resource.data.userId == resource.data.userId;
+      allow delete: if isSelf(userId) || isAdmin();
+    }
+
+    // ─── Public curriculum content ──────────────────────────────────────────
+    // Anyone can browse syllabus data; only staff can author it.
+    function syllabusWriteAllowed() {
+      return isAdmin();
+    }
+
     match /domains/{docId} {
       allow read: if true;
-      allow write: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+      allow write: if syllabusWriteAllowed();
     }
 
     match /courses/{docId} {
       allow read: if true;
-      allow write: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+      allow write: if syllabusWriteAllowed();
     }
 
     match /subjects/{docId} {
       allow read: if true;
-      allow write: if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+      allow write: if syllabusWriteAllowed();
     }
 
-    // ─── Feedback ────────────────────────────────────────────────
+    match /syllabuses/{docId} {
+      allow read: if true;
+      allow write: if syllabusWriteAllowed();
+    }
+
+    // ─── Feedback ───────────────────────────────────────────────────────────
     match /feedback/{docId} {
-      allow create: if request.auth != null;
-      allow read:   if request.auth != null && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+      // FeedbackPage is a public route, so anonymous submissions are allowed.
+      allow create: if true;
+      allow read:   if isAdmin();
+      allow update: if isAdmin();
+      allow delete: if isSuperAdmin();
     }
 
-    // ─── Exam history (stored by user) ───────────────────────────
-    match /examHistory/{docId} {
-      allow read, write: if request.auth != null && request.auth.uid == resource.data.userId;
-      allow create:      if request.auth != null && request.resource.data.userId == request.auth.uid;
-    }
-
-    // ─── Catch-all: deny everything else ─────────────────────────
+    // ─── Anything not named above is denied ─────────────────────────────────
     match /{document=**} {
       allow read, write: if false;
     }

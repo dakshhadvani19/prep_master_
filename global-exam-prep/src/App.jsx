@@ -27,6 +27,22 @@ function ScrollToTop() {
   return null;
 }
 
+/**
+ * Redirects the legacy /login (and /register) URLs to the unified auth page
+ * while carrying `location.state` across. A bare <Navigate to="..."/> would
+ * discard it, which silently broke "return to the page you came from".
+ */
+function ForwardToAuth({ mode }) {
+  const location = useLocation();
+  return (
+    <Navigate
+      to={{ pathname: '/signup', search: `?mode=${mode}` }}
+      state={location.state}
+      replace
+    />
+  );
+}
+
 function NotFound() {
   return (
     <div style={{ textAlign: 'center', padding: '6rem 1.5rem' }}>
@@ -59,7 +75,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route index element={<LandingPage />} />
-                <Route path="login" element={<Navigate to="/signup?mode=login" replace />} />
+                <Route path="login" element={<ForwardToAuth mode="login" />} />
+                <Route path="register" element={<ForwardToAuth mode="signup" />} />
                 <Route path="signup" element={<Signup />} />
                 <Route path="domains/:domainId/courses" element={<CourseExplorer />} />
                 <Route path="search" element={<SearchResults />} />
@@ -93,7 +110,7 @@ function App() {
                 <Route
                   path="admin/syllabus"
                   element={
-                    <ProtectedRoute>
+                    <ProtectedRoute requiredRole="admin">
                       <SyllabusAdmin />
                     </ProtectedRoute>
                   }

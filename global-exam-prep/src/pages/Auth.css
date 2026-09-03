@@ -1230,3 +1230,64 @@ main:has(.auth-container) {
 .success-redirect-hint {
     color: rgba(134, 239, 172, 0.50);
 }
+
+
+/* ── Auth mode switch links (login <-> signup) ───────────────────────────── */
+.auth-switch-hint {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.9rem;
+    width: 100%;
+    font-size: 0.85rem;
+    color: var(--text-muted, #9ca3af);
+}
+
+.auth-switch-link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 650;
+    color: var(--accent-primary, #60a5fa);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.auth-switch-link:hover { color: #93c5fd; }
+.auth-switch-link:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; border-radius: 3px; }
+
+/* ── Password requirement checklist ──────────────────────────────────────── */
+.strength-requirements {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.25rem 0.75rem;
+}
+
+.strength-requirements li {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.74rem;
+    line-height: 1.5;
+    color: var(--text-muted, #9ca3af);
+}
+
+.strength-requirements li.met   { color: #45d483; }
+.strength-requirements li.unmet { color: #7f8794; }
+
+/* ── OTP expiry notice ───────────────────────────────────────────────────── */
+.otp-expired {
+    margin: 0.75rem 0 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fbbf24;
+}

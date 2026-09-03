@@ -37,3 +37,9 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
+# But keep the documented template
+!.env.example
+
+# Local dev-preview shim (sandbox host allowlist); not part of the app
+vite.config.preview.mjs
+global-exam-prep/vite.config.preview.mjs

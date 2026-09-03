@@ -222,10 +222,13 @@ Firestore Security Rules: global-exam-prep/firestore.rules
   8. CURRENT OPEN TASKS / KNOWN ISSUES
 ==============================================================================
 
-  [BUG - PRIORITY]
-    /signup?mode=signup URL param may not be defaulting correctly.
-    Check LandingPage.jsx to see what URLs the Login/Sign Up buttons point to.
-    Check Signup.jsx line ~107 for the useState initialization logic.
+  [DONE] /signup?mode=... — FIXED 2026-09-03.
+    Root cause was NOT the URL parsing (that was correct): the tab was mirrored
+    into useState by a one-shot effect and clicking a tab called setMode()
+    WITHOUT updating the URL, so the two desynced and any refresh/Google
+    round-trip snapped back to the tab the stale URL named.
+    Fix: the query string is now the single source of truth (mode + email step
+    are *derived* from ?mode / ?method, and setMode writes them back).
 
   [TODO - DO NOT START YET]
     Admin authentication system -- owner will give instructions later.
@@ -256,7 +259,51 @@ Firestore Security Rules: global-exam-prep/firestore.rules
   11. CHANGE LOG
 ==============================================================================
 
-  [2026-08-31]
+  [2026-09-03] Student authentication completed + hardened (see global-exam-prep/AUTH.md).
+    FIXED  ?mode= desync: Signup.jsx now derives the tab from the URL and writes
+           clicks back to it (single setSearchParams per interaction - two racing
+           updaters clobbered each other).
+    FIXED  ProtectedRoute sent guests to bare /signup; now /signup?mode=login with
+           state.from, and login/signup RESUMES the intended path (was always
+           /dashboard). /login also dropped state.from via a bare <Navigate>.
+    FIXED  firestore.rules had NO rules for `students`, `admins`, `meta` or
+           `users/{uid}/examHistory` - the catch-all denied them, so signup,
+           profile load, checkEmailExists AND exam-history saves all failed with
+           permission-denied. This was the real "auth does not work" blocker.
+    FIXED  SyllabusAdmin was unreachable (isAdmin hardcoded false + route had no
+           requiredRole) and ProtectedRoute's superAdmin branch redirected to
+           /admin/dashboard, which is not a route (404).
+    ADDED  RBAC: role on students/{uid} ('student'|'admin'|'superAdmin'),
+           hasRole(), isAdmin/isSuperAdmin derived (fail closed), route gating,
+           admin writes gated in rules. Admin AUTH still not implemented (awaiting
+           owner) - bootstrap a role from the Firebase console.
+    ADDED  Rollback: a failed profile write deletes the orphaned Auth user so the
+           email is not permanently burned; missing profiles are rebuilt lazily.
+    CHANGED passwordHash: SHA-256(password:email) -> salted PBKDF2-SHA256
+           210k rounds, versioned envelope; legacy digests still verify (v1->v2
+           lazy upgrade). Firebase Auth remains the login credential.
+    CHANGED OTP: doc key is now base64url(email)~<nonce> (sessionStorage), so a
+           stranger cannot read/pre-seed/replace your pending code; attempts now
+           increment atomically and rules forbid resetting them; `list` denied on
+           otp_tokens (was fully readable - leaked every registering email).
+    REMOVED checkEmailExists client query (needed a public read on `students` =
+           account enumeration). Firebase's email-already-in-use is surfaced with
+           a "Log in instead" action.
+    FIXED  strength meter never rendered (read state.message/state.requirements;
+           util returns state.label/state.checks) and could index past the colour
+           array at score 5-6; gate now uses isAcceptable (score>=4) not score>=2.
+    FIXED  "Resend code" was locked for the whole 10-min code lifetime; resend
+           cooldown is now 60s and separate from expiry.
+    HARDENED api/send-otp.js: was an open mail relay with HTML injection via
+           userName; now validates email + 6-digit code, escapes the name, and
+           rate-limits per email and per IP.
+    HARDENED src/firebase.js: missing VITE_FIREBASE_* vars used to leave the whole
+           SPA on an infinite spinner; now shows a real configuration error.
+    DEAD CODE removed: src/pages/Login.jsx (unrouted, called a non-existent
+           signInWithApple). FloatingInput/PasswordInput labels now tied to inputs.
+    TESTS    added: vitest + RTL, 21 tests (npm run test) covering URL<->tab sync,
+           guest redirect + resume, RBAC fail-closed, hash round-trip, strength gate.
+    [2026-08-31]
     - progressByAi.txt created with full project state for AI handoff.
     - progress.txt and progressByAi.txt added to root .gitignore.
     - Confirmed: /login redirects to /signup?mode=login (App.jsx line 62).
