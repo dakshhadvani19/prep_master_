@@ -29,8 +29,12 @@ Preview) — they are read only by `api/send-otp.js`.
 cd global-exam-prep
 npm i -g firebase-tools
 firebase login
-firebase deploy --only firestore:rules
+firebase use --add          # pick the project; name the alias "default"
+npm run deploy:rules        # = firebase deploy --only firestore:rules
 ```
+
+`firebase use --add` is not optional: `firebase.json` carries no `projects`
+field, so without an active alias the deploy targets nothing.
 
 This step is **required**. The client cannot read or write `students`, `meta` or
 `otp_tokens` without it, and signup fails with *"the database rules blocked this
