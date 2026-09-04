@@ -330,16 +330,16 @@ const itemVariants = {
 // ─── Friendly error translator ────────────────────────────────────────────────
 function getFriendlyError(err) {
     const code = err?.code || '';
-    if (code.includes('email-already-in-use'))      return 'This email is already registered. Try logging in instead.';
-    if (code.includes('user-not-found'))             return 'No account found with this email.';
+    if (code.includes('email-already-in-use')) return 'This email is already registered. Try logging in instead.';
+    if (code.includes('user-not-found')) return 'No account found with this email.';
     if (code.includes('wrong-password') || code.includes('invalid-credential')) return 'Incorrect email or password. Please try again.';
-    if (code.includes('weak-password'))              return 'Please choose a stronger password (at least 8 characters).';
-    if (code.includes('too-many-requests'))          return 'Too many attempts. Please wait a moment and try again.';
-    if (code.includes('network-request-failed'))     return 'Connection issue. Please check your internet and try again.';
+    if (code.includes('weak-password')) return 'Please choose a stronger password (at least 8 characters).';
+    if (code.includes('too-many-requests')) return 'Too many attempts. Please wait a moment and try again.';
+    if (code.includes('network-request-failed')) return 'Connection issue. Please check your internet and try again.';
     if (code.includes('popup-closed-by-user') || code.includes('cancelled-popup-request')) return null; // silent
-    if (code.includes('popup-blocked'))              return 'Pop-up was blocked. Please allow pop-ups for this site.';
+    if (code.includes('popup-blocked')) return 'Pop-up was blocked. Please allow pop-ups for this site.';
     if (code.includes('account-exists-with-different-credential')) return 'An account already exists with this email. Try a different sign-in method.';
-    if (code.includes('permission-denied'))          return 'Something went wrong. Please try again.';
+    if (code.includes('permission-denied')) return 'Something went wrong. Please try again.';
     // Never leak raw Firebase messages or DB errors
     if (err?.message && !err.message.includes('Firebase') && !err.message.includes('firestore') && !err.message.includes('[')) {
         return err.message;
@@ -371,10 +371,10 @@ export default function Signup() {
     // touching the URL. The two then disagreed, so a refresh (or a Google
     // redirect round-trip) snapped the page back to whichever tab the stale URL
     // named — looking exactly like "?mode=signup doesn't work".
-    const urlMode   = searchParams.get('mode') === 'login' ? 'login' : 'signup';
+    const urlMode = searchParams.get('mode') === 'login' ? 'login' : 'signup';
     const urlMethod = searchParams.get('method'); // 'email' | 'google' | null
 
-    const mode      = urlMode;
+    const mode = urlMode;
     const emailOpen = urlMethod === 'email';
 
     /** Patches the query string; pass null to drop a key. */
@@ -404,7 +404,7 @@ export default function Signup() {
     const resumePath = location.state?.from?.pathname || '/dashboard';
 
     const [googleLoading, setGoogleLoading] = useState(false);
-    const [globalError,   setGlobalError]   = useState('');
+    const [globalError, setGlobalError] = useState('');
 
     // SUCCESS OVERLAY — we use a REF as source of truth in addition to state.
     // Firebase's onAuthStateChanged fires setCurrentUser() asynchronously, which
@@ -412,106 +412,106 @@ export default function Signup() {
     // the effect would see successData===null and redirect, skipping the animation.
     const successDataRef = useRef(null);
 
-const googleRedirectPendingOnLoad =
-    typeof window !== 'undefined' &&
-    sessionStorage.getItem(GOOGLE_REDIRECT_PENDING_KEY) === '1';
+    const googleRedirectPendingOnLoad =
+        typeof window !== 'undefined' &&
+        sessionStorage.getItem(GOOGLE_REDIRECT_PENDING_KEY) === '1';
 
-const authActionPending = useRef(googleRedirectPendingOnLoad);
+    const authActionPending = useRef(googleRedirectPendingOnLoad);
 
-const [successData, setSuccessData] = useState(null);
+    const [successData, setSuccessData] = useState(null);
 
     // Atomic setter
     const showSuccess = useCallback((data) => {
         successDataRef.current = data;
         setSuccessData(data);
     }, []);
-// ============================================================================
-// Google Redirect Completion
-// ============================================================================
+    // ============================================================================
+    // Google Redirect Completion
+    // ============================================================================
 
-useEffect(() => {
-    const pending =
-        typeof window !== 'undefined' &&
-        sessionStorage.getItem(GOOGLE_REDIRECT_PENDING_KEY) === '1';
+    useEffect(() => {
+        const pending =
+            typeof window !== 'undefined' &&
+            sessionStorage.getItem(GOOGLE_REDIRECT_PENDING_KEY) === '1';
 
-    if (!pending) return;
+        if (!pending) return;
 
-    let cancelled = false;
+        let cancelled = false;
 
-    authActionPending.current = true;
-    setGoogleLoading(true);
-    setGlobalError('');
+        authActionPending.current = true;
+        setGoogleLoading(true);
+        setGlobalError('');
 
-    const finishGoogleRedirect = async () => {
-        try {
-            // Firebase normally returns the redirect result here. On some
-            // browsers/setups the result can already have been consumed while
-            // auth.currentUser is still correctly populated. Support both.
-            let redirectResult = null;
-
+        const finishGoogleRedirect = async () => {
             try {
-                redirectResult = await getRedirectResult(auth);
-            } catch (redirectError) {
-                // If Firebase has already restored the authenticated user, the
-                // redirect itself succeeded. We can continue using currentUser.
-                if (!auth.currentUser) {
-                    throw redirectError;
+                // Firebase normally returns the redirect result here. On some
+                // browsers/setups the result can already have been consumed while
+                // auth.currentUser is still correctly populated. Support both.
+                let redirectResult = null;
+
+                try {
+                    redirectResult = await getRedirectResult(auth);
+                } catch (redirectError) {
+                    // If Firebase has already restored the authenticated user, the
+                    // redirect itself succeeded. We can continue using currentUser.
+                    if (!auth.currentUser) {
+                        throw redirectError;
+                    }
                 }
-            }
 
-            if (cancelled) return;
+                if (cancelled) return;
 
-            const user = redirectResult?.user || auth.currentUser;
+                const user = redirectResult?.user || auth.currentUser;
 
-            if (!user) {
+                if (!user) {
+                    sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
+                    authActionPending.current = false;
+                    setGlobalError('Google sign-in did not complete. Please try again.');
+                    return;
+                }
+
+                // Determine new/existing user from our own source of truth: the
+                // students collection. This also works when getRedirectResult()
+                // returns null after Firebase restores the session.
+                const studentSnap = await getDoc(doc(db, 'students', user.uid));
+                const isNewUser = !studentSnap.exists();
+
+                if (isNewUser) {
+                    await completeGoogleProfile(
+                        user,
+                        user.displayName || user.email || 'Student'
+                    );
+                }
+
+                if (cancelled) return;
+
+                sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
+
+                showSuccess({
+                    name: user.displayName || user.email || 'Student',
+                    isLogin: !isNewUser,
+                });
+            } catch (err) {
+                if (cancelled) return;
+
                 sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
                 authActionPending.current = false;
-                setGlobalError('Google sign-in did not complete. Please try again.');
-                return;
+
+                const msg = getFriendlyError(err);
+                setGlobalError(msg || 'Google sign-in failed. Please try again.');
+            } finally {
+                if (!cancelled) {
+                    setGoogleLoading(false);
+                }
             }
+        };
 
-            // Determine new/existing user from our own source of truth: the
-            // students collection. This also works when getRedirectResult()
-            // returns null after Firebase restores the session.
-            const studentSnap = await getDoc(doc(db, 'students', user.uid));
-            const isNewUser = !studentSnap.exists();
+        finishGoogleRedirect();
 
-            if (isNewUser) {
-                await completeGoogleProfile(
-                    user,
-                    user.displayName || user.email || 'Student'
-                );
-            }
-
-            if (cancelled) return;
-
-            sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
-
-            showSuccess({
-                name: user.displayName || user.email || 'Student',
-                isLogin: !isNewUser,
-            });
-        } catch (err) {
-            if (cancelled) return;
-
-            sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
-            authActionPending.current = false;
-
-            const msg = getFriendlyError(err);
-            setGlobalError(msg || 'Google sign-in failed. Please try again.');
-        } finally {
-            if (!cancelled) {
-                setGoogleLoading(false);
-            }
-        }
-    };
-
-    finishGoogleRedirect();
-
-    return () => {
-        cancelled = true;
-    };
-}, [completeGoogleProfile, showSuccess]);
+        return () => {
+            cancelled = true;
+        };
+    }, [completeGoogleProfile, showSuccess]);
     // CRITICAL FIX: Check BOTH refs. If an action is pending or success overlay is active, DO NOT redirect yet.
     useEffect(() => {
         if (currentUser && !successDataRef.current && !authActionPending.current) {
@@ -580,7 +580,7 @@ useEffect(() => {
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
     const handleMouseMove = (e) => {
         setMousePos({
-            x: (e.clientX / window.innerWidth  - 0.5) * 40,
+            x: (e.clientX / window.innerWidth - 0.5) * 40,
             y: (e.clientY / window.innerHeight - 0.5) * 40,
         });
     };
@@ -686,6 +686,11 @@ useEffect(() => {
                                 exit={{ opacity: 0, x: 16 }}
                                 transition={{ duration: 0.25, ease: 'easeInOut' }}
                             >
+                                <GoogleButton
+                                    onClick={handleGoogleSignIn}
+                                    loading={googleLoading}
+                                />
+                                <div className="auth-divider"><span>or</span></div>
                                 <LoginForm
                                     login={login}
                                     sendPasswordReset={sendPasswordReset}
@@ -714,25 +719,7 @@ useEffect(() => {
                                             transition={{ duration: 0.2, ease: 'easeInOut' }}
                                             className="auth-buttons-row"
                                         >
-                                            {/* Google */}
-                                            <motion.button
-                                                type="button"
-                                                className="premium-google-btn"
-                                                onClick={handleGoogleSignIn}
-                                                disabled={googleLoading}
-                                                whileHover={{ y: -1 }}
-                                                whileTap={{ scale: 0.98 }}
-                                            >
-                                                {googleLoading ? <div className="mini-spin white" /> : (
-                                                    <svg className="google-icon-svg" viewBox="0 0 24 24">
-                                                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-                                                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-                                                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
-                                                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
-                                                    </svg>
-                                                )}
-                                                Continue with Google
-                                            </motion.button>
+                                            <GoogleButton onClick={handleGoogleSignIn} loading={googleLoading} />
 
                                             {/* Email */}
                                             <motion.button
@@ -796,15 +783,42 @@ useEffect(() => {
 }
 
 // ============================================================================
+// 2b. Google button — shared by the Log in tab and the signup method picker so
+//     both use one markup and one flow (the redirect round-trip, which survives
+//     popup blockers and full-page navigation).
+// ============================================================================
+function GoogleButton({ onClick, loading, label = 'Continue with Google' }) {
+    return (
+        <motion.button
+            type="button"
+            className="premium-google-btn"
+            onClick={onClick}
+            disabled={loading}
+            whileHover={{ y: -1 }}
+            whileTap={{ scale: 0.98 }}
+        >
+            {loading ? <div className="mini-spin white" /> : (
+                <svg className="google-icon-svg" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                </svg>
+            )}
+            {label}
+        </motion.button>
+    );
+}
+// ============================================================================
 // 3. Login Form
 // ============================================================================
 function LoginForm({ login, sendPasswordReset, onSuccess, onAuthStart, onAuthEnd, onSwitch }) {
-    const [email,     setEmail]     = useState('');
-    const [password,  setPassword]  = useState('');
-    const [loading,   setLoading]   = useState(false);
-    const [error,     setError]     = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
     const [resetMode, setResetMode] = useState(false);
-    const [msg,       setMsg]       = useState('');
+    const [msg, setMsg] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -935,11 +949,11 @@ function LoginForm({ login, sendPasswordReset, onSuccess, onAuthStart, onAuthEnd
 function SignupForm({ signupWithEmail, onShowSuccess, onAuthStart, onAuthEnd, onSwitch }) {
     const [step, setStep] = useState('details');
 
-    const [name,     setName]     = useState('');
-    const [email,    setEmail]    = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [loading,  setLoading]  = useState(false);
-    const [error,    setError]    = useState('');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
 
     const [emailTaken, setEmailTaken] = useState(false);
 
@@ -1049,17 +1063,17 @@ function SignupForm({ signupWithEmail, onShowSuccess, onAuthStart, onAuthEnd, on
                 )}
             </AnimatePresence>
 
-            <FloatingInput label="Full Name"      value={name}     onChange={e => setName(e.target.value)} />
-            <FloatingInput label="Email address"  type="email" value={email}    onChange={e => setEmail(e.target.value)} />
+            <FloatingInput label="Full Name" value={name} onChange={e => setName(e.target.value)} />
+            <FloatingInput label="Email address" type="email" value={email} onChange={e => setEmail(e.target.value)} />
 
             <div style={{ width: '100%' }}>
                 <PasswordInput
-                label="Create Password"
-                value={password}
-                name="new-password"
-                autoComplete="new-password"
-                onChange={e => setPassword(e.target.value)}
-            />
+                    label="Create Password"
+                    value={password}
+                    name="new-password"
+                    autoComplete="new-password"
+                    onChange={e => setPassword(e.target.value)}
+                />
                 {password && <PasswordStrength state={strengthState} />}
             </div>
 
@@ -1096,15 +1110,15 @@ function SignupForm({ signupWithEmail, onShowSuccess, onAuthStart, onAuthEnd, on
 // 5. OTP Step
 // ============================================================================
 function OTPStep({ email, name, onBack, onSuccess }) {
-    const [digits,   setDigits]   = useState(['', '', '', '', '', '']);
-    const [loading,  setLoading]  = useState(false);
-    const [error,    setError]    = useState('');
+    const [digits, setDigits] = useState(['', '', '', '', '', '']);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
     // Two separate clocks. The code is valid for 10 minutes; a *resend* is only
     // allowed once a minute. Previously a single `timeLeft` (600) gated the
     // resend button, so "Resend code" stayed dead for the full ten minutes even
     // though the email itself promised a 10-minute window.
     const [expiresIn, setExpiresIn] = useState(600); // code lifetime
-    const [cooldown,  setCooldown]  = useState(RESEND_COOLDOWN); // resend wait
+    const [cooldown, setCooldown] = useState(RESEND_COOLDOWN); // resend wait
     const inputRefs = useRef([]);
 
     // FIX: Prevent double-submission from auto-submit racing with button click
@@ -1123,7 +1137,7 @@ function OTPStep({ email, name, onBack, onSuccess }) {
     useEffect(() => {
         const code = digits.join('');
         if (code.length === 6 && !loading && !verifyingRef.current) handleVerify(code);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [digits]);
 
     const handleDigit = (idx, value) => {
@@ -1137,7 +1151,7 @@ function OTPStep({ email, name, onBack, onSuccess }) {
 
     const handleKeyDown = (idx, e) => {
         if (e.key === 'Backspace' && !digits[idx] && idx > 0) inputRefs.current[idx - 1]?.focus();
-        if (e.key === 'ArrowLeft'  && idx > 0) inputRefs.current[idx - 1]?.focus();
+        if (e.key === 'ArrowLeft' && idx > 0) inputRefs.current[idx - 1]?.focus();
         if (e.key === 'ArrowRight' && idx < 5) inputRefs.current[idx + 1]?.focus();
     };
 
@@ -1302,7 +1316,7 @@ function PasswordStrength({ state }) {
     // case in which this renders nothing.
     if (!state) return null;
 
-    const pct   = Math.max(0, Math.min(100, state.percent ?? 0));
+    const pct = Math.max(0, Math.min(100, state.percent ?? 0));
     const color = state.color || 'rgba(255,255,255,0.15)';
     const checks = state.checks || {};
 
@@ -1342,7 +1356,7 @@ function PasswordStrength({ state }) {
 }
 
 function TimerRing({ timeLeft, total = 600 }) {
-    const pct     = (Math.max(timeLeft, 0) / total) * 100;
+    const pct = (Math.max(timeLeft, 0) / total) * 100;
     const expired = timeLeft === 0;
     return (
         <div className={`timer-ring-wrap ${expired ? 'expired' : ''}`}>
