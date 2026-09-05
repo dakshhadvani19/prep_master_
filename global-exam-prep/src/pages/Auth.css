@@ -1315,3 +1315,96 @@ main:has(.auth-container) {
     font-size: 0.8rem;
     color: #fbbf24;
 }
+/* ==========================================================================
+   PASSWORD STRENGTH OVERFLOW FIX
+   Keeps the strength meter and requirement checklist inside the auth card
+   at desktop, tablet, mobile, and browser zoom levels.
+   ========================================================================== */
+
+.strength-meter-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.strength-ring-wrap {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.strength-ring {
+    flex: 0 0 var(--ring-size);
+    min-width: var(--ring-size);
+}
+
+.strength-ring-wrap .strength-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.strength-requirements {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    /* Never force two columns when the card is narrow. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    /* Prevent long requirement text from determining grid width. */
+    overflow: hidden;
+}
+
+.strength-requirements li {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.strength-requirements li span {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+/* Narrow phones / small auth cards */
+@media (max-width: 520px) {
+    .strength-requirements {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+    }
+
+    .strength-requirements li {
+        width: 100%;
+        font-size: 0.72rem;
+    }
+
+    .strength-ring-wrap {
+        gap: 8px;
+    }
+
+    .strength-text {
+        font-size: 0.76rem;
+    }
+}
+
+/* Very narrow screens / high browser zoom */
+@media (max-width: 360px) {
+    .strength-ring {
+        --ring-size: 30px;
+        --ring-arc: 3px;
+    }
+
+    .strength-requirements li {
+        font-size: 0.7rem;
+        line-height: 1.4;
+    }
+}

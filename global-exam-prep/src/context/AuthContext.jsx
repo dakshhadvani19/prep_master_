@@ -69,6 +69,7 @@ import {
     consumeAuthCallback,
     hasPendingAuthCallback,
     supabase,
+    recoverySupabase,
     supabaseConfigError,
 } from '../supabase';
 import {
@@ -138,11 +139,36 @@ export function AuthProvider({ children }) {
     // so the SPA never flashes a splash screen it cannot leave.
     const [authLoading, setAuthLoading] = useState(() => Boolean(supabase));
     const [profileError, setProfileError] = useState(() => (supabase
-    ? ''
-    // Known at module load: surface it on the first paint instead of after an
-    // effect, so a misconfigured build never flashes a blank card.
-    : (supabaseConfigError || 'Supabase is not configured for this build.')));
+        ? ''
+        // Known at module load: surface it on the first paint instead of after an
+        // effect, so a misconfigured build never flashes a blank card.
+        : (supabaseConfigError || 'Supabase is not configured for this build.')));
     const [recoveryMode, setRecoveryMode] = useState(false);
+    const RECOVERY_PENDING_KEY = 'prepmaster_password_recovery_pending';
+
+    const markRecoveryPending = () => {
+        try {
+            localStorage.setItem(RECOVERY_PENDING_KEY, '1');
+        } catch {
+            // Ignore storage failures; Supabase PKCE still protects the flow.
+        }
+    };
+
+    const isRecoveryPending = () => {
+        try {
+            return localStorage.getItem(RECOVERY_PENDING_KEY) === '1';
+        } catch {
+            return false;
+        }
+    };
+
+    const clearRecoveryPending = () => {
+        try {
+            localStorage.removeItem(RECOVERY_PENDING_KEY);
+        } catch {
+            // Ignore storage failures.
+        }
+    };
 
     // The one authority the auth pages read for the Google return leg: 'idle'
     // (nothing in flight), 'exchanging' (a code is being turned into a session),
@@ -267,22 +293,85 @@ export function AuthProvider({ children }) {
                 clearOAuthAttempt();
                 reportGoogle('failed', verdict.message);
             } else if (verdict?.code) {
+                const recoveryFlow = isRecoveryPending();
+
+                // Google and password recovery use different PKCE storage namespaces.
+                const exchangeClient = recoveryFlow
+                    ? recoverySupabase
+                    : supabase;
+
                 reportGoogle('exchanging');
+
                 try {
-                    const exchanged = await exchangeAuthCode(supabase, verdict.code);
+                    if (!exchangeClient) {
+                        throw new Error('Supabase is not available on this deployment.');
+                    }
+
+                    const exchanged = await exchangeAuthCode(
+                        exchangeClient,
+                        verdict.code
+                    );
+
                     clearOAuthAttempt();
+
                     if (cancelled) return;
-                    // A recovery link rides the same code path; the flag is what
-                    // tells the UI to show "choose a new password" instead of "hi".
-                    if (verdict.type === 'recovery') setRecoveryMode(true);
-                    reportGoogle('signed_in');
-                    // PASSWORD_RECOVERY rather than SIGNED_IN: `apply` clears recovery
-                    // mode on a completed sign-in, which would throw the reset form
-                    // away the moment the session landed.
-                    await apply(verdict.type === 'recovery' ? 'PASSWORD_RECOVERY' : 'SIGNED_IN', exchanged);
+
+                    if (recoveryFlow) {
+                        // The recovery client exchanged the code and now owns the
+                        // temporary recovery session. Move that session into the
+                        // normal app client so updateUser() and the rest of the app
+                        // continue using the standard auth client.
+                        const { data: recoverySession } =
+                            await exchangeClient.auth.getSession();
+
+                        const activeSession =
+                            recoverySession?.session || exchanged;
+
+                        if (!activeSession?.access_token || !activeSession?.refresh_token) {
+                            throw new Error(
+                                'The password recovery session could not be established.'
+                            );
+                        }
+
+                        const { error: sessionError } =
+                            await supabase.auth.setSession({
+                                access_token: activeSession.access_token,
+                                refresh_token: activeSession.refresh_token,
+                            });
+
+                        if (sessionError) throw sessionError;
+
+                        clearRecoveryPending();
+                        setRecoveryMode(true);
+
+                        await apply(
+                            'PASSWORD_RECOVERY',
+                            activeSession
+                        );
+
+                        reportGoogle('signed_in');
+                    } else {
+                        reportGoogle('signed_in');
+
+                        await apply(
+                            'SIGNED_IN',
+                            exchanged
+                        );
+                    }
                 } catch (err) {
                     clearOAuthAttempt();
-                    reportGoogle('failed', err?.message || 'Google sign-in did not complete. Please try again.');
+
+                    if (recoveryFlow) {
+                        clearRecoveryPending();
+                    }
+
+                    reportGoogle(
+                        'failed',
+                        err?.message ||
+                        (recoveryFlow
+                            ? 'Password recovery did not complete. Please request a new reset link.'
+                            : 'Google sign-in did not complete. Please try again.')
+                    );
                 }
             } else if (callback) {
                 clearOAuthAttempt();
@@ -529,12 +618,32 @@ export function AuthProvider({ children }) {
 
     // ─── Password reset / change ─────────────────────────────────────────────
     const sendPasswordReset = useCallback(async (email) => {
-        if (!supabase) throw new Error(supabaseConfigError || 'Supabase is not available.');
-        const origin = typeof window !== 'undefined' ? window.location.origin : '';
-        return sbSendReset(supabase, {
-            email,
-            redirectTo: origin ? `${origin}/signup?mode=login` : undefined,
-        });
+        if (!recoverySupabase) {
+            throw new Error(
+                supabaseConfigError || 'Supabase is not available.'
+            );
+        }
+
+        const origin =
+            typeof window !== 'undefined'
+                ? window.location.origin
+                : '';
+
+        // Tell the callback that the next PKCE code belongs to password recovery,
+        // not Google OAuth.
+        markRecoveryPending();
+
+        try {
+            return await sbSendReset(recoverySupabase, {
+                email,
+                redirectTo: origin
+                    ? `${origin}/signup?mode=login`
+                    : undefined,
+            });
+        } catch (err) {
+            clearRecoveryPending();
+            throw err;
+        }
     }, []);
 
     /** Writes a new password on the short-lived PASSWORD_RECOVERY session. */

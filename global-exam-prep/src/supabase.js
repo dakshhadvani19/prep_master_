@@ -193,6 +193,20 @@ export const supabase = supabaseConfigError
               storageKey: 'prepmaster-supabase-auth',
           },
       });
+      // Password recovery gets its own PKCE storage namespace.
+// This prevents a Google OAuth verifier from colliding with a password-reset
+// verifier when both flows are used in the same browser.
+export const recoverySupabase = supabaseConfigError
+    ? null
+    : createClient(String(rawUrl).replace(/\/+$/, ''), String(rawKey), {
+          auth: {
+              persistSession: true,
+              autoRefreshToken: true,
+              flowType: 'pkce',
+              detectSessionInUrl: false,
+              storageKey: 'prepmaster-supabase-recovery',
+          },
+      });
 
 /** Throws a readable error instead of a `null.foo` TypeError deep in a handler. */
 export function requireSupabase() {
