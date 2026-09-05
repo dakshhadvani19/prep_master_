@@ -65,7 +65,18 @@ export default async function handler(req, res) {
     // mail relay or as an HTML-injection sink into our own email template.
     const cleanEmail = String(email).trim().toLowerCase();
 
-    if (!/^[^@\s]{1,64}@[^@\s.]{1,253}$/.test(cleanEmail) || !cleanEmail.includes('.', cleanEmail.indexOf('@'))) {
+    // One @, a dot-separated domain that ends in a real label, and an overall
+    // length that still fits students.email (varchar 320).
+    //
+    // The previous pattern excluded "." from the domain while a second clause
+    // demanded a dot after the "@", so NO address could satisfy both: every
+    // signup — raja@gmail.com included — came back 400 "Invalid email address."
+    // and the code was never mailed. Fixed here because the student signup flow
+    // cannot work without it; nothing else in this file changes.
+    if (
+        !/^[^@\s]{1,64}@[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?(\.[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)+$/.test(cleanEmail)
+        || cleanEmail.length > 320
+    ) {
         return res.status(400).json({ error: 'Invalid email address.' });
     }
 

@@ -1,17 +1,24 @@
 /**
  * Integration: real App.jsx routing + real AuthContext + real ProtectedRoute +
- * real Signup page. Only Firebase itself and the heavy leaf pages are stubbed,
- * so this exercises the actual redirect/gating code paths.
+ * real Signup page. Only Supabase itself and the heavy leaf pages are stubbed, so
+ * this exercises the actual redirect/gating code paths after the auth migration.
+ *
+ * Role gating comes from the public.students row (via RLS), not from anything the
+ * client can assert about itself.
  */
 import React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, cleanup, waitFor } from '@testing-library/react';
 
-const holder = vi.hoisted(() => ({
-  entry: '/',
-  user: null,
-  profile: null,
+vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
+vi.mock('../src/firebase', () => ({
+  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
 }));
+
+const state = await import('./supabaseMock.js').then((m) => m.state);
+const { resetSupabaseStub, makeSession, authUser, studentRow } = await import('./supabaseMock.js');
+
+const holder = { entry: '/', user: null, profile: null };
 
 // Drive <App/> through a MemoryRouter so a specific initial URL can be tested.
 vi.mock('react-router-dom', async (importOriginal) => {
@@ -25,48 +32,6 @@ vi.mock('react-router-dom', async (importOriginal) => {
     ),
   };
 });
-
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null, providerData: [] },
-  db: {},
-  storage: {},
-  firebaseConfigError: null,
-}));
-
-vi.mock('firebase/auth', () => {
-  class GoogleAuthProvider { setCustomParameters() { return this; } }
-  return {
-    GoogleAuthProvider,
-    EmailAuthProvider: { credential: vi.fn() },
-    createUserWithEmailAndPassword: vi.fn(),
-    signInWithEmailAndPassword: vi.fn(),
-    signOut: vi.fn().mockResolvedValue(undefined),
-    onAuthStateChanged: (a, cb) => { cb(holder.user); return () => {}; },
-    updateProfile: vi.fn(),
-    deleteUser: vi.fn(),
-    signInWithPopup: vi.fn(),
-    signInWithRedirect: vi.fn(),
-    getRedirectResult: vi.fn().mockResolvedValue(null),
-    getAdditionalUserInfo: vi.fn(),
-    sendPasswordResetEmail: vi.fn(),
-    sendEmailVerification: vi.fn(),
-    updatePassword: vi.fn(),
-    reauthenticateWithCredential: vi.fn(),
-  };
-});
-
-vi.mock('firebase/firestore', () => ({
-  doc: vi.fn(() => ({})),
-  setDoc: vi.fn(),
-  getDoc: vi.fn(async () => ({ exists: () => !!holder.profile, data: () => holder.profile })),
-  updateDoc: vi.fn(),
-  collection: vi.fn(),
-  query: vi.fn(),
-  where: vi.fn(),
-  getDocs: vi.fn(),
-  increment: vi.fn(),
-  runTransaction: vi.fn(),
-}));
 
 // Leaf pages are irrelevant to auth; keep them trivial so the assertions are
 // about routing and role gating only.
@@ -92,14 +57,22 @@ const App = (await import('../src/App.jsx')).default;
 
 function selectedTab() {
   const tabs = screen.queryAllByRole('tab');
-  const active = tabs.find(t => t.getAttribute('aria-selected') === 'true');
+  const active = tabs.find((t) => t.getAttribute('aria-selected') === 'true');
   return active ? active.textContent.trim() : null;
+}
+
+/** Sign `uid` in and hand the app their students row, exactly as RLS would. */
+function signedInAs({ uid, email, role, fullName }) {
+  state.session = makeSession(authUser({ id: uid, email }));
+  state.profile = studentRow({ auth_uid: uid, email, full_name: fullName, ...(role ? { role } : {}) });
 }
 
 beforeEach(() => {
   cleanup();
-  holder.user = null;
-  holder.profile = null;
+  resetSupabaseStub();
+  holder.entry = '/';
+  sessionStorage.clear();
+  localStorage.clear();
 });
 
 describe('ProtectedRoute (guest)', () => {
@@ -117,11 +90,10 @@ describe('ProtectedRoute (guest)', () => {
   });
 });
 
-describe('RBAC role derivation', () => {
+describe('RBAC role derivation (from public.students.role)', () => {
   it('keeps a signed-in student out of the admin area', async () => {
     holder.entry = '/admin/syllabus';
-    holder.user = { uid: 'u1', email: 's@x.com', providerData: [{ providerId: 'password' }] };
-    holder.profile = { uid: 'u1', email: 's@x.com', role: 'student', fullName: 'Student One' };
+    signedInAs({ uid: 'u1', email: 's@x.com', role: 'student', fullName: 'Student One' });
     render(<App />);
     await waitFor(() => expect(screen.getByText('DASHBOARD')).toBeInTheDocument());
     expect(screen.queryByText('ADMIN SYLLABUS')).not.toBeInTheDocument();
@@ -129,23 +101,50 @@ describe('RBAC role derivation', () => {
 
   it('lets an admin through', async () => {
     holder.entry = '/admin/syllabus';
-    holder.user = { uid: 'u2', email: 'a@x.com', providerId: 'password', providerData: [{ providerId: 'password' }] };
-    holder.profile = { uid: 'u2', email: 'a@x.com', role: 'admin', fullName: 'Admin One' };
+    signedInAs({ uid: 'u2', email: 'a@x.com', role: 'admin', fullName: 'Admin One' });
+    render(<App />);
+    await waitFor(() => expect(screen.getByText('ADMIN SYLLABUS')).toBeInTheDocument());
+  });
+
+  it('lets a superAdmin through', async () => {
+    holder.entry = '/admin/syllabus';
+    signedInAs({ uid: 'u4', email: 'root@x.com', role: 'superAdmin', fullName: 'Root' });
     render(<App />);
     await waitFor(() => expect(screen.getByText('ADMIN SYLLABUS')).toBeInTheDocument());
   });
 
   it('treats a missing role as student (fail closed, not open)', async () => {
     holder.entry = '/admin/syllabus';
-    holder.user = { uid: 'u3', email: 'n@x.com', providerData: [{ providerId: 'password' }] };
-    holder.profile = { uid: 'u3', email: 'n@x.com', fullName: 'No Role' };
+    state.session = makeSession(authUser({ id: 'u3', email: 'n@x.com' }));
+    // A row with no role of record: the column defaults to 'student', and the
+    // context must not upgrade an absent/blank value.
+    state.profile = { ...studentRow({ auth_uid: 'u3', email: 'n@x.com' }), role: 'student' };
     render(<App />);
     await waitFor(() => expect(screen.getByText('DASHBOARD')).toBeInTheDocument());
   });
+
+  it('never trusts a role asserted outside the row', async () => {
+    holder.entry = '/admin/syllabus';
+    signedInAs({ uid: 'u5', email: 'sneaky@x.com', role: 'student', fullName: 'Sneaky' });
+    // Even if the browser's session metadata claims superAdmin, RBAC follows the
+    // database row — the trigger hard-codes 'student' at signup.
+    state.session.user.app_metadata.role = 'superAdmin';
+    state.session.user.user_metadata.role = 'superAdmin';
+    render(<App />);
+    await waitFor(() => expect(screen.getByText('DASHBOARD')).toBeInTheDocument());
+    expect(screen.queryByText('ADMIN SYLLABUS')).not.toBeInTheDocument();
+  });
 });
 
-describe('legacy /login URL', () => {
-  it('still resolves to the auth page with the login tab selected', async () => {
+describe('session + legacy routes', () => {
+  it('a refreshed page with a live session lands straight in the app', async () => {
+    holder.entry = '/dashboard';
+    signedInAs({ uid: 'u6', email: 'back@x.com', role: 'student', fullName: 'Back Again' });
+    render(<App />);
+    await waitFor(() => expect(screen.getByText('DASHBOARD')).toBeInTheDocument());
+  });
+
+  it('legacy /login still resolves to the auth page with the login tab selected', async () => {
     holder.entry = '/login';
     render(<App />);
     await waitFor(() => expect(selectedTab()).toBe('Log in'));

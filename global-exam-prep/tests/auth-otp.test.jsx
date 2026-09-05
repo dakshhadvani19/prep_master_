@@ -1,63 +1,60 @@
 /**
- * Email sign-up is gated on the OTP that is *emailed* to the student.
- * Two guarantees matter in production:
- *   1. no Auth account exists until the code is verified (a failed email
- *      send must not leave an orphan account behind), and
- *   2. the code is mailed through /api/send-otp, whose Gmail credentials live
- *      only in Vercel — so a missing secret has to fail loudly on the form,
- *      not silently half-create an account.
- * Real Signup.jsx + real otpService; only the HTTP call and Firebase are stubbed.
+ * Signup: the existing Nodemailer/Gmail OTP is the gate, Supabase is the account.
+ *
+ * This file runs the REAL src/utils/otpService.js against an in-memory Firestore
+ * and a captured fetch, so it proves the endpoint contract itself:
+ *   1. the details step calls /api/send-otp
+ *   2. the password never goes to it (only email + code + greeting name)
+ *   3. supabase.auth.signUp is not called before the code is verified
+ *   4. a wrong code / an expired code creates no account
+ *   5. resend uses the same Nodemailer path and respects the cooldown
+ *   6. a verified code causes exactly one signUp, carrying only full_name
+ *   7. the browser never inserts into public.students; the trigger's row (role
+ *      'student') is what the app then reads
+ *   8. Supabase is never asked to mail or check a signup code
+ * Only `src/supabase.js` is stubbed (tests/supabaseMock.js).
  */
 import React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { render, fireEvent, waitFor, cleanup } from '@testing-library/react';
-import { webcrypto } from 'node:crypto';
+import { render, fireEvent, waitFor, cleanup, act } from '@testing-library/react';
 
-if (!globalThis.crypto?.subtle) {
-  Object.defineProperty(globalThis, 'crypto', { value: webcrypto, configurable: true });
-}
+const holder = vi.hoisted(() => ({ entry: '/' }));
+// The otp_tokens collection, as the real service writes it.
+const db = vi.hoisted(() => ({ docs: new Map() }));
 
-const holder = vi.hoisted(() => ({ entry: '/', user: null, profile: null }));
+vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
+
+vi.mock('../src/firebase', () => ({
+  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
+}));
+
+vi.mock('firebase/firestore', () => ({
+  doc: (database, coll, id) => ({ path: `${coll}/${id}` }),
+  collection: (database, ...p) => ({ path: p.join('/') }),
+  setDoc: vi.fn(async (ref, data) => { db.docs.set(ref.path, { ...data }); }),
+  getDoc: vi.fn(async (ref) => ({
+    exists: () => db.docs.has(ref.path),
+    data: () => db.docs.get(ref.path),
+  })),
+  updateDoc: vi.fn(async (ref, patch) => {
+    const cur = { ...db.docs.get(ref.path) };
+    for (const [k, v] of Object.entries(patch || {})) {
+      cur[k] = v && typeof v === 'object' && '__inc' in v ? (cur[k] || 0) + v.__inc : v;
+    }
+    db.docs.set(ref.path, cur);
+  }),
+  deleteDoc: vi.fn(async (ref) => { db.docs.delete(ref.path); }),
+  increment: (n) => ({ __inc: n }),
+  getDocs: vi.fn(async () => ({ empty: true, docs: [] })),
+  query: vi.fn(), where: vi.fn(), runTransaction: vi.fn(),
+  onSnapshot: vi.fn(() => () => {}), serverTimestamp: vi.fn(() => 'ts'),
+}));
 
 vi.mock('react-router-dom', async (orig) => {
   const actual = await orig();
   return { ...actual, BrowserRouter: ({ children }) => (
     <actual.MemoryRouter key={holder.entry} initialEntries={[holder.entry]}>{children}</actual.MemoryRouter>) };
 });
-vi.mock('../src/firebase', () => ({ auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null }));
-
-vi.mock('firebase/auth', () => {
-  class GoogleAuthProvider { setCustomParameters() { return this; } }
-  return {
-    GoogleAuthProvider, EmailAuthProvider: { credential: vi.fn() },
-    createUserWithEmailAndPassword: vi.fn(), signInWithEmailAndPassword: vi.fn(),
-    signOut: vi.fn().mockResolvedValue(undefined),
-    onAuthStateChanged: (a, cb) => { cb(holder.user); return () => {}; },
-    updateProfile: vi.fn(), deleteUser: vi.fn(), signInWithPopup: vi.fn(),
-    signInWithRedirect: vi.fn().mockResolvedValue(undefined),
-    getRedirectResult: vi.fn().mockResolvedValue(null), getAdditionalUserInfo: vi.fn(),
-    sendPasswordResetEmail: vi.fn().mockResolvedValue(undefined), sendEmailVerification: vi.fn(),
-    updatePassword: vi.fn(), reauthenticateWithCredential: vi.fn(),
-  };
-});
-const authMock = await import('firebase/auth');
-
-// Captures the challenge document otpService writes, so the flow's Firestore
-// contract is asserted too (digest stored, plaintext never persisted).
-const captured = vi.hoisted(() => ({ otpDocs: [] }));
-
-vi.mock('firebase/firestore', () => ({
-  doc: vi.fn((db, ...p) => ({ path: p.filter(x => typeof x === 'string').join('/') })),
-  collection: vi.fn((db, ...p) => ({ path: p.join('/') })),
-  setDoc: vi.fn(async (r, data) => { if (r.path.startsWith('otp_tokens')) captured.otpDocs.push({ path: r.path, data }); }),
-  updateDoc: vi.fn(), deleteDoc: vi.fn(async () => {}), getDocs: vi.fn(async () => ({ empty: true, docs: [] })),
-  query: vi.fn(), where: vi.fn(), increment: vi.fn(n => ({ __increment: n })), runTransaction: vi.fn(),
-  onSnapshot: vi.fn(() => () => {}), serverTimestamp: vi.fn(() => 'ts'),
-  getDoc: vi.fn(async () => (holder.profile
-    ? { exists: () => true, data: () => holder.profile }
-    : { exists: () => false, data: () => undefined })),
-}));
-const fsMock = await import('firebase/firestore');
 
 vi.mock('../src/pages/Dashboard', () => ({ default: () => <div>DASHBOARD</div> }));
 vi.mock('../src/pages/ReviewPage', () => ({ default: () => <div>REVIEW</div> }));
@@ -69,15 +66,28 @@ vi.mock('../src/components/Layout', async () => {
   return { default: () => <div><Outlet /></div> };
 });
 
+const {
+  state, resetSupabaseStub, callsTo, lastCall, studentRow, authUser,
+} = await import('./supabaseMock.js');
+
 const App = (await import('../src/App.jsx')).default;
+
+const PASSWORD = 'Str0ng!Passw0rd';
+const sent = [];            // every /api/send-otp request the app made
+
+/** The one live challenge for the address — otpService keeps exactly one per email. */
+function otpDocFor() {
+  const entry = [...db.docs.entries()].find(([path]) => path.startsWith('otp_tokens/'));
+  return entry ? { path: entry[0], data: entry[1] } : null;
+}
 
 async function openEmailForm() {
   holder.entry = '/signup?mode=signup&method=email';
   render(<App />);
   await waitFor(() => expect(document.querySelector('.auth-form')).toBeTruthy());
   return {
-    form: () => document.querySelector('.auth-form'),
     submit: () => document.querySelector('.auth-form button[type="submit"]'),
+    form: () => document.querySelector('.auth-form'),
     fill: (vals) => vals.forEach((v, i) => {
       const el = document.querySelectorAll('.auth-form input')[i];
       if (el) fireEvent.change(el, { target: { value: v } });
@@ -85,64 +95,204 @@ async function openEmailForm() {
   };
 }
 
+/** details → OTP screen, with the code actually mailed. */
+async function toOtpStep(api, { email = 'raja@x.com', name = 'Raja Advani' } = {}) {
+  api.fill([name, email, PASSWORD]);
+  fireEvent.submit(api.form());
+  await waitFor(() => expect(document.querySelectorAll('.otp-digit').length).toBe(6));
+}
+
+/** The code that was just mailed — generated by the real service, so the test has
+ *  to read it back out of the captured request instead of assuming a value. */
+function mailedCode() {
+  const last = sent.at(-1);
+  expect(last?.body?.otp).toMatch(/^[1-9]\d{5}$/);
+  return String(last.body.otp);
+}
+
+function typeCode(code) {
+  const boxes = document.querySelectorAll('.otp-digit');
+  code.split('').forEach((digit, i) => fireEvent.change(boxes[i], { target: { value: digit } }));
+}
+
 beforeEach(() => {
   cleanup();
-  holder.user = null; holder.profile = null; captured.otpDocs.length = 0;
-  sessionStorage.clear(); localStorage.clear();
-  Object.values(authMock).forEach(f => f?.mockClear?.());
-  Object.values(fsMock).forEach(f => f?.mockClear?.());
+  resetSupabaseStub();
+  holder.entry = '/';
+  sessionStorage.clear();
+  localStorage.clear();
+  db.docs.clear();
+  sent.length = 0;
+  globalThis.fetch = vi.fn(async (url, init) => {
+    sent.push({ url: String(url), body: init?.body ? JSON.parse(init.body) : null });
+    return { ok: true, status: 200, json: async () => ({ sent: true }) };
+  });
 });
 
-describe('emailed OTP gate', () => {
-  it('requests a code through /api/send-otp before any account exists', async () => {
-    globalThis.fetch = vi.fn().mockResolvedValue({ ok: true, status: 200, json: async () => ({ success: true }) });
-    const { fill } = await openEmailForm();
+describe('signup: Nodemailer OTP gate, then the Supabase account', () => {
+  it('the details step mails a code through /api/send-otp and creates nothing yet', async () => {
+    const api = await openEmailForm();
+    await toOtpStep(api);
 
-    fill(['Raja Advani', 'raja@x.com', 'Str0ng!Passw0rd']);
-    fireEvent.submit(document.querySelector('.auth-form'));
+    expect(sent).toHaveLength(1);
+    expect(sent[0].url).toBe('/api/send-otp');
+    expect(callsTo('signUp')).toHaveLength(0);        // req 3: not before verification
+    expect(callsTo('verifyOtp')).toHaveLength(0);     // req 4: Supabase never checks it
+    expect(callsTo('resend')).toHaveLength(0);        // req 3: nor mails a signup code
+    expect(document.body.textContent).toMatch(/check your email/i);
+  }, 20000);
 
-    await waitFor(() => expect(globalThis.fetch).toHaveBeenCalled());
-    expect(globalThis.fetch.mock.calls[0][0]).toBe('/api/send-otp');
-    const body = JSON.parse(globalThis.fetch.mock.calls[0][1].body);
+  it('the password is never sent to the mail endpoint, and never stored in plaintext', async () => {
+    const api = await openEmailForm();
+    await toOtpStep(api);
+
+    const { body } = sent[0];
+    expect(Object.keys(body).sort()).toEqual(['email', 'otp', 'userName']);
+    expect(JSON.stringify(body)).not.toMatch(PASSWORD.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
     expect(body.email).toBe('raja@x.com');
-    expect(String(body.otp)).toMatch(/^\d{6}$/);            // the code that gets mailed
-    expect(body.userName).toBe('Raja Advani');   // the field send-otp.js reads
+    expect(body.otp).toMatch(/^\d{6}$/);              // 6 digits, as required
 
-    await waitFor(() => expect(/check your email/i.test(document.body.textContent)).toBe(true));
-    expect(authMock.createUserWithEmailAndPassword).not.toHaveBeenCalled();   // gated
+    // What Firestore keeps is the digest only — and the plaintext is never written.
+    const live = otpDocFor();
+    expect(live).toBeTruthy();
+    expect(live.path.startsWith('otp_tokens/')).toBe(true);
+    expect(live.data.otpHash).toMatch(/^[0-9a-f]{64}$/);
+    expect(JSON.stringify(live.data)).not.toContain(body.otp);
+    expect(live.data.attempts).toBe(0);
+    expect(live.data.email).toBe('raja@x.com');
+    expect(Date.parse(live.data.expiresAt) - Date.parse(live.data.createdAt)).toBe(600000);
   }, 20000);
 
-  it('persists only a SHA-256 digest of the code, keyed by email + nonce', async () => {
-    globalThis.fetch = vi.fn().mockResolvedValue({ ok: true, status: 200, json: async () => ({ success: true }) });
-    const { fill } = await openEmailForm();
-    fill(['Raja Advani', 'raja@x.com', 'Str0ng!Passw0rd']);
-    fireEvent.submit(document.querySelector('.auth-form'));
+  it('a verified code creates the account exactly once, with only full_name as metadata', async () => {
+    state.profile = studentRow({ role: 'student', student_id: 7 });
+    const api = await openEmailForm();
+    await toOtpStep(api);
+    typeCode(mailedCode());
 
-    await waitFor(() => expect(captured.otpDocs.length).toBe(1));
-    const { path, data } = captured.otpDocs[0];
-    expect(path.startsWith('otp_tokens/')).toBe(true);
-    expect(data.otpHash).toMatch(/^[0-9a-f]{64}$/);
-    expect(data.email).toBe('raja@x.com');
-    expect(data.attempts).toBe(0);
-    const { createHash } = await import('node:crypto');
-    const sent = JSON.parse(globalThis.fetch.mock.calls[0][1].body).otp;
-    expect(data.otpHash).toBe(createHash('sha256').update(String(sent)).digest('hex'));
-    expect(JSON.stringify(data)).not.toContain(String(sent));   // plaintext never stored
-    expect(new Date(data.expiresAt).getTime() > Date.now()).toBe(true);
+    await waitFor(() => expect(callsTo('signUp')).toHaveLength(1));
+    const call = lastCall('signUp');
+    expect(call.email).toBe('raja@x.com');
+    expect(call.password).toBe(PASSWORD);             // to the auth endpoint only
+    expect(call.options).toEqual({ data: { full_name: 'Raja Advani' } });
+
+    // the challenge is single-use: it is gone once the account exists
+    await waitFor(() => expect(db.docs.size).toBe(0));
+
+    // no browser-side profile write, and the trigger's role is what the app reads
+    expect(callsTo('insert:students')).toHaveLength(0);
+    expect(state.calls.filter((c) => c.table === 'students' && c.op !== 'select')).toHaveLength(0);
+    expect(lastCall('select:students').filters).toEqual({ auth_uid: 'u1' });
+
+    await waitFor(() => expect(document.body.textContent).toMatch(/DASHBOARD/), { timeout: 9000 });
   }, 20000);
 
-  it('a Gmail misconfiguration on Vercel blocks sign-up instead of half-creating an account', async () => {
-    globalThis.fetch = vi.fn().mockResolvedValue({
-      ok: false, status: 500,
-      json: async () => ({ error: 'Email service not configured (GMAIL_USER or GMAIL_APP_PASSWORD missing).' }),
-    });
-    const { submit, fill } = await openEmailForm();
-    fill(['Raja Advani', 'blocked@x.com', 'Str0ng!Passw0rd']);
-    fireEvent.submit(document.querySelector('.auth-form'));
+  it('a wrong code stays on the OTP screen, burns an attempt, and creates no account', async () => {
+    const api = await openEmailForm();
+    await toOtpStep(api);
+    typeCode('000000');
 
-    await waitFor(() => expect(/email service not configured/i.test(document.body.textContent)).toBe(true));
-    expect(authMock.createUserWithEmailAndPassword).not.toHaveBeenCalled();
-    expect(submit()).toBeTruthy();                 // still on the form, retryable
-    expect(submit().disabled).toBe(false);
+    await waitFor(() => expect(/incorrect code/i.test(document.body.textContent)).toBe(true));
+    expect(document.querySelector('.otp-step')).toBeTruthy();
+    expect(callsTo('signUp')).toHaveLength(0);
+    expect(otpDocFor().data.attempts).toBe(1);        // atomic increment, not a rewrite
+    expect(Array.from(document.querySelectorAll('.otp-digit')).map((el) => el.value).join('')).toBe('');
+  }, 20000);
+
+  it('three wrong codes lock the challenge out — still no account', async () => {
+    const api = await openEmailForm();
+    await toOtpStep(api);
+
+    for (let i = 0; i < 3; i += 1) {
+      typeCode('000000');
+      await waitFor(() => expect(document.querySelectorAll('.otp-digit')[0].value).toBe(''));
+    }
+
+    await waitFor(() => expect(/too many incorrect attempts/i.test(document.body.textContent)).toBe(true));
+    expect(callsTo('signUp')).toHaveLength(0);
+    expect(db.docs.size).toBe(0);                     // destroyed after the 3rd try
+  }, 20000);
+
+  it('an expired code says so, is discarded, and a resend is allowed', async () => {
+    const api = await openEmailForm();
+    await toOtpStep(api);
+
+    const live = otpDocFor();
+    const past = new Date(Date.now() - 601000).toISOString();
+    db.docs.set(live.path, { ...live.data, createdAt: past, expiresAt: past });
+
+    typeCode(mailedCode());                                    // the right digits, too late
+    await waitFor(() => expect(/expired/i.test(document.body.textContent)).toBe(true));
+    expect(callsTo('signUp')).toHaveLength(0);
+    expect(db.docs.size).toBe(0);                     // spent challenge removed
+  }, 20000);
+
+  it('resend goes through the same Nodemailer path and respects the cooldown', async () => {
+    const api = await openEmailForm();
+    await toOtpStep(api);
+
+    const resend = document.querySelector('.resend-btn');
+    expect(resend.disabled).toBe(true);               // 60 s from the first send
+    fireEvent.click(resend);
+    fireEvent.click(resend);
+    await act(async () => { await Promise.resolve(); });
+    expect(sent).toHaveLength(1);                     // no request burned while locked
+
+    // The endpoint is only ever called by otpService — Supabase is not in this loop.
+    expect(callsTo('resend')).toHaveLength(0);
+    expect(callsTo('signUp')).toHaveLength(0);
+  }, 20000);
+
+  it('a mailer failure rolls the challenge back so the student can retry', async () => {
+    globalThis.fetch = vi.fn(async () => ({
+      ok: false, status: 500, json: async () => ({ error: 'Gmail rejected the credentials' }),
+    }));
+    const api = await openEmailForm();
+
+    api.fill(['Raja Advani', 'raja@x.com', PASSWORD]);
+    fireEvent.submit(api.form());
+
+    await waitFor(() => expect(/gmail rejected the credentials/i.test(document.body.textContent)).toBe(true));
+    expect(db.docs.size).toBe(0);                     // rolled back, address is free
+    expect(document.querySelector('.auth-form')).toBeTruthy();   // still on details
+    expect(callsTo('signUp')).toHaveLength(0);
+  }, 20000);
+
+  it('an address that already has an account is bounced to the log-in hint', async () => {
+    state.signUpResult = { data: { user: authUser({ identities: [] }), session: null }, error: null };
+    const api = await openEmailForm();
+    await toOtpStep(api, { email: 'taken@x.com' });
+    typeCode(mailedCode());
+
+    await waitFor(() => expect(/already registered/i.test(document.body.textContent)).toBe(true));
+    expect(document.querySelector('.auth-switch-link')).toBeTruthy();  // "Log in instead"
+    expect(callsTo('signUp')).toHaveLength(1);        // attempted once, never retried
+    expect(callsTo('insert:students')).toHaveLength(0);
+  }, 20000);
+
+  it('a project that still confirms emails itself is reported honestly', async () => {
+    state.signUpResult = { data: { user: authUser(), session: null }, error: null };
+    const api = await openEmailForm();
+    await toOtpStep(api);
+    typeCode(mailedCode());
+
+    await waitFor(() => expect(/confirm email/i.test(document.body.textContent)).toBe(true));
+    expect(callsTo('signUp')).toHaveLength(1);
+    expect(callsTo('insert:students')).toHaveLength(0);
+    expect(callsTo('verifyOtp')).toHaveLength(0);
+  }, 20000);
+
+  it('reloading mid-flow cannot skip the gate', async () => {
+    const api = await openEmailForm();
+    await toOtpStep(api);
+
+    // The pending record is memory-only: a reload lands back on the details step
+    // with no account created and no code verified.
+    cleanup();
+    holder.entry = '/signup?mode=signup&method=email';
+    render(<App />);
+    await waitFor(() => expect(document.querySelector('.auth-form')).toBeTruthy());
+    expect(document.querySelectorAll('.otp-digit')).toHaveLength(0);
+    expect(callsTo('signUp')).toHaveLength(0);
+    expect(sent).toHaveLength(1);                     // no new code mailed on reload
   }, 20000);
 });

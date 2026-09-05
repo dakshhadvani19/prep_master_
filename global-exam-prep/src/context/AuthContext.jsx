@@ -1,35 +1,51 @@
 /**
  * AuthContext.jsx
  *
- * Student authentication for PrepMaster: Firebase Auth (email + OTP-verified
- * signup, Google sign-in) backed by a Firestore profile document.
+ * Student authentication for PrepMaster: **Supabase Auth** (email + password, and
+ * Google OAuth via PKCE) backed by the `public.students` row that the database
+ * creates.
  *
- * Firestore collection: `students` (doc ID = Firebase Auth UID)
+ * Signup verification order (deadline-critical, so it is stated at the top):
+ *   details -> /api/send-otp (Nodemailer/Gmail, src/utils/otpService.js)
+ *           -> 6-digit code verified against the Firestore `otp_tokens` digest
+ *           -> ONLY then supabase.auth.signUp() -> session -> trigger profile
+ * Supabase never mails a signup code and `auth.verifyOtp` is never called here:
+ * the custom OTP is the gate, so an unverified address never creates an account.
+ *
+ * public.students (Phase-1 schema, SRS Table 1.1)
  * {
- *   studentId:     number   // ER: Students.StudentId (auto-increment int)
- *   uid:          string    // Firebase Auth UID
- *   fullName:     string    // ER: Students.FullName
- *   email:        string    // ER: Students.Email (lowercase trimmed)
- *   passwordHash: string|null // ER: Students.Password — salted PBKDF2 digest,
- *                             // never a raw password; Google-only accounts null
- *   isSpam:       boolean   // ER: Students.IsSpam
- *   role:         'student' | 'admin' | 'superAdmin'
- *   provider:     string    ('email' | 'google')
- *   providers:    string[]
- *   createdAt:    string    (ISO)
- *   photoURL:     string|null
+ *   student_id:  bigint       // Students.StudentId, identity PK
+ *   auth_uid:    uuid         // -> auth.users(id) ON DELETE CASCADE
+ *   full_name:   varchar(100) // Students.FullName
+ *   email:       varchar(320) // Students.Email, lowercase
+ *   is_spam:     boolean      // Students.IsSpam
+ *   role:        'student' | 'admin' | 'superAdmin'
+ *   created_at:  timestamptz
  * }
+ * Students.Password is NOT a column: the credential lives only in Supabase Auth
+ * (auth.users.encrypted_password) and is never readable from this app.
  *
- * Roles are READ from the profile so <ProtectedRoute requiredRole=...> is
- * meaningful. They are never writable by the client — firestore.rules blocks
- * client-side changes to `role`. Admin *authentication* is deliberately not
- * implemented here (owner's instruction); an admin is bootstrapped by setting
- * role='admin' on their own student document in the Firebase console.
+ * Division of labour, on purpose:
+ *  - Supabase = student auth, student session, student profile.
+ *  - Firebase = Firestore data (exams, syllabus, dashboard, analytics, feedback,
+ *    storage, exam history). Those files keep importing `src/firebase.js`.
  *
- * Google authentication:
- * - Existing login callers may continue using popup through signInWithGoogle().
- * - Student signup uses redirect through startGoogleRedirect().
- * - Signup completes the redirect through completeGoogleRedirect().
+ * What this context does NOT do:
+ *  - It never inserts `public.students`. `handle_new_user()` (an AFTER INSERT
+ *    trigger on auth.users) owns profile creation, so a signup can never leave a
+ *    half-written profile, and RLS grants no INSERT to `authenticated` anyway.
+ *  - It never accepts role/is_spam/student_id/auth_uid from the client. `role`
+ *    is read from the row purely for routing decisions; it is not authoritative
+ *    for anything the client is allowed to do — RLS is.
+ *  - It does not pretend to be Firebase Auth. `currentUser` keeps the field names
+ *    the existing pages read (uid/email/displayName/photoURL) so they did not have
+ *    to change, and carries `authProvider: 'supabase'`. Anything that needs a real
+ *    Firebase credential (Firestore `request.auth`, exam history, storage) does
+ *    not get one — see AUTH.md "Identity bridge".
+ *
+ * Google authentication: redirect only (no popup), because PKCE completes in the
+ * return leg. `startGoogleRedirect()` sends the browser out; the session lands via
+ * `detectSessionInUrl` + onAuthStateChange, not via a "get redirect result" call.
  */
 
 import React, {
@@ -38,43 +54,30 @@ import React, {
     useContext,
     useEffect,
     useMemo,
+    useRef,
     useState,
 } from 'react';
 
+import { supabase, supabaseConfigError } from '../supabase';
 import {
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    signOut,
-    onAuthStateChanged,
-    updateProfile,
-    deleteUser,
-    GoogleAuthProvider,
-    signInWithPopup,
-    signInWithRedirect,
-    getRedirectResult,
-    getAdditionalUserInfo,
-    sendPasswordResetEmail,
-    sendEmailVerification,
-    updatePassword,
-    reauthenticateWithCredential,
-    EmailAuthProvider,
-} from 'firebase/auth';
-
-import {
-    doc,
-    setDoc,
-    getDoc,
-    updateDoc,
-} from 'firebase/firestore';
-
-import { auth, db, firebaseConfigError } from '../firebase';
-import { hashPassword, getNextStudentId } from '../utils/hashUtil';
-
-const googleProvider = new GoogleAuthProvider();
-
-googleProvider.setCustomParameters({
-    prompt: 'select_account',
-});
+    changePassword as sbChangePassword,
+    completePasswordRecovery as sbCompleteRecovery,
+    fetchStudentProfile,
+    loginWithPassword,
+    logout as sbLogout,
+    mapStudentProfile,
+    normalizeAuthError,
+    readOAuthErrorFromUrl,
+    resendSignupCode as sbResendCode,
+    sendPasswordReset as sbSendReset,
+    startGoogleOAuth,
+    updateStudentFullName,
+    createAuthUserAfterOtp,
+} from '../utils/supabaseAuth';
+// The existing secure OTP implementation: issues the code through /api/send-otp
+// (Nodemailer + Gmail) and verifies it against the SHA-256 digest stored in the
+// Firestore `otp_tokens` collection. Reused as-is; deliberately not rewritten.
+import { createAndSendOTP, verifyOTP } from '../utils/otpService';
 
 const AuthContext = createContext(null);
 
@@ -85,374 +88,420 @@ export function useAuth() {
 const ROLE_RANK = { student: 0, admin: 1, superAdmin: 2 };
 
 /**
- * createUserWithEmailAndPassword + a Firestore profile write is not one atomic
- * operation. If the profile write fails after the auth user exists, the address
- * is permanently "in use" with no profile to show for it — the user can neither
- * sign up again nor sign in. So the auth user is deleted to roll the attempt
- * back, and only then is the error surfaced.
- *
- * @param {import('firebase/auth').User} user
+ * A deliberately small, Supabase-derived view of the signed-in user, using the
+ * property names the rest of the app already reads. Not a Firebase `User`: there
+ * is no `getIdToken()` here, and nothing that needs one should use this.
  */
-async function rollbackOrphanedAuthUser(user) {
-    try {
-        await deleteUser(user);
-        return true;
-    } catch {
-        // Token may have expired; sign out so the app is not left "logged in".
-        try { await signOut(auth); } catch { /* noop */ }
-        return false;
-    }
-}
-
-// ─── Profile writer (shared by signup + lazy repair) ────────────────────────
-// Module scope on purpose: it touches no React state, so it cannot capture a
-// stale render and is reusable from anywhere in the auth flow.
-async function buildStudentProfile(user, { fullName, password, provider }) {
-    const cleanEmail = String(user.email || '').trim().toLowerCase();
-    const cleanName  = String(fullName || '').trim()
-        || (cleanEmail ? cleanEmail.split('@')[0] : 'Student');
-
-    const [studentId, passwordHash] = await Promise.all([
-        getNextStudentId(),
-        password ? hashPassword(password) : Promise.resolve(null),
-    ]);
-
-    const studentDoc = {
-        studentId,
-        uid: user.uid,
-        fullName: cleanName,
-        email: cleanEmail,
-        passwordHash,
-        isSpam: false,
-        role: 'student',
-        provider,
-        providers: [provider],
-        createdAt: new Date().toISOString(),
-        photoURL: user.photoURL || null,
+function toCurrentUser(user) {
+    if (!user) return null;
+    const meta = user.user_metadata || {};
+    const email = user.email ?? null;
+    return {
+        uid: user.id,
+        id: user.id,
+        email,
+        displayName: meta.full_name || meta.name || (email ? email.split('@')[0] : null),
+        photoURL: meta.avatar_url || meta.picture || null,
+        emailVerified: Boolean(user.email_confirmed_at),
+        isAnonymous: Boolean(user.is_anonymous),
+        providerData: (user.identities || []).map((identity) => ({
+            providerId: identity.provider,
+            uid: identity.identity_id ?? user.id,
+        })),
+        metadata: { creationTime: user.created_at, lastSignInTime: user.last_sign_in_at },
+        authProvider: 'supabase',
     };
-
-    await setDoc(doc(db, 'students', user.uid), studentDoc);
-    return studentDoc;
-}
-
-/**
- * Rebuilds a profile for an authenticated user who has none — the residue of an
- * interrupted signup, or a Google account returning before its profile saved.
- */
-async function createMissingProfile(user) {
-    const provider = user.providerData?.some(p => p.providerId === 'google.com')
-        ? 'google'
-        : 'email';
-
-    return buildStudentProfile(user, {
-        fullName: user.displayName,
-        password: null,
-        provider,
-    });
 }
 
 export function AuthProvider({ children }) {
+    const [session, setSession] = useState(null);
+    const [supabaseUser, setSupabaseUser] = useState(null);
     const [currentUser, setCurrentUser] = useState(null);
     const [studentData, setStudentData] = useState(null);
-    const [authLoading, setAuthLoading] = useState(true);
-    const [profileError, setProfileError] = useState('');
+    // A build with no Supabase project has no session to wait for: start settled,
+    // so the SPA never flashes a splash screen it cannot leave.
+    const [authLoading, setAuthLoading] = useState(() => Boolean(supabase));
+    const [profileError, setProfileError] = useState(() => (supabase
+    ? ''
+    // Known at module load: surface it on the first paint instead of after an
+    // effect, so a misconfigured build never flashes a blank card.
+    : (supabaseConfigError || 'Supabase is not configured for this build.')));
+    const [recoveryMode, setRecoveryMode] = useState(false);
 
-    // ─── Load student profile from Firestore ─────────────────────────────────
+    // One profile read per user id, however many auth events arrive. TOKEN_REFRESHED
+    // fires hourly; refetching on every one of those is how a refresh race with the
+    // post-redirect effects gets invented.
+    const loadedForRef = useRef(null);
+    const settledRef = useRef(false);
+
+    const markSettled = useCallback(() => {
+        if (!settledRef.current) {
+            settledRef.current = true;
+            setAuthLoading(false);
+        }
+    }, []);
+
+    // ─── Student profile (public.students, via RLS) ──────────────────────────
     const loadStudentProfile = useCallback(async (user) => {
         if (!user) {
+            loadedForRef.current = null;
             setStudentData(null);
             setProfileError('');
             return null;
         }
 
         try {
-            const snap = await getDoc(doc(db, 'students', user.uid));
+            const { row } = await fetchStudentProfile(supabase, user.id);
 
-            if (snap.exists()) {
-                setStudentData(snap.data());
+            if (row) {
+                const profile = mapStudentProfile(row, user);
+                setStudentData(profile);
                 setProfileError('');
-                return snap.data();
+                return profile;
             }
 
-            // Authenticated but profile-less: this is the residue of an
-            // interrupted signup (or a Google user returning before their
-            // profile was saved). Rebuild it so the account is usable instead
-            // of stranding the user on a blank dashboard.
-            const rebuilt = await createMissingProfile(user);
-            setStudentData(rebuilt);
-            return rebuilt;
-        } catch (err) {
-            // Do not silently pretend the profile is absent: surface the real
-            // cause, since permission-denied almost always means the deployed
-            // firestore.rules are out of date.
+            // No row for a real session: the signup trigger did not run (or the
+            // Phase-1 SQL is not deployed). The client must NOT paper over this by
+            // inserting its own profile — that path is what RLS exists to close.
             setStudentData(null);
             setProfileError(
-                err?.code === 'permission-denied'
-                    ? 'Your account profile is blocked by the database security rules. Deploy firestore.rules.'
+                'Your student profile is missing. The auth.users -> students trigger '
+                + 'did not create it, so an operator needs to check the Supabase '
+                + 'SQL migration before this account can be used.'
+            );
+            return null;
+        } catch (err) {
+            loadedForRef.current = null;
+            setStudentData(null);
+            setProfileError(
+                err?.isProfileBlocked
+                    ? 'Your profile is blocked by the database security policies. Enable RLS on public.students and apply the Phase-1 policies.'
                     : 'Could not load your profile. Please refresh and try again.'
             );
             return null;
         }
     }, []);
 
-    // ─── Email / Password Sign-Up (called AFTER the OTP is verified) ─────────
-    const signupWithEmail = useCallback(async (email, password, displayName) => {
-        const cleanEmail = String(email).trim().toLowerCase();
-        const cleanName  = String(displayName || '').trim();
+    // ─── Session plumbing ────────────────────────────────────────────────────
+    useEffect(() => {
+        if (!supabase) return undefined;   // nothing to subscribe to; see authLoading init
 
-        let user;
-        try {
-                ({ user } = await createUserWithEmailAndPassword(auth, cleanEmail, password));
-        } catch (err) {
-            throw normaliseAuthError(err);
-        }
+        let cancelled = false;
 
-        try {
-            if (cleanName) {
-                await updateProfile(user, { displayName: cleanName });
-            }
-            const studentDoc = await buildStudentProfile(user, {
-                fullName: cleanName,
-                password,
-                provider: 'email',
-            });
+        const apply = async (event, nextSession) => {
+            if (cancelled) return;
 
-            setStudentData(studentDoc);
-            return user;
-        } catch (err) {
-            const rolledBack = await rollbackOrphanedAuthUser(user);
-            if (err?.code === 'permission-denied') {
-                throw new Error(
-                    'Your account could not be saved because the database rules are '
-                    + 'blocking it. Deploy firestore.rules to your Firebase project.'
-                );
-            }
-            throw new Error(
-                rolledBack
-                    ? 'We could not finish creating your account. Please try again.'
-                    : 'Your account was created but could not be saved. Please sign out and try again.'
-            );
-        }
-    }, []);
-
-    // ─── Email / Password Login ─────────────────────────────────────────────
-    const login = useCallback(async (email, password) => {
-        try {
-            return await signInWithEmailAndPassword(
-                auth,
-                String(email).trim().toLowerCase(),
-                password
-            );
-        } catch (err) {
-            throw normaliseAuthError(err);
-        }
-    }, []);
-
-    // ─── Existing Google Login (popup) ───────────────────────────────────────
-    // Kept for backward compatibility with callers that expect a popup.
-    const signInWithGoogle = useCallback(async () => {
-        try {
-            const result = await signInWithPopup(auth, googleProvider);
-            const user = result.user;
-
-            const snap = await getDoc(doc(db, 'students', user.uid));
-
-            if (!snap.exists()) {
-                return { user, isNewUser: true };
+            if (event === 'SIGNED_OUT') {
+                setSession(null);
+                setSupabaseUser(null);
+                setCurrentUser(null);
+                setStudentData(null);
+                setProfileError('');
+                loadedForRef.current = null;
+                markSettled();
+                return;
             }
 
-            setStudentData(snap.data());
-            return { user, isNewUser: false };
-        } catch (err) {
-            throw normaliseAuthError(err);
-        }
-    }, []);
+            const user = nextSession?.user ?? null;
+            setSession(nextSession ?? null);
+            setSupabaseUser(user);
+            setCurrentUser(toCurrentUser(user));
 
-    // ─── Complete Google Profile (first-time Google users) ──────────────────
-    const completeGoogleProfile = useCallback(async (user, displayName, password = null) => {
-        /*
-         * Idempotency guard:
-         * If the profile already exists, do not allocate another studentId.
-         */
-        const existingSnap = await getDoc(doc(db, 'students', user.uid));
+            if (event === 'PASSWORD_RECOVERY') setRecoveryMode(true);
+            // A completed sign-in ends any recovery mode; functional form keeps
+            // this callback free of a stale `recoveryMode` dependency.
+            if (event === 'SIGNED_IN') setRecoveryMode((prev) => (prev ? false : prev));
 
-        if (existingSnap.exists()) {
-            setStudentData(existingSnap.data());
-            return user;
-        }
-
-        const resolvedName =
-            (displayName && displayName.trim())
-                ? displayName.trim()
-                : (user.email ? user.email.split('@')[0] : 'Student');
-
-        if (resolvedName && user.displayName !== resolvedName) {
-            await updateProfile(user, { displayName: resolvedName });
-        }
-
-        try {
-            const studentDoc = await buildStudentProfile(user, {
-                fullName: resolvedName,
-                password,
-                provider: 'google',
-            });
-            setStudentData(studentDoc);
-            return user;
-        } catch (err) {
-            if (err?.code === 'permission-denied') {
-                throw new Error(
-                    'Your Google sign-in worked, but the database rules blocked saving '
-                    + 'your profile. Deploy firestore.rules to your Firebase project.'
-                );
+            if (user && loadedForRef.current !== user.id) {
+                loadedForRef.current = user.id;
+                await loadStudentProfile(user);
             }
-            throw err;
-        }
+
+            markSettled();
+        };
+
+        const { data: sub } = supabase.auth.onAuthStateChange((event, nextSession) => {
+            // Supabase warns against awaiting auth calls inside this callback; the
+            // profile read is a PostgREST read, and it is fire-and-forget either way.
+            void apply(event, nextSession);
+        });
+
+        // INITIAL_SESSION is not guaranteed on every adapter, so read it directly
+        // too. Whichever arrives first wins; the other is a no-op by uid.
+        supabase.auth.getSession()
+            .then(({ data }) => apply('INITIAL_SESSION', data?.session ?? null))
+            .catch(() => markSettled());
+
+        // A cold, offline, or misrouted auth request must never strand the app on
+        // the splash screen forever.
+        const failsafe = setTimeout(markSettled, 8000);
+
+        return () => {
+            cancelled = true;
+            clearTimeout(failsafe);
+            sub?.subscription?.unsubscribe?.();
+        };
+    }, [loadStudentProfile, markSettled]);
+
+    // ─── Sign up: custom OTP first, Supabase account second ──────────────────
+    /**
+     * The two steps share one in-memory record: step 1 mails the code, step 2
+     * verifies it and then creates the account. The password lives only here, in
+     * this tab's memory, for exactly as long as the OTP screen is open — it is
+     * never sent to /api/send-otp, never written to Firestore, and dropped as soon
+     * as the code has been consumed (or the student goes back).
+     */
+    const pendingSignupRef = useRef(null);
+    // In-flight signUp promise, so a double submit cannot create two accounts.
+    const signupAttemptRef = useRef(null);
+
+    /** Step 1: ask the existing Gmail/Nodemailer path for a code. No Supabase call. */
+    const requestSignup = useCallback(async (email, password, displayName) => {
+        const cleanEmail = String(email || '').trim().toLowerCase();
+        const fullName = String(displayName || '').trim();
+
+        // Deliberately no supabase.auth.* here: the account must not exist before
+        // the code is verified.
+        const info = await createAndSendOTP(cleanEmail, fullName);
+        pendingSignupRef.current = {
+            email: cleanEmail,
+            password: String(password || ''),
+            fullName,
+        };
+        return { status: 'otp_sent', ...info };
     }, []);
 
-    // ─── Google Signup: start redirect ───────────────────────────────────────
-    const startGoogleRedirect = useCallback(() => {
-        return signInWithRedirect(auth, googleProvider);
-    }, []);
-
-    // ─── Google Signup: finish redirect ──────────────────────────────────────
-    const completeGoogleRedirect = useCallback(async () => {
-        const result = await getRedirectResult(auth);
-
-        if (!result?.user) {
-            return null;
-        }
-
-        const user = result.user;
-
-        /*
-         * getAdditionalUserInfo() gives Firebase's provider-level new-user
-         * signal. Firestore is also checked because PrepMaster requires a
-         * student profile before the dashboard flow is considered complete.
-         */
-        const additionalInfo = getAdditionalUserInfo(result);
-        const profileSnap = await getDoc(doc(db, 'students', user.uid));
-
-        let isNewUser = additionalInfo?.isNewUser === true;
-
-        // Fallback if provider metadata is unavailable after redirect.
-        if (!additionalInfo) {
-            isNewUser = !profileSnap.exists();
-        }
-
-        // Never allocate a second PrepMaster student record.
-        if (isNewUser && profileSnap.exists()) {
-            isNewUser = false;
-        }
-
-        if (isNewUser) {
-            await completeGoogleProfile(
-                user,
-                user.displayName || user.email || 'Student'
-            );
-        } else if (profileSnap.exists()) {
-            setStudentData(profileSnap.data());
-        }
-
-        return { user, isNewUser };
-    }, [completeGoogleProfile]);
-
-    // ─── Password Reset ──────────────────────────────────────────────────────
-    const sendPasswordReset = useCallback(async (email) => {
-        try {
-            await sendPasswordResetEmail(auth, String(email).trim().toLowerCase());
-            return true;
-        } catch (err) {
-            throw normaliseAuthError(err);
-        }
+    /** Resend: the same Nodemailer path. otpService supersedes the old code and
+     *  enforces the 60 s cooldown, which is also what the UI counts down. */
+    const resendSignupOtp = useCallback(async (email) => {
+        const pending = pendingSignupRef.current;
+        const target = String(email || pending?.email || '').trim().toLowerCase();
+        // A new code supersedes the old one inside otpService, so the pending
+        // record needs no change: the password it holds is still the right one.
+        const info = await createAndSendOTP(target, pending?.fullName);
+        return { status: 'otp_sent', ...info };
     }, []);
 
     /**
-     * Password change for a signed-in email account. Google-only accounts have
-     * no Firebase password yet, in which case this links one (step-up).
+     * Step 2. `verifyOTP` throws for a wrong, expired, over-attempt or missing code
+     * and consumes it on success (single use); Supabase is only reached after that,
+     * exactly once, with `full_name` as its only metadata. The profile row is the
+     * trigger's job — there is no client-side insert and no rollback to write.
      */
-    const changePassword = useCallback(async (currentPassword, newPassword) => {
-        const user = auth.currentUser;
-        if (!user) throw new Error('You are not signed in.');
+    const verifySignupOtp = useCallback(async (email, token) => {
+        if (!supabase) throw new Error(supabaseConfigError || 'Supabase is not available.');
 
-        const email = String(user.email || '').trim().toLowerCase();
-
-        if (user.providerData?.some(p => p.providerId === 'password') && currentPassword) {
-            try {
-                await reauthenticateWithCredential(
-                    user,
-                    EmailAuthProvider.credential(email, currentPassword)
-                );
-            } catch (err) {
-                throw normaliseAuthError(err);
-            }
+        const pending = pendingSignupRef.current;
+        const target = String(email || pending?.email || '').trim().toLowerCase();
+        if (!pending || pending.email !== target) {
+            throw new Error('Your signup session expired. Please enter your details again.');
         }
 
-        try {
-            await updatePassword(user, newPassword);
-            const passwordHash = await hashPassword(newPassword);
-            await updateDoc(doc(db, 'students', user.uid), {
-                passwordHash,
-                passwordUpdatedAt: new Date().toISOString(),
-            });
-            return true;
-        } catch (err) {
-            throw normaliseAuthError(err);
-        }
-    }, []);
+        // 1. the gate — throws before anything is created
+        await verifyOTP(target, token);
 
-    const resendVerificationEmail = useCallback(async () => {
-        const user = auth.currentUser;
-        if (!user) throw new Error('You are not signed in.');
-        await sendEmailVerification(user);
-        return true;
-    }, []);
-
-    const refreshStudentProfile = useCallback(async () => {
-        return loadStudentProfile(auth.currentUser);
-    }, [loadStudentProfile]);
-
-    // ─── Sign Out ─────────────────────────────────────────────────────────────
-    const logout = useCallback(async () => {
-        localStorage.removeItem('userExamHistory');
-        try { sessionStorage.removeItem('prepmaster_google_signup_pending'); } catch { /* noop */ }
-        setStudentData(null);
-        await signOut(auth);
-    }, []);
-
-    // ─── Auth State Observer ──────────────────────────────────────────────────
-    useEffect(() => {
-        if (firebaseConfigError) {
-            // No Firebase project: resolve the loader instead of leaving the
-            // whole SPA hanging on a spinner with no explanation.
-            setAuthLoading(false);
-            setProfileError(firebaseConfigError);
-            return undefined;
-        }
-
-        const unsubscribe = onAuthStateChanged(
-            auth,
-            async (user) => {
-                setCurrentUser(user);
+        // 2. The challenge is spent. The credentials leave memory at once and the
+        //    one in-flight attempt is shared, so a double submit cannot create two
+        //    accounts (requirement: signUp is called exactly once per verified code).
+        if (!signupAttemptRef.current) {
+            const { password, fullName } = pending;
+            signupAttemptRef.current = (async () => {
                 try {
-                    await loadStudentProfile(user);
+                    const created = await createAuthUserAfterOtp(supabase, { email: target, password, fullName });
+                    // Terminal either way (account created, or it already exists):
+                    // the password leaves memory as soon as it has been used. A
+                    // *failed* request keeps the pending record, so the student can
+                    // resend a code and retry — the spent code can never be replayed.
+                    pendingSignupRef.current = null;
+                    return created;
                 } finally {
-                    // Never leave the app locked behind the splash screen.
-                    setAuthLoading(false);
+                    signupAttemptRef.current = null;
                 }
-            }
-        );
+            })();
+        }
 
-        return unsubscribe;
+        const result = await signupAttemptRef.current;
+
+        if (result.status === 'email_exists') {
+            // Same neutral signal Supabase gives (an identity-less user); no second
+            // account is attempted and no existence verdict is implied.
+            return { status: 'email_exists', message: result.message };
+        }
+
+        const { user, session: nextSession } = result;
+        // onAuthStateChange normally lands first; this covers the tick where it has
+        // not, so the success overlay and the redirect see one consistent state.
+        if (user && loadedForRef.current !== user.id) {
+            loadedForRef.current = user.id;
+            setSession(nextSession ?? null);
+            setSupabaseUser(user);
+            setCurrentUser(toCurrentUser(user));
+            await loadStudentProfile(user);
+        }
+        markSettled();
+        return { status: result.status };
+    }, [loadStudentProfile, markSettled]);
+
+    /** Back out of the OTP screen without leaving a password or a live challenge
+     *  around: the code itself is superseded the next time one is requested. */
+    const cancelSignupOtp = useCallback(() => {
+        pendingSignupRef.current = null;
+    }, []);
+
+    /** The Log in tab's "my address is not confirmed" escape hatch. This is the one
+     *  place Supabase is asked to mail anything, and it is not the signup OTP. */
+    const resendSupabaseVerification = useCallback(async (email) => {
+        if (!supabase) throw new Error(supabaseConfigError || 'Supabase is not available.');
+        return sbResendCode(supabase, email || supabaseUser?.email);
+    }, [supabaseUser]);
+
+    /** Kept so an old call site fails loudly instead of silently mailing a code and
+     *  stopping. The flow is requestSignup() -> verifySignupOtp(). */
+    const signupWithEmail = useCallback(async () => {
+        throw new Error(
+            'signupWithEmail is no longer one call: request the code with requestSignup() '
+            + 'and create the account with verifySignupOtp().'
+        );
+    }, []);
+
+    // ─── Log in / out ────────────────────────────────────────────────────────
+    const login = useCallback(async (email, password) => {
+        if (!supabase) throw new Error(supabaseConfigError || 'Supabase is not available.');
+        try {
+            const nextSession = await loginWithPassword(supabase, { email, password });
+            return { user: nextSession?.user ?? null, session: nextSession };
+        } catch (err) {
+            throw err?.code ? err : normalizeAuthError(err);
+        }
+    }, []);
+
+    const logout = useCallback(async () => {
+        // Exam history cache lives in localStorage; clearing it on logout is the
+        // existing behaviour and stays here (the data itself is still Firestore's).
+        try { localStorage.removeItem('userExamHistory'); } catch { /* noop */ }
+        try { sessionStorage.removeItem('prepmaster_google_signup_pending'); } catch { /* noop */ }
+
+        loadedForRef.current = null;
+        setStudentData(null);
+        setCurrentUser(null);
+        setSupabaseUser(null);
+        setSession(null);
+        setProfileError('');
+
+        if (!supabase) return;
+        await sbLogout(supabase);
+    }, []);
+
+    // ─── Google (redirect + PKCE) ────────────────────────────────────────────
+    /**
+     * @param {'login'|'signup'} [mode] which auth tab to come back to. It decides
+     * nothing about the account (the trigger created the profile either way and a
+     * returning Google student is signed in regardless), but a student who cancels
+     * consent should land back on the tab they left, not on Log in.
+     */
+    const startGoogleRedirect = useCallback((mode) => {
+        if (!supabase) throw new Error(supabaseConfigError || 'Supabase is not available.');
+        const origin = typeof window !== 'undefined' ? window.location.origin : '';
+        const tab = mode === 'signup' ? 'signup' : 'login';
+        // Must match a Supabase redirect allow-list entry (`<origin>/**`).
+        const redirectTo = origin ? `${origin}/signup?mode=${tab}` : undefined;
+        return startGoogleOAuth(supabase, { redirectTo });
+    }, []);
+
+    /** Redirect-only now: `signInWithGoogle` is the same flow, kept for callers. */
+    const signInWithGoogle = useCallback(async () => {
+        await startGoogleRedirect('login');
+        return null;
+    }, [startGoogleRedirect]);
+
+    /**
+     * The return leg is handled by `detectSessionInUrl` + onAuthStateChange, so
+     * there is no "getRedirectResult" step any more. Kept as a no-op shape for any
+     * caller that still awaits it, and it reports a URL-level OAuth failure
+     * (cancelled consent) which is otherwise silent.
+     */
+    const completeGoogleRedirect = useCallback(async () => {
+        const problem = readOAuthErrorFromUrl(
+            typeof window !== 'undefined' ? window.location.href : ''
+        );
+        if (problem) throw normalizeAuthError(new Error(problem.message));
+        const current = await supabase?.auth?.getSession?.() ?? null;
+        return current?.data?.session ? { user: current.data.session.user } : null;
+    }, []);
+
+    // ─── Password reset / change ─────────────────────────────────────────────
+    const sendPasswordReset = useCallback(async (email) => {
+        if (!supabase) throw new Error(supabaseConfigError || 'Supabase is not available.');
+        const origin = typeof window !== 'undefined' ? window.location.origin : '';
+        return sbSendReset(supabase, {
+            email,
+            redirectTo: origin ? `${origin}/signup?mode=login` : undefined,
+        });
+    }, []);
+
+    /** Writes a new password on the short-lived PASSWORD_RECOVERY session. */
+    const completePasswordRecovery = useCallback(async (newPassword) => {
+        if (!supabase) throw new Error(supabaseConfigError || 'Supabase is not available.');
+        await sbCompleteRecovery(supabase, newPassword);
+        setRecoveryMode(false);
+        try {
+            const { data } = await supabase.auth.getUser();
+            if (data?.user) await loadStudentProfile(data.user);
+        } catch { /* the session may have ended by design */ }
+        return true;
     }, [loadStudentProfile]);
+
+    /**
+     * Password change for a signed-in account. There is no current-password check
+     * here on purpose: the client cannot and must not verify a credential it
+     * cannot read. If the project enables "require reauthentication", Supabase
+     * rejects the call and the mapped message asks the student to sign in again.
+     */
+    const changePassword = useCallback(async (newPassword) => {
+        if (!supabase) throw new Error(supabaseConfigError || 'Supabase is not available.');
+        return sbChangePassword(supabase, newPassword);
+    }, []);
+
+    // ─── Profile helpers ──────────────────────────────────────────────────────
+    const refreshStudentProfile = useCallback(async () => {
+        if (!supabase) return null;
+        const { data } = await supabase.auth.getUser();
+        if (!data?.user) return null;
+        setSupabaseUser(data.user);
+        setCurrentUser(toCurrentUser(data.user));
+        loadedForRef.current = data.user.id;
+        return loadStudentProfile(data.user);
+    }, [loadStudentProfile]);
+
+    const updateFullName = useCallback(async (fullName) => {
+        if (!supabase || !supabaseUser) throw new Error('You are not signed in.');
+        const clean = await updateStudentFullName(supabase, supabaseUser.id, fullName);
+        setStudentData((prev) => (prev ? { ...prev, fullName: clean } : prev));
+        return clean;
+    }, [supabaseUser]);
+
+    /**
+     * Profile creation moved into the database. Anything that used to "complete" a
+     * Google profile now just re-reads it; the trigger has already made it.
+     */
+    const completeGoogleProfile = useCallback(async () => refreshStudentProfile(), [refreshStudentProfile]);
+
+    const needsEmailVerification = Boolean(currentUser) && !currentUser.emailVerified;
 
     // ─── Roles (RBAC) ─────────────────────────────────────────────────────────
     const role = studentData?.role ?? 'student';
 
     const value = useMemo(() => ({
+        authProvider: 'supabase',
         currentUser,
+        supabaseUser,
+        session,
         studentData,
+        studentId: studentData?.studentId ?? null,
         authLoading,
         profileError,
+        recoveryMode,
+        needsEmailVerification,
 
         role,
         isAdmin: ROLE_RANK[role] >= ROLE_RANK.admin,
@@ -464,40 +513,46 @@ export function AuthProvider({ children }) {
                 ? role === 'superAdmin'
                 : ROLE_RANK[role] >= ROLE_RANK[required]),
 
-        // Auth methods
+        // Student auth surface
+        requestSignup,
+        signupWithEmail,
+        verifySignupOtp,
+        resendSignupOtp,
+        cancelSignupOtp,
+        resendSupabaseVerification,
         login,
         logout,
-        signupWithEmail,
-
-        // Existing popup Google login
-        signInWithGoogle,
-
-        // Redirect Google signup
         startGoogleRedirect,
+        signInWithGoogle,
         completeGoogleRedirect,
-
-        // Google profile creation
         completeGoogleProfile,
-
         sendPasswordReset,
+        completePasswordRecovery,
         changePassword,
-        resendVerificationEmail,
         refreshStudentProfile,
-    }), [
-        currentUser, studentData, authLoading, profileError, role,
-        login, logout, signupWithEmail, signInWithGoogle, startGoogleRedirect,
-        completeGoogleRedirect, completeGoogleProfile, sendPasswordReset,
-        changePassword, resendVerificationEmail, refreshStudentProfile,
-    ]);
+        updateFullName,
+        clearRecoveryMode: () => setRecoveryMode(false),
 
-    // Legacy alias retained for any caller still using `signup`.
-    value.signup = signupWithEmail;
-    // checkEmailExists is intentionally gone: a client-side existence lookup
-    // needs a public read on `students`, which is an account-enumeration leak.
-    // Firebase's own auth/email-already-in-use error is surfaced instead.
-    value.checkEmailExists = async () => {
-        throw new Error('Email availability is reported by Firebase at signup.');
-    };
+        // Legacy aliases, so no caller has to change in this same step:
+        //   signup                 -> throws (see signupWithEmail); signup is two steps now
+        //   resendVerificationEmail-> resendSupabaseVerification (Log in tab only)
+        //   checkEmailExists       -> stays unavailable on purpose; answering it from
+        //                             the client would need a public read on students,
+        //                             which is an account-enumeration oracle.
+        signup: signupWithEmail,
+        resendVerificationEmail: resendSupabaseVerification,
+        checkEmailExists: async () => {
+            throw new Error('Email availability is reported by Supabase Auth at signup.');
+        },
+    }), [
+        currentUser, supabaseUser, session, studentData, authLoading, profileError,
+        recoveryMode, needsEmailVerification, role, requestSignup, signupWithEmail,
+        verifySignupOtp, resendSignupOtp, cancelSignupOtp, resendSupabaseVerification,
+        login, logout, startGoogleRedirect,
+        signInWithGoogle, completeGoogleRedirect, completeGoogleProfile,
+        sendPasswordReset, completePasswordRecovery, changePassword,
+        refreshStudentProfile, updateFullName,
+    ]);
 
     return (
         <AuthContext.Provider value={value}>
@@ -545,40 +600,4 @@ export function AuthProvider({ children }) {
             )}
         </AuthContext.Provider>
     );
-}
-
-/**
- * Maps Firebase error codes to user-facing copy. Never forwards a raw
- * Firebase/internal message to the UI.
- */
-function normaliseAuthError(err) {
-    const code = err?.code || '';
-    const friendly = new Map([
-        ['auth/invalid-email', 'That email address is not valid.'],
-        ['auth/user-not-found', 'No account found with this email.'],
-        ['auth/wrong-password', 'Incorrect password. Please try again.'],
-        ['auth/invalid-credential', 'Incorrect email or password.'],
-        ['auth/email-already-in-use', 'An account with this email already exists. Try logging in instead.'],
-        ['auth/weak-password', 'Please choose a stronger password.'],
-        ['auth/too-many-requests', 'Too many attempts. Please wait a moment and try again.'],
-        ['auth/network-request-failed', 'Connection issue. Check your internet and try again.'],
-        ['auth/popup-blocked', 'Pop-up was blocked. Please allow pop-ups for this site.'],
-        ['auth/popup-closed-by-user', 'Sign-in was cancelled.'],
-        ['auth/cancelled-popup-request', 'Sign-in was cancelled.'],
-        ['auth/account-exists-with-different-credential', 'An account already exists for this email using a different sign-in method.'],
-        ['auth/requires-recent-login', 'For your security, please log in again before changing your password.'],
-        ['auth/operation-not-allowed', 'This sign-in method is disabled. Enable it in the Firebase console.'],
-        ['auth/configuration-not-found', 'Firebase Auth is not configured for this project.'],
-        ['auth/unauthorized-domain', 'This domain is not authorised in the Firebase console.'],
-        ['auth/permission-denied', 'The database rules blocked this action.'],
-    ]);
-
-    const message = friendly.get(code)
-        || (/Firebase|firestore|\[/.test(err?.message || '')
-            ? 'Something went wrong. Please try again.'
-            : err?.message || 'Something went wrong. Please try again.');
-
-    const out = new Error(message);
-    out.code = code;
-    return out;
 }

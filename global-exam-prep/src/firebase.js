@@ -1,3 +1,14 @@
+/**
+ * ⚠️ IDENTITY NOTE (Supabase migration, Phase 2): student *authentication* now
+ * goes through Supabase (src/supabase.js), so `firebase/auth` is no longer
+ * initialised from the auth flow and Firestore `request.auth` is EMPTY for a
+ * signed-in student. Everything still served from here — exam history
+ * (`users/{uid}/examHistory`), syllabus storage, feedback, storage uploads —
+ * keeps working only until the identity bridge lands: the rules in
+ * firestore.rules gate those paths on `request.auth.uid == uid`, and a Supabase
+ * session is deliberately not presented as a Firebase credential. See
+ * AUTH.md / the Phase-2 report for the affected paths.
+ */
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
