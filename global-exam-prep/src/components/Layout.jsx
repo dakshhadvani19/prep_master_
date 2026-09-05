@@ -644,6 +644,7 @@ export default function Layout() {
                 textAlign: 'center',
                 color: 'var(--text-tertiary)',
                 fontSize: '0.875rem',
+                display: 'none'
             }}>
                 <p>© 2026 PrepMaster — Built by <strong style={{ color: 'var(--text-secondary)' }}>Daksh Hadvani</strong>. University Exam Preparation Platform.</p>
             </footer>
