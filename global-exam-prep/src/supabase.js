@@ -48,6 +48,105 @@ function isPrivateCredential(value) {
     return false;
 }
 
+// ─── OAuth / recovery callback: captured HERE, before anything else can ─────────
+//
+// A Supabase redirect lands on `?code=…&state=…` (or, for a rejection,
+// `?error_code=…`). That code can be exchanged exactly once, and whoever holds it
+// must be the only consumer. Two consumers is what broke Google sign-in in
+// production: the SDK's own `detectSessionInUrl` parses and *strips* those params
+// during its async bootstrap, while this app's routing (react-router, the auth
+// guards, the return-leg effect in Signup.jsx) is already reading and rewriting the
+// same URL. Whichever of them won the tick decided whether the student got signed
+// in — and when the SDK lost, the page fell through to a generic
+// "Google sign-in did not complete" that hid the real reason.
+//
+// So the params are read synchronously at module evaluation, which happens before
+// React mounts and before any navigation can rewrite the address bar, and
+// `detectSessionInUrl` is turned off below. The exchange then happens in one place
+// (AuthContext), where its error can be reported to the student instead of the
+// console.
+const CALLBACK_PARAMS = [
+    'code', 'state', 'type',
+    'error', 'error_code', 'error_description',
+    'access_token', 'refresh_token', 'expires_in', 'token_type',
+    'provider_token', 'id_token',
+];
+
+function readCallbackParams() {
+    if (typeof window === 'undefined' || !window.location) return null;
+
+    const query = new URLSearchParams(window.location.search || '');
+    const hash = String(window.location.hash || '').replace(/^#/, '');
+    const hashQuery = new URLSearchParams(hash.includes('?') ? hash.slice(hash.indexOf('?') + 1) : hash);
+    const read = (key) => query.get(key) || hashQuery.get(key) || '';
+
+    const found = {};
+    for (const key of CALLBACK_PARAMS) {
+        const value = read(key);
+        if (value) found[key] = value;
+    }
+
+    const hasCode = Boolean(found.code);
+    const hasFailure = Boolean(found.error || found.error_code || found.error_description);
+    const hasTokens = Boolean(found.access_token);
+    if (!hasCode && !hasFailure && !hasTokens) return null;
+
+    return {
+        kind: hasCode ? 'code' : hasTokens ? 'implicit' : 'error',
+        code: found.code || '',
+        state: found.state || '',
+        // `type=recovery` is how a password-reset link announces itself; the same
+        // one-time code path serves it, so the flag has to survive the capture.
+        type: found.type || '',
+        errorCode: found.error_code || found.error || '',
+        errorDescription: (found.error_description || '').replace(/\+/g, ' '),
+        raw: window.location.href,
+    };
+}
+
+function scrubCallbackFromUrl() {
+    if (typeof window === 'undefined' || !window.history?.replaceState) return;
+    try {
+        const url = new URL(window.location.href);
+        for (const key of CALLBACK_PARAMS) url.searchParams.delete(key);
+        const search = url.searchParams.toString();
+        window.history.replaceState({}, '', `${url.pathname}${search ? `?${search}` : ''}`);
+    } catch {
+        // A browser that will not let us rewrite the address bar is not worth
+        // failing sign-in over: the params stay, and the exchange is still the
+        // only consumer of them in this tab.
+    }
+}
+
+let pendingCallback = readCallbackParams();
+if (pendingCallback) scrubCallbackFromUrl();
+
+/**
+ * The callback this page load arrived on, or null. Read once via
+ * `consumeAuthCallback()` so a remount, a StrictMode double-effect or a stray
+ * re-render can never exchange the same code twice.
+ */
+export function consumeAuthCallback() {
+    const value = pendingCallback;
+    pendingCallback = null;
+    return value;
+}
+
+/** Peek, without consuming: used to refuse starting a *new* OAuth flow mid-callback. */
+export function peekAuthCallback() {
+    return pendingCallback;
+}
+
+/**
+ * True while an OAuth/recovery code is waiting to be exchanged. Any code path that
+ * would start a fresh flow must check this first: a second `signInWithOAuth`
+ * overwrites the PKCE code verifier in storage, which is precisely how a valid,
+ * still-unexchanged code becomes "Unable to exchange external code".
+ */
+export function hasPendingAuthCallback() {
+    return Boolean(pendingCallback && pendingCallback.kind !== 'error');
+}
+
 /**
  * Non-null when this build has no usable Supabase project. AuthContext reads it
  * so the UI can explain the problem instead of hanging on a loader (same job
@@ -85,9 +184,11 @@ export const supabase = supabaseConfigError
               persistSession: true,
               autoRefreshToken: true,
               flowType: 'pkce',
-              // Consumes ?code=… (PKCE callback, Google return leg, password
-              // recovery link) on page load and fires onAuthStateChange.
-              detectSessionInUrl: true,
+              // Deliberately OFF: see the capture above. The one-time code in the
+              // URL is exchanged once, by AuthContext, which can then report the
+              // actual reason to the student. With this left on, the SDK and the
+              // app race to consume the same code and the loser wins the UI.
+              detectSessionInUrl: false,
               // Namespaced so a Firebase-era localStorage key can never collide.
               storageKey: 'prepmaster-supabase-auth',
           },

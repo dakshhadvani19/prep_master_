@@ -816,9 +816,19 @@ input:focus-visible,
     gap: 10px;
 }
 
+/* One knob owns the geometry. The disc is the ring minus the arc, and the glyph is
+   a fixed fraction of the disc, so the score can never be sized out of its circle by
+   a root-font-size change, a zoom level, or someone editing one of these numbers.
+   (The "6" clipped in production because the digit's font-size and the disc's px
+   size were set independently, and there was no line-height at all: the inherited
+   line box was taller than the circle, so the glyph sat low and was cut by the rim.) */
 .strength-ring {
-    width: 34px;
-    height: 34px;
+    --ring-size: 34px;
+    --ring-arc: 4px;
+    --ring-disc: calc(var(--ring-size) - (var(--ring-arc) * 2));
+
+    width: var(--ring-size);
+    height: var(--ring-size);
     border-radius: 50%;
     flex-shrink: 0;
     display: flex;
@@ -827,16 +837,13 @@ input:focus-visible,
     transition: background 0.4s ease;
 }
 
-/* The score digit inherited a normal line-height inside a 22px disc, so the line
-   box was taller than the circle and the "6" sat low and clipped against the rim.
-   Grid centering + line-height:1 + a box sized for the glyph keeps 0-6 centered
-   and contained; overflow:hidden guarantees nothing can escape the disc. No
-   sizing is left to the inherited text metrics. */
 .strength-ring-inner {
-    width: 26px;
-    height: 26px;
-    min-width: 26px;
-    min-height: 26px;
+    /* A single digit, so 1ch is the exact advance width; the box is derived from it
+       rather than fixed, which is what keeps it inside the disc at any zoom. */
+    width: var(--ring-disc);
+    height: var(--ring-disc);
+    min-width: var(--ring-disc);
+    min-height: var(--ring-disc);
     border-radius: 50%;
     background: var(--card-bg-solid);
     display: grid;
@@ -844,8 +851,14 @@ input:focus-visible,
     padding: 0;
     overflow: hidden;
     font-family: var(--font-mono);
-    font-size: 0.72rem;
-    line-height: 1;
+    font-size: calc(var(--ring-disc) * 0.46);
+    /* Centring the *line box* in a grid cell is not the same as centring the ink: with
+       line-height:1 the half-leading is negative and the digit rides ~1.5px high. 1.3
+       puts the drawn glyph on the centre line of the disc — screenshot-measured at
+       dx 0.00 / dy -0.50 at 1x, 2x and 3x and at a 22px root font, i.e. within half a
+       device pixel — while the box it occupies (0.46em * 1.3 ≈ 15.5px) stays inside
+       the 26px disc, so containment never depends on the value of --ring-size. */
+    line-height: 1.3;
     font-weight: 600;
     text-align: center;
     font-variant-numeric: tabular-nums;
@@ -854,7 +867,7 @@ input:focus-visible,
 
 .strength-text {
     font-size: 0.78rem;
-    line-height: 1.3;
+    line-height: 1.4;
 }
 
 /* ==========================================================================

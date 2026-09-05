@@ -24,6 +24,14 @@ export const state = {
   resendError: null,
   emit: null,             // the app's onAuthStateChange callback
   calls: [],
+
+  // What the page load arrived with, in the shape src/supabase.js produces. Tests set
+  // this instead of rewriting window.location, because in the real app the code is
+  // read once at module load and then owned by AuthContext — no URL mutation after
+  // that is even observable.
+  authCallback: null,
+  exchangeError: null,    // a { message, code } from GoTrue's /token?grant_type=pkce
+  exchangeDelayMs: 0,     // to exercise the bounded wait without a real timeout
 };
 
 export function resetSupabaseStub() {
@@ -39,6 +47,15 @@ export function resetSupabaseStub() {
   state.resendError = null;
   state.emit = null;
   state.calls.length = 0;
+  state.authCallback = null;
+  state.exchangeError = null;
+  state.exchangeDelayMs = 0;
+}
+
+/** Make the next page load arrive on an OAuth/recovery callback. */
+export function setAuthCallback(callback) {
+  state.authCallback = callback;
+  return callback;
 }
 
 export const callsTo = (name) => state.calls.filter((c) => c.name === name);
@@ -147,6 +164,21 @@ export const client = {
       return { data: { user: state.session?.user ?? authUser() }, error: state.updateUserError };
     }),
 
+    exchangeCodeForSession: vi.fn(async (code) => {
+      state.calls.push({ name: 'exchangeCodeForSession', code });
+      if (state.exchangeDelayMs) await new Promise((r) => setTimeout(r, state.exchangeDelayMs));
+      if (state.exchangeError) return { data: null, error: state.exchangeError };
+      const user = state.session?.user ?? authUser({
+        app_metadata: { provider: 'google' },
+        identities: [{ provider: 'google', identity_id: 'g1' }],
+      });
+      state.session = makeSession(user);
+      // GoTrue fires SIGNED_IN from inside the exchange; the app must not have to
+      // poll for it.
+      state.emit?.('SIGNED_IN', state.session);
+      return { data: { session: state.session, user }, error: null };
+    }),
+
     signInWithOAuth: vi.fn(async (opts) => {
       state.calls.push({ name: 'signInWithOAuth', ...opts });
       if (state.oauthError) return { data: null, error: state.oauthError };
@@ -203,5 +235,19 @@ export function makeBuilder(table) {
 }
 
 export function supabaseModuleMock() {
-  return { supabase: client, default: client, supabaseConfigError: null, requireSupabase: () => client };
+  return {
+    supabase: client,
+    default: client,
+    supabaseConfigError: null,
+    requireSupabase: () => client,
+    // The capture API. `consume` is one-shot, exactly like the real module, so a
+    // test can assert the code is exchanged once and never re-read on a remount.
+    consumeAuthCallback: () => {
+      const value = state.authCallback;
+      state.authCallback = null;
+      return value;
+    },
+    peekAuthCallback: () => state.authCallback,
+    hasPendingAuthCallback: () => Boolean(state.authCallback && state.authCallback.kind !== 'error'),
+  };
 }

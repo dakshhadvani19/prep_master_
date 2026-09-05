@@ -1,45 +1,35 @@
 import nodemailer from 'nodemailer';
+import {
+    OTP_TTL_SECONDS,
+    RESEND_COOLDOWN_S,
+    budgetFor,
+    clientIp,
+    discardOtpChallenge,
+    generateOtp,
+    issueOtpChallenge,
+    missingConfig,
+    normalizeEmail,
+    safeUserName,
+} from './_otpStore.js';
 
-// ─── Guards ──────────────────────────────────────────────────────────────────
-
-/** Minimal HTML escaping; the template interpolates this into the body. */
-function escapeHtml(value) {
-    return String(value)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-}
-
-const WINDOW_MS     = 10 * 60 * 1000;
-const MAX_PER_EMAIL = 5;   // codes per address per window
-const MAX_PER_IP     = 12;  // requests per IP per window
-const emailHits = new Map();
-const ipHits    = new Map();
-
-function slide(map, key, max) {
-    const now = Date.now();
-    const kept = (map.get(key) || []).filter(t => now - t < WINDOW_MS);
-    if (kept.length >= max) {
-        const retryIn = Math.ceil((WINDOW_MS - (now - kept[0])) / 1000);
-        map.set(key, kept);
-        return retryIn;
-    }
-    kept.push(now);
-    map.set(key, kept);
-    return 0;
-}
-
-function checkRateLimit(email, ip) {
-    // Evict occasionally so long-lived instances do not grow without bound.
-    if (emailHits.size > 5000 || ipHits.size > 5000) {
-        emailHits.clear();
-        ipHits.clear();
-    }
-    return Math.max(slide(emailHits, email, MAX_PER_EMAIL), slide(ipHits, ip, MAX_PER_IP));
-}
-
+/**
+ * POST /api/send-otp — issue a signup code and mail it.
+ *
+ * The contract changed with the Firestore -> Postgres move, and it changed in the
+ * direction that matters: **the browser no longer supplies the code.** It sends
+ * `{ email, userName }`, this function generates the code with the CSPRNG, stores
+ * only its keyed digest in Postgres (`public.auth_otp`, see
+ * supabase/migrations/20260905120000_auth_otp.sql), and mails it. That removes the
+ * race where a client-generated code had to survive a round trip through two
+ * back-ends, and it means a tampered client cannot pick its own challenge.
+ *
+ * The password is not part of this endpoint, in any direction: it is never read
+ * here, never forwarded to Nodemailer, and never logged.
+ *
+ * Failure order is deliberate: store first, mail second, roll the store back if the
+ * mail fails — otherwise a student who never received an email would have to wait
+ * out a 10-minute cooldown for a code that does not exist.
+ */
 export default async function handler(req, res) {
     // ─── CORS preflight ───────────────────────────────────────────────────────
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -53,64 +43,69 @@ export default async function handler(req, res) {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    // ─── Parse body ───────────────────────────────────────────────────────────
-    const { email, otp, userName } = req.body || {};
-
-    if (!email || !otp) {
-        return res.status(400).json({ error: 'Missing email or OTP' });
-    }
+    // Only these two fields are read. Anything else a stale client may still post
+    // (notably `password` or a client-side `otp`) is ignored, never forwarded.
+    const { email, userName } = req.body || {};
 
     // ─── Validation ───────────────────────────────────────────────────────────
-    // This endpoint is unauthenticated, so it must not be usable as a generic
-    // mail relay or as an HTML-injection sink into our own email template.
-    const cleanEmail = String(email).trim().toLowerCase();
-
-    // One @, a dot-separated domain that ends in a real label, and an overall
-    // length that still fits students.email (varchar 320).
-    //
-    // The previous pattern excluded "." from the domain while a second clause
-    // demanded a dot after the "@", so NO address could satisfy both: every
-    // signup — raja@gmail.com included — came back 400 "Invalid email address."
-    // and the code was never mailed. Fixed here because the student signup flow
-    // cannot work without it; nothing else in this file changes.
-    if (
-        !/^[^@\s]{1,64}@[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?(\.[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)+$/.test(cleanEmail)
-        || cleanEmail.length > 320
-    ) {
+    // This endpoint is unauthenticated, so it must not be usable as a generic mail
+    // relay or as an HTML-injection sink into our own email template.
+    const cleanEmail = normalizeEmail(email);
+    if (!cleanEmail) {
         return res.status(400).json({ error: 'Invalid email address.' });
     }
 
-    // The OTP is rendered at 56px in a monospace block — it must be exactly
-    // 6 digits and nothing else, or it becomes arbitrary markup in the body.
-    if (!/^\d{6}$/.test(String(otp))) {
-        return res.status(400).json({ error: 'Invalid verification code.' });
-    }
-
     // Stripped of tags/quotes and length-capped before it reaches the template.
-    const safeName = escapeHtml(
-        String(userName || '').replace(/\s+/g, ' ').trim().slice(0, 60)
-    ) || 'there';
+    const safeName = safeUserName(userName);
 
-    // ─── Rate limit (per instance) ────────────────────────────────────────────
-    // Vercel edge instances are short-lived, so this is a blunt but real
-    // deterrent against hammering one address or spraying many. The client also
-    // enforces a 60s resend cooldown.
-    const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'unknown';
-    const limited = checkRateLimit(cleanEmail, ip);
-    if (limited) {
-        return res.status(429).json({
-            error: `Too many codes requested. Try again in ${limited}s.`,
+    // ─── Config ───────────────────────────────────────────────────────────────
+    const missing = missingConfig();
+    const gmailUser = globalThis.process.env.GMAIL_USER;
+    const gmailPass = globalThis.process.env.GMAIL_APP_PASSWORD;
+    if (!gmailUser || !gmailPass) missing.push('GMAIL_USER / GMAIL_APP_PASSWORD');
+    if (missing.length) {
+        // Names only. Echoing a value would put a secret in a response body.
+        return res.status(500).json({
+            error: `Verification is unavailable on this deployment (missing ${missing.join(', ')}).`,
         });
     }
 
-    const gmailUser = process.env.GMAIL_USER;
-    const gmailPass = process.env.GMAIL_APP_PASSWORD;
-
-    if (!gmailUser || !gmailPass) {
-        return res.status(500).json({ error: 'Email service not configured (GMAIL_USER or GMAIL_APP_PASSWORD missing).' });
+    // ─── Per-instance budget (the durable limits live in Postgres) ────────────
+    const ip = clientIp(req);
+    const limited = budgetFor(cleanEmail, ip, { kind: 'send' });
+    if (limited) {
+        return res.status(429).json({
+            error: `Too many codes requested. Try again in ${limited}s.`,
+            retry_after_seconds: limited,
+        });
     }
 
-    // ─── Email HTML ───────────────────────────────────────────────────────────
+    // ─── Issue: generate, digest, store ───────────────────────────────────────
+    const otp = generateOtp();
+    let issued;
+    try {
+        issued = await issueOtpChallenge(cleanEmail, otp);
+        if (issued?.reason === 'retry') issued = await issueOtpChallenge(cleanEmail, otp);
+    } catch (err) {
+        console.error('[send-otp] store error:', err?.code || err?.message);
+        return res.status(502).json({
+            error: 'We could not start verification right now. Please try again.',
+        });
+    }
+
+    if (!issued?.ok) {
+        if (issued?.reason === 'cooldown') {
+            const wait = Number(issued.retry_after_seconds) || RESEND_COOLDOWN_S;
+            return res.status(429).json({
+                error: `Please wait ${wait}s before requesting another code.`,
+                retry_after_seconds: wait,
+            });
+        }
+        return res.status(502).json({
+            error: 'We could not start verification right now. Please try again.',
+        });
+    }
+
     const firstName = safeName.split(' ')[0];
 
     const html = `<!DOCTYPE html>
@@ -227,11 +222,23 @@ export default async function handler(req, res) {
         };
 
         const info = await transporter.sendMail(mailOptions);
-        console.log('[send-otp] Email sent: ', info.messageId);
+        // messageId + nonce only: no address, no code, nothing guessable in a log.
+        console.log('[send-otp] Email sent: ', info.messageId, issued.nonce || '');
 
-        return res.status(200).json({ success: true });
+        return res.status(200).json({
+            success: true,
+            // The client counts down from these, so they come from the server that
+            // actually enforced them.
+            expiresIn: Number(issued.ttl_seconds) || OTP_TTL_SECONDS,
+            resendAfter: Number.isFinite(Number(issued.resend_after_seconds)) && Number(issued.resend_after_seconds) > 0
+                ? Number(issued.resend_after_seconds)
+                : RESEND_COOLDOWN_S,
+            expiresAt: issued.expires_at || null,
+        });
     } catch (err) {
         console.error('[send-otp] Nodemailer error:', err.message);
+        // The challenge exists but its code never arrived: free the address now.
+        await discardOtpChallenge(cleanEmail);
         return res.status(500).json({ error: 'Failed to send email. Please try again.' });
     }
 }

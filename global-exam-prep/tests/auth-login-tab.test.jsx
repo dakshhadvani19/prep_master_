@@ -14,7 +14,8 @@ vi.mock('../src/firebase', () => ({
 }));
 
 const {
-  state, resetSupabaseStub, lastCall, callsTo, makeSession, authUser, studentRow,
+  state, resetSupabaseStub, lastCall, callsTo, studentRow,
+  setAuthCallback,
 } = await import('./supabaseMock.js');
 
 const holder = { entry: '/' };
@@ -120,28 +121,39 @@ describe('login tab: Google OR email+password', () => {
   });
 
   it('a returning Google student lands in the app via the redirect return leg', async () => {
-    state.session = makeSession(authUser({
-      id: 'u1', email: 'raja@x.com',
-      app_metadata: { provider: 'google' },
-      identities: [{ provider: 'google', identity_id: 'g1' }],
-    }));
+    // The return leg is a one-time code in the URL; src/supabase.js captures it and
+    // AuthContext exchanges it. Nothing here pre-sets a session: the session is what
+    // the exchange must produce, which is the whole behaviour under test.
+    setAuthCallback({ kind: 'code', code: 'auth-code-1', state: 's1' });
     state.profile = studentRow({ auth_uid: 'u1', email: 'raja@x.com', full_name: 'Raja', student_id: 7 });
     sessionStorage.setItem('prepmaster_google_signup_pending', '1');
 
     at('/signup?mode=login');
     await waitFor(() => expect(screen.getByText('DASHBOARD')).toBeInTheDocument(), { timeout: 9000 });
 
+    // Exchanged once, with the code from the URL, and NOT re-authorised on the way.
+    expect(callsTo('exchangeCodeForSession').map((c) => c.code)).toEqual(['auth-code-1']);
+    expect(callsTo('signInWithOAuth')).toHaveLength(0);
+    // The profile came from the existing row, not from a client-side write.
+    expect(state.session.user.id).toBe('u1');
+    expect(callsTo('insert:students')).toHaveLength(0);
+
     // The flag must not outlive the return leg, or the next sign-in stalls on it.
     expect(sessionStorage.getItem('prepmaster_google_signup_pending')).toBeNull();
   });
 
   it('a cancelled Google consent reports itself instead of looping back silently', async () => {
+    setAuthCallback({
+      kind: 'error', errorCode: 'access_denied', errorDescription: 'User closed the window',
+    });
     sessionStorage.setItem('prepmaster_google_signup_pending', '1');
-    window.location = { ...window.location, href: 'http://localhost:5173/signup?mode=login&error_code=access_denied&error_description=User%20closed%20the%20window' };
 
     at('/signup?mode=login');
     await waitFor(() => expect(/cancelled/i.test(document.body.textContent)).toBe(true));
     expect(sessionStorage.getItem('prepmaster_google_signup_pending')).toBeNull();
+    // A cancelled consent must not be "resolved" by silently starting another flow.
+    expect(callsTo('signInWithOAuth')).toHaveLength(0);
+    expect(callsTo('exchangeCodeForSession')).toHaveLength(0);
   });
 
   it('the signup method picker still offers exactly one Google button', async () => {

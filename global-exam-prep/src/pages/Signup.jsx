@@ -13,12 +13,18 @@ import {
     OTP_LENGTH,
     OTP_TTL_SECONDS,
     RESEND_COOLDOWN,
-    readOAuthErrorFromUrl,
+    clearOAuthAttempt,
+    oauthAttemptInFlight,
 } from '../utils/supabaseAuth';
+// Whether a code is waiting to be exchanged is a fact about the page load, owned by
+// src/supabase.js. The auto-start below consults it so a return leg can never be
+// mistaken for a fresh "start Google" request.
+import { hasPendingAuthCallback } from '../supabase';
 import { checkPasswordStrength } from '../utils/passwordStrength';
 import './Auth.css';
 
-const GOOGLE_REDIRECT_PENDING_KEY = 'prepmaster_google_signup_pending';
+// The departure marker key lives in src/utils/supabaseAuth.js (rememberOAuthAttempt),
+// because the AuthProvider has to write it before the browser leaves for Google.
 
 // NOTE: This file has been patched — all animation race conditions fixed.
 
@@ -380,6 +386,9 @@ export default function Signup() {
         cancelSignupOtp,
         resendSupabaseVerification,
         startGoogleRedirect,
+        googleStatus,
+        googleError,
+        clearGoogleError,
         sendPasswordReset,
         recoveryMode,
         completePasswordRecovery,
@@ -445,11 +454,11 @@ export default function Signup() {
     // the effect would see successData===null and redirect, skipping the animation.
     const successDataRef = useRef(null);
 
-const googleRedirectPendingOnLoad =
-    typeof window !== 'undefined' &&
-    sessionStorage.getItem(GOOGLE_REDIRECT_PENDING_KEY) === '1';
-
-const authActionPending = useRef(googleRedirectPendingOnLoad);
+// A round trip that is still in flight (or has only just landed) must hold off the
+// "signed in? go to /dashboard" redirect for one tick, or the page navigates away
+// while the code is being exchanged. `oauthAttemptInFlight` reads both storages, so
+// a provider that returned the browser to a NEW tab is covered too.
+const authActionPending = useRef(oauthAttemptInFlight());
 
 const [successData, setSuccessData] = useState(null);
 
@@ -461,73 +470,80 @@ const [successData, setSuccessData] = useState(null);
 
     // ============================================================================
 
-    // Supabase returns from Google with ?code=… on this same URL. The client exchanges
-    // it during AuthProvider's bootstrap, so the page only has to *observe* the result:
-    // no getRedirectResult(), no students lookup, no profile creation (the DB trigger
-    // owns that). We stay in the pending state while authLoading is still true, which is
-    // what prevents the "redirect to /dashboard" effect from firing against a session
-    // that has not been written yet.
-    const googleReturnHandled = useRef(false);
-    /* eslint-disable react-hooks/set-state-in-effect -- Supabase hands the
-       outcome of the redirect round-trip to us through the URL. The page owns
-       exactly one piece of state about it (the message + spinner), and it has
-       to be on screen on the first paint after the browser comes back. */
+    // ─── The Google return leg ────────────────────────────────────────────────
+    //
+    // This page no longer *decides* what happened to the redirect. src/supabase.js
+    // takes `?code=…`/`?error_code=…` at module load, AuthContext exchanges it, and
+    // the result is published as `googleStatus`. The old version raced that work: it
+    // looked at `authLoading` and `currentUser` on the first tick after they settled,
+    // and if the exchange had not landed yet it declared "Google sign-in did not
+    // complete" — on a sign-in that was about to succeed.
+    const noCodeDiagnosed = useRef(false);
+
+    /* eslint-disable react-hooks/set-state-in-effect -- the redirect outcome is not
+       state this page owns; mirroring it into the spinner/message is the whole job,
+       and it has to be on the first paint after the browser comes back. */
     useEffect(() => {
-        // A redirect we have only just started is not a redirect we came back from.
-        // Clearing ?method=google re-renders and re-runs this effect while the
-        // browser is still leaving for Google, and without this guard it used to
-        // consume the pending flag and show "Google sign-in did not complete"
-        // before the round-trip had even begun.
-        if (googleLoading) return;
-
-        const here = typeof window !== 'undefined' ? window.location.href : '';
-        const pending =
-            typeof window !== 'undefined' &&
-            sessionStorage.getItem(GOOGLE_REDIRECT_PENDING_KEY) === '1';
-        const oauthProblem = readOAuthErrorFromUrl(here);
-
-        if (!pending && !oauthProblem) return;
-
-        // Cancelled or rejected consent: report it and scrub the error params so a
-        // refresh cannot re-show it.
-        if (oauthProblem) {
-            sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
-            authActionPending.current = false;
-            setGoogleLoading(false);
-            setGlobalError(oauthProblem.message);
-            writeParams({ error_code: null, error_description: null, error: null });
+        if (googleStatus === 'exchanging') {
+            authActionPending.current = true;
+            setGoogleLoading(true);
+            setGlobalError('');
             return;
         }
 
-        setGoogleLoading(true);
-        authActionPending.current = true;
-        if (authLoading) return;               // still exchanging the code
-        if (googleReturnHandled.current) return;
-        googleReturnHandled.current = true;
-
-        sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
-        authActionPending.current = false;
-        setGoogleLoading(false);
-
-        if (currentUser) {
-            showSuccess({
-                name: currentUser.displayName || currentUser.email || 'Student',
-                // A Google signup is indistinguishable from a Google sign-in here, and
-                // the difference no longer matters: the trigger made the profile either
-                // way, and public.students is read-only from the client.
-                isLogin: true,
-            });
-        } else {
-            setGlobalError('Google sign-in did not complete. Please try again.');
+        if (googleStatus === 'signed_in') {
+            authActionPending.current = false;
+            setGoogleLoading(false);
+            setGlobalError('');
+            if (currentUser && !successDataRef.current && !recoveryMode) {
+                showSuccess({
+                    name: currentUser.displayName || currentUser.email || 'Student',
+                    // A Google signup is indistinguishable from a Google sign-in here,
+                    // and it no longer matters: the trigger made the profile either way.
+                    isLogin: true,
+                });
+            }
+            return;
         }
-    }, [authLoading, currentUser, googleLoading, showSuccess, writeParams]);
+
+        if (googleStatus === 'failed') {
+            // The provider knows WHY. Show that, never a generic guess, and never a
+            // spinner: the button below is live so the student can try again.
+            authActionPending.current = false;
+            setGoogleLoading(false);
+            setGlobalError(googleError || 'Google sign-in did not complete. Please try again.');
+            return;
+        }
+
+        // 'idle'. Two ways to be here after a round trip: the marker says we left but
+        // no callback arrived (Google bounced, or the tab was replaced), or nothing
+        // ever happened at all. Only the first deserves a message, and only once.
+        if (
+            !currentUser && !authLoading && !noCodeDiagnosed.current
+            && oauthAttemptInFlight()
+        ) {
+            noCodeDiagnosed.current = true;
+            authActionPending.current = false;
+            setGoogleLoading(false);
+            clearOAuthAttempt();
+            setGlobalError(
+                'Google returned without a sign-in code for this page. This is usually an '
+                + 'expired consent screen or a second tab finishing the same request — '
+                + 'try "Continue with Google" once more.'
+            );
+        }
+    }, [authLoading, currentUser, googleStatus, googleError, recoveryMode, showSuccess]);
 
     // CRITICAL FIX: Check BOTH refs. If an action is pending or success overlay is active, DO NOT redirect yet.
     useEffect(() => {
+        // A recovery session is signed in on purpose (the emailed link established the
+        // session) but must not be redirected: the new password has not been written
+        // yet, and sending the student to /dashboard would end the reset silently.
+        if (recoveryMode) return;
         if (currentUser && !successDataRef.current && !authActionPending.current) {
             navigate(resumePath, { replace: true });
         }
-    }, [currentUser, navigate, resumePath]);
+    }, [currentUser, navigate, resumePath, recoveryMode]);
 
     // Callback when success animation finishes → navigate
     const handleSuccessDone = useCallback(() => {
@@ -541,44 +557,42 @@ const [successData, setSuccessData] = useState(null);
         if (googleLoading) return;
 
         setGoogleLoading(true);
-        setGlobalError('');
         authActionPending.current = true;
-
-        // This survives the full-page redirect to Google and back.
-        sessionStorage.setItem(
-            GOOGLE_REDIRECT_PENDING_KEY,
-            '1'
-        );
+        clearGoogleError?.();
 
         try {
-            // Supabase sends the browser away; everything after this is the
-            // return leg handled above.
+            // startGoogleRedirect records the departure marker (both storages),
+            // refuses to start on top of a code that is still being exchanged, and
+            // hands the browser to Google exactly once. Everything after this line is
+            // the return leg, handled by the effect above via googleStatus.
             await startGoogleRedirect(urlMode);
-        } catch (err) {
-            sessionStorage.removeItem(GOOGLE_REDIRECT_PENDING_KEY);
+            // Still here? Then the navigation did not happen (blocked, or the URL was
+            // refused). Release the spinner rather than hanging on it.
             authActionPending.current = false;
             setGoogleLoading(false);
-
-            const msg = getFriendlyError(err);
-            if (msg) {
-                setGlobalError(msg);
-            }
+        } catch (err) {
+            authActionPending.current = false;
+            setGoogleLoading(false);
+            setGlobalError(getFriendlyError(err)
+                || 'Google sign-in could not be started. Please try again.');
         }
     };
 
-    // Auto-trigger Google redirect when ?method=google is in URL
+    // Auto-trigger Google redirect when ?method=google is in URL — the homepage CTA
+    // uses that link so one click is enough. It must never fire on a return leg: a
+    // second signInWithOAuth rewrites the PKCE verifier while the first code is still
+    // unexchanged, which is how a valid code becomes "Unable to exchange external
+    // code". Hence the three gates below in addition to the one-shot ref.
     const googleAutoFired = useRef(false);
 
     useEffect(() => {
-        const redirectPending =
-            typeof window !== 'undefined' &&
-            sessionStorage.getItem(GOOGLE_REDIRECT_PENDING_KEY) === '1';
-
         if (
             urlMethod === 'google' &&
             !googleAutoFired.current &&
             !currentUser &&
-            !redirectPending
+            !hasPendingAuthCallback() &&
+            googleStatus !== 'exchanging' &&
+            !oauthAttemptInFlight()
         ) {
             googleAutoFired.current = true;
             // Clear the trigger before navigating away so a cancelled/failed
@@ -586,7 +600,7 @@ const [successData, setSuccessData] = useState(null);
             writeParams({ method: null });
             handleGoogleSignIn();
         }
-    }, [urlMethod, currentUser]);
+    }, [urlMethod, currentUser, googleStatus]);
 
     // Mouse-tracking for the ambient parallax background
     const [mousePos, setMousePos] = useState({ x: 0, y: 0 });

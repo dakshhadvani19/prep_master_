@@ -1,170 +1,232 @@
 /**
- * Reproduction of the production hang, at the layer that caused it.
+ * The browser's half of signup verification, against a fake network.
  *
- * Firestore's contract is that a write whose backend cannot be reached stays
- * PENDING FOREVER (the SDK queues it and retries). `createAndSendOTP` awaited that
- * write, then awaited a `fetch` with no timeout — so any deployment that cannot
- * reach Firestore (e.g. built without the VITE_FIREBASE_* values, where
- * src/firebase.js deliberately falls back to 'invalid-config') left "Create
- * Account" spinning with no error, no OTP and no way out.
- *
- * These tests use the REAL src/utils/otpService.js against a Firestore stub that
- * can be made to stall, and assert the caller is always released: with an error
- * message, without mailing a code, without burning a second request.
+ * What this pins down, in order of how it broke production:
+ *   1. every request SETTLES. A pending promise here once meant a spinner that never
+ *      stopped, because Signup.jsx only clears `loading` in a `finally`.
+ *   2. the request carries `{ email, userName }` for sending and `{ email, code }`
+ *      for verifying. Never a password; never a client-chosen code.
+ *   3. two clicks are one request (a second send mails a second code; a second
+ *      verify burns a second attempt out of a budget of three).
+ *   4. a server message is shown as written, and an unreadable one is replaced by a
+ *      sentence a student can act on.
  */
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 
-const store = vi.hoisted(() => ({
-  docs: new Map(),
-  hangWrite: false,
-  hangRead: false,
-  deletes: 0,
-  fetchCalls: [],
+const net = vi.hoisted(() => ({
+  calls: [],
+  /** Resolved by the current test: a Response-like object, a never-settling promise, or a throw. */
+  respond: async () => ({ ok: true, status: 200, text: async () => JSON.stringify({ success: true }) }),
 }));
 
 vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null }, storage: {}, db: {}, firebaseConfigError: null,
+  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
 }));
 
-vi.mock('firebase/firestore', () => ({
-  doc: (db, coll, id) => ({ path: `${coll}/${id}` }),
-  collection: (db, ...p) => ({ path: p.join('/') }),
-  // Not an async function: when stalled it must return a promise that NEVER
-  // settles, which is exactly the production behaviour being guarded against.
-  setDoc: (ref, data) => (store.hangWrite
-    ? new Promise(() => {})
-    : Promise.resolve(store.docs.set(ref.path, { ...data }))),
-  // A read that stalls is the other half of the same production failure mode.
-  getDoc: (ref) => (store.hangRead
-    ? new Promise(() => {})
-    : Promise.resolve({ exists: () => store.docs.has(ref.path), data: () => store.docs.get(ref.path) })),
-  updateDoc: (ref, patch) => {
-    const cur = { ...store.docs.get(ref.path) };
-    for (const [k, v] of Object.entries(patch || {})) {
-      cur[k] = v && typeof v === 'object' && '__inc' in v ? (cur[k] || 0) + v.__inc : v;
-    }
-    store.docs.set(ref.path, cur);
-    return Promise.resolve();
-  },
-  deleteDoc: (ref) => { store.deletes += 1; store.docs.delete(ref.path); return Promise.resolve(); },
-  increment: (n) => ({ __inc: n }),
-  getDocs: () => Promise.resolve({ empty: true, docs: [] }),
-  query: vi.fn(), where: vi.fn(), runTransaction: vi.fn(),
-  onSnapshot: vi.fn(() => () => {}), serverTimestamp: vi.fn(() => 'ts'),
-}));
+const otp = await import('../src/utils/otpService.js');
+const { createAndSendOTP, verifyOTP, resendCooldownRemaining } = otp;
 
-const { createAndSendOTP, verifyOTP } = await import('../src/utils/otpService.js');
-
-const MAIL_OK = () => ({ ok: true, status: 200, json: async () => ({ sent: true }) });
+function json(body, status = 200) {
+  return { ok: status >= 200 && status < 300, status, text: async () => JSON.stringify(body) };
+}
 
 beforeEach(() => {
-  store.docs.clear();
-  store.hangWrite = false;
-  store.deletes = 0;
-  store.fetchCalls.length = 0;
-  sessionStorage.clear();
+  net.calls.length = 0;
+  net.respond = async () => json({ success: true, expiresIn: 600, resendAfter: 60, expiresAt: null });
   globalThis.fetch = vi.fn(async (url, init) => {
-    store.fetchCalls.push({ url: String(url), body: JSON.parse(init.body) });
-    return MAIL_OK();
+    const call = { url: String(url), body: JSON.parse(init.body || '{}'), signal: init?.signal };
+    net.calls.push(call);
+    return net.respond(call);
   });
 });
 
 afterEach(() => vi.useRealTimers());
 
-describe('the OTP send can never hang the caller', () => {
-  it('happy path still resolves promptly and mails only what it needs', async () => {
-    const info = await createAndSendOTP('raja@x.com', 'Raja Advani');
+const sendCall = () => net.calls.find((c) => c.url.includes('/api/send-otp'));
+const verifyCall = () => net.calls.find((c) => c.url.includes('/api/verify-otp'));
 
-    expect(info.resendAfter).toBe(60);
-    expect(store.fetchCalls).toHaveLength(1);
-    expect(Object.keys(store.fetchCalls[0].body).sort()).toEqual(['email', 'otp', 'userName']);
-    expect(JSON.stringify(store.fetchCalls[0].body)).not.toMatch(/password/i);
+describe('request contract', () => {
+  it('asks for a code with the address and the greeting name, and nothing else', async () => {
+    await createAndSendOTP('Raja@X.com ', 'Raja Advani');
+
+    expect(net.calls).toHaveLength(1);
+    expect(sendCall().url).toBe('/api/send-otp');
+    // Sorted keys, exactly: `password` and `otp` are the two fields that must never
+    // appear here, and naming them in the assertion is the point of the test.
+    expect(Object.keys(sendCall().body).sort()).toEqual(['email', 'userName']);
+    expect(sendCall().body.email).toBe('raja@x.com');
+    expect(JSON.stringify(sendCall().body)).not.toMatch(/password|"otp"/i);
+    // No credentials, no cache: the response is single-use by construction.
+    expect(globalThis.fetch).toHaveBeenCalledWith(
+      '/api/send-otp',
+      expect.objectContaining({ credentials: 'omit', cache: 'no-store', method: 'POST' }),
+    );
   });
 
-  it('a Firestore write that never settles ends in an error, not an endless spinner', async () => {
+  it('reports when the code expires and when a resend is allowed, from the server', async () => {
+    net.respond = async () => json({
+      success: true, expiresIn: 300, resendAfter: 90,
+      expiresAt: new Date(Date.now() + 300_000).toISOString(),
+    });
+    const info = await createAndSendOTP('raja@x.com', 'Raja');
+
+    expect(info.resendAfter).toBe(90);
+    expect(info.expiresInMs).toBe(300_000);
+    expect(info.expiresAt).toBeGreaterThan(info.sentAt);
+    // …and the countdown helper agrees with what the page will show.
+    expect(resendCooldownRemaining(90)).toBe(60);      // clamped to the server's cooldown
+  });
+
+  it('sends the typed code for verification, without the password it is holding', async () => {
+    net.respond = async (call) => (call.url.includes('verify')
+      ? json({ verified: true })
+      : json({ success: true }));
+
+    await expect(verifyOTP('Raja@X.com', ' 4 2 7 1 9 3 ')).resolves.toBe('raja@x.com');
+    expect(Object.keys(verifyCall().body).sort()).toEqual(['code', 'email']);
+    expect(verifyCall().body).toEqual({ email: 'raja@x.com', code: '427193' });
+  });
+});
+
+describe('no path can hang the caller', () => {
+  it('a request that never answers is abandoned, and actually cancelled', async () => {
     vi.useFakeTimers();
-    store.hangWrite = true;
+    let aborted = false;
+    net.respond = (call) => {
+      call.signal.addEventListener('abort', () => { aborted = true; });
+      return new Promise(() => {});                 // the production failure mode
+    };
 
-    const pending = createAndSendOTP('slow@x.com', 'Raja');
-    let settled = 'pending';
-    pending.then(() => { settled = 'resolved'; }, (e) => { settled = e.message; });
+    let outcome = 'pending';
+    createAndSendOTP('raja@x.com', 'Raja').then(
+      () => { outcome = 'resolved'; }, (e) => { outcome = e.message; },
+    );
 
-    await vi.advanceTimersByTimeAsync(2000);
-    expect(settled).toBe('pending');            // still waiting: bounded, not infinite
-    await vi.advanceTimersByTimeAsync(8000);
-    expect(settled).toMatch(/could not save the verification code/i);
-
-    // and no code is mailed for a challenge that was never stored
-    expect(store.fetchCalls).toHaveLength(0);
+    await vi.advanceTimersByTimeAsync(24_000);
+    expect(outcome).toBe('pending');                // bounded, not endless
+    await vi.advanceTimersByTimeAsync(2_000);
+    expect(outcome).toMatch(/too long/i);
+    expect(aborted).toBe(true);                     // the socket is given up, not leaked
   });
 
-  it('a stalled /api/send-otp is aborted and rolls the challenge back', async () => {
+  it('an offline browser gets a sentence, not a TypeError', async () => {
+    net.respond = async () => { throw new TypeError('Failed to fetch'); };
+    await expect(createAndSendOTP('raja@x.com', 'Raja'))
+      .rejects.toThrow(/connection/i);
+  });
+
+  it('a 500 with an HTML body does not become "Unexpected token < in JSON"', async () => {
+    net.respond = async () => ({ ok: false, status: 502, text: async () => '<html>502 Bad Gateway</html>' });
+    await expect(createAndSendOTP('raja@x.com', 'Raja'))
+      .rejects.toThrow(/could not start verification|could not send the code/i);
+  });
+
+  it('a verification request that hangs cannot freeze the OTP screen', async () => {
     vi.useFakeTimers();
-    globalThis.fetch = vi.fn((_url, init) => new Promise((_res, rej) => {
-      // Behaves like a request the server never answers, honouring abort.
-      init.signal.addEventListener('abort', () => rej(new Error('aborted')));
-    }));
+    net.respond = (call) => (call.url.includes('verify')
+      ? new Promise(() => {})
+      : json({ success: true }));
 
-    const message = createAndSendOTP('stall@x.com', 'Raja').then(
-        () => 'resolved', (e) => e.message);
-
-    // runAll (not a fixed advance) so every pending timer AND the microtasks it
-    // unblocks are drained before we look: an unsettled attempt here would leak a
-    // live promise into the next test and pollute its fetch spy.
-    await vi.runAllTimersAsync();
-
-    expect(await message).toMatch(/taking too long|aborted/i);
-    expect(store.deletes).toBe(1);                       // rollback ran, so retry is free
-    expect(store.docs.size).toBe(0);
+    let outcome = 'pending';
+    verifyOTP('raja@x.com', '427193').then(
+      () => { outcome = 'resolved'; }, (e) => { outcome = e.message; },
+    );
+    await vi.advanceTimersByTimeAsync(16_000);
+    expect(outcome).toMatch(/too long/i);
   });
+});
 
-  it('two submits for one address mail exactly one code', async () => {
-    const [a, b] = await Promise.all([
-      createAndSendOTP('dup@x.com', 'R'),
-      createAndSendOTP('dup@x.com', 'R'),
+describe('duplicate submits', () => {
+  it('three clicks for one address are one request, and all three get the same result', async () => {
+    const all = await Promise.all([
+      createAndSendOTP('raja@x.com', 'Raja'),
+      createAndSendOTP('raja@x.com', 'Raja'),
+      createAndSendOTP('raja@x.com', 'Raja'),
     ]);
 
-    expect(store.fetchCalls.map((c) => c.body.email)).toEqual(['dup@x.com']);
-    expect(a).toEqual(b);                                // both get the same attempt
-    // exactly one live challenge doc, not one per click
-    expect(store.docs.size).toBe(1);
+    expect(net.calls).toHaveLength(1);
+    expect(all[0]).toEqual(all[1]);
+    expect(all[1]).toEqual(all[2]);
   });
 
-  it('a build with no Firebase configuration fails loudly instead of hanging', async () => {
-    vi.resetModules();
-    vi.doMock('../src/firebase', () => ({
-      auth: { currentUser: null }, storage: {}, db: {},
-      firebaseConfigError: 'Firebase is not configured for this deployment.',
-    }));
-    vi.doMock('firebase/firestore', () => ({
-      doc: () => ({ path: 'p' }),
-      setDoc: () => new Promise(() => {}),                // would hang if reached
-      getDoc: () => new Promise(() => {}),
-      deleteDoc: () => new Promise(() => {}),
-      updateDoc: () => new Promise(() => {}),
-      increment: (n) => n, collection: () => ({}),
-    }));
-    const mod = await import('../src/utils/otpService.js');
+  it('a repeated verify is one request, because two would spend the attempt budget twice', async () => {
+    net.respond = async () => json({ verified: false, reason: 'invalid', remaining: 2, error: 'Nope.' });
 
-    await expect(mod.createAndSendOTP('raja@x.com', 'Raja'))
-      .rejects.toThrow(/Verification service is unavailable/i);
-    expect(store.fetchCalls).toHaveLength(0);
-    vi.doUnmock('../src/firebase');
-    vi.doUnmock('firebase/firestore');
+    const both = await Promise.allSettled([
+      verifyOTP('raja@x.com', '427193'),
+      verifyOTP('raja@x.com', '427193'),
+    ]);
+
+    expect(net.calls.filter((c) => c.url.includes('verify'))).toHaveLength(1);
+    expect(both.map((r) => r.status)).toEqual(['rejected', 'rejected']);
   });
 
-  it('verification reads are bounded too, so the OTP screen cannot freeze', async () => {
-    // A real send first, so the browser holds a nonce and verification proceeds to
-    // the read — then the read stalls, exactly as it does when Firestore is dark.
-    await createAndSendOTP('verify@x.com', 'Raja');
-    store.hangRead = true;
-    vi.useFakeTimers();
+  it('the next click after a settled attempt is allowed (no sticky lock)', async () => {
+    await createAndSendOTP('raja@x.com', 'Raja');
+    await createAndSendOTP('raja@x.com', 'Raja');
+    expect(net.calls.filter((c) => c.url.includes('send'))).toHaveLength(2);
+  });
+});
 
-    const pending = verifyOTP('verify@x.com', '123456');
-    let settled = 'pending';
-    pending.then(() => { settled = 'resolved'; }, (e) => { settled = e.message; });
+describe('server verdicts reach the student', () => {
+  it('a cooldown 429 is shown as written, with the wait', async () => {
+    net.respond = async () => json(
+      { error: 'Please wait 37s before requesting another code.', retry_after_seconds: 37 }, 429,
+    );
+    await expect(createAndSendOTP('raja@x.com', 'Raja'))
+      .rejects.toThrow('Please wait 37s before requesting another code.');
+  });
 
-    await vi.advanceTimersByTimeAsync(9000);
-    expect(settled).toMatch(/could not reach the verification service/i);
+  it('an expired code unlocks the resend button', async () => {
+    net.respond = async () => json({
+      verified: false, reason: 'expired', error: 'Your code has expired. Request a new one.', resendAllowed: true,
+    }, 400);
+
+    await expect(verifyOTP('raja@x.com', '427193')).rejects.toMatchObject({
+      reason: 'expired',
+      resendAllowed: true,
+      message: 'Your code has expired. Request a new one.',
+    });
+  });
+
+  it('a lockout says so, and still lets the student start over', async () => {
+    net.respond = async () => json({
+      verified: false, reason: 'locked', error: 'Too many incorrect attempts. Please request a new code.', resendAllowed: true,
+    }, 429);
+
+    await expect(verifyOTP('raja@x.com', '427193')).rejects.toMatchObject({
+      reason: 'locked', resendAllowed: true, remaining: 0,
+    });
+  });
+
+  it('a store that will not answer is never reported as a wrong code', async () => {
+    net.respond = async () => json({
+      verified: false, reason: 'store_unavailable', error: 'We could not check your code just now. Please try again.',
+    }, 502);
+
+    await expect(verifyOTP('raja@x.com', '427193')).rejects.toMatchObject({
+      reason: 'store_unavailable',
+      resendAllowed: false,
+      message: 'We could not check your code just now. Please try again.',
+    });
+  });
+
+  it('internal text from the server is never rendered to a student', async () => {
+    net.respond = async () => json({
+      error: 'relation "auth_otp" does not exist (42P01)',
+    }, 500);
+    await expect(createAndSendOTP('raja@x.com', 'Raja'))
+      .rejects.toThrow(/could not send the code right now/i);
+  });
+
+  it('a malformed code never reaches the network', async () => {
+    await expect(verifyOTP('raja@x.com', '42719')).rejects.toThrow(/6-digit/i);
+    await expect(verifyOTP('raja@x.com', 'abcdef')).rejects.toThrow(/6-digit/i);
+    expect(net.calls).toHaveLength(0);
+  });
+
+  it('an obviously bad address is refused before it can be mailed to', async () => {
+    await expect(createAndSendOTP('not-an-email', 'Raja')).rejects.toThrow(/valid email/i);
+    expect(net.calls).toHaveLength(0);
   });
 });

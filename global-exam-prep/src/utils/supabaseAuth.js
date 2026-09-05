@@ -190,16 +190,114 @@ export async function changePassword(client, newPassword) {
     return completePasswordRecovery(client, newPassword);
 }
 
-/** Starts the Google redirect. Returns nothing useful: the browser leaves. */
-export async function startGoogleOAuth(client, { redirectTo } = {}) {
+/**
+ * Starts the Google redirect.
+ *
+ * `skipBrowserRedirect: true` matters: by default the SDK assigns `location.href`
+ * itself *and* returns the URL, so a caller that also navigates fires the
+ * navigation twice — two `/authorize` calls, two PKCE flow rows, and whichever
+ * code comes back may not match the verifier this tab stored. We ask for the URL,
+ * then leave exactly once.
+ */
+export async function startGoogleOAuth(client, { redirectTo, shouldStart } = {}) {
+    if (!client) throw new Error('Supabase is not available on this deployment.');
+    // A second signInWithOAuth while a return-leg code is still unexchanged
+    // overwrites the stored code verifier, which turns a perfectly good code into
+    // "Unable to exchange external code". Callers gate on the pending callback;
+    // this makes the gate impossible to forget.
+    if (shouldStart && !shouldStart()) {
+        throw new Error('Another sign-in is already finishing in this tab. Please wait for it.');
+    }
+
+    const options = { skipBrowserRedirect: true };
+    if (redirectTo) options.redirectTo = redirectTo;
+
     const { data, error } = await client.auth.signInWithOAuth({
         provider: 'google',
-        options: redirectTo ? { redirectTo } : {},
+        options,
     });
     if (error) throw normalizeAuthError(error);
     if (!data?.url) throw new Error('Google sign-in could not be started. Please try again.');
     if (typeof window !== 'undefined') window.location.assign(data.url);
     return data.url;
+}
+
+// ─── The return leg: one owner, real reasons ─────────────────────────────────
+//
+// src/supabase.js captures ?code=… / ?error_code=… at module scope and scrubs them
+// from the address bar, so these functions work on that captured object instead of
+// re-reading a URL that has already been rewritten.
+
+/**
+ * Maps a code-exchange failure to a sentence that says what happened and what to
+ * do. The previous behaviour — a generic "did not complete" — is what made this
+ * undiagnosable for two rounds of debugging, so the branches below are the point
+ * of the module, not decoration.
+ */
+const EXCHANGE_FRIENDLY = [
+    [/flow_state_not_found|invalid flow state/, 'The Google sign-in request expired before it could be finished. Please try again.'],
+    [/bad_verifier|unable to exchange external code|code verifier/, 'This browser\'s sign-in state no longer matches the request — usually a second sign-in started, or another tab finished it. Please try again in one tab.'],
+    [/code.*already|already (been )?used|invalid grant/, 'That sign-in link has already been used on this page. Please try again.'],
+    [/otp_expired|expired/, 'The sign-in link expired. Please try again.'],
+    [/over_request_limit|rate ?limit|too many requests/, 'Too many sign-in attempts. Please wait a minute and try again.'],
+    [/provider .*not enabled|oauth provider/, 'Google sign-in is not enabled on the Supabase project yet.'],
+    [/redirect.*not allowed|redirect uri/, 'This site URL is not in the Supabase redirect allow-list.'],
+    [/network|failed to fetch|fetch failed|timeout|aborted/, 'Connection issue while finishing sign-in. Check your internet and try again.'],
+];
+
+/** Only ever appended when it is short, human and free of internals. */
+function safeDetail(text) {
+    const clean = String(text || '').replace(/\s+/g, ' ').trim();
+    if (!clean || clean.length > 90) return '';
+    if (!/^[A-Za-z0-9 .,:;'\-_()]+$/.test(clean)) return '';
+    if (/supabase|postgrest|GoTrue|constraint|[{[]/i.test(clean)) return '';
+    return clean;
+}
+
+export function describeAuthExchangeError(err) {
+    const code = String(err?.code || err?.error_code || '').toLowerCase();
+    const raw = String(err?.message || err?.error_description || err?.msg || '').trim();
+    const hay = `${code} ${raw}`.toLowerCase();
+    const match = EXCHANGE_FRIENDLY.find(([re]) => re.test(hay));
+    const detail = safeDetail(raw);
+
+    const out = new Error(match ? match[1] : (detail
+        ? `Google sign-in did not complete: ${detail}. Please try again.`
+        : 'Google sign-in did not complete. Please try again.'));
+    out.code = code || 'auth/exchange_failed';
+    out.retryable = true;
+    return out;
+}
+
+/**
+ * A callback that did NOT bring a code: consent denied, cancelled, or rejected by
+ * the provider. Turned into a message here so the UI never has to guess from a
+ * query string it can no longer see.
+ */
+export function describeAuthCallback(callback) {
+    if (!callback) return null;
+    if (callback.kind === 'code') {
+        return { kind: 'code', code: callback.code, type: callback.type || '' };
+    }
+    const hay = `${callback.errorCode || ''} ${callback.errorDescription || ''}`.toLowerCase();
+    if (!hay.trim()) {
+        return { kind: 'error', cancelled: false, message: 'Sign-in returned nothing usable. Please try again.' };
+    }
+    if (/access_denied|user_cancelled|cancelled|denied/.test(hay)) {
+        return { kind: 'error', cancelled: true, message: 'Google sign-in was cancelled. Nothing was created — you can try again.' };
+    }
+    // The summary stays on every failure so a screenshot is enough to diagnose it,
+    // and the provider's own words follow when they are safe to show.
+    const mapped = normalizeAuthError({ code: callback.errorCode, message: callback.errorDescription });
+    const detail = safeDetail(callback.errorDescription)
+        || safeDetail(mapped?.message)
+        || (mapped?.message && mapped.message !== 'Something went wrong. Please try again.' ? '' : '')
+        || 'the provider rejected the request';
+    return {
+        kind: 'error',
+        cancelled: false,
+        message: `Google sign-in did not complete (${detail}). Please try again.`,
+    };
 }
 
 /**
@@ -221,16 +319,100 @@ export function readOAuthErrorFromUrl(href) {
     }
 
     if (!code && !description) return null;
-    if (/access_denied|cancelled|user closed/i.test(`${code} ${description}`)) {
-        return { cancelled: true, message: 'Google sign-in was cancelled.' };
-    }
-    return { cancelled: false, message: 'Google sign-in did not complete. Please try again.' };
+    return describeAuthCallback({ kind: 'error', errorCode: code, errorDescription: description });
 }
 
-/** True when the URL still carries a code Supabase has not exchanged yet. */
+/** True when a URL still carries an unexchanged code (kept for direct checks). */
 export function hasPendingAuthCode(href) {
     if (!href) return false;
     return /[?&#]code=/.test(String(href));
+}
+
+/**
+ * Exchanges a PKCE `code` for a session, with a deadline.
+ *
+ * The deadline is not ceremony: `exchangeCodeForSession` is a network call made
+ * while the whole app waits on the auth bootstrap, and an unsettled promise there
+ * is what turns a login page into a spinner forever. On timeout the UI gets an
+ * error and a retry instead — the code itself stays valid server-side for the
+ * student to try again (it is single-use, so a late success is harmless either way).
+ */
+// ─── "we left for Google on purpose" marker ──────────────────────────────────
+//
+// Written before the browser leaves, in BOTH storages on purpose:
+// sessionStorage is what a same-tab return sees, but a provider that hands the code
+// back in a NEW tab (or a mobile redirect that rebuilds the session) leaves that
+// storage empty — and a page that cannot tell "we came back" from "we were never
+// here" is exactly what produced the false "Google sign-in did not complete".
+// localStorage is shared across tabs and survives, and it expires on its own so a
+// stale marker can never pin the UI in a spinner.
+const OAUTH_ATTEMPT_KEY     = 'prepmaster_oauth_attempt_v1';
+const OAUTH_TAB_FLAG_KEY    = 'prepmaster_google_signup_pending';   // Signup.jsx reads this one
+const OAUTH_ATTEMPT_TTL_MS  = 15 * 60 * 1000;
+
+function eachStorage(fn) {
+    if (typeof window === 'undefined') return;
+    for (const store of [window.localStorage, window.sessionStorage]) {
+        try { if (store) fn(store); } catch { /* private mode, disabled storage */ }
+    }
+}
+
+export function rememberOAuthAttempt() {
+    const now = Date.now();
+    eachStorage((store) => {
+        store.setItem(OAUTH_ATTEMPT_KEY, String(now));
+        store.setItem(OAUTH_TAB_FLAG_KEY, '1');
+    });
+}
+
+export function clearOAuthAttempt() {
+    eachStorage((store) => {
+        store.removeItem(OAUTH_ATTEMPT_KEY);
+        store.removeItem(OAUTH_TAB_FLAG_KEY);
+    });
+}
+
+/**
+ * True while a departure is recent enough that "back with no code" is still best
+ * read as "in flight / just landed", not as "the visitor never tried".
+ */
+export function oauthAttemptInFlight(now = Date.now()) {
+    if (typeof window === 'undefined') return false;
+    for (const store of [window.localStorage, window.sessionStorage]) {
+        let raw = null;
+        try { raw = store?.getItem(OAUTH_ATTEMPT_KEY) ?? null; } catch { raw = null; }
+        const started = Number(raw);
+        if (Number.isFinite(started) && started > 0 && now - started <= OAUTH_ATTEMPT_TTL_MS) return true;
+    }
+    return false;
+}
+
+export async function exchangeAuthCode(client, code, { timeoutMs = 12000 } = {}) {
+    if (!client) throw new Error('Supabase is not available on this deployment.');
+    if (!code) throw new Error('The sign-in link was missing its verification code. Please try again.');
+
+    let timer;
+    try {
+        const race = await Promise.race([
+            Promise.resolve(client.auth.exchangeCodeForSession(String(code))),
+            new Promise((_res, rej) => {
+                timer = setTimeout(() => rej(Object.assign(new Error('timeout'), { code: 'exchange_timeout' })), timeoutMs);
+            }),
+        ]);
+
+        const { data, error } = race || {};
+        if (error) throw describeAuthExchangeError(error);
+        const session = data?.session ?? null;
+        if (!session) throw describeAuthExchangeError(new Error('no session returned by the exchange'));
+        return session;
+    } catch (err) {
+        if (err?.code === 'exchange_timeout') {
+            throw new Error('Finishing sign-in took too long. Please try again.');
+        }
+        throw err?.code && err.code !== 'auth/error' ? err : describeAuthExchangeError(err);
+    } finally {
+        clearTimeout(timer);
+    }
 }
 
 /**

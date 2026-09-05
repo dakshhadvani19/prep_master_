@@ -6,11 +6,14 @@
  * creates.
  *
  * Signup verification order (deadline-critical, so it is stated at the top):
- *   details -> /api/send-otp (Nodemailer/Gmail, src/utils/otpService.js)
- *           -> 6-digit code verified against the Firestore `otp_tokens` digest
- *           -> ONLY then supabase.auth.signUp() -> session -> trigger profile
- * Supabase never mails a signup code and `auth.verifyOtp` is never called here:
- * the custom OTP is the gate, so an unverified address never creates an account.
+ *   details -> POST /api/send-otp: the SERVER generates the code, stores
+ *              HMAC-SHA256(OTP_PEPPER, email:code) in public.auth_otp, mails it
+ *   typed code -> POST /api/verify-otp: the SERVER re-derives that digest and
+ *              verifies it in SQL (single use, 3 attempts, 60 s resend, 10 min TTL)
+ *   -> ONLY then supabase.auth.signUp() -> session -> trigger creates the profile
+ * The browser never holds the code, Supabase never mails a signup code, and
+ * `auth.verifyOtp` is never called here: the app's own OTP is the gate, so an
+ * unverified address never creates an account. Firestore is not on this path.
  *
  * public.students (Phase-1 schema, SRS Table 1.1)
  * {
@@ -44,8 +47,12 @@
  *    not get one — see AUTH.md "Identity bridge".
  *
  * Google authentication: redirect only (no popup), because PKCE completes in the
- * return leg. `startGoogleRedirect()` sends the browser out; the session lands via
- * `detectSessionInUrl` + onAuthStateChange, not via a "get redirect result" call.
+ * return leg. `startGoogleRedirect()` sends the browser out. The return leg is owned
+ * HERE: src/supabase.js captures `?code=…`/`?error_code=…` synchronously at module
+ * load, this provider exchanges it once (bounded), and reports the outcome as
+ * `googleStatus` + `googleError` so the page can show the real reason instead of a
+ * guess. The SDK's own `detectSessionInUrl` is off, because two consumers of a
+ * single-use code means one of them loses and the student sees a false failure.
  */
 
 import React, {
@@ -58,7 +65,12 @@ import React, {
     useState,
 } from 'react';
 
-import { supabase, supabaseConfigError } from '../supabase';
+import {
+    consumeAuthCallback,
+    hasPendingAuthCallback,
+    supabase,
+    supabaseConfigError,
+} from '../supabase';
 import {
     changePassword as sbChangePassword,
     completePasswordRecovery as sbCompleteRecovery,
@@ -66,17 +78,21 @@ import {
     loginWithPassword,
     logout as sbLogout,
     mapStudentProfile,
+    clearOAuthAttempt,
+    describeAuthCallback,
+    exchangeAuthCode,
     normalizeAuthError,
-    readOAuthErrorFromUrl,
+    rememberOAuthAttempt,
     resendSignupCode as sbResendCode,
     sendPasswordReset as sbSendReset,
     startGoogleOAuth,
     updateStudentFullName,
     createAuthUserAfterOtp,
 } from '../utils/supabaseAuth';
-// The existing secure OTP implementation: issues the code through /api/send-otp
-// (Nodemailer + Gmail) and verifies it against the SHA-256 digest stored in the
-// Firestore `otp_tokens` collection. Reused as-is; deliberately not rewritten.
+// The client half of the OTP gate: it asks the server to send a code, submits what
+// was typed, and enforces the server's timings on the UI. It does not generate,
+// hash, store, or compare a code — that all happens behind /api/send-otp and
+// /api/verify-otp against public.auth_otp. See src/utils/otpService.js.
 import { createAndSendOTP, verifyOTP } from '../utils/otpService';
 
 const AuthContext = createContext(null);
@@ -127,6 +143,18 @@ export function AuthProvider({ children }) {
     // effect, so a misconfigured build never flashes a blank card.
     : (supabaseConfigError || 'Supabase is not configured for this build.')));
     const [recoveryMode, setRecoveryMode] = useState(false);
+
+    // The one authority the auth pages read for the Google return leg: 'idle'
+    // (nothing in flight), 'exchanging' (a code is being turned into a session),
+    // 'signed_in', 'failed' (+ `googleError`, which states the actual reason).
+    const [googleStatus, setGoogleStatus] = useState('idle');
+    const [googleError, setGoogleError] = useState('');
+    const googleStatusRef = useRef('idle');
+    const reportGoogle = useCallback((status, message = '') => {
+        googleStatusRef.current = status;
+        setGoogleStatus(status);
+        setGoogleError(message);
+    }, []);
 
     // One profile read per user id, however many auth events arrive. TOKEN_REFRESHED
     // fires hourly; refetching on every one of those is how a refresh race with the
@@ -226,22 +254,59 @@ export function AuthProvider({ children }) {
             void apply(event, nextSession);
         });
 
-        // INITIAL_SESSION is not guaranteed on every adapter, so read it directly
-        // too. Whichever arrives first wins; the other is a no-op by uid.
-        supabase.auth.getSession()
-            .then(({ data }) => apply('INITIAL_SESSION', data?.session ?? null))
-            .catch(() => markSettled());
+        // The return leg first: if this page load arrived with a one-time code, it
+        // is exchanged here and only here, before the initial session is read, so
+        // no effect anywhere has to guess whether sign-in is still finishing.
+        (async () => {
+            const callback = consumeAuthCallback();
+            const verdict = callback ? describeAuthCallback(callback) : null;
+
+            if (verdict?.kind === 'error') {
+                // Cancelled consent, or the provider refused: report it plainly and
+                // clear the departure marker so the next attempt starts clean.
+                clearOAuthAttempt();
+                reportGoogle('failed', verdict.message);
+            } else if (verdict?.code) {
+                reportGoogle('exchanging');
+                try {
+                    const exchanged = await exchangeAuthCode(supabase, verdict.code);
+                    clearOAuthAttempt();
+                    if (cancelled) return;
+                    // A recovery link rides the same code path; the flag is what
+                    // tells the UI to show "choose a new password" instead of "hi".
+                    if (verdict.type === 'recovery') setRecoveryMode(true);
+                    reportGoogle('signed_in');
+                    // PASSWORD_RECOVERY rather than SIGNED_IN: `apply` clears recovery
+                    // mode on a completed sign-in, which would throw the reset form
+                    // away the moment the session landed.
+                    await apply(verdict.type === 'recovery' ? 'PASSWORD_RECOVERY' : 'SIGNED_IN', exchanged);
+                } catch (err) {
+                    clearOAuthAttempt();
+                    reportGoogle('failed', err?.message || 'Google sign-in did not complete. Please try again.');
+                }
+            } else if (callback) {
+                clearOAuthAttempt();
+            }
+
+            // INITIAL_SESSION is not guaranteed on every adapter, so read it
+            // directly too. Whichever arrives first wins; the other is a no-op by uid.
+            const { data } = await supabase.auth.getSession().catch(() => ({ data: null }));
+            if (!cancelled) await apply('INITIAL_SESSION', data?.session ?? null);
+            markSettled();
+        })().catch(() => markSettled());
 
         // A cold, offline, or misrouted auth request must never strand the app on
-        // the splash screen forever.
-        const failsafe = setTimeout(markSettled, 8000);
+        // the splash screen forever. The exchange above is bounded tighter than
+        // this, so the failsafe only ever wins when something below our own code
+        // (storage, the SDK constructor) has wedged.
+        const failsafe = setTimeout(markSettled, 15000);
 
         return () => {
             cancelled = true;
             clearTimeout(failsafe);
             sub?.subscription?.unsubscribe?.();
         };
-    }, [loadStudentProfile, markSettled]);
+    }, [loadStudentProfile, markSettled, reportGoogle]);
 
     // ─── Sign up: custom OTP first, Supabase account second ──────────────────
     /**
@@ -380,6 +445,8 @@ export function AuthProvider({ children }) {
         // existing behaviour and stays here (the data itself is still Firestore's).
         try { localStorage.removeItem('userExamHistory'); } catch { /* noop */ }
         try { sessionStorage.removeItem('prepmaster_google_signup_pending'); } catch { /* noop */ }
+        clearOAuthAttempt();
+        reportGoogle('idle', '');
 
         loadedForRef.current = null;
         setStudentData(null);
@@ -390,7 +457,7 @@ export function AuthProvider({ children }) {
 
         if (!supabase) return;
         await sbLogout(supabase);
-    }, []);
+    }, [reportGoogle]);
 
     // ─── Google (redirect + PKCE) ────────────────────────────────────────────
     /**
@@ -401,12 +468,40 @@ export function AuthProvider({ children }) {
      */
     const startGoogleRedirect = useCallback((mode) => {
         if (!supabase) throw new Error(supabaseConfigError || 'Supabase is not available.');
+
+        // Never start a flow on top of a finishing one: a second signInWithOAuth
+        // rewrites the stored PKCE verifier and invalidates the code that is
+        // currently on its way back, which is what "Unable to exchange external
+        // code" has always meant.
+        if (hasPendingAuthCallback() || googleStatusRef.current === 'exchanging') {
+            return Promise.reject(new Error(
+                'A Google sign-in is still finishing in this tab. Wait for it, or reload once.'
+            ));
+        }
+
         const origin = typeof window !== 'undefined' ? window.location.origin : '';
         const tab = mode === 'signup' ? 'signup' : 'login';
-        // Must match a Supabase redirect allow-list entry (`<origin>/**`).
+        // A bare path, no `method` param: the return leg must not look like a fresh
+        // "start Google" instruction to any effect that reads the URL.
         const redirectTo = origin ? `${origin}/signup?mode=${tab}` : undefined;
-        return startGoogleOAuth(supabase, { redirectTo });
-    }, []);
+
+        // Survives the round trip, in localStorage rather than sessionStorage, so a
+        // provider that hands the browser a new tab still knows this was intentional.
+        rememberOAuthAttempt();
+        reportGoogle('idle', '');
+
+        return startGoogleOAuth(supabase, {
+            redirectTo,
+            shouldStart: () => !hasPendingAuthCallback(),
+        }).catch((err) => {
+            clearOAuthAttempt();
+            reportGoogle('failed', err?.message || 'Google sign-in could not be started. Please try again.');
+            throw err;
+        });
+    }, [reportGoogle]);
+
+    /** Dismisses a Google failure so the retry starts from a clean slate. */
+    const clearGoogleError = useCallback(() => reportGoogle('idle', ''), [reportGoogle]);
 
     /** Redirect-only now: `signInWithGoogle` is the same flow, kept for callers. */
     const signInWithGoogle = useCallback(async () => {
@@ -421,13 +516,16 @@ export function AuthProvider({ children }) {
      * (cancelled consent) which is otherwise silent.
      */
     const completeGoogleRedirect = useCallback(async () => {
-        const problem = readOAuthErrorFromUrl(
-            typeof window !== 'undefined' ? window.location.href : ''
-        );
-        if (problem) throw normalizeAuthError(new Error(problem.message));
+        // Nothing re-reads the URL: src/supabase.js already took the params, and the
+        // bootstrap above either exchanged the code or recorded why it could not.
+        if (googleStatusRef.current === 'failed') {
+            const err = new Error(googleError || 'Google sign-in did not complete. Please try again.');
+            err.retryable = true;
+            throw err;
+        }
         const current = await supabase?.auth?.getSession?.() ?? null;
         return current?.data?.session ? { user: current.data.session.user } : null;
-    }, []);
+    }, [googleError]);
 
     // ─── Password reset / change ─────────────────────────────────────────────
     const sendPasswordReset = useCallback(async (email) => {
@@ -501,6 +599,10 @@ export function AuthProvider({ children }) {
         authLoading,
         profileError,
         recoveryMode,
+        /** 'idle' | 'exchanging' | 'signed_in' | 'failed' — the Google return leg. */
+        googleStatus,
+        googleError,
+        clearGoogleError,
         needsEmailVerification,
 
         role,
@@ -546,7 +648,8 @@ export function AuthProvider({ children }) {
         },
     }), [
         currentUser, supabaseUser, session, studentData, authLoading, profileError,
-        recoveryMode, needsEmailVerification, role, requestSignup, signupWithEmail,
+        recoveryMode, googleStatus, googleError, clearGoogleError,
+        needsEmailVerification, role, requestSignup, signupWithEmail,
         verifySignupOtp, resendSignupOtp, cancelSignupOtp, resendSupabaseVerification,
         login, logout, startGoogleRedirect,
         signInWithGoogle, completeGoogleRedirect, completeGoogleProfile,
