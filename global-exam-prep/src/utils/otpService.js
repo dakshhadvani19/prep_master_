@@ -25,12 +25,48 @@ import {
     updateDoc,
     increment,
 } from 'firebase/firestore';
-import { db } from '../firebase';
+import { db, firebaseConfigError } from '../firebase';
 
 const OTP_TTL_MS      = 10 * 60 * 1000; // 10 minutes, matches the email copy
 const MAX_ATTEMPTS    = 3;
 const RESEND_COOLDOWN = 60;           // seconds; UI must not block for the TTL
 const NONCE_PREFIX    = 'pm_otp_nonce_';
+
+// Every await in this module used to be unbounded. Firestore behaves exactly as
+// designed when it cannot reach its backend — it queues the write and leaves the
+// returned promise pending forever — so a deployment missing the VITE_FIREBASE_*
+// variables (or an offline client, or a serverless call that never answers) froze
+// "Create Account" on a spinner with no error and no timeout. Each step now has a
+// deadline, so the UI always ends up on the OTP screen or on a message.
+const STORE_TIMEOUT_MS       = 8000;  // digest write / challenge read
+const STORE_OPS_TIMEOUT_MS   = 5000;  // best-effort delete + attempt increment
+const MAIL_TIMEOUT_MS        = 25000; // /api/send-otp: cold start + SMTP can be slow
+
+/**
+ * Rejects with a user-facing message if `promise` has not settled in `ms`. The
+ * underlying work is NOT cancelled (a late write is harmless: the next request
+ * supersedes it); only the caller's wait is bounded.
+ */
+function withTimeout(promise, ms, message) {
+    let timer;
+    return Promise.race([
+        Promise.resolve(promise),
+        new Promise((_, reject) => { timer = setTimeout(() => reject(new Error(message)), ms); }),
+    ]).finally(() => clearTimeout(timer));
+}
+
+/** One challenge per address in flight, however often the button is fired. */
+const inFlight = new Map();
+
+/** Firestore is unreachable by construction in this build: say so, don't hang. */
+function assertStoreConfigured() {
+    if (firebaseConfigError) {
+        throw new Error(
+            'Verification service is unavailable right now (the app is missing its '
+            + 'Firebase configuration). Please try again shortly.'
+        );
+    }
+}
 
 // ─── Crypto helpers ────────────────────────────────────────────────────────────
 
@@ -105,20 +141,39 @@ export async function createAndSendOTP(email, userName) {
         throw new Error('Please enter a valid email address.');
     }
 
+    assertStoreConfigured();
+
+    // A second click while the first request is still running must not mail a
+    // second code or start a second challenge; it joins the same attempt instead.
+    const running = inFlight.get(cleanEmail);
+    if (running) return running;
+
+    const attempt = issueOtp(cleanEmail, userName).finally(() => inFlight.delete(cleanEmail));
+    inFlight.set(cleanEmail, attempt);
+    return attempt;
+}
+
+async function issueOtp(cleanEmail, userName) {
+
     // Throttle rapid re-issues (the API also rate-limits, this saves the round-trip).
     const previousNonce = recallNonce(cleanEmail);
     const now = Date.now();
     if (previousNonce) {
-        const prev = await getDoc(doc(db, 'otp_tokens', docIdFor(cleanEmail, previousNonce)))
-            .catch(() => null);
+        const prev = await withTimeout(
+            getDoc(doc(db, 'otp_tokens', docIdFor(cleanEmail, previousNonce))),
+            STORE_TIMEOUT_MS, 'Could not check the previous code. Please try again.',
+        ).catch(() => null);
         const prevCreatedAt = prev?.exists() ? Date.parse(prev.data().createdAt) : 0;
         if (prevCreatedAt && now - prevCreatedAt < RESEND_COOLDOWN * 1000) {
             const wait = Math.ceil((RESEND_COOLDOWN * 1000 - (now - prevCreatedAt)) / 1000);
             throw new Error(`Please wait ${wait}s before requesting another code.`);
         }
-        // Supersede the old challenge so the emailed code stops working.
-        await deleteDoc(doc(db, 'otp_tokens', docIdFor(cleanEmail, previousNonce)))
-            .catch(() => {});
+        // Supersede the old challenge so the emailed code stops working. Best
+        // effort: a stalled delete must not hold up issuing the new code.
+        await withTimeout(
+            deleteDoc(doc(db, 'otp_tokens', docIdFor(cleanEmail, previousNonce))),
+            STORE_OPS_TIMEOUT_MS, 'timeout',
+        ).catch(() => {});
     }
 
     const otp       = generateOTP();
@@ -128,34 +183,53 @@ export async function createAndSendOTP(email, userName) {
     const createdAt = new Date(now);
     const expiresAt = new Date(now + OTP_TTL_MS);
 
-    await setDoc(doc(db, 'otp_tokens', docId), {
-        email:     cleanEmail,
-        otpHash,
-        createdAt: createdAt.toISOString(),
-        expiresAt: expiresAt.toISOString(),
-        attempts:  0,
-    });
+    await withTimeout(
+        setDoc(doc(db, 'otp_tokens', docId), {
+            email:     cleanEmail,
+            otpHash,
+            createdAt: createdAt.toISOString(),
+            expiresAt: expiresAt.toISOString(),
+            attempts:  0,
+        }),
+        STORE_TIMEOUT_MS,
+        'Could not save the verification code. Please try again.',
+    );
 
+    // The body is deliberately { email, otp, userName } and nothing else: the
+    // password never reaches this endpoint (nor does it need to).
+    const controller = new AbortController();
+    const mailTimer = setTimeout(() => controller.abort(), MAIL_TIMEOUT_MS);
     try {
-        const res = await fetch('/api/send-otp', {
-            method:  'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body:    JSON.stringify({ email: cleanEmail, otp, userName }),
-        });
+        const res = await withTimeout(
+            fetch('/api/send-otp', {
+                method:  'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body:    JSON.stringify({ email: cleanEmail, otp, userName }),
+                signal:  controller.signal,
+            }),
+            MAIL_TIMEOUT_MS,
+            'The email service is taking too long to respond. Please try again.',
+        );
 
         if (!res.ok) {
             const body = await res.json().catch(() => ({}));
             throw new Error(body.error || 'Failed to send the verification email.');
         }
     } catch (err) {
-        // Roll back so the address is free to retry immediately.
-        await deleteDoc(doc(db, 'otp_tokens', docId)).catch(() => {});
+        controller.abort();
+        // Roll back so the address is free to retry immediately. Bounded, because
+        // a rollback that itself hangs is what we are trying to avoid.
+        await withTimeout(
+            deleteDoc(doc(db, 'otp_tokens', docId)), STORE_OPS_TIMEOUT_MS, 'timeout',
+        ).catch(() => {});
         forgetNonce(cleanEmail);
         throw new Error(
             err instanceof Error && err.message
                 ? err.message
                 : 'Could not reach the email service. Please try again.'
         );
+    } finally {
+        clearTimeout(mailTimer);
     }
 
     // Only remember the nonce once the code is demonstrably in flight.
@@ -191,7 +265,10 @@ export async function verifyOTP(email, submittedOTP) {
     }
 
     const docRef = doc(db, 'otp_tokens', docIdFor(cleanEmail, nonce));
-    const snap   = await getDoc(docRef);
+    const snap   = await withTimeout(
+        getDoc(docRef), STORE_TIMEOUT_MS,
+        'Could not reach the verification service. Please try again.',
+    );
 
     if (!snap.exists()) {
         forgetNonce(cleanEmail);
@@ -202,20 +279,20 @@ export async function verifyOTP(email, submittedOTP) {
 
     // Defence in depth: the digest must belong to this address.
     if (data.email && data.email !== cleanEmail) {
-        await deleteDoc(docRef).catch(() => {});
+        await withTimeout(deleteDoc(docRef), STORE_OPS_TIMEOUT_MS, 'timeout').catch(() => {});
         forgetNonce(cleanEmail);
         throw new Error('This verification request is invalid. Please start again.');
     }
 
     if (Date.now() > Date.parse(data.expiresAt)) {
-        await deleteDoc(docRef).catch(() => {});
+        await withTimeout(deleteDoc(docRef), STORE_OPS_TIMEOUT_MS, 'timeout').catch(() => {});
         forgetNonce(cleanEmail);
         throw new Error('Your code has expired. Please request a new one.');
     }
 
     const attempts = Number(data.attempts ?? 0);
     if (attempts >= MAX_ATTEMPTS) {
-        await deleteDoc(docRef).catch(() => {});
+        await withTimeout(deleteDoc(docRef), STORE_OPS_TIMEOUT_MS, 'timeout').catch(() => {});
         forgetNonce(cleanEmail);
         throw new Error('Too many incorrect attempts. Please request a new code.');
     }
@@ -225,11 +302,14 @@ export async function verifyOTP(email, submittedOTP) {
     if (submittedHash !== data.otpHash) {
         const remaining = MAX_ATTEMPTS - (attempts + 1);
 
-        // Atomic increment: rules allow attempts to advance by exactly 1.
-        await updateDoc(docRef, { attempts: increment(1) }).catch(() => {});
+        // Atomic increment: rules allow attempts to advance by exactly 1. If the
+        // store is unreachable this is best effort — the code still has to match.
+        await withTimeout(
+            updateDoc(docRef, { attempts: increment(1) }), STORE_OPS_TIMEOUT_MS, 'timeout',
+        ).catch(() => {});
 
         if (remaining <= 0) {
-            await deleteDoc(docRef).catch(() => {});
+            await withTimeout(deleteDoc(docRef), STORE_OPS_TIMEOUT_MS, 'timeout').catch(() => {});
             forgetNonce(cleanEmail);
             throw new Error('Too many incorrect attempts. Please request a new code.');
         }
@@ -240,7 +320,7 @@ export async function verifyOTP(email, submittedOTP) {
     }
 
     // Single use: burn the challenge before the caller creates the account.
-    await deleteDoc(docRef).catch(() => {});
+    await withTimeout(deleteDoc(docRef), STORE_OPS_TIMEOUT_MS, 'timeout').catch(() => {});
     forgetNonce(cleanEmail);
 
     return cleanEmail;

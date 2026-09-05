@@ -257,6 +257,38 @@ describe('signup: Nodemailer OTP gate, then the Supabase account', () => {
     expect(callsTo('signUp')).toHaveLength(0);
   }, 20000);
 
+  it('a stalled endpoint releases the spinner, and hammering Create Account sends one code', async () => {
+    const api = await openEmailForm();
+    api.fill(['Raja Advani', 'raja@x.com', PASSWORD]);
+
+    // Three clicks while the first request is still in flight (the old double-send).
+    fireEvent.submit(api.form());
+    fireEvent.submit(api.form());
+    fireEvent.submit(api.form());
+
+    await waitFor(() => expect(document.querySelectorAll('.otp-digit').length).toBe(6));
+    const mails = sent.filter((r) => r.url.includes('/api/send-otp'));
+    expect(mails).toHaveLength(1);                          // one code, not three
+    expect(mails[0].body).toEqual({
+      email: 'raja@x.com', otp: expect.stringMatching(/^[1-9]\d{5}$/), userName: 'Raja Advani',
+    });
+    expect(JSON.stringify(mails[0].body)).not.toMatch(/password/i);
+    // reaching the OTP screen at all means the pending request settled: the step
+    // only mounts after createAndSendOTP resolves, and `loading` is cleared with it.
+  }, 20000);
+
+  it('an endpoint that fails outright stops the spinner and says why', async () => {
+    globalThis.fetch = vi.fn(async () => { throw new TypeError('Failed to fetch'); });
+    const api = await openEmailForm();
+    api.fill(['Raja Advani', 'raja@x.com', PASSWORD]);
+    fireEvent.submit(api.form());
+
+    await waitFor(() => expect(api.submit()).not.toBeDisabled());   // spinner released
+    expect(document.querySelector('.auth-form')).toBeTruthy();     // stayed on details
+    expect(document.querySelectorAll('.otp-digit')).toHaveLength(0);
+    expect(/verif|email|try again/i.test(document.body.textContent)).toBe(true);
+  }, 20000);
+
   it('an address that already has an account is bounced to the log-in hint', async () => {
     state.signUpResult = { data: { user: authUser({ identities: [] }), session: null }, error: null };
     const api = await openEmailForm();

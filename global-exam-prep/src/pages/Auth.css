@@ -817,8 +817,8 @@ input:focus-visible,
 }
 
 .strength-ring {
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     flex-shrink: 0;
     display: flex;
@@ -827,17 +827,28 @@ input:focus-visible,
     transition: background 0.4s ease;
 }
 
+/* The score digit inherited a normal line-height inside a 22px disc, so the line
+   box was taller than the circle and the "6" sat low and clipped against the rim.
+   Grid centering + line-height:1 + a box sized for the glyph keeps 0-6 centered
+   and contained; overflow:hidden guarantees nothing can escape the disc. No
+   sizing is left to the inherited text metrics. */
 .strength-ring-inner {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    min-height: 26px;
     border-radius: 50%;
     background: var(--card-bg-solid);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    overflow: hidden;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.72rem;
+    line-height: 1;
     font-weight: 600;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
     color: var(--text-primary);
 }
 

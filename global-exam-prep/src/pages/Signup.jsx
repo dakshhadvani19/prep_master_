@@ -1091,6 +1091,7 @@ function SignupForm({
 
     const handleDetailsSubmit = async (e) => {
         e.preventDefault();
+        if (loading) return;   // Enter + click can both land before the button disables
         setError('');
         setEmailTaken(false);
 
