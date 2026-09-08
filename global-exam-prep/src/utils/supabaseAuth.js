@@ -209,10 +209,7 @@ export async function startGoogleOAuth(client, { redirectTo, shouldStart } = {})
         throw new Error('Another sign-in is already finishing in this tab. Please wait for it.');
     }
 
-    const options = {
-    skipBrowserRedirect: true,
-    scopes: 'openid email profile https://www.googleapis.com/auth/userinfo.email',
-    };
+    const options = { skipBrowserRedirect: true };
     if (redirectTo) options.redirectTo = redirectTo;
 
     const { data, error } = await client.auth.signInWithOAuth({
