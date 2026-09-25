@@ -3,7 +3,7 @@
 Update this file after **every** Agent Mode task. Keep it short, factual, and code-verified.
 Long-term rules and architecture live in `PREPMaster_PROJECT_CONTEXT.md` (same folder).
 
-**Last updated:** 2026-09-25 (GitHub reconciliation + commit; push still waiting on a credential)
+**Last updated:** 2026-09-25 (GitHub reconciliation, commit **and push** — `origin/main` = `25d15b8`)
 **Verified by:** reading the working tree, running `npx vitest run` / `npm run build` / `npm run lint`,
 and fetching `origin/main`. Nothing here is inferred from chat history.
 
@@ -12,11 +12,11 @@ and fetching `origin/main`. Nothing here is inferred from chat history.
 | Item | Value |
 | --- | --- |
 | Git root / app dir | `/home/user/prep_master_` / `global-exam-prep/` |
-| Branch | `main` (clean tree) |
+| Branch | `main`, tracking `origin/main` (clean tree) |
 | HEAD | the merge commit `chore(repo): merge GitHub main (strength-ring removal) …` on top of `9b9fadf` (docs) and `210748a` (Phase 1) |
 | `origin` | `https://github.com/dakshhadvani19/prep_master_.git` (HTTPS; was re-added locally — `.git/config` is not snapshotted by this sandbox) |
 | Remote tip at last fetch | `2ca9fe8` — now an **ancestor** of local `main`, so `git push origin main` is a clean fast-forward |
-| Push status | **not pushed.** No credential exists in this sandbox: `git push` → `fatal: could not read Username for 'https://github.com': terminal prompts disabled` (exit 128). No `gh`, no `~/.ssh`, no `~/.git-credentials`, no token env var. Network itself is fine (anonymous fetch works) |
+| Push status | ✅ **pushed 2026-09-25**: `2ca9fe8..25d15b8 main -> main` (fast-forward, no force), verified with `git ls-remote origin refs/heads/main` → `25d15b847f78d78590832800619378f941a3ec08`. The owner's PAT was supplied only as a process environment variable for that one command and read through a temporary `GIT_ASKPASS` script holding no secret, which was then deleted: the token is in no file, no remote URL, no `git config`, no credential store and no commit |
 
 ### What was committed
 
@@ -84,7 +84,7 @@ resolves to `student` (fail-closed).
 
 | Phase | Scope | Status |
 | --- | --- | --- |
-| 1 | Real admin authentication + authorization resolution | ✅ committed on `main`, tested; deployment steps above outstanding |
+| 1 | Real admin authentication + authorization resolution | ✅ committed **and pushed** (`25d15b8`), tested; live-project deployment steps above outstanding |
 | 2 | Admin UI shell, role-aware nav (admins: Home→Dashboard, Subscriptions→Courses), admin Dashboard (feedback Total/Seen/Remaining chart, spam users) | 📝 not started — no admin UI beyond `SyllabusAdmin` |
 | 3 | Courses → Semester → Subjects → Questions admin UI (add/edit/update/remove) | 📝 not started (verified: no CRUD code, no such tables) |
 | 4 | Leaderboard UI (student-scoped, Top 100 + own rank/percentile, admin all-boards + dependent filters) | 📝 not started (verified: no route/page/query) |
@@ -92,8 +92,8 @@ resolves to `student` (fail-closed).
 
 ## Known issues / caveats (pre-existing unless marked)
 
-1. **The push is not done** — needs a PAT/SSH key in this sandbox, or run `git push origin main` where
-   the owner's GitHub login works. Local `main` is already fast-forwardable onto `2ca9fe8`.
+1. **Revoke the PAT used for this push** — it was pasted into chat, so treat it as exposed. The push
+   itself landed cleanly (`25d15b8` on `main`).
 2. Both migrations are **unapplied** to the live Supabase project.
 3. Vercel env vars listed above are missing in production → `/api/send-otp` 502 `store_unavailable`.
 4. Firestore/Storage paths need a Firebase identity, so exam-history saves and syllabus admin writes
@@ -117,7 +117,7 @@ resolves to `student` (fail-closed).
 
 ## Next intended task
 
-First: complete the push (credential needed). Then **Phase 2** — admin UI shell + role-aware
+**Phase 2** — admin UI shell + role-aware
 navigation (admins: Home→Dashboard, Subscriptions→Courses; other options unchanged) + the admin
 Dashboard with feedback Total / Seen / **Remaining (= Total − Seen)** visualization and a spam-users
 list, reusing the existing light-purple + dark-neutral language with restrained gold (`#ffb454`
