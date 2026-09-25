@@ -1469,38 +1469,21 @@ function PasswordStrength({ state }) {
     const checks = state.checks || {};
 
     return (
-        <div className="strength-meter-container">
-            <div className="strength-ring-wrap">
-                <div
-                    className="strength-ring"
-                    style={{ background: `conic-gradient(${color} ${pct}%, var(--ring-track) ${pct}%)` }}
-                    role="img"
-                    aria-label={`Password strength: ${state.label || 'unknown'}, ${pct}%`}
-                >
-                    <div className="strength-ring-inner">{state.score}</div>
-                </div>
-                <div
-                    className="strength-text"
-                    style={{ color: state.isAcceptable ? 'var(--text-muted)' : 'var(--error)' }}
-                >
-                    {state.label}
-                </div>
-            </div>
-
-            {Object.keys(checks).length > 0 && (
-                <ul className="strength-requirements" aria-label="Password requirements">
-                    {Object.entries(checks).map(([key, item]) => (
-                        <li key={key} className={item.pass ? 'met' : 'unmet'}>
-                            {item.pass
-                                ? <CheckCircle2 size={12} aria-hidden="true" />
-                                : <AlertCircle size={12} aria-hidden="true" />}
-                            {item.label}
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </div>
-    );
+    <div className="strength-meter-container">
+        {Object.keys(checks).length > 0 && (
+            <ul className="strength-requirements" aria-label="Password requirements">
+                {Object.entries(checks).map(([key, item]) => (
+                    <li key={key} className={item.pass ? 'met' : 'unmet'}>
+                        {item.pass
+                            ? <CheckCircle2 size={12} aria-hidden="true" />
+                            : <AlertCircle size={12} aria-hidden="true" />}
+                        {item.label}
+                    </li>
+                ))}
+            </ul>
+        )}
+    </div>
+);
 }
 
 function TimerRing({ timeLeft, total = OTP_TTL_SECONDS }) {
