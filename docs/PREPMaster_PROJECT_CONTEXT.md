@@ -148,8 +148,11 @@ Non-negotiable rules (all enforced in code today):
 - **Log in:** email+password or Google. Both land on `/dashboard` unless ProtectedRoute stashed a
   `state.from` destination.
 - The only client write to `students` is the display name (`updateStudentFullName`).
-- Password strength meter (`src/utils/passwordStrength.js`) + the amber score ring are UX-contracted
-  by tests (`tests/auth-strength-ring.test.js`) — do not change the scoring.
+- Password meter: `checkPasswordStrength()` drives a **requirement checklist with tick marks** and
+  nothing else — the owner removed the amber score ring ("only that list and tick mark on it is enough
+  as user types password"). `tests/auth-strength-meter.test.js` pins both halves (list present, ring
+  absent, `--ring-track` kept because the OTP timer still paints with it) and the scoring contract.
+  Do not change the scoring, and do not "restore" the ring.
 
 ## 6. Admin Authentication and Authorization (Phase 1 — ✅ done, 📝 for the UI)
 
@@ -303,7 +306,7 @@ separate admin homepage** — after real admin auth they land on the existing Da
 
 - Students must see no admin affordance whatsoever; role-driven UI is `isAdmin`/`hasRole` only.
 - Login screen layout/visuals are the owner's: change only what auth behaviour strictly requires.
-- Auth page owns its own scoped tokens and the amber score ring (see §18); the success overlay then
+- Auth page owns its own scoped tokens (see §18); the success overlay then
   navigates to the remembered path — do not reorder those two.
 - Exam flow contract: SubjectDetails (semester → subject → exam type → difficulty) → ExamPortal →
   ReviewPage; results persist through `users/{uid}/examHistory` + a `localStorage.userExamHistory`
@@ -450,7 +453,8 @@ Login/signup tabs via `?mode=`, legacy `/login` `/register` aliases, the OTP-gat
 exchange, `?method=google`), password reset + in-app recovery mode, session restore on refresh,
 "student profile missing" operator message, exam history read/write + localStorage cache, the
 dashboard, syllabus upload/list/delete, feedback email, AI question generation through `/api/ai`,
-search, user guide, role gating of `/admin/syllabus`, the auth-page success overlay + score ring,
+search, user guide, role gating of `/admin/syllabus`, the auth-page success overlay + the password
+requirement list,
 the service-role-key boot guard, and the `npm run build`/`npx vitest run` gates (17 files / 216 tests;
 dist = 74 files; lint 45 problems).
 
@@ -533,6 +537,10 @@ login, a Google round trip, `/api/send-otp` not 502, and (once staff exists) an 
   `ProtectedRoute`/`Layout`/`SyllabusAdmin` by making the context authoritative, with zero page edits.
 - **Cleanup audits keep "unused but possibly meaningful" files** (e.g. `@google/generative-ai`,
   `canvas-confetti`, `mockData.js.bak`, both reference images): "unused" ≠ "unnecessary".
+- **The password meter is the checklist only, no ring** (owner decision, 2026-09-25, GitHub commit
+  `2ca9fe8` "Remove password strength counter", merged back into `main`). The dead
+  `.strength-ring*` rules were left in `Auth.css` on purpose: they are inert without markup, and
+  `--ring-track` next to them is still used by the OTP countdown ring.
 - **Docs are repo-backed** (this file): future sessions must not depend on chat history.
 
 ## 26. Future Planned Work (owner's phase plan)

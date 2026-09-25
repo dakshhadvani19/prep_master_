@@ -1464,8 +1464,6 @@ function PasswordStrength({ state }) {
     // case in which this renders nothing.
     if (!state) return null;
 
-    const pct   = Math.max(0, Math.min(100, state.percent ?? 0));
-    const color = state.color || 'rgba(255,255,255,0.15)';
     const checks = state.checks || {};
 
     return (
