@@ -67,7 +67,7 @@ action"*.
   "email":       "raja@x.com",       // ER: Email, lowercase
   "passwordHash": "pbkdf2$210000$…", // ER: Password — salted digest, never plaintext
   "isSpam":      false,              // ER: IsSpam
-  "role":        "student",          // 'student' | 'admin' | 'superAdmin'
+  "role":        "student",          // stored column; NOT the authorization source — see §7
   "provider":    "email",            // 'email' | 'google'
   "providers":   ["email"],
   "createdAt":   "2026-09-03T03:10:00.000Z",
@@ -100,6 +100,7 @@ Full name + email + password
    supabase.auth.signUp({ email, password, options:{ data:{ full_name } } })
         │        → auth.users row → handle_new_user() → public.students
         ▼          (role 'student' is set by the trigger; the client sends nothing else)
+        │            Authorization is decided separately, from public.admins (§7)
    session in the context → /dashboard
 ```
 
@@ -151,18 +152,44 @@ instead of always to `/dashboard`.
 
 ## 7. Roles (RBAC)
 
-* Roles are read from `public.students.role`, fetched by `auth_uid = <Supabase user
-  id>` under RLS; `hasRole('admin')` means admin **or above**. (In Phase 1 the client
-  read `students/{uid}` from Firestore; the field is the same, the store is not.)
-* `firestore.rules` refuses client-side writes to `role`, `uid`, `email`,
-  `studentId`, `createdAt`, `provider` — a student cannot promote themselves.
-* **Admin authentication is not implemented** (owner's instruction). To make
-  yourself an admin, run `update public.students set role = 'admin' where email =
-  'you@example.com';` in the Supabase SQL editor. The trigger hard-codes `'student'`
-  for every signup and `guard_student_protected_columns` blocks client writes to
-  `role`, so no path through the browser can mint an admin.
-* Admin-only *data* writes (`domains`, `courses`, `subjects`, `syllabuses`) are
-  already gated on the same `role` field.
+* Admin status is a fact about the **authenticated identity**, not about a profile row:
+  a user is staff exactly when `public.admins` holds a row whose `auth_uid` is their
+  `auth.users` id, and `public.admins.is_super_admin` decides `superAdmin` vs `admin`.
+  `hasRole('admin')` means admin **or above**. There is no separate admin login:
+  email+password and the existing Google flow both go through Supabase Auth, and only
+  the role resolution afterwards differs.
+* The lookup lives in one place — `resolveAuthorization()` + `deriveRole()` in
+  `src/utils/supabaseAuth.js`, called by `loadIdentity()` in `AuthContext` — and runs on
+  every event that changes the user: password sign-in, the Google return leg, a page
+  refresh (`INITIAL_SESSION`), signup completion, password recovery, and
+  `refreshStudentProfile()`. It prefers the `public.admin_role_for_uid()` RPC
+  (security-definer, **takes no argument**, so it can only answer about `auth.uid()`)
+  and falls back to a self-read of `public.admins` for projects whose RLS already grants
+  that. `tests/admin-role-sql.test.js` runs the migration against a real Postgres and
+  pins both paths.
+* `public.students.role` is deliberately **not** consulted for authorization, even
+  though the column is still returned on `studentData`. A student may update their own
+  `students` row, so a role column there is a promotion an account can hand itself.
+  `firestore.rules` still refuses client-side writes to `role`, `uid`, `email`,
+  `studentId`, `createdAt`, `provider`; `public.admins` is not writable from the
+  browser at all, and this app never writes it.
+* Fail-closed in every direction: no admins row ⇒ `student`; a lookup that errors ⇒
+  `student` **plus** a non-empty `authorizationError`, so "could not verify" is never
+  quietly reported as "not staff". A row returned for a different uid is discarded and
+  reported. Nothing admin-shaped is kept in `localStorage`/`sessionStorage`, and a
+  logout clears the role together with the session — the client holds no state that
+  could be edited to gain access.
+* An admin with no `public.students` row is not shown the "your student profile is
+  missing" warning: staff accounts are not student accounts.
+* **Granting admin is an operator action on `public.admins`, never app behaviour.** The
+  account must already exist in Supabase Auth (by signup or by Google), then:
+  `insert into public.admins (auth_uid, full_name, email, is_super_admin) values
+  ('<that auth.users id>', 'Name', 'you@example.com', true);`. Apply
+  `supabase/migrations/20260925150000_admin_role_lookup.sql` for the lookup function.
+  `public.admins` holds no password column by design and none is added here.
+* Admin-only *data* writes (`domains`, `courses`, `subjects`, `syllabuses`) are still
+  governed by `firestore.rules`, which this phase did not touch; the app-side gate for
+  those screens is the `role` above.
 
 ## 8. Known follow-ups
 
@@ -203,6 +230,7 @@ production incident, so read them as gates, not notes:
 | Gate | Where | Why it fails loudly or silently |
 | --- | --- | --- |
 | `public.auth_otp` + its 4 functions exist | apply `supabase/migrations/20260905120000_auth_otp.sql` (SQL Editor, or `supabase db push`) | `/api/send-otp` answers 502 `store_unavailable`. The migration is idempotent and grants nothing to `anon`/`authenticated`: RLS is enabled with **zero** policies, so only the service role can touch it, and only through the functions. |
+| `public.admin_role_for_uid()` exists | apply `supabase/migrations/20260925150000_admin_role_lookup.sql` (SQL Editor, or `supabase db push`) | Without it, admin status can only be seen through a self-read policy on `public.admins`; with neither, every admin signs in as a student and `authorizationError` says so. The migration adds no policy, no column and no row, and grants execute to `authenticated` only. |
 | `OTP_PEPPER` | Vercel → Environment Variables → *Production* | Missing ⇒ 500 naming the variable (by design, names only). Present but changed ⇒ every outstanding code is invalid, which is the intended behaviour during an incident. |
 | `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` | Vercel → Environment Variables → *Production* | These are the **server** copies. The browser never sees them; `VITE_`-prefixing the service-role key would ship it to every visitor, and `src/supabase.js` deliberately refuses to boot on a secret key. |
 | `GMAIL_USER`, `GMAIL_APP_PASSWORD` | Vercel → Environment Variables → *Production* | Missing ⇒ 500. Revoked/expired app password ⇒ 500 *after* the challenge is issued, and the endpoint discards the challenge so the student can retry. |

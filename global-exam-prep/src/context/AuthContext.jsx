@@ -22,7 +22,7 @@
  *   full_name:   varchar(100) // Students.FullName
  *   email:       varchar(320) // Students.Email, lowercase
  *   is_spam:     boolean      // Students.IsSpam
- *   role:        'student' | 'admin' | 'superAdmin'
+ *   role:        'student' | 'admin' | 'superAdmin'   // tiers resolved from public.admins
  *   created_at:  timestamptz
  * }
  * Students.Password is NOT a column: the credential lives only in Supabase Auth
@@ -37,9 +37,12 @@
  *  - It never inserts `public.students`. `handle_new_user()` (an AFTER INSERT
  *    trigger on auth.users) owns profile creation, so a signup can never leave a
  *    half-written profile, and RLS grants no INSERT to `authenticated` anyway.
+ *  - Admin and super-admin status are never client assertions and never a column a
+ *    student can write. They are the caller's own row in public.admins, keyed by
+ *    auth.uid(); is_super_admin decides the tier. `role` below derives from that.
  *  - It never accepts role/is_spam/student_id/auth_uid from the client. `role`
- *    is read from the row purely for routing decisions; it is not authoritative
- *    for anything the client is allowed to do — RLS is.
+ *    is derived from the admins lookup purely for routing decisions; it is not
+ *    authoritative for anything the client is allowed to do — RLS is.
  *  - It does not pretend to be Firebase Auth. `currentUser` keeps the field names
  *    the existing pages read (uid/email/displayName/photoURL) so they did not have
  *    to change, and carries `authProvider: 'supabase'`. Anything that needs a real
@@ -82,8 +85,10 @@ import {
     describeAuthCallback,
     exchangeAuthCode,
     normalizeAuthError,
+    deriveRole,
     rememberOAuthAttempt,
     resendSignupCode as sbResendCode,
+    resolveAuthorization,
     sendPasswordReset as sbSendReset,
     startGoogleOAuth,
     updateStudentFullName,
@@ -144,6 +149,14 @@ export function AuthProvider({ children }) {
     : (supabaseConfigError || 'Supabase is not configured for this build.')));
     const [recoveryMode, setRecoveryMode] = useState(false);
 
+    // The caller's own public.admins row, or null. This — not public.students.role,
+    // not a cached flag, not localStorage — is what makes someone an admin, and it is
+    // re-read from the database on every boot, refresh, signup and recovery.
+    const [adminRecord, setAdminRecord] = useState(null);
+    // Non-empty when the admin lookup itself could not be completed, so "I could not
+    // check" is never silently reported as "this is a student".
+    const [authorizationError, setAuthorizationError] = useState('');
+
     // The one authority the auth pages read for the Google return leg: 'idle'
     // (nothing in flight), 'exchanging' (a code is being turned into a session),
     // 'signed_in', 'failed' (+ `googleError`, which states the actual reason).
@@ -169,14 +182,34 @@ export function AuthProvider({ children }) {
         }
     }, []);
 
-    // ─── Student profile (public.students, via RLS) ──────────────────────────
-    const loadStudentProfile = useCallback(async (user) => {
+    // ─── Profile + authorization (public.students, public.admins; via RLS) ───
+    /**
+     * One read per user id, keyed to auth.uid(). The students row says who the signed
+     * in student is; the admins row says whether that same identity is staff. A
+     * student without an admins row follows exactly the path it did before; an admin
+     * is never asked for a student profile, because staff are not students.
+     */
+    const loadIdentity = useCallback(async (user) => {
         if (!user) {
             loadedForRef.current = null;
             setStudentData(null);
             setProfileError('');
+            setAdminRecord(null);
+            setAuthorizationError('');
             return null;
         }
+
+        // Authorization first, and never fatal: an unreadable lookup degrades to
+        // "student", the branch that grants nothing.
+        const authorization = await resolveAuthorization(supabase, user.id);
+        // A newer uid may have been claimed while this was in flight; if so this
+        // answer is stale and gets dropped rather than painted over it.
+        if (loadedForRef.current !== user.id) return null;
+        setAdminRecord(authorization.row);
+        setAuthorizationError(authorization.error
+            ? 'Admin access could not be verified for this account, so the session is '
+              + 'being treated as a student. Check that the admin-role lookup is applied.'
+            : '');
 
         try {
             const { row } = await fetchStudentProfile(supabase, user.id);
@@ -188,24 +221,27 @@ export function AuthProvider({ children }) {
                 return profile;
             }
 
-            // No row for a real session: the signup trigger did not run (or the
-            // Phase-1 SQL is not deployed). The client must NOT paper over this by
-            // inserting its own profile — that path is what RLS exists to close.
+            // No row for a real session. For a student that means the signup trigger
+            // did not run (or the Phase-1 SQL is not deployed) and the account is not
+            // usable yet — and the client must NOT paper over it by inserting its own
+            // profile, which is the path RLS exists to close.
             setStudentData(null);
-            setProfileError(
+            setProfileError(authorization.row ? '' : (
                 'Your student profile is missing. The auth.users -> students trigger '
                 + 'did not create it, so an operator needs to check the Supabase '
                 + 'SQL migration before this account can be used.'
-            );
+            ));
             return null;
         } catch (err) {
             loadedForRef.current = null;
             setStudentData(null);
-            setProfileError(
+            // Staff accounts are not students: when only the profile read failed, an
+            // admin still holds a valid, fully resolved session and gets no banner.
+            setProfileError(authorization.row ? '' : (
                 err?.isProfileBlocked
                     ? 'Your profile is blocked by the database security policies. Enable RLS on public.students and apply the Phase-1 policies.'
                     : 'Could not load your profile. Please refresh and try again.'
-            );
+            ));
             return null;
         }
     }, []);
@@ -225,6 +261,8 @@ export function AuthProvider({ children }) {
                 setCurrentUser(null);
                 setStudentData(null);
                 setProfileError('');
+                setAdminRecord(null);
+                setAuthorizationError('');
                 loadedForRef.current = null;
                 markSettled();
                 return;
@@ -241,8 +279,11 @@ export function AuthProvider({ children }) {
             if (event === 'SIGNED_IN') setRecoveryMode((prev) => (prev ? false : prev));
 
             if (user && loadedForRef.current !== user.id) {
+                // Claim the uid before awaiting: a second event for the same user
+                // (TOKEN_REFRESHED, or the duplicate INITIAL_SESSION read) starts no
+                // second load, so no answer can land out of order.
                 loadedForRef.current = user.id;
-                await loadStudentProfile(user);
+                await loadIdentity(user);
             }
 
             markSettled();
@@ -306,7 +347,7 @@ export function AuthProvider({ children }) {
             clearTimeout(failsafe);
             sub?.subscription?.unsubscribe?.();
         };
-    }, [loadStudentProfile, markSettled, reportGoogle]);
+    }, [loadIdentity, markSettled, reportGoogle]);
 
     // ─── Sign up: custom OTP first, Supabase account second ──────────────────
     /**
@@ -401,11 +442,11 @@ export function AuthProvider({ children }) {
             setSession(nextSession ?? null);
             setSupabaseUser(user);
             setCurrentUser(toCurrentUser(user));
-            await loadStudentProfile(user);
+            await loadIdentity(user);
         }
         markSettled();
         return { status: result.status };
-    }, [loadStudentProfile, markSettled]);
+    }, [loadIdentity, markSettled]);
 
     /** Back out of the OTP screen without leaving a password or a live challenge
      *  around: the code itself is superseded the next time one is requested. */
@@ -454,6 +495,11 @@ export function AuthProvider({ children }) {
         setSupabaseUser(null);
         setSession(null);
         setProfileError('');
+        // Role is a fact about the session, so it leaves with the session. Nothing
+        // admin-shaped survives a logout in memory, and nothing was ever written to
+        // storage in the first place.
+        setAdminRecord(null);
+        setAuthorizationError('');
 
         if (!supabase) return;
         await sbLogout(supabase);
@@ -544,10 +590,12 @@ export function AuthProvider({ children }) {
         setRecoveryMode(false);
         try {
             const { data } = await supabase.auth.getUser();
-            if (data?.user) await loadStudentProfile(data.user);
+            // Re-read profile AND role: a staff account resets its password through
+            // this same flow and must come back with its admin status intact.
+            if (data?.user) await loadIdentity(data.user);
         } catch { /* the session may have ended by design */ }
         return true;
-    }, [loadStudentProfile]);
+    }, [loadIdentity]);
 
     /**
      * Password change for a signed-in account. There is no current-password check
@@ -568,8 +616,8 @@ export function AuthProvider({ children }) {
         setSupabaseUser(data.user);
         setCurrentUser(toCurrentUser(data.user));
         loadedForRef.current = data.user.id;
-        return loadStudentProfile(data.user);
-    }, [loadStudentProfile]);
+        return loadIdentity(data.user);
+    }, [loadIdentity]);
 
     const updateFullName = useCallback(async (fullName) => {
         if (!supabase || !supabaseUser) throw new Error('You are not signed in.');
@@ -587,7 +635,10 @@ export function AuthProvider({ children }) {
     const needsEmailVerification = Boolean(currentUser) && !currentUser.emailVerified;
 
     // ─── Roles (RBAC) ─────────────────────────────────────────────────────────
-    const role = studentData?.role ?? 'student';
+    // deriveRole() is the only role rule in the app: a public.admins row for this
+    // auth.uid() means admin (is_super_admin => superAdmin), and no row means
+    // student. public.students.role is deliberately not consulted for authorization.
+    const role = deriveRole(adminRecord);
 
     const value = useMemo(() => ({
         authProvider: 'supabase',
@@ -608,6 +659,10 @@ export function AuthProvider({ children }) {
         role,
         isAdmin: ROLE_RANK[role] >= ROLE_RANK.admin,
         isSuperAdmin: role === 'superAdmin',
+        /** The caller's own public.admins row (whitelisted fields), or null. */
+        adminProfile: adminRecord,
+        /** Non-empty when the admin lookup could not be completed at all. */
+        authorizationError,
         /** hasRole('admin') => admin or above; hasRole('superAdmin') => exact. */
         hasRole: (required) =>
             !required
@@ -648,6 +703,7 @@ export function AuthProvider({ children }) {
         },
     }), [
         currentUser, supabaseUser, session, studentData, authLoading, profileError,
+        adminRecord, authorizationError,
         recoveryMode, googleStatus, googleError, clearGoogleError,
         needsEmailVerification, role, requestSignup, signupWithEmail,
         verifySignupOtp, resendSignupOtp, cancelSignupOtp, resendSupabaseVerification,

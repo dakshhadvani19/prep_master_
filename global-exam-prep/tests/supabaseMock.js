@@ -7,6 +7,8 @@
  *   - signup sends only `full_name` as metadata (never role/is_spam/ids)
  *   - nothing ever inserts into public.students from the client
  *   - the profile is read back by `auth_uid`
+ *   - admin status is read only for the caller's own uid, from public.admins (or its
+ *     security-definer lookup), and never written from the client
  * Import it, then `vi.mock('../src/supabase', ...)` with `supabaseModuleMock()`.
  */
 import { vi } from 'vitest';
@@ -18,6 +20,14 @@ export const state = {
   signUpResult: null,
   signUpError: null,
   verifyError: null,
+
+  // public.admins, as the database sees it. Two knobs, because there are two ways the
+  // app may legitimately learn admin status: the security-definer RPC (primary) and a
+  // client self-read that only returns rows when the project's RLS already allows it.
+  adminRow: null,          // the staff row keyed by auth_uid
+  adminLookup: 'rpc',      // 'rpc' (function exists) | 'missing' | 'error'
+  adminRowError: null,     // a PostgREST error from whichever path was taken
+  adminsSelfRead: false,   // does public.admins have a self-read policy?
   signInError: null,
   oauthError: null,
   updateUserError: null,
@@ -41,6 +51,10 @@ export function resetSupabaseStub() {
   state.signUpResult = null;
   state.signUpError = null;
   state.verifyError = null;
+  state.adminRow = null;
+  state.adminLookup = 'rpc';
+  state.adminRowError = null;
+  state.adminsSelfRead = false;
   state.signInError = null;
   state.oauthError = null;
   state.updateUserError = null;
@@ -73,6 +87,30 @@ export function studentRow(overrides = {}) {
     created_at: '2026-01-01T00:00:00.000Z',
     ...overrides,
   };
+}
+
+/** What a public.admins row looks like coming back from Postgres. */
+export function adminRow(overrides = {}) {
+  return {
+    admin_id: 11,
+    auth_uid: 'u1',
+    full_name: 'Daksh Patel',
+    email: 'admin@x.com',
+    is_super_admin: false,
+    created_at: '2026-01-01T00:00:00.000Z',
+    ...overrides,
+  };
+}
+
+/**
+ * The staff row for the CURRENT session user. Both read paths in the stub resolve
+ * against `state.session.user.id`, i.e. auth.uid() — never against an argument a
+ * caller passes — so a test that seeds a row for some other uid proves the app
+ * cannot borrow someone else's admin status.
+ */
+export function setAdminRow(row) {
+  state.adminRow = row ?? null;
+  return state.adminRow;
 }
 
 export function authUser(overrides = {}) {
@@ -187,12 +225,54 @@ export const client = {
   },
 
   from: vi.fn((table) => makeBuilder(table)),
+
+  // PostgREST /rpc. admin_role_for_uid() takes no arguments, so the row is looked up
+  // from the session uid exactly as the SQL body does it server-side.
+  rpc: vi.fn(async (fn, args) => {
+    state.calls.push({ name: `rpc:${fn}`, op: 'rpc', fn, args: args ?? null });
+    if (fn !== 'admin_role_for_uid' || state.adminLookup === 'missing') {
+      return {
+        data: null,
+        error: {
+          code: 'PGRST202',
+          message: `Could not find the function public.${fn} within the schema cache`,
+        },
+      };
+    }
+    if (state.adminLookup === 'error') {
+      return {
+        data: null,
+        error: state.adminRowError
+          || { code: '42501', message: 'permission denied for function admin_role_for_uid' },
+      };
+    }
+    if (state.adminRowError) return { data: null, error: state.adminRowError };
+    const row = ownAdminRow();
+    return {
+      data: row ? {
+        admin_id: row.admin_id,
+        auth_uid: row.auth_uid,
+        full_name: row.full_name,
+        email: row.email,
+        is_super_admin: row.is_super_admin === true,
+      } : null,
+      error: null,
+    };
+  }),
 };
 
 /**
  * Chainable builder. `insert`/`update` are recorded so a test can fail the run if
  * application code ever tries to write protected student fields from the browser.
  */
+/** The caller's own public.admins row, as RLS would (or would not) hand it over. */
+function ownAdminRow() {
+  const uid = state.session?.user?.id ?? null;
+  const row = state.adminRow;
+  if (!row || uid === null) return null;
+  return String(row.auth_uid) === String(uid) ? row : null;
+}
+
 export function makeBuilder(table) {
   const record = () => state.calls.push({
     name: `${b._op}:${table}`, op: b._op, table,
@@ -211,13 +291,21 @@ export function makeBuilder(table) {
     maybeSingle: vi.fn(async () => {
       record();
       if (b._op !== 'select') return { data: null, error: null };
+      if (table === 'admins') {
+        return state.adminsSelfRead
+          ? { data: ownAdminRow(), error: state.adminRowError ?? null }
+          : { data: null, error: null };   // RLS with no self-read policy: no rows
+      }
       if (state.profileError) return { data: null, error: state.profileError };
       return { data: state.profile ?? null, error: null };
     }),
     single: vi.fn(async () => {
       const written = { ...b._payload };
       record();
-      if (b._op === 'select') return { data: state.profile ?? null, error: state.profileError ?? null };
+      if (b._op === 'select') {
+        if (table === 'admins') return { data: state.adminsSelfRead ? ownAdminRow() : null, error: null };
+        return { data: state.profile ?? null, error: state.profileError ?? null };
+      }
       return { data: { ...state.profile, ...written }, error: null };
     }),
     // PostgrestBuilder is awaitable: `await from().update().eq()` resolves to
@@ -226,7 +314,11 @@ export function makeBuilder(table) {
       const written = { ...b._payload };
       try {
         record();
-        if (b._op === 'select') resolve({ data: state.profile ?? null, error: state.profileError ?? null });
+        if (b._op === 'select') {
+          resolve(table === 'admins'
+            ? { data: state.adminsSelfRead ? ownAdminRow() : null, error: null }
+            : { data: state.profile ?? null, error: state.profileError ?? null });
+        }
         else resolve({ data: b._op === 'update' ? { ...state.profile, ...written } : null, error: null });
       } catch (e) { reject(e); }
     }),

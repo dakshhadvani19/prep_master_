@@ -19,6 +19,9 @@
  *    `auth.resend({ type: 'signup' })` is kept only for the separate "account
  *    exists but is unconfirmed" case the Log in tab offers.
  *  - It never surfaces a raw server message to the UI.
+ *  - Admin status is resolved ONLY from public.admins keyed by the authenticated
+ *    uid (see resolveAuthorization/deriveRole at the bottom). Nothing in this module
+ *    reads a password, an email-to-role table, or a client-side flag to decide it.
  */
 
 // The signup code is issued by src/utils/otpService.js. These are the *display*
@@ -473,4 +476,128 @@ export function mapStudentProfile(row, user) {
         createdAt: row?.created_at ?? user?.created_at ?? null,
         photoURL: user?.user_metadata?.avatar_url ?? user?.user_metadata?.picture ?? null,
     };
+}
+
+// ─── Admin authorization (public.admins) ─────────────────────────────────────
+//
+// An admin is not a different kind of login. It is the same Supabase Auth user,
+// plus a row in public.admins whose auth_uid is that user's auth.users id. So:
+// authentication answers "who are you", and this answers "what are you". There is
+// deliberately no admin password anywhere in this file, no email-based lookup, and
+// no second auth path.
+//
+// Read order, and why:
+//  1. public.admin_role_for_uid() — the security-definer function shipped by
+//     supabase/migrations/20260925150000_admin_role_lookup.sql. It takes NO
+//     argument, so a caller cannot ask about somebody else: the predicate is
+//     auth.uid() evaluated inside Postgres against the verified JWT.
+//  2. a direct read of the caller's own row, for a project whose RLS already
+//     allows that. This is a convenience, not a widening: nothing here adds,
+//     edits or relies on a loosened policy.
+//
+// The failure direction is the point: if neither read succeeds the user is a
+// student, which grants nothing. The error is returned alongside so the caller can
+// say "I could not check" instead of silently pretending the account is ordinary.
+
+/** The RPC name, exported so tests and the migration cannot drift apart. */
+export const ADMIN_LOOKUP_FUNCTION = 'admin_role_for_uid';
+
+/** Whitelisted on purpose: only what the app may show, never a credential. */
+const ADMIN_COLUMNS = 'admin_id, auth_uid, full_name, email, is_super_admin';
+
+/** Reported instead of swallowed: the lookup answered with somebody else's row. */
+export const ADMIN_UID_MISMATCH = 'The admin-role lookup returned a row for a different '
+    + 'account, so it was ignored and this session is treated as a student.';
+
+function normalizeAdminRow(raw) {
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
+    const flag = raw.is_super_admin ?? raw.isSuperAdmin ?? false;
+    return {
+        adminId: raw.admin_id ?? raw.adminId ?? null,
+        authUid: raw.auth_uid ?? raw.authUid ?? null,
+        fullName: raw.full_name ?? raw.fullName ?? '',
+        email: cleanEmail(raw.email) || '',
+        // Postgres booleans arrive as true/false; a text export can say 't'.
+        isSuperAdmin: flag === true || flag === 'true' || flag === 1 || flag === 't',
+    };
+}
+
+/**
+ * Only a row about THIS uid counts as authorization, and it has to be a single object.
+ * A lookup function that was edited to return someone else's row, a scalar, or a list
+ * therefore grants nothing — the app checks the identity it asked about, not just that
+ * something came back.
+ */
+function acceptAdminRow(raw, authUid) {
+    const row = normalizeAdminRow(raw);
+    if (!row) return { row: null, mismatch: false };
+    if (String(row.authUid ?? '') !== String(authUid ?? '')) return { row: null, mismatch: true };
+    return { row, mismatch: false };
+}
+
+/** "Function not created yet" is the only error that justifies the fallback read. */
+function isMissingLookupFunction(error) {
+    const hay = `${error?.code || ''} ${error?.message || ''}`.toLowerCase();
+    return /pgrst202|could not find the function|function .* does not exist|schema does not exist/.test(hay);
+}
+
+/**
+ * Resolves what the authenticated user is allowed to be, from the database.
+ * Never throws: a failed lookup is reported, and the caller fails closed.
+ *
+ * @returns {Promise<{ row: object|null, error: Error|null, source: 'rpc'|'self-select'|'anonymous' }>}
+ */
+export async function resolveAuthorization(client, authUid) {
+    if (!client || !authUid) return { row: null, error: null, source: 'anonymous' };
+
+    if (typeof client.rpc === 'function') {
+        let out = null;
+        try {
+            out = await client.rpc(ADMIN_LOOKUP_FUNCTION);
+        } catch (err) {
+            out = { data: null, error: err };
+        }
+        const { data, error } = out || {};
+        if (!error) {
+            const accepted = acceptAdminRow(data, authUid);
+            return {
+                row: accepted.row,
+                error: accepted.mismatch ? new Error(ADMIN_UID_MISMATCH) : null,
+                source: 'rpc',
+            };
+        }
+        if (!isMissingLookupFunction(error)) {
+            return { row: null, error: normalizeAuthError(error), source: 'rpc' };
+        }
+        // else: the lookup function has not been deployed to this project yet.
+    }
+
+    try {
+        const { data, error } = await client
+            .from('admins')
+            .select(ADMIN_COLUMNS)
+            .eq('auth_uid', authUid)
+            .maybeSingle();
+        if (error) return { row: null, error: normalizeAuthError(error), source: 'self-select' };
+        const accepted = acceptAdminRow(data, authUid);
+        return {
+            row: accepted.row,
+            error: accepted.mismatch ? new Error(ADMIN_UID_MISMATCH) : null,
+            source: 'self-select',
+        };
+    } catch (err) {
+        return { row: null, error: normalizeAuthError(err), source: 'self-select' };
+    }
+}
+
+/**
+ * THE role rule. One function, one place, so no page can grow its own opinion.
+ *
+ * public.students.role is deliberately not consulted: students may update their own
+ * profile row, so a column in a table the row owner can write is not an
+ * authorization source — it is an escalation path waiting to be found.
+ */
+export function deriveRole(adminRow) {
+    if (!adminRow) return 'student';
+    return adminRow.isSuperAdmin ? 'superAdmin' : 'admin';
 }

@@ -44,7 +44,8 @@ vi.mock('../src/utils/otpService', async () => {
 });
 
 const {
-  state, resetSupabaseStub, callsTo, lastCall, studentRow, authUser, makeSession, emit,
+  state, resetSupabaseStub, callsTo, lastCall, studentRow, adminRow, setAdminRow,
+  authUser, makeSession, emit,
 } = await import('./supabaseMock.js');
 
 const { AuthProvider, useAuth } = await import('../src/context/AuthContext.jsx');
@@ -501,24 +502,49 @@ describe('password reset, change, and the one allowed profile write', () => {
   });
 });
 
-describe('RBAC read from public.students', () => {
-  it('promotes UI behaviour only — it cannot be written from here', async () => {
+describe('role: public.admins is the authority, public.students.role is not', () => {
+  it('a students row cannot confer admin status (it is writable by its owner)', async () => {
+    // The column still exists and is still surfaced on the profile object — it is
+    // just no longer an authorization source. RLS lets a student update their own
+    // students row, so anything that trusted this would be a privilege escalation.
     state.profile = studentRow({ role: 'admin' });
     await mount();
     await fire('SIGNED_IN', makeSession(authUser()));
 
-    await waitFor(() => expect(screen.getByTestId('role').textContent).toBe('admin'));
+    await waitFor(() => expect(ctx.current.studentData).toBeTruthy());
+    expect(ctx.current.studentData.role).toBe('admin');   // data, unchanged
+    expect(ctx.current.role).toBe('student');             // authorization, fail-closed
+    expect(ctx.current.isAdmin).toBe(false);
+    expect(ctx.current.hasRole('admin')).toBe(false);
+    expect(callsTo('update:students')).toHaveLength(0);
+  });
+
+  it('an admins row for auth.uid() promotes, without any client write', async () => {
+    state.profile = null;                     // staff accounts have no students row
+    setAdminRow(adminRow({ auth_uid: 'u1', is_super_admin: false }));
+    await mount();
+    await fire('SIGNED_IN', makeSession(authUser()));
+
+    await waitFor(() => expect(ctx.current.role).toBe('admin'));
     expect(ctx.current.isAdmin).toBe(true);
     expect(ctx.current.isSuperAdmin).toBe(false);
     expect(ctx.current.hasRole('admin')).toBe(true);
     expect(ctx.current.hasRole('superAdmin')).toBe(false);
-    expect(callsTo('update:students')).toHaveLength(0);
+    // The admin's own session is complete: no "your student profile is missing"
+    // message, because a staff account is not a student account.
+    expect(ctx.current.profileError).toBe('');
+    expect(ctx.current.authorizationError).toBe('');
+    expect(callsTo('insert:admins')).toHaveLength(0);
+    expect(callsTo('update:admins')).toHaveLength(0);
   });
 
-  it('fails closed when the row has no role of record', async () => {
+  it('an admins row belonging to a different uid does not promote', async () => {
     state.profile = studentRow({ role: 'student' });
+    // Somebody else's staff row, present in the table but not keyed to this uid.
+    state.adminRow = adminRow({ auth_uid: 'someone-else', is_super_admin: true });
     await mount();
-    await fire('SIGNED_IN', makeSession(authUser()));
+    await fire('SIGNED_IN', makeSession(authUser()));   // authUser id is 'u1'
+
     await waitFor(() => expect(ctx.current.studentData).toBeTruthy());
     expect(ctx.current.role).toBe('student');
     expect(ctx.current.isAdmin).toBe(false);

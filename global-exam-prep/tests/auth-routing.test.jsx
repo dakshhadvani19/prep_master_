@@ -3,8 +3,9 @@
  * real Signup page. Only Supabase itself and the heavy leaf pages are stubbed, so
  * this exercises the actual redirect/gating code paths after the auth migration.
  *
- * Role gating comes from the public.students row (via RLS), not from anything the
- * client can assert about itself.
+ * Role gating comes from the caller's own public.admins row (keyed by auth.uid(),
+ * read through RLS/the lookup function), never from anything the client can assert
+ * about itself — and not from public.students, whose row its owner can update.
  */
 import React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
@@ -16,7 +17,7 @@ vi.mock('../src/firebase', () => ({
 }));
 
 const state = await import('./supabaseMock.js').then((m) => m.state);
-const { resetSupabaseStub, makeSession, authUser, studentRow } = await import('./supabaseMock.js');
+const { resetSupabaseStub, makeSession, authUser, studentRow, adminRow } = await import('./supabaseMock.js');
 
 const holder = { entry: '/', user: null, profile: null };
 
@@ -61,10 +62,22 @@ function selectedTab() {
   return active ? active.textContent.trim() : null;
 }
 
-/** Sign `uid` in and hand the app their students row, exactly as RLS would. */
-function signedInAs({ uid, email, role, fullName }) {
+/**
+ * Sign `uid` in and hand the app their rows, exactly as RLS would.
+ * `staff` is the public.admins side: undefined → not staff; 'admin' / 'super' →
+ * a staff row keyed to THIS uid. A staff account has no students row at all, which
+ * is the real shape of the data and the reason the admin gate cannot lean on it.
+ */
+function signedInAs({ uid, email, role, fullName, staff }) {
   state.session = makeSession(authUser({ id: uid, email }));
-  state.profile = studentRow({ auth_uid: uid, email, full_name: fullName, ...(role ? { role } : {}) });
+  if (staff) {
+    state.adminRow = adminRow({
+      auth_uid: uid, email, full_name: fullName,
+      is_super_admin: staff === 'super',
+    });
+  } else {
+    state.profile = studentRow({ auth_uid: uid, email, full_name: fullName, ...(role ? { role } : {}) });
+  }
 }
 
 beforeEach(() => {
@@ -90,7 +103,7 @@ describe('ProtectedRoute (guest)', () => {
   });
 });
 
-describe('RBAC role derivation (from public.students.role)', () => {
+describe('RBAC role derivation (from public.admins, keyed by auth.uid())', () => {
   it('keeps a signed-in student out of the admin area', async () => {
     holder.entry = '/admin/syllabus';
     signedInAs({ uid: 'u1', email: 's@x.com', role: 'student', fullName: 'Student One' });
@@ -101,35 +114,45 @@ describe('RBAC role derivation (from public.students.role)', () => {
 
   it('lets an admin through', async () => {
     holder.entry = '/admin/syllabus';
-    signedInAs({ uid: 'u2', email: 'a@x.com', role: 'admin', fullName: 'Admin One' });
+    signedInAs({ uid: 'u2', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
     render(<App />);
     await waitFor(() => expect(screen.getByText('ADMIN SYLLABUS')).toBeInTheDocument());
   });
 
   it('lets a superAdmin through', async () => {
     holder.entry = '/admin/syllabus';
-    signedInAs({ uid: 'u4', email: 'root@x.com', role: 'superAdmin', fullName: 'Root' });
+    signedInAs({ uid: 'u4', email: 'root@x.com', fullName: 'Root', staff: 'super' });
     render(<App />);
     await waitFor(() => expect(screen.getByText('ADMIN SYLLABUS')).toBeInTheDocument());
+  });
+
+  it('a students row that claims admin is not enough', async () => {
+    holder.entry = '/admin/syllabus';
+    signedInAs({ uid: 'u9', email: 'forged@x.com', role: 'admin', fullName: 'Claims Admin' });
+    render(<App />);
+    await waitFor(() => expect(screen.getByText('DASHBOARD')).toBeInTheDocument());
+    expect(screen.queryByText('ADMIN SYLLABUS')).not.toBeInTheDocument();
   });
 
   it('treats a missing role as student (fail closed, not open)', async () => {
     holder.entry = '/admin/syllabus';
     state.session = makeSession(authUser({ id: 'u3', email: 'n@x.com' }));
-    // A row with no role of record: the column defaults to 'student', and the
-    // context must not upgrade an absent/blank value.
+    // A signed-in account with no staff row of any kind: the admin area stays shut,
+    // whatever the students row says about itself.
     state.profile = { ...studentRow({ auth_uid: 'u3', email: 'n@x.com' }), role: 'student' };
     render(<App />);
     await waitFor(() => expect(screen.getByText('DASHBOARD')).toBeInTheDocument());
   });
 
-  it('never trusts a role asserted outside the row', async () => {
+  it('never trusts a role asserted outside the admins row', async () => {
     holder.entry = '/admin/syllabus';
-    signedInAs({ uid: 'u5', email: 'sneaky@x.com', role: 'student', fullName: 'Sneaky' });
-    // Even if the browser's session metadata claims superAdmin, RBAC follows the
-    // database row — the trigger hard-codes 'student' at signup.
+    signedInAs({ uid: 'u5', email: 'sneaky@x.com', role: 'admin', fullName: 'Sneaky' });
+    // Session metadata is client-visible, and so is localStorage: neither can make a
+    // student staff. The only thing that does is a public.admins row for this uid.
     state.session.user.app_metadata.role = 'superAdmin';
     state.session.user.user_metadata.role = 'superAdmin';
+    localStorage.setItem('role', 'superAdmin');
+    localStorage.setItem('isAdmin', 'true');
     render(<App />);
     await waitFor(() => expect(screen.getByText('DASHBOARD')).toBeInTheDocument());
     expect(screen.queryByText('ADMIN SYLLABUS')).not.toBeInTheDocument();
