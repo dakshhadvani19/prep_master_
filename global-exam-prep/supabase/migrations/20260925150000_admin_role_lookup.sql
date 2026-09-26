@@ -82,7 +82,7 @@ returns jsonb
 language sql
 stable
 security definer
-set search_path = public
+set search_path = public, pg_temp
 as $$
     select (
         select jsonb_build_object(
