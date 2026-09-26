@@ -3,7 +3,7 @@
 Update this file after **every** Agent Mode task. Keep it short, factual, and code-verified.
 Long-term rules and architecture live in `PREPMaster_PROJECT_CONTEXT.md` (same folder).
 
-**Last updated:** 2026-09-26 (UI/UX motion + geometry pass — no Phase 5)
+**Last updated:** 2026-09-26 (leaderboard list: podium excluded, 10-row fold)
 **Verified by:** reading the working tree, `npx vitest run` (20 files / 248 tests), `npm run build`, `npm run lint`.
 
 ## Repository state

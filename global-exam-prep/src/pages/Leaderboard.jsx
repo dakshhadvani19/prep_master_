@@ -3,9 +3,9 @@
  * Students: boards they participate in, Top 100, own rank + percentile.
  * Admins: all boards with Course → Semester → Subject filters.
  */
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Trophy, Medal, Sparkles } from 'lucide-react';
+import { Trophy, Medal, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import {
     LB_COURSES,
@@ -82,11 +82,45 @@ function Podium({ rows }) {
     );
 }
 
+const LIST_PAGE = 10;
+
 function RankList({ rows }) {
+    const [open, setOpen] = useState(false);
+    const rest = useMemo(() => rows.filter((row) => row.rank > 3), [rows]);
+    const shown = open ? rest : rest.slice(0, LIST_PAGE);
+    const canToggle = rest.length > LIST_PAGE;
+
+    useEffect(() => {
+        setOpen(false);
+    }, [rows]);
+
+    function toggle() {
+        setOpen((v) => !v);
+    }
+
+    const toggleBtn = canToggle ? (
+        <motion.button
+            type="button"
+            className={`lb-more ${open ? 'lb-more--up' : 'lb-more--down'}`}
+            onClick={toggle}
+            aria-expanded={open}
+            whileHover={{ y: open ? -2 : 2 }}
+            whileTap={{ scale: 0.97 }}
+        >
+            <span className="lb-more__orb" aria-hidden>
+                {open ? <ChevronUp size={22} strokeWidth={2.25} /> : <ChevronDown size={22} strokeWidth={2.25} />}
+            </span>
+            <span className="lb-more__copy">
+                {open ? 'Show less' : `Show more · ${rest.length - LIST_PAGE} in Top 100`}
+            </span>
+        </motion.button>
+    ) : null;
+
     return (
         <div data-testid="lb-top100">
+            {open && toggleBtn}
             <AnimatePresence mode="popLayout">
-                {rows.map((row, i) => (
+                {shown.map((row, i) => (
                     <motion.div
                         layout
                         key={row.id}
@@ -94,7 +128,7 @@ function RankList({ rows }) {
                         initial={{ opacity: 0, x: -12 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 8 }}
-                        transition={{ delay: Math.min(i, 18) * 0.018, duration: 0.28 }}
+                        transition={{ delay: Math.min(i, 12) * 0.018, duration: 0.28 }}
                     >
                         <span className="lb-badge">{row.rank}</span>
                         <div>
@@ -106,7 +140,8 @@ function RankList({ rows }) {
                     </motion.div>
                 ))}
             </AnimatePresence>
-            {rows.length === 0 && <div className="lb-empty">No students match this view.</div>}
+            {!open && toggleBtn}
+            {rest.length === 0 && <div className="lb-empty">No students match this view.</div>}
         </div>
     );
 }

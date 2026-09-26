@@ -132,7 +132,8 @@ describe('student ranking', () => {
     await waitFor(() => expect(screen.getByTestId('lb-you')).toBeInTheDocument());
     expect(screen.getByRole('heading', { name: /Top 100/ })).toBeInTheDocument();
     const rows = document.querySelectorAll('[data-testid="lb-top100"] .lb-row');
-    expect(rows.length).toBe(100);
+    expect(rows.length).toBe(10);
+    expect(rows[0].querySelector('.lb-badge').textContent).toBe('4');
     expect(screen.getByTestId('lb-you').textContent).toMatch(/#118/);
     expect(screen.getByTestId('lb-you').textContent).toMatch(/Stu Kapoor/);
     expect(screen.getByTestId('lb-percentile').textContent).toMatch(/%/);
@@ -176,7 +177,12 @@ describe('admin filters', () => {
   it('renders Top 100 for the selected board and does not persist', async () => {
     await at('/leaderboards');
     await waitFor(() => expect(screen.getByTestId('lb-top100')).toBeInTheDocument());
-    expect(document.querySelectorAll('[data-testid="lb-top100"] .lb-row').length).toBe(100);
+    expect(document.querySelectorAll('[data-testid="lb-top100"] .lb-row').length).toBe(10);
+    fireEvent.click(screen.getByRole('button', { name: /Show more/i }));
+    await waitFor(() => {
+      expect(document.querySelectorAll('[data-testid="lb-top100"] .lb-row').length).toBe(97);
+    });
+    expect(screen.getByRole('button', { name: /Show less/i })).toBeInTheDocument();
     expect(writes()).toHaveLength(0);
   });
 });
