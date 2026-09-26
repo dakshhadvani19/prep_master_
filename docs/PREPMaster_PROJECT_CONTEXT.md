@@ -45,9 +45,17 @@ feedback. A staff (admin) area manages syllabus files today and is being expande
 Courses/Subjects/Questions, Leaderboards and Feedback management (see §26).
 
 - App code: `global-exam-prep/` (Vite root; `package.json` scripts live here).
-- Requirements/diagrams: `SRS/*.jpg` (ER, DFD0-2, use-case, student & admin flow/sequence diagrams).
-  `progress.txt` states: *"Always take reference from diagrams which are inside SRS folder for
-  implementing any feature."* That is a standing project rule, not a suggestion.
+- Requirements/diagrams: `SRS/` is the **primary requirements reference for future admin (and
+  student) work**. Current files (owner commit `4804603`, 2026-09-25; the `*_25_8.jpg` names are
+  gone): `SRS_last_updated_print.pdf` (44-page IEEE SRS), `UseCase_Diagram_last_updated_3_9.jpg`,
+  `adminflowchart.jpg`, `updated_student_flow.jpg`, `sequenceadmin.jpg`, `sequencestudent.jpg`,
+  `DFD0_last_updated_3_9.jpg`, `DFD1_last_updated_3_9.jpg`, `DFD2_last_updated_3_9.jpg`,
+  `ER_Diagram_last_updated_3_9.jpg`. Student/admin **activity** diagrams and the **class** diagram
+  live in the PDF only (Figures 3.1, 3.2, 7.1) after `studentfinal_25_8.jpg` / `finaladmin_25_8.jpg`
+  / `finalclass_25_8.jpg` were deleted. `progress.txt` states: always take reference from diagrams
+  which are inside the SRS folder for implementing any feature. That is a standing project rule.
+  When an updated SRS/diagram differs from older context, **prefer the latest SRS/diagram** and
+  record the change here + in `CURRENT_STATUS.md`. Do not invent missing requirements.
 - Owner notes: `progress.txt`, `progressByAi.txt`; auth design: `global-exam-prep/AUTH.md`
   (10 sections, the authoritative auth write-up); deep code explanation:
   `global-exam-prep/context/CODEBASE_DEEP_EXPLANATION.txt`.
@@ -234,7 +242,7 @@ Columns the application reads/writes (from `fetchStudentProfile` / `resolveAutho
   `service_role` only and revoked from `public, anon, authenticated`. Single live challenge per
   address (PK), resend cooldown and attempt ceiling enforced inside the SQL, row deleted on success.
 - `public.admin_role_for_uid()` ✅ (see §6) — `security definer`, `stable`,
-  `set search_path = public`, execute granted to `authenticated`, revoked from `public`/`anon`;
+  `set search_path = public, pg_temp`, execute granted to `authenticated`, revoked from `public`/`anon`;
   returns NULL for non-staff. The migration creates no table, no column, no policy and no row, and
   fails with an explicit message if `public.admins` or its `auth_uid`/`is_super_admin` columns are absent.
 - Legacy Firestore collections (still live; §9): `students/{uid}`, `admins/{adminId}`,
@@ -281,26 +289,27 @@ Rate limits in `_otpStore.js`: 5 codes/address/window, 10 verify guesses/address
 
 ## 11. Routing and Navigation Rules
 
-Routes (`src/App.jsx`, all nested under `Layout`): `/` (LandingPage, index) · `/signup`
-(`?mode=login|signup`, `?method=email|google`) · `/login`, `/register` → `ForwardToAuth` (redirect to
-`/signup` **carrying `location.state`**) · `/domains/:domainId/courses` · `/courses/:courseId/subjects`
-· `/exams/:subjectId/:examType/:difficulty` (protected) · `/dashboard` (protected) ·
+Routes (`src/App.jsx`, all nested under `Layout`): `/` (`HomeIndex`: LandingPage for guests/students;
+authenticated admins `Navigate` to `/dashboard`) · `/signup` (`?mode=login|signup`,
+`?method=email|google`) · `/login`, `/register` → `ForwardToAuth` (redirect to `/signup` **carrying
+`location.state`**) · `/domains/:domainId/courses` · `/courses/:courseId/subjects` ·
+`/exams/:subjectId/:examType/:difficulty` (protected) · `/dashboard` (protected, `DashboardSwitch`) ·
 `/review/:historyId` (protected) · `/admin/syllabus` (`ProtectedRoute requiredRole="admin"`) ·
-`/search` · `/feedback` · `/guide` · `*` → inline `NotFound`.
+`/admin/courses` (`ProtectedRoute requiredRole="admin"`, Phase 2 placeholder) · `/search` ·
+`/feedback` · `/guide` · `*` → inline `NotFound`.
 
-`ProtectedRoute` (verbatim behaviour): `authLoading` → render nothing · no `currentUser` →
-`/signup?mode=login` with `state.from = location` · `requiredRole='superAdmin'` without it →
-`/admin/syllabus` if the user is at least admin else `/dashboard` · `requiredRole='admin'` without it
-→ `/dashboard`. `adminHome` is `/admin/syllabus` because **there is no `/admin/dashboard` route yet**.
+`ProtectedRoute`: `authLoading` → render nothing · no `currentUser` → `/signup?mode=login` with
+`state.from = location` · `requiredRole='superAdmin'` without it → `/dashboard` if at least admin
+else `/dashboard` · `requiredRole='admin'` without it → `/dashboard`. `adminHome` is `/dashboard`.
 
-Navbar (`Layout.jsx` `navItems`): Home `/` · Leaderboards `/leaderboards` · Feedback `/feedback` ·
-Subscriptions `/subscriptions`. ⚠️ `/leaderboards` and `/subscriptions` have **no routes** — today they
-render `NotFound`. The user menu adds Dashboard `/dashboard`, Log out, and a gold **Syllabus Admin**
-link that appears only when `isAdmin`.
+Navbar is **role-dependent** (`Layout.jsx`, `AuthContext.isAdmin` only):
+- Guest / student: Home `/` · Leaderboards `/leaderboards` · Feedback `/feedback` · Subscriptions `/subscriptions`.
+- Authenticated admin / superAdmin: Dashboard `/dashboard` · Courses `/admin/courses` · Leaderboards · Feedback.
+⚠️ `/leaderboards` and `/subscriptions` still have **no pages** (`NotFound`). User menu: Dashboard,
+Log out, gold **Syllabus Admin** when `isAdmin`. Logo goes to `/dashboard` for admins, `/` otherwise.
 
-Requirement for Phase 2 (📝, owner-specified): for authenticated admins **Home → Dashboard** and
-**Subscriptions → Courses**; the other two navbar options stay unchanged. Admins have **no
-separate admin homepage** — after real admin auth they land on the existing Dashboard screen.
+Landing page (`LandingPage.jsx`, owner `4804603`): the hero **“Continue with Google”** CTA is
+commented out. Google signup/login is still available on `/signup`. Do not uncomment it as a “fix”.
 
 ## 12. Student UI Rules
 
@@ -313,20 +322,49 @@ separate admin homepage** — after real admin auth they land on the existing Da
   cache that is cleared on logout.
 - Public pages: LandingPage, CourseExplorer, SubjectDetails, SearchResults, FeedbackPage, UserGuide.
 
-## 13. Admin UI Rules (📝 planned; today only SyllabusAdmin exists)
+## 13. Admin UI Rules (Phase 2 shell ✅; persistence 📝)
 
-Planned admin experience, per the owner's flow diagram (`SRS/adminflowchart_25_8.jpg`) and
-`SRS/finaladmin_25_8.jpg`, and to be built on the **existing** visual language:
-- Standard Admin: Dashboard (admin), Feedback management/overview, Leaderboard & Ranking,
-  Subject management, Question management, Logout.
-- Super Admin: everything a Standard Admin has **plus** Add Admin, Remove Admin, Add Super Admin.
-- The Courses section replaces the student-facing "Subscriptions" navbar entry **for admins only**.
+**Status:** ✅ Phase 2 UI shell is in the repo (`AdminDashboard.jsx` on `/dashboard` for staff,
+role-aware navbar, `/admin/courses` placeholder). 📝 every write path (feedback store, spam,
+staff add/remove, catalog CRUD, leaderboard) is still mock-only. `SyllabusAdmin.jsx` is the
+pre-existing syllabus page (Firestore + Storage, still gated by the Firebase-identity gap in §9).
+
+Primary reference (prefer these over any older `*_25_8` / `finaladmin_*` filenames — those files
+are **not in the repo**): `SRS/adminflowchart.jpg`, `SRS/UseCase_Diagram_last_updated_3_9.jpg`,
+`SRS/sequenceadmin.jpg`, `SRS/DFD1_last_updated_3_9.jpg`, `SRS/DFD2_last_updated_3_9.jpg`, SRS
+§2.2 Admin Module / §3.1.4 Admin Dashboard Interface / §3.2 / §3.3.1, PDF Figure 3.2.
+
+From `adminflowchart.jpg` (and the matching activity diagram):
+
+1. **Authenticate** (✅ Phase 1): Start → Sign in with Google **or** login with email+password;
+   invalid credentials / failed Google → Show Error, Retry; Forgot Password → Send Reset Link via
+   Email (shared Supabase recovery). Then **is super admin?**
+2. **Super Admin Dashboard** (✅ Phase 2 mock UI / 📝 Phase 5 writes): Add Admin (Enter Details &
+   Confirm), Remove Admin (Select Admin & Confirm), Add Super Admin (Enter Details & Confirm).
+   Use-case also names **Make an admin a super admin** and **Create account** (include Sign in
+   with Google). DFD1 inbound: Signup credentials, Add/Remove admin, Make an admin super admin.
+3. **Standard Admin Dashboard** (✅ Phase 2 UI): hub with Check Leaderboard & Ranking
+   (📝 Phase 4), Read Feedback (✅ placeholder visualization; 📝 Phase 5 persistence), Edit Subject and
+   Edit Question (📝 Phase 3, entry → `/admin/courses`). Feedback actions: Set User as Spam,
+   Set Feedback as Spam, Bookmark, Set as Seen — buttons exist, they do not write.
+4. Logout → End.
+
+SRS §2.2 / intro “Admin Panel” wording to keep: Admin dashboard, Add/Remove admin, Mark student
+as spam, Edit course / subjects / questions, Review / flag feedbacks, Check leaderboards.
+
+Owner Phase-2 extras that are **not** contradicted by the new diagrams (keep): navbar Home→Dashboard
+and Subscriptions→Courses for admins; feedback Total / Seen / Remaining (= Total − Seen)
+visualization; spam-users list; reuse the existing light-purple + dark-neutral language with
+restrained gold (`#ffb454` family) for important / selected / super-admin emphasis.
+
+Build rules:
 - Admin screens are separate routes (e.g. under `/admin/…`) behind `ProtectedRoute requiredRole`;
   nothing may rely on hiding a button alone.
-- Today's only real admin surface: `SyllabusAdmin.jsx` — syllabus PDF upload / list / delete
-  (Firestore + Storage, currently gated by the Firebase-identity gap in §9).
-- Mock-UI-first is the agreed approach for Phases 3–4: build the shells/flows, then wire persistence —
-  and never present a mock as a working feature.
+- There is **no** second admin login and **no** self-service admin signup in code today: a staff
+  row is an operator insert into `public.admins`. Google can authenticate an already-listed admin.
+  Do not auto-create `public.admins` on Google login just because the use-case has “Create account”.
+- Mock-UI-first is the agreed approach for Phases 3–4: build the shells/flows, then wire
+  persistence — and never present a mock as a working feature.
 
 ## 14. Super Admin Rules
 
@@ -351,21 +389,32 @@ Questions come from `src/data/questionGenerator.js` (`universitySyllabus` + `exa
 `universitySyllabus.js`, `pdfSyllabus.js`, `predicted_ai_syllabus.json`, uploaded/`fetchSyllabus`
 Firestore PDFs, and AI generation via `geminiQuestions.js` → `/api/ai`.
 
-📝 Planned admin Courses flow (Course → Semester → Subjects → Questions) with
-**Add / Edit / Update / Remove** for Subjects and **Add / Edit / Update / Remove** for Questions:
-**none of this exists in the repo** (grep for `addSubject|deleteSubject|updateSubject|addQuestion|…`
-returns nothing). No `domains/courses/subjects/questions` tables exist in the Supabase migrations,
-and the Firestore collections `domains`, `courses`, `subjects` are read-only `allow: if true` with
-writes gated on the (currently unreachable) `isAdmin()`. Phase 3 is therefore mock UI + a storage
-decision that has to be made explicitly (Firestore vs Supabase tables + migrations).
+📝 Planned admin Courses flow (Phase 3) — Course → Semester → Subjects → Questions — with
+**Add / Edit / Update / Remove** for Subjects and Questions. SRS/ER + Appendix A names:
+
+- Courses: `CourseId` PK, `CourseName`, `Sems` (array, up to 12).
+- Subjects: `SubjectId` PK, `SubjectName`, `CourseId` FK. Use-case: Edit question / Edit Subject
+  **include** Choose course and subject.
+- TestsData: `TestId` PK, `Questions` / `Options` / `Answers` arrays. Class diagram operations:
+  `editQuestion`, `addQuestion`, `deleteQuestion`, `changeQuestionPreference`.
+
+**None of this admin CRUD exists in the repo.** No `domains/courses/subjects/questions` tables
+exist in the Supabase migrations, and the Firestore collections `domains`, `courses`, `subjects`
+are read-only `allow: if true` with writes gated on the (currently unreachable) `isAdmin()`.
+Phase 3 is therefore mock UI + a storage decision that has to be made explicitly (Firestore vs
+Supabase tables + migrations). Do not treat the SRS data-dictionary types (`Long`, `Password`
+columns, Mongo-style arrays) as a mandate to recreate that physical schema — they are conceptual.
 
 ## 16. Leaderboard Requirements
 
-Verified current state: **not implemented.** The only occurrences are the navbar label/link in
+Verified current state: **not implemented** (📝). The only occurrences are the navbar label/link in
 `Layout.jsx` (`/leaderboards`) and a mobile link + `Trophy` icon; there is no route, page, query,
-table or ranking logic anywhere in `src/` or `api/`.
+table or ranking logic anywhere in `src/` or `api/`. SRS/use-case/DFD/ER all require a real
+Leaderboard (student “Check Leaderboard ranking”; admin “Check leaderboard and ranking”; DFD2 store
+`Leaderboards`; ER `LeaderboardId`, `{StudentId}`, `{Points}`, `SubjectId`, `{TotalTests}`).
+Student sequence: VIEW LEADER BOARD RANKING → REQUEST RANKING → SHOW RANKING.
 
-Requirements to build (owner-specified, 📝):
+Requirements to build (owner-specified, 📝 Phase 4; SRS adds global + peer/friend ranking):
 - Students see only leaderboards they participate in / that are relevant to them.
 - If a student attempted an exam but is outside the Top 100: still show the Top 100 **and** the
   student's own rank + percentile.
@@ -384,12 +433,20 @@ There is **no feedback store** — no table, no Firestore write — so nothing e
 bookmark or mark seen. The `feedback` collection exists in `firestore.rules` (create `if true`,
 read/update `isAdmin()`, delete `isSuperAdmin()`) but no app code writes it.
 
-📝 Planned admin feedback UI: Total Feedback / Seen Feedback / **Remaining = Total − Seen**, shown as
-one professional chart/progress visualization (pick the form that fits the data — a bar/stacked bar
-or a progress donut, not decoration); per-item actions from the diagram: Set User as Spam, Set Feedback
-as Spam, Bookmark Feedback, Set as Seen; plus a spam-users list on the admin dashboard. Implementing
-any of this requires first deciding where feedback is stored (Supabase table + migration, or
-Firestore once the identity bridge exists) — that is a real design decision, not a cleanup.
+📝 Planned admin feedback UI (Phase 2 visualization on mock/empty data; persistence is a later
+decision): Total Feedback / Seen Feedback / **Remaining = Total − Seen**, shown as one professional
+chart/progress visualization (pick the form that fits the data — a bar/stacked bar or a progress
+donut, not decoration). Per-item actions from `adminflowchart.jpg` / use-case / sequenceadmin:
+Set User as Spam (Select User, Confirm & Flag), Set Feedback as Spam, Bookmark Feedback, Set as
+Seen; plus a spam-users list on the admin dashboard.
+
+SRS Appendix A Table 1.8 / ER `FeedBacks`: `FeedbackId`, `Description`, `Type`, `isSpam`,
+`isBookmark`, `isSeen`, `StudentId`. DFD1/2 process “Feedback management”. Class-diagram operations:
+`giveFeedback`, `readFeedback`, `markAsSpam`, `markAsBookmark`, `markAsSeen`.
+
+Implementing any of this for real requires first deciding where feedback is stored (Supabase table
++ migration, or Firestore once the identity bridge exists) — that is a real design decision, not a
+cleanup. Do not pretend `api/feedback.js` email is that store.
 
 ## 18. UI Design System / Theme
 
@@ -455,8 +512,7 @@ exchange, `?method=google`), password reset + in-app recovery mode, session rest
 dashboard, syllabus upload/list/delete, feedback email, AI question generation through `/api/ai`,
 search, user guide, role gating of `/admin/syllabus`, the auth-page success overlay + the password
 requirement list,
-the service-role-key boot guard, and the `npm run build`/`npx vitest run` gates (17 files / 216 tests;
-dist = 74 files; lint 45 problems).
+the service-role-key boot guard, and the `npm run build`/`npx vitest run` gates (18 files / 227 tests).
 
 ## 22. Development / Testing Rules
 
@@ -507,9 +563,11 @@ Production env var **names**: `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KE
 `VITE_FIREBASE_*` (6), `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `OTP_PEPPER`, `GMAIL_USER`,
 `GMAIL_APP_PASSWORD`, and `GROQ_API_KEY` (or `VITE_GROQ_API_KEY`). `VITE_*` values are baked at
 build time → changing them needs a redeploy. Never rename an env var. Never prefix a server secret.
-`deploy` → `vercel --prod`; `deploy:rules` publishes `firestore.rules`. No git remote is configured in
-this clone; pushes are done by the owner's environment. Post-deploy checks: CSP console clean, a real
-login, a Google round trip, `/api/send-otp` not 502, and (once staff exists) an admin sign-in.
+`deploy` → `vercel --prod`; `deploy:rules` publishes `firestore.rules`. Remote `origin` is
+`https://github.com/dakshhadvani19/prep_master_.git` (plain HTTPS; no credential in the URL or in
+`git config`). This sandbox has no persisted GitHub credential; do not write one. Post-deploy
+checks: CSP console clean, a real login, a Google round trip, `/api/send-otp` not 502, and (once
+staff exists) an admin sign-in.
 
 ## 25. Important Project Decisions (dated, with reasons)
 
@@ -542,18 +600,35 @@ login, a Google round trip, `/api/send-otp` not 502, and (once staff exists) an 
   `.strength-ring*` rules were left in `Auth.css` on purpose: they are inert without markup, and
   `--ring-track` next to them is still used by the OTP countdown ring.
 - **Docs are repo-backed** (this file): future sessions must not depend on chat history.
+- **SRS/diagrams refreshed 2026-09-25** (owner `4804603` “docs: update SRS and sync current
+  codebase”). Authoritative filenames are the `*_3_9.jpg` / undated current set listed in §1.
+  Deleted from the repo (do not recreate, do not cite as if present): `finaladmin_25_8.jpg`,
+  `finalclass_25_8.jpg`, `studentfinal_25_8.jpg`, and every `*_25_8.jpg`. Class + activity
+  diagrams remain inside `SRS_last_updated_print.pdf`.
+- **Admin Google OAuth is a first-class SRS path** (`adminflowchart.jpg`, admin activity
+  diagram, use-case “Create account / Sign in with google”, DFD0 admin Login/Signup credentials).
+  Phase 1 already authenticates admins through the same Google redirect as students; it does
+  **not** auto-provision `public.admins`. Keep that split.
+- **Landing-page Google CTA is intentionally commented out** (same owner commit). Google remains
+  on `/signup`. Do not restore the button unless asked.
+- **`admin_role_for_uid` pins `search_path = public, pg_temp`** (aligned with the OTP functions;
+  one-line hardening 2026-09-25). If an older copy with `search_path = public` was already applied
+  live, re-run this `CREATE OR REPLACE FUNCTION` file.
+- **Phase 2 admin shell (2026-09-26):** `/dashboard` is role-switched, not duplicated; admin navbar
+  is AuthContext-driven; super-admin staff controls are `isSuperAdmin` only; no `public.admins`
+  writes from the UI.
 
 ## 26. Future Planned Work (owner's phase plan)
 
 1. **Phase 1 — Real admin authentication.** ✅ code-complete in this repo (see §6); operator steps
    (apply migration, insert the staff row) are outstanding.
-2. **Phase 2 — Admin UI shell + role-aware navigation + admin dashboard.** Routes under `/admin/…`,
-   navbar Home→Dashboard and Subscriptions→Courses for admins, dashboard with the feedback
-   Total/Seen/Remaining visualization and a spam-users list. Existing Dashboard stays as the admin's
-   landing screen until this shell exists.
+2. **Phase 2 — Admin UI shell + role-aware navigation + admin dashboard.** ✅ UI-complete in this
+   repo (no persistence). `/dashboard` is `DashboardSwitch`: students keep `Dashboard.jsx`, staff
+   see `AdminDashboard.jsx`. Navbar Home→Dashboard and Subscriptions→Courses for admins only.
 3. **Phase 3 — Courses / Subjects / Questions: mock UI** for Course → Semester → Subjects → Questions
-   with Add/Edit/Update/Remove for subjects and questions, following `SRS/finaladmin_25_8.jpg` /
-   `SRS/adminflowchart_25_8.jpg`; storage decision documented before any persistence.
+   with Add/Edit/Update/Remove for subjects and questions, following `SRS/adminflowchart.jpg`
+   (Edit Subject / Edit Question), the use-case “Choose course and subject”, ER Courses/Subjects/
+   TestsData, and SRS §3.2 Content Management; storage decision documented before any persistence.
 4. **Phase 4 — Leaderboard UI**: student-scoped boards, Top 100 + self rank/percentile, admin
    all-boards view with the compact Course→Subject/Semester dependent filters.
 5. **Phase 5 — Final admin integration / QA**: wire the mock admin flows to real data, staff
@@ -574,7 +649,7 @@ loosening RLS, or renaming env vars — each needs its own instruction.
 - `README.md` at the repo root contains an **unresolved merge-conflict marker block** (`# Learning_Git`
   vs `# exam_prep_master`) — pre-existing, cosmetic, unfixed here because it is outside a
   documentation task's remit; worth a one-line owner decision.
-- `AUTH.md` §9 says "12/IP" while `api/_otpStore.js` uses `MAX_IP_PER_WINDOW = 20` — code is right, doc is stale.
+- `AUTH.md` §9 rate-limit copy matches `api/_otpStore.js` (`MAX_IP_PER_WINDOW = 20`).
 - `api/feedback.js` hard-codes the owner's email address as its recipient (no fallback env var).
 - Gmail app-password quota is a real ceiling on a cohort signup day; a transactional provider is the
   eventual replacement.
@@ -582,26 +657,57 @@ loosening RLS, or renaming env vars — each needs its own instruction.
   `chunkSizeWarningLimit` is intentional.
 - One-off root scripts import packages that are not in `package.json` (`pdf-parse`, `pdf2json`,
   `playwright`) — they are offline tooling, deliberately not installed.
-- Minor hardening candidate: `20260905120000_auth_otp.sql` pins `set search_path = public, pg_temp`
-  on its four functions, while `20260925150000_admin_role_lookup.sql` pins `search_path = public`
-  (its table/function references are schema-qualified, so nothing is currently shadowable). Aligning
-  the two is a follow-up for whoever next touches a migration — do not re-run an applied migration
-  just for style.
-- No admin/staff UI exists yet, so a real admin today lands on the student Dashboard with a "Syllabus
-  Admin" link only.
+- Admin UI is Phase 2 shell only: a real admin lands on `AdminDashboard.jsx`. Writes (staff, spam,
+  feedback, catalog, leaderboard) are still preview-only.
+- **SRS vs running stack (do not “fix” code to match the stack paragraph):** the PDF still names
+  MERN, MongoDB, JWT, Socket.io, Tailwind CSS v4. The running app is Vite + React 19, Supabase Auth
+  + Postgres, Firebase Firestore/Storage, Vercel serverless, and CSS design tokens. Follow the
+  **diagrams and functional requirements**; do not migrate the stack because of that prose.
+- **SRS vs auth tables:** Appendix A Tables 1.1/1.2 and the ER diagram still list `Password` on
+  Students and Admins. Implementation: passwords live only in Supabase Auth; `public.admins` has
+  **no** password column and none may be added (`AUTH.md` §7). Document the difference; do not add
+  the column.
+- **SRS student features not in Phases 2–5** (still 📝, do not sneak them into an admin task):
+  test rooms (create/join/share, timer & participants), subscriptions/tokens/payment/refund,
+  “Available Tokens/Plan?” gates on Choose exam and Create test room (`updated_student_flow.jpg`,
+  DFD Payment management, ER Subscriptions/Subscribers). Navbar `/subscriptions` is a dead link.
 
 ---
 
-### Appendix A — Traceability to `SRS/` diagrams
+### Appendix A — Traceability to current `SRS/` diagrams
+
+These are the files that exist **now**. Do not cite `*_25_8.jpg`, `finaladmin_*`, `finalclass_*` or
+`studentfinal_*` — they were removed in `4804603`.
+
+**Implemented vs planned vs mock** (do not describe 📝 as ✅):
+
+| Area | Status |
+| --- | --- |
+| Student email+password, Google, OTP signup, password recovery | ✅ |
+| Admin authentication through the same Supabase Auth + `public.admins` lookup | ✅ Phase 1 |
+| Super vs standard role flag (`is_super_admin`) | ✅ resolution only; 📝 no dashboard split UI |
+| Student exam catalog / take test / review (static data + Firestore history) | ⚠️ history blocked by Firebase-identity gap (§9) |
+| Syllabus Admin page | ⚠️ UI exists; writes blocked by §9 |
+| Admin Dashboard, role-aware nav, staff management UI | ✅ Phase 2 UI shell (mock writes); 📝 Phase 5 persistence |
+| Courses / Subjects / Questions admin CRUD | 📝 Phase 3 — **not** implemented (catalog is static) |
+| Leaderboards | 📝 Phase 4 — navbar label only |
+| Feedback store + admin moderation | 📝 — student form emails the owner; no store |
+| Test rooms, subscriptions, payments, token gates | 📝 SRS-required, **outside** Phases 2–5 |
 
 | Diagram (`SRS/`) | What it governs | Repo status |
 | --- | --- | --- |
-| `ER_Diagram_last_updated_25_8.jpg` | Students{StudentId PK, FullName, Email, Password, IsSpam}, Admins{AdminId PK, FullName, Email, Password, isSuperAdmin} | ✅ mirrored as `public.students` / `public.admins`, with "Password" satisfied by Supabase Auth instead of a table column |
-| `UseCase_Diagram_last_updated_25_8.jpg` | student vs admin use cases | 📝 admin use cases are Phases 2–5 |
-| `adminflowchart_25_8.jpg` | Login → credentials validation → *is super admin?* → Super Admin Dashboard (Add Admin / Remove Admin / Add Super Admin, each "Enter Details & Confirm" / "Select Admin & Confirm") or Standard Admin Dashboard → Dashboard → Check Leaderboard & Ranking · Read Feedback · Edit Subject · Edit Question → feedback actions (Set User as Spam → Select User, Confirm & Flag; Set Feedback as Spam; Bookmark Feedback; Set as Seen) → Logout. Forgot Password → Send Reset Link via Email; invalid credentials → Show Error, Retry Login | ✅ auth/validation/"is super admin" branch and forgot-password are implemented (§4, §6); 📝 every dashboard/management node |
-| `sequenceadmin_25_8.jpg`, `finaladmin_25_8.jpg` | admin interaction sequences / final admin screens | 📝 Phase 2–3 targets |
-| `sequencestudent_25_8.jpg`, `studentfinal_25_8.jpg`, `updated_student_flow_25_8.jpg` | student flow | ✅ implemented on static data + Firestore history (see §9 gap) |
-| `DFD0/DFD1/DFD2_last_updated_25_8.jpg` | data-flow levels | mixed: student paths ✅, admin paths 📝 |
+| `SRS_last_updated_print.pdf` | IEEE SRS (scope, FR/NFR, Appendix A data dictionary, Figures 1.1–7.1) | authoritative requirements text; the stack paragraph is **not** the running stack (§27) |
+| `ER_Diagram_last_updated_3_9.jpg` | Students{StudentId, FullName, Email, Password, IsSpam}; Admins{AdminId, FullName, Email, Password, isSuperAdmin}; Courses{CourseId, Sems, CourseName}; Subjects{SubjectId, SubjectName, CourseId}; TestsData{TestId, Questions, Answers, Options}; TestAttempts; TestRooms; FeedBacks{FeedbackId, Description, Type, isSpam, isBookmark, isSeen, StudentId}; Leaderboards; Subscriptions; Subscribers | ⚠️ Students/Admins mirrored as `public.students` / `public.admins` with **Password satisfied by Supabase Auth, not a table column**; other entities 📝 |
+| `UseCase_Diagram_last_updated_3_9.jpg` | Student: Choose exam/Give tests, Review Analysis, Create account (Google + email), Join/Create test room (+ Share), Give Feedback, Login (email+password **and Google**), Change question preference, Forgot Password, Check Leaderboard, Logout, Choose Subscription (Make payment / Make refund). Admin: Login (email+password), Logout, Remove/Add admin, Check leaderboard, Set user as spam, Edit question / Edit Subject (include Choose course and subject), Forgot Password, Read Feedback (include Set feedback as spam, Bookmark, Set as seen), Make an admin a super admin, **Create account (include Sign in with google)** — this last bubble is new vs the 25_8 diagram | student auth ✅; admin auth ✅; everything else 📝 |
+| `adminflowchart.jpg` | Start → Sign in with Google **or** login (email+password, Continue with Google, Forgot Password → email reset) → Credentials/Google valid? → **is super admin?** → Super Admin Dashboard (Add Admin / Remove Admin / Add Super Admin) **or** Standard Admin Dashboard → Dashboard → Leaderboard, Read Feedback, Edit Subject, Edit Question → feedback actions → Logout. **Change vs 25_8:** Google is a first-class start path, not email-only | ✅ auth / validation / is-super-admin branch / forgot-password / Google-can-auth-an-admin; 📝 every dashboard/management node |
+| `sequenceadmin.jpg` | Admin ↔ Authentication / Email / Dashboard / Admin management / Leaderboard / Feedback / Subject / Question / Creating another SuperAdmin / Database | 📝 Phase 2–5; login/reset ✅ |
+| `sequencestudent.jpg` | Student ↔ Auth / Email / Google / Dashboard / Exam / Test room / Feedback / Leaderboard / Preference / Subscription / Database | ⚠️ exam path on static data; Google/auth/OTP ✅; rooms/leaderboard/subscription 📝 |
+| `updated_student_flow.jpg` | Register? → Login (email+password or Google) or Sign Up (Google, or email+password → OTP → credentials valid) → Student Dashboard → Choose Exam (**Available Tokens/Plan?**) / Join Test Room / Create Test Room (token gate, timer & participants, share code) / Review Analysis / Give Feedback / Leaderboard / Change Question Preference / Choose Subscription (pay / refund) | auth+OTP ✅; dashboard/exam ⚠️; token gates, rooms, subscription 📝. **Change vs 25_8:** explicit token/plan diamonds on Choose Exam and Create Test Room |
+| `DFD0_last_updated_3_9.jpg` | Student and Admin as external entities around System. Admin inbound includes Login, Signup, Add/Remove admin, Feedback flag, Set user spam, Edit Subjects/Questions, Forget password | mixed |
+| `DFD1_last_updated_3_9.jpg` | Processes: Student auth+dashboard; Test and testroom; Admin auth+dashboard (incl. Make an admin super admin); Feedback management; Payment management | student auth ✅; others 📝 |
+| `DFD2_last_updated_3_9.jpg` | Same processes + stores Students, TestsData, TestsAttempts, TestsRooms, Courses, Feedbacks, Leaderboards, Admins, Subscription, Subscribers | only `public.students` / `public.admins` / `public.auth_otp` exist in-repo as Postgres; exam history is Firestore |
+| PDF Fig 3.1 / 3.2 | Student / Admin activity (same content as the flowcharts, including admin Google) | same status as the flow jpgs |
+| PDF Fig 7.1 Class Diagram | Operations on the ER entities (e.g. Admins.`login with google`, `addAdmin`, `removeAdmin`, `setUserAsSpam`) | 📝 except login/logout/Google |
 
 ### Appendix B — Where to read more
 

@@ -47,7 +47,7 @@ vi.mock('../src/pages/FeedbackPage', () => ({ default: () => <div>FEEDBACK</div>
 vi.mock('../src/pages/UserGuide', () => ({ default: () => <div>GUIDE</div> }));
 vi.mock('../src/pages/SubjectDetails', () => ({ default: () => <div>SUBJECTS</div> }));
 
-const { state, resetSupabaseStub, lastCall } = await import('./supabaseMock.js');
+const { state, resetSupabaseStub } = await import('./supabaseMock.js');
 const App = (await import('../src/App.jsx')).default;
 
 /**
@@ -114,16 +114,16 @@ describe('homepage', () => {
     await waitFor(() => expect(document.querySelector('.auth-form input')).toBeTruthy());
   }, 20000);
 
-  it('the homepage Google CTA opens sign-up and starts the Supabase OAuth redirect', async () => {
+  it('the landing-page Google CTA is intentionally absent; Google remains on /signup', async () => {
+    // Owner commit 4804603 commented the hero "Continue with Google" button out.
+    // Do not restore it. Google signup/login still lives on the auth page.
     await at('/');
-    const googleCta = await screen.findByRole('button', { name: /Google/i });
-    fireEvent.click(googleCta);
-
-    await waitFor(() => expect(lastCall('signInWithOAuth')).toBeTruthy());
-    expect(lastCall('signInWithOAuth').provider).toBe('google');
-    expect(lastCall('signInWithOAuth').options.redirectTo).toContain('/signup?mode=signup');
-    // and the student is asked to confirm before anything is created
-    expect(sessionStorage.getItem('prepmaster_google_signup_pending')).toBe('1');
+    await waitFor(() => expect(document.body.textContent).toMatch(/syllabus-matched mock examinations/i));
+    expect(screen.queryByRole('button', { name: /Continue with Google/i })).toBeNull();
+    cleanup();
+    await at('/signup?mode=signup');
+    await waitFor(() => expect(activeTab()).toBe('Create account'));
+    expect(screen.getByRole('button', { name: /Continue with Google/i })).toBeTruthy();
   }, 20000);
 
   it('a guest following the shell dashboard link is sent to Log in, not left stranded', async () => {

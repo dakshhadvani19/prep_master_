@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Link, Navigate, useLocation } from 'react-router-dom';
 import React, { useEffect, Suspense, lazy } from 'react';
 import Layout from './components/Layout';
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import { Loader } from 'lucide-react';
 import './index.css';
@@ -11,7 +11,8 @@ const LandingPage = lazy(() => import('./pages/LandingPage'));
 const CourseExplorer = lazy(() => import('./pages/CourseExplorer'));
 const SubjectDetails = lazy(() => import('./pages/SubjectDetails'));
 const ExamPortal = lazy(() => import('./pages/ExamPortal'));
-const Dashboard = lazy(() => import('./pages/Dashboard'));
+const DashboardSwitch = lazy(() => import('./pages/DashboardSwitch'));
+const AdminCourses = lazy(() => import('./pages/AdminCourses'));
 const ReviewPage = lazy(() => import('./pages/ReviewPage'));
 
 const Signup = lazy(() => import('./pages/Signup'));
@@ -41,6 +42,14 @@ function ForwardToAuth({ mode }) {
       replace
     />
   );
+}
+
+/** Authenticated admins have no Home page — they land on /dashboard. Students still see LandingPage. */
+function HomeIndex() {
+  const { currentUser, isAdmin, authLoading } = useAuth();
+  if (authLoading) return null;
+  if (currentUser && isAdmin) return <Navigate to="/dashboard" replace />;
+  return <LandingPage />;
 }
 
 function NotFound() {
@@ -74,7 +83,7 @@ function App() {
           }>
             <Routes>
               <Route path="/" element={<Layout />}>
-                <Route index element={<LandingPage />} />
+                <Route index element={<HomeIndex />} />
                 <Route path="login" element={<ForwardToAuth mode="login" />} />
                 <Route path="register" element={<ForwardToAuth mode="signup" />} />
                 <Route path="signup" element={<Signup />} />
@@ -95,7 +104,15 @@ function App() {
                   path="dashboard"
                   element={
                     <ProtectedRoute>
-                      <Dashboard />
+                      <DashboardSwitch />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="admin/courses"
+                  element={
+                    <ProtectedRoute requiredRole="admin">
+                      <AdminCourses />
                     </ProtectedRoute>
                   }
                 />

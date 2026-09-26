@@ -35,10 +35,10 @@ export default function ProtectedRoute({ children, requiredRole }) {
         );
     }
 
-    // Role checks. Admin landing page is the syllabus manager until the admin
-    // area grows more pages — /admin/dashboard does not exist as a route, so
-    // sending anyone there produced a 404.
-    const adminHome = '/admin/syllabus';
+    // Role checks. Admin landing is the shared /dashboard route (Admin Dashboard
+    // for staff, student Dashboard for everyone else). Syllabus Admin remains a
+    // separate existing page, not the primary home.
+    const adminHome = '/dashboard';
 
     if (requiredRole === 'superAdmin' && !hasRole('superAdmin')) {
         return (

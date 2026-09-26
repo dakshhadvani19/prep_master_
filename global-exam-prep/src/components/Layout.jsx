@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
-import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Trophy, CreditCard, MessageSquare } from 'lucide-react';
+import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Trophy, CreditCard, MessageSquare, Shield, LayoutDashboard } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import { domains } from '../data/mockData';
 
 export default function Layout() {
-    const { currentUser, logout, isAdmin } = useAuth();
+    const { currentUser, logout, isAdmin, authLoading } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -88,15 +88,46 @@ export default function Layout() {
     }
 
 
-    const navItems = [
-        { id: 'home', label: 'Home', path: '/' },
-        { id: 'leaderboards', label: 'Leaderboards', path: '/leaderboards' },
-        { id: 'feedback', label: 'Feedback', path: '/feedback' },
-        { id: 'subscriptions', label: 'Subscriptions', path: '/subscriptions' },
-    ];
+    // Role-dependent navbar. Students (and guests) keep Home / Subscriptions.
+    // Authenticated admins: Dashboard + Courses in those slots; Leaderboards and
+    // Feedback stay. Never derived from email or storage — AuthContext.isAdmin only.
+    const showAdminNav = !authLoading && !!currentUser && isAdmin;
+    const navItems = showAdminNav
+        ? [
+            { id: 'dashboard', label: 'Dashboard', path: '/dashboard' },
+            { id: 'courses', label: 'Courses', path: '/admin/courses' },
+            { id: 'leaderboards', label: 'Leaderboards', path: '/leaderboards' },
+            { id: 'feedback', label: 'Feedback', path: '/feedback' },
+        ]
+        : [
+            { id: 'home', label: 'Home', path: '/' },
+            { id: 'leaderboards', label: 'Leaderboards', path: '/leaderboards' },
+            { id: 'feedback', label: 'Feedback', path: '/feedback' },
+            { id: 'subscriptions', label: 'Subscriptions', path: '/subscriptions' },
+        ];
+
+    const navIcon = {
+        home: Home,
+        dashboard: LayoutDashboard,
+        courses: BookOpen,
+        leaderboards: Trophy,
+        feedback: MessageSquare,
+        subscriptions: CreditCard,
+    };
+    const navIconColor = {
+        home: 'var(--accent-primary)',
+        dashboard: '#ffb454',
+        courses: '#8d7bff',
+        leaderboards: '#f59e0b',
+        feedback: '#a78bfa',
+        subscriptions: '#34d399',
+    };
 
     const getActiveNavId = () => {
-        if (location.pathname === '/' ||
+        if (showAdminNav) {
+            if (location.pathname.startsWith('/dashboard')) return 'dashboard';
+            if (location.pathname.startsWith('/admin/courses')) return 'courses';
+        } else if (location.pathname === '/' ||
             location.pathname.startsWith('/domains') ||
             location.pathname.startsWith('/courses') ||
             location.pathname.startsWith('/exams')) return 'home';
@@ -130,7 +161,7 @@ export default function Layout() {
                     gap: '0.75rem',
                 }}>
                     {/* Logo */}
-                    <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
+                    <Link to={showAdminNav ? '/dashboard' : '/'} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
                         <div style={{
                             background: 'var(--accent-gradient)',
                             padding: '0.45rem',
@@ -530,53 +561,25 @@ export default function Layout() {
                             )}
                         </div>
 
-                        {/* Mobile Home */}
-                        <Link to="/" style={{
-                            display: 'flex', alignItems: 'center', gap: '0.5rem',
-                            color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: 500,
-                            padding: '0.75rem 1rem',
-                            borderRadius: 'var(--radius-md)',
-                            border: '1px solid var(--glass-border)',
-                            background: 'rgba(255,255,255,0.03)',
-                        }}>
-                            <Home size={18} color="var(--accent-primary)" /> Home
-                        </Link>
-
-                        {/* Mobile Leaderboards */}
-                        <Link to="/leaderboards" style={{
-                            display: 'flex', alignItems: 'center', gap: '0.5rem',
-                            color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: 500,
-                            padding: '0.75rem 1rem',
-                            borderRadius: 'var(--radius-md)',
-                            border: '1px solid var(--glass-border)',
-                            background: 'rgba(255,255,255,0.03)',
-                        }}>
-                            <Trophy size={18} color="#f59e0b" /> Leaderboards
-                        </Link>
-
-                        {/* Mobile Feedback */}
-                        <Link to="/feedback" style={{
-                            display: 'flex', alignItems: 'center', gap: '0.5rem',
-                            color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: 500,
-                            padding: '0.75rem 1rem',
-                            borderRadius: 'var(--radius-md)',
-                            border: '1px solid var(--glass-border)',
-                            background: 'rgba(255,255,255,0.03)',
-                        }}>
-                            <MessageSquare size={18} color="#a78bfa" /> Feedback
-                        </Link>
-
-                        {/* Mobile Subscriptions */}
-                        <Link to="/subscriptions" style={{
-                            display: 'flex', alignItems: 'center', gap: '0.5rem',
-                            color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: 500,
-                            padding: '0.75rem 1rem',
-                            borderRadius: 'var(--radius-md)',
-                            border: '1px solid var(--glass-border)',
-                            background: 'rgba(255,255,255,0.03)',
-                        }}>
-                            <CreditCard size={18} color="#34d399" /> Subscriptions
-                        </Link>
+                        {navItems.map((item) => {
+                            const Icon = navIcon[item.id] || Home;
+                            return (
+                                <Link
+                                    key={item.id}
+                                    to={item.path}
+                                    style={{
+                                        display: 'flex', alignItems: 'center', gap: '0.5rem',
+                                        color: 'var(--text-primary)', fontSize: '0.95rem', fontWeight: 500,
+                                        padding: '0.75rem 1rem',
+                                        borderRadius: 'var(--radius-md)',
+                                        border: '1px solid var(--glass-border)',
+                                        background: 'rgba(255,255,255,0.03)',
+                                    }}
+                                >
+                                    <Icon size={18} color={navIconColor[item.id] || 'var(--accent-primary)'} /> {item.label}
+                                </Link>
+                            );
+                        })}
                         <div style={{ display: 'flex', gap: '0.75rem', borderTop: '1px solid var(--glass-border)', paddingTop: '1rem' }}>
                             {currentUser ? (
                                 <>
