@@ -4,8 +4,8 @@
  * Admins: all boards with Course → Semester → Subject filters.
  */
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { Trophy, Medal, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { Trophy, Medal, ChevronDown, ChevronUp, RotateCcw } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import {
     LB_COURSES,
@@ -19,11 +19,6 @@ import {
 import './Leaderboard.css';
 
 const PREVIEW = 'Preview ranks — no data was changed.';
-
-const fadeUp = {
-    hidden: { opacity: 0, y: 16 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.35 } },
-};
 
 function viewerName(auth) {
     return (
@@ -54,7 +49,28 @@ function useBoard(subjectId, viewer, plannedRank, query) {
     }, [subjectId, viewer, plannedRank, query]);
 }
 
+function Density({ total, youRank }) {
+    const marks = 40;
+    const youAt = youRank && total ? Math.min(marks - 1, Math.round(((youRank - 1) / Math.max(total - 1, 1)) * (marks - 1))) : null;
+    return (
+        <div className="lb-density" aria-hidden="true">
+            {Array.from({ length: marks }, (_, i) => (
+                <i
+                    key={i}
+                    className={
+                        i < 2 ? 'is-top'
+                            : youAt === i ? 'is-you'
+                                : i > marks * 0.72 ? 'is-tail'
+                                    : ''
+                    }
+                />
+            ))}
+        </div>
+    );
+}
+
 function Podium({ rows }) {
+    const reduce = useReducedMotion();
     const first = rows.find((r) => r.rank === 1);
     const second = rows.find((r) => r.rank === 2);
     const third = rows.find((r) => r.rank === 3);
@@ -63,29 +79,34 @@ function Podium({ rows }) {
         return (
             <motion.div
                 className={`lb-pod lb-pod--${place}`}
-                variants={fadeUp}
-                whileHover={{ y: place === 1 ? -8 : -5 }}
+                initial={reduce ? false : { opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: place === 1 ? 0.08 : place === 2 ? 0 : 0.14, duration: 0.32 }}
+                whileHover={reduce ? undefined : { y: place === 1 ? -10 : -5 }}
             >
+                <div className="lb-pod__plinth" aria-hidden />
                 <div className="lb-pod__place">{place === 1 ? 'First' : place === 2 ? 'Second' : 'Third'}</div>
-                <Medal size={place === 1 ? 22 : 18} style={{ marginTop: 8, color: place === 1 ? '#ffb454' : 'inherit' }} />
+                <Medal size={place === 1 ? 22 : 16} />
                 <div className="lb-pod__name">{row.name}</div>
                 <div className="lb-pod__meta">{row.points} pts · {row.tests} tests</div>
             </motion.div>
         );
     };
     return (
-        <motion.div className="lb-podium" initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.08 } } }}>
+        <div className="lb-podium">
             {card(second, 2)}
             {card(first, 1)}
             {card(third, 3)}
-        </motion.div>
+        </div>
     );
 }
 
-function RankList({ rows }) {
+function RankList({ rows, total }) {
     const rest = useMemo(() => rows.filter((row) => row.rank > 3), [rows]);
     const scroller = useRef(null);
     const [end, setEnd] = useState('top');
+    const [picked, setPicked] = useState(null);
+    const reduce = useReducedMotion();
 
     function measure() {
         const el = scroller.current;
@@ -100,6 +121,7 @@ function RankList({ rows }) {
         if (!el) return;
         el.scrollTop = 0;
         measure();
+        setPicked(null);
     }, [rows]);
 
     function jump() {
@@ -107,7 +129,7 @@ function RankList({ rows }) {
         if (!el) return;
         el.scrollTo({
             top: end === 'bottom' ? 0 : el.scrollHeight,
-            behavior: 'smooth',
+            behavior: reduce ? 'auto' : 'smooth',
         });
     }
 
@@ -118,8 +140,8 @@ function RankList({ rows }) {
             className={`lb-more ${atBottom ? 'lb-more--up' : 'lb-more--down'}`}
             onClick={jump}
             aria-label={atBottom ? 'Jump to top of list' : 'Jump to bottom of list'}
-            whileHover={{ y: atBottom ? -2 : 2 }}
-            whileTap={{ scale: 0.97 }}
+            whileHover={reduce ? undefined : { y: atBottom ? -2 : 2 }}
+            whileTap={reduce ? undefined : { scale: 0.97 }}
         >
             <span className="lb-more__orb" aria-hidden>
                 {atBottom ? <ChevronUp size={22} strokeWidth={2.25} /> : <ChevronDown size={22} strokeWidth={2.25} />}
@@ -138,24 +160,40 @@ function RankList({ rows }) {
                 ref={scroller}
                 onScroll={measure}
                 data-testid="lb-scroll"
+                role="list"
+                aria-label="Ranks 4 to 100"
             >
-                {rest.map((row, i) => (
-                    <motion.div
-                        key={row.id}
-                        className={`lb-row ${row.isYou ? 'is-you' : ''}`}
-                        initial={{ opacity: 0, x: -12 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: Math.min(i, 9) * 0.02, duration: 0.28 }}
-                    >
-                        <span className="lb-badge">{row.rank}</span>
-                        <div>
-                            <div className="lb-row__name">{row.name}{row.isYou ? ' · you' : ''}</div>
-                            <div className="lb-row__sub">{row.points} points</div>
+                {rest.map((row) => {
+                    const pct = percentileFor(row.rank, total || rows.length);
+                    const on = picked === row.id || row.isYou;
+                    return (
+                        <div
+                            key={row.id}
+                            className={`lb-row ${row.isYou ? 'is-you' : ''} ${on ? 'is-on' : ''}`}
+                            role="listitem"
+                            tabIndex={0}
+                            aria-selected={on}
+                            onClick={() => setPicked(row.id)}
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    setPicked(row.id);
+                                }
+                            }}
+                        >
+                            <span className="lb-badge">{row.rank}</span>
+                            <div>
+                                <div className="lb-row__name">{row.name}{row.isYou ? ' · you' : ''}</div>
+                                <div className="lb-row__sub">{row.points} points</div>
+                            </div>
+                            <div className="lb-meter" aria-label={`${pct} percentile`}>
+                                <span style={{ width: `${Math.max(6, pct)}%` }} />
+                            </div>
+                            <div className="lb-row__pts">{row.points}</div>
+                            <div className="lb-row__tests">{row.tests} tests</div>
                         </div>
-                        <div className="lb-row__pts">{row.points}</div>
-                        <div className="lb-row__tests">{row.tests} tests</div>
-                    </motion.div>
-                ))}
+                    );
+                })}
                 {rest.length === 0 && <div className="lb-empty">No students match this view.</div>}
             </div>
             {!atBottom && toggleBtn}
@@ -179,7 +217,7 @@ function YouCard({ you, total, percentile }) {
                 </div>
             </div>
             <div>
-                <div className="lb-you__title">Your standing</div>
+                <div className="lb-you__title">Your position</div>
                 <div className="lb-you__name">{you.name}</div>
                 <div className="lb-you__meta">
                     {you.points} points · {you.tests} tests · {you.rank <= 100 ? 'Inside the Top 100' : 'Outside the Top 100 — still listed here'}
@@ -211,7 +249,6 @@ function StudentBoard({ auth, flash }) {
             <div className="lb-panel">
                 <div className="lb-list__head">
                     <h2>Your boards</h2>
-                    <p>Only subjects you have attempted (preview).</p>
                 </div>
                 <div className="lb-chips" data-testid="lb-student-boards">
                     {STUDENT_BOARDS.map((b) => {
@@ -232,11 +269,11 @@ function StudentBoard({ auth, flash }) {
 
             <div className="lb-stats">
                 <div className="lb-stat">
-                    <div className="lb-stat__label">Board size</div>
+                    <div className="lb-stat__label">Board</div>
                     <div className="lb-stat__value">{board.total}</div>
                 </div>
                 <div className="lb-stat lb-stat--you">
-                    <div className="lb-stat__label">Your rank</div>
+                    <div className="lb-stat__label">Rank</div>
                     <div className="lb-stat__value">#{board.you?.rank ?? '—'}</div>
                 </div>
                 <div className="lb-stat">
@@ -244,15 +281,20 @@ function StudentBoard({ auth, flash }) {
                     <div className="lb-stat__value">{board.percentile}%</div>
                 </div>
             </div>
+            <Density total={board.total} youRank={board.you?.rank} />
 
             <Podium rows={board.rows} />
-            <YouCard you={board.you} total={board.total} percentile={board.percentile} />
 
             <div className="lb-list__head">
                 <h2>Top 100 · {meta?.subject.title}</h2>
                 <p>{meta?.course.title} · Sem {meta?.subject.sem}</p>
             </div>
-            <RankList rows={board.visible} />
+            <RankList rows={board.visible} total={board.total} />
+
+            <div className="lb-continue" aria-hidden>
+                <span />
+            </div>
+            <YouCard you={board.you} total={board.total} percentile={board.percentile} />
         </>
     );
 }
@@ -264,6 +306,7 @@ function AdminBoard({ flash }) {
     const subjects = course.subjects.filter((s) => s.sem === sem);
     const [subjectId, setSubjectId] = useState(subjects[0]?.id || '');
     const [query, setQuery] = useState('');
+    const [sid, setSid] = useState('');
 
     const subject = course.subjects.find((s) => s.id === subjectId) || subjects[0] || null;
     const board = useBoard(subject?.id, null, null, query);
@@ -276,6 +319,7 @@ function AdminBoard({ flash }) {
         setSem(firstSem);
         setSubjectId(firstSub?.id || '');
         setQuery('');
+        setSid('');
         flash(`Course set to ${next.title}. ${PREVIEW}`);
     }
 
@@ -292,14 +336,48 @@ function AdminBoard({ flash }) {
         flash(`Showing ${info?.subject.title || 'subject'}. ${PREVIEW}`);
     }
 
+    function applySid(value) {
+        setSid(value);
+        const needle = value.trim().toLowerCase();
+        if (!needle) return;
+        for (const c of LB_COURSES) {
+            const hit = c.subjects.find((s) => s.id.toLowerCase() === needle || s.title.toLowerCase() === needle);
+            if (hit) {
+                setCourseId(c.id);
+                setSem(hit.sem);
+                setSubjectId(hit.id);
+                flash(`Showing ${hit.title}. ${PREVIEW}`);
+                return;
+            }
+        }
+    }
+
+    function reset() {
+        applyCourse(LB_COURSES[0].id);
+    }
+
     return (
         <>
             <div className="lb-panel" data-testid="lb-admin-filters">
-                <div className="lb-list__head">
-                    <h2>All boards</h2>
-                    <p>Course restricts semester and subject. Preview only.</p>
-                </div>
                 <div className="lb-filters">
+                    <div className="lb-field lb-field--search">
+                        <label htmlFor="lb-search">Student name</label>
+                        <input
+                            id="lb-search"
+                            value={query}
+                            placeholder="Name on this board"
+                            onChange={(e) => setQuery(e.target.value)}
+                        />
+                    </div>
+                    <div className="lb-field">
+                        <label htmlFor="lb-sid">Subject ID</label>
+                        <input
+                            id="lb-sid"
+                            value={sid}
+                            placeholder="01ma0106"
+                            onChange={(e) => applySid(e.target.value)}
+                        />
+                    </div>
                     <div className="lb-field">
                         <label htmlFor="lb-course">Course</label>
                         <select id="lb-course" value={courseId} onChange={(e) => applyCourse(e.target.value)}>
@@ -318,15 +396,16 @@ function AdminBoard({ flash }) {
                             {subjects.map((s) => <option key={s.id} value={s.id}>{s.title}</option>)}
                         </select>
                     </div>
-                    <div className="lb-field">
-                        <label htmlFor="lb-search">Student name</label>
-                        <input
-                            id="lb-search"
-                            value={query}
-                            placeholder="Search this board"
-                            onChange={(e) => setQuery(e.target.value)}
-                        />
-                    </div>
+                    <button type="button" className="lb-btn" onClick={reset}>
+                        <RotateCcw size={12} /> Reset
+                    </button>
+                </div>
+                <div className="lb-dep" aria-label="Filter dependency">
+                    <b>{course.title}</b>
+                    <span />
+                    <b>Sem {sem}</b>
+                    <span />
+                    <b>{subject?.title || 'Subject'}</b>
                 </div>
             </div>
 
@@ -344,6 +423,7 @@ function AdminBoard({ flash }) {
                     <div className="lb-stat__value" style={{ fontSize: '1.05rem' }}>{subject?.title || '—'}</div>
                 </div>
             </div>
+            <Density total={board.total} youRank={null} />
 
             {subject ? (
                 <>
@@ -352,7 +432,7 @@ function AdminBoard({ flash }) {
                         <h2>Top 100 · {subject.title}</h2>
                         <p>{course.title} · Sem {sem}</p>
                     </div>
-                    <RankList rows={board.visible} />
+                    <RankList rows={board.visible} total={board.total} />
                 </>
             ) : (
                 <div className="lb-empty">No subjects in this semester.</div>
@@ -365,6 +445,7 @@ export default function Leaderboard() {
     const auth = useAuth();
     const { isAdmin } = auth;
     const [toast, setToast] = useState('');
+    const reduce = useReducedMotion();
 
     function flash(msg) {
         setToast(msg);
@@ -377,21 +458,9 @@ export default function Leaderboard() {
                 <div>
                     <div className="lb__kicker">{isAdmin ? 'Admin · Rankings' : 'Student · Rankings'}</div>
                     <h1 className="lb__title">Leaderboard</h1>
-                    <p className="lb__sub">
-                        {isAdmin
-                            ? 'All boards. Filter Course → Semester → Subject. Ranks are a preview, not live attempts.'
-                            : 'Top 100 plus your rank and percentile, even if you sit outside the published list.'}
-                    </p>
-                    <p className="lb-preview">In-memory preview. ER fields: points, tests, subject.</p>
+                    <p className="lb-preview">Preview ranks. Points · tests · subject.</p>
                 </div>
-                <motion.div
-                    initial={{ rotate: -8, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    transition={{ type: 'spring', stiffness: 260, damping: 18 }}
-                    aria-hidden
-                >
-                    <Trophy size={36} color="#ffb454" />
-                </motion.div>
+                <Trophy size={32} color="#ffb454" aria-hidden />
             </header>
 
             {isAdmin ? <AdminBoard flash={flash} /> : <StudentBoard auth={auth} flash={flash} />}
@@ -401,11 +470,10 @@ export default function Leaderboard() {
                     <motion.div
                         className="lb-toast"
                         role="status"
-                        initial={{ opacity: 0, y: 14, scale: 0.96 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        exit={{ opacity: 0, y: 8 }}
+                        initial={reduce ? false : { opacity: 0, y: 14 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0 }}
                     >
-                        <Sparkles size={14} style={{ marginRight: 6, verticalAlign: -2 }} />
                         {toast}
                     </motion.div>
                 )}
