@@ -124,7 +124,7 @@ export default function AdminDashboard() {
                     </div>
                 </div>
                 <div className="admin-dash__visual">
-                    <AdminController />
+                    <AdminController gold={isSuperAdmin} />
                     <span className={`admin-dash__badge ${isSuperAdmin ? 'admin-dash__badge--gold' : ''}`}>
                         {isSuperAdmin ? <Crown size={14} /> : <Shield size={14} />}
                         {isSuperAdmin ? 'Super Admin' : 'Standard Admin'}
