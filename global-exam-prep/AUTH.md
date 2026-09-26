@@ -1,4 +1,24 @@
-# Auth setup (students)
+# Auth setup (students and admins)
+
+Identity is **one** Supabase Auth system. Role is resolved afterwards from the
+authenticated uid, never from an email string, never from `localStorage`, never
+from a frontend boolean, never from `public.students.role`:
+
+```
+Supabase Auth
+    ↓
+authenticated user / auth.uid()
+    ↓
+public.admins authorization lookup
+    ↓
+student / admin / superAdmin
+```
+
+Admins use the same login, Google OAuth, and password-recovery screens as
+students. Passwords remain in Supabase Auth. `public.admins` is an
+authorization/profile table (**no password column**). Google OAuth can
+authenticate an admin; it does **not** auto-create a staff row. The lookup uses
+the authenticated uid (`public.admin_role_for_uid()`, no arguments).
 
 **Student identity is Supabase Auth** (email + password, Google OAuth, password
 recovery); the profile row is `public.students`, created by a database trigger.
@@ -56,8 +76,12 @@ action"*.
 
 ## 4. Shape of a student document
 
-`students/{firebaseUid}` — collection named `students` per
-`SRS/ER_Diagram_last_updated_25_8.jpg` (`Students` entity):
+`students/{firebaseUid}` — **legacy Firestore** collection named `students` per
+`SRS/ER_Diagram_last_updated_3_9.jpg` (`Students` entity). Live identity is
+`public.students` keyed by Supabase `auth.uid()`; this Firestore shape is what
+§10 still assumes until the identity bridge exists. The ER/SRS data dictionary
+still lists a `Password` attribute; that is satisfied by **Supabase Auth**, not
+by a column on `public.students` or `public.admins`:
 
 ```jsonc
 {
@@ -214,7 +238,7 @@ instead of always to `/dashboard`.
 | **Confirm email** | Auth → Providers → **Email** | **OFF** — required. Our Gmail code is the verification, done *before* `signUp`; with this ON, `signUp` returns a user but **no session**, so the student is created and then stuck (the app reports "Account created, but this Supabase project still confirms email addresses itself" rather than looping). With it OFF the account is signed in immediately and **no second verification mail is sent**. |
 | Allow new users to sign up | Auth → Providers → Email | **ON** — turning it off returns `Signups not allowed for this project` and signup cannot work at all |
 | Confirm signup template | Auth → Email templates | Irrelevant to signup now (nothing to confirm). Leave the default. |
-| OTP expiry / rate limits | Auth → Rate limits | Not used for signup. The 10-minute window and 60-second resend gap are enforced by `src/utils/otpService.js` + `api/send-otp.js` (5 codes/address/10 min, 12/IP). |
+| OTP expiry / rate limits | Auth → Rate limits | Not used for signup. The 10-minute window and 60-second resend gap are enforced by `src/utils/otpService.js` + `api/send-otp.js` (5 codes/address/10 min, 20/IP — `MAX_IP_PER_WINDOW` in `api/_otpStore.js`). |
 | Site URL | Auth → URL Configuration | `https://<prod-domain>` |
 | Redirect URLs | Auth → URL Configuration | `https://<prod-domain>/**`, `http://localhost:5173/**` |
 | Google provider | Auth → Providers → Google | Enabled; client id/secret from Google Cloud |
@@ -230,7 +254,7 @@ production incident, so read them as gates, not notes:
 | Gate | Where | Why it fails loudly or silently |
 | --- | --- | --- |
 | `public.auth_otp` + its 4 functions exist | apply `supabase/migrations/20260905120000_auth_otp.sql` (SQL Editor, or `supabase db push`) | `/api/send-otp` answers 502 `store_unavailable`. The migration is idempotent and grants nothing to `anon`/`authenticated`: RLS is enabled with **zero** policies, so only the service role can touch it, and only through the functions. |
-| `public.admin_role_for_uid()` exists | apply `supabase/migrations/20260925150000_admin_role_lookup.sql` (SQL Editor, or `supabase db push`) | Without it, admin status can only be seen through a self-read policy on `public.admins`; with neither, every admin signs in as a student and `authorizationError` says so. The migration adds no policy, no column and no row, and grants execute to `authenticated` only. |
+| `public.admin_role_for_uid()` exists | apply `supabase/migrations/20260925150000_admin_role_lookup.sql` (SQL Editor, or `supabase db push`) | Without it, admin status can only be seen through a self-read policy on `public.admins`; with neither, every admin signs in as a student and `authorizationError` says so. The migration adds no policy, no column and no row, grants execute to `authenticated` only, and pins `set search_path = public, pg_temp`. |
 | `OTP_PEPPER` | Vercel → Environment Variables → *Production* | Missing ⇒ 500 naming the variable (by design, names only). Present but changed ⇒ every outstanding code is invalid, which is the intended behaviour during an incident. |
 | `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` | Vercel → Environment Variables → *Production* | These are the **server** copies. The browser never sees them; `VITE_`-prefixing the service-role key would ship it to every visitor, and `src/supabase.js` deliberately refuses to boot on a secret key. |
 | `GMAIL_USER`, `GMAIL_APP_PASSWORD` | Vercel → Environment Variables → *Production* | Missing ⇒ 500. Revoked/expired app password ⇒ 500 *after* the challenge is issued, and the endpoint discards the challenge so the student can retry. |
