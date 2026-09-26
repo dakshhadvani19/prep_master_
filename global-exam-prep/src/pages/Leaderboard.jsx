@@ -3,7 +3,7 @@
  * Students: boards they participate in, Top 100, own rank + percentile.
  * Admins: all boards with Course → Semester → Subject filters.
  */
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Trophy, Medal, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
@@ -82,53 +82,70 @@ function Podium({ rows }) {
     );
 }
 
-const LIST_PAGE = 10;
-
 function RankList({ rows }) {
-    const [open, setOpen] = useState(false);
     const rest = useMemo(() => rows.filter((row) => row.rank > 3), [rows]);
-    const shown = open ? rest : rest.slice(0, LIST_PAGE);
-    const canToggle = rest.length > LIST_PAGE;
+    const scroller = useRef(null);
+    const [end, setEnd] = useState('top');
 
-    useEffect(() => {
-        setOpen(false);
-    }, [rows]);
-
-    function toggle() {
-        setOpen((v) => !v);
+    function measure() {
+        const el = scroller.current;
+        if (!el) return;
+        const top = el.scrollTop <= 16;
+        const bottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 16;
+        setEnd(bottom && !top ? 'bottom' : 'top');
     }
 
-    const toggleBtn = canToggle ? (
+    useEffect(() => {
+        const el = scroller.current;
+        if (!el) return;
+        el.scrollTop = 0;
+        measure();
+    }, [rows]);
+
+    function jump() {
+        const el = scroller.current;
+        if (!el) return;
+        el.scrollTo({
+            top: end === 'bottom' ? 0 : el.scrollHeight,
+            behavior: 'smooth',
+        });
+    }
+
+    const atBottom = end === 'bottom';
+    const toggleBtn = rest.length > 10 ? (
         <motion.button
             type="button"
-            className={`lb-more ${open ? 'lb-more--up' : 'lb-more--down'}`}
-            onClick={toggle}
-            aria-expanded={open}
-            whileHover={{ y: open ? -2 : 2 }}
+            className={`lb-more ${atBottom ? 'lb-more--up' : 'lb-more--down'}`}
+            onClick={jump}
+            aria-label={atBottom ? 'Jump to top of list' : 'Jump to bottom of list'}
+            whileHover={{ y: atBottom ? -2 : 2 }}
             whileTap={{ scale: 0.97 }}
         >
             <span className="lb-more__orb" aria-hidden>
-                {open ? <ChevronUp size={22} strokeWidth={2.25} /> : <ChevronDown size={22} strokeWidth={2.25} />}
+                {atBottom ? <ChevronUp size={22} strokeWidth={2.25} /> : <ChevronDown size={22} strokeWidth={2.25} />}
             </span>
             <span className="lb-more__copy">
-                {open ? 'Show less' : `Show more · ${rest.length - LIST_PAGE} in Top 100`}
+                {atBottom ? 'Back to rank 4' : 'Scroll the rest of Top 100'}
             </span>
         </motion.button>
     ) : null;
 
     return (
         <div data-testid="lb-top100">
-            {open && toggleBtn}
-            <AnimatePresence mode="popLayout">
-                {shown.map((row, i) => (
+            {atBottom && toggleBtn}
+            <div
+                className="lb-scroll"
+                ref={scroller}
+                onScroll={measure}
+                data-testid="lb-scroll"
+            >
+                {rest.map((row, i) => (
                     <motion.div
-                        layout
                         key={row.id}
                         className={`lb-row ${row.isYou ? 'is-you' : ''}`}
                         initial={{ opacity: 0, x: -12 }}
                         animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: 8 }}
-                        transition={{ delay: Math.min(i, 12) * 0.018, duration: 0.28 }}
+                        transition={{ delay: Math.min(i, 9) * 0.02, duration: 0.28 }}
                     >
                         <span className="lb-badge">{row.rank}</span>
                         <div>
@@ -139,9 +156,9 @@ function RankList({ rows }) {
                         <div className="lb-row__tests">{row.tests} tests</div>
                     </motion.div>
                 ))}
-            </AnimatePresence>
-            {!open && toggleBtn}
-            {rest.length === 0 && <div className="lb-empty">No students match this view.</div>}
+                {rest.length === 0 && <div className="lb-empty">No students match this view.</div>}
+            </div>
+            {!atBottom && toggleBtn}
         </div>
     );
 }
