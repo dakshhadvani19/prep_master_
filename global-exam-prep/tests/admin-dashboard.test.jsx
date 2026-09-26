@@ -103,11 +103,12 @@ describe('student', () => {
     expect(screen.queryByText('Add Admin')).toBeNull();
   });
 
-  it('cannot open the admin courses placeholder', async () => {
+  it('cannot open the admin Courses catalog', async () => {
     signedInAs({ uid: 's1', email: 's@x.com', fullName: 'Student One' });
     await at('/admin/courses');
     await waitFor(() => expect(screen.getByText('STUDENT DASHBOARD')).toBeInTheDocument());
-    expect(screen.queryByText('Catalog structure')).toBeNull();
+    expect(screen.queryByText('Catalog')).toBeNull();
+    expect(screen.queryByRole('button', { name: /Add Course/i })).toBeNull();
   });
 });
 
@@ -141,12 +142,11 @@ describe('standard admin', () => {
     expect(screen.queryByText('LANDING')).toBeNull();
   });
 
-  it('opens the Courses placeholder without implementing CRUD', async () => {
+  it('opens Courses for an admin without writing to public.admins', async () => {
     signedInAs({ uid: 'a1', email: 'a@x.com', fullName: 'Admin One', staff: 'admin' });
     await at('/admin/courses');
-    await waitFor(() => expect(screen.getByText('Catalog structure')).toBeInTheDocument());
-    fireEvent.click(screen.getByRole('button', { name: /Add subject/i }));
-    expect(screen.getByRole('status').textContent).toMatch(/Phase 3/i);
+    await waitFor(() => expect(screen.getByText('Catalog')).toBeInTheDocument());
+    expect(screen.getByRole('button', { name: /Add Course/i })).toBeInTheDocument();
     expect(state.calls.filter((c) => c.table === 'admins' && c.op !== 'select')).toHaveLength(0);
   });
 });

@@ -3,8 +3,8 @@
 Update this file after **every** Agent Mode task. Keep it short, factual, and code-verified.
 Long-term rules and architecture live in `PREPMaster_PROJECT_CONTEXT.md` (same folder).
 
-**Last updated:** 2026-09-26 (Phase 2 — admin UI shell + role-aware navigation + Admin Dashboard)
-**Verified by:** reading the working tree, `npx vitest run` (18 files / 227 tests), `npm run build`.
+**Last updated:** 2026-09-26 (Phase 3 — admin Courses / Subjects / Questions mock UI)
+**Verified by:** reading the working tree, `npx vitest run` (19 files / 238 tests), `npm run build`.
 
 ## Repository state
 
@@ -12,15 +12,15 @@ Long-term rules and architecture live in `PREPMaster_PROJECT_CONTEXT.md` (same f
 | --- | --- |
 | Git root / app dir | `/home/user/prep_master_` / `global-exam-prep/` |
 | Branch | `main`, tracking `origin/main` |
-| HEAD at last fetch | `4804603` `docs: update SRS and sync current codebase` |
-| This session | **not committed, not pushed.** Phase 2 UI + docs in the workspace |
+| HEAD at last fetch | `2d4e10e` `Merge remote-tracking branch 'origin/main'` (Phase 2 `1dfd8f8` + `cb5ea6f` search_path) |
+| This session | **not committed, not pushed.** Phase 3 UI + tests + docs in the workspace. Do not include leftover `AUTH.md`. |
 
 ## Architecture snapshot (verified)
 
 React 19 + Vite SPA. Identity/role = Supabase Auth → `auth.uid()` → `public.admins` lookup (Phase 1).
-`/dashboard` is `DashboardSwitch`: students keep `Dashboard.jsx`; admin / superAdmin get
-`AdminDashboard.jsx`. Navbar is role-dependent. Feedback email-only. Catalog is static
-`mockData.js`. No leaderboard/test-room/subscription implementation.
+`/dashboard` is `DashboardSwitch`. Navbar is role-dependent. Feedback email-only. Student catalog is
+static `mockData.js`. Admin catalog at `/admin/courses` is **in-memory** (`AdminCourses.jsx` seed).
+No leaderboard/test-room/subscription implementation.
 
 ## Authentication state
 
@@ -38,30 +38,36 @@ staff row). Until then an admin session fail-closes to `student`.
 | --- | --- | --- |
 | 1 | Real admin authentication + authorization resolution | ✅ implemented (live apply/insert outstanding) |
 | 2 | Admin UI shell + role-aware navigation + Admin Dashboard | ✅ **UI complete, mock-only beyond auth.** Persistence not started. |
-| 3 | Courses / Subjects / Questions UI | 📝 not started (`/admin/courses` is a structure placeholder) |
+| 3 | Courses / Subjects / Questions UI | ✅ **UI complete, in-memory only.** No schema, no API, no persistence. |
 | 4 | Leaderboard UI | 📝 not started (dashboard card + navbar link only) |
 | 5 | Final admin integration / QA | 📝 not started |
 
-## What Phase 2 implemented (UI)
+## What Phase 3 implemented (UI)
 
-- Role-aware navbar: guests/students keep Home + Subscriptions; admins see Dashboard + Courses + Leaderboards + Feedback.
-- Authenticated admins have no Home: `/` → `/dashboard`. Logo → `/dashboard`.
-- Admin Dashboard: Overview, Feedback overview (Total / Seen / Remaining = Total − Seen, CSS donut), preview feedback actions, Spam users structure, Courses / Leaderboard / Syllabus entry cards.
-- Super Admin only (`isSuperAdmin`): Add Admin, Remove Admin, Add Super Admin mock modals — **no DB writes**.
-- `/admin/courses` placeholder: Course → Semester → Subjects → Questions + anticipated Add/Edit/Update/Remove buttons (Phase 3 notices).
+- `/admin/courses` (`ProtectedRoute requiredRole="admin"`) is a catalog, not a placeholder.
+- Hierarchy: Course → Semester → Subjects → Questions with dependent selection.
+- Mock Add / Edit / Update / Remove for **Courses**, **Subjects**, and **Questions**.
+- Semesters: list/select from the course Sems list only (no semester CRUD).
+- Edit Subject / Edit Question include Choose course (and subject).
+- Question fields follow TestsData + `questionGenerator.js`: objective `text` / `options[]` / `answer`;
+  subjective `text` / `marks`. No invented difficulty/tags/explanations.
+- Completion toast: `Preview only — no data was changed.` Destructive confirm stays professional.
+- Distinct hover per object (course shine, semester lift, subject slide+bar, question gold underline).
+- Student navbar (Home / Subscriptions) unchanged. No `public.admins` writes. No new migrations.
 
 ## What remains mock-only
 
-Feedback counts and rows, spam list, staff add/remove/promote, subject/question CRUD, leaderboard data. No new tables. No `public.admins` writes. No API calls from the new UI.
+Feedback counts and rows, spam list, staff add/remove/promote, **catalog persistence**, leaderboard
+data. Student exam catalog is still `mockData.js`. No new tables.
 
 ## Next intended task
 
-**Phase 3** — Courses / Subjects / Questions mock UI (real CRUD still not authorised unless a later task says so). Do not start it from this status file.
+**Phase 4** — Leaderboard UI (not started). Do not start it from this status file.
 
 ## Verification snapshot
 
 ```
-npx vitest run  → 18 files / 227 tests passed
+npx vitest run  → 19 files / 238 tests passed
 npm run build   → built OK
 ```
 

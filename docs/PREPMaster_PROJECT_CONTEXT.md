@@ -295,7 +295,7 @@ authenticated admins `Navigate` to `/dashboard`) · `/signup` (`?mode=login|sign
 `location.state`**) · `/domains/:domainId/courses` · `/courses/:courseId/subjects` ·
 `/exams/:subjectId/:examType/:difficulty` (protected) · `/dashboard` (protected, `DashboardSwitch`) ·
 `/review/:historyId` (protected) · `/admin/syllabus` (`ProtectedRoute requiredRole="admin"`) ·
-`/admin/courses` (`ProtectedRoute requiredRole="admin"`, Phase 2 placeholder) · `/search` ·
+`/admin/courses` (`ProtectedRoute requiredRole="admin"`, Phase 3 mock catalog UI) · `/search` ·
 `/feedback` · `/guide` · `*` → inline `NotFound`.
 
 `ProtectedRoute`: `authLoading` → render nothing · no `currentUser` → `/signup?mode=login` with
@@ -325,8 +325,9 @@ commented out. Google signup/login is still available on `/signup`. Do not uncom
 ## 13. Admin UI Rules (Phase 2 shell ✅; persistence 📝)
 
 **Status:** ✅ Phase 2 UI shell is in the repo (`AdminDashboard.jsx` on `/dashboard` for staff,
-role-aware navbar, `/admin/courses` placeholder). 📝 every write path (feedback store, spam,
-staff add/remove, catalog CRUD, leaderboard) is still mock-only. `SyllabusAdmin.jsx` is the
+role-aware navbar). `/admin/courses` is the Phase 3 in-memory catalog UI. 📝 every write path
+(feedback store, spam, staff add/remove, catalog persistence, leaderboard) is still mock-only.
+`SyllabusAdmin.jsx` is the
 pre-existing syllabus page (Firestore + Storage, still gated by the Firebase-identity gap in §9).
 
 Primary reference (prefer these over any older `*_25_8` / `finaladmin_*` filenames — those files
@@ -345,7 +346,7 @@ From `adminflowchart.jpg` (and the matching activity diagram):
    with Google). DFD1 inbound: Signup credentials, Add/Remove admin, Make an admin super admin.
 3. **Standard Admin Dashboard** (✅ Phase 2 UI): hub with Check Leaderboard & Ranking
    (📝 Phase 4), Read Feedback (✅ placeholder visualization; 📝 Phase 5 persistence), Edit Subject and
-   Edit Question (📝 Phase 3, entry → `/admin/courses`). Feedback actions: Set User as Spam,
+   Edit Question (✅ Phase 3 mock UI, entry → `/admin/courses`; 📝 persistence). Feedback actions: Set User as Spam,
    Set Feedback as Spam, Bookmark, Set as Seen — buttons exist, they do not write.
 4. Logout → End.
 
@@ -389,8 +390,12 @@ Questions come from `src/data/questionGenerator.js` (`universitySyllabus` + `exa
 `universitySyllabus.js`, `pdfSyllabus.js`, `predicted_ai_syllabus.json`, uploaded/`fetchSyllabus`
 Firestore PDFs, and AI generation via `geminiQuestions.js` → `/api/ai`.
 
-📝 Planned admin Courses flow (Phase 3) — Course → Semester → Subjects → Questions — with
-**Add / Edit / Update / Remove** for Subjects and Questions. SRS/ER + Appendix A names:
+✅ Phase 3 mock UI (`AdminCourses.jsx` at `/admin/courses`) — Course → Semester → Subjects →
+Questions, in memory only (seeded from two B.Tech courses; not `mockData.js` and not a DB).
+**Add / Edit / Update / Remove** for Courses, Subjects, and Questions. Semesters are selected
+from the course Sems list (no semester CRUD). Edit Subject / Edit Question include Choose
+course (and subject). Destructive confirm toast: `Preview only — no data was changed.`
+SRS/ER + Appendix A names:
 
 - Courses: `CourseId` PK, `CourseName`, `Sems` (array, up to 12).
 - Subjects: `SubjectId` PK, `SubjectName`, `CourseId` FK. Use-case: Edit question / Edit Subject
@@ -398,12 +403,12 @@ Firestore PDFs, and AI generation via `geminiQuestions.js` → `/api/ai`.
 - TestsData: `TestId` PK, `Questions` / `Options` / `Answers` arrays. Class diagram operations:
   `editQuestion`, `addQuestion`, `deleteQuestion`, `changeQuestionPreference`.
 
-**None of this admin CRUD exists in the repo.** No `domains/courses/subjects/questions` tables
-exist in the Supabase migrations, and the Firestore collections `domains`, `courses`, `subjects`
-are read-only `allow: if true` with writes gated on the (currently unreachable) `isAdmin()`.
-Phase 3 is therefore mock UI + a storage decision that has to be made explicitly (Firestore vs
-Supabase tables + migrations). Do not treat the SRS data-dictionary types (`Long`, `Password`
-columns, Mongo-style arrays) as a mandate to recreate that physical schema — they are conceptual.
+The admin catalog **UI** exists; **persistence does not.** No `domains/courses/subjects/questions`
+tables exist in the Supabase migrations, and the Firestore collections `domains`, `courses`,
+`subjects` are read-only `allow: if true` with writes gated on the (currently unreachable)
+`isAdmin()`. Storage (Firestore vs Supabase tables + migrations) still has to be chosen before
+any real CRUD. Do not treat the SRS data-dictionary types (`Long`, `Password` columns,
+Mongo-style arrays) as a mandate to recreate that physical schema — they are conceptual.
 
 ## 16. Leaderboard Requirements
 
@@ -617,6 +622,9 @@ staff exists) an admin sign-in.
 - **Phase 2 admin shell (2026-09-26):** `/dashboard` is role-switched, not duplicated; admin navbar
   is AuthContext-driven; super-admin staff controls are `isSuperAdmin` only; no `public.admins`
   writes from the UI.
+- **Phase 3 catalog UI (2026-09-26):** `/admin/courses` is in-memory Course → Semester → Subject →
+  Question CRUD (semesters select-only). No tables, no API, no persistence. Student catalog remains
+  `mockData.js`.
 
 ## 26. Future Planned Work (owner's phase plan)
 
@@ -625,8 +633,9 @@ staff exists) an admin sign-in.
 2. **Phase 2 — Admin UI shell + role-aware navigation + admin dashboard.** ✅ UI-complete in this
    repo (no persistence). `/dashboard` is `DashboardSwitch`: students keep `Dashboard.jsx`, staff
    see `AdminDashboard.jsx`. Navbar Home→Dashboard and Subscriptions→Courses for admins only.
-3. **Phase 3 — Courses / Subjects / Questions: mock UI** for Course → Semester → Subjects → Questions
-   with Add/Edit/Update/Remove for subjects and questions, following `SRS/adminflowchart.jpg`
+3. **Phase 3 — Courses / Subjects / Questions: mock UI.** ✅ UI-complete in this repo (no
+   persistence). Course → Semester → Subjects → Questions with Add/Edit/Update/Remove for
+   courses, subjects, and questions (semesters select-only), following `SRS/adminflowchart.jpg`
    (Edit Subject / Edit Question), the use-case “Choose course and subject”, ER Courses/Subjects/
    TestsData, and SRS §3.2 Content Management; storage decision documented before any persistence.
 4. **Phase 4 — Leaderboard UI**: student-scoped boards, Top 100 + self rank/percentile, admin
@@ -657,8 +666,9 @@ loosening RLS, or renaming env vars — each needs its own instruction.
   `chunkSizeWarningLimit` is intentional.
 - One-off root scripts import packages that are not in `package.json` (`pdf-parse`, `pdf2json`,
   `playwright`) — they are offline tooling, deliberately not installed.
-- Admin UI is Phase 2 shell only: a real admin lands on `AdminDashboard.jsx`. Writes (staff, spam,
-  feedback, catalog, leaderboard) are still preview-only.
+- Admin UI is Phase 2 shell + Phase 3 mock catalog: a real admin lands on `AdminDashboard.jsx`;
+  `/admin/courses` is in-memory. Writes (staff, spam, feedback, catalog, leaderboard) are still
+  preview-only.
 - **SRS vs running stack (do not “fix” code to match the stack paragraph):** the PDF still names
   MERN, MongoDB, JWT, Socket.io, Tailwind CSS v4. The running app is Vite + React 19, Supabase Auth
   + Postgres, Firebase Firestore/Storage, Vercel serverless, and CSS design tokens. Follow the
@@ -689,7 +699,7 @@ These are the files that exist **now**. Do not cite `*_25_8.jpg`, `finaladmin_*`
 | Student exam catalog / take test / review (static data + Firestore history) | ⚠️ history blocked by Firebase-identity gap (§9) |
 | Syllabus Admin page | ⚠️ UI exists; writes blocked by §9 |
 | Admin Dashboard, role-aware nav, staff management UI | ✅ Phase 2 UI shell (mock writes); 📝 Phase 5 persistence |
-| Courses / Subjects / Questions admin CRUD | 📝 Phase 3 — **not** implemented (catalog is static) |
+| Courses / Subjects / Questions admin CRUD | ✅ Phase 3 mock UI (`/admin/courses`); 📝 no persistence (student catalog still static `mockData.js`) |
 | Leaderboards | 📝 Phase 4 — navbar label only |
 | Feedback store + admin moderation | 📝 — student form emails the owner; no store |
 | Test rooms, subscriptions, payments, token gates | 📝 SRS-required, **outside** Phases 2–5 |
