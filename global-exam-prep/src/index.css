@@ -14,6 +14,13 @@
   --accent-light: rgba(59, 130, 246, 0.1);
   --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
 
+  --gold: #ffb454;
+  --gold-soft: rgba(255, 180, 84, 0.14);
+  --gold-line: rgba(255, 180, 84, 0.38);
+  --gold-bright: #ffd08a;
+  --violet: #8d7bff;
+  --violet-soft: rgba(141, 123, 255, 0.16);
+
   --success: #10b981;
   --warning: #f59e0b;
   --danger: #ef4444;
@@ -34,8 +41,9 @@
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
   --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
 
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --transition-fast: 0.15s ease;
-  --transition-normal: 0.3s ease;
+  --transition-normal: 0.3s var(--ease-out);
 }
 
 * {
@@ -47,6 +55,11 @@
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(1200px 520px at 8% -10%, rgba(59, 130, 246, 0.16), transparent 55%),
+    radial-gradient(900px 480px at 110% 0%, rgba(141, 123, 255, 0.14), transparent 50%),
+    radial-gradient(700px 360px at 50% 120%, rgba(255, 180, 84, 0.07), transparent 55%);
+  background-attachment: fixed;
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
@@ -103,6 +116,11 @@ button {
   border: none;
   outline: none;
   background: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
 }
 
 /* Utilities */
@@ -216,4 +234,25 @@ button {
   .container {
     max-width: 1400px;
   }
+}
+
+@keyframes pm-shine {
+  to { transform: translateX(130%); }
+}
+
+@keyframes pm-underline {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .spin { animation: none !important; }
 }

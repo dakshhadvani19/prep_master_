@@ -1,0 +1,38 @@
+/* Student dashboard — same palette, product geometry. Data fetch unchanged. */
+
+.sd {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.sd-card {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), transparent 36%),
+        var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 1.15rem 1.2rem;
+    margin-bottom: 0.85rem;
+    transition: transform 0.24s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)),
+                border-color 0.24s ease,
+                box-shadow 0.24s ease;
+}
+
+.sd-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, transparent 35%, rgba(59, 130, 246, 0.12) 50%, transparent 65%);
+    transform: translateX(-140%);
+}
+
+.sd-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(59, 130, 246, 0.35);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28);
+}
+
+.sd-card:hover::after { animation: pm-shine 0.7s ease forwards; }

@@ -5,6 +5,7 @@ import { Award, Clock, ArrowLeft, Target, BookOpen, Search, CheckCircle, Loader 
 import { useAuth } from '../context/AuthContext';
 import { db } from '../firebase';
 import { collection, query, getDocs, orderBy } from 'firebase/firestore';
+import './Dashboard.css';
 
 export default function Dashboard() {
     const [history, setHistory] = useState([]);
@@ -57,7 +58,7 @@ export default function Dashboard() {
     };
 
     return (
-        <div className="container animate-fade-in" style={{ maxWidth: '900px' }}>
+        <div className="container animate-fade-in sd" style={{ maxWidth: '900px' }}>
             <button
                 onClick={() => navigate(-1)}
                 style={{

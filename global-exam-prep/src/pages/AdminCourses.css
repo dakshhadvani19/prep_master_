@@ -64,11 +64,19 @@
 }
 
 .ac-panel {
-    background: var(--bg-secondary);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.025), transparent 32%),
+        var(--bg-secondary);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-lg);
     padding: 1rem 1.05rem 1.15rem;
     min-width: 0;
+    transition: border-color 0.24s ease, box-shadow 0.24s ease;
+}
+
+.ac-panel:hover {
+    border-color: rgba(141, 123, 255, 0.22);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
 }
 
 .ac-panel__head {
@@ -385,6 +393,15 @@
     padding: 0.55rem 0.7rem;
     font-family: inherit;
     font-size: 0.9rem;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.ac-field input:focus,
+.ac-field select:focus,
+.ac-field textarea:focus {
+    border-color: var(--gold-line);
+    box-shadow: 0 0 0 3px var(--gold-soft);
+    outline: none;
 }
 
 .ac-field textarea { min-height: 88px; resize: vertical; }

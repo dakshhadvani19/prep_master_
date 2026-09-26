@@ -1,0 +1,39 @@
+/* Shell chrome — PrepMaster product language. Nav labels/paths unchanged. */
+
+.pm-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.pm-nav__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.pm-logo {
+    position: relative;
+    transition: transform 0.28s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1));
+}
+
+.pm-logo:hover {
+    transform: translateY(-1px);
+}
+
+.pm-logo__mark {
+    transition: transform 0.28s var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)), box-shadow 0.28s ease;
+}
+
+.pm-logo:hover .pm-logo__mark {
+    transform: rotate(-6deg) scale(1.04);
+    box-shadow: 0 8px 22px rgba(59, 130, 246, 0.28);
+}
+
+.pm-main {
+    flex: 1;
+    padding: 2rem 0 3rem;
+}
+
+@media (max-width: 768px) {
+    .pm-main { padding: 1.15rem 0 2.5rem; }
+}

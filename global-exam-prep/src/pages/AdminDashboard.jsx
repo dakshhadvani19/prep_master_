@@ -4,6 +4,7 @@
  */
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
     LayoutDashboard, MessageSquare, ShieldAlert, BookOpen, Trophy,
     Shield, UserPlus, UserMinus, Crown, Bookmark, Eye, Flag,
@@ -93,7 +94,12 @@ export default function AdminDashboard() {
 
     return (
         <div className="admin-dash">
-            <header className="admin-dash__hero">
+            <motion.header
+                className="admin-dash__hero"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            >
                 <div>
                     <div className="admin-dash__kicker">Admin control center</div>
                     <h1 className="admin-dash__title">Dashboard</h1>
@@ -103,10 +109,18 @@ export default function AdminDashboard() {
                     {isSuperAdmin ? <Crown size={14} /> : <Shield size={14} />}
                     {isSuperAdmin ? 'Super Admin' : 'Standard Admin'}
                 </span>
-            </header>
+            </motion.header>
 
-            <div className="admin-grid">
-                <section className="admin-card admin-card--span-12" aria-labelledby="overview-heading">
+            <motion.div
+                className="admin-grid"
+                initial="hidden"
+                animate="show"
+                variants={{
+                    hidden: {},
+                    show: { transition: { staggerChildren: 0.06 } },
+                }}
+            >
+                <motion.section className="admin-card admin-card--span-12" aria-labelledby="overview-heading" variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0 } }}>
                     <div className="admin-card__head">
                         <div>
                             <h2 className="admin-card__title" id="overview-heading">
@@ -130,9 +144,9 @@ export default function AdminDashboard() {
                             <div className="admin-stat__value admin-stat__value--gold">{stats.remaining}</div>
                         </div>
                     </div>
-                </section>
+                </motion.section>
 
-                <section className="admin-card admin-card--span-8" aria-labelledby="feedback-heading">
+                <motion.section className="admin-card admin-card--span-8" aria-labelledby="feedback-heading" variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0 } }}>
                     <div className="admin-card__head">
                         <div>
                             <h2 className="admin-card__title" id="feedback-heading">
@@ -169,9 +183,9 @@ export default function AdminDashboard() {
                         ))}
                     </div>
                     {notice && <div className="admin-banner" role="status">{notice}</div>}
-                </section>
+                </motion.section>
 
-                <section className="admin-card admin-card--span-4" aria-labelledby="spam-heading">
+                <motion.section className="admin-card admin-card--span-4" aria-labelledby="spam-heading" variants={{ hidden: { opacity: 0, y: 14 }, show: { opacity: 1, y: 0 } }}>
                     <div className="admin-card__head">
                         <div>
                             <h2 className="admin-card__title" id="spam-heading">
@@ -192,7 +206,7 @@ export default function AdminDashboard() {
                         <button type="button" className="admin-chip" onClick={() => previewOnly('Preview control — no user is flagged or restored.')}>Restore (preview)</button>
                         <button type="button" className="admin-chip" onClick={() => previewOnly('Preview control — no user is deleted.')}>Remove flag (preview)</button>
                     </div>
-                </section>
+                </motion.section>
 
                 <Link to="/admin/courses" className="admin-card admin-card--span-4 admin-entry" aria-labelledby="courses-entry">
                     <div className="admin-entry__icon"><BookOpen size={18} /></div>
@@ -243,11 +257,27 @@ export default function AdminDashboard() {
                         </div>
                     </section>
                 )}
-            </div>
+            </motion.div>
 
+            <AnimatePresence>
             {modal && (
-                <div className="admin-modal-backdrop" onClick={closeModal} role="presentation">
-                    <form className="admin-modal" onClick={(e) => e.stopPropagation()} onSubmit={submitModal} aria-labelledby="staff-modal-title">
+                <motion.div
+                    className="admin-modal-backdrop"
+                    onClick={closeModal}
+                    role="presentation"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                >
+                    <motion.form
+                        className="admin-modal"
+                        onClick={(e) => e.stopPropagation()}
+                        onSubmit={submitModal}
+                        aria-labelledby="staff-modal-title"
+                        initial={{ opacity: 0, y: 16, scale: 0.98 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 8 }}
+                    >
                         <h3 id="staff-modal-title">
                             {modal === 'add' && 'Add Admin'}
                             {modal === 'remove' && 'Remove Admin'}
@@ -280,9 +310,10 @@ export default function AdminDashboard() {
                             <button type="button" className="admin-btn" onClick={closeModal}>Cancel</button>
                             <button type="submit" className="admin-btn admin-btn--gold">Confirm (preview)</button>
                         </div>
-                    </form>
-                </div>
+                    </motion.form>
+                </motion.div>
             )}
+            </AnimatePresence>
         </div>
     );
 }

@@ -4,6 +4,7 @@ import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Tro
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import { domains } from '../data/mockData';
+import './Layout.css';
 
 export default function Layout() {
     const { currentUser, logout, isAdmin, authLoading } = useAuth();
@@ -141,7 +142,7 @@ export default function Layout() {
 
     return (
         <>
-            <nav style={{
+            <nav className="pm-nav" style={{
                 position: 'sticky',
                 top: 0,
                 zIndex: 50,
@@ -161,8 +162,8 @@ export default function Layout() {
                     gap: '0.75rem',
                 }}>
                     {/* Logo */}
-                    <Link to={showAdminNav ? '/dashboard' : '/'} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
-                        <div style={{
+                    <Link to={showAdminNav ? '/dashboard' : '/'} className="pm-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexShrink: 0 }}>
+                        <div className="pm-logo__mark" style={{
                             background: 'var(--accent-gradient)',
                             padding: '0.45rem',
                             borderRadius: 'var(--radius-md)',
@@ -218,7 +219,7 @@ export default function Layout() {
                                                 border: '1px solid rgba(255, 255, 255, 0.18)',
                                                 borderRadius: 'var(--radius-full)',
                                                 zIndex: 0,
-                                                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(59, 130, 246, 0.15)',
+                                                boxShadow: '0 4px 20px rgba(0, 0, 0, 0.4), 0 0 18px rgba(255, 180, 84, 0.16)',
                                             }}
                                             transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
                                         />
@@ -636,8 +637,15 @@ export default function Layout() {
                 )}
             </nav>
 
-            <main style={{ flex: 1, padding: '2rem 0' }}>
-                <Outlet />
+            <main className="pm-main" style={{ flex: 1, padding: '2rem 0' }}>
+                <motion.div
+                    key={location.pathname}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+                >
+                    <Outlet />
+                </motion.div>
             </main>
 
             <footer style={{
