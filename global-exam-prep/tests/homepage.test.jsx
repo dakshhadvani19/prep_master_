@@ -144,12 +144,14 @@ describe('homepage', () => {
     const dead = hrefs.filter((h) => !KNOWN.has(pathOf(h)) && !dynamic.some((re) => re.test(pathOf(h))));
     expect(dead, `links with no matching route: ${dead.join(', ')}`).toEqual([]);
 
-    // the two unbuilt features must degrade to the 404 page, never a crash
-    for (const path of ['/leaderboards', '/subscriptions']) {
-      cleanup();
-      await at(path);
-      expect(document.body.textContent).toMatch(/404|Page not found/i);
-    }
+    // subscriptions is still unbuilt; leaderboards is Phase 4 (auth-gated)
+    cleanup();
+    await at('/subscriptions');
+    expect(document.body.textContent).toMatch(/404|Page not found/i);
+    cleanup();
+    await at('/leaderboards');
+    await waitFor(() => expect(activeTab()).toBe('Log in'));
+    expect(screen.queryByText('404')).toBeNull();
   }, 20000);
 
   it('the auth page is reachable by its legacy aliases without a redirect loop', async () => {

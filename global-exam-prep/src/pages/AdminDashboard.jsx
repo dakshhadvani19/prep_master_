@@ -201,12 +201,12 @@ export default function AdminDashboard() {
                     <span className="admin-linkish">Open Courses →</span>
                 </Link>
 
-                <div className="admin-card admin-card--span-4 admin-entry" aria-labelledby="leaderboard-entry">
+                <Link to="/leaderboards" className="admin-card admin-card--span-4 admin-entry" aria-labelledby="leaderboard-entry">
                     <div className="admin-entry__icon admin-entry__icon--gold"><Trophy size={18} /></div>
                     <h2 className="admin-card__title" id="leaderboard-entry">Leaderboard &amp; ranking</h2>
-                    <p>Leaderboard management. Rankings, filters and search arrive in Phase 4.</p>
-                    <span className="admin-linkish">Coming next</span>
-                </div>
+                    <p>All boards with Course → Semester → Subject filters. Preview ranks only.</p>
+                    <span className="admin-linkish">Open Leaderboard →</span>
+                </Link>
 
                 <Link to="/admin/syllabus" className="admin-card admin-card--span-4 admin-entry" aria-labelledby="syllabus-entry">
                     <div className="admin-entry__icon"><Shield size={18} /></div>

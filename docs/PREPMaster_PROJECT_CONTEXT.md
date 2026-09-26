@@ -295,7 +295,8 @@ authenticated admins `Navigate` to `/dashboard`) · `/signup` (`?mode=login|sign
 `location.state`**) · `/domains/:domainId/courses` · `/courses/:courseId/subjects` ·
 `/exams/:subjectId/:examType/:difficulty` (protected) · `/dashboard` (protected, `DashboardSwitch`) ·
 `/review/:historyId` (protected) · `/admin/syllabus` (`ProtectedRoute requiredRole="admin"`) ·
-`/admin/courses` (`ProtectedRoute requiredRole="admin"`, Phase 3 mock catalog UI) · `/search` ·
+`/admin/courses` (`ProtectedRoute requiredRole="admin"`, Phase 3 mock catalog UI) · `/leaderboards`
+(`ProtectedRoute`, Phase 4 mock ranking UI) · `/search` ·
 `/feedback` · `/guide` · `*` → inline `NotFound`.
 
 `ProtectedRoute`: `authLoading` → render nothing · no `currentUser` → `/signup?mode=login` with
@@ -305,7 +306,8 @@ else `/dashboard` · `requiredRole='admin'` without it → `/dashboard`. `adminH
 Navbar is **role-dependent** (`Layout.jsx`, `AuthContext.isAdmin` only):
 - Guest / student: Home `/` · Leaderboards `/leaderboards` · Feedback `/feedback` · Subscriptions `/subscriptions`.
 - Authenticated admin / superAdmin: Dashboard `/dashboard` · Courses `/admin/courses` · Leaderboards · Feedback.
-⚠️ `/leaderboards` and `/subscriptions` still have **no pages** (`NotFound`). User menu: Dashboard,
+⚠️ `/subscriptions` still has **no page** (`NotFound`). `/leaderboards` is the Phase 4 mock UI.
+User menu: Dashboard,
 Log out, gold **Syllabus Admin** when `isAdmin`. Logo goes to `/dashboard` for admins, `/` otherwise.
 
 Landing page (`LandingPage.jsx`, owner `4804603`): the hero **“Continue with Google”** CTA is
@@ -412,21 +414,21 @@ Mongo-style arrays) as a mandate to recreate that physical schema — they are c
 
 ## 16. Leaderboard Requirements
 
-Verified current state: **not implemented** (📝). The only occurrences are the navbar label/link in
-`Layout.jsx` (`/leaderboards`) and a mobile link + `Trophy` icon; there is no route, page, query,
-table or ranking logic anywhere in `src/` or `api/`. SRS/use-case/DFD/ER all require a real
+Verified current state: ✅ Phase 4 **mock UI** at `/leaderboards` (`Leaderboard.jsx`, in-memory
+`leaderboardMock.js`). No table, query, or API. SRS/use-case/DFD/ER still require a real
 Leaderboard (student “Check Leaderboard ranking”; admin “Check leaderboard and ranking”; DFD2 store
 `Leaderboards`; ER `LeaderboardId`, `{StudentId}`, `{Points}`, `SubjectId`, `{TotalTests}`).
 Student sequence: VIEW LEADER BOARD RANKING → REQUEST RANKING → SHOW RANKING.
 
-Requirements to build (owner-specified, 📝 Phase 4; SRS adds global + peer/friend ranking):
+Implemented in the mock UI (owner-specified Phase 4; SRS also names global + peer/friend ranking —
+peer/friend is **not** in this UI):
 - Students see only leaderboards they participate in / that are relevant to them.
 - If a student attempted an exam but is outside the Top 100: still show the Top 100 **and** the
   student's own rank + percentile.
-- Admins eventually see all leaderboards, with search + compact filters: Student Name, Subject Name,
-  Subject ID, Course, Semester. Dependency rule: choosing a Course restricts the Subject list to that
-  course's subjects and the Semester list to that course's semesters. Keep filters few and useful.
-- Admin view needs: search, filtering, results, ranking, percentile, useful exam/context columns.
+- Admins see all leaderboards (mock), with compact filters: Course, Semester, Subject, Student Name.
+  Dependency rule: choosing a Course restricts the Subject list to that course's subjects and the
+  Semester list to that course's semesters.
+- Admin view: search, filtering, results, ranking. Persistence is still 📝.
 - Data dependency: ranks need persisted attempts, which today sit behind the Firebase identity gap
   (§9) — resolve that (or define a Supabase-side attempts table) before promising real leaderboards.
 
@@ -625,6 +627,8 @@ staff exists) an admin sign-in.
 - **Phase 3 catalog UI (2026-09-26):** `/admin/courses` is in-memory Course → Semester → Subject →
   Question CRUD (semesters select-only). No tables, no API, no persistence. Student catalog remains
   `mockData.js`.
+- **Phase 4 leaderboard UI (2026-09-26):** `/leaderboards` is in-memory Top 100 + own rank/percentile
+  (students) and Course → Semester → Subject all-boards (admins). No tables, no API, no persistence.
 
 ## 26. Future Planned Work (owner's phase plan)
 
@@ -638,8 +642,9 @@ staff exists) an admin sign-in.
    courses, subjects, and questions (semesters select-only), following `SRS/adminflowchart.jpg`
    (Edit Subject / Edit Question), the use-case “Choose course and subject”, ER Courses/Subjects/
    TestsData, and SRS §3.2 Content Management; storage decision documented before any persistence.
-4. **Phase 4 — Leaderboard UI**: student-scoped boards, Top 100 + self rank/percentile, admin
-   all-boards view with the compact Course→Subject/Semester dependent filters.
+4. **Phase 4 — Leaderboard UI.** ✅ UI-complete in this repo (no persistence). Student-scoped
+   boards, Top 100 + self rank/percentile; admin all-boards view with Course → Semester → Subject
+   dependent filters. Storage/attempts still blocked by §9 before real ranks.
 5. **Phase 5 — Final admin integration / QA**: wire the mock admin flows to real data, staff
    management (Add/Remove Admin, Add Super Admin) through a secure write path, end-to-end QA of both
    roles, then a docs update.
@@ -666,9 +671,9 @@ loosening RLS, or renaming env vars — each needs its own instruction.
   `chunkSizeWarningLimit` is intentional.
 - One-off root scripts import packages that are not in `package.json` (`pdf-parse`, `pdf2json`,
   `playwright`) — they are offline tooling, deliberately not installed.
-- Admin UI is Phase 2 shell + Phase 3 mock catalog: a real admin lands on `AdminDashboard.jsx`;
-  `/admin/courses` is in-memory. Writes (staff, spam, feedback, catalog, leaderboard) are still
-  preview-only.
+- Admin UI is Phase 2 shell + Phase 3 mock catalog + Phase 4 mock leaderboard: a real admin lands
+  on `AdminDashboard.jsx`; `/admin/courses` and `/leaderboards` are in-memory. Writes (staff, spam,
+  feedback, catalog, leaderboard) are still preview-only.
 - **SRS vs running stack (do not “fix” code to match the stack paragraph):** the PDF still names
   MERN, MongoDB, JWT, Socket.io, Tailwind CSS v4. The running app is Vite + React 19, Supabase Auth
   + Postgres, Firebase Firestore/Storage, Vercel serverless, and CSS design tokens. Follow the
@@ -700,7 +705,7 @@ These are the files that exist **now**. Do not cite `*_25_8.jpg`, `finaladmin_*`
 | Syllabus Admin page | ⚠️ UI exists; writes blocked by §9 |
 | Admin Dashboard, role-aware nav, staff management UI | ✅ Phase 2 UI shell (mock writes); 📝 Phase 5 persistence |
 | Courses / Subjects / Questions admin CRUD | ✅ Phase 3 mock UI (`/admin/courses`); 📝 no persistence (student catalog still static `mockData.js`) |
-| Leaderboards | 📝 Phase 4 — navbar label only |
+| Leaderboards | ✅ Phase 4 mock UI (`/leaderboards`); 📝 no persistence |
 | Feedback store + admin moderation | 📝 — student form emails the owner; no store |
 | Test rooms, subscriptions, payments, token gates | 📝 SRS-required, **outside** Phases 2–5 |
 

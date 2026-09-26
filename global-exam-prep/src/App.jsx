@@ -13,6 +13,7 @@ const SubjectDetails = lazy(() => import('./pages/SubjectDetails'));
 const ExamPortal = lazy(() => import('./pages/ExamPortal'));
 const DashboardSwitch = lazy(() => import('./pages/DashboardSwitch'));
 const AdminCourses = lazy(() => import('./pages/AdminCourses'));
+const Leaderboard = lazy(() => import('./pages/Leaderboard'));
 const ReviewPage = lazy(() => import('./pages/ReviewPage'));
 
 const Signup = lazy(() => import('./pages/Signup'));
@@ -129,6 +130,14 @@ function App() {
                   element={
                     <ProtectedRoute requiredRole="admin">
                       <SyllabusAdmin />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="leaderboards"
+                  element={
+                    <ProtectedRoute>
+                      <Leaderboard />
                     </ProtectedRoute>
                   }
                 />
