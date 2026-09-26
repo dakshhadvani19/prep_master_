@@ -328,7 +328,9 @@ commented out. Google signup/login is still available on `/signup`. Do not uncom
 
 **Status:** ✅ Phase 2 UI shell is in the repo (`AdminDashboard.jsx` on `/dashboard` for staff,
 role-aware navbar). `/admin/courses` is the Phase 3 in-memory catalog UI. 📝 every write path
-(feedback store, spam, staff add/remove, catalog persistence, leaderboard) is still mock-only.
+(feedback store, spam, catalog persistence, leaderboard) is still mock-only. Staff add/remove/promote
+calls `public.manage_admin_staff` (Phase 5); the RPC is not applied on the live project until the
+operator runs the migration.
 `SyllabusAdmin.jsx` is the
 pre-existing syllabus page (Firestore + Storage, still gated by the Firebase-identity gap in §9).
 
@@ -342,10 +344,13 @@ From `adminflowchart.jpg` (and the matching activity diagram):
 1. **Authenticate** (✅ Phase 1): Start → Sign in with Google **or** login with email+password;
    invalid credentials / failed Google → Show Error, Retry; Forgot Password → Send Reset Link via
    Email (shared Supabase recovery). Then **is super admin?**
-2. **Super Admin Dashboard** (✅ Phase 2 mock UI / 📝 Phase 5 writes): Add Admin (Enter Details &
-   Confirm), Remove Admin (Select Admin & Confirm), Add Super Admin (Enter Details & Confirm).
-   Use-case also names **Make an admin a super admin** and **Create account** (include Sign in
-   with Google). DFD1 inbound: Signup credentials, Add/Remove admin, Make an admin super admin.
+2. **Super Admin Dashboard** (✅ Phase 2 UI / ✅ Phase 5 RPC path, ⚠️ live apply outstanding): Add
+   Admin (Enter Details & Confirm), Remove Admin (Select Admin & Confirm), Add Super Admin (Enter
+   Details & Confirm). Writes go through `public.manage_admin_staff(p_action, p_email, p_full_name)`
+   as the signed-in uid — never a client INSERT/UPDATE/DELETE on `public.admins`. Add requires an
+   existing `auth.users` email. Use-case also names **Make an admin a super admin** and **Create
+   account** (include Sign in with Google). DFD1 inbound: Signup credentials, Add/Remove admin,
+   Make an admin super admin. Do not auto-create auth identities from this form.
 3. **Standard Admin Dashboard** (✅ Phase 2 UI): hub with Check Leaderboard & Ranking
    (📝 Phase 4), Read Feedback (✅ placeholder visualization; 📝 Phase 5 persistence), Edit Subject and
    Edit Question (✅ Phase 3 mock UI, entry → `/admin/courses`; 📝 persistence). Feedback actions: Set User as Spam,
@@ -645,9 +650,10 @@ staff exists) an admin sign-in.
 4. **Phase 4 — Leaderboard UI.** ✅ UI-complete in this repo (no persistence). Student-scoped
    boards, Top 100 + self rank/percentile; admin all-boards view with Course → Semester → Subject
    dependent filters. Storage/attempts still blocked by §9 before real ranks.
-5. **Phase 5 — Final admin integration / QA**: wire the mock admin flows to real data, staff
-   management (Add/Remove Admin, Add Super Admin) through a secure write path, end-to-end QA of both
-   roles, then a docs update.
+5. **Phase 5 — Final admin integration / QA**: ⚠️ in repo. Staff management (Add/Remove Admin,
+   Add Super Admin) is a super-admin-only RPC (`manage_admin_staff`); catalog, leaderboard, feedback
+   store, and spam remain mocks because those tables are not in the repo. Operator must apply the
+   staff migration before live writes succeed.
 Explicitly **not** authorised by these plans: removing Firebase, changing the OTP design,
 loosening RLS, or renaming env vars — each needs its own instruction.
 
@@ -672,8 +678,9 @@ loosening RLS, or renaming env vars — each needs its own instruction.
 - One-off root scripts import packages that are not in `package.json` (`pdf-parse`, `pdf2json`,
   `playwright`) — they are offline tooling, deliberately not installed.
 - Admin UI is Phase 2 shell + Phase 3 mock catalog + Phase 4 mock leaderboard: a real admin lands
-  on `AdminDashboard.jsx`; `/admin/courses` and `/leaderboards` are in-memory. Writes (staff, spam,
-  feedback, catalog, leaderboard) are still preview-only.
+  on `AdminDashboard.jsx`; `/admin/courses` and `/leaderboards` are in-memory. Staff writes use
+  `manage_admin_staff` (unapplied on live until the operator runs SQL). Spam, feedback, catalog,
+  and leaderboard writes are still preview-only.
 - **SRS vs running stack (do not “fix” code to match the stack paragraph):** the PDF still names
   MERN, MongoDB, JWT, Socket.io, Tailwind CSS v4. The running app is Vite + React 19, Supabase Auth
   + Postgres, Firebase Firestore/Storage, Vercel serverless, and CSS design tokens. Follow the
@@ -703,7 +710,7 @@ These are the files that exist **now**. Do not cite `*_25_8.jpg`, `finaladmin_*`
 | Super vs standard role flag (`is_super_admin`) | ✅ resolution only; 📝 no dashboard split UI |
 | Student exam catalog / take test / review (static data + Firestore history) | ⚠️ history blocked by Firebase-identity gap (§9) |
 | Syllabus Admin page | ⚠️ UI exists; writes blocked by §9 |
-| Admin Dashboard, role-aware nav, staff management UI | ✅ Phase 2 UI shell (mock writes); 📝 Phase 5 persistence |
+| Admin Dashboard, role-aware nav, staff management UI | ✅ Phase 2 UI; ✅ Phase 5 RPC (`manage_admin_staff`); ⚠️ not applied live |
 | Courses / Subjects / Questions admin CRUD | ✅ Phase 3 mock UI (`/admin/courses`); 📝 no persistence (student catalog still static `mockData.js`) |
 | Leaderboards | ✅ Phase 4 mock UI (`/leaderboards`); 📝 no persistence |
 | Feedback store + admin moderation | 📝 — student form emails the owner; no store |

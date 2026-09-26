@@ -10,18 +10,19 @@
     --line: var(--glass-border);
     --radius: var(--radius-lg);
     --bg-elevated: var(--bg-secondary);
-    max-width: 1180px;
+    max-width: min(1180px, 100%);
     margin: 0 auto;
     padding: 1.5rem 1.25rem 4rem;
+    overflow-x: clip;
 }
 
 .admin-ctrl {
     width: 100%;
-    max-width: 520px;
+    max-width: min(520px, 100%);
     height: auto;
     display: block;
     margin: 0 auto;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .admin-dash__hero {
@@ -157,6 +158,8 @@
     margin: 0;
     font-size: 0.95rem;
     letter-spacing: 0.02em;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .admin-card__tag {
@@ -278,6 +281,9 @@
 .admin-row__title {
     font-size: 0.86rem;
     font-weight: 600;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    min-width: 0;
 }
 
 .admin-row__sub {
@@ -549,6 +555,8 @@
 
 .admin-modal {
     width: min(420px, 100%);
+    max-height: min(88vh, 720px);
+    overflow: auto;
     background: var(--bg-elevated);
     border: 1px solid var(--line);
     border-radius: 16px;

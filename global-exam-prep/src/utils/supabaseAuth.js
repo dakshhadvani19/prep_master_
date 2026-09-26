@@ -501,6 +501,7 @@ export function mapStudentProfile(row, user) {
 
 /** The RPC name, exported so tests and the migration cannot drift apart. */
 export const ADMIN_LOOKUP_FUNCTION = 'admin_role_for_uid';
+export const ADMIN_STAFF_FUNCTION = 'manage_admin_staff';
 
 /** Whitelisted on purpose: only what the app may show, never a credential. */
 const ADMIN_COLUMNS = 'admin_id, auth_uid, full_name, email, is_super_admin';
@@ -600,4 +601,48 @@ export async function resolveAuthorization(client, authUid) {
 export function deriveRole(adminRow) {
     if (!adminRow) return 'student';
     return adminRow.isSuperAdmin ? 'superAdmin' : 'admin';
+}
+
+/**
+ * Super-admin staff write. The browser only sends action + email + name.
+ * Authorization is the database function (caller = auth.uid()). This never
+ * writes public.admins from the client and never sends is_super_admin as a
+ * claim about the caller.
+ */
+export async function manageAdminStaff(client, { action, email, fullName } = {}) {
+    if (!client || typeof client.rpc !== 'function') {
+        throw new Error('Staff management is not available.');
+    }
+    const act = String(action || '').trim().toLowerCase();
+    if (!['add', 'remove', 'add_super'].includes(act)) {
+        throw new Error('That staff action is not valid.');
+    }
+    let out;
+    try {
+        out = await client.rpc(ADMIN_STAFF_FUNCTION, {
+            p_action: act,
+            p_email: String(email || '').trim(),
+            p_full_name: fullName == null ? null : String(fullName),
+        });
+    } catch (err) {
+        throw normalizeAuthError(err);
+    }
+    const { data, error } = out || {};
+    if (error) {
+        const hay = `${error.code || ''} ${error.message || ''}`.toLowerCase();
+        if (/42501|not_authorized|permission denied/.test(hay)) {
+            throw new Error('Only a Super Admin can change staff.');
+        }
+        if (/no_auth_user|p0001/.test(hay)) {
+            throw new Error('That email has no PrepMaster account yet. They must sign up first.');
+        }
+        if (/cannot_remove_self/.test(hay)) {
+            throw new Error('You cannot remove your own admin row.');
+        }
+        if (/pgrst202|could not find the function/.test(hay)) {
+            throw new Error('Staff write path is not applied on this project yet.');
+        }
+        throw normalizeAuthError(error);
+    }
+    return data;
 }

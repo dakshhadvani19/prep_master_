@@ -174,7 +174,8 @@ describe('super admin', () => {
     fireEvent.change(screen.getByLabelText(/Full name/i), { target: { value: 'New Person' } });
     fireEvent.change(screen.getByLabelText(/^Email$/i), { target: { value: 'n@x.com' } });
     fireEvent.click(screen.getByRole('button', { name: /Confirm \(preview\)/i }));
-    await waitFor(() => expect(screen.getByRole('status').textContent).toMatch(/Preview only/i));
+    await waitFor(() => expect(screen.getByRole('status').textContent).toMatch(/Staff added|account yet|not applied|Super Admin/i));
+    expect(state.calls.some((c) => c.fn === 'manage_admin_staff' || c.name === 'rpc:manage_admin_staff')).toBe(true);
     expect(state.calls.some((c) => c.table === 'admins' && c.op !== 'select')).toBe(false);
   });
 

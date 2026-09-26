@@ -230,6 +230,20 @@ export const client = {
   // from the session uid exactly as the SQL body does it server-side.
   rpc: vi.fn(async (fn, args) => {
     state.calls.push({ name: `rpc:${fn}`, op: 'rpc', fn, args: args ?? null });
+    if (fn === 'manage_admin_staff') {
+      const mine = ownAdminRow();
+      if (!mine || mine.is_super_admin !== true) {
+        return { data: null, error: { code: '42501', message: 'not_authorized' } };
+      }
+      return {
+        data: {
+          ok: true,
+          action: args?.p_action || null,
+          email: String(args?.p_email || '').toLowerCase(),
+        },
+        error: null,
+      };
+    }
     if (fn !== 'admin_role_for_uid' || state.adminLookup === 'missing') {
       return {
         data: null,

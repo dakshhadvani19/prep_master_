@@ -9,9 +9,10 @@
     --violet-soft: rgba(141, 123, 255, 0.16);
     --silver: #c9d1dc;
     --bronze: #d49264;
-    max-width: 1180px;
+    max-width: min(1180px, 100%);
     margin: 0 auto;
     padding: 1.15rem 1.25rem 4.5rem;
+    overflow-x: clip;
 }
 
 .lb__hero {
@@ -61,7 +62,7 @@
     align-items: end;
 }
 
-.lb-field { display: flex; flex-direction: column; gap: 0.28rem; min-width: 7.5rem; flex: 1; }
+.lb-field { display: flex; flex-direction: column; gap: 0.28rem; min-width: min(7.5rem, 100%); flex: 1; }
 .lb-field--search { flex: 1.4; min-width: 10rem; }
 
 .lb-field label {
@@ -245,7 +246,7 @@
 .lb-pod--2 .lb-pod__place { color: var(--silver); }
 .lb-pod--3 .lb-pod__place { color: var(--bronze); }
 
-.lb-pod__name { font-weight: 700; margin-top: 0.45rem; font-size: 0.98rem; }
+.lb-pod__name { font-weight: 700; margin-top: 0.45rem; font-size: 0.98rem; overflow-wrap: anywhere; word-break: break-word; }
 .lb-pod__meta { color: var(--text-tertiary); font-size: 0.76rem; margin-top: 0.25rem; }
 
 .lb-you {
@@ -362,7 +363,14 @@
     color: var(--gold);
 }
 
-.lb-row__name { font-weight: 600; font-size: 0.9rem; }
+.lb-row__name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
 .lb-row__sub { font-size: 0.72rem; color: var(--text-tertiary); }
 .lb-row__pts { font-variant-numeric: tabular-nums; font-weight: 700; }
 .lb-row__tests { font-size: 0.75rem; color: var(--text-tertiary); text-align: right; }

@@ -8,9 +8,10 @@
     --violet: #8d7bff;
     --violet-soft: rgba(141, 123, 255, 0.16);
     --danger-soft: rgba(239, 68, 68, 0.12);
-    max-width: 1240px;
+    max-width: min(1240px, 100%);
     margin: 0 auto;
     padding: 1.25rem 1.25rem 4rem;
+    overflow-x: clip;
 }
 
 .ac__hero {
@@ -182,7 +183,7 @@
     color: var(--gold);
 }
 
-.ac-course__name { font-weight: 650; font-size: 0.9rem; }
+.ac-course__name { font-weight: 650; font-size: 0.9rem; overflow-wrap: anywhere; word-break: break-word; }
 .ac-course__meta {
     font-size: 0.72rem;
     color: var(--text-tertiary);
@@ -331,7 +332,7 @@
 
 .ac-row.is-warn { border-color: rgba(255, 180, 84, 0.7); }
 
-.ac-row__title { font-size: 0.88rem; font-weight: 600; }
+.ac-row__title { font-size: 0.88rem; font-weight: 600; overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
 .ac-row__sub { font-size: 0.72rem; color: var(--text-tertiary); margin-top: 0.15rem; }
 
 .ac-bench {
@@ -382,7 +383,7 @@
     padding: 0;
 }
 
-.ac-q__text { font-size: 0.86rem; line-height: 1.4; margin-top: 0.3rem; }
+.ac-q__text { font-size: 0.86rem; line-height: 1.4; margin-top: 0.3rem; overflow-wrap: anywhere; word-break: break-word; }
 .ac-q__meta { font-size: 0.72rem; color: var(--text-tertiary); margin-top: 0.3rem; }
 
 .ac-chip {
@@ -526,6 +527,7 @@
     bottom: 0;
     z-index: 80;
     width: min(460px, 100%);
+    max-height: 100dvh;
     background: var(--bg-secondary);
     border-left: 1px solid var(--gold-line);
     padding: 1.25rem 1.2rem 1.4rem;

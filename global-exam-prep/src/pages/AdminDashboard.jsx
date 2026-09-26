@@ -10,6 +10,8 @@ import {
     Shield, UserPlus, UserMinus, Crown, Bookmark, Eye, Flag,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
+import { supabase } from '../supabase';
+import { manageAdminStaff } from '../utils/supabaseAuth';
 import AdminController from '../components/AdminController';
 import './AdminDashboard.css';
 
@@ -81,6 +83,7 @@ export default function AdminDashboard() {
     const [modal, setModal] = useState(null);
     const [form, setForm] = useState({ name: '', email: '', target: '' });
     const [fbFocus, setFbFocus] = useState(null);
+    const [staffBusy, setStaffBusy] = useState(false);
 
     const stats = useMemo(() => {
         const total = FEEDBACK_PLACEHOLDER.total;
@@ -99,10 +102,27 @@ export default function AdminDashboard() {
         setForm({ name: '', email: '', target: '' });
     }
 
-    function submitModal(e) {
+    async function submitModal(e) {
         e.preventDefault();
-        previewOnly('Preview only — no account is created, removed, or promoted.');
-        closeModal();
+        if (!isSuperAdmin) {
+            previewOnly('Only a Super Admin can change staff.');
+            closeModal();
+            return;
+        }
+        const action = modal === 'add' ? 'add' : modal === 'super' ? 'add_super' : 'remove';
+        const email = modal === 'remove'
+            ? (PREVIEW_ADMINS.find((a) => a.id === form.target)?.email || form.target)
+            : form.email;
+        setStaffBusy(true);
+        try {
+            await manageAdminStaff(supabase, { action, email, fullName: form.name });
+            previewOnly(`Staff ${action === 'remove' ? 'removed' : action === 'add_super' ? 'promoted' : 'added'} for ${String(email || '').trim() || 'that address'}.`);
+            closeModal();
+        } catch (err) {
+            previewOnly(err?.message || 'Staff change did not complete.');
+        } finally {
+            setStaffBusy(false);
+        }
     }
 
     return (
@@ -261,7 +281,7 @@ export default function AdminDashboard() {
                                 {modal === 'remove' && 'Remove Admin'}
                                 {modal === 'super' && 'Add Super Admin'}
                             </h3>
-                            <p>Preview only. Confirm does not change accounts.</p>
+                            <p>Super Admin only. That email must already have a PrepMaster account.</p>
                             {modal !== 'remove' ? (
                                 <>
                                     <div className="admin-field">
@@ -286,7 +306,7 @@ export default function AdminDashboard() {
                             )}
                             <div className="admin-modal__row">
                                 <button type="button" className="admin-btn" onClick={closeModal}>Cancel</button>
-                                <button type="submit" className="admin-btn admin-btn--gold">Confirm (preview)</button>
+                                <button type="submit" className="admin-btn admin-btn--gold" disabled={staffBusy}>Confirm (preview)</button>
                             </div>
                         </motion.form>
                     </motion.div>
