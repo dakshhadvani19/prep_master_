@@ -59,6 +59,7 @@ Design finalized:
 ├── "CourseId"    BIGINT generated identity PK
 ├── "Sems"        INTEGER[] NOT NULL, max 12 entries
 └── "CourseName"  VARCHAR(100) NOT NULL
+```
 
 ## Static catalog normalization
 
