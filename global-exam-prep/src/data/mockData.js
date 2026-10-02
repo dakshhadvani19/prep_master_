@@ -130,7 +130,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01sl0102/ 01sl0103",
+            "id": "PM20001",
             "title": "Reading and Writing for Technology / Speaking and Presentation Skills",
             "sem": 2,
             "exams": [
@@ -290,7 +290,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ee1101",
+            "id": "01it0504",
             "title": "Advanced Java Programming",
             "sem": 5,
             "exams": [
@@ -410,7 +410,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ce0508",
+            "id": "01me0610",
             "title": "Design Engineering and Project Management",
             "sem": 6,
             "exams": [
@@ -420,7 +420,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01it0502",
+            "id": "01cr0601",
             "title": "Business Benchmark",
             "sem": 6,
             "exams": [
@@ -610,7 +610,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ce0501",
+            "id": "01it1801",
             "title": "Major Project – 2",
             "sem": 8,
             "exams": [
@@ -756,7 +756,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01sl0102/ 01sl0103",
+            "id": "PM20001",
             "title": "Reading and Writing for Technology / Speaking and Presentation Skills",
             "sem": 2,
             "exams": [
@@ -1402,7 +1402,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01me1101",
+            "id": "PM20003",
             "title": "BASICS OF MECHANICAL ENGINEERING",
             "sem": 2,
             "exams": [
@@ -1962,7 +1962,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ee1711",
+            "id": "PM70001",
             "title": "Restructured Power System",
             "sem": 7,
             "exams": [
@@ -2078,7 +2078,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ee1101",
+            "id": "PM10001",
             "title": "Fundamentals of Electronics",
             "sem": 1,
             "exams": [
@@ -2188,7 +2188,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01sl0102/01sl0103",
+            "id": "PM20001",
             "title": "Reading and Writing for Technology / Speaking and Presentation Skills",
             "sem": 2,
             "exams": [
@@ -2244,7 +2244,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ee1101",
+            "id": "PM10001",
             "title": "Fundamentals of Electronics",
             "sem": 1,
             "exams": [
@@ -2354,7 +2354,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01sl0102/01sl0103",
+            "id": "PM20001",
             "title": "Reading and Writing for Technology / Speaking and Presentation Skills",
             "sem": 2,
             "exams": [
@@ -3170,7 +3170,7 @@ export const domains = [
             ]
           },
           {
-            "id": "cadd",
+            "id": "PM50001",
             "title": "Computer Aided Drug Designing",
             "sem": 5,
             "exams": [
@@ -3556,7 +3556,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ct0106",
+            "id": "PM20006",
             "title": "Introduction to R and R Studio",
             "sem": 2,
             "exams": [
@@ -4126,7 +4126,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ct0712",
+            "id": "PM70002",
             "title": "Human computer interaction",
             "sem": 7,
             "exams": [
@@ -4262,7 +4262,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01me01xx",
+            "id": "PM20007",
             "title": "3D Modeling and Printing",
             "sem": 2,
             "exams": [
@@ -5128,7 +5128,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ce0511",
+            "id": "PM50002",
             "title": "Python Programming for Security",
             "sem": 5,
             "exams": [
@@ -5148,7 +5148,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ccxxx",
+            "id": "PM50003",
             "title": "Fundamentals of IOT & SCADA Security",
             "sem": 5,
             "exams": [
@@ -5178,7 +5178,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ce0517",
+            "id": "01c10722",
             "title": "Cyber Law and Ethics",
             "sem": 5,
             "exams": [
@@ -5228,7 +5228,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ce0607",
+            "id": "PM60001",
             "title": "Information Security Management",
             "sem": 6,
             "exams": [
@@ -5258,7 +5258,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ce0610",
+            "id": "PM60003",
             "title": "Cyber Physical System",
             "sem": 6,
             "exams": [
@@ -5278,7 +5278,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ce0612",
+            "id": "PM60004",
             "title": "Exploit Development and Shell Scripting",
             "sem": 6,
             "exams": [
@@ -5298,7 +5298,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ce0614",
+            "id": "PM60005",
             "title": "Darkweb Monitoring",
             "sem": 6,
             "exams": [
@@ -5378,7 +5378,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ccxxxx",
+            "id": "PM70003",
             "title": "Digital Watermarking and Steganography",
             "sem": 7,
             "exams": [
@@ -5398,7 +5398,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ccxxx",
+            "id": "PM70004",
             "title": "Introduction to Fintech & Security",
             "sem": 7,
             "exams": [
@@ -5724,7 +5724,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ce0408",
+            "id": "PM40001",
             "title": "Proactive Programming Technique",
             "sem": 4,
             "exams": [
@@ -6030,7 +6030,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ee1101",
+            "id": "01ci1101",
             "title": "Elements of Civil Engineering",
             "sem": 1,
             "exams": [
@@ -6180,7 +6180,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01en1101",
+            "id": "01py0101",
             "title": "Physical Education/Sports/Yoga",
             "sem": 2,
             "exams": [
@@ -6270,7 +6270,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01cr0302",
+            "id": "01cr0104",
             "title": "Professional Ethics",
             "sem": 3,
             "exams": [
@@ -6290,7 +6290,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01it0402",
+            "id": "01me1602",
             "title": "Heat Transfer",
             "sem": 4,
             "exams": [
@@ -6420,7 +6420,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01it0601",
+            "id": "PM60006",
             "title": "Chemical Technology",
             "sem": 6,
             "exams": [
@@ -6620,7 +6620,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ch0707",
+            "id": "09ch1507",
             "title": "Fertilizer Technology",
             "sem": 8,
             "exams": [
@@ -6666,7 +6666,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01gs2101",
+            "id": "PM10003",
             "title": "Engineering Physics / Chemistry",
             "sem": 1,
             "exams": [
@@ -6886,7 +6886,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ce1304",
+            "id": "01ch1301",
             "title": "Fluid Mechanics",
             "sem": 3,
             "exams": [
@@ -6986,7 +6986,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01it0405",
+            "id": "PM40002",
             "title": "Structural Analysis-1",
             "sem": 4,
             "exams": [
@@ -7176,7 +7176,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ci0513",
+            "id": "PM50004",
             "title": "Construction Equipment and Automation",
             "sem": 5,
             "exams": [
@@ -7306,7 +7306,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ci0613",
+            "id": "PM60007",
             "title": "Environmental Impact Assessment",
             "sem": 6,
             "exams": [
@@ -7496,7 +7496,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01c10711",
+            "id": "PM70005",
             "title": "Air pollution and Control",
             "sem": 7,
             "exams": [
@@ -7812,7 +7812,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ma0103",
+            "id": "01ma1151",
             "title": "Matrix algebra and vector calculus",
             "sem": 2,
             "exams": [
@@ -7952,7 +7952,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01me2302",
+            "id": "01cr0104",
             "title": "Professional Ethics",
             "sem": 3,
             "exams": [
@@ -8032,7 +8032,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ma1401",
+            "id": "01me1404",
             "title": "Engineering Thermodynamics",
             "sem": 4,
             "exams": [
@@ -8312,7 +8312,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01me07",
+            "id": "PM70006",
             "title": "Prog.Elec.3",
             "sem": 7,
             "exams": [
@@ -8322,7 +8322,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01me07",
+            "id": "PM70007",
             "title": "Prog.Elec.4",
             "sem": 7,
             "exams": [
@@ -8452,7 +8452,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01me08",
+            "id": "PM80001",
             "title": "Prog.Elec.5",
             "sem": 8,
             "exams": [
@@ -8462,7 +8462,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01me08",
+            "id": "PM80002",
             "title": "Prog.Elec.6",
             "sem": 8,
             "exams": [
@@ -8748,7 +8748,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ml0101",
+            "id": "09me2302",
             "title": "Fluid Mechanics & Hydraulic Machines",
             "sem": 3,
             "exams": [
@@ -8788,7 +8788,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ml0301",
+            "id": "PM30001",
             "title": "Python Programming for AI & ML",
             "sem": 3,
             "exams": [
@@ -9464,7 +9464,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01mr0302",
+            "id": "PM30002",
             "title": "Fundamentals of Robotics and Drives",
             "sem": 3,
             "exams": [
@@ -9564,7 +9564,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ml0504",
+            "id": "PM50005",
             "title": "Quantitative & Logical Ability -3",
             "sem": 5,
             "exams": [
@@ -9744,7 +9744,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ml0702",
+            "id": "01me0821",
             "title": "Computer Integrated Manufacturing",
             "sem": 7,
             "exams": [
@@ -9960,7 +9960,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01en1101",
+            "id": "01ec1103",
             "title": "ELECTRONIC WORKSHOP",
             "sem": 1,
             "exams": [
@@ -10090,7 +10090,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30003",
             "title": "CIRCUIT AND NETWORKS",
             "sem": 3,
             "exams": [
@@ -10100,7 +10100,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30004",
             "title": "CONTROL SYSTEM",
             "sem": 3,
             "exams": [
@@ -10110,7 +10110,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30005",
             "title": "INTERFACING",
             "sem": 3,
             "exams": [
@@ -10120,7 +10120,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30006",
             "title": "NUMERICAL METHODS AND OPTIMIZATION",
             "sem": 3,
             "exams": [
@@ -10130,7 +10130,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30007",
             "title": "LANGUAGES",
             "sem": 3,
             "exams": [
@@ -10140,7 +10140,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30008",
             "title": "HDL FOR DIGITAL DESIGN & VERIFICATION",
             "sem": 3,
             "exams": [
@@ -10150,7 +10150,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ec0116",
+            "id": "PM30010",
             "title": "INTERFACES",
             "sem": 3,
             "exams": [
@@ -10170,7 +10170,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM40003",
             "title": "ANALOG COMMUNICATION",
             "sem": 4,
             "exams": [
@@ -10180,7 +10180,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM40004",
             "title": "CMOS VLSI DESIGN",
             "sem": 4,
             "exams": [
@@ -10190,7 +10190,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "01ct0302",
             "title": "SIGNALS AND SYSTEMS",
             "sem": 4,
             "exams": [
@@ -10200,7 +10200,7 @@ export const domains = [
             ]
           },
           {
-            "id": "arm + rtos",
+            "id": "09ct0603",
             "title": "EMBEDDED SYSTEMS",
             "sem": 4,
             "exams": [
@@ -10210,7 +10210,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "01ct0506",
             "title": "HUMAN CENTERED DESIGN",
             "sem": 4,
             "exams": [
@@ -10220,7 +10220,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM40005",
             "title": "ITRODUCTION TO ROBOTICS",
             "sem": 4,
             "exams": [
@@ -10240,7 +10240,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "01ct0601",
             "title": "DIGITAL SIGNAL PROCESSING",
             "sem": 5,
             "exams": [
@@ -10250,7 +10250,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM50006",
             "title": "DIGITAL COMMUNICATION",
             "sem": 5,
             "exams": [
@@ -10260,7 +10260,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01crxxxx",
+            "id": "PM50007",
             "title": "ANALYTICAL & LOGICAL REASONING",
             "sem": 5,
             "exams": [
@@ -10270,7 +10270,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM50008",
             "title": "IPR & ENTREPRENEURSHIP FOR ENGINEERS",
             "sem": 5,
             "exams": [
@@ -10280,7 +10280,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM50009",
             "title": "DRONE AND UNMANNED AERIAL VEHICLE",
             "sem": 5,
             "exams": [
@@ -10290,7 +10290,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM50010",
             "title": "IoT APPLICATIONS",
             "sem": 5,
             "exams": [
@@ -10310,7 +10310,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM60008",
             "title": "ANTENNA DESIGN",
             "sem": 6,
             "exams": [
@@ -10320,7 +10320,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM60009",
             "title": "OPTICAL FIBER COMMUNICATION",
             "sem": 6,
             "exams": [
@@ -10330,7 +10330,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx*",
+            "id": "01ci1704",
             "title": "MINOR PROJECT",
             "sem": 6,
             "exams": [
@@ -10340,7 +10340,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM60010",
             "title": "WIRELESS & MOBILE COMMUNICATION",
             "sem": 6,
             "exams": [
@@ -10360,7 +10360,7 @@ export const domains = [
             ]
           },
           {
-            "id": "soc",
+            "id": "PM60011",
             "title": "SYSTEM ON CHIP",
             "sem": 6,
             "exams": [
@@ -10370,7 +10370,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM70009",
             "title": "DATA COMM. AND NETWORKING",
             "sem": 7,
             "exams": [
@@ -10380,7 +10380,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "01ci1803",
             "title": "MAJOR PROJECT",
             "sem": 7,
             "exams": [
@@ -10390,7 +10390,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01crxxxx",
+            "id": "PM70010",
             "title": "HUMAN VALUES & PROFESSIONAL ETHICS",
             "sem": 7,
             "exams": [
@@ -10400,7 +10400,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM70011",
             "title": "MICROWAVE & RADAR ENGINEERING",
             "sem": 7,
             "exams": [
@@ -10410,7 +10410,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "01ml0801",
             "title": "INTERNSHIP/ PROJECT",
             "sem": 8,
             "exams": [
@@ -10606,7 +10606,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30003",
             "title": "CIRCUIT AND NETWORKS",
             "sem": 3,
             "exams": [
@@ -10616,7 +10616,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30004",
             "title": "CONTROL SYSTEM",
             "sem": 3,
             "exams": [
@@ -10626,7 +10626,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30005",
             "title": "INTERFACING",
             "sem": 3,
             "exams": [
@@ -10636,7 +10636,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30006",
             "title": "NUMERICAL METHODS AND OPTIMIZATION",
             "sem": 3,
             "exams": [
@@ -10646,7 +10646,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30007",
             "title": "LANGUAGES",
             "sem": 3,
             "exams": [
@@ -10656,7 +10656,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM30008",
             "title": "HDL FOR DIGITAL DESIGN & VERIFICATION",
             "sem": 3,
             "exams": [
@@ -10686,7 +10686,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM40003",
             "title": "ANALOG COMMUNICATION",
             "sem": 4,
             "exams": [
@@ -10696,7 +10696,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM40004",
             "title": "CMOS VLSI DESIGN",
             "sem": 4,
             "exams": [
@@ -10706,7 +10706,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "01ct0302",
             "title": "SIGNALS AND SYSTEMS",
             "sem": 4,
             "exams": [
@@ -10716,7 +10716,7 @@ export const domains = [
             ]
           },
           {
-            "id": "arm + rtos",
+            "id": "09ct0603",
             "title": "EMBEDDED SYSTEMS",
             "sem": 4,
             "exams": [
@@ -10726,7 +10726,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "01ct0506",
             "title": "HUMAN CENTERED DESIGN",
             "sem": 4,
             "exams": [
@@ -10736,7 +10736,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM40006",
             "title": "PROBLEM BASED LEARNING",
             "sem": 4,
             "exams": [
@@ -10766,7 +10766,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "01ct0601",
             "title": "DIGITAL SIGNAL PROCESSING",
             "sem": 5,
             "exams": [
@@ -10776,7 +10776,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM50006",
             "title": "DIGITAL COMMUNICATION",
             "sem": 5,
             "exams": [
@@ -10786,7 +10786,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01crxxxx",
+            "id": "PM50007",
             "title": "ANALYTICAL & LOGICAL REASONING",
             "sem": 5,
             "exams": [
@@ -10796,7 +10796,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM50008",
             "title": "IPR & ENTREPRENEURSHIP FOR ENGINEERS",
             "sem": 5,
             "exams": [
@@ -10806,7 +10806,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM50009",
             "title": "DRONE AND UNMANNED AERIAL VEHICLE",
             "sem": 5,
             "exams": [
@@ -10826,7 +10826,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM60008",
             "title": "ANTENNA DESIGN",
             "sem": 6,
             "exams": [
@@ -10836,7 +10836,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM60009",
             "title": "OPTICAL FIBER COMMUNICATION",
             "sem": 6,
             "exams": [
@@ -10846,7 +10846,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx*",
+            "id": "01ci1704",
             "title": "MINOR PROJECT",
             "sem": 6,
             "exams": [
@@ -10876,7 +10876,7 @@ export const domains = [
             ]
           },
           {
-            "id": "soc",
+            "id": "PM60011",
             "title": "SYSTEM ON CHIP",
             "sem": 6,
             "exams": [
@@ -10886,7 +10886,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM70009",
             "title": "DATA COMM. AND NETWORKING",
             "sem": 7,
             "exams": [
@@ -10896,7 +10896,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "01ci1803",
             "title": "MAJOR PROJECT",
             "sem": 7,
             "exams": [
@@ -10906,7 +10906,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01crxxxx",
+            "id": "01cr0104",
             "title": "PROFESSIONAL ETHICS",
             "sem": 7,
             "exams": [
@@ -10916,7 +10916,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "PM70012",
             "title": "AI & ML MAKER LAB",
             "sem": 7,
             "exams": [
@@ -10936,7 +10936,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01ecxxxx",
+            "id": "01ml0801",
             "title": "INTERNSHIP/ PROJECT",
             "sem": 8,
             "exams": [
@@ -11620,7 +11620,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "04SC0007",
+                "id": "04SL0153",
                 "title": "ENGLISH THROUGH MOVIES",
                 "sem": 0,
                 "exams": [
@@ -11900,7 +11900,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "04BB0509",
+                "id": "04BB0510",
                 "title": "RETAIL MARKETING",
                 "sem": 5,
                 "exams": [
@@ -12528,7 +12528,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "04BB0105",
+                "id": "04BC2507",
                 "title": "TALLY",
                 "sem": 1,
                 "exams": [
@@ -12898,7 +12898,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "04BH0402",
+                "id": "04SC0001",
                 "title": "ACCOUNTS EXECUTIVE",
                 "sem": 4,
                 "exams": [
@@ -13028,7 +13028,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "04BB0529",
+                "id": "04IB0401",
                 "title": "INTERNATIONAL MARKETING",
                 "sem": 5,
                 "exams": [
@@ -13258,7 +13258,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "04BB1502",
+                "id": "PM50011",
                 "title": "FUNDAMENTALS OF INTERNATIONAL BUSINESS",
                 "sem": 5,
                 "exams": [
@@ -13318,7 +13318,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "04BB0615",
+                "id": "PM60012",
                 "title": "MARKETING",
                 "sem": 6,
                 "exams": [
@@ -13936,7 +13936,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Choose any one",
+                "id": "PM10005",
                 "title": "",
                 "sem": 1,
                 "exams": [
@@ -13966,7 +13966,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any one",
+                "id": "PM10006",
                 "title": "General Electives",
                 "sem": 1,
                 "exams": [
@@ -14056,7 +14056,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Choose any one",
+                "id": "PM20009",
                 "title": "",
                 "sem": 2,
                 "exams": [
@@ -14086,7 +14086,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any one",
+                "id": "PM20010",
                 "title": "General Electives",
                 "sem": 2,
                 "exams": [
@@ -14176,7 +14176,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any one",
+                "id": "PM30009",
                 "title": "General Electives",
                 "sem": 3,
                 "exams": [
@@ -14436,7 +14436,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any one",
+                "id": "PM40007",
                 "title": "General Electives",
                 "sem": 4,
                 "exams": [
@@ -14526,7 +14526,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Choose any one",
+                "id": "PM50012",
                 "title": "Specialization",
                 "sem": 5,
                 "exams": [
@@ -14646,7 +14646,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Choose any one",
+                "id": "PM60013",
                 "title": "Specialization",
                 "sem": 6,
                 "exams": [
@@ -14656,7 +14656,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "04BB0204",
+                "id": "PM60014",
                 "title": "Advanced Auditing",
                 "sem": 6,
                 "exams": [
@@ -14823,7 +14823,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "04BB0204",
+                "id": "04BB0203",
                 "title": "STATISTICS FOR BUSINESS",
                 "sem": 2,
                 "exams": [
@@ -14873,7 +14873,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "IKS COURSE)(04BB0208",
+                "id": "PM20011",
                 "title": "INDIAN BUSINESS HISTORY",
                 "sem": 2,
                 "exams": [
@@ -15530,7 +15530,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "IKS COURSE)(04BB0208",
+                "id": "PM20011",
                 "title": "INDIAN BUSINESS HISTORY",
                 "sem": 2,
                 "exams": [
@@ -16187,7 +16187,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "IKS COURSE)(04BB0208",
+                "id": "PM20011",
                 "title": "INDIAN BUSINESS HISTORY",
                 "sem": 2,
                 "exams": [
@@ -17084,7 +17084,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "04SC0004",
+                "id": "04SC0005",
                 "title": "MICROFINANCE EXECUTIVE",
                 "sem": 4,
                 "exams": [
@@ -19820,7 +19820,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Three",
+                "id": "04BB0305",
                 "title": "Financial Management",
                 "sem": 3,
                 "exams": [
@@ -19890,7 +19890,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Three",
+                "id": "04BB0301",
                 "title": "Marketing Management",
                 "sem": 3,
                 "exams": [
@@ -19960,7 +19960,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Three",
+                "id": "04BB0204",
                 "title": "Human Resources Management",
                 "sem": 3,
                 "exams": [
@@ -20030,7 +20030,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Three",
+                "id": "04BB0411",
                 "title": "International Business",
                 "sem": 3,
                 "exams": [
@@ -20100,7 +20100,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Three",
+                "id": "PM30011",
                 "title": "Entrepreneurship & Family Business",
                 "sem": 3,
                 "exams": [
@@ -20160,7 +20160,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Three",
+                "id": "PM30012",
                 "title": "Banking & Indurance",
                 "sem": 3,
                 "exams": [
@@ -20230,7 +20230,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Three",
+                "id": "PM30013",
                 "title": "IT & Systems",
                 "sem": 3,
                 "exams": [
@@ -20300,7 +20300,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Three",
+                "id": "PM30014",
                 "title": "Operations Management",
                 "sem": 3,
                 "exams": [
@@ -20370,7 +20370,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Three",
+                "id": "PM30015",
                 "title": "Logistics & Supply Chain Management",
                 "sem": 3,
                 "exams": [
@@ -20440,7 +20440,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any One",
+                "id": "PM30016",
                 "title": "General Elective",
                 "sem": 3,
                 "exams": [
@@ -20550,7 +20550,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "PM30017",
                 "title": "Skill Enhancement Course",
                 "sem": 3,
                 "exams": [
@@ -20610,7 +20610,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "04BB0305",
                 "title": "Financial Management",
                 "sem": 4,
                 "exams": [
@@ -20660,7 +20660,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "04BB0301",
                 "title": "Marketing Management",
                 "sem": 4,
                 "exams": [
@@ -20720,7 +20720,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "04BB0204",
                 "title": "Human Resources Management",
                 "sem": 4,
                 "exams": [
@@ -20770,7 +20770,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "04BB0411",
                 "title": "International Business",
                 "sem": 4,
                 "exams": [
@@ -20820,7 +20820,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "PM30011",
                 "title": "Entrepreneurship & Family Business",
                 "sem": 4,
                 "exams": [
@@ -20870,7 +20870,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "PM30012",
                 "title": "Banking & Indurance",
                 "sem": 4,
                 "exams": [
@@ -20920,7 +20920,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "PM30013",
                 "title": "IT & Systems",
                 "sem": 4,
                 "exams": [
@@ -20970,7 +20970,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "PM30014",
                 "title": "Operations Management",
                 "sem": 4,
                 "exams": [
@@ -21020,7 +21020,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "PM30015",
                 "title": "Logistics & Supply Chain Management",
                 "sem": 4,
                 "exams": [
@@ -21070,7 +21070,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any One",
+                "id": "PM40008",
                 "title": "General Elective",
                 "sem": 4,
                 "exams": [
@@ -21180,7 +21180,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any Two",
+                "id": "PM40009",
                 "title": "Skill Enhancement Course",
                 "sem": 4,
                 "exams": [
@@ -21367,7 +21367,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Choose Any One",
+                "id": "PM20012",
                 "title": "Elective G1",
                 "sem": 2,
                 "exams": [
@@ -21507,7 +21507,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any One",
+                "id": "PM30018",
                 "title": "General Elective",
                 "sem": 3,
                 "exams": [
@@ -21707,7 +21707,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Any One",
+                "id": "PM40010",
                 "title": "General Elective",
                 "sem": 4,
                 "exams": [
@@ -22138,7 +22138,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "02CY0303",
+                "id": "02CY1404",
                 "title": "Analytical Chemistry",
                 "sem": 5,
                 "exams": [
@@ -22612,7 +22612,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "16AS0106",
+                "id": "PM10007",
                 "title": "Physical Education",
                 "sem": 1,
                 "exams": [
@@ -22742,7 +22742,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "16AS0206",
+                "id": "PM20013",
                 "title": "NSS/NCC/Physical Education & Yoga Practices",
                 "sem": 2,
                 "exams": [
@@ -22862,7 +22862,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Rabi Crops)(16AS0401",
+                "id": "16AS0401",
                 "title": "Crop Production Technology-II",
                 "sem": 4,
                 "exams": [
@@ -22992,7 +22992,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Kharif Crops)(16AS0503",
+                "id": "16AS0503",
                 "title": "Practical Crop Production-I",
                 "sem": 5,
                 "exams": [
@@ -23052,7 +23052,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Kharif Crops)(16AS0509",
+                "id": "16AS0509",
                 "title": "Crop Improvements-I",
                 "sem": 5,
                 "exams": [
@@ -23112,7 +23112,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Rabi Crops) (16AS0603",
+                "id": "16AS0603",
                 "title": "Practical Crop Production-II",
                 "sem": 6,
                 "exams": [
@@ -23152,7 +23152,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Rabi Crops) (16AS0607",
+                "id": "16AS0607",
                 "title": "Crop Improvement-II",
                 "sem": 6,
                 "exams": [
@@ -23202,7 +23202,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "AIA",
+                "id": "PM70013",
                 "title": "Attachment",
                 "sem": 7,
                 "exams": [
@@ -23212,7 +23212,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "ELP",
+                "id": "PM80003",
                 "title": "Experiential Learning Programme",
                 "sem": 8,
                 "exams": [
@@ -23369,7 +23369,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "02CY0252",
+                "id": "02CY0509",
                 "title": "ESSENCE OF CHROMATOGRAPHY",
                 "sem": 3,
                 "exams": [
@@ -23439,7 +23439,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "02CY0353",
+                "id": "02CY1554",
                 "title": "DISSERTATION/PROJECT",
                 "sem": 4,
                 "exams": [
@@ -23546,7 +23546,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "02MB0155",
+                "id": "04MB0441",
                 "title": "Intellectual Property Rights",
                 "sem": 2,
                 "exams": [
@@ -23960,7 +23960,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "PMM)(13OE0001",
+                "id": "13OE0001",
                 "title": "Pharma Marketing Management",
                 "sem": 4,
                 "exams": [
@@ -23970,7 +23970,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "CAD)(13OE0002",
+                "id": "13OE0002",
                 "title": "Computer-Aided Drug Design",
                 "sem": 4,
                 "exams": [
@@ -23980,7 +23980,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "PCS)(13OE0003",
+                "id": "13OE0003",
                 "title": "Pharmaceutical Cosmetic Science",
                 "sem": 4,
                 "exams": [
@@ -24090,7 +24090,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "PMM)(13OE0001",
+                "id": "13OE0001",
                 "title": "Pharma Marketing Management",
                 "sem": 6,
                 "exams": [
@@ -24100,7 +24100,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "CAD)(13OE0002",
+                "id": "13OE0002",
                 "title": "Computer-Aided Drug Design",
                 "sem": 6,
                 "exams": [
@@ -24110,7 +24110,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "PCS)(13OE0003",
+                "id": "13OE0003",
                 "title": "Pharmaceutical Cosmetic Science",
                 "sem": 6,
                 "exams": [
@@ -24310,7 +24310,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "PMM)(13OE0001",
+                "id": "13OE0001",
                 "title": "Pharma Marketing Management",
                 "sem": 8,
                 "exams": [
@@ -24320,7 +24320,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "CAD)(13OE0002",
+                "id": "13OE0002",
                 "title": "Computer-Aided Drug Design",
                 "sem": 8,
                 "exams": [
@@ -24330,7 +24330,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "PCS)(13OE0003",
+                "id": "13OE0003",
                 "title": "Pharmaceutical Cosmetic Science",
                 "sem": 8,
                 "exams": [
@@ -24771,7 +24771,7 @@ export const domains = [
             "title": "M.Pharm Regulatory Affairs",
             "subjects": [
               {
-                "id": "GRP)(13MR0101",
+                "id": "13MR0101",
                 "title": "Good Regulatory Practices",
                 "sem": 1,
                 "exams": [
@@ -24781,7 +24781,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "DRW) (13MR0102",
+                "id": "13MR0102",
                 "title": "Documentation and regulatory writing",
                 "sem": 1,
                 "exams": [
@@ -24791,7 +24791,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "CRR)(13MR0103",
+                "id": "13MR0103",
                 "title": "Clinical research regulations",
                 "sem": 1,
                 "exams": [
@@ -24801,7 +24801,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "RLIP)(13MR0104",
+                "id": "13MR0104",
                 "title": "India and Intellectual Property Rights",
                 "sem": 1,
                 "exams": [
@@ -24811,7 +24811,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "RAP)(13MR0105",
+                "id": "13MR0105",
                 "title": "Regulatory Affairs Practical-1",
                 "sem": 1,
                 "exams": [
@@ -24821,7 +24821,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "SA)(13MR0106",
+                "id": "13MR0106",
                 "title": "Seminar/ assignment",
                 "sem": 1,
                 "exams": [
@@ -24831,7 +24831,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "RDC)(13MR0201",
+                "id": "13MR0201",
                 "title": "Regulatory Aspects of Drugs & Cosmetic",
                 "sem": 2,
                 "exams": [
@@ -24841,7 +24841,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "RHB) (13MR0202",
+                "id": "13MR0202",
                 "title": "",
                 "sem": 2,
                 "exams": [
@@ -24851,7 +24851,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "RMD)(13MR0203",
+                "id": "13MR0203",
                 "title": "Regulatory Aspects of Medical Devices",
                 "sem": 2,
                 "exams": [
@@ -24861,7 +24861,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "RFN)(13MR0204",
+                "id": "13MR0204",
                 "title": "",
                 "sem": 2,
                 "exams": [
@@ -24871,7 +24871,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "RAP-2)(13MR0205",
+                "id": "13MR0205",
                 "title": "Regulatory Affairs Practical-2",
                 "sem": 2,
                 "exams": [
@@ -24881,7 +24881,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "SA) (13MR0206",
+                "id": "13MR0206",
                 "title": "Seminar/ assignment",
                 "sem": 2,
                 "exams": [
@@ -25046,7 +25046,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "MACROECONOMICS) (10BA2202",
+                "id": "10BA2202",
                 "title": "ECONOMICS II",
                 "sem": 2,
                 "exams": [
@@ -25106,7 +25106,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "NGO)(10FL0204",
+                "id": "10FL0204",
                 "title": "INTERNSHIP",
                 "sem": 2,
                 "exams": [
@@ -25186,7 +25186,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "ELECTIVE)(10SL1302",
+                "id": "10SL1302",
                 "title": "BASICS OF FRENCH LANGUAGE- I",
                 "sem": 3,
                 "exams": [
@@ -25196,7 +25196,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "LOWER COURT I) 4 WEEKS(10FL0306",
+                "id": "10FL0306",
                 "title": "INTERNSHIP",
                 "sem": 3,
                 "exams": [
@@ -25276,7 +25276,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "LOWER COURT 2) 4 WEEKS(10FL0406",
+                "id": "10FL0406",
                 "title": "INTERNSHIP",
                 "sem": 4,
                 "exams": [
@@ -25356,7 +25356,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "HIGH COURT 1) 4 WEEKS(10FL0507",
+                "id": "10FL0507",
                 "title": "INTERNSHIP",
                 "sem": 5,
                 "exams": [
@@ -25446,7 +25446,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70014",
                 "title": "LAW ON MERGER AND ACQUISITION  - Business Law",
                 "sem": 7,
                 "exams": [
@@ -25466,7 +25466,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course (10BL0702",
+                "id": "10BL0702",
                 "title": "",
                 "sem": 7,
                 "exams": [
@@ -25476,7 +25476,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70015",
                 "title": "CRIMINOLOGY - Crime and Criminology",
                 "sem": 7,
                 "exams": [
@@ -25496,7 +25496,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70016",
                 "title": "IT OFFENCES - Crime and Criminology",
                 "sem": 7,
                 "exams": [
@@ -25516,7 +25516,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70017",
                 "title": "LAW OF COPYRIGHT - Intellectual Property Law",
                 "sem": 7,
                 "exams": [
@@ -25536,7 +25536,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70018",
                 "title": "INDICATIONS - Intellectual Property Law",
                 "sem": 7,
                 "exams": [
@@ -25556,7 +25556,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70019",
                 "title": "MEDIA AND LAW  - Constitutional Law",
                 "sem": 7,
                 "exams": [
@@ -25576,7 +25576,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70020",
                 "title": "LEGISLATIVE DRAFTING - Constitutional Law",
                 "sem": 7,
                 "exams": [
@@ -25656,7 +25656,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM80004",
                 "title": "LAW ON CORPORATE FINANCE - Business Law",
                 "sem": 8,
                 "exams": [
@@ -25676,7 +25676,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM80005",
                 "title": "LAW OF CORPORATE GOVERNANCE  - Business Law",
                 "sem": 8,
                 "exams": [
@@ -25696,7 +25696,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR0801",
+                "id": "10CR0801",
                 "title": "",
                 "sem": 8,
                 "exams": [
@@ -25706,7 +25706,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR0802",
+                "id": "10CR0802",
                 "title": "Criminology",
                 "sem": 8,
                 "exams": [
@@ -25716,7 +25716,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10IP0801",
+                "id": "10IP0801",
                 "title": "Property Law",
                 "sem": 8,
                 "exams": [
@@ -25726,7 +25726,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM80006",
                 "title": "LAW OF PATENT - Intellectual Property Law",
                 "sem": 8,
                 "exams": [
@@ -25746,7 +25746,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM80007",
                 "title": "LAW & EDUCATION - Constitutional Law",
                 "sem": 8,
                 "exams": [
@@ -25766,7 +25766,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CL0802",
+                "id": "10CL0802",
                 "title": "",
                 "sem": 8,
                 "exams": [
@@ -25816,7 +25816,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "CLINICAL COURSE IV)(10FL0805",
+                "id": "10FL0805",
                 "title": "SERVICES",
                 "sem": 8,
                 "exams": [
@@ -25836,7 +25836,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10BL0901",
+                "id": "10BL0901",
                 "title": "",
                 "sem": 9,
                 "exams": [
@@ -25846,7 +25846,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM90001",
                 "title": "FINANCIAL MARKET REGULATION - Business Law",
                 "sem": 9,
                 "exams": [
@@ -25866,7 +25866,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR0901",
+                "id": "10CR0901",
                 "title": "Criminology",
                 "sem": 9,
                 "exams": [
@@ -25876,7 +25876,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR0902",
+                "id": "10CR0902",
                 "title": "Criminology",
                 "sem": 9,
                 "exams": [
@@ -25886,7 +25886,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course (10CL0901",
+                "id": "10CL0901",
                 "title": "",
                 "sem": 9,
                 "exams": [
@@ -25896,7 +25896,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM90002",
                 "title": "RIGHT TO INFORMATION LAW - Constitutional Law",
                 "sem": 9,
                 "exams": [
@@ -25916,7 +25916,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course (10IP0901",
+                "id": "10IP0901",
                 "title": "",
                 "sem": 9,
                 "exams": [
@@ -25926,7 +25926,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM90003",
                 "title": "EMERGING ISSUES IN IPR - Intellectual Property Law",
                 "sem": 9,
                 "exams": [
@@ -25946,7 +25946,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "CLINICAL COURSE V) (10FL0901",
+                "id": "10FL0901",
                 "title": "SYSTEM",
                 "sem": 9,
                 "exams": [
@@ -25996,7 +25996,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM100001",
                 "title": "INTERNATIONAL TRADE LAW - Business Law",
                 "sem": 10,
                 "exams": [
@@ -26016,7 +26016,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM100002",
                 "title": "INTERNATIONAL TAXATION LAW - Business Law",
                 "sem": 10,
                 "exams": [
@@ -26036,7 +26036,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR01001",
+                "id": "10CR01001",
                 "title": "Criminology",
                 "sem": 10,
                 "exams": [
@@ -26046,7 +26046,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR01002",
+                "id": "10CR01002",
                 "title": "",
                 "sem": 10,
                 "exams": [
@@ -26056,7 +26056,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM100003",
                 "title": "COMPARATIVE CONSTITUTION - Constitutional Law",
                 "sem": 10,
                 "exams": [
@@ -26076,7 +26076,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM100004",
                 "title": "JUDICIAL PROCESS - Constitutional Law",
                 "sem": 10,
                 "exams": [
@@ -26096,7 +26096,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course (10IP01001",
+                "id": "10IP01001",
                 "title": "Intellectual Property Law",
                 "sem": 10,
                 "exams": [
@@ -26106,7 +26106,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course (10IP01002",
+                "id": "10IP01002",
                 "title": "Intellectual Property Law",
                 "sem": 10,
                 "exams": [
@@ -26324,7 +26324,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "NGO)(10FL0204",
+                "id": "10FL0204",
                 "title": "INTERNSHIP",
                 "sem": 2,
                 "exams": [
@@ -26414,7 +26414,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "LOWER COURT I) 4 WEEKS(10FL0306",
+                "id": "10FL0306",
                 "title": "INTERNSHIP",
                 "sem": 3,
                 "exams": [
@@ -26494,7 +26494,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "LOWER COURT 2) 4 WEEKS(10FL0406",
+                "id": "10FL0406",
                 "title": "INTERNSHIP",
                 "sem": 4,
                 "exams": [
@@ -26574,7 +26574,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "HIGH COURT 1) 4 WEEKS(10FL0507",
+                "id": "10FL0507",
                 "title": "INTERNSHIP",
                 "sem": 5,
                 "exams": [
@@ -26664,7 +26664,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70014",
                 "title": "LAW ON MERGER AND ACQUISITION  - Business Law",
                 "sem": 7,
                 "exams": [
@@ -26684,7 +26684,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course (10BL0702",
+                "id": "10BL0702",
                 "title": "",
                 "sem": 7,
                 "exams": [
@@ -26694,7 +26694,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70015",
                 "title": "CRIMINOLOGY - Crime and Criminology",
                 "sem": 7,
                 "exams": [
@@ -26714,7 +26714,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70016",
                 "title": "IT OFFENCES - Crime and Criminology",
                 "sem": 7,
                 "exams": [
@@ -26734,7 +26734,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70017",
                 "title": "LAW OF COPYRIGHT - Intellectual Property Law",
                 "sem": 7,
                 "exams": [
@@ -26754,7 +26754,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70018",
                 "title": "INDICATIONS - Intellectual Property Law",
                 "sem": 7,
                 "exams": [
@@ -26774,7 +26774,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70019",
                 "title": "MEDIA AND LAW  - Constitutional Law",
                 "sem": 7,
                 "exams": [
@@ -26794,7 +26794,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM70020",
                 "title": "LEGISLATIVE DRAFTING - Constitutional Law",
                 "sem": 7,
                 "exams": [
@@ -26874,7 +26874,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM80004",
                 "title": "LAW ON CORPORATE FINANCE - Business Law",
                 "sem": 8,
                 "exams": [
@@ -26894,7 +26894,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM80005",
                 "title": "LAW OF CORPORATE GOVERNANCE  - Business Law",
                 "sem": 8,
                 "exams": [
@@ -26914,7 +26914,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR0801",
+                "id": "10CR0801",
                 "title": "",
                 "sem": 8,
                 "exams": [
@@ -26924,7 +26924,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR0802",
+                "id": "10CR0802",
                 "title": "Criminology",
                 "sem": 8,
                 "exams": [
@@ -26934,7 +26934,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10IP0801",
+                "id": "10IP0801",
                 "title": "Property Law",
                 "sem": 8,
                 "exams": [
@@ -26944,7 +26944,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM80006",
                 "title": "LAW OF PATENT - Intellectual Property Law",
                 "sem": 8,
                 "exams": [
@@ -26964,7 +26964,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM80007",
                 "title": "LAW & EDUCATION - Constitutional Law",
                 "sem": 8,
                 "exams": [
@@ -26984,7 +26984,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CL0802",
+                "id": "10CL0802",
                 "title": "",
                 "sem": 8,
                 "exams": [
@@ -27034,7 +27034,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "CLINICAL COURSE IV)(10FL0805",
+                "id": "10FL0805",
                 "title": "SERVICES",
                 "sem": 8,
                 "exams": [
@@ -27054,7 +27054,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10BL0901",
+                "id": "10BL0901",
                 "title": "",
                 "sem": 9,
                 "exams": [
@@ -27064,7 +27064,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM90001",
                 "title": "FINANCIAL MARKET REGULATION - Business Law",
                 "sem": 9,
                 "exams": [
@@ -27084,7 +27084,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR0901",
+                "id": "10CR0901",
                 "title": "Criminology",
                 "sem": 9,
                 "exams": [
@@ -27094,7 +27094,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR0902",
+                "id": "10CR0902",
                 "title": "Criminology",
                 "sem": 9,
                 "exams": [
@@ -27104,7 +27104,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course (10CL0901",
+                "id": "10CL0901",
                 "title": "",
                 "sem": 9,
                 "exams": [
@@ -27114,7 +27114,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM90002",
                 "title": "RIGHT TO INFORMATION LAW - Constitutional Law",
                 "sem": 9,
                 "exams": [
@@ -27134,7 +27134,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course (10IP0901",
+                "id": "10IP0901",
                 "title": "",
                 "sem": 9,
                 "exams": [
@@ -27144,7 +27144,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM90003",
                 "title": "EMERGING ISSUES IN IPR - Intellectual Property Law",
                 "sem": 9,
                 "exams": [
@@ -27164,7 +27164,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "CLINICAL COURSE V) (10FL0901",
+                "id": "10FL0901",
                 "title": "SYSTEM",
                 "sem": 9,
                 "exams": [
@@ -27214,7 +27214,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM100001",
                 "title": "INTERNATIONAL TRADE LAW - Business Law",
                 "sem": 10,
                 "exams": [
@@ -27234,7 +27234,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM100002",
                 "title": "INTERNATIONAL TAXATION LAW - Business Law",
                 "sem": 10,
                 "exams": [
@@ -27254,7 +27254,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR01001",
+                "id": "10CR01001",
                 "title": "Criminology",
                 "sem": 10,
                 "exams": [
@@ -27264,7 +27264,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course(10CR01002",
+                "id": "10CR01002",
                 "title": "",
                 "sem": 10,
                 "exams": [
@@ -27274,7 +27274,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM100003",
                 "title": "COMPARATIVE CONSTITUTION - Constitutional Law",
                 "sem": 10,
                 "exams": [
@@ -27294,7 +27294,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.",
+                "id": "PM100004",
                 "title": "JUDICIAL PROCESS - Constitutional Law",
                 "sem": 10,
                 "exams": [
@@ -27314,7 +27314,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course (10IP01001",
+                "id": "10IP01001",
                 "title": "Intellectual Property Law",
                 "sem": 10,
                 "exams": [
@@ -27324,7 +27324,7 @@ export const domains = [
                 ]
               },
               {
-                "id": "Hons.) Course (10IP01002",
+                "id": "10IP01002",
                 "title": "Intellectual Property Law",
                 "sem": 10,
                 "exams": [
@@ -28685,7 +28685,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09au0102",
+            "id": "09ce1101",
             "title": "COMPUTER FUNDAMENTAL SKILL",
             "sem": 2,
             "exams": [
@@ -29022,7 +29022,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09gs1101",
+            "id": "PM10008",
             "title": "Applied Chemistry",
             "sem": 1,
             "exams": [
@@ -29182,7 +29182,7 @@ export const domains = [
             ]
           },
           {
-            "id": "uo-iii)(09ch1401",
+            "id": "09ch1401",
             "title": "Unit Operation – III",
             "sem": 4,
             "exams": [
@@ -29192,7 +29192,7 @@ export const domains = [
             ]
           },
           {
-            "id": "pht)(09ci1401",
+            "id": "PM40011",
             "title": "Process Heat Transfer",
             "sem": 4,
             "exams": [
@@ -29202,7 +29202,7 @@ export const domains = [
             ]
           },
           {
-            "id": "pui)(09ch1403",
+            "id": "09ch1403",
             "title": "Plant Utilization and Instrumentation",
             "sem": 4,
             "exams": [
@@ -29222,7 +29222,7 @@ export const domains = [
             ]
           },
           {
-            "id": "cps)(09ch1404",
+            "id": "09ch1404",
             "title": "Chemical Process Software",
             "sem": 4,
             "exams": [
@@ -29232,7 +29232,7 @@ export const domains = [
             ]
           },
           {
-            "id": "gct)(09ch1405",
+            "id": "09ch1405",
             "title": "General Chemical Technology",
             "sem": 4,
             "exams": [
@@ -29699,7 +29699,7 @@ export const domains = [
             ]
           },
           {
-            "id": "eeu)(09ee2601",
+            "id": "09ee2601",
             "title": "Electrical Energy Utilization",
             "sem": 6,
             "exams": [
@@ -30006,7 +30006,7 @@ export const domains = [
             ]
           },
           {
-            "id": "r.c.c.)(09ci1501",
+            "id": "09ci1501",
             "title": "Structure Design & Drawing – I",
             "sem": 5,
             "exams": [
@@ -30016,7 +30016,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09me1501",
+            "id": "PM50013",
             "title": "Quantity Survey and Valuation",
             "sem": 5,
             "exams": [
@@ -30046,7 +30046,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09ci1504",
+            "id": "01ch0705",
             "title": "PROJECT-I",
             "sem": 5,
             "exams": [
@@ -30056,7 +30056,7 @@ export const domains = [
             ]
           },
           {
-            "id": "steel)(09ci1601",
+            "id": "09ci1601",
             "title": "Structure Design & Drawing – II",
             "sem": 6,
             "exams": [
@@ -30153,7 +30153,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09ct0103",
+            "id": "PM10009",
             "title": "Essential Skills of Information Technology",
             "sem": 1,
             "exams": [
@@ -30353,7 +30353,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09ct0405",
+            "id": "01it0601",
             "title": "Software Engineering",
             "sem": 4,
             "exams": [
