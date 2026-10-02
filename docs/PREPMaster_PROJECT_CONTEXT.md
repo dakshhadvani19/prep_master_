@@ -309,9 +309,14 @@ SRS:
 - `SubjectName` String 100, Not Null
 - `CourseId` String 64, Foreign Key
 
+Current owner decision for implementation:
+- `"SubjectId"` remains BIGINT Primary Key and is populated from normalized numeric subject IDs derived from `mockData.js`.
+- Alphabetic subject-ID characters are normalized case-insensitively using A=1 through Z=26; existing digits remain digits; hyphens are removed.
+- The verified normalized subject IDs fit within PostgreSQL BIGINT (maximum 10 digits in the current dataset).
+- `"CourseId"` remains BIGINT and references the generated `"Courses"."CourseId"`.
+
 The SRS `CourseId` type is a documentation mistake.
-Because it references `Courses.CourseId`, the intended type is:
-- `"CourseId"` BIGINT
+Because it references `Courses.CourseId`, the intended database type is BIGINT.
 
 Relationship:
 `"Subjects"."CourseId"` → `"Courses"."CourseId"`
@@ -672,6 +677,8 @@ Never rename environment variables without explicit authorization.
 - SRS CRUD requirements are authoritative when explicitly stated.
 - Exact SRS field names should be preserved when implementing matching database entities.
 - Courses, Subjects, Feedbacks and Leaderboards now have finalized database designs.
+- Courses use generated BIGINT primary keys; source course IDs in `mockData.js` remain frontend/source identifiers until the database-backed catalog mapping is implemented.
+- Subjects use BIGINT primary keys populated from normalized numeric source subject IDs in `mockData.js`.
 - Remaining SRS tables are intentionally deferred until related functionality requires them.
 - Static-data import must be audited and deduplicated before large Supabase inserts.
 
