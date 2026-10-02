@@ -4,12 +4,9 @@ Update this file after every Agent Mode task. Keep it short, factual, and code-v
 Long-term rules and architecture live in `PREPMaster_PROJECT_CONTEXT.md`.
 Database-specific state lives in `PREPMaster_DATABASE_STATUS.md`.
 
-**Last updated:** 2026-10-02 — database foundation + static-data preparation phase
-**Verified from repository:** current project docs, migration directory, SRS references, and source-data
-inventory paths.
-**Live verification limitation:** this environment cannot independently inspect the live Supabase
-catalog/feedback/leaderboard tables. Live state marked as owner-confirmed is not presented as
-independently verified.
+**Last updated:** 2026-10-02 — normalized mock subject IDs for upcoming catalog import
+**Verified from repository:** current project docs, migration directory, SRS references, and the verified `mockData.js` source dataset.
+**Live verification:** the connected Supabase `prepmaster` project currently contains 49 Courses and 2,806 Subjects; this task did not modify the live database.
 
 ## Repository state
 
@@ -49,7 +46,7 @@ Server:
 | 4 | Leaderboard UI | ✅ mock/in-memory UI |
 | 5 | Final admin integration / QA | ⚠️ partial; staff RPC path exists; catalog/leaderboard/feedback persistence now moving into DB phase |
 | Database foundation | Courses / Subjects / Feedbacks / Leaderboards designs | ✅ design finalized |
-| Static data preparation | Audit and deduplicate JSON/JS datasets before import | 📝 next active task |
+| Static data preparation | Normalize verified subject IDs; audit/deduplicate before import | ✅ subject-ID normalization completed; import still pending |
 
 ## Database state
 
@@ -62,3 +59,10 @@ Design finalized:
 ├── "CourseId"    BIGINT generated identity PK
 ├── "Sems"        INTEGER[] NOT NULL, max 12 entries
 └── "CourseName"  VARCHAR(100) NOT NULL
+
+## Static catalog normalization
+
+- `global-exam-prep/src/data/mockData.js`: all 2,806 subject ID occurrences are now normalized to numeric BIGINT-compatible values using A=1 through Z=26 (case-insensitive); digits remain unchanged and hyphens are removed.
+- Current normalized SubjectId values are at most 10 digits and fit PostgreSQL BIGINT.
+- Course IDs in `mockData.js` remain unchanged source/frontend identifiers; database Courses use generated BIGINT IDs.
+- The verified source contains 1,813 distinct case-insensitive subject IDs across 2,806 subject occurrences, so repeated source IDs remain repeated and must be handled explicitly during the eventual import.
