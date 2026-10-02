@@ -5,7 +5,7 @@
  * the tests can drive the real code paths with a stub client.
  *
  * Hard rules this module enforces:
- *  - It never writes `public.students` from the browser. The `on_auth_user_created`
+ *  - It never writes `public."Students"` from the browser. The `on_auth_user_created`
  *    trigger owns profile creation (and RLS grants no INSERT to `authenticated`).
  *  - It never sends `role`, `is_spam`, `student_id` or `auth_uid` anywhere. Signup
  *    metadata is limited to `full_name`.
@@ -19,7 +19,7 @@
  *    `auth.resend({ type: 'signup' })` is kept only for the separate "account
  *    exists but is unconfirmed" case the Log in tab offers.
  *  - It never surfaces a raw server message to the UI.
- *  - Admin status is resolved ONLY from public.admins keyed by the authenticated
+ *  - Admin status is resolved ONLY from public."Admins" keyed by the authenticated
  *    uid (see resolveAuthorization/deriveRole at the bottom). Nothing in this module
  *    reads a password, an email-to-role table, or a client-side flag to decide it.
  */
@@ -121,8 +121,6 @@ export async function createAuthUserAfterOtp(client, { email, password, fullName
     const user = data?.user ?? null;
 
     // Anti-enumeration shape: user returned but not linked to this credential.
-    // Reported as the same neutral "already registered?" hint, never as a
-    // definitive existence answer, and no account is created a second time.
     if (!user) return { status: 'email_exists', message: 'This email is already registered. Try logging in instead.' };
     if (Array.isArray(user.identities) && user.identities.length === 0) {
         return { status: 'email_exists', message: 'This email is already registered. Try logging in instead.' };
@@ -175,8 +173,8 @@ export async function sendPasswordReset(client, { email, redirectTo }) {
 
 /**
  * Completes a password reset from inside the app: the recovery link lands on the
- * site URL, detectSessionInUrl exchanges the code, onAuthStateChange reports
- * PASSWORD_RECOVERY, and this writes the new password on that short-lived session.
+ * site URL, the auth callback is handled by the app, and this writes the new
+ * password on that short-lived session.
  */
 export async function completePasswordRecovery(client, newPassword) {
     const password = String(newPassword || '');
@@ -204,10 +202,6 @@ export async function changePassword(client, newPassword) {
  */
 export async function startGoogleOAuth(client, { redirectTo, shouldStart } = {}) {
     if (!client) throw new Error('Supabase is not available on this deployment.');
-    // A second signInWithOAuth while a return-leg code is still unexchanged
-    // overwrites the stored code verifier, which turns a perfectly good code into
-    // "Unable to exchange external code". Callers gate on the pending callback;
-    // this makes the gate impossible to forget.
     if (shouldStart && !shouldStart()) {
         throw new Error('Another sign-in is already finishing in this tab. Please wait for it.');
     }
@@ -226,17 +220,7 @@ export async function startGoogleOAuth(client, { redirectTo, shouldStart } = {})
 }
 
 // ─── The return leg: one owner, real reasons ─────────────────────────────────
-//
-// src/supabase.js captures ?code=… / ?error_code=… at module scope and scrubs them
-// from the address bar, so these functions work on that captured object instead of
-// re-reading a URL that has already been rewritten.
 
-/**
- * Maps a code-exchange failure to a sentence that says what happened and what to
- * do. The previous behaviour — a generic "did not complete" — is what made this
- * undiagnosable for two rounds of debugging, so the branches below are the point
- * of the module, not decoration.
- */
 const EXCHANGE_FRIENDLY = [
     [/flow_state_not_found|invalid flow state/, 'The Google sign-in request expired before it could be finished. Please try again.'],
     [/bad_verifier|unable to exchange external code|code verifier/, 'This browser\'s sign-in state no longer matches the request — usually a second sign-in started, or another tab finished it. Please try again in one tab.'],
@@ -248,7 +232,6 @@ const EXCHANGE_FRIENDLY = [
     [/network|failed to fetch|fetch failed|timeout|aborted/, 'Connection issue while finishing sign-in. Check your internet and try again.'],
 ];
 
-/** Only ever appended when it is short, human and free of internals. */
 function safeDetail(text) {
     const clean = String(text || '').replace(/\s+/g, ' ').trim();
     if (!clean || clean.length > 90) return '';
@@ -272,11 +255,6 @@ export function describeAuthExchangeError(err) {
     return out;
 }
 
-/**
- * A callback that did NOT bring a code: consent denied, cancelled, or rejected by
- * the provider. Turned into a message here so the UI never has to guess from a
- * query string it can no longer see.
- */
 export function describeAuthCallback(callback) {
     if (!callback) return null;
     if (callback.kind === 'code') {
@@ -289,12 +267,9 @@ export function describeAuthCallback(callback) {
     if (/access_denied|user_cancelled|cancelled|denied/.test(hay)) {
         return { kind: 'error', cancelled: true, message: 'Google sign-in was cancelled. Nothing was created — you can try again.' };
     }
-    // The summary stays on every failure so a screenshot is enough to diagnose it,
-    // and the provider's own words follow when they are safe to show.
     const mapped = normalizeAuthError({ code: callback.errorCode, message: callback.errorDescription });
     const detail = safeDetail(callback.errorDescription)
         || safeDetail(mapped?.message)
-        || (mapped?.message && mapped.message !== 'Something went wrong. Please try again.' ? '' : '')
         || 'the provider rejected the request';
     return {
         kind: 'error',
@@ -303,11 +278,6 @@ export function describeAuthCallback(callback) {
     };
 }
 
-/**
- * A cancelled or failed OAuth round-trip comes back as
- * `?error_code=access_denied&error_description=…` (or in the hash). Supabase clears
- * the session, so without this the user just sees the login page again.
- */
 export function readOAuthErrorFromUrl(href) {
     if (!href) return null;
     const [beforeHash, hash = ''] = String(href).split('#');
@@ -325,32 +295,13 @@ export function readOAuthErrorFromUrl(href) {
     return describeAuthCallback({ kind: 'error', errorCode: code, errorDescription: description });
 }
 
-/** True when a URL still carries an unexchanged code (kept for direct checks). */
 export function hasPendingAuthCode(href) {
     if (!href) return false;
     return /[?&#]code=/.test(String(href));
 }
 
-/**
- * Exchanges a PKCE `code` for a session, with a deadline.
- *
- * The deadline is not ceremony: `exchangeCodeForSession` is a network call made
- * while the whole app waits on the auth bootstrap, and an unsettled promise there
- * is what turns a login page into a spinner forever. On timeout the UI gets an
- * error and a retry instead — the code itself stays valid server-side for the
- * student to try again (it is single-use, so a late success is harmless either way).
- */
-// ─── "we left for Google on purpose" marker ──────────────────────────────────
-//
-// Written before the browser leaves, in BOTH storages on purpose:
-// sessionStorage is what a same-tab return sees, but a provider that hands the code
-// back in a NEW tab (or a mobile redirect that rebuilds the session) leaves that
-// storage empty — and a page that cannot tell "we came back" from "we were never
-// here" is exactly what produced the false "Google sign-in did not complete".
-// localStorage is shared across tabs and survives, and it expires on its own so a
-// stale marker can never pin the UI in a spinner.
 const OAUTH_ATTEMPT_KEY     = 'prepmaster_oauth_attempt_v1';
-const OAUTH_TAB_FLAG_KEY    = 'prepmaster_google_signup_pending';   // Signup.jsx reads this one
+const OAUTH_TAB_FLAG_KEY    = 'prepmaster_google_signup_pending';
 const OAUTH_ATTEMPT_TTL_MS  = 15 * 60 * 1000;
 
 function eachStorage(fn) {
@@ -375,10 +326,6 @@ export function clearOAuthAttempt() {
     });
 }
 
-/**
- * True while a departure is recent enough that "back with no code" is still best
- * read as "in flight / just landed", not as "the visitor never tried".
- */
 export function oauthAttemptInFlight(now = Date.now()) {
     if (typeof window === 'undefined') return false;
     for (const store of [window.localStorage, window.sessionStorage]) {
@@ -426,14 +373,13 @@ export async function fetchStudentProfile(client, authUid) {
     if (!client || !authUid) return { row: null, error: null };
 
     const { data, error } = await client
-        .from('students')
-        .select('student_id, auth_uid, full_name, email, is_spam, role, created_at')
+        .from('Students')
+        .select('StudentId, auth_uid, FullName, Email, IsSpam, role, created_at')
         .eq('auth_uid', authUid)
         .maybeSingle();
 
     if (error) {
         const norm = normalizeAuthError(error);
-        // PostgREST reports an RLS/privilege rejection as a permission error.
         norm.isProfileBlocked = /permission denied|42501|row-level security/.test(
             `${error.code || ''} ${error.message || ''}`.toLowerCase()
         );
@@ -448,87 +394,69 @@ export async function updateStudentFullName(client, authUid, fullName) {
     if (!clean) throw new Error('Please enter your full name.');
 
     const { error } = await client
-        .from('students')
-        .update({ full_name: clean })
+        .from('Students')
+        .update({ FullName: clean })
         .eq('auth_uid', authUid);
 
     if (error) throw normalizeAuthError(error);
     return clean;
 }
 
-/**
- * Maps the Phase-1 row to the shape the rest of the app already consumed
- * (camelCase, plus `uid`), so no dashboard/exam file needed changing.
- * `provider`/`photoURL` are read from the auth user, never stored in public.students.
- */
 export function mapStudentProfile(row, user) {
     if (!row && !user) return null;
     const provider = user?.app_metadata?.provider === 'google' ? 'google' : 'email';
+
+    // The database now follows the ER naming exactly. The legacy fallbacks are kept
+    // only so previously stored test fixtures do not break during this schema rename.
+    const studentId = row?.StudentId ?? row?.student_id ?? null;
+    const authUid = row?.auth_uid ?? user?.id ?? null;
+    const fullName = row?.FullName ?? row?.full_name ?? user?.user_metadata?.full_name ?? '';
+    const email = row?.Email ?? row?.email ?? cleanEmail(user?.email);
+    const isSpam = row?.IsSpam ?? row?.is_spam ?? false;
+    const createdAt = row?.created_at ?? user?.created_at ?? null;
+
     return {
-        studentId: row?.student_id ?? null,
-        uid: row?.auth_uid ?? user?.id ?? null,
-        fullName: row?.full_name ?? user?.user_metadata?.full_name ?? '',
-        email: row?.email ?? cleanEmail(user?.email),
-        isSpam: row?.is_spam ?? false,
+        studentId,
+        uid: authUid,
+        fullName,
+        email,
+        isSpam,
         role: row?.role ?? 'student',
         provider,
         providers: [provider],
-        createdAt: row?.created_at ?? user?.created_at ?? null,
+        createdAt,
         photoURL: user?.user_metadata?.avatar_url ?? user?.user_metadata?.picture ?? null,
     };
 }
 
-// ─── Admin authorization (public.admins) ─────────────────────────────────────
+// ─── Admin authorization (public."Admins") ───────────────────────────────────
 //
 // An admin is not a different kind of login. It is the same Supabase Auth user,
-// plus a row in public.admins whose auth_uid is that user's auth.users id. So:
-// authentication answers "who are you", and this answers "what are you". There is
-// deliberately no admin password anywhere in this file, no email-based lookup, and
-// no second auth path.
-//
-// Read order, and why:
-//  1. public.admin_role_for_uid() — the security-definer function shipped by
-//     supabase/migrations/20260925150000_admin_role_lookup.sql. It takes NO
-//     argument, so a caller cannot ask about somebody else: the predicate is
-//     auth.uid() evaluated inside Postgres against the verified JWT.
-//  2. a direct read of the caller's own row, for a project whose RLS already
-//     allows that. This is a convenience, not a widening: nothing here adds,
-//     edits or relies on a loosened policy.
-//
-// The failure direction is the point: if neither read succeeds the user is a
-// student, which grants nothing. The error is returned alongside so the caller can
-// say "I could not check" instead of silently pretending the account is ordinary.
+// plus a row in public."Admins" whose auth_uid is that user's auth.users id.
 
-/** The RPC name, exported so tests and the migration cannot drift apart. */
 export const ADMIN_LOOKUP_FUNCTION = 'admin_role_for_uid';
 export const ADMIN_STAFF_FUNCTION = 'manage_admin_staff';
 
 /** Whitelisted on purpose: only what the app may show, never a credential. */
-const ADMIN_COLUMNS = 'admin_id, auth_uid, full_name, email, is_super_admin';
+const ADMIN_COLUMNS = 'AdminId, auth_uid, FullName, Email, isSuperAdmin';
 
-/** Reported instead of swallowed: the lookup answered with somebody else's row. */
-export const ADMIN_UID_MISMATCH = 'The admin-role lookup returned a row for a different '
-    + 'account, so it was ignored and this session is treated as a student.';
+export const ADMIN_UID_MISMATCH =
+    'The admin-role lookup returned a row for a different account, so it was ignored and this session is treated as a student.';
 
 function normalizeAdminRow(raw) {
     if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
-    const flag = raw.is_super_admin ?? raw.isSuperAdmin ?? false;
+
+    const flag = raw.isSuperAdmin ?? raw.is_super_admin ?? false;
+
     return {
-        adminId: raw.admin_id ?? raw.adminId ?? null,
+        adminId: raw.AdminId ?? raw.admin_id ?? null,
         authUid: raw.auth_uid ?? raw.authUid ?? null,
-        fullName: raw.full_name ?? raw.fullName ?? '',
-        email: cleanEmail(raw.email) || '',
-        // Postgres booleans arrive as true/false; a text export can say 't'.
+        fullName: raw.FullName ?? raw.full_name ?? '',
+        email: cleanEmail(raw.Email ?? raw.email) || '',
         isSuperAdmin: flag === true || flag === 'true' || flag === 1 || flag === 't',
     };
 }
 
-/**
- * Only a row about THIS uid counts as authorization, and it has to be a single object.
- * A lookup function that was edited to return someone else's row, a scalar, or a list
- * therefore grants nothing — the app checks the identity it asked about, not just that
- * something came back.
- */
 function acceptAdminRow(raw, authUid) {
     const row = normalizeAdminRow(raw);
     if (!row) return { row: null, mismatch: false };
@@ -536,18 +464,11 @@ function acceptAdminRow(raw, authUid) {
     return { row, mismatch: false };
 }
 
-/** "Function not created yet" is the only error that justifies the fallback read. */
 function isMissingLookupFunction(error) {
     const hay = `${error?.code || ''} ${error?.message || ''}`.toLowerCase();
     return /pgrst202|could not find the function|function .* does not exist|schema does not exist/.test(hay);
 }
 
-/**
- * Resolves what the authenticated user is allowed to be, from the database.
- * Never throws: a failed lookup is reported, and the caller fails closed.
- *
- * @returns {Promise<{ row: object|null, error: Error|null, source: 'rpc'|'self-select'|'anonymous' }>}
- */
 export async function resolveAuthorization(client, authUid) {
     if (!client || !authUid) return { row: null, error: null, source: 'anonymous' };
 
@@ -559,6 +480,7 @@ export async function resolveAuthorization(client, authUid) {
             out = { data: null, error: err };
         }
         const { data, error } = out || {};
+
         if (!error) {
             const accepted = acceptAdminRow(data, authUid);
             return {
@@ -567,20 +489,23 @@ export async function resolveAuthorization(client, authUid) {
                 source: 'rpc',
             };
         }
+
         if (!isMissingLookupFunction(error)) {
             return { row: null, error: normalizeAuthError(error), source: 'rpc' };
         }
-        // else: the lookup function has not been deployed to this project yet.
     }
 
     try {
         const { data, error } = await client
-            .from('admins')
+            .from('Admins')
             .select(ADMIN_COLUMNS)
             .eq('auth_uid', authUid)
             .maybeSingle();
+
         if (error) return { row: null, error: normalizeAuthError(error), source: 'self-select' };
+
         const accepted = acceptAdminRow(data, authUid);
+
         return {
             row: accepted.row,
             error: accepted.mismatch ? new Error(ADMIN_UID_MISMATCH) : null,
@@ -594,29 +519,23 @@ export async function resolveAuthorization(client, authUid) {
 /**
  * THE role rule. One function, one place, so no page can grow its own opinion.
  *
- * public.students.role is deliberately not consulted: students may update their own
- * profile row, so a column in a table the row owner can write is not an
- * authorization source — it is an escalation path waiting to be found.
+ * public."Students".role is deliberately not consulted.
  */
 export function deriveRole(adminRow) {
     if (!adminRow) return 'student';
     return adminRow.isSuperAdmin ? 'superAdmin' : 'admin';
 }
 
-/**
- * Super-admin staff write. The browser only sends action + email + name.
- * Authorization is the database function (caller = auth.uid()). This never
- * writes public.admins from the client and never sends is_super_admin as a
- * claim about the caller.
- */
 export async function manageAdminStaff(client, { action, email, fullName } = {}) {
     if (!client || typeof client.rpc !== 'function') {
         throw new Error('Staff management is not available.');
     }
+
     const act = String(action || '').trim().toLowerCase();
     if (!['add', 'remove', 'add_super'].includes(act)) {
         throw new Error('That staff action is not valid.');
     }
+
     let out;
     try {
         out = await client.rpc(ADMIN_STAFF_FUNCTION, {
@@ -627,9 +546,12 @@ export async function manageAdminStaff(client, { action, email, fullName } = {})
     } catch (err) {
         throw normalizeAuthError(err);
     }
+
     const { data, error } = out || {};
+
     if (error) {
         const hay = `${error.code || ''} ${error.message || ''}`.toLowerCase();
+
         if (/42501|not_authorized|permission denied/.test(hay)) {
             throw new Error('Only a Super Admin can change staff.');
         }
@@ -642,7 +564,9 @@ export async function manageAdminStaff(client, { action, email, fullName } = {})
         if (/pgrst202|could not find the function/.test(hay)) {
             throw new Error('Staff write path is not applied on this project yet.');
         }
+
         throw normalizeAuthError(error);
     }
+
     return data;
 }
