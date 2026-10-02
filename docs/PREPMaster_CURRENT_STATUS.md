@@ -17,7 +17,7 @@ independently verified.
 |---|---|
 | Git root / app dir | `/home/user/prep_master_` / `global-exam-prep/` |
 | Branch | `main` |
-| Last pushed HEAD | `285d458ce4e968cba3d42ecd7cfceea4865bc662` (`feat(ui): animate admin command orrery`) |
+| Last pushed HEAD | `dd164dec330f006ae37c3b13be2ec1847b49a6fa` (`Correctised subjectId`) |
 | Working tree | Previous documentation/session notes reported dirty; current live working tree is not independently writable from this session |
 | Commit/push policy | Do not commit/push unless the owner explicitly asks |
 
