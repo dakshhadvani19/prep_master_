@@ -2,38 +2,52 @@
  * supabaseMock.js — one shared stub of `src/supabase.js` for the auth tests.
  *
  * It records every call the app makes, in the shape the real client has
- * (chainable `from().select().eq().maybeSingle()`), while mirroring the current
- * SRS-named database tables:
- *   - `Students`
- *   - `Admins`
- *
- * Legacy fixture property names are normalized at the boundary only, so existing
- * tests that seed an old-shaped fixture remain valid during this database rename.
+ * (chainable `from().select().eq().maybeSingle()`), so a test can assert both the
+ * happy path and the security rules we care about:
+ *   - signup sends only `full_name` as metadata (never role/is_spam/ids)
+ *   - nothing ever inserts into public.students from the client
+ *   - the profile is read back by `auth_uid`
+ *   - admin status is read only for the caller's own uid, from public.admins (or its
+ *     security-definer lookup), and never written from the client
+ * Import it, then `vi.mock('../src/supabase', ...)` with `supabaseModuleMock()`.
  */
 import { vi } from 'vitest';
 
 export const state = {
   session: null,
-  profile: null,
+  profile: null,          // the row public.students returns for the signed-in user
   profileError: null,
   signUpResult: null,
   signUpError: null,
   verifyError: null,
 
-  adminRow: null,
-  adminLookup: 'rpc',
-  adminRowError: null,
-  adminsSelfRead: false,
+  // public.admins, as the database sees it. Two knobs, because there are two ways the
+  // app may legitimately learn admin status: the security-definer RPC (primary) and a
+  // client self-read that only returns rows when the project's RLS already allows it.
+  adminRow: null,          // the staff row keyed by auth_uid
+  adminLookup: 'rpc',      // 'rpc' (function exists) | 'missing' | 'error'
+  adminRowError: null,     // a PostgREST error from whichever path was taken
+  adminsSelfRead: false,   // does public.admins have a self-read policy?
   signInError: null,
   oauthError: null,
   updateUserError: null,
   resendError: null,
-  emit: null,
+  emit: null,             // the app's onAuthStateChange callback
   calls: [],
 
+  // public."Courses" / public."Subjects" catalog rows for student-catalog tests.
+  catalogCourses: [],
+  catalogSubjects: [],
+  catalogError: null,
+  catalogDelayMs: 0,
+
+  // What the page load arrived with, in the shape src/supabase.js produces. Tests set
+  // this instead of rewriting window.location, because in the real app the code is
+  // read once at module load and then owned by AuthContext — no URL mutation after
+  // that is even observable.
   authCallback: null,
-  exchangeError: null,
-  exchangeDelayMs: 0,
+  exchangeError: null,    // a { message, code } from GoTrue's /token?grant_type=pkce
+  exchangeDelayMs: 0,     // to exercise the bounded wait without a real timeout
 };
 
 export function resetSupabaseStub() {
@@ -53,11 +67,16 @@ export function resetSupabaseStub() {
   state.resendError = null;
   state.emit = null;
   state.calls.length = 0;
+  state.catalogCourses = [];
+  state.catalogSubjects = [];
+  state.catalogError = null;
+  state.catalogDelayMs = 0;
   state.authCallback = null;
   state.exchangeError = null;
   state.exchangeDelayMs = 0;
 }
 
+/** Make the next page load arrive on an OAuth/recovery callback. */
 export function setAuthCallback(callback) {
   state.authCallback = callback;
   return callback;
@@ -66,61 +85,39 @@ export function setAuthCallback(callback) {
 export const callsTo = (name) => state.calls.filter((c) => c.name === name);
 export const lastCall = (name) => callsTo(name).at(-1);
 
-function normalizeStudentFixture(overrides = {}) {
-  const out = { ...overrides };
-  if (out.StudentId === undefined && out.student_id !== undefined) out.StudentId = out.student_id;
-  if (out.FullName === undefined && out.full_name !== undefined) out.FullName = out.full_name;
-  if (out.Email === undefined && out.email !== undefined) out.Email = out.email;
-  if (out.IsSpam === undefined && out.is_spam !== undefined) out.IsSpam = out.is_spam;
-  delete out.student_id;
-  delete out.full_name;
-  delete out.email;
-  delete out.is_spam;
-  return out;
-}
-
-/** Mirrors the live public."Students" row shape. */
+/** Public Postgres rows are snake_case; this is what RLS hands back. */
 export function studentRow(overrides = {}) {
   return {
-    StudentId: 1,
+    student_id: 1,
     auth_uid: 'u1',
-    FullName: 'Raja Advani',
-    Email: 'raja@x.com',
-    IsSpam: false,
+    full_name: 'Raja Advani',
+    email: 'raja@x.com',
+    is_spam: false,
     role: 'student',
     created_at: '2026-01-01T00:00:00.000Z',
-    ...normalizeStudentFixture(overrides),
+    ...overrides,
   };
 }
 
-function normalizeAdminFixture(overrides = {}) {
-  const out = { ...overrides };
-  if (out.AdminId === undefined && out.admin_id !== undefined) out.AdminId = out.admin_id;
-  if (out.FullName === undefined && out.full_name !== undefined) out.FullName = out.full_name;
-  if (out.Email === undefined && out.email !== undefined) out.Email = out.email;
-  if (out.isSuperAdmin === undefined && out.is_super_admin !== undefined) {
-    out.isSuperAdmin = out.is_super_admin;
-  }
-  delete out.admin_id;
-  delete out.full_name;
-  delete out.email;
-  delete out.is_super_admin;
-  return out;
-}
-
-/** Mirrors the live public."Admins" row shape. */
+/** What a public.admins row looks like coming back from Postgres. */
 export function adminRow(overrides = {}) {
   return {
-    AdminId: 11,
+    admin_id: 11,
     auth_uid: 'u1',
-    FullName: 'Daksh Patel',
-    Email: 'admin@x.com',
-    isSuperAdmin: false,
+    full_name: 'Daksh Patel',
+    email: 'admin@x.com',
+    is_super_admin: false,
     created_at: '2026-01-01T00:00:00.000Z',
-    ...normalizeAdminFixture(overrides),
+    ...overrides,
   };
 }
 
+/**
+ * The staff row for the CURRENT session user. Both read paths in the stub resolve
+ * against `state.session.user.id`, i.e. auth.uid() — never against an argument a
+ * caller passes — so a test that seeds a row for some other uid proves the app
+ * cannot borrow someone else's admin status.
+ */
 export function setAdminRow(row) {
   state.adminRow = row ?? null;
   return state.adminRow;
@@ -146,6 +143,7 @@ export function makeSession(user) {
   return { user, access_token: 'fake-access-token', refresh_token: 'fake-refresh-token' };
 }
 
+/** Fire an auth event the way GoTrue's listener would. */
 export function emit(event, session) {
   state.session = session ?? null;
   return state.emit?.(event, session ?? null);
@@ -165,7 +163,10 @@ export const client = {
       state.calls.push({ name: 'signUp', ...opts });
       if (state.signUpError) return { data: null, error: state.signUpError };
       if (state.signUpResult) return state.signUpResult;
-
+      // "Confirm email" OFF, which is what the custom-OTP architecture needs: the
+      // Gmail code we verified first is the only gate, so GoTrue hands back a usable
+      // session and never sends a second verification mail. Set state.signUpResult
+      // to exercise the ON shape ({ user, session: null }).
       const user = authUser({
         email: opts?.email,
         user_metadata: opts?.options?.data ?? {},
@@ -220,6 +221,8 @@ export const client = {
         identities: [{ provider: 'google', identity_id: 'g1' }],
       });
       state.session = makeSession(user);
+      // GoTrue fires SIGNED_IN from inside the exchange; the app must not have to
+      // poll for it.
       state.emit?.('SIGNED_IN', state.session);
       return { data: { session: state.session, user }, error: null };
     }),
@@ -233,12 +236,13 @@ export const client = {
 
   from: vi.fn((table) => makeBuilder(table)),
 
+  // PostgREST /rpc. admin_role_for_uid() takes no arguments, so the row is looked up
+  // from the session uid exactly as the SQL body does it server-side.
   rpc: vi.fn(async (fn, args) => {
     state.calls.push({ name: `rpc:${fn}`, op: 'rpc', fn, args: args ?? null });
-
     if (fn === 'manage_admin_staff') {
       const mine = ownAdminRow();
-      if (!mine || mine.isSuperAdmin !== true) {
+      if (!mine || mine.is_super_admin !== true) {
         return { data: null, error: { code: '42501', message: 'not_authorized' } };
       }
       return {
@@ -250,7 +254,6 @@ export const client = {
         error: null,
       };
     }
-
     if (fn !== 'admin_role_for_uid' || state.adminLookup === 'missing') {
       return {
         data: null,
@@ -260,7 +263,6 @@ export const client = {
         },
       };
     }
-
     if (state.adminLookup === 'error') {
       return {
         data: null,
@@ -268,23 +270,26 @@ export const client = {
           || { code: '42501', message: 'permission denied for function admin_role_for_uid' },
       };
     }
-
     if (state.adminRowError) return { data: null, error: state.adminRowError };
-
     const row = ownAdminRow();
     return {
       data: row ? {
-        AdminId: row.AdminId,
+        admin_id: row.admin_id,
         auth_uid: row.auth_uid,
-        FullName: row.FullName,
-        Email: row.Email,
-        isSuperAdmin: row.isSuperAdmin === true,
+        full_name: row.full_name,
+        email: row.email,
+        is_super_admin: row.is_super_admin === true,
       } : null,
       error: null,
     };
   }),
 };
 
+/**
+ * Chainable builder. `insert`/`update` are recorded so a test can fail the run if
+ * application code ever tries to write protected student fields from the browser.
+ */
+/** The caller's own public.admins row, as RLS would (or would not) hand it over. */
 function ownAdminRow() {
   const uid = state.session?.user?.id ?? null;
   const row = state.adminRow;
@@ -292,87 +297,92 @@ function ownAdminRow() {
   return String(row.auth_uid) === String(uid) ? row : null;
 }
 
-function callName(op, table) {
-  // Keep the established test call labels stable while the actual `table`
-  // field records the SRS-named database object.
-  if (table === 'Students') return `${op}:students`;
-  if (table === 'Admins') return `${op}:admins`;
-  return `${op}:${table}`;
-}
-
 export function makeBuilder(table) {
   const record = () => state.calls.push({
-    name: callName(b._op, table),
-    op: b._op,
-    table,
-    cols: b._cols,
-    payload: b._payload,
-    filters: { ...b._filters },
+    name: `${b._op}:${table}`, op: b._op, table,
+    cols: b._cols, payload: b._payload, filters: { ...b._filters },
   });
-
   const b = {
     _table: table,
     _op: 'select',
     _cols: null,
     _payload: null,
     _filters: {},
-
     select: vi.fn((cols) => { b._cols = cols; return b; }),
     insert: vi.fn((payload) => { b._op = 'insert'; b._payload = payload; return b; }),
     update: vi.fn((payload) => { b._op = 'update'; b._payload = payload; return b; }),
     eq: vi.fn((k, v) => { b._filters[k] = v; return b; }),
-
+    in: vi.fn((k, v) => { b._filters[k] = v; return b; }),
     maybeSingle: vi.fn(async () => {
+      if (state.catalogDelayMs && (table === 'Courses' || table === 'Subjects')) {
+        await new Promise((r) => setTimeout(r, state.catalogDelayMs));
+      }
       record();
-
       if (b._op !== 'select') return { data: null, error: null };
-
-      if (table === 'Admins') {
+      if (table === 'Courses' || table === 'Subjects') {
+        if (state.catalogError) return { data: null, error: state.catalogError };
+        const rows = catalogRows(table, b._filters);
+        return { data: rows[0] ?? null, error: null };
+      }
+      if (table === 'admins') {
         return state.adminsSelfRead
           ? { data: ownAdminRow(), error: state.adminRowError ?? null }
-          : { data: null, error: null };
+          : { data: null, error: null };   // RLS with no self-read policy: no rows
       }
-
       if (state.profileError) return { data: null, error: state.profileError };
       return { data: state.profile ?? null, error: null };
     }),
-
     single: vi.fn(async () => {
       const written = { ...b._payload };
       record();
-
       if (b._op === 'select') {
-        if (table === 'Admins') {
-          return { data: state.adminsSelfRead ? ownAdminRow() : null, error: null };
+        if (table === 'Courses' || table === 'Subjects') {
+          if (state.catalogError) return { data: null, error: state.catalogError };
+          const rows = catalogRows(table, b._filters);
+          return { data: rows[0] ?? null, error: null };
         }
+        if (table === 'admins') return { data: state.adminsSelfRead ? ownAdminRow() : null, error: null };
         return { data: state.profile ?? null, error: state.profileError ?? null };
       }
-
       return { data: { ...state.profile, ...written }, error: null };
     }),
-
+    // PostgrestBuilder is awaitable: `await from().update().eq()` resolves to
+    // { data, error }. Modelled so writes are recorded exactly like reads.
     then: vi.fn((resolve, reject) => {
       const written = { ...b._payload };
-      try {
-        record();
-
-        if (b._op === 'select') {
-          resolve(table === 'Admins'
-            ? { data: state.adminsSelfRead ? ownAdminRow() : null, error: null }
-            : { data: state.profile ?? null, error: state.profileError ?? null });
-        } else {
-          resolve({
-            data: b._op === 'update' ? { ...state.profile, ...written } : null,
-            error: null,
-          });
-        }
-      } catch (e) {
-        reject(e);
+      const finish = () => {
+        try {
+          record();
+          if (b._op === 'select') {
+            if (table === 'Courses' || table === 'Subjects') {
+              if (state.catalogError) return resolve({ data: null, error: state.catalogError });
+              return resolve({ data: catalogRows(table, b._filters), error: null });
+            }
+            resolve(table === 'admins'
+              ? { data: state.adminsSelfRead ? ownAdminRow() : null, error: null }
+              : { data: state.profile ?? null, error: state.profileError ?? null });
+          }
+          else resolve({ data: b._op === 'update' ? { ...state.profile, ...written } : null, error: null });
+        } catch (e) { reject(e); }
+      };
+      if (state.catalogDelayMs && (table === 'Courses' || table === 'Subjects')) {
+        return new Promise((r) => setTimeout(r, state.catalogDelayMs)).then(finish, reject);
       }
+      return finish();
     }),
   };
-
   return b;
+}
+
+function catalogRows(table, filters) {
+  const rows = table === 'Courses' ? state.catalogCourses : state.catalogSubjects;
+  const wanted = filters?.CourseId;
+  if (wanted === undefined) return [...rows];
+  if (Array.isArray(wanted)) {
+    const set = new Set(wanted.map(Number));
+    return rows.filter((r) => set.has(Number(r.CourseId)));
+  }
+  return rows.filter((r) => Number(r.CourseId) === Number(wanted));
 }
 
 export function supabaseModuleMock() {
@@ -381,6 +391,8 @@ export function supabaseModuleMock() {
     default: client,
     supabaseConfigError: null,
     requireSupabase: () => client,
+    // The capture API. `consume` is one-shot, exactly like the real module, so a
+    // test can assert the code is exchanged once and never re-read on a remount.
     consumeAuthCallback: () => {
       const value = state.authCallback;
       state.authCallback = null;
