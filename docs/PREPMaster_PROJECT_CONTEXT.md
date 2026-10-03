@@ -395,7 +395,14 @@ Student CourseId is numeric 1–49; SubjectId is the final BIGINT scheme
 `CourseId + normalized original SubjectId + occurrence suffix` (do not redesign).
 Frontend bridges: `src/data/catalogDomains.js` (six departments, no fetch),
 `src/data/courseMapping.json` (domainId → CourseIds; source course id ↔ DB CourseId),
-`src/data/subjectSemesterMap.json` (SubjectId → semester only; the Subjects table has no Sem column).
+`src/data/subjectSemesterMap.json` (final numeric SubjectId → semester) and
+`src/data/subjectIdBridge.json` (final numeric SubjectId → source subject/course + numeric CourseId + semester).
+
+**Current audit finding (2026-10-03):** the checked-in `subjectSemesterMap.json` and `subjectIdBridge.json`
+were generated against the pre-final SubjectIds. The live `public."Subjects"` table and current `mockData.js`
+contain the final IDs. Treat the two bridge files as **stale until regenerated from the current canonical
+`mockData.js`**. The first observed 61 missing IDs are the 61 subjects of CourseId 1; this is a global
+2,788-subject artifact mismatch, not a CourseId-1-only defect.
 `CourseExplorer` / `SubjectDetails` query only the CourseIds for the selected department, or
 Subjects for one CourseId. Homepage does not fetch Courses/Subjects and does not import `mockData.js`.
 `mockData.js` remains for exam prompts (also copied to `examPrompts.js`), ExamPortal, SearchResults,
@@ -641,6 +648,10 @@ staff exists) an admin sign-in.
 - **Phase 3 catalog UI (2026-09-26):** `/admin/courses` is in-memory Course → Semester → Subject →
   Question CRUD (semesters select-only). No tables, no API, no persistence. Student catalog remains
   `mockData.js`.
+- **2026-10-03 catalog bridge audit:** live Supabase data was verified at 49 Courses / 2,788 Subjects, while the checked-in
+  `subjectSemesterMap.json` and `subjectIdBridge.json` were found to contain the same count of **stale pre-final IDs**.
+  The authoritative repair path is regeneration from the current `mockData.js` final numeric IDs, with global 2,788-row
+  coverage validation; do not patch only the first failing course and do not alter the live Subjects table without evidence.
 - **Phase 4 leaderboard UI (2026-09-26):** `/leaderboards` is in-memory Top 100 + own rank/percentile
   (students) and Course → Semester → Subject all-boards (admins). No tables, no API, no persistence.
 
