@@ -1,7 +1,8 @@
 /**
- * supabase.js — the browser Supabase client, used for STUDENT AUTHENTICATION ONLY.
+ * supabase.js — the browser Supabase client.
  *
- * Scope (deliberate): Supabase owns auth + the `public.students` profile. It does
+ * Scope (deliberate): Supabase owns auth, the `public.students` profile, and
+ * public catalog reads (`Courses`, `Subjects` via RLS SELECT). It does
  * NOT own Firestore data, exams, syllabus, dashboard data, analytics, feedback,
  * storage or exam history — those still go through `src/firebase.js`.
  *

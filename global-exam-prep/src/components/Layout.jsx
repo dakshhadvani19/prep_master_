@@ -3,7 +3,8 @@ import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
 import { BookOpen, Search, User, LogOut, LogIn, ChevronRight, Menu, X, Home, Trophy, CreditCard, MessageSquare, Shield, LayoutDashboard } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
-import { domains } from '../data/mockData';
+import { CATALOG_DOMAINS } from '../data/catalogDomains';
+import courseMapping from '../data/courseMapping.json';
 import './Layout.css';
 
 export default function Layout() {
@@ -35,16 +36,19 @@ export default function Layout() {
         setMobileMenuOpen(false);
     }, [location.pathname]);
 
-    // Flatten domains into searchable items
+    // Departments + courses only — do not import mockData.js (subjects live in Supabase).
     const searchableItems = useMemo(() => {
         const items = [];
-        domains.forEach(domain => {
+        CATALOG_DOMAINS.forEach(domain => {
             items.push({ type: 'Domain', id: domain.id, title: domain.title, path: `/domains/${domain.id}/courses` });
-            domain.courses.forEach(course => {
-                items.push({ type: 'Course', id: course.id, title: course.title, path: `/courses/${course.id}/subjects`, domainTitle: domain.title });
-                course.subjects.forEach(subject => {
-                    items.push({ type: 'Subject', id: subject.id, title: subject.title, path: `/courses/${course.id}/subjects#${subject.id}`, courseTitle: course.title });
-                });
+        });
+        courseMapping.forEach(course => {
+            items.push({
+                type: 'Course',
+                id: String(course.courseId),
+                title: course.courseName,
+                path: `/courses/${course.courseId}/subjects`,
+                domainTitle: course.domainName,
             });
         });
         return items;

@@ -1,9 +1,10 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { domains, examPrompts } from '../data/mockData';
+import { examPrompts, DEFAULT_EXAM_TYPES } from '../data/examPrompts';
+import { fetchCourseAndSubjects } from '../utils/catalogApi';
 import {
     ChevronLeft, Book, Target, Activity, Flame, Shield,
-    Cpu, Upload, ArrowRight, BookOpen, GraduationCap
+    Cpu, Upload, ArrowRight, BookOpen, GraduationCap, Loader, AlertCircle
 } from 'lucide-react';
 
 const DIFFICULTY_LEVELS = [
@@ -23,51 +24,93 @@ export default function SubjectDetails() {
     const [selectedMode, setSelectedMode] = useState(null); // 'auto' | 'upload'
     const [selectedDifficulty, setSelectedDifficulty] = useState('medium');
 
-    // Find the required course
-    let currentCourse = null;
-    for (const domain of domains) {
-        const found = domain.courses.find(c => c.id === courseId);
-        if (found) { currentCourse = found; break; }
-    }
+    const [currentCourse, setCurrentCourse] = useState(null);
+    const [subjects, setSubjects] = useState([]);
+    const [unmapped, setUnmapped] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-    // Derive sorted list of unique semesters
-    const semesters = useMemo(() => {
-        if (!currentCourse) return [];
-        return [...new Set(currentCourse.subjects.map(s => s.sem))].sort((a, b) => a - b);
-    }, [currentCourse]);
-
-    // Subjects for selected semester
-    const subjectsInSem = useMemo(() => {
-        if (!currentCourse || !selectedSem) return [];
-        return currentCourse.subjects.filter(s => s.sem === selectedSem);
-    }, [currentCourse, selectedSem]);
-
-    // Handle hash scroll for search deep-link: e.g. /courses/btech-ce/subjects#01ce1101
     useEffect(() => {
-        if (!location.hash || !currentCourse) return;
+        let cancelled = false;
+        setLoading(true);
+        setError(null);
+        setCurrentCourse(null);
+        setSubjects([]);
+        setUnmapped([]);
+        setSelectedSem(null);
+        setSelectedSubject(null);
+        setSelectedExamType(null);
+        setSelectedMode(null);
+
+        fetchCourseAndSubjects(courseId).then((result) => {
+            if (cancelled) return;
+            if (result.error) {
+                setError(result.error.message || 'Could not load this course.');
+                setLoading(false);
+                return;
+            }
+            setCurrentCourse(result.course);
+            setSubjects((result.subjects || []).map((s) => ({
+                id: s.subjectId,
+                title: s.subjectName,
+                sem: s.sem,
+                exams: DEFAULT_EXAM_TYPES,
+            })));
+            setUnmapped(result.unmapped || []);
+            setLoading(false);
+        }).catch((err) => {
+            if (cancelled) return;
+            setError(err.message || 'Could not load this course.');
+            setLoading(false);
+        });
+
+        return () => { cancelled = true; };
+    }, [courseId]);
+
+    const semesters = useMemo(() => {
+        return [...new Set(subjects.map(s => s.sem))].sort((a, b) => a - b);
+    }, [subjects]);
+
+    const subjectsInSem = useMemo(() => {
+        if (!selectedSem && selectedSem !== 0) return [];
+        return subjects.filter(s => s.sem === selectedSem);
+    }, [subjects, selectedSem]);
+
+    useEffect(() => {
+        if (!location.hash || !subjects.length) return;
         const subjectId = location.hash.replace('#', '');
-        const subject = currentCourse.subjects.find(s => s.id === subjectId);
+        const subject = subjects.find(s => String(s.id) === String(subjectId));
         if (subject) {
             setSelectedSem(subject.sem);
-            // Scroll after render
             setTimeout(() => {
                 setSelectedSubject(subject);
             }, 150);
         } else {
             window.scrollTo(0, 0);
         }
-    }, [location.hash, courseId]);
+    }, [location.hash, subjects]);
 
-    if (!currentCourse) {
+    if (loading) {
         return (
-            <div className="container" style={{ textAlign: 'center', marginTop: '4rem' }}>
-                <BookOpen size={48} style={{ color: 'var(--text-secondary)', margin: '0 auto 1rem', display: 'block' }} />
-                <h2>Course not found</h2>
+            <div className="container" style={{ marginTop: '4rem', display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'var(--text-secondary)' }}>
+                <Loader size={22} className="spinner" style={{ color: 'var(--accent-primary)' }} />
+                <span data-testid="catalog-loading">Loading subjects…</span>
             </div>
         );
     }
 
-    // Navigate to ExamPortal with mode pre-selected
+    if (error || !currentCourse) {
+        return (
+            <div className="container" style={{ textAlign: 'center', marginTop: '4rem' }} data-testid="catalog-error">
+                <BookOpen size={48} style={{ color: 'var(--text-secondary)', margin: '0 auto 1rem', display: 'block' }} />
+                <h2>{error && error !== 'Course not found.' ? 'Could not load course' : 'Course not found'}</h2>
+                {error && error !== 'Course not found.' && (
+                    <p style={{ color: 'var(--text-secondary)', marginTop: '0.75rem' }}>{error}</p>
+                )}
+            </div>
+        );
+    }
+
     const handleStartExam = () => {
         if (!selectedSubject || !selectedExamType || !selectedMode || !selectedDifficulty) return;
         navigate(
@@ -78,7 +121,6 @@ export default function SubjectDetails() {
 
     const canStart = selectedSubject && selectedExamType && selectedMode && selectedDifficulty;
 
-    // ── STEP BACK helpers ──
     const handleSemClick = (sem) => {
         setSelectedSem(sem);
         setSelectedSubject(null);
@@ -100,7 +142,6 @@ export default function SubjectDetails() {
 
     return (
         <div className="container animate-fade-in" style={{ maxWidth: '960px' }}>
-            {/* ── Back Button ── */}
             <button
                 onClick={() => navigate(-1)}
                 style={{
@@ -111,20 +152,35 @@ export default function SubjectDetails() {
                 <ChevronLeft size={16} /> Back to Programs
             </button>
 
-            {/* ── Course Header ── */}
             <header style={{ marginBottom: '2.5rem', paddingBottom: '2rem', borderBottom: '1px solid var(--glass-border)' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '0.5rem' }}>
                     <div style={{ background: 'var(--accent-light)', color: 'var(--accent-primary)', padding: '0.6rem', borderRadius: 'var(--radius-md)' }}>
                         <GraduationCap size={24} />
                     </div>
-                    <h1 style={{ fontSize: '2rem' }}>{currentCourse.title}</h1>
+                    <h1 style={{ fontSize: '2rem' }}>{currentCourse.courseName}</h1>
                 </div>
                 <p style={{ color: 'var(--text-secondary)', marginLeft: '0.25rem' }}>
-                    {semesters.length} Semesters · {currentCourse.subjects.length} Subjects
+                    {semesters.length} Semesters · {subjects.length} Subjects
                 </p>
             </header>
 
-            {/* ── STEP 1: Semester Selector ── */}
+            {unmapped.length > 0 && (
+                <div data-testid="unmapped-semester" className="glass-panel" style={{ padding: '1rem 1.25rem', marginBottom: '1.5rem', display: 'flex', gap: '0.75rem' }}>
+                    <AlertCircle size={20} style={{ color: '#f59e0b', flexShrink: 0 }} />
+                    <p style={{ color: 'var(--text-secondary)', margin: 0 }}>
+                        {unmapped.length} subject{unmapped.length === 1 ? '' : 's'} could not be placed in a semester
+                        (missing mapping for SubjectId {unmapped.map((s) => s.subjectId).join(', ')}). Semester was not guessed.
+                    </p>
+                </div>
+            )}
+
+            {!loading && subjects.length === 0 && unmapped.length === 0 && (
+                <div data-testid="catalog-empty" className="glass-panel" style={{ padding: '2rem', textAlign: 'center', color: 'var(--text-secondary)' }}>
+                    No subjects are listed for this course yet.
+                </div>
+            )}
+
+            {subjects.length > 0 && (
             <section style={{ marginBottom: '2.5rem' }}>
                 <h2 style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '1rem' }}>
                     Step 1 — Select Semester
@@ -132,7 +188,7 @@ export default function SubjectDetails() {
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
                     {semesters.map(sem => {
                         const isSelected = selectedSem === sem;
-                        const count = currentCourse.subjects.filter(s => s.sem === sem).length;
+                        const count = subjects.filter(s => s.sem === sem).length;
                         return (
                             <button
                                 key={sem}
@@ -163,9 +219,9 @@ export default function SubjectDetails() {
                     })}
                 </div>
             </section>
+            )}
 
-            {/* ── STEP 2: Subject List ── */}
-            {selectedSem && (
+            {selectedSem != null && (
                 <section style={{ marginBottom: '2.5rem', animation: 'fadeIn 0.3s ease' }}>
                     <h2 style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '1rem' }}>
                         Step 2 — Select Subject
@@ -174,8 +230,7 @@ export default function SubjectDetails() {
                         {subjectsInSem.map((subject, idx) => {
                             const isOpen = selectedSubject?.id === subject.id;
                             return (
-                                <div key={`${subject.id}-${idx}`} id={subject.id}>
-                                    {/* Subject Toggle Button */}
+                                <div key={`${subject.id}-${idx}`} id={String(subject.id)}>
                                     <button
                                         onClick={() => handleSubjectClick(subject)}
                                         style={{
@@ -210,7 +265,6 @@ export default function SubjectDetails() {
                                         />
                                     </button>
 
-                                    {/* ── STEP 3: Exam Type + Mode + Difficulty (inline) ── */}
                                     {isOpen && (
                                         <div
                                             style={{
@@ -222,7 +276,6 @@ export default function SubjectDetails() {
                                                 animation: 'fadeIn 0.25s ease',
                                             }}
                                         >
-                                            {/* Exam Type */}
                                             <p style={{ fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text-tertiary)', marginBottom: '0.75rem' }}>
                                                 Choose Exam Type
                                             </p>
@@ -259,10 +312,8 @@ export default function SubjectDetails() {
                                                 })}
                                             </div>
 
-                                            {/* Mode + Difficulty (shown after exam type selected) */}
                                             {selectedExamType && (
                                                 <div style={{ animation: 'fadeIn 0.2s ease' }}>
-                                                    {/* Mode Selection */}
                                                     <p style={{ fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text-tertiary)', marginBottom: '0.75rem' }}>
                                                         Choose Mode
                                                     </p>
@@ -303,7 +354,6 @@ export default function SubjectDetails() {
                                                         })}
                                                     </div>
 
-                                                    {/* Difficulty Selection */}
                                                     {selectedMode && (
                                                         <div style={{ animation: 'fadeIn 0.2s ease' }}>
                                                             <p style={{ fontSize: '0.82rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.07em', color: 'var(--text-tertiary)', marginBottom: '0.75rem' }}>
@@ -322,9 +372,9 @@ export default function SubjectDetails() {
                                                                                 minWidth: '130px',
                                                                                 padding: '0.75rem 1rem',
                                                                                 border: `1px solid ${isSel ? level.color : 'var(--glass-border)'}`,
-                                                                                borderRadius: 'var(--radius-md)',
                                                                                 background: isSel ? `${level.color}1a` : 'var(--bg-tertiary)',
                                                                                 color: isSel ? level.color : 'var(--text-secondary)',
+                                                                                borderRadius: 'var(--radius-md)',
                                                                                 cursor: 'pointer',
                                                                                 fontWeight: 600,
                                                                                 transition: 'all var(--transition-fast)',
@@ -343,7 +393,6 @@ export default function SubjectDetails() {
                                                                 })}
                                                             </div>
 
-                                                            {/* Start Exam Button */}
                                                             <button
                                                                 onClick={handleStartExam}
                                                                 disabled={!canStart}
@@ -389,4 +438,3 @@ export default function SubjectDetails() {
         </div>
     );
 }
-

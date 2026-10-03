@@ -1,656 +1,799 @@
-{
-  "description": "Deterministic mapping of every source course to its PostgreSQL-generated Courses.CourseId used by the current catalog import.",
-  "courseIdScheme": "Sequential BIGINT mapping in source course order; current live Courses rows are 1 through 49 and were verified by CourseName.",
-  "courses": [
-    {
-      "courseId": 1,
-      "courseSourceId": "btech-ce",
-      "courseName": "B.Tech - Computer Engineering",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 2,
-      "courseSourceId": "btech-it",
-      "courseName": "B.Tech - IT",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 3,
-      "courseSourceId": "btech-electrical",
-      "courseName": "B.Tech - Electrical Engineering",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 4,
-      "courseSourceId": "btech-aiml",
-      "courseName": "B.Tech - AI/ML",
-      "sems": [
-        1,
-        2
-      ]
-    },
-    {
-      "courseId": 5,
-      "courseSourceId": "btech-aids",
-      "courseName": "B.Tech - AI/Data science",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 6,
-      "courseSourceId": "btech-bioinfo",
-      "courseName": "B.Tech - BioInformatics",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 7,
-      "courseSourceId": "btech-ict",
-      "courseName": "B.Tech - ICT",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 8,
-      "courseSourceId": "btech-cse",
-      "courseName": "B.Tech - CSE",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 9,
-      "courseSourceId": "btech-csecybersecurity",
-      "courseName": "B.Tech - CSE & Cyber Security",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 10,
-      "courseSourceId": "btech-cseai",
-      "courseName": "B.Tech - CSE & AI",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 11,
-      "courseSourceId": "btech-chemicalengineering",
-      "courseName": "B.Tech - Chemical Engineering",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 12,
-      "courseSourceId": "btech-civil",
-      "courseName": "B.Tech - Civil Engineering",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 13,
-      "courseSourceId": "btech-mechanical",
-      "courseName": "B.Tech - Mechanical Engineering",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 14,
-      "courseSourceId": "btech-mechanicalengineeringaiml",
-      "courseName": "B.Tech - Mechanical Engineering & Ai/ML",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 15,
-      "courseSourceId": "btech-mechanicalengineeringroboticsautomation",
-      "courseName": "B.Tech - Mechanical Engineering Robotics & Automation",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 16,
-      "courseSourceId": "btech-electronicscommunication",
-      "courseName": "B.Tech - Electronics & Communication",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 17,
-      "courseSourceId": "btech-electronicsandcommunicationengineeringai",
-      "courseName": "B.Tech - Electronics and Communication Engineering - AI",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 18,
-      "courseSourceId": "bca",
-      "courseName": "BCA - Bachelor of Computer Applications",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
-    },
-    {
-      "courseId": 19,
-      "courseSourceId": "mca",
-      "courseName": "MCA - Master of Computer Applications",
-      "sems": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "courseId": 20,
-      "courseSourceId": "bba",
-      "courseName": "BBA",
-      "sems": [
-        0,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 21,
-      "courseSourceId": "bba-hons-",
-      "courseName": "BBA (HONS)",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 22,
-      "courseSourceId": "b-com",
-      "courseName": "B.Com",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 23,
-      "courseSourceId": "bba-business-analytics-",
-      "courseName": "BBA ( Business Analytics )",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 24,
-      "courseSourceId": "bba-digital-marketing-",
-      "courseName": "BBA ( Digital Marketing )",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 25,
-      "courseSourceId": "bba-international-business-",
-      "courseName": "BBA ( International Business)",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 26,
-      "courseSourceId": "bba-in-global-business-management",
-      "courseName": "BBA in Global Business Management",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 27,
-      "courseSourceId": "bba-aviation",
-      "courseName": "BBA Aviation",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 28,
-      "courseSourceId": "mba",
-      "courseName": "MBA",
-      "sems": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "courseId": 29,
-      "courseSourceId": "mba-business-analytics",
-      "courseName": "MBA Business Analytics",
-      "sems": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "courseId": 30,
-      "courseSourceId": "master-in-global-business-management",
-      "courseName": "Master In Global Business Management",
-      "sems": []
-    },
-    {
-      "courseId": 31,
-      "courseSourceId": "b-sc-in-chemistry",
-      "courseName": "B.Sc in Chemistry",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 32,
-      "courseSourceId": "b-sc-in-microbiology",
-      "courseName": "B.Sc in Microbiology",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 33,
-      "courseSourceId": "b-sc-in-agricultural-honors",
-      "courseName": "B.Sc in Agricultural Honors",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 34,
-      "courseSourceId": "m-sc-in-chemistry",
-      "courseName": "M.Sc in Chemistry",
-      "sems": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "courseId": 35,
-      "courseSourceId": "m-sc-in-micorbiology",
-      "courseName": "M.Sc in MicorBiology",
-      "sems": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "courseId": 36,
-      "courseSourceId": "m-sc-in-pgdmlt",
-      "courseName": "M.Sc in PGDMLT",
-      "sems": [
-        1,
-        2
-      ]
-    },
-    {
-      "courseId": 37,
-      "courseSourceId": "b-pharm",
-      "courseName": "B.Pharm",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 38,
-      "courseSourceId": "m-pharm-pharmaceutics",
-      "courseName": "M.Pharm Pharmaceutics",
-      "sems": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "courseId": 39,
-      "courseSourceId": "m-pharm-pharmaceutical-quality-assurence",
-      "courseName": "M.Pharm Pharmaceutical Quality Assurence",
-      "sems": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "courseId": 40,
-      "courseSourceId": "m-pharm-regulatory-affairs",
-      "courseName": "M.Pharm Regulatory Affairs",
-      "sems": [
-        1,
-        2,
-        3,
-        4
-      ]
-    },
-    {
-      "courseId": 41,
-      "courseSourceId": "ba-llb-hons-",
-      "courseName": "BA LLB (Hons)",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    {
-      "courseId": 42,
-      "courseSourceId": "b-com-llb-hons-",
-      "courseName": "B.Com LLB (HONS)",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ]
-    },
-    {
-      "courseId": 43,
-      "courseSourceId": "ba-in-socialogy-psychology-political-science",
-      "courseName": "BA in Socialogy Psychology Political Science",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ]
-    },
-    {
-      "courseId": 44,
-      "courseSourceId": "dip-compu",
-      "courseName": "Diploma Computer Engineering",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 45,
-      "courseSourceId": "dip-mecha",
-      "courseName": "Diploma Mechanical Engineering",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 46,
-      "courseSourceId": "dip-chemi",
-      "courseName": "Diploma Chemical Engineering",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 47,
-      "courseSourceId": "dip-elect",
-      "courseName": "Diploma Electrical Engineering",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 48,
-      "courseSourceId": "dip-civil",
-      "courseName": "Diploma Civil Engineering",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    },
-    {
-      "courseId": 49,
-      "courseSourceId": "dip-infor",
-      "courseName": "Diploma Information and Communication Technology",
-      "sems": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ]
-    }
-  ]
-}
+[
+  {
+    "courseId": 1,
+    "courseSourceId": "btech-ce",
+    "courseName": "B.Tech - Computer Engineering",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 61
+  },
+  {
+    "courseId": 2,
+    "courseSourceId": "btech-it",
+    "courseName": "B.Tech - IT",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 65
+  },
+  {
+    "courseId": 3,
+    "courseSourceId": "btech-electrical",
+    "courseName": "B.Tech - Electrical Engineering",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 78
+  },
+  {
+    "courseId": 4,
+    "courseSourceId": "btech-aiml",
+    "courseName": "B.Tech - AI/ML",
+    "sems": [
+      1,
+      2
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 16
+  },
+  {
+    "courseId": 5,
+    "courseSourceId": "btech-aids",
+    "courseName": "B.Tech - AI/Data science",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 63
+  },
+  {
+    "courseId": 6,
+    "courseSourceId": "btech-bioinfo",
+    "courseName": "B.Tech - BioInformatics",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 54
+  },
+  {
+    "courseId": 7,
+    "courseSourceId": "btech-ict",
+    "courseName": "B.Tech - ICT",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 73
+  },
+  {
+    "courseId": 8,
+    "courseSourceId": "btech-cse",
+    "courseName": "B.Tech - CSE",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 64
+  },
+  {
+    "courseId": 9,
+    "courseSourceId": "btech-csecybersecurity",
+    "courseName": "B.Tech - CSE & Cyber Security",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 63
+  },
+  {
+    "courseId": 10,
+    "courseSourceId": "btech-cseai",
+    "courseName": "B.Tech - CSE & AI",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 58
+  },
+  {
+    "courseId": 11,
+    "courseSourceId": "btech-chemicalengineering",
+    "courseName": "B.Tech - Chemical Engineering",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 61
+  },
+  {
+    "courseId": 12,
+    "courseSourceId": "btech-civil",
+    "courseName": "B.Tech - Civil Engineering",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 106
+  },
+  {
+    "courseId": 13,
+    "courseSourceId": "btech-mechanical",
+    "courseName": "B.Tech - Mechanical Engineering",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 86
+  },
+  {
+    "courseId": 14,
+    "courseSourceId": "btech-mechanicalengineeringaiml",
+    "courseName": "B.Tech - Mechanical Engineering & Ai/ML",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 67
+  },
+  {
+    "courseId": 15,
+    "courseSourceId": "btech-mechanicalengineeringroboticsautomation",
+    "courseName": "B.Tech - Mechanical Engineering Robotics & Automation",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 66
+  },
+  {
+    "courseId": 16,
+    "courseSourceId": "btech-electronicscommunication",
+    "courseName": "B.Tech - Electronics & Communication",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 51
+  },
+  {
+    "courseId": 17,
+    "courseSourceId": "btech-electronicsandcommunicationengineeringai",
+    "courseName": "B.Tech - Electronics and Communication Engineering - AI",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "engineering",
+    "domainName": "Engineering & Technology",
+    "subjectCount": 52
+  },
+  {
+    "courseId": 18,
+    "courseSourceId": "bca",
+    "courseName": "BCA - Bachelor of Computer Applications",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "domainId": "computer-apps",
+    "domainName": "Computer Applications",
+    "subjectCount": 33
+  },
+  {
+    "courseId": 19,
+    "courseSourceId": "mca",
+    "courseName": "MCA - Master of Computer Applications",
+    "sems": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "domainId": "computer-apps",
+    "domainName": "Computer Applications",
+    "subjectCount": 23
+  },
+  {
+    "courseId": 20,
+    "courseSourceId": "bba",
+    "courseName": "BBA",
+    "sems": [
+      0,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 59
+  },
+  {
+    "courseId": 21,
+    "courseSourceId": "bba-hons-",
+    "courseName": "BBA (HONS)",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 111
+  },
+  {
+    "courseId": 22,
+    "courseSourceId": "b-com",
+    "courseName": "B.Com",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 77
+  },
+  {
+    "courseId": 23,
+    "courseSourceId": "bba-business-analytics-",
+    "courseName": "BBA ( Business Analytics )",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 65
+  },
+  {
+    "courseId": 24,
+    "courseSourceId": "bba-digital-marketing-",
+    "courseName": "BBA ( Digital Marketing )",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 65
+  },
+  {
+    "courseId": 25,
+    "courseSourceId": "bba-international-business-",
+    "courseName": "BBA ( International Business)",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 65
+  },
+  {
+    "courseId": 26,
+    "courseSourceId": "bba-in-global-business-management",
+    "courseName": "BBA in Global Business Management",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 73
+  },
+  {
+    "courseId": 27,
+    "courseSourceId": "bba-aviation",
+    "courseName": "BBA Aviation",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 73
+  },
+  {
+    "courseId": 28,
+    "courseSourceId": "mba",
+    "courseName": "MBA",
+    "sems": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 159
+  },
+  {
+    "courseId": 29,
+    "courseSourceId": "mba-business-analytics",
+    "courseName": "MBA Business Analytics",
+    "sems": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 59
+  },
+  {
+    "courseId": 30,
+    "courseSourceId": "master-in-global-business-management",
+    "courseName": "Master In Global Business Management",
+    "sems": [],
+    "domainId": "management",
+    "domainName": "Management Studies",
+    "subjectCount": 0
+  },
+  {
+    "courseId": 31,
+    "courseSourceId": "b-sc-in-chemistry",
+    "courseName": "B.Sc in Chemistry",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "science-pharmacy",
+    "domainName": "Science & Pharmacy",
+    "subjectCount": 35
+  },
+  {
+    "courseId": 32,
+    "courseSourceId": "b-sc-in-microbiology",
+    "courseName": "B.Sc in Microbiology",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "science-pharmacy",
+    "domainName": "Science & Pharmacy",
+    "subjectCount": 32
+  },
+  {
+    "courseId": 33,
+    "courseSourceId": "b-sc-in-agricultural-honors",
+    "courseName": "B.Sc in Agricultural Honors",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "science-pharmacy",
+    "domainName": "Science & Pharmacy",
+    "subjectCount": 70
+  },
+  {
+    "courseId": 34,
+    "courseSourceId": "m-sc-in-chemistry",
+    "courseName": "M.Sc in Chemistry",
+    "sems": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "domainId": "science-pharmacy",
+    "domainName": "Science & Pharmacy",
+    "subjectCount": 22
+  },
+  {
+    "courseId": 35,
+    "courseSourceId": "m-sc-in-micorbiology",
+    "courseName": "M.Sc in MicorBiology",
+    "sems": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "domainId": "science-pharmacy",
+    "domainName": "Science & Pharmacy",
+    "subjectCount": 18
+  },
+  {
+    "courseId": 36,
+    "courseSourceId": "m-sc-in-pgdmlt",
+    "courseName": "M.Sc in PGDMLT",
+    "sems": [
+      1,
+      2
+    ],
+    "domainId": "science-pharmacy",
+    "domainName": "Science & Pharmacy",
+    "subjectCount": 9
+  },
+  {
+    "courseId": 37,
+    "courseSourceId": "b-pharm",
+    "courseName": "B.Pharm",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "science-pharmacy",
+    "domainName": "Science & Pharmacy",
+    "subjectCount": 60
+  },
+  {
+    "courseId": 38,
+    "courseSourceId": "m-pharm-pharmaceutics",
+    "courseName": "M.Pharm Pharmaceutics",
+    "sems": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "domainId": "science-pharmacy",
+    "domainName": "Science & Pharmacy",
+    "subjectCount": 20
+  },
+  {
+    "courseId": 39,
+    "courseSourceId": "m-pharm-pharmaceutical-quality-assurence",
+    "courseName": "M.Pharm Pharmaceutical Quality Assurence",
+    "sems": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "domainId": "science-pharmacy",
+    "domainName": "Science & Pharmacy",
+    "subjectCount": 21
+  },
+  {
+    "courseId": 40,
+    "courseSourceId": "m-pharm-regulatory-affairs",
+    "courseName": "M.Pharm Regulatory Affairs",
+    "sems": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "domainId": "science-pharmacy",
+    "domainName": "Science & Pharmacy",
+    "subjectCount": 17
+  },
+  {
+    "courseId": 41,
+    "courseSourceId": "ba-llb-hons-",
+    "courseName": "BA LLB (Hons)",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "domainId": "law-arts",
+    "domainName": "Law & Arts",
+    "subjectCount": 110
+  },
+  {
+    "courseId": 42,
+    "courseSourceId": "b-com-llb-hons-",
+    "courseName": "B.Com LLB (HONS)",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "domainId": "law-arts",
+    "domainName": "Law & Arts",
+    "subjectCount": 111
+  },
+  {
+    "courseId": 43,
+    "courseSourceId": "ba-in-socialogy-psychology-political-science",
+    "courseName": "BA in Socialogy Psychology Political Science",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "domainId": "law-arts",
+    "domainName": "Law & Arts",
+    "subjectCount": 82
+  },
+  {
+    "courseId": 44,
+    "courseSourceId": "dip-compu",
+    "courseName": "Diploma Computer Engineering",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "diploma",
+    "domainName": "Diploma in Engineering",
+    "subjectCount": 37
+  },
+  {
+    "courseId": 45,
+    "courseSourceId": "dip-mecha",
+    "courseName": "Diploma Mechanical Engineering",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "diploma",
+    "domainName": "Diploma in Engineering",
+    "subjectCount": 39
+  },
+  {
+    "courseId": 46,
+    "courseSourceId": "dip-chemi",
+    "courseName": "Diploma Chemical Engineering",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "diploma",
+    "domainName": "Diploma in Engineering",
+    "subjectCount": 34
+  },
+  {
+    "courseId": 47,
+    "courseSourceId": "dip-elect",
+    "courseName": "Diploma Electrical Engineering",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "diploma",
+    "domainName": "Diploma in Engineering",
+    "subjectCount": 40
+  },
+  {
+    "courseId": 48,
+    "courseSourceId": "dip-civil",
+    "courseName": "Diploma Civil Engineering",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "diploma",
+    "domainName": "Diploma in Engineering",
+    "subjectCount": 34
+  },
+  {
+    "courseId": 49,
+    "courseSourceId": "dip-infor",
+    "courseName": "Diploma Information and Communication Technology",
+    "sems": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "domainId": "diploma",
+    "domainName": "Diploma in Engineering",
+    "subjectCount": 51
+  }
+]
