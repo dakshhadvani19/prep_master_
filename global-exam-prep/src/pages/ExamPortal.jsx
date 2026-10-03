@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { examPrompts, domains } from '../data/mockData';
+import { findSubjectContext } from '../utils/subjectResolver';
 import { generateExamQuestions } from '../data/questionGenerator';
 import { universitySyllabus } from '../data/universitySyllabus';
 import { pdfSyllabus } from '../data/pdfSyllabus';
@@ -39,21 +40,12 @@ export default function ExamPortal() {
     const [autoProcessing, setAutoProcessing] = useState(false);
     const [autoError, setAutoError] = useState('');
 
-    // Find subject details and academic context
-    let subjectDetail = null;
-    let courseDetail = null;
-    let domainDetail = null;
-
-    domains.forEach(d => {
-        d.courses.forEach(c => {
-            const s = c.subjects.find(sub => sub.id === subjectId);
-            if (s) {
-                subjectDetail = s;
-                courseDetail = c;
-                domainDetail = d;
-            }
-        });
-    });
+    // Numeric catalog SubjectIds resolve through the bridge; legacy source IDs still match mockData.
+    const subjectContext = findSubjectContext(domains, subjectId);
+    const subjectDetail = subjectContext.subject;
+    const courseDetail = subjectContext.course;
+    const domainDetail = subjectContext.domain;
+    const sourceSubjectId = subjectContext.sourceSubjectId || subjectId;
 
     const examInfo = examPrompts[examType];
 
@@ -128,17 +120,17 @@ export default function ExamPortal() {
             setAutoProcessing(true);
             setAutoError('');
             try {
-                const syllabus = universitySyllabus[subjectId];
+                const syllabus = universitySyllabus[sourceSubjectId];
                 let syllabusText = contextPrefix;
 
                 // Priority 1: Local PDF extracted text (from process-syllabuses.cjs)
-                if (pdfSyllabus[subjectId]) {
-                    syllabusText += `Provided Study Material/Syllabus content:\n${pdfSyllabus[subjectId]}`;
+                if (pdfSyllabus[sourceSubjectId]) {
+                    syllabusText += `Provided Study Material/Syllabus content:\n${pdfSyllabus[sourceSubjectId]}`;
                 } else {
                     // Priority 2: PDF syllabus uploaded by admin (stored in Firestore)
                     let pdfFirestoreSyllabus = null;
                     try {
-                        pdfFirestoreSyllabus = await fetchSyllabus(subjectId, courseDetail?.id);
+                        pdfFirestoreSyllabus = await fetchSyllabus(sourceSubjectId, courseDetail?.id);
                     } catch (firestoreErr) {
                         console.warn('Could not fetch Firestore syllabus (permissions?), falling back:', firestoreErr.message);
                     }
@@ -150,9 +142,9 @@ export default function ExamPortal() {
                         syllabus.chapters.forEach(ch => {
                             syllabusText += `Chapter: ${ch.title}\nConcepts: ${ch.concepts.join(', ')}\n\n`;
                         });
-                    } else if (predictedSyllabus && predictedSyllabus[subjectId]) {
+                    } else if (predictedSyllabus && predictedSyllabus[sourceSubjectId]) {
                         // Priority 4: Predicted AI Syllabus from PDF extraction
-                        const predicted = predictedSyllabus[subjectId];
+                        const predicted = predictedSyllabus[sourceSubjectId];
                         syllabusText += `You MUST base the generated questions strictly on the following specific topics for this subject (Aligned with ${predicted.aiPromptContext}):
 ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                     } else {
@@ -304,7 +296,7 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
             await setDoc(doc(db, 'users', currentUser.uid, 'examHistory', String(recordId)), {
                 id: recordId,
                 date: new Date().toISOString(),
-                subjectId: subjectId || "unknown",
+                subjectId: sourceSubjectId || "unknown",
                 examType: examType || "unknown",
                 difficulty: difficulty || "medium",
                 type: examInfo.type,
@@ -608,7 +600,7 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                 <ActiveExamInterface
                     examType={examType}
                     examInfo={examInfo}
-                    subjectId={subjectId}
+                    subjectId={sourceSubjectId}
                     difficulty={difficulty || 'medium'}
                     timeLeft={timeLeft}
                     formatTime={formatTime}
