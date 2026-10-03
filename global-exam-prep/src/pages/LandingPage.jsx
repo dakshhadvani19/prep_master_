@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
-import { domains } from '../data/mockData';
+import { CATALOG_DOMAINS as domains } from '../data/catalogDomains';
 import * as Icons from 'lucide-react';
 import './LandingPage.css';
 
