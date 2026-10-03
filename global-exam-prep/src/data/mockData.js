@@ -1,4 +1,4 @@
-export const domains = [
+export const domains =[
   {
     "id": "engineering",
     "title": "Engineering & Technology",
@@ -10,7 +10,7 @@ export const domains = [
         "title": "B.Tech - Computer Engineering",
         "subjects": [
           {
-            "id": "011310106",
+            "id": "1001131010601",
             "title": "Calculus",
             "sem": 1,
             "exams": [
@@ -20,7 +20,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551101",
+            "id": "1000155110101",
             "title": "Basics of Electrical & Electronics Engineering",
             "sem": 1,
             "exams": [
@@ -30,7 +30,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "1000135110101",
             "title": "Computer Programming",
             "sem": 1,
             "exams": [
@@ -40,7 +40,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017191101",
+            "id": "1001719110101",
             "title": "Engineering Physics",
             "sem": 1,
             "exams": [
@@ -50,7 +50,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "1001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -60,7 +60,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351102",
+            "id": "1000135110201",
             "title": "Computer Workshop",
             "sem": 1,
             "exams": [
@@ -70,7 +70,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "1001719010301",
             "title": "Indian constitution",
             "sem": 1,
             "exams": [
@@ -80,7 +80,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "1001318010501",
             "title": "Verbal Ability – 1",
             "sem": 1,
             "exams": [
@@ -90,7 +90,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310104",
+            "id": "1001131010401",
             "title": "Linear Algebra",
             "sem": 2,
             "exams": [
@@ -100,7 +100,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350104",
+            "id": "1000135010401",
             "title": "Object Oriented Programming",
             "sem": 2,
             "exams": [
@@ -110,7 +110,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351103",
+            "id": "1001135110301",
             "title": "Engineering Drawings",
             "sem": 2,
             "exams": [
@@ -120,7 +120,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530102",
+            "id": "1000153010201",
             "title": "Digital Electronics",
             "sem": 2,
             "exams": [
@@ -130,7 +130,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320001",
+            "id": "1016132000101",
             "title": "Reading and Writing for Technology / Speaking and Presentation Skills",
             "sem": 2,
             "exams": [
@@ -140,7 +140,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "1001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 2,
             "exams": [
@@ -150,7 +150,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "1001318010401",
             "title": "Professional Ethics",
             "sem": 2,
             "exams": [
@@ -160,7 +160,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "1001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -170,7 +170,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350309",
+            "id": "1000135030901",
             "title": "Probability and Statistics",
             "sem": 3,
             "exams": [
@@ -180,7 +180,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351301",
+            "id": "1000135130101",
             "title": "Data Structure",
             "sem": 3,
             "exams": [
@@ -190,7 +190,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01352302",
+            "id": "1000135230201",
             "title": "Database Management System",
             "sem": 3,
             "exams": [
@@ -200,7 +200,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350306",
+            "id": "1000135030601",
             "title": "Web Technology",
             "sem": 3,
             "exams": [
@@ -210,7 +210,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350308",
+            "id": "1000135030801",
             "title": "Advance Java Technology",
             "sem": 3,
             "exams": [
@@ -220,7 +220,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351304",
+            "id": "1000135130401",
             "title": "Design Thinking and Problem Solving Skills",
             "sem": 3,
             "exams": [
@@ -230,7 +230,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351305",
+            "id": "1000135130501",
             "title": "Programming with Python",
             "sem": 3,
             "exams": [
@@ -240,7 +240,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350509",
+            "id": "1000135050901",
             "title": "Fundamentals of Microprocessors",
             "sem": 4,
             "exams": [
@@ -250,7 +250,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351503",
+            "id": "1000135150301",
             "title": "Design and Analysis of Algorithm",
             "sem": 4,
             "exams": [
@@ -260,7 +260,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350510",
+            "id": "1000135051001",
             "title": "Advanced Web Technology",
             "sem": 4,
             "exams": [
@@ -270,7 +270,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350511",
+            "id": "1000135051101",
             "title": "Seminar",
             "sem": 4,
             "exams": [
@@ -280,7 +280,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350501",
+            "id": "1000135050101",
             "title": "Microprocessor Fundamentals & Programming",
             "sem": 5,
             "exams": [
@@ -290,7 +290,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200504",
+            "id": "1001920050401",
             "title": "Advanced Java Programming",
             "sem": 5,
             "exams": [
@@ -300,7 +300,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350503",
+            "id": "1000135050301",
             "title": "Design and Analysis of Algorithm",
             "sem": 5,
             "exams": [
@@ -310,7 +310,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350504",
+            "id": "1000135050401",
             "title": "Theory of Automata and Formal Languages",
             "sem": 5,
             "exams": [
@@ -320,7 +320,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350508",
+            "id": "1000135050801",
             "title": "Reverse Engineering",
             "sem": 5,
             "exams": [
@@ -330,7 +330,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200502",
+            "id": "1001920050201",
             "title": "Seminar",
             "sem": 5,
             "exams": [
@@ -340,7 +340,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200503",
+            "id": "1001920050301",
             "title": "Advanced Computer Network",
             "sem": 5,
             "exams": [
@@ -350,7 +350,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350506",
+            "id": "1000135050601",
             "title": "Distributed Operating System",
             "sem": 5,
             "exams": [
@@ -360,7 +360,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350507",
+            "id": "1000135050701",
             "title": "Image Processing",
             "sem": 5,
             "exams": [
@@ -370,7 +370,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200601",
+            "id": "1001920060101",
             "title": "Software Engineering",
             "sem": 6,
             "exams": [
@@ -380,7 +380,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350601",
+            "id": "1000135060101",
             "title": "Compiler Design",
             "sem": 6,
             "exams": [
@@ -390,7 +390,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350602",
+            "id": "1000135060201",
             "title": ".NET Technologies",
             "sem": 6,
             "exams": [
@@ -400,7 +400,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200602",
+            "id": "1001920060201",
             "title": "Web Technology",
             "sem": 6,
             "exams": [
@@ -410,7 +410,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350610",
+            "id": "1001135061001",
             "title": "Design Engineering and Project Management",
             "sem": 6,
             "exams": [
@@ -420,7 +420,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180601",
+            "id": "1001318060101",
             "title": "Business Benchmark",
             "sem": 6,
             "exams": [
@@ -430,7 +430,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350603",
+            "id": "1000135060301",
             "title": "Computer Security",
             "sem": 6,
             "exams": [
@@ -440,7 +440,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350604",
+            "id": "1000135060401",
             "title": "Cyber Security",
             "sem": 6,
             "exams": [
@@ -450,7 +450,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350605",
+            "id": "1000135060501",
             "title": "Network Security",
             "sem": 6,
             "exams": [
@@ -460,7 +460,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200701",
+            "id": "1001920070101",
             "title": "Advanced Web Technologies",
             "sem": 7,
             "exams": [
@@ -470,7 +470,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350702",
+            "id": "1000135070201",
             "title": "Artificial Intelligence",
             "sem": 7,
             "exams": [
@@ -480,7 +480,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201703",
+            "id": "1001920170301",
             "title": "Major Project – 1",
             "sem": 7,
             "exams": [
@@ -490,7 +490,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351703",
+            "id": "1000135170301",
             "title": "iOS Programming",
             "sem": 7,
             "exams": [
@@ -500,7 +500,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351704",
+            "id": "1000135170401",
             "title": "Android Programming",
             "sem": 7,
             "exams": [
@@ -510,7 +510,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351705",
+            "id": "1000135170501",
             "title": "Programming with Python",
             "sem": 7,
             "exams": [
@@ -520,7 +520,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351706",
+            "id": "1000135170601",
             "title": "Advanced .NET Technologies",
             "sem": 7,
             "exams": [
@@ -530,7 +530,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351707",
+            "id": "1000135170701",
             "title": "Data Mining and Information Retrieval",
             "sem": 7,
             "exams": [
@@ -540,7 +540,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351708",
+            "id": "1000135170801",
             "title": "Software Architecture",
             "sem": 7,
             "exams": [
@@ -550,7 +550,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351709",
+            "id": "1000135170901",
             "title": "Computational Intelligence",
             "sem": 7,
             "exams": [
@@ -560,7 +560,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350701",
+            "id": "1000135070101",
             "title": "Mobile Computing",
             "sem": 7,
             "exams": [
@@ -570,7 +570,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350710",
+            "id": "1000135071001",
             "title": "Cloud Computing",
             "sem": 7,
             "exams": [
@@ -580,7 +580,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350711",
+            "id": "1000135071101",
             "title": "Machine Learning",
             "sem": 7,
             "exams": [
@@ -590,7 +590,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350712",
+            "id": "1000135071201",
             "title": "Internet of Things",
             "sem": 7,
             "exams": [
@@ -600,7 +600,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350713",
+            "id": "1000135071301",
             "title": "Natural Language Processing",
             "sem": 7,
             "exams": [
@@ -610,7 +610,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201801",
+            "id": "1001920180101",
             "title": "Major Project – 2",
             "sem": 8,
             "exams": [
@@ -626,7 +626,7 @@ export const domains = [
         "title": "B.Tech - IT",
         "subjects": [
           {
-            "id": "011310106",
+            "id": "2001131010601",
             "title": "Calculus",
             "sem": 1,
             "exams": [
@@ -636,7 +636,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551101",
+            "id": "2000155110101",
             "title": "Basics of Electrical & Electronics Engineering",
             "sem": 1,
             "exams": [
@@ -646,7 +646,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "2000135110101",
             "title": "Computer Programming",
             "sem": 1,
             "exams": [
@@ -656,7 +656,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017191101",
+            "id": "2001719110101",
             "title": "Engineering Physics",
             "sem": 1,
             "exams": [
@@ -666,7 +666,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "2001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -676,7 +676,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351102",
+            "id": "2000135110201",
             "title": "Computer Workshop",
             "sem": 1,
             "exams": [
@@ -686,7 +686,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "2001719010301",
             "title": "Indian constitution",
             "sem": 1,
             "exams": [
@@ -696,7 +696,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "2001318010501",
             "title": "Verbal Ability – 1",
             "sem": 1,
             "exams": [
@@ -706,7 +706,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210001",
+            "id": "2000121000101",
             "title": "NCC-1",
             "sem": 1,
             "exams": [
@@ -716,7 +716,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200101",
+            "id": "2001920010101",
             "title": "Linear Algebra",
             "sem": 2,
             "exams": [
@@ -726,7 +726,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200102",
+            "id": "2001920010201",
             "title": "Object Oriented Design & Programming",
             "sem": 2,
             "exams": [
@@ -736,7 +736,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351103",
+            "id": "2001135110301",
             "title": "Engineering Drawings",
             "sem": 2,
             "exams": [
@@ -746,7 +746,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530102",
+            "id": "2000153010201",
             "title": "Digital Electronics",
             "sem": 2,
             "exams": [
@@ -756,7 +756,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320001",
+            "id": "2016132000101",
             "title": "Reading and Writing for Technology / Speaking and Presentation Skills",
             "sem": 2,
             "exams": [
@@ -766,7 +766,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "2001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 2,
             "exams": [
@@ -776,7 +776,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "2001318010401",
             "title": "Professional Ethics",
             "sem": 2,
             "exams": [
@@ -786,7 +786,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "2001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -796,7 +796,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210002",
+            "id": "2000121000201",
             "title": "NCC – 2",
             "sem": 2,
             "exams": [
@@ -806,7 +806,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01191301",
+            "id": "2000119130101",
             "title": "Probability and Statistics",
             "sem": 3,
             "exams": [
@@ -816,7 +816,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351301",
+            "id": "2000135130101",
             "title": "Data Structure",
             "sem": 3,
             "exams": [
@@ -826,7 +826,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01352302",
+            "id": "2000135230201",
             "title": "Database Management System",
             "sem": 3,
             "exams": [
@@ -836,7 +836,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200301",
+            "id": "2001920030101",
             "title": "Data Communication and Networking",
             "sem": 3,
             "exams": [
@@ -846,7 +846,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190302",
+            "id": "2000119030201",
             "title": "Programming with Python",
             "sem": 3,
             "exams": [
@@ -856,7 +856,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351304",
+            "id": "2000135130401",
             "title": "Design Thinking and Problem Solving Skills",
             "sem": 3,
             "exams": [
@@ -866,7 +866,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351305",
+            "id": "2000135130501",
             "title": "Programming with Python",
             "sem": 3,
             "exams": [
@@ -876,7 +876,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210003",
+            "id": "2000121000301",
             "title": "NCC-3",
             "sem": 3,
             "exams": [
@@ -886,7 +886,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200406",
+            "id": "2001920040601",
             "title": "Discrete Mathematics",
             "sem": 4,
             "exams": [
@@ -896,7 +896,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200402",
+            "id": "2001920040201",
             "title": "Operating System & Virtualization",
             "sem": 4,
             "exams": [
@@ -906,7 +906,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201401",
+            "id": "2001920140101",
             "title": "Computer Network",
             "sem": 4,
             "exams": [
@@ -916,7 +916,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200404",
+            "id": "2001920040401",
             "title": "Java Programming",
             "sem": 4,
             "exams": [
@@ -926,7 +926,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200403",
+            "id": "2001920040301",
             "title": "Analysis and Design of Algorithms",
             "sem": 4,
             "exams": [
@@ -936,7 +936,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200405",
+            "id": "2001920040501",
             "title": "Creativity, Problem Solving and Innovation",
             "sem": 4,
             "exams": [
@@ -946,7 +946,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210004",
+            "id": "2000121000401",
             "title": "NCC-4",
             "sem": 4,
             "exams": [
@@ -956,7 +956,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200501",
+            "id": "2001920050101",
             "title": "LINUX ADMINISTRATION",
             "sem": 5,
             "exams": [
@@ -966,7 +966,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200504",
+            "id": "2001920050401",
             "title": "Advanced Java Programming",
             "sem": 5,
             "exams": [
@@ -976,7 +976,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200505",
+            "id": "2001920050501",
             "title": "WEB TECHNOLOGY",
             "sem": 5,
             "exams": [
@@ -986,7 +986,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200506",
+            "id": "2001920050601",
             "title": "Computer Organisations and Architectures",
             "sem": 5,
             "exams": [
@@ -996,7 +996,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350508",
+            "id": "2000135050801",
             "title": "Reverse Engineering",
             "sem": 5,
             "exams": [
@@ -1006,7 +1006,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200510",
+            "id": "2001920051001",
             "title": "Internet of Things",
             "sem": 5,
             "exams": [
@@ -1016,7 +1016,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210005",
+            "id": "2000121000501",
             "title": "NCC-5",
             "sem": 5,
             "exams": [
@@ -1026,7 +1026,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201503",
+            "id": "2001920150301",
             "title": "Advanced Computer Network",
             "sem": 5,
             "exams": [
@@ -1036,7 +1036,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200507",
+            "id": "2001920050701",
             "title": "Fundamentals of Microprocessor",
             "sem": 5,
             "exams": [
@@ -1046,7 +1046,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200508",
+            "id": "2001920050801",
             "title": "Image Processing",
             "sem": 5,
             "exams": [
@@ -1056,7 +1056,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200601",
+            "id": "2001920060101",
             "title": "Software Engineering",
             "sem": 6,
             "exams": [
@@ -1066,7 +1066,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200610",
+            "id": "2001920061001",
             "title": "Machine Learning",
             "sem": 6,
             "exams": [
@@ -1076,7 +1076,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350601",
+            "id": "2000135060101",
             "title": "COMPILER DESIGN",
             "sem": 6,
             "exams": [
@@ -1086,7 +1086,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200605",
+            "id": "2001920060501",
             "title": ".NET TECHNOLOGIES",
             "sem": 6,
             "exams": [
@@ -1096,7 +1096,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180601",
+            "id": "2001318060101",
             "title": "BUSINESS BENCHMARK",
             "sem": 6,
             "exams": [
@@ -1106,7 +1106,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210006",
+            "id": "2000121000601",
             "title": "NCC-6",
             "sem": 6,
             "exams": [
@@ -1116,7 +1116,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200611",
+            "id": "2001920061101",
             "title": "Information and Network Security",
             "sem": 6,
             "exams": [
@@ -1126,7 +1126,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200612",
+            "id": "2001920061201",
             "title": "Mobile Application Development",
             "sem": 6,
             "exams": [
@@ -1136,7 +1136,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200613",
+            "id": "2001920061301",
             "title": "Digital Forensics",
             "sem": 6,
             "exams": [
@@ -1146,7 +1146,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201701",
+            "id": "2001920170101",
             "title": "Advanced Web Technologies",
             "sem": 7,
             "exams": [
@@ -1156,7 +1156,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200714",
+            "id": "2001920071401",
             "title": "Data Science",
             "sem": 7,
             "exams": [
@@ -1166,7 +1166,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201703",
+            "id": "2001920170301",
             "title": "Major Project – 1",
             "sem": 7,
             "exams": [
@@ -1176,7 +1176,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200717",
+            "id": "2001920071701",
             "title": "UI/UX design and Agile Development",
             "sem": 7,
             "exams": [
@@ -1186,7 +1186,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200718",
+            "id": "2001920071801",
             "title": "Blockchain",
             "sem": 7,
             "exams": [
@@ -1196,7 +1196,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200719",
+            "id": "2001920071901",
             "title": "Foundation of Human Computer Interaction",
             "sem": 7,
             "exams": [
@@ -1206,7 +1206,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200708",
+            "id": "2001920070801",
             "title": "Big Data & Analytics",
             "sem": 7,
             "exams": [
@@ -1216,7 +1216,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200715",
+            "id": "2001920071501",
             "title": "Software Testing & Quality Assurance",
             "sem": 7,
             "exams": [
@@ -1226,7 +1226,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200710",
+            "id": "2001920071001",
             "title": "Computational Intelligence",
             "sem": 7,
             "exams": [
@@ -1236,7 +1236,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200711",
+            "id": "2001920071101",
             "title": "Cloud Computing",
             "sem": 7,
             "exams": [
@@ -1246,7 +1246,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200716",
+            "id": "2001920071601",
             "title": "Computer Vision",
             "sem": 7,
             "exams": [
@@ -1256,7 +1256,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200713",
+            "id": "2001920071301",
             "title": "Natural Language Processing",
             "sem": 7,
             "exams": [
@@ -1266,7 +1266,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201801",
+            "id": "2001920180101",
             "title": "Major Project – 2",
             "sem": 8,
             "exams": [
@@ -1282,7 +1282,7 @@ export const domains = [
         "title": "B.Tech - Electrical Engineering",
         "subjects": [
           {
-            "id": "1210001",
+            "id": "3000121000101",
             "title": "NATIONAL CADET CORPS",
             "sem": 1,
             "exams": [
@@ -1292,7 +1292,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "3000135110101",
             "title": "COMPUTER PROGRAMMING",
             "sem": 1,
             "exams": [
@@ -1302,7 +1302,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551113",
+            "id": "3000155111301",
             "title": "ELECTRICAL WORKSHOP",
             "sem": 1,
             "exams": [
@@ -1312,7 +1312,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "3001318110301",
             "title": "VALUE EDUCATION",
             "sem": 1,
             "exams": [
@@ -1322,7 +1322,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551111",
+            "id": "3000155111101",
             "title": "BASICS OF ELECTRICAL ENGINEERING",
             "sem": 1,
             "exams": [
@@ -1332,7 +1332,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "3001719010301",
             "title": "INDIAN CONSTITUTION",
             "sem": 1,
             "exams": [
@@ -1342,7 +1342,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017191101",
+            "id": "3001719110101",
             "title": "ENGINEERING PHYSICS",
             "sem": 1,
             "exams": [
@@ -1352,7 +1352,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310106",
+            "id": "3001131010601",
             "title": "CALCULUS",
             "sem": 1,
             "exams": [
@@ -1362,7 +1362,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "3001318010501",
             "title": "VERBAL ABILITY – 1",
             "sem": 1,
             "exams": [
@@ -1372,7 +1372,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011210102",
+            "id": "3001121010201",
             "title": "NATIONAL CADET CORPS -2",
             "sem": 2,
             "exams": [
@@ -1382,7 +1382,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551112",
+            "id": "3000155111201",
             "title": "BASIC ELECTRONICS",
             "sem": 2,
             "exams": [
@@ -1392,7 +1392,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "3001318010401",
             "title": "PROFESSIONAL ETHICS",
             "sem": 2,
             "exams": [
@@ -1402,7 +1402,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320003",
+            "id": "3016132000301",
             "title": "BASICS OF MECHANICAL ENGINEERING",
             "sem": 2,
             "exams": [
@@ -1412,7 +1412,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "3001514110101",
             "title": "BASICS OF ENVIRONMENTAL STUDIES",
             "sem": 2,
             "exams": [
@@ -1422,7 +1422,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310104",
+            "id": "3001131010401",
             "title": "LINEAR ALGEBRA",
             "sem": 2,
             "exams": [
@@ -1432,7 +1432,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351103",
+            "id": "3001135110301",
             "title": "ENGINEERING DRAWING",
             "sem": 2,
             "exams": [
@@ -1442,7 +1442,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120102",
+            "id": "3011912010201",
             "title": "READING & WRITING FOR TECHNOLOGY*",
             "sem": 2,
             "exams": [
@@ -1452,7 +1452,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120103",
+            "id": "3011912010301",
             "title": "SPEAKING & PRESENTATION SKILLS*",
             "sem": 2,
             "exams": [
@@ -1462,7 +1462,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "3001318010601",
             "title": "VERBAL ABILITY – 2",
             "sem": 2,
             "exams": [
@@ -1472,7 +1472,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311303",
+            "id": "3001131130301",
             "title": "Applied Mathematics for Electrical Engineering",
             "sem": 3,
             "exams": [
@@ -1482,7 +1482,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551301",
+            "id": "3000155130101",
             "title": "Electrical Circuit Analysis",
             "sem": 3,
             "exams": [
@@ -1492,7 +1492,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551302",
+            "id": "3000155130201",
             "title": "Analog and Digital Electronics",
             "sem": 3,
             "exams": [
@@ -1502,7 +1502,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551303",
+            "id": "3000155130301",
             "title": "Electrical Machines-I",
             "sem": 3,
             "exams": [
@@ -1512,7 +1512,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551304",
+            "id": "3000155130401",
             "title": "Electrical and Electronic Instruments",
             "sem": 3,
             "exams": [
@@ -1522,7 +1522,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119121401",
+            "id": "3011912140101",
             "title": "Communication Skill for Engineers",
             "sem": 3,
             "exams": [
@@ -1532,7 +1532,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551305",
+            "id": "3000155130501",
             "title": "Design Thinking and Problem Solving Skills",
             "sem": 3,
             "exams": [
@@ -1542,7 +1542,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180303",
+            "id": "3001318030301",
             "title": "Quantitative & Logical Ability – 1",
             "sem": 3,
             "exams": [
@@ -1552,7 +1552,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551401",
+            "id": "3000155140101",
             "title": "Power System-I",
             "sem": 4,
             "exams": [
@@ -1562,7 +1562,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551402",
+            "id": "3000155140201",
             "title": "Power Electronics",
             "sem": 4,
             "exams": [
@@ -1572,7 +1572,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551403",
+            "id": "3000155140301",
             "title": "Control System Engineering",
             "sem": 4,
             "exams": [
@@ -1582,7 +1582,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551404",
+            "id": "3000155140401",
             "title": "Field Theory",
             "sem": 4,
             "exams": [
@@ -1592,7 +1592,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551405",
+            "id": "3000155140501",
             "title": "Field Theory Lab",
             "sem": 4,
             "exams": [
@@ -1602,7 +1602,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01550408",
+            "id": "3000155040801",
             "title": "Creativity, Problem Solving and Innovation",
             "sem": 4,
             "exams": [
@@ -1612,7 +1612,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180402",
+            "id": "3001318040201",
             "title": "Quantitative & Logical Ability – 2",
             "sem": 4,
             "exams": [
@@ -1622,7 +1622,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551401",
+            "id": "3000155140102",
             "title": "Power System-I",
             "sem": 5,
             "exams": [
@@ -1632,7 +1632,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551402",
+            "id": "3000155140202",
             "title": "Power Electronics",
             "sem": 5,
             "exams": [
@@ -1642,7 +1642,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551403",
+            "id": "3000155140302",
             "title": "Control System Engineering",
             "sem": 5,
             "exams": [
@@ -1652,7 +1652,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551404",
+            "id": "3000155140402",
             "title": "Field Theory",
             "sem": 5,
             "exams": [
@@ -1662,7 +1662,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551405",
+            "id": "3000155140502",
             "title": "Field Theory Lab",
             "sem": 5,
             "exams": [
@@ -1672,7 +1672,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01550408",
+            "id": "3000155040802",
             "title": "Creativity, Problem Solving and Innovation",
             "sem": 5,
             "exams": [
@@ -1682,7 +1682,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180402",
+            "id": "3001318040202",
             "title": "Quantitative & Logical Ability – 2",
             "sem": 5,
             "exams": [
@@ -1692,7 +1692,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180602",
+            "id": "3001318060201",
             "title": "Quantitative Aptitude and Verbal Ability",
             "sem": 6,
             "exams": [
@@ -1702,7 +1702,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551601",
+            "id": "3000155160101",
             "title": "Solid State Drives",
             "sem": 6,
             "exams": [
@@ -1712,7 +1712,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551602",
+            "id": "3000155160201",
             "title": "Microcontroller & Embedded Systems",
             "sem": 6,
             "exams": [
@@ -1722,7 +1722,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551603",
+            "id": "3000155160301",
             "title": "Interconnected Power Systems",
             "sem": 6,
             "exams": [
@@ -1732,7 +1732,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551604",
+            "id": "3000155160401",
             "title": "MOOC/ SEMINAR",
             "sem": 6,
             "exams": [
@@ -1742,7 +1742,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551605",
+            "id": "3000155160501",
             "title": "Batteries and Battery Management Systems",
             "sem": 6,
             "exams": [
@@ -1752,7 +1752,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551606",
+            "id": "3000155160601",
             "title": "Distributed Energy Resources and Energy Storage Systems",
             "sem": 6,
             "exams": [
@@ -1762,7 +1762,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551607",
+            "id": "3000155160701",
             "title": "Switch Mode Power Supplies",
             "sem": 6,
             "exams": [
@@ -1772,7 +1772,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551608",
+            "id": "3000155160801",
             "title": "Power System Practice and Design",
             "sem": 6,
             "exams": [
@@ -1782,7 +1782,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350531",
+            "id": "3000135053101",
             "title": "Python Programming",
             "sem": 6,
             "exams": [
@@ -1792,7 +1792,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200521",
+            "id": "3001320052101",
             "title": "Introduction to HDL",
             "sem": 6,
             "exams": [
@@ -1802,7 +1802,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200522",
+            "id": "3001320052201",
             "title": "Analog & Digital Communication",
             "sem": 6,
             "exams": [
@@ -1812,7 +1812,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350532",
+            "id": "3000135053201",
             "title": "Data Structure and Algorithms",
             "sem": 6,
             "exams": [
@@ -1822,7 +1822,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350631",
+            "id": "3000135063101",
             "title": "Aritificial Intelligence",
             "sem": 6,
             "exams": [
@@ -1832,7 +1832,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350632",
+            "id": "3000135063201",
             "title": "Big Data Analysis",
             "sem": 6,
             "exams": [
@@ -1842,7 +1842,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200620",
+            "id": "3001320062001",
             "title": "Internet of Things",
             "sem": 6,
             "exams": [
@@ -1852,7 +1852,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551701",
+            "id": "3000155170101",
             "title": "Summer Internship",
             "sem": 7,
             "exams": [
@@ -1862,7 +1862,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551702",
+            "id": "3000155170201",
             "title": "Mini Project",
             "sem": 7,
             "exams": [
@@ -1872,7 +1872,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551703",
+            "id": "3000155170301",
             "title": "Switchgear and Protection",
             "sem": 7,
             "exams": [
@@ -1882,7 +1882,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551704",
+            "id": "3000155170401",
             "title": "Electrical Machine Design",
             "sem": 7,
             "exams": [
@@ -1892,7 +1892,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551705",
+            "id": "3000155170501",
             "title": "Electrical Machine Design Laboratory",
             "sem": 7,
             "exams": [
@@ -1902,7 +1902,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551711",
+            "id": "3000155171101",
             "title": "DSP based control of Power Electronic Systems",
             "sem": 7,
             "exams": [
@@ -1912,7 +1912,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551706",
+            "id": "3000155170601",
             "title": "Battery Chargers for Electric Vehicles",
             "sem": 7,
             "exams": [
@@ -1922,7 +1922,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551707",
+            "id": "3000155170701",
             "title": "Power Electronic Converters for RES",
             "sem": 7,
             "exams": [
@@ -1932,7 +1932,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551708",
+            "id": "3000155170801",
             "title": "Converter Control",
             "sem": 7,
             "exams": [
@@ -1942,7 +1942,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551709",
+            "id": "3000155170901",
             "title": "Power System Operation and Control",
             "sem": 7,
             "exams": [
@@ -1952,7 +1952,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551710",
+            "id": "3000155171001",
             "title": "Power Quality Management",
             "sem": 7,
             "exams": [
@@ -1962,7 +1962,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370001",
+            "id": "3016137000101",
             "title": "Restructured Power System",
             "sem": 7,
             "exams": [
@@ -1972,7 +1972,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551712",
+            "id": "3000155171201",
             "title": "Special Machines for Elecric Vehicles",
             "sem": 7,
             "exams": [
@@ -1982,7 +1982,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551713",
+            "id": "3000155171301",
             "title": "Control Algorithms for PV and Wind Energy Systems",
             "sem": 7,
             "exams": [
@@ -1992,7 +1992,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551714",
+            "id": "3000155171401",
             "title": "High Power Converter and Semiconductor Devices",
             "sem": 7,
             "exams": [
@@ -2002,7 +2002,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551715",
+            "id": "3000155171501",
             "title": "FACTS & HVDC",
             "sem": 7,
             "exams": [
@@ -2012,7 +2012,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551716",
+            "id": "3000155171601",
             "title": "Smart Grid",
             "sem": 7,
             "exams": [
@@ -2022,7 +2022,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551717",
+            "id": "3000155171701",
             "title": "Industrial Automation",
             "sem": 7,
             "exams": [
@@ -2032,7 +2032,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551718",
+            "id": "3000155171801",
             "title": "Advance control system",
             "sem": 7,
             "exams": [
@@ -2042,7 +2042,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551719",
+            "id": "3000155171901",
             "title": "Energy Audit",
             "sem": 7,
             "exams": [
@@ -2052,7 +2052,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551801",
+            "id": "3000155180101",
             "title": "Project",
             "sem": 8,
             "exams": [
@@ -2068,7 +2068,7 @@ export const domains = [
         "title": "B.Tech - AI/ML",
         "subjects": [
           {
-            "id": "011120101",
+            "id": "4001112010101",
             "title": "Mathematical Fundamentals for Computer Science",
             "sem": 1,
             "exams": [
@@ -2078,7 +2078,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161310001",
+            "id": "4016131000101",
             "title": "Fundamentals of Electronics",
             "sem": 1,
             "exams": [
@@ -2088,7 +2088,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "4000135110101",
             "title": "Computer Programming",
             "sem": 1,
             "exams": [
@@ -2098,7 +2098,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011190101",
+            "id": "4001119010101",
             "title": "Data Analysis & Visualization using spreadsheets",
             "sem": 1,
             "exams": [
@@ -2108,7 +2108,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181102",
+            "id": "4001318110201",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -2118,7 +2118,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351102",
+            "id": "4000135110201",
             "title": "Computer Workshop",
             "sem": 1,
             "exams": [
@@ -2128,7 +2128,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "4001719010301",
             "title": "Indian constitution",
             "sem": 1,
             "exams": [
@@ -2138,7 +2138,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "4001318010501",
             "title": "Verbal Ability – 1",
             "sem": 1,
             "exams": [
@@ -2148,7 +2148,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011190102",
+            "id": "4001119010201",
             "title": "Mathematics for Data Science",
             "sem": 2,
             "exams": [
@@ -2158,7 +2158,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190103",
+            "id": "4000119010301",
             "title": "Object Oriented Design & Programming",
             "sem": 2,
             "exams": [
@@ -2168,7 +2168,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011190103",
+            "id": "4001119010301",
             "title": "Statistics for Data Science",
             "sem": 2,
             "exams": [
@@ -2178,7 +2178,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011120102",
+            "id": "4001112010201",
             "title": "Introduction to Artificial Intelligence",
             "sem": 2,
             "exams": [
@@ -2188,7 +2188,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320001",
+            "id": "4016132000101",
             "title": "Reading and Writing for Technology / Speaking and Presentation Skills",
             "sem": 2,
             "exams": [
@@ -2198,7 +2198,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "4001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 2,
             "exams": [
@@ -2208,7 +2208,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "4001318010401",
             "title": "Professional Ethics",
             "sem": 2,
             "exams": [
@@ -2218,7 +2218,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "4001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -2234,7 +2234,7 @@ export const domains = [
         "title": "B.Tech - AI/Data science",
         "subjects": [
           {
-            "id": "011120101",
+            "id": "5001112010101",
             "title": "Mathematical Fundamentals for Computer Science",
             "sem": 1,
             "exams": [
@@ -2244,7 +2244,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161310001",
+            "id": "5016131000101",
             "title": "Fundamentals of Electronics",
             "sem": 1,
             "exams": [
@@ -2254,7 +2254,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "5000135110101",
             "title": "Computer Programming",
             "sem": 1,
             "exams": [
@@ -2264,7 +2264,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011190101",
+            "id": "5001119010101",
             "title": "Data Analysis & Visualization using spreadsheets",
             "sem": 1,
             "exams": [
@@ -2274,7 +2274,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181102",
+            "id": "5001318110201",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -2284,7 +2284,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351102",
+            "id": "5000135110201",
             "title": "Computer Workshop",
             "sem": 1,
             "exams": [
@@ -2294,7 +2294,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "5001719010301",
             "title": "Indian constitution",
             "sem": 1,
             "exams": [
@@ -2304,7 +2304,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "5001318010501",
             "title": "Verbal Ability – 1",
             "sem": 1,
             "exams": [
@@ -2314,7 +2314,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011190102",
+            "id": "5001119010201",
             "title": "Mathematics for Data Science",
             "sem": 2,
             "exams": [
@@ -2324,7 +2324,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190103",
+            "id": "5000119010301",
             "title": "Object Oriented Design & Programming",
             "sem": 2,
             "exams": [
@@ -2334,7 +2334,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011190103",
+            "id": "5001119010301",
             "title": "Statistics for Data Science",
             "sem": 2,
             "exams": [
@@ -2344,7 +2344,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011120102",
+            "id": "5001112010201",
             "title": "Introduction to Artificial Intelligence",
             "sem": 2,
             "exams": [
@@ -2354,7 +2354,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320001",
+            "id": "5016132000101",
             "title": "Reading and Writing for Technology / Speaking and Presentation Skills",
             "sem": 2,
             "exams": [
@@ -2364,7 +2364,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "5001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 2,
             "exams": [
@@ -2374,7 +2374,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "5001318010401",
             "title": "Professional Ethics",
             "sem": 2,
             "exams": [
@@ -2384,7 +2384,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "5001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -2394,7 +2394,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01191301",
+            "id": "5000119130101",
             "title": "Probability and Statistics",
             "sem": 3,
             "exams": [
@@ -2404,7 +2404,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351301",
+            "id": "5000135130101",
             "title": "Data Structure",
             "sem": 3,
             "exams": [
@@ -2414,7 +2414,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01352302",
+            "id": "5000135230201",
             "title": "Database Management System",
             "sem": 3,
             "exams": [
@@ -2424,7 +2424,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200301",
+            "id": "5001920030101",
             "title": "Data Communication and Networking",
             "sem": 3,
             "exams": [
@@ -2434,7 +2434,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190302",
+            "id": "5000119030201",
             "title": "Programming with Python",
             "sem": 3,
             "exams": [
@@ -2444,7 +2444,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351304",
+            "id": "5000135130401",
             "title": "Design Thinking and Problem Solving Skills",
             "sem": 3,
             "exams": [
@@ -2454,7 +2454,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351305",
+            "id": "5000135130501",
             "title": "Programming with Python",
             "sem": 3,
             "exams": [
@@ -2464,7 +2464,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210003",
+            "id": "5000121000301",
             "title": "NCC-3",
             "sem": 3,
             "exams": [
@@ -2474,7 +2474,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200406",
+            "id": "5001920040601",
             "title": "Discrete Mathematics",
             "sem": 4,
             "exams": [
@@ -2484,7 +2484,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200402",
+            "id": "5001920040201",
             "title": "Operating System & Virtualization",
             "sem": 4,
             "exams": [
@@ -2494,7 +2494,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201401",
+            "id": "5001920140101",
             "title": "Computer Network",
             "sem": 4,
             "exams": [
@@ -2504,7 +2504,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200404",
+            "id": "5001920040401",
             "title": "Java Programming",
             "sem": 4,
             "exams": [
@@ -2514,7 +2514,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200403",
+            "id": "5001920040301",
             "title": "Analysis and Design of Algorithms",
             "sem": 4,
             "exams": [
@@ -2524,7 +2524,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200405",
+            "id": "5001920040501",
             "title": "Creativity, Problem Solving and Innovation",
             "sem": 4,
             "exams": [
@@ -2534,7 +2534,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210004",
+            "id": "5000121000401",
             "title": "NCC-4",
             "sem": 4,
             "exams": [
@@ -2544,7 +2544,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200501",
+            "id": "5001920050101",
             "title": "LINUX ADMINISTRATION",
             "sem": 5,
             "exams": [
@@ -2554,7 +2554,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200504",
+            "id": "5001920050401",
             "title": "Advanced Java Programming",
             "sem": 5,
             "exams": [
@@ -2564,7 +2564,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200505",
+            "id": "5001920050501",
             "title": "WEB TECHNOLOGY",
             "sem": 5,
             "exams": [
@@ -2574,7 +2574,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200506",
+            "id": "5001920050601",
             "title": "Computer Organisations and Architectures",
             "sem": 5,
             "exams": [
@@ -2584,7 +2584,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350508",
+            "id": "5000135050801",
             "title": "Reverse Engineering",
             "sem": 5,
             "exams": [
@@ -2594,7 +2594,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200510",
+            "id": "5001920051001",
             "title": "Internet of Things",
             "sem": 5,
             "exams": [
@@ -2604,7 +2604,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210005",
+            "id": "5000121000501",
             "title": "NCC-5",
             "sem": 5,
             "exams": [
@@ -2614,7 +2614,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201503",
+            "id": "5001920150301",
             "title": "Advanced Computer Network",
             "sem": 5,
             "exams": [
@@ -2624,7 +2624,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200507",
+            "id": "5001920050701",
             "title": "Fundamentals of Microprocessor",
             "sem": 5,
             "exams": [
@@ -2634,7 +2634,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200508",
+            "id": "5001920050801",
             "title": "Image Processing",
             "sem": 5,
             "exams": [
@@ -2644,7 +2644,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200601",
+            "id": "5001920060101",
             "title": "Software Engineering",
             "sem": 6,
             "exams": [
@@ -2654,7 +2654,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200610",
+            "id": "5001920061001",
             "title": "Machine Learning",
             "sem": 6,
             "exams": [
@@ -2664,7 +2664,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350601",
+            "id": "5000135060101",
             "title": "COMPILER DESIGN",
             "sem": 6,
             "exams": [
@@ -2674,7 +2674,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200605",
+            "id": "5001920060501",
             "title": ".NET TECHNOLOGIES",
             "sem": 6,
             "exams": [
@@ -2684,7 +2684,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180601",
+            "id": "5001318060101",
             "title": "BUSINESS BENCHMARK",
             "sem": 6,
             "exams": [
@@ -2694,7 +2694,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210006",
+            "id": "5000121000601",
             "title": "NCC-6",
             "sem": 6,
             "exams": [
@@ -2704,7 +2704,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200611",
+            "id": "5001920061101",
             "title": "Information and Network Security",
             "sem": 6,
             "exams": [
@@ -2714,7 +2714,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200612",
+            "id": "5001920061201",
             "title": "Mobile Application Development",
             "sem": 6,
             "exams": [
@@ -2724,7 +2724,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200613",
+            "id": "5001920061301",
             "title": "Digital Forensics",
             "sem": 6,
             "exams": [
@@ -2734,7 +2734,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201701",
+            "id": "5001920170101",
             "title": "Advanced Web Technologies",
             "sem": 7,
             "exams": [
@@ -2744,7 +2744,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200714",
+            "id": "5001920071401",
             "title": "Data Science",
             "sem": 7,
             "exams": [
@@ -2754,7 +2754,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201703",
+            "id": "5001920170301",
             "title": "Major Project – 1",
             "sem": 7,
             "exams": [
@@ -2764,7 +2764,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200717",
+            "id": "5001920071701",
             "title": "UI/UX design and Agile Development",
             "sem": 7,
             "exams": [
@@ -2774,7 +2774,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200718",
+            "id": "5001920071801",
             "title": "Blockchain",
             "sem": 7,
             "exams": [
@@ -2784,7 +2784,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200719",
+            "id": "5001920071901",
             "title": "Foundation of Human Computer Interaction",
             "sem": 7,
             "exams": [
@@ -2794,7 +2794,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200708",
+            "id": "5001920070801",
             "title": "Big Data & Analytics",
             "sem": 7,
             "exams": [
@@ -2804,7 +2804,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200715",
+            "id": "5001920071501",
             "title": "Software Testing & Quality Assurance",
             "sem": 7,
             "exams": [
@@ -2814,7 +2814,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200710",
+            "id": "5001920071001",
             "title": "Computational Intelligence",
             "sem": 7,
             "exams": [
@@ -2824,7 +2824,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200711",
+            "id": "5001920071101",
             "title": "Cloud Computing",
             "sem": 7,
             "exams": [
@@ -2834,7 +2834,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200716",
+            "id": "5001920071601",
             "title": "Computer Vision",
             "sem": 7,
             "exams": [
@@ -2844,7 +2844,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200713",
+            "id": "5001920071301",
             "title": "Natural Language Processing",
             "sem": 7,
             "exams": [
@@ -2854,7 +2854,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201801",
+            "id": "5001920180101",
             "title": "Major Project – 2",
             "sem": 8,
             "exams": [
@@ -2870,7 +2870,7 @@ export const domains = [
         "title": "B.Tech - BioInformatics",
         "subjects": [
           {
-            "id": "01320101",
+            "id": "6000132010101",
             "title": "Fundamentals of biology",
             "sem": 1,
             "exams": [
@@ -2880,7 +2880,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "6000135110101",
             "title": "Computer programming",
             "sem": 1,
             "exams": [
@@ -2890,7 +2890,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351102",
+            "id": "6000135110201",
             "title": "Computer workshop",
             "sem": 1,
             "exams": [
@@ -2900,7 +2900,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "6001318010501",
             "title": "Verbal ability-1",
             "sem": 1,
             "exams": [
@@ -2910,7 +2910,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "6001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -2920,7 +2920,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551101",
+            "id": "6000155110101",
             "title": "Basic of Electrical & Electronics Engineering",
             "sem": 1,
             "exams": [
@@ -2930,7 +2930,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "6001719010301",
             "title": "Indian constitution",
             "sem": 1,
             "exams": [
@@ -2940,7 +2940,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310106",
+            "id": "6001131010601",
             "title": "Calculus",
             "sem": 1,
             "exams": [
@@ -2950,7 +2950,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320102",
+            "id": "6000132010201",
             "title": "Analytical Bioinformatics",
             "sem": 2,
             "exams": [
@@ -2960,7 +2960,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350104",
+            "id": "6000135010401",
             "title": "Object Oriented Programming",
             "sem": 2,
             "exams": [
@@ -2970,7 +2970,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "6001318010401",
             "title": "Professional Ethics",
             "sem": 2,
             "exams": [
@@ -2980,7 +2980,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "6001318010601",
             "title": "Verbal Ability-2",
             "sem": 2,
             "exams": [
@@ -2990,7 +2990,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530102",
+            "id": "6000153010201",
             "title": "Digital Electronics",
             "sem": 2,
             "exams": [
@@ -3000,7 +3000,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200106",
+            "id": "6001320010601",
             "title": "Basics of Environmental Studies",
             "sem": 2,
             "exams": [
@@ -3010,7 +3010,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310104",
+            "id": "6001131010401",
             "title": "Linear Algebra",
             "sem": 2,
             "exams": [
@@ -3020,7 +3020,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120104",
+            "id": "6011912010401",
             "title": "Professional Communication",
             "sem": 2,
             "exams": [
@@ -3030,7 +3030,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320301",
+            "id": "6000132030101",
             "title": "Computational Analysis of Biomolecular Sequence & Structures",
             "sem": 3,
             "exams": [
@@ -3040,7 +3040,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320302",
+            "id": "6000132030201",
             "title": "Python for Biologist",
             "sem": 3,
             "exams": [
@@ -3050,7 +3050,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350306",
+            "id": "6000135030601",
             "title": "Web Technology",
             "sem": 3,
             "exams": [
@@ -3060,7 +3060,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350309",
+            "id": "6000135030901",
             "title": "Probability and statistics",
             "sem": 3,
             "exams": [
@@ -3070,7 +3070,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351301",
+            "id": "6000135130101",
             "title": "Data structure",
             "sem": 3,
             "exams": [
@@ -3080,7 +3080,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351304",
+            "id": "6000135130401",
             "title": "Design Thinking and Problem Solving Skills",
             "sem": 3,
             "exams": [
@@ -3090,7 +3090,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351305",
+            "id": "6000135130501",
             "title": "Programming with Python",
             "sem": 3,
             "exams": [
@@ -3100,7 +3100,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01352302",
+            "id": "6000135230201",
             "title": "Database Management System",
             "sem": 3,
             "exams": [
@@ -3110,7 +3110,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320401",
+            "id": "6000132040101",
             "title": "Fundamentals of Microbiology & Immunology",
             "sem": 4,
             "exams": [
@@ -3120,7 +3120,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320402",
+            "id": "6000132040201",
             "title": "Fundamentals of Genomics and Proteomics",
             "sem": 4,
             "exams": [
@@ -3130,7 +3130,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320403",
+            "id": "6000132040301",
             "title": "Introduction to Structural & System Biology",
             "sem": 4,
             "exams": [
@@ -3140,7 +3140,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350408",
+            "id": "6000135040801",
             "title": "Creativity, Problem Solving and Innovation",
             "sem": 4,
             "exams": [
@@ -3150,7 +3150,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350409",
+            "id": "6000135040901",
             "title": "Discrete Mathematics",
             "sem": 4,
             "exams": [
@@ -3160,7 +3160,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351401",
+            "id": "6000135140101",
             "title": "Operating System",
             "sem": 4,
             "exams": [
@@ -3170,7 +3170,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350001",
+            "id": "6016135000101",
             "title": "Computer Aided Drug Designing",
             "sem": 5,
             "exams": [
@@ -3180,7 +3180,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320502",
+            "id": "6000132050201",
             "title": "Immuno -Informatics",
             "sem": 5,
             "exams": [
@@ -3190,7 +3190,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350523",
+            "id": "6000135052301",
             "title": ".NET Technologies",
             "sem": 5,
             "exams": [
@@ -3200,7 +3200,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351503",
+            "id": "6000135150301",
             "title": "Design and Analysis of Algorithms",
             "sem": 5,
             "exams": [
@@ -3210,7 +3210,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350514",
+            "id": "6000135051401",
             "title": "Cloud Computing Essentials",
             "sem": 5,
             "exams": [
@@ -3220,7 +3220,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350515",
+            "id": "6000135051501",
             "title": "Data Mining and Information Retrieval",
             "sem": 5,
             "exams": [
@@ -3230,7 +3230,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350516",
+            "id": "6000135051601",
             "title": "Cyber Security",
             "sem": 5,
             "exams": [
@@ -3240,7 +3240,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350517",
+            "id": "6000135051701",
             "title": "Data Science Essentials",
             "sem": 5,
             "exams": [
@@ -3250,7 +3250,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320503",
+            "id": "6000132050301",
             "title": "Metabolomics",
             "sem": 5,
             "exams": [
@@ -3260,7 +3260,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320504",
+            "id": "6000132050401",
             "title": "Biological Network Analysis",
             "sem": 5,
             "exams": [
@@ -3270,7 +3270,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320505",
+            "id": "6000132050501",
             "title": "Transcriptomics",
             "sem": 5,
             "exams": [
@@ -3280,7 +3280,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320506",
+            "id": "6000132050601",
             "title": "Advances in Genomics",
             "sem": 5,
             "exams": [
@@ -3290,7 +3290,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320601",
+            "id": "6000132060101",
             "title": "Agro-Informatics",
             "sem": 6,
             "exams": [
@@ -3300,7 +3300,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320602",
+            "id": "6000132060201",
             "title": "Phylo-Informatics",
             "sem": 6,
             "exams": [
@@ -3310,7 +3310,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350616",
+            "id": "6000135061601",
             "title": "Artificial Intelligence",
             "sem": 6,
             "exams": [
@@ -3320,7 +3320,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350607",
+            "id": "6000135060701",
             "title": "Software Engineering",
             "sem": 6,
             "exams": [
@@ -3330,7 +3330,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350610",
+            "id": "6000135061001",
             "title": "App Development using Flutter",
             "sem": 6,
             "exams": [
@@ -3340,7 +3340,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350611",
+            "id": "6000135061101",
             "title": "Web Development with PHP",
             "sem": 6,
             "exams": [
@@ -3350,7 +3350,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350613",
+            "id": "6000135061301",
             "title": "Information and Network Security",
             "sem": 6,
             "exams": [
@@ -3360,7 +3360,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350614",
+            "id": "6000135061401",
             "title": "Data Visualization",
             "sem": 6,
             "exams": [
@@ -3370,7 +3370,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320603",
+            "id": "6000132060301",
             "title": "Biological Databases",
             "sem": 6,
             "exams": [
@@ -3380,7 +3380,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320604",
+            "id": "6000132060401",
             "title": "Data management and Data warehousing",
             "sem": 6,
             "exams": [
@@ -3390,7 +3390,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320605",
+            "id": "6000132060501",
             "title": "Nano-Informatics",
             "sem": 6,
             "exams": [
@@ -3400,7 +3400,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01320606",
+            "id": "6000132060601",
             "title": "ChemInformatics",
             "sem": 6,
             "exams": [
@@ -3416,7 +3416,7 @@ export const domains = [
         "title": "B.Tech - ICT",
         "subjects": [
           {
-            "id": "011311101",
+            "id": "7001131110101",
             "title": "Differential and Integral Calculus",
             "sem": 1,
             "exams": [
@@ -3426,7 +3426,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01550104",
+            "id": "7000155010401",
             "title": "Electrical Circuits",
             "sem": 1,
             "exams": [
@@ -3436,7 +3436,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530101",
+            "id": "7000153010101",
             "title": "Basics of Electronics Engineering",
             "sem": 1,
             "exams": [
@@ -3446,7 +3446,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120102",
+            "id": "7011912010201",
             "title": "Reading and Writing for Technology",
             "sem": 1,
             "exams": [
@@ -3456,7 +3456,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120103",
+            "id": "7011912010301",
             "title": "Speaking and Presentation Skills",
             "sem": 1,
             "exams": [
@@ -3466,7 +3466,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200101",
+            "id": "7001320010101",
             "title": "Introduction to Computer Programming",
             "sem": 1,
             "exams": [
@@ -3476,7 +3476,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200103",
+            "id": "7001320010301",
             "title": "Foundation skills in sensor interfacing",
             "sem": 1,
             "exams": [
@@ -3486,7 +3486,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200104",
+            "id": "7001320010401",
             "title": "ICT Workshop",
             "sem": 1,
             "exams": [
@@ -3496,7 +3496,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011650101",
+            "id": "7001165010101",
             "title": "Physical Education/Sports/Yoga",
             "sem": 1,
             "exams": [
@@ -3506,7 +3506,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311151",
+            "id": "7001131115101",
             "title": "Matrix Algebra and Vector Calculus",
             "sem": 2,
             "exams": [
@@ -3516,7 +3516,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530102",
+            "id": "7000153010201",
             "title": "Digital Electronics",
             "sem": 2,
             "exams": [
@@ -3526,7 +3526,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350105",
+            "id": "7001135010501",
             "title": "Engineering Drawing and Computer Aided Design",
             "sem": 2,
             "exams": [
@@ -3536,7 +3536,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200105",
+            "id": "7001320010501",
             "title": "Object Oriented Programming",
             "sem": 2,
             "exams": [
@@ -3546,7 +3546,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015140101",
+            "id": "7001514010101",
             "title": "Basics of Environmental Studies",
             "sem": 2,
             "exams": [
@@ -3556,7 +3556,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320006",
+            "id": "7016132000601",
             "title": "Introduction to R and R Studio",
             "sem": 2,
             "exams": [
@@ -3566,7 +3566,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180102",
+            "id": "7001318010201",
             "title": "Value Education",
             "sem": 2,
             "exams": [
@@ -3576,7 +3576,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310231",
+            "id": "7001131023101",
             "title": "Discrete Mathematics and Graph Theory",
             "sem": 3,
             "exams": [
@@ -3586,7 +3586,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200301",
+            "id": "7001320030101",
             "title": "Computer Organization and Architecture",
             "sem": 3,
             "exams": [
@@ -3596,7 +3596,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200302",
+            "id": "7001320030201",
             "title": "Signals and Systems",
             "sem": 3,
             "exams": [
@@ -3606,7 +3606,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180301",
+            "id": "7001318030101",
             "title": "Professional Ethics",
             "sem": 3,
             "exams": [
@@ -3616,7 +3616,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200303",
+            "id": "7001320030301",
             "title": "Introduction to Communication Engineering",
             "sem": 3,
             "exams": [
@@ -3626,7 +3626,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200307",
+            "id": "7001320030701",
             "title": "Data Structure and Algorithm",
             "sem": 3,
             "exams": [
@@ -3636,7 +3636,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200306",
+            "id": "7001320030601",
             "title": "Design Engineering",
             "sem": 3,
             "exams": [
@@ -3646,7 +3646,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200401",
+            "id": "7001320040101",
             "title": "Probability and Statistics",
             "sem": 4,
             "exams": [
@@ -3656,7 +3656,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200402",
+            "id": "7001320040201",
             "title": "Problem solving using Python",
             "sem": 4,
             "exams": [
@@ -3666,7 +3666,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200403",
+            "id": "7001320040301",
             "title": "Microcontroller and Interfacing",
             "sem": 4,
             "exams": [
@@ -3676,7 +3676,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200404",
+            "id": "7001320040401",
             "title": "Analog and Digital Communication",
             "sem": 4,
             "exams": [
@@ -3686,7 +3686,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200405",
+            "id": "7001320040501",
             "title": "Engineering Electrodynamics",
             "sem": 4,
             "exams": [
@@ -3696,7 +3696,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350401",
+            "id": "7000135040101",
             "title": "Operating System",
             "sem": 4,
             "exams": [
@@ -3706,7 +3706,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200406",
+            "id": "7001320040601",
             "title": "Technical Writing",
             "sem": 4,
             "exams": [
@@ -3716,7 +3716,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200501",
+            "id": "7001320050101",
             "title": "Optimization Techniques",
             "sem": 5,
             "exams": [
@@ -3726,7 +3726,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200502",
+            "id": "7001320050201",
             "title": "Database Management System",
             "sem": 5,
             "exams": [
@@ -3736,7 +3736,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200503",
+            "id": "7001320050301",
             "title": "Computer Networks",
             "sem": 5,
             "exams": [
@@ -3746,7 +3746,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200504",
+            "id": "7001320050401",
             "title": "Internet and Web Technology",
             "sem": 5,
             "exams": [
@@ -3756,7 +3756,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200505",
+            "id": "7001320050501",
             "title": "Introduction to Single Board Computer Programming",
             "sem": 5,
             "exams": [
@@ -3766,7 +3766,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200506",
+            "id": "7001320050601",
             "title": "Human Centered Design",
             "sem": 5,
             "exams": [
@@ -3776,7 +3776,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190501",
+            "id": "7001719050101",
             "title": "Cognitive Aptitude -1",
             "sem": 5,
             "exams": [
@@ -3786,7 +3786,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200507",
+            "id": "7001320050701",
             "title": "Advanced Microprocessor",
             "sem": 5,
             "exams": [
@@ -3796,7 +3796,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200508",
+            "id": "7001320050801",
             "title": "Optical Communication",
             "sem": 5,
             "exams": [
@@ -3806,7 +3806,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200509",
+            "id": "7001320050901",
             "title": "Linux Administration",
             "sem": 5,
             "exams": [
@@ -3816,7 +3816,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200510",
+            "id": "7001320051001",
             "title": "Applied Linear algebra",
             "sem": 5,
             "exams": [
@@ -3826,7 +3826,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200511",
+            "id": "7001320051101",
             "title": "Theory of Compuation",
             "sem": 5,
             "exams": [
@@ -3836,7 +3836,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200601",
+            "id": "7001320060101",
             "title": "Digital Signal Processing",
             "sem": 6,
             "exams": [
@@ -3846,7 +3846,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200602",
+            "id": "7001320060201",
             "title": "Wireless Communication and Mobile Computing",
             "sem": 6,
             "exams": [
@@ -3856,7 +3856,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200601",
+            "id": "7001920060101",
             "title": "Software Engineering",
             "sem": 6,
             "exams": [
@@ -3866,7 +3866,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200603",
+            "id": "7001320060301",
             "title": "Reverse Engineering",
             "sem": 6,
             "exams": [
@@ -3876,7 +3876,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180601",
+            "id": "7001318060101",
             "title": "Business Benchmark",
             "sem": 6,
             "exams": [
@@ -3886,7 +3886,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190601",
+            "id": "7001719060101",
             "title": "Cognitive Aptitude -2",
             "sem": 6,
             "exams": [
@@ -3896,7 +3896,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200604",
+            "id": "7001320060401",
             "title": "Embedded System Design",
             "sem": 6,
             "exams": [
@@ -3906,7 +3906,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200605",
+            "id": "7001320060501",
             "title": "RF and Microwave Communication",
             "sem": 6,
             "exams": [
@@ -3916,7 +3916,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200606",
+            "id": "7001320060601",
             "title": "Advanced Computer Networks",
             "sem": 6,
             "exams": [
@@ -3926,7 +3926,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200607",
+            "id": "7001320060701",
             "title": "Machine learning",
             "sem": 6,
             "exams": [
@@ -3936,7 +3936,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200608",
+            "id": "7001320060801",
             "title": "Compiler Design",
             "sem": 6,
             "exams": [
@@ -3946,7 +3946,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200609",
+            "id": "7001320060901",
             "title": "VLSI Designs",
             "sem": 6,
             "exams": [
@@ -3956,7 +3956,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200610",
+            "id": "7001320061001",
             "title": "Satellite Communication",
             "sem": 6,
             "exams": [
@@ -3966,7 +3966,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200611",
+            "id": "7001320061101",
             "title": "Cloud Computing",
             "sem": 6,
             "exams": [
@@ -3976,7 +3976,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200612",
+            "id": "7001320061201",
             "title": "Data Warehousing and Data mining",
             "sem": 6,
             "exams": [
@@ -3986,7 +3986,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200613",
+            "id": "7001320061301",
             "title": ".NET Technology",
             "sem": 6,
             "exams": [
@@ -3996,7 +3996,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200701",
+            "id": "7001320070101",
             "title": "Cryptography and Network Security",
             "sem": 7,
             "exams": [
@@ -4006,7 +4006,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200702",
+            "id": "7001320070201",
             "title": "Information Theory and Coding",
             "sem": 7,
             "exams": [
@@ -4016,7 +4016,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200703",
+            "id": "7001320070301",
             "title": "Artificial intelligence",
             "sem": 7,
             "exams": [
@@ -4026,7 +4026,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200704",
+            "id": "7001320070401",
             "title": "Management Information System",
             "sem": 7,
             "exams": [
@@ -4036,7 +4036,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200705",
+            "id": "7001320070501",
             "title": "Digital Design using Verilog",
             "sem": 7,
             "exams": [
@@ -4046,7 +4046,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200706",
+            "id": "7001320070601",
             "title": "Computer Vision",
             "sem": 7,
             "exams": [
@@ -4056,7 +4056,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200707",
+            "id": "7001320070701",
             "title": "Multimedia computing",
             "sem": 7,
             "exams": [
@@ -4066,7 +4066,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200708",
+            "id": "7001320070801",
             "title": "Big Data Analytics",
             "sem": 7,
             "exams": [
@@ -4076,7 +4076,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200709",
+            "id": "7001320070901",
             "title": "Advanced Java",
             "sem": 7,
             "exams": [
@@ -4086,7 +4086,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200710",
+            "id": "7001320071001",
             "title": "Embedded Operating System",
             "sem": 7,
             "exams": [
@@ -4096,7 +4096,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200711",
+            "id": "7001320071101",
             "title": "Wireless system Design",
             "sem": 7,
             "exams": [
@@ -4106,7 +4106,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200712",
+            "id": "7001320071201",
             "title": "IOT",
             "sem": 7,
             "exams": [
@@ -4116,7 +4116,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200713",
+            "id": "7001320071301",
             "title": "Programming for Application Development",
             "sem": 7,
             "exams": [
@@ -4126,7 +4126,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370002",
+            "id": "7016137000201",
             "title": "Human computer interaction",
             "sem": 7,
             "exams": [
@@ -4136,7 +4136,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200801",
+            "id": "7001320080101",
             "title": "Project / Industrial Training",
             "sem": 8,
             "exams": [
@@ -4152,7 +4152,7 @@ export const domains = [
         "title": "B.Tech - CSE",
         "subjects": [
           {
-            "id": "011310106",
+            "id": "8001131010601",
             "title": "Calculus",
             "sem": 1,
             "exams": [
@@ -4162,7 +4162,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01352101",
+            "id": "8000135210101",
             "title": "Computer Programming",
             "sem": 1,
             "exams": [
@@ -4172,7 +4172,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01352102",
+            "id": "8000135210201",
             "title": "Computer Workshop",
             "sem": 1,
             "exams": [
@@ -4182,7 +4182,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01552101",
+            "id": "8000155210101",
             "title": "Basics of Electrical & Electronics Engineering",
             "sem": 1,
             "exams": [
@@ -4192,7 +4192,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530102",
+            "id": "8000153010201",
             "title": "Digital Electronics",
             "sem": 1,
             "exams": [
@@ -4202,7 +4202,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "8001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -4212,7 +4212,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "8001719010301",
             "title": "Indian Constitution",
             "sem": 1,
             "exams": [
@@ -4222,7 +4222,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "8001318010501",
             "title": "Verbal Ability – 1",
             "sem": 1,
             "exams": [
@@ -4232,7 +4232,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311104",
+            "id": "8001131110401",
             "title": "Linear Algebra",
             "sem": 2,
             "exams": [
@@ -4242,7 +4242,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350104",
+            "id": "8000135010401",
             "title": "Object Oriented Programming",
             "sem": 2,
             "exams": [
@@ -4252,7 +4252,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350105",
+            "id": "8000135010501",
             "title": "Database Management System",
             "sem": 2,
             "exams": [
@@ -4262,7 +4262,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320007",
+            "id": "8016132000701",
             "title": "3D Modeling and Printing",
             "sem": 2,
             "exams": [
@@ -4272,7 +4272,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350106",
+            "id": "8000135010601",
             "title": "Prompt Engineering",
             "sem": 2,
             "exams": [
@@ -4282,7 +4282,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119121104",
+            "id": "8011912110401",
             "title": "Professional Communication",
             "sem": 2,
             "exams": [
@@ -4292,7 +4292,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "8001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 2,
             "exams": [
@@ -4302,7 +4302,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "8001318010401",
             "title": "Professional Ethics",
             "sem": 2,
             "exams": [
@@ -4312,7 +4312,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "8001318010601",
             "title": "Verbal Ability - 2",
             "sem": 2,
             "exams": [
@@ -4322,7 +4322,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350309",
+            "id": "8000135030901",
             "title": "Probability and Statistics",
             "sem": 3,
             "exams": [
@@ -4332,7 +4332,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351301",
+            "id": "8000135130101",
             "title": "Data Structure",
             "sem": 3,
             "exams": [
@@ -4342,7 +4342,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350310",
+            "id": "8000135031001",
             "title": "Advance Database Management System",
             "sem": 3,
             "exams": [
@@ -4352,7 +4352,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01352306",
+            "id": "8000135230601",
             "title": "Web Technology",
             "sem": 3,
             "exams": [
@@ -4362,7 +4362,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350308",
+            "id": "8000135030801",
             "title": "Advance Java Technology",
             "sem": 3,
             "exams": [
@@ -4372,7 +4372,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180303",
+            "id": "8001318030301",
             "title": "Quantitative & Logical Ability - 1",
             "sem": 3,
             "exams": [
@@ -4382,7 +4382,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350409",
+            "id": "8000135040901",
             "title": "Discrete Mathematics",
             "sem": 4,
             "exams": [
@@ -4392,7 +4392,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351401",
+            "id": "8000135140101",
             "title": "Operating System",
             "sem": 4,
             "exams": [
@@ -4402,7 +4402,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351402",
+            "id": "8000135140201",
             "title": "Computer Organization and Architecture",
             "sem": 4,
             "exams": [
@@ -4412,7 +4412,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350410",
+            "id": "8000135041001",
             "title": "Computer Network",
             "sem": 4,
             "exams": [
@@ -4422,7 +4422,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350413",
+            "id": "8000135041301",
             "title": "Programming with Python",
             "sem": 4,
             "exams": [
@@ -4432,7 +4432,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351412",
+            "id": "8000135141201",
             "title": "Advance Web Technology",
             "sem": 4,
             "exams": [
@@ -4442,7 +4442,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180402",
+            "id": "8001318040201",
             "title": "Quantitative & Logical Ability - 2",
             "sem": 4,
             "exams": [
@@ -4452,7 +4452,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350509",
+            "id": "8000135050901",
             "title": "Fundamentals of Microprocessors",
             "sem": 5,
             "exams": [
@@ -4462,7 +4462,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351503",
+            "id": "8000135150301",
             "title": "Design and Analysis of Algorithm",
             "sem": 5,
             "exams": [
@@ -4472,7 +4472,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350523",
+            "id": "8000135052301",
             "title": ".NET Technologies",
             "sem": 5,
             "exams": [
@@ -4482,7 +4482,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350524",
+            "id": "8000135052401",
             "title": "Machine Learning",
             "sem": 5,
             "exams": [
@@ -4492,7 +4492,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180503",
+            "id": "8001318050301",
             "title": "Quantitative & Logical Ability - 3",
             "sem": 5,
             "exams": [
@@ -4502,7 +4502,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350512",
+            "id": "8000135051201",
             "title": "Internet of Things and Applications",
             "sem": 5,
             "exams": [
@@ -4512,7 +4512,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350513",
+            "id": "8000135051301",
             "title": "Programming for Android",
             "sem": 5,
             "exams": [
@@ -4522,7 +4522,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350514",
+            "id": "8000135051401",
             "title": "Cloud Computing Essentials",
             "sem": 5,
             "exams": [
@@ -4532,7 +4532,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350516",
+            "id": "8000135051601",
             "title": "Cyber Security",
             "sem": 5,
             "exams": [
@@ -4542,7 +4542,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350517",
+            "id": "8000135051701",
             "title": "Data Science Essentials",
             "sem": 5,
             "exams": [
@@ -4552,7 +4552,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350518",
+            "id": "8000135051801",
             "title": "Optimization Techniques",
             "sem": 5,
             "exams": [
@@ -4562,7 +4562,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350607",
+            "id": "8000135060701",
             "title": "Software Engineering",
             "sem": 6,
             "exams": [
@@ -4572,7 +4572,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350608",
+            "id": "8000135060801",
             "title": "Theory of Computation",
             "sem": 6,
             "exams": [
@@ -4582,7 +4582,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350616",
+            "id": "8000135061601",
             "title": "Artificial Intelligence",
             "sem": 6,
             "exams": [
@@ -4592,7 +4592,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350618",
+            "id": "8000135061801",
             "title": "Open Source Technologies",
             "sem": 6,
             "exams": [
@@ -4602,7 +4602,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350609",
+            "id": "8000135060901",
             "title": "Mini Project",
             "sem": 6,
             "exams": [
@@ -4612,7 +4612,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180602",
+            "id": "8001318060201",
             "title": "Quantitative Aptitude and Verbal Ability",
             "sem": 6,
             "exams": [
@@ -4622,7 +4622,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350610",
+            "id": "8000135061001",
             "title": "App Development using Flutter",
             "sem": 6,
             "exams": [
@@ -4632,7 +4632,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350611",
+            "id": "8000135061101",
             "title": "Web Development with PHP",
             "sem": 6,
             "exams": [
@@ -4642,7 +4642,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350612",
+            "id": "8000135061201",
             "title": "Computer Vision",
             "sem": 6,
             "exams": [
@@ -4652,7 +4652,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350613",
+            "id": "8000135061301",
             "title": "Information and Network Security",
             "sem": 6,
             "exams": [
@@ -4662,7 +4662,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350614",
+            "id": "8000135061401",
             "title": "Data Visualization",
             "sem": 6,
             "exams": [
@@ -4672,7 +4672,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350615",
+            "id": "8000135061501",
             "title": "Computer Graphics",
             "sem": 6,
             "exams": [
@@ -4682,7 +4682,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350723",
+            "id": "8000135072301",
             "title": "Data Warehousing & Data Mining",
             "sem": 7,
             "exams": [
@@ -4692,7 +4692,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350714",
+            "id": "8000135071401",
             "title": "Compiler Design",
             "sem": 7,
             "exams": [
@@ -4702,7 +4702,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350724",
+            "id": "8000135072401",
             "title": "Generative Artificial Intelligence",
             "sem": 7,
             "exams": [
@@ -4712,7 +4712,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350715",
+            "id": "8000135071501",
             "title": "Major Project – 1",
             "sem": 7,
             "exams": [
@@ -4722,7 +4722,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350717",
+            "id": "8000135071701",
             "title": "DevOps Essentials",
             "sem": 7,
             "exams": [
@@ -4732,7 +4732,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350718",
+            "id": "8000135071801",
             "title": "Natural Language Processing",
             "sem": 7,
             "exams": [
@@ -4742,7 +4742,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350719",
+            "id": "8000135071901",
             "title": "Big Data Analytics",
             "sem": 7,
             "exams": [
@@ -4752,7 +4752,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350720",
+            "id": "8000135072001",
             "title": "Blockchain Technology",
             "sem": 7,
             "exams": [
@@ -4762,7 +4762,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350721",
+            "id": "8000135072101",
             "title": "UI and UX design",
             "sem": 7,
             "exams": [
@@ -4772,7 +4772,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350722",
+            "id": "8000135072201",
             "title": "Software Testing",
             "sem": 7,
             "exams": [
@@ -4782,7 +4782,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350807",
+            "id": "8000135080701",
             "title": "Intenship / Major Project - 2",
             "sem": 8,
             "exams": [
@@ -4798,7 +4798,7 @@ export const domains = [
         "title": "B.Tech - CSE & Cyber Security",
         "subjects": [
           {
-            "id": "011310106",
+            "id": "9001131010601",
             "title": "Calculus",
             "sem": 1,
             "exams": [
@@ -4808,7 +4808,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551101",
+            "id": "9000155110101",
             "title": "Basics of Electrical & Electronics Engineering",
             "sem": 1,
             "exams": [
@@ -4818,7 +4818,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "9000135110101",
             "title": "Computer Programming",
             "sem": 1,
             "exams": [
@@ -4828,7 +4828,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530102",
+            "id": "9000153010201",
             "title": "Digital Electronics",
             "sem": 1,
             "exams": [
@@ -4838,7 +4838,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "9001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -4848,7 +4848,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330101",
+            "id": "9000133010101",
             "title": "Cyber Space & it's Security",
             "sem": 1,
             "exams": [
@@ -4858,7 +4858,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "9001719010301",
             "title": "Indian Constitution",
             "sem": 1,
             "exams": [
@@ -4868,7 +4868,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "9001318010501",
             "title": "Verbal Ability – 1",
             "sem": 1,
             "exams": [
@@ -4878,7 +4878,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311104",
+            "id": "9001131110401",
             "title": "Linear Algebra",
             "sem": 2,
             "exams": [
@@ -4888,7 +4888,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350104",
+            "id": "9000135010401",
             "title": "Object Oriented Programming",
             "sem": 2,
             "exams": [
@@ -4898,7 +4898,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350105",
+            "id": "9000135010501",
             "title": "Database Management System",
             "sem": 2,
             "exams": [
@@ -4908,7 +4908,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119121104",
+            "id": "9011912110401",
             "title": "Professional Communications",
             "sem": 2,
             "exams": [
@@ -4918,7 +4918,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330102",
+            "id": "9000133010201",
             "title": "Fundamental of Cyber Security",
             "sem": 2,
             "exams": [
@@ -4928,7 +4928,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "9001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 2,
             "exams": [
@@ -4938,7 +4938,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "9001318010401",
             "title": "Professional Ethics",
             "sem": 2,
             "exams": [
@@ -4948,7 +4948,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "9001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -4958,7 +4958,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350106",
+            "id": "9000135010601",
             "title": "Prompt Engineering",
             "sem": 2,
             "exams": [
@@ -4968,7 +4968,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350309",
+            "id": "9000135030901",
             "title": "Probability and Statistics",
             "sem": 3,
             "exams": [
@@ -4978,7 +4978,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351301",
+            "id": "9000135130101",
             "title": "Data Structure",
             "sem": 3,
             "exams": [
@@ -4988,7 +4988,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330303",
+            "id": "9000133030301",
             "title": "Datatase Security",
             "sem": 3,
             "exams": [
@@ -4998,7 +4998,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330302",
+            "id": "9000133030201",
             "title": "Computer Network Fundamentals",
             "sem": 3,
             "exams": [
@@ -5008,7 +5008,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350308",
+            "id": "9000135030801",
             "title": "Advance Java Technology",
             "sem": 3,
             "exams": [
@@ -5018,7 +5018,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01352305",
+            "id": "9000135230501",
             "title": "Programming with Python",
             "sem": 3,
             "exams": [
@@ -5028,7 +5028,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180303",
+            "id": "9001318030301",
             "title": "Quantitative & Logical Ability - 1",
             "sem": 3,
             "exams": [
@@ -5038,7 +5038,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350409",
+            "id": "9000135040901",
             "title": "Discrete Mathematics",
             "sem": 4,
             "exams": [
@@ -5048,7 +5048,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330401",
+            "id": "9000133040101",
             "title": "Operating Systems & Security",
             "sem": 4,
             "exams": [
@@ -5058,7 +5058,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330402",
+            "id": "9000133040201",
             "title": "Web Development Technology",
             "sem": 4,
             "exams": [
@@ -5068,7 +5068,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330403",
+            "id": "9000133040301",
             "title": "Ethical Hacking",
             "sem": 4,
             "exams": [
@@ -5078,7 +5078,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330404",
+            "id": "9000133040401",
             "title": "Mastering Kali Linux",
             "sem": 4,
             "exams": [
@@ -5088,7 +5088,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180402",
+            "id": "9001318040201",
             "title": "Quantitative & Logical Ability - 2",
             "sem": 4,
             "exams": [
@@ -5098,7 +5098,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330501",
+            "id": "9000133050101",
             "title": "Cryptography",
             "sem": 5,
             "exams": [
@@ -5108,7 +5108,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351503",
+            "id": "9000135150301",
             "title": "Design and Analysis of Algorithm",
             "sem": 5,
             "exams": [
@@ -5118,7 +5118,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330502",
+            "id": "9000133050201",
             "title": "Web Application & Security",
             "sem": 5,
             "exams": [
@@ -5128,7 +5128,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350002",
+            "id": "9016135000201",
             "title": "Python Programming for Security",
             "sem": 5,
             "exams": [
@@ -5138,7 +5138,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180503",
+            "id": "9001318050301",
             "title": "Quantitative & Logical Ability - 3",
             "sem": 5,
             "exams": [
@@ -5148,7 +5148,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350003",
+            "id": "9016135000301",
             "title": "Fundamentals of IOT & SCADA Security",
             "sem": 5,
             "exams": [
@@ -5158,7 +5158,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330503",
+            "id": "9000133050301",
             "title": "Cloud Computing & Security",
             "sem": 5,
             "exams": [
@@ -5168,7 +5168,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330504",
+            "id": "9000133050401",
             "title": "Server Management",
             "sem": 5,
             "exams": [
@@ -5178,7 +5178,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01310722",
+            "id": "9000131072201",
             "title": "Cyber Law and Ethics",
             "sem": 5,
             "exams": [
@@ -5188,7 +5188,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330505",
+            "id": "9000133050501",
             "title": "Identity and Access Managent",
             "sem": 5,
             "exams": [
@@ -5198,7 +5198,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330506",
+            "id": "9000133050601",
             "title": "Mobile Application & Security",
             "sem": 5,
             "exams": [
@@ -5208,7 +5208,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330601",
+            "id": "9000133060101",
             "title": "Cyber Crime Investigation & Digital Forensics",
             "sem": 6,
             "exams": [
@@ -5218,7 +5218,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350617",
+            "id": "9000135061701",
             "title": "Network Security",
             "sem": 6,
             "exams": [
@@ -5228,7 +5228,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360001",
+            "id": "9016136000101",
             "title": "Information Security Management",
             "sem": 6,
             "exams": [
@@ -5238,7 +5238,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350618",
+            "id": "9000135061801",
             "title": "Open Source Technology",
             "sem": 6,
             "exams": [
@@ -5248,7 +5248,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180602",
+            "id": "9001318060201",
             "title": "Quantitative Aptitude and Verbal Ability",
             "sem": 6,
             "exams": [
@@ -5258,7 +5258,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360003",
+            "id": "9016136000301",
             "title": "Cyber Physical System",
             "sem": 6,
             "exams": [
@@ -5268,7 +5268,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330602",
+            "id": "9000133060201",
             "title": "Metasploit Framework",
             "sem": 6,
             "exams": [
@@ -5278,7 +5278,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360004",
+            "id": "9016136000401",
             "title": "Exploit Development and Shell Scripting",
             "sem": 6,
             "exams": [
@@ -5288,7 +5288,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330603",
+            "id": "9000133060301",
             "title": "SystemSecure Software Design",
             "sem": 6,
             "exams": [
@@ -5298,7 +5298,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360005",
+            "id": "9016136000501",
             "title": "Darkweb Monitoring",
             "sem": 6,
             "exams": [
@@ -5308,7 +5308,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330604",
+            "id": "9000133060401",
             "title": "Malware Analaysis and Reverse Engineering",
             "sem": 6,
             "exams": [
@@ -5318,7 +5318,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330701",
+            "id": "9000133070101",
             "title": "BlockChain Technology & Security",
             "sem": 7,
             "exams": [
@@ -5328,7 +5328,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330702",
+            "id": "9000133070201",
             "title": "VAPT",
             "sem": 7,
             "exams": [
@@ -5338,7 +5338,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330703",
+            "id": "9000133070301",
             "title": "Artificial Intelligence & Cyber Security",
             "sem": 7,
             "exams": [
@@ -5348,7 +5348,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350715",
+            "id": "9000135071501",
             "title": "Major Project – 1",
             "sem": 7,
             "exams": [
@@ -5358,7 +5358,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350717",
+            "id": "9000135071701",
             "title": "DevOps Essentials",
             "sem": 7,
             "exams": [
@@ -5368,7 +5368,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330704",
+            "id": "9000133070401",
             "title": "Security Monitoring and SIEM",
             "sem": 7,
             "exams": [
@@ -5378,7 +5378,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370003",
+            "id": "9016137000301",
             "title": "Digital Watermarking and Steganography",
             "sem": 7,
             "exams": [
@@ -5388,7 +5388,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330705",
+            "id": "9000133070501",
             "title": "Intrusion Detection and Prevention Systems",
             "sem": 7,
             "exams": [
@@ -5398,7 +5398,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370004",
+            "id": "9016137000401",
             "title": "Introduction to Fintech & Security",
             "sem": 7,
             "exams": [
@@ -5408,7 +5408,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01330706",
+            "id": "9000133070601",
             "title": "Biometrics",
             "sem": 7,
             "exams": [
@@ -5418,7 +5418,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350807",
+            "id": "9000135080701",
             "title": "Intenship / Major Project - 2",
             "sem": 8,
             "exams": [
@@ -5434,7 +5434,7 @@ export const domains = [
         "title": "B.Tech - CSE & AI",
         "subjects": [
           {
-            "id": "011310106",
+            "id": "10001131010601",
             "title": "Calculus",
             "sem": 1,
             "exams": [
@@ -5444,7 +5444,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551101",
+            "id": "10000155110101",
             "title": "Basics of Electrical & Electronics Engineering",
             "sem": 1,
             "exams": [
@@ -5454,7 +5454,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "10000135110101",
             "title": "Computer Programming",
             "sem": 1,
             "exams": [
@@ -5464,7 +5464,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017191101",
+            "id": "10001719110101",
             "title": "Engineering Physics",
             "sem": 1,
             "exams": [
@@ -5474,7 +5474,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "10001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -5484,7 +5484,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351102",
+            "id": "10000135110201",
             "title": "Computer Workshop",
             "sem": 1,
             "exams": [
@@ -5494,7 +5494,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "10001719010301",
             "title": "Indian constitution",
             "sem": 1,
             "exams": [
@@ -5504,7 +5504,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "10001318010501",
             "title": "Verbal Ability – 1",
             "sem": 1,
             "exams": [
@@ -5514,7 +5514,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310104",
+            "id": "10001131010401",
             "title": "Linear Algebra",
             "sem": 2,
             "exams": [
@@ -5524,7 +5524,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350104",
+            "id": "10000135010401",
             "title": "Object Oriented Programming",
             "sem": 2,
             "exams": [
@@ -5534,7 +5534,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351103",
+            "id": "10001135110301",
             "title": "Engineering Drawings",
             "sem": 2,
             "exams": [
@@ -5544,7 +5544,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530102",
+            "id": "10000153010201",
             "title": "Digital Electronics",
             "sem": 2,
             "exams": [
@@ -5554,7 +5554,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120102",
+            "id": "10011912010201",
             "title": "Reading and Writing for Technology",
             "sem": 2,
             "exams": [
@@ -5564,7 +5564,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120103",
+            "id": "10011912010301",
             "title": "Speaking and Presentation Skills",
             "sem": 2,
             "exams": [
@@ -5574,7 +5574,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "10001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 2,
             "exams": [
@@ -5584,7 +5584,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "10001318010401",
             "title": "Professional Ethics",
             "sem": 2,
             "exams": [
@@ -5594,7 +5594,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "10001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -5604,7 +5604,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01191301",
+            "id": "10000119130101",
             "title": "Probability and Statistics",
             "sem": 3,
             "exams": [
@@ -5614,7 +5614,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351301",
+            "id": "10000135130101",
             "title": "Data Structure",
             "sem": 3,
             "exams": [
@@ -5624,7 +5624,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01352302",
+            "id": "10000135230201",
             "title": "Database Management System",
             "sem": 3,
             "exams": [
@@ -5634,7 +5634,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200301",
+            "id": "10001920030101",
             "title": "Data Communication and Networking",
             "sem": 3,
             "exams": [
@@ -5644,7 +5644,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190302",
+            "id": "10000119030201",
             "title": "Programming with Python",
             "sem": 3,
             "exams": [
@@ -5654,7 +5654,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351304",
+            "id": "10000135130401",
             "title": "Design Thinking and Problem Solving Skills",
             "sem": 3,
             "exams": [
@@ -5664,7 +5664,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190402",
+            "id": "10000119040201",
             "title": "Discrete Mathematical Structures",
             "sem": 4,
             "exams": [
@@ -5674,7 +5674,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200402",
+            "id": "10001920040201",
             "title": "Operating System & Virtualization",
             "sem": 4,
             "exams": [
@@ -5684,7 +5684,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201401",
+            "id": "10001920140101",
             "title": "Computer Network",
             "sem": 4,
             "exams": [
@@ -5694,7 +5694,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190401",
+            "id": "10000119040101",
             "title": "Java Programming",
             "sem": 4,
             "exams": [
@@ -5704,7 +5704,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350406",
+            "id": "10000135040601",
             "title": "Machine Learning Essentials",
             "sem": 4,
             "exams": [
@@ -5714,7 +5714,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350408",
+            "id": "10000135040801",
             "title": "Creativity, Problem Solving and Innovation",
             "sem": 4,
             "exams": [
@@ -5724,7 +5724,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340001",
+            "id": "10016134000101",
             "title": "Proactive Programming Technique",
             "sem": 4,
             "exams": [
@@ -5734,7 +5734,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350504",
+            "id": "10000135050401",
             "title": "Theory of Automata & Formal Language",
             "sem": 5,
             "exams": [
@@ -5744,7 +5744,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190501",
+            "id": "10000119050101",
             "title": "Advanced Java Programming",
             "sem": 5,
             "exams": [
@@ -5754,7 +5754,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190502",
+            "id": "10000119050201",
             "title": "Artificial Intelligence",
             "sem": 5,
             "exams": [
@@ -5764,7 +5764,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350503",
+            "id": "10000135050301",
             "title": "Design and Analysis of Algorithms",
             "sem": 5,
             "exams": [
@@ -5774,7 +5774,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190503",
+            "id": "10000119050301",
             "title": "Cloud Computing",
             "sem": 5,
             "exams": [
@@ -5784,7 +5784,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350508",
+            "id": "10000135050801",
             "title": "Reverse Engineering",
             "sem": 5,
             "exams": [
@@ -5794,7 +5794,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190504",
+            "id": "10000119050401",
             "title": "Digital Image Processing",
             "sem": 5,
             "exams": [
@@ -5804,7 +5804,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200503",
+            "id": "10001920050301",
             "title": "Advanced Computer Network",
             "sem": 5,
             "exams": [
@@ -5814,7 +5814,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350604",
+            "id": "10000135060401",
             "title": "Cyber Security",
             "sem": 5,
             "exams": [
@@ -5824,7 +5824,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190601",
+            "id": "10000119060101",
             "title": "Human Computer Interface",
             "sem": 6,
             "exams": [
@@ -5834,7 +5834,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200601",
+            "id": "10001920060101",
             "title": "Software Engineering",
             "sem": 6,
             "exams": [
@@ -5844,7 +5844,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190602",
+            "id": "10000119060201",
             "title": "Web Intelligence and Mining",
             "sem": 6,
             "exams": [
@@ -5854,7 +5854,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190603",
+            "id": "10000119060301",
             "title": "Machine Learning Techniques",
             "sem": 6,
             "exams": [
@@ -5864,7 +5864,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180601",
+            "id": "10001318060101",
             "title": "Business Benchmark",
             "sem": 6,
             "exams": [
@@ -5874,7 +5874,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190606",
+            "id": "10000119060601",
             "title": "Mathematics for Data Science",
             "sem": 6,
             "exams": [
@@ -5884,7 +5884,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190604",
+            "id": "10000119060401",
             "title": "Block Chains",
             "sem": 6,
             "exams": [
@@ -5894,7 +5894,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190605",
+            "id": "10000119060501",
             "title": "System and Network Security",
             "sem": 6,
             "exams": [
@@ -5904,7 +5904,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190701",
+            "id": "10000119070101",
             "title": "Deep Learning",
             "sem": 7,
             "exams": [
@@ -5914,7 +5914,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190706",
+            "id": "10000119070601",
             "title": "Compiler Design",
             "sem": 7,
             "exams": [
@@ -5924,7 +5924,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190702",
+            "id": "10000119070201",
             "title": "Natural Language Processing",
             "sem": 7,
             "exams": [
@@ -5934,7 +5934,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019201703",
+            "id": "10001920170301",
             "title": "Major Project – 1",
             "sem": 7,
             "exams": [
@@ -5944,7 +5944,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350704",
+            "id": "10000135070401",
             "title": "Android Programming",
             "sem": 7,
             "exams": [
@@ -5954,7 +5954,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350701",
+            "id": "10000135070101",
             "title": "Mobile Computing",
             "sem": 7,
             "exams": [
@@ -5964,7 +5964,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350805",
+            "id": "10000135080501",
             "title": "Business Intelligence",
             "sem": 7,
             "exams": [
@@ -5974,7 +5974,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350806",
+            "id": "10000135080601",
             "title": "Internet Of things",
             "sem": 7,
             "exams": [
@@ -5984,7 +5984,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190703",
+            "id": "10000119070301",
             "title": "Computer Vision",
             "sem": 7,
             "exams": [
@@ -5994,7 +5994,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01190704",
+            "id": "10000119070401",
             "title": "Virtual and Augmented Reality",
             "sem": 7,
             "exams": [
@@ -6004,7 +6004,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200801",
+            "id": "10001920080101",
             "title": "Industrial Internship/Major Project-II",
             "sem": 8,
             "exams": [
@@ -6020,7 +6020,7 @@ export const domains = [
         "title": "B.Tech - Chemical Engineering",
         "subjects": [
           {
-            "id": "011312101",
+            "id": "11001131210101",
             "title": "Differential and Integral Calculus",
             "sem": 1,
             "exams": [
@@ -6030,7 +6030,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391101",
+            "id": "11000139110101",
             "title": "Elements of Civil Engineering",
             "sem": 1,
             "exams": [
@@ -6040,7 +6040,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351101",
+            "id": "11001135110101",
             "title": "Elements of Mechanical Engineering",
             "sem": 1,
             "exams": [
@@ -6050,7 +6050,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120102",
+            "id": "11011912010201",
             "title": "Reading & Writing for Technology",
             "sem": 1,
             "exams": [
@@ -6060,7 +6060,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120103",
+            "id": "11011912010301",
             "title": "Speaking & Presentation Skills",
             "sem": 1,
             "exams": [
@@ -6070,7 +6070,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381101",
+            "id": "11000138110101",
             "title": "Engineering Chemistry – I",
             "sem": 1,
             "exams": [
@@ -6080,7 +6080,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "11001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 1,
             "exams": [
@@ -6090,7 +6090,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "11001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -6100,7 +6100,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "11001719010301",
             "title": "Indian Constitution",
             "sem": 1,
             "exams": [
@@ -6110,7 +6110,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "11001318010501",
             "title": "Verbal Ability – 1",
             "sem": 1,
             "exams": [
@@ -6120,7 +6120,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210001",
+            "id": "11000121000101",
             "title": "National Cadet Corps -1",
             "sem": 1,
             "exams": [
@@ -6130,7 +6130,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310103",
+            "id": "11001131010301",
             "title": "Matrix Algebra and Vector Space",
             "sem": 2,
             "exams": [
@@ -6140,7 +6140,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "11000135110101",
             "title": "Computer Programming",
             "sem": 2,
             "exams": [
@@ -6150,7 +6150,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351102",
+            "id": "11001135110201",
             "title": "Engineering Graphics",
             "sem": 2,
             "exams": [
@@ -6160,7 +6160,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551101",
+            "id": "11000155110101",
             "title": "Basics of Electrical and Electronics Engineering",
             "sem": 2,
             "exams": [
@@ -6170,7 +6170,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351104",
+            "id": "11001135110401",
             "title": "Mechanical Workshop",
             "sem": 2,
             "exams": [
@@ -6180,7 +6180,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0116250101",
+            "id": "11011625010101",
             "title": "Physical Education/Sports/Yoga",
             "sem": 2,
             "exams": [
@@ -6190,7 +6190,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "11001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -6200,7 +6200,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210002",
+            "id": "11000121000201",
             "title": "National Cadet Corps-2",
             "sem": 2,
             "exams": [
@@ -6210,7 +6210,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381301",
+            "id": "11000138130101",
             "title": "Fluid Mechanics",
             "sem": 3,
             "exams": [
@@ -6220,7 +6220,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381302",
+            "id": "11000138130201",
             "title": "Chemical Process Calculation",
             "sem": 3,
             "exams": [
@@ -6230,7 +6230,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381303",
+            "id": "11000138130301",
             "title": "Mechanical Operations",
             "sem": 3,
             "exams": [
@@ -6240,7 +6240,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381306",
+            "id": "11000138130601",
             "title": "Engineering Chemistry II",
             "sem": 3,
             "exams": [
@@ -6250,7 +6250,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310304",
+            "id": "11001131030401",
             "title": "Applied Mathematics in Chemical Engineering",
             "sem": 3,
             "exams": [
@@ -6260,7 +6260,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180303",
+            "id": "11001318030301",
             "title": "Quantitative & Logical Ability – 1",
             "sem": 3,
             "exams": [
@@ -6270,7 +6270,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "11001318010401",
             "title": "Professional Ethics",
             "sem": 3,
             "exams": [
@@ -6280,7 +6280,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381401",
+            "id": "11000138140101",
             "title": "Chemical Engineering Thermodynamics- I",
             "sem": 4,
             "exams": [
@@ -6290,7 +6290,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351602",
+            "id": "11001135160201",
             "title": "Heat Transfer",
             "sem": 4,
             "exams": [
@@ -6300,7 +6300,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381406",
+            "id": "11000138140601",
             "title": "Mass Transfer-I",
             "sem": 4,
             "exams": [
@@ -6310,7 +6310,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310401",
+            "id": "11001131040101",
             "title": "Numerical Methods in Chemical Engineering",
             "sem": 4,
             "exams": [
@@ -6320,7 +6320,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381402",
+            "id": "11000138140201",
             "title": "Material Science and Engineering",
             "sem": 4,
             "exams": [
@@ -6330,7 +6330,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380408",
+            "id": "11000138040801",
             "title": "Energy Technology",
             "sem": 4,
             "exams": [
@@ -6340,7 +6340,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380409",
+            "id": "11000138040901",
             "title": "Introduction to Membrane Technology",
             "sem": 4,
             "exams": [
@@ -6350,7 +6350,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380507",
+            "id": "11000138050701",
             "title": "Mass Transfer-II",
             "sem": 5,
             "exams": [
@@ -6360,7 +6360,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380502",
+            "id": "11000138050201",
             "title": "Cleaner Production",
             "sem": 5,
             "exams": [
@@ -6370,7 +6370,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380503",
+            "id": "11000138050301",
             "title": "Chemical Engineering Thermodynamics-II",
             "sem": 5,
             "exams": [
@@ -6380,7 +6380,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380504",
+            "id": "11000138050401",
             "title": "Instrumentation & Process Control",
             "sem": 5,
             "exams": [
@@ -6390,7 +6390,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380505",
+            "id": "11000138050501",
             "title": "Safety in Chemical Industries",
             "sem": 5,
             "exams": [
@@ -6400,7 +6400,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180501",
+            "id": "11001318050101",
             "title": "Business Benchmark",
             "sem": 5,
             "exams": [
@@ -6410,7 +6410,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381506",
+            "id": "11000138150601",
             "title": "Chemical Engineers & Society-III",
             "sem": 5,
             "exams": [
@@ -6420,7 +6420,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360006",
+            "id": "11016136000601",
             "title": "Chemical Technology",
             "sem": 6,
             "exams": [
@@ -6430,7 +6430,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380602",
+            "id": "11000138060201",
             "title": "Chemical Reaction Engineering-I",
             "sem": 6,
             "exams": [
@@ -6440,7 +6440,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380603",
+            "id": "11000138060301",
             "title": "Process Equipment Design-I",
             "sem": 6,
             "exams": [
@@ -6450,7 +6450,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380609",
+            "id": "11000138060901",
             "title": "Chemical Engineers & Society-IV",
             "sem": 6,
             "exams": [
@@ -6460,7 +6460,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380606",
+            "id": "11000138060601",
             "title": "Biochemical Engineering",
             "sem": 6,
             "exams": [
@@ -6470,7 +6470,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381604",
+            "id": "11000138160401",
             "title": "Unit operations and Processes",
             "sem": 6,
             "exams": [
@@ -6480,7 +6480,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015190601",
+            "id": "11001519060101",
             "title": "Renewable Energy Resources",
             "sem": 6,
             "exams": [
@@ -6490,7 +6490,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380605",
+            "id": "11000138060501",
             "title": "industries",
             "sem": 6,
             "exams": [
@@ -6500,7 +6500,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380701",
+            "id": "11000138070101",
             "title": "Process Modelling & Simulation",
             "sem": 7,
             "exams": [
@@ -6510,7 +6510,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380702",
+            "id": "11000138070201",
             "title": "Chermical Reaction Engineering-II",
             "sem": 7,
             "exams": [
@@ -6520,7 +6520,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380703",
+            "id": "11000138070301",
             "title": "Process Equipment & Design-II",
             "sem": 7,
             "exams": [
@@ -6530,7 +6530,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380704",
+            "id": "11000138070401",
             "title": "Plant Design & Project Engineering",
             "sem": 7,
             "exams": [
@@ -6540,7 +6540,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380705",
+            "id": "11000138070501",
             "title": "Project I",
             "sem": 7,
             "exams": [
@@ -6550,7 +6550,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380706",
+            "id": "11000138070601",
             "title": "Food Technology",
             "sem": 7,
             "exams": [
@@ -6560,7 +6560,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380707",
+            "id": "11000138070701",
             "title": "Advanced Separation Techniques",
             "sem": 7,
             "exams": [
@@ -6570,7 +6570,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380801",
+            "id": "11000138080101",
             "title": "Optimization in chemical engineering",
             "sem": 8,
             "exams": [
@@ -6580,7 +6580,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380802",
+            "id": "11000138080201",
             "title": "Transport Phenomena",
             "sem": 8,
             "exams": [
@@ -6590,7 +6590,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380803",
+            "id": "11000138080301",
             "title": "Petroleum Refining & Petrochemicals",
             "sem": 8,
             "exams": [
@@ -6600,7 +6600,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380804",
+            "id": "11000138080401",
             "title": "Project II",
             "sem": 8,
             "exams": [
@@ -6610,7 +6610,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380805",
+            "id": "11000138080501",
             "title": "Polymer & Nanotechnology",
             "sem": 8,
             "exams": [
@@ -6620,7 +6620,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381507",
+            "id": "11000938150701",
             "title": "Fertilizer Technology",
             "sem": 8,
             "exams": [
@@ -6636,7 +6636,7 @@ export const domains = [
         "title": "B.Tech - Civil Engineering",
         "subjects": [
           {
-            "id": "011312101",
+            "id": "12001131210101",
             "title": "Differential and Integral Calculus",
             "sem": 1,
             "exams": [
@@ -6646,7 +6646,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391101",
+            "id": "12000139110101",
             "title": "Elements of Civil Engineering",
             "sem": 1,
             "exams": [
@@ -6656,7 +6656,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351101",
+            "id": "12001135110101",
             "title": "Elements of Mechanical Engineering",
             "sem": 1,
             "exams": [
@@ -6666,7 +6666,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161310003",
+            "id": "12016131000301",
             "title": "Engineering Physics / Chemistry",
             "sem": 1,
             "exams": [
@@ -6676,7 +6676,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120102",
+            "id": "12011912010201",
             "title": "Reading & Writing for Technology",
             "sem": 1,
             "exams": [
@@ -6686,7 +6686,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120103",
+            "id": "12011912010301",
             "title": "Speaking & Presentation Skills",
             "sem": 1,
             "exams": [
@@ -6696,7 +6696,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "12001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 1,
             "exams": [
@@ -6706,7 +6706,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "12001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -6716,7 +6716,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "12001719010301",
             "title": "Indian Constitution",
             "sem": 1,
             "exams": [
@@ -6726,7 +6726,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "12001318010501",
             "title": "Verbal Ability – 1",
             "sem": 1,
             "exams": [
@@ -6736,7 +6736,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011210101",
+            "id": "12001121010101",
             "title": "N.C.C.-1",
             "sem": 1,
             "exams": [
@@ -6746,7 +6746,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310103",
+            "id": "12001131010301",
             "title": "Matrix Algebra and Vector Space",
             "sem": 2,
             "exams": [
@@ -6756,7 +6756,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "12000135110101",
             "title": "Computer Programming",
             "sem": 2,
             "exams": [
@@ -6766,7 +6766,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390201",
+            "id": "12000139020101",
             "title": "Quality Assurance Technician",
             "sem": 2,
             "exams": [
@@ -6776,7 +6776,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351102",
+            "id": "12001135110201",
             "title": "Engineering Graphics",
             "sem": 2,
             "exams": [
@@ -6786,7 +6786,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551101",
+            "id": "12000155110101",
             "title": "Basics of Electrical & Electronics Engineering",
             "sem": 2,
             "exams": [
@@ -6796,7 +6796,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351104",
+            "id": "12001135110401",
             "title": "Workshop",
             "sem": 2,
             "exams": [
@@ -6806,7 +6806,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0116250101",
+            "id": "12011625010101",
             "title": "Physical Education/Sports/Yoga",
             "sem": 2,
             "exams": [
@@ -6816,7 +6816,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "12001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -6826,7 +6826,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011210102",
+            "id": "12001121010201",
             "title": "NCC – 2",
             "sem": 2,
             "exams": [
@@ -6836,7 +6836,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390307",
+            "id": "12000139030701",
             "title": "Principles of Economics & Management",
             "sem": 3,
             "exams": [
@@ -6846,7 +6846,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311301",
+            "id": "12001131130101",
             "title": "Applied Differential Equations",
             "sem": 3,
             "exams": [
@@ -6856,7 +6856,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391301",
+            "id": "12000139130101",
             "title": "Mechanics of Solids",
             "sem": 3,
             "exams": [
@@ -6866,7 +6866,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391302",
+            "id": "12000139130201",
             "title": "Building Planning & Drawing",
             "sem": 3,
             "exams": [
@@ -6876,7 +6876,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391303",
+            "id": "12000139130301",
             "title": "Surveying",
             "sem": 3,
             "exams": [
@@ -6886,7 +6886,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01381301",
+            "id": "12000138130101",
             "title": "Fluid Mechanics",
             "sem": 3,
             "exams": [
@@ -6896,7 +6896,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391305",
+            "id": "12000139130501",
             "title": "Computer Applications in Civil Engineering – I",
             "sem": 3,
             "exams": [
@@ -6906,7 +6906,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390308",
+            "id": "12000139030801",
             "title": "Land Surveying Techniques",
             "sem": 3,
             "exams": [
@@ -6916,7 +6916,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180303",
+            "id": "12001318030301",
             "title": "Quantitative & Logical Ability – 1",
             "sem": 3,
             "exams": [
@@ -6926,7 +6926,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011210301",
+            "id": "12001121030101",
             "title": "N.C.C.-3",
             "sem": 3,
             "exams": [
@@ -6936,7 +6936,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180401",
+            "id": "12001318040101",
             "title": "Professional Ethics",
             "sem": 4,
             "exams": [
@@ -6946,7 +6946,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390408",
+            "id": "12000139040801",
             "title": "Creativity, Problem Solving and Innovation",
             "sem": 4,
             "exams": [
@@ -6956,7 +6956,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390410",
+            "id": "12000139041001",
             "title": "Assistant Surveyor: Roads",
             "sem": 4,
             "exams": [
@@ -6966,7 +6966,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311401",
+            "id": "12001131140101",
             "title": "Complex Variable & Numerical Analysis",
             "sem": 4,
             "exams": [
@@ -6976,7 +6976,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01392401",
+            "id": "12000139240101",
             "title": "Materials, Testing & Evaluation",
             "sem": 4,
             "exams": [
@@ -6986,7 +6986,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340002",
+            "id": "12016134000201",
             "title": "Structural Analysis-1",
             "sem": 4,
             "exams": [
@@ -6996,7 +6996,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391403",
+            "id": "12000139140301",
             "title": "Basics of Geology & Geotechnical Engineering",
             "sem": 4,
             "exams": [
@@ -7006,7 +7006,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390409",
+            "id": "12000139040901",
             "title": "Building Construction Technology",
             "sem": 4,
             "exams": [
@@ -7016,7 +7016,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01392405",
+            "id": "12000139240501",
             "title": "Computer Applications in Civil Engineering – II",
             "sem": 4,
             "exams": [
@@ -7026,7 +7026,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180402",
+            "id": "12001318040201",
             "title": "Quantitative & Logical Ability – 2",
             "sem": 4,
             "exams": [
@@ -7036,7 +7036,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011210401",
+            "id": "12001121040101",
             "title": "N.C.C.-4",
             "sem": 4,
             "exams": [
@@ -7046,7 +7046,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180501",
+            "id": "12001318050101",
             "title": "Business Benchmark",
             "sem": 5,
             "exams": [
@@ -7056,7 +7056,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391501",
+            "id": "12000139150101",
             "title": "Hydrology and Water Resource Management",
             "sem": 5,
             "exams": [
@@ -7066,7 +7066,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391502",
+            "id": "12000139150201",
             "title": "Structural Analysis – 2",
             "sem": 5,
             "exams": [
@@ -7076,7 +7076,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391503",
+            "id": "12000139150301",
             "title": "Highway Engineering",
             "sem": 5,
             "exams": [
@@ -7086,7 +7086,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391504",
+            "id": "12000139150401",
             "title": "Environmental Engineering",
             "sem": 5,
             "exams": [
@@ -7096,7 +7096,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391510",
+            "id": "12000139151001",
             "title": "Advanced Geotechnical Engineering",
             "sem": 5,
             "exams": [
@@ -7106,7 +7106,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391505",
+            "id": "12000139150501",
             "title": "Computer Applications in Civil Engineering – III",
             "sem": 5,
             "exams": [
@@ -7116,7 +7116,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390518",
+            "id": "12000139051801",
             "title": "Design & Maintenance Skills for Pavements",
             "sem": 5,
             "exams": [
@@ -7126,7 +7126,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180503",
+            "id": "12001318050301",
             "title": "Quantitative & Logical Ability – 3",
             "sem": 5,
             "exams": [
@@ -7136,7 +7136,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011210501",
+            "id": "12001121050101",
             "title": "N.C.C.-5",
             "sem": 5,
             "exams": [
@@ -7146,7 +7146,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390511",
+            "id": "12000139051101",
             "title": "Repair and Maintenance of Structure",
             "sem": 5,
             "exams": [
@@ -7156,7 +7156,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390512",
+            "id": "12000139051201",
             "title": "Railway, Bridge and Tunnel Engineering",
             "sem": 5,
             "exams": [
@@ -7166,7 +7166,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390513",
+            "id": "12000139051301",
             "title": "Applied Fluid Mechanics in Civil Engineering",
             "sem": 5,
             "exams": [
@@ -7176,7 +7176,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350004",
+            "id": "12016135000401",
             "title": "Construction Equipment and Automation",
             "sem": 5,
             "exams": [
@@ -7186,7 +7186,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391507",
+            "id": "12000139150701",
             "title": "Environmental Pollution",
             "sem": 5,
             "exams": [
@@ -7196,7 +7196,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390515",
+            "id": "12000139051501",
             "title": "Advanced Surveying",
             "sem": 5,
             "exams": [
@@ -7206,7 +7206,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390516",
+            "id": "12000139051601",
             "title": "Introduction to Programming",
             "sem": 5,
             "exams": [
@@ -7216,7 +7216,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391602",
+            "id": "12000139160201",
             "title": "Elementary Design of Structures",
             "sem": 6,
             "exams": [
@@ -7226,7 +7226,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391604",
+            "id": "12000139160401",
             "title": "Professional Practice and Valuation",
             "sem": 6,
             "exams": [
@@ -7236,7 +7236,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390609",
+            "id": "12000139060901",
             "title": "Foundation Engineering",
             "sem": 6,
             "exams": [
@@ -7246,7 +7246,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391606",
+            "id": "12000139160601",
             "title": "Computer Applications in Civil Engineering – IV",
             "sem": 6,
             "exams": [
@@ -7256,7 +7256,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390610",
+            "id": "12000139061001",
             "title": "Construction Supervision for Roads and Runways",
             "sem": 6,
             "exams": [
@@ -7266,7 +7266,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390611",
+            "id": "12000139061101",
             "title": "Advanced Structural Analysis",
             "sem": 6,
             "exams": [
@@ -7276,7 +7276,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390612",
+            "id": "12000139061201",
             "title": "Traffic Engineering and Road Safety",
             "sem": 6,
             "exams": [
@@ -7286,7 +7286,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390613",
+            "id": "12000139061301",
             "title": "Open Channel Flow",
             "sem": 6,
             "exams": [
@@ -7296,7 +7296,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390614",
+            "id": "12000139061401",
             "title": "Advanced Construction Technology",
             "sem": 6,
             "exams": [
@@ -7306,7 +7306,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360007",
+            "id": "12016136000701",
             "title": "Environmental Impact Assessment",
             "sem": 6,
             "exams": [
@@ -7316,7 +7316,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390616",
+            "id": "12000139061601",
             "title": "Remote Sensing",
             "sem": 6,
             "exams": [
@@ -7326,7 +7326,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390617",
+            "id": "12000139061701",
             "title": "Soft Computing Techniques",
             "sem": 6,
             "exams": [
@@ -7336,7 +7336,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390618",
+            "id": "12000139061801",
             "title": "Earthquake Engineering",
             "sem": 6,
             "exams": [
@@ -7346,7 +7346,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390619",
+            "id": "12000139061901",
             "title": "Pavement Engineering",
             "sem": 6,
             "exams": [
@@ -7356,7 +7356,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390620",
+            "id": "12000139062001",
             "title": "Irrigation Engineering",
             "sem": 6,
             "exams": [
@@ -7366,7 +7366,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390621",
+            "id": "12000139062101",
             "title": "Tender and Contract Management",
             "sem": 6,
             "exams": [
@@ -7376,7 +7376,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390622",
+            "id": "12000139062201",
             "title": "Water and Wastewater Engineering",
             "sem": 6,
             "exams": [
@@ -7386,7 +7386,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390623",
+            "id": "12000139062301",
             "title": "Geographic Information System",
             "sem": 6,
             "exams": [
@@ -7396,7 +7396,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390624",
+            "id": "12000139062401",
             "title": "Introduction to Python Programming",
             "sem": 6,
             "exams": [
@@ -7406,7 +7406,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210006",
+            "id": "12000121000601",
             "title": "N.C.C.-6",
             "sem": 6,
             "exams": [
@@ -7416,7 +7416,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391703",
+            "id": "12000139170301",
             "title": "Construction Project Management",
             "sem": 7,
             "exams": [
@@ -7426,7 +7426,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391704",
+            "id": "12000139170401",
             "title": "Minor Project",
             "sem": 7,
             "exams": [
@@ -7436,7 +7436,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01310709",
+            "id": "12000131070901",
             "title": "Skilling the Construction Site Supervision",
             "sem": 7,
             "exams": [
@@ -7446,7 +7446,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01310710",
+            "id": "12000131071001",
             "title": "Summer Internship",
             "sem": 7,
             "exams": [
@@ -7456,7 +7456,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391701",
+            "id": "12000139170101",
             "title": "Design of Concrete Structures",
             "sem": 7,
             "exams": [
@@ -7466,7 +7466,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01399707",
+            "id": "12000139970701",
             "title": "Modern Transportation System",
             "sem": 7,
             "exams": [
@@ -7476,7 +7476,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01310711",
+            "id": "12000131071101",
             "title": "Design of Hydraulic Structures",
             "sem": 7,
             "exams": [
@@ -7486,7 +7486,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01310712",
+            "id": "12000131071201",
             "title": "Disaster Mitigation and Management",
             "sem": 7,
             "exams": [
@@ -7496,7 +7496,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370005",
+            "id": "12016137000501",
             "title": "Air pollution and Control",
             "sem": 7,
             "exams": [
@@ -7506,7 +7506,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390714",
+            "id": "12000139071401",
             "title": "Application of GIS and GPS in Civil Engincering",
             "sem": 7,
             "exams": [
@@ -7516,7 +7516,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390715",
+            "id": "12000139071501",
             "title": "Engineering",
             "sem": 7,
             "exams": [
@@ -7526,7 +7526,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390716",
+            "id": "12000139071601",
             "title": "Design of Steel Structures",
             "sem": 7,
             "exams": [
@@ -7536,7 +7536,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01310717",
+            "id": "12000131071701",
             "title": "Airport Engineering",
             "sem": 7,
             "exams": [
@@ -7546,7 +7546,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390718",
+            "id": "12000139071801",
             "title": "Engineering",
             "sem": 7,
             "exams": [
@@ -7556,7 +7556,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01310719",
+            "id": "12000131071901",
             "title": "Building System, Safety and Services",
             "sem": 7,
             "exams": [
@@ -7566,7 +7566,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390720",
+            "id": "12000139072001",
             "title": "Sustainable Design Strategies",
             "sem": 7,
             "exams": [
@@ -7576,7 +7576,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01310721",
+            "id": "12000131072101",
             "title": "Geospatial Techniques in Civil Engineering",
             "sem": 7,
             "exams": [
@@ -7586,7 +7586,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01310722",
+            "id": "12000131072201",
             "title": "Cyber Laws and Ethics",
             "sem": 7,
             "exams": [
@@ -7596,7 +7596,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391803",
+            "id": "12000139180301",
             "title": "Major Project",
             "sem": 8,
             "exams": [
@@ -7606,7 +7606,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391810",
+            "id": "12000139181001",
             "title": "Infrastructure Engineering and Management",
             "sem": 8,
             "exams": [
@@ -7616,7 +7616,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390813",
+            "id": "12000139081301",
             "title": "Safety",
             "sem": 8,
             "exams": [
@@ -7626,7 +7626,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391809",
+            "id": "12000139180901",
             "title": "Design of Prestressed Concrete Structures",
             "sem": 8,
             "exams": [
@@ -7636,7 +7636,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390814",
+            "id": "12000139081401",
             "title": "Port & Harbour Engineering",
             "sem": 8,
             "exams": [
@@ -7646,7 +7646,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390815",
+            "id": "12000139081501",
             "title": "Pipeline Engineering",
             "sem": 8,
             "exams": [
@@ -7656,7 +7656,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391808",
+            "id": "12000139180801",
             "title": "Sustainable Building Technology",
             "sem": 8,
             "exams": [
@@ -7666,7 +7666,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391807",
+            "id": "12000139180701",
             "title": "Municipal Solid Waste Management",
             "sem": 8,
             "exams": [
@@ -7676,7 +7676,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390816",
+            "id": "12000139081601",
             "title": "Digital Photogrammetry & Image Processing",
             "sem": 8,
             "exams": [
@@ -7686,7 +7686,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01390817",
+            "id": "12000139081701",
             "title": "Python for Data Analysis",
             "sem": 8,
             "exams": [
@@ -7702,7 +7702,7 @@ export const domains = [
         "title": "B.Tech - Mechanical Engineering",
         "subjects": [
           {
-            "id": "011312101",
+            "id": "13001131210101",
             "title": "Differential and Integral Calculus",
             "sem": 1,
             "exams": [
@@ -7712,7 +7712,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391101",
+            "id": "13000139110101",
             "title": "Elements of Civil Engineering",
             "sem": 1,
             "exams": [
@@ -7722,7 +7722,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351101",
+            "id": "13001135110101",
             "title": "Elements of Mechanical Engineering",
             "sem": 1,
             "exams": [
@@ -7732,7 +7732,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120102",
+            "id": "13011912010201",
             "title": "Reading & Writing for Technology",
             "sem": 1,
             "exams": [
@@ -7742,7 +7742,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120103",
+            "id": "13011912010301",
             "title": "Speaking & Presentation Skills",
             "sem": 1,
             "exams": [
@@ -7752,7 +7752,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017192101",
+            "id": "13001719210101",
             "title": "Physics",
             "sem": 1,
             "exams": [
@@ -7762,7 +7762,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "13001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 1,
             "exams": [
@@ -7772,7 +7772,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "13001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -7782,7 +7782,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "13001318010501",
             "title": "Verbal Ability-1",
             "sem": 1,
             "exams": [
@@ -7792,7 +7792,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011210001",
+            "id": "13001121000101",
             "title": "NATIONAL CADET CORPS-1",
             "sem": 1,
             "exams": [
@@ -7802,7 +7802,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "13001719010301",
             "title": "Indian Constitution",
             "sem": 1,
             "exams": [
@@ -7812,7 +7812,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311151",
+            "id": "13001131115101",
             "title": "Matrix algebra and vector calculus",
             "sem": 2,
             "exams": [
@@ -7822,7 +7822,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01351101",
+            "id": "13000135110101",
             "title": "Computer Programming",
             "sem": 2,
             "exams": [
@@ -7832,7 +7832,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351102",
+            "id": "13001135110201",
             "title": "Engineering Graphics",
             "sem": 2,
             "exams": [
@@ -7842,7 +7842,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01551101",
+            "id": "13000155110101",
             "title": "Basic Electrical and Electronics Engineering",
             "sem": 2,
             "exams": [
@@ -7852,7 +7852,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351104",
+            "id": "13001135110401",
             "title": "Mechanical Workshop",
             "sem": 2,
             "exams": [
@@ -7862,7 +7862,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0116250101",
+            "id": "13011625010101",
             "title": "Physical Education/Sports/Yoga",
             "sem": 2,
             "exams": [
@@ -7872,7 +7872,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "13001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -7882,7 +7882,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011210002",
+            "id": "13001121000201",
             "title": "NATIONAL CADET CORPS-2",
             "sem": 2,
             "exams": [
@@ -7892,7 +7892,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350201",
+            "id": "13001135020101",
             "title": "Computer Aided Modelling",
             "sem": 2,
             "exams": [
@@ -7902,7 +7902,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351305",
+            "id": "13001135130501",
             "title": "Fundamental of Machine Design",
             "sem": 3,
             "exams": [
@@ -7912,7 +7912,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311301",
+            "id": "13001131130101",
             "title": "Applied Differential Equations",
             "sem": 3,
             "exams": [
@@ -7922,7 +7922,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011352301",
+            "id": "13001135230101",
             "title": "Fluid Mechanics",
             "sem": 3,
             "exams": [
@@ -7932,7 +7932,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011352302",
+            "id": "13001135230201",
             "title": "Kinematics of Machines",
             "sem": 3,
             "exams": [
@@ -7942,7 +7942,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011352303",
+            "id": "13001135230301",
             "title": "Manufacturing Processes I",
             "sem": 3,
             "exams": [
@@ -7952,7 +7952,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "13001318010401",
             "title": "Professional Ethics",
             "sem": 3,
             "exams": [
@@ -7962,7 +7962,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011352304",
+            "id": "13001135230401",
             "title": "Design Thinking and Problem Solving Skills",
             "sem": 3,
             "exams": [
@@ -7972,7 +7972,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011210003",
+            "id": "13001121000301",
             "title": "NATIONAL CADET CORPS-3",
             "sem": 3,
             "exams": [
@@ -7982,7 +7982,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180303",
+            "id": "13001318030301",
             "title": "Quantitative & Logical Ability – 1",
             "sem": 3,
             "exams": [
@@ -7992,7 +7992,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311401",
+            "id": "13001131140101",
             "title": "Complex Variable & Numerical Analysis",
             "sem": 4,
             "exams": [
@@ -8002,7 +8002,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011352401",
+            "id": "13001135240101",
             "title": "Machine Design & Industrial Drafting",
             "sem": 4,
             "exams": [
@@ -8012,7 +8012,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011352402",
+            "id": "13001135240201",
             "title": "Manufacturing Processes II",
             "sem": 4,
             "exams": [
@@ -8022,7 +8022,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011352403",
+            "id": "13001135240301",
             "title": "Material Science and Metallurgy",
             "sem": 4,
             "exams": [
@@ -8032,7 +8032,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351404",
+            "id": "13001135140401",
             "title": "Engineering Thermodynamics",
             "sem": 4,
             "exams": [
@@ -8042,7 +8042,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350406",
+            "id": "13001135040601",
             "title": "Creativity, Problem Solving and Innovation",
             "sem": 4,
             "exams": [
@@ -8052,7 +8052,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350407",
+            "id": "13001135040701",
             "title": "Computer Aided Design Laboratory",
             "sem": 4,
             "exams": [
@@ -8062,7 +8062,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350408",
+            "id": "13001135040801",
             "title": "Advance Welding Technology",
             "sem": 4,
             "exams": [
@@ -8072,7 +8072,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351501",
+            "id": "13001135150101",
             "title": "Dynamics of Machine-I",
             "sem": 5,
             "exams": [
@@ -8082,7 +8082,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351502",
+            "id": "13001135150201",
             "title": "Fluid Power Engineering",
             "sem": 5,
             "exams": [
@@ -8092,7 +8092,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351503",
+            "id": "13001135150301",
             "title": "Machine Design-1",
             "sem": 5,
             "exams": [
@@ -8102,7 +8102,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350504",
+            "id": "13001135050401",
             "title": "Metrology",
             "sem": 5,
             "exams": [
@@ -8112,7 +8112,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180501",
+            "id": "13001318050101",
             "title": "Business Benchmark",
             "sem": 5,
             "exams": [
@@ -8122,7 +8122,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011210005",
+            "id": "13001121000501",
             "title": "NATIONAL CADET CORPS-5",
             "sem": 5,
             "exams": [
@@ -8132,7 +8132,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350509",
+            "id": "13001135050901",
             "title": "Python for Mechanical Engineering",
             "sem": 5,
             "exams": [
@@ -8142,7 +8142,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351505",
+            "id": "13001135150501",
             "title": "Power Plant Engineering",
             "sem": 5,
             "exams": [
@@ -8152,7 +8152,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350506",
+            "id": "13001135050601",
             "title": "Computer Graphics",
             "sem": 5,
             "exams": [
@@ -8162,7 +8162,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350507",
+            "id": "13001135050701",
             "title": "Design for Manufacturing",
             "sem": 5,
             "exams": [
@@ -8172,7 +8172,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350511",
+            "id": "13001135051101",
             "title": "Mechatronics",
             "sem": 5,
             "exams": [
@@ -8182,7 +8182,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351601",
+            "id": "13001135160101",
             "title": "Dynamics of Machine –II",
             "sem": 6,
             "exams": [
@@ -8192,7 +8192,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351602",
+            "id": "13001135160201",
             "title": "Heat Transfer",
             "sem": 6,
             "exams": [
@@ -8202,7 +8202,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351603",
+            "id": "13001135160301",
             "title": "Machine Design-II",
             "sem": 6,
             "exams": [
@@ -8212,7 +8212,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350604",
+            "id": "13001135060401",
             "title": "Operation Research",
             "sem": 6,
             "exams": [
@@ -8222,7 +8222,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350609",
+            "id": "13001135060901",
             "title": "Basic & Electro Hydraulics",
             "sem": 6,
             "exams": [
@@ -8232,7 +8232,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350610",
+            "id": "13001135061001",
             "title": "Design Engineering & Project Management",
             "sem": 6,
             "exams": [
@@ -8242,7 +8242,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350605",
+            "id": "13001135060501",
             "title": "IC Engines & Automobiles",
             "sem": 6,
             "exams": [
@@ -8252,7 +8252,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350606",
+            "id": "13001135060601",
             "title": "Design of Material Handling Equipments",
             "sem": 6,
             "exams": [
@@ -8262,7 +8262,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351607",
+            "id": "13001135160701",
             "title": "Advance Manufacturing processes",
             "sem": 6,
             "exams": [
@@ -8272,7 +8272,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350611",
+            "id": "13001135061101",
             "title": "Computer Programming for Robotics",
             "sem": 6,
             "exams": [
@@ -8282,7 +8282,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351701",
+            "id": "13001135170101",
             "title": "Finite Elements Method",
             "sem": 7,
             "exams": [
@@ -8292,7 +8292,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350702",
+            "id": "13001135070201",
             "title": "Project-1",
             "sem": 7,
             "exams": [
@@ -8302,7 +8302,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350703",
+            "id": "13001135070301",
             "title": "Rapid Casting: I",
             "sem": 7,
             "exams": [
@@ -8312,7 +8312,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370006",
+            "id": "13016137000601",
             "title": "Prog.Elec.3",
             "sem": 7,
             "exams": [
@@ -8322,7 +8322,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370007",
+            "id": "13016137000701",
             "title": "Prog.Elec.4",
             "sem": 7,
             "exams": [
@@ -8332,7 +8332,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350705",
+            "id": "13001135070501",
             "title": "CNC Programmer",
             "sem": 7,
             "exams": [
@@ -8342,7 +8342,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350711",
+            "id": "13001135071101",
             "title": "Advanced Machine Design",
             "sem": 7,
             "exams": [
@@ -8352,7 +8352,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350712",
+            "id": "13001135071201",
             "title": "Design and synthesis of Robot",
             "sem": 7,
             "exams": [
@@ -8362,7 +8362,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350721",
+            "id": "13001135072101",
             "title": "Computer Aided Process Management",
             "sem": 7,
             "exams": [
@@ -8372,7 +8372,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351722",
+            "id": "13001135172201",
             "title": "Datamining and Analysis",
             "sem": 7,
             "exams": [
@@ -8382,7 +8382,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350731",
+            "id": "13001135073101",
             "title": "Ref. & Air conditioning",
             "sem": 7,
             "exams": [
@@ -8392,7 +8392,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350732",
+            "id": "13001135073201",
             "title": "Renewable Energy Engineering",
             "sem": 7,
             "exams": [
@@ -8402,7 +8402,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350741",
+            "id": "13001135074101",
             "title": "Pneumatic and Hydraulic control",
             "sem": 7,
             "exams": [
@@ -8412,7 +8412,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350742",
+            "id": "13001135074201",
             "title": "Sensorics",
             "sem": 7,
             "exams": [
@@ -8422,7 +8422,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350801",
+            "id": "13001135080101",
             "title": "Production Technology",
             "sem": 8,
             "exams": [
@@ -8432,7 +8432,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351802",
+            "id": "13001135180201",
             "title": "Project-II",
             "sem": 8,
             "exams": [
@@ -8442,7 +8442,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350803",
+            "id": "13001135080301",
             "title": "Rapid Casting: II",
             "sem": 8,
             "exams": [
@@ -8452,7 +8452,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380001",
+            "id": "13016138000101",
             "title": "Prog.Elec.5",
             "sem": 8,
             "exams": [
@@ -8462,7 +8462,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380002",
+            "id": "13016138000201",
             "title": "Prog.Elec.6",
             "sem": 8,
             "exams": [
@@ -8472,7 +8472,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350811",
+            "id": "13001135081101",
             "title": "Design of Pressure vessels",
             "sem": 8,
             "exams": [
@@ -8482,7 +8482,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350812",
+            "id": "13001135081201",
             "title": "Machine Tool Design",
             "sem": 8,
             "exams": [
@@ -8492,7 +8492,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350813",
+            "id": "13001135081301",
             "title": "Design of composite materials",
             "sem": 8,
             "exams": [
@@ -8502,7 +8502,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350821",
+            "id": "13001135082101",
             "title": "Computer Integrated Mfg.",
             "sem": 8,
             "exams": [
@@ -8512,7 +8512,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351822",
+            "id": "13001135182201",
             "title": "IoT for Manufacturing",
             "sem": 8,
             "exams": [
@@ -8522,7 +8522,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350831",
+            "id": "13001135083101",
             "title": "Steam and Gas Turbine",
             "sem": 8,
             "exams": [
@@ -8532,7 +8532,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350832",
+            "id": "13001135083201",
             "title": "Computational Fluid Dynamics",
             "sem": 8,
             "exams": [
@@ -8542,7 +8542,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350841",
+            "id": "13001135084101",
             "title": "Robotics & FMS",
             "sem": 8,
             "exams": [
@@ -8552,7 +8552,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350842",
+            "id": "13001135084201",
             "title": "Artificial Intelligence",
             "sem": 8,
             "exams": [
@@ -8568,7 +8568,7 @@ export const domains = [
         "title": "B.Tech - Mechanical Engineering & Ai/ML",
         "subjects": [
           {
-            "id": "011312101",
+            "id": "14001131210101",
             "title": "Differential and Integral Calculus",
             "sem": 1,
             "exams": [
@@ -8578,7 +8578,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350101",
+            "id": "14000135010101",
             "title": "Computer Programming",
             "sem": 1,
             "exams": [
@@ -8588,7 +8588,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351101",
+            "id": "14001135110101",
             "title": "Elements of Mechanical Engineering",
             "sem": 1,
             "exams": [
@@ -8598,7 +8598,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119121104",
+            "id": "14011912110401",
             "title": "Professional Communication",
             "sem": 1,
             "exams": [
@@ -8608,7 +8608,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017192101",
+            "id": "14001719210101",
             "title": "Engineering Physics",
             "sem": 1,
             "exams": [
@@ -8618,7 +8618,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "14001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 1,
             "exams": [
@@ -8628,7 +8628,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "14001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -8638,7 +8638,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "14001318010501",
             "title": "Verbal Ability - 1",
             "sem": 1,
             "exams": [
@@ -8648,7 +8648,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "14001719010301",
             "title": "Indian Constitution",
             "sem": 1,
             "exams": [
@@ -8658,7 +8658,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310103",
+            "id": "14001131010301",
             "title": "Matrix Algebra and Vector Space",
             "sem": 2,
             "exams": [
@@ -8668,7 +8668,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120101",
+            "id": "14011312010101",
             "title": "Python Programming",
             "sem": 2,
             "exams": [
@@ -8678,7 +8678,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351102",
+            "id": "14001135110201",
             "title": "Engineering Graphics",
             "sem": 2,
             "exams": [
@@ -8688,7 +8688,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01552101",
+            "id": "14000155210101",
             "title": "Basic Electrical and Electronics Engineering",
             "sem": 2,
             "exams": [
@@ -8698,7 +8698,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351104",
+            "id": "14001135110401",
             "title": "Mechanical Workshop",
             "sem": 2,
             "exams": [
@@ -8708,7 +8708,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "14001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -8718,7 +8718,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120202",
+            "id": "14011312020201",
             "title": "Fundamental of AI & ML",
             "sem": 2,
             "exams": [
@@ -8728,7 +8728,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351305",
+            "id": "14001135130501",
             "title": "Fundamental of Machine Design",
             "sem": 3,
             "exams": [
@@ -8738,7 +8738,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311301",
+            "id": "14001131130101",
             "title": "Applied Differential Equations",
             "sem": 3,
             "exams": [
@@ -8748,7 +8748,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352302",
+            "id": "14009135230201",
             "title": "Fluid Mechanics & Hydraulic Machines",
             "sem": 3,
             "exams": [
@@ -8758,7 +8758,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011352302",
+            "id": "14001135230201",
             "title": "Kinematics of Machines",
             "sem": 3,
             "exams": [
@@ -8768,7 +8768,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120301",
+            "id": "14011312030101",
             "title": "Manufacturing Technolgy",
             "sem": 3,
             "exams": [
@@ -8778,7 +8778,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180302",
+            "id": "14001318030201",
             "title": "Quantitative & Logical Ability - 1",
             "sem": 3,
             "exams": [
@@ -8788,7 +8788,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330001",
+            "id": "14016133000101",
             "title": "Python Programming for AI & ML",
             "sem": 3,
             "exams": [
@@ -8798,7 +8798,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311401",
+            "id": "14001131140101",
             "title": "Complex Variable & Numerical Analysis",
             "sem": 4,
             "exams": [
@@ -8808,7 +8808,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113122401",
+            "id": "14011312240101",
             "title": "Machine Design & Industrial Drafting",
             "sem": 4,
             "exams": [
@@ -8818,7 +8818,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011352403",
+            "id": "14001135240301",
             "title": "Material Science and Metallurgy",
             "sem": 4,
             "exams": [
@@ -8828,7 +8828,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351404",
+            "id": "14001135140401",
             "title": "Engineering Thermodynamics",
             "sem": 4,
             "exams": [
@@ -8838,7 +8838,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120401",
+            "id": "14011312040101",
             "title": "Data Science",
             "sem": 4,
             "exams": [
@@ -8848,7 +8848,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350406",
+            "id": "14001135040601",
             "title": "Creativity, Problem Solving and Innovation",
             "sem": 4,
             "exams": [
@@ -8858,7 +8858,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180402",
+            "id": "14001318040201",
             "title": "Quantitative & Logical Ability - 2",
             "sem": 4,
             "exams": [
@@ -8868,7 +8868,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120501",
+            "id": "14011312050101",
             "title": "Dynamics of Machine",
             "sem": 5,
             "exams": [
@@ -8878,7 +8878,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120502",
+            "id": "14011312050201",
             "title": "Machine Design",
             "sem": 5,
             "exams": [
@@ -8888,7 +8888,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350504",
+            "id": "14001135050401",
             "title": "Metrology",
             "sem": 5,
             "exams": [
@@ -8898,7 +8898,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120503",
+            "id": "14011312050301",
             "title": "Machine Learning",
             "sem": 5,
             "exams": [
@@ -8908,7 +8908,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180503",
+            "id": "14001318050301",
             "title": "Quantitative & Logical Ability - 3",
             "sem": 5,
             "exams": [
@@ -8918,7 +8918,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120504",
+            "id": "14011312050401",
             "title": "Automation and Control Systems",
             "sem": 5,
             "exams": [
@@ -8928,7 +8928,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120511",
+            "id": "14011312051101",
             "title": "IIoT Applications in Foundry",
             "sem": 5,
             "exams": [
@@ -8938,7 +8938,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120512",
+            "id": "14011312051201",
             "title": "IIoT Applications in Welding",
             "sem": 5,
             "exams": [
@@ -8948,7 +8948,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120513",
+            "id": "14011312051301",
             "title": "IIoT Applications in Machining",
             "sem": 5,
             "exams": [
@@ -8958,7 +8958,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120601",
+            "id": "14011312060101",
             "title": "Deep Learning",
             "sem": 6,
             "exams": [
@@ -8968,7 +8968,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351602",
+            "id": "14001135160201",
             "title": "Heat Transfer",
             "sem": 6,
             "exams": [
@@ -8978,7 +8978,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120602",
+            "id": "14011312060201",
             "title": "Soft Computing",
             "sem": 6,
             "exams": [
@@ -8988,7 +8988,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120603",
+            "id": "14011312060301",
             "title": "Machine Vision",
             "sem": 6,
             "exams": [
@@ -8998,7 +8998,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350612",
+            "id": "14001135061201",
             "title": "Basics of Pneumatics and Hydraulics",
             "sem": 6,
             "exams": [
@@ -9008,7 +9008,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180602",
+            "id": "14001318060201",
             "title": "Quantitative Aptitude and Verbal Ability",
             "sem": 6,
             "exams": [
@@ -9018,7 +9018,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120621",
+            "id": "14011312062101",
             "title": "Application of AI/ML in Casting Process",
             "sem": 6,
             "exams": [
@@ -9028,7 +9028,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120622",
+            "id": "14011312062201",
             "title": "Application of AI/ML in Welding Process",
             "sem": 6,
             "exams": [
@@ -9038,7 +9038,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120623",
+            "id": "14011312062301",
             "title": "Application of AI/ML in Machining Process",
             "sem": 6,
             "exams": [
@@ -9048,7 +9048,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120624",
+            "id": "14011312062401",
             "title": "Applications of AI&ML in Add. Mfg",
             "sem": 6,
             "exams": [
@@ -9058,7 +9058,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120625",
+            "id": "14011312062501",
             "title": "Applications of AI&ML in QC",
             "sem": 6,
             "exams": [
@@ -9068,7 +9068,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120626",
+            "id": "14011312062601",
             "title": "Application of AI&ML in Tranport Phenemenon",
             "sem": 6,
             "exams": [
@@ -9078,7 +9078,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120627",
+            "id": "14011312062701",
             "title": "Solar Power and Battery Management System",
             "sem": 6,
             "exams": [
@@ -9088,7 +9088,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120701",
+            "id": "14011312070101",
             "title": "System",
             "sem": 7,
             "exams": [
@@ -9098,7 +9098,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120702",
+            "id": "14011312070201",
             "title": "Operation Management with AI/ML",
             "sem": 7,
             "exams": [
@@ -9108,7 +9108,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120703",
+            "id": "14011312070301",
             "title": "Robotics",
             "sem": 7,
             "exams": [
@@ -9118,7 +9118,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120731",
+            "id": "14011312073101",
             "title": "Extended Reality for Mechanical Systems",
             "sem": 7,
             "exams": [
@@ -9128,7 +9128,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120732",
+            "id": "14011312073201",
             "title": "Machine Vision for Inspection",
             "sem": 7,
             "exams": [
@@ -9138,7 +9138,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120733",
+            "id": "14011312073301",
             "title": "AI-Driven Mechanical Design",
             "sem": 7,
             "exams": [
@@ -9148,7 +9148,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120734",
+            "id": "14011312073401",
             "title": "AI-Driven Heat Transfer Analysis",
             "sem": 7,
             "exams": [
@@ -9158,7 +9158,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120735",
+            "id": "14011312073501",
             "title": "CAD for AR/VR",
             "sem": 7,
             "exams": [
@@ -9168,7 +9168,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120736",
+            "id": "14011312073601",
             "title": "Data-Driven Innovations in Material Science",
             "sem": 7,
             "exams": [
@@ -9178,7 +9178,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120741",
+            "id": "14011312074101",
             "title": "Autonomous Vehicle Technologies",
             "sem": 7,
             "exams": [
@@ -9188,7 +9188,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120742",
+            "id": "14011312074201",
             "title": "Fundamentals of UAV Design with AI ML",
             "sem": 7,
             "exams": [
@@ -9198,7 +9198,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120743",
+            "id": "14011312074301",
             "title": "Cyber-Physical Security in Smart Industries",
             "sem": 7,
             "exams": [
@@ -9208,7 +9208,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120744",
+            "id": "14011312074401",
             "title": "Smart Industrial Systems",
             "sem": 7,
             "exams": [
@@ -9218,7 +9218,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120745",
+            "id": "14011312074501",
             "title": "Indutry 4.0",
             "sem": 7,
             "exams": [
@@ -9228,7 +9228,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120801",
+            "id": "14011312080101",
             "title": "Internship/Project",
             "sem": 8,
             "exams": [
@@ -9244,7 +9244,7 @@ export const domains = [
         "title": "B.Tech - Mechanical Engineering Robotics & Automation",
         "subjects": [
           {
-            "id": "011312101",
+            "id": "15001131210101",
             "title": "Differential and Integral Calculus",
             "sem": 1,
             "exams": [
@@ -9254,7 +9254,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01350101",
+            "id": "15000135010101",
             "title": "Computer Programming",
             "sem": 1,
             "exams": [
@@ -9264,7 +9264,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351101",
+            "id": "15001135110101",
             "title": "Elements of Mechanical Engineering",
             "sem": 1,
             "exams": [
@@ -9274,7 +9274,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119121104",
+            "id": "15011912110401",
             "title": "Professional Communication",
             "sem": 1,
             "exams": [
@@ -9284,7 +9284,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017192101",
+            "id": "15001719210101",
             "title": "Engineering Physics",
             "sem": 1,
             "exams": [
@@ -9294,7 +9294,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "15001514110101",
             "title": "Basics of Environmental Studies",
             "sem": 1,
             "exams": [
@@ -9304,7 +9304,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013181103",
+            "id": "15001318110301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -9314,7 +9314,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180105",
+            "id": "15001318010501",
             "title": "Verbal Ability - 1",
             "sem": 1,
             "exams": [
@@ -9324,7 +9324,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "15001719010301",
             "title": "Indian Constitution",
             "sem": 1,
             "exams": [
@@ -9334,7 +9334,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011310103",
+            "id": "15001131010301",
             "title": "Matrix Algebra and Vector Space",
             "sem": 2,
             "exams": [
@@ -9344,7 +9344,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120101",
+            "id": "15011312010101",
             "title": "Python Programming",
             "sem": 2,
             "exams": [
@@ -9354,7 +9354,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351102",
+            "id": "15001135110201",
             "title": "Engineering Graphics",
             "sem": 2,
             "exams": [
@@ -9364,7 +9364,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01552101",
+            "id": "15000155210101",
             "title": "Basic Electrical and Electronics Engineering",
             "sem": 2,
             "exams": [
@@ -9374,7 +9374,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351104",
+            "id": "15001135110401",
             "title": "Mechanical Workshop",
             "sem": 2,
             "exams": [
@@ -9384,7 +9384,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180106",
+            "id": "15001318010601",
             "title": "Verbal Ability – 2",
             "sem": 2,
             "exams": [
@@ -9394,7 +9394,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120202",
+            "id": "15011312020201",
             "title": "Fundamental of AI & ML",
             "sem": 2,
             "exams": [
@@ -9404,7 +9404,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351305",
+            "id": "15001135130501",
             "title": "Fundamental of Machine Design",
             "sem": 3,
             "exams": [
@@ -9414,7 +9414,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311301",
+            "id": "15001131130101",
             "title": "Applied Differential Equations",
             "sem": 3,
             "exams": [
@@ -9424,7 +9424,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180301",
+            "id": "15011318030101",
             "title": "Thermo-Fluids Engineering",
             "sem": 3,
             "exams": [
@@ -9434,7 +9434,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180302",
+            "id": "15011318030201",
             "title": "Kinematics and Dynamics of Robots",
             "sem": 3,
             "exams": [
@@ -9444,7 +9444,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120301",
+            "id": "15011312030101",
             "title": "Manufacturing Technolgy",
             "sem": 3,
             "exams": [
@@ -9454,7 +9454,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180302",
+            "id": "15001318030201",
             "title": "Quantitative & Logical Ability - 1",
             "sem": 3,
             "exams": [
@@ -9464,7 +9464,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330002",
+            "id": "15016133000201",
             "title": "Fundamentals of Robotics and Drives",
             "sem": 3,
             "exams": [
@@ -9474,7 +9474,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011311401",
+            "id": "15001131140101",
             "title": "Complex Variable & Numerical Analysis",
             "sem": 4,
             "exams": [
@@ -9484,7 +9484,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113122401",
+            "id": "15011312240101",
             "title": "Machine Design & Industrial Drafting",
             "sem": 4,
             "exams": [
@@ -9494,7 +9494,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011352403",
+            "id": "15001135240301",
             "title": "Material Science and Metallurgy",
             "sem": 4,
             "exams": [
@@ -9504,7 +9504,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350406",
+            "id": "15001135040601",
             "title": "Creativity, Problem Solving and Innovation",
             "sem": 4,
             "exams": [
@@ -9514,7 +9514,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180402",
+            "id": "15001318040201",
             "title": "Quantitative & Logical Ability - 2",
             "sem": 4,
             "exams": [
@@ -9524,7 +9524,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180401",
+            "id": "15011318040101",
             "title": "Intsrumentation and Measurement",
             "sem": 4,
             "exams": [
@@ -9534,7 +9534,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180402",
+            "id": "15011318040201",
             "title": "Microcontrollers and Embedded Systems",
             "sem": 4,
             "exams": [
@@ -9544,7 +9544,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180501",
+            "id": "15011318050101",
             "title": "Design and Analysis of Robotic Elements",
             "sem": 5,
             "exams": [
@@ -9554,7 +9554,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180502",
+            "id": "15011318050201",
             "title": "Industry 4.0",
             "sem": 5,
             "exams": [
@@ -9564,7 +9564,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350005",
+            "id": "15016135000501",
             "title": "Quantitative & Logical Ability -3",
             "sem": 5,
             "exams": [
@@ -9574,7 +9574,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120504",
+            "id": "15011312050401",
             "title": "Automation & Control System",
             "sem": 5,
             "exams": [
@@ -9584,7 +9584,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180503",
+            "id": "15011318050301",
             "title": "Pneumatics and Hydraulics Controls",
             "sem": 5,
             "exams": [
@@ -9594,7 +9594,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180504",
+            "id": "15011318050401",
             "title": "Sensors and Signal Processing",
             "sem": 5,
             "exams": [
@@ -9604,7 +9604,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180511",
+            "id": "15011318051101",
             "title": "Advanced Materials for Robotics",
             "sem": 5,
             "exams": [
@@ -9614,7 +9614,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180512",
+            "id": "15011318051201",
             "title": "Automotive Vehicles",
             "sem": 5,
             "exams": [
@@ -9624,7 +9624,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180513",
+            "id": "15011318051301",
             "title": "Biologically Inspired Robotics",
             "sem": 5,
             "exams": [
@@ -9634,7 +9634,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180514",
+            "id": "15011318051401",
             "title": "Robotic Systems in Manufacturing",
             "sem": 5,
             "exams": [
@@ -9644,7 +9644,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180601",
+            "id": "15011318060101",
             "title": "Robotics Programming",
             "sem": 6,
             "exams": [
@@ -9654,7 +9654,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180602",
+            "id": "15011318060201",
             "title": "CAD and 3D Printing",
             "sem": 6,
             "exams": [
@@ -9664,7 +9664,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180603",
+            "id": "15011318060301",
             "title": "Digital Twin for Robotics",
             "sem": 6,
             "exams": [
@@ -9674,7 +9674,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180604",
+            "id": "15011318060401",
             "title": "Minor Project",
             "sem": 6,
             "exams": [
@@ -9684,7 +9684,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180602",
+            "id": "15001318060201",
             "title": "Quantitative Aptitude and Verbal Ability",
             "sem": 6,
             "exams": [
@@ -9694,7 +9694,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180621",
+            "id": "15011318062101",
             "title": "Edge AI and Embedded Machine Learning",
             "sem": 6,
             "exams": [
@@ -9704,7 +9704,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180622",
+            "id": "15011318062201",
             "title": "Autonomous Mobile Robotics and AGV Design",
             "sem": 6,
             "exams": [
@@ -9714,7 +9714,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180623",
+            "id": "15011318062301",
             "title": "Multi-Agent Robotics",
             "sem": 6,
             "exams": [
@@ -9724,7 +9724,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180624",
+            "id": "15011318062401",
             "title": "Robotics in Agriculture and Environment",
             "sem": 6,
             "exams": [
@@ -9734,7 +9734,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180701",
+            "id": "15011318070101",
             "title": "Learning",
             "sem": 7,
             "exams": [
@@ -9744,7 +9744,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011350821",
+            "id": "15001135082101",
             "title": "Computer Integrated Manufacturing",
             "sem": 7,
             "exams": [
@@ -9754,7 +9754,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180703",
+            "id": "15011318070301",
             "title": "Machine Vision for Robotics",
             "sem": 7,
             "exams": [
@@ -9764,7 +9764,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180731",
+            "id": "15011318073101",
             "title": "Biomedical Robotics",
             "sem": 7,
             "exams": [
@@ -9774,7 +9774,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180732",
+            "id": "15011318073201",
             "title": "Architecture of Electric and Hybrid Vehicles",
             "sem": 7,
             "exams": [
@@ -9784,7 +9784,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180733",
+            "id": "15011318073301",
             "title": "Micro robotics",
             "sem": 7,
             "exams": [
@@ -9794,7 +9794,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180734",
+            "id": "15011318073401",
             "title": "Soft Robotics",
             "sem": 7,
             "exams": [
@@ -9804,7 +9804,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180735",
+            "id": "15011318073501",
             "title": "Human-Robot Interaction",
             "sem": 7,
             "exams": [
@@ -9814,7 +9814,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180741",
+            "id": "15011318074101",
             "title": "IoT and Cloud Robotics",
             "sem": 7,
             "exams": [
@@ -9824,7 +9824,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180742",
+            "id": "15011318074201",
             "title": "Advanced Driver Assistance Systems",
             "sem": 7,
             "exams": [
@@ -9834,7 +9834,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180743",
+            "id": "15011318074301",
             "title": "Reconfigurable Robots",
             "sem": 7,
             "exams": [
@@ -9844,7 +9844,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180744",
+            "id": "15011318074401",
             "title": "Additive Manufacturing and Robotic Fabrication",
             "sem": 7,
             "exams": [
@@ -9854,7 +9854,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180745",
+            "id": "15011318074501",
             "title": "Automation",
             "sem": 7,
             "exams": [
@@ -9864,7 +9864,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180746",
+            "id": "15011318074601",
             "title": "Automotive System Modelling and Simulation",
             "sem": 7,
             "exams": [
@@ -9874,7 +9874,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180747",
+            "id": "15011318074701",
             "title": "Humanoid Robotics",
             "sem": 7,
             "exams": [
@@ -9884,7 +9884,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180748",
+            "id": "15011318074801",
             "title": "Factory Integrated Automation",
             "sem": 7,
             "exams": [
@@ -9894,7 +9894,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113180801",
+            "id": "15011318080101",
             "title": "Internship/Major Project",
             "sem": 8,
             "exams": [
@@ -9910,7 +9910,7 @@ export const domains = [
         "title": "B.Tech - Electronics & Communication",
         "subjects": [
           {
-            "id": "01530110",
+            "id": "16000153011001",
             "title": "ELECTRONIC DEVICES AND CIRCUITS",
             "sem": 1,
             "exams": [
@@ -9920,7 +9920,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530111",
+            "id": "16000153011101",
             "title": "ENGINEERING PHYSICS",
             "sem": 1,
             "exams": [
@@ -9930,7 +9930,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530114",
+            "id": "16000153011401",
             "title": "SOLVING",
             "sem": 1,
             "exams": [
@@ -9940,7 +9940,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530117",
+            "id": "16000153011701",
             "title": "CALCULUS AND LINEAR ALGEBRA",
             "sem": 1,
             "exams": [
@@ -9950,7 +9950,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530119",
+            "id": "16000153011901",
             "title": "DESIGN ENGINEERING",
             "sem": 1,
             "exams": [
@@ -9960,7 +9960,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01531103",
+            "id": "16000153110301",
             "title": "ELECTRONIC WORKSHOP",
             "sem": 1,
             "exams": [
@@ -9970,7 +9970,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120102",
+            "id": "16011912010201",
             "title": "READING AND WRITING FOR TECHNOLOGY",
             "sem": 1,
             "exams": [
@@ -9980,7 +9980,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019110001",
+            "id": "16001911000101",
             "title": "(IKS)",
             "sem": 1,
             "exams": [
@@ -9990,7 +9990,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "16001514110101",
             "title": "BASICS OF ENVIRONMENTAL STUDIES",
             "sem": 1,
             "exams": [
@@ -10000,7 +10000,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210001",
+            "id": "16000121000101",
             "title": "NATIONAL CADET CORPS-1",
             "sem": 1,
             "exams": [
@@ -10010,7 +10010,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530112",
+            "id": "16000153011201",
             "title": "ANALOG CIRCUITS",
             "sem": 2,
             "exams": [
@@ -10020,7 +10020,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530113",
+            "id": "16000153011301",
             "title": "DIGITAL CIRCUITS",
             "sem": 2,
             "exams": [
@@ -10030,7 +10030,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530115",
+            "id": "16000153011501",
             "title": "PYTHON PROGRAMMING & APPLICATIONS",
             "sem": 2,
             "exams": [
@@ -10040,7 +10040,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530116",
+            "id": "16000153011601",
             "title": "DATA STRUCTURE AND ALGORITHM ",
             "sem": 2,
             "exams": [
@@ -10050,7 +10050,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530118",
+            "id": "16000153011801",
             "title": "DIFFERENTIAL EQUATIONS AND TRANSFORMS",
             "sem": 2,
             "exams": [
@@ -10060,7 +10060,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351105",
+            "id": "16001135110501",
             "title": "DESIGN",
             "sem": 2,
             "exams": [
@@ -10070,7 +10070,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "16001719010301",
             "title": "INDIAN CONSTITUTION",
             "sem": 2,
             "exams": [
@@ -10080,7 +10080,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210002",
+            "id": "16000121000201",
             "title": "NATIONAL CADET CORPS-2",
             "sem": 2,
             "exams": [
@@ -10090,7 +10090,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330003",
+            "id": "16016133000301",
             "title": "CIRCUIT AND NETWORKS",
             "sem": 3,
             "exams": [
@@ -10100,7 +10100,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330004",
+            "id": "16016133000401",
             "title": "CONTROL SYSTEM",
             "sem": 3,
             "exams": [
@@ -10110,7 +10110,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330005",
+            "id": "16016133000501",
             "title": "INTERFACING",
             "sem": 3,
             "exams": [
@@ -10120,7 +10120,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330006",
+            "id": "16016133000601",
             "title": "NUMERICAL METHODS AND OPTIMIZATION",
             "sem": 3,
             "exams": [
@@ -10130,7 +10130,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330007",
+            "id": "16016133000701",
             "title": "LANGUAGES",
             "sem": 3,
             "exams": [
@@ -10140,7 +10140,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330008",
+            "id": "16016133000801",
             "title": "HDL FOR DIGITAL DESIGN & VERIFICATION",
             "sem": 3,
             "exams": [
@@ -10150,7 +10150,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330010",
+            "id": "16016133001001",
             "title": "INTERFACES",
             "sem": 3,
             "exams": [
@@ -10160,7 +10160,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210003",
+            "id": "16000121000301",
             "title": "NATIONAL CADET CORPS-3",
             "sem": 3,
             "exams": [
@@ -10170,7 +10170,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340003",
+            "id": "16016134000301",
             "title": "ANALOG COMMUNICATION",
             "sem": 4,
             "exams": [
@@ -10180,7 +10180,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340004",
+            "id": "16016134000401",
             "title": "CMOS VLSI DESIGN",
             "sem": 4,
             "exams": [
@@ -10190,7 +10190,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200302",
+            "id": "16001320030201",
             "title": "SIGNALS AND SYSTEMS",
             "sem": 4,
             "exams": [
@@ -10200,7 +10200,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200603",
+            "id": "16009320060301",
             "title": "EMBEDDED SYSTEMS",
             "sem": 4,
             "exams": [
@@ -10210,7 +10210,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200506",
+            "id": "16001320050601",
             "title": "HUMAN CENTERED DESIGN",
             "sem": 4,
             "exams": [
@@ -10220,7 +10220,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340005",
+            "id": "16016134000501",
             "title": "ITRODUCTION TO ROBOTICS",
             "sem": 4,
             "exams": [
@@ -10230,7 +10230,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210004",
+            "id": "16000121000401",
             "title": "NATIONAL CADET CORPS-4",
             "sem": 4,
             "exams": [
@@ -10240,7 +10240,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200601",
+            "id": "16001320060101",
             "title": "DIGITAL SIGNAL PROCESSING",
             "sem": 5,
             "exams": [
@@ -10250,7 +10250,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350006",
+            "id": "16016135000601",
             "title": "DIGITAL COMMUNICATION",
             "sem": 5,
             "exams": [
@@ -10260,7 +10260,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350007",
+            "id": "16016135000701",
             "title": "ANALYTICAL & LOGICAL REASONING",
             "sem": 5,
             "exams": [
@@ -10270,7 +10270,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350008",
+            "id": "16016135000801",
             "title": "IPR & ENTREPRENEURSHIP FOR ENGINEERS",
             "sem": 5,
             "exams": [
@@ -10280,7 +10280,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350009",
+            "id": "16016135000901",
             "title": "DRONE AND UNMANNED AERIAL VEHICLE",
             "sem": 5,
             "exams": [
@@ -10290,7 +10290,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350010",
+            "id": "16016135001001",
             "title": "IoT APPLICATIONS",
             "sem": 5,
             "exams": [
@@ -10300,7 +10300,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210005",
+            "id": "16000121000501",
             "title": "NATIONAL CADET CORPS-5",
             "sem": 5,
             "exams": [
@@ -10310,7 +10310,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360008",
+            "id": "16016136000801",
             "title": "ANTENNA DESIGN",
             "sem": 6,
             "exams": [
@@ -10320,7 +10320,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360009",
+            "id": "16016136000901",
             "title": "OPTICAL FIBER COMMUNICATION",
             "sem": 6,
             "exams": [
@@ -10330,7 +10330,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391704",
+            "id": "16000139170401",
             "title": "MINOR PROJECT",
             "sem": 6,
             "exams": [
@@ -10340,7 +10340,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360010",
+            "id": "16016136001001",
             "title": "WIRELESS & MOBILE COMMUNICATION",
             "sem": 6,
             "exams": [
@@ -10350,7 +10350,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210006",
+            "id": "16000121000601",
             "title": "NATIONAL CADET CORPS-6",
             "sem": 6,
             "exams": [
@@ -10360,7 +10360,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360011",
+            "id": "16016136001101",
             "title": "SYSTEM ON CHIP",
             "sem": 6,
             "exams": [
@@ -10370,7 +10370,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370009",
+            "id": "16016137000901",
             "title": "DATA COMM. AND NETWORKING",
             "sem": 7,
             "exams": [
@@ -10380,7 +10380,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391803",
+            "id": "16000139180301",
             "title": "MAJOR PROJECT",
             "sem": 7,
             "exams": [
@@ -10390,7 +10390,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370010",
+            "id": "16016137001001",
             "title": "HUMAN VALUES & PROFESSIONAL ETHICS",
             "sem": 7,
             "exams": [
@@ -10400,7 +10400,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370011",
+            "id": "16016137001101",
             "title": "MICROWAVE & RADAR ENGINEERING",
             "sem": 7,
             "exams": [
@@ -10410,7 +10410,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120801",
+            "id": "16011312080101",
             "title": "INTERNSHIP/ PROJECT",
             "sem": 8,
             "exams": [
@@ -10426,7 +10426,7 @@ export const domains = [
         "title": "B.Tech - Electronics and Communication Engineering - AI",
         "subjects": [
           {
-            "id": "01530110",
+            "id": "17000153011001",
             "title": "ELECTRONIC DEVICES AND CIRCUITS",
             "sem": 1,
             "exams": [
@@ -10436,7 +10436,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530111",
+            "id": "17000153011101",
             "title": "ENGINEERING PHYSICS",
             "sem": 1,
             "exams": [
@@ -10446,7 +10446,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530114",
+            "id": "17000153011401",
             "title": "SOLVING",
             "sem": 1,
             "exams": [
@@ -10456,7 +10456,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530117",
+            "id": "17000153011701",
             "title": "CALCULUS AND LINEAR ALGEBRA",
             "sem": 1,
             "exams": [
@@ -10466,7 +10466,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530119",
+            "id": "17000153011901",
             "title": "DESIGN ENGINEERING",
             "sem": 1,
             "exams": [
@@ -10476,7 +10476,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01531103",
+            "id": "17000153110301",
             "title": "ELECTRONIC WORKSHOP",
             "sem": 1,
             "exams": [
@@ -10486,7 +10486,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0119120102",
+            "id": "17011912010201",
             "title": "READING AND WRITING FOR TECHNOLOGY",
             "sem": 1,
             "exams": [
@@ -10496,7 +10496,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019110001",
+            "id": "17001911000101",
             "title": "(IKS)",
             "sem": 1,
             "exams": [
@@ -10506,7 +10506,7 @@ export const domains = [
             ]
           },
           {
-            "id": "015141101",
+            "id": "17001514110101",
             "title": "BASICS OF ENVIRONMENTAL STUDIES",
             "sem": 1,
             "exams": [
@@ -10516,7 +10516,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210001",
+            "id": "17000121000101",
             "title": "NATIONAL CADET CORPS-1",
             "sem": 1,
             "exams": [
@@ -10526,7 +10526,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530112",
+            "id": "17000153011201",
             "title": "ANALOG CIRCUITS",
             "sem": 2,
             "exams": [
@@ -10536,7 +10536,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530113",
+            "id": "17000153011301",
             "title": "DIGITAL CIRCUITS",
             "sem": 2,
             "exams": [
@@ -10546,7 +10546,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530115",
+            "id": "17000153011501",
             "title": "PYTHON PROGRAMMING & APPLICATIONS",
             "sem": 2,
             "exams": [
@@ -10556,7 +10556,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530116",
+            "id": "17000153011601",
             "title": "DATA STRUCTURE AND ALGORITHM ",
             "sem": 2,
             "exams": [
@@ -10566,7 +10566,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01530118",
+            "id": "17000153011801",
             "title": "DIFFERENTIAL EQUATIONS AND TRANSFORMS",
             "sem": 2,
             "exams": [
@@ -10576,7 +10576,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011351105",
+            "id": "17001135110501",
             "title": "DESIGN",
             "sem": 2,
             "exams": [
@@ -10586,7 +10586,7 @@ export const domains = [
             ]
           },
           {
-            "id": "017190103",
+            "id": "17001719010301",
             "title": "INDIAN CONSTITUTION",
             "sem": 2,
             "exams": [
@@ -10596,7 +10596,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210002",
+            "id": "17000121000201",
             "title": "NATIONAL CADET CORPS-2",
             "sem": 2,
             "exams": [
@@ -10606,7 +10606,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330003",
+            "id": "17016133000301",
             "title": "CIRCUIT AND NETWORKS",
             "sem": 3,
             "exams": [
@@ -10616,7 +10616,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330004",
+            "id": "17016133000401",
             "title": "CONTROL SYSTEM",
             "sem": 3,
             "exams": [
@@ -10626,7 +10626,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330005",
+            "id": "17016133000501",
             "title": "INTERFACING",
             "sem": 3,
             "exams": [
@@ -10636,7 +10636,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330006",
+            "id": "17016133000601",
             "title": "NUMERICAL METHODS AND OPTIMIZATION",
             "sem": 3,
             "exams": [
@@ -10646,7 +10646,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330007",
+            "id": "17016133000701",
             "title": "LANGUAGES",
             "sem": 3,
             "exams": [
@@ -10656,7 +10656,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330008",
+            "id": "17016133000801",
             "title": "HDL FOR DIGITAL DESIGN & VERIFICATION",
             "sem": 3,
             "exams": [
@@ -10666,7 +10666,7 @@ export const domains = [
             ]
           },
           {
-            "id": "19131201",
+            "id": "17001913120101",
             "title": "LEARNING",
             "sem": 3,
             "exams": [
@@ -10676,7 +10676,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210003",
+            "id": "17000121000301",
             "title": "NATIONAL CADET CORPS-3",
             "sem": 3,
             "exams": [
@@ -10686,7 +10686,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340003",
+            "id": "17016134000301",
             "title": "ANALOG COMMUNICATION",
             "sem": 4,
             "exams": [
@@ -10696,7 +10696,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340004",
+            "id": "17016134000401",
             "title": "CMOS VLSI DESIGN",
             "sem": 4,
             "exams": [
@@ -10706,7 +10706,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200302",
+            "id": "17001320030201",
             "title": "SIGNALS AND SYSTEMS",
             "sem": 4,
             "exams": [
@@ -10716,7 +10716,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200603",
+            "id": "17009320060301",
             "title": "EMBEDDED SYSTEMS",
             "sem": 4,
             "exams": [
@@ -10726,7 +10726,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200506",
+            "id": "17001320050601",
             "title": "HUMAN CENTERED DESIGN",
             "sem": 4,
             "exams": [
@@ -10736,7 +10736,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340006",
+            "id": "17016134000601",
             "title": "PROBLEM BASED LEARNING",
             "sem": 4,
             "exams": [
@@ -10746,7 +10746,7 @@ export const domains = [
             ]
           },
           {
-            "id": "19131202",
+            "id": "17001913120201",
             "title": "INTRODUCTION TO DATA ANALYTICS",
             "sem": 4,
             "exams": [
@@ -10756,7 +10756,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210004",
+            "id": "17000121000401",
             "title": "NATIONAL CADET CORPS-4",
             "sem": 4,
             "exams": [
@@ -10766,7 +10766,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013200601",
+            "id": "17001320060101",
             "title": "DIGITAL SIGNAL PROCESSING",
             "sem": 5,
             "exams": [
@@ -10776,7 +10776,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350006",
+            "id": "17016135000601",
             "title": "DIGITAL COMMUNICATION",
             "sem": 5,
             "exams": [
@@ -10786,7 +10786,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350007",
+            "id": "17016135000701",
             "title": "ANALYTICAL & LOGICAL REASONING",
             "sem": 5,
             "exams": [
@@ -10796,7 +10796,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350008",
+            "id": "17016135000801",
             "title": "IPR & ENTREPRENEURSHIP FOR ENGINEERS",
             "sem": 5,
             "exams": [
@@ -10806,7 +10806,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350009",
+            "id": "17016135000901",
             "title": "DRONE AND UNMANNED AERIAL VEHICLE",
             "sem": 5,
             "exams": [
@@ -10816,7 +10816,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210005",
+            "id": "17000121000501",
             "title": "NATIONAL CADET CORPS-5",
             "sem": 5,
             "exams": [
@@ -10826,7 +10826,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360008",
+            "id": "17016136000801",
             "title": "ANTENNA DESIGN",
             "sem": 6,
             "exams": [
@@ -10836,7 +10836,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360009",
+            "id": "17016136000901",
             "title": "OPTICAL FIBER COMMUNICATION",
             "sem": 6,
             "exams": [
@@ -10846,7 +10846,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391704",
+            "id": "17000139170401",
             "title": "MINOR PROJECT",
             "sem": 6,
             "exams": [
@@ -10856,7 +10856,7 @@ export const domains = [
             ]
           },
           {
-            "id": "19131204",
+            "id": "17001913120401",
             "title": "SPECIAL TOPICS IN ARTIFICIAL INTELLEGIENCE",
             "sem": 6,
             "exams": [
@@ -10866,7 +10866,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210006",
+            "id": "17000121000601",
             "title": "NATIONAL CADET CORPS-6",
             "sem": 6,
             "exams": [
@@ -10876,7 +10876,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360011",
+            "id": "17016136001101",
             "title": "SYSTEM ON CHIP",
             "sem": 6,
             "exams": [
@@ -10886,7 +10886,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370009",
+            "id": "17016137000901",
             "title": "DATA COMM. AND NETWORKING",
             "sem": 7,
             "exams": [
@@ -10896,7 +10896,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01391803",
+            "id": "17000139180301",
             "title": "MAJOR PROJECT",
             "sem": 7,
             "exams": [
@@ -10906,7 +10906,7 @@ export const domains = [
             ]
           },
           {
-            "id": "013180104",
+            "id": "17001318010401",
             "title": "PROFESSIONAL ETHICS",
             "sem": 7,
             "exams": [
@@ -10916,7 +10916,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370012",
+            "id": "17016137001201",
             "title": "AI & ML MAKER LAB",
             "sem": 7,
             "exams": [
@@ -10926,7 +10926,7 @@ export const domains = [
             ]
           },
           {
-            "id": "19131205",
+            "id": "17001913120501",
             "title": "APPLICATIONS OF AI",
             "sem": 7,
             "exams": [
@@ -10936,7 +10936,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0113120801",
+            "id": "17011312080101",
             "title": "INTERNSHIP/ PROJECT",
             "sem": 8,
             "exams": [
@@ -10960,7 +10960,7 @@ export const domains = [
         "title": "BCA - Bachelor of Computer Applications",
         "subjects": [
           {
-            "id": "05231101",
+            "id": "18000523110101",
             "title": "Basic Mathematics",
             "sem": 1,
             "exams": [
@@ -10970,7 +10970,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231102",
+            "id": "18000523110201",
             "title": "Computer Organization & Architecture",
             "sem": 1,
             "exams": [
@@ -10980,7 +10980,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231103",
+            "id": "18000523110301",
             "title": "Programming in C – 1",
             "sem": 1,
             "exams": [
@@ -10990,7 +10990,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231104",
+            "id": "18000523110401",
             "title": "Internet & HTML",
             "sem": 1,
             "exams": [
@@ -11000,7 +11000,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231105",
+            "id": "18000523110501",
             "title": "Library & Information Resources",
             "sem": 1,
             "exams": [
@@ -11010,7 +11010,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231106",
+            "id": "18000523110601",
             "title": "Sports & Yoga",
             "sem": 1,
             "exams": [
@@ -11020,7 +11020,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231201",
+            "id": "18000523120101",
             "title": "Computer Oriented Numerical Methods",
             "sem": 2,
             "exams": [
@@ -11030,7 +11030,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231203",
+            "id": "18000523120301",
             "title": "Programming in C – 2",
             "sem": 2,
             "exams": [
@@ -11040,7 +11040,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231204",
+            "id": "18000523120401",
             "title": "Database Management System – 1",
             "sem": 2,
             "exams": [
@@ -11050,7 +11050,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231301",
+            "id": "18000523130101",
             "title": "Basic Statistics",
             "sem": 3,
             "exams": [
@@ -11060,7 +11060,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231302",
+            "id": "18000523130201",
             "title": "Database Management System – 2",
             "sem": 3,
             "exams": [
@@ -11070,7 +11070,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231303",
+            "id": "18000523130301",
             "title": "Data Structures",
             "sem": 3,
             "exams": [
@@ -11080,7 +11080,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231304",
+            "id": "18000523130401",
             "title": "Programming Using Java",
             "sem": 3,
             "exams": [
@@ -11090,7 +11090,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231401",
+            "id": "18000523140101",
             "title": "Object Oriented Analysis & Design",
             "sem": 4,
             "exams": [
@@ -11100,7 +11100,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231402",
+            "id": "18000523140201",
             "title": "Operating Systems",
             "sem": 4,
             "exams": [
@@ -11110,7 +11110,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231403",
+            "id": "18000523140301",
             "title": "Computer Networks",
             "sem": 4,
             "exams": [
@@ -11120,7 +11120,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231404",
+            "id": "18000523140401",
             "title": "Project (Java)",
             "sem": 4,
             "exams": [
@@ -11130,7 +11130,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231501",
+            "id": "18000523150101",
             "title": "Management Information System",
             "sem": 5,
             "exams": [
@@ -11140,7 +11140,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231502",
+            "id": "18000523150201",
             "title": "Software Testing",
             "sem": 5,
             "exams": [
@@ -11150,7 +11150,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231503",
+            "id": "18000523150301",
             "title": "Data Analytics using R",
             "sem": 5,
             "exams": [
@@ -11160,7 +11160,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231504",
+            "id": "18000523150401",
             "title": "Web Application Development – 1 (PHP)",
             "sem": 5,
             "exams": [
@@ -11170,7 +11170,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231505",
+            "id": "18000523150501",
             "title": "Computer Graphics",
             "sem": 5,
             "exams": [
@@ -11180,7 +11180,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231506",
+            "id": "18000523150601",
             "title": "Android Application Development",
             "sem": 5,
             "exams": [
@@ -11190,7 +11190,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231601",
+            "id": "18000523160101",
             "title": "Cloud Computing Foundation",
             "sem": 6,
             "exams": [
@@ -11200,7 +11200,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231602",
+            "id": "18000523160201",
             "title": "Cyber Security",
             "sem": 6,
             "exams": [
@@ -11210,7 +11210,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231603",
+            "id": "18000523160301",
             "title": "Python Programming",
             "sem": 6,
             "exams": [
@@ -11220,7 +11220,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231604",
+            "id": "18000523160401",
             "title": "Web Application Development – 2 (Laravel)",
             "sem": 6,
             "exams": [
@@ -11230,7 +11230,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231605",
+            "id": "18000523160501",
             "title": "Image Processing",
             "sem": 6,
             "exams": [
@@ -11240,7 +11240,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231606",
+            "id": "18000523160601",
             "title": "Game Application Development",
             "sem": 6,
             "exams": [
@@ -11250,7 +11250,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231703",
+            "id": "18000523170301",
             "title": "Cryptography",
             "sem": 7,
             "exams": [
@@ -11260,7 +11260,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231704",
+            "id": "18000523170401",
             "title": "Cloud Computing Security",
             "sem": 7,
             "exams": [
@@ -11270,7 +11270,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231705",
+            "id": "18000523170501",
             "title": "Edge / Fog Computing",
             "sem": 7,
             "exams": [
@@ -11280,7 +11280,7 @@ export const domains = [
             ]
           },
           {
-            "id": "05231706",
+            "id": "18000523170601",
             "title": "DevOps Methodology",
             "sem": 7,
             "exams": [
@@ -11296,7 +11296,7 @@ export const domains = [
         "title": "MCA - Master of Computer Applications",
         "subjects": [
           {
-            "id": "051330101",
+            "id": "19005133010101",
             "title": "Data structure using C",
             "sem": 1,
             "exams": [
@@ -11306,7 +11306,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330102",
+            "id": "19005133010201",
             "title": "Web application development using PHP",
             "sem": 1,
             "exams": [
@@ -11316,7 +11316,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330103",
+            "id": "19005133010301",
             "title": "Object oriented programming using Java",
             "sem": 1,
             "exams": [
@@ -11326,7 +11326,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330104",
+            "id": "19005133010401",
             "title": "Operating Systems",
             "sem": 1,
             "exams": [
@@ -11336,7 +11336,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330105",
+            "id": "19005133010501",
             "title": "Relational Database Management Systems",
             "sem": 1,
             "exams": [
@@ -11346,7 +11346,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330106",
+            "id": "19005133010601",
             "title": "MOOC – HTML / CSS / JS",
             "sem": 1,
             "exams": [
@@ -11356,7 +11356,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330201",
+            "id": "19005133020101",
             "title": "Computer Networks",
             "sem": 2,
             "exams": [
@@ -11366,7 +11366,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330202",
+            "id": "19005133020201",
             "title": "Python Programming",
             "sem": 2,
             "exams": [
@@ -11376,7 +11376,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330203",
+            "id": "19005133020301",
             "title": "Mobile Programming",
             "sem": 2,
             "exams": [
@@ -11386,7 +11386,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330204",
+            "id": "19005133020401",
             "title": "Mini Project – 1",
             "sem": 2,
             "exams": [
@@ -11396,7 +11396,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330205",
+            "id": "19005133020501",
             "title": "NoSQL Databases",
             "sem": 2,
             "exams": [
@@ -11406,7 +11406,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330206",
+            "id": "19005133020601",
             "title": "Image Processing",
             "sem": 2,
             "exams": [
@@ -11416,7 +11416,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330207",
+            "id": "19005133020701",
             "title": "Data Analytics and Visualization",
             "sem": 2,
             "exams": [
@@ -11426,7 +11426,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330208",
+            "id": "19005133020801",
             "title": "C#.Net",
             "sem": 2,
             "exams": [
@@ -11436,7 +11436,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330301",
+            "id": "19005133030101",
             "title": "Software Engineering",
             "sem": 3,
             "exams": [
@@ -11446,7 +11446,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330302",
+            "id": "19005133030201",
             "title": "Cryptography",
             "sem": 3,
             "exams": [
@@ -11456,7 +11456,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330303",
+            "id": "19005133030301",
             "title": "Artificial Intelligence",
             "sem": 3,
             "exams": [
@@ -11466,7 +11466,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330304",
+            "id": "19005133030401",
             "title": "Mini Project – 2",
             "sem": 3,
             "exams": [
@@ -11476,7 +11476,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330305",
+            "id": "19005133030501",
             "title": "Big Data Tools",
             "sem": 3,
             "exams": [
@@ -11486,7 +11486,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330306",
+            "id": "19005133030601",
             "title": "Machine Vision",
             "sem": 3,
             "exams": [
@@ -11496,7 +11496,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330307",
+            "id": "19005133030701",
             "title": "Machine Learning",
             "sem": 3,
             "exams": [
@@ -11506,7 +11506,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330308",
+            "id": "19005133030801",
             "title": "ASP.Net",
             "sem": 3,
             "exams": [
@@ -11516,7 +11516,7 @@ export const domains = [
             ]
           },
           {
-            "id": "051330401",
+            "id": "19005133040101",
             "title": "Industry Defined Project (Internship)",
             "sem": 4,
             "exams": [
@@ -11540,7 +11540,7 @@ export const domains = [
         "title": "BBA",
         "subjects": [
           {
-            "id": "041930002",
+            "id": "20004193000201",
             "title": "INSURANCE AGENT",
             "sem": 0,
             "exams": [
@@ -11550,7 +11550,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "20004193000301",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 0,
             "exams": [
@@ -11560,7 +11560,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "20004193000401",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 0,
             "exams": [
@@ -11570,7 +11570,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "20004193000501",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 0,
             "exams": [
@@ -11580,7 +11580,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "20004193000601",
             "title": "VOICE",
             "sem": 0,
             "exams": [
@@ -11590,7 +11590,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "20004193000701",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 0,
             "exams": [
@@ -11600,7 +11600,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "20004193000801",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 0,
             "exams": [
@@ -11610,7 +11610,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120152",
+            "id": "20041912015201",
             "title": "ENGLISH FOR WORKPLACE",
             "sem": 0,
             "exams": [
@@ -11620,7 +11620,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120153",
+            "id": "20041912015301",
             "title": "ENGLISH THROUGH MOVIES",
             "sem": 0,
             "exams": [
@@ -11630,7 +11630,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220301",
+            "id": "20000422030101",
             "title": "MARKETING MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -11640,7 +11640,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220305",
+            "id": "20000422030501",
             "title": "FINANCIAL MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -11650,7 +11650,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220308",
+            "id": "20000422030801",
             "title": "INDIAN FINANCIAL SYSTEM",
             "sem": 3,
             "exams": [
@@ -11660,7 +11660,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220309",
+            "id": "20000422030901",
             "title": "COST ACCOUNTING",
             "sem": 3,
             "exams": [
@@ -11670,7 +11670,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221304",
+            "id": "20000422130401",
             "title": "RESEARCH METHODOLOGY",
             "sem": 3,
             "exams": [
@@ -11680,7 +11680,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221307",
+            "id": "20000422130701",
             "title": "FUNDAMENTALS OF DIGITAL MARKETING",
             "sem": 3,
             "exams": [
@@ -11690,7 +11690,7 @@ export const domains = [
             ]
           },
           {
-            "id": "043180301",
+            "id": "20004318030101",
             "title": "CAREER READINESS PROGRAM",
             "sem": 3,
             "exams": [
@@ -11700,7 +11700,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210003",
+            "id": "20000121000301",
             "title": "NATIONAL CADET CORPS-3",
             "sem": 3,
             "exams": [
@@ -11710,7 +11710,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220401",
+            "id": "20000422040101",
             "title": "PRODUCTION & OPERATIONS MANAGEMENT",
             "sem": 4,
             "exams": [
@@ -11720,7 +11720,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220403",
+            "id": "20000422040301",
             "title": "INCOME TAX – LAW AND PRACTICE",
             "sem": 4,
             "exams": [
@@ -11730,7 +11730,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220406",
+            "id": "20000422040601",
             "title": "MANAGEMENT OF SERVICES",
             "sem": 4,
             "exams": [
@@ -11740,7 +11740,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220408",
+            "id": "20000422040801",
             "title": "MANAGEMENT ACCOUNTING",
             "sem": 4,
             "exams": [
@@ -11750,7 +11750,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220409",
+            "id": "20000422040901",
             "title": "ENVIRONMENTAL STUDIES",
             "sem": 4,
             "exams": [
@@ -11760,7 +11760,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220411",
+            "id": "20000422041101",
             "title": "INTERNATIONAL BUSINESS",
             "sem": 4,
             "exams": [
@@ -11770,7 +11770,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222405",
+            "id": "20000422240501",
             "title": "ENTREPRENEURSHIP",
             "sem": 4,
             "exams": [
@@ -11780,7 +11780,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "20004193000101",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 4,
             "exams": [
@@ -11790,7 +11790,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "20004193000202",
             "title": "INSURANCE AGENT",
             "sem": 4,
             "exams": [
@@ -11800,7 +11800,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "20004193000302",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 4,
             "exams": [
@@ -11810,7 +11810,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "20004193000402",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 4,
             "exams": [
@@ -11820,7 +11820,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "20004193000502",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 4,
             "exams": [
@@ -11830,7 +11830,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "20004193000602",
             "title": "VOICE",
             "sem": 4,
             "exams": [
@@ -11840,7 +11840,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "20004193000702",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 4,
             "exams": [
@@ -11850,7 +11850,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "20004193000802",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 4,
             "exams": [
@@ -11860,7 +11860,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210004",
+            "id": "20000121000401",
             "title": "NATIONAL CADET CORPS-4",
             "sem": 4,
             "exams": [
@@ -11870,7 +11870,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220506",
+            "id": "20000422050601",
             "title": "INTERNSHIP",
             "sem": 5,
             "exams": [
@@ -11880,7 +11880,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220507",
+            "id": "20000422050701",
             "title": "MANAGEMENT OF FINANCIAL MARKETS",
             "sem": 5,
             "exams": [
@@ -11890,7 +11890,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220509",
+            "id": "20000422050901",
             "title": "CONSUMER BEHAVIOUR",
             "sem": 5,
             "exams": [
@@ -11900,7 +11900,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220510",
+            "id": "20000422051001",
             "title": "RETAIL MARKETING",
             "sem": 5,
             "exams": [
@@ -11910,7 +11910,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220529",
+            "id": "20000422052901",
             "title": "FUNDAMENTALS OF BANKING",
             "sem": 5,
             "exams": [
@@ -11920,7 +11920,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220530",
+            "id": "20000422053001",
             "title": "LABOUR WELFARE & SOCIAL SECURITIES",
             "sem": 5,
             "exams": [
@@ -11930,7 +11930,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221501",
+            "id": "20000422150101",
             "title": "OPERATIONS RESEARCH",
             "sem": 5,
             "exams": [
@@ -11940,7 +11940,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221502",
+            "id": "20000422150201",
             "title": "STRATEGIC MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -11950,7 +11950,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221512",
+            "id": "20000422151201",
             "title": "COMPENSATION MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -11960,7 +11960,7 @@ export const domains = [
             ]
           },
           {
-            "id": "043181501",
+            "id": "20004318150101",
             "title": "CAREER READINESS PROGRAM",
             "sem": 5,
             "exams": [
@@ -11970,7 +11970,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210005",
+            "id": "20000121000501",
             "title": "NATIONAL CADET CORPS-5",
             "sem": 5,
             "exams": [
@@ -11980,7 +11980,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220606",
+            "id": "20000422060601",
             "title": "ADVERTISING MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -11990,7 +11990,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220613",
+            "id": "20000422061301",
             "title": "STATEMENTS",
             "sem": 6,
             "exams": [
@@ -12000,7 +12000,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220614",
+            "id": "20000422061401",
             "title": "MANAGEMENT INFORMATION SYSTEM",
             "sem": 6,
             "exams": [
@@ -12010,7 +12010,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220615",
+            "id": "20000422061501",
             "title": "RESEARCH PROJECT",
             "sem": 6,
             "exams": [
@@ -12020,7 +12020,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221601",
+            "id": "20000422160101",
             "title": "BUSINESS ETHICS & CORPORATE GOVERNANCE",
             "sem": 6,
             "exams": [
@@ -12030,7 +12030,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221605",
+            "id": "20000422160501",
             "title": "ADVANCED FINANCIAL MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -12040,7 +12040,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221607",
+            "id": "20000422160701",
             "title": "CHANGE MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -12050,7 +12050,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "20004193000102",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 6,
             "exams": [
@@ -12060,7 +12060,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "20004193000203",
             "title": "INSURANCE AGENT",
             "sem": 6,
             "exams": [
@@ -12070,7 +12070,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "20004193000303",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 6,
             "exams": [
@@ -12080,7 +12080,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "20004193000403",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 6,
             "exams": [
@@ -12090,7 +12090,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "20004193000503",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 6,
             "exams": [
@@ -12100,7 +12100,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "20004193000603",
             "title": "VOICE",
             "sem": 6,
             "exams": [
@@ -12110,7 +12110,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "20004193000703",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 6,
             "exams": [
@@ -12120,7 +12120,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "20004193000803",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 6,
             "exams": [
@@ -12478,7 +12478,7 @@ export const domains = [
         "title": "BBA (HONS)",
         "subjects": [
           {
-            "id": "04220101",
+            "id": "21000422010101",
             "title": "PRINCIPLES OF MANAGEMENT",
             "sem": 1,
             "exams": [
@@ -12488,7 +12488,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220102",
+            "id": "21000422010201",
             "title": "MICRO ECONOMICS",
             "sem": 1,
             "exams": [
@@ -12498,7 +12498,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220103",
+            "id": "21000422010301",
             "title": "FUNDAMENTALS OF ACCOUNTING",
             "sem": 1,
             "exams": [
@@ -12508,7 +12508,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220104",
+            "id": "21000422010401",
             "title": "COMPUTER ESSENTIALS & OFFICE APPLICATIONS",
             "sem": 1,
             "exams": [
@@ -12518,7 +12518,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220105",
+            "id": "21000422010501",
             "title": "BUSINESS LAWS",
             "sem": 1,
             "exams": [
@@ -12528,7 +12528,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04232507",
+            "id": "21000423250701",
             "title": "TALLY",
             "sem": 1,
             "exams": [
@@ -12538,7 +12538,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120102",
+            "id": "21041912010201",
             "title": "READING & WRITING FOR BUSINESS",
             "sem": 1,
             "exams": [
@@ -12548,7 +12548,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120103",
+            "id": "21041912010301",
             "title": "SPEAKING & PRESENTATION SKILLS",
             "sem": 1,
             "exams": [
@@ -12558,7 +12558,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210001",
+            "id": "21000121000101",
             "title": "NATIONAL CADET CORPS-1",
             "sem": 1,
             "exams": [
@@ -12568,7 +12568,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220201",
+            "id": "21000422020101",
             "title": "MACROECONOMICS",
             "sem": 2,
             "exams": [
@@ -12578,7 +12578,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220202",
+            "id": "21000422020201",
             "title": "ORGANIZATIONAL BEHAVIOR",
             "sem": 2,
             "exams": [
@@ -12588,7 +12588,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220203",
+            "id": "21000422020301",
             "title": "STATISTICS FOR BUSINESS",
             "sem": 2,
             "exams": [
@@ -12598,7 +12598,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220204",
+            "id": "21000422020401",
             "title": "HUMAN RESOURCE MANAGEMENT",
             "sem": 2,
             "exams": [
@@ -12608,7 +12608,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220205",
+            "id": "21000422020501",
             "title": "BUSINESS ENVIRONMENT",
             "sem": 2,
             "exams": [
@@ -12618,7 +12618,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280202",
+            "id": "21000428020201",
             "title": "ADVANCED EXCEL",
             "sem": 2,
             "exams": [
@@ -12628,7 +12628,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "21004193000101",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 2,
             "exams": [
@@ -12638,7 +12638,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "21004193000201",
             "title": "INSURANCE AGENT",
             "sem": 2,
             "exams": [
@@ -12648,7 +12648,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "21004193000301",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 2,
             "exams": [
@@ -12658,7 +12658,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "21004193000401",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 2,
             "exams": [
@@ -12668,7 +12668,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "21004193000501",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 2,
             "exams": [
@@ -12678,7 +12678,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "21004193000601",
             "title": "VOICE",
             "sem": 2,
             "exams": [
@@ -12688,7 +12688,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "21004193000701",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 2,
             "exams": [
@@ -12698,7 +12698,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "21004193000801",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 2,
             "exams": [
@@ -12708,7 +12708,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120152",
+            "id": "21041912015201",
             "title": "ENGLISH FOR WORKPLACE",
             "sem": 2,
             "exams": [
@@ -12718,7 +12718,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120153",
+            "id": "21041912015301",
             "title": "ENGLISH THROUGH MOVIES",
             "sem": 2,
             "exams": [
@@ -12728,7 +12728,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220301",
+            "id": "21000422030101",
             "title": "MARKETING MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -12738,7 +12738,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220305",
+            "id": "21000422030501",
             "title": "FINANCIAL MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -12748,7 +12748,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220308",
+            "id": "21000422030801",
             "title": "INDIAN FINANCIAL SYSTEM",
             "sem": 3,
             "exams": [
@@ -12758,7 +12758,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220309",
+            "id": "21000422030901",
             "title": "COST ACCOUNTING",
             "sem": 3,
             "exams": [
@@ -12768,7 +12768,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221304",
+            "id": "21000422130401",
             "title": "RESEARCH METHODOLOGY",
             "sem": 3,
             "exams": [
@@ -12778,7 +12778,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221307",
+            "id": "21000422130701",
             "title": "FUNDAMENTALS OF DIGITAL MARKETING",
             "sem": 3,
             "exams": [
@@ -12788,7 +12788,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280302",
+            "id": "21000428030201",
             "title": "LOGISTICS MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -12798,7 +12798,7 @@ export const domains = [
             ]
           },
           {
-            "id": "043180301",
+            "id": "21004318030101",
             "title": "CAREER READINESS PROGRAM",
             "sem": 3,
             "exams": [
@@ -12808,7 +12808,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210003",
+            "id": "21000121000301",
             "title": "NATIONAL CADET CORPS-3",
             "sem": 3,
             "exams": [
@@ -12818,7 +12818,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220401",
+            "id": "21000422040101",
             "title": "PRODUCTION & OPERATIONS MANAGEMENT",
             "sem": 4,
             "exams": [
@@ -12828,7 +12828,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220403",
+            "id": "21000422040301",
             "title": "INCOME TAX – LAW AND PRACTICE",
             "sem": 4,
             "exams": [
@@ -12838,7 +12838,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220406",
+            "id": "21000422040601",
             "title": "MANAGEMENT OF SERVICES",
             "sem": 4,
             "exams": [
@@ -12848,7 +12848,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220408",
+            "id": "21000422040801",
             "title": "MANAGEMENT ACCOUNTING",
             "sem": 4,
             "exams": [
@@ -12858,7 +12858,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220409",
+            "id": "21000422040901",
             "title": "ENVIRONMENTAL STUDIES",
             "sem": 4,
             "exams": [
@@ -12868,7 +12868,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220411",
+            "id": "21000422041101",
             "title": "INTERNATIONAL BUSINESS",
             "sem": 4,
             "exams": [
@@ -12878,7 +12878,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222405",
+            "id": "21000422240501",
             "title": "ENTREPRENEURSHIP",
             "sem": 4,
             "exams": [
@@ -12888,7 +12888,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280402",
+            "id": "21000428040201",
             "title": "PROJECT MANAGEMENT",
             "sem": 4,
             "exams": [
@@ -12898,7 +12898,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "21004193000102",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 4,
             "exams": [
@@ -12908,7 +12908,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "21004193000202",
             "title": "INSURANCE AGENT",
             "sem": 4,
             "exams": [
@@ -12918,7 +12918,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "21004193000302",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 4,
             "exams": [
@@ -12928,7 +12928,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "21004193000402",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 4,
             "exams": [
@@ -12938,7 +12938,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "21004193000502",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 4,
             "exams": [
@@ -12948,7 +12948,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "21004193000602",
             "title": "VOICE",
             "sem": 4,
             "exams": [
@@ -12958,7 +12958,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "21004193000702",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 4,
             "exams": [
@@ -12968,7 +12968,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "21004193000802",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 4,
             "exams": [
@@ -12978,7 +12978,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210004",
+            "id": "21000121000401",
             "title": "NATIONAL CADET CORPS-4",
             "sem": 4,
             "exams": [
@@ -12988,7 +12988,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220506",
+            "id": "21000422050601",
             "title": "INTERNSHIP",
             "sem": 5,
             "exams": [
@@ -12998,7 +12998,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220507",
+            "id": "21000422050701",
             "title": "MANAGEMENT OF FINANCIAL MARKETS",
             "sem": 5,
             "exams": [
@@ -13008,7 +13008,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220509",
+            "id": "21000422050901",
             "title": "CONSUMER BEHAVIOUR",
             "sem": 5,
             "exams": [
@@ -13018,7 +13018,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220510",
+            "id": "21000422051001",
             "title": "RETAIL MARKETING",
             "sem": 5,
             "exams": [
@@ -13028,7 +13028,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04920401",
+            "id": "21000492040101",
             "title": "INTERNATIONAL MARKETING",
             "sem": 5,
             "exams": [
@@ -13038,7 +13038,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220514",
+            "id": "21000422051401",
             "title": "MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -13048,7 +13048,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220515",
+            "id": "21000422051501",
             "title": "MODERN BANKING THEORY & PRACTICES",
             "sem": 5,
             "exams": [
@@ -13058,7 +13058,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220518",
+            "id": "21000422051801",
             "title": "INVENTORY MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -13068,7 +13068,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220519",
+            "id": "21000422051901",
             "title": "MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -13078,7 +13078,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220520",
+            "id": "21000422052001",
             "title": "ESSENTIALS OF DIGITAL MARKETING",
             "sem": 5,
             "exams": [
@@ -13088,7 +13088,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220521",
+            "id": "21000422052101",
             "title": "APPLICATIONS OF SEO, SEM & WEB ANALYTICS",
             "sem": 5,
             "exams": [
@@ -13098,7 +13098,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220522",
+            "id": "21000422052201",
             "title": "INNOVATION & START-UP MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -13108,7 +13108,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220523",
+            "id": "21000422052301",
             "title": "ENTREPRENEURSHIP",
             "sem": 5,
             "exams": [
@@ -13118,7 +13118,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220524",
+            "id": "21000422052401",
             "title": "FUNDAMENTALS OF INSURANCE",
             "sem": 5,
             "exams": [
@@ -13128,7 +13128,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220529",
+            "id": "21000422052901",
             "title": "FUNDAMENTALS OF BANKING",
             "sem": 5,
             "exams": [
@@ -13138,7 +13138,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220530",
+            "id": "21000422053001",
             "title": "LABOUR WELFARE & SOCIAL SECURITIES",
             "sem": 5,
             "exams": [
@@ -13148,7 +13148,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221501",
+            "id": "21000422150101",
             "title": "OPERATIONS RESEARCH",
             "sem": 5,
             "exams": [
@@ -13158,7 +13158,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221502",
+            "id": "21000422150201",
             "title": "STRATEGIC MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -13168,7 +13168,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221512",
+            "id": "21000422151201",
             "title": "COMPENSATION MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -13178,7 +13178,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280505",
+            "id": "21000428050501",
             "title": "FUNDAMENTALS OF OPERATIONAL BANKING",
             "sem": 5,
             "exams": [
@@ -13188,7 +13188,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280506",
+            "id": "21000428050601",
             "title": "INTERNATIONAL BUSINESS PROCEDURES",
             "sem": 5,
             "exams": [
@@ -13198,7 +13198,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280507",
+            "id": "21000428050701",
             "title": "PACKAGING MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -13208,7 +13208,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280508",
+            "id": "21000428050801",
             "title": "WEBSITE DEVELOPMENT",
             "sem": 5,
             "exams": [
@@ -13218,7 +13218,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280509",
+            "id": "21000428050901",
             "title": "BASICS OF BUSINESS ANALYTICS",
             "sem": 5,
             "exams": [
@@ -13228,7 +13228,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280510",
+            "id": "21000428051001",
             "title": "GST AND CUSTOMS DUTY",
             "sem": 5,
             "exams": [
@@ -13238,7 +13238,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280511",
+            "id": "21000428051101",
             "title": "SALES MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -13248,7 +13248,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280512",
+            "id": "21000428051201",
             "title": "TALENT ACQUISITION",
             "sem": 5,
             "exams": [
@@ -13258,7 +13258,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350011",
+            "id": "21016135001101",
             "title": "FUNDAMENTALS OF INTERNATIONAL BUSINESS",
             "sem": 5,
             "exams": [
@@ -13268,7 +13268,7 @@ export const domains = [
             ]
           },
           {
-            "id": "043181501",
+            "id": "21004318150101",
             "title": "CAREER READINESS PROGRAM",
             "sem": 5,
             "exams": [
@@ -13278,7 +13278,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210005",
+            "id": "21000121000501",
             "title": "NATIONAL CADET CORPS-5",
             "sem": 5,
             "exams": [
@@ -13288,7 +13288,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220606",
+            "id": "21000422060601",
             "title": "ADVERTISING MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -13298,7 +13298,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220608",
+            "id": "21000422060801",
             "title": "INTERNATIONAL SUPPLY CHAIN MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -13308,7 +13308,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220610",
+            "id": "21000422061001",
             "title": "IT IN LOGISTICS MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -13318,7 +13318,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360012",
+            "id": "21016136001201",
             "title": "MARKETING",
             "sem": 6,
             "exams": [
@@ -13328,7 +13328,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220612",
+            "id": "21000422061201",
             "title": "LEGAL ASPECTS OF STARTUPS AND IPR",
             "sem": 6,
             "exams": [
@@ -13338,7 +13338,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220613",
+            "id": "21000422061301",
             "title": "STATEMENTS",
             "sem": 6,
             "exams": [
@@ -13348,7 +13348,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220614",
+            "id": "21000422061401",
             "title": "MANAGEMENT INFORMATION SYSTEM",
             "sem": 6,
             "exams": [
@@ -13358,7 +13358,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220615",
+            "id": "21000422061501",
             "title": "RESEARCH PROJECT",
             "sem": 6,
             "exams": [
@@ -13368,7 +13368,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221601",
+            "id": "21000422160101",
             "title": "BUSINESS ETHICS & CORPORATE GOVERNANCE",
             "sem": 6,
             "exams": [
@@ -13378,7 +13378,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221605",
+            "id": "21000422160501",
             "title": "ADVANCED FINANCIAL MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -13388,7 +13388,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221607",
+            "id": "21000422160701",
             "title": "CHANGE MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -13398,7 +13398,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221609",
+            "id": "21000422160901",
             "title": "RURAL BANKING AND MICRO FINANCE",
             "sem": 6,
             "exams": [
@@ -13408,7 +13408,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280607",
+            "id": "21000428060701",
             "title": "INTERNATIONAL LOGISTICS",
             "sem": 6,
             "exams": [
@@ -13418,7 +13418,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280608",
+            "id": "21000428060801",
             "title": "FUNDING FOR START-UPS",
             "sem": 6,
             "exams": [
@@ -13428,7 +13428,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04280609",
+            "id": "21000428060901",
             "title": "PLATFORMS",
             "sem": 6,
             "exams": [
@@ -13438,7 +13438,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04281601",
+            "id": "21000428160101",
             "title": "SIX SIGMA",
             "sem": 6,
             "exams": [
@@ -13448,7 +13448,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04281602",
+            "id": "21000428160201",
             "title": "ASSET MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -13458,7 +13458,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04281603",
+            "id": "21000428160301",
             "title": "SOCIAL MEDIA MARKETING",
             "sem": 6,
             "exams": [
@@ -13468,7 +13468,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04281604",
+            "id": "21000428160401",
             "title": "PAYROLL MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -13478,7 +13478,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04281605",
+            "id": "21000428160501",
             "title": "MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -13488,7 +13488,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04281606",
+            "id": "21000428160601",
             "title": "INVESTMENT BANKING",
             "sem": 6,
             "exams": [
@@ -13498,7 +13498,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "21004193000103",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 6,
             "exams": [
@@ -13508,7 +13508,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "21004193000203",
             "title": "INSURANCE AGENT",
             "sem": 6,
             "exams": [
@@ -13518,7 +13518,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "21004193000303",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 6,
             "exams": [
@@ -13528,7 +13528,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "21004193000403",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 6,
             "exams": [
@@ -13538,7 +13538,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "21004193000503",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 6,
             "exams": [
@@ -13548,7 +13548,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "21004193000603",
             "title": "VOICE",
             "sem": 6,
             "exams": [
@@ -13558,7 +13558,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "21004193000703",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 6,
             "exams": [
@@ -13568,7 +13568,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "21004193000803",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 6,
             "exams": [
@@ -13578,7 +13578,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210006",
+            "id": "21000121000601",
             "title": "NATIONAL CADET CORPS-6",
             "sem": 6,
             "exams": [
@@ -13896,7 +13896,7 @@ export const domains = [
         "title": "B.Com",
         "subjects": [
           {
-            "id": "04231101",
+            "id": "22000423110101",
             "title": "Financial Accounting-I",
             "sem": 1,
             "exams": [
@@ -13906,7 +13906,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230104",
+            "id": "22000423010401",
             "title": "Micro Economics",
             "sem": 1,
             "exams": [
@@ -13916,7 +13916,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230105",
+            "id": "22000423010501",
             "title": "Business Organisation & Management",
             "sem": 1,
             "exams": [
@@ -13926,7 +13926,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230106",
+            "id": "22000423010601",
             "title": "Business Environment",
             "sem": 1,
             "exams": [
@@ -13936,7 +13936,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161310005",
+            "id": "22016131000501",
             "title": "",
             "sem": 1,
             "exams": [
@@ -13946,7 +13946,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120102",
+            "id": "22041912010201",
             "title": "Reading and Writing for Business",
             "sem": 1,
             "exams": [
@@ -13956,7 +13956,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120103",
+            "id": "22041912010301",
             "title": "Speaking and Presentation Skills",
             "sem": 1,
             "exams": [
@@ -13966,7 +13966,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161310006",
+            "id": "22016131000601",
             "title": "General Electives",
             "sem": 1,
             "exams": [
@@ -13976,7 +13976,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230121",
+            "id": "22000423012101",
             "title": "Currency, Banking and Exchange",
             "sem": 1,
             "exams": [
@@ -13986,7 +13986,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230122",
+            "id": "22000423012201",
             "title": "Human Resource Management",
             "sem": 1,
             "exams": [
@@ -13996,7 +13996,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230123",
+            "id": "22000423012301",
             "title": "Tourism and Travel Management",
             "sem": 1,
             "exams": [
@@ -14006,7 +14006,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04231201",
+            "id": "22000423120101",
             "title": "Financial Accounting-II",
             "sem": 2,
             "exams": [
@@ -14016,7 +14016,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230202",
+            "id": "22000423020201",
             "title": "Macroeconomics",
             "sem": 2,
             "exams": [
@@ -14026,7 +14026,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230203",
+            "id": "22000423020301",
             "title": "Spreadsheet",
             "sem": 2,
             "exams": [
@@ -14036,7 +14036,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04231205",
+            "id": "22000423120501",
             "title": "Business Statistics",
             "sem": 2,
             "exams": [
@@ -14046,7 +14046,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230206",
+            "id": "22000423020601",
             "title": "Environmental Studies",
             "sem": 2,
             "exams": [
@@ -14056,7 +14056,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320009",
+            "id": "22016132000901",
             "title": "",
             "sem": 2,
             "exams": [
@@ -14066,7 +14066,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120152",
+            "id": "22041912015201",
             "title": "English for Workplace",
             "sem": 2,
             "exams": [
@@ -14076,7 +14076,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120153",
+            "id": "22041912015301",
             "title": "English through Movies",
             "sem": 2,
             "exams": [
@@ -14086,7 +14086,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320010",
+            "id": "22016132001001",
             "title": "General Electives",
             "sem": 2,
             "exams": [
@@ -14096,7 +14096,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230221",
+            "id": "22000423022101",
             "title": "Indian Financial System",
             "sem": 2,
             "exams": [
@@ -14106,7 +14106,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230222",
+            "id": "22000423022201",
             "title": "Business Mathematics",
             "sem": 2,
             "exams": [
@@ -14116,7 +14116,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230223",
+            "id": "22000423022301",
             "title": "Indian Economy",
             "sem": 2,
             "exams": [
@@ -14126,7 +14126,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04231301",
+            "id": "22000423130101",
             "title": "Cost Accounting- I",
             "sem": 3,
             "exams": [
@@ -14136,7 +14136,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04231303",
+            "id": "22000423130301",
             "title": "Financial Management- I",
             "sem": 3,
             "exams": [
@@ -14146,7 +14146,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04231305",
+            "id": "22000423130501",
             "title": "Legal Aspects of Business",
             "sem": 3,
             "exams": [
@@ -14156,7 +14156,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230308",
+            "id": "22000423030801",
             "title": "Taxation- I",
             "sem": 3,
             "exams": [
@@ -14166,7 +14166,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230309",
+            "id": "22000423030901",
             "title": "Business Correspondence",
             "sem": 3,
             "exams": [
@@ -14176,7 +14176,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330009",
+            "id": "22016133000901",
             "title": "General Electives",
             "sem": 3,
             "exams": [
@@ -14186,7 +14186,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230321",
+            "id": "22000423032101",
             "title": "International Business",
             "sem": 3,
             "exams": [
@@ -14196,7 +14196,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230322",
+            "id": "22000423032201",
             "title": "Fundamentals of Stock Markets",
             "sem": 3,
             "exams": [
@@ -14206,7 +14206,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230323",
+            "id": "22000423032301",
             "title": "Public Finance",
             "sem": 3,
             "exams": [
@@ -14216,7 +14216,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230324",
+            "id": "22000423032401",
             "title": "Financial Analysis and Reporting",
             "sem": 3,
             "exams": [
@@ -14226,7 +14226,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220401",
+            "id": "22000422040101",
             "title": "PRODUCTION & OPERATIONS MANAGEMENT",
             "sem": 4,
             "exams": [
@@ -14236,7 +14236,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220403",
+            "id": "22000422040301",
             "title": "INCOME TAX – LAW AND PRACTICE",
             "sem": 4,
             "exams": [
@@ -14246,7 +14246,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220406",
+            "id": "22000422040601",
             "title": "MANAGEMENT OF SERVICES",
             "sem": 4,
             "exams": [
@@ -14256,7 +14256,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220408",
+            "id": "22000422040801",
             "title": "MANAGEMENT ACCOUNTING",
             "sem": 4,
             "exams": [
@@ -14266,7 +14266,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220409",
+            "id": "22000422040901",
             "title": "ENVIRONMENTAL STUDIES",
             "sem": 4,
             "exams": [
@@ -14276,7 +14276,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220411",
+            "id": "22000422041101",
             "title": "INTERNATIONAL BUSINESS",
             "sem": 4,
             "exams": [
@@ -14286,7 +14286,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222405",
+            "id": "22000422240501",
             "title": "ENTREPRENEURSHIP",
             "sem": 4,
             "exams": [
@@ -14296,7 +14296,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "22004193000101",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 4,
             "exams": [
@@ -14306,7 +14306,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "22004193000201",
             "title": "INSURANCE AGENT",
             "sem": 4,
             "exams": [
@@ -14316,7 +14316,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "22004193000301",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 4,
             "exams": [
@@ -14326,7 +14326,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "22004193000401",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 4,
             "exams": [
@@ -14336,7 +14336,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "22004193000501",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 4,
             "exams": [
@@ -14346,7 +14346,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "22004193000601",
             "title": "VOICE",
             "sem": 4,
             "exams": [
@@ -14356,7 +14356,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "22004193000701",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 4,
             "exams": [
@@ -14366,7 +14366,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "22004193000801",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 4,
             "exams": [
@@ -14376,7 +14376,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210004",
+            "id": "22000121000401",
             "title": "NATIONAL CADET CORPS-4",
             "sem": 4,
             "exams": [
@@ -14386,7 +14386,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04231401",
+            "id": "22000423140101",
             "title": "Cost Accounting- II",
             "sem": 4,
             "exams": [
@@ -14396,7 +14396,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04231403",
+            "id": "22000423140301",
             "title": "Financial Management- II",
             "sem": 4,
             "exams": [
@@ -14406,7 +14406,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230408",
+            "id": "22000423040801",
             "title": "Taxation- II",
             "sem": 4,
             "exams": [
@@ -14416,7 +14416,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230409",
+            "id": "22000423040901",
             "title": "Company Law",
             "sem": 4,
             "exams": [
@@ -14426,7 +14426,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230410",
+            "id": "22000423041001",
             "title": "Principles of Marketing",
             "sem": 4,
             "exams": [
@@ -14436,7 +14436,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340007",
+            "id": "22016134000701",
             "title": "General Electives",
             "sem": 4,
             "exams": [
@@ -14446,7 +14446,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230421",
+            "id": "22000423042101",
             "title": "Insurance and Risk Management",
             "sem": 4,
             "exams": [
@@ -14456,7 +14456,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230422",
+            "id": "22000423042201",
             "title": "Production and Operations Management",
             "sem": 4,
             "exams": [
@@ -14466,7 +14466,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230423",
+            "id": "22000423042301",
             "title": "Procedures & Practices in EXIM Mgmt",
             "sem": 4,
             "exams": [
@@ -14476,7 +14476,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230424",
+            "id": "22000423042401",
             "title": "E-Commerce",
             "sem": 4,
             "exams": [
@@ -14486,7 +14486,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230501",
+            "id": "22000423050101",
             "title": "Research Methodology",
             "sem": 5,
             "exams": [
@@ -14496,7 +14496,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04232507",
+            "id": "22000423250701",
             "title": "Tally",
             "sem": 5,
             "exams": [
@@ -14506,7 +14506,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230508",
+            "id": "22000423050801",
             "title": "Entrepreneurship",
             "sem": 5,
             "exams": [
@@ -14516,7 +14516,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230509",
+            "id": "22000423050901",
             "title": "Fundamentals of Investments",
             "sem": 5,
             "exams": [
@@ -14526,7 +14526,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350012",
+            "id": "22016135001201",
             "title": "Specialization",
             "sem": 5,
             "exams": [
@@ -14536,7 +14536,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230521",
+            "id": "22000423052101",
             "title": "Management Accounting",
             "sem": 5,
             "exams": [
@@ -14546,7 +14546,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230522",
+            "id": "22000423052201",
             "title": "Advanced Accounting",
             "sem": 5,
             "exams": [
@@ -14556,7 +14556,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230531",
+            "id": "22000423053101",
             "title": "Indirect Tax",
             "sem": 5,
             "exams": [
@@ -14566,7 +14566,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230532",
+            "id": "22000423053201",
             "title": "Advanced Financial Management",
             "sem": 5,
             "exams": [
@@ -14576,7 +14576,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230541",
+            "id": "22000423054101",
             "title": "Consumer Behavior",
             "sem": 5,
             "exams": [
@@ -14586,7 +14586,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230542",
+            "id": "22000423054201",
             "title": "Sales Management",
             "sem": 5,
             "exams": [
@@ -14596,7 +14596,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04231606",
+            "id": "22000423160601",
             "title": "Research Project",
             "sem": 6,
             "exams": [
@@ -14606,7 +14606,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230607",
+            "id": "22000423060701",
             "title": "Auditing",
             "sem": 6,
             "exams": [
@@ -14616,7 +14616,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230608",
+            "id": "22000423060801",
             "title": "Responsibility",
             "sem": 6,
             "exams": [
@@ -14626,7 +14626,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230609",
+            "id": "22000423060901",
             "title": "Fundamentals of Digital Marketing",
             "sem": 6,
             "exams": [
@@ -14636,7 +14636,7 @@ export const domains = [
             ]
           },
           {
-            "id": "043180601",
+            "id": "22004318060101",
             "title": "Career Readiness Programme",
             "sem": 6,
             "exams": [
@@ -14646,7 +14646,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360013",
+            "id": "22016136001301",
             "title": "Specialization",
             "sem": 6,
             "exams": [
@@ -14656,7 +14656,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161360014",
+            "id": "22016136001401",
             "title": "Advanced Auditing",
             "sem": 6,
             "exams": [
@@ -14666,7 +14666,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230631",
+            "id": "22000423063101",
             "title": "Corporate Taxation",
             "sem": 6,
             "exams": [
@@ -14676,7 +14676,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04230641",
+            "id": "22000423064101",
             "title": "Retail Marketing",
             "sem": 6,
             "exams": [
@@ -14693,7 +14693,7 @@ export const domains = [
         "title": "BBA ( Business Analytics )",
         "subjects": [
           {
-            "id": "04221101",
+            "id": "23000422110101",
             "title": "PRINCIPLES OF MANAGEMENT",
             "sem": 1,
             "exams": [
@@ -14703,7 +14703,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221102",
+            "id": "23000422110201",
             "title": "MICRO ECONOMICS",
             "sem": 1,
             "exams": [
@@ -14713,7 +14713,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04210101",
+            "id": "23000421010101",
             "title": "ANALYTICS",
             "sem": 1,
             "exams": [
@@ -14723,7 +14723,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220103",
+            "id": "23000422010301",
             "title": "FUNDAMENTALS OF ACCOUNTING",
             "sem": 1,
             "exams": [
@@ -14733,7 +14733,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220104",
+            "id": "23000422010401",
             "title": "COMPUTER ESSENTIALS & OFFICE APPLICATIONS",
             "sem": 1,
             "exams": [
@@ -14743,7 +14743,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220106",
+            "id": "23000422010601",
             "title": "MATHEMATICS FOR BUSINESS",
             "sem": 1,
             "exams": [
@@ -14753,7 +14753,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220110",
+            "id": "23000422011001",
             "title": "COMMUNICATIVE ENGLISH",
             "sem": 1,
             "exams": [
@@ -14763,7 +14763,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220107",
+            "id": "23000422010701",
             "title": "TALLY PRIME",
             "sem": 1,
             "exams": [
@@ -14773,7 +14773,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220108",
+            "id": "23000422010801",
             "title": "JEWELLERY DESIGNING",
             "sem": 1,
             "exams": [
@@ -14783,7 +14783,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220109",
+            "id": "23000422010901",
             "title": "ENVIRONMENTAL SCIENCE",
             "sem": 1,
             "exams": [
@@ -14793,7 +14793,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220205",
+            "id": "23000422020501",
             "title": "BUSINESS ENVIRONMENT",
             "sem": 2,
             "exams": [
@@ -14803,7 +14803,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220202",
+            "id": "23000422020201",
             "title": "ORGANIZATIONAL BEHAVIOR",
             "sem": 2,
             "exams": [
@@ -14813,7 +14813,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04210201",
+            "id": "23000421020101",
             "title": "DATA ANALYSIS USING PYTHON",
             "sem": 2,
             "exams": [
@@ -14823,7 +14823,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220203",
+            "id": "23000422020301",
             "title": "STATISTICS FOR BUSINESS",
             "sem": 2,
             "exams": [
@@ -14833,7 +14833,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220201",
+            "id": "23000422020101",
             "title": "MACROECONOMICS",
             "sem": 2,
             "exams": [
@@ -14843,7 +14843,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220209",
+            "id": "23000422020901",
             "title": "BUSINESS COMMUNICATION",
             "sem": 2,
             "exams": [
@@ -14853,7 +14853,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220206",
+            "id": "23000422020601",
             "title": "ADVANCED SPREADSHEET APPLICATIONS",
             "sem": 2,
             "exams": [
@@ -14863,7 +14863,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220207",
+            "id": "23000422020701",
             "title": "FASHION DESIGNING",
             "sem": 2,
             "exams": [
@@ -14873,7 +14873,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320011",
+            "id": "23016132001101",
             "title": "INDIAN BUSINESS HISTORY",
             "sem": 2,
             "exams": [
@@ -14883,7 +14883,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221301",
+            "id": "23000422130101",
             "title": "MARKETING MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -14893,7 +14893,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221305",
+            "id": "23000422130501",
             "title": "FINANCIAL MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -14903,7 +14903,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221302",
+            "id": "23000422130201",
             "title": "HUMAN RESOURCES MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -14913,7 +14913,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04210301",
+            "id": "23000421030101",
             "title": "STATISTICS & COMPUTATIONAL DATA ANALYTICS",
             "sem": 3,
             "exams": [
@@ -14923,7 +14923,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221306",
+            "id": "23000422130601",
             "title": "BUSINESS LAWS",
             "sem": 3,
             "exams": [
@@ -14933,7 +14933,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220310",
+            "id": "23000422031001",
             "title": "FOREIGN LANGUAGE",
             "sem": 3,
             "exams": [
@@ -14943,7 +14943,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220311",
+            "id": "23000422031101",
             "title": "TOURISM MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -14953,7 +14953,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220312",
+            "id": "23000422031201",
             "title": "GRAPHIC DESIGN",
             "sem": 3,
             "exams": [
@@ -14963,7 +14963,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220313",
+            "id": "23000422031301",
             "title": "CRITICAL AND LOGICAL THINKING",
             "sem": 3,
             "exams": [
@@ -14973,7 +14973,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221404",
+            "id": "23000422140401",
             "title": "INDIAN FINANCIAL SYSTEM",
             "sem": 4,
             "exams": [
@@ -14983,7 +14983,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221419",
+            "id": "23000422141901",
             "title": "RESEARCH METHODOLOGY",
             "sem": 4,
             "exams": [
@@ -14993,7 +14993,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221401",
+            "id": "23000422140101",
             "title": "MANAGEMENT",
             "sem": 4,
             "exams": [
@@ -15003,7 +15003,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04210401",
+            "id": "23000421040101",
             "title": "DATA VISUALISATION AND STORY TELLING",
             "sem": 4,
             "exams": [
@@ -15013,7 +15013,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221411",
+            "id": "23000422141101",
             "title": "INTERNATIONAL BUSINESS",
             "sem": 4,
             "exams": [
@@ -15023,7 +15023,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220418",
+            "id": "23000422041801",
             "title": "DIGITAL MARKETING",
             "sem": 4,
             "exams": [
@@ -15033,7 +15033,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220413",
+            "id": "23000422041301",
             "title": "COST ACCOUNTING",
             "sem": 4,
             "exams": [
@@ -15043,7 +15043,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220414",
+            "id": "23000422041401",
             "title": "CORPORATE ETIQUETTE",
             "sem": 4,
             "exams": [
@@ -15053,7 +15053,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220415",
+            "id": "23000422041501",
             "title": "MUTUAL FUNDS",
             "sem": 4,
             "exams": [
@@ -15063,7 +15063,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220416",
+            "id": "23000422041601",
             "title": "FINANCIAL STATEMENT ANALYSIS",
             "sem": 4,
             "exams": [
@@ -15073,7 +15073,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220417",
+            "id": "23000422041701",
             "title": "COURSE)",
             "sem": 4,
             "exams": [
@@ -15083,7 +15083,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222502",
+            "id": "23000422250201",
             "title": "STRATEGIC MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -15093,7 +15093,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220506",
+            "id": "23000422050601",
             "title": "INTERNSHIP",
             "sem": 5,
             "exams": [
@@ -15103,7 +15103,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220531",
+            "id": "23000422053101",
             "title": "INCOME TAX - LAW AND PRACTICES",
             "sem": 5,
             "exams": [
@@ -15113,7 +15113,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04210501",
+            "id": "23000421050101",
             "title": "BUSINESS",
             "sem": 5,
             "exams": [
@@ -15123,7 +15123,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04210502",
+            "id": "23000421050201",
             "title": "RISK AND FRAUD ANALYTICS",
             "sem": 5,
             "exams": [
@@ -15133,7 +15133,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221509",
+            "id": "23000422150901",
             "title": "CONSUMER BEHAVIOUR",
             "sem": 5,
             "exams": [
@@ -15143,7 +15143,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221507",
+            "id": "23000422150701",
             "title": "MANAGEMENT OF FINANCIAL MARKETS",
             "sem": 5,
             "exams": [
@@ -15153,7 +15153,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221530",
+            "id": "23000422153001",
             "title": "LABOUR WELFARE AND SOCIAL SECURITIES",
             "sem": 5,
             "exams": [
@@ -15163,7 +15163,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221510",
+            "id": "23000422151001",
             "title": "RETAIL MARKETING",
             "sem": 5,
             "exams": [
@@ -15173,7 +15173,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221529",
+            "id": "23000422152901",
             "title": "FUNDAMENTALS OF BANKING",
             "sem": 5,
             "exams": [
@@ -15183,7 +15183,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222512",
+            "id": "23000422251201",
             "title": "COMPENSATION MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -15193,7 +15193,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220534",
+            "id": "23000422053401",
             "title": "SPSS",
             "sem": 5,
             "exams": [
@@ -15203,7 +15203,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220535",
+            "id": "23000422053501",
             "title": "AI AND ML IN MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -15213,7 +15213,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220532",
+            "id": "23000422053201",
             "title": "BLOCK CHAIN TECHNOLOGY",
             "sem": 5,
             "exams": [
@@ -15223,7 +15223,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220533",
+            "id": "23000422053301",
             "title": "CYBER SECURITY",
             "sem": 5,
             "exams": [
@@ -15233,7 +15233,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221602",
+            "id": "23000422160201",
             "title": "MANAGEMENT ACCOUNTING",
             "sem": 6,
             "exams": [
@@ -15243,7 +15243,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222601",
+            "id": "23000422260101",
             "title": "GOVERNENCE",
             "sem": 6,
             "exams": [
@@ -15253,7 +15253,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220616",
+            "id": "23000422061601",
             "title": "ENTREPRENEURSHIP",
             "sem": 6,
             "exams": [
@@ -15263,7 +15263,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221614",
+            "id": "23000422161401",
             "title": "MANAGEMENT INFORMATION SYSTEMS",
             "sem": 6,
             "exams": [
@@ -15273,7 +15273,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04210601",
+            "id": "23000421060101",
             "title": "CONSUMER BEHAVIOUR ANALYTICS",
             "sem": 6,
             "exams": [
@@ -15283,7 +15283,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04210602",
+            "id": "23000421060201",
             "title": "SUPPLY CHAIN ANALYTICS",
             "sem": 6,
             "exams": [
@@ -15293,7 +15293,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220617",
+            "id": "23000422061701",
             "title": "SALES MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -15303,7 +15303,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220618",
+            "id": "23000422061801",
             "title": "GST AND CUSTOMS DUTY",
             "sem": 6,
             "exams": [
@@ -15313,7 +15313,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220619",
+            "id": "23000422061901",
             "title": "TALENT ACQUISITION",
             "sem": 6,
             "exams": [
@@ -15323,7 +15323,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220620",
+            "id": "23000422062001",
             "title": "HINDI",
             "sem": 6,
             "exams": [
@@ -15333,7 +15333,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220621",
+            "id": "23000422062101",
             "title": "SANSKRIT",
             "sem": 6,
             "exams": [
@@ -15350,7 +15350,7 @@ export const domains = [
         "title": "BBA ( Digital Marketing )",
         "subjects": [
           {
-            "id": "04221101",
+            "id": "24000422110101",
             "title": "PRINCIPLES OF MANAGEMENT",
             "sem": 1,
             "exams": [
@@ -15360,7 +15360,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221102",
+            "id": "24000422110201",
             "title": "MICRO ECONOMICS",
             "sem": 1,
             "exams": [
@@ -15370,7 +15370,7 @@ export const domains = [
             ]
           },
           {
-            "id": "044130101",
+            "id": "24004413010101",
             "title": "INTRODUCTION TO DIGITAL MARKETING",
             "sem": 1,
             "exams": [
@@ -15380,7 +15380,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220103",
+            "id": "24000422010301",
             "title": "FUNDAMENTALS OF ACCOUNTING",
             "sem": 1,
             "exams": [
@@ -15390,7 +15390,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220104",
+            "id": "24000422010401",
             "title": "COMPUTER ESSENTIALS & OFFICE APPLICATIONS",
             "sem": 1,
             "exams": [
@@ -15400,7 +15400,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220106",
+            "id": "24000422010601",
             "title": "MATHEMATICS FOR BUSINESS",
             "sem": 1,
             "exams": [
@@ -15410,7 +15410,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220110",
+            "id": "24000422011001",
             "title": "COMMUNICATIVE ENGLISH",
             "sem": 1,
             "exams": [
@@ -15420,7 +15420,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220107",
+            "id": "24000422010701",
             "title": "TALLY PRIME",
             "sem": 1,
             "exams": [
@@ -15430,7 +15430,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220108",
+            "id": "24000422010801",
             "title": "JEWELLERY DESIGNING",
             "sem": 1,
             "exams": [
@@ -15440,7 +15440,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220109",
+            "id": "24000422010901",
             "title": "ENVIRONMENTAL SCIENCE",
             "sem": 1,
             "exams": [
@@ -15450,7 +15450,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220205",
+            "id": "24000422020501",
             "title": "BUSINESS ENVIRONMENT",
             "sem": 2,
             "exams": [
@@ -15460,7 +15460,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220202",
+            "id": "24000422020201",
             "title": "ORGANIZATIONAL BEHAVIOR",
             "sem": 2,
             "exams": [
@@ -15470,7 +15470,7 @@ export const domains = [
             ]
           },
           {
-            "id": "044130201",
+            "id": "24004413020101",
             "title": "DESIGNING WEB PRESENCE",
             "sem": 2,
             "exams": [
@@ -15480,7 +15480,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221203",
+            "id": "24000422120301",
             "title": "STATISTICS FOR BUSINESS",
             "sem": 2,
             "exams": [
@@ -15490,7 +15490,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220201",
+            "id": "24000422020101",
             "title": "MACROECONOMICS",
             "sem": 2,
             "exams": [
@@ -15500,7 +15500,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220209",
+            "id": "24000422020901",
             "title": "BUSINESS COMMUNICATION",
             "sem": 2,
             "exams": [
@@ -15510,7 +15510,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220206",
+            "id": "24000422020601",
             "title": "ADVANCED SPREADSHEET APPLICATIONS",
             "sem": 2,
             "exams": [
@@ -15520,7 +15520,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220207",
+            "id": "24000422020701",
             "title": "FASHION DESIGNING",
             "sem": 2,
             "exams": [
@@ -15530,7 +15530,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320011",
+            "id": "24016132001101",
             "title": "INDIAN BUSINESS HISTORY",
             "sem": 2,
             "exams": [
@@ -15540,7 +15540,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221301",
+            "id": "24000422130101",
             "title": "MARKETING MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -15550,7 +15550,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221305",
+            "id": "24000422130501",
             "title": "FINANCIAL MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -15560,7 +15560,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221302",
+            "id": "24000422130201",
             "title": "HUMAN RESOURCES MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -15570,7 +15570,7 @@ export const domains = [
             ]
           },
           {
-            "id": "044130301",
+            "id": "24004413030101",
             "title": "CONTENT MARKETING AND STORYTELLING",
             "sem": 3,
             "exams": [
@@ -15580,7 +15580,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221306",
+            "id": "24000422130601",
             "title": "BUSINESS LAWS",
             "sem": 3,
             "exams": [
@@ -15590,7 +15590,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220310",
+            "id": "24000422031001",
             "title": "FOREIGN LANGUAGE",
             "sem": 3,
             "exams": [
@@ -15600,7 +15600,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220311",
+            "id": "24000422031101",
             "title": "TOURISM MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -15610,7 +15610,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220312",
+            "id": "24000422031201",
             "title": "GRAPHIC DESIGN",
             "sem": 3,
             "exams": [
@@ -15620,7 +15620,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220313",
+            "id": "24000422031301",
             "title": "CRITICAL AND LOGICAL THINKING",
             "sem": 3,
             "exams": [
@@ -15630,7 +15630,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221404",
+            "id": "24000422140401",
             "title": "INDIAN FINANCIAL SYSTEM",
             "sem": 4,
             "exams": [
@@ -15640,7 +15640,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221419",
+            "id": "24000422141901",
             "title": "RESEARCH METHODOLOGY",
             "sem": 4,
             "exams": [
@@ -15650,7 +15650,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221401",
+            "id": "24000422140101",
             "title": "MANAGEMENT",
             "sem": 4,
             "exams": [
@@ -15660,7 +15660,7 @@ export const domains = [
             ]
           },
           {
-            "id": "044130401",
+            "id": "24004413040101",
             "title": "SEARCH ENGINE OPTIMIZATION",
             "sem": 4,
             "exams": [
@@ -15670,7 +15670,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221411",
+            "id": "24000422141101",
             "title": "INTERNATIONAL BUSINESS",
             "sem": 4,
             "exams": [
@@ -15680,7 +15680,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220412",
+            "id": "24000422041201",
             "title": "BUSINESS ANALYTICS",
             "sem": 4,
             "exams": [
@@ -15690,7 +15690,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220413",
+            "id": "24000422041301",
             "title": "COST ACCOUNTING",
             "sem": 4,
             "exams": [
@@ -15700,7 +15700,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220414",
+            "id": "24000422041401",
             "title": "CORPORATE ETIQUETTE",
             "sem": 4,
             "exams": [
@@ -15710,7 +15710,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220415",
+            "id": "24000422041501",
             "title": "MUTUAL FUNDS",
             "sem": 4,
             "exams": [
@@ -15720,7 +15720,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220416",
+            "id": "24000422041601",
             "title": "FINANCIAL STATEMENT ANALYSIS",
             "sem": 4,
             "exams": [
@@ -15730,7 +15730,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220417",
+            "id": "24000422041701",
             "title": "COURSE)",
             "sem": 4,
             "exams": [
@@ -15740,7 +15740,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222502",
+            "id": "24000422250201",
             "title": "STRATEGIC MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -15750,7 +15750,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220506",
+            "id": "24000422050601",
             "title": "INTERNSHIP",
             "sem": 5,
             "exams": [
@@ -15760,7 +15760,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220531",
+            "id": "24000422053101",
             "title": "INCOME TAX - LAW AND PRACTICES",
             "sem": 5,
             "exams": [
@@ -15770,7 +15770,7 @@ export const domains = [
             ]
           },
           {
-            "id": "044130501",
+            "id": "24004413050101",
             "title": "MANAGE DIGITAL MARKETING CHANNELS",
             "sem": 5,
             "exams": [
@@ -15780,7 +15780,7 @@ export const domains = [
             ]
           },
           {
-            "id": "044130502",
+            "id": "24004413050201",
             "title": "SOCIAL MEDIA MARKETING",
             "sem": 5,
             "exams": [
@@ -15790,7 +15790,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221509",
+            "id": "24000422150901",
             "title": "CONSUMER BEHAVIOUR",
             "sem": 5,
             "exams": [
@@ -15800,7 +15800,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221507",
+            "id": "24000422150701",
             "title": "MANAGEMENT OF FINANCIAL MARKETS",
             "sem": 5,
             "exams": [
@@ -15810,7 +15810,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221530",
+            "id": "24000422153001",
             "title": "LABOUR WELFARE AND SOCIAL SECURITIES",
             "sem": 5,
             "exams": [
@@ -15820,7 +15820,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221510",
+            "id": "24000422151001",
             "title": "RETAIL MARKETING",
             "sem": 5,
             "exams": [
@@ -15830,7 +15830,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221529",
+            "id": "24000422152901",
             "title": "FUNDAMENTALS OF BANKING",
             "sem": 5,
             "exams": [
@@ -15840,7 +15840,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222512",
+            "id": "24000422251201",
             "title": "COMPENSATION MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -15850,7 +15850,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220534",
+            "id": "24000422053401",
             "title": "SPSS",
             "sem": 5,
             "exams": [
@@ -15860,7 +15860,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220535",
+            "id": "24000422053501",
             "title": "AI AND ML IN MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -15870,7 +15870,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220532",
+            "id": "24000422053201",
             "title": "BLOCK CHAIN TECHNOLOGY",
             "sem": 5,
             "exams": [
@@ -15880,7 +15880,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220533",
+            "id": "24000422053301",
             "title": "CYBER SECURITY",
             "sem": 5,
             "exams": [
@@ -15890,7 +15890,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221602",
+            "id": "24000422160201",
             "title": "MANAGEMENT ACCOUNTING",
             "sem": 6,
             "exams": [
@@ -15900,7 +15900,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222601",
+            "id": "24000422260101",
             "title": "GOVERNENCE",
             "sem": 6,
             "exams": [
@@ -15910,7 +15910,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220616",
+            "id": "24000422061601",
             "title": "ENTREPRENEURSHIP",
             "sem": 6,
             "exams": [
@@ -15920,7 +15920,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221614",
+            "id": "24000422161401",
             "title": "MANAGEMENT INFORMATION SYSTEMS",
             "sem": 6,
             "exams": [
@@ -15930,7 +15930,7 @@ export const domains = [
             ]
           },
           {
-            "id": "044130601",
+            "id": "24004413060101",
             "title": "WEB ANALYTICS",
             "sem": 6,
             "exams": [
@@ -15940,7 +15940,7 @@ export const domains = [
             ]
           },
           {
-            "id": "044130602",
+            "id": "24004413060201",
             "title": "GENERATIVE AI FOR DIGITAL MARKETING",
             "sem": 6,
             "exams": [
@@ -15950,7 +15950,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220617",
+            "id": "24000422061701",
             "title": "SALES MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -15960,7 +15960,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220618",
+            "id": "24000422061801",
             "title": "GST AND CUSTOMS DUTY",
             "sem": 6,
             "exams": [
@@ -15970,7 +15970,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220619",
+            "id": "24000422061901",
             "title": "TALENT ACQUISITION",
             "sem": 6,
             "exams": [
@@ -15980,7 +15980,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220620",
+            "id": "24000422062001",
             "title": "HINDI",
             "sem": 6,
             "exams": [
@@ -15990,7 +15990,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220621",
+            "id": "24000422062101",
             "title": "SANSKRIT",
             "sem": 6,
             "exams": [
@@ -16007,7 +16007,7 @@ export const domains = [
         "title": "BBA ( International Business)",
         "subjects": [
           {
-            "id": "04221101",
+            "id": "25000422110101",
             "title": "PRINCIPLES OF MANAGEMENT",
             "sem": 1,
             "exams": [
@@ -16017,7 +16017,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221102",
+            "id": "25000422110201",
             "title": "MICRO ECONOMICS",
             "sem": 1,
             "exams": [
@@ -16027,7 +16027,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04920101",
+            "id": "25000492010101",
             "title": "INTRODUCTION TO INTERNATIONAL BUSINESS",
             "sem": 1,
             "exams": [
@@ -16037,7 +16037,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220103",
+            "id": "25000422010301",
             "title": "FUNDAMENTALS OF ACCOUNTING",
             "sem": 1,
             "exams": [
@@ -16047,7 +16047,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220104",
+            "id": "25000422010401",
             "title": "COMPUTER ESSENTIALS & OFFICE APPLICATIONS",
             "sem": 1,
             "exams": [
@@ -16057,7 +16057,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220106",
+            "id": "25000422010601",
             "title": "MATHEMATICS FOR BUSINESS",
             "sem": 1,
             "exams": [
@@ -16067,7 +16067,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220110",
+            "id": "25000422011001",
             "title": "COMMUNICATIVE ENGLISH",
             "sem": 1,
             "exams": [
@@ -16077,7 +16077,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220107",
+            "id": "25000422010701",
             "title": "TALLY PRIME",
             "sem": 1,
             "exams": [
@@ -16087,7 +16087,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220108",
+            "id": "25000422010801",
             "title": "JEWELLERY DESIGNING",
             "sem": 1,
             "exams": [
@@ -16097,7 +16097,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220109",
+            "id": "25000422010901",
             "title": "ENVIRONMENTAL SCIENCE",
             "sem": 1,
             "exams": [
@@ -16107,7 +16107,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220205",
+            "id": "25000422020501",
             "title": "BUSINESS ENVIRONMENT",
             "sem": 2,
             "exams": [
@@ -16117,7 +16117,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220202",
+            "id": "25000422020201",
             "title": "ORGANIZATIONAL BEHAVIOR",
             "sem": 2,
             "exams": [
@@ -16127,7 +16127,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04920201",
+            "id": "25000492020101",
             "title": "INTERNATIONAL BUSINESS PROCEDURES",
             "sem": 2,
             "exams": [
@@ -16137,7 +16137,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221203",
+            "id": "25000422120301",
             "title": "STATISTICS FOR BUSINESS",
             "sem": 2,
             "exams": [
@@ -16147,7 +16147,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220201",
+            "id": "25000422020101",
             "title": "MACROECONOMICS",
             "sem": 2,
             "exams": [
@@ -16157,7 +16157,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220209",
+            "id": "25000422020901",
             "title": "BUSINESS COMMUNICATION",
             "sem": 2,
             "exams": [
@@ -16167,7 +16167,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220206",
+            "id": "25000422020601",
             "title": "ADVANCED SPREADSHEET APPLICATIONS",
             "sem": 2,
             "exams": [
@@ -16177,7 +16177,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220207",
+            "id": "25000422020701",
             "title": "FASHION DESIGNING",
             "sem": 2,
             "exams": [
@@ -16187,7 +16187,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320011",
+            "id": "25016132001101",
             "title": "INDIAN BUSINESS HISTORY",
             "sem": 2,
             "exams": [
@@ -16197,7 +16197,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221301",
+            "id": "25000422130101",
             "title": "MARKETING MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -16207,7 +16207,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221305",
+            "id": "25000422130501",
             "title": "FINANCIAL MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -16217,7 +16217,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221302",
+            "id": "25000422130201",
             "title": "HUMAN RESOURCES MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -16227,7 +16227,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04920301",
+            "id": "25000492030101",
             "title": "MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -16237,7 +16237,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221306",
+            "id": "25000422130601",
             "title": "BUSINESS LAWS",
             "sem": 3,
             "exams": [
@@ -16247,7 +16247,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220310",
+            "id": "25000422031001",
             "title": "FOREIGN LANGUAGE",
             "sem": 3,
             "exams": [
@@ -16257,7 +16257,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220311",
+            "id": "25000422031101",
             "title": "TOURISM MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -16267,7 +16267,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220312",
+            "id": "25000422031201",
             "title": "GRAPHIC DESIGN",
             "sem": 3,
             "exams": [
@@ -16277,7 +16277,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220313",
+            "id": "25000422031301",
             "title": "CRITICAL AND LOGICAL THINKING",
             "sem": 3,
             "exams": [
@@ -16287,7 +16287,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221404",
+            "id": "25000422140401",
             "title": "INDIAN FINANCIAL SYSTEM",
             "sem": 4,
             "exams": [
@@ -16297,7 +16297,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221419",
+            "id": "25000422141901",
             "title": "RESEARCH METHODOLOGY",
             "sem": 4,
             "exams": [
@@ -16307,7 +16307,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221401",
+            "id": "25000422140101",
             "title": "MANAGEMENT",
             "sem": 4,
             "exams": [
@@ -16317,7 +16317,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04920401",
+            "id": "25000492040101",
             "title": "INTERNATIONAL MARKETING",
             "sem": 4,
             "exams": [
@@ -16327,7 +16327,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220418",
+            "id": "25000422041801",
             "title": "DIGITAL MARKETING",
             "sem": 4,
             "exams": [
@@ -16337,7 +16337,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220412",
+            "id": "25000422041201",
             "title": "BUSINESS ANALYTICS",
             "sem": 4,
             "exams": [
@@ -16347,7 +16347,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220413",
+            "id": "25000422041301",
             "title": "COST ACCOUNTING",
             "sem": 4,
             "exams": [
@@ -16357,7 +16357,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220414",
+            "id": "25000422041401",
             "title": "CORPORATE ETIQUETTE",
             "sem": 4,
             "exams": [
@@ -16367,7 +16367,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220415",
+            "id": "25000422041501",
             "title": "MUTUAL FUNDS",
             "sem": 4,
             "exams": [
@@ -16377,7 +16377,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220416",
+            "id": "25000422041601",
             "title": "FINANCIAL STATEMENT ANALYSIS",
             "sem": 4,
             "exams": [
@@ -16387,7 +16387,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220417",
+            "id": "25000422041701",
             "title": "COURSE)",
             "sem": 4,
             "exams": [
@@ -16397,7 +16397,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222502",
+            "id": "25000422250201",
             "title": "STRATEGIC MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -16407,7 +16407,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220506",
+            "id": "25000422050601",
             "title": "INTERNSHIP",
             "sem": 5,
             "exams": [
@@ -16417,7 +16417,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220531",
+            "id": "25000422053101",
             "title": "INCOME TAX - LAW AND PRACTICES",
             "sem": 5,
             "exams": [
@@ -16427,7 +16427,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04920501",
+            "id": "25000492050101",
             "title": "INTERNATIONAL SUPPLY CHAIN MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -16437,7 +16437,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04920502",
+            "id": "25000492050201",
             "title": "GLOBAL BUSINESS ETHICS AND LAWS",
             "sem": 5,
             "exams": [
@@ -16447,7 +16447,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221509",
+            "id": "25000422150901",
             "title": "CONSUMER BEHAVIOUR",
             "sem": 5,
             "exams": [
@@ -16457,7 +16457,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221507",
+            "id": "25000422150701",
             "title": "MANAGEMENT OF FINANCIAL MARKETS",
             "sem": 5,
             "exams": [
@@ -16467,7 +16467,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221530",
+            "id": "25000422153001",
             "title": "LABOUR WELFARE AND SOCIAL SECURITIES",
             "sem": 5,
             "exams": [
@@ -16477,7 +16477,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221510",
+            "id": "25000422151001",
             "title": "RETAIL MARKETING",
             "sem": 5,
             "exams": [
@@ -16487,7 +16487,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221529",
+            "id": "25000422152901",
             "title": "FUNDAMENTALS OF BANKING",
             "sem": 5,
             "exams": [
@@ -16497,7 +16497,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222512",
+            "id": "25000422251201",
             "title": "COMPENSATION MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -16507,7 +16507,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220534",
+            "id": "25000422053401",
             "title": "SPSS",
             "sem": 5,
             "exams": [
@@ -16517,7 +16517,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220535",
+            "id": "25000422053501",
             "title": "AI AND ML IN MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -16527,7 +16527,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220532",
+            "id": "25000422053201",
             "title": "BLOCK CHAIN TECHNOLOGY",
             "sem": 5,
             "exams": [
@@ -16537,7 +16537,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220533",
+            "id": "25000422053301",
             "title": "CYBER SECURITY",
             "sem": 5,
             "exams": [
@@ -16547,7 +16547,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221602",
+            "id": "25000422160201",
             "title": "MANAGEMENT ACCOUNTING",
             "sem": 6,
             "exams": [
@@ -16557,7 +16557,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222601",
+            "id": "25000422260101",
             "title": "GOVERNENCE",
             "sem": 6,
             "exams": [
@@ -16567,7 +16567,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220616",
+            "id": "25000422061601",
             "title": "ENTREPRENEURSHIP",
             "sem": 6,
             "exams": [
@@ -16577,7 +16577,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221614",
+            "id": "25000422161401",
             "title": "MANAGEMENT INFORMATION SYSTEMS",
             "sem": 6,
             "exams": [
@@ -16587,7 +16587,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04920601",
+            "id": "25000492060101",
             "title": "MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -16597,7 +16597,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04920602",
+            "id": "25000492060201",
             "title": "CROSS CULTURAL BUSINESS COMMUNICATION",
             "sem": 6,
             "exams": [
@@ -16607,7 +16607,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220617",
+            "id": "25000422061701",
             "title": "SALES MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -16617,7 +16617,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220618",
+            "id": "25000422061801",
             "title": "GST AND CUSTOMS DUTY",
             "sem": 6,
             "exams": [
@@ -16627,7 +16627,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220619",
+            "id": "25000422061901",
             "title": "TALENT ACQUISITION",
             "sem": 6,
             "exams": [
@@ -16637,7 +16637,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220620",
+            "id": "25000422062001",
             "title": "HINDI",
             "sem": 6,
             "exams": [
@@ -16647,7 +16647,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220621",
+            "id": "25000422062101",
             "title": "SANSKRIT",
             "sem": 6,
             "exams": [
@@ -16664,7 +16664,7 @@ export const domains = [
         "title": "BBA in Global Business Management",
         "subjects": [
           {
-            "id": "04220101",
+            "id": "26000422010101",
             "title": "PRINCIPLES OF MANAGEMENT",
             "sem": 1,
             "exams": [
@@ -16674,7 +16674,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220102",
+            "id": "26000422010201",
             "title": "MICRO ECONOMICS",
             "sem": 1,
             "exams": [
@@ -16684,7 +16684,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220103",
+            "id": "26000422010301",
             "title": "FUNDAMENTALS OF ACCOUNTING",
             "sem": 1,
             "exams": [
@@ -16694,7 +16694,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220104",
+            "id": "26000422010401",
             "title": "COMPUTER ESSENTIALS & OFFICE APPLICATIONS",
             "sem": 1,
             "exams": [
@@ -16704,7 +16704,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220105",
+            "id": "26000422010501",
             "title": "BUSINESS LAWS",
             "sem": 1,
             "exams": [
@@ -16714,7 +16714,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120102",
+            "id": "26041912010201",
             "title": "READING & WRITING FOR BUSINESS",
             "sem": 1,
             "exams": [
@@ -16724,7 +16724,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120103",
+            "id": "26041912010301",
             "title": "SPEAKING & PRESENTATION SKILLS",
             "sem": 1,
             "exams": [
@@ -16734,7 +16734,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210001",
+            "id": "26000121000101",
             "title": "NATIONAL CADET CORPS-1",
             "sem": 1,
             "exams": [
@@ -16744,7 +16744,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220201",
+            "id": "26000422020101",
             "title": "MACROECONOMICS",
             "sem": 2,
             "exams": [
@@ -16754,7 +16754,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220202",
+            "id": "26000422020201",
             "title": "ORGANIZATIONAL BEHAVIOR",
             "sem": 2,
             "exams": [
@@ -16764,7 +16764,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220203",
+            "id": "26000422020301",
             "title": "STATISTICS FOR BUSINESS",
             "sem": 2,
             "exams": [
@@ -16774,7 +16774,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220204",
+            "id": "26000422020401",
             "title": "HUMAN RESOURCE MANAGEMENT",
             "sem": 2,
             "exams": [
@@ -16784,7 +16784,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220205",
+            "id": "26000422020501",
             "title": "BUSINESS ENVIRONMENT",
             "sem": 2,
             "exams": [
@@ -16794,7 +16794,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "26004193000101",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 2,
             "exams": [
@@ -16804,7 +16804,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "26004193000201",
             "title": "INSURANCE AGENT",
             "sem": 2,
             "exams": [
@@ -16814,7 +16814,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "26004193000301",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 2,
             "exams": [
@@ -16824,7 +16824,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "26004193000401",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 2,
             "exams": [
@@ -16834,7 +16834,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "26004193000501",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 2,
             "exams": [
@@ -16844,7 +16844,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "26004193000601",
             "title": "VOICE",
             "sem": 2,
             "exams": [
@@ -16854,7 +16854,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "26004193000701",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 2,
             "exams": [
@@ -16864,7 +16864,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "26004193000801",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 2,
             "exams": [
@@ -16874,7 +16874,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120152",
+            "id": "26041912015201",
             "title": "ENGLISH FOR WORKPLACE",
             "sem": 2,
             "exams": [
@@ -16884,7 +16884,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120153",
+            "id": "26041912015301",
             "title": "ENGLISH THROUGH MOVIES",
             "sem": 2,
             "exams": [
@@ -16894,7 +16894,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220301",
+            "id": "26000422030101",
             "title": "MARKETING MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -16904,7 +16904,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220305",
+            "id": "26000422030501",
             "title": "FINANCIAL MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -16914,7 +16914,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220308",
+            "id": "26000422030801",
             "title": "INDIAN FINANCIAL SYSTEM",
             "sem": 3,
             "exams": [
@@ -16924,7 +16924,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220309",
+            "id": "26000422030901",
             "title": "COST ACCOUNTING",
             "sem": 3,
             "exams": [
@@ -16934,7 +16934,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221304",
+            "id": "26000422130401",
             "title": "RESEARCH METHODOLOGY",
             "sem": 3,
             "exams": [
@@ -16944,7 +16944,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221307",
+            "id": "26000422130701",
             "title": "FUNDAMENTALS OF DIGITAL MARKETING",
             "sem": 3,
             "exams": [
@@ -16954,7 +16954,7 @@ export const domains = [
             ]
           },
           {
-            "id": "043180301",
+            "id": "26004318030101",
             "title": "CAREER READINESS PROGRAM",
             "sem": 3,
             "exams": [
@@ -16964,7 +16964,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210003",
+            "id": "26000121000301",
             "title": "NATIONAL CADET CORPS-3",
             "sem": 3,
             "exams": [
@@ -16974,7 +16974,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220401",
+            "id": "26000422040101",
             "title": "PRODUCTION & OPERATIONS MANAGEMENT",
             "sem": 4,
             "exams": [
@@ -16984,7 +16984,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220403",
+            "id": "26000422040301",
             "title": "INCOME TAX – LAW AND PRACTICE",
             "sem": 4,
             "exams": [
@@ -16994,7 +16994,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220406",
+            "id": "26000422040601",
             "title": "MANAGEMENT OF SERVICES",
             "sem": 4,
             "exams": [
@@ -17004,7 +17004,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220408",
+            "id": "26000422040801",
             "title": "MANAGEMENT ACCOUNTING",
             "sem": 4,
             "exams": [
@@ -17014,7 +17014,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220409",
+            "id": "26000422040901",
             "title": "ENVIRONMENTAL STUDIES",
             "sem": 4,
             "exams": [
@@ -17024,7 +17024,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220411",
+            "id": "26000422041101",
             "title": "INTERNATIONAL BUSINESS",
             "sem": 4,
             "exams": [
@@ -17034,7 +17034,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222405",
+            "id": "26000422240501",
             "title": "ENTREPRENEURSHIP",
             "sem": 4,
             "exams": [
@@ -17044,7 +17044,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "26004193000102",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 4,
             "exams": [
@@ -17054,7 +17054,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "26004193000202",
             "title": "INSURANCE AGENT",
             "sem": 4,
             "exams": [
@@ -17064,7 +17064,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "26004193000302",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 4,
             "exams": [
@@ -17074,7 +17074,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "26004193000402",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 4,
             "exams": [
@@ -17084,7 +17084,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "26004193000502",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 4,
             "exams": [
@@ -17094,7 +17094,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "26004193000602",
             "title": "VOICE",
             "sem": 4,
             "exams": [
@@ -17104,7 +17104,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "26004193000702",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 4,
             "exams": [
@@ -17114,7 +17114,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "26004193000802",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 4,
             "exams": [
@@ -17124,7 +17124,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210004",
+            "id": "26000121000401",
             "title": "NATIONAL CADET CORPS-4",
             "sem": 4,
             "exams": [
@@ -17134,7 +17134,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220506",
+            "id": "26000422050601",
             "title": "INTERNSHIP",
             "sem": 5,
             "exams": [
@@ -17144,7 +17144,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220507",
+            "id": "26000422050701",
             "title": "MANAGEMENT OF FINANCIAL MARKETS",
             "sem": 5,
             "exams": [
@@ -17154,7 +17154,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220509",
+            "id": "26000422050901",
             "title": "CONSUMER BEHAVIOUR",
             "sem": 5,
             "exams": [
@@ -17164,7 +17164,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220510",
+            "id": "26000422051001",
             "title": "RETAIL MARKETING",
             "sem": 5,
             "exams": [
@@ -17174,7 +17174,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220529",
+            "id": "26000422052901",
             "title": "FUNDAMENTALS OF BANKING",
             "sem": 5,
             "exams": [
@@ -17184,7 +17184,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220530",
+            "id": "26000422053001",
             "title": "LABOUR WELFARE & SOCIAL SECURITIES",
             "sem": 5,
             "exams": [
@@ -17194,7 +17194,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221501",
+            "id": "26000422150101",
             "title": "OPERATIONS RESEARCH",
             "sem": 5,
             "exams": [
@@ -17204,7 +17204,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221502",
+            "id": "26000422150201",
             "title": "STRATEGIC MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -17214,7 +17214,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221512",
+            "id": "26000422151201",
             "title": "COMPENSATION MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -17224,7 +17224,7 @@ export const domains = [
             ]
           },
           {
-            "id": "043181501",
+            "id": "26004318150101",
             "title": "CAREER READINESS PROGRAM",
             "sem": 5,
             "exams": [
@@ -17234,7 +17234,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210005",
+            "id": "26000121000501",
             "title": "NATIONAL CADET CORPS-5",
             "sem": 5,
             "exams": [
@@ -17244,7 +17244,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220606",
+            "id": "26000422060601",
             "title": "ADVERTISING MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -17254,7 +17254,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220613",
+            "id": "26000422061301",
             "title": "STATEMENTS",
             "sem": 6,
             "exams": [
@@ -17264,7 +17264,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220614",
+            "id": "26000422061401",
             "title": "MANAGEMENT INFORMATION SYSTEM",
             "sem": 6,
             "exams": [
@@ -17274,7 +17274,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220615",
+            "id": "26000422061501",
             "title": "RESEARCH PROJECT",
             "sem": 6,
             "exams": [
@@ -17284,7 +17284,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221601",
+            "id": "26000422160101",
             "title": "BUSINESS ETHICS & CORPORATE GOVERNANCE",
             "sem": 6,
             "exams": [
@@ -17294,7 +17294,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221605",
+            "id": "26000422160501",
             "title": "ADVANCED FINANCIAL MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -17304,7 +17304,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221607",
+            "id": "26000422160701",
             "title": "CHANGE MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -17314,7 +17314,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "26004193000103",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 6,
             "exams": [
@@ -17324,7 +17324,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "26004193000203",
             "title": "INSURANCE AGENT",
             "sem": 6,
             "exams": [
@@ -17334,7 +17334,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "26004193000303",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 6,
             "exams": [
@@ -17344,7 +17344,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "26004193000403",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 6,
             "exams": [
@@ -17354,7 +17354,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "26004193000503",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 6,
             "exams": [
@@ -17364,7 +17364,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "26004193000603",
             "title": "VOICE",
             "sem": 6,
             "exams": [
@@ -17374,7 +17374,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "26004193000703",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 6,
             "exams": [
@@ -17384,7 +17384,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "26004193000803",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 6,
             "exams": [
@@ -18552,7 +18552,7 @@ export const domains = [
         "title": "BBA Aviation",
         "subjects": [
           {
-            "id": "04220101",
+            "id": "27000422010101",
             "title": "PRINCIPLES OF MANAGEMENT",
             "sem": 1,
             "exams": [
@@ -18562,7 +18562,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220102",
+            "id": "27000422010201",
             "title": "MICRO ECONOMICS",
             "sem": 1,
             "exams": [
@@ -18572,7 +18572,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220103",
+            "id": "27000422010301",
             "title": "FUNDAMENTALS OF ACCOUNTING",
             "sem": 1,
             "exams": [
@@ -18582,7 +18582,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220104",
+            "id": "27000422010401",
             "title": "COMPUTER ESSENTIALS & OFFICE APPLICATIONS",
             "sem": 1,
             "exams": [
@@ -18592,7 +18592,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220105",
+            "id": "27000422010501",
             "title": "BUSINESS LAWS",
             "sem": 1,
             "exams": [
@@ -18602,7 +18602,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120102",
+            "id": "27041912010201",
             "title": "READING & WRITING FOR BUSINESS",
             "sem": 1,
             "exams": [
@@ -18612,7 +18612,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120103",
+            "id": "27041912010301",
             "title": "SPEAKING & PRESENTATION SKILLS",
             "sem": 1,
             "exams": [
@@ -18622,7 +18622,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210001",
+            "id": "27000121000101",
             "title": "NATIONAL CADET CORPS-1",
             "sem": 1,
             "exams": [
@@ -18632,7 +18632,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220201",
+            "id": "27000422020101",
             "title": "MACROECONOMICS",
             "sem": 2,
             "exams": [
@@ -18642,7 +18642,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220202",
+            "id": "27000422020201",
             "title": "ORGANIZATIONAL BEHAVIOR",
             "sem": 2,
             "exams": [
@@ -18652,7 +18652,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220203",
+            "id": "27000422020301",
             "title": "STATISTICS FOR BUSINESS",
             "sem": 2,
             "exams": [
@@ -18662,7 +18662,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220204",
+            "id": "27000422020401",
             "title": "HUMAN RESOURCE MANAGEMENT",
             "sem": 2,
             "exams": [
@@ -18672,7 +18672,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220205",
+            "id": "27000422020501",
             "title": "BUSINESS ENVIRONMENT",
             "sem": 2,
             "exams": [
@@ -18682,7 +18682,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "27004193000101",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 2,
             "exams": [
@@ -18692,7 +18692,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "27004193000201",
             "title": "INSURANCE AGENT",
             "sem": 2,
             "exams": [
@@ -18702,7 +18702,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "27004193000301",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 2,
             "exams": [
@@ -18712,7 +18712,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "27004193000401",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 2,
             "exams": [
@@ -18722,7 +18722,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "27004193000501",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 2,
             "exams": [
@@ -18732,7 +18732,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "27004193000601",
             "title": "VOICE",
             "sem": 2,
             "exams": [
@@ -18742,7 +18742,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "27004193000701",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 2,
             "exams": [
@@ -18752,7 +18752,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "27004193000801",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 2,
             "exams": [
@@ -18762,7 +18762,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120152",
+            "id": "27041912015201",
             "title": "ENGLISH FOR WORKPLACE",
             "sem": 2,
             "exams": [
@@ -18772,7 +18772,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0419120153",
+            "id": "27041912015301",
             "title": "ENGLISH THROUGH MOVIES",
             "sem": 2,
             "exams": [
@@ -18782,7 +18782,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220301",
+            "id": "27000422030101",
             "title": "MARKETING MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -18792,7 +18792,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220305",
+            "id": "27000422030501",
             "title": "FINANCIAL MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -18802,7 +18802,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220308",
+            "id": "27000422030801",
             "title": "INDIAN FINANCIAL SYSTEM",
             "sem": 3,
             "exams": [
@@ -18812,7 +18812,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220309",
+            "id": "27000422030901",
             "title": "COST ACCOUNTING",
             "sem": 3,
             "exams": [
@@ -18822,7 +18822,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221304",
+            "id": "27000422130401",
             "title": "RESEARCH METHODOLOGY",
             "sem": 3,
             "exams": [
@@ -18832,7 +18832,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221307",
+            "id": "27000422130701",
             "title": "FUNDAMENTALS OF DIGITAL MARKETING",
             "sem": 3,
             "exams": [
@@ -18842,7 +18842,7 @@ export const domains = [
             ]
           },
           {
-            "id": "043180301",
+            "id": "27004318030101",
             "title": "CAREER READINESS PROGRAM",
             "sem": 3,
             "exams": [
@@ -18852,7 +18852,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210003",
+            "id": "27000121000301",
             "title": "NATIONAL CADET CORPS-3",
             "sem": 3,
             "exams": [
@@ -18862,7 +18862,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220401",
+            "id": "27000422040101",
             "title": "PRODUCTION & OPERATIONS MANAGEMENT",
             "sem": 4,
             "exams": [
@@ -18872,7 +18872,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220403",
+            "id": "27000422040301",
             "title": "INCOME TAX – LAW AND PRACTICE",
             "sem": 4,
             "exams": [
@@ -18882,7 +18882,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220406",
+            "id": "27000422040601",
             "title": "MANAGEMENT OF SERVICES",
             "sem": 4,
             "exams": [
@@ -18892,7 +18892,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220408",
+            "id": "27000422040801",
             "title": "MANAGEMENT ACCOUNTING",
             "sem": 4,
             "exams": [
@@ -18902,7 +18902,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220409",
+            "id": "27000422040901",
             "title": "ENVIRONMENTAL STUDIES",
             "sem": 4,
             "exams": [
@@ -18912,7 +18912,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220411",
+            "id": "27000422041101",
             "title": "INTERNATIONAL BUSINESS",
             "sem": 4,
             "exams": [
@@ -18922,7 +18922,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04222405",
+            "id": "27000422240501",
             "title": "ENTREPRENEURSHIP",
             "sem": 4,
             "exams": [
@@ -18932,7 +18932,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "27004193000102",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 4,
             "exams": [
@@ -18942,7 +18942,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "27004193000202",
             "title": "INSURANCE AGENT",
             "sem": 4,
             "exams": [
@@ -18952,7 +18952,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "27004193000302",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 4,
             "exams": [
@@ -18962,7 +18962,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "27004193000402",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 4,
             "exams": [
@@ -18972,7 +18972,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "27004193000502",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 4,
             "exams": [
@@ -18982,7 +18982,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "27004193000602",
             "title": "VOICE",
             "sem": 4,
             "exams": [
@@ -18992,7 +18992,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "27004193000702",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 4,
             "exams": [
@@ -19002,7 +19002,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "27004193000802",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 4,
             "exams": [
@@ -19012,7 +19012,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210004",
+            "id": "27000121000401",
             "title": "NATIONAL CADET CORPS-4",
             "sem": 4,
             "exams": [
@@ -19022,7 +19022,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220506",
+            "id": "27000422050601",
             "title": "INTERNSHIP",
             "sem": 5,
             "exams": [
@@ -19032,7 +19032,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220507",
+            "id": "27000422050701",
             "title": "MANAGEMENT OF FINANCIAL MARKETS",
             "sem": 5,
             "exams": [
@@ -19042,7 +19042,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220509",
+            "id": "27000422050901",
             "title": "CONSUMER BEHAVIOUR",
             "sem": 5,
             "exams": [
@@ -19052,7 +19052,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220510",
+            "id": "27000422051001",
             "title": "RETAIL MARKETING",
             "sem": 5,
             "exams": [
@@ -19062,7 +19062,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220529",
+            "id": "27000422052901",
             "title": "FUNDAMENTALS OF BANKING",
             "sem": 5,
             "exams": [
@@ -19072,7 +19072,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220530",
+            "id": "27000422053001",
             "title": "LABOUR WELFARE & SOCIAL SECURITIES",
             "sem": 5,
             "exams": [
@@ -19082,7 +19082,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221501",
+            "id": "27000422150101",
             "title": "OPERATIONS RESEARCH",
             "sem": 5,
             "exams": [
@@ -19092,7 +19092,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221502",
+            "id": "27000422150201",
             "title": "STRATEGIC MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -19102,7 +19102,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221512",
+            "id": "27000422151201",
             "title": "COMPENSATION MANAGEMENT",
             "sem": 5,
             "exams": [
@@ -19112,7 +19112,7 @@ export const domains = [
             ]
           },
           {
-            "id": "043181501",
+            "id": "27004318150101",
             "title": "CAREER READINESS PROGRAM",
             "sem": 5,
             "exams": [
@@ -19122,7 +19122,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210005",
+            "id": "27000121000501",
             "title": "NATIONAL CADET CORPS-5",
             "sem": 5,
             "exams": [
@@ -19132,7 +19132,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220606",
+            "id": "27000422060601",
             "title": "ADVERTISING MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -19142,7 +19142,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220613",
+            "id": "27000422061301",
             "title": "STATEMENTS",
             "sem": 6,
             "exams": [
@@ -19152,7 +19152,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220614",
+            "id": "27000422061401",
             "title": "MANAGEMENT INFORMATION SYSTEM",
             "sem": 6,
             "exams": [
@@ -19162,7 +19162,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220615",
+            "id": "27000422061501",
             "title": "RESEARCH PROJECT",
             "sem": 6,
             "exams": [
@@ -19172,7 +19172,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221601",
+            "id": "27000422160101",
             "title": "BUSINESS ETHICS & CORPORATE GOVERNANCE",
             "sem": 6,
             "exams": [
@@ -19182,7 +19182,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221605",
+            "id": "27000422160501",
             "title": "ADVANCED FINANCIAL MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -19192,7 +19192,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04221607",
+            "id": "27000422160701",
             "title": "CHANGE MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -19202,7 +19202,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930001",
+            "id": "27004193000103",
             "title": "ACCOUNTS EXECUTIVE",
             "sem": 6,
             "exams": [
@@ -19212,7 +19212,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930002",
+            "id": "27004193000203",
             "title": "INSURANCE AGENT",
             "sem": 6,
             "exams": [
@@ -19222,7 +19222,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930003",
+            "id": "27004193000303",
             "title": "MUTUAL FUND DISTRIBUTOR",
             "sem": 6,
             "exams": [
@@ -19232,7 +19232,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930004",
+            "id": "27004193000403",
             "title": "CREDIT PROCESSING OFFICER",
             "sem": 6,
             "exams": [
@@ -19242,7 +19242,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930005",
+            "id": "27004193000503",
             "title": "MICROFINANCE EXECUTIVE",
             "sem": 6,
             "exams": [
@@ -19252,7 +19252,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930006",
+            "id": "27004193000603",
             "title": "VOICE",
             "sem": 6,
             "exams": [
@@ -19262,7 +19262,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930007",
+            "id": "27004193000703",
             "title": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
             "sem": 6,
             "exams": [
@@ -19272,7 +19272,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041930008",
+            "id": "27004193000803",
             "title": "BUSINESS CORRESPONDENT / FACILITATOR",
             "sem": 6,
             "exams": [
@@ -19630,7 +19630,7 @@ export const domains = [
         "title": "MBA",
         "subjects": [
           {
-            "id": "041321101",
+            "id": "28004132110101",
             "title": "Accounting for Managers",
             "sem": 1,
             "exams": [
@@ -19640,7 +19640,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321111",
+            "id": "28004132111101",
             "title": "Economics for Decision Making",
             "sem": 1,
             "exams": [
@@ -19650,7 +19650,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321106",
+            "id": "28004132110601",
             "title": "Business Communication",
             "sem": 1,
             "exams": [
@@ -19660,7 +19660,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320147",
+            "id": "28004132014701",
             "title": "Behaviour",
             "sem": 1,
             "exams": [
@@ -19670,7 +19670,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320148",
+            "id": "28004132014801",
             "title": "Business Statistics",
             "sem": 1,
             "exams": [
@@ -19680,7 +19680,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320149",
+            "id": "28004132014901",
             "title": "Artificial Intelligence for Managers",
             "sem": 1,
             "exams": [
@@ -19690,7 +19690,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041322109",
+            "id": "28004132210901",
             "title": "Advanced Excel",
             "sem": 1,
             "exams": [
@@ -19700,7 +19700,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320150",
+            "id": "28004132015001",
             "title": "Sustainability and Environment",
             "sem": 1,
             "exams": [
@@ -19710,7 +19710,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321201",
+            "id": "28004132120101",
             "title": "Financial Management",
             "sem": 2,
             "exams": [
@@ -19720,7 +19720,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321202",
+            "id": "28004132120201",
             "title": "Human Resources Management",
             "sem": 2,
             "exams": [
@@ -19730,7 +19730,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041322203",
+            "id": "28004132220301",
             "title": "Marketing Management",
             "sem": 2,
             "exams": [
@@ -19740,7 +19740,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321205",
+            "id": "28004132120501",
             "title": "Business Research Methods",
             "sem": 2,
             "exams": [
@@ -19750,7 +19750,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320231",
+            "id": "28004132023101",
             "title": "Operations and Supply Chain Management",
             "sem": 2,
             "exams": [
@@ -19760,7 +19760,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320232",
+            "id": "28004132023201",
             "title": "BlockChain Applications",
             "sem": 2,
             "exams": [
@@ -19770,7 +19770,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321209",
+            "id": "28004132120901",
             "title": "Digital and Social Media Marketing",
             "sem": 2,
             "exams": [
@@ -19780,7 +19780,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320233",
+            "id": "28004132023301",
             "title": "Spirituality and Mindfulness",
             "sem": 2,
             "exams": [
@@ -19790,7 +19790,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320301",
+            "id": "28004132030101",
             "title": "Strategic Management",
             "sem": 3,
             "exams": [
@@ -19800,7 +19800,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321302",
+            "id": "28004132130201",
             "title": "Legal Aspects of Business",
             "sem": 3,
             "exams": [
@@ -19810,7 +19810,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320303",
+            "id": "28004132030301",
             "title": "International Business",
             "sem": 3,
             "exams": [
@@ -19820,7 +19820,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220305",
+            "id": "28000422030501",
             "title": "Financial Management",
             "sem": 3,
             "exams": [
@@ -19830,7 +19830,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320304",
+            "id": "28004132030401",
             "title": "Investment Analysis & Portfolio Management",
             "sem": 3,
             "exams": [
@@ -19840,7 +19840,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320305",
+            "id": "28004132030501",
             "title": "Financial Statement Analysis",
             "sem": 3,
             "exams": [
@@ -19850,7 +19850,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320306",
+            "id": "28004132030601",
             "title": "Financial Markets & Institutions",
             "sem": 3,
             "exams": [
@@ -19860,7 +19860,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320307",
+            "id": "28004132030701",
             "title": "Corporate Taxation",
             "sem": 3,
             "exams": [
@@ -19870,7 +19870,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320308",
+            "id": "28004132030801",
             "title": "International Finance",
             "sem": 3,
             "exams": [
@@ -19880,7 +19880,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320309",
+            "id": "28004132030901",
             "title": "Financial Derivatives & Risk Management",
             "sem": 3,
             "exams": [
@@ -19890,7 +19890,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220301",
+            "id": "28000422030101",
             "title": "Marketing Management",
             "sem": 3,
             "exams": [
@@ -19900,7 +19900,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320310",
+            "id": "28004132031001",
             "title": "Consumer Behavior",
             "sem": 3,
             "exams": [
@@ -19910,7 +19910,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320311",
+            "id": "28004132031101",
             "title": "Marketing Communication",
             "sem": 3,
             "exams": [
@@ -19920,7 +19920,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320312",
+            "id": "28004132031201",
             "title": "Product & Brand Management",
             "sem": 3,
             "exams": [
@@ -19930,7 +19930,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320313",
+            "id": "28004132031301",
             "title": "Marketing Research",
             "sem": 3,
             "exams": [
@@ -19940,7 +19940,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320314",
+            "id": "28004132031401",
             "title": "Analytics for Marketing Management",
             "sem": 3,
             "exams": [
@@ -19950,7 +19950,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320315",
+            "id": "28004132031501",
             "title": "Retail Management & Services",
             "sem": 3,
             "exams": [
@@ -19960,7 +19960,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220204",
+            "id": "28000422020401",
             "title": "Human Resources Management",
             "sem": 3,
             "exams": [
@@ -19970,7 +19970,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320316",
+            "id": "28004132031601",
             "title": "Development",
             "sem": 3,
             "exams": [
@@ -19980,7 +19980,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320317",
+            "id": "28004132031701",
             "title": "Compensation Management",
             "sem": 3,
             "exams": [
@@ -19990,7 +19990,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320318",
+            "id": "28004132031801",
             "title": "Human Resource Information System",
             "sem": 3,
             "exams": [
@@ -20000,7 +20000,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320319",
+            "id": "28004132031901",
             "title": "Legislations",
             "sem": 3,
             "exams": [
@@ -20010,7 +20010,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320320",
+            "id": "28004132032001",
             "title": "HR Analytics",
             "sem": 3,
             "exams": [
@@ -20020,7 +20020,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320321",
+            "id": "28004132032101",
             "title": "Managing Diversity",
             "sem": 3,
             "exams": [
@@ -20030,7 +20030,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220411",
+            "id": "28000422041101",
             "title": "International Business",
             "sem": 3,
             "exams": [
@@ -20040,7 +20040,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320322",
+            "id": "28004132032201",
             "title": "Global Marketing",
             "sem": 3,
             "exams": [
@@ -20050,7 +20050,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320370",
+            "id": "28004132037001",
             "title": "International Finance",
             "sem": 3,
             "exams": [
@@ -20060,7 +20060,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320323",
+            "id": "28004132032301",
             "title": "International Human Resource Management",
             "sem": 3,
             "exams": [
@@ -20070,7 +20070,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320324",
+            "id": "28004132032401",
             "title": "International Advertising",
             "sem": 3,
             "exams": [
@@ -20080,7 +20080,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320325",
+            "id": "28004132032501",
             "title": "India & WTO",
             "sem": 3,
             "exams": [
@@ -20090,7 +20090,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320326",
+            "id": "28004132032601",
             "title": "International Negotiations",
             "sem": 3,
             "exams": [
@@ -20100,7 +20100,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330011",
+            "id": "28016133001101",
             "title": "Entrepreneurship & Family Business",
             "sem": 3,
             "exams": [
@@ -20110,7 +20110,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320327",
+            "id": "28004132032701",
             "title": "Planning, Structuring & Financing SMEs",
             "sem": 3,
             "exams": [
@@ -20120,7 +20120,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320328",
+            "id": "28004132032801",
             "title": "Managing Start Ups",
             "sem": 3,
             "exams": [
@@ -20130,7 +20130,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320329",
+            "id": "28004132032901",
             "title": "Marketing for MSMEs",
             "sem": 3,
             "exams": [
@@ -20140,7 +20140,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320330",
+            "id": "28004132033001",
             "title": "Management of Family Business",
             "sem": 3,
             "exams": [
@@ -20150,7 +20150,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320331",
+            "id": "28004132033101",
             "title": "Social Entrepreneurship",
             "sem": 3,
             "exams": [
@@ -20160,7 +20160,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330012",
+            "id": "28016133001201",
             "title": "Banking & Indurance",
             "sem": 3,
             "exams": [
@@ -20170,7 +20170,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320332",
+            "id": "28004132033201",
             "title": "Investment Banking",
             "sem": 3,
             "exams": [
@@ -20180,7 +20180,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320333",
+            "id": "28004132033301",
             "title": "Financial Services",
             "sem": 3,
             "exams": [
@@ -20190,7 +20190,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320334",
+            "id": "28004132033401",
             "title": "Principles & Practices of Banking",
             "sem": 3,
             "exams": [
@@ -20200,7 +20200,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320371",
+            "id": "28004132037101",
             "title": "Financial Markets & Institutions",
             "sem": 3,
             "exams": [
@@ -20210,7 +20210,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320335",
+            "id": "28004132033501",
             "title": "Treasury Management",
             "sem": 3,
             "exams": [
@@ -20220,7 +20220,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320336",
+            "id": "28004132033601",
             "title": "Fundamentals of Insurance",
             "sem": 3,
             "exams": [
@@ -20230,7 +20230,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330013",
+            "id": "28016133001301",
             "title": "IT & Systems",
             "sem": 3,
             "exams": [
@@ -20240,7 +20240,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320337",
+            "id": "28004132033701",
             "title": "Software Project Management",
             "sem": 3,
             "exams": [
@@ -20250,7 +20250,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320338",
+            "id": "28004132033801",
             "title": "Network & Communication Management",
             "sem": 3,
             "exams": [
@@ -20260,7 +20260,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320339",
+            "id": "28004132033901",
             "title": "Database Management Systems",
             "sem": 3,
             "exams": [
@@ -20270,7 +20270,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320340",
+            "id": "28004132034001",
             "title": "Big Data in IT & Systems",
             "sem": 3,
             "exams": [
@@ -20280,7 +20280,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320341",
+            "id": "28004132034101",
             "title": "Data Science using R",
             "sem": 3,
             "exams": [
@@ -20290,7 +20290,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320342",
+            "id": "28004132034201",
             "title": "Information Security, Ethics & Issues",
             "sem": 3,
             "exams": [
@@ -20300,7 +20300,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330014",
+            "id": "28016133001401",
             "title": "Operations Management",
             "sem": 3,
             "exams": [
@@ -20310,7 +20310,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320343",
+            "id": "28004132034301",
             "title": "Management",
             "sem": 3,
             "exams": [
@@ -20320,7 +20320,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320344",
+            "id": "28004132034401",
             "title": "Operations Research Applications",
             "sem": 3,
             "exams": [
@@ -20330,7 +20330,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320345",
+            "id": "28004132034501",
             "title": "Material Management & Inventory Control",
             "sem": 3,
             "exams": [
@@ -20340,7 +20340,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320346",
+            "id": "28004132034601",
             "title": "Total Quality Management",
             "sem": 3,
             "exams": [
@@ -20350,7 +20350,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320347",
+            "id": "28004132034701",
             "title": "Management of Manufacturing Systems",
             "sem": 3,
             "exams": [
@@ -20360,7 +20360,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320348",
+            "id": "28004132034801",
             "title": "Sourcing Management",
             "sem": 3,
             "exams": [
@@ -20370,7 +20370,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330015",
+            "id": "28016133001501",
             "title": "Logistics & Supply Chain Management",
             "sem": 3,
             "exams": [
@@ -20380,7 +20380,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320372",
+            "id": "28004132037201",
             "title": "Sourcing Management",
             "sem": 3,
             "exams": [
@@ -20390,7 +20390,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320373",
+            "id": "28004132037301",
             "title": "Total Quality Management",
             "sem": 3,
             "exams": [
@@ -20400,7 +20400,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320349",
+            "id": "28004132034901",
             "title": "Management",
             "sem": 3,
             "exams": [
@@ -20410,7 +20410,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320374",
+            "id": "28004132037401",
             "title": "Material Management & Inventory Control",
             "sem": 3,
             "exams": [
@@ -20420,7 +20420,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320375",
+            "id": "28004132037501",
             "title": "Management",
             "sem": 3,
             "exams": [
@@ -20430,7 +20430,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320350",
+            "id": "28004132035001",
             "title": "EXIM Trade Documentation & Procedures",
             "sem": 3,
             "exams": [
@@ -20440,7 +20440,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330016",
+            "id": "28016133001601",
             "title": "General Elective",
             "sem": 3,
             "exams": [
@@ -20450,7 +20450,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320351",
+            "id": "28004132035101",
             "title": "Project Management",
             "sem": 3,
             "exams": [
@@ -20460,7 +20460,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320352",
+            "id": "28004132035201",
             "title": "Creativity & Innovation",
             "sem": 3,
             "exams": [
@@ -20470,7 +20470,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320353",
+            "id": "28004132035301",
             "title": "Econometrics",
             "sem": 3,
             "exams": [
@@ -20480,7 +20480,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320354",
+            "id": "28004132035401",
             "title": "Personal Financial Management",
             "sem": 3,
             "exams": [
@@ -20490,7 +20490,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320355",
+            "id": "28004132035501",
             "title": "Customer Relationship Management",
             "sem": 3,
             "exams": [
@@ -20500,7 +20500,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320356",
+            "id": "28004132035601",
             "title": "Value Chain Management",
             "sem": 3,
             "exams": [
@@ -20510,7 +20510,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320357",
+            "id": "28004132035701",
             "title": "Emotional Intelligence",
             "sem": 3,
             "exams": [
@@ -20520,7 +20520,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320358",
+            "id": "28004132035801",
             "title": "Psychometric Testing",
             "sem": 3,
             "exams": [
@@ -20530,7 +20530,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320359",
+            "id": "28004132035901",
             "title": "Managerial Psychology",
             "sem": 3,
             "exams": [
@@ -20540,7 +20540,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320360",
+            "id": "28004132036001",
             "title": "Summer Internship Project",
             "sem": 3,
             "exams": [
@@ -20550,7 +20550,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330017",
+            "id": "28016133001701",
             "title": "Skill Enhancement Course",
             "sem": 3,
             "exams": [
@@ -20560,7 +20560,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320361",
+            "id": "28004132036101",
             "title": "Goods & Service Tax",
             "sem": 3,
             "exams": [
@@ -20570,7 +20570,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320362",
+            "id": "28004132036201",
             "title": "Advance Corporate Communication",
             "sem": 3,
             "exams": [
@@ -20580,7 +20580,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320363",
+            "id": "28004132036301",
             "title": "Foreign Language",
             "sem": 3,
             "exams": [
@@ -20590,7 +20590,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320401",
+            "id": "28004132040101",
             "title": "Business Ethics & Corporate Governance",
             "sem": 4,
             "exams": [
@@ -20600,7 +20600,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320402",
+            "id": "28004132040201",
             "title": "Management Information System",
             "sem": 4,
             "exams": [
@@ -20610,7 +20610,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220305",
+            "id": "28000422030502",
             "title": "Financial Management",
             "sem": 4,
             "exams": [
@@ -20620,7 +20620,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320403",
+            "id": "28004132040301",
             "title": "Corporate Restructuring & Valuation",
             "sem": 4,
             "exams": [
@@ -20630,7 +20630,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320404",
+            "id": "28004132040401",
             "title": "Financial Modeling & Analytics",
             "sem": 4,
             "exams": [
@@ -20640,7 +20640,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320405",
+            "id": "28004132040501",
             "title": "Project Appraisal & Finance",
             "sem": 4,
             "exams": [
@@ -20650,7 +20650,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320406",
+            "id": "28004132040601",
             "title": "Behavioural Finance",
             "sem": 4,
             "exams": [
@@ -20660,7 +20660,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220301",
+            "id": "28000422030102",
             "title": "Marketing Management",
             "sem": 4,
             "exams": [
@@ -20670,7 +20670,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320407",
+            "id": "28004132040701",
             "title": "Supply Chain Management",
             "sem": 4,
             "exams": [
@@ -20680,7 +20680,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321408",
+            "id": "28004132140801",
             "title": "Services Marketing",
             "sem": 4,
             "exams": [
@@ -20690,7 +20690,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320409",
+            "id": "28004132040901",
             "title": "Sales & Distribution Management",
             "sem": 4,
             "exams": [
@@ -20700,7 +20700,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320410",
+            "id": "28004132041001",
             "title": "Industrial Marketing",
             "sem": 4,
             "exams": [
@@ -20710,7 +20710,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320411",
+            "id": "28004132041101",
             "title": "Rural Marketing",
             "sem": 4,
             "exams": [
@@ -20720,7 +20720,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220204",
+            "id": "28000422020402",
             "title": "Human Resources Management",
             "sem": 4,
             "exams": [
@@ -20730,7 +20730,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320412",
+            "id": "28004132041201",
             "title": "Strategic Human Resource Management",
             "sem": 4,
             "exams": [
@@ -20740,7 +20740,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320413",
+            "id": "28004132041301",
             "title": "Human Resource Development",
             "sem": 4,
             "exams": [
@@ -20750,7 +20750,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320414",
+            "id": "28004132041401",
             "title": "Strategic Performance Management",
             "sem": 4,
             "exams": [
@@ -20760,7 +20760,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320415",
+            "id": "28004132041501",
             "title": "Talent Management & Employee Engagement",
             "sem": 4,
             "exams": [
@@ -20770,7 +20770,7 @@ export const domains = [
             ]
           },
           {
-            "id": "04220411",
+            "id": "28000422041102",
             "title": "International Business",
             "sem": 4,
             "exams": [
@@ -20780,7 +20780,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320416",
+            "id": "28004132041601",
             "title": "International Risk Communication",
             "sem": 4,
             "exams": [
@@ -20790,7 +20790,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320417",
+            "id": "28004132041701",
             "title": "International Supply Chain Management",
             "sem": 4,
             "exams": [
@@ -20800,7 +20800,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320418",
+            "id": "28004132041801",
             "title": "India: Internation Relations",
             "sem": 4,
             "exams": [
@@ -20810,7 +20810,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320419",
+            "id": "28004132041901",
             "title": "Documentation",
             "sem": 4,
             "exams": [
@@ -20820,7 +20820,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330011",
+            "id": "28016133001102",
             "title": "Entrepreneurship & Family Business",
             "sem": 4,
             "exams": [
@@ -20830,7 +20830,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320420",
+            "id": "28004132042001",
             "title": "Managing Corporate Entrepreneurship",
             "sem": 4,
             "exams": [
@@ -20840,7 +20840,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320421",
+            "id": "28004132042101",
             "title": "Succession Planning for Family Business",
             "sem": 4,
             "exams": [
@@ -20850,7 +20850,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320422",
+            "id": "28004132042201",
             "title": "Appreciation",
             "sem": 4,
             "exams": [
@@ -20860,7 +20860,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320423",
+            "id": "28004132042301",
             "title": "Legal Aspects of Start Ups & IPR",
             "sem": 4,
             "exams": [
@@ -20870,7 +20870,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330012",
+            "id": "28016133001202",
             "title": "Banking & Indurance",
             "sem": 4,
             "exams": [
@@ -20880,7 +20880,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320424",
+            "id": "28004132042401",
             "title": "Economic of Insurance",
             "sem": 4,
             "exams": [
@@ -20890,7 +20890,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320425",
+            "id": "28004132042501",
             "title": "Wealth Management",
             "sem": 4,
             "exams": [
@@ -20900,7 +20900,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320426",
+            "id": "28004132042601",
             "title": "Microfine & Rural Banking",
             "sem": 4,
             "exams": [
@@ -20910,7 +20910,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320427",
+            "id": "28004132042701",
             "title": "Insurance & Risk Management",
             "sem": 4,
             "exams": [
@@ -20920,7 +20920,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330013",
+            "id": "28016133001302",
             "title": "IT & Systems",
             "sem": 4,
             "exams": [
@@ -20930,7 +20930,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320428",
+            "id": "28004132042801",
             "title": "Management",
             "sem": 4,
             "exams": [
@@ -20940,7 +20940,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320429",
+            "id": "28004132042901",
             "title": "Data Visualization using Power BI",
             "sem": 4,
             "exams": [
@@ -20950,7 +20950,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320430",
+            "id": "28004132043001",
             "title": "Business Analytics using Python Programming",
             "sem": 4,
             "exams": [
@@ -20960,7 +20960,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320431",
+            "id": "28004132043101",
             "title": "Application of Cloud Management",
             "sem": 4,
             "exams": [
@@ -20970,7 +20970,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330014",
+            "id": "28016133001402",
             "title": "Operations Management",
             "sem": 4,
             "exams": [
@@ -20980,7 +20980,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320432",
+            "id": "28004132043201",
             "title": "Supply Chain Analytics",
             "sem": 4,
             "exams": [
@@ -20990,7 +20990,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320433",
+            "id": "28004132043301",
             "title": "Management of Services",
             "sem": 4,
             "exams": [
@@ -21000,7 +21000,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320434",
+            "id": "28004132043401",
             "title": "Operations Strategy",
             "sem": 4,
             "exams": [
@@ -21010,7 +21010,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320435",
+            "id": "28004132043501",
             "title": "Lean Management",
             "sem": 4,
             "exams": [
@@ -21020,7 +21020,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330015",
+            "id": "28016133001502",
             "title": "Logistics & Supply Chain Management",
             "sem": 4,
             "exams": [
@@ -21030,7 +21030,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320459",
+            "id": "28004132045901",
             "title": "Management",
             "sem": 4,
             "exams": [
@@ -21040,7 +21040,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320436",
+            "id": "28004132043601",
             "title": "Shipping & Maritime Logistics Management",
             "sem": 4,
             "exams": [
@@ -21050,7 +21050,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320437",
+            "id": "28004132043701",
             "title": "Packing & Packaging Management",
             "sem": 4,
             "exams": [
@@ -21060,7 +21060,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320438",
+            "id": "28004132043801",
             "title": "International Logistics Management",
             "sem": 4,
             "exams": [
@@ -21070,7 +21070,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340008",
+            "id": "28016134000801",
             "title": "General Elective",
             "sem": 4,
             "exams": [
@@ -21080,7 +21080,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320439",
+            "id": "28004132043901",
             "title": "Management",
             "sem": 4,
             "exams": [
@@ -21090,7 +21090,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320440",
+            "id": "28004132044001",
             "title": "Design Thinking",
             "sem": 4,
             "exams": [
@@ -21100,7 +21100,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320441",
+            "id": "28004132044101",
             "title": "Intellectual Property Rights",
             "sem": 4,
             "exams": [
@@ -21110,7 +21110,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320442",
+            "id": "28004132044201",
             "title": "Leadership – Theory & Practice",
             "sem": 4,
             "exams": [
@@ -21120,7 +21120,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320443",
+            "id": "28004132044301",
             "title": "Energy Business Management",
             "sem": 4,
             "exams": [
@@ -21130,7 +21130,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320444",
+            "id": "28004132044401",
             "title": "Event Management",
             "sem": 4,
             "exams": [
@@ -21140,7 +21140,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320445",
+            "id": "28004132044501",
             "title": "Public Policy",
             "sem": 4,
             "exams": [
@@ -21150,7 +21150,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320446",
+            "id": "28004132044601",
             "title": "Public Finance & Policy",
             "sem": 4,
             "exams": [
@@ -21160,7 +21160,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320447",
+            "id": "28004132044701",
             "title": "Stress Management",
             "sem": 4,
             "exams": [
@@ -21170,7 +21170,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320448",
+            "id": "28004132044801",
             "title": "Comprehensive Project",
             "sem": 4,
             "exams": [
@@ -21180,7 +21180,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340009",
+            "id": "28016134000901",
             "title": "Skill Enhancement Course",
             "sem": 4,
             "exams": [
@@ -21190,7 +21190,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320449",
+            "id": "28004132044901",
             "title": "Six Sigma",
             "sem": 4,
             "exams": [
@@ -21200,7 +21200,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321450",
+            "id": "28004132145001",
             "title": "Management of Field Sales",
             "sem": 4,
             "exams": [
@@ -21210,7 +21210,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320451",
+            "id": "28004132045101",
             "title": "Block Chain Technology",
             "sem": 4,
             "exams": [
@@ -21227,7 +21227,7 @@ export const domains = [
         "title": "MBA Business Analytics",
         "subjects": [
           {
-            "id": "041390101",
+            "id": "29004139010101",
             "title": "Managerial Economics",
             "sem": 1,
             "exams": [
@@ -21237,7 +21237,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321132",
+            "id": "29004132113201",
             "title": "Fundamentals of Business Analytics",
             "sem": 1,
             "exams": [
@@ -21247,7 +21247,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320134",
+            "id": "29004132013401",
             "title": "Data Mining for Business Analtyics using R",
             "sem": 1,
             "exams": [
@@ -21257,7 +21257,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041390103",
+            "id": "29004139010301",
             "title": "Marketing for Managers",
             "sem": 1,
             "exams": [
@@ -21267,7 +21267,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041390105",
+            "id": "29004139010501",
             "title": "Business Statistics & Econometrics",
             "sem": 1,
             "exams": [
@@ -21277,7 +21277,7 @@ export const domains = [
             ]
           },
           {
-            "id": "042130101",
+            "id": "29004213010101",
             "title": "Business Intelligence and Data Storytelling",
             "sem": 1,
             "exams": [
@@ -21287,7 +21287,7 @@ export const domains = [
             ]
           },
           {
-            "id": "042130102",
+            "id": "29004213010201",
             "title": "Descriptive and Diagnostic Analytics using SPSS",
             "sem": 1,
             "exams": [
@@ -21297,7 +21297,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041390201",
+            "id": "29004139020101",
             "title": "Corporate Strategy",
             "sem": 2,
             "exams": [
@@ -21307,7 +21307,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041390203",
+            "id": "29004139020301",
             "title": "Corporate Finance",
             "sem": 2,
             "exams": [
@@ -21317,7 +21317,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321205",
+            "id": "29004132120501",
             "title": "Business Research Methods",
             "sem": 2,
             "exams": [
@@ -21327,7 +21327,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041390204",
+            "id": "29004139020401",
             "title": "Data Visualization, Ethics & Data Privacy",
             "sem": 2,
             "exams": [
@@ -21337,7 +21337,7 @@ export const domains = [
             ]
           },
           {
-            "id": "042130201",
+            "id": "29004213020101",
             "title": "Managing People & Organization",
             "sem": 2,
             "exams": [
@@ -21347,7 +21347,7 @@ export const domains = [
             ]
           },
           {
-            "id": "042130202",
+            "id": "29004213020201",
             "title": "Introduction to Python Programming",
             "sem": 2,
             "exams": [
@@ -21357,7 +21357,7 @@ export const domains = [
             ]
           },
           {
-            "id": "042130203",
+            "id": "29004213020301",
             "title": "Predictive and Advance Analytics",
             "sem": 2,
             "exams": [
@@ -21367,7 +21367,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320012",
+            "id": "29016132001201",
             "title": "Elective G1",
             "sem": 2,
             "exams": [
@@ -21377,7 +21377,7 @@ export const domains = [
             ]
           },
           {
-            "id": "042130204",
+            "id": "29004213020401",
             "title": "Structural Equation Modelling",
             "sem": 2,
             "exams": [
@@ -21387,7 +21387,7 @@ export const domains = [
             ]
           },
           {
-            "id": "042130205",
+            "id": "29004213020501",
             "title": "Generative AI",
             "sem": 2,
             "exams": [
@@ -21397,7 +21397,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041321213",
+            "id": "29004132121301",
             "title": "Database Management System",
             "sem": 2,
             "exams": [
@@ -21407,7 +21407,7 @@ export const domains = [
             ]
           },
           {
-            "id": "042130206",
+            "id": "29004213020601",
             "title": "Analytics for Services",
             "sem": 2,
             "exams": [
@@ -21417,7 +21417,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041390202",
+            "id": "29004139020201",
             "title": "Operations and Supply Chain Management",
             "sem": 2,
             "exams": [
@@ -21427,7 +21427,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320301",
+            "id": "29004132030101",
             "title": "Strategic Management",
             "sem": 3,
             "exams": [
@@ -21437,7 +21437,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320364",
+            "id": "29004132036401",
             "title": "Supply Chain Analytics",
             "sem": 3,
             "exams": [
@@ -21447,7 +21447,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320365",
+            "id": "29004132036501",
             "title": "Marketing Analytics",
             "sem": 3,
             "exams": [
@@ -21457,7 +21457,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320366",
+            "id": "29004132036601",
             "title": "Financial Analytics",
             "sem": 3,
             "exams": [
@@ -21467,7 +21467,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320320",
+            "id": "29004132032001",
             "title": "HR Analytics",
             "sem": 3,
             "exams": [
@@ -21477,7 +21477,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320367",
+            "id": "29004132036701",
             "title": "Data Science using Python",
             "sem": 3,
             "exams": [
@@ -21487,7 +21487,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320368",
+            "id": "29004132036801",
             "title": "Business Intelligence",
             "sem": 3,
             "exams": [
@@ -21497,7 +21497,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320369",
+            "id": "29004132036901",
             "title": "Business Forecasting using Eviews-II",
             "sem": 3,
             "exams": [
@@ -21507,7 +21507,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161330018",
+            "id": "29016133001801",
             "title": "General Elective",
             "sem": 3,
             "exams": [
@@ -21517,7 +21517,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320351",
+            "id": "29004132035101",
             "title": "Project Management",
             "sem": 3,
             "exams": [
@@ -21527,7 +21527,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320352",
+            "id": "29004132035201",
             "title": "Creativity & Innovation",
             "sem": 3,
             "exams": [
@@ -21537,7 +21537,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320353",
+            "id": "29004132035301",
             "title": "Econometrics",
             "sem": 3,
             "exams": [
@@ -21547,7 +21547,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320354",
+            "id": "29004132035401",
             "title": "Personal Financial Management",
             "sem": 3,
             "exams": [
@@ -21557,7 +21557,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320355",
+            "id": "29004132035501",
             "title": "Customer Relationship Management",
             "sem": 3,
             "exams": [
@@ -21567,7 +21567,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320356",
+            "id": "29004132035601",
             "title": "Value Chain Management",
             "sem": 3,
             "exams": [
@@ -21577,7 +21577,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320357",
+            "id": "29004132035701",
             "title": "Emotional Intelligence",
             "sem": 3,
             "exams": [
@@ -21587,7 +21587,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320358",
+            "id": "29004132035801",
             "title": "Psychometric Testing",
             "sem": 3,
             "exams": [
@@ -21597,7 +21597,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320359",
+            "id": "29004132035901",
             "title": "Managerial Psychology",
             "sem": 3,
             "exams": [
@@ -21607,7 +21607,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320360",
+            "id": "29004132036001",
             "title": "Summer Internship Project",
             "sem": 3,
             "exams": [
@@ -21617,7 +21617,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320401",
+            "id": "29004132040101",
             "title": "Business Ethics & Corporate Governance",
             "sem": 4,
             "exams": [
@@ -21627,7 +21627,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320402",
+            "id": "29004132040201",
             "title": "Management Information System",
             "sem": 4,
             "exams": [
@@ -21637,7 +21637,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320452",
+            "id": "29004132045201",
             "title": "Tableau",
             "sem": 4,
             "exams": [
@@ -21647,7 +21647,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320453",
+            "id": "29004132045301",
             "title": "Predictive Analytics",
             "sem": 4,
             "exams": [
@@ -21657,7 +21657,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320454",
+            "id": "29004132045401",
             "title": "Big Data Analytics",
             "sem": 4,
             "exams": [
@@ -21667,7 +21667,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320455",
+            "id": "29004132045501",
             "title": "Power BI",
             "sem": 4,
             "exams": [
@@ -21677,7 +21677,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320456",
+            "id": "29004132045601",
             "title": "Hadoop & Apache Spark",
             "sem": 4,
             "exams": [
@@ -21687,7 +21687,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320457",
+            "id": "29004132045701",
             "title": "Matlab",
             "sem": 4,
             "exams": [
@@ -21697,7 +21697,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320458",
+            "id": "29004132045801",
             "title": "STATA",
             "sem": 4,
             "exams": [
@@ -21707,7 +21707,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340010",
+            "id": "29016134001001",
             "title": "General Elective",
             "sem": 4,
             "exams": [
@@ -21717,7 +21717,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320439",
+            "id": "29004132043901",
             "title": "Management",
             "sem": 4,
             "exams": [
@@ -21727,7 +21727,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320440",
+            "id": "29004132044001",
             "title": "Design Thinking",
             "sem": 4,
             "exams": [
@@ -21737,7 +21737,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320441",
+            "id": "29004132044101",
             "title": "Intellectual Property Rights",
             "sem": 4,
             "exams": [
@@ -21747,7 +21747,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320442",
+            "id": "29004132044201",
             "title": "Leadership – Theory & Practice",
             "sem": 4,
             "exams": [
@@ -21757,7 +21757,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320443",
+            "id": "29004132044301",
             "title": "Energy Business Management",
             "sem": 4,
             "exams": [
@@ -21767,7 +21767,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320444",
+            "id": "29004132044401",
             "title": "Event Management",
             "sem": 4,
             "exams": [
@@ -21777,7 +21777,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320445",
+            "id": "29004132044501",
             "title": "Public Policy",
             "sem": 4,
             "exams": [
@@ -21787,7 +21787,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320446",
+            "id": "29004132044601",
             "title": "Public Finance & Policy",
             "sem": 4,
             "exams": [
@@ -21797,7 +21797,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320447",
+            "id": "29004132044701",
             "title": "Stress Management",
             "sem": 4,
             "exams": [
@@ -21807,7 +21807,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320448",
+            "id": "29004132044801",
             "title": "Comprehensive Project",
             "sem": 4,
             "exams": [
@@ -21838,7 +21838,7 @@ export const domains = [
         "title": "B.Sc in Chemistry",
         "subjects": [
           {
-            "id": "023180103",
+            "id": "31002318010301",
             "title": "Value Education",
             "sem": 1,
             "exams": [
@@ -21848,7 +21848,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250103",
+            "id": "31002325010301",
             "title": "General Chemistry – I",
             "sem": 1,
             "exams": [
@@ -21858,7 +21858,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250104",
+            "id": "31002325010401",
             "title": "Elementry Chemistry – I",
             "sem": 1,
             "exams": [
@@ -21868,7 +21868,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250105",
+            "id": "31002325010501",
             "title": "Laboratory – I",
             "sem": 1,
             "exams": [
@@ -21878,7 +21878,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021310132",
+            "id": "31002131013201",
             "title": "Basic Calculus",
             "sem": 1,
             "exams": [
@@ -21888,7 +21888,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320105",
+            "id": "31002132010501",
             "title": "Fundamental Biology",
             "sem": 1,
             "exams": [
@@ -21898,7 +21898,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0216250105",
+            "id": "31021625010501",
             "title": "Fundamental Of Physics",
             "sem": 1,
             "exams": [
@@ -21908,7 +21908,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0219120105",
+            "id": "31021912010501",
             "title": "Communication Skills – I",
             "sem": 1,
             "exams": [
@@ -21918,7 +21918,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210001",
+            "id": "31000121000101",
             "title": "National Cadet Corps-1",
             "sem": 1,
             "exams": [
@@ -21928,7 +21928,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023180201",
+            "id": "31002318020101",
             "title": "Professional Ethics",
             "sem": 2,
             "exams": [
@@ -21938,7 +21938,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250153",
+            "id": "31002325015301",
             "title": "General Chemistry – II",
             "sem": 2,
             "exams": [
@@ -21948,7 +21948,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250154",
+            "id": "31002325015401",
             "title": "Elementry Chemistry – II",
             "sem": 2,
             "exams": [
@@ -21958,7 +21958,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250155",
+            "id": "31002325015501",
             "title": "Laboratory – II",
             "sem": 2,
             "exams": [
@@ -21968,7 +21968,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021310182",
+            "id": "31002131018201",
             "title": "Fundamentals Of Statistics",
             "sem": 2,
             "exams": [
@@ -21978,7 +21978,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320154",
+            "id": "31002132015401",
             "title": "Cell Biology",
             "sem": 2,
             "exams": [
@@ -21988,7 +21988,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0216250191",
+            "id": "31021625019101",
             "title": "Mechanics & Thermodynamics",
             "sem": 2,
             "exams": [
@@ -21998,7 +21998,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0219120203",
+            "id": "31021912020301",
             "title": "Communication Skill – II",
             "sem": 2,
             "exams": [
@@ -22008,7 +22008,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023180301",
+            "id": "31002318030101",
             "title": "Career Readiness Programme",
             "sem": 3,
             "exams": [
@@ -22018,7 +22018,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250201",
+            "id": "31002325020101",
             "title": "Chemistry-III",
             "sem": 3,
             "exams": [
@@ -22028,7 +22028,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381303",
+            "id": "31000938130301",
             "title": "Fundamental Chemistry-III",
             "sem": 3,
             "exams": [
@@ -22038,7 +22038,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0216251231",
+            "id": "31021625123101",
             "title": "Physics-III",
             "sem": 3,
             "exams": [
@@ -22048,7 +22048,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0219120201",
+            "id": "31021912020101",
             "title": "English through non-fiction",
             "sem": 3,
             "exams": [
@@ -22058,7 +22058,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023180401",
+            "id": "31002318040101",
             "title": "Career Readiness Program",
             "sem": 4,
             "exams": [
@@ -22068,7 +22068,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250251",
+            "id": "31002325025101",
             "title": "Chemistry-IV",
             "sem": 4,
             "exams": [
@@ -22078,7 +22078,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250252",
+            "id": "31002325025201",
             "title": "Fundametal Chemistry-IV",
             "sem": 4,
             "exams": [
@@ -22088,7 +22088,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320253",
+            "id": "31002132025301",
             "title": "Basic Biochemistry",
             "sem": 4,
             "exams": [
@@ -22098,7 +22098,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0219120251",
+            "id": "31021912025101",
             "title": "English for workplace",
             "sem": 4,
             "exams": [
@@ -22108,7 +22108,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250301",
+            "id": "31002325030101",
             "title": "Inorganic & Industrial Chemistry",
             "sem": 5,
             "exams": [
@@ -22118,7 +22118,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250302",
+            "id": "31002325030201",
             "title": "Organic Chemistry",
             "sem": 5,
             "exams": [
@@ -22128,7 +22128,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250303",
+            "id": "31002325030301",
             "title": "Physical Chemistry",
             "sem": 5,
             "exams": [
@@ -22138,7 +22138,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251404",
+            "id": "31002325140401",
             "title": "Analytical Chemistry",
             "sem": 5,
             "exams": [
@@ -22148,7 +22148,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250351",
+            "id": "31002325035101",
             "title": "Advanced Inorganic & Industrial Chemistry",
             "sem": 6,
             "exams": [
@@ -22158,7 +22158,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250352",
+            "id": "31002325035201",
             "title": "Advanced Organic Chemistry",
             "sem": 6,
             "exams": [
@@ -22168,7 +22168,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250353",
+            "id": "31002325035301",
             "title": "Advanced Physical Chemistry",
             "sem": 6,
             "exams": [
@@ -22178,7 +22178,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250354",
+            "id": "31002325035401",
             "title": "Analytical Spectroscopic Techniques",
             "sem": 6,
             "exams": [
@@ -22195,7 +22195,7 @@ export const domains = [
         "title": "B.Sc in Microbiology",
         "subjects": [
           {
-            "id": "023180103",
+            "id": "32002318010301",
             "title": "VALUE EDUCATION",
             "sem": 1,
             "exams": [
@@ -22205,7 +22205,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250103",
+            "id": "32002325010301",
             "title": "GENERAL CHEMISTRY – I",
             "sem": 1,
             "exams": [
@@ -22215,7 +22215,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320104",
+            "id": "32002132010401",
             "title": "BASICS OF MICROBIOLOGY",
             "sem": 1,
             "exams": [
@@ -22225,7 +22225,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320105",
+            "id": "32002132010501",
             "title": "FUNDAMENTAL BIOLOGY",
             "sem": 1,
             "exams": [
@@ -22235,7 +22235,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320106",
+            "id": "32002132010601",
             "title": "EXPERIMENTAL LABORATORY- I",
             "sem": 1,
             "exams": [
@@ -22245,7 +22245,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0216250105",
+            "id": "32021625010501",
             "title": "FUNDAMENTALS OF PHYSICS",
             "sem": 1,
             "exams": [
@@ -22255,7 +22255,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0219120105",
+            "id": "32021912010501",
             "title": "COMMUNICATION SKILLS – I",
             "sem": 1,
             "exams": [
@@ -22265,7 +22265,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210001",
+            "id": "32000121000101",
             "title": "NATIONAL CADET CORPS-1",
             "sem": 1,
             "exams": [
@@ -22275,7 +22275,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023180201",
+            "id": "32002318020101",
             "title": "PROFESSIONAL ETHICS",
             "sem": 2,
             "exams": [
@@ -22285,7 +22285,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250153",
+            "id": "32002325015301",
             "title": "GENERAL CHEMISTRY-II",
             "sem": 2,
             "exams": [
@@ -22295,7 +22295,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320154",
+            "id": "32002132015401",
             "title": "CELL BIOLOGY",
             "sem": 2,
             "exams": [
@@ -22305,7 +22305,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320155",
+            "id": "32002132015501",
             "title": "BIOMOLECULES",
             "sem": 2,
             "exams": [
@@ -22315,7 +22315,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320156",
+            "id": "32002132015601",
             "title": "EXPERIMENTAL LABORATORY-II",
             "sem": 2,
             "exams": [
@@ -22325,7 +22325,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0216250191",
+            "id": "32021625019101",
             "title": "MECHANICS AND THERMODYNAMICS",
             "sem": 2,
             "exams": [
@@ -22335,7 +22335,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320203",
+            "id": "32002132020301",
             "title": "Microbial Physiology",
             "sem": 3,
             "exams": [
@@ -22345,7 +22345,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320204",
+            "id": "32002132020401",
             "title": "Microbial Biochemistry",
             "sem": 3,
             "exams": [
@@ -22355,7 +22355,7 @@ export const domains = [
             ]
           },
           {
-            "id": "025190310",
+            "id": "32002519031001",
             "title": "Environmental Studies",
             "sem": 3,
             "exams": [
@@ -22365,7 +22365,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023180301",
+            "id": "32002318030101",
             "title": "Career Readiness Programme",
             "sem": 3,
             "exams": [
@@ -22375,7 +22375,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320205",
+            "id": "32002132020501",
             "title": "Experimental Laboratory-III",
             "sem": 3,
             "exams": [
@@ -22385,7 +22385,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320254",
+            "id": "32002132025401",
             "title": "Bacterial Systematics",
             "sem": 4,
             "exams": [
@@ -22395,7 +22395,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320255",
+            "id": "32002132025501",
             "title": "Environmental Microbiology",
             "sem": 4,
             "exams": [
@@ -22405,7 +22405,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0216250292",
+            "id": "32021625029201",
             "title": "Indian Astronomy and Mathematics",
             "sem": 4,
             "exams": [
@@ -22415,7 +22415,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0231800401",
+            "id": "32023180040101",
             "title": "Career Readiness Programme",
             "sem": 4,
             "exams": [
@@ -22425,7 +22425,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320256",
+            "id": "32002132025601",
             "title": "Experimental Laboratory-IV",
             "sem": 4,
             "exams": [
@@ -22435,7 +22435,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320301",
+            "id": "32002132030101",
             "title": "Bioinformatics & Biostatistics",
             "sem": 5,
             "exams": [
@@ -22445,7 +22445,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320302",
+            "id": "32002132030201",
             "title": "Molecular Biology & Genetics",
             "sem": 5,
             "exams": [
@@ -22455,7 +22455,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320303",
+            "id": "32002132030301",
             "title": "Biochemical Techniques & Instrumentation",
             "sem": 5,
             "exams": [
@@ -22465,7 +22465,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320304",
+            "id": "32002132030401",
             "title": "Microbial Biotechnology",
             "sem": 5,
             "exams": [
@@ -22475,7 +22475,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320351",
+            "id": "32002132035101",
             "title": "Fermentation Technology",
             "sem": 6,
             "exams": [
@@ -22485,7 +22485,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320352",
+            "id": "32002132035201",
             "title": "Basics of Immunology",
             "sem": 6,
             "exams": [
@@ -22495,7 +22495,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320353",
+            "id": "32002132035301",
             "title": "Applied Microbiology",
             "sem": 6,
             "exams": [
@@ -22505,7 +22505,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320354",
+            "id": "32002132035401",
             "title": "Dissertation Project",
             "sem": 6,
             "exams": [
@@ -22522,7 +22522,7 @@ export const domains = [
         "title": "B.Sc in Agricultural Honors",
         "subjects": [
           {
-            "id": "161190101",
+            "id": "33016119010101",
             "title": "Agriculture Heritage",
             "sem": 1,
             "exams": [
@@ -22532,7 +22532,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190102",
+            "id": "33016119010201",
             "title": "Fundamentals Of Soil Science",
             "sem": 1,
             "exams": [
@@ -22542,7 +22542,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190103",
+            "id": "33016119010301",
             "title": "Change",
             "sem": 1,
             "exams": [
@@ -22552,7 +22552,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190104",
+            "id": "33016119010401",
             "title": "Agriculture Microbiology",
             "sem": 1,
             "exams": [
@@ -22562,7 +22562,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190105",
+            "id": "33016119010501",
             "title": "Agriculture Informatics",
             "sem": 1,
             "exams": [
@@ -22572,7 +22572,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190106",
+            "id": "33016119010601",
             "title": "Introductory Biology",
             "sem": 1,
             "exams": [
@@ -22582,7 +22582,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190107",
+            "id": "33016119010701",
             "title": "Fundamentals Of Horticulture",
             "sem": 1,
             "exams": [
@@ -22592,7 +22592,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190108",
+            "id": "33016119010801",
             "title": "Fundamentals Of Plant Pathology",
             "sem": 1,
             "exams": [
@@ -22602,7 +22602,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161310101",
+            "id": "33016131010101",
             "title": "Elementary Mathematics",
             "sem": 1,
             "exams": [
@@ -22612,7 +22612,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161310007",
+            "id": "33016131000701",
             "title": "Physical Education",
             "sem": 1,
             "exams": [
@@ -22622,7 +22622,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1619120101",
+            "id": "33161912010101",
             "title": "English",
             "sem": 1,
             "exams": [
@@ -22632,7 +22632,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190201",
+            "id": "33016119020101",
             "title": "Fundamentals Of Agronomy",
             "sem": 2,
             "exams": [
@@ -22642,7 +22642,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190202",
+            "id": "33016119020201",
             "title": "Manures, Fertilizers & Soil Fertility Mangement",
             "sem": 2,
             "exams": [
@@ -22652,7 +22652,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190203",
+            "id": "33016119020301",
             "title": "Statistical Methods",
             "sem": 2,
             "exams": [
@@ -22662,7 +22662,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190204",
+            "id": "33016119020401",
             "title": "Fundamentals Of Agriculture Economics",
             "sem": 2,
             "exams": [
@@ -22672,7 +22672,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190205",
+            "id": "33016119020501",
             "title": "Engineering",
             "sem": 2,
             "exams": [
@@ -22682,7 +22682,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190206",
+            "id": "33016119020601",
             "title": "Fundamentals Of Plant Biochemistry",
             "sem": 2,
             "exams": [
@@ -22692,7 +22692,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190206",
+            "id": "33016119020602",
             "title": "Fundamentals Of Plant Biochemistry",
             "sem": 2,
             "exams": [
@@ -22702,7 +22702,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190207",
+            "id": "33016119020701",
             "title": "Fundamentals Of Genetics",
             "sem": 2,
             "exams": [
@@ -22712,7 +22712,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190208",
+            "id": "33016119020801",
             "title": "Crops",
             "sem": 2,
             "exams": [
@@ -22722,7 +22722,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190209",
+            "id": "33016119020901",
             "title": "Introductory Plant Nematology",
             "sem": 2,
             "exams": [
@@ -22732,7 +22732,7 @@ export const domains = [
             ]
           },
           {
-            "id": "167190201",
+            "id": "33016719020101",
             "title": "Human Value & Ethics",
             "sem": 2,
             "exams": [
@@ -22742,7 +22742,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161320013",
+            "id": "33016132001301",
             "title": "NSS/NCC/Physical Education & Yoga Practices",
             "sem": 2,
             "exams": [
@@ -22752,7 +22752,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1619120201",
+            "id": "33161912020101",
             "title": "English For Special Purpose",
             "sem": 2,
             "exams": [
@@ -22762,7 +22762,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190301",
+            "id": "33016119030101",
             "title": "Crop Production Technology-I",
             "sem": 3,
             "exams": [
@@ -22772,7 +22772,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190302",
+            "id": "33016119030201",
             "title": "Problematic Soils & Their Management",
             "sem": 3,
             "exams": [
@@ -22782,7 +22782,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190303",
+            "id": "33016119030301",
             "title": "Fundamentals Of Entomology",
             "sem": 3,
             "exams": [
@@ -22792,7 +22792,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190304",
+            "id": "33016119030401",
             "title": "Agriculture Finance & Cooperation",
             "sem": 3,
             "exams": [
@@ -22802,7 +22802,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190305",
+            "id": "33016119030501",
             "title": "Farm Machinery & Power",
             "sem": 3,
             "exams": [
@@ -22812,7 +22812,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190306",
+            "id": "33016119030601",
             "title": "Education",
             "sem": 3,
             "exams": [
@@ -22822,7 +22822,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190307",
+            "id": "33016119030701",
             "title": "Fundamentals Of Plant Breeding",
             "sem": 3,
             "exams": [
@@ -22832,7 +22832,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190308",
+            "id": "33016119030801",
             "title": "Production Technology For Vegetables & Spices",
             "sem": 3,
             "exams": [
@@ -22842,7 +22842,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190309",
+            "id": "33016119030901",
             "title": "Fundamentals Of Crop Physiology",
             "sem": 3,
             "exams": [
@@ -22852,7 +22852,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161650301",
+            "id": "33016165030101",
             "title": "Gradial)",
             "sem": 3,
             "exams": [
@@ -22862,7 +22862,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190401",
+            "id": "33016119040101",
             "title": "Crop Production Technology-II",
             "sem": 4,
             "exams": [
@@ -22872,7 +22872,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190402",
+            "id": "33016119040201",
             "title": "Weed Management",
             "sem": 4,
             "exams": [
@@ -22882,7 +22882,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190404",
+            "id": "33016119040401",
             "title": "Management Of Beneficial Insects",
             "sem": 4,
             "exams": [
@@ -22892,7 +22892,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190405",
+            "id": "33016119040501",
             "title": "Agriculture Marketing, Trade & Prices",
             "sem": 4,
             "exams": [
@@ -22902,7 +22902,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190406",
+            "id": "33016119040601",
             "title": "Renewable Energy & Green Technology",
             "sem": 4,
             "exams": [
@@ -22912,7 +22912,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190407",
+            "id": "33016119040701",
             "title": "Rural Sociology & Educational Psychology",
             "sem": 4,
             "exams": [
@@ -22922,7 +22922,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190408",
+            "id": "33016119040801",
             "title": "Principle Of Integrated Disease Management",
             "sem": 4,
             "exams": [
@@ -22932,7 +22932,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190409",
+            "id": "33016119040901",
             "title": "Principles Of Seed Technology",
             "sem": 4,
             "exams": [
@@ -22942,7 +22942,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190410",
+            "id": "33016119041001",
             "title": "Intellectual Property Rights",
             "sem": 4,
             "exams": [
@@ -22952,7 +22952,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190411",
+            "id": "33016119041101",
             "title": "Landscaping",
             "sem": 4,
             "exams": [
@@ -22962,7 +22962,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161650401",
+            "id": "33016165040101",
             "title": "Gradial)",
             "sem": 4,
             "exams": [
@@ -22972,7 +22972,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190501",
+            "id": "33016119050101",
             "title": "Farming System & Sustainable Agriculture",
             "sem": 5,
             "exams": [
@@ -22982,7 +22982,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190502",
+            "id": "33016119050201",
             "title": "Geo-Informatics & Precision Farming",
             "sem": 5,
             "exams": [
@@ -22992,7 +22992,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190503",
+            "id": "33016119050301",
             "title": "Practical Crop Production-I",
             "sem": 5,
             "exams": [
@@ -23002,7 +23002,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190504",
+            "id": "33016119050401",
             "title": "Introductory Biotechnology",
             "sem": 5,
             "exams": [
@@ -23012,7 +23012,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190505",
+            "id": "33016119050501",
             "title": "Management",
             "sem": 5,
             "exams": [
@@ -23022,7 +23022,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190506",
+            "id": "33016119050601",
             "title": "Protected Cultivation & Secondary Agriculture",
             "sem": 5,
             "exams": [
@@ -23032,7 +23032,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190507",
+            "id": "33016119050701",
             "title": "Development",
             "sem": 5,
             "exams": [
@@ -23042,7 +23042,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190508",
+            "id": "33016119050801",
             "title": "Management -I",
             "sem": 5,
             "exams": [
@@ -23052,7 +23052,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190509",
+            "id": "33016119050901",
             "title": "Crop Improvements-I",
             "sem": 5,
             "exams": [
@@ -23062,7 +23062,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190510",
+            "id": "33016119051001",
             "title": "Ruminant Production & Management",
             "sem": 5,
             "exams": [
@@ -23072,7 +23072,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190511",
+            "id": "33016119051101",
             "title": "Landscaping",
             "sem": 5,
             "exams": [
@@ -23082,7 +23082,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190512",
+            "id": "33016119051201",
             "title": "Enviornmental Studies & Disaster Management",
             "sem": 5,
             "exams": [
@@ -23092,7 +23092,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190601",
+            "id": "33016119060101",
             "title": "Principles Of Organic Farming",
             "sem": 6,
             "exams": [
@@ -23102,7 +23102,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190602",
+            "id": "33016119060201",
             "title": "Rainfed Agriculture & Watershed Management",
             "sem": 6,
             "exams": [
@@ -23112,7 +23112,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190603",
+            "id": "33016119060301",
             "title": "Practical Crop Production-II",
             "sem": 6,
             "exams": [
@@ -23122,7 +23122,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190604",
+            "id": "33016119060401",
             "title": "Economics",
             "sem": 6,
             "exams": [
@@ -23132,7 +23132,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190605",
+            "id": "33016119060501",
             "title": "Management",
             "sem": 6,
             "exams": [
@@ -23142,7 +23142,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190606",
+            "id": "33016119060601",
             "title": "Communication",
             "sem": 6,
             "exams": [
@@ -23152,7 +23152,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190607",
+            "id": "33016119060701",
             "title": "Crop Improvement-II",
             "sem": 6,
             "exams": [
@@ -23162,7 +23162,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190608",
+            "id": "33016119060801",
             "title": "Vegetables",
             "sem": 6,
             "exams": [
@@ -23172,7 +23172,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190609",
+            "id": "33016119060901",
             "title": "Management -II",
             "sem": 6,
             "exams": [
@@ -23182,7 +23182,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190610",
+            "id": "33016119061001",
             "title": "Bio-Pesticides & Bio-Fertilizers",
             "sem": 6,
             "exams": [
@@ -23192,7 +23192,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161190611",
+            "id": "33016119061101",
             "title": "Poultry Production & Management",
             "sem": 6,
             "exams": [
@@ -23202,7 +23202,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370013",
+            "id": "33016137001301",
             "title": "Attachment",
             "sem": 7,
             "exams": [
@@ -23212,7 +23212,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380003",
+            "id": "33016138000301",
             "title": "Experiential Learning Programme",
             "sem": 8,
             "exams": [
@@ -23229,7 +23229,7 @@ export const domains = [
         "title": "M.Sc in Chemistry",
         "subjects": [
           {
-            "id": "023250406",
+            "id": "34002325040601",
             "title": "FUNDAMENTALS",
             "sem": 1,
             "exams": [
@@ -23239,7 +23239,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251401",
+            "id": "34002325140101",
             "title": "PHYSICAL CHEMISTRY-I",
             "sem": 1,
             "exams": [
@@ -23249,7 +23249,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251404",
+            "id": "34002325140401",
             "title": "ANALYTICAL CHEMISTRY-I",
             "sem": 1,
             "exams": [
@@ -23259,7 +23259,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023252402",
+            "id": "34002325240201",
             "title": "INORGANIC CHEMISTRY-I",
             "sem": 1,
             "exams": [
@@ -23269,7 +23269,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250456",
+            "id": "34002325045601",
             "title": "ORGANIC CHEMISTRY-ESSENTIAL CONCEPTS",
             "sem": 2,
             "exams": [
@@ -23279,7 +23279,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251451",
+            "id": "34002325145101",
             "title": "PHYSICAL CHEMISTRY – II",
             "sem": 2,
             "exams": [
@@ -23289,7 +23289,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251452",
+            "id": "34002325145201",
             "title": "INORGANIC CHEMISTRY – II",
             "sem": 2,
             "exams": [
@@ -23299,7 +23299,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251454",
+            "id": "34002325145401",
             "title": "ANALYTICAL CHEMISTRY-II",
             "sem": 2,
             "exams": [
@@ -23309,7 +23309,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250504",
+            "id": "34002325050401",
             "title": "MEDICINAL CHEMISTRY",
             "sem": 3,
             "exams": [
@@ -23319,7 +23319,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250507",
+            "id": "34002325050701",
             "title": "ADVANCED ORGANIC CHEMISTRY – I",
             "sem": 3,
             "exams": [
@@ -23329,7 +23329,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250509",
+            "id": "34002325050901",
             "title": "ESSENCE OF CHROMATOGRAPHY",
             "sem": 3,
             "exams": [
@@ -23339,7 +23339,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251501",
+            "id": "34002325150101",
             "title": "ADVANCED ANALYTICAL TECHNIQUES",
             "sem": 3,
             "exams": [
@@ -23349,7 +23349,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250506",
+            "id": "34002325050601",
             "title": "INDUSTRIAL ANALYSIS",
             "sem": 3,
             "exams": [
@@ -23359,7 +23359,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250508",
+            "id": "34002325050801",
             "title": "SELECTED TOPICS IN ANALYTICAL CHEMISTRY",
             "sem": 3,
             "exams": [
@@ -23369,7 +23369,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250509",
+            "id": "34002325050902",
             "title": "ESSENCE OF CHROMATOGRAPHY",
             "sem": 3,
             "exams": [
@@ -23379,7 +23379,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251501",
+            "id": "34002325150102",
             "title": "ADVANCED ANALYTICAL TECHNIQUES",
             "sem": 3,
             "exams": [
@@ -23389,7 +23389,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250551",
+            "id": "34002325055101",
             "title": "RESEARCH METHODOLOGY",
             "sem": 4,
             "exams": [
@@ -23399,7 +23399,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250555",
+            "id": "34002325055501",
             "title": "ADVANCED ORGANIC CHEMISTRY -II",
             "sem": 4,
             "exams": [
@@ -23409,7 +23409,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251554",
+            "id": "34002325155401",
             "title": "DISSERTATION/PROJECT",
             "sem": 4,
             "exams": [
@@ -23419,7 +23419,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023250551",
+            "id": "34002325055102",
             "title": "RESEARCH METHODOLOGY",
             "sem": 4,
             "exams": [
@@ -23429,7 +23429,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251553",
+            "id": "34002325155301",
             "title": "PHARMA REGULATORY AFFAIRS",
             "sem": 4,
             "exams": [
@@ -23439,7 +23439,7 @@ export const domains = [
             ]
           },
           {
-            "id": "023251554",
+            "id": "34002325155402",
             "title": "DISSERTATION/PROJECT",
             "sem": 4,
             "exams": [
@@ -23456,7 +23456,7 @@ export const domains = [
         "title": "M.Sc in MicorBiology",
         "subjects": [
           {
-            "id": "021320412",
+            "id": "35002132041201",
             "title": "Enzymology",
             "sem": 1,
             "exams": [
@@ -23466,7 +23466,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320408",
+            "id": "35002132040801",
             "title": "Microbial Evolution and Phylogenetics",
             "sem": 1,
             "exams": [
@@ -23476,7 +23476,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320409",
+            "id": "35002132040901",
             "title": "Bioanalytical Techniques",
             "sem": 1,
             "exams": [
@@ -23486,7 +23486,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320410",
+            "id": "35002132041001",
             "title": "Biochemistry",
             "sem": 1,
             "exams": [
@@ -23496,7 +23496,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320411",
+            "id": "35002132041101",
             "title": "Experimental Laboratory- I",
             "sem": 1,
             "exams": [
@@ -23506,7 +23506,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0219120401",
+            "id": "35021912040101",
             "title": "Effective Communication skills -I",
             "sem": 1,
             "exams": [
@@ -23516,7 +23516,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320458",
+            "id": "35002132045801",
             "title": "Microbial Metabolism",
             "sem": 2,
             "exams": [
@@ -23526,7 +23526,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320459",
+            "id": "35002132045901",
             "title": "Bioinformatics and Statistics",
             "sem": 2,
             "exams": [
@@ -23536,7 +23536,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320460",
+            "id": "35002132046001",
             "title": "Immunology",
             "sem": 2,
             "exams": [
@@ -23546,7 +23546,7 @@ export const domains = [
             ]
           },
           {
-            "id": "041320441",
+            "id": "35004132044101",
             "title": "Intellectual Property Rights",
             "sem": 2,
             "exams": [
@@ -23556,7 +23556,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320156",
+            "id": "35002132015601",
             "title": "Experimental Laboratory – II",
             "sem": 2,
             "exams": [
@@ -23566,7 +23566,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320463",
+            "id": "35002132046301",
             "title": "Fundamental Molecular Biology",
             "sem": 2,
             "exams": [
@@ -23576,7 +23576,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320464",
+            "id": "35002132046401",
             "title": "Cell Biology",
             "sem": 2,
             "exams": [
@@ -23586,7 +23586,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320501",
+            "id": "35002132050101",
             "title": "Bioprocess Technology",
             "sem": 3,
             "exams": [
@@ -23596,7 +23596,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021321503",
+            "id": "35002132150301",
             "title": "Molecular Biology",
             "sem": 3,
             "exams": [
@@ -23606,7 +23606,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320504",
+            "id": "35002132050401",
             "title": "Pharmaceutical Microbiology",
             "sem": 3,
             "exams": [
@@ -23616,7 +23616,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0219120501",
+            "id": "35021912050101",
             "title": "Effective Communication skills-II",
             "sem": 3,
             "exams": [
@@ -23626,7 +23626,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021320552",
+            "id": "35002132055201",
             "title": "Dissertation Project",
             "sem": 4,
             "exams": [
@@ -23643,7 +23643,7 @@ export const domains = [
         "title": "M.Sc in PGDMLT",
         "subjects": [
           {
-            "id": "0213121101",
+            "id": "36021312110101",
             "title": "Basic and Clinical Pathology",
             "sem": 1,
             "exams": [
@@ -23653,7 +23653,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0213120102",
+            "id": "36021312010201",
             "title": "Basic Hematology",
             "sem": 1,
             "exams": [
@@ -23663,7 +23663,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0213120103",
+            "id": "36021312010301",
             "title": "Clinical Biochemistry",
             "sem": 1,
             "exams": [
@@ -23673,7 +23673,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0213120104",
+            "id": "36021312010401",
             "title": "Human Anatomy and Physiology",
             "sem": 1,
             "exams": [
@@ -23683,7 +23683,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0213120106",
+            "id": "36021312010601",
             "title": "Techniques",
             "sem": 1,
             "exams": [
@@ -23693,7 +23693,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0213120105",
+            "id": "36021312010501",
             "title": "Lab 1",
             "sem": 1,
             "exams": [
@@ -23703,7 +23703,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0213120202",
+            "id": "36021312020201",
             "title": "Standard Practices in Biomedical Laboratory",
             "sem": 2,
             "exams": [
@@ -23713,7 +23713,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0213120203",
+            "id": "36021312020301",
             "title": "Lab 2",
             "sem": 2,
             "exams": [
@@ -23723,7 +23723,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0213120204",
+            "id": "36021312020401",
             "title": "Internship",
             "sem": 2,
             "exams": [
@@ -23740,7 +23740,7 @@ export const domains = [
         "title": "B.Pharm",
         "subjects": [
           {
-            "id": "131680101",
+            "id": "37013168010101",
             "title": "Human Anatomy and Physiology I",
             "sem": 1,
             "exams": [
@@ -23750,7 +23750,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680102",
+            "id": "37013168010201",
             "title": "Pharmaceutical Analysis I",
             "sem": 1,
             "exams": [
@@ -23760,7 +23760,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680103",
+            "id": "37013168010301",
             "title": "Pharmaceutics I",
             "sem": 1,
             "exams": [
@@ -23770,7 +23770,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680104",
+            "id": "37013168010401",
             "title": "Pharmaceutical Inorganic Chemistry",
             "sem": 1,
             "exams": [
@@ -23780,7 +23780,7 @@ export const domains = [
             ]
           },
           {
-            "id": "133190105",
+            "id": "37013319010501",
             "title": "Communication skills *",
             "sem": 1,
             "exams": [
@@ -23790,7 +23790,7 @@ export const domains = [
             ]
           },
           {
-            "id": "13290101",
+            "id": "37001329010101",
             "title": "Remedial Biology *",
             "sem": 1,
             "exams": [
@@ -23800,7 +23800,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131310101",
+            "id": "37013131010101",
             "title": "Remedial Mathematics*",
             "sem": 1,
             "exams": [
@@ -23810,7 +23810,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680201",
+            "id": "37013168020101",
             "title": "Human Anatomy and Physiology II",
             "sem": 2,
             "exams": [
@@ -23820,7 +23820,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680202",
+            "id": "37013168020201",
             "title": "Pharmaceutical Organic Chemistry I",
             "sem": 2,
             "exams": [
@@ -23830,7 +23830,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680203",
+            "id": "37013168020301",
             "title": "Pharmaceutical Engineering",
             "sem": 2,
             "exams": [
@@ -23840,7 +23840,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680204",
+            "id": "37013168020401",
             "title": "Computer Applications in Pharmacy*",
             "sem": 2,
             "exams": [
@@ -23850,7 +23850,7 @@ export const domains = [
             ]
           },
           {
-            "id": "135140201",
+            "id": "37013514020101",
             "title": "Environmental Sciences*",
             "sem": 2,
             "exams": [
@@ -23860,7 +23860,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680301",
+            "id": "37013168030101",
             "title": "Pharmaceutical Organic Chemistry-II",
             "sem": 3,
             "exams": [
@@ -23870,7 +23870,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680302",
+            "id": "37013168030201",
             "title": "Physical Pharmaceutics-I",
             "sem": 3,
             "exams": [
@@ -23880,7 +23880,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680303",
+            "id": "37013168030301",
             "title": "Biochemistry",
             "sem": 3,
             "exams": [
@@ -23890,7 +23890,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680304",
+            "id": "37013168030401",
             "title": "Pathophysiology",
             "sem": 3,
             "exams": [
@@ -23900,7 +23900,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680305",
+            "id": "37013168030501",
             "title": "Pharmacognosy and Phytochemistry-I",
             "sem": 3,
             "exams": [
@@ -23910,7 +23910,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680401",
+            "id": "37013168040101",
             "title": "Pharmaceutical Organic Chemistry-III",
             "sem": 4,
             "exams": [
@@ -23920,7 +23920,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680402",
+            "id": "37013168040201",
             "title": "Medicinal Chemistry-I",
             "sem": 4,
             "exams": [
@@ -23930,7 +23930,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680403",
+            "id": "37013168040301",
             "title": "Physical Pharmaceutics-II",
             "sem": 4,
             "exams": [
@@ -23940,7 +23940,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680404",
+            "id": "37013168040401",
             "title": "Pharmacology-I",
             "sem": 4,
             "exams": [
@@ -23950,7 +23950,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680405",
+            "id": "37013168040501",
             "title": "Pharmaceutical Jurisprudence",
             "sem": 4,
             "exams": [
@@ -23960,7 +23960,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131550001",
+            "id": "37013155000101",
             "title": "Pharma Marketing Management",
             "sem": 4,
             "exams": [
@@ -23970,7 +23970,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131550002",
+            "id": "37013155000201",
             "title": "Computer-Aided Drug Design",
             "sem": 4,
             "exams": [
@@ -23980,7 +23980,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131550003",
+            "id": "37013155000301",
             "title": "Pharmaceutical Cosmetic Science",
             "sem": 4,
             "exams": [
@@ -23990,7 +23990,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680501",
+            "id": "37013168050101",
             "title": "Medicinal Chemistry-II",
             "sem": 5,
             "exams": [
@@ -24000,7 +24000,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680502",
+            "id": "37013168050201",
             "title": "Pharmacology-II",
             "sem": 5,
             "exams": [
@@ -24010,7 +24010,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680503",
+            "id": "37013168050301",
             "title": "Pharmacognosy and Phytochemistry-II",
             "sem": 5,
             "exams": [
@@ -24020,7 +24020,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680504",
+            "id": "37013168050401",
             "title": "Pharmaceutical Microbiology",
             "sem": 5,
             "exams": [
@@ -24030,7 +24030,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680505",
+            "id": "37013168050501",
             "title": "Pharmaceutical Biotechnology",
             "sem": 5,
             "exams": [
@@ -24040,7 +24040,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680601",
+            "id": "37013168060101",
             "title": "Medicinal Chemistry-III",
             "sem": 6,
             "exams": [
@@ -24050,7 +24050,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680602",
+            "id": "37013168060201",
             "title": "Pharmacology-III",
             "sem": 6,
             "exams": [
@@ -24060,7 +24060,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680603",
+            "id": "37013168060301",
             "title": "Herbal Drug Technology",
             "sem": 6,
             "exams": [
@@ -24070,7 +24070,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680604",
+            "id": "37013168060401",
             "title": "Biopharmaceutics and Pharmacokinetics",
             "sem": 6,
             "exams": [
@@ -24080,7 +24080,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680605",
+            "id": "37013168060501",
             "title": "Industrial Pharmacy-I",
             "sem": 6,
             "exams": [
@@ -24090,7 +24090,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131550001",
+            "id": "37013155000102",
             "title": "Pharma Marketing Management",
             "sem": 6,
             "exams": [
@@ -24100,7 +24100,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131550002",
+            "id": "37013155000202",
             "title": "Computer-Aided Drug Design",
             "sem": 6,
             "exams": [
@@ -24110,7 +24110,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131550003",
+            "id": "37013155000302",
             "title": "Pharmaceutical Cosmetic Science",
             "sem": 6,
             "exams": [
@@ -24120,7 +24120,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680701",
+            "id": "37013168070101",
             "title": "Instrumental Methods of Analysis",
             "sem": 7,
             "exams": [
@@ -24130,7 +24130,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680702",
+            "id": "37013168070201",
             "title": "Industrial Pharmacy-II",
             "sem": 7,
             "exams": [
@@ -24140,7 +24140,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680703",
+            "id": "37013168070301",
             "title": "Pharmacy Practice",
             "sem": 7,
             "exams": [
@@ -24150,7 +24150,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680704",
+            "id": "37013168070401",
             "title": "Novel Drug Delivery Systems",
             "sem": 7,
             "exams": [
@@ -24160,7 +24160,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680705",
+            "id": "37013168070501",
             "title": "Quality Assurance",
             "sem": 7,
             "exams": [
@@ -24170,7 +24170,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680706",
+            "id": "37013168070601",
             "title": "Practice School",
             "sem": 7,
             "exams": [
@@ -24180,7 +24180,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680801",
+            "id": "37013168080101",
             "title": "Biostatistics and Research Methodology",
             "sem": 8,
             "exams": [
@@ -24190,7 +24190,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680802",
+            "id": "37013168080201",
             "title": "Social and Preventive Pharmacy",
             "sem": 8,
             "exams": [
@@ -24200,7 +24200,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680803",
+            "id": "37013168080301",
             "title": "Pharma Marketing Management",
             "sem": 8,
             "exams": [
@@ -24210,7 +24210,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680804",
+            "id": "37013168080401",
             "title": "Pharmaceutical Regulatory Science",
             "sem": 8,
             "exams": [
@@ -24220,7 +24220,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680805",
+            "id": "37013168080501",
             "title": "Pharmacovigilance",
             "sem": 8,
             "exams": [
@@ -24230,7 +24230,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680806",
+            "id": "37013168080601",
             "title": "Quality Control and Standardization of Herbals",
             "sem": 8,
             "exams": [
@@ -24240,7 +24240,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680807",
+            "id": "37013168080701",
             "title": "Computer-Aided Drug Design",
             "sem": 8,
             "exams": [
@@ -24250,7 +24250,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680808",
+            "id": "37013168080801",
             "title": "Cell and Molecular Biology",
             "sem": 8,
             "exams": [
@@ -24260,7 +24260,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680809",
+            "id": "37013168080901",
             "title": "Cosmetic Science",
             "sem": 8,
             "exams": [
@@ -24270,7 +24270,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680810",
+            "id": "37013168081001",
             "title": "Experimental Pharmacology",
             "sem": 8,
             "exams": [
@@ -24280,7 +24280,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680811",
+            "id": "37013168081101",
             "title": "Advanced Instrumentation Techniques",
             "sem": 8,
             "exams": [
@@ -24290,7 +24290,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680812",
+            "id": "37013168081201",
             "title": "Dietary Supplements and Nutraceuticals",
             "sem": 8,
             "exams": [
@@ -24300,7 +24300,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131680813",
+            "id": "37013168081301",
             "title": "Project Work",
             "sem": 8,
             "exams": [
@@ -24310,7 +24310,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131550001",
+            "id": "37013155000103",
             "title": "Pharma Marketing Management",
             "sem": 8,
             "exams": [
@@ -24320,7 +24320,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131550002",
+            "id": "37013155000203",
             "title": "Computer-Aided Drug Design",
             "sem": 8,
             "exams": [
@@ -24330,7 +24330,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131550003",
+            "id": "37013155000303",
             "title": "Pharmaceutical Cosmetic Science",
             "sem": 8,
             "exams": [
@@ -24347,7 +24347,7 @@ export const domains = [
         "title": "M.Pharm Pharmaceutics",
         "subjects": [
           {
-            "id": "131330101",
+            "id": "38013133010101",
             "title": "Modern Pharmaceutical Analytical Techniques",
             "sem": 1,
             "exams": [
@@ -24357,7 +24357,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330102",
+            "id": "38013133010201",
             "title": "Drug Delivery Systems",
             "sem": 1,
             "exams": [
@@ -24367,7 +24367,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330103",
+            "id": "38013133010301",
             "title": "Modern Pharmaceutics",
             "sem": 1,
             "exams": [
@@ -24377,7 +24377,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330104",
+            "id": "38013133010401",
             "title": "Regulatory Affairs",
             "sem": 1,
             "exams": [
@@ -24387,7 +24387,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330105",
+            "id": "38013133010501",
             "title": "Pharmaceutics Practical-1",
             "sem": 1,
             "exams": [
@@ -24397,7 +24397,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330106",
+            "id": "38013133010601",
             "title": "Seminar/assignment",
             "sem": 1,
             "exams": [
@@ -24407,7 +24407,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330201",
+            "id": "38013133020101",
             "title": "Molecular Pharmaceutics",
             "sem": 2,
             "exams": [
@@ -24417,7 +24417,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330202",
+            "id": "38013133020201",
             "title": "Pharmacokinetics",
             "sem": 2,
             "exams": [
@@ -24427,7 +24427,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330203",
+            "id": "38013133020301",
             "title": "Computer-Aided Drug Development",
             "sem": 2,
             "exams": [
@@ -24437,7 +24437,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330204",
+            "id": "38013133020401",
             "title": "Cosmetics and Cosmeceuticals",
             "sem": 2,
             "exams": [
@@ -24447,7 +24447,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330205",
+            "id": "38013133020501",
             "title": "Pharmaceutics Practicals-2",
             "sem": 2,
             "exams": [
@@ -24457,7 +24457,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330206",
+            "id": "38013133020601",
             "title": "Seminar/assignment",
             "sem": 2,
             "exams": [
@@ -24467,7 +24467,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330301",
+            "id": "38013133030101",
             "title": "Research Methodology & Biostatistics",
             "sem": 3,
             "exams": [
@@ -24477,7 +24477,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330302",
+            "id": "38013133030201",
             "title": "Pharma Journal Club-1",
             "sem": 3,
             "exams": [
@@ -24487,7 +24487,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330303",
+            "id": "38013133030301",
             "title": "Research Proposal Presentation",
             "sem": 3,
             "exams": [
@@ -24497,7 +24497,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330304",
+            "id": "38013133030401",
             "title": "Research Project Work",
             "sem": 3,
             "exams": [
@@ -24507,7 +24507,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330305",
+            "id": "38013133030501",
             "title": "Interpretation of spectra*",
             "sem": 3,
             "exams": [
@@ -24517,7 +24517,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330401",
+            "id": "38013133040101",
             "title": "Pharma Journal Club-2",
             "sem": 4,
             "exams": [
@@ -24527,7 +24527,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330402",
+            "id": "38013133040201",
             "title": "Research Progress Presentation",
             "sem": 4,
             "exams": [
@@ -24537,7 +24537,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131330403",
+            "id": "38013133040301",
             "title": "Research Work and Colloquium",
             "sem": 4,
             "exams": [
@@ -24554,7 +24554,7 @@ export const domains = [
         "title": "M.Pharm Pharmaceutical Quality Assurence",
         "subjects": [
           {
-            "id": "1313170101",
+            "id": "39131317010101",
             "title": "Modern Pharmaceutical Analytical Techniques",
             "sem": 1,
             "exams": [
@@ -24564,7 +24564,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170102",
+            "id": "39131317010201",
             "title": "Quality Management System",
             "sem": 1,
             "exams": [
@@ -24574,7 +24574,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170103",
+            "id": "39131317010301",
             "title": "Quality Control and Quality Assurance",
             "sem": 1,
             "exams": [
@@ -24584,7 +24584,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170104",
+            "id": "39131317010401",
             "title": "Product Development and Technology Transfer",
             "sem": 1,
             "exams": [
@@ -24594,7 +24594,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170105",
+            "id": "39131317010501",
             "title": "Quality Assurance Practical-1",
             "sem": 1,
             "exams": [
@@ -24604,7 +24604,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170106",
+            "id": "39131317010601",
             "title": "Seminar/assignment",
             "sem": 1,
             "exams": [
@@ -24614,7 +24614,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170201",
+            "id": "39131317020101",
             "title": "Hazards and Safety Management",
             "sem": 2,
             "exams": [
@@ -24624,7 +24624,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170202",
+            "id": "39131317020201",
             "title": "Pharmaceutical Validation",
             "sem": 2,
             "exams": [
@@ -24634,7 +24634,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170203",
+            "id": "39131317020301",
             "title": "Audits and Regulatory Compliance",
             "sem": 2,
             "exams": [
@@ -24644,7 +24644,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170204",
+            "id": "39131317020401",
             "title": "Pharmaceutical Manufacturing Technology",
             "sem": 2,
             "exams": [
@@ -24654,7 +24654,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170205",
+            "id": "39131317020501",
             "title": "Quality Assurance Practical-2",
             "sem": 2,
             "exams": [
@@ -24664,7 +24664,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170206",
+            "id": "39131317020601",
             "title": "Seminar/assignment",
             "sem": 2,
             "exams": [
@@ -24674,7 +24674,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170207",
+            "id": "39131317020701",
             "title": "Research writing*",
             "sem": 2,
             "exams": [
@@ -24684,7 +24684,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170301",
+            "id": "39131317030101",
             "title": "Research Methodology & Biostatistics",
             "sem": 3,
             "exams": [
@@ -24694,7 +24694,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170302",
+            "id": "39131317030201",
             "title": "Pharma Journal Club-1",
             "sem": 3,
             "exams": [
@@ -24704,7 +24704,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170303",
+            "id": "39131317030301",
             "title": "Research Proposal Presentation",
             "sem": 3,
             "exams": [
@@ -24714,7 +24714,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170304",
+            "id": "39131317030401",
             "title": "Research Project Work",
             "sem": 3,
             "exams": [
@@ -24724,7 +24724,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170305",
+            "id": "39131317030501",
             "title": "Interpretation of spectra*",
             "sem": 3,
             "exams": [
@@ -24734,7 +24734,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170401",
+            "id": "39131317040101",
             "title": "Pharma Journal Club-2",
             "sem": 4,
             "exams": [
@@ -24744,7 +24744,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170402",
+            "id": "39131317040201",
             "title": "Research Progress Presentation",
             "sem": 4,
             "exams": [
@@ -24754,7 +24754,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313170403",
+            "id": "39131317040301",
             "title": "Research Work and Colloquium",
             "sem": 4,
             "exams": [
@@ -24771,7 +24771,7 @@ export const domains = [
         "title": "M.Pharm Regulatory Affairs",
         "subjects": [
           {
-            "id": "1313180101",
+            "id": "40131318010101",
             "title": "Good Regulatory Practices",
             "sem": 1,
             "exams": [
@@ -24781,7 +24781,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180102",
+            "id": "40131318010201",
             "title": "Documentation and regulatory writing",
             "sem": 1,
             "exams": [
@@ -24791,7 +24791,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180103",
+            "id": "40131318010301",
             "title": "Clinical research regulations",
             "sem": 1,
             "exams": [
@@ -24801,7 +24801,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180104",
+            "id": "40131318010401",
             "title": "India and Intellectual Property Rights",
             "sem": 1,
             "exams": [
@@ -24811,7 +24811,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180105",
+            "id": "40131318010501",
             "title": "Regulatory Affairs Practical-1",
             "sem": 1,
             "exams": [
@@ -24821,7 +24821,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180106",
+            "id": "40131318010601",
             "title": "Seminar/ assignment",
             "sem": 1,
             "exams": [
@@ -24831,7 +24831,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180201",
+            "id": "40131318020101",
             "title": "Regulatory Aspects of Drugs & Cosmetic",
             "sem": 2,
             "exams": [
@@ -24841,7 +24841,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180202",
+            "id": "40131318020201",
             "title": "",
             "sem": 2,
             "exams": [
@@ -24851,7 +24851,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180203",
+            "id": "40131318020301",
             "title": "Regulatory Aspects of Medical Devices",
             "sem": 2,
             "exams": [
@@ -24861,7 +24861,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180204",
+            "id": "40131318020401",
             "title": "",
             "sem": 2,
             "exams": [
@@ -24871,7 +24871,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180205",
+            "id": "40131318020501",
             "title": "Regulatory Affairs Practical-2",
             "sem": 2,
             "exams": [
@@ -24881,7 +24881,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180206",
+            "id": "40131318020601",
             "title": "Seminar/ assignment",
             "sem": 2,
             "exams": [
@@ -24891,7 +24891,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180301",
+            "id": "40131318030101",
             "title": "Research Methodology & Biostatistics",
             "sem": 3,
             "exams": [
@@ -24901,7 +24901,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180302",
+            "id": "40131318030201",
             "title": "Pharma Journal Club-1",
             "sem": 3,
             "exams": [
@@ -24911,7 +24911,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180303",
+            "id": "40131318030301",
             "title": "Research Proposal Presentation",
             "sem": 3,
             "exams": [
@@ -24921,7 +24921,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180304",
+            "id": "40131318030401",
             "title": "Research Project Work",
             "sem": 3,
             "exams": [
@@ -24931,7 +24931,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180401",
+            "id": "40131318040101",
             "title": "Pharma Journal Club-2",
             "sem": 4,
             "exams": [
@@ -24941,7 +24941,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180402",
+            "id": "40131318040201",
             "title": "Research Progress Presentation",
             "sem": 4,
             "exams": [
@@ -24951,7 +24951,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1313180403",
+            "id": "40131318040301",
             "title": "Research Work and Colloquium",
             "sem": 4,
             "exams": [
@@ -24976,7 +24976,7 @@ export const domains = [
         "title": "BA LLB (Hons)",
         "subjects": [
           {
-            "id": "10212101",
+            "id": "41001021210101",
             "title": "POLITICS",
             "sem": 1,
             "exams": [
@@ -24986,7 +24986,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10212102",
+            "id": "41001021210201",
             "title": "ECONOMICS I",
             "sem": 1,
             "exams": [
@@ -24996,7 +24996,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10212103",
+            "id": "41001021210301",
             "title": "SOCIOLOGY I",
             "sem": 1,
             "exams": [
@@ -25006,7 +25006,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103181101",
+            "id": "41010318110101",
             "title": "SKILLS",
             "sem": 1,
             "exams": [
@@ -25016,7 +25016,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122101",
+            "id": "41010612210101",
             "title": "LEGAL METHODS",
             "sem": 1,
             "exams": [
@@ -25026,7 +25026,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122102",
+            "id": "41010612210201",
             "title": "LAW OF CONTRACT I : GENERAL PRINCIPLES",
             "sem": 1,
             "exams": [
@@ -25036,7 +25036,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10212201",
+            "id": "41001021220101",
             "title": "RELATIONS",
             "sem": 2,
             "exams": [
@@ -25046,7 +25046,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10212202",
+            "id": "41001021220201",
             "title": "ECONOMICS II",
             "sem": 2,
             "exams": [
@@ -25056,7 +25056,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10212203",
+            "id": "41001021220301",
             "title": "INTERFACE",
             "sem": 2,
             "exams": [
@@ -25066,7 +25066,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122201",
+            "id": "41010612220101",
             "title": "MOTOR VEHICLE ACT,1988",
             "sem": 2,
             "exams": [
@@ -25076,7 +25076,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122202",
+            "id": "41010612220201",
             "title": "LAW OF CONTRACT II",
             "sem": 2,
             "exams": [
@@ -25086,7 +25086,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122203",
+            "id": "41010612220301",
             "title": "MOOT COURT TRAINING",
             "sem": 2,
             "exams": [
@@ -25096,7 +25096,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1019120152",
+            "id": "41101912015201",
             "title": "LAW THROUGH POPULAR MEDIA",
             "sem": 2,
             "exams": [
@@ -25106,7 +25106,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120204",
+            "id": "41010612020401",
             "title": "INTERNSHIP",
             "sem": 2,
             "exams": [
@@ -25116,7 +25116,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10212301",
+            "id": "41001021230101",
             "title": "GOVERNANCE",
             "sem": 3,
             "exams": [
@@ -25126,7 +25126,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10212302",
+            "id": "41001021230201",
             "title": "ECONOMICS III",
             "sem": 3,
             "exams": [
@@ -25136,7 +25136,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10212303",
+            "id": "41001021230301",
             "title": "& PROSPECTS",
             "sem": 3,
             "exams": [
@@ -25146,7 +25146,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122301",
+            "id": "41010612230101",
             "title": "FAMILY LAW I",
             "sem": 3,
             "exams": [
@@ -25156,7 +25156,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122302",
+            "id": "41010612230201",
             "title": "CONSTITUTIONAL LAW I",
             "sem": 3,
             "exams": [
@@ -25166,7 +25166,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122303",
+            "id": "41010612230301",
             "title": "LAW OF CRIMES-I",
             "sem": 3,
             "exams": [
@@ -25176,7 +25176,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122304",
+            "id": "41010612230401",
             "title": "JURISPRUDENCE",
             "sem": 3,
             "exams": [
@@ -25186,7 +25186,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1019121302",
+            "id": "41101912130201",
             "title": "BASICS OF FRENCH LANGUAGE- I",
             "sem": 3,
             "exams": [
@@ -25196,7 +25196,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120306",
+            "id": "41010612030601",
             "title": "INTERNSHIP",
             "sem": 3,
             "exams": [
@@ -25206,7 +25206,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10212401",
+            "id": "41001021240101",
             "title": "THOUGHT",
             "sem": 4,
             "exams": [
@@ -25216,7 +25216,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122401",
+            "id": "41010612240101",
             "title": "PUBLIC INTERNATIONAL LAW",
             "sem": 4,
             "exams": [
@@ -25226,7 +25226,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122402",
+            "id": "41010612240201",
             "title": "ENVIRONMENT LAW",
             "sem": 4,
             "exams": [
@@ -25236,7 +25236,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122403",
+            "id": "41010612240301",
             "title": "FAMILY LAW II",
             "sem": 4,
             "exams": [
@@ -25246,7 +25246,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122404",
+            "id": "41010612240401",
             "title": "CONSTITUTIONAL LAW -II",
             "sem": 4,
             "exams": [
@@ -25256,7 +25256,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122405",
+            "id": "41010612240501",
             "title": "LAW OF CRIMES II",
             "sem": 4,
             "exams": [
@@ -25266,7 +25266,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1019121402",
+            "id": "41101912140201",
             "title": "BASICS OF FRENCH LANGUAGE FRENCH- II",
             "sem": 4,
             "exams": [
@@ -25276,7 +25276,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120406",
+            "id": "41010612040601",
             "title": "INTERNSHIP",
             "sem": 4,
             "exams": [
@@ -25286,7 +25286,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10211501",
+            "id": "41001021150101",
             "title": "POLITICS",
             "sem": 5,
             "exams": [
@@ -25296,7 +25296,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121501",
+            "id": "41010612150101",
             "title": "LAW",
             "sem": 5,
             "exams": [
@@ -25306,7 +25306,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121502",
+            "id": "41010612150201",
             "title": "LAW OF CRIMINAL PROCEDURE",
             "sem": 5,
             "exams": [
@@ -25316,7 +25316,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121503",
+            "id": "41010612150301",
             "title": "CORPORATE LAW I",
             "sem": 5,
             "exams": [
@@ -25326,7 +25326,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121504",
+            "id": "41010612150401",
             "title": "LAW OF EVIDENCE",
             "sem": 5,
             "exams": [
@@ -25336,7 +25336,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121505",
+            "id": "41010612150501",
             "title": "ADMINISTRATIVE LAW",
             "sem": 5,
             "exams": [
@@ -25346,7 +25346,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121506",
+            "id": "41010612150601",
             "title": "LEGAL WRITING: ENRICHMENT COURSE",
             "sem": 5,
             "exams": [
@@ -25356,7 +25356,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120507",
+            "id": "41010612050701",
             "title": "INTERNSHIP",
             "sem": 5,
             "exams": [
@@ -25366,7 +25366,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10211601",
+            "id": "41001021160101",
             "title": "THOUGHT",
             "sem": 6,
             "exams": [
@@ -25376,7 +25376,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121601",
+            "id": "41010612160101",
             "title": "LABOUR & INDUSTRIAL LAW",
             "sem": 6,
             "exams": [
@@ -25386,7 +25386,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121602",
+            "id": "41010612160201",
             "title": "INTERPRETATION OF STATUTES",
             "sem": 6,
             "exams": [
@@ -25396,7 +25396,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121603",
+            "id": "41010612160301",
             "title": "CORPORATE LAW II",
             "sem": 6,
             "exams": [
@@ -25406,7 +25406,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121604",
+            "id": "41010612160401",
             "title": "CIVIL PROCEDURE CODE & LIMITATION ACT",
             "sem": 6,
             "exams": [
@@ -25416,7 +25416,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121605",
+            "id": "41010612160501",
             "title": "PROPERTY LAW",
             "sem": 6,
             "exams": [
@@ -25426,7 +25426,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121606",
+            "id": "41010612160601",
             "title": "INTELLECTUAL PROPERTY LAW",
             "sem": 6,
             "exams": [
@@ -25436,7 +25436,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120607",
+            "id": "41010612060701",
             "title": "INTERNSHIP HIGH COURT 2) 4 WEEKS",
             "sem": 6,
             "exams": [
@@ -25446,7 +25446,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370014",
+            "id": "41016137001401",
             "title": "LAW ON MERGER AND ACQUISITION  - Business Law",
             "sem": 7,
             "exams": [
@@ -25456,7 +25456,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120701",
+            "id": "41010212070101",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -25466,7 +25466,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120702",
+            "id": "41010212070201",
             "title": "",
             "sem": 7,
             "exams": [
@@ -25476,7 +25476,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370015",
+            "id": "41016137001501",
             "title": "CRIMINOLOGY - Crime and Criminology",
             "sem": 7,
             "exams": [
@@ -25486,7 +25486,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180701",
+            "id": "41010318070101",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -25496,7 +25496,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370016",
+            "id": "41016137001601",
             "title": "IT OFFENCES - Crime and Criminology",
             "sem": 7,
             "exams": [
@@ -25506,7 +25506,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180702",
+            "id": "41010318070201",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -25516,7 +25516,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370017",
+            "id": "41016137001701",
             "title": "LAW OF COPYRIGHT - Intellectual Property Law",
             "sem": 7,
             "exams": [
@@ -25526,7 +25526,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160701",
+            "id": "41010916070101",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -25536,7 +25536,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370018",
+            "id": "41016137001801",
             "title": "INDICATIONS - Intellectual Property Law",
             "sem": 7,
             "exams": [
@@ -25546,7 +25546,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160702",
+            "id": "41010916070201",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -25556,7 +25556,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370019",
+            "id": "41016137001901",
             "title": "MEDIA AND LAW  - Constitutional Law",
             "sem": 7,
             "exams": [
@@ -25566,7 +25566,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120701",
+            "id": "41010312070101",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -25576,7 +25576,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370020",
+            "id": "41016137002001",
             "title": "LEGISLATIVE DRAFTING - Constitutional Law",
             "sem": 7,
             "exams": [
@@ -25586,7 +25586,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120702",
+            "id": "41010312070201",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -25596,7 +25596,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120701",
+            "id": "41010612070101",
             "title": "LABOUR & INDUSTRIAL LAW II",
             "sem": 7,
             "exams": [
@@ -25606,7 +25606,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120702",
+            "id": "41010612070201",
             "title": "II)",
             "sem": 7,
             "exams": [
@@ -25616,7 +25616,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120703",
+            "id": "41010612070301",
             "title": "TAXATION LAW I",
             "sem": 7,
             "exams": [
@@ -25626,7 +25626,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120704",
+            "id": "41010612070401",
             "title": "III)",
             "sem": 7,
             "exams": [
@@ -25636,7 +25636,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120705",
+            "id": "41010612070501",
             "title": "INVESTMENT & SECURITY LAW",
             "sem": 7,
             "exams": [
@@ -25646,7 +25646,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120706",
+            "id": "41010612070601",
             "title": "HOUSE 1/COURT I) 4 WEEKS",
             "sem": 7,
             "exams": [
@@ -25656,7 +25656,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380004",
+            "id": "41016138000401",
             "title": "LAW ON CORPORATE FINANCE - Business Law",
             "sem": 8,
             "exams": [
@@ -25666,7 +25666,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120801",
+            "id": "41010212080101",
             "title": "Course",
             "sem": 8,
             "exams": [
@@ -25676,7 +25676,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380005",
+            "id": "41016138000501",
             "title": "LAW OF CORPORATE GOVERNANCE  - Business Law",
             "sem": 8,
             "exams": [
@@ -25686,7 +25686,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120802",
+            "id": "41010212080201",
             "title": "Course",
             "sem": 8,
             "exams": [
@@ -25696,7 +25696,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180801",
+            "id": "41010318080101",
             "title": "",
             "sem": 8,
             "exams": [
@@ -25706,7 +25706,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180802",
+            "id": "41010318080201",
             "title": "Criminology",
             "sem": 8,
             "exams": [
@@ -25716,7 +25716,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160801",
+            "id": "41010916080101",
             "title": "Property Law",
             "sem": 8,
             "exams": [
@@ -25726,7 +25726,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380006",
+            "id": "41016138000601",
             "title": "LAW OF PATENT - Intellectual Property Law",
             "sem": 8,
             "exams": [
@@ -25736,7 +25736,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160802",
+            "id": "41010916080201",
             "title": "Course",
             "sem": 8,
             "exams": [
@@ -25746,7 +25746,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380007",
+            "id": "41016138000701",
             "title": "LAW & EDUCATION - Constitutional Law",
             "sem": 8,
             "exams": [
@@ -25756,7 +25756,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120801",
+            "id": "41010312080101",
             "title": "Course",
             "sem": 8,
             "exams": [
@@ -25766,7 +25766,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120802",
+            "id": "41010312080201",
             "title": "",
             "sem": 8,
             "exams": [
@@ -25776,7 +25776,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120801",
+            "id": "41010612080101",
             "title": "BANKING & INSURANCE LAW",
             "sem": 8,
             "exams": [
@@ -25786,7 +25786,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120802",
+            "id": "41010612080201",
             "title": "PRIVATE INTERNATIONAL LAW",
             "sem": 8,
             "exams": [
@@ -25796,7 +25796,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120803",
+            "id": "41010612080301",
             "title": "COMPETITION LAW",
             "sem": 8,
             "exams": [
@@ -25806,7 +25806,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120804",
+            "id": "41010612080401",
             "title": "PRACTICES)",
             "sem": 8,
             "exams": [
@@ -25816,7 +25816,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120805",
+            "id": "41010612080501",
             "title": "SERVICES",
             "sem": 8,
             "exams": [
@@ -25826,7 +25826,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120806",
+            "id": "41010612080601",
             "title": "HOUSE 2) 4 WEEKS",
             "sem": 8,
             "exams": [
@@ -25836,7 +25836,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120901",
+            "id": "41010212090101",
             "title": "",
             "sem": 9,
             "exams": [
@@ -25846,7 +25846,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161390001",
+            "id": "41016139000101",
             "title": "FINANCIAL MARKET REGULATION - Business Law",
             "sem": 9,
             "exams": [
@@ -25856,7 +25856,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120902",
+            "id": "41010212090201",
             "title": "Course",
             "sem": 9,
             "exams": [
@@ -25866,7 +25866,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180901",
+            "id": "41010318090101",
             "title": "Criminology",
             "sem": 9,
             "exams": [
@@ -25876,7 +25876,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180902",
+            "id": "41010318090201",
             "title": "Criminology",
             "sem": 9,
             "exams": [
@@ -25886,7 +25886,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120901",
+            "id": "41010312090101",
             "title": "",
             "sem": 9,
             "exams": [
@@ -25896,7 +25896,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161390002",
+            "id": "41016139000201",
             "title": "RIGHT TO INFORMATION LAW - Constitutional Law",
             "sem": 9,
             "exams": [
@@ -25906,7 +25906,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120902",
+            "id": "41010312090201",
             "title": "Course",
             "sem": 9,
             "exams": [
@@ -25916,7 +25916,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160901",
+            "id": "41010916090101",
             "title": "",
             "sem": 9,
             "exams": [
@@ -25926,7 +25926,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161390003",
+            "id": "41016139000301",
             "title": "EMERGING ISSUES IN IPR - Intellectual Property Law",
             "sem": 9,
             "exams": [
@@ -25936,7 +25936,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160902",
+            "id": "41010916090201",
             "title": "Course",
             "sem": 9,
             "exams": [
@@ -25946,7 +25946,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120901",
+            "id": "41010612090101",
             "title": "SYSTEM",
             "sem": 9,
             "exams": [
@@ -25956,7 +25956,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120902",
+            "id": "41010612090201",
             "title": "LAW, SCIENCE & TECHNOLOGY",
             "sem": 9,
             "exams": [
@@ -25966,7 +25966,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120906",
+            "id": "41010612090601",
             "title": "TELECOMMUNICATION LAW",
             "sem": 9,
             "exams": [
@@ -25976,7 +25976,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120907",
+            "id": "41010612090701",
             "title": "ENERGY LAW - Elective Course",
             "sem": 9,
             "exams": [
@@ -25986,7 +25986,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120908",
+            "id": "41010612090801",
             "title": "PLACEMENT INTERNSHIP",
             "sem": 9,
             "exams": [
@@ -25996,7 +25996,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1613100001",
+            "id": "41161310000101",
             "title": "INTERNATIONAL TRADE LAW - Business Law",
             "sem": 10,
             "exams": [
@@ -26006,7 +26006,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1021201001",
+            "id": "41102120100101",
             "title": "Course",
             "sem": 10,
             "exams": [
@@ -26016,7 +26016,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1613100002",
+            "id": "41161310000201",
             "title": "INTERNATIONAL TAXATION LAW - Business Law",
             "sem": 10,
             "exams": [
@@ -26026,7 +26026,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1021201002",
+            "id": "41102120100201",
             "title": "Course",
             "sem": 10,
             "exams": [
@@ -26036,7 +26036,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1031801001",
+            "id": "41103180100101",
             "title": "Criminology",
             "sem": 10,
             "exams": [
@@ -26046,7 +26046,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1031801002",
+            "id": "41103180100201",
             "title": "",
             "sem": 10,
             "exams": [
@@ -26056,7 +26056,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1613100003",
+            "id": "41161310000301",
             "title": "COMPARATIVE CONSTITUTION - Constitutional Law",
             "sem": 10,
             "exams": [
@@ -26066,7 +26066,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1031201001",
+            "id": "41103120100101",
             "title": "Course",
             "sem": 10,
             "exams": [
@@ -26076,7 +26076,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1613100004",
+            "id": "41161310000401",
             "title": "JUDICIAL PROCESS - Constitutional Law",
             "sem": 10,
             "exams": [
@@ -26086,7 +26086,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1031201002",
+            "id": "41103120100201",
             "title": "Course",
             "sem": 10,
             "exams": [
@@ -26096,7 +26096,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1091601001",
+            "id": "41109160100101",
             "title": "Intellectual Property Law",
             "sem": 10,
             "exams": [
@@ -26106,7 +26106,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1091601002",
+            "id": "41109160100201",
             "title": "Intellectual Property Law",
             "sem": 10,
             "exams": [
@@ -26116,7 +26116,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1061201001",
+            "id": "41106120100101",
             "title": "AIR AND SPACE LAW - Elective Course",
             "sem": 10,
             "exams": [
@@ -26126,7 +26126,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1061201003",
+            "id": "41106120100301",
             "title": "CYBER LAW - Elective Course",
             "sem": 10,
             "exams": [
@@ -26136,7 +26136,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1061201002",
+            "id": "41106120100201",
             "title": "HEALTH LAW - Elective Course",
             "sem": 10,
             "exams": [
@@ -26184,7 +26184,7 @@ export const domains = [
         "title": "B.Com LLB (HONS)",
         "subjects": [
           {
-            "id": "10232101",
+            "id": "42001023210101",
             "title": "PRINCIPLES OF BUSINESS ADMINISTRATION",
             "sem": 1,
             "exams": [
@@ -26194,7 +26194,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10232102",
+            "id": "42001023210201",
             "title": "BUSINESS ENVIRONMENT",
             "sem": 1,
             "exams": [
@@ -26204,7 +26204,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10232103",
+            "id": "42001023210301",
             "title": "PRINCIPLES OF ACCOUNTING",
             "sem": 1,
             "exams": [
@@ -26214,7 +26214,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103181101",
+            "id": "42010318110101",
             "title": "SKILLS",
             "sem": 1,
             "exams": [
@@ -26224,7 +26224,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122101",
+            "id": "42010612210101",
             "title": "LEGAL METHODS",
             "sem": 1,
             "exams": [
@@ -26234,7 +26234,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122102",
+            "id": "42010612210201",
             "title": "LAW OF CONTRACT I : GENERAL PRINCIPLES",
             "sem": 1,
             "exams": [
@@ -26244,7 +26244,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1019121101",
+            "id": "42101912110101",
             "title": "INTRODUCTION TO LANGUAGE SKILLS",
             "sem": 1,
             "exams": [
@@ -26254,7 +26254,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10230209",
+            "id": "42001023020901",
             "title": "BUSINESS COMMUNICATION",
             "sem": 2,
             "exams": [
@@ -26264,7 +26264,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10232201",
+            "id": "42001023220101",
             "title": "BUSINESS ECONOMICS",
             "sem": 2,
             "exams": [
@@ -26274,7 +26274,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10232203",
+            "id": "42001023220301",
             "title": "FINANCIAL MANAGEMENT",
             "sem": 2,
             "exams": [
@@ -26284,7 +26284,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122201",
+            "id": "42010612220101",
             "title": "MOTOR VEHICLE ACT,1988",
             "sem": 2,
             "exams": [
@@ -26294,7 +26294,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122202",
+            "id": "42010612220201",
             "title": "LAW OF CONTRACT II",
             "sem": 2,
             "exams": [
@@ -26304,7 +26304,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122203",
+            "id": "42010612220301",
             "title": "MOOT COURT TRAINING",
             "sem": 2,
             "exams": [
@@ -26314,7 +26314,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1019120152",
+            "id": "42101912015201",
             "title": "LAW THROUGH POPULAR MEDIA",
             "sem": 2,
             "exams": [
@@ -26324,7 +26324,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120204",
+            "id": "42010612020401",
             "title": "INTERNSHIP",
             "sem": 2,
             "exams": [
@@ -26334,7 +26334,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10232301",
+            "id": "42001023230101",
             "title": "FINANCIAL ACCOUNTING",
             "sem": 3,
             "exams": [
@@ -26344,7 +26344,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10232302",
+            "id": "42001023230201",
             "title": "FUNDAMENTALS OF ENTREPRENEURSHIP",
             "sem": 3,
             "exams": [
@@ -26354,7 +26354,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10232303",
+            "id": "42001023230301",
             "title": "HUMAN RESOURCE MANAGEMENT",
             "sem": 3,
             "exams": [
@@ -26364,7 +26364,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122301",
+            "id": "42010612230101",
             "title": "FAMILY LAW I",
             "sem": 3,
             "exams": [
@@ -26374,7 +26374,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122302",
+            "id": "42010612230201",
             "title": "CONSTITUTIONAL LAW I",
             "sem": 3,
             "exams": [
@@ -26384,7 +26384,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122303",
+            "id": "42010612230301",
             "title": "LAW OF CRIMES-I",
             "sem": 3,
             "exams": [
@@ -26394,7 +26394,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122304",
+            "id": "42010612230401",
             "title": "JURISPRUDENCE",
             "sem": 3,
             "exams": [
@@ -26404,7 +26404,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1019121302",
+            "id": "42101912130201",
             "title": "BASICS OF FRENCH LANGUAGE- I",
             "sem": 3,
             "exams": [
@@ -26414,7 +26414,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120306",
+            "id": "42010612030601",
             "title": "INTERNSHIP",
             "sem": 3,
             "exams": [
@@ -26424,7 +26424,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10232401",
+            "id": "42001023240101",
             "title": "ORGANIZATION BEHAVIOUR",
             "sem": 4,
             "exams": [
@@ -26434,7 +26434,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122401",
+            "id": "42010612240101",
             "title": "PUBLIC INTERNATIONAL LAW",
             "sem": 4,
             "exams": [
@@ -26444,7 +26444,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122402",
+            "id": "42010612240201",
             "title": "ENVIRONMENT LAW",
             "sem": 4,
             "exams": [
@@ -26454,7 +26454,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122403",
+            "id": "42010612240301",
             "title": "FAMILY LAW II",
             "sem": 4,
             "exams": [
@@ -26464,7 +26464,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122404",
+            "id": "42010612240401",
             "title": "CONSTITUTIONAL LAW -II",
             "sem": 4,
             "exams": [
@@ -26474,7 +26474,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106122405",
+            "id": "42010612240501",
             "title": "LAW OF CRIMES II",
             "sem": 4,
             "exams": [
@@ -26484,7 +26484,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1019121402",
+            "id": "42101912140201",
             "title": "BASICS OF FRENCH LANGUAGE FRENCH- II",
             "sem": 4,
             "exams": [
@@ -26494,7 +26494,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120406",
+            "id": "42010612040601",
             "title": "INTERNSHIP",
             "sem": 4,
             "exams": [
@@ -26504,7 +26504,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10231501",
+            "id": "42001023150101",
             "title": "PRINCIPLES OF MARKETING",
             "sem": 5,
             "exams": [
@@ -26514,7 +26514,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121501",
+            "id": "42010612150101",
             "title": "LAW",
             "sem": 5,
             "exams": [
@@ -26524,7 +26524,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121502",
+            "id": "42010612150201",
             "title": "LAW OF CRIMINAL PROCEDURE",
             "sem": 5,
             "exams": [
@@ -26534,7 +26534,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121503",
+            "id": "42010612150301",
             "title": "CORPORATE LAW I",
             "sem": 5,
             "exams": [
@@ -26544,7 +26544,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121504",
+            "id": "42010612150401",
             "title": "LAW OF EVIDENCE",
             "sem": 5,
             "exams": [
@@ -26554,7 +26554,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121505",
+            "id": "42010612150501",
             "title": "ADMINISTRATIVE LAW",
             "sem": 5,
             "exams": [
@@ -26564,7 +26564,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121506",
+            "id": "42010612150601",
             "title": "LEGAL WRITING: ENRICHMENT COURSE",
             "sem": 5,
             "exams": [
@@ -26574,7 +26574,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120507",
+            "id": "42010612050701",
             "title": "INTERNSHIP",
             "sem": 5,
             "exams": [
@@ -26584,7 +26584,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10231601",
+            "id": "42001023160101",
             "title": "ESSENTIALS OF E-COMMERCE",
             "sem": 6,
             "exams": [
@@ -26594,7 +26594,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121601",
+            "id": "42010612160101",
             "title": "LABOUR & INDUSTRIAL LAW",
             "sem": 6,
             "exams": [
@@ -26604,7 +26604,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121602",
+            "id": "42010612160201",
             "title": "INTERPRETATION OF STATUTES",
             "sem": 6,
             "exams": [
@@ -26614,7 +26614,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121603",
+            "id": "42010612160301",
             "title": "CORPORATE LAW II",
             "sem": 6,
             "exams": [
@@ -26624,7 +26624,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121604",
+            "id": "42010612160401",
             "title": "CIVIL PROCEDURE CODE & LIMITATION ACT",
             "sem": 6,
             "exams": [
@@ -26634,7 +26634,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121605",
+            "id": "42010612160501",
             "title": "PROPERTY LAW",
             "sem": 6,
             "exams": [
@@ -26644,7 +26644,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106121606",
+            "id": "42010612160601",
             "title": "INTELLECTUAL PROPERTY LAW",
             "sem": 6,
             "exams": [
@@ -26654,7 +26654,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120607",
+            "id": "42010612060701",
             "title": "INTERNSHIP HIGH COURT 2) 4 WEEKS",
             "sem": 6,
             "exams": [
@@ -26664,7 +26664,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370014",
+            "id": "42016137001401",
             "title": "LAW ON MERGER AND ACQUISITION  - Business Law",
             "sem": 7,
             "exams": [
@@ -26674,7 +26674,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120701",
+            "id": "42010212070101",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -26684,7 +26684,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120702",
+            "id": "42010212070201",
             "title": "",
             "sem": 7,
             "exams": [
@@ -26694,7 +26694,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370015",
+            "id": "42016137001501",
             "title": "CRIMINOLOGY - Crime and Criminology",
             "sem": 7,
             "exams": [
@@ -26704,7 +26704,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180701",
+            "id": "42010318070101",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -26714,7 +26714,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370016",
+            "id": "42016137001601",
             "title": "IT OFFENCES - Crime and Criminology",
             "sem": 7,
             "exams": [
@@ -26724,7 +26724,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180702",
+            "id": "42010318070201",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -26734,7 +26734,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370017",
+            "id": "42016137001701",
             "title": "LAW OF COPYRIGHT - Intellectual Property Law",
             "sem": 7,
             "exams": [
@@ -26744,7 +26744,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160701",
+            "id": "42010916070101",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -26754,7 +26754,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370018",
+            "id": "42016137001801",
             "title": "INDICATIONS - Intellectual Property Law",
             "sem": 7,
             "exams": [
@@ -26764,7 +26764,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160702",
+            "id": "42010916070201",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -26774,7 +26774,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370019",
+            "id": "42016137001901",
             "title": "MEDIA AND LAW  - Constitutional Law",
             "sem": 7,
             "exams": [
@@ -26784,7 +26784,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120701",
+            "id": "42010312070101",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -26794,7 +26794,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161370020",
+            "id": "42016137002001",
             "title": "LEGISLATIVE DRAFTING - Constitutional Law",
             "sem": 7,
             "exams": [
@@ -26804,7 +26804,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120702",
+            "id": "42010312070201",
             "title": "Course",
             "sem": 7,
             "exams": [
@@ -26814,7 +26814,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120701",
+            "id": "42010612070101",
             "title": "LABOUR & INDUSTRIAL LAW II",
             "sem": 7,
             "exams": [
@@ -26824,7 +26824,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120702",
+            "id": "42010612070201",
             "title": "II)",
             "sem": 7,
             "exams": [
@@ -26834,7 +26834,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120703",
+            "id": "42010612070301",
             "title": "TAXATION LAW I",
             "sem": 7,
             "exams": [
@@ -26844,7 +26844,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120704",
+            "id": "42010612070401",
             "title": "III)",
             "sem": 7,
             "exams": [
@@ -26854,7 +26854,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120705",
+            "id": "42010612070501",
             "title": "INVESTMENT & SECURITY LAW",
             "sem": 7,
             "exams": [
@@ -26864,7 +26864,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120706",
+            "id": "42010612070601",
             "title": "HOUSE 1/COURT I) 4 WEEKS",
             "sem": 7,
             "exams": [
@@ -26874,7 +26874,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380004",
+            "id": "42016138000401",
             "title": "LAW ON CORPORATE FINANCE - Business Law",
             "sem": 8,
             "exams": [
@@ -26884,7 +26884,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120801",
+            "id": "42010212080101",
             "title": "Course",
             "sem": 8,
             "exams": [
@@ -26894,7 +26894,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380005",
+            "id": "42016138000501",
             "title": "LAW OF CORPORATE GOVERNANCE  - Business Law",
             "sem": 8,
             "exams": [
@@ -26904,7 +26904,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120802",
+            "id": "42010212080201",
             "title": "Course",
             "sem": 8,
             "exams": [
@@ -26914,7 +26914,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180801",
+            "id": "42010318080101",
             "title": "",
             "sem": 8,
             "exams": [
@@ -26924,7 +26924,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180802",
+            "id": "42010318080201",
             "title": "Criminology",
             "sem": 8,
             "exams": [
@@ -26934,7 +26934,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160801",
+            "id": "42010916080101",
             "title": "Property Law",
             "sem": 8,
             "exams": [
@@ -26944,7 +26944,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380006",
+            "id": "42016138000601",
             "title": "LAW OF PATENT - Intellectual Property Law",
             "sem": 8,
             "exams": [
@@ -26954,7 +26954,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160802",
+            "id": "42010916080201",
             "title": "Course",
             "sem": 8,
             "exams": [
@@ -26964,7 +26964,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161380007",
+            "id": "42016138000701",
             "title": "LAW & EDUCATION - Constitutional Law",
             "sem": 8,
             "exams": [
@@ -26974,7 +26974,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120801",
+            "id": "42010312080101",
             "title": "Course",
             "sem": 8,
             "exams": [
@@ -26984,7 +26984,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120802",
+            "id": "42010312080201",
             "title": "",
             "sem": 8,
             "exams": [
@@ -26994,7 +26994,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120801",
+            "id": "42010612080101",
             "title": "BANKING & INSURANCE LAW",
             "sem": 8,
             "exams": [
@@ -27004,7 +27004,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120802",
+            "id": "42010612080201",
             "title": "PRIVATE INTERNATIONAL LAW",
             "sem": 8,
             "exams": [
@@ -27014,7 +27014,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120803",
+            "id": "42010612080301",
             "title": "COMPETITION LAW",
             "sem": 8,
             "exams": [
@@ -27024,7 +27024,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120804",
+            "id": "42010612080401",
             "title": "PRACTICES)",
             "sem": 8,
             "exams": [
@@ -27034,7 +27034,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120805",
+            "id": "42010612080501",
             "title": "SERVICES",
             "sem": 8,
             "exams": [
@@ -27044,7 +27044,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120806",
+            "id": "42010612080601",
             "title": "HOUSE 2) 4 WEEKS",
             "sem": 8,
             "exams": [
@@ -27054,7 +27054,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120901",
+            "id": "42010212090101",
             "title": "",
             "sem": 9,
             "exams": [
@@ -27064,7 +27064,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161390001",
+            "id": "42016139000101",
             "title": "FINANCIAL MARKET REGULATION - Business Law",
             "sem": 9,
             "exams": [
@@ -27074,7 +27074,7 @@ export const domains = [
             ]
           },
           {
-            "id": "102120902",
+            "id": "42010212090201",
             "title": "Course",
             "sem": 9,
             "exams": [
@@ -27084,7 +27084,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180901",
+            "id": "42010318090101",
             "title": "Criminology",
             "sem": 9,
             "exams": [
@@ -27094,7 +27094,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103180902",
+            "id": "42010318090201",
             "title": "Criminology",
             "sem": 9,
             "exams": [
@@ -27104,7 +27104,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120901",
+            "id": "42010312090101",
             "title": "",
             "sem": 9,
             "exams": [
@@ -27114,7 +27114,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161390002",
+            "id": "42016139000201",
             "title": "RIGHT TO INFORMATION LAW - Constitutional Law",
             "sem": 9,
             "exams": [
@@ -27124,7 +27124,7 @@ export const domains = [
             ]
           },
           {
-            "id": "103120902",
+            "id": "42010312090201",
             "title": "Course",
             "sem": 9,
             "exams": [
@@ -27134,7 +27134,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160901",
+            "id": "42010916090101",
             "title": "",
             "sem": 9,
             "exams": [
@@ -27144,7 +27144,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161390003",
+            "id": "42016139000301",
             "title": "EMERGING ISSUES IN IPR - Intellectual Property Law",
             "sem": 9,
             "exams": [
@@ -27154,7 +27154,7 @@ export const domains = [
             ]
           },
           {
-            "id": "109160902",
+            "id": "42010916090201",
             "title": "Course",
             "sem": 9,
             "exams": [
@@ -27164,7 +27164,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120901",
+            "id": "42010612090101",
             "title": "SYSTEM",
             "sem": 9,
             "exams": [
@@ -27174,7 +27174,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120902",
+            "id": "42010612090201",
             "title": "LAW, SCIENCE & TECHNOLOGY",
             "sem": 9,
             "exams": [
@@ -27184,7 +27184,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120906",
+            "id": "42010612090601",
             "title": "TELECOMMUNICATION LAW",
             "sem": 9,
             "exams": [
@@ -27194,7 +27194,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120907",
+            "id": "42010612090701",
             "title": "ENERGY LAW - Elective Course",
             "sem": 9,
             "exams": [
@@ -27204,7 +27204,7 @@ export const domains = [
             ]
           },
           {
-            "id": "106120908",
+            "id": "42010612090801",
             "title": "PLACEMENT INTERNSHIP",
             "sem": 9,
             "exams": [
@@ -27214,7 +27214,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1613100001",
+            "id": "42161310000101",
             "title": "INTERNATIONAL TRADE LAW - Business Law",
             "sem": 10,
             "exams": [
@@ -27224,7 +27224,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1021201001",
+            "id": "42102120100101",
             "title": "Course",
             "sem": 10,
             "exams": [
@@ -27234,7 +27234,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1613100002",
+            "id": "42161310000201",
             "title": "INTERNATIONAL TAXATION LAW - Business Law",
             "sem": 10,
             "exams": [
@@ -27244,7 +27244,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1021201002",
+            "id": "42102120100201",
             "title": "Course",
             "sem": 10,
             "exams": [
@@ -27254,7 +27254,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1031801001",
+            "id": "42103180100101",
             "title": "Criminology",
             "sem": 10,
             "exams": [
@@ -27264,7 +27264,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1031801002",
+            "id": "42103180100201",
             "title": "",
             "sem": 10,
             "exams": [
@@ -27274,7 +27274,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1613100003",
+            "id": "42161310000301",
             "title": "COMPARATIVE CONSTITUTION - Constitutional Law",
             "sem": 10,
             "exams": [
@@ -27284,7 +27284,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1031201001",
+            "id": "42103120100101",
             "title": "Course",
             "sem": 10,
             "exams": [
@@ -27294,7 +27294,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1613100004",
+            "id": "42161310000401",
             "title": "JUDICIAL PROCESS - Constitutional Law",
             "sem": 10,
             "exams": [
@@ -27304,7 +27304,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1031201002",
+            "id": "42103120100201",
             "title": "Course",
             "sem": 10,
             "exams": [
@@ -27314,7 +27314,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1091601001",
+            "id": "42109160100101",
             "title": "Intellectual Property Law",
             "sem": 10,
             "exams": [
@@ -27324,7 +27324,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1091601002",
+            "id": "42109160100201",
             "title": "Intellectual Property Law",
             "sem": 10,
             "exams": [
@@ -27334,7 +27334,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1061201001",
+            "id": "42106120100101",
             "title": "AIR AND SPACE LAW - Elective Course",
             "sem": 10,
             "exams": [
@@ -27344,7 +27344,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1061201003",
+            "id": "42106120100301",
             "title": "CYBER LAW - Elective Course",
             "sem": 10,
             "exams": [
@@ -27354,7 +27354,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1061201002",
+            "id": "42106120100201",
             "title": "HEALTH LAW - Elective Course",
             "sem": 10,
             "exams": [
@@ -27402,7 +27402,7 @@ export const domains = [
         "title": "BA in Socialogy Psychology Political Science",
         "subjects": [
           {
-            "id": "10281101",
+            "id": "43001028110101",
             "title": "Psychology I: Introduction to psychology",
             "sem": 1,
             "exams": [
@@ -27412,7 +27412,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281102",
+            "id": "43001028110201",
             "title": "Science",
             "sem": 1,
             "exams": [
@@ -27422,7 +27422,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281103",
+            "id": "43001028110301",
             "title": "Sociology I: An Introduction",
             "sem": 1,
             "exams": [
@@ -27432,7 +27432,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281104",
+            "id": "43001028110401",
             "title": "Communication Skills I",
             "sem": 1,
             "exams": [
@@ -27442,7 +27442,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281105",
+            "id": "43001028110501",
             "title": "English I: Fundamentals of English language",
             "sem": 1,
             "exams": [
@@ -27452,7 +27452,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281106",
+            "id": "43001028110601",
             "title": "Environmental Science",
             "sem": 1,
             "exams": [
@@ -27462,7 +27462,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281107",
+            "id": "43001028110701",
             "title": "Creative writing",
             "sem": 1,
             "exams": [
@@ -27472,7 +27472,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281201",
+            "id": "43001028120101",
             "title": "Differences",
             "sem": 2,
             "exams": [
@@ -27482,7 +27482,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281202",
+            "id": "43001028120201",
             "title": "Democracy in India",
             "sem": 2,
             "exams": [
@@ -27492,7 +27492,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281203",
+            "id": "43001028120301",
             "title": "Sociology II: Fundamentals of Sociology",
             "sem": 2,
             "exams": [
@@ -27502,7 +27502,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281204",
+            "id": "43001028120401",
             "title": "Communication skills II",
             "sem": 2,
             "exams": [
@@ -27512,7 +27512,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281205",
+            "id": "43001028120501",
             "title": "English ii: Introduction to English Literature",
             "sem": 2,
             "exams": [
@@ -27522,7 +27522,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281206",
+            "id": "43001028120601",
             "title": "Critical thinking & argumentative skills",
             "sem": 2,
             "exams": [
@@ -27532,7 +27532,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281207",
+            "id": "43001028120701",
             "title": "Internship I",
             "sem": 2,
             "exams": [
@@ -27542,7 +27542,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10280210",
+            "id": "43001028021001",
             "title": "Gandhi and Education",
             "sem": 2,
             "exams": [
@@ -27552,7 +27552,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281301",
+            "id": "43001028130101",
             "title": "Psychology III: Developmental Psychology",
             "sem": 3,
             "exams": [
@@ -27562,7 +27562,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281302",
+            "id": "43001028130201",
             "title": "Political science III: Political Philosophy",
             "sem": 3,
             "exams": [
@@ -27572,7 +27572,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281303",
+            "id": "43001028130301",
             "title": "Sociology III: Indian Society",
             "sem": 3,
             "exams": [
@@ -27582,7 +27582,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281304",
+            "id": "43001028130401",
             "title": "Understanding India",
             "sem": 3,
             "exams": [
@@ -27592,7 +27592,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281305",
+            "id": "43001028130501",
             "title": "English III: History of English Literature- I",
             "sem": 3,
             "exams": [
@@ -27602,7 +27602,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281306",
+            "id": "43001028130601",
             "title": "Basics of Law",
             "sem": 3,
             "exams": [
@@ -27612,7 +27612,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281307",
+            "id": "43001028130701",
             "title": "Financial Accounting",
             "sem": 3,
             "exams": [
@@ -27622,7 +27622,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281308",
+            "id": "43001028130801",
             "title": "Basics of French",
             "sem": 3,
             "exams": [
@@ -27632,7 +27632,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1210003",
+            "id": "43000121000301",
             "title": "National cadet corps-3",
             "sem": 3,
             "exams": [
@@ -27642,7 +27642,7 @@ export const domains = [
             ]
           },
           {
-            "id": "021550003",
+            "id": "43002155000301",
             "title": "Basic Biology",
             "sem": 3,
             "exams": [
@@ -27652,7 +27652,7 @@ export const domains = [
             ]
           },
           {
-            "id": "131550003",
+            "id": "43013155000301",
             "title": "Pharmaceutical cosmetic science",
             "sem": 3,
             "exams": [
@@ -27662,7 +27662,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281401",
+            "id": "43001028140101",
             "title": "Psychology",
             "sem": 4,
             "exams": [
@@ -27672,7 +27672,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281402",
+            "id": "43001028140201",
             "title": "Political Science IV: International Relations",
             "sem": 4,
             "exams": [
@@ -27682,7 +27682,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281403",
+            "id": "43001028140301",
             "title": "Sociology IV: social movement in India",
             "sem": 4,
             "exams": [
@@ -27692,7 +27692,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281405",
+            "id": "43001028140501",
             "title": "English IV: history of English literature-II",
             "sem": 4,
             "exams": [
@@ -27702,7 +27702,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281413",
+            "id": "43001028141301",
             "title": "Introductory Economics",
             "sem": 4,
             "exams": [
@@ -27712,7 +27712,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281414",
+            "id": "43001028141401",
             "title": "Internship II",
             "sem": 4,
             "exams": [
@@ -27722,7 +27722,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281406",
+            "id": "43001028140601",
             "title": "Introduction to Indian constitution",
             "sem": 4,
             "exams": [
@@ -27732,7 +27732,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281408",
+            "id": "43001028140801",
             "title": "Basics of French -II",
             "sem": 4,
             "exams": [
@@ -27742,7 +27742,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281501",
+            "id": "43001028150101",
             "title": "Psychology V: social psychology",
             "sem": 5,
             "exams": [
@@ -27752,7 +27752,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281502",
+            "id": "43001028150201",
             "title": "Political science V: public administration",
             "sem": 5,
             "exams": [
@@ -27762,7 +27762,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281503",
+            "id": "43001028150301",
             "title": "Sociology V: Indian sociological thought",
             "sem": 5,
             "exams": [
@@ -27772,7 +27772,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281504",
+            "id": "43001028150401",
             "title": "English V: introduction to linguistics",
             "sem": 5,
             "exams": [
@@ -27782,7 +27782,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281507",
+            "id": "43001028150701",
             "title": "Health, wellness and yoga",
             "sem": 5,
             "exams": [
@@ -27792,7 +27792,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281508",
+            "id": "43001028150801",
             "title": "Universal human values and life skills",
             "sem": 5,
             "exams": [
@@ -27802,7 +27802,7 @@ export const domains = [
             ]
           },
           {
-            "id": "011550001",
+            "id": "43001155000101",
             "title": "Basic programming with C",
             "sem": 5,
             "exams": [
@@ -27812,7 +27812,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281505",
+            "id": "43001028150501",
             "title": "Law and consumer protection",
             "sem": 5,
             "exams": [
@@ -27822,7 +27822,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281506",
+            "id": "43001028150601",
             "title": "Principles of marketing",
             "sem": 5,
             "exams": [
@@ -27832,7 +27832,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281601",
+            "id": "43001028160101",
             "title": "Health psychology",
             "sem": 6,
             "exams": [
@@ -27842,7 +27842,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281602",
+            "id": "43001028160201",
             "title": "Public policy",
             "sem": 6,
             "exams": [
@@ -27852,7 +27852,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281603",
+            "id": "43001028160301",
             "title": "Western sociological thought",
             "sem": 6,
             "exams": [
@@ -27862,7 +27862,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281604",
+            "id": "43001028160401",
             "title": "Indian English literature",
             "sem": 6,
             "exams": [
@@ -27872,7 +27872,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281607",
+            "id": "43001028160701",
             "title": "Advanced excel programme",
             "sem": 6,
             "exams": [
@@ -27882,7 +27882,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281608",
+            "id": "43001028160801",
             "title": "Internship III",
             "sem": 6,
             "exams": [
@@ -27892,7 +27892,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281605",
+            "id": "43001028160501",
             "title": "Introduction to business laws",
             "sem": 6,
             "exams": [
@@ -27902,7 +27902,7 @@ export const domains = [
             ]
           },
           {
-            "id": "10281606",
+            "id": "43001028160601",
             "title": "Essentials to e-commerce",
             "sem": 6,
             "exams": [
@@ -27912,7 +27912,7 @@ export const domains = [
             ]
           },
           {
-            "id": "101930701",
+            "id": "43010193070101",
             "title": "Political Sociology",
             "sem": 7,
             "exams": [
@@ -27922,7 +27922,7 @@ export const domains = [
             ]
           },
           {
-            "id": "101930702",
+            "id": "43010193070201",
             "title": "Sociology of Marginal Groups",
             "sem": 7,
             "exams": [
@@ -27932,7 +27932,7 @@ export const domains = [
             ]
           },
           {
-            "id": "101930703",
+            "id": "43010193070301",
             "title": "Sociological Theories",
             "sem": 7,
             "exams": [
@@ -27942,7 +27942,7 @@ export const domains = [
             ]
           },
           {
-            "id": "101930704",
+            "id": "43010193070401",
             "title": "Social change and Development",
             "sem": 7,
             "exams": [
@@ -27952,7 +27952,7 @@ export const domains = [
             ]
           },
           {
-            "id": "101930705",
+            "id": "43010193070501",
             "title": "Sociology of Family and Gender",
             "sem": 7,
             "exams": [
@@ -27962,7 +27962,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250701",
+            "id": "43101625070101",
             "title": "Internship VII",
             "sem": 7,
             "exams": [
@@ -27972,7 +27972,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250702",
+            "id": "43101625070201",
             "title": "Psychological Research Methods",
             "sem": 7,
             "exams": [
@@ -27982,7 +27982,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250703",
+            "id": "43101625070301",
             "title": "Neuro Psychology",
             "sem": 7,
             "exams": [
@@ -27992,7 +27992,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250704",
+            "id": "43101625070401",
             "title": "Abnormal Psychology",
             "sem": 7,
             "exams": [
@@ -28002,7 +28002,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250705",
+            "id": "43101625070501",
             "title": "Positive Psychology",
             "sem": 7,
             "exams": [
@@ -28012,7 +28012,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016190701",
+            "id": "43101619070101",
             "title": "Indian and western political thought",
             "sem": 7,
             "exams": [
@@ -28022,7 +28022,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016190702",
+            "id": "43101619070201",
             "title": "Basics of international relations",
             "sem": 7,
             "exams": [
@@ -28032,7 +28032,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016190703",
+            "id": "43101619070301",
             "title": "environment",
             "sem": 7,
             "exams": [
@@ -28042,7 +28042,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016190704",
+            "id": "43101619070401",
             "title": "International political economy",
             "sem": 7,
             "exams": [
@@ -28052,7 +28052,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016190705",
+            "id": "43101619070501",
             "title": "Colonialism and nationalism in India",
             "sem": 7,
             "exams": [
@@ -28062,7 +28062,7 @@ export const domains = [
             ]
           },
           {
-            "id": "101930801",
+            "id": "43010193080101",
             "title": "Globalization and society",
             "sem": 8,
             "exams": [
@@ -28072,7 +28072,7 @@ export const domains = [
             ]
           },
           {
-            "id": "101930802",
+            "id": "43010193080201",
             "title": "Media, culture and society",
             "sem": 8,
             "exams": [
@@ -28082,7 +28082,7 @@ export const domains = [
             ]
           },
           {
-            "id": "101930803",
+            "id": "43010193080301",
             "title": "Sociology of health and medicine",
             "sem": 8,
             "exams": [
@@ -28092,7 +28092,7 @@ export const domains = [
             ]
           },
           {
-            "id": "101930804",
+            "id": "43010193080401",
             "title": "Sociology of law",
             "sem": 8,
             "exams": [
@@ -28102,7 +28102,7 @@ export const domains = [
             ]
           },
           {
-            "id": "101930805",
+            "id": "43010193080501",
             "title": "Environmental sociology",
             "sem": 8,
             "exams": [
@@ -28112,7 +28112,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250801",
+            "id": "43101625080101",
             "title": "Statistical methods for psychological research",
             "sem": 8,
             "exams": [
@@ -28122,7 +28122,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250802",
+            "id": "43101625080201",
             "title": "Psychodiagnostics",
             "sem": 8,
             "exams": [
@@ -28132,7 +28132,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250803",
+            "id": "43101625080301",
             "title": "Psychotherapy",
             "sem": 8,
             "exams": [
@@ -28142,7 +28142,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250804",
+            "id": "43101625080401",
             "title": "Psychological testing",
             "sem": 8,
             "exams": [
@@ -28152,7 +28152,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250805",
+            "id": "43101625080501",
             "title": "Practicals",
             "sem": 8,
             "exams": [
@@ -28162,7 +28162,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016250806",
+            "id": "43101625080601",
             "title": "Dissertation",
             "sem": 8,
             "exams": [
@@ -28172,7 +28172,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016190801",
+            "id": "43101619080101",
             "title": "Political theories/ ideologies",
             "sem": 8,
             "exams": [
@@ -28182,7 +28182,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016190802",
+            "id": "43101619080201",
             "title": "science",
             "sem": 8,
             "exams": [
@@ -28192,7 +28192,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016190803",
+            "id": "43101619080301",
             "title": "Religion and world politics",
             "sem": 8,
             "exams": [
@@ -28202,7 +28202,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016190804",
+            "id": "43101619080401",
             "title": "Human rights and international affairs",
             "sem": 8,
             "exams": [
@@ -28212,7 +28212,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1016190805",
+            "id": "43101619080501",
             "title": "world",
             "sem": 8,
             "exams": [
@@ -28238,7 +28238,7 @@ export const domains = [
         "semesters": 6,
         "subjects": [
           {
-            "id": "091312101",
+            "id": "44009131210101",
             "title": "Mathematics-I",
             "sem": 1,
             "exams": [
@@ -28248,7 +28248,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09352102",
+            "id": "44000935210201",
             "title": "Basics of Web Designing",
             "sem": 1,
             "exams": [
@@ -28258,7 +28258,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351101",
+            "id": "44009135110101",
             "title": "Engineering Drawing",
             "sem": 1,
             "exams": [
@@ -28268,7 +28268,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0919120103",
+            "id": "44091912010301",
             "title": "Communication Skills-I",
             "sem": 1,
             "exams": [
@@ -28278,7 +28278,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09352101",
+            "id": "44000935210101",
             "title": "Computer Fundamental Skill",
             "sem": 1,
             "exams": [
@@ -28288,7 +28288,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09352103",
+            "id": "44000935210301",
             "title": "Computer Hardware Skill",
             "sem": 1,
             "exams": [
@@ -28298,7 +28298,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091210102",
+            "id": "44009121010201",
             "title": "Enviornment Conservation & Disater Management",
             "sem": 2,
             "exams": [
@@ -28308,7 +28308,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351104",
+            "id": "44000935110401",
             "title": "Computer Programming",
             "sem": 2,
             "exams": [
@@ -28318,7 +28318,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351105",
+            "id": "44000935110501",
             "title": "Computer Network Skills",
             "sem": 2,
             "exams": [
@@ -28328,7 +28328,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552103",
+            "id": "44000955210301",
             "title": "Basic Electronics",
             "sem": 2,
             "exams": [
@@ -28338,7 +28338,7 @@ export const domains = [
             ]
           },
           {
-            "id": "097191101",
+            "id": "44009719110101",
             "title": "Applied Physics",
             "sem": 2,
             "exams": [
@@ -28348,7 +28348,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091312102",
+            "id": "44009131210201",
             "title": "Mathematics-II",
             "sem": 2,
             "exams": [
@@ -28358,7 +28358,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091640101",
+            "id": "44009164010101",
             "title": "Integrated Personality Development Course-I",
             "sem": 2,
             "exams": [
@@ -28368,7 +28368,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351302",
+            "id": "44000935130201",
             "title": "Database Management System",
             "sem": 3,
             "exams": [
@@ -28378,7 +28378,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09352301",
+            "id": "44000935230101",
             "title": "Object Oriented Programming With C++",
             "sem": 3,
             "exams": [
@@ -28388,7 +28388,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09352303",
+            "id": "44000935230301",
             "title": "Data Structure",
             "sem": 3,
             "exams": [
@@ -28398,7 +28398,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093201301",
+            "id": "44009320130101",
             "title": "Digital Electronics",
             "sem": 3,
             "exams": [
@@ -28408,7 +28408,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091310302",
+            "id": "44009131030201",
             "title": "Mathematics-III",
             "sem": 3,
             "exams": [
@@ -28418,7 +28418,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091640301",
+            "id": "44009164030101",
             "title": "Integrated Personality Development Course-II",
             "sem": 3,
             "exams": [
@@ -28428,7 +28428,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351403",
+            "id": "44000935140301",
             "title": "Java Programming",
             "sem": 4,
             "exams": [
@@ -28438,7 +28438,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09352401",
+            "id": "44000935240101",
             "title": "Computer Organization",
             "sem": 4,
             "exams": [
@@ -28448,7 +28448,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09352402",
+            "id": "44000935240201",
             "title": "Software Engineering",
             "sem": 4,
             "exams": [
@@ -28458,7 +28458,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09352404",
+            "id": "44000935240401",
             "title": "Web Technology",
             "sem": 4,
             "exams": [
@@ -28468,7 +28468,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09352405",
+            "id": "44000935240501",
             "title": "Operating System",
             "sem": 4,
             "exams": [
@@ -28478,7 +28478,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091310402",
+            "id": "44009131040201",
             "title": "Mathematics-IV",
             "sem": 4,
             "exams": [
@@ -28488,7 +28488,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09350509",
+            "id": "44000935050901",
             "title": "Summer Internship",
             "sem": 5,
             "exams": [
@@ -28498,7 +28498,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351501",
+            "id": "44000935150101",
             "title": "Mobile Computing",
             "sem": 5,
             "exams": [
@@ -28508,7 +28508,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351502",
+            "id": "44000935150201",
             "title": "Advance Database Management System",
             "sem": 5,
             "exams": [
@@ -28518,7 +28518,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351503",
+            "id": "44000935150301",
             "title": "Advance Web Technology",
             "sem": 5,
             "exams": [
@@ -28528,7 +28528,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351504",
+            "id": "44000935150401",
             "title": "Advance Java Programming",
             "sem": 5,
             "exams": [
@@ -28538,7 +28538,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351505",
+            "id": "44000935150501",
             "title": "Project-I",
             "sem": 5,
             "exams": [
@@ -28548,7 +28548,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351506",
+            "id": "44000935150601",
             "title": "Fundamentals Of IOT With Python",
             "sem": 5,
             "exams": [
@@ -28558,7 +28558,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351601",
+            "id": "44000935160101",
             "title": "Multimedia and Animation Tools",
             "sem": 6,
             "exams": [
@@ -28568,7 +28568,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351602",
+            "id": "44000935160201",
             "title": "Project-II",
             "sem": 6,
             "exams": [
@@ -28578,7 +28578,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351603",
+            "id": "44000935160301",
             "title": ".NET",
             "sem": 6,
             "exams": [
@@ -28588,7 +28588,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351606",
+            "id": "44000935160601",
             "title": "Fundametals of Machine Learning",
             "sem": 6,
             "exams": [
@@ -28598,7 +28598,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351607",
+            "id": "44000935160701",
             "title": "Entrepreneurship Development",
             "sem": 6,
             "exams": [
@@ -28615,7 +28615,7 @@ export const domains = [
         "semesters": 6,
         "subjects": [
           {
-            "id": "091210101",
+            "id": "45009121010101",
             "title": "INDIAN CONSTITUTION",
             "sem": 1,
             "exams": [
@@ -28625,7 +28625,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091210102",
+            "id": "45009121010201",
             "title": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
             "sem": 1,
             "exams": [
@@ -28635,7 +28635,7 @@ export const domains = [
             ]
           },
           {
-            "id": "097191101",
+            "id": "45009719110101",
             "title": "APPLIED PHYSICS",
             "sem": 1,
             "exams": [
@@ -28645,7 +28645,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091312101",
+            "id": "45009131210101",
             "title": "MATHEMATICS-I",
             "sem": 1,
             "exams": [
@@ -28655,7 +28655,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351101",
+            "id": "45009135110101",
             "title": "ENGINEERING DRAWING",
             "sem": 1,
             "exams": [
@@ -28665,7 +28665,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352102",
+            "id": "45009135210201",
             "title": "Mechanical Workshop",
             "sem": 1,
             "exams": [
@@ -28675,7 +28675,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0919120103",
+            "id": "45091912010301",
             "title": "COMMUNICATION SKILLS",
             "sem": 1,
             "exams": [
@@ -28685,7 +28685,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351101",
+            "id": "45000935110101",
             "title": "COMPUTER FUNDAMENTAL SKILL",
             "sem": 2,
             "exams": [
@@ -28695,7 +28695,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09392103",
+            "id": "45000939210301",
             "title": "Applied Mechanics",
             "sem": 2,
             "exams": [
@@ -28705,7 +28705,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091312102",
+            "id": "45009131210201",
             "title": "MATHEMATICS-II",
             "sem": 2,
             "exams": [
@@ -28715,7 +28715,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352103",
+            "id": "45009135210301",
             "title": "ELEMENTS OF MECHANICAL ENGINEERING",
             "sem": 2,
             "exams": [
@@ -28725,7 +28725,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352104",
+            "id": "45009135210401",
             "title": "COMPUTER -AIDED MECHANICAL DRAFTING",
             "sem": 2,
             "exams": [
@@ -28735,7 +28735,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091640101",
+            "id": "45009164010101",
             "title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE -I",
             "sem": 2,
             "exams": [
@@ -28745,7 +28745,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091310302",
+            "id": "45009131030201",
             "title": "MATHEMATICS-III",
             "sem": 3,
             "exams": [
@@ -28755,7 +28755,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352301",
+            "id": "45009135230101",
             "title": "THERMODYNAMICS",
             "sem": 3,
             "exams": [
@@ -28765,7 +28765,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352302",
+            "id": "45009135230201",
             "title": "FLUID MECHANICS AND HYDRAULIC MACHINE",
             "sem": 3,
             "exams": [
@@ -28775,7 +28775,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352303",
+            "id": "45009135230301",
             "title": "STRENGTH OF MATERIAL",
             "sem": 3,
             "exams": [
@@ -28785,7 +28785,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352304",
+            "id": "45009135230401",
             "title": "MATERIAL SCIENCE AND METALLURGY",
             "sem": 3,
             "exams": [
@@ -28795,7 +28795,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352305",
+            "id": "45009135230501",
             "title": "MANUFACTURING PROCESS -I",
             "sem": 3,
             "exams": [
@@ -28805,7 +28805,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091640301",
+            "id": "45009164030101",
             "title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE  – II",
             "sem": 3,
             "exams": [
@@ -28815,7 +28815,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091310402",
+            "id": "45009131040201",
             "title": "MATHEMATICS-IV",
             "sem": 4,
             "exams": [
@@ -28825,7 +28825,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352401",
+            "id": "45009135240101",
             "title": "THEORY OF MACHINE",
             "sem": 4,
             "exams": [
@@ -28835,7 +28835,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352402",
+            "id": "45009135240201",
             "title": "THERMAL ENGINEERING  – 1",
             "sem": 4,
             "exams": [
@@ -28845,7 +28845,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352403",
+            "id": "45009135240301",
             "title": "MECHANICAL MEASUREMENT & METROLOGY",
             "sem": 4,
             "exams": [
@@ -28855,7 +28855,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352404",
+            "id": "45009135240401",
             "title": "PLANT MAINTENANCE & SAFETY",
             "sem": 4,
             "exams": [
@@ -28865,7 +28865,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352405",
+            "id": "45009135240501",
             "title": "MANUFACTURING PROCESS -II",
             "sem": 4,
             "exams": [
@@ -28875,7 +28875,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091350508",
+            "id": "45009135050801",
             "title": "SUMMER INTERNSHIP",
             "sem": 5,
             "exams": [
@@ -28885,7 +28885,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351501",
+            "id": "45009135150101",
             "title": "INDUSTRIAL ENGINEERING",
             "sem": 5,
             "exams": [
@@ -28895,7 +28895,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351503",
+            "id": "45009135150301",
             "title": "THERMAL ENGINEERING -II",
             "sem": 5,
             "exams": [
@@ -28905,7 +28905,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351504",
+            "id": "45009135150401",
             "title": "3D MODELLING SOFTWARE",
             "sem": 5,
             "exams": [
@@ -28915,7 +28915,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351505",
+            "id": "45009135150501",
             "title": "PROJECT – I",
             "sem": 5,
             "exams": [
@@ -28925,7 +28925,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351507",
+            "id": "45009135150701",
             "title": "ENTREPRENEURSHIP DEVELOPMENT",
             "sem": 5,
             "exams": [
@@ -28935,7 +28935,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352502",
+            "id": "45009135250201",
             "title": "DYNAMICS OF MACHINE",
             "sem": 5,
             "exams": [
@@ -28945,7 +28945,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351602",
+            "id": "45009135160201",
             "title": "COMPUTER AIDED DESIGN",
             "sem": 6,
             "exams": [
@@ -28955,7 +28955,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351604",
+            "id": "45009135160401",
             "title": "CNC PROGRAMMING",
             "sem": 6,
             "exams": [
@@ -28965,7 +28965,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351605",
+            "id": "45009135160501",
             "title": "PROJECT-II",
             "sem": 6,
             "exams": [
@@ -28975,7 +28975,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351606",
+            "id": "45009135160601",
             "title": "POWER PLANT ENGINEERING",
             "sem": 6,
             "exams": [
@@ -28985,7 +28985,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352601",
+            "id": "45009135260101",
             "title": "INDUSTRIAL MANAGEMENT",
             "sem": 6,
             "exams": [
@@ -28995,7 +28995,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352603",
+            "id": "45009135260301",
             "title": "DESIGN OF MACHINE ELEMENT",
             "sem": 6,
             "exams": [
@@ -29012,7 +29012,7 @@ export const domains = [
         "semesters": 6,
         "subjects": [
           {
-            "id": "091311101",
+            "id": "46009131110101",
             "title": "Mathematics-1",
             "sem": 1,
             "exams": [
@@ -29022,7 +29022,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161310008",
+            "id": "46016131000801",
             "title": "Applied Chemistry",
             "sem": 1,
             "exams": [
@@ -29032,7 +29032,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381101",
+            "id": "46000938110101",
             "title": "Chemical Engineering Equipment Design",
             "sem": 1,
             "exams": [
@@ -29042,7 +29042,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0919121101",
+            "id": "46091912110101",
             "title": "Communication Skills-I",
             "sem": 1,
             "exams": [
@@ -29052,7 +29052,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351101",
+            "id": "46000935110101",
             "title": "Computer Fundamental Skill",
             "sem": 1,
             "exams": [
@@ -29062,7 +29062,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351102",
+            "id": "46009135110201",
             "title": "Mechanical Workshop",
             "sem": 1,
             "exams": [
@@ -29072,7 +29072,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091311102",
+            "id": "46009131110201",
             "title": "Mathematics-II",
             "sem": 2,
             "exams": [
@@ -29082,7 +29082,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381102",
+            "id": "46000938110201",
             "title": "Unit Operation – 1",
             "sem": 2,
             "exams": [
@@ -29092,7 +29092,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351101",
+            "id": "46009135110101",
             "title": "Engineering Drawing",
             "sem": 2,
             "exams": [
@@ -29102,7 +29102,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0919121102",
+            "id": "46091912110201",
             "title": "Communication Skills-II",
             "sem": 2,
             "exams": [
@@ -29112,7 +29112,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391102",
+            "id": "46000939110201",
             "title": "Environment Conservation & Disaster Management",
             "sem": 2,
             "exams": [
@@ -29122,7 +29122,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381103",
+            "id": "46000938110301",
             "title": "Electrical Pumps and Valves Operation Skill",
             "sem": 2,
             "exams": [
@@ -29132,7 +29132,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381301",
+            "id": "46000938130101",
             "title": "Unit Operation – II",
             "sem": 3,
             "exams": [
@@ -29142,7 +29142,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381302",
+            "id": "46000938130201",
             "title": "Industrial Stoichiometry",
             "sem": 3,
             "exams": [
@@ -29152,7 +29152,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381303",
+            "id": "46000938130301",
             "title": "Safety & Pollution Measures",
             "sem": 3,
             "exams": [
@@ -29162,7 +29162,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091311301",
+            "id": "46009131130101",
             "title": "Basic Calculus",
             "sem": 3,
             "exams": [
@@ -29172,7 +29172,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381304",
+            "id": "46000938130401",
             "title": "Reactor & Boiler Operation Skill",
             "sem": 3,
             "exams": [
@@ -29182,7 +29182,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381401",
+            "id": "46000938140101",
             "title": "Unit Operation – III",
             "sem": 4,
             "exams": [
@@ -29192,7 +29192,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161340011",
+            "id": "46016134001101",
             "title": "Process Heat Transfer",
             "sem": 4,
             "exams": [
@@ -29202,7 +29202,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381403",
+            "id": "46000938140301",
             "title": "Plant Utilization and Instrumentation",
             "sem": 4,
             "exams": [
@@ -29212,7 +29212,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091311401",
+            "id": "46009131140101",
             "title": "Engineering Mathematics",
             "sem": 4,
             "exams": [
@@ -29222,7 +29222,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381404",
+            "id": "46000938140401",
             "title": "Chemical Process Software",
             "sem": 4,
             "exams": [
@@ -29232,7 +29232,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381405",
+            "id": "46000938140501",
             "title": "General Chemical Technology",
             "sem": 4,
             "exams": [
@@ -29242,7 +29242,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381501",
+            "id": "46000938150101",
             "title": "Unit Operation – IV",
             "sem": 5,
             "exams": [
@@ -29252,7 +29252,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381502",
+            "id": "46000938150201",
             "title": "Chemical Reaction Engineering & Thermodynamics",
             "sem": 5,
             "exams": [
@@ -29262,7 +29262,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381503",
+            "id": "46000938150301",
             "title": "Petroleum Refining & Petrochemicals",
             "sem": 5,
             "exams": [
@@ -29272,7 +29272,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381504",
+            "id": "46000938150401",
             "title": "Project-I",
             "sem": 5,
             "exams": [
@@ -29282,7 +29282,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381505",
+            "id": "46000938150501",
             "title": "DCS & SCADA",
             "sem": 5,
             "exams": [
@@ -29292,7 +29292,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381506",
+            "id": "46000938150601",
             "title": "Polymer Technology",
             "sem": 5,
             "exams": [
@@ -29302,7 +29302,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381507",
+            "id": "46000938150701",
             "title": "Fertilizer Technology",
             "sem": 5,
             "exams": [
@@ -29312,7 +29312,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381601",
+            "id": "46000938160101",
             "title": "Chemical Process Equipment Design",
             "sem": 6,
             "exams": [
@@ -29322,7 +29322,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381602",
+            "id": "46000938160201",
             "title": "Chemical Engineering Plant Economics",
             "sem": 6,
             "exams": [
@@ -29332,7 +29332,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381603",
+            "id": "46000938160301",
             "title": "Project -II",
             "sem": 6,
             "exams": [
@@ -29342,7 +29342,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09381604",
+            "id": "46000938160401",
             "title": "Entrepreneurship Development",
             "sem": 6,
             "exams": [
@@ -29359,7 +29359,7 @@ export const domains = [
         "semesters": 6,
         "subjects": [
           {
-            "id": "091312101",
+            "id": "47009131210101",
             "title": "Mathematics-1",
             "sem": 1,
             "exams": [
@@ -29369,7 +29369,7 @@ export const domains = [
             ]
           },
           {
-            "id": "097191101",
+            "id": "47009719110101",
             "title": "Applied Physics",
             "sem": 1,
             "exams": [
@@ -29379,7 +29379,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552101",
+            "id": "47000955210101",
             "title": "DC Circuits",
             "sem": 1,
             "exams": [
@@ -29389,7 +29389,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0919120103",
+            "id": "47091912010301",
             "title": "Communication Skills",
             "sem": 1,
             "exams": [
@@ -29399,7 +29399,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09352101",
+            "id": "47000935210101",
             "title": "Computer Fundamental Skill",
             "sem": 1,
             "exams": [
@@ -29409,7 +29409,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552102",
+            "id": "47000955210201",
             "title": "Electrical Practice",
             "sem": 1,
             "exams": [
@@ -29419,7 +29419,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091210101",
+            "id": "47009121010101",
             "title": "Indian Constitution",
             "sem": 1,
             "exams": [
@@ -29429,7 +29429,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091312102",
+            "id": "47009131210201",
             "title": "Mathematics-II",
             "sem": 2,
             "exams": [
@@ -29439,7 +29439,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552104",
+            "id": "47000955210401",
             "title": "AC Circuit",
             "sem": 2,
             "exams": [
@@ -29449,7 +29449,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351101",
+            "id": "47009135110101",
             "title": "Engineering Drawing",
             "sem": 2,
             "exams": [
@@ -29459,7 +29459,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091640101",
+            "id": "47009164010101",
             "title": "Integrated Personality Development Course-I",
             "sem": 2,
             "exams": [
@@ -29469,7 +29469,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552105",
+            "id": "47000955210501",
             "title": "Electrical Control Panel Design",
             "sem": 2,
             "exams": [
@@ -29479,7 +29479,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091210102",
+            "id": "47009121010201",
             "title": "Environment Conservation & Disaster Management",
             "sem": 2,
             "exams": [
@@ -29489,7 +29489,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091310302",
+            "id": "47009131030201",
             "title": "Mathematics-III",
             "sem": 3,
             "exams": [
@@ -29499,7 +29499,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552301",
+            "id": "47000955230101",
             "title": "Electrical DC Machines and Transformer",
             "sem": 3,
             "exams": [
@@ -29509,7 +29509,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552302",
+            "id": "47000955230201",
             "title": "Generation of Electrical Power",
             "sem": 3,
             "exams": [
@@ -29519,7 +29519,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552304",
+            "id": "47000955230401",
             "title": "Basic Electronics",
             "sem": 3,
             "exams": [
@@ -29529,7 +29529,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091640301",
+            "id": "47009164030101",
             "title": "Integrated Personality Development Course-II",
             "sem": 3,
             "exams": [
@@ -29539,7 +29539,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552303",
+            "id": "47000955230301",
             "title": "Electrical Measurement and Instrumentation",
             "sem": 3,
             "exams": [
@@ -29549,7 +29549,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552305",
+            "id": "47000955230501",
             "title": "Electrical Software Skill-I",
             "sem": 3,
             "exams": [
@@ -29559,7 +29559,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091310402",
+            "id": "47009131040201",
             "title": "Mathematics-IV",
             "sem": 4,
             "exams": [
@@ -29569,7 +29569,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552401",
+            "id": "47000955240101",
             "title": "Electrical Rotating AC Machines",
             "sem": 4,
             "exams": [
@@ -29579,7 +29579,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552402",
+            "id": "47000955240201",
             "title": "Electrical Power Transmission and Distribution",
             "sem": 4,
             "exams": [
@@ -29589,7 +29589,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552403",
+            "id": "47000955240301",
             "title": "Electrical Wiring, Estimating, Costing and Contracting",
             "sem": 4,
             "exams": [
@@ -29599,7 +29599,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552404",
+            "id": "47000955240401",
             "title": "Digital Electronics and Instruments",
             "sem": 4,
             "exams": [
@@ -29609,7 +29609,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552405",
+            "id": "47000955240501",
             "title": "Electrical Software Skill-II",
             "sem": 4,
             "exams": [
@@ -29619,7 +29619,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552501",
+            "id": "47000955250101",
             "title": "Switchgear & Protection",
             "sem": 5,
             "exams": [
@@ -29629,7 +29629,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552502",
+            "id": "47000955250201",
             "title": "Testing and Maintenance of Electrical Machine",
             "sem": 5,
             "exams": [
@@ -29639,7 +29639,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552503",
+            "id": "47000955250301",
             "title": "Power Electronics and Electrical Drives",
             "sem": 5,
             "exams": [
@@ -29649,7 +29649,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552507",
+            "id": "47000955250701",
             "title": "Project – 1",
             "sem": 5,
             "exams": [
@@ -29659,7 +29659,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09550508",
+            "id": "47000955050801",
             "title": "Summer Internship",
             "sem": 5,
             "exams": [
@@ -29669,7 +29669,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552504",
+            "id": "47000955250401",
             "title": "Application of Microprocessor and Microcontroller",
             "sem": 5,
             "exams": [
@@ -29679,7 +29679,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552505",
+            "id": "47000955250501",
             "title": "Electric Vehicle Technologies",
             "sem": 5,
             "exams": [
@@ -29689,7 +29689,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09550509",
+            "id": "47000955050901",
             "title": "Automation and Control in Industrial Applications",
             "sem": 5,
             "exams": [
@@ -29699,7 +29699,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552601",
+            "id": "47000955260101",
             "title": "Electrical Energy Utilization",
             "sem": 6,
             "exams": [
@@ -29709,7 +29709,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552605",
+            "id": "47000955260501",
             "title": "Entrepreneurship Development",
             "sem": 6,
             "exams": [
@@ -29719,7 +29719,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552609",
+            "id": "47000955260901",
             "title": "Industrial Project/Training",
             "sem": 6,
             "exams": [
@@ -29729,7 +29729,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552602",
+            "id": "47000955260201",
             "title": "Substation Engineering and Power Quality",
             "sem": 6,
             "exams": [
@@ -29739,7 +29739,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552603",
+            "id": "47000955260301",
             "title": "Operation and Control of Power System",
             "sem": 6,
             "exams": [
@@ -29749,7 +29749,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09552604",
+            "id": "47000955260401",
             "title": "Design of Electrical Machines and Equipment",
             "sem": 6,
             "exams": [
@@ -29766,7 +29766,7 @@ export const domains = [
         "semesters": 6,
         "subjects": [
           {
-            "id": "091311101",
+            "id": "48009131110101",
             "title": "Mathematics-1",
             "sem": 1,
             "exams": [
@@ -29776,7 +29776,7 @@ export const domains = [
             ]
           },
           {
-            "id": "097191101",
+            "id": "48009719110101",
             "title": "Applied Physics",
             "sem": 1,
             "exams": [
@@ -29786,7 +29786,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391101",
+            "id": "48000939110101",
             "title": "Civil Engineering Materials",
             "sem": 1,
             "exams": [
@@ -29796,7 +29796,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0919121101",
+            "id": "48091912110101",
             "title": "Communication Skill-1",
             "sem": 1,
             "exams": [
@@ -29806,7 +29806,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391102",
+            "id": "48000939110201",
             "title": "Environment Conservation and Disaster Management",
             "sem": 1,
             "exams": [
@@ -29816,7 +29816,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091352102",
+            "id": "48009135210201",
             "title": "Mechanical Workshop",
             "sem": 1,
             "exams": [
@@ -29826,7 +29826,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091311102",
+            "id": "48009131110201",
             "title": "Mathematics-2",
             "sem": 2,
             "exams": [
@@ -29836,7 +29836,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391103",
+            "id": "48000939110301",
             "title": "Applied Mechanics",
             "sem": 2,
             "exams": [
@@ -29846,7 +29846,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091351101",
+            "id": "48009135110101",
             "title": "Engineering Drawing",
             "sem": 2,
             "exams": [
@@ -29856,7 +29856,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0919121102",
+            "id": "48091912110201",
             "title": "Communication Skill-2",
             "sem": 2,
             "exams": [
@@ -29866,7 +29866,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351101",
+            "id": "48000935110101",
             "title": "Computer Fundamental Skills",
             "sem": 2,
             "exams": [
@@ -29876,7 +29876,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391104",
+            "id": "48000939110401",
             "title": "Computer-Aided Drawing",
             "sem": 2,
             "exams": [
@@ -29886,7 +29886,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091311301",
+            "id": "48009131130101",
             "title": "Basic Calculus",
             "sem": 3,
             "exams": [
@@ -29896,7 +29896,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391301",
+            "id": "48000939130101",
             "title": "Hydraulics",
             "sem": 3,
             "exams": [
@@ -29906,7 +29906,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391302",
+            "id": "48000939130201",
             "title": "Mechanics of Structure-1",
             "sem": 3,
             "exams": [
@@ -29916,7 +29916,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391304",
+            "id": "48000939130401",
             "title": "Construction Technology",
             "sem": 3,
             "exams": [
@@ -29926,7 +29926,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391305",
+            "id": "48000939130501",
             "title": "Surveying",
             "sem": 3,
             "exams": [
@@ -29936,7 +29936,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391303",
+            "id": "48000939130301",
             "title": "Building Planning and Drawing",
             "sem": 3,
             "exams": [
@@ -29946,7 +29946,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091311401",
+            "id": "48009131140101",
             "title": "Engineering Mathematics",
             "sem": 4,
             "exams": [
@@ -29956,7 +29956,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391401",
+            "id": "48000939140101",
             "title": "Mechanics of Structure-II",
             "sem": 4,
             "exams": [
@@ -29966,7 +29966,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391402",
+            "id": "48000939140201",
             "title": "Highway and Transportation Engineering",
             "sem": 4,
             "exams": [
@@ -29976,7 +29976,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391403",
+            "id": "48000939140301",
             "title": "Soil Mechanics",
             "sem": 4,
             "exams": [
@@ -29986,7 +29986,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391404",
+            "id": "48000939140401",
             "title": "Concrete Technology",
             "sem": 4,
             "exams": [
@@ -29996,7 +29996,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391405",
+            "id": "48000939140501",
             "title": "Advanced Surveying",
             "sem": 4,
             "exams": [
@@ -30006,7 +30006,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391501",
+            "id": "48000939150101",
             "title": "Structure Design & Drawing – I",
             "sem": 5,
             "exams": [
@@ -30016,7 +30016,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161350013",
+            "id": "48016135001301",
             "title": "Quantity Survey and Valuation",
             "sem": 5,
             "exams": [
@@ -30026,7 +30026,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391503",
+            "id": "48000939150301",
             "title": "Construction Quality Control and Monitoring",
             "sem": 5,
             "exams": [
@@ -30036,7 +30036,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391504",
+            "id": "48000939150401",
             "title": "Water Supply & Sanitary Engineering",
             "sem": 5,
             "exams": [
@@ -30046,7 +30046,7 @@ export const domains = [
             ]
           },
           {
-            "id": "01380705",
+            "id": "48000138070501",
             "title": "PROJECT-I",
             "sem": 5,
             "exams": [
@@ -30056,7 +30056,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391601",
+            "id": "48000939160101",
             "title": "Structure Design & Drawing – II",
             "sem": 6,
             "exams": [
@@ -30066,7 +30066,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391602",
+            "id": "48000939160201",
             "title": "Construction Project Management",
             "sem": 6,
             "exams": [
@@ -30076,7 +30076,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391603",
+            "id": "48000939160301",
             "title": "Entrepreneurship in Engineering",
             "sem": 6,
             "exams": [
@@ -30086,7 +30086,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391604",
+            "id": "48000939160401",
             "title": "Building Services",
             "sem": 6,
             "exams": [
@@ -30096,7 +30096,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391605",
+            "id": "48000939160501",
             "title": "PROJECT-II",
             "sem": 6,
             "exams": [
@@ -30113,7 +30113,7 @@ export const domains = [
         "semesters": 6,
         "subjects": [
           {
-            "id": "091311101",
+            "id": "49009131110101",
             "title": "Mathematics-I",
             "sem": 1,
             "exams": [
@@ -30123,7 +30123,7 @@ export const domains = [
             ]
           },
           {
-            "id": "097191101",
+            "id": "49009719110101",
             "title": "Applied Physics",
             "sem": 1,
             "exams": [
@@ -30133,7 +30133,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200103",
+            "id": "49009320010301",
             "title": "Basics of Electronics Engineering",
             "sem": 1,
             "exams": [
@@ -30143,7 +30143,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0919121101",
+            "id": "49091912110101",
             "title": "Communication Skills-I",
             "sem": 1,
             "exams": [
@@ -30153,7 +30153,7 @@ export const domains = [
             ]
           },
           {
-            "id": "161310009",
+            "id": "49016131000901",
             "title": "Essential Skills of Information Technology",
             "sem": 1,
             "exams": [
@@ -30163,7 +30163,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200102",
+            "id": "49009320010201",
             "title": "Electronic Practice",
             "sem": 1,
             "exams": [
@@ -30173,7 +30173,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091311102",
+            "id": "49009131110201",
             "title": "Mathematics-II",
             "sem": 2,
             "exams": [
@@ -30183,7 +30183,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09391102",
+            "id": "49000939110201",
             "title": "Environment Conservation & Disaster Management",
             "sem": 2,
             "exams": [
@@ -30193,7 +30193,7 @@ export const domains = [
             ]
           },
           {
-            "id": "09351104",
+            "id": "49000935110401",
             "title": "Computer Programming",
             "sem": 2,
             "exams": [
@@ -30203,7 +30203,7 @@ export const domains = [
             ]
           },
           {
-            "id": "0919121102",
+            "id": "49091912110201",
             "title": "Communication Skills-II",
             "sem": 2,
             "exams": [
@@ -30213,7 +30213,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200104",
+            "id": "49009320010401",
             "title": "Digital Logic and Design",
             "sem": 2,
             "exams": [
@@ -30223,7 +30223,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200105",
+            "id": "49009320010501",
             "title": "ICT Workshop",
             "sem": 2,
             "exams": [
@@ -30233,7 +30233,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091311301",
+            "id": "49009131130101",
             "title": "Basic Calculus",
             "sem": 3,
             "exams": [
@@ -30243,7 +30243,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200302",
+            "id": "49009320030201",
             "title": "Object Oriented Programming",
             "sem": 3,
             "exams": [
@@ -30253,7 +30253,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200303",
+            "id": "49009320030301",
             "title": "Analog and Digital Communication",
             "sem": 3,
             "exams": [
@@ -30263,7 +30263,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200304",
+            "id": "49009320030401",
             "title": "Data Base Management system",
             "sem": 3,
             "exams": [
@@ -30273,7 +30273,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200305",
+            "id": "49009320030501",
             "title": "Analog and Digital Circuit Design",
             "sem": 3,
             "exams": [
@@ -30283,7 +30283,7 @@ export const domains = [
             ]
           },
           {
-            "id": "1593200306",
+            "id": "49159320030601",
             "title": "Operating System",
             "sem": 3,
             "exams": [
@@ -30293,7 +30293,7 @@ export const domains = [
             ]
           },
           {
-            "id": "091311401",
+            "id": "49009131140101",
             "title": "Engineering Mathematics",
             "sem": 4,
             "exams": [
@@ -30303,7 +30303,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200401",
+            "id": "49009320040101",
             "title": "Foundation of Data science Tools",
             "sem": 4,
             "exams": [
@@ -30313,7 +30313,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200402",
+            "id": "49009320040201",
             "title": "Microprocessor and Assembly Language Programming",
             "sem": 4,
             "exams": [
@@ -30323,7 +30323,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200403",
+            "id": "49009320040301",
             "title": "Data Structure and Algorithms",
             "sem": 4,
             "exams": [
@@ -30333,7 +30333,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200404",
+            "id": "49009320040401",
             "title": "Data Communication and Networking",
             "sem": 4,
             "exams": [
@@ -30343,7 +30343,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200405",
+            "id": "49009320040501",
             "title": "Web Technology",
             "sem": 4,
             "exams": [
@@ -30353,7 +30353,7 @@ export const domains = [
             ]
           },
           {
-            "id": "019200601",
+            "id": "49001920060101",
             "title": "Software Engineering",
             "sem": 4,
             "exams": [
@@ -30363,7 +30363,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200501",
+            "id": "49009320050101",
             "title": "Probability and Statistics",
             "sem": 5,
             "exams": [
@@ -30373,7 +30373,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200502",
+            "id": "49009320050201",
             "title": ".Net Programming",
             "sem": 5,
             "exams": [
@@ -30383,7 +30383,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200503",
+            "id": "49009320050301",
             "title": "Cryptography and Network Security",
             "sem": 5,
             "exams": [
@@ -30393,7 +30393,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200504",
+            "id": "49009320050401",
             "title": "Project I",
             "sem": 5,
             "exams": [
@@ -30403,7 +30403,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200505",
+            "id": "49009320050501",
             "title": "Microcontroller and Interfacing",
             "sem": 5,
             "exams": [
@@ -30413,7 +30413,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200506",
+            "id": "49009320050601",
             "title": "Optical and Satellite Communication",
             "sem": 5,
             "exams": [
@@ -30423,7 +30423,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200507",
+            "id": "49009320050701",
             "title": "Network Routing and Switching",
             "sem": 5,
             "exams": [
@@ -30433,7 +30433,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200508",
+            "id": "49009320050801",
             "title": "Data Analytics and Visualization",
             "sem": 5,
             "exams": [
@@ -30443,7 +30443,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200509",
+            "id": "49009320050901",
             "title": "Programming for Mobile Application Development",
             "sem": 5,
             "exams": [
@@ -30453,7 +30453,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200510",
+            "id": "49009320051001",
             "title": "VLSI",
             "sem": 5,
             "exams": [
@@ -30463,7 +30463,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200511",
+            "id": "49009320051101",
             "title": "Engineering Electrodynamics",
             "sem": 5,
             "exams": [
@@ -30473,7 +30473,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200512",
+            "id": "49009320051201",
             "title": "Linux Administration",
             "sem": 5,
             "exams": [
@@ -30483,7 +30483,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200513",
+            "id": "49009320051301",
             "title": "Machine Learning using Python",
             "sem": 5,
             "exams": [
@@ -30493,7 +30493,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200514",
+            "id": "49009320051401",
             "title": "Game Development",
             "sem": 5,
             "exams": [
@@ -30503,7 +30503,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200601",
+            "id": "49009320060101",
             "title": "Management Information System",
             "sem": 6,
             "exams": [
@@ -30513,7 +30513,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200602",
+            "id": "49009320060201",
             "title": "Project-II",
             "sem": 6,
             "exams": [
@@ -30523,7 +30523,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200603",
+            "id": "49009320060301",
             "title": "Embedded System",
             "sem": 6,
             "exams": [
@@ -30533,7 +30533,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200604",
+            "id": "49009320060401",
             "title": "RF and Microwave Communications",
             "sem": 6,
             "exams": [
@@ -30543,7 +30543,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200605",
+            "id": "49009320060501",
             "title": "Cloud Computing",
             "sem": 6,
             "exams": [
@@ -30553,7 +30553,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200606",
+            "id": "49009320060601",
             "title": "Big Data Analytics",
             "sem": 6,
             "exams": [
@@ -30563,7 +30563,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200607",
+            "id": "49009320060701",
             "title": "Advance Java",
             "sem": 6,
             "exams": [
@@ -30573,7 +30573,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200608",
+            "id": "49009320060801",
             "title": "Sensors and IoT",
             "sem": 6,
             "exams": [
@@ -30583,7 +30583,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200609",
+            "id": "49009320060901",
             "title": "Wireless Technologies",
             "sem": 6,
             "exams": [
@@ -30593,7 +30593,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200610",
+            "id": "49009320061001",
             "title": "Cyber Security",
             "sem": 6,
             "exams": [
@@ -30603,7 +30603,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200611",
+            "id": "49009320061101",
             "title": "Fundamentals of Data Mining Techniques",
             "sem": 6,
             "exams": [
@@ -30613,7 +30613,7 @@ export const domains = [
             ]
           },
           {
-            "id": "093200612",
+            "id": "49009320061201",
             "title": "Computer Graphics and Animation",
             "sem": 6,
             "exams": [
