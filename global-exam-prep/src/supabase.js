@@ -16,7 +16,7 @@
  * it is refused below rather than silently used, because a bundled secret is a
  * full database bypass.
  */
-import { createClient } from 'Supabase/supabase-js';
+import { createClient } from '@supabase/supabase-js';
 
 const rawUrl = import.meta.env.VITE_SUPABASE_URL;
 const rawKey = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
