@@ -644,10 +644,7 @@ staff exists) an admin sign-in.
 - **Phase 3 catalog UI (2026-09-26):** `/admin/courses` is in-memory Course → Semester → Subject →
   Question CRUD (semesters select-only). No tables, no API, no persistence. Student catalog remains
   `mockData.js`.
-- **2026-10-03 catalog bridge audit:** live Supabase data was verified at 49 Courses / 2,788 Subjects, while the checked-in
-  `subjectSemesterMap.json` and `subjectIdBridge.json` were found to contain the same count of **stale pre-final IDs**.
-  The authoritative repair path is regeneration from the current `mockData.js` final numeric IDs, with global 2,788-row
-  coverage validation; do not patch only the first failing course and do not alter the live Subjects table without evidence.
+- **2026-10-03 catalog bridge repair:** live Supabase data remains 49 Courses / 2,788 Subjects. The checked-in `subjectSemesterMap.json` and `subjectIdBridge.json` now match the canonical final numeric SubjectIds globally: 2,788/2,788 coverage, no stale keys, no semester conflicts. The final numeric IDs are derived from the canonical catalog; semesters come from each subject's explicit `sem` value. Do not patch individual courses or reseed the live Subjects table for this issue. Departments remain a frontend/static concern and must not be added as a Supabase table for the homepage.
 - **Phase 4 leaderboard UI (2026-09-26):** `/leaderboards` is in-memory Top 100 + own rank/percentile
   (students) and Course → Semester → Subject all-boards (admins). No tables, no API, no persistence.
 

@@ -1,4 +1,4 @@
-/** Six student-catalog departments. Do not import mockData.js for this list. */
+/** Canonical frontend definition for the six student-catalog departments. Do not fetch or persist this list in Supabase. */
 export const CATALOG_DOMAINS = [
   {
     "id": "engineering",
