@@ -41,7 +41,7 @@ const CourseExplorer = (await import('../src/pages/CourseExplorer.jsx')).default
 const SubjectDetails = (await import('../src/pages/SubjectDetails.jsx')).default;
 
 const ENG_IDS = courseIdsForDomain('engineering');
-const MATH_ID = 1000001010601; // course 1, semester 1 (from the generated bridge)
+const MATH_ID = 1001131010601; // course 1, semester 1 (current final numeric id)
 
 function seedEngineering() {
   state.catalogCourses = [

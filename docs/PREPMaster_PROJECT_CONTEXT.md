@@ -398,11 +398,7 @@ Frontend bridges: `src/data/catalogDomains.js` (six departments, no fetch),
 `src/data/subjectSemesterMap.json` (final numeric SubjectId → semester) and
 `src/data/subjectIdBridge.json` (final numeric SubjectId → source subject/course + numeric CourseId + semester).
 
-**Current audit finding (2026-10-03):** the checked-in `subjectSemesterMap.json` and `subjectIdBridge.json`
-were generated against the pre-final SubjectIds. The live `public."Subjects"` table and current `mockData.js`
-contain the final IDs. Treat the two bridge files as **stale until regenerated from the current canonical
-`mockData.js`**. The first observed 61 missing IDs are the 61 subjects of CourseId 1; this is a global
-2,788-subject artifact mismatch, not a CourseId-1-only defect.
+**Bridge repair completed (2026-10-03):** subjectSemesterMap.json and subjectIdBridge.json now use the final numeric SubjectIds used by current main mockData.js and the live Subjects table. Both contain 2,788 keys with 0 stale/extra keys, and bridge semester values agree with canonical subject semesters. The ExamPortal resolver accepts final numeric route IDs and also preserves legacy source-ID lookup through the bridge. The repair was reconstructed from current main plus historical source catalog commit dd164dec330f006ae37c3b13be2ec1847b49a6fa. Do not infer semesters from SubjectId digits and do not alter live Subjects data to repair a frontend mapping mismatch.
 `CourseExplorer` / `SubjectDetails` query only the CourseIds for the selected department, or
 Subjects for one CourseId. Homepage does not fetch Courses/Subjects and does not import `mockData.js`.
 `mockData.js` remains for exam prompts (also copied to `examPrompts.js`), ExamPortal, SearchResults,
