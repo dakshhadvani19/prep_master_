@@ -3,7 +3,7 @@
  *
  * The homepage is the entry point to authentication, so it is checked with the
  * REAL LandingPage, the REAL Layout shell and the REAL router — nothing is mocked
- * except Supabase itself and `src/firebase.js` (still imported by data layers).
+ * except Supabase itself and `src/legacy backend.js` (still imported by data layers).
  * It proves the three things the handoff depends on:
  *   1. `/` renders without a runtime error,
  *   2. the auth buttons land on the correct auth screen/tab (email and Google),
@@ -17,18 +17,6 @@ import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/re
 const holder = vi.hoisted(() => ({ entry: '/' }));
 
 vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
-}));
-vi.mock('firebase/firestore', () => ({
-  doc: (db, ...p) => ({ path: p.join('/') }), collection: (db, ...p) => ({ path: p.join('/') }),
-  getDoc: vi.fn(async () => ({ exists: () => false, data: () => undefined })),
-  getDocs: vi.fn(async () => ({ empty: true, docs: [] })),
-  setDoc: vi.fn(async () => {}), updateDoc: vi.fn(async () => {}), deleteDoc: vi.fn(async () => {}),
-  query: vi.fn(), where: vi.fn(), increment: (n) => n, runTransaction: vi.fn(),
-  onSnapshot: vi.fn(() => () => {}), serverTimestamp: vi.fn(() => 'ts'),
-}));
-
 vi.mock('react-router-dom', async (orig) => {
   const actual = await orig();
   return { ...actual, BrowserRouter: ({ children }) => (
