@@ -68,7 +68,7 @@ export async function uploadSyllabusPDF({
     };
 
     const items = readAll().filter((entry) => docId(entry.courseId, entry.subjectId) !== key);
-    items.push(item);
+    items.push({ ...item, pdfURL: '' });
     writeAll(items);
     onProgress?.('Done!');
     return item;
@@ -78,7 +78,7 @@ export async function fetchSyllabus(subjectId, courseId) {
     if (!subjectId || !courseId) return null;
     const key = docId(courseId, subjectId);
     const item = readAll().find((entry) => docId(entry.courseId, entry.subjectId) === key) || null;
-    if (item && !item.pdfURL) item.pdfURL = objectUrls.get(key) || '';
+    if (item) item.pdfURL = objectUrls.get(key) || '';
     return item;
 }
 
