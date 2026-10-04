@@ -20,7 +20,7 @@ Supabase Auth is the only authentication provider: email/password, Google OAuth 
 
 ## 3. Legacy backend removal
 
-The previous Firebase integration has been removed from the application.
+The previous secondary backend integration has been removed from the application.
 
 Removed:
 - SDK dependency
