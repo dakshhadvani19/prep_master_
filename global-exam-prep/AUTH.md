@@ -26,10 +26,7 @@ recovery); the profile row is `public.students`, created by a database trigger.
 by the browser and not by Supabase: `/api/send-otp` mints it, keeps only a keyed digest
 in `public.auth_otp`, mails it (Nodemailer + Gmail), and `/api/verify-otp` checks it.
 The account is created only after that check passes, so Supabase never mails a signup
-code and the raw code never appears in a client-generated request. **Everything else is still Firebase**: Firestore data (exams,
-syllabus, dashboard, analytics, feedback), Storage, and the exam-history documents —
-see §10 for what that split costs until the two identities are bridged. Role-based
-route guards are unchanged.
+code and the raw code never appears in a client-generated request. **Current runtime data is not Firebase-backed**: exam history is stored in Supabase Postgres and syllabus administration uses the temporary local/static browser store. Role-based route guards are unchanged.
 > **Current architecture (2026-10-04):** Firebase is no longer used by the application. Supabase Auth is the only identity system, Supabase Postgres owns exam history, and syllabus administration currently uses a local/static browser fallback until a deliberate Supabase Storage contract is added. The older Firebase sections later in this document are historical and are not deployment instructions for the current branch.
 
 ## Historical Firebase migration notes
