@@ -27,9 +27,6 @@
  * Firestore atomic increment via a transaction on one counter document.
  */
 
-import { doc, runTransaction, getDoc } from 'firebase/firestore';
-import { db } from '../firebase';
-
 // ─── Constants ───────────────────────────────────────────────────────────────
 
 const PBKDF2_ROUNDS = 210_000;
@@ -155,48 +152,43 @@ export function isLegacyHash(storedHash) {
     return !!storedHash && !String(storedHash).startsWith('pbkdf2$');
 }
 
-// ─── Auto-increment int64 IDs ─────────────────────────────────────────────────
+// ─── Temporary browser-local numeric IDs ─────────────────────────────────────
+const COUNTERS_KEY = 'prepmaster_id_counters_v1';
 
-const COUNTERS_DOC = doc(db, 'meta', 'counters');
-
-async function bumpCounter(field, otherField) {
-    return runTransaction(db, async (tx) => {
-        const snap    = await tx.get(COUNTERS_DOC);
-        const current = snap.exists() ? (snap.data()[field] ?? 0) : 0;
-        const next    = current + 1;
-
-        if (snap.exists()) {
-            tx.update(COUNTERS_DOC, { [field]: next });
-        } else {
-            // Create both fields so later updates only ever touch one of them.
-            tx.set(COUNTERS_DOC, { [field]: next, [otherField]: 0 });
+function readCounters() {
+    try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+            const raw = window.localStorage.getItem(COUNTERS_KEY);
+            if (raw) return JSON.parse(raw);
         }
-
-        return next;
-    });
+    } catch {}
+    return { studentCount: 0, adminCount: 0 };
 }
 
-/**
- * Atomically allocates the next numeric StudentId (ER: Students.StudentId PK).
- * @returns {Promise<number>}
- */
+function writeCounters(counters) {
+    try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+            window.localStorage.setItem(COUNTERS_KEY, JSON.stringify(counters));
+        }
+    } catch {}
+}
+
+function bumpCounter(field) {
+    const counters = readCounters();
+    counters[field] = Number(counters[field] || 0) + 1;
+    writeCounters(counters);
+    return counters[field];
+}
+
 export async function getNextStudentId() {
-    return bumpCounter('studentCount', 'adminCount');
+    return bumpCounter('studentCount');
 }
 
-/**
- * Atomically allocates the next numeric AdminId (ER: Admins.AdminId PK).
- * Reserved for the admin auth work; not called by the student flow.
- * @returns {Promise<number>}
- */
 export async function getNextAdminId() {
-    return bumpCounter('adminCount', 'studentCount');
+    return bumpCounter('adminCount');
 }
 
-/** Reads the current counters without mutating them (handy for admin tooling). */
 export async function peekCounters() {
-    const snap = await getDoc(COUNTERS_DOC);
-    if (!snap.exists()) return { studentCount: 0, adminCount: 0 };
-    const d = snap.data();
-    return { studentCount: d.studentCount ?? 0, adminCount: d.adminCount ?? 0 };
+    const counters = readCounters();
+    return { studentCount: counters.studentCount || 0, adminCount: counters.adminCount || 0 };
 }
