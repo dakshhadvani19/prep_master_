@@ -4,7 +4,7 @@ Update this file after every Agent Mode task. Keep it short, factual, and code-v
 Long-term rules and architecture live in PREPMaster_PROJECT_CONTEXT.md (same folder).
 
 Last updated: 2026-10-04 (Firebase removal and Supabase exam-history migration)
-Verified: live Supabase catalog has 49 Courses + 2,788 Subjects; catalog SELECT/RLS is applied. Firebase runtime has been removed from the application.
+Verified: live Supabase catalog has 49 Courses + 2,788 Subjects; catalog SELECT/RLS is applied. Firebase runtime has been removed from the application. Final local npm build/test execution is pending because the current execution environment cannot resolve GitHub/npm registry hosts.
 
 ## Repository state
 
