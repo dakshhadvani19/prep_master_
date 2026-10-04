@@ -214,7 +214,7 @@ describe('department course order + source CourseId', () => {
   it('resolves a legacy source course id to the numeric CourseId fetch', async () => {
     seedEngineering();
     state.catalogSubjects = [
-      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1 },
+      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1, Semester: 1 },
     ];
     renderSubjects('btech-ce');
     await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
