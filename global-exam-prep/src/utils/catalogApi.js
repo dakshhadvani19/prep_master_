@@ -3,17 +3,17 @@
  * anon key (RLS SELECT only). Never service_role. Never realtime.
  *
  * Domain → CourseIds comes from courseMapping.json (the DB has no domain column).
- * Subject semester comes from subjectSemesterMap.json (the DB has no Sem column).
+ * Course semester options come from public."Courses".Sems.
+ * Subject semester comes from public."Subjects".Semester.
  */
 import { supabase, supabaseConfigError } from '../supabase';
 import { CATALOG_DOMAINS, getCatalogDomain } from '../data/catalogDomains';
 import courseMapping from '../data/courseMapping.json';
-import subjectSemesterMap from '../data/subjectSemesterMap.json';
 
 export { CATALOG_DOMAINS, getCatalogDomain };
 
 const COURSE_COLS = 'CourseId,CourseName,Sems';
-const SUBJECT_COLS = 'SubjectId,SubjectName,CourseId';
+const SUBJECT_COLS = 'SubjectId,SubjectName,CourseId,Semester';
 
 const coursesByDomain = new Map();
 const coursePages = new Map();
@@ -51,7 +51,6 @@ function mapCourseRow(row) {
         sems: Array.isArray(row.Sems) ? row.Sems : [],
         domainId: mapped?.domainId ?? null,
         courseSourceId: mapped?.courseSourceId ?? null,
-        subjectCount: mapped?.subjectCount ?? null,
     };
 }
 
@@ -62,6 +61,7 @@ function mapSubjectRow(row, expectedCourseId) {
         subjectId: Number(row.SubjectId),
         subjectName: row.SubjectName,
         courseId,
+        sem: Number(row.Semester),
     };
 }
 
@@ -86,13 +86,6 @@ export function resolveCourseParam(courseIdParam) {
     if (/^\d+$/.test(raw)) return Number(raw);
     const mapped = courseMapping.find((c) => c.courseSourceId === raw);
     return mapped ? mapped.courseId : null;
-}
-
-export function semesterForSubjectId(subjectId) {
-    if (subjectId == null) return undefined;
-    const key = String(subjectId);
-    if (!Object.prototype.hasOwnProperty.call(subjectSemesterMap, key)) return undefined;
-    return Number(subjectSemesterMap[key]);
 }
 
 export async function fetchCoursesForDomain(domainId) {
@@ -161,18 +154,7 @@ export async function fetchCourseAndSubjects(courseIdParam) {
             .map((row) => mapSubjectRow(row, courseId))
             .filter(Boolean);
 
-        const unmapped = [];
-        const withSem = [];
-        for (const subject of subjects) {
-            const sem = semesterForSubjectId(subject.subjectId);
-            if (sem === undefined || Number.isNaN(sem)) {
-                unmapped.push(subject);
-            } else {
-                withSem.push({ ...subject, sem });
-            }
-        }
-
-        const page = { course, subjects: withSem, unmapped };
+        const page = { course, subjects, unmapped: [] };
         coursePages.set(courseId, page);
         return { ...page, error: null };
     });
