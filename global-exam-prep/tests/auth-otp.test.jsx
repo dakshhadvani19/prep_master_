@@ -41,10 +41,6 @@ const srv = vi.hoisted(() => ({
 const digestFor = (email, code) => createHash('sha256').update(`${email}:${code}`).digest('hex');
 
 vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
-}));
-
 vi.mock('react-router-dom', async (orig) => {
   const actual = await orig();
   return { ...actual, BrowserRouter: ({ children }) => (
