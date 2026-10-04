@@ -1,10 +1,9 @@
 /**
  * supabase.js — the browser Supabase client.
  *
- * Scope (deliberate): Supabase owns auth, the `public.students` profile, and
- * public catalog reads (`Courses`, `Subjects` via RLS SELECT). It does
- * NOT own Firestore data, exams, syllabus, dashboard data, analytics, feedback,
- * storage or exam history — those still go through `src/firebase.js`.
+ * Scope: Supabase owns authentication, the `public.students` profile, and
+ * public catalog reads (`Courses`, `Subjects` via RLS SELECT). Features that do not
+ * yet have persistent Supabase tables use explicit browser-local/static fallbacks.
  *
  * Credentials come from Vite env vars and are never hardcoded here:
  *   VITE_SUPABASE_URL
@@ -190,7 +189,7 @@ export const supabase = supabaseConfigError
               // actual reason to the student. With this left on, the SDK and the
               // app race to consume the same code and the loser wins the UI.
               detectSessionInUrl: false,
-              // Namespaced so a Firebase-era localStorage key can never collide.
+              // Namespaced to keep the authentication session isolated from other app data.
               storageKey: 'prepmaster-supabase-auth',
           },
       });
