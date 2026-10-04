@@ -33,7 +33,7 @@ vi.mock('react-router-dom', async (orig) => {
 });
 
 const { state, resetSupabaseStub, callsTo } = await import('./supabaseMock.js');
-const { resetCatalogCache, courseIdsForDomain, resolveCourseParam, semesterForSubjectId } = await import('../src/utils/catalogApi.js');
+const { resetCatalogCache, courseIdsForDomain, resolveCourseParam } = await import('../src/utils/catalogApi.js');
 const { CATALOG_DOMAINS } = await import('../src/data/catalogDomains.js');
 const courseMapping = (await import('../src/data/courseMapping.json')).default;
 const App = (await import('../src/App.jsx')).default;
@@ -135,33 +135,40 @@ describe('course → subjects', () => {
   it('fetches subjects only for that CourseId and keeps numeric ids in the route', async () => {
     seedEngineering();
     state.catalogSubjects = [
-      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1 },
+      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1, Semester: 1 },
       { SubjectId: 1800001110101, SubjectName: 'Should not appear', CourseId: 18 },
     ];
     renderSubjects(1);
     await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
     const subjectSelects = callsTo('select:Subjects');
     expect(subjectSelects.length).toBe(1);
-    expect(subjectSelects[0].cols).toBe('SubjectId,SubjectName,CourseId');
+    expect(subjectSelects[0].cols).toBe('SubjectId,SubjectName,CourseId,Semester');
     expect(subjectSelects[0].filters.CourseId).toBe(1);
     fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
     expect(screen.getByText('Mathematics-I')).toBeTruthy();
     expect(screen.queryByText('Should not appear')).toBeNull();
   });
 
-  it('groups by the semester mapping and does not guess unmapped rows', async () => {
+  it('uses Course.Sems and Subjects.Semester returned by Supabase', async () => {
     seedEngineering();
+    state.catalogCourses = [
+      { CourseId: 1, CourseName: 'B.Tech - Computer Engineering', Sems: [1, 2, 3] },
+    ];
     state.catalogSubjects = [
-      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1 },
-      { SubjectId: 999999, SubjectName: 'Unmapped Ghost Paper', CourseId: 1 },
+      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1, Semester: 1 },
+      { SubjectId: 999999, SubjectName: 'Database Systems', CourseId: 1, Semester: 3 },
     ];
     renderSubjects('1');
-    await waitFor(() => expect(screen.getByTestId('unmapped-semester')).toBeTruthy());
-    expect(document.body.textContent).toMatch(/999999/);
-    expect(screen.queryByText('Unmapped Ghost Paper')).toBeNull();
+    await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
+
+    expect(screen.getByRole('button', { name: /Sem 1/i })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /Sem 2/i })).toBeTruthy();
+    expect(screen.getByRole('button', { name: /Sem 3/i })).toBeTruthy();
+
+    fireEvent.click(screen.getByRole('button', { name: /Sem 3/i }));
+    expect(screen.getByText('Database Systems')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', { name: /Sem 1/i }));
     expect(screen.getByText('Mathematics-I')).toBeTruthy();
-    expect(screen.queryByRole('button', { name: /Sem undefined|Sem NaN|Sem 99/i })).toBeNull();
   });
 
   it('accepts numeric database CourseIds in the route', async () => {
@@ -169,7 +176,7 @@ describe('course → subjects', () => {
     expect(resolveCourseParam('btech-ce')).toBe(1);
     seedEngineering();
     state.catalogSubjects = [
-      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1 },
+      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1, Semester: 1 },
     ];
     renderSubjects('1');
     await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
@@ -183,10 +190,8 @@ describe('course → subjects', () => {
 });
 
 describe('catalog bridge', () => {
-  it('maps 49 courses and never invents a semester', () => {
+  it('maps 49 courses for department scoping while semester data stays backend-backed', () => {
     expect(courseMapping).toHaveLength(49);
-    expect(semesterForSubjectId(MATH_ID)).toBe(1);
-    expect(semesterForSubjectId(424242)).toBeUndefined();
     expect(ENG_IDS.every((id) => id >= 1 && id <= 17)).toBe(true);
   });
 });
