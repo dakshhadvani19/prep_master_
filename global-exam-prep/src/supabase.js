@@ -148,8 +148,7 @@ export function hasPendingAuthCallback() {
 
 /**
  * Non-null when this build has no usable Supabase project. AuthContext reads it
- * so the UI can explain the problem instead of hanging on a loader (same job
- * `firebaseConfigError` does for Firestore).
+ * so the UI can explain the problem instead of hanging on a loader.
  */
 export const supabaseConfigError = (() => {
     if (!rawUrl || !rawKey) {
