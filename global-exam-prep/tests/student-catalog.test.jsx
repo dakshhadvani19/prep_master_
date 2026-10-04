@@ -136,7 +136,7 @@ describe('course → subjects', () => {
     seedEngineering();
     state.catalogSubjects = [
       { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1, Semester: 1 },
-      { SubjectId: 1800001110101, SubjectName: 'Should not appear', CourseId: 18 },
+      { SubjectId: 1800001110101, SubjectName: 'Should not appear', CourseId: 18, Semester: 1 },
     ];
     renderSubjects(1);
     await waitFor(() => expect(screen.getByText('B.Tech - Computer Engineering')).toBeTruthy());
@@ -227,7 +227,7 @@ describe('course page states', () => {
     seedEngineering();
     state.catalogDelayMs = 80;
     state.catalogSubjects = [
-      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1 },
+      { SubjectId: MATH_ID, SubjectName: 'Mathematics-I', CourseId: 1, Semester: 1 },
     ];
     renderSubjects(1);
     expect(screen.getByTestId('catalog-loading')).toBeTruthy();
