@@ -449,7 +449,7 @@ export default function Signup() {
     const [globalError,   setGlobalError]   = useState('');
 
     // SUCCESS OVERLAY — we use a REF as source of truth in addition to state.
-    // Firebase's onAuthStateChanged fires setCurrentUser() asynchronously, which
+    // The auth-state callback updates setCurrentUser() asynchronously, which
     // triggers our redirect useEffect. If React hasn't flushed setSuccessData yet,
     // the effect would see successData===null and redirect, skipping the animation.
     const successDataRef = useRef(null);
@@ -1120,7 +1120,7 @@ function SignupForm({
         setLoading(true);
         try {
             // Step 1 asks the existing Nodemailer/Gmail endpoint for a 6-digit code
-            // and stores only its SHA-256 digest in Firestore. No Supabase call
+            // and stores only its HMAC digest in the private OTP table. No Supabase Auth call
             // happens here on purpose: until the code has been verified there is no
             // auth.users row, so an unverified (or bogus) address cannot burn an
             // email address or leave a half-created profile behind. The password
@@ -1304,7 +1304,7 @@ function OTPStep({ email, onBack, onVerify, onResend, onSuccess, onAuthStart, on
         setLoading(true); setError('');
 
         // The session appears mid-call, so block the parent's auto-redirect until
-        // the success overlay is in place — the same race the Firebase version guarded.
+        // the success overlay is in place — the same redirect race guarded by the current Supabase flow.
         if (onAuthStart) onAuthStart();
 
         try {
