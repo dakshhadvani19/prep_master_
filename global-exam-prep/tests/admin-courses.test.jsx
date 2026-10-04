@@ -1,22 +1,12 @@
 /**
  * Phase 3 — admin catalog UI. Real App + Layout + AdminCourses.
- * Actions stay in memory; they must not hit Supabase/Firebase CRUD.
+ * Actions stay in memory; they must not hit Supabase/legacy auth/data backend CRUD.
  */
 import React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, waitFor, cleanup, fireEvent, within } from '@testing-library/react';
 
 vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
-}));
-vi.mock('firebase/firestore', () => ({
-  doc: () => ({}), collection: () => ({}),
-  getDoc: vi.fn(async () => ({ exists: () => false, data: () => undefined })),
-  getDocs: vi.fn(async () => ({ empty: true, docs: [] })),
-  query: vi.fn(), orderBy: vi.fn(),
-}));
-
 const holder = { entry: '/admin/courses' };
 
 vi.mock('react-router-dom', async (importOriginal) => {
