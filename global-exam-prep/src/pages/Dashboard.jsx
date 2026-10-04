@@ -3,45 +3,30 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { domains, examPrompts } from '../data/mockData';
 import { Award, Clock, ArrowLeft, Target, BookOpen, Search, CheckCircle, Loader } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { db } from '../firebase';
-import { collection, query, getDocs, orderBy } from 'firebase/firestore';
+import { getExamHistory } from '../utils/examHistoryStorage';
 import './Dashboard.css';
 
 export default function Dashboard() {
     const [history, setHistory] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [justSubmitted, setJustSubmitted] = useState(false);
     const navigate = useNavigate();
     const location = useLocation();
     const { currentUser } = useAuth();
 
     useEffect(() => {
-        if (!currentUser) return;
+        if (!currentUser) {
+            setHistory([]);
+            return;
+        }
 
-        const fetchHistory = async () => {
-            setLoading(true);
-            try {
-                const snap = await getDocs(
-                    query(
-                        collection(db, 'users', currentUser.uid, 'examHistory'),
-                        orderBy('date', 'desc')
-                    )
-                );
-                setHistory(snap.docs.map(d => d.data()));
-            } catch (err) {
-                console.warn('Could not fetch exam history:', err.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchHistory();
+        setHistory(getExamHistory(currentUser.uid));
 
         if (location.state?.justSubmitted) {
             setJustSubmitted(true);
             setTimeout(() => setJustSubmitted(false), 5000);
         }
-    }, [currentUser?.uid]);
+    }, [currentUser?.uid, location.state?.justSubmitted]);
 
     const getSubjectName = (subjectId) => {
         for (const d of domains) {
