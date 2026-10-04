@@ -1,6 +1,6 @@
 /**
  * Phase 3 — admin catalog UI (Course → Semester → Subject → Question).
- * In-memory preview only. No Supabase, Firebase, API, or persistence.
+ * In-memory preview only. No persistence.
  *
  * Question fields follow TestsData + the existing generator:
  *   objective → text, options[], answer index
