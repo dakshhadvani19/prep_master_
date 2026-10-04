@@ -12,18 +12,7 @@ import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, cleanup, act } from '@testing-library/react';
 import { MemoryRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
-// ─── Mock: src/firebase (auth/db/storage singletons) ─────────────────────────
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null },
-  db: {},
-  storage: {},
-}));
-
-// ─── Mock: firebase/auth (Signup + AuthContext import these) ────────────────
-
-// ─── Mock: firebase/firestore ───────────────────────────────────────────────
-
-// ─── Mock: AuthContext so Signup renders without a live Firebase project ────
+// ─── Mock: AuthContext so Signup renders without a live backend ────────────────
 const authState = { current: {} };
 vi.mock('../src/context/AuthContext', () => ({
   useAuth: () => authState.current,
