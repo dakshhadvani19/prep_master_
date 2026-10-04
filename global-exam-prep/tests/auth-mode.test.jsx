@@ -20,37 +20,8 @@ vi.mock('../src/firebase', () => ({
 }));
 
 // ─── Mock: firebase/auth (Signup + AuthContext import these) ────────────────
-vi.mock('firebase/auth', () => {
-  class GoogleAuthProvider {
-    setCustomParameters() { return this; }
-  }
-  return {
-    GoogleAuthProvider,
-    createUserWithEmailAndPassword: vi.fn(),
-    signInWithEmailAndPassword: vi.fn(),
-    signOut: vi.fn(),
-    onAuthStateChanged: vi.fn((a, cb) => { cb(null); return () => {}; }),
-    updateProfile: vi.fn(),
-    signInWithPopup: vi.fn(),
-    signInWithRedirect: vi.fn(),
-    getRedirectResult: vi.fn().mockResolvedValue(null),
-    getAdditionalUserInfo: vi.fn(),
-    sendPasswordResetEmail: vi.fn(),
-  };
-});
 
 // ─── Mock: firebase/firestore ───────────────────────────────────────────────
-vi.mock('firebase/firestore', () => ({
-  doc: vi.fn(() => ({})),
-  setDoc: vi.fn().mockResolvedValue(undefined),
-  getDoc: vi.fn().mockResolvedValue({ exists: () => false, data: () => null }),
-  collection: vi.fn(() => ({})),
-  query: vi.fn(() => ({})),
-  where: vi.fn(),
-  getDocs: vi.fn().mockResolvedValue({ empty: true }),
-  increment: vi.fn(),
-  runTransaction: vi.fn(),
-}));
 
 // ─── Mock: AuthContext so Signup renders without a live Firebase project ────
 const authState = { current: {} };
