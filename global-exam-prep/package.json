@@ -10,14 +10,12 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest",
-    "deploy:rules": "firebase deploy --only firestore:rules"
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
     "@supabase/supabase-js": "^2.109.0",
     "canvas-confetti": "^1.9.4",
-    "firebase": "^12.10.0",
     "framer-motion": "^12.34.5",
     "jszip": "^3.10.1",
     "lucide-react": "^0.576.0",
