@@ -3,8 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, CheckCircle, XCircle, MinusCircle, BarChart2, BookOpen, Loader } from 'lucide-react';
 import { domains, examPrompts } from '../data/mockData';
 import { useAuth } from '../context/AuthContext';
-import { db } from '../firebase';
-import { doc, getDoc } from 'firebase/firestore';
+import { getExamHistoryRecord } from '../utils/examHistoryStorage';
 
 export default function ReviewPage() {
     const { historyId } = useParams();
@@ -14,18 +13,16 @@ export default function ReviewPage() {
     const [loadingRecord, setLoadingRecord] = useState(true);
     const { currentUser } = useAuth();
 
-    // Load the specific history record from Firestore (scoped to current user)
+    // History is currently a browser-local static store.
     useEffect(() => {
-        if (!currentUser) return;
-
-        const fetchRecord = async () => {
-            setLoadingRecord(true);
-            const snap = await getDoc(doc(db, 'users', currentUser.uid, 'examHistory', historyId));
-            setRecord(snap.exists() ? snap.data() : null);
+        if (!currentUser) {
+            setRecord(null);
             setLoadingRecord(false);
-        };
+            return;
+        }
 
-        fetchRecord();
+        setRecord(getExamHistoryRecord(currentUser.uid, historyId));
+        setLoadingRecord(false);
     }, [currentUser?.uid, historyId]);
 
     // Summary stats - MUST be above conditional returns to satisfy React Hook rules
