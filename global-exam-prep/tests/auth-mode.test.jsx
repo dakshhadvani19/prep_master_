@@ -14,7 +14,6 @@ import { MemoryRouter, Routes, Route, useLocation, useNavigate } from 'react-rou
 
 // ─── Mock: src/legacy backend (auth/db/storage singletons) ─────────────────────────
 // ─── Mock: legacy backend/auth (Signup + AuthContext import these) ────────────────
-// ─── Mock: legacy backend/firestore ───────────────────────────────────────────────
 // ─── Mock: AuthContext so Signup renders without a live legacy auth/data backend project ────
 const authState = { current: {} };
 vi.mock('../src/context/AuthContext', () => ({
