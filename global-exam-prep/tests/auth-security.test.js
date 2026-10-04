@@ -4,26 +4,6 @@
  */
 import { describe, it, expect, vi } from 'vitest';
 
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null },
-  db: {},
-  storage: {},
-  firebaseConfigError: null,
-}));
-
-vi.mock('firebase/firestore', () => ({
-  doc: vi.fn((db, col, id) => ({ col, id })),
-  getDoc: vi.fn(),
-  setDoc: vi.fn(),
-  updateDoc: vi.fn(),
-  runTransaction: vi.fn(),
-  increment: vi.fn((n) => ({ __increment: n })),
-  collection: vi.fn(),
-  query: vi.fn(),
-  where: vi.fn(),
-  getDocs: vi.fn(),
-}));
-
 import { hashPassword, verifyPassword, isLegacyHash } from '../src/utils/hashUtil';
 import { checkPasswordStrength } from '../src/utils/passwordStrength';
 
