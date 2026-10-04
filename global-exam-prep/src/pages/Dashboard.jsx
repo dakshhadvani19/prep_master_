@@ -3,8 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { domains, examPrompts } from '../data/mockData';
 import { Award, Clock, ArrowLeft, Target, BookOpen, Search, CheckCircle, Loader } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { db } from '../firebase';
-import { collection, query, getDocs, orderBy } from 'firebase/firestore';
+import { requireSupabase } from '../supabase';
 import './Dashboard.css';
 
 export default function Dashboard() {
@@ -16,20 +15,32 @@ export default function Dashboard() {
     const { currentUser } = useAuth();
 
     useEffect(() => {
-        if (!currentUser) return;
+        if (!currentUser) {
+            setHistory([]);
+            setLoading(false);
+            return;
+        }
 
         const fetchHistory = async () => {
             setLoading(true);
             try {
-                const snap = await getDocs(
-                    query(
-                        collection(db, 'users', currentUser.uid, 'examHistory'),
-                        orderBy('date', 'desc')
-                    )
-                );
-                setHistory(snap.docs.map(d => d.data()));
+                const { data, error } = await requireSupabase()
+                    .from('exam_history')
+                    .select('id, date, subject_id, exam_type, difficulty, type, score, total_marks, questions, user_answers')
+                    .order('date', { ascending: false });
+
+                if (error) throw error;
+
+                setHistory((data || []).map(record => ({
+                    ...record,
+                    subjectId: record.subject_id,
+                    examType: record.exam_type,
+                    totalMarks: record.total_marks,
+                    userAnswers: record.user_answers,
+                })));
             } catch (err) {
                 console.warn('Could not fetch exam history:', err.message);
+                setHistory([]);
             } finally {
                 setLoading(false);
             }
@@ -41,7 +52,7 @@ export default function Dashboard() {
             setJustSubmitted(true);
             setTimeout(() => setJustSubmitted(false), 5000);
         }
-    }, [currentUser?.uid]);
+    }, [currentUser?.uid, location.state?.justSubmitted]);
 
     const getSubjectName = (subjectId) => {
         for (const d of domains) {
@@ -73,7 +84,6 @@ export default function Dashboard() {
                 <ArrowLeft size={16} /> Back
             </button>
 
-            {/* Success Banner */}
             {justSubmitted && (
                 <div style={{
                     background: 'rgba(16,185,129,0.12)',
@@ -114,7 +124,6 @@ export default function Dashboard() {
                     </div>
                 </div>
 
-                {/* Profile info on the right */}
                 {currentUser && (
                     <div style={{
                         textAlign: 'right',
@@ -169,7 +178,6 @@ export default function Dashboard() {
                             hour: '2-digit', minute: '2-digit'
                         });
 
-                        // If it's objective, we have a score. Otherwise it's subjective
                         const isScored = record.type === 'objective' && record.score !== null;
                         const percentage = isScored ? (record.score / record.totalMarks) * 100 : null;
 
@@ -225,11 +233,9 @@ export default function Dashboard() {
                                             </div>
                                         </>
                                     ) : (
-                                        <>
-                                            <div style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--accent-primary)', marginBottom: '0.75rem' }}>
-                                                Subjective
-                                            </div>
-                                        </>
+                                        <div style={{ fontSize: '1.2rem', fontWeight: 600, color: 'var(--accent-primary)', marginBottom: '0.75rem' }}>
+                                            Subjective
+                                        </div>
                                     )}
                                     {record.questions && (
                                         <Link
