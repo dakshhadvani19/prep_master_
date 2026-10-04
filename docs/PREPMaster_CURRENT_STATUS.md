@@ -3,7 +3,7 @@
 Update this file after every Agent Mode task. Keep it short, factual, and code-verified.
 Long-term rules and architecture live in PREPMaster_PROJECT_CONTEXT.md (same folder).
 
-Last updated: 2026-10-03 (global final numeric SubjectId semester/ExamPortal bridge repair)
+Last updated: 2026-10-04 (student catalog semester runtime sourcing)
 Verified: live Supabase catalog has 49 Courses + 2,788 Subjects; catalog SELECT/RLS is applied.
 
 ## Repository state
@@ -15,7 +15,8 @@ Verified: live Supabase catalog has 49 Courses + 2,788 Subjects; catalog SELECT/
 | Live DB CourseId check | ✅ verified: CourseId 1–49 map to the canonical 49 courses |
 | Live catalog rows | ✅ 49 Courses, ✅ 2,788 Subjects, ✅ 0 blank names, ✅ no orphan CourseIds |
 | Live catalog SELECT | ✅ anon + authenticated SELECT on Courses/Subjects with RLS enabled |
-| Subject semester bridge | ✅ repaired globally: 2,788 final numeric SubjectIds mapped |
+| Student catalog runtime source | ✅ Courses + Courses.Sems + Subjects + Subjects.Semester are read from Supabase on catalog navigation |
+| Subject semester bridge | ✅ retained only for ExamPortal/legacy numeric-ID resolution; student catalog no longer reads it |
 | ExamPortal bridge | ✅ repaired globally: 2,788 final numeric SubjectIds mapped to source ID, source course, numeric CourseId, semester |
 
 ## Bridge repair verification
@@ -28,7 +29,8 @@ Verified: live Supabase catalog has 49 Courses + 2,788 Subjects; catalog SELECT/
 - Current ID 1001131010601 maps to Calculus / 01ma0106 / CourseId 1 / semester 1.
 - Current ID 1016132000101 maps to Reading and Writing for Technology / PM20001 / CourseId 1 / semester 2.
 - Stale digit-stripped ID 1000001010601 is absent.
-- The live Subjects table was not reseeded or modified for this frontend-only repair.
+- The live `Subjects.Semester` column is populated for all 2,788 subjects and is now the student catalog's semester source.
+- No student catalog page uses `subjectSemesterMap.json` for runtime semester grouping.
 
 ## Verification snapshot
 
