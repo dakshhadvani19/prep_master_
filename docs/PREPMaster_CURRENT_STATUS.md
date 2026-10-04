@@ -54,7 +54,7 @@ Student browser
   → Supabase Subjects
   → Supabase Subjects.Semester
   → existing ExamPortal / legacy generation stack
-  → Firebase-backed legacy history/syllabus paths where those have not yet been migrated
+  → Supabase-backed exam history; local/static browser syllabus fallback for now
 
 Source-of-truth rule:
   * Displayed catalog Courses, Semesters, and Subjects are runtime database data.
