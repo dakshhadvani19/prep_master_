@@ -41,11 +41,8 @@
  *  - It never accepts role/is_spam/student_id/auth_uid from the client. `role`
  *    is derived from the admins lookup purely for routing decisions; it is not
  *    authoritative for anything the client is allowed to do — RLS is.
- *  - It does not pretend to be Firebase Auth. `currentUser` keeps the field names
- *    the existing pages read (uid/email/displayName/photoURL) so they did not have
- *    to change, and carries `authProvider: 'supabase'`. Anything that needs a real
- *    Firebase credential (Firestore `request.auth`, exam history, storage) does
- *    not get one — see AUTH.md "Identity bridge".
+ *  - `currentUser` keeps the field names existing pages read (uid/email/displayName/
+ *    photoURL) and carries `authProvider: 'supabase'` for compatibility.
  *
  * Google authentication: redirect only (no popup), because PKCE completes in the
  * return leg. `startGoogleRedirect()` sends the browser out. The return leg is owned
@@ -352,7 +349,7 @@ export function AuthProvider({ children }) {
      * The two steps share one in-memory record: step 1 mails the code, step 2
      * verifies it and then creates the account. The password lives only here, in
      * this tab's memory, for exactly as long as the OTP screen is open — it is
-     * never sent to /api/send-otp, never written to Firestore, and dropped as soon
+     * never sent to /api/send-otp, never written to persistent storage, and dropped as soon
      * as the code has been consumed (or the student goes back).
      */
     const pendingSignupRef = useRef(null);
@@ -480,9 +477,6 @@ export function AuthProvider({ children }) {
     }, []);
 
     const logout = useCallback(async () => {
-        // Exam history cache lives in localStorage; clearing it on logout is the
-        // existing behaviour and stays here (the data itself is still Firestore's).
-        try { localStorage.removeItem('userExamHistory'); } catch { /* noop */ }
         try { sessionStorage.removeItem('prepmaster_google_signup_pending'); } catch { /* noop */ }
         clearOAuthAttempt();
         reportGoogle('idle', '');
