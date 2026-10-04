@@ -3,8 +3,8 @@
 Update this file after every Agent Mode task. Keep it short, factual, and code-verified.
 Long-term rules and architecture live in PREPMaster_PROJECT_CONTEXT.md (same folder).
 
-Last updated: 2026-10-04 (student catalog semester runtime sourcing)
-Verified: live Supabase catalog has 49 Courses + 2,788 Subjects; catalog SELECT/RLS is applied.
+Last updated: 2026-10-04 (Firebase removal and Supabase exam-history migration)
+Verified: live Supabase catalog has 49 Courses + 2,788 Subjects; catalog SELECT/RLS is applied. Firebase runtime has been removed from the application.
 
 ## Repository state
 
@@ -73,9 +73,9 @@ Source-of-truth rule:
 | Subject/legacy compatibility | Frontend JSON | `subjectIdBridge.json` + `subjectSemesterMap.json` | ✅ compatibility only |
 | Authentication | Supabase Auth | `auth.users` + session | ✅ live |
 | Admin authorization | Supabase | `public.admins` + authorization lookup | ✅ implemented |
-| Exam generation | Hybrid | local syllabus/question data + AI API + legacy Firebase paths | ⚠️ hybrid |
-| Exam history | Firebase legacy path | Firestore `users/{uid}/examHistory` | ⚠️ identity bridge pending |
-| Syllabus storage | Firebase legacy path | Firestore/Storage | ⚠️ identity bridge pending |
+| Exam generation | Hybrid | local syllabus/question data + AI API + local/static syllabus fallback | ⚠️ hybrid |
+| Exam history | Supabase | `public.exam_history` with `auth_uid` ownership RLS | ✅ migrated |
+| Syllabus storage | Local/static fallback | Browser localStorage; no artificial fetch delay | ⚠️ temporary until Supabase Storage contract is added |
 | Leaderboards | React mock UI | in-memory mock data | 📝 persistence pending |
 | Admin catalog CRUD | React mock UI | in-memory admin catalog | 📝 persistence pending |
 | Feedback management | API/email + legacy paths | no finished persistent admin store | 📝 pending |
@@ -118,7 +118,7 @@ Never assume an Arena statement such as tests passed, build passed, or deploymen
 - Do not put Supabase service-role or secret keys into browser code.
 - Do not disable RLS to make the catalog work.
 - Do not redesign the final numeric SubjectId scheme without explicit authorization.
-- Do not rewrite ExamPortal/Firebase logic during catalog-only work.
+- ExamPortal now uses Supabase for exam-history persistence; do not reintroduce a second backend identity layer.
 - Do not claim a deployment is successful while its CI/Vercel status is pending.
 
 ## 21. Reading order for a new agent
