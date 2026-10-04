@@ -390,17 +390,15 @@ Build rules:
 
 Verified current state (2026-10-03): the **student** catalog browse path is Supabase-backed.
 Hosted tables `public."Courses"` (`CourseId`, `CourseName`, `Sems`) and `public."Subjects"`
-(`SubjectId`, `SubjectName`, `CourseId`) hold 49 courses and 2,788 subjects (18 blank names dropped).
+(`SubjectId`, `SubjectName`, `CourseId`, `Semester`) hold 49 courses and 2,788 subjects (18 blank names dropped).
 Student CourseId is numeric 1–49; SubjectId is the final BIGINT scheme
 `CourseId + normalized original SubjectId + occurrence suffix` (do not redesign).
-Frontend bridges: `src/data/catalogDomains.js` (six departments, no fetch),
-`src/data/courseMapping.json` (domainId → CourseIds; source course id ↔ DB CourseId),
-`src/data/subjectSemesterMap.json` (final numeric SubjectId → semester) and
-`src/data/subjectIdBridge.json` (final numeric SubjectId → source subject/course + numeric CourseId + semester).
+Frontend metadata: `src/data/catalogDomains.js` (six departments, no fetch) and
+`src/data/courseMapping.json` (domainId → CourseIds; source course id ↔ DB CourseId). The student catalog must not use a frontend semester map: course semester options come from `public."Courses".Sems`, and each subject's semester comes from `public."Subjects".Semester`.
+`src/data/subjectSemesterMap.json` and `src/data/subjectIdBridge.json` remain only for ExamPortal/legacy numeric-ID compatibility.
 
 **Bridge repair completed (2026-10-03):** subjectSemesterMap.json and subjectIdBridge.json now use the final numeric SubjectIds used by current main mockData.js and the live Subjects table. Both contain 2,788 keys with 0 stale/extra keys, and bridge semester values agree with canonical subject semesters. The ExamPortal resolver accepts final numeric route IDs and also preserves legacy source-ID lookup through the bridge. The repair was reconstructed from current main plus historical source catalog commit dd164dec330f006ae37c3b13be2ec1847b49a6fa. Do not infer semesters from SubjectId digits and do not alter live Subjects data to repair a frontend mapping mismatch.
-`CourseExplorer` / `SubjectDetails` query only the CourseIds for the selected department, or
-Subjects for one CourseId. Homepage does not fetch Courses/Subjects and does not import `mockData.js`.
+`CourseExplorer` fetches selected-department Courses from Supabase. `SubjectDetails` fetches one Course row (including `Sems`) and that CourseId's Subjects (including `Semester`) from Supabase when the user opens the course. Homepage does not fetch Courses/Subjects and does not import `mockData.js`.
 `mockData.js` remains for exam prompts (also copied to `examPrompts.js`), ExamPortal, SearchResults,
 and other non-browse features. Admin `/admin/courses` is still in-memory Phase 3 UI.
 `SubjectDetails.jsx` still implements Course → **Step 1: Select Semester** → Subjects → exam picker.
@@ -416,15 +414,15 @@ course (and subject). Destructive confirm toast: `Preview only — no data was c
 SRS/ER + Appendix A names:
 
 - Courses: `CourseId` PK, `CourseName`, `Sems` (array, up to 12).
-- Subjects: `SubjectId` PK, `SubjectName`, `CourseId` FK. Use-case: Edit question / Edit Subject
+- Subjects: `SubjectId` PK, `SubjectName`, `CourseId` FK, `Semester` (integer). Use-case: Edit question / Edit Subject
   **include** Choose course and subject.
 - TestsData: `TestId` PK, `Questions` / `Options` / `Answers` arrays. Class diagram operations:
   `editQuestion`, `addQuestion`, `deleteQuestion`, `changeQuestionPreference`.
 
 The **admin** catalog **UI** exists; **admin persistence does not.** Student browse reads hosted
-`public."Courses"` / `public."Subjects"` (SELECT via planned RLS
-`20261003120000_catalog_public_select.sql` — not applied by this repo). This repo still has no
-CREATE TABLE migration for those catalogs. Firestore collections `domains`, `courses`,
+`public."Courses"` / `public."Subjects"` through the Supabase Data API; the live project has RLS-enabled
+SELECT for `anon` and `authenticated`. Student catalog runtime reads Courses/Courses.Sems/Subjects/Subjects.Semester
+from Supabase; it does not use `mockData.js` or `subjectSemesterMap.json` for those displayed catalog values. Firestore collections `domains`, `courses`,
 `subjects` remain read-only `allow: if true` with writes gated on the (currently unreachable)
 `isAdmin()`. Do not treat student catalog SELECT as admin CRUD. Do not treat the SRS data-dictionary types (`Long`, `Password` columns,
 Mongo-style arrays) as a mandate to recreate that physical schema — they are conceptual.
