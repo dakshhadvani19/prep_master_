@@ -4,8 +4,8 @@
  *    default and if sign up then that on authentication page but that
  *    signupmode url is not working currently"
  *
- * These tests drive the REAL src/pages/Signup.jsx (only firebase + AuthContext
- * are mocked), asserting which tab the SegmentedControl reports as selected.
+ * These tests drive the REAL src/pages/Signup.jsx with only AuthContext mocked,
+ * asserting which tab the SegmentedControl reports as selected.
  */
 import React, { useEffect } from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
