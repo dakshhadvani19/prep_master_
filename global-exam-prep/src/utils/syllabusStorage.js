@@ -35,7 +35,7 @@ function toPdfDataUrl(file) {
 }
 
 /**
- * Temporary non-Firebase syllabus store.
+ * Temporary local/static syllabus store.
  *
  * Supabase Storage is intentionally not introduced in this phase because the
  * existing project does not yet have the bucket/policy contract wired for this
