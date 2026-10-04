@@ -126,12 +126,12 @@ export default function ExamPortal() {
                 if (pdfSyllabus[sourceSubjectId]) {
                     syllabusText += `Provided Study Material/Syllabus content:\n${pdfSyllabus[sourceSubjectId]}`;
                 } else {
-                    // Priority 2: PDF syllabus uploaded by admin (stored in Firestore)
-                    let pdfFirestoreSyllabus = null;
+                    // Priority 2: PDF syllabus uploaded through the temporary local syllabus adapter
+                    let pdfUploadedSyllabus = null;
                     try {
                         pdfFirestoreSyllabus = await fetchSyllabus(sourceSubjectId, courseDetail?.id);
-                    } catch (firestoreErr) {
-                        console.warn('Could not fetch Firestore syllabus (permissions?), falling back:', firestoreErr.message);
+                    } catch (syllabusErr) {
+                        console.warn('Could not load the uploaded syllabus, falling back:', firestoreErr.message);
                     }
                     if (pdfFirestoreSyllabus?.extractedText) {
                         syllabusText += `Provided Study Material/Syllabus content:\n${pdfFirestoreSyllabus.extractedText}`;
@@ -275,7 +275,7 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
             const recordId = Date.now();
 
             // Store compact question+answer snapshot for review
-            // CRITICAL: Ensure no field is 'undefined' as Firestore will throw an error
+            // CRITICAL: Ensure no field is undefined before storing the compact local snapshot
             const questionSnapshot = questions.map(q => ({
                 id: q.id,
                 text: q.text || "",
