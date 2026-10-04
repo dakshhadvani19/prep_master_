@@ -4,7 +4,7 @@
  *    default and if sign up then that on authentication page but that
  *    signupmode url is not working currently"
  *
- * These tests drive the REAL src/pages/Signup.jsx (only firebase + AuthContext
+ * These tests drive the REAL src/pages/Signup.jsx (only legacy backend + AuthContext
  * are mocked), asserting which tab the SegmentedControl reports as selected.
  */
 import React, { useEffect } from 'react';
@@ -12,47 +12,10 @@ import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, cleanup, act } from '@testing-library/react';
 import { MemoryRouter, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
-// ─── Mock: src/firebase (auth/db/storage singletons) ─────────────────────────
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null },
-  db: {},
-  storage: {},
-}));
-
-// ─── Mock: firebase/auth (Signup + AuthContext import these) ────────────────
-vi.mock('firebase/auth', () => {
-  class GoogleAuthProvider {
-    setCustomParameters() { return this; }
-  }
-  return {
-    GoogleAuthProvider,
-    createUserWithEmailAndPassword: vi.fn(),
-    signInWithEmailAndPassword: vi.fn(),
-    signOut: vi.fn(),
-    onAuthStateChanged: vi.fn((a, cb) => { cb(null); return () => {}; }),
-    updateProfile: vi.fn(),
-    signInWithPopup: vi.fn(),
-    signInWithRedirect: vi.fn(),
-    getRedirectResult: vi.fn().mockResolvedValue(null),
-    getAdditionalUserInfo: vi.fn(),
-    sendPasswordResetEmail: vi.fn(),
-  };
-});
-
-// ─── Mock: firebase/firestore ───────────────────────────────────────────────
-vi.mock('firebase/firestore', () => ({
-  doc: vi.fn(() => ({})),
-  setDoc: vi.fn().mockResolvedValue(undefined),
-  getDoc: vi.fn().mockResolvedValue({ exists: () => false, data: () => null }),
-  collection: vi.fn(() => ({})),
-  query: vi.fn(() => ({})),
-  where: vi.fn(),
-  getDocs: vi.fn().mockResolvedValue({ empty: true }),
-  increment: vi.fn(),
-  runTransaction: vi.fn(),
-}));
-
-// ─── Mock: AuthContext so Signup renders without a live Firebase project ────
+// ─── Mock: src/legacy backend (auth/db/storage singletons) ─────────────────────────
+// ─── Mock: legacy backend/auth (Signup + AuthContext import these) ────────────────
+// ─── Mock: legacy backend/firestore ───────────────────────────────────────────────
+// ─── Mock: AuthContext so Signup renders without a live legacy auth/data backend project ────
 const authState = { current: {} };
 vi.mock('../src/context/AuthContext', () => ({
   useAuth: () => authState.current,
