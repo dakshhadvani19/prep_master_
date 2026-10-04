@@ -105,8 +105,8 @@ const ROLE_RANK = { student: 0, admin: 1, superAdmin: 2 };
 
 /**
  * A deliberately small, Supabase-derived view of the signed-in user, using the
- * property names the rest of the app already reads. Not a Firebase `User`: there
- * is no `getIdToken()` here, and nothing that needs one should use this.
+ * property names the rest of the app already reads. It is a Supabase-derived user
+ * view; there is no separate provider credential here.
  */
 function toCurrentUser(user) {
     if (!user) return null;
