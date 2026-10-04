@@ -1,131 +1,148 @@
 # PrepMaster — Current Status
 
-Update this file after every Agent Mode task. Keep it short, factual, and code-verified.
-Long-term rules and architecture live in PREPMaster_PROJECT_CONTEXT.md (same folder).
+_Last updated: 2026-10-04_
 
-Last updated: 2026-10-04 (student catalog semester runtime sourcing)
-Verified: live Supabase catalog has 49 Courses + 2,788 Subjects; catalog SELECT/RLS is applied.
+## 1. Repository and deployment
 
-## Repository state
+- Repository: dakshhadvani19/prep_master_
+- Default branch: main
+- App root: global-exam-prep
+- Vercel project: prepmaster-tau.vercel.app
+- Git policy: work lands directly on main; do not create or merge PRs unless explicitly requested.
 
-| Item | Value |
-| --- | --- |
-| Git root / app dir | /home/user/prep_master_ / global-exam-prep/ |
-| Branch policy | main only |
-| Live DB CourseId check | ✅ verified: CourseId 1–49 map to the canonical 49 courses |
-| Live catalog rows | ✅ 49 Courses, ✅ 2,788 Subjects, ✅ 0 blank names, ✅ no orphan CourseIds |
-| Live catalog SELECT | ✅ anon + authenticated SELECT on Courses/Subjects with RLS enabled |
-| Student catalog runtime source | ✅ Courses + Courses.Sems + Subjects + Subjects.Semester are read from Supabase on catalog navigation |
-| Subject semester bridge | ✅ retained only for ExamPortal/legacy numeric-ID resolution; student catalog no longer reads it |
-| ExamPortal bridge | ✅ repaired globally: 2,788 final numeric SubjectIds mapped to source ID, source course, numeric CourseId, semester |
+## 2. Current architecture
 
-## Bridge repair verification
+React 19 + Vite, React Router, Framer Motion, Lucide, CSS design system, Supabase JS, and browser-local/static adapters for features whose persistent database design is still pending.
 
-- Current main mockData.js: 2,788 nonblank subjects, 2,788 unique numeric SubjectIds, all with explicit semesters.
-- Historical source catalog: commit dd164dec330f006ae37c3b13be2ec1847b49a6fa.
-- Reconstruction check: 2,788 / 2,788 IDs reproduced with 0 ID-generation mismatches and 0 subject-order/title mismatches.
-- subjectSemesterMap.json and subjectIdBridge.json both contain exactly 2,788 keys with the same key set and 0 semester conflicts.
-- CourseId distribution is preserved across all populated CourseIds; CourseId 1 has 61 subjects.
-- Current ID 1001131010601 maps to Calculus / 01ma0106 / CourseId 1 / semester 1.
-- Current ID 1016132000101 maps to Reading and Writing for Technology / PM20001 / CourseId 1 / semester 2.
-- Stale digit-stripped ID 1000001010601 is absent.
-- The live `Subjects.Semester` column is populated for all 2,788 subjects and is now the student catalog's semester source.
-- No student catalog page uses `subjectSemesterMap.json` for runtime semester grouping.
+### Authentication
 
-## Verification snapshot
+Supabase Auth is the only authentication provider: email/password, Google OAuth with PKCE, custom server-generated OTP signup gate, public.students, public.admins, and RLS-backed authorization.
 
-Arena reported:
-- npx vitest run → 24 test files / 282 tests passed
-- npm run build → success
-- npm run lint → exit 1, 52 existing problems (48 errors, 4 warnings); unrelated lint was not mass-fixed.
+## 3. Legacy backend removal
 
-This environment independently validated the 2,788-row reconstruction against current main and historical dd164dec, but did not execute the full Vite/Vitest workspace.
+The previous Firebase integration has been removed from the application.
 
-## 16. New-reader project map
+Removed:
+- SDK dependency
+- initialization module
+- database rules/configuration
+- dedicated build chunk
+- environment variables
+- CSP endpoints
+- test mocks
+- remote exam-history reads/writes
+- remote syllabus/storage reads/writes
 
-This is the fastest way for a new developer or agent to understand the system:
+Replacement behavior:
 
-Student browser
-  → React/Vite SPA
-  → Supabase Auth for identity
-  → frontend-static department definitions
-  → Supabase Courses
-  → Supabase Courses.Sems
-  → Supabase Subjects
-  → Supabase Subjects.Semester
-  → existing ExamPortal / legacy generation stack
-  → Firebase-backed legacy history/syllabus paths where those have not yet been migrated
+| Previous capability | Current temporary behavior |
+|---|---|
+| Exam history | Browser-local examHistoryStorage.js |
+| Exam review | Reads the same browser-local history |
+| Syllabus upload | Extract PDF text and keep metadata/text in browser storage |
+| Syllabus PDF URL | Current-session object URL only |
+| Numeric helper counters | Browser-local counters |
+| Authentication | Supabase Auth |
 
-Source-of-truth rule:
-  * Displayed catalog Courses, Semesters, and Subjects are runtime database data.
-  * Departments are the explicit exception and are frontend configuration.
-  * Local bridge JSON is compatibility metadata, not the student catalog source of truth.
+These replacements are intentionally fast and do not add fake network delays.
 
-## 17. Data ownership map
+## 4. Supabase database
 
-| Concern | System | Current source of truth | Status |
-|---|---|---|---|
-| Departments | React static data | `src/data/catalogDomains.js` | ✅ intentional |
-| Courses | Supabase Postgres | `public.Courses` | ✅ live |
-| Course semester options | Supabase Postgres | `public.Courses.Sems` | ✅ live |
-| Subjects | Supabase Postgres | `public.Subjects` | ✅ live |
-| Subject semester | Supabase Postgres | `public.Subjects.Semester` | ✅ live |
-| Subject/legacy compatibility | Frontend JSON | `subjectIdBridge.json` + `subjectSemesterMap.json` | ✅ compatibility only |
-| Authentication | Supabase Auth | `auth.users` + session | ✅ live |
-| Admin authorization | Supabase | `public.admins` + authorization lookup | ✅ implemented |
-| Exam generation | Hybrid | local syllabus/question data + AI API + legacy Firebase paths | ⚠️ hybrid |
-| Exam history | Firebase legacy path | Firestore `users/{uid}/examHistory` | ⚠️ identity bridge pending |
-| Syllabus storage | Firebase legacy path | Firestore/Storage | ⚠️ identity bridge pending |
-| Leaderboards | React mock UI | in-memory mock data | 📝 persistence pending |
-| Admin catalog CRUD | React mock UI | in-memory admin catalog | 📝 persistence pending |
-| Feedback management | API/email + legacy paths | no finished persistent admin store | 📝 pending |
+Verified live project: prepmaster, ref llqwtgwjlwgrftihtern, region ap-south-1, ACTIVE_HEALTHY.
 
-## 18. Latest implementation history
+### Courses
 
-The catalog work was completed in this sequence:
-1. Courses were moved to runtime Supabase reads.
-2. Subjects were moved to runtime Supabase reads.
-3. The final numeric SubjectId bridge was repaired after the earlier stale-ID mismatch.
-4. The live Subjects table gained/populated `Semester`.
-5. The student UI was changed to use `Courses.Sems` and `Subjects.Semester` directly.
-6. Tests were updated so a future regression back to the frontend semester map is visible.
+public.Courses: CourseId BIGINT identity PK, CourseName, Sems INTEGER[], 49 rows, RLS enabled, browser SELECT works.
 
-Latest code commits on main for this task:
-`167cfa89d83fcf346e4ff9dc32a4cc7d4368e447` — read semester data from Supabase
-`96138350d1a811aca680e2cd4cc10d6640b43221` — render semesters from Supabase Course.Sems
-`d7dcadf6aa740ac3169a9dd429c36569cd0f12e0` — remove leftover semester-map state
-`e2b32f0dd90475dae2994bbbafe6b946326dc5a9` — latest catalog test alignment
+### Subjects
 
-## 19. How future work is handled
+public.Subjects: SubjectId BIGINT PK, SubjectName, CourseId FK, Semester INTEGER NOT NULL, 2788 rows, all rows have a semester, no blank names, no orphan CourseIds, RLS enabled, browser SELECT works.
 
-Normal workflow for this project:
-1. Inspect current main and the two project docs.
-2. Check the SRS diagrams when the feature is covered by requirements.
-3. Define the smallest allowed change.
-4. Give the implementation task to Arena when long-context/code-volume work benefits from it.
-5. Receive Arena report plus every changed file.
-6. Independently review the returned implementation against the actual current main code and the database when relevant.
-7. Push only validated changes directly to main.
-8. Update these docs with the true result.
+There is deliberately **no Departments table**.
 
-Never assume an Arena statement such as tests passed, build passed, or deployment succeeded without verification.
+## 5. Student catalog contract
 
-## 20. Important do-not-do rules
+Departments are frontend-static in src/data/catalogDomains.js. Do not move them to Supabase.
 
-- Do not create a Supabase `Departments` table.
-- Do not move catalog semester grouping back to `subjectSemesterMap.json`.
-- Do not use `mockData.js` as the runtime source for the displayed student catalog.
-- Do not put Supabase service-role or secret keys into browser code.
-- Do not disable RLS to make the catalog work.
-- Do not redesign the final numeric SubjectId scheme without explicit authorization.
-- Do not rewrite ExamPortal/Firebase logic during catalog-only work.
-- Do not claim a deployment is successful while its CI/Vercel status is pending.
+Runtime source:
+- Departments -> catalogDomains.js
+- Courses -> Supabase Courses
+- Course semester options -> Courses.Sems
+- Subjects -> Supabase Subjects
+- Subject semester -> Subjects.Semester
 
-## 21. Reading order for a new agent
+Compatibility files:
+- src/data/courseMapping.json -> department-to-course scoping and source CourseId compatibility
+- src/data/subjectIdBridge.json -> numeric SubjectId to legacy/source compatibility
+- src/data/subjectSemesterMap.json -> legacy ExamPortal compatibility only
 
-1. `docs/PREPMaster_PROJECT_CONTEXT.md` — durable architecture, security, requirements, protected areas, and historical decisions.
-2. `docs/PREPMaster_CURRENT_STATUS.md` — this live implementation snapshot.
-3. `global-exam-prep/AUTH.md` — detailed authentication and Supabase security contract.
-4. `SRS/` — requirements and diagrams; use the latest diagrams for feature behavior.
-5. Relevant source files — code is the final implementation truth.
+Do not infer semesters from SubjectId digits.
 
+## 6. Catalog runtime flow
+
+1. Homepage renders six static departments.
+2. /domains/:domainId/courses queries only scoped Supabase Courses.
+3. /courses/:courseId/subjects queries the selected Course and its Subjects.
+4. Semester filters use Courses.Sems.
+5. Subject semester values use Subjects.Semester.
+6. Small in-memory caches/inflight deduplication may reduce repeated reads, but never replace Supabase as the source of truth.
+
+The homepage does not fetch the full catalog.
+
+## 7. Main routes
+
+- /, /signup, /login, /register
+- /domains/:domainId/courses
+- /search, /feedback, /guide
+- /courses/:courseId/subjects
+- /exams/:subjectId/:examType/:difficulty
+- /dashboard, /review/:historyId
+- /admin/courses, /admin/syllabus
+- /leaderboards
+
+## 8. Exam system
+
+The exam UI and question-generation stack remain protected. Exam generation can use static syllabus/question data, uploaded PDF text, and configured AI generation.
+
+Exam submission writes a compact result to browser-local history and navigates immediately. This is temporary persistence, not a completed server-side attempts system.
+
+## 9. Admin status
+
+- /admin/courses remains an in-memory preview; persistent catalog CRUD is not complete.
+- /admin/syllabus extracts PDF text but currently stores it locally.
+- Leaderboard UI exists; persistent attempt/ranking storage is pending.
+- Feedback submission/API plumbing exists; complete persistent admin feedback storage is pending.
+
+## 10. Security rules
+
+- Never ship service-role/secret keys to the browser.
+- Keep RLS enabled.
+- Authorization comes from authenticated identity and database policies.
+- Never trust localStorage/sessionStorage for roles.
+- Do not bypass blocked database operations by weakening security.
+- Do not restore a removed backend just to make a feature persistent.
+
+## 11. Protected areas
+
+Unless the requested task directly requires them, avoid opportunistic rewrites of Supabase auth/OTP, AuthContext, question generation, subject-resolution bridge, exam UI, catalog source-of-truth rules, Vite chunk strategy, and RLS/security configuration.
+
+## 12. Git/Arena workflow
+
+1. Arena handles large repetitive implementation when useful.
+2. User provides changed files/report/bundle.
+3. Review the resulting files independently.
+4. Validate against project docs and live backend where relevant.
+5. Apply only verified changes to main.
+6. Verify final main state.
+7. Never claim push/deploy/test success without actual verification.
+
+## 13. Current priorities
+
+1. Keep the Supabase-only architecture clean.
+2. Complete persistent data features with Supabase when schemas are ready.
+3. Keep temporary local/static fallbacks explicit and fast.
+4. Finish admin persistence.
+5. Finish attempts/history persistence.
+6. Finish leaderboard persistence.
+7. Finish feedback persistence.
+8. Keep project documentation synchronized with actual code.
