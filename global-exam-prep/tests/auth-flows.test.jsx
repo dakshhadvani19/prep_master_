@@ -392,7 +392,7 @@ describe('log in / sign up — Google (PKCE redirect)', () => {
 });
 
 describe('session plumbing', () => {
-  it('restores a session on load and exposes the Supabase user (not a fake Firebase one)', async () => {
+  it('restores a session on load and exposes the Supabase user (as the only authenticated user)', async () => {
     state.session = makeSession(authUser());
     state.profile = studentRow();
     await mount();
@@ -403,7 +403,7 @@ describe('session plumbing', () => {
     expect(ctx.current.authLoading).toBe(false);
     expect(ctx.current.session?.access_token).toBe('fake-access-token');
     expect(ctx.current.currentUser.displayName).toBe('Raja Advani');
-    // No Firebase credential is manufactured: nothing here can mint an ID token.
+    // No secondary provider credential is manufactured; the test verifies the Supabase session directly.
     expect(ctx.current.currentUser.getIdToken).toBeUndefined();
   });
 
