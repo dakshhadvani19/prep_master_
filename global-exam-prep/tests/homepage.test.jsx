@@ -3,7 +3,7 @@
  *
  * The homepage is the entry point to authentication, so it is checked with the
  * REAL LandingPage, the REAL Layout shell and the REAL router — nothing is mocked
- * except Supabase itself and `src/firebase.js` (still imported by data layers).
+ * * except Supabase itself, which is mocked for deterministic tests.
  * It proves the three things the handoff depends on:
  *   1. `/` renders without a runtime error,
  *   2. the auth buttons land on the correct auth screen/tab (email and Google),
@@ -17,16 +17,6 @@ import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/re
 const holder = vi.hoisted(() => ({ entry: '/' }));
 
 vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
-}));
-
-vi.mock('react-router-dom', async (orig) => {
-  const actual = await orig();
-  return { ...actual, BrowserRouter: ({ children }) => (
-    <actual.MemoryRouter key={holder.entry} initialEntries={[holder.entry]}>{children}</actual.MemoryRouter>) };
-});
-
 // Leaf pages the homepage links to: stand-ins are enough, the point is that the
 // ROUTER resolves the link (a 404 would render the NotFound page instead).
 vi.mock('../src/pages/Dashboard', () => ({ default: () => <div>DASHBOARD</div> }));
