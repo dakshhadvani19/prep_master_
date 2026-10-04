@@ -1,291 +1,78 @@
-# Auth setup (students and admins)
+# PrepMaster Authentication
 
-Identity is **one** Supabase Auth system. Role is resolved afterwards from the
-authenticated uid, never from an email string, never from `localStorage`, never
-from a frontend boolean, never from `public.students.role`:
+## Current authentication architecture
 
-```
-Supabase Auth
-    ↓
-authenticated user / auth.uid()
-    ↓
-public.admins authorization lookup
-    ↓
-student / admin / superAdmin
-```
+PrepMaster uses **Supabase Auth as the only authentication system**.
 
-Admins use the same login, Google OAuth, and password-recovery screens as
-students. Passwords remain in Supabase Auth. `public.admins` is an
-authorization/profile table (**no password column**). Google OAuth can
-authenticate an admin; it does **not** auto-create a staff row. The lookup uses
-the authenticated uid (`public.admin_role_for_uid()`, no arguments).
+- Email/password authentication is handled by Supabase Auth.
+- Google OAuth uses Supabase PKCE.
+- Signup is gated by the project's serverless OTP flow:
+  - /api/send-otp generates and stores an HMAC digest in public.auth_otp.
+  - /api/verify-otp verifies the code.
+  - Only after successful verification does the browser create the Supabase Auth account.
+- public.students is created by the database trigger attached to auth.users.
+- Admin authorization comes from public.admins and the authenticated user's UUID.
+- Passwords are never stored in application tables.
+- The browser never receives a service-role/secret key.
 
-**Student identity is Supabase Auth** (email + password, Google OAuth, password
-recovery); the profile row is `public.students`, created by a database trigger.
-**Signup's 6-digit code is generated, stored and verified by this app's server**, not
-by the browser and not by Supabase: `/api/send-otp` mints it, keeps only a keyed digest
-in `public.auth_otp`, mails it (Nodemailer + Gmail), and `/api/verify-otp` checks it.
-The account is created only after that check passes, so Supabase never mails a signup
-code and the raw code never appears in a client-generated request. **Everything else is still Firebase**: Firestore data (exams,
-syllabus, dashboard, analytics, feedback), Storage, and the exam-history documents —
-see §10 for what that split costs until the two identities are bridged. Role-based
-route guards are unchanged.
+## Client files
 
-## 1. Firebase console checklist
+| Area | File |
+|---|---|
+| Supabase client | src/supabase.js |
+| Auth provider | src/context/AuthContext.jsx |
+| Auth helpers | src/utils/supabaseAuth.js |
+| OTP client | src/utils/otpService.js |
+| Signup UI | src/pages/Signup.jsx |
+| Server OTP issue | api/send-otp.js |
+| Server OTP verification | api/verify-otp.js |
 
-| Setting | Where | Value |
-| --- | --- | --- |
-| Email/Password provider | Authentication → Sign-in method | **Enabled** |
-| Google provider | Authentication → Sign-in method | **Enabled** |
-| Authorised domains | Authentication → Settings → Authorised domains | `localhost`, your Vercel domain (`*.vercel.app`), and your production domain |
-| Firestore | Build → Firestore Database | Created (production mode) |
-| Rules | Build → Firestore → Rules | Deploy `global-exam-prep/firestore.rules` |
+## Session handling
 
-> **Email/Password must stay enabled even if you only use Google.** Registration
-> creates a real Firebase Auth user; blocking it with "email enumeration
-> protection" will surface as `auth/operation-not-allowed`.
+src/supabase.js creates one browser Supabase client with persistSession, autoRefreshToken, PKCE, detectSessionInUrl disabled, and a dedicated prepmaster-supabase-auth storage key.
 
-## 2. Environment
+OAuth/recovery callback parameters are captured synchronously and exchanged once by AuthContext. This prevents multiple consumers from racing over the same one-time code.
 
-Copy `global-exam-prep/.env.example` → `global-exam-prep/.env.local`.
+The currentUser object is a small compatibility view derived from the Supabase user. It exposes uid, email, displayName, and photoURL; it is not a second authentication provider.
 
-| Variable | Used by | Notes |
-| --- | --- | --- |
-| `VITE_SUPABASE_URL` | `src/supabase.js` | Project URL, `https://<ref>.supabase.co` |
-| `VITE_SUPABASE_PUBLISHABLE_KEY` | `src/supabase.js` | The publishable (`sb_publishable_…`) key. There is **no** `VITE_SUPABASE_SECRET_KEY`: `src/supabase.js` refuses to boot if the value looks like a `sb_secret_…` key or a service-role JWT. |
-| `GMAIL_USER` / `GMAIL_APP_PASSWORD` | `api/send-otp.js` | **Required for signup.** A Gmail account with a 16-char *App Password* (not the account password). Missing them ⇒ the endpoint returns 500 and signup shows "Email service not configured…". |
+## Authorization
 
-Vite bakes `VITE_*` at build time, so changing either value needs a redeploy.
+Client-side role state is only for routing/UI decisions.
 
-## 3. Deploy the rules
+Authoritative access control is database-side:
+- auth.uid() identifies the caller.
+- public.admins determines admin/super-admin status.
+- RLS remains enabled on exposed tables.
+- No role is accepted from localStorage, URL parameters, user metadata, or client-submitted profile fields.
 
-```bash
-cd global-exam-prep
-npm i -g firebase-tools
-firebase login
-firebase use --add          # pick the project; name the alias "default"
-npm run deploy:rules        # = firebase deploy --only firestore:rules
-```
+## OTP requirements
 
-`firebase use --add` is not optional: `firebase.json` carries no `projects`
-field, so without an active alias the deploy targets nothing.
+Production requires these server-only variables:
+- SUPABASE_URL
+- SUPABASE_SERVICE_ROLE_KEY
+- OTP_PEPPER
+- GMAIL_USER
+- GMAIL_APP_PASSWORD
 
-This step is **required**. The client cannot read or write `students`, `meta` or
-`otp_tokens` without it, and signup fails with *"the database rules blocked this
-action"*.
+The service-role key is used only by serverless code that must write the private OTP table. It must never be prefixed with VITE_.
 
-## 4. Shape of a student document
+## Current non-auth fallbacks
 
-`students/{firebaseUid}` — **legacy Firestore** collection named `students` per
-`SRS/ER_Diagram_last_updated_3_9.jpg` (`Students` entity). Live identity is
-`public.students` keyed by Supabase `auth.uid()`; this Firestore shape is what
-§10 still assumes until the identity bridge exists. The ER/SRS data dictionary
-still lists a `Password` attribute; that is satisfied by **Supabase Auth**, not
-by a column on `public.students` or `public.admins`:
+Some non-auth features do not yet have persistent Supabase tables. They therefore use explicit browser-local/static adapters:
+- Exam history: src/utils/examHistoryStorage.js
+- Syllabus metadata/text: src/utils/syllabusStorage.js
+- Temporary numeric helper counters: src/utils/hashUtil.js
 
-```jsonc
-{
-  "studentId": 1,                    // ER: StudentId (auto-increment, from meta/counters)
-  "uid":         "…",                // Firebase Auth UID, == document id
-  "fullName":    "Raja Advani",      // ER: FullName
-  "email":       "raja@x.com",       // ER: Email, lowercase
-  "passwordHash": "pbkdf2$210000$…", // ER: Password — salted digest, never plaintext
-  "isSpam":      false,              // ER: IsSpam
-  "role":        "student",          // stored column; NOT the authorization source — see §7
-  "provider":    "email",            // 'email' | 'google'
-  "providers":   ["email"],
-  "createdAt":   "2026-09-03T03:10:00.000Z",
-  "photoURL":    null
-}
-```
+These are intentionally temporary. They do not provide cross-device persistence or server-side durability.
 
-`passwordHash` exists to satisfy the ER attribute and for out-of-band recovery.
-Login is verified by Firebase Auth, not by this field. Google-only accounts store
-`null`.
+## Rules
 
-## 5. Registration flow
+Do not:
+1. add another authentication provider;
+2. put a secret/service-role key in frontend code;
+3. create a client-writable role field;
+4. use localStorage as the authority for authorization;
+5. bypass RLS to make a feature appear functional;
+6. reintroduce a removed backend just to restore persistence.
 
-```
-Full name + email + password
-        │
-        ▼  POST /api/send-otp   { email, userName }            ← no password, no code
-   server: generateOtp() (6 digits, first one 1-9 so the UI can reject a leading 0)
-        │        otp_hash = HMAC-SHA256(OTP_PEPPER, lower(email) + ':' + code)
-        ▼        auth_otp_issue(email, otp_hash, ttl 600, cooldown 60)
-   public.auth_otp  ← one row per address, normalized email, attempts 0
-        │        then Nodemailer → Gmail → the student's inbox
-        ▼        (mail failed after two tries ⇒ auth_otp_discard, so no orphan challenge)
-   student types the code → POST /api/verify-otp { email, code }
-        │        auth_otp_verify: recompute digest, compare, DELETE on match
-        │        expired ⇒ row deleted + `expired` (resend unlocked); 3rd wrong guess ⇒
-        │        row deleted + `locked`; the code is single-use, so a replay reads as
-        │        "not right" rather than as a second success
-        ▼  only on { verified: true }, exactly once:
-   supabase.auth.signUp({ email, password, options:{ data:{ full_name } } })
-        │        → auth.users row → handle_new_user() → public.students
-        ▼          (role 'student' is set by the trigger; the client sends nothing else)
-        │            Authorization is decided separately, from public.admins (§7)
-   session in the context → /dashboard
-```
-
-What that ordering buys, and why it is the shape of the system:
-
-* **The browser never holds the code.** It asks for one, types one, and learns whether
-  it was right. Nothing in `src/` can read, list, or extend a challenge, so there is no
-  client-side bypass to find.
-* **The stored digest is keyed.** `OTP_PEPPER` means a leaked `public.auth_otp` is not a
-  list of crackable OTP hashes — the 10^6 code space cannot be attacked offline.
-* **Every limit is enforced where the row lives**: TTL, the 60-second resend gap, the
-  3-attempt ceiling and single use are CHECK constraints and one `FOR UPDATE` statement
-  in `auth_otp_verify`, not application discipline. Two tabs, two devices, or a scripted
-  client all meet the same numbers.
-* An address that never proves control leaves **no** account behind — no abandoned
-  `auth.users` row, no orphan `public.students` row, no rollback code needed.
-* The password goes to the auth endpoint only: never to `/api/send-otp`, never to
-  `/api/verify-otp`, never into Postgres, Firestore, or web storage.
-* Supabase's own `verifyOtp` / `resend({ type: 'signup' })` are **not** part of this
-  flow. `resendSignupCode` remains only for the Log in tab's "my address was never
-  confirmed" case, which is a different state.
-
-Rate limits sit in front of the store as well (`api/_otpStore.js`): 5 sends and 10
-verifications per address per 10 minutes, 20 requests per IP — a per-process sliding
-window, cheap and forgettable, because the durable limits are the database's.
-
-Two known gaps, stated rather than papered over:
-
-* The `verify-otp` → `signUp` handoff is not atomic: the browser performs `signUp`, so
-  a captured `{ verified: true }` response could in principle be replayed by an attacker
-  who also holds the password. Closing it needs a server-side `signUp` (or a one-shot
-  signed ticket), which changes how the session is established — deliberately out of
-  scope here.
-* The per-IP window is per serverless instance; it throttles a naive script, not a
-  distributed one. The address-scoped ceiling is the one that matters.
-
-## 6. Routes
-
-| Route | Requires |
-| --- | --- |
-| `/signup` | public — `?mode=login\|signup` picks the tab, `?method=email\|google` picks the step |
-| `/login`, `/register` | redirect to `/signup` carrying `location.state` |
-| `/dashboard`, `/exams/…`, `/review/…` | signed-in student |
-| `/admin/syllabus` | `role: admin` or `superAdmin` |
-
-`ProtectedRoute` sends a guest to `/signup?mode=login` and stores the intended
-path in `location.state.from`; after a successful login the user is returned there
-instead of always to `/dashboard`.
-
-## 7. Roles (RBAC)
-
-* Admin status is a fact about the **authenticated identity**, not about a profile row:
-  a user is staff exactly when `public.admins` holds a row whose `auth_uid` is their
-  `auth.users` id, and `public.admins.is_super_admin` decides `superAdmin` vs `admin`.
-  `hasRole('admin')` means admin **or above**. There is no separate admin login:
-  email+password and the existing Google flow both go through Supabase Auth, and only
-  the role resolution afterwards differs.
-* The lookup lives in one place — `resolveAuthorization()` + `deriveRole()` in
-  `src/utils/supabaseAuth.js`, called by `loadIdentity()` in `AuthContext` — and runs on
-  every event that changes the user: password sign-in, the Google return leg, a page
-  refresh (`INITIAL_SESSION`), signup completion, password recovery, and
-  `refreshStudentProfile()`. It prefers the `public.admin_role_for_uid()` RPC
-  (security-definer, **takes no argument**, so it can only answer about `auth.uid()`)
-  and falls back to a self-read of `public.admins` for projects whose RLS already grants
-  that. `tests/admin-role-sql.test.js` runs the migration against a real Postgres and
-  pins both paths.
-* `public.students.role` is deliberately **not** consulted for authorization, even
-  though the column is still returned on `studentData`. A student may update their own
-  `students` row, so a role column there is a promotion an account can hand itself.
-  `firestore.rules` still refuses client-side writes to `role`, `uid`, `email`,
-  `studentId`, `createdAt`, `provider`; `public.admins` is not writable from the
-  browser at all, and this app never writes it.
-* Fail-closed in every direction: no admins row ⇒ `student`; a lookup that errors ⇒
-  `student` **plus** a non-empty `authorizationError`, so "could not verify" is never
-  quietly reported as "not staff". A row returned for a different uid is discarded and
-  reported. Nothing admin-shaped is kept in `localStorage`/`sessionStorage`, and a
-  logout clears the role together with the session — the client holds no state that
-  could be edited to gain access.
-* An admin with no `public.students` row is not shown the "your student profile is
-  missing" warning: staff accounts are not student accounts.
-* **Granting admin is an operator action on `public.admins`, never app behaviour.** The
-  account must already exist in Supabase Auth (by signup or by Google), then:
-  `insert into public.admins (auth_uid, full_name, email, is_super_admin) values
-  ('<that auth.users id>', 'Name', 'you@example.com', true);`. Apply
-  `supabase/migrations/20260925150000_admin_role_lookup.sql` for the lookup function.
-  `public.admins` holds no password column by design and none is added here.
-* Admin-only *data* writes (`domains`, `courses`, `subjects`, `syllabuses`) are still
-  governed by `firestore.rules`, which this phase did not touch; the app-side gate for
-  those screens is the `role` above.
-
-## 8. Known follow-ups
-
-* OTP issue and verification are now server-side (this file §5). The remaining piece is
-  the last browser-held secret: `signUp` itself, so the verified→created handoff can be
-  atomic (§5's first gap).
-* `meta/counters` is unreferenced by signup; `public.students.student_id` comes from the
-  sequence. Ids can skip numbers on rolled-back signups — don't treat `studentId` as a
-  row count.
-* `firestore.rules` and the Firestore `otp_tokens` collection are no longer on the auth
-  path. The collection can be dropped once no deployed client is old enough to read it;
-  the rules file is untouched, because loosening or deleting rules is a separate
-  decision with its own blast radius.
-* The signup email is sent from one Gmail account with an app password. Gmail's daily
-  send quota is a real ceiling for a cohort-wide signup day; a transactional provider
-  is the follow-up, not this change.
-
-## 9. Supabase dashboard checklist
-
-| Setting | Where | Value |
-| --- | --- | --- |
-| **Confirm email** | Auth → Providers → **Email** | **OFF** — required. Our Gmail code is the verification, done *before* `signUp`; with this ON, `signUp` returns a user but **no session**, so the student is created and then stuck (the app reports "Account created, but this Supabase project still confirms email addresses itself" rather than looping). With it OFF the account is signed in immediately and **no second verification mail is sent**. |
-| Allow new users to sign up | Auth → Providers → Email | **ON** — turning it off returns `Signups not allowed for this project` and signup cannot work at all |
-| Confirm signup template | Auth → Email templates | Irrelevant to signup now (nothing to confirm). Leave the default. |
-| OTP expiry / rate limits | Auth → Rate limits | Not used for signup. The 10-minute window and 60-second resend gap are enforced by `src/utils/otpService.js` + `api/send-otp.js` (5 codes/address/10 min, 20/IP — `MAX_IP_PER_WINDOW` in `api/_otpStore.js`). |
-| Site URL | Auth → URL Configuration | `https://<prod-domain>` |
-| Redirect URLs | Auth → URL Configuration | `https://<prod-domain>/**`, `http://localhost:5173/**` |
-| Google provider | Auth → Providers → Google | Enabled; client id/secret from Google Cloud |
-| Google authorised redirect URI | Google Cloud → Credentials | `https://<ref>.supabase.co/auth/v1/callback` (the panel above shows the exact value) |
-| Recovery template | Auth → Email templates | Leave `{{ .ConfirmationURL }}`; the app lands on `/signup` in recovery mode either way |
-
-A `redirectTo` that is not on the allow-list is **silently** rewritten to Site URL —
-if Google sign-in returns to the wrong host, that is the setting to fix.
-
-**Deploy checklist added by this change** — every item below has already cost one
-production incident, so read them as gates, not notes:
-
-| Gate | Where | Why it fails loudly or silently |
-| --- | --- | --- |
-| `public.auth_otp` + its 4 functions exist | apply `supabase/migrations/20260905120000_auth_otp.sql` (SQL Editor, or `supabase db push`) | `/api/send-otp` answers 502 `store_unavailable`. The migration is idempotent and grants nothing to `anon`/`authenticated`: RLS is enabled with **zero** policies, so only the service role can touch it, and only through the functions. |
-| `public.admin_role_for_uid()` exists | apply `supabase/migrations/20260925150000_admin_role_lookup.sql` (SQL Editor, or `supabase db push`) | Without it, admin status can only be seen through a self-read policy on `public.admins`; with neither, every admin signs in as a student and `authorizationError` says so. The migration adds no policy, no column and no row, grants execute to `authenticated` only, and pins `set search_path = public, pg_temp`. |
-| `OTP_PEPPER` | Vercel → Environment Variables → *Production* | Missing ⇒ 500 naming the variable (by design, names only). Present but changed ⇒ every outstanding code is invalid, which is the intended behaviour during an incident. |
-| `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` | Vercel → Environment Variables → *Production* | These are the **server** copies. The browser never sees them; `VITE_`-prefixing the service-role key would ship it to every visitor, and `src/supabase.js` deliberately refuses to boot on a secret key. |
-| `GMAIL_USER`, `GMAIL_APP_PASSWORD` | Vercel → Environment Variables → *Production* | Missing ⇒ 500. Revoked/expired app password ⇒ 500 *after* the challenge is issued, and the endpoint discards the challenge so the student can retry. |
-| **CSP allows Supabase** | `index.html` → `connect-src` must list `https://*.supabase.co` | **This is what silently killed Google sign-in.** With it absent, the browser refuses `POST /auth/v1/token?grant_type=pkce`, so the code Google handed back is never exchanged, and every Supabase call (login, signup, profile reads) dies in the same way. The symptom is a generic "did not complete" with no server-side trace: the request never reaches Supabase, so it is invisible in the Supabase and Vercel logs. Verify after deploy with DevTools → Console: a CSP violation line naming `connect-src` means the app cannot authenticate at all. |
-
-The return leg in the app, for reference: `src/supabase.js` captures `?code=`/`#code=`
-once at module load and scrubs it from the URL; `AuthContext` owns the exchange
-(`detectSessionInUrl` is off, so exactly one owner exists), reports
-`exchanging → signed_in / failed(reason)`, and `Signup.jsx` renders that status instead
-of guessing from a URL it can no longer read. A second `signInWithOAuth` cannot start
-over a code in flight, because a fresh flow would rewrite this tab's PKCE verifier —
-that is the bug that used to surface as "Unable to exchange external code".
-
-## 10. What still needs a Firebase identity (bridge pending)
-
-`public.students` is keyed by the Supabase user id, but Firestore rules and Storage
-rules authenticate with **Firebase** (`request.auth`). Until the two are bridged, any
-feature below gets `permission-denied` for a Supabase-only user — deliberately not
-worked around, because faking a Firebase session (or loosening the rules) would be
-the worse bug:
-
-| Feature | Where | Today |
-| --- | --- | --- |
-| Exam history | `Dashboard.jsx:25`, `ExamPortal.jsx:304`, `ReviewPage.jsx:23` (`users/{uid}/examHistory`) | reads warn and come back empty; a save fails with "Failed to save exam results" |
-| Syllabus uploads | `SyllabusAdmin.jsx:102` (`uploaderUid`), `syllabusStorage.js` (Storage rules) | admin writes rejected |
-| Feedback / analytics | `FeedbackPage`, `api/feedback.js`, `api/ai.js` | Firestore/Storage paths still assume a Firebase uid |
-| `firestore.rules` | `isSignedIn()` / `isSelf()` | still Firestore-only auth; untouched by this phase |
-
-`AuthContext` keeps `currentUser` as a Firebase-*shaped* compat view (`uid`, `email`,
-`displayName`, `photoURL`, `providerData`, `emailVerified`, `authProvider:
-'supabase'`) so those pages keep compiling. It is a shape, not a credential:
-`getIdToken()` is intentionally absent, because there is no Firebase token to mint.
-The bridge (either a Supabase→Firebase token exchange, or rewriting the rules to
-trust Supabase's JWT) is the next phase's decision.
+When persistent storage is implemented later, migrate these local adapters to properly designed Supabase tables/RLS.
