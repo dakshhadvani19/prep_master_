@@ -5,7 +5,7 @@
  *
  * ─── Why a digest exists at all ─────────────────────────────────────────────
  * SRS/ER_Diagram_last_updated_25_8.jpg gives Students a `Password` attribute,
- * so the profile keeps a `passwordHash` field. Firebase Auth remains the
+ * so the profile keeps a `passwordHash` field. Supabase Auth remains the
  * credential actually verified at login (signInWithEmailAndPassword); this
  * digest exists to satisfy the ER attribute and to allow out-of-band recovery.
  *
@@ -24,7 +24,7 @@
  * migrate lazily.
  *
  * ─── Int64 IDs ─────────────────────────────────────────────────────────────
- * Firestore atomic increment via a transaction on one counter document.
+ * A previous version used a remote transaction for counters; the temporary implementation below is browser-local.
  */
 
 // ─── Constants ───────────────────────────────────────────────────────────────
