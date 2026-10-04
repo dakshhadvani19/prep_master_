@@ -11,8 +11,7 @@ import { fetchSyllabus } from '../utils/syllabusStorage';
 import predictedSyllabus from '../data/predicted_ai_syllabus.json';
 import { Clock, AlertCircle, CheckCircle, ChevronLeft, ArrowRight, ArrowLeft, Upload, Cpu, BookOpen, FileText, X, Loader } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { db } from '../firebase';
-import { doc, setDoc } from 'firebase/firestore';
+import { saveExamHistory } from '../utils/examHistoryStorage';
 
 export default function ExamPortal() {
     const { subjectId, examType, difficulty } = useParams();
@@ -292,8 +291,8 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                 sanitizedAnswers[q.id] = val !== undefined ? val : "";
             });
 
-            // Save to Firestore under the authenticated user's subcollection
-            await setDoc(doc(db, 'users', currentUser.uid, 'examHistory', String(recordId)), {
+            // Save to the temporary browser-local history store until persistent exam history is migrated.
+            saveExamHistory(currentUser.uid, {
                 id: recordId,
                 date: new Date().toISOString(),
                 subjectId: sourceSubjectId || "unknown",
@@ -306,17 +305,13 @@ ${predicted.topics.map(t => `- ${t}`).join('\n')}`;
                 userAnswers: sanitizedAnswers,
             });
 
-            // Fast local state transition before navigation for better perceived performance
+            // The result is already saved locally, so there is no artificial wait.
             setExamState('submitted');
-
-            // Navigate directly to dashboard
-            setTimeout(() => {
-                navigate('/dashboard', { state: { justSubmitted: true } });
-            }, 800); // Slight delay to show success before navigating
+            navigate('/dashboard', { state: { justSubmitted: true } });
 
         } catch (err) {
             console.error("Submission failed:", err);
-            setSubmitError("Failed to save exam results. Please check your connection and try again.");
+            setSubmitError("Failed to save exam results locally. Please try submitting again.");
             setIsSubmitting(false);
         }
     };
