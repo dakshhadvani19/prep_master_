@@ -482,7 +482,7 @@ export function AuthProvider({ children }) {
 
     const logout = useCallback(async () => {
         // Exam history cache lives in localStorage; clearing it on logout is the
-        // existing behaviour and stays here (the data itself is still Firestore's).
+        // Keep the existing local cache cleanup behaviour on logout.
         try { localStorage.removeItem('userExamHistory'); } catch { /* noop */ }
         try { sessionStorage.removeItem('prepmaster_google_signup_pending'); } catch { /* noop */ }
         clearOAuthAttempt();
