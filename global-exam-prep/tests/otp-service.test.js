@@ -19,10 +19,6 @@ const net = vi.hoisted(() => ({
   respond: async () => ({ ok: true, status: 200, text: async () => JSON.stringify({ success: true }) }),
 }));
 
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
-}));
-
 const otp = await import('../src/utils/otpService.js');
 const { createAndSendOTP, verifyOTP, resendCooldownRemaining } = otp;
 
