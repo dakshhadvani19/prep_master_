@@ -10,20 +10,6 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 const holder = vi.hoisted(() => ({ entry: '/' }));
 
 vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
-}));
-
-vi.mock('react-router-dom', async (orig) => {
-  const actual = await orig();
-  return {
-    ...actual,
-    BrowserRouter: ({ children }) => (
-      <actual.MemoryRouter key={holder.entry} initialEntries={[holder.entry]}>{children}</actual.MemoryRouter>
-    ),
-  };
-});
-
 const { state, resetSupabaseStub, callsTo } = await import('./supabaseMock.js');
 const { resetCatalogCache, courseIdsForDomain, resolveCourseParam } = await import('../src/utils/catalogApi.js');
 const { CATALOG_DOMAINS } = await import('../src/data/catalogDomains.js');
