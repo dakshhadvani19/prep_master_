@@ -13,7 +13,7 @@
  *   -> ONLY then supabase.auth.signUp() -> session -> trigger creates the profile
  * The browser never holds the code, Supabase never mails a signup code, and
  * `auth.verifyOtp` is never called here: the app's own OTP is the gate, so an
- * unverified address never creates an account. Firestore is not on this path.
+ * unverified address never creates an account.
  *
  * public.students (Phase-1 schema, SRS Table 1.1)
  * {
