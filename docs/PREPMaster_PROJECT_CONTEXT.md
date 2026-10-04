@@ -7,6 +7,8 @@
 Gmail app passwords, OAuth client secrets, `OTP_PEPPER`, tokens or private credentials.
 Environment-variable **names** are allowed; values never are.
 
+> **Architecture update — 2026-10-04:** Firebase has been removed from the application runtime. Supabase Auth/Postgres now owns identity, catalog, authorization, and exam history. Syllabus administration currently uses an immediate browser-local/static fallback rather than Firebase Storage/Firestore. Any older Firebase sections below are historical context from before this migration and must not be treated as current implementation instructions.
+
 ---
 
 ## ⚠️ MANDATORY CONTEXT RULE — applies to EVERY future Agent Mode task
