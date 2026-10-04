@@ -13,7 +13,7 @@
  *   -> ONLY then supabase.auth.signUp() -> session -> trigger creates the profile
  * The browser never holds the code, Supabase never mails a signup code, and
  * `auth.verifyOtp` is never called here: the app's own OTP is the gate, so an
- * unverified address never creates an account. Firestore is not on this path.
+ * unverified address never creates an account. The signup path is independent of any legacy data store.
  *
  * public.students (Phase-1 schema, SRS Table 1.1)
  * {
@@ -28,10 +28,8 @@
  * Students.Password is NOT a column: the credential lives only in Supabase Auth
  * (auth.users.encrypted_password) and is never readable from this app.
  *
- * Division of labour, on purpose:
- *  - Supabase = student auth, student session, student profile.
- *  - Firebase = Firestore data (exams, syllabus, dashboard, analytics, feedback,
- *    storage, exam history). Those files keep importing `src/firebase.js`.
+ * Supabase owns authentication, student profiles, catalog reads, and the current
+ * browser-local/static fallbacks used by features whose persistent migration is pending.
  *
  * What this context does NOT do:
  *  - It never inserts `public.students`. `handle_new_user()` (an AFTER INSERT
