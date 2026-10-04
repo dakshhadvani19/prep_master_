@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { ChevronLeft, GraduationCap, Clock, BookOpen, Loader, AlertCircle } from 'lucide-react';
+import { ChevronLeft, GraduationCap, Clock, Loader, AlertCircle } from 'lucide-react';
 import { fetchCoursesForDomain, getCatalogDomain } from '../utils/catalogApi';
 
 export default function CourseExplorer() {
@@ -142,11 +142,6 @@ export default function CourseExplorer() {
                                 color: 'var(--text-tertiary)',
                                 fontSize: '0.9rem'
                             }}>
-                                {course.subjectCount != null && (
-                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                                        <BookOpen size={16} /> {course.subjectCount} Subjects
-                                    </div>
-                                )}
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                                     <Clock size={16} /> 3 Exams / Subject
                                 </div>
