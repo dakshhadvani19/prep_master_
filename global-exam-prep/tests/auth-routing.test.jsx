@@ -12,10 +12,6 @@ import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, cleanup, waitFor } from '@testing-library/react';
 
 vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
-}));
-
 const state = await import('./supabaseMock.js').then((m) => m.state);
 const { resetSupabaseStub, makeSession, authUser, studentRow, adminRow } = await import('./supabaseMock.js');
 
