@@ -20,14 +20,6 @@ vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supab
 vi.mock('../src/firebase', () => ({
   auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
 }));
-vi.mock('firebase/firestore', () => ({
-  doc: (db, ...p) => ({ path: p.join('/') }), collection: (db, ...p) => ({ path: p.join('/') }),
-  getDoc: vi.fn(async () => ({ exists: () => false, data: () => undefined })),
-  getDocs: vi.fn(async () => ({ empty: true, docs: [] })),
-  setDoc: vi.fn(async () => {}), updateDoc: vi.fn(async () => {}), deleteDoc: vi.fn(async () => {}),
-  query: vi.fn(), where: vi.fn(), increment: (n) => n, runTransaction: vi.fn(),
-  onSnapshot: vi.fn(() => () => {}), serverTimestamp: vi.fn(() => 'ts'),
-}));
 
 vi.mock('react-router-dom', async (orig) => {
   const actual = await orig();
