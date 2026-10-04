@@ -30,7 +30,7 @@ export default function SyllabusAdmin() {
     const navigate = useNavigate();
     const fileInputRef = useRef(null);
 
-    const [uploaded, setUploaded] = useState([]); // list from Firestore
+    const [uploaded, setUploaded] = useState([]); // temporary browser-local list
     const [loadingList, setLoadingList] = useState(true);
 
     // Upload form state
@@ -144,7 +144,7 @@ export default function SyllabusAdmin() {
                 Syllabus Admin
             </h1>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '2.5rem' }}>
-                Upload PDF syllabuses for subjects. When a user generates an exam, these PDFs are used as the topic source.
+                Upload PDF syllabuses for subjects. They are kept in this browser temporarily and can be used as the topic source while persistent storage is pending.
             </p>
 
             {/* Upload Form */}
