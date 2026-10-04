@@ -26,7 +26,6 @@ export default function SubjectDetails() {
 
     const [currentCourse, setCurrentCourse] = useState(null);
     const [subjects, setSubjects] = useState([]);
-    const [unmapped, setUnmapped] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -36,7 +35,6 @@ export default function SubjectDetails() {
         setError(null);
         setCurrentCourse(null);
         setSubjects([]);
-        setUnmapped([]);
         setSelectedSem(null);
         setSelectedSubject(null);
         setSelectedExamType(null);
@@ -68,8 +66,10 @@ export default function SubjectDetails() {
     }, [courseId]);
 
     const semesters = useMemo(() => {
-        return [...new Set(subjects.map(s => s.sem))].sort((a, b) => a - b);
-    }, [subjects]);
+        return [...new Set((currentCourse?.sems || []).map(Number))]
+            .filter((sem) => Number.isFinite(sem))
+            .sort((a, b) => a - b);
+    }, [currentCourse]);
 
     const subjectsInSem = useMemo(() => {
         if (!selectedSem && selectedSem !== 0) return [];
@@ -164,17 +164,7 @@ export default function SubjectDetails() {
                 </p>
             </header>
 
-            {unmapped.length > 0 && (
-                <div data-testid="unmapped-semester" className="glass-panel" style={{ padding: '1rem 1.25rem', marginBottom: '1.5rem', display: 'flex', gap: '0.75rem' }}>
-                    <AlertCircle size={20} style={{ color: '#f59e0b', flexShrink: 0 }} />
-                    <p style={{ color: 'var(--text-secondary)', margin: 0 }}>
-                        {unmapped.length} subject{unmapped.length === 1 ? '' : 's'} could not be placed in a semester
-                        (missing mapping for SubjectId {unmapped.map((s) => s.subjectId).join(', ')}). Semester was not guessed.
-                    </p>
-                </div>
-            )}
-
-            {!loading && subjects.length === 0 && unmapped.length === 0 && (
+            {!loading && subjects.length === 0 && (
                 <div data-testid="catalog-empty" className="glass-panel" style={{ padding: '2rem', textAlign: 'center', color: 'var(--text-secondary)' }}>
                     No subjects are listed for this course yet.
                 </div>
