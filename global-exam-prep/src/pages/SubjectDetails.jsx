@@ -54,7 +54,6 @@ export default function SubjectDetails() {
                 sem: s.sem,
                 exams: DEFAULT_EXAM_TYPES,
             })));
-            setUnmapped(result.unmapped || []);
             setLoading(false);
         }).catch((err) => {
             if (cancelled) return;
