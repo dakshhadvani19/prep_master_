@@ -1,8 +1,8 @@
 # PrepMaster — Project Context (long-term source of truth)
 
 **Repository:** `/home/user/prep_master_` (git root) · application in `global-exam-prep/`
-**Audience:** future Agent Mode sessions. This file is durable project knowledge.
-`PREPMaster_CURRENT_STATUS.md` (same folder) is the short, frequently-updated state file.
+**Audience:** any developer, AI agent, or collaborator who needs the complete project context. This is the durable architecture and decision record.
+`PREPMaster_CURRENT_STATUS.md` (same folder) is the frequently updated implementation snapshot.
 **Never put secrets in these files:** no passwords, API keys, service-role/`sb_secret_…` keys,
 Gmail app passwords, OAuth client secrets, `OTP_PEPPER`, tokens or private credentials.
 Environment-variable **names** are allowed; values never are.
@@ -86,13 +86,12 @@ Scripts (`global-exam-prep/package.json`): `dev` (vite), `build` (vite build), `
 `src/main.jsx` → `src/App.jsx` (`BrowserRouter` → `AuthProvider` → `Layout` route with nested
 routes, all pages `React.lazy`-loaded, `Suspense` fallback) → pages in `src/pages/`.
 
-Key files (line counts as of writing): `src/context/AuthContext.jsx` (762 — the only auth/role
-owner), `src/utils/supabaseAuth.js` (603 — every Supabase Auth + authorization call),
+Key files: `src/context/AuthContext.jsx` (the auth/role owner), `src/utils/supabaseAuth.js` (Supabase Auth + authorization),
 `src/supabase.js` (203 — client, key validation, OAuth-callback capture),
 `src/components/ProtectedRoute.jsx` (57), `src/components/Layout.jsx` (663 — navbar/header/user menu),
 `src/pages/Signup.jsx` (1521 — login + signup + OTP + Google + forgot-password UI),
 `src/pages/SyllabusAdmin.jsx` (331 — the only existing admin page), `src/firebase.js`.
-Static data: `src/data/mockData.js` (catalog + exam definitions), `universitySyllabus.js`,
+Static/legacy data: `src/data/mockData.js` (legacy catalog/exam context + exam definitions), `universitySyllabus.js`,
 `pdfSyllabus.js`, `predicted_ai_syllabus.json`, `questionGenerator.js`.
 Utilities: `syllabusStorage.js` (Firestore+Storage), `fileParser.js`, `geminiQuestions.js`
 (AI via `/api/ai`), `passwordStrength.js`, `otpService.js` (client half of the OTP gate),
@@ -388,7 +387,7 @@ Build rules:
 
 ## 15. Courses / Subjects / Questions Requirements
 
-Verified current state (2026-10-03): the **student** catalog browse path is Supabase-backed.
+Verified current state (2026-10-04): the **student** catalog browse path is runtime-backed by Supabase.
 Hosted tables `public."Courses"` (`CourseId`, `CourseName`, `Sems`) and `public."Subjects"`
 (`SubjectId`, `SubjectName`, `CourseId`, `Semester`) hold 49 courses and 2,788 subjects (18 blank names dropped).
 Student CourseId is numeric 1–49; SubjectId is the final BIGINT scheme
@@ -749,3 +748,71 @@ routes, roles, follow-ups, Supabase dashboard checklist, Firebase-bridge gap) ·
 `global-exam-prep/context/CODEBASE_DEEP_EXPLANATION.txt` · `progress.txt` + `progressByAi.txt`
 (owner notes/changelog) · the SQL files under `supabase/migrations/` (authoritative for what this repo
 defines) · `firestore.rules` (authoritative for the Firestore paths).
+## 27. Complete handoff: what is finished vs what is not
+
+### Finished and verified
+
+- Supabase Auth is the current identity system.
+- Admin authorization is resolved from the authenticated uid and `public.admins`.
+- Student catalog reads Courses from Supabase.
+- Student catalog reads course semester options from `Courses.Sems` in Supabase.
+- Student catalog reads Subjects from Supabase.
+- Student catalog reads each subject's semester from `Subjects.Semester` in Supabase.
+- Live catalog access is protected by RLS and exposed for intended browser SELECT.
+- Final numeric SubjectId bridge repair is complete for 2,788 subjects.
+- Student catalog pages have loading, error, and empty states.
+- Route components are lazy-loaded with React Suspense.
+
+### Still hybrid / intentionally unfinished
+
+- The application has not completed a Firebase-to-Supabase data migration.
+- Existing exam history still uses the legacy Firebase path.
+- Existing syllabus/storage functionality still uses Firebase/Storage.
+- Exam question generation still combines local syllabus data, existing application data, and the AI API.
+- Admin Course/Subject/Question persistence is not implemented; `/admin/courses` is a mock/in-memory UI.
+- Leaderboard persistence is not implemented.
+- Feedback management persistence is not implemented.
+- Supabase↔Firebase identity bridging is not implemented.
+
+### Catalog implementation contract
+
+For any future catalog task, preserve this exact ownership model unless the user explicitly changes it:
+
+`Departments → frontend static configuration`
+`Courses → Supabase public.Courses`
+`Course semester options → Supabase public.Courses.Sems`
+`Subjects → Supabase public.Subjects`
+`Subject semester → Supabase public.Subjects.Semester`
+
+`courseMapping.json` may continue to define the static department-to-CourseId scope and legacy course-ID compatibility.
+`subjectSemesterMap.json` and `subjectIdBridge.json` must not become the runtime student catalog source again.
+
+### Database facts that matter
+
+- `Courses.CourseId` is the canonical numeric CourseId, currently 1–49.
+- `Subjects.CourseId` is a foreign key to `Courses.CourseId`.
+- `Subjects.SubjectId` is the final numeric BIGINT identifier and must not be regenerated casually.
+- `Subjects.Semester` is an integer, non-null in the current live catalog, and is the subject's canonical semester.
+- `Courses.Sems` is the course-level list of semester options.
+- Both catalog tables have RLS enabled.
+- Browser catalog SELECT is currently available to `anon` and `authenticated`.
+
+### When changing the project
+
+Always distinguish these four different questions:
+
+1. What the requirements/SRS says should exist.
+2. What the repository code currently implements.
+3. What the live Supabase/Firebase systems currently contain.
+4. What is planned but not implemented.
+
+Never collapse those categories into one claim.
+
+### Safety / scope boundary
+
+Do not solve a catalog task by modifying authentication, OTP, Firebase rules, ExamPortal, question generation, or unrelated pages. The protected-area list in §20 is mandatory.
+
+Do not create a new database entity merely because a UI concept exists. In particular, **Department is a frontend concept, not a Supabase table.**
+
+---
+End of durable project context.
