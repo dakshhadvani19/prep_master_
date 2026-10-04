@@ -10,12 +10,6 @@ vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supab
 vi.mock('../src/firebase', () => ({
   auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
 }));
-vi.mock('firebase/firestore', () => ({
-  doc: () => ({}), collection: () => ({}),
-  getDoc: vi.fn(async () => ({ exists: () => false, data: () => undefined })),
-  getDocs: vi.fn(async () => ({ empty: true, docs: [] })),
-  query: vi.fn(), orderBy: vi.fn(),
-}));
 
 const holder = { entry: '/leaderboards' };
 
