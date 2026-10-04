@@ -30,8 +30,9 @@ code and the raw code never appears in a client-generated request. **Everything 
 syllabus, dashboard, analytics, feedback), Storage, and the exam-history documents —
 see §10 for what that split costs until the two identities are bridged. Role-based
 route guards are unchanged.
+> **Current architecture (2026-10-04):** Firebase is no longer used by the application. Supabase Auth is the only identity system, Supabase Postgres owns exam history, and syllabus administration currently uses a local/static browser fallback until a deliberate Supabase Storage contract is added. The older Firebase sections later in this document are historical and are not deployment instructions for the current branch.
 
-## 1. Firebase console checklist
+## Historical Firebase migration notes
 
 | Setting | Where | Value |
 | --- | --- | --- |
