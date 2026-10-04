@@ -1,12 +1,12 @@
 -- ==========================================================================
--- Signup OTP: challenge storage + verification, in Postgres (was Firestore)
+-- Signup OTP: challenge storage + verification, in Postgres (replaced the previous remote challenge store)
 -- ==========================================================================
 --
 -- WHY THIS EXISTS
---   The emailed 6-digit code that gates signup used to live in the Firestore
+--   The emailed 6-digit code that gates signup used to live in a separate remote
 --   `otp_tokens` collection. That made the auth-critical path depend on a second
 --   backend which the browser had to reach directly — and a build without the
---   VITE_FIREBASE_* values could never complete a signup. Supabase is already the
+--   a second-backend configuration could never complete a signup. Supabase is already the
 --   identity store, so the challenge now lives here, and ONLY the serverless API
 --   touches it: the browser never reads or writes this table.
 --
