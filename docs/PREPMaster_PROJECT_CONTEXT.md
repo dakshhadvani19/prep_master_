@@ -34,7 +34,7 @@ PrepMaster is a university-exam preparation SPA for diploma/degree students. The
 - Browser-local/static adapters only where persistent Supabase storage is not yet designed
 
 There is one authentication provider: Supabase Auth.
-There is no Firebase integration in the current application.
+There is no secondary backend integration in the current application.
 
 ## Authentication
 
@@ -75,19 +75,16 @@ Admin authorization is resolved from public.admins using auth.uid(). Client role
 - Do not weaken RLS to make a feature work.
 - Do not add a second identity system.
 
-## Firebase removal
+## Secondary backend removal
 
-The previous Firebase integration was deliberately removed.
+The previous secondary backend integration was deliberately removed.
 
 Deleted:
-- src/firebase.js
-- firestore.rules
-- firebase.json
-- Firebase package dependency and Firebase lockfile entries
-- Firebase build chunk
-- Firebase environment variables
-- Firebase CSP endpoints
-- Firebase test mocks
+- Legacy initialization/configuration files
+- Legacy package and lockfile entries
+- Legacy build chunk
+- Legacy environment variables and CSP endpoints
+- Legacy test mocks
 
 Features that previously required remote persistence now use explicit local/static adapters until their Supabase schemas are designed:
 - src/utils/examHistoryStorage.js for exam history
