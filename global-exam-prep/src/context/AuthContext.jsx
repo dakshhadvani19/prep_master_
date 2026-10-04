@@ -30,8 +30,7 @@
  *
  * Division of labour, on purpose:
  *  - Supabase = student auth, student session, student profile.
- *  - Firebase = Firestore data (exams, syllabus, dashboard, analytics, feedback,
- *    storage, exam history). Those files keep importing `src/firebase.js`.
+ *  - Supabase = authentication, student profile, authorization and current application data.
  *
  * What this context does NOT do:
  *  - It never inserts `public.students`. `handle_new_user()` (an AFTER INSERT
@@ -43,10 +42,10 @@
  *  - It never accepts role/is_spam/student_id/auth_uid from the client. `role`
  *    is derived from the admins lookup purely for routing decisions; it is not
  *    authoritative for anything the client is allowed to do — RLS is.
- *  - It does not pretend to be Firebase Auth. `currentUser` keeps the field names
+ *  - `currentUser` keeps the field names
  *    the existing pages read (uid/email/displayName/photoURL) so they did not have
  *    to change, and carries `authProvider: 'supabase'`. Anything that needs a real
- *    Firebase credential (Firestore `request.auth`, exam history, storage) does
+ *    legacy backend credentials for exam history or storage.
  *    not get one — see AUTH.md "Identity bridge".
  *
  * Google authentication: redirect only (no popup), because PKCE completes in the
@@ -110,7 +109,7 @@ const ROLE_RANK = { student: 0, admin: 1, superAdmin: 2 };
 
 /**
  * A deliberately small, Supabase-derived view of the signed-in user, using the
- * property names the rest of the app already reads. Not a Firebase `User`: there
+ * property names the rest of the app already reads. It is a normalized Supabase user view:
  * is no `getIdToken()` here, and nothing that needs one should use this.
  */
 function toCurrentUser(user) {
@@ -354,7 +353,7 @@ export function AuthProvider({ children }) {
      * The two steps share one in-memory record: step 1 mails the code, step 2
      * verifies it and then creates the account. The password lives only here, in
      * this tab's memory, for exactly as long as the OTP screen is open — it is
-     * never sent to /api/send-otp, never written to Firestore, and dropped as soon
+     * never sent to /api/send-otp, never written to application data, and dropped as soon
      * as the code has been consumed (or the student goes back).
      */
     const pendingSignupRef = useRef(null);
