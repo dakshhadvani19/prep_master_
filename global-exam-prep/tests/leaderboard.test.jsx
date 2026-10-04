@@ -1,22 +1,12 @@
 /**
  * Phase 4 — leaderboard UI. Real App + Layout + Leaderboard.
- * Ranks stay in memory; no Supabase/Firebase writes.
+ * Ranks stay in memory; no Supabase/legacy auth/data backend writes.
  */
 import React from 'react';
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, waitFor, cleanup, fireEvent } from '@testing-library/react';
 
 vi.mock('../src/supabase', async () => (await import('./supabaseMock.js')).supabaseModuleMock());
-vi.mock('../src/firebase', () => ({
-  auth: { currentUser: null }, db: {}, storage: {}, firebaseConfigError: null,
-}));
-vi.mock('firebase/firestore', () => ({
-  doc: () => ({}), collection: () => ({}),
-  getDoc: vi.fn(async () => ({ exists: () => false, data: () => undefined })),
-  getDocs: vi.fn(async () => ({ empty: true, docs: [] })),
-  query: vi.fn(), orderBy: vi.fn(),
-}));
-
 const holder = { entry: '/leaderboards' };
 
 vi.mock('react-router-dom', async (importOriginal) => {
