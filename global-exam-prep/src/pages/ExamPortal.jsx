@@ -129,12 +129,12 @@ export default function ExamPortal() {
                     // Priority 2: PDF syllabus uploaded through the temporary local syllabus adapter
                     let pdfUploadedSyllabus = null;
                     try {
-                        pdfFirestoreSyllabus = await fetchSyllabus(sourceSubjectId, courseDetail?.id);
+                        pdfUploadedSyllabus = await fetchSyllabus(sourceSubjectId, courseDetail?.id);
                     } catch (syllabusErr) {
-                        console.warn('Could not load the uploaded syllabus, falling back:', firestoreErr.message);
+                        console.warn('Could not load the uploaded syllabus, falling back:', syllabusErr.message);
                     }
-                    if (pdfFirestoreSyllabus?.extractedText) {
-                        syllabusText += `Provided Study Material/Syllabus content:\n${pdfFirestoreSyllabus.extractedText}`;
+                    if (pdfUploadedSyllabus?.extractedText) {
+                        syllabusText += `Provided Study Material/Syllabus content:\n${pdfUploadedSyllabus.extractedText}`;
                     } else if (syllabus) {
                         // Priority 3: Local universitySyllabus.js chapters/concepts
                         syllabusText += `Syllabus Breakdown:\n`;
