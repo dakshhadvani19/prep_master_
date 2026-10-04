@@ -4,7 +4,7 @@ import { examPrompts, DEFAULT_EXAM_TYPES } from '../data/examPrompts';
 import { fetchCourseAndSubjects } from '../utils/catalogApi';
 import {
     ChevronLeft, Book, Target, Activity, Flame, Shield,
-    Cpu, Upload, ArrowRight, BookOpen, GraduationCap, Loader, AlertCircle
+    Cpu, Upload, ArrowRight, BookOpen, GraduationCap, Loader
 } from 'lucide-react';
 
 const DIFFICULTY_LEVELS = [
