@@ -276,3 +276,12 @@ The removal of the previous backend is complete at the application architecture 
 ## Law & Arts syllabus match cleanup (2026-10-11)
 
 The Law & Arts PDF content audit temporarily excluded 74 live `public.Subjects` rows after archiving 88 audit rows (the other 14 were already absent). Archive: `global-exam-prep/temp_removed_subjects/law_arts_removed_subjects_2026-10-11.csv`. The 74 removed numeric IDs are removed from `subjectIdBridge.json` and `subjectSemesterMap.json`. Network-unverified cases (33 course/semester occurrences across 19 title groups) remain live and are documented in `law_arts_network_retry_pending_2026-10-11.csv`. The removal is based on an inconclusive/malformed one-to-one PDF mapping, not a claim that the underlying subject has no syllabus online; restore once the title/course code and syllabus are verified.
+
+## Management Studies recovery cleanup — 2026-10-11
+
+- Archive: `management_studies_removed_subjects_2026-10-11.csv`.
+- The recovery run marked 74 unique normalized Management Studies subject titles as `FAILED_NO_MATCHING_OFFICIAL_PDF`, covering 122 course/semester occurrences. The exact 122 live Supabase rows are preserved in the archive with their original `SubjectId`, `SubjectName`, `CourseId`, `CourseName`, and `Semester`.
+- The records are temporarily excluded under the user's direction after this recovery run. This status reflects the run result only, not proof that a syllabus does not exist: the report recorded HTTP 429 rate limits and zero candidate-download attempts for some failed titles.
+- The same 122 IDs are removed from `src/data/subjectIdBridge.json`, `src/data/subjectSemesterMap.json`, and the legacy subject arrays in `src/data/mockData.js` to prevent stale numeric exam routes from resolving them.
+- Restore only after a directly accessible syllabus is validated against the applicable course/program, subject code/title, and semester. Retry sources in priority order: official Marwadi University, GTU, then another credible official university for clearly-labelled comparable references.
+
