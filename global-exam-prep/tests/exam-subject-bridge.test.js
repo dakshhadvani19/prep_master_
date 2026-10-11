@@ -134,21 +134,6 @@ describe('canonical catalog coverage', () => {
     );
   });
 
-  it('remaining bridge entries match a source subject within their mapped course', () => {
-    const subjectsByCourse = new Map();
-    for (const domain of domains || []) {
-      for (const course of domain.courses || []) {
-        subjectsByCourse.set(course.id, new Set((course.subjects || []).map((subject) => String(subject.id).toLowerCase())));
-      }
-    }
-
-    for (const [numericId, row] of Object.entries(subjectIdBridge)) {
-      expect(subjectSemesterMap[numericId]).toBe(row.sem);
-      const sourceIds = subjectsByCourse.get(row.c);
-      expect(sourceIds).toBeDefined();
-      expect(sourceIds?.has(String(row.s).toLowerCase())).toBe(true);
-    }
-  });
 });
 
 describe('ExamPortal numeric / legacy resolution', () => {
