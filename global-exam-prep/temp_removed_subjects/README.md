@@ -29,3 +29,12 @@ This is an internal recovery archive, not a public website data source. Do not i
 - `law_arts_removed_subjects_2026-10-11.csv` preserves 88 questionable/unusable catalog occurrences with source SubjectId, course, semester, audit classification, and restoration metadata. Of these, 74 were present as live Supabase rows and are archived before temporary exclusion; 14 blank-title rows were already absent from Supabase.
 - `law_arts_network_retry_pending_2026-10-11.csv` lists 33 occurrences across 19 unique titles that hit network/access failures. These remain live and must be retried; network failure is not proof that a syllabus does not exist.
 - PDF title fragments, cross-course title ambiguity, duplicate-content false positives, and generic labels were not treated as verified one-to-one subject matches. Restore or update rows only after the source title and course-specific syllabus are confirmed.
+
+## Management Studies recovery cleanup — 2026-10-11
+
+- Archive: `management_studies_removed_subjects_2026-10-11.csv`.
+- The recovery run marked 74 unique normalized Management Studies subject titles as `FAILED_NO_MATCHING_OFFICIAL_PDF`, covering 122 course/semester occurrences. The exact 122 live Supabase rows are preserved in the archive with their original `SubjectId`, `SubjectName`, `CourseId`, `CourseName`, and `Semester`.
+- The records are temporarily excluded under the user's direction after this recovery run. This status reflects the run result only, not proof that a syllabus does not exist: the report recorded HTTP 429 rate limits and zero candidate-download attempts for some failed titles.
+- The same 122 IDs are removed from `src/data/subjectIdBridge.json`, `src/data/subjectSemesterMap.json`, and the legacy subject arrays in `src/data/mockData.js` to prevent stale numeric exam routes from resolving them.
+- Restore only after a directly accessible syllabus is validated against the applicable course/program, subject code/title, and semester. Retry sources in priority order: official Marwadi University, GTU, then another credible official university for clearly-labelled comparable references.
+
