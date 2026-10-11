@@ -58,7 +58,7 @@ function nonblankSubjects(doms) {
 describe('subject id uniqueness', () => {
   it('does not introduce duplicate numeric SubjectIds in the mapping layer', () => {
     expect(bridgeHasDuplicateNumericIds()).toBe(false);
-    expect(bridgeEntryCount()).toBe(2682);
+    expect(bridgeEntryCount()).toBe(2608);
   });
 });
 
@@ -80,16 +80,47 @@ describe('canonical catalog coverage', () => {
     }
   });
 
+  it('does not resolve Law & Arts rows temporarily excluded after PDF content review', () => {
+    const csv = readFileSync(new URL('../temp_removed_subjects/law_arts_removed_subjects_2026-10-11.csv', import.meta.url), 'utf8').trim();
+    const lines = csv.split(/\r?\n/);
+    const rows = lines.slice(1).map(parseCsvLine);
+    const header = parseCsvLine(lines[0]);
+    const idIndex = header.indexOf('live_subject_id');
+    const removedIds = rows.map((row) => row[idIndex]).filter(Boolean);
+    expect(removedIds).toHaveLength(74);
+    expect(new Set(removedIds).size).toBe(74);
+    for (const id of removedIds) {
+      expect(subjectIdBridge[id]).toBeUndefined();
+      expect(subjectSemesterMap[id]).toBeUndefined();
+      expect(lookupNumericSubject(id)).toBeNull();
+      expect(findSubjectContext(domains, id).kind).toBe('unknown');
+    }
+  });
+
+  it('keeps Law & Arts network-unverified subjects mapped for retry', () => {
+    const csv = readFileSync(new URL('../temp_removed_subjects/law_arts_network_retry_pending_2026-10-11.csv', import.meta.url), 'utf8').trim();
+    const lines = csv.split(/\r?\n/);
+    const rows = lines.slice(1).map(parseCsvLine);
+    const header = parseCsvLine(lines[0]);
+    const idIndex = header.indexOf('source_subject_id');
+    const pendingIds = rows.map((row) => row[idIndex]).filter(Boolean);
+    expect(pendingIds).toHaveLength(33);
+    for (const id of pendingIds) {
+      expect(subjectIdBridge[id]).toBeDefined();
+      expect(subjectSemesterMap[id]).toBeDefined();
+    }
+  });
+
   const semKeys = Object.keys(subjectSemesterMap);
   const brKeys = Object.keys(subjectIdBridge);
   const subjects = nonblankSubjects(domains);
 
   it('retains legacy ExamPortal subjects while maps contain only 2,682 active catalog IDs', () => {
     expect(subjects).toHaveLength(2788);
-    expect(new Set(semKeys).size).toBe(2682);
-    expect(new Set(brKeys).size).toBe(2682);
-    expect(semKeys).toHaveLength(2682);
-    expect(brKeys).toHaveLength(2682);
+    expect(new Set(semKeys).size).toBe(2608);
+    expect(new Set(brKeys).size).toBe(2608);
+    expect(semKeys).toHaveLength(2608);
+    expect(brKeys).toHaveLength(2608);
   });
 
   it('semester-map and bridge keys are exactly the same set', () => {
