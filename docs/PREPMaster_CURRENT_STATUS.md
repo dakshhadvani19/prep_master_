@@ -1,6 +1,6 @@
 # PrepMaster — Current Status
 
-_Last updated: 2026-10-04_
+_Last updated: 2026-10-11_
 
 ## 1. Repository and deployment
 
@@ -56,7 +56,7 @@ public.Courses: CourseId BIGINT identity PK, CourseName, Sems INTEGER[], 49 rows
 
 ### Subjects
 
-public.Subjects: SubjectId BIGINT PK, SubjectName, CourseId FK, Semester INTEGER NOT NULL, 2788 rows, all rows have a semester, no blank names, no orphan CourseIds, RLS enabled, browser SELECT works.
+public.Subjects: SubjectId BIGINT PK, SubjectName, CourseId FK, Semester INTEGER NOT NULL, 2682 rows after the 2026-10-11 syllabus-availability cleanup; all rows have a semester, no blank names, no orphan CourseIds, RLS enabled, browser SELECT works.
 
 There is deliberately **no Departments table**.
 
