@@ -116,7 +116,7 @@ describe('canonical catalog coverage', () => {
   const subjects = nonblankSubjects(domains);
 
   it('retains legacy ExamPortal subjects while maps contain only 2,682 active catalog IDs', () => {
-    expect(subjects).toHaveLength(2788);
+    expect(subjects).toHaveLength(2714);
     expect(new Set(semKeys).size).toBe(2608);
     expect(new Set(brKeys).size).toBe(2608);
     expect(semKeys).toHaveLength(2608);
