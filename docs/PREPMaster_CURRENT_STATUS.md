@@ -156,3 +156,4 @@ Unless the requested task directly requires them, avoid opportunistic rewrites o
 6. Finish leaderboard persistence.
 7. Finish feedback persistence.
 8. Keep project documentation synchronized with actual code.
+- The 88 archived Law & Arts IDs were also removed from the legacy `src/data/mockData.js` exam context (74 nonblank subject rows; 14 blank-title rows had no usable display label), preventing fallback resolution outside the numeric bridge. The 33 network-retry occurrences remain in the catalog and mapping files.
