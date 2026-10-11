@@ -126,7 +126,15 @@ Exam submission writes a compact result to browser-local history and navigates i
 
 Unless the requested task directly requires them, avoid opportunistic rewrites of Supabase auth/OTP, AuthContext, question generation, subject-resolution bridge, exam UI, catalog source-of-truth rules, Vite chunk strategy, and RLS/security configuration.
 
-## 12. Git/Arena workflow
+## 12. Syllabus availability cleanup (2026-10-11)
+
+- Archived 106 exact live Subject rows under `global-exam-prep/temp_removed_subjects/` before deletion.
+- Deleted 106 rows from live Supabase `public.Subjects`; a post-delete query confirmed none of those SubjectIds remained.
+- Rejected four Arena-labelled PDFs after internal course codes did not match the intended B.Tech subject.
+- The archive contains the original SubjectId, course, title, and semester needed for review/restoration. One Bioinformatics target had no safe live-row match, so it was archived without a database deletion.
+- The Arena summary logged zero HTTP attempts. Thus exclusions mean “no acceptable PDF in that package,” not proof that no public syllabus exists. Restore only after a correctly matched PDF is verified.
+
+## 13. Git/Arena workflow
 
 1. Arena handles large repetitive implementation when useful.
 2. User provides changed files/report/bundle.
@@ -136,7 +144,7 @@ Unless the requested task directly requires them, avoid opportunistic rewrites o
 6. Verify final main state.
 7. Never claim push/deploy/test success without actual verification.
 
-## 13. Current priorities
+## 14. Current priorities
 
 1. Keep the Supabase-only architecture clean.
 2. Complete persistent data features with Supabase when schemas are ready.
