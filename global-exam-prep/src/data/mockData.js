@@ -24976,16 +24976,6 @@ export const domains =[
         "title": "BA LLB (Hons)",
         "subjects": [
           {
-            "id": "41001021210101",
-            "title": "POLITICS",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41001021210201",
             "title": "ECONOMICS I",
             "sem": 1,
@@ -25036,38 +25026,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41001021220101",
-            "title": "RELATIONS",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41001021220201",
             "title": "ECONOMICS II",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41001021220301",
-            "title": "INTERFACE",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010612220101",
-            "title": "MOTOR VEHICLE ACT,1988",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -25116,28 +25076,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41001021230101",
-            "title": "GOVERNANCE",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41001021230201",
             "title": "ECONOMICS III",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41001021230301",
-            "title": "& PROSPECTS",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -25199,16 +25139,6 @@ export const domains =[
             "id": "41010612030601",
             "title": "INTERNSHIP",
             "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41001021240101",
-            "title": "THOUGHT",
-            "sem": 4,
             "exams": [
               "mid-1",
               "mid-2",
@@ -25286,26 +25216,6 @@ export const domains =[
             ]
           },
           {
-            "id": "41001021150101",
-            "title": "POLITICS",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010612150101",
-            "title": "LAW",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41010612150201",
             "title": "LAW OF CRIMINAL PROCEDURE",
             "sem": 5,
@@ -25359,16 +25269,6 @@ export const domains =[
             "id": "41010612050701",
             "title": "INTERNSHIP",
             "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41001021160101",
-            "title": "THOUGHT",
-            "sem": 6,
             "exams": [
               "mid-1",
               "mid-2",
@@ -25456,38 +25356,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41010212070101",
-            "title": "Course",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010212070201",
-            "title": "",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41016137001501",
             "title": "CRIMINOLOGY - Crime and Criminology",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010318070101",
-            "title": "Course",
             "sem": 7,
             "exams": [
               "mid-1",
@@ -25506,48 +25376,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41010318070201",
-            "title": "Course",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41016137001701",
             "title": "LAW OF COPYRIGHT - Intellectual Property Law",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010916070101",
-            "title": "Course",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41016137001801",
-            "title": "INDICATIONS - Intellectual Property Law",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010916070201",
-            "title": "Course",
             "sem": 7,
             "exams": [
               "mid-1",
@@ -25566,28 +25396,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41010312070101",
-            "title": "Course",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41016137002001",
             "title": "LEGISLATIVE DRAFTING - Constitutional Law",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010312070201",
-            "title": "Course",
             "sem": 7,
             "exams": [
               "mid-1",
@@ -25606,28 +25416,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41010612070201",
-            "title": "II)",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41010612070301",
             "title": "TAXATION LAW I",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010612070401",
-            "title": "III)",
             "sem": 7,
             "exams": [
               "mid-1",
@@ -25646,16 +25436,6 @@ export const domains =[
             ]
           },
           {
-            "id": "41010612070601",
-            "title": "HOUSE 1/COURT I) 4 WEEKS",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41016138000401",
             "title": "LAW ON CORPORATE FINANCE - Business Law",
             "sem": 8,
@@ -25666,38 +25446,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41010212080101",
-            "title": "Course",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41016138000501",
             "title": "LAW OF CORPORATE GOVERNANCE  - Business Law",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010212080201",
-            "title": "Course",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010318080101",
-            "title": "",
             "sem": 8,
             "exams": [
               "mid-1",
@@ -25736,38 +25486,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41010916080201",
-            "title": "Course",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41016138000701",
             "title": "LAW & EDUCATION - Constitutional Law",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010312080101",
-            "title": "Course",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010312080201",
-            "title": "",
             "sem": 8,
             "exams": [
               "mid-1",
@@ -25806,58 +25526,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41010612080401",
-            "title": "PRACTICES)",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010612080501",
-            "title": "SERVICES",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010612080601",
-            "title": "HOUSE 2) 4 WEEKS",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010212090101",
-            "title": "",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41016139000101",
             "title": "FINANCIAL MARKET REGULATION - Business Law",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010212090201",
-            "title": "Course",
             "sem": 9,
             "exams": [
               "mid-1",
@@ -25886,16 +25556,6 @@ export const domains =[
             ]
           },
           {
-            "id": "41010312090101",
-            "title": "",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41016139000201",
             "title": "RIGHT TO INFORMATION LAW - Constitutional Law",
             "sem": 9,
@@ -25906,48 +25566,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41010312090201",
-            "title": "Course",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010916090101",
-            "title": "",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41016139000301",
             "title": "EMERGING ISSUES IN IPR - Intellectual Property Law",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010916090201",
-            "title": "Course",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41010612090101",
-            "title": "SYSTEM",
             "sem": 9,
             "exams": [
               "mid-1",
@@ -26006,28 +25626,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41102120100101",
-            "title": "Course",
-            "sem": 10,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41161310000201",
             "title": "INTERNATIONAL TAXATION LAW - Business Law",
-            "sem": 10,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41102120100201",
-            "title": "Course",
             "sem": 10,
             "exams": [
               "mid-1",
@@ -26046,16 +25646,6 @@ export const domains =[
             ]
           },
           {
-            "id": "41103180100201",
-            "title": "",
-            "sem": 10,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41161310000301",
             "title": "COMPARATIVE CONSTITUTION - Constitutional Law",
             "sem": 10,
@@ -26066,28 +25656,8 @@ export const domains =[
             ]
           },
           {
-            "id": "41103120100101",
-            "title": "Course",
-            "sem": 10,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "41161310000401",
             "title": "JUDICIAL PROCESS - Constitutional Law",
-            "sem": 10,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "41103120100201",
-            "title": "Course",
             "sem": 10,
             "exams": [
               "mid-1",
@@ -26284,16 +25854,6 @@ export const domains =[
             ]
           },
           {
-            "id": "42010612220101",
-            "title": "MOTOR VEHICLE ACT,1988",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42010612220201",
             "title": "LAW OF CONTRACT II",
             "sem": 2,
@@ -26327,16 +25887,6 @@ export const domains =[
             "id": "42010612020401",
             "title": "INTERNSHIP",
             "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42001023230101",
-            "title": "FINANCIAL ACCOUNTING",
-            "sem": 3,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26504,26 +26054,6 @@ export const domains =[
             ]
           },
           {
-            "id": "42001023150101",
-            "title": "PRINCIPLES OF MARKETING",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010612150101",
-            "title": "LAW",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42010612150201",
             "title": "LAW OF CRIMINAL PROCEDURE",
             "sem": 5,
@@ -26674,38 +26204,8 @@ export const domains =[
             ]
           },
           {
-            "id": "42010212070101",
-            "title": "Course",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010212070201",
-            "title": "",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42016137001501",
             "title": "CRIMINOLOGY - Crime and Criminology",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010318070101",
-            "title": "Course",
             "sem": 7,
             "exams": [
               "mid-1",
@@ -26724,48 +26224,8 @@ export const domains =[
             ]
           },
           {
-            "id": "42010318070201",
-            "title": "Course",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42016137001701",
             "title": "LAW OF COPYRIGHT - Intellectual Property Law",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010916070101",
-            "title": "Course",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42016137001801",
-            "title": "INDICATIONS - Intellectual Property Law",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010916070201",
-            "title": "Course",
             "sem": 7,
             "exams": [
               "mid-1",
@@ -26784,28 +26244,8 @@ export const domains =[
             ]
           },
           {
-            "id": "42010312070101",
-            "title": "Course",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42016137002001",
             "title": "LEGISLATIVE DRAFTING - Constitutional Law",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010312070201",
-            "title": "Course",
             "sem": 7,
             "exams": [
               "mid-1",
@@ -26824,28 +26264,8 @@ export const domains =[
             ]
           },
           {
-            "id": "42010612070201",
-            "title": "II)",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42010612070301",
             "title": "TAXATION LAW I",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010612070401",
-            "title": "III)",
             "sem": 7,
             "exams": [
               "mid-1",
@@ -26864,16 +26284,6 @@ export const domains =[
             ]
           },
           {
-            "id": "42010612070601",
-            "title": "HOUSE 1/COURT I) 4 WEEKS",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42016138000401",
             "title": "LAW ON CORPORATE FINANCE - Business Law",
             "sem": 8,
@@ -26884,38 +26294,8 @@ export const domains =[
             ]
           },
           {
-            "id": "42010212080101",
-            "title": "Course",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42016138000501",
             "title": "LAW OF CORPORATE GOVERNANCE  - Business Law",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010212080201",
-            "title": "Course",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010318080101",
-            "title": "",
             "sem": 8,
             "exams": [
               "mid-1",
@@ -26954,38 +26334,8 @@ export const domains =[
             ]
           },
           {
-            "id": "42010916080201",
-            "title": "Course",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42016138000701",
             "title": "LAW & EDUCATION - Constitutional Law",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010312080101",
-            "title": "Course",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010312080201",
-            "title": "",
             "sem": 8,
             "exams": [
               "mid-1",
@@ -27024,58 +26374,8 @@ export const domains =[
             ]
           },
           {
-            "id": "42010612080401",
-            "title": "PRACTICES)",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010612080501",
-            "title": "SERVICES",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010612080601",
-            "title": "HOUSE 2) 4 WEEKS",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010212090101",
-            "title": "",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42016139000101",
             "title": "FINANCIAL MARKET REGULATION - Business Law",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010212090201",
-            "title": "Course",
             "sem": 9,
             "exams": [
               "mid-1",
@@ -27104,16 +26404,6 @@ export const domains =[
             ]
           },
           {
-            "id": "42010312090101",
-            "title": "",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42016139000201",
             "title": "RIGHT TO INFORMATION LAW - Constitutional Law",
             "sem": 9,
@@ -27124,48 +26414,8 @@ export const domains =[
             ]
           },
           {
-            "id": "42010312090201",
-            "title": "Course",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010916090101",
-            "title": "",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42016139000301",
             "title": "EMERGING ISSUES IN IPR - Intellectual Property Law",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010916090201",
-            "title": "Course",
-            "sem": 9,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42010612090101",
-            "title": "SYSTEM",
             "sem": 9,
             "exams": [
               "mid-1",
@@ -27224,28 +26474,8 @@ export const domains =[
             ]
           },
           {
-            "id": "42102120100101",
-            "title": "Course",
-            "sem": 10,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42161310000201",
             "title": "INTERNATIONAL TAXATION LAW - Business Law",
-            "sem": 10,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42102120100201",
-            "title": "Course",
             "sem": 10,
             "exams": [
               "mid-1",
@@ -27264,16 +26494,6 @@ export const domains =[
             ]
           },
           {
-            "id": "42103180100201",
-            "title": "",
-            "sem": 10,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42161310000301",
             "title": "COMPARATIVE CONSTITUTION - Constitutional Law",
             "sem": 10,
@@ -27284,28 +26504,8 @@ export const domains =[
             ]
           },
           {
-            "id": "42103120100101",
-            "title": "Course",
-            "sem": 10,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "42161310000401",
             "title": "JUDICIAL PROCESS - Constitutional Law",
-            "sem": 10,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "42103120100201",
-            "title": "Course",
             "sem": 10,
             "exams": [
               "mid-1",
@@ -27472,26 +26672,6 @@ export const domains =[
             ]
           },
           {
-            "id": "43001028120101",
-            "title": "Differences",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "43001028120201",
-            "title": "Democracy in India",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "43001028120301",
             "title": "Sociology II: Fundamentals of Sociology",
             "sem": 2,
@@ -27612,28 +26792,8 @@ export const domains =[
             ]
           },
           {
-            "id": "43001028130701",
-            "title": "Financial Accounting",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "43001028130801",
             "title": "Basics of French",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "43000121000301",
-            "title": "National cadet corps-3",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27655,16 +26815,6 @@ export const domains =[
             "id": "43013155000301",
             "title": "Pharmaceutical cosmetic science",
             "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "43001028140101",
-            "title": "Psychology",
-            "sem": 4,
             "exams": [
               "mid-1",
               "mid-2",
@@ -27814,16 +26964,6 @@ export const domains =[
           {
             "id": "43001028150501",
             "title": "Law and consumer protection",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "43001028150601",
-            "title": "Principles of marketing",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -28032,16 +27172,6 @@ export const domains =[
             ]
           },
           {
-            "id": "43101619070301",
-            "title": "environment",
-            "sem": 7,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "43101619070401",
             "title": "International political economy",
             "sem": 7,
@@ -28204,16 +27334,6 @@ export const domains =[
           {
             "id": "43101619080401",
             "title": "Human rights and international affairs",
-            "sem": 8,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "43101619080501",
-            "title": "world",
             "sem": 8,
             "exams": [
               "mid-1",
