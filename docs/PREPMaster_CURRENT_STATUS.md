@@ -157,3 +157,12 @@ Unless the requested task directly requires them, avoid opportunistic rewrites o
 7. Finish feedback persistence.
 8. Keep project documentation synchronized with actual code.
 - The 88 archived Law & Arts IDs were also removed from the legacy `src/data/mockData.js` exam context (74 nonblank subject rows; 14 blank-title rows had no usable display label), preventing fallback resolution outside the numeric bridge. The 33 network-retry occurrences remain in the catalog and mapping files.
+
+## Management Studies recovery cleanup — 2026-10-11
+
+- Archive: `management_studies_removed_subjects_2026-10-11.csv`.
+- The recovery run marked 74 unique normalized Management Studies subject titles as `FAILED_NO_MATCHING_OFFICIAL_PDF`, covering 122 course/semester occurrences. The exact 122 live Supabase rows are preserved in the archive with their original `SubjectId`, `SubjectName`, `CourseId`, `CourseName`, and `Semester`.
+- The records are temporarily excluded under the user's direction after this recovery run. This status reflects the run result only, not proof that a syllabus does not exist: the report recorded HTTP 429 rate limits and zero candidate-download attempts for some failed titles.
+- The same 122 IDs are removed from `src/data/subjectIdBridge.json`, `src/data/subjectSemesterMap.json`, and the legacy subject arrays in `src/data/mockData.js` to prevent stale numeric exam routes from resolving them.
+- Restore only after a directly accessible syllabus is validated against the applicable course/program, subject code/title, and semester. Retry sources in priority order: official Marwadi University, GTU, then another credible official university for clearly-labelled comparable references.
+
