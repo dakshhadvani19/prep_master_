@@ -22,3 +22,10 @@ Do not restore a row to the public subject catalog until a directly accessible P
 - `unmatched_targets_2026-10-11.csv`: targets with no safe live database row match; these are not deleted.
 
 This is an internal recovery archive, not a public website data source. Do not import these rows back into the live catalog wholesale.
+
+
+## Law & Arts recovery audit — 2026-10-11
+
+- `law_arts_removed_subjects_2026-10-11.csv` preserves 88 questionable/unusable catalog occurrences with source SubjectId, course, semester, audit classification, and restoration metadata. Of these, 74 were present as live Supabase rows and are archived before temporary exclusion; 14 blank-title rows were already absent from Supabase.
+- `law_arts_network_retry_pending_2026-10-11.csv` lists 33 occurrences across 19 unique titles that hit network/access failures. These remain live and must be retried; network failure is not proof that a syllabus does not exist.
+- PDF title fragments, cross-course title ambiguity, duplicate-content false positives, and generic labels were not treated as verified one-to-one subject matches. Restore or update rows only after the source title and course-specific syllabus are confirmed.
