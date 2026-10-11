@@ -12,13 +12,13 @@ The four rejected PDF mappings were:
 - B.Tech IT 01IT0714 Data Science: PDF declares MBA Business Analytics code 04MB0367.
 - B.Tech Mechanical Engineering AI/ML 01ML0503 Machine Learning: PDF declares code 04BA0501, Foundations of Machine Learning.
 
-## Restore policy
+## Live database action\n\n- 106 exact rows were deleted from live `public.Subjects` only after this archive was committed.\n- Verification after deletion found zero of those 106 SubjectIds remaining.\n- The mapping counts after cleanup are CourseId 2 = 26, 14 = 38, 15 = 32, 16 = 49, 17 = 50.\n- The 106 deleted IDs were also removed from `subjectIdBridge.json` and `subjectSemesterMap.json` so numeric exam routes do not resolve archived numeric IDs.\n\n## Restore policy
 
 Do not restore a row to the public subject catalog until a directly accessible PDF has been validated as matching the program, code/title, and semester. Source priority: Marwadi official PDF, then directly accessible equivalent GTU PDF, then another credible official university syllabus clearly labelled as a comparable reference. Network failures are not evidence that a syllabus does not exist.
 
 ## Files
 
-- `removed_subjects_2026-10-11.csv`: pre-deletion snapshot for subjects with an exact live database match. Contains both the Arena target and exact Supabase SubjectId/CourseId fields needed for restoration.
+- `removed_subjects_2026-10-11.csv`: snapshot for subjects with an exact live database match; `database_action` is set to `DELETED_VERIFIED`. Contains both the Arena target and exact Supabase SubjectId/CourseId fields needed for restoration.
 - `unmatched_targets_2026-10-11.csv`: targets with no safe live database row match; these are not deleted.
 
 This is an internal recovery archive, not a public website data source. Do not import these rows back into the live catalog wholesale.
