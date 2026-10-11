@@ -11980,16 +11980,6 @@ export const domains =[
             ]
           },
           {
-            "id": "20000422060601",
-            "title": "ADVERTISING MANAGEMENT",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "20000422061301",
             "title": "STATEMENTS",
             "sem": 6,
@@ -12528,16 +12518,6 @@ export const domains =[
             ]
           },
           {
-            "id": "21000423250701",
-            "title": "TALLY",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "21041912010201",
             "title": "READING & WRITING FOR BUSINESS",
             "sem": 1,
@@ -13028,26 +13008,6 @@ export const domains =[
             ]
           },
           {
-            "id": "21000492040101",
-            "title": "INTERNATIONAL MARKETING",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "21000422051401",
-            "title": "MANAGEMENT",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "21000422051501",
             "title": "MODERN BANKING THEORY & PRACTICES",
             "sem": 5,
@@ -13068,16 +13028,6 @@ export const domains =[
             ]
           },
           {
-            "id": "21000422051901",
-            "title": "MANAGEMENT",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "21000422052001",
             "title": "ESSENTIALS OF DIGITAL MARKETING",
             "sem": 5,
@@ -13090,16 +13040,6 @@ export const domains =[
           {
             "id": "21000422052101",
             "title": "APPLICATIONS OF SEO, SEM & WEB ANALYTICS",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "21000422052201",
-            "title": "INNOVATION & START-UP MANAGEMENT",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -13258,16 +13198,6 @@ export const domains =[
             ]
           },
           {
-            "id": "21016135001101",
-            "title": "FUNDAMENTALS OF INTERNATIONAL BUSINESS",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "21004318150101",
             "title": "CAREER READINESS PROGRAM",
             "sem": 5,
@@ -13281,16 +13211,6 @@ export const domains =[
             "id": "21000121000501",
             "title": "NATIONAL CADET CORPS-5",
             "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "21000422060601",
-            "title": "ADVERTISING MANAGEMENT",
-            "sem": 6,
             "exams": [
               "mid-1",
               "mid-2",
@@ -13470,16 +13390,6 @@ export const domains =[
           {
             "id": "21000428160401",
             "title": "PAYROLL MANAGEMENT",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "21000428160501",
-            "title": "MANAGEMENT",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -13966,16 +13876,6 @@ export const domains =[
             ]
           },
           {
-            "id": "22016131000601",
-            "title": "General Electives",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "22000423012101",
             "title": "Currency, Banking and Exchange",
             "sem": 1,
@@ -14086,16 +13986,6 @@ export const domains =[
             ]
           },
           {
-            "id": "22016132001001",
-            "title": "General Electives",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "22000423022101",
             "title": "Indian Financial System",
             "sem": 2,
@@ -14176,28 +14066,8 @@ export const domains =[
             ]
           },
           {
-            "id": "22016133000901",
-            "title": "General Electives",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "22000423032101",
             "title": "International Business",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "22000423032201",
-            "title": "Fundamentals of Stock Markets",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -14436,16 +14306,6 @@ export const domains =[
             ]
           },
           {
-            "id": "22016134000701",
-            "title": "General Electives",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "22000423042101",
             "title": "Insurance and Risk Management",
             "sem": 4,
@@ -14496,38 +14356,8 @@ export const domains =[
             ]
           },
           {
-            "id": "22000423250701",
-            "title": "Tally",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "22000423050801",
             "title": "Entrepreneurship",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "22000423050901",
-            "title": "Fundamentals of Investments",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "22016135001201",
-            "title": "Specialization",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -14616,16 +14446,6 @@ export const domains =[
             ]
           },
           {
-            "id": "22000423060801",
-            "title": "Responsibility",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "22000423060901",
             "title": "Fundamentals of Digital Marketing",
             "sem": 6,
@@ -14638,16 +14458,6 @@ export const domains =[
           {
             "id": "22004318060101",
             "title": "Career Readiness Programme",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "22016136001301",
-            "title": "Specialization",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -14773,16 +14583,6 @@ export const domains =[
             ]
           },
           {
-            "id": "23000422010801",
-            "title": "JEWELLERY DESIGNING",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "23000422010901",
             "title": "ENVIRONMENTAL SCIENCE",
             "sem": 1,
@@ -14855,16 +14655,6 @@ export const domains =[
           {
             "id": "23000422020601",
             "title": "ADVANCED SPREADSHEET APPLICATIONS",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "23000422020701",
-            "title": "FASHION DESIGNING",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -14993,26 +14783,6 @@ export const domains =[
             ]
           },
           {
-            "id": "23000422140101",
-            "title": "MANAGEMENT",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "23000421040101",
-            "title": "DATA VISUALISATION AND STORY TELLING",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "23000422141101",
             "title": "INTERNATIONAL BUSINESS",
             "sem": 4,
@@ -15073,16 +14843,6 @@ export const domains =[
             ]
           },
           {
-            "id": "23000422041701",
-            "title": "COURSE)",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "23000422250201",
             "title": "STRATEGIC MANAGEMENT",
             "sem": 5,
@@ -15095,26 +14855,6 @@ export const domains =[
           {
             "id": "23000422050601",
             "title": "INTERNSHIP",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "23000422053101",
-            "title": "INCOME TAX - LAW AND PRACTICES",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "23000421050101",
-            "title": "BUSINESS",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -15243,16 +14983,6 @@ export const domains =[
             ]
           },
           {
-            "id": "23000422260101",
-            "title": "GOVERNENCE",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "23000422061601",
             "title": "ENTREPRENEURSHIP",
             "sem": 6,
@@ -15325,16 +15055,6 @@ export const domains =[
           {
             "id": "23000422062001",
             "title": "HINDI",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "23000422062101",
-            "title": "SANSKRIT",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -15430,16 +15150,6 @@ export const domains =[
             ]
           },
           {
-            "id": "24000422010801",
-            "title": "JEWELLERY DESIGNING",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "24000422010901",
             "title": "ENVIRONMENTAL SCIENCE",
             "sem": 1,
@@ -15512,16 +15222,6 @@ export const domains =[
           {
             "id": "24000422020601",
             "title": "ADVANCED SPREADSHEET APPLICATIONS",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "24000422020701",
-            "title": "FASHION DESIGNING",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -15650,16 +15350,6 @@ export const domains =[
             ]
           },
           {
-            "id": "24000422140101",
-            "title": "MANAGEMENT",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "24004413040101",
             "title": "SEARCH ENGINE OPTIMIZATION",
             "sem": 4,
@@ -15730,16 +15420,6 @@ export const domains =[
             ]
           },
           {
-            "id": "24000422041701",
-            "title": "COURSE)",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "24000422250201",
             "title": "STRATEGIC MANAGEMENT",
             "sem": 5,
@@ -15752,26 +15432,6 @@ export const domains =[
           {
             "id": "24000422050601",
             "title": "INTERNSHIP",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "24000422053101",
-            "title": "INCOME TAX - LAW AND PRACTICES",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "24004413050101",
-            "title": "MANAGE DIGITAL MARKETING CHANNELS",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -15900,16 +15560,6 @@ export const domains =[
             ]
           },
           {
-            "id": "24000422260101",
-            "title": "GOVERNENCE",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "24000422061601",
             "title": "ENTREPRENEURSHIP",
             "sem": 6,
@@ -15982,16 +15632,6 @@ export const domains =[
           {
             "id": "24000422062001",
             "title": "HINDI",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "24000422062101",
-            "title": "SANSKRIT",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -16087,16 +15727,6 @@ export const domains =[
             ]
           },
           {
-            "id": "25000422010801",
-            "title": "JEWELLERY DESIGNING",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "25000422010901",
             "title": "ENVIRONMENTAL SCIENCE",
             "sem": 1,
@@ -16177,16 +15807,6 @@ export const domains =[
             ]
           },
           {
-            "id": "25000422020701",
-            "title": "FASHION DESIGNING",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "25016132001101",
             "title": "INDIAN BUSINESS HISTORY",
             "sem": 2,
@@ -16219,16 +15839,6 @@ export const domains =[
           {
             "id": "25000422130201",
             "title": "HUMAN RESOURCES MANAGEMENT",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "25000492030101",
-            "title": "MANAGEMENT",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -16307,26 +15917,6 @@ export const domains =[
             ]
           },
           {
-            "id": "25000422140101",
-            "title": "MANAGEMENT",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "25000492040101",
-            "title": "INTERNATIONAL MARKETING",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "25000422041801",
             "title": "DIGITAL MARKETING",
             "sem": 4,
@@ -16387,16 +15977,6 @@ export const domains =[
             ]
           },
           {
-            "id": "25000422041701",
-            "title": "COURSE)",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "25000422250201",
             "title": "STRATEGIC MANAGEMENT",
             "sem": 5,
@@ -16409,16 +15989,6 @@ export const domains =[
           {
             "id": "25000422050601",
             "title": "INTERNSHIP",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "25000422053101",
-            "title": "INCOME TAX - LAW AND PRACTICES",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -16557,16 +16127,6 @@ export const domains =[
             ]
           },
           {
-            "id": "25000422260101",
-            "title": "GOVERNENCE",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "25000422061601",
             "title": "ENTREPRENEURSHIP",
             "sem": 6,
@@ -16579,16 +16139,6 @@ export const domains =[
           {
             "id": "25000422161401",
             "title": "MANAGEMENT INFORMATION SYSTEMS",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "25000492060101",
-            "title": "MANAGEMENT",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -16639,16 +16189,6 @@ export const domains =[
           {
             "id": "25000422062001",
             "title": "HINDI",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "25000422062101",
-            "title": "SANSKRIT",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -17237,16 +16777,6 @@ export const domains =[
             "id": "26000121000501",
             "title": "NATIONAL CADET CORPS-5",
             "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "26000422060601",
-            "title": "ADVERTISING MANAGEMENT",
-            "sem": 6,
             "exams": [
               "mid-1",
               "mid-2",
@@ -19132,16 +18662,6 @@ export const domains =[
             ]
           },
           {
-            "id": "27000422060601",
-            "title": "ADVERTISING MANAGEMENT",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "27000422061301",
             "title": "STATEMENTS",
             "sem": 6,
@@ -19910,16 +19430,6 @@ export const domains =[
             ]
           },
           {
-            "id": "28004132031101",
-            "title": "Marketing Communication",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28004132031201",
             "title": "Product & Brand Management",
             "sem": 3,
@@ -19962,16 +19472,6 @@ export const domains =[
           {
             "id": "28000422020401",
             "title": "Human Resources Management",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132031601",
-            "title": "Development",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -20080,48 +19580,8 @@ export const domains =[
             ]
           },
           {
-            "id": "28004132032501",
-            "title": "India & WTO",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28004132032601",
             "title": "International Negotiations",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28016133001101",
-            "title": "Entrepreneurship & Family Business",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132032701",
-            "title": "Planning, Structuring & Financing SMEs",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132032801",
-            "title": "Managing Start Ups",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -20152,16 +19612,6 @@ export const domains =[
           {
             "id": "28004132033101",
             "title": "Social Entrepreneurship",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28016133001201",
-            "title": "Banking & Indurance",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -20230,16 +19680,6 @@ export const domains =[
             ]
           },
           {
-            "id": "28016133001301",
-            "title": "IT & Systems",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28004132033701",
             "title": "Software Project Management",
             "sem": 3,
@@ -20292,26 +19732,6 @@ export const domains =[
           {
             "id": "28004132034201",
             "title": "Information Security, Ethics & Issues",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28016133001401",
-            "title": "Operations Management",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132034301",
-            "title": "Management",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -20400,28 +19820,8 @@ export const domains =[
             ]
           },
           {
-            "id": "28004132034901",
-            "title": "Management",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28004132037401",
             "title": "Material Management & Inventory Control",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132037501",
-            "title": "Management",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -20440,28 +19840,8 @@ export const domains =[
             ]
           },
           {
-            "id": "28016133001601",
-            "title": "General Elective",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28004132035101",
             "title": "Project Management",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132035201",
-            "title": "Creativity & Innovation",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -20520,66 +19900,6 @@ export const domains =[
             ]
           },
           {
-            "id": "28004132035801",
-            "title": "Psychometric Testing",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132035901",
-            "title": "Managerial Psychology",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132036001",
-            "title": "Summer Internship Project",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28016133001701",
-            "title": "Skill Enhancement Course",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132036101",
-            "title": "Goods & Service Tax",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132036201",
-            "title": "Advance Corporate Communication",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28004132036301",
             "title": "Foreign Language",
             "sem": 3,
@@ -20620,46 +19940,6 @@ export const domains =[
             ]
           },
           {
-            "id": "28004132040301",
-            "title": "Corporate Restructuring & Valuation",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132040401",
-            "title": "Financial Modeling & Analytics",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132040501",
-            "title": "Project Appraisal & Finance",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132040601",
-            "title": "Behavioural Finance",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28000422030102",
             "title": "Marketing Management",
             "sem": 4,
@@ -20690,78 +19970,8 @@ export const domains =[
             ]
           },
           {
-            "id": "28004132040901",
-            "title": "Sales & Distribution Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132041001",
-            "title": "Industrial Marketing",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132041101",
-            "title": "Rural Marketing",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28000422020402",
             "title": "Human Resources Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132041201",
-            "title": "Strategic Human Resource Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132041301",
-            "title": "Human Resource Development",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132041401",
-            "title": "Strategic Performance Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132041501",
-            "title": "Talent Management & Employee Engagement",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -20800,178 +20010,8 @@ export const domains =[
             ]
           },
           {
-            "id": "28004132041801",
-            "title": "India: Internation Relations",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28004132041901",
             "title": "Documentation",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28016133001102",
-            "title": "Entrepreneurship & Family Business",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132042001",
-            "title": "Managing Corporate Entrepreneurship",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132042101",
-            "title": "Succession Planning for Family Business",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132042201",
-            "title": "Appreciation",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132042301",
-            "title": "Legal Aspects of Start Ups & IPR",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28016133001202",
-            "title": "Banking & Indurance",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132042401",
-            "title": "Economic of Insurance",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132042501",
-            "title": "Wealth Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132042601",
-            "title": "Microfine & Rural Banking",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132042701",
-            "title": "Insurance & Risk Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28016133001302",
-            "title": "IT & Systems",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132042801",
-            "title": "Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132042901",
-            "title": "Data Visualization using Power BI",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132043001",
-            "title": "Business Analytics using Python Programming",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132043101",
-            "title": "Application of Cloud Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28016133001402",
-            "title": "Operations Management",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -21000,88 +20040,8 @@ export const domains =[
             ]
           },
           {
-            "id": "28004132043401",
-            "title": "Operations Strategy",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132043501",
-            "title": "Lean Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28016133001502",
             "title": "Logistics & Supply Chain Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132045901",
-            "title": "Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132043601",
-            "title": "Shipping & Maritime Logistics Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132043701",
-            "title": "Packing & Packaging Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132043801",
-            "title": "International Logistics Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28016134000801",
-            "title": "General Elective",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132043901",
-            "title": "Management",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -21170,38 +20130,8 @@ export const domains =[
             ]
           },
           {
-            "id": "28004132044801",
-            "title": "Comprehensive Project",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28016134000901",
-            "title": "Skill Enhancement Course",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "28004132044901",
             "title": "Six Sigma",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "28004132145001",
-            "title": "Management of Field Sales",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -21239,26 +20169,6 @@ export const domains =[
           {
             "id": "29004132113201",
             "title": "Fundamentals of Business Analytics",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "29004132013401",
-            "title": "Data Mining for Business Analtyics using R",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "29004139010301",
-            "title": "Marketing for Managers",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -21357,26 +20267,6 @@ export const domains =[
             ]
           },
           {
-            "id": "29004213020301",
-            "title": "Predictive and Advance Analytics",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "29016132001201",
-            "title": "Elective G1",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "29004213020401",
             "title": "Structural Equation Modelling",
             "sem": 2,
@@ -21447,26 +20337,6 @@ export const domains =[
             ]
           },
           {
-            "id": "29004132036501",
-            "title": "Marketing Analytics",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "29004132036601",
-            "title": "Financial Analytics",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "29004132032001",
             "title": "HR Analytics",
             "sem": 3,
@@ -21487,16 +20357,6 @@ export const domains =[
             ]
           },
           {
-            "id": "29004132036801",
-            "title": "Business Intelligence",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "29004132036901",
             "title": "Business Forecasting using Eviews-II",
             "sem": 3,
@@ -21507,28 +20367,8 @@ export const domains =[
             ]
           },
           {
-            "id": "29016133001801",
-            "title": "General Elective",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "29004132035101",
             "title": "Project Management",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "29004132035201",
-            "title": "Creativity & Innovation",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -21579,36 +20419,6 @@ export const domains =[
           {
             "id": "29004132035701",
             "title": "Emotional Intelligence",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "29004132035801",
-            "title": "Psychometric Testing",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "29004132035901",
-            "title": "Managerial Psychology",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "29004132036001",
-            "title": "Summer Internship Project",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -21707,26 +20517,6 @@ export const domains =[
             ]
           },
           {
-            "id": "29016134001001",
-            "title": "General Elective",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "29004132043901",
-            "title": "Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "29004132044001",
             "title": "Design Thinking",
             "sem": 4,
@@ -21799,16 +20589,6 @@ export const domains =[
           {
             "id": "29004132044701",
             "title": "Stress Management",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "29004132044801",
-            "title": "Comprehensive Project",
             "sem": 4,
             "exams": [
               "mid-1",
