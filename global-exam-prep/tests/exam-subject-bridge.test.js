@@ -76,6 +76,7 @@ describe('canonical catalog coverage', () => {
       expect(subjectIdBridge[id]).toBeUndefined();
       expect(subjectSemesterMap[id]).toBeUndefined();
       expect(lookupNumericSubject(id)).toBeNull();
+      expect(findSubjectContext(domains, id).kind).toBe('unknown');
     }
   });
 
@@ -133,15 +134,19 @@ describe('canonical catalog coverage', () => {
     );
   });
 
-  it('every remaining bridge key exists in the legacy dataset and mapped semesters agree', () => {
-    const numericIds = new Set(subjects.map((s) => String(s.id)).filter((id) => /^\d+$/.test(id)));
-    expect(brKeys.every((id) => numericIds.has(id))).toBe(true);
-    for (const s of subjects) {
-      const key = String(s.id);
-      if (subjectSemesterMap[key] !== undefined) {
-        expect(subjectSemesterMap[key]).toBe(s.sem);
-        expect(subjectIdBridge[key].sem).toBe(s.sem);
+  it('remaining bridge entries match a source subject within their mapped course', () => {
+    const subjectsByCourse = new Map();
+    for (const domain of domains || []) {
+      for (const course of domain.courses || []) {
+        subjectsByCourse.set(course.id, new Set((course.subjects || []).map((subject) => String(subject.id).toLowerCase())));
       }
+    }
+
+    for (const [numericId, row] of Object.entries(subjectIdBridge)) {
+      expect(subjectSemesterMap[numericId]).toBe(row.sem);
+      const sourceIds = subjectsByCourse.get(row.c);
+      expect(sourceIds).toBeDefined();
+      expect(sourceIds?.has(String(row.s).toLowerCase())).toBe(true);
     }
   });
 });
