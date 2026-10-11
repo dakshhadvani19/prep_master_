@@ -272,3 +272,7 @@ Do not preserve obsolete architecture descriptions as if they are active impleme
 - Any other feature whose final storage schema has not yet been designed and verified
 
 The removal of the previous backend is complete at the application architecture level; the remaining work is to replace temporary local persistence with deliberate Supabase designs where needed.
+
+## Law & Arts syllabus match cleanup (2026-10-11)
+
+The Law & Arts PDF content audit temporarily excluded 74 live `public.Subjects` rows after archiving 88 audit rows (the other 14 were already absent). Archive: `global-exam-prep/temp_removed_subjects/law_arts_removed_subjects_2026-10-11.csv`. The 74 removed numeric IDs are removed from `subjectIdBridge.json` and `subjectSemesterMap.json`. Network-unverified cases (33 course/semester occurrences across 19 title groups) remain live and are documented in `law_arts_network_retry_pending_2026-10-11.csv`. The removal is based on an inconclusive/malformed one-to-one PDF mapping, not a claim that the underlying subject has no syllabus online; restore once the title/course code and syllabus are verified.
