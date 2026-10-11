@@ -3,6 +3,7 @@
  * Also guards against a stale semester/bridge map silently passing.
  */
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
 import { domains } from '../src/data/mockData';
 import subjectSemesterMap from '../src/data/subjectSemesterMap.json';
 import subjectIdBridge from '../src/data/subjectIdBridge.json';
@@ -17,6 +18,30 @@ const NUMERIC = '1001131010601';
 const SOURCE = '01ma0106';
 const STALE = '1000001010601';
 const PM_NUMERIC = '1016132000101';
+
+function parseCsvLine(line) {
+  const fields = [];
+  let value = '';
+  let inQuotes = false;
+  for (let i = 0; i < line.length; i += 1) {
+    const ch = line[i];
+    if (ch === '"') {
+      if (inQuotes && line[i + 1] === '"') {
+        value += '"';
+        i += 1;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (ch === ',' && !inQuotes) {
+      fields.push(value);
+      value = '';
+    } else {
+      value += ch;
+    }
+  }
+  fields.push(value);
+  return fields;
+}
 
 function nonblankSubjects(doms) {
   const rows = [];
@@ -33,21 +58,37 @@ function nonblankSubjects(doms) {
 describe('subject id uniqueness', () => {
   it('does not introduce duplicate numeric SubjectIds in the mapping layer', () => {
     expect(bridgeHasDuplicateNumericIds()).toBe(false);
-    expect(bridgeEntryCount()).toBe(2788);
+    expect(bridgeEntryCount()).toBe(2682);
   });
 });
 
 describe('canonical catalog coverage', () => {
+  it('does not resolve IDs for subjects archived out of the public catalog', () => {
+    const csv = readFileSync(new URL('../temp_removed_subjects/removed_subjects_2026-10-11.csv', import.meta.url), 'utf8').trim();
+    const lines = csv.split(/\r?\n/);
+    const rows = lines.slice(1).map(parseCsvLine);
+    const header = parseCsvLine(lines[0]);
+    const idIndex = header.indexOf('live_subject_id');
+    const removedIds = rows.map((row) => row[idIndex]).filter(Boolean);
+    expect(removedIds).toHaveLength(106);
+    expect(new Set(removedIds).size).toBe(106);
+    for (const id of removedIds) {
+      expect(subjectIdBridge[id]).toBeUndefined();
+      expect(subjectSemesterMap[id]).toBeUndefined();
+      expect(lookupNumericSubject(id)).toBeNull();
+    }
+  });
+
   const semKeys = Object.keys(subjectSemesterMap);
   const brKeys = Object.keys(subjectIdBridge);
   const subjects = nonblankSubjects(domains);
 
-  it('has 2,788 nonblank subjects and 2,788 unique map keys', () => {
+  it('retains legacy ExamPortal subjects while maps contain only 2,682 active catalog IDs', () => {
     expect(subjects).toHaveLength(2788);
-    expect(new Set(semKeys).size).toBe(2788);
-    expect(new Set(brKeys).size).toBe(2788);
-    expect(semKeys).toHaveLength(2788);
-    expect(brKeys).toHaveLength(2788);
+    expect(new Set(semKeys).size).toBe(2682);
+    expect(new Set(brKeys).size).toBe(2682);
+    expect(semKeys).toHaveLength(2682);
+    expect(brKeys).toHaveLength(2682);
   });
 
   it('semester-map and bridge keys are exactly the same set', () => {
@@ -92,13 +133,14 @@ describe('canonical catalog coverage', () => {
     );
   });
 
-  it('if mockData already stores numeric IDs, they match the maps exactly', () => {
-    const numericIds = subjects.map((s) => String(s.id)).filter((id) => /^\d+$/.test(id));
-    if (numericIds.length === subjects.length) {
-      expect(new Set(numericIds)).toEqual(new Set(semKeys));
-      for (const s of subjects) {
-        expect(subjectSemesterMap[String(s.id)]).toBe(s.sem);
-        expect(subjectIdBridge[String(s.id)].sem).toBe(s.sem);
+  it('every remaining bridge key exists in the legacy dataset and mapped semesters agree', () => {
+    const numericIds = new Set(subjects.map((s) => String(s.id)).filter((id) => /^\d+$/.test(id)));
+    expect(brKeys.every((id) => numericIds.has(id))).toBe(true);
+    for (const s of subjects) {
+      const key = String(s.id);
+      if (subjectSemesterMap[key] !== undefined) {
+        expect(subjectSemesterMap[key]).toBe(s.sem);
+        expect(subjectIdBridge[key].sem).toBe(s.sem);
       }
     }
   });
