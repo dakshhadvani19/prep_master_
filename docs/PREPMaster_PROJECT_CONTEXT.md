@@ -117,7 +117,11 @@ Course semester options come from Courses.Sems.
 Subject semester values come from Subjects.Semester.
 Do not infer semester from SubjectId digits.
 
-## Syllabus availability cleanup (2026-10-11)\n\nThe live Supabase `public.Subjects` catalog excludes 106 subjects from the Arena review batch that had no acceptable PDF in the supplied recovery package, including four mislabeled PDF false positives. Their pre-deletion row metadata is stored in `global-exam-prep/temp_removed_subjects/removed_subjects_2026-10-11.csv`; the unmapped Bioinformatics target is preserved separately and was not deleted. The `subjectIdBridge.json` and `subjectSemesterMap.json` compatibility maps must exclude the same 106 numeric IDs. The Arena run recorded zero HTTP attempts, so exclusion means “not verified in that package,” not proof of internet-wide unavailability.\n\n## Catalog compatibility files
+## Syllabus availability cleanup (2026-10-11)
+
+The live Supabase `public.Subjects` catalog excludes 106 subjects from the Arena review batch that had no acceptable subject-matched PDF in the supplied recovery package, including four incorrectly labelled PDFs rejected after internal course-code inspection. Their pre-deletion row metadata is stored in `global-exam-prep/temp_removed_subjects/removed_subjects_2026-10-11.csv`; the Bioinformatics target with no safe live-row match is preserved separately and was not deleted. The `subjectIdBridge.json` and `subjectSemesterMap.json` compatibility maps exclude the same 106 numeric IDs. The Arena run recorded zero HTTP attempts, so this exclusion reflects the package's verified-file list, not proof of internet-wide unavailability.
+
+## Catalog compatibility files
 
 - src/data/courseMapping.json is allowed for department-to-course scoping and source CourseId compatibility.
 - src/data/subjectIdBridge.json maps numeric SubjectIds to legacy/source compatibility values used by the exam path.
