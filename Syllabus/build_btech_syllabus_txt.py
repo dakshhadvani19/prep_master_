@@ -131,7 +131,7 @@ def parse_units(text: str) -> tuple[list[dict[str, Any]], list[str]]:
     mode = False
     roman = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8}
     heading = re.compile(
-        r"^(?:UNIT|MODULE)\s*[-:#.]?\s*(I{1,3}|IV|V?I{0,3}|[1-8])"
+        r"^(?:UNIT|MODULE)\s*[-:#.]?\s*(VIII|VII|VI|IV|V|III|II|I|[1-8])"
         r"\s*(?:[-:.)–—]\s*)?(.*)$",
         flags=re.IGNORECASE,
     )
@@ -250,8 +250,8 @@ def extract_course(row: dict[str, str], program: dict[str, str], semester: int |
             [r"Course\s+Objectives?\s*:?", r"Objectives?\s*:", r"\bAim\s*:"],
             [
                 r"Course\s+Outcomes?\b", r"\bCO\s*[- ]?1\b", r"Course\s+Contents?\b",
-                r"\bContents?\s*:", r"\bUNIT\s*[-:#.]?\s*(?:I{1,3}|IV|V?I{0,3}|[1-8])",
-                r"\bMODULE\s*[-:#.]?\s*(?:I{1,3}|IV|V?I{0,3}|[1-8])", r"\bText\s*Books?\b",
+                r"\bContents?\s*:", r"\bUNIT\s*[-:#.]?\s*(?:VIII|VII|VI|IV|V|III|II|I|[1-8])",
+                r"\bMODULE\s*[-:#.]?\s*(?:VIII|VII|VI|IV|V|III|II|I|[1-8])", r"\bText\s*Books?\b",
                 r"\bReferences?\b", r"Teaching\s+and\s+Examination\s+Scheme",
             ],
         )
@@ -259,8 +259,8 @@ def extract_course(row: dict[str, str], program: dict[str, str], semester: int |
             full_text,
             [r"Course\s+Outcomes?\s*:?", r"\bCourse\s+Outcome\s*:"],
             [
-                r"\bUNIT\s*[-:#.]?\s*(?:I{1,3}|IV|V?I{0,3}|[1-8])",
-                r"\bMODULE\s*[-:#.]?\s*(?:I{1,3}|IV|V?I{0,3}|[1-8])",
+                r"\bUNIT\s*[-:#.]?\s*(?:VIII|VII|VI|IV|V|III|II|I|[1-8])",
+                r"\bMODULE\s*[-:#.]?\s*(?:VIII|VII|VI|IV|V|III|II|I|[1-8])",
                 r"\bCourse\s+Contents?\b", r"\bContents?\s*:", r"\bText\s*Books?\b",
                 r"\bReferences?\b", r"Teaching\s+and\s+Examination\s+Scheme",
             ],
