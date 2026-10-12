@@ -20599,12 +20599,7 @@ export const domains =[
         ],
         "scenarios": []
       },
-      {
-        "id": "master-in-global-business-management",
-        "title": "Master In Global Business Management",
-        "subjects": [],
-        "scenarios": []
-      }
+
     ]
   },
   {
