@@ -1,0 +1,48 @@
+name: Build Management Studies syllabus text JSON
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'Syllabus/build_management_studies_syllabus_txt.py'
+      - '.github/workflows/build-management-studies-syllabus-txt.yml'
+      - 'Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv'
+      - 'Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/unique_download_list.csv'
+      - 'Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: management-studies-syllabus-json
+  cancel-in-progress: false
+
+jobs:
+  extract-and-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF text extractor
+        run: python -m pip install --upgrade pip pymupdf
+      - name: Validate and extract verified Management Studies syllabus PDFs
+        run: |
+          python -m py_compile Syllabus/build_management_studies_syllabus_txt.py
+          python Syllabus/build_management_studies_syllabus_txt.py
+      - name: Commit generated semester JSON files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+users.noreply.github.com"
+          git add Syllabus/syllabus_txt/Management_Studies/
+          if git diff --cached --quiet; then
+            echo "No Management Studies JSON changes to commit."
+            exit 0
+          fi
+          git commit -m "Generate Management Studies semester syllabus JSON"
+          git push
