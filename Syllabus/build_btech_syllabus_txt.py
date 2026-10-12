@@ -123,70 +123,147 @@ def extract_references(text: str) -> dict[str, list[str]]:
     return result
 
 
-def parse_units(text: str) -> tuple[list[dict[str, Any]], list[str]]:
-    """Index explicit Unit/Module headings while retaining all original page text."""
-    units: list[dict[str, Any]] = []
+def parse_units(text: str) -> tuple[dict[str, list[dict[str, Any]]], list[str]]:
+    """Parse both explicit Unit/Module headings and numbered syllabus-table rows."""
+    sections: dict[str, list[dict[str, Any]]] = {
+        "theory_units": [],
+        "practical_units": [],
+    }
     warnings: list[str] = []
+    active = False
+    in_experiment_list = False
+    section_name = "theory_units"
     current: dict[str, Any] | None = None
-    mode = False
     roman = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8}
-    heading = re.compile(
+    explicit_heading = re.compile(
         r"^(?:UNIT|MODULE)\s*[-:#.]?\s*(VIII|VII|VI|IV|V|III|II|I|[1-8])"
         r"\s*(?:[-:.)–—]\s*)?(.*)$",
         flags=re.IGNORECASE,
     )
+    # Marwadi's PDF tables commonly extract as: "1 Unit Title 4" where the last
+    # number is contact hours. Also accept the hours on a following numeric line.
+    table_row = re.compile(r"^(\d{1,2})\s+(.+?)\s+(\d{1,2})$")
+    unit_row_without_hours = re.compile(r"^(\d{1,2})\s+([A-Za-z].+)$")
+
+    def flush() -> None:
+        nonlocal current
+        if current:
+            topic_lines = [line for line in current.pop("_topic_lines", []) if line]
+            current["topic_lines"] = topic_lines
+            current["topics_text"] = " ".join(topic_lines).strip()
+            current["topics"] = split_list_items("\n".join(topic_lines))
+            sections[section_name].append(current)
+            current = None
 
     for line in clean_lines(text):
+        low = line.casefold()
         if re.fullmatch(r"\[PAGE\s+\d+\]", line, flags=re.IGNORECASE):
             continue
-        low = line.casefold()
-        match = heading.match(line)
-        if match:
-            if current:
-                current["topic_lines"] = current.pop("_topic_lines")
-                current["topics_text"] = " ".join(current["topic_lines"]).strip()
-                current["topics"] = split_list_items("\n".join(current["topic_lines"]))
-                units.append(current)
-            token = match.group(1).upper()
+
+        if low.startswith(("digitally signed by", "mr.", "dr.")) or "digitally signed by" in low:
+            flush()
+            active = False
+            continue
+
+        if "suggested list of experiments" in low or "list of experiments" in low:
+            flush()
+            section_name = "practical_units"
+            in_experiment_list = True
+            active = True
+            continue
+
+        # "Contents :" sometimes shares its line with the extracted table headings.
+        if "contents" in low and (
+            low.strip().startswith("contents")
+            or "unit" in low
+            or "topics" in low
+            or "contact hours" in low
+        ):
+            flush()
+            active = True
+            section_name = "practical_units" if in_experiment_list else "theory_units"
+            continue
+
+        if active and any(
+            re.match(r"^\s*" + stop + r"\b", line, flags=re.IGNORECASE)
+            for stop in STOP_SECTION
+        ):
+            flush()
+            active = False
+            continue
+
+        if not active:
+            continue
+
+        if low.startswith((
+            "unit topics", "topics unit", "unit no", "unit number",
+            "contact hours", "lecture hours", "total hours", "course contents",
+            "course content", "contents", "topics", "unit",
+        )):
+            continue
+
+        explicit = explicit_heading.match(line)
+        if explicit:
+            flush()
+            token = explicit.group(1).upper()
             number = int(token) if token.isdigit() else roman.get(token)
-            title = match.group(2).strip(" :-–—.") if match.group(2) else ""
+            title = explicit.group(2).strip(" :-–—.") if explicit.group(2) else ""
             current = {
                 "unit_number": number,
                 "title": title or None,
+                "contact_hours": None,
                 "_topic_lines": [],
             }
-            mode = True
             continue
 
-        if mode and any(re.match(r"^\s*" + stop + r"\b", line, flags=re.IGNORECASE) for stop in STOP_SECTION):
-            if current:
-                current["topic_lines"] = current.pop("_topic_lines")
-                current["topics_text"] = " ".join(current["topic_lines"]).strip()
-                current["topics"] = split_list_items("\n".join(current["topic_lines"]))
-                units.append(current)
-                current = None
-            mode = False
-            continue
-        if mode and current:
-            if low in {"unit contents", "course contents", "course content", "syllabus"}:
+        table = table_row.match(line)
+        if table:
+            number = int(table.group(1))
+            title = table.group(2).strip(" :-–—.")
+            hours = int(table.group(3))
+            if 1 <= number <= 20 and title and hours <= 100:
+                flush()
+                current = {
+                    "unit_number": number,
+                    "title": title,
+                    "contact_hours": hours,
+                    "_topic_lines": [],
+                }
                 continue
+
+        no_hours = unit_row_without_hours.match(line)
+        if no_hours and 1 <= int(no_hours.group(1)) <= 20:
+            # Support table rows where contact hours are extracted as a separate line.
+            flush()
+            current = {
+                "unit_number": int(no_hours.group(1)),
+                "title": no_hours.group(2).strip(" :-–—."),
+                "contact_hours": None,
+                "_topic_lines": [],
+            }
+            continue
+
+        if current and line.isdigit() and current.get("contact_hours") is None:
+            hours = int(line)
+            if 0 <= hours <= 100:
+                current["contact_hours"] = hours
+                continue
+
+        if current:
             current["_topic_lines"].append(line)
 
-    if current:
-        current["topic_lines"] = current.pop("_topic_lines")
-        current["topics_text"] = " ".join(current["topic_lines"]).strip()
-        current["topics"] = split_list_items("\n".join(current["topic_lines"]))
-        units.append(current)
+    flush()
 
-    # Keep malformed repeated numbering visible but don't guess the missing structure.
-    seen: set[int] = set()
-    for unit in units:
-        number = unit.get("unit_number")
-        if number is not None and number in seen:
-            warnings.append(f"Repeated explicit unit/module number {number}; inspect the source PDF.")
-        if number is not None:
-            seen.add(number)
-    return units, warnings
+    # Detect repeated numbering within each contents table without inventing corrections.
+    for kind, units in sections.items():
+        seen: set[int] = set()
+        for unit in units:
+            number = unit.get("unit_number")
+            if number is not None and number in seen:
+                warnings.append(f"Repeated {kind} unit number {number}; inspect the source PDF.")
+            if number is not None:
+                seen.add(number)
+    return sections, warnings
 
 
 def extract_course(row: dict[str, str], program: dict[str, str], semester: int | None) -> dict[str, Any]:
@@ -220,7 +297,7 @@ def extract_course(row: dict[str, str], program: dict[str, str], semester: int |
         "objectives": [],
         "course_outcomes_text": "",
         "course_outcomes": [],
-        "units": [],
+        "contents": {"theory_units": [], "practical_units": []},
         "references": {},
         "source_text_by_page": [],
         "warnings": [],
@@ -270,7 +347,7 @@ def extract_course(row: dict[str, str], program: dict[str, str], semester: int |
         course["course_outcomes_text"] = " ".join(clean_lines(outcomes_section))
         course["course_outcomes"] = split_list_items(outcomes_section)
         course["references"] = extract_references(full_text)
-        course["units"], unit_warnings = parse_units(full_text)
+        course["contents"], unit_warnings = parse_units(full_text)
         course["warnings"].extend(unit_warnings)
 
         if len(full_text) < 100:
@@ -278,9 +355,9 @@ def extract_course(row: dict[str, str], program: dict[str, str], semester: int |
             course["warnings"].append("Very little native PDF text was extracted; OCR/manual review may be needed.")
         elif expected_hash and actual_hash.lower() != expected_hash:
             course["extraction_status"] = "PDF_HASH_MISMATCH_NEEDS_REVIEW"
-        elif not course["units"]:
+        elif not (course["contents"]["theory_units"] or course["contents"]["practical_units"]):
             course["extraction_status"] = "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW"
-            course["warnings"].append("PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently.")
+            course["warnings"].append("PDF text was extracted, but syllabus units/topics could not be parsed confidently.")
         else:
             course["extraction_status"] = "TEXT_EXTRACTED_AND_STRUCTURED"
     except Exception as exc:
