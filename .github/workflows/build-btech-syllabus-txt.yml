@@ -1,21 +1,16 @@
-name: Refresh B.Tech source PDFs and build syllabus JSON
+name: Build verified B.Tech syllabus text JSON
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'Syllabus/refresh_btech_collection.py'
       - 'Syllabus/build_btech_syllabus_txt.py'
       - '.github/workflows/build-btech-syllabus-txt.yml'
       - 'Syllabus/B.Tech programs/_PDF_Library/**'
       - 'Syllabus/B.Tech programs/_Catalogs/program_course_map.csv'
       - 'Syllabus/B.Tech programs/_Catalogs/program_catalog.csv'
       - 'Syllabus/B.Tech programs/_Catalogs/pdf_library_index.csv'
-      - 'Syllabus/B.Tech programs/_Tools/Batch_2_Official_Collector/build_syllabus_archive.py'
-      - 'Syllabus/B.Tech programs/_Tools/Batch_2_Official_Collector/programs.csv'
-      - 'Syllabus/B.Tech programs/_Tools/Batch_2_Official_Collector/GTU_Fallback_Map.csv'
-      - 'Syllabus/B.Tech programs/_Tools/Batch_2_Official_Collector/requirements.txt'
   workflow_dispatch:
 
 permissions:
@@ -26,7 +21,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  refresh-and-build:
+  extract-and-commit:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -35,24 +30,20 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install PDF collection and text extraction tools
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install -r "Syllabus/B.Tech programs/_Tools/Batch_2_Official_Collector/requirements.txt"
-          python -m pip install pymupdf
-      - name: Refresh official B.Tech PDFs, catalogs, and JSON
-        run: python Syllabus/refresh_btech_collection.py --missing-only
-      - name: Commit source PDFs, collection reports, indexes, and generated JSON
+      - name: Install PDF text extractor
+        run: python -m pip install --upgrade pip pymupdf
+      - name: Remove unusable mappings and build JSON from verified local PDFs
+        run: python Syllabus/build_btech_syllabus_txt.py
+      - name: Commit verified catalog cleanup and generated JSON
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add 'Syllabus/B.Tech programs/_PDF_Library/'
+          git config user.email "41898282+users.noreply.github.com"
           git add 'Syllabus/B.Tech programs/_Catalogs/'
           git add 'Syllabus/B.Tech programs/Programs/'
           git add 'Syllabus/syllabus_txt/B.Tech/'
           if git diff --cached --quiet; then
-            echo "No B.Tech source or JSON changes to commit."
+            echo "No B.Tech catalog or JSON changes to commit."
             exit 0
           fi
-          git commit -m "Refresh all B.Tech syllabus sources and JSON"
+          git commit -m "Prune unavailable B.Tech syllabi and rebuild JSON"
           git push
