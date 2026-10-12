@@ -225,7 +225,14 @@ def extract_subject(row: dict[str, str], generated: str) -> dict[str, Any]:
 
     warnings: list[str] = []
     if not approved:
-        warnings.append(note or "The selected title-level PDF was not verified for this exact course/semester occurrence; syllabus content was not inferred.")
+        if occurrence_status == "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE":
+            warnings.append("A same-title PDF was matched to another course variant; this occurrence was not verified, so its content was intentionally not used.")
+        elif occurrence_status == "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE":
+            warnings.append("The selected same-title PDF's course-code evidence does not match this course occurrence; its content was intentionally not used.")
+        elif occurrence_status == "FAILED_NO_MATCHING_OFFICIAL_PDF":
+            warnings.append("No acceptable official syllabus PDF was verified for this occurrence in the recovery run.")
+        else:
+            warnings.append(note or "The selected title-level PDF was not verified for this exact course/semester occurrence; syllabus content was not inferred.")
     if not pdf_path or not pdf_path.is_file():
         if approved:
             warnings.append("The occurrence is marked verified, but its mapped PDF is not present at the expected repository path.")
