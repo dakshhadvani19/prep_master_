@@ -12,6 +12,7 @@ import csv
 import hashlib
 import json
 import re
+import shutil
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
@@ -66,6 +67,26 @@ def read_csv(path: Path) -> list[dict[str, str]]:
         raise FileNotFoundError(f"Required catalog is missing: {path}")
     with path.open("r", encoding="utf-8-sig", newline="") as handle:
         return list(csv.DictReader(handle))
+
+
+def write_csv(path: Path, rows: list[dict[str, str]], fields: list[str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8-sig", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows({field: row.get(field, "") for field in fields} for row in rows)
+
+
+PROGRAM_MAP_FIELDS = [
+    "program_name", "program_folder", "semester", "course_code", "course_title",
+    "library_file", "content_sha256", "git_blob_sha_before_migration",
+    "file_size_bytes", "source_batch", "source_status", "source_url", "original_path",
+]
+PDF_INDEX_FIELDS = [
+    "library_file", "file_name", "course_code", "course_title", "content_sha256",
+    "git_blob_sha_before_migration", "file_size_bytes", "source_occurrence_count",
+    "unique_program_count", "programs", "source_batches",
+]
 
 
 def slugify(value: str) -> str:
@@ -432,8 +453,58 @@ def main() -> int:
             ", ".join(sorted(program_names))
         )
 
+    # Keep only course associations backed by an existing, hash-verified PDF.
+    # Unavailable/corrupt mappings are removed from the source map and indexes.
+    verified_rows: list[dict[str, str]] = []
+    rejected_rows: list[dict[str, str]] = []
+    for row in mapped_rows:
+        library_rel = (row.get("library_file") or "").replace("\\", "/").lstrip("/")
+        pdf_path = COLLECTION_ROOT / library_rel
+        reason = ""
+        if not library_rel or not pdf_path.is_file():
+            reason = "PDF_NOT_FOUND"
+        else:
+            try:
+                if pdf_path.read_bytes()[:5] != b"%PDF-":
+                    reason = "NOT_A_VALID_PDF"
+                else:
+                    expected = (row.get("content_sha256") or "").strip().lower()
+                    actual = hashlib.sha256(pdf_path.read_bytes()).hexdigest()
+                    if expected and expected != actual:
+                        reason = "PDF_HASH_MISMATCH"
+            except OSError as exc:
+                reason = f"PDF_READ_ERROR: {exc}"
+        if reason:
+            rejected_rows.append({**row, "prune_reason": reason})
+        else:
+            verified_rows.append(row)
+
+    if rejected_rows:
+        print(f"Pruning {len(rejected_rows)} course associations without a verified source PDF.")
+        mapped_rows = verified_rows
+        write_csv(PROGRAM_MAP, mapped_rows, PROGRAM_MAP_FIELDS)
+        used_paths = {row.get("library_file", "") for row in mapped_rows}
+        prior_index = read_csv(LIBRARY_INDEX)
+        clean_index = [row for row in prior_index if row.get("library_file", "") in used_paths]
+        write_csv(LIBRARY_INDEX, clean_index, PDF_INDEX_FIELDS)
+        for catalog_program in programs:
+            associated = [
+                row for row in mapped_rows
+                if row.get("program_name") == catalog_program.get("program_name")
+            ]
+            catalog_program["source_pdf_occurrences"] = str(len(associated))
+            catalog_program["unique_pdf_assets_linked"] = str(
+                len({row.get("library_file", "") for row in associated if row.get("library_file")})
+            )
+        write_csv(PROGRAM_CATALOG, programs, list(programs[0].keys()))
+        prune_report = CATALOG_ROOT / "collection_reports" / "pruned_unverified_course_rows.csv"
+        write_csv(prune_report, rejected_rows, PROGRAM_MAP_FIELDS + ["prune_reason"])
+    else:
+        mapped_rows = verified_rows
+
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     summary_programs: list[dict[str, Any]] = []
+    excluded_programs: list[dict[str, str]] = []
     all_statuses: Counter[str] = Counter()
     overall_courses = 0
 
@@ -449,6 +520,32 @@ def main() -> int:
             grouped[semester].append(row)
 
         output_dir = OUTPUT_ROOT / slugify(program["program_folder"])
+        if not program_rows:
+            # Do not publish nine empty placeholder JSONs for programs with no
+            # verified syllabus PDFs. Preserve their program catalog entry for future recovery.
+            if output_dir.exists():
+                shutil.rmtree(output_dir)
+            excluded_programs.append({
+                "program_name": program["program_name"],
+                "program_folder": program["program_folder"],
+                "official_program_url": program.get("official_program_url", ""),
+                "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed.",
+            })
+            readme_path = COLLECTION_ROOT / "Programs" / program["program_folder"] / "README.md"
+            if readme_path.parent.exists():
+                readme_path.write_text(
+                    f"# B.Tech {program['program_folder']}\n\n"
+                    f"- **Program name:** {program['program_name']}\n"
+                    f"- **Official program page:** {program.get('official_program_url') or 'Not confirmed'}\n\n"
+                    "## Syllabus availability\n\n"
+                    "No verified source syllabus PDFs are currently available in the repository for this program. "
+                    "It has therefore been excluded from generated syllabus JSON rather than represented by empty files. "
+                    "The program remains in the program catalog for future source recovery.\n",
+                    encoding="utf-8",
+                )
+            print(f"PROGRAM EXCLUDED: {program['program_name']}: no verified source syllabus PDF.")
+            continue
+
         output_dir.mkdir(parents=True, exist_ok=True)
         program_statuses: Counter[str] = Counter()
         files_created = 0
@@ -504,7 +601,11 @@ def main() -> int:
         "unique_pdf_index": LIBRARY_INDEX.relative_to(ROOT).as_posix(),
         "output_root": OUTPUT_ROOT.relative_to(ROOT).as_posix(),
         "semester_policy": "Only explicit source-map semester labels are used; otherwise semester_unknown.json.",
+        "catalog_program_count": len(programs),
         "program_count": len(summary_programs),
+        "programs_without_verified_syllabus_json": len(excluded_programs),
+        "excluded_programs_without_verified_syllabus": excluded_programs,
+        "removed_unverified_course_rows": len(rejected_rows),
         "course_association_count": overall_courses,
         "extraction_status_counts": dict(sorted(all_statuses.items())),
         "programs": summary_programs,
@@ -515,7 +616,7 @@ def main() -> int:
             json.dumps(index, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
-    print(f"OVERALL SUMMARY: {json.dumps({k: index[k] for k in ('program_count', 'course_association_count', 'extraction_status_counts')}, ensure_ascii=False)}")
+    print(f"OVERALL SUMMARY: {json.dumps({k: index[k] for k in ('catalog_program_count', 'program_count', 'programs_without_verified_syllabus_json', 'removed_unverified_course_rows', 'course_association_count', 'extraction_status_counts')}, ensure_ascii=False)}")
     return 0
 
 
