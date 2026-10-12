@@ -23,7 +23,7 @@ permissions:
 
 concurrency:
   group: btech-syllabus-json
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   refresh-and-build:
@@ -41,11 +41,11 @@ jobs:
           python -m pip install -r "Syllabus/B.Tech programs/_Tools/Batch_2_Official_Collector/requirements.txt"
           python -m pip install pymupdf
       - name: Refresh official B.Tech PDFs, catalogs, and JSON
-        run: python Syllabus/refresh_btech_collection.py
+        run: python Syllabus/refresh_btech_collection.py --missing-only
       - name: Commit source PDFs, collection reports, indexes, and generated JSON
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add 'Syllabus/B.Tech programs/_PDF_Library/'
           git add 'Syllabus/B.Tech programs/_Catalogs/'
           git add 'Syllabus/B.Tech programs/Programs/'
