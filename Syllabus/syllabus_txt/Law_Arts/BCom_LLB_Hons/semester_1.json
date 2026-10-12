@@ -1,0 +1,1118 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-com-llb-hons-",
+    "course_name": "B.Com LLB (HONS)",
+    "output_slug": "BCom_LLB_Hons"
+  },
+  "semester": 1,
+  "subject_count": 7,
+  "subjects": [
+    {
+      "subject_id": "42001023210201",
+      "subject_name": "BUSINESS ENVIRONMENT",
+      "course_id": "b-com-llb-hons-",
+      "course_name": "B.Com LLB (HONS)",
+      "semester": 1,
+      "subject_code": "10BC2102",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/Business-Environment.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS ENVIRONMENT [3c698d046dbb].pdf",
+      "expected_pdf_sha256": "045e13636f33ed49177066d0ad31f9e3a5b49e0a7effe3b8e4b232634e2ed1d6",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BUSINESS ENVIRONMENT",
+        "course_code": "10BC2102",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To impart basic understanding of the various types of environmental components influencing the business.",
+        "To recognize opportunities, risks, and challenges and their relevance associated with managerial decisions",
+        "To apply theoretical knowledge to real-world business scenarios, developing critical thinking and decision-making skills essential for managerial roles in diverse business settings."
+      ],
+      "course_outcomes": [
+        "Understand the meaning and relationship of environment and business",
+        "Determine the various political and economic factors affecting business.",
+        "Analyse the legal framework affecting a business",
+        "Critically evaluate the impact of the emerging technological environment on businesses, identifying opportunities and challenges presented by innovations",
+        "Construct a comprehensive understanding of the multifaceted landscape of contemporary business operations Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION TO BUSINESS ENVIRONMENT",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Introduction to Business environment , salient features, importance,",
+              "Types of business environment, SWOT Analysis- Firm Specific-",
+              "environment scanning: features - process & techniques, Business",
+              "Environment with reference to global integration",
+              "2 POLITICAL & ECONOMIC ENVIRONMENT 9",
+              "Political structure: Legislative institutions – executive institutions –",
+              "judicial institutions - economic and legal roles of the government.,",
+              "Overview of Economic systems: Capitalism, Socialism & mixed",
+              "economy;, Macroeconomic environment and fundamentals of fiscal",
+              "policy, A study on LPG-Liberalization, Privatization &",
+              "Globalization and its impact on Indian Economy and business,",
+              "Overview of New Business policy & its implication in India",
+              "3 LEGAL FRAMEWORK 9",
+              "ISO standards and Bureau Of Indian Standards, Intellectual Property",
+              "Rights and Business, The Competition Act 2002, Regulatory",
+              "framework and policies for Start-Ups in India, Foreign Investment",
+              "Regulations in IndiaForeign Investment Regulations in India,",
+              "International Trade Laws: World Trade Organization (WTO)",
+              "Agreements - International Trade Dispute Resolution Mechanisms",
+              "4 TECHNOLOGICAL ENVIRONMENT 9",
+              "The interface of Technology and Business, Innovations and",
+              "Emerging Technologies for Business Transformation- AI, Block",
+              "chain, IoT (Internet of Things) and Digital Transformation",
+              "Strategies in business, Cybersecurity in Technology, Data",
+              "Protection and privacy regulations in India",
+              "5 SOCIAL ENVIRONMENT 9",
+              "Business and Society, Changing Concepts and objectives of",
+              "Business, Interdependence of business and society, Sustainable",
+              "business practices- ESG and CSR Reporting, The Consumer",
+              "protection Act 2019 - Rights of a consumer – Redressal Mechanism,",
+              "Basics of Corporate Governance – Meaning, Importance, Role and",
+              "responsibilities of stakeholders",
+              "Total Hours 45"
+            ],
+            "topics_text": "Introduction to Business environment , salient features, importance, Types of business environment, SWOT Analysis- Firm Specific- environment scanning: features - process & techniques, Business Environment with reference to global integration 2 POLITICAL & ECONOMIC ENVIRONMENT 9 Political structure: Legislative institutions – executive institutions – judicial institutions - economic and legal roles of the government., Overview of Economic systems: Capitalism, Socialism & mixed economy;, Macroeconomic environment and fundamentals of fiscal policy, A study on LPG-Liberalization, Privatization & Globalization and its impact on Indian Economy and business, Overview of New Business policy & its implication in India 3 LEGAL FRAMEWORK 9 ISO standards and Bureau Of Indian Standards, Intellectual Property Rights and Business, The Competition Act 2002, Regulatory framework and policies for Start-Ups in India, Foreign Investment Regulations in IndiaForeign Investment Regulations in India, International Trade Laws: World Trade Organization (WTO) Agreements - International Trade Dispute Resolution Mechanisms 4 TECHNOLOGICAL ENVIRONMENT 9 The interface of Technology and Business, Innovations and Emerging Technologies for Business Transformation- AI, Block chain, IoT (Internet of Things) and Digital Transformation Strategies in business, Cybersecurity in Technology, Data Protection and privacy regulations in India 5 SOCIAL ENVIRONMENT 9 Business and Society, Changing Concepts and objectives of Business, Interdependence of business and society, Sustainable business practices- ESG and CSR Reporting, The Consumer protection Act 2019 - Rights of a consumer – Redressal Mechanism, Basics of Corporate Governance – Meaning, Importance, Role and responsibilities of stakeholders Total Hours 45",
+            "topics": [
+              "Introduction to Business environment , salient features, importance,",
+              "Types of business environment, SWOT Analysis- Firm Specific",
+              "environment scanning: features - process & techniques, Business",
+              "Environment with reference to global integration",
+              "2 POLITICAL & ECONOMIC ENVIRONMENT 9",
+              "Political structure: Legislative institutions – executive institutions –",
+              "judicial institutions - economic and legal roles of the government.,",
+              "Overview of Economic systems: Capitalism, Socialism & mixed",
+              "economy",
+              ", Macroeconomic environment and fundamentals of fiscal",
+              "policy, A study on LPG-Liberalization, Privatization &",
+              "Globalization and its impact on Indian Economy and business,",
+              "Overview of New Business policy & its implication in India",
+              "3 LEGAL FRAMEWORK 9",
+              "ISO standards and Bureau Of Indian Standards, Intellectual Property",
+              "Rights and Business, The Competition Act 2002, Regulatory",
+              "framework and policies for Start-Ups in India, Foreign Investment",
+              "Regulations in IndiaForeign Investment Regulations in India,",
+              "International Trade Laws: World Trade Organization (WTO)",
+              "Agreements - International Trade Dispute Resolution Mechanisms",
+              "4 TECHNOLOGICAL ENVIRONMENT 9",
+              "The interface of Technology and Business, Innovations and",
+              "Emerging Technologies for Business Transformation- AI, Block",
+              "chain, IoT (Internet of Things) and Digital Transformation",
+              "Strategies in business, Cybersecurity in Technology, Data",
+              "Protection and privacy regulations in India",
+              "5 SOCIAL ENVIRONMENT 9",
+              "Business and Society, Changing Concepts and objectives of",
+              "Business, Interdependence of business and society, Sustainable",
+              "business practices- ESG and CSR Reporting, The Consumer",
+              "protection Act 2019 - Rights of a consumer – Redressal Mechanism,",
+              "Basics of Corporate Governance – Meaning, Importance, Role and",
+              "responsibilities of stakeholders",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Business Environment",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Business Environment",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Business Environment, Shaikh, S., Himalaya Publishing House, 2010"
+            ],
+            "topics_text": "Issues related to Business Environment Total Hours 15 Textbook : 1 Business Environment, Shaikh, S., Himalaya Publishing House, 2010",
+            "topics": [
+              "Issues related to Business Environment",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Business Environment, Shaikh, S., Himalaya Publishing House, 2010"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Business Environment- Text and Cases, Business Environment- Text and Cases, 2. Justin, P., Tata McGraw Hill Publishing, 2010"
+        ],
+        "textbooks": [
+          "Business Environment, Shaikh, S., Himalaya Publishing House, 2010"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6037,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    BUSINESS ENVIRONMENT\nCOURSE CODE     10BC2102\nCOURSE CREDITS  4\n\nObjective:\n 1  To impart basic understanding of the various types of environmental components\n     influencing the business.\n 2  To recognize opportunities, risks, and challenges and their relevance associated with\n     managerial decisions\n 3  To apply theoretical knowledge to real-world business scenarios, developing critical\n     thinking and decision-making skills essential for managerial roles in diverse business\n      settings.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the meaning and relationship of environment and business\n 2  Determine the various political and economic factors affecting business.\n 3  Analyse the legal framework affecting a business\n 4   Critically evaluate the impact of the emerging technological environment on businesses,\n     identifying opportunities and challenges presented by innovations\n 5  Construct a comprehensive understanding of the multifaceted landscape of contemporary\n     business operations\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    INTRODUCTION TO BUSINESS ENVIRONMENT          9\n               Introduction to Business environment , salient features, importance,\n            Types of business environment, SWOT Analysis- Firm Specific-\n             environment scanning: features - process & techniques, Business\n             Environment with reference to global integration\n     2     POLITICAL & ECONOMIC ENVIRONMENT              9\n                Political structure: Legislative institutions – executive institutions –\n                judicial institutions - economic and legal roles of the government.,\n            Overview of Economic systems: Capitalism, Socialism & mixed\n             economy;, Macroeconomic environment and fundamentals of fiscal\n               policy, A study on LPG-Liberalization, Privatization &\n              Globalization and its impact on Indian Economy and business,\n            Overview of New Business policy & its implication in India\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3    LEGAL FRAMEWORK                                  9\n           ISO standards and Bureau Of Indian Standards, Intellectual Property\n              Rights and Business, The Competition Act 2002, Regulatory\n            framework and policies for Start-Ups in India, Foreign Investment\n              Regulations in IndiaForeign Investment Regulations in India,\n               International Trade Laws: World Trade Organization (WTO)\n            Agreements - International Trade Dispute Resolution Mechanisms\n     4    TECHNOLOGICAL ENVIRONMENT                      9\n            The interface of Technology and Business, Innovations and\n            Emerging Technologies for Business Transformation- AI, Block\n               chain, IoT (Internet of Things) and Digital Transformation\n               Strategies in business, Cybersecurity in Technology, Data\n               Protection and privacy regulations in India\n     5     SOCIAL ENVIRONMENT                                9\n             Business and Society, Changing Concepts and objectives of\n              Business, Interdependence of business and society, Sustainable\n              business practices- ESG and CSR Reporting, The Consumer\n               protection Act 2019 - Rights of a consumer – Redressal Mechanism,\n              Basics of Corporate Governance – Meaning, Importance, Role and\n                responsibilities of stakeholders\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Business Environment                      15\n               Issues related to Business Environment\n                               Total Hours                       15\n\nTextbook :\n 1  Business Environment, Shaikh, S., Himalaya Publishing House, 2010\n\nReferences:\n 1  Business Environment- Text and Cases, Business Environment- Text and Cases, 2. Justin,\n      P., Tata McGraw Hill Publishing, 2010\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "045e13636f33ed49177066d0ad31f9e3a5b49e0a7effe3b8e4b232634e2ed1d6",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "42101912110101",
+      "subject_name": "INTRODUCTION TO LANGUAGE SKILLS",
+      "course_id": "b-com-llb-hons-",
+      "course_name": "B.Com LLB (HONS)",
+      "semester": 1,
+      "subject_code": "10SL1101",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/Intro-to-Language-Skills-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTRODUCTION TO LANGUAGE SKILLS [b2109f6fd956].pdf",
+      "expected_pdf_sha256": "8833c34f76f8e6f605eaee6f0ca34455d673b9fe77c1e49e96f441ccd2a57529",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INTRODUCTION TO LANGUAGE SKILLS",
+        "course_code": "10SL1101",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "a. To familiarize students with language skills to understand their domain",
+        "b. To help students enhance their competency in English language with a focus on LSRW",
+        "c. To introduce students to English in legal context to help them achieve their programme requirements",
+        "d. To help students become better communicators with reference to both the productive skills, i.e. Speaking Skills and Writing Skills",
+        "To familiarize students with language skills to understand their domain",
+        "To help students enhance their competency in English language with a focus on LSRW",
+        "To introduce students to English in legal context to help them achieve their program requirements"
+      ],
+      "course_outcomes": [
+        "a. Develop and enhance their listening skills for various purposes",
+        "b. Understand and use written and spoken language in context",
+        "c. Comprehend, compare and differentiate between various written texts/documents",
+        "d. Enhance appropriate writing competence with reference to legal context Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 0 30 20 25 25 DR. NONGTHOMBAM BANGKIM SINGH DR. RHISHIKESH NARENDRA DAVE Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Listening in Context",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Listening for details: What do you mean by detail?, Listening for",
+              "details: Having an eye for detail/ identifying detail in context,",
+              "Listening for details: Tasks, Listening for the main idea: Defining",
+              "the main idea, Listening for the main idea: Techniques to identify",
+              "the main idea, Listening for the main idea: Tasks, Listening for",
+              "specific vocabulary: Understanding vocabulary (various",
+              "forms/types), Listening for specific vocabulary: Vocabulary in",
+              "context (formal & informal etc.), Listening for specific vocabulary:",
+              "Tasks, Listening for attitudes and opinions: Defining, identifying",
+              "and differentiating attitudes and opinions, Listening for attitudes and",
+              "opinions: Attitudes and opinions in context, Listening for attitudes",
+              "and opinions: Tasks",
+              "2 Speaking in Context 11",
+              "Effective Pronunciation and Body Language: Basics of",
+              "pronunciation, Effective Pronunciation and Body Language:",
+              "Understanding body language, Effective Pronunciation and Body",
+              "Language:Tasks , Persuasive Speaking: Law and the art of",
+              "persuasion, Persuasive Speaking: Techniques (Ethos, Pathos and",
+              "Logos and other relevant techniques), Persuasive Speaking: Tasks,",
+              "Using Argumentation: Law and the art of argumentation, Using",
+              "Argumentation: Techniques, Using Argumentation: Tasks, Effective",
+              "Presentation: Strategies/techniques of creating and making an",
+              "effective presentation, Effective Presentation: Dos and Don’ts of an",
+              "effective presentation, Effective Presentation: Tasks/Practice",
+              "3 Reading Skills 11",
+              "Skimming, Scanning, Intensive and Extensive Reading:",
+              "Understanding different reading strategies, Skimming, Scanning,",
+              "Intensive and Extensive Reading: Tasks, Reading Comprehension",
+              "and Interpretation: Understanding comprehension and",
+              "interpretation, Reading Comprehension and Interpretation: Tasks,",
+              "Comparing and Classifying Information: Techniques of comparison",
+              "and classification, Comparing and Classifying Information: Tasks,",
+              "Evaluating and Synthesizing Information: Techniques of evaluation",
+              "and synthetization , Evaluating and Synthesizing Information: Tasks",
+              "4 Writing Skills 12",
+              "Grammar in context: Understanding grammar in context, Grammar",
+              "in context: Practice, Vocabulary in context: Synonyms and",
+              "antonyms, Vocabulary in context: Acronyms and abbreviations,",
+              "Vocabulary in context: Idioms and phrases, Vocabulary in context:",
+              "Practice, Sentence Structure and Paragraph Development: Types of",
+              "sentences and sentence structure, Sentence Structure and Paragraph",
+              "Development: Paragraph development strategies, Sentence Structure",
+              "and Paragraph Development: Practice, Punctuation: Understanding",
+              "the usage of different punctuation marks, Punctuation: Punctuation",
+              "in legal writing, Punctuation: Tasks/Practice",
+              "Total Hours 45"
+            ],
+            "topics_text": "Listening for details: What do you mean by detail?, Listening for details: Having an eye for detail/ identifying detail in context, Listening for details: Tasks, Listening for the main idea: Defining the main idea, Listening for the main idea: Techniques to identify the main idea, Listening for the main idea: Tasks, Listening for specific vocabulary: Understanding vocabulary (various forms/types), Listening for specific vocabulary: Vocabulary in context (formal & informal etc.), Listening for specific vocabulary: Tasks, Listening for attitudes and opinions: Defining, identifying and differentiating attitudes and opinions, Listening for attitudes and opinions: Attitudes and opinions in context, Listening for attitudes and opinions: Tasks 2 Speaking in Context 11 Effective Pronunciation and Body Language: Basics of pronunciation, Effective Pronunciation and Body Language: Understanding body language, Effective Pronunciation and Body Language:Tasks , Persuasive Speaking: Law and the art of persuasion, Persuasive Speaking: Techniques (Ethos, Pathos and Logos and other relevant techniques), Persuasive Speaking: Tasks, Using Argumentation: Law and the art of argumentation, Using Argumentation: Techniques, Using Argumentation: Tasks, Effective Presentation: Strategies/techniques of creating and making an effective presentation, Effective Presentation: Dos and Don’ts of an effective presentation, Effective Presentation: Tasks/Practice 3 Reading Skills 11 Skimming, Scanning, Intensive and Extensive Reading: Understanding different reading strategies, Skimming, Scanning, Intensive and Extensive Reading: Tasks, Reading Comprehension and Interpretation: Understanding comprehension and interpretation, Reading Comprehension and Interpretation: Tasks, Comparing and Classifying Information: Techniques of comparison and classification, Comparing and Classifying Information: Tasks, Evaluating and Synthesizing Information: Techniques of evaluation and synthetization , Evaluating and Synthesizing Information: Tasks 4 Writing Skills 12 Grammar in context: Understanding grammar in context, Grammar in context: Practice, Vocabulary in context: Synonyms and antonyms, Vocabulary in context: Acronyms and abbreviations, Vocabulary in context: Idioms and phrases, Vocabulary in context: Practice, Sentence Structure and Paragraph Development: Types of sentences and sentence structure, Sentence Structure and Paragraph Development: Paragraph development strategies, Sentence Structure and Paragraph Development: Practice, Punctuation: Understanding the usage of different punctuation marks, Punctuation: Punctuation in legal writing, Punctuation: Tasks/Practice Total Hours 45",
+            "topics": [
+              "Listening for details: What do you mean by detail?, Listening for",
+              "details: Having an eye for detail/ identifying detail in context,",
+              "Listening for details: Tasks, Listening for the main idea: Defining",
+              "the main idea, Listening for the main idea: Techniques to identify",
+              "the main idea, Listening for the main idea: Tasks, Listening for",
+              "specific vocabulary: Understanding vocabulary (various",
+              "forms/types), Listening for specific vocabulary: Vocabulary in",
+              "context (formal & informal etc.), Listening for specific vocabulary:",
+              "Tasks, Listening for attitudes and opinions: Defining, identifying",
+              "and differentiating attitudes and opinions, Listening for attitudes and",
+              "opinions: Attitudes and opinions in context, Listening for attitudes",
+              "and opinions: Tasks",
+              "2 Speaking in Context 11",
+              "Effective Pronunciation and Body Language: Basics of",
+              "pronunciation, Effective Pronunciation and Body Language:",
+              "Understanding body language, Effective Pronunciation and Body",
+              "Language:Tasks , Persuasive Speaking: Law and the art of",
+              "persuasion, Persuasive Speaking: Techniques (Ethos, Pathos and",
+              "Logos and other relevant techniques), Persuasive Speaking: Tasks,",
+              "Using Argumentation: Law and the art of argumentation, Using",
+              "Argumentation: Techniques, Using Argumentation: Tasks, Effective",
+              "Presentation: Strategies/techniques of creating and making an",
+              "effective presentation, Effective Presentation: Dos and Don’ts of an",
+              "effective presentation, Effective Presentation: Tasks/Practice",
+              "3 Reading Skills 11",
+              "Skimming, Scanning, Intensive and Extensive Reading:",
+              "Understanding different reading strategies, Skimming, Scanning,",
+              "Intensive and Extensive Reading: Tasks, Reading Comprehension",
+              "and Interpretation: Understanding comprehension and",
+              "interpretation, Reading Comprehension and Interpretation: Tasks,",
+              "Comparing and Classifying Information: Techniques of comparison",
+              "and classification, Comparing and Classifying Information: Tasks,",
+              "Evaluating and Synthesizing Information: Techniques of evaluation",
+              "and synthetization , Evaluating and Synthesizing Information: Tasks",
+              "4 Writing Skills 12",
+              "Grammar in context: Understanding grammar in context, Grammar",
+              "in context: Practice, Vocabulary in context: Synonyms and",
+              "antonyms, Vocabulary in context: Acronyms and abbreviations,",
+              "Vocabulary in context: Idioms and phrases, Vocabulary in context:",
+              "Practice, Sentence Structure and Paragraph Development: Types of",
+              "sentences and sentence structure, Sentence Structure and Paragraph",
+              "Development: Paragraph development strategies, Sentence Structure",
+              "and Paragraph Development: Practice, Punctuation: Understanding",
+              "the usage of different punctuation marks, Punctuation: Punctuation",
+              "in legal writing, Punctuation: Tasks/Practice",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Tutorial Exercices on Language skills",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Exercices on Language skills",
+              "Total Hours 15",
+              "Textbook :",
+              "1 English for Law, M. A. Yadugiri and Geeta Bhasker, Foundation Books, Cambridge",
+              "House, 2005"
+            ],
+            "topics_text": "Exercices on Language skills Total Hours 15 Textbook : 1 English for Law, M. A. Yadugiri and Geeta Bhasker, Foundation Books, Cambridge House, 2005",
+            "topics": [
+              "Exercices on Language skills",
+              "Total Hours 15",
+              "Textbook :",
+              "1 English for Law, M. A. Yadugiri and Geeta Bhasker, Foundation Books, Cambridge",
+              "House, 2005"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Communication Skills, Communication Skills, Kumar, Sanjay, & Puspalata, OUP, 2011"
+        ],
+        "textbooks": [
+          "English for Law, M. A. Yadugiri and Geeta Bhasker, Foundation Books, Cambridge House, 2005"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 7036,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    INTRODUCTION TO LANGUAGE SKILLS\nCOURSE CODE     10SL1101\nCOURSE CREDITS  4\n\nObjective:\n 1  a. To familiarize students with language skills to understand their domain\n 2  b. To help students enhance their competency in English language with a focus on LSRW\n 3  c. To introduce students to English in legal context to help them achieve their programme\n     requirements\n 4  d. To help students become better communicators with reference to both the productive\n      skills, i.e. Speaking Skills and Writing Skills\n 5  To familiarize students with language skills to understand their domain\n 6  To help students enhance their competency in English language with a focus on LSRW\n 7  To introduce students to English in legal context to help them achieve their program\n     requirements\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1   a. Develop and enhance their listening skills for various purposes\n 2   b. Understand and use written and spoken language in context\n 3   c. Comprehend, compare and differentiate between various written texts/documents\n 4   d. Enhance appropriate writing competence with reference to legal context\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0         0      30      20        25         25\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Listening in Context                                      11\n              Listening for details: What do you mean by detail?, Listening for\n                 details: Having an eye for detail/ identifying detail in context,\n              Listening for details: Tasks, Listening for the main idea: Defining\n               the main idea, Listening for the main idea: Techniques to identify\n               the main idea, Listening for the main idea: Tasks, Listening for\n               specific vocabulary: Understanding vocabulary (various\n               forms/types), Listening for specific vocabulary: Vocabulary in\n              context (formal & informal etc.), Listening for specific vocabulary:\n              Tasks, Listening for attitudes and opinions: Defining, identifying\n            and differentiating attitudes and opinions, Listening for attitudes and\n              opinions: Attitudes and opinions in context, Listening for attitudes\n            and opinions: Tasks\n     2      Speaking in Context                                      11\n               Effective Pronunciation and Body Language: Basics of\n              pronunciation, Effective Pronunciation and Body Language:\n             Understanding body language, Effective Pronunciation and Body\n             Language:Tasks , Persuasive Speaking: Law and the art of\n               persuasion, Persuasive Speaking: Techniques (Ethos, Pathos and\n            Logos and other relevant techniques), Persuasive Speaking: Tasks,\n             Using Argumentation: Law and the art of argumentation, Using\n             Argumentation: Techniques, Using Argumentation: Tasks, Effective\n               Presentation: Strategies/techniques of creating and making an\n               effective presentation, Effective Presentation: Dos and Don’ts of an\n               effective presentation, Effective Presentation: Tasks/Practice\n     3      Reading Skills                                           11\n            Skimming, Scanning, Intensive and Extensive Reading:\n             Understanding different reading strategies, Skimming, Scanning,\n               Intensive and Extensive Reading: Tasks, Reading Comprehension\n            and Interpretation: Understanding comprehension and\n                interpretation, Reading Comprehension and Interpretation: Tasks,\n            Comparing and Classifying Information: Techniques of comparison\n            and classification, Comparing and Classifying Information: Tasks,\n              Evaluating and Synthesizing Information: Techniques of evaluation\n            and synthetization , Evaluating and Synthesizing Information: Tasks\n     4      Writing Skills                                            12\n           Grammar in context: Understanding grammar in context, Grammar\n               in context: Practice, Vocabulary in context: Synonyms and\n             antonyms, Vocabulary in context: Acronyms and abbreviations,\n             Vocabulary in context: Idioms and phrases, Vocabulary in context:\n                Practice, Sentence Structure and Paragraph Development: Types of\n              sentences and sentence structure, Sentence Structure and Paragraph\n             Development: Paragraph development strategies, Sentence Structure\n            and Paragraph Development: Practice, Punctuation: Understanding\n               the usage of different punctuation marks, Punctuation: Punctuation\n               in legal writing, Punctuation: Tasks/Practice\n                               Total Hours                       45\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Tutorial Exercices on Language skills                        15\n              Exercices on Language skills\n                               Total Hours                       15\n\nTextbook :\n 1  English for Law, M. A. Yadugiri and Geeta Bhasker, Foundation Books, Cambridge\n    House, 2005\n\nReferences:\n 1  Communication Skills, Communication Skills, Kumar, Sanjay, & Puspalata, OUP, 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8833c34f76f8e6f605eaee6f0ca34455d673b9fe77c1e49e96f441ccd2a57529",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "42010612210201",
+      "subject_name": "LAW OF CONTRACT I : GENERAL PRINCIPLES",
+      "course_id": "b-com-llb-hons-",
+      "course_name": "B.Com LLB (HONS)",
+      "semester": 1,
+      "subject_code": "10FL2102",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/Law-of-C-ontract-1-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/LAW OF CONTRACT I GENERAL PRINCIPLES [08e5548d38f9].pdf",
+      "expected_pdf_sha256": "4a658d33c7a96286a9b7e51fb4649dc3f28549322e916aee81593c806c7a756d",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "LAW OF CONTRACT I: GENERAL PRINCIPLES",
+        "course_code": "10FL2102",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To provide a conceptual understanding of the basic principles of the Law of Contract",
+        "To develop analytical skills concerning various issues related to the law of Contract",
+        "To understand the judicial interpretation of the statute the case analysis method of teaching will be mostly adopted."
+      ],
+      "course_outcomes": [
+        "Develop a conceptual understanding of the basics of the law of contract.",
+        "Understand the legal aspects of a valid contract and simultaneously judge a void and voidable contract.",
+        "Learn the remedies available in cases of breach of contract",
+        "Develop strong analytical skills to review, draft, and analyze a contract. Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction and Formation of Contract",
+            "contact_hours": 8,
+            "topic_lines": [
+              "The historical development of contract Law-Common Law & Indian",
+              "Origin, Meaning & Purpose of Contract, Definitions & Formation of",
+              "Contract – Agreement and Contract- Proposal, Offer, and invitation",
+              "to offer, Communication of Proposal Communication when",
+              "complete, Intention to enter into a Contract, Family & Social",
+              "matters, Business matters, Acceptance, Agreement,Contract,",
+              "Revocation of offer and acceptance, Types of Contracts- Standard",
+              "form of contract, Essentials of a Valid Contract, Formation of E-",
+              "Contract, Smart-contracts-Meaning, relevance, AI-based contracts",
+              "and agreements, Government Contracts",
+              "2 Consideration, Capacity to Contract, Free Consent, Legal 8",
+              "Object",
+              "Consideration: Doctrine of consideration, Essential of valid",
+              "Consideration, The rule =no consideration no contract?- its",
+              "exception‘, the inadequacy of consideration, nudum pactum, Privity",
+              "of contract and of consideration, Unlawful consideration and its",
+              "effects,, Capacity to Contract: Natural Person Agreements by minor,",
+              "Unsoundness of mind, Legal Person, Company, State,",
+              "Disqualification under Law, Free Consent – Definition, Factors",
+              "vitiating free consent: Coercion, Undue Influence,",
+              "Misrepresentation, Fraud, Mistake, etc., Legal Object: Forbidden by",
+              "Law, Void and Illegal Contracts, Defeat the provisions of any law,",
+              "Fraudulent Purpose, Agreement injurious to the person or property",
+              "of another, Opposed to Public Policy.",
+              "3 Void Agreements, Contingent Contracts 7",
+              "Agreements in Restraint of Marriage, Agreements in Restraint of",
+              "Trade., Agreement in Restraint of Legal Proceedings, Ambiguous",
+              "and Uncertain Agreements, Agreement by Way of Wager.,",
+              "Contingent Contract, Enforcement of Contingent contract",
+              "4 Performance of Contract, Discharge of Contract 7",
+              "Offer of performance or tender, Essential of a Valid Tender, Effect",
+              "of failure to perform the Contract in time, Appropriation of",
+              "Payment, Discharge by Performance, Discharge by Breach of",
+              "Contract, Discharge by Impossibility of Performance,, Discharge by",
+              "Agreement and Novation, Rescission and Alteration, Force Majeure",
+              "5 Quasi -Contracts, Breach of Contract, Remedies for Breach of 8",
+              "Contract",
+              "Claim for necessaries supplied to incapable person, Reimbursement",
+              "of person paying money due by another, Obligation of person",
+              "enjoying the benefit of non-gratuitous act, Responsibility of finder",
+              "of goods, Liability of person to whom money is paid, or thing is",
+              "delivered by mistake or under coercion, Meaning, kinds of breach,",
+              "remedies for breach; Remedies generally, Damages: measure of",
+              "damages, remoteness of damages, Quantum Meruit, Contract",
+              "Drafting, Salient features of Registration Act & Stamp Act-",
+              "Meaning of Stamping, Registration and Franking.",
+              "6 Specific Relief Act, 1963 7",
+              "Specific performance of contract-Recovering possession of property",
+              "specific performance of contract, Contract that can be specifically",
+              "enforced, Persons for or against whom specific enforcement can be",
+              "ordered, Discretionary powers of Contract, Ratification or",
+              "instruments-Recession and cancellation, Injunction- Temporary,",
+              "Perpetual, Mandatory, Prohibitory, Declaratory Decree",
+              "Total Hours 45"
+            ],
+            "topics_text": "The historical development of contract Law-Common Law & Indian Origin, Meaning & Purpose of Contract, Definitions & Formation of Contract – Agreement and Contract- Proposal, Offer, and invitation to offer, Communication of Proposal Communication when complete, Intention to enter into a Contract, Family & Social matters, Business matters, Acceptance, Agreement,Contract, Revocation of offer and acceptance, Types of Contracts- Standard form of contract, Essentials of a Valid Contract, Formation of E- Contract, Smart-contracts-Meaning, relevance, AI-based contracts and agreements, Government Contracts 2 Consideration, Capacity to Contract, Free Consent, Legal 8 Object Consideration: Doctrine of consideration, Essential of valid Consideration, The rule =no consideration no contract?- its exception‘, the inadequacy of consideration, nudum pactum, Privity of contract and of consideration, Unlawful consideration and its effects,, Capacity to Contract: Natural Person Agreements by minor, Unsoundness of mind, Legal Person, Company, State, Disqualification under Law, Free Consent – Definition, Factors vitiating free consent: Coercion, Undue Influence, Misrepresentation, Fraud, Mistake, etc., Legal Object: Forbidden by Law, Void and Illegal Contracts, Defeat the provisions of any law, Fraudulent Purpose, Agreement injurious to the person or property of another, Opposed to Public Policy. 3 Void Agreements, Contingent Contracts 7 Agreements in Restraint of Marriage, Agreements in Restraint of Trade., Agreement in Restraint of Legal Proceedings, Ambiguous and Uncertain Agreements, Agreement by Way of Wager., Contingent Contract, Enforcement of Contingent contract 4 Performance of Contract, Discharge of Contract 7 Offer of performance or tender, Essential of a Valid Tender, Effect of failure to perform the Contract in time, Appropriation of Payment, Discharge by Performance, Discharge by Breach of Contract, Discharge by Impossibility of Performance,, Discharge by Agreement and Novation, Rescission and Alteration, Force Majeure 5 Quasi -Contracts, Breach of Contract, Remedies for Breach of 8 Contract Claim for necessaries supplied to incapable person, Reimbursement of person paying money due by another, Obligation of person enjoying the benefit of non-gratuitous act, Responsibility of finder of goods, Liability of person to whom money is paid, or thing is delivered by mistake or under coercion, Meaning, kinds of breach, remedies for breach; Remedies generally, Damages: measure of damages, remoteness of damages, Quantum Meruit, Contract Drafting, Salient features of Registration Act & Stamp Act- Meaning of Stamping, Registration and Franking. 6 Specific Relief Act, 1963 7 Specific performance of contract-Recovering possession of property specific performance of contract, Contract that can be specifically enforced, Persons for or against whom specific enforcement can be ordered, Discretionary powers of Contract, Ratification or instruments-Recession and cancellation, Injunction- Temporary, Perpetual, Mandatory, Prohibitory, Declaratory Decree Total Hours 45",
+            "topics": [
+              "The historical development of contract Law-Common Law & Indian",
+              "Origin, Meaning & Purpose of Contract, Definitions & Formation of",
+              "Contract – Agreement and Contract- Proposal, Offer, and invitation",
+              "to offer, Communication of Proposal Communication when",
+              "complete, Intention to enter into a Contract, Family & Social",
+              "matters, Business matters, Acceptance, Agreement,Contract,",
+              "Revocation of offer and acceptance, Types of Contracts- Standard",
+              "form of contract, Essentials of a Valid Contract, Formation of E",
+              "Contract, Smart-contracts-Meaning, relevance, AI-based contracts",
+              "and agreements, Government Contracts",
+              "2 Consideration, Capacity to Contract, Free Consent, Legal 8",
+              "Object",
+              "Consideration: Doctrine of consideration, Essential of valid",
+              "Consideration, The rule =no consideration no contract?- its",
+              "exception‘, the inadequacy of consideration, nudum pactum, Privity",
+              "of contract and of consideration, Unlawful consideration and its",
+              "effects,, Capacity to Contract: Natural Person Agreements by minor,",
+              "Unsoundness of mind, Legal Person, Company, State,",
+              "Disqualification under Law, Free Consent – Definition, Factors",
+              "vitiating free consent: Coercion, Undue Influence,",
+              "Misrepresentation, Fraud, Mistake, etc., Legal Object: Forbidden by",
+              "Law, Void and Illegal Contracts, Defeat the provisions of any law,",
+              "Fraudulent Purpose, Agreement injurious to the person or property",
+              "of another, Opposed to Public Policy.",
+              "3 Void Agreements, Contingent Contracts 7",
+              "Agreements in Restraint of Marriage, Agreements in Restraint of",
+              "Trade., Agreement in Restraint of Legal Proceedings, Ambiguous",
+              "and Uncertain Agreements, Agreement by Way of Wager.,",
+              "Contingent Contract, Enforcement of Contingent contract",
+              "4 Performance of Contract, Discharge of Contract 7",
+              "Offer of performance or tender, Essential of a Valid Tender, Effect",
+              "of failure to perform the Contract in time, Appropriation of",
+              "Payment, Discharge by Performance, Discharge by Breach of",
+              "Contract, Discharge by Impossibility of Performance,, Discharge by",
+              "Agreement and Novation, Rescission and Alteration, Force Majeure",
+              "5 Quasi -Contracts, Breach of Contract, Remedies for Breach of 8",
+              "Contract",
+              "Claim for necessaries supplied to incapable person, Reimbursement",
+              "of person paying money due by another, Obligation of person",
+              "enjoying the benefit of non-gratuitous act, Responsibility of finder",
+              "of goods, Liability of person to whom money is paid, or thing is",
+              "delivered by mistake or under coercion, Meaning, kinds of breach,",
+              "remedies for breach",
+              "Remedies generally, Damages: measure of",
+              "damages, remoteness of damages, Quantum Meruit, Contract",
+              "Drafting, Salient features of Registration Act & Stamp Act",
+              "Meaning of Stamping, Registration and Franking.",
+              "6 Specific Relief Act, 1963 7",
+              "Specific performance of contract-Recovering possession of property",
+              "specific performance of contract, Contract that can be specifically",
+              "enforced, Persons for or against whom specific enforcement can be",
+              "ordered, Discretionary powers of Contract, Ratification or",
+              "instruments-Recession and cancellation, Injunction- Temporary,",
+              "Perpetual, Mandatory, Prohibitory, Declaratory Decree",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Exercises related to Law of Contract",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Law of Contract - I",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Law of Contract and Specific Relief, Avatar Singh, Eastern Book Company, 2011"
+            ],
+            "topics_text": "Issues related to Law of Contract - I Total Hours 15 Textbook : 1 Law of Contract and Specific Relief, Avatar Singh, Eastern Book Company, 2011",
+            "topics": [
+              "Issues related to Law of Contract - I",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Law of Contract and Specific Relief, Avatar Singh, Eastern Book Company, 2011"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Chitty on Contracts, Chitty on Contracts, Joseph Chitty, Sweet and Maxwell Limited, 2011"
+        ],
+        "textbooks": [
+          "Law of Contract and Specific Relief, Avatar Singh, Eastern Book Company, 2011"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.indiacode.nic.in/bitstream/123456789/2269/1/187201.pdf",
+          "https://www.legalserviceindia.com/legal/article-220-law-of-contract.html",
+          "https://www.manupatrafast.com/search.asp?q=Indian+Contract+Act+1872",
+          "https://www.justia.com/injury/contracts/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7629,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   LAW OF CONTRACT I: GENERAL PRINCIPLES\nCOURSE CODE     10FL2102\nCOURSE CREDITS  4\n\nObjective:\n 1  To provide a conceptual understanding of the basic principles of the Law of Contract\n 2  To develop analytical skills concerning various issues related to the law of Contract\n 3  To understand the judicial interpretation of the statute the case analysis method of teaching\n     will be mostly adopted.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Develop a conceptual understanding of the basics of the law of contract.\n 2  Understand the legal aspects of a valid contract and simultaneously judge a void and\n     voidable contract.\n 3  Learn the remedies available in cases of breach of contract\n 4  Develop strong analytical skills to review, draft, and analyze a contract.\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction and Formation of Contract                     8\n            The historical development of contract Law-Common Law & Indian\n               Origin, Meaning & Purpose of Contract, Definitions & Formation of\n              Contract – Agreement and Contract- Proposal, Offer, and invitation\n               to offer, Communication of Proposal Communication when\n              complete, Intention to enter into a Contract, Family & Social\n               matters, Business matters, Acceptance, Agreement,Contract,\n             Revocation of offer and acceptance, Types of Contracts- Standard\n            form of contract, Essentials of a Valid Contract, Formation of E-\n               Contract, Smart-contracts-Meaning, relevance, AI-based contracts\n            and agreements, Government Contracts\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Consideration, Capacity to Contract, Free Consent, Legal      8\n            Object\n              Consideration: Doctrine of consideration, Essential of valid\n              Consideration, The rule =no consideration no contract?- its\n               exception‘, the inadequacy of consideration, nudum pactum, Privity\n              of contract and of consideration, Unlawful consideration and its\n                 effects,, Capacity to Contract: Natural Person Agreements by minor,\n            Unsoundness of mind, Legal Person, Company, State,\n               Disqualification under Law, Free Consent – Definition, Factors\n                vitiating free consent: Coercion, Undue Influence,\n              Misrepresentation, Fraud, Mistake, etc., Legal Object: Forbidden by\n            Law, Void and Illegal Contracts, Defeat the provisions of any law,\n              Fraudulent Purpose, Agreement injurious to the person or property\n              of another, Opposed to Public Policy.\n     3      Void Agreements, Contingent Contracts                     7\n            Agreements in Restraint of Marriage, Agreements in Restraint of\n               Trade., Agreement in Restraint of Legal Proceedings, Ambiguous\n            and Uncertain Agreements, Agreement by Way of Wager.,\n             Contingent Contract, Enforcement of Contingent contract\n     4      Performance of Contract, Discharge of Contract              7\n              Offer of performance or tender, Essential of a Valid Tender, Effect\n              of failure to perform the Contract in time, Appropriation of\n             Payment, Discharge by Performance, Discharge by Breach of\n               Contract, Discharge by Impossibility of Performance,, Discharge by\n            Agreement and Novation, Rescission and Alteration, Force Majeure\n     5      Quasi -Contracts, Breach of Contract, Remedies for Breach of   8\n            Contract\n            Claim for necessaries supplied to incapable person, Reimbursement\n              of person paying money due by another, Obligation of person\n              enjoying the benefit of non-gratuitous act, Responsibility of finder\n              of goods, Liability of person to whom money is paid, or thing is\n              delivered by mistake or under coercion, Meaning, kinds of breach,\n             remedies for breach; Remedies generally, Damages: measure of\n             damages, remoteness of damages, Quantum Meruit, Contract\n               Drafting, Salient features of Registration Act & Stamp Act-\n            Meaning of Stamping, Registration and Franking.\n     6       Specific Relief Act, 1963                                   7\n               Specific performance of contract-Recovering possession of property\n               specific performance of contract, Contract that can be specifically\n              enforced, Persons for or against whom specific enforcement can be\n              ordered, Discretionary powers of Contract, Ratification or\n              instruments-Recession and cancellation, Injunction- Temporary,\n               Perpetual, Mandatory, Prohibitory, Declaratory Decree\n                               Total Hours                       45\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Exercises related to Law of Contract                        15\n               Issues related to Law of Contract - I\n                               Total Hours                       15\n\nTextbook :\n 1  Law of Contract and Specific Relief, Avatar Singh, Eastern Book Company, 2011\n\nReferences:\n 1  Chitty on Contracts, Chitty on Contracts, Joseph Chitty, Sweet and Maxwell Limited, 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\nSupplementary Resources:\n 1  https://www.indiacode.nic.in/bitstream/123456789/2269/1/187201.pdf\n 2  https://www.legalserviceindia.com/legal/article-220-law-of-contract.html\n 3  https://www.manupatrafast.com/search.asp?q=Indian+Contract+Act+1872\n 4  https://www.justia.com/injury/contracts/\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "4a658d33c7a96286a9b7e51fb4649dc3f28549322e916aee81593c806c7a756d",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "42010612210101",
+      "subject_name": "LEGAL METHODS",
+      "course_id": "b-com-llb-hons-",
+      "course_name": "B.Com LLB (HONS)",
+      "semester": 1,
+      "subject_code": "10FL2101",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/Legal-Method-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/LEGAL METHODS [79239bdb456b].pdf",
+      "expected_pdf_sha256": "637db25cddac7f8ce7f31fc27bf23370f71ea77efc6781ed18af8a1bbce43a99",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "LEGAL METHODS",
+        "course_code": "10FL2101",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To provide an understanding of the law's meaning, importance, and role in society",
+        "To provide an understanding of the nature & development of law and legal systems",
+        "To know the structure of the legal institutions and the hierarchy of courts in India.",
+        "To know the various sources of law and be able to synthesize such sources and use them to formulate arguments in their research; be familiar with legal research sources and tools and basic techniques of legal and logical reasoning."
+      ],
+      "course_outcomes": [
+        "Understand the concept, sources, and functions of law and various legal systems of the world.",
+        "Understand the hierarchy of the Indian courts and their jurisdictions",
+        "Understand judicial reasoning and its application in the Courts.",
+        "Acquire the ability to identify legal issues and principles underlying any given factual situation and to undertake and present research on such issues.",
+        "Equip with the basics of legal research methodology and legal writing. Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Law- Meaning, Nature, and Functions",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Concept and Definition of law and legal system – Law, A Law, The",
+              "Law, Function of Law, Classification of Law: i. Public and Private",
+              "Law ii. Substantive and Procedural Law iii. Municipal and",
+              "International Law, Kinds of Legal Systems i. Civil Legal Systems ii.",
+              "Common Legal Systems iii. Religious Legal Systems iv. Customary",
+              "Legal Systems v. Hybrid Legal Systems, Difference between Bill,",
+              "Act, Code, Statute, Ordinance, Order, Bye-Law, Rule, Regulation,",
+              "Department Circular, and Notification.",
+              "2 Sources of Law 12",
+              "Custom , Precedent, Legislation, Statutory Interpretation,",
+              "Legislative History, • Commentaries., Sources of International-",
+              "Treaty law, international customary law, and general principles of",
+              "law recognized by civilized nations",
+              "3 Basic Concepts of the Indian Legal System 10",
+              "Indian Constitution: Salient Features, Basic Structure Doctrine, The",
+              "Rule of Law, Doctrine of Separation of Powers, Judicial system in",
+              "India i. Hierarchy of Courts ii. Jurisdiction of the Courts",
+              "4 Legal Writing and Research 12",
+              "Meaning & Importance of Legal Research., Kinds of Legal",
+              "Research, Process of Legal Research, Sources of Legal Research-",
+              "Primary & Secondary, Statutes, Reports, Journals, Manuals, Bill,",
+              "Act., Case Analysis- FILAC and IRAC methods, Preparation of",
+              "Briefs, Citations and Bibliography., New Dimensions in Legal",
+              "Research- Use of Online Databases and e-resources, How to search",
+              "the Cause List.",
+              "Total Hours 45"
+            ],
+            "topics_text": "Concept and Definition of law and legal system – Law, A Law, The Law, Function of Law, Classification of Law: i. Public and Private Law ii. Substantive and Procedural Law iii. Municipal and International Law, Kinds of Legal Systems i. Civil Legal Systems ii. Common Legal Systems iii. Religious Legal Systems iv. Customary Legal Systems v. Hybrid Legal Systems, Difference between Bill, Act, Code, Statute, Ordinance, Order, Bye-Law, Rule, Regulation, Department Circular, and Notification. 2 Sources of Law 12 Custom , Precedent, Legislation, Statutory Interpretation, Legislative History, • Commentaries., Sources of International- Treaty law, international customary law, and general principles of law recognized by civilized nations 3 Basic Concepts of the Indian Legal System 10 Indian Constitution: Salient Features, Basic Structure Doctrine, The Rule of Law, Doctrine of Separation of Powers, Judicial system in India i. Hierarchy of Courts ii. Jurisdiction of the Courts 4 Legal Writing and Research 12 Meaning & Importance of Legal Research., Kinds of Legal Research, Process of Legal Research, Sources of Legal Research- Primary & Secondary, Statutes, Reports, Journals, Manuals, Bill, Act., Case Analysis- FILAC and IRAC methods, Preparation of Briefs, Citations and Bibliography., New Dimensions in Legal Research- Use of Online Databases and e-resources, How to search the Cause List. Total Hours 45",
+            "topics": [
+              "Concept and Definition of law and legal system – Law, A Law, The",
+              "Law, Function of Law, Classification of Law: i. Public and Private",
+              "Law ii. Substantive and Procedural Law iii. Municipal and",
+              "International Law, Kinds of Legal Systems i. Civil Legal Systems ii.",
+              "Common Legal Systems iii. Religious Legal Systems iv. Customary",
+              "Legal Systems v. Hybrid Legal Systems, Difference between Bill,",
+              "Act, Code, Statute, Ordinance, Order, Bye-Law, Rule, Regulation,",
+              "Department Circular, and Notification.",
+              "2 Sources of Law 12",
+              "Custom , Precedent, Legislation, Statutory Interpretation,",
+              "Legislative History,",
+              "Commentaries., Sources of International",
+              "Treaty law, international customary law, and general principles of",
+              "law recognized by civilized nations",
+              "3 Basic Concepts of the Indian Legal System 10",
+              "Indian Constitution: Salient Features, Basic Structure Doctrine, The",
+              "Rule of Law, Doctrine of Separation of Powers, Judicial system in",
+              "India i. Hierarchy of Courts ii. Jurisdiction of the Courts",
+              "4 Legal Writing and Research 12",
+              "Meaning & Importance of Legal Research., Kinds of Legal",
+              "Research, Process of Legal Research, Sources of Legal Research",
+              "Primary & Secondary, Statutes, Reports, Journals, Manuals, Bill,",
+              "Act., Case Analysis- FILAC and IRAC methods, Preparation of",
+              "Briefs, Citations and Bibliography., New Dimensions in Legal",
+              "Research- Use of Online Databases and e-resources, How to search",
+              "the Cause List.",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Tutorial exercises related to Legal Writing and Research",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Tutorial exercises related to Legal Writing and Research Research",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Legal Methods, Dr. G.P Tripathi, Central Law Publications, 2022"
+            ],
+            "topics_text": "Tutorial exercises related to Legal Writing and Research Research Total Hours 15 Textbook : 1 Legal Methods, Dr. G.P Tripathi, Central Law Publications, 2022",
+            "topics": [
+              "Tutorial exercises related to Legal Writing and Research Research",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Legal Methods, Dr. G.P Tripathi, Central Law Publications, 2022"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Learning the Law, Learning the Law, A.T.H. Smith , Sweet & Maxwell , 2023"
+        ],
+        "textbooks": [
+          "Legal Methods, Dr. G.P Tripathi, Central Law Publications, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5419,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    LEGAL METHODS\nCOURSE CODE     10FL2101\nCOURSE CREDITS  4\n\nObjective:\n 1  To provide an understanding of the law's meaning, importance, and role in society\n 2  To provide an understanding of the nature & development of law and legal systems\n 3  To know the structure of the legal institutions and the hierarchy of courts in India.\n 4  To know the various sources of law and be able to synthesize such sources and use them to\n     formulate arguments in their research; be familiar with legal research sources and tools and\n     basic techniques of legal and logical reasoning.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the concept, sources, and functions of law and various legal systems of the\n     world.\n 2  Understand the hierarchy of the Indian courts and their jurisdictions\n 3  Understand judicial reasoning and its application in the Courts.\n 4  Acquire the ability to identify legal issues and principles underlying any given factual\n     situation and to undertake and present research on such issues.\n 5  Equip with the basics of legal research methodology and legal writing.\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Law- Meaning, Nature, and Functions                       11\n             Concept and Definition of law and legal system – Law, A Law, The\n            Law, Function of Law, Classification of Law: i. Public and Private\n          Law ii. Substantive and Procedural Law iii. Municipal and\n               International Law, Kinds of Legal Systems i. Civil Legal Systems ii.\n          Common Legal Systems iii. Religious Legal Systems iv. Customary\n             Legal Systems v. Hybrid Legal Systems, Difference between Bill,\n              Act, Code, Statute, Ordinance, Order, Bye-Law, Rule, Regulation,\n             Department Circular, and Notification.\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Sources of Law                                           12\n            Custom , Precedent, Legislation, Statutory Interpretation,\n               Legislative History, • Commentaries., Sources of International-\n              Treaty law, international customary law, and general principles of\n            law recognized by civilized nations\n     3      Basic Concepts of the Indian Legal System                   10\n              Indian Constitution: Salient Features, Basic Structure Doctrine, The\n             Rule of Law, Doctrine of Separation of Powers, Judicial system in\n               India i. Hierarchy of Courts ii. Jurisdiction of the Courts\n     4      Legal Writing and Research                               12\n            Meaning & Importance of Legal Research., Kinds of Legal\n              Research, Process of Legal Research, Sources of Legal Research-\n             Primary & Secondary, Statutes, Reports, Journals, Manuals, Bill,\n               Act., Case Analysis- FILAC and IRAC methods, Preparation of\n                Briefs, Citations and Bibliography., New Dimensions in Legal\n             Research- Use of Online Databases and e-resources, How to search\n               the Cause List.\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Tutorial exercises related to Legal Writing and Research       15\n               Tutorial exercises related to Legal Writing and Research Research\n                               Total Hours                       15\n\nTextbook :\n 1  Legal Methods, Dr. G.P Tripathi, Central Law Publications, 2022\n\nReferences:\n 1  Learning the Law, Learning the Law, A.T.H. Smith , Sweet & Maxwell , 2023\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "637db25cddac7f8ce7f31fc27bf23370f71ea77efc6781ed18af8a1bbce43a99",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "42001023210301",
+      "subject_name": "PRINCIPLES OF ACCOUNTING",
+      "course_id": "b-com-llb-hons-",
+      "course_name": "B.Com LLB (HONS)",
+      "semester": 1,
+      "subject_code": "10BC2103",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/PA-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/PRINCIPLES OF ACCOUNTING [8cbdca112201].pdf",
+      "expected_pdf_sha256": "b210975ede4a7bb1ab2017680982fabed139d06fa1f98b9c30b4083c7abffeeb",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PRINCIPLES OF ACCOUNTING",
+        "course_code": "10BC2103",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To introduce fundamental principles and practices of accounting",
+        "To develop an understanding of journalising transactions",
+        "To demonstrate the elementary framework of the subsidiary book.",
+        "To develop skills in maintaining ledger accounts and preparing Trial Balance.",
+        "To apply practical accounting skills in the preparation of Final Accounts."
+      ],
+      "course_outcomes": [
+        "Demonstrate proficiency in fundamental bookkeeping principles.",
+        "Apply journalizing techniques to record transactions accurately",
+        "Utilize subsidiary books effectively for transaction classification",
+        "Execute ledger maintenance and Trial Balance preparation",
+        "Prepare comprehensive Final Accounts for sole proprietorships Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basics of Book-keeping and Accounting",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Introduction to Book-keeping and Accounting, Objectives and need",
+              "of Accounting, Functions of Accounting, Branches of Accounting,",
+              "Users of Accounting Information, Methods of Accounting, Basic",
+              "Accounting Terms, Accounting Principles, Concepts and",
+              "Conventions, Fundamental Accounting Assumptions, Capital and",
+              "Revenue Transactions",
+              "2 Journal 9",
+              "Double Entry System, Desi Namu Vs. Double Entry System,",
+              "Computerised accounting system, Source documents and its",
+              "legality, Accounting Equations, Classification of Accounts and its",
+              "Rules, Format of Journal, Simple and compound journal entries,",
+              "Practical Questions",
+              "3 Subsidiary Books 9",
+              "Introduction and need for subsidiary books, Distinction between",
+              "Subsidiary Books and Principal Books, Advantages of Subsidiary",
+              "Books, Cashbook, Purchases Book and Purchase Return books,",
+              "Sales Book and Sales Returns Book, Journal Proper, Practical",
+              "Questions",
+              "4 Ledger and Trial Balance 9",
+              "Introduction and Format of Ledger, Posting and balancing",
+              "Accounts, Objectives of preparing Trial Balance, Methods of",
+              "preparing Trial Balance, Limitations of Trial Balance, Fraud and",
+              "Errors in Accounting, Practical Questions",
+              "5 Final Accounts of Sole Proprietor 9",
+              "Introduction, Trading Account, Profit & Loss Account, Balance",
+              "Sheet, Adjustment and their treatment, Opening, Closing, Transfer",
+              "& Adjustment Entries, Opening, Closing, Transfer & Adjustment",
+              "Entries",
+              "Total Hours 45"
+            ],
+            "topics_text": "Introduction to Book-keeping and Accounting, Objectives and need of Accounting, Functions of Accounting, Branches of Accounting, Users of Accounting Information, Methods of Accounting, Basic Accounting Terms, Accounting Principles, Concepts and Conventions, Fundamental Accounting Assumptions, Capital and Revenue Transactions 2 Journal 9 Double Entry System, Desi Namu Vs. Double Entry System, Computerised accounting system, Source documents and its legality, Accounting Equations, Classification of Accounts and its Rules, Format of Journal, Simple and compound journal entries, Practical Questions 3 Subsidiary Books 9 Introduction and need for subsidiary books, Distinction between Subsidiary Books and Principal Books, Advantages of Subsidiary Books, Cashbook, Purchases Book and Purchase Return books, Sales Book and Sales Returns Book, Journal Proper, Practical Questions 4 Ledger and Trial Balance 9 Introduction and Format of Ledger, Posting and balancing Accounts, Objectives of preparing Trial Balance, Methods of preparing Trial Balance, Limitations of Trial Balance, Fraud and Errors in Accounting, Practical Questions 5 Final Accounts of Sole Proprietor 9 Introduction, Trading Account, Profit & Loss Account, Balance Sheet, Adjustment and their treatment, Opening, Closing, Transfer & Adjustment Entries, Opening, Closing, Transfer & Adjustment Entries Total Hours 45",
+            "topics": [
+              "Introduction to Book-keeping and Accounting, Objectives and need",
+              "of Accounting, Functions of Accounting, Branches of Accounting,",
+              "Users of Accounting Information, Methods of Accounting, Basic",
+              "Accounting Terms, Accounting Principles, Concepts and",
+              "Conventions, Fundamental Accounting Assumptions, Capital and",
+              "Revenue Transactions",
+              "2 Journal 9",
+              "Double Entry System, Desi Namu Vs. Double Entry System,",
+              "Computerised accounting system, Source documents and its",
+              "legality, Accounting Equations, Classification of Accounts and its",
+              "Rules, Format of Journal, Simple and compound journal entries,",
+              "Practical Questions",
+              "3 Subsidiary Books 9",
+              "Introduction and need for subsidiary books, Distinction between",
+              "Subsidiary Books and Principal Books, Advantages of Subsidiary",
+              "Books, Cashbook, Purchases Book and Purchase Return books,",
+              "Sales Book and Sales Returns Book, Journal Proper, Practical",
+              "Questions",
+              "4 Ledger and Trial Balance 9",
+              "Introduction and Format of Ledger, Posting and balancing",
+              "Accounts, Objectives of preparing Trial Balance, Methods of",
+              "preparing Trial Balance, Limitations of Trial Balance, Fraud and",
+              "Errors in Accounting, Practical Questions",
+              "5 Final Accounts of Sole Proprietor 9",
+              "Introduction, Trading Account, Profit & Loss Account, Balance",
+              "Sheet, Adjustment and their treatment, Opening, Closing, Transfer",
+              "& Adjustment Entries, Opening, Closing, Transfer & Adjustment",
+              "Entries",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Problem Solving exercises related to Principles of Accounting",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Problem Solving exercises related to Principles of Accounting",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Financial Accounting, P.C. Tulsian,, Pearson Education India, 2002"
+            ],
+            "topics_text": "Problem Solving exercises related to Principles of Accounting Total Hours 15 Textbook : 1 Financial Accounting, P.C. Tulsian,, Pearson Education India, 2002",
+            "topics": [
+              "Problem Solving exercises related to Principles of Accounting",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Financial Accounting, P.C. Tulsian,, Pearson Education India, 2002"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Advanced AccountsVol.-I& II,, Advanced AccountsVol.-I& II,, R. L. Gupta and M. Radhaswamy, S. Chand & Co., New Delhi, 2014"
+        ],
+        "textbooks": [
+          "Financial Accounting, P.C. Tulsian,, Pearson Education India, 2002"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "Accounting Principles and Assumptions course on Alison",
+          "Accounting Standards and Principles course on Alison",
+          "Accountancy Knowledge free accounting portal"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5643,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    PRINCIPLES OF ACCOUNTING\nCOURSE CODE     10BC2103\nCOURSE CREDITS  4\n\nObjective:\n 1  To introduce fundamental principles and practices of accounting\n 2  To develop an understanding of journalising transactions\n 3  To demonstrate the elementary framework of the subsidiary book.\n 4  To develop skills in maintaining ledger accounts and preparing Trial Balance.\n 5  To apply practical accounting skills in the preparation of Final Accounts.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Demonstrate proficiency in fundamental bookkeeping principles.\n 2  Apply journalizing techniques to record transactions accurately\n 3  Utilize subsidiary books effectively for transaction classification\n 4  Execute ledger maintenance and Trial Balance preparation\n 5  Prepare comprehensive Final Accounts for sole proprietorships\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Basics of Book-keeping and Accounting                      9\n               Introduction to Book-keeping and Accounting, Objectives and need\n              of Accounting, Functions of Accounting, Branches of Accounting,\n             Users of Accounting Information, Methods of Accounting, Basic\n             Accounting Terms, Accounting Principles, Concepts and\n              Conventions, Fundamental Accounting Assumptions, Capital and\n            Revenue Transactions\n     2      Journal                                                 9\n            Double Entry System, Desi Namu Vs. Double Entry System,\n             Computerised accounting system, Source documents and its\n                 legality, Accounting Equations, Classification of Accounts and its\n              Rules, Format of Journal, Simple and compound journal entries,\n               Practical Questions\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Subsidiary Books                                         9\n               Introduction and need for subsidiary books, Distinction between\n              Subsidiary Books and Principal Books, Advantages of Subsidiary\n             Books, Cashbook, Purchases Book and Purchase Return books,\n              Sales Book and Sales Returns Book, Journal Proper, Practical\n             Questions\n     4      Ledger and Trial Balance                                  9\n               Introduction and Format of Ledger, Posting and balancing\n             Accounts, Objectives of preparing Trial Balance, Methods of\n              preparing Trial Balance, Limitations of Trial Balance, Fraud and\n              Errors in Accounting, Practical Questions\n     5       Final Accounts of Sole Proprietor                           9\n               Introduction, Trading Account, Profit & Loss Account, Balance\n               Sheet, Adjustment and their treatment, Opening, Closing, Transfer\n        & Adjustment Entries, Opening, Closing, Transfer & Adjustment\n               Entries\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Problem Solving exercises related to Principles of Accounting   15\n            Problem Solving exercises related to Principles of Accounting\n                               Total Hours                       15\n\nTextbook :\n 1  Financial Accounting, P.C. Tulsian,, Pearson Education India, 2002\n\nReferences:\n 1  Advanced AccountsVol.-I& II,, Advanced AccountsVol.-I& II,, R. L. Gupta and M.\n    Radhaswamy, S. Chand & Co., New Delhi, 2014\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 1  Accounting Principles and Assumptions course on Alison\n 2  Accounting Standards and Principles course on Alison\n 3  Accountancy Knowledge free accounting portal\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "b210975ede4a7bb1ab2017680982fabed139d06fa1f98b9c30b4083c7abffeeb",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "42001023210101",
+      "subject_name": "PRINCIPLES OF BUSINESS ADMINISTRATION",
+      "course_id": "b-com-llb-hons-",
+      "course_name": "B.Com LLB (HONS)",
+      "semester": 1,
+      "subject_code": "10BC2101",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/PBA-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/PRINCIPLES OF BUSINESS ADMINISTRATION [378c36fcaf87].pdf",
+      "expected_pdf_sha256": "ad46a125390b89f33bfde061ed370011799646669e4264d3db2c12b3b0f41d7a",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PRINCIPLES OF BUSINESS ADMINISTRATION",
+        "course_code": "10BC2101",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To understand the basic principles of management",
+        "To examine the significance of establishing clear and measurable goals and objectives for organizational success.",
+        "To provide an understanding of the managerial functions essential in today‘s business environment"
+      ],
+      "course_outcomes": [
+        "Demonstrate knowledge of business and management principles",
+        "Get acquainted with management processes and functions",
+        "Critique the process of directing, communication and coordination in management",
+        "Comprehend the modern management techniques and its relevance in business Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Management",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Meaning, Nature and Characteristics of Management, Scope of",
+              "Management - Functional areas, Management & Administration,",
+              "Levels of management & Managerial Skills, Evolution of",
+              "Management Thoughts, Principles of Management, Principles of",
+              "Management, Case study: The Hawthorne Plant study",
+              "2 Planning and Decision-Making in Management 8",
+              "Need and importance of planning, Planning process, Types of plans-",
+              "Strategy V/s Planning, Management By Objectives, Decision",
+              "making – Meaning – Nature and importance, Types of Decision",
+              "Making , Process of decision making, Decision Making Biases,",
+              "Case Studies: The case of Ford Pinto, The collapse of Nokia mobile",
+              "phone",
+              "3 Organizing and Staffing 8",
+              "Need for organization & fundamental principles of organization,",
+              "Types of organization, Centralization vs. decentralization of",
+              "authority and responsibility, Case study : Procter & Gamble's matrix",
+              "organization, Google‘s Alphabet restructuring, Staffing –",
+              "Introduction, Need for staffing , Importance of Staffing , Process of",
+              "staffing",
+              "4 Directing, Communication and Coordinating 12",
+              "Directing – Meaning, nature and importance, Theories of",
+              "Motivation: Maslow‘s Need Hierarchy theory, Herzberg‘s Two",
+              "factor theory, McGregor‘s Theory X and Theory Y, Leadership –",
+              "Introduction, Formal and Informal Leadership , Styles of",
+              "Leadership, Importance and need of Communication as a leader,",
+              "Case Studies: The growth of Apple Inc., Johnson & Johnson's",
+              "Tylenol Crisis, Evolution of Amazon, Coordination – Introduction,",
+              "Importance of coordination, Principles of Coordination",
+              "5 Controlling 9",
+              "Meaning and steps in Controlling , Pre-requisites of a strong control",
+              "system , Methods of establishing control , Modern Control",
+              "techniques: Business process Re-engineering , Benchmarking,",
+              "Kaizen, Six Sigma, Knowledge Mangemnet , Sustainability",
+              "Management, Emotional Intelligence in Mnagemnet and Chnage",
+              "Managemnet",
+              "Total Hours 45"
+            ],
+            "topics_text": "Meaning, Nature and Characteristics of Management, Scope of Management - Functional areas, Management & Administration, Levels of management & Managerial Skills, Evolution of Management Thoughts, Principles of Management, Principles of Management, Case study: The Hawthorne Plant study 2 Planning and Decision-Making in Management 8 Need and importance of planning, Planning process, Types of plans- Strategy V/s Planning, Management By Objectives, Decision making – Meaning – Nature and importance, Types of Decision Making , Process of decision making, Decision Making Biases, Case Studies: The case of Ford Pinto, The collapse of Nokia mobile phone 3 Organizing and Staffing 8 Need for organization & fundamental principles of organization, Types of organization, Centralization vs. decentralization of authority and responsibility, Case study : Procter & Gamble's matrix organization, Google‘s Alphabet restructuring, Staffing – Introduction, Need for staffing , Importance of Staffing , Process of staffing 4 Directing, Communication and Coordinating 12 Directing – Meaning, nature and importance, Theories of Motivation: Maslow‘s Need Hierarchy theory, Herzberg‘s Two factor theory, McGregor‘s Theory X and Theory Y, Leadership – Introduction, Formal and Informal Leadership , Styles of Leadership, Importance and need of Communication as a leader, Case Studies: The growth of Apple Inc., Johnson & Johnson's Tylenol Crisis, Evolution of Amazon, Coordination – Introduction, Importance of coordination, Principles of Coordination 5 Controlling 9 Meaning and steps in Controlling , Pre-requisites of a strong control system , Methods of establishing control , Modern Control techniques: Business process Re-engineering , Benchmarking, Kaizen, Six Sigma, Knowledge Mangemnet , Sustainability Management, Emotional Intelligence in Mnagemnet and Chnage Managemnet Total Hours 45",
+            "topics": [
+              "Meaning, Nature and Characteristics of Management, Scope of",
+              "Management - Functional areas, Management & Administration,",
+              "Levels of management & Managerial Skills, Evolution of",
+              "Management Thoughts, Principles of Management, Principles of",
+              "Management, Case study: The Hawthorne Plant study",
+              "2 Planning and Decision-Making in Management 8",
+              "Need and importance of planning, Planning process, Types of plans",
+              "Strategy V/s Planning, Management By Objectives, Decision",
+              "making – Meaning – Nature and importance, Types of Decision",
+              "Making , Process of decision making, Decision Making Biases,",
+              "Case Studies: The case of Ford Pinto, The collapse of Nokia mobile",
+              "phone",
+              "3 Organizing and Staffing 8",
+              "Need for organization & fundamental principles of organization,",
+              "Types of organization, Centralization vs. decentralization of",
+              "authority and responsibility, Case study : Procter & Gamble's matrix",
+              "organization, Google‘s Alphabet restructuring, Staffing –",
+              "Introduction, Need for staffing , Importance of Staffing , Process of",
+              "staffing",
+              "4 Directing, Communication and Coordinating 12",
+              "Directing – Meaning, nature and importance, Theories of",
+              "Motivation: Maslow‘s Need Hierarchy theory, Herzberg‘s Two",
+              "factor theory, McGregor‘s Theory X and Theory Y, Leadership –",
+              "Introduction, Formal and Informal Leadership , Styles of",
+              "Leadership, Importance and need of Communication as a leader,",
+              "Case Studies: The growth of Apple Inc., Johnson & Johnson's",
+              "Tylenol Crisis, Evolution of Amazon, Coordination – Introduction,",
+              "Importance of coordination, Principles of Coordination",
+              "5 Controlling 9",
+              "Meaning and steps in Controlling , Pre-requisites of a strong control",
+              "system , Methods of establishing control , Modern Control",
+              "techniques: Business process Re-engineering , Benchmarking,",
+              "Kaizen, Six Sigma, Knowledge Mangemnet , Sustainability",
+              "Management, Emotional Intelligence in Mnagemnet and Chnage",
+              "Managemnet",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Principles of Business Administration",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Principles of Business Administration",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Principles of Management, Prasad, L. M., Sultan Chand and Sons., 2019"
+            ],
+            "topics_text": "Issues related to Principles of Business Administration Total Hours 15 Textbook : 1 Principles of Management, Prasad, L. M., Sultan Chand and Sons., 2019",
+            "topics": [
+              "Issues related to Principles of Business Administration",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Principles of Management, Prasad, L. M., Sultan Chand and Sons., 2019"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Management: Text & Cases, Management: Text & Cases, Rao, V. S. P., Excel Books, 2022"
+        ],
+        "textbooks": [
+          "Principles of Management, Prasad, L. M., Sultan Chand and Sons., 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://alison.com/course/the-principles-of-business-administration",
+          "https://wizape.com/English/Core-Business-Administration-Principles",
+          "https://www.iau.edu.sa/en/courses/principles-of-business-administration"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6072,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    PRINCIPLES OF BUSINESS ADMINISTRATION\nCOURSE CODE     10BC2101\nCOURSE CREDITS  4\n\nObjective:\n 1  To understand the basic principles of management\n 2  To examine the significance of establishing clear and measurable goals and objectives for\n     organizational success.\n 3  To provide an understanding of the managerial functions essential in today‘s business\n    environment\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Demonstrate knowledge of business and management principles\n 2  Get acquainted with management processes and functions\n 3  Critique the process of directing, communication and coordination in management\n 4  Comprehend the modern management techniques and its relevance in business\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Management                               8\n             Meaning, Nature and Characteristics of Management, Scope of\n           Management - Functional areas, Management & Administration,\n             Levels of management & Managerial Skills, Evolution of\n           Management Thoughts, Principles of Management, Principles of\n            Management, Case study: The Hawthorne Plant study\n     2      Planning and Decision-Making in Management               8\n           Need and importance of planning, Planning process, Types of plans-\n              Strategy V/s Planning, Management By Objectives, Decision\n            making – Meaning – Nature and importance, Types of Decision\n            Making , Process of decision making, Decision Making Biases,\n            Case Studies: The case of Ford Pinto, The collapse of Nokia mobile\n            phone\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Organizing and Staffing                                   8\n           Need for organization & fundamental principles of organization,\n            Types of organization, Centralization vs. decentralization of\n               authority and responsibility, Case study : Procter & Gamble's matrix\n               organization, Google‘s Alphabet restructuring, Staffing –\n               Introduction, Need for staffing , Importance of Staffing , Process of\n                staffing\n     4       Directing, Communication and Coordinating                 12\n              Directing – Meaning, nature and importance, Theories of\n              Motivation: Maslow‘s Need Hierarchy theory, Herzberg‘s Two\n               factor theory, McGregor‘s Theory X and Theory Y, Leadership –\n               Introduction, Formal and Informal Leadership , Styles of\n              Leadership, Importance and need of Communication as a leader,\n            Case Studies: The growth of Apple Inc., Johnson & Johnson's\n             Tylenol Crisis, Evolution of Amazon, Coordination – Introduction,\n             Importance of coordination, Principles of Coordination\n     5      Controlling                                              9\n            Meaning and steps in Controlling , Pre-requisites of a strong control\n             system , Methods of establishing control , Modern Control\n              techniques: Business process Re-engineering , Benchmarking,\n              Kaizen, Six Sigma, Knowledge Mangemnet , Sustainability\n            Management, Emotional Intelligence in Mnagemnet and Chnage\n           Managemnet\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Principles of Business Administration         15\n               Issues related to Principles of Business Administration\n                               Total Hours                       15\n\nTextbook :\n 1  Principles of Management, Prasad, L. M., Sultan Chand and Sons., 2019\n\nReferences:\n 1  Management: Text & Cases, Management: Text & Cases, Rao, V. S. P., Excel Books, 2022\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\nSupplementary Resources:\n 1  https://alison.com/course/the-principles-of-business-administration\n 2  https://wizape.com/English/Core-Business-Administration-Principles\n 3  https://www.iau.edu.sa/en/courses/principles-of-business-administration\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "ad46a125390b89f33bfde061ed370011799646669e4264d3db2c12b3b0f41d7a",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "42010318110101",
+      "subject_name": "SKILLS",
+      "course_id": "b-com-llb-hons-",
+      "course_name": "B.Com LLB (HONS)",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NETWORK_UNVERIFIED_RETRY",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Source access was blocked/unverified; not evidence the syllabus does not exist."
+      ],
+      "pdf_verification_status": "NETWORK_UNVERIFIED_RETRY_NO_LOCAL_PDF"
+    }
+  ],
+  "build_summary": {
+    "extracted": 6,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 1,
+    "extraction_errors": 0
+  }
+}

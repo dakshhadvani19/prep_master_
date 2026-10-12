@@ -1,0 +1,1126 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "ba-in-socialogy-psychology-political-science",
+    "course_name": "BA in Socialogy Psychology Political Science",
+    "output_slug": "BA_in_Sociology_Psychology_Political_Science"
+  },
+  "semester": 6,
+  "subject_count": 8,
+  "subjects": [
+    {
+      "subject_id": "43001028160701",
+      "subject_name": "Advanced excel programme",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 6,
+      "subject_code": "10BH1607",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1607.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Advanced excel programme [605a0175d989].pdf",
+      "expected_pdf_sha256": "ae6a6141032c160291e7ce7a6550fc882d231894cb2270b0c5ffafe8c5ee4ec0",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ADVANCED EXCEL PROGRAMME",
+        "course_code": "10BH1607",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To provide a deep understanding of advanced Excel functionalities, including complex formulas, data analysis, and automation.",
+        "To equip students with the ability to analyze, organize, and present large datasets effectively using Excel.",
+        "To introduce Excel automation tools like Macros and VBA for efficient task management.",
+        "To develop proficiency in managing and securing data using advanced Excel features."
+      ],
+      "course_outcomes": [
+        "Apply advanced Excel functions and formulas to solve complex data-related tasks efficiently.",
+        "Create and analyze dynamic reports, charts, and pivot tables for effective data visualization and decision-making.",
+        "Automate repetitive tasks using Macros and basic VBA scripts to enhance productivity.",
+        "Demonstrate the ability to manage large datasets, perform what-if analysis, and implement security measures for data protection. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Advanced Formulas and Functions",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction to Complex Formulas, Key Advanced Functions",
+              "Logical Functions: IF, AND, OR, IFERROR, and nested IF",
+              "statements., Lookup Functions: VLOOKUP, HLOOKUP, INDEX,",
+              "MATCH, and XLOOKUP., Text Functions: CONCATENATE,",
+              "TEXT, LEFT, RIGHT, MID, and TRIM., Date and Time Functions:",
+              "TODAY, NOW, YEAR, MONTH, DAY, and DATEDIF.,",
+              "Mathematical and Statistical Functions SUMIFS, COUNTIFS,",
+              "AVERAGEIFS. SUMPRODUCT, RANK, LARGE, SMALL,",
+              "MEDIAN., Array Formulas",
+              "2 Data Analysis and Visualization 7",
+              "Data Sorting and Filtering, Pivot Tables and Pivot Charts , Chart",
+              "Customization, Dashboard Creation , Data Validation: Setting up",
+              "custom validation rules, input restrictions, and error messages for",
+              "data consistency., Conditional Formatting",
+              "3 Excel Automation using Macros 7",
+              "Introduction to Macros, Recording and Running Macros,",
+              "Introduction to VBA (Visual Basic for Applications), Debugging",
+              "and Error Handling",
+              "4 Advanced Data Management and Security 8",
+              "What-If Analysis Using Goal Seek, Scenario Manager, and Data",
+              "Tables for forecasting and simulations, Sensitivity analysis for",
+              "decision-making., Data Consolidation, Power Query and Power",
+              "Pivot, Excel Security and Protection",
+              "Total Hours 30"
+            ],
+            "topics_text": "Introduction to Complex Formulas, Key Advanced Functions Logical Functions: IF, AND, OR, IFERROR, and nested IF statements., Lookup Functions: VLOOKUP, HLOOKUP, INDEX, MATCH, and XLOOKUP., Text Functions: CONCATENATE, TEXT, LEFT, RIGHT, MID, and TRIM., Date and Time Functions: TODAY, NOW, YEAR, MONTH, DAY, and DATEDIF., Mathematical and Statistical Functions SUMIFS, COUNTIFS, AVERAGEIFS. SUMPRODUCT, RANK, LARGE, SMALL, MEDIAN., Array Formulas 2 Data Analysis and Visualization 7 Data Sorting and Filtering, Pivot Tables and Pivot Charts , Chart Customization, Dashboard Creation , Data Validation: Setting up custom validation rules, input restrictions, and error messages for data consistency., Conditional Formatting 3 Excel Automation using Macros 7 Introduction to Macros, Recording and Running Macros, Introduction to VBA (Visual Basic for Applications), Debugging and Error Handling 4 Advanced Data Management and Security 8 What-If Analysis Using Goal Seek, Scenario Manager, and Data Tables for forecasting and simulations, Sensitivity analysis for decision-making., Data Consolidation, Power Query and Power Pivot, Excel Security and Protection Total Hours 30",
+            "topics": [
+              "Introduction to Complex Formulas, Key Advanced Functions",
+              "Logical Functions: IF, AND, OR, IFERROR, and nested IF",
+              "statements., Lookup Functions: VLOOKUP, HLOOKUP, INDEX,",
+              "MATCH, and XLOOKUP., Text Functions: CONCATENATE,",
+              "TEXT, LEFT, RIGHT, MID, and TRIM., Date and Time Functions:",
+              "TODAY, NOW, YEAR, MONTH, DAY, and DATEDIF.,",
+              "Mathematical and Statistical Functions SUMIFS, COUNTIFS,",
+              "AVERAGEIFS. SUMPRODUCT, RANK, LARGE, SMALL,",
+              "MEDIAN., Array Formulas",
+              "2 Data Analysis and Visualization 7",
+              "Data Sorting and Filtering, Pivot Tables and Pivot Charts , Chart",
+              "Customization, Dashboard Creation , Data Validation: Setting up",
+              "custom validation rules, input restrictions, and error messages for",
+              "data consistency., Conditional Formatting",
+              "3 Excel Automation using Macros 7",
+              "Introduction to Macros, Recording and Running Macros,",
+              "Introduction to VBA (Visual Basic for Applications), Debugging",
+              "and Error Handling",
+              "4 Advanced Data Management and Security 8",
+              "What-If Analysis Using Goal Seek, Scenario Manager, and Data",
+              "Tables for forecasting and simulations, Sensitivity analysis for",
+              "decision-making., Data Consolidation, Power Query and Power",
+              "Pivot, Excel Security and Protection",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Advanced Excel Programme",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Advanced Excel Programme",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Excel 2019 Bible, Alexander, M., Kusleika, R., & Walkenbach, J, Wiley, 2019",
+              "2 Excel: Quick start guide from beginner to expert, Fischer, W, Fischer, 2019",
+              "3 Microsoft Excel 2019 step by step, Frye, C., Microsoft Press, 2018",
+              "4 Advanced Excel: Practical approach, Shrivastava, S. S., Himalaya Publishing House, 2019",
+              "5 Mastering Excel., Gips, J., McGraw Hill Education., 2016"
+            ],
+            "topics_text": "Issues related to Advanced Excel Programme Total Hours 15 Textbook : 1 Excel 2019 Bible, Alexander, M., Kusleika, R., & Walkenbach, J, Wiley, 2019 2 Excel: Quick start guide from beginner to expert, Fischer, W, Fischer, 2019 3 Microsoft Excel 2019 step by step, Frye, C., Microsoft Press, 2018 4 Advanced Excel: Practical approach, Shrivastava, S. S., Himalaya Publishing House, 2019 5 Mastering Excel., Gips, J., McGraw Hill Education., 2016",
+            "topics": [
+              "Issues related to Advanced Excel Programme",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Excel 2019 Bible, Alexander, M., Kusleika, R., & Walkenbach, J, Wiley, 2019",
+              "2 Excel: Quick start guide from beginner to expert, Fischer, W, Fischer, 2019",
+              "3 Microsoft Excel 2019 step by step, Frye, C., Microsoft Press, 2018",
+              "4 Advanced Excel: Practical approach, Shrivastava, S. S., Himalaya Publishing House, 2019",
+              "5 Mastering Excel., Gips, J., McGraw Hill Education., 2016"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Excel 2019 power programming with VBA, Excel 2019 power programming with VBA, Alexander, M., & Kusleika, R., Wiley., 2019",
+          "Data analysis using Microsoft Excel., Data analysis using Microsoft Excel., Sah, A. N., Excel Books India., 2011",
+          "Excel advanced skills for business, Excel advanced skills for business, Humphrey, M. L, Luminant Publications., 2019",
+          "Excel 2016 in depth, Excel 2016 in depth, Jelen, B, Que Publishing., 2016",
+          "Microsoft Excel 2019 data analysis and business modeling, Microsoft Excel 2019 data analysis and business modeling, Winston, W. , Microsoft Press., 2019"
+        ],
+        "textbooks": [
+          "Excel 2019 Bible, Alexander, M., Kusleika, R., & Walkenbach, J, Wiley, 2019",
+          "Excel: Quick start guide from beginner to expert, Fischer, W, Fischer, 2019",
+          "Microsoft Excel 2019 step by step, Frye, C., Microsoft Press, 2018",
+          "Advanced Excel: Practical approach, Shrivastava, S. S., Himalaya Publishing House, 2019",
+          "Mastering Excel., Gips, J., McGraw Hill Education., 2016"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6048,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   ADVANCED EXCEL PROGRAMME\nCOURSE CODE     10BH1607\nCOURSE CREDITS  3\n\nObjective:\n 1  To provide a deep understanding of advanced Excel functionalities, including complex\n     formulas, data analysis, and automation.\n 2  To equip students with the ability to analyze, organize, and present large datasets\n     effectively using Excel.\n 3  To introduce Excel automation tools like Macros and VBA for efficient task management.\n 4  To develop proficiency in managing and securing data using advanced Excel features.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply advanced Excel functions and formulas to solve complex data-related tasks\n      efficiently.\n 2  Create and analyze dynamic reports, charts, and pivot tables for effective data visualization\n    and decision-making.\n 3  Automate repetitive tasks using Macros and basic VBA scripts to enhance productivity.\n 4  Demonstrate the ability to manage large datasets, perform what-if analysis, and implement\n     security measures for data protection.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Advanced Formulas and Functions                          8\n               Introduction to Complex Formulas, Key Advanced Functions\n              Logical Functions: IF, AND, OR, IFERROR, and nested IF\n               statements., Lookup Functions: VLOOKUP, HLOOKUP, INDEX,\n         MATCH, and XLOOKUP., Text Functions: CONCATENATE,\n           TEXT, LEFT, RIGHT, MID, and TRIM., Date and Time Functions:\n          TODAY, NOW, YEAR, MONTH, DAY, and DATEDIF.,\n             Mathematical and Statistical Functions SUMIFS, COUNTIFS,\n          AVERAGEIFS. SUMPRODUCT, RANK, LARGE, SMALL,\n           MEDIAN., Array Formulas\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Data Analysis and Visualization                            7\n             Data Sorting and Filtering, Pivot Tables and Pivot Charts , Chart\n              Customization, Dashboard Creation , Data Validation: Setting up\n            custom validation rules, input restrictions, and error messages for\n              data consistency., Conditional Formatting\n     3      Excel Automation using Macros                            7\n               Introduction to Macros, Recording and Running Macros,\n               Introduction to VBA (Visual Basic for Applications), Debugging\n            and Error Handling\n     4     Advanced Data Management and Security                   8\n             What-If Analysis Using Goal Seek, Scenario Manager, and Data\n             Tables for forecasting and simulations, Sensitivity analysis for\n              decision-making., Data Consolidation, Power Query and Power\n               Pivot, Excel Security and Protection\n                               Total Hours                       30\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Advanced Excel Programme                 15\n               Issues related to Advanced Excel Programme\n                               Total Hours                       15\n\nTextbook :\n 1  Excel 2019 Bible, Alexander, M., Kusleika, R., & Walkenbach, J, Wiley, 2019\n 2  Excel: Quick start guide from beginner to expert, Fischer, W, Fischer, 2019\n 3  Microsoft Excel 2019 step by step, Frye, C., Microsoft Press, 2018\n 4  Advanced Excel: Practical approach, Shrivastava, S. S., Himalaya Publishing House, 2019\n 5  Mastering Excel., Gips, J., McGraw Hill Education., 2016\n\nReferences:\n 1  Excel 2019 power programming with VBA, Excel 2019 power programming with VBA,\n     Alexander, M., & Kusleika, R., Wiley., 2019\n 2  Data analysis using Microsoft Excel., Data analysis using Microsoft Excel., Sah, A. N.,\n    Excel Books India., 2011\n 3  Excel advanced skills for business, Excel advanced skills for business, Humphrey, M. L,\n    Luminant Publications., 2019\n 4  Excel 2016 in depth, Excel 2016 in depth, Jelen, B, Que Publishing., 2016\n 5  Microsoft Excel 2019 data analysis and business modeling, Microsoft Excel 2019 data\n     analysis and business modeling, Winston, W. , Microsoft Press., 2019\n\nSuggested Theory Distribution:\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "ae6a6141032c160291e7ce7a6550fc882d231894cb2270b0c5ffafe8c5ee4ec0",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028160601",
+      "subject_name": "Essentials to e-commerce",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 6,
+      "subject_code": "10BH1606",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1606.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Essentials to e-commerce [00e8e86e5b5b].pdf",
+      "expected_pdf_sha256": "a82af93d1a9dcef40e6ef7468c4d85ceffab769cd111db4ad6ee345737f5b475",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ESSENTIALS TO E-COMMERCE",
+        "course_code": "10BH1606",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To understand key concepts and frameworks of e-commerce.",
+        "To explore fundamental technologies and business models in e-commerce.",
+        "To analyze the practical aspects of running and managing an e-commerce business."
+      ],
+      "course_outcomes": [
+        "Understand the Fundamentals of E-Commerce: Explain the evolution, significance, and various business models of E-Commerce.",
+        "Describe and differentiate between the various e-commerce models and technologies.",
+        "Apply and develop digital strategies for optimizing business operations",
+        "Apply and develop digital strategies for optimizing business operations",
+        "Explore the future trends in E-Commerce and assess how technological advancements are transforming global digital trade and online consumer behavior Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION TO E-COMMERCE AND EMERGING",
+            "contact_hours": 15,
+            "topic_lines": [
+              "TECHNOLOGIES",
+              "Introduction to E-Commerce: ? Definition, Scope and Evolution of",
+              "E- Commerce, Key Drivers of E-Commerce Growth, Trends and",
+              "Future of E-Commerce, Limitations of E-Commerce and Global",
+              "Trends, E-Commerce Business Models ? B2B, B2C, C2C, C2B",
+              "models, Omnichannel Commerce and direct-to- consumer (DTC)",
+              "Model, Technology driving E-Commerce: Artificial Intelligence,",
+              "Blockchain Technology, Internet of Things (IoT), Metaverse",
+              "Commerce, E-Commerce Operations & Management ? Digital",
+              "Marketing and Social Commerce, Customer Relationship",
+              "Management, E-fulfillment and last-mile delivery innovations",
+              "2 E-COMMERCE OPERATIONS AND MANAGEMENT 15",
+              "Digital Payment Systems: Types of electronic payment methods,",
+              "Payment gateways, digital wallets and buy- now-pay-later (BNPL)",
+              "models, Role of blockchain in secure payments, Cybersecurity in E-",
+              "Commerce: ? Threats: Phishing, Data breaches, e-commerce frauds,",
+              "Security Measures, Privacy Laws, Legal and Ethical Issues in E-",
+              "Commerce ? Consumer protection laws in digital commerce,",
+              "Intellectual property and copyright in online marketplace, Ethical",
+              "Concerns, Case study on E-Commerce Companies: ? Amazon’s AI-",
+              "powered personalization and logistics innovation, Walmart’s use of",
+              "IoT for supply chain optimization",
+              "Total Hours 30",
+              "Textbook :",
+              "1 E-Business and E-Commerce Management (3rd ed.), Chaffey, D., Pearson., 2007"
+            ],
+            "topics_text": "TECHNOLOGIES Introduction to E-Commerce: ? Definition, Scope and Evolution of E- Commerce, Key Drivers of E-Commerce Growth, Trends and Future of E-Commerce, Limitations of E-Commerce and Global Trends, E-Commerce Business Models ? B2B, B2C, C2C, C2B models, Omnichannel Commerce and direct-to- consumer (DTC) Model, Technology driving E-Commerce: Artificial Intelligence, Blockchain Technology, Internet of Things (IoT), Metaverse Commerce, E-Commerce Operations & Management ? Digital Marketing and Social Commerce, Customer Relationship Management, E-fulfillment and last-mile delivery innovations 2 E-COMMERCE OPERATIONS AND MANAGEMENT 15 Digital Payment Systems: Types of electronic payment methods, Payment gateways, digital wallets and buy- now-pay-later (BNPL) models, Role of blockchain in secure payments, Cybersecurity in E- Commerce: ? Threats: Phishing, Data breaches, e-commerce frauds, Security Measures, Privacy Laws, Legal and Ethical Issues in E- Commerce ? Consumer protection laws in digital commerce, Intellectual property and copyright in online marketplace, Ethical Concerns, Case study on E-Commerce Companies: ? Amazon’s AI- powered personalization and logistics innovation, Walmart’s use of IoT for supply chain optimization Total Hours 30 Textbook : 1 E-Business and E-Commerce Management (3rd ed.), Chaffey, D., Pearson., 2007",
+            "topics": [
+              "TECHNOLOGIES",
+              "Introduction to E-Commerce: ? Definition, Scope and Evolution of",
+              "E- Commerce, Key Drivers of E-Commerce Growth, Trends and",
+              "Future of E-Commerce, Limitations of E-Commerce and Global",
+              "Trends, E-Commerce Business Models ? B2B, B2C, C2C, C2B",
+              "models, Omnichannel Commerce and direct-to- consumer (DTC)",
+              "Model, Technology driving E-Commerce: Artificial Intelligence,",
+              "Blockchain Technology, Internet of Things (IoT), Metaverse",
+              "Commerce, E-Commerce Operations & Management ? Digital",
+              "Marketing and Social Commerce, Customer Relationship",
+              "Management, E-fulfillment and last-mile delivery innovations",
+              "2 E-COMMERCE OPERATIONS AND MANAGEMENT 15",
+              "Digital Payment Systems: Types of electronic payment methods,",
+              "Payment gateways, digital wallets and buy- now-pay-later (BNPL)",
+              "models, Role of blockchain in secure payments, Cybersecurity in E",
+              "Commerce: ? Threats: Phishing, Data breaches, e-commerce frauds,",
+              "Security Measures, Privacy Laws, Legal and Ethical Issues in E",
+              "Commerce ? Consumer protection laws in digital commerce,",
+              "Intellectual property and copyright in online marketplace, Ethical",
+              "Concerns, Case study on E-Commerce Companies: ? Amazon’s AI",
+              "powered personalization and logistics innovation, Walmart’s use of",
+              "IoT for supply chain optimization",
+              "Total Hours 30",
+              "Textbook :",
+              "1 E-Business and E-Commerce Management (3rd ed.), Chaffey, D., Pearson., 2007"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Electronic Commerce: Concepts, Methodologies, Tools and Applications., Electronic Commerce: Concepts, Methodologies, Tools and Applications., Becker, S. A., Information Science, 2007",
+          "E-Commerce, The Cutting Edge of Business., E-Commerce, The Cutting Edge of Business., Bajaj, K., &amp; Nag, D., McGraw Hill Education (India) Private Limited., 2005",
+          "Electronic Commerce: From Vision to Fulfillment., Electronic Commerce: From Vision to Fulfillment., Awad, E. M., New Delhi: Pearson Education., 2007",
+          "eMarketing excellence: The Heart of eBusiness., eMarketing excellence: The Heart of eBusiness., Smith, P. R., &amp; Chaffey, D., UK: Elsevier Ltd., 2005"
+        ],
+        "textbooks": [
+          "E-Business and E-Commerce Management (3rd ed.), Chaffey, D., Pearson., 2007"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5073,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    ESSENTIALS TO E-COMMERCE\nCOURSE CODE     10BH1606\nCOURSE CREDITS  3\n\nObjective:\n 1  To understand key concepts and frameworks of e-commerce.\n 2  To explore fundamental technologies and business models in e-commerce.\n 3  To analyze the practical aspects of running and managing an e-commerce business.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the Fundamentals of E-Commerce: Explain the evolution, significance, and\n     various business models of E-Commerce.\n 2  Describe and differentiate between the various e-commerce models and technologies.\n 3  Apply and develop digital strategies for optimizing business operations\n 4  Apply and develop digital strategies for optimizing business operations\n 5  Explore the future trends in E-Commerce and assess how technological advancements are\n     transforming global digital trade and online consumer behavior\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    INTRODUCTION TO E-COMMERCE AND EMERGING     15\n         TECHNOLOGIES\n               Introduction to E-Commerce: ? Definition, Scope and Evolution of\n             E- Commerce, Key Drivers of E-Commerce Growth, Trends and\n              Future of E-Commerce, Limitations of E-Commerce and Global\n              Trends, E-Commerce Business Models ? B2B, B2C, C2C, C2B\n             models, Omnichannel Commerce and direct-to- consumer (DTC)\n             Model, Technology driving E-Commerce: Artificial Intelligence,\n             Blockchain Technology, Internet of Things (IoT), Metaverse\n            Commerce, E-Commerce Operations & Management ? Digital\n             Marketing and Social Commerce, Customer Relationship\n            Management, E-fulfillment and last-mile delivery innovations\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2    E-COMMERCE OPERATIONS AND MANAGEMENT       15\n               Digital Payment Systems: Types of electronic payment methods,\n            Payment gateways, digital wallets and buy- now-pay-later (BNPL)\n             models, Role of blockchain in secure payments, Cybersecurity in E-\n            Commerce: ? Threats: Phishing, Data breaches, e-commerce frauds,\n              Security Measures, Privacy Laws, Legal and Ethical Issues in E-\n           Commerce ? Consumer protection laws in digital commerce,\n                Intellectual property and copyright in online marketplace, Ethical\n             Concerns, Case study on E-Commerce Companies: ? Amazon’s AI-\n            powered personalization and logistics innovation, Walmart’s use of\n            IoT for supply chain optimization\n                               Total Hours                       30\n\n\nTextbook :\n 1  E-Business and E-Commerce Management (3rd ed.), Chaffey, D., Pearson., 2007\n\nReferences:\n 1  Electronic Commerce: Concepts, Methodologies, Tools and Applications., Electronic\n    Commerce: Concepts, Methodologies, Tools and Applications., Becker, S. A., Information\n     Science, 2007\n 2  E-Commerce, The Cutting Edge of Business., E-Commerce, The Cutting Edge of\n     Business., Bajaj, K., &amp; Nag, D., McGraw Hill Education (India) Private Limited.,\n    2005\n 3  Electronic Commerce: From Vision to Fulfillment., Electronic Commerce: From Vision to\n     Fulfillment., Awad, E. M., New Delhi: Pearson Education., 2007\n 4  eMarketing excellence: The Heart of eBusiness., eMarketing excellence: The Heart of\n     eBusiness., Smith, P. R., &amp; Chaffey, D., UK: Elsevier Ltd., 2005\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "a82af93d1a9dcef40e6ef7468c4d85ceffab769cd111db4ad6ee345737f5b475",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028160101",
+      "subject_name": "Health psychology",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 6,
+      "subject_code": "10BH1601",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1601.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Health psychology [72ab44e91775].pdf",
+      "expected_pdf_sha256": "3c527aa12e47172c22808da06a18d5b2e0a55b9570b4405e98c48b2c42d56eda",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "HEALTH PSYCHOLOGY",
+        "course_code": "10BH1601",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To provide a comprehensive understanding of the fundamental concepts of health psychology, including the interplay of social, emotional, cognitive, and physical aspects of health.",
+        "To analyse health behaviours, barriers to their adoption, and apply health behaviour theories to promote well-being.",
+        "To explore health-enhancing behaviours such as exercise, nutrition, and stress management, and their impact on overall health.",
+        "To examine psychological factors like happiness, life satisfaction, resilience, optimism, and hope in promoting well-being and holistic health."
+      ],
+      "course_outcomes": [
+        "To articulate the role of psychology in healthcare",
+        "To discuss the roles that health psychologists play in promoting wellness and in addressing and treating psychological factors related to health and illness",
+        "To describe behavioural factors that influence wellness and that play a role in the prevention, development, course, and outcome of many human diseases and health problems",
+        "To use various theoretical frameworks to understand health beliefs and predict health behaviours",
+        "To identify specific challenges and opportunities for psychologists in the health care system of India. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction: Introduction to Health Psychology, Components of",
+              "health: social, emotional, cognitive and physical aspects, Mind-body",
+              "relationship, Goals of health psychology, Bio-psycho-social model",
+              "of health.",
+              "2 Health Behaviour and its Theories 5",
+              "Behaviour and health: Characteristics of health behaviour, Barriers",
+              "to health behaviour, Theories of health behaviour and their",
+              "implications",
+              "3 Stress and its management techniques 10",
+              "Stress: Nature, Sources, Effects of stress on physical and mental",
+              "health, Physiological response to stress: SAM pathway, HPA",
+              "Pathway, Coping strategies and stress management,",
+              "Psychoneuroimmunology, Chronic Health problems, Pain",
+              "management, Stress Management techniques - based therapy,",
+              "neurofeedback and diaphragmatic breathing Social support",
+              "etcJPMR, Mindfulness-, Behavioural medicine, Consequences of",
+              "health psychology techniques in management of chronic diseases,",
+              "Quality of Life and Quality of Life assessment given by WHO",
+              "4 Understanding health promoting behaviours 8",
+              "Matarazzo's Health Behaviours, Health Management: Health-",
+              "enhancing behaviours: Exercise, Nutrition, safety, Assessment of",
+              "Pain scales managing and controlling pain., Health Protective",
+              "Behaviours, Illness Management.",
+              "Total Hours 30"
+            ],
+            "topics_text": "Introduction: Introduction to Health Psychology, Components of health: social, emotional, cognitive and physical aspects, Mind-body relationship, Goals of health psychology, Bio-psycho-social model of health. 2 Health Behaviour and its Theories 5 Behaviour and health: Characteristics of health behaviour, Barriers to health behaviour, Theories of health behaviour and their implications 3 Stress and its management techniques 10 Stress: Nature, Sources, Effects of stress on physical and mental health, Physiological response to stress: SAM pathway, HPA Pathway, Coping strategies and stress management, Psychoneuroimmunology, Chronic Health problems, Pain management, Stress Management techniques - based therapy, neurofeedback and diaphragmatic breathing Social support etcJPMR, Mindfulness-, Behavioural medicine, Consequences of health psychology techniques in management of chronic diseases, Quality of Life and Quality of Life assessment given by WHO 4 Understanding health promoting behaviours 8 Matarazzo's Health Behaviours, Health Management: Health- enhancing behaviours: Exercise, Nutrition, safety, Assessment of Pain scales managing and controlling pain., Health Protective Behaviours, Illness Management. Total Hours 30",
+            "topics": [
+              "Introduction: Introduction to Health Psychology, Components of",
+              "health: social, emotional, cognitive and physical aspects, Mind-body",
+              "relationship, Goals of health psychology, Bio-psycho-social model",
+              "of health.",
+              "2 Health Behaviour and its Theories 5",
+              "Behaviour and health: Characteristics of health behaviour, Barriers",
+              "to health behaviour, Theories of health behaviour and their",
+              "implications",
+              "3 Stress and its management techniques 10",
+              "Stress: Nature, Sources, Effects of stress on physical and mental",
+              "health, Physiological response to stress: SAM pathway, HPA",
+              "Pathway, Coping strategies and stress management,",
+              "Psychoneuroimmunology, Chronic Health problems, Pain",
+              "management, Stress Management techniques - based therapy,",
+              "neurofeedback and diaphragmatic breathing Social support",
+              "etcJPMR, Mindfulness-, Behavioural medicine, Consequences of",
+              "health psychology techniques in management of chronic diseases,",
+              "Quality of Life and Quality of Life assessment given by WHO",
+              "4 Understanding health promoting behaviours 8",
+              "Matarazzo's Health Behaviours, Health Management: Health",
+              "enhancing behaviours: Exercise, Nutrition, safety, Assessment of",
+              "Pain scales managing and controlling pain., Health Protective",
+              "Behaviours, Illness Management.",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Health psychology",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Health psychology",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Health psychology, Taylor, S. E., McGraw Hill., 2019"
+            ],
+            "topics_text": "Issues related to Health psychology Total Hours 15 Textbook : 1 Health psychology, Taylor, S. E., McGraw Hill., 2019",
+            "topics": [
+              "Issues related to Health psychology",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Health psychology, Taylor, S. E., McGraw Hill., 2019"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Positive psychology: The science of wellbeing and human strengths, Positive psychology: The science of wellbeing and human strengths, Carr, A., Routledge., 2022",
+          "Psychological perspectives on stress and health., Psychological perspectives on stress and health., Misra, G., Concept Publishing Company., 1999",
+          "Health psychology, Health psychology, DiMatteo, M. R., Martin, L. R., & Tucker, V., Pearson., 2018"
+        ],
+        "textbooks": [
+          "Health psychology, Taylor, S. E., McGraw Hill., 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5943,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   HEALTH PSYCHOLOGY\nCOURSE CODE     10BH1601\nCOURSE CREDITS  3\n\nObjective:\n 1  To provide a comprehensive understanding of the fundamental concepts of health\n     psychology, including the interplay of social, emotional, cognitive, and physical aspects of\n     health.\n 2  To analyse health behaviours, barriers to their adoption, and apply health behaviour\n     theories to promote well-being.\n 3  To explore health-enhancing behaviours such as exercise, nutrition, and stress\n    management, and their impact on overall health.\n 4  To examine psychological factors like happiness, life satisfaction, resilience, optimism, and\n    hope in promoting well-being and holistic health.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To articulate the role of psychology in healthcare\n 2  To discuss the roles that health psychologists play in promoting wellness and in addressing\n    and treating psychological factors related to health and illness\n 3  To describe behavioural factors that influence wellness and that play a role in the\n     prevention, development, course, and outcome of many human diseases and health\n    problems\n 4  To use various theoretical frameworks to understand health beliefs and predict health\n     behaviours\n 5  To identify specific challenges and opportunities for psychologists in the health care system\n     of India.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction                                             7\n               Introduction: Introduction to Health Psychology, Components of\n               health: social, emotional, cognitive and physical aspects, Mind-body\n                relationship, Goals of health psychology, Bio-psycho-social model\n              of health.\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Health Behaviour and its Theories                          5\n             Behaviour and health: Characteristics of health behaviour, Barriers\n               to health behaviour, Theories of health behaviour and their\n               implications\n     3       Stress and its management techniques                       10\n                Stress: Nature, Sources, Effects of stress on physical and mental\n                health, Physiological response to stress: SAM pathway, HPA\n             Pathway, Coping strategies and stress management,\n            Psychoneuroimmunology, Chronic Health problems, Pain\n            management, Stress Management techniques - based therapy,\n             neurofeedback and diaphragmatic breathing Social support\n            etcJPMR, Mindfulness-, Behavioural medicine, Consequences of\n               health psychology techniques in management of chronic diseases,\n              Quality of Life and Quality of Life assessment given by WHO\n     4      Understanding health promoting behaviours                  8\n              Matarazzo's Health Behaviours, Health Management: Health-\n             enhancing behaviours: Exercise, Nutrition, safety, Assessment of\n             Pain scales managing and controlling pain., Health Protective\n              Behaviours, Illness Management.\n                               Total Hours                       30\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Health psychology                          15\n               Issues related to Health psychology\n                               Total Hours                       15\n\nTextbook :\n 1  Health psychology, Taylor, S. E., McGraw Hill., 2019\n\nReferences:\n 1  Positive psychology: The science of wellbeing and human strengths, Positive psychology:\n    The science of wellbeing and human strengths, Carr, A., Routledge., 2022\n 2  Psychological perspectives on stress and health., Psychological perspectives on stress and\n     health., Misra, G., Concept Publishing Company., 1999\n 3  Health psychology, Health psychology, DiMatteo, M. R., Martin, L. R., & Tucker, V.,\n     Pearson., 2018\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "3c527aa12e47172c22808da06a18d5b2e0a55b9570b4405e98c48b2c42d56eda",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028160401",
+      "subject_name": "Indian English literature",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 6,
+      "subject_code": "10BH1604",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1604.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Indian English literature [8f74e17180d3].pdf",
+      "expected_pdf_sha256": "a1ab3d7665cb708ff489c3c98bf782a5acccd4284aa2deeb89a510ee217c8616",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INDIAN ENGLISH LITERATURE",
+        "course_code": "10BH1604",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To gain an appreciation for the historical development and evolution of various genres within Indian Writing in English",
+        "To develop critical skills to analyze and interpret Indian literary texts written in English",
+        "To approach IWE from diverse angles, considering historical context and social positioning"
+      ],
+      "course_outcomes": [
+        "Appreciate the historical trajectory of various genres of IWE from colonial times till the present",
+        "Critically engage with Indian literary texts written in English in terms of colonialism/postcolonialism, regionalism, and nationalism",
+        "Critically appreciate the creative use of the English language in IWE",
+        "Approach IWE from multiple positions based on historical and social locations Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Background of Indian English Literature",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Role of English in India, Historical Background of Indian English",
+              "writing",
+              "2 Poetry 10",
+              "“An Introduction” by Kamala Das, “The Night of the Scorpion” by",
+              "Nissim Ezekiel, “A Poem for Mother” by Robin S. Ngangom, “To",
+              "India – My Native Land” by H.L.V. Derozio",
+              "3 Fiction 10",
+              "“Dance Like a Man” by Mahesh Dattani, “The Intrusion” by Shashi",
+              "Deshpande, “Kanthapura” by Raja Rao, “The Guide” by R.K.",
+              "Narayan",
+              "Total Hours 30"
+            ],
+            "topics_text": "Role of English in India, Historical Background of Indian English writing 2 Poetry 10 “An Introduction” by Kamala Das, “The Night of the Scorpion” by Nissim Ezekiel, “A Poem for Mother” by Robin S. Ngangom, “To India – My Native Land” by H.L.V. Derozio 3 Fiction 10 “Dance Like a Man” by Mahesh Dattani, “The Intrusion” by Shashi Deshpande, “Kanthapura” by Raja Rao, “The Guide” by R.K. Narayan Total Hours 30",
+            "topics": [
+              "Role of English in India, Historical Background of Indian English",
+              "writing",
+              "2 Poetry 10",
+              "“An Introduction” by Kamala Das, “The Night of the Scorpion” by",
+              "Nissim Ezekiel, “A Poem for Mother” by Robin S. Ngangom, “To",
+              "India – My Native Land” by H.L.V. Derozio",
+              "3 Fiction 10",
+              "“Dance Like a Man” by Mahesh Dattani, “The Intrusion” by Shashi",
+              "Deshpande, “Kanthapura” by Raja Rao, “The Guide” by R.K.",
+              "Narayan",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Indian English Literature",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Indian English Literature",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Dance Like a Man, Mahesh Dattani,, Surjeet Publication,, 2018",
+              "2 The Guide, R.K. Narayan, Penguin Books, 2006"
+            ],
+            "topics_text": "Issues related to Indian English Literature Total Hours 15 Textbook : 1 Dance Like a Man, Mahesh Dattani,, Surjeet Publication,, 2018 2 The Guide, R.K. Narayan, Penguin Books, 2006",
+            "topics": [
+              "Issues related to Indian English Literature",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Dance Like a Man, Mahesh Dattani,, Surjeet Publication,, 2018",
+              "2 The Guide, R.K. Narayan, Penguin Books, 2006"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Foreword to Kanthapura,, Foreword to Kanthapura,, Raja Rao,, OUP,, 1989",
+          "‘Commonwealth Literature does not exist’, in Imaginary Homelands,, ‘Commonwealth Literature does not exist’, in Imaginary Homelands,, Salman Rushdie,, Grand Books, London,, 1991",
+          "‘Divided by a Common Language’,in The Perishable Empire,, ‘Divided by a Common Language’,in The Perishable Empire,, Meenakshi Mukherjee,, OUP,, 2000",
+          "‘Introduction’, in Modern Indian Poetry in English,, ‘Introduction’, in Modern Indian Poetry in English,, Bruce King,, OUP,, 2005"
+        ],
+        "textbooks": [
+          "Dance Like a Man, Mahesh Dattani,, Surjeet Publication,, 2018",
+          "The Guide, R.K. Narayan, Penguin Books, 2006"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4294,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    INDIAN ENGLISH LITERATURE\nCOURSE CODE     10BH1604\nCOURSE CREDITS  3\n\nObjective:\n 1  To gain an appreciation for the historical development and evolution of various genres\n     within Indian Writing in English\n 2  To develop critical skills to analyze and interpret Indian literary texts written in English\n 3  To approach IWE from diverse angles, considering historical context and social positioning\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Appreciate the historical trajectory of various genres of IWE from colonial times till the\n     present\n 2   Critically engage with Indian literary texts written in English in terms of\n     colonialism/postcolonialism, regionalism, and nationalism\n 3   Critically appreciate the creative use of the English language in IWE\n 4  Approach IWE from multiple positions based on historical and social locations\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Background of Indian English Literature                    10\n             Role of English in India, Historical Background of Indian English\n              writing\n     2      Poetry                                                  10\n           “An Introduction” by Kamala Das, “The Night of the Scorpion” by\n             Nissim Ezekiel, “A Poem for Mother” by Robin S. Ngangom, “To\n               India – My Native Land” by H.L.V. Derozio\n     3       Fiction                                                  10\n            “Dance Like a Man” by Mahesh Dattani, “The Intrusion” by Shashi\n             Deshpande, “Kanthapura” by Raja Rao, “The Guide” by R.K.\n            Narayan\n                               Total Hours                       30\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Indian English Literature                   15\n               Issues related to Indian English Literature\n                               Total Hours                       15\n\nTextbook :\n 1  Dance Like a Man, Mahesh Dattani,, Surjeet Publication,, 2018\n 2  The Guide, R.K. Narayan, Penguin Books, 2006\n\nReferences:\n 1  Foreword to Kanthapura,, Foreword to Kanthapura,, Raja Rao,, OUP,, 1989\n 2  ‘Commonwealth Literature does not exist’, in Imaginary Homelands,, ‘Commonwealth\n     Literature does not exist’, in Imaginary Homelands,, Salman Rushdie,, Grand Books,\n    London,, 1991\n 3  ‘Divided by a Common Language’,in The Perishable Empire,, ‘Divided by a Common\n     Language’,in The Perishable Empire,, Meenakshi Mukherjee,, OUP,, 2000\n 4  ‘Introduction’, in Modern Indian Poetry in English,, ‘Introduction’, in Modern Indian\n     Poetry in English,, Bruce King,, OUP,, 2005\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "a1ab3d7665cb708ff489c3c98bf782a5acccd4284aa2deeb89a510ee217c8616",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028160801",
+      "subject_name": "Internship III",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 6,
+      "subject_code": "10BH1608",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1608.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Internship III [53c4b043631d].pdf",
+      "expected_pdf_sha256": "155abeedb5310ad5d20b3ab8dfe62edd1cd8e633dcec683e76e8e01424ed984f",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "INTERNSHIP III",
+        "course_code": "10BH1608",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To expose students to real-world applications of social science theories, concepts, and research methods through field-based learning.",
+        "To develop critical thinking, analytical, and communication skills by engaging with governmental, non-governmental, or community-based organizations.",
+        "To enable students to understand the socio-political, economic, and cultural dynamics operating in field-based contexts.",
+        "To instill professional ethics, civic responsibility, and reflective practice in diverse social environments."
+      ],
+      "course_outcomes": [
+        "Apply social science theories and methods to analyze real-life social problems and institutional practices.",
+        "Demonstrate professional skills such as report writing, data collection, stakeholder interaction, and teamwork.",
+        "Critically reflect on field experiences to evaluate the roles and impact of institutions and actors in society.",
+        "Exhibit enhanced awareness of ethical issues, diversity, and inclusivity in social engagement and community work. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 3005,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    INTERNSHIP III\nCOURSE CODE     10BH1608\nCOURSE CREDITS  2\n\nObjective:\n 1  To expose students to real-world applications of social science theories, concepts, and\n     research methods through field-based learning.\n 2  To develop critical thinking, analytical, and communication skills by engaging with\n     governmental, non-governmental, or community-based organizations.\n 3  To enable students to understand the socio-political, economic, and cultural dynamics\n     operating in field-based contexts.\n 4  To instill professional ethics, civic responsibility, and reflective practice in diverse social\n     environments.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply social science theories and methods to analyze real-life social problems and\n      institutional practices.\n 2  Demonstrate professional skills such as report writing, data collection, stakeholder\n     interaction, and teamwork.\n 3   Critically reflect on field experiences to evaluate the roles and impact of institutions and\n     actors in society.\n 4  Exhibit enhanced awareness of ethical issues, diversity, and inclusivity in social\n    engagement and community work.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "155abeedb5310ad5d20b3ab8dfe62edd1cd8e633dcec683e76e8e01424ed984f",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028160501",
+      "subject_name": "Introduction to business laws",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 6,
+      "subject_code": "10BH1605",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1605.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Introduction to business laws [545803ee754f].pdf",
+      "expected_pdf_sha256": "66c6e5e46e9a19bf7ae777075c9441d496a7471a57e65452a3cf2e079a3e8498",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INTRODUCTION TO BUSINESS LAWS",
+        "course_code": "10BH1605",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To comprehend the basics of business law and aspects of the Contract law.",
+        "To understand the legal system and sources of business law.",
+        "To explore business organizations right and liability.",
+        "To discuss Intellectual Property rights in relations to business law.",
+        "To explore business ethics and legal compliance."
+      ],
+      "course_outcomes": [
+        "Student will acquire a well-rounded understanding of the Key Principles of Business Law",
+        "Learn to analyze Business Legal Structures and Liabilities",
+        "Able to identify the components of a legally binding contract and evaluate contract terms for compliance with legal standards.",
+        "Identify different types of intellectual property (IP) protection and understand their significance in safeguarding business innovations.",
+        "Able to examine ethical issues in business law and understand the intersection between legal requirements and ethical decision-making.",
+        "Understand the function of the judiciary, courts, and governmental bodies in enforcing business laws and resolving disputes. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Business Law",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Meaning and scope of Business Law, Overview of the legal",
+              "environment in business (private and public law)., Role of Business",
+              "Law in protecting businesses, employees, consumers, and society",
+              "2 The Legal System and Sources of Business Law 5",
+              "Structure of the Indian legal system (courts, legislative bodies,",
+              "executive agencies)., Sources of business law: statutory law, case",
+              "law, administrative regulations, and common law., The role of",
+              "judicial decisions in business law., Types of civil cases relevant to",
+              "business (contracts, torts, property)., Overview of criminal liability",
+              "in business (fraud, embezzlement).",
+              "3 Contract Law 6",
+              "The elements and types of contract, Contract execution,",
+              "performance and breach., Remedies for breach of contract:",
+              "damages, specific performance, and rescission",
+              "4 Business Organizations and Liability 5",
+              "Types of business entities: sole proprietorship, partnership,",
+              "corporation, and limited liability company (LLC)., Advantages and",
+              "disadvantages of each business structure., Liability issues in",
+              "different business entities., Legal requirements for forming a",
+              "business entity.",
+              "5 Intellectual Property (IP) and Its Importance to Business 5",
+              "Overview of intellectual property: patents, trademarks, copyrights,",
+              "and trade secrets., The legal framework for protecting business",
+              "innovations and ideas., How businesses can leverage IP for",
+              "competitive advantage., Start-up and IP Laws",
+              "6 Business Ethics and Legal Compliance 5",
+              "Understanding the concept of Business Ethics., Legal compliance:",
+              "ensuring adherence to laws and regulations in business operations.,",
+              "Corporate social responsibility (CSR) and its legal implications.,",
+              "Ethical challenges in business law (e.g., insider trading,",
+              "environmental laws, labor rights).",
+              "Total Hours 30"
+            ],
+            "topics_text": "Meaning and scope of Business Law, Overview of the legal environment in business (private and public law)., Role of Business Law in protecting businesses, employees, consumers, and society 2 The Legal System and Sources of Business Law 5 Structure of the Indian legal system (courts, legislative bodies, executive agencies)., Sources of business law: statutory law, case law, administrative regulations, and common law., The role of judicial decisions in business law., Types of civil cases relevant to business (contracts, torts, property)., Overview of criminal liability in business (fraud, embezzlement). 3 Contract Law 6 The elements and types of contract, Contract execution, performance and breach., Remedies for breach of contract: damages, specific performance, and rescission 4 Business Organizations and Liability 5 Types of business entities: sole proprietorship, partnership, corporation, and limited liability company (LLC)., Advantages and disadvantages of each business structure., Liability issues in different business entities., Legal requirements for forming a business entity. 5 Intellectual Property (IP) and Its Importance to Business 5 Overview of intellectual property: patents, trademarks, copyrights, and trade secrets., The legal framework for protecting business innovations and ideas., How businesses can leverage IP for competitive advantage., Start-up and IP Laws 6 Business Ethics and Legal Compliance 5 Understanding the concept of Business Ethics., Legal compliance: ensuring adherence to laws and regulations in business operations., Corporate social responsibility (CSR) and its legal implications., Ethical challenges in business law (e.g., insider trading, environmental laws, labor rights). Total Hours 30",
+            "topics": [
+              "Meaning and scope of Business Law, Overview of the legal",
+              "environment in business (private and public law)., Role of Business",
+              "Law in protecting businesses, employees, consumers, and society",
+              "2 The Legal System and Sources of Business Law 5",
+              "Structure of the Indian legal system (courts, legislative bodies,",
+              "executive agencies)., Sources of business law: statutory law, case",
+              "law, administrative regulations, and common law., The role of",
+              "judicial decisions in business law., Types of civil cases relevant to",
+              "business (contracts, torts, property)., Overview of criminal liability",
+              "in business (fraud, embezzlement).",
+              "3 Contract Law 6",
+              "The elements and types of contract, Contract execution,",
+              "performance and breach., Remedies for breach of contract:",
+              "damages, specific performance, and rescission",
+              "4 Business Organizations and Liability 5",
+              "Types of business entities: sole proprietorship, partnership,",
+              "corporation, and limited liability company (LLC)., Advantages and",
+              "disadvantages of each business structure., Liability issues in",
+              "different business entities., Legal requirements for forming a",
+              "business entity.",
+              "5 Intellectual Property (IP) and Its Importance to Business 5",
+              "Overview of intellectual property: patents, trademarks, copyrights,",
+              "and trade secrets., The legal framework for protecting business",
+              "innovations and ideas., How businesses can leverage IP for",
+              "competitive advantage., Start-up and IP Laws",
+              "6 Business Ethics and Legal Compliance 5",
+              "Understanding the concept of Business Ethics., Legal compliance:",
+              "ensuring adherence to laws and regulations in business operations.,",
+              "Corporate social responsibility (CSR) and its legal implications.,",
+              "Ethical challenges in business law (e.g., insider trading,",
+              "environmental laws, labor rights).",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Introduction to Business Laws",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Introduction to Business Laws",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Principles of Business Law., Maheshwari, S.N., &Maheshwari, S.K., New Delhi: National",
+              "Publishing House., 2014"
+            ],
+            "topics_text": "Issues related to Introduction to Business Laws Total Hours 15 Textbook : 1 Principles of Business Law., Maheshwari, S.N., &Maheshwari, S.K., New Delhi: National Publishing House., 2014",
+            "topics": [
+              "Issues related to Introduction to Business Laws",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Principles of Business Law., Maheshwari, S.N., &Maheshwari, S.K., New Delhi: National",
+              "Publishing House., 2014"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Business Law for Managers., Business Law for Managers., Goel, P.K., New Delhi: Vikas Publishing House., 2020",
+          "Business Law: Text and Cases., Business Law: Text and Cases., Gulshan, S.S., & Kapoor, G.K., New Delhi: New Age International Publishers., 2019",
+          "Legal Aspects of Business. 8th ed., Legal Aspects of Business. 8th ed., Pathak, A., New Delhi: McGraw Hill Education., 2018"
+        ],
+        "textbooks": [
+          "Principles of Business Law., Maheshwari, S.N., &Maheshwari, S.K., New Delhi: National Publishing House., 2014"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6464,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    INTRODUCTION TO BUSINESS LAWS\nCOURSE CODE     10BH1605\nCOURSE CREDITS  3\n\nObjective:\n 1  To comprehend the basics of business law and aspects of the Contract law.\n 2  To understand the legal system and sources of business law.\n 3  To explore business organizations right and liability.\n 4  To discuss Intellectual Property rights in relations to business law.\n 5  To explore business ethics and legal compliance.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Student will acquire a well-rounded understanding of the Key Principles of Business Law\n 2  Learn to analyze Business Legal Structures and Liabilities\n 3  Able to identify the components of a legally binding contract and evaluate contract terms\n     for compliance with legal standards.\n 4  Identify different types of intellectual property (IP) protection and understand their\n     significance in safeguarding business innovations.\n 5  Able to examine ethical issues in business law and understand the intersection between\n     legal requirements and ethical decision-making.\n 6  Understand the function of the judiciary, courts, and governmental bodies in enforcing\n     business laws and resolving disputes.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Business Law                              4\n            Meaning and scope of Business Law, Overview of the legal\n             environment in business (private and public law)., Role of Business\n          Law in protecting businesses, employees, consumers, and society\n     2     The Legal System and Sources of Business Law               5\n               Structure of the Indian legal system (courts, legislative bodies,\n              executive agencies)., Sources of business law: statutory law, case\n              law, administrative regulations, and common law., The role of\n                judicial decisions in business law., Types of civil cases relevant to\n              business (contracts, torts, property)., Overview of criminal liability\n               in business (fraud, embezzlement).\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Contract Law                                            6\n            The elements and types of contract, Contract execution,\n             performance and breach., Remedies for breach of contract:\n             damages, specific performance, and rescission\n     4      Business Organizations and Liability                        5\n            Types of business entities: sole proprietorship, partnership,\n               corporation, and limited liability company (LLC)., Advantages and\n              disadvantages of each business structure., Liability issues in\n                different business entities., Legal requirements for forming a\n              business entity.\n     5       Intellectual Property (IP) and Its Importance to Business       5\n            Overview of intellectual property: patents, trademarks, copyrights,\n            and trade secrets., The legal framework for protecting business\n              innovations and ideas., How businesses can leverage IP for\n              competitive advantage., Start-up and IP Laws\n     6      Business Ethics and Legal Compliance                       5\n             Understanding the concept of Business Ethics., Legal compliance:\n              ensuring adherence to laws and regulations in business operations.,\n             Corporate social responsibility (CSR) and its legal implications.,\n               Ethical challenges in business law (e.g., insider trading,\n             environmental laws, labor rights).\n                               Total Hours                       30\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Introduction to Business Laws               15\n               Issues related to Introduction to Business Laws\n                               Total Hours                       15\n\nTextbook :\n 1  Principles of Business Law., Maheshwari, S.N., &Maheshwari, S.K., New Delhi: National\n     Publishing House., 2014\n\nReferences:\n 1  Business Law for Managers., Business Law for Managers., Goel, P.K., New Delhi: Vikas\n     Publishing House., 2020\n 2  Business Law: Text and Cases., Business Law: Text and Cases., Gulshan, S.S., & Kapoor,\n     G.K., New Delhi: New Age International Publishers., 2019\n 3  Legal Aspects of Business. 8th ed., Legal Aspects of Business. 8th ed., Pathak, A., New\n     Delhi: McGraw Hill Education., 2018\n\nSuggested Theory Distribution:\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "66c6e5e46e9a19bf7ae777075c9441d496a7471a57e65452a3cf2e079a3e8498",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028160201",
+      "subject_name": "Public policy",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 6,
+      "subject_code": "10BH1602",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1602.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Public policy [c82e42e2228f].pdf",
+      "expected_pdf_sha256": "669338c2756fb75ea6e91e457772744358cbd45c5e1cf4931ba7d766cbb0ff68",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PUBLIC POLICY",
+        "course_code": "10BH1602",
+        "semester_label": "V",
+        "credits": 3,
+        "prerequisite": "Semester V – Public Administration"
+      },
+      "objectives": [
+        "To introduce students to the fundamental concepts and significance of public policy.",
+        "To explore various models and approaches to policy-making, and examine stakeholder roles in the process.",
+        "To analyze the policy-making process in diverse contexts, including gender, developmental stages, and multicultural considerations.",
+        "To evaluate contemporary challenges in public policy, focusing on political dynamics, constraints, and efforts to democratize the process."
+      ],
+      "course_outcomes": [
+        "To understand the nature, scope, and importance of public policy.",
+        "To apply various models and approaches to analyse policy-making processes.",
+        "To critically assess policy-making in different sociocultural and economic contexts. Pre-requisite of course:Semester V – Public Administration"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamentals of Public Policy",
+            "contact_hours": 4,
+            "topic_lines": [
+              "What is Public Policy?, Nature and Scope of Public Policy,",
+              "Significance of Policy",
+              "2 Types, Models, and Stakeholder Participation 8",
+              "Types of Public Policy – Regulatory, Distributive, Redistributive,",
+              "Capitalization & Ethical., Models and Approaches to Public Policy",
+              "– Institutional approach, Group theory, Elite Theory, Rational",
+              "Model, Incremental Model, Game theory, Systems Approach,",
+              "Critical theory, Stakeholders in Policy Making – Official and",
+              "Unofficial participants",
+              "3 Elements of Policy Making Process 6",
+              "Problem Formation, Policy Formulation, Policy Adoption, Policy",
+              "Implementation, Policy Evaluation",
+              "4 Policy Making in Diverse Contexts 6",
+              "Public opinion and policy-making, Identity politics and policy-",
+              "making, Gender-sensitive policy making, Policy making in the",
+              "context of of a developed, developing and underdeveloped nation.,",
+              "Policy making in a multicultural nation.",
+              "5 New Perspectives in Policy Making 6",
+              "Politics of Policy Evaluation – The dilemma between policy impact",
+              "and policy output (with a special emphasis on the kanyashree",
+              "prakalpa), Constraints on Public Policy, Democratizing the Public",
+              "Policy Process, Role of Governmental and Non-Governmental",
+              "Agencies in the Contextual Setting of Public Policy Making",
+              "Total Hours 30"
+            ],
+            "topics_text": "What is Public Policy?, Nature and Scope of Public Policy, Significance of Policy 2 Types, Models, and Stakeholder Participation 8 Types of Public Policy – Regulatory, Distributive, Redistributive, Capitalization & Ethical., Models and Approaches to Public Policy – Institutional approach, Group theory, Elite Theory, Rational Model, Incremental Model, Game theory, Systems Approach, Critical theory, Stakeholders in Policy Making – Official and Unofficial participants 3 Elements of Policy Making Process 6 Problem Formation, Policy Formulation, Policy Adoption, Policy Implementation, Policy Evaluation 4 Policy Making in Diverse Contexts 6 Public opinion and policy-making, Identity politics and policy- making, Gender-sensitive policy making, Policy making in the context of of a developed, developing and underdeveloped nation., Policy making in a multicultural nation. 5 New Perspectives in Policy Making 6 Politics of Policy Evaluation – The dilemma between policy impact and policy output (with a special emphasis on the kanyashree prakalpa), Constraints on Public Policy, Democratizing the Public Policy Process, Role of Governmental and Non-Governmental Agencies in the Contextual Setting of Public Policy Making Total Hours 30",
+            "topics": [
+              "What is Public Policy?, Nature and Scope of Public Policy,",
+              "Significance of Policy",
+              "2 Types, Models, and Stakeholder Participation 8",
+              "Types of Public Policy – Regulatory, Distributive, Redistributive,",
+              "Capitalization & Ethical., Models and Approaches to Public Policy",
+              "– Institutional approach, Group theory, Elite Theory, Rational",
+              "Model, Incremental Model, Game theory, Systems Approach,",
+              "Critical theory, Stakeholders in Policy Making – Official and",
+              "Unofficial participants",
+              "3 Elements of Policy Making Process 6",
+              "Problem Formation, Policy Formulation, Policy Adoption, Policy",
+              "Implementation, Policy Evaluation",
+              "4 Policy Making in Diverse Contexts 6",
+              "Public opinion and policy-making, Identity politics and policy",
+              "making, Gender-sensitive policy making, Policy making in the",
+              "context of of a developed, developing and underdeveloped nation.,",
+              "Policy making in a multicultural nation.",
+              "5 New Perspectives in Policy Making 6",
+              "Politics of Policy Evaluation – The dilemma between policy impact",
+              "and policy output (with a special emphasis on the kanyashree",
+              "prakalpa), Constraints on Public Policy, Democratizing the Public",
+              "Policy Process, Role of Governmental and Non-Governmental",
+              "Agencies in the Contextual Setting of Public Policy Making",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Public Policy",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Public Policy",
+              "Total Hours 15",
+              "Textbook :",
+              "1 The Oxford Handbook of Public Policy., Moran, M., Rein, M., & Goodin, R. E., New",
+              "York: Oxford University Press., 2006"
+            ],
+            "topics_text": "Issues related to Public Policy Total Hours 15 Textbook : 1 The Oxford Handbook of Public Policy., Moran, M., Rein, M., & Goodin, R. E., New York: Oxford University Press., 2006",
+            "topics": [
+              "Issues related to Public Policy",
+              "Total Hours 15",
+              "Textbook :",
+              "1 The Oxford Handbook of Public Policy., Moran, M., Rein, M., & Goodin, R. E., New",
+              "York: Oxford University Press., 2006"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Public Policy and Politics in India, How Institution Matter, Public Policy and Politics in India, How Institution Matter, Kuldeep Mathur, OUP, 2015",
+          "Shaping Policy in India: Alliance, Advocacy, Activism, Shaping Policy in India: Alliance, Advocacy, Activism, Rajesh Chakraborti and Kaushiki Sanyal, OUP, 2017",
+          "Politics in India: Structure, Process and Policy, Politics in India: Structure, Process and Policy, Subrata K. Mitra, OUP, 2014",
+          "Public Administration (34th ed.), Public Administration (34th ed.), Avasthi, A., & Maheshwari, S., Agra: Lakshmi Narain Agarwal., 2018",
+          "Routledge Handbook of Public Policy., Routledge Handbook of Public Policy., Araral, E., Fritzen, S., Howlett, M., Ramesh, M., & Wu, X., Oxon: Routledge., 2013",
+          "Public Policy: Concept, Theory and Practices., Public Policy: Concept, Theory and Practices., Chakrabarty, B., & Chand, P., Sage., 2016",
+          "Public Policy and Systems., Public Policy and Systems., De, P. K., New Delhi: Pearson, 2011"
+        ],
+        "textbooks": [
+          "The Oxford Handbook of Public Policy., Moran, M., Rein, M., & Goodin, R. E., New York: Oxford University Press., 2006"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.cengage.co.in/book-list/print/public-policymaking-an-introduction-",
+          "https://www.routledge.com/An-Introduction-to-the-Policy-Process-The-ories- Concepts/Birkland/p/book/9781138495616",
+          "https://www.routledge.com/An-Introduction-to-the-Policy-Process-Theories-Concepts-and- Models-of-Public-Policymaking/Birkland/",
+          "https://www.routledge.com/An-Introduction-to-the-Policy-Process-Theories-Concepts-and- Models-of-Public-Policymaking/Birkland/p/book/9781032756615",
+          "https://wwnorton.com/books/Policy-Paradox"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6685,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    PUBLIC POLICY\nCOURSE CODE     10BH1602\nCOURSE CREDITS  3\n\nObjective:\n 1  To introduce students to the fundamental concepts and significance of public policy.\n 2  To explore various models and approaches to policy-making, and examine stakeholder\n     roles in the process.\n 3  To analyze the policy-making process in diverse contexts, including gender, developmental\n     stages, and multicultural considerations.\n 4  To evaluate contemporary challenges in public policy, focusing on political dynamics,\n     constraints, and efforts to democratize the process.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand the nature, scope, and importance of public policy.\n 2  To apply various models and approaches to analyse policy-making processes.\n 3  To critically assess policy-making in different sociocultural and economic contexts.\n\n\nPre-requisite of course:Semester V – Public Administration\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fundamentals of Public Policy                              4\n           What is Public Policy?, Nature and Scope of Public Policy,\n              Significance of Policy\n     2      Types, Models, and Stakeholder Participation                 8\n            Types of Public Policy – Regulatory, Distributive, Redistributive,\n               Capitalization & Ethical., Models and Approaches to Public Policy\n            – Institutional approach, Group theory, Elite Theory, Rational\n             Model, Incremental Model, Game theory, Systems Approach,\n                Critical theory, Stakeholders in Policy Making – Official and\n               Unofficial participants\n     3      Elements of Policy Making Process                          6\n            Problem Formation, Policy Formulation, Policy Adoption, Policy\n              Implementation, Policy Evaluation\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4       Policy Making in Diverse Contexts                          6\n              Public opinion and policy-making, Identity politics and policy-\n             making, Gender-sensitive policy making, Policy making in the\n              context of of a developed, developing and underdeveloped nation.,\n              Policy making in a multicultural nation.\n     5     New Perspectives in Policy Making                          6\n                Politics of Policy Evaluation – The dilemma between policy impact\n            and policy output (with a special emphasis on the kanyashree\n               prakalpa), Constraints on Public Policy, Democratizing the Public\n              Policy Process, Role of Governmental and Non-Governmental\n             Agencies in the Contextual Setting of Public Policy Making\n                               Total Hours                       30\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Public Policy                              15\n               Issues related to Public Policy\n                               Total Hours                       15\n\nTextbook :\n 1  The Oxford Handbook of Public Policy., Moran, M., Rein, M., & Goodin, R. E., New\n    York: Oxford University Press., 2006\n\nReferences:\n 1  Public Policy and Politics in India, How Institution Matter, Public Policy and Politics in\n     India, How Institution Matter, Kuldeep Mathur, OUP, 2015\n 2  Shaping Policy in India: Alliance, Advocacy, Activism, Shaping Policy in India: Alliance,\n    Advocacy, Activism, Rajesh Chakraborti and Kaushiki Sanyal, OUP, 2017\n 3   Politics in India: Structure, Process and Policy, Politics in India: Structure, Process and\n     Policy, Subrata K. Mitra, OUP, 2014\n 4  Public Administration (34th ed.), Public Administration (34th ed.), Avasthi, A., &\n    Maheshwari, S., Agra: Lakshmi Narain Agarwal., 2018\n 5  Routledge Handbook of Public Policy., Routledge Handbook of Public Policy., Araral, E.,\n     Fritzen, S., Howlett, M., Ramesh, M., & Wu, X., Oxon: Routledge., 2013\n 6  Public Policy: Concept, Theory and Practices., Public Policy: Concept, Theory and\n     Practices., Chakrabarty, B., & Chand, P., Sage., 2016\n 7  Public Policy and Systems., Public Policy and Systems., De, P. K., New Delhi: Pearson,\n    2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\nSupplementary Resources:\n 1  https://www.cengage.co.in/book-list/print/public-policymaking-an-introduction-\n 2  https://www.routledge.com/An-Introduction-to-the-Policy-Process-The-ories-\n    Concepts/Birkland/p/book/9781138495616\n 3  https://www.routledge.com/An-Introduction-to-the-Policy-Process-Theories-Concepts-and-\n     Models-of-Public-Policymaking/Birkland/\n 4  https://www.routledge.com/An-Introduction-to-the-Policy-Process-Theories-Concepts-and-\n    Models-of-Public-Policymaking/Birkland/p/book/9781032756615\n 5  https://wwnorton.com/books/Policy-Paradox\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "Official PDF semester differs from the active catalog semester."
+      ],
+      "actual_pdf_sha256": "669338c2756fb75ea6e91e457772744358cbd45c5e1cf4931ba7d766cbb0ff68",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028160301",
+      "subject_name": "Western sociological thought",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 6,
+      "subject_code": "10BH1603",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1603.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Western sociological thought [9852ee5bbc52].pdf",
+      "expected_pdf_sha256": "02ccda4a5a4d2709935623cdd611560114ad8c70614d9f2b83b88ac40444cf02",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "WESTERN SOCIOLOGICAL THOUGHT",
+        "course_code": "10BH1603",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To introduce students to key aspects of western sociological thoughts.",
+        "To acquaint students to different types and dimensions of western sociological thoughts.",
+        "To enable students to develop their perspectives on western sociological thoughts."
+      ],
+      "course_outcomes": [
+        "Define the emergence of western sociological thoughts.",
+        "Describe approaches to the functionalism sociological thoughts.",
+        "Demonstrate the underpinnings of conflict sociological thoughts.",
+        "Theorize the major schools of exchange sociological thoughts.",
+        "Formulate and establish theories on interactionist sociological thoughts. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Emergence of Sociology",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Historical background of Sociology, Sociology as a new discipline,",
+              "Impact of revolutions:, Enlightenment, Renaissance, The French",
+              "Revolution, The Industrial Revolution., Comte and Positivism",
+              "2 Theory of Functionalism 5",
+              "Functionalism: Emergence (Herbert spencer and Emile Durkheim),",
+              "Functionalism of Malinowski, Brown, Talcott Parsons, R.K.",
+              "Merton.",
+              "3 Conflict Perspective 8",
+              "Conflict School:, Origin of Conflict/ Critical Theorising,, Conflict",
+              "theories of Karl Marx,, Ralf Dahrendorf, Lewis Coser., Critical",
+              "Theory",
+              "4 Interactionist Theory 7",
+              "Interactionist Theory:, Sociological Imagination., Early",
+              "Interactionism;, Symbolic Interactionism of Blumer and Goffman,",
+              "Role theory of Turner;, Ethnomethodology.",
+              "Total Hours 30"
+            ],
+            "topics_text": "Historical background of Sociology, Sociology as a new discipline, Impact of revolutions:, Enlightenment, Renaissance, The French Revolution, The Industrial Revolution., Comte and Positivism 2 Theory of Functionalism 5 Functionalism: Emergence (Herbert spencer and Emile Durkheim), Functionalism of Malinowski, Brown, Talcott Parsons, R.K. Merton. 3 Conflict Perspective 8 Conflict School:, Origin of Conflict/ Critical Theorising,, Conflict theories of Karl Marx,, Ralf Dahrendorf, Lewis Coser., Critical Theory 4 Interactionist Theory 7 Interactionist Theory:, Sociological Imagination., Early Interactionism;, Symbolic Interactionism of Blumer and Goffman, Role theory of Turner;, Ethnomethodology. Total Hours 30",
+            "topics": [
+              "Historical background of Sociology, Sociology as a new discipline,",
+              "Impact of revolutions:, Enlightenment, Renaissance, The French",
+              "Revolution, The Industrial Revolution., Comte and Positivism",
+              "2 Theory of Functionalism 5",
+              "Functionalism: Emergence (Herbert spencer and Emile Durkheim),",
+              "Functionalism of Malinowski, Brown, Talcott Parsons, R.K.",
+              "Merton.",
+              "3 Conflict Perspective 8",
+              "Conflict School:, Origin of Conflict/ Critical Theorising,, Conflict",
+              "theories of Karl Marx,, Ralf Dahrendorf, Lewis Coser., Critical",
+              "Theory",
+              "4 Interactionist Theory 7",
+              "Interactionist Theory:, Sociological Imagination., Early",
+              "Interactionism",
+              ", Symbolic Interactionism of Blumer and Goffman,",
+              "Role theory of Turner",
+              ", Ethnomethodology.",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Western Sociological Thought",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Western Sociological Thought",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Sociological Theory., Ritzer, George, New Delhi: Tata-Mc Graw Hill, 1996",
+              "2 Sociological theory in the contemporary era: Text and readings., Appelrouth, S., & Edles,",
+              "L. D., Pine Forge Press., 2010"
+            ],
+            "topics_text": "Issues related to Western Sociological Thought Total Hours 15 Textbook : 1 Sociological Theory., Ritzer, George, New Delhi: Tata-Mc Graw Hill, 1996 2 Sociological theory in the contemporary era: Text and readings., Appelrouth, S., & Edles, L. D., Pine Forge Press., 2010",
+            "topics": [
+              "Issues related to Western Sociological Thought",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Sociological Theory., Ritzer, George, New Delhi: Tata-Mc Graw Hill, 1996",
+              "2 Sociological theory in the contemporary era: Text and readings., Appelrouth, S., & Edles,",
+              "L. D., Pine Forge Press., 2010"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Sociological Thought,, Sociological Thought,, Abraham, F. And J.H. Morgan, Madras: MacMillan India Limited., 1985",
+          "Main Concepts in Sociological Thought (2 Volume),, Main Concepts in Sociological Thought (2 Volume),, Aron, Rymond,, Harmondsworth, Middlesex, Penguin Books., 1967",
+          "Master of Sociological Thought,, Master of Sociological Thought,, Coser, Lewis A.,, Rawat Publication), 1979"
+        ],
+        "textbooks": [
+          "Sociological Theory., Ritzer, George, New Delhi: Tata-Mc Graw Hill, 1996",
+          "Sociological theory in the contemporary era: Text and readings., Appelrouth, S., & Edles, L. D., Pine Forge Press., 2010"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://courses.lumenlearning.com/wm-introductiontosociology/chapter/the-history-of- sociology/",
+          "https://www.khanacademy.org/humanities/world-history/renaissance-and-reformation",
+          "https://www.history.com/topics/renaissance/renaissance",
+          "https://www.simplypsychology.org/auguste-comte.html",
+          "https://courses.lumenlearning.com/wm-introductiontosociology/chapter/theoretical- perspectives/",
+          "https://www.simplypsychology.org/functionalism.html",
+          "https://courses.lumenlearning.com/wm-introductiontosociology/chapter/social-conflict- theory/",
+          "https://www.britannica.com/biography/Karl-Marx Supplementary Resources:",
+          "https://plato.stanford.edu/entries/critical-theory/",
+          "https://courses.lumenlearning.com/wm-introductiontosociology/chapter/symbolic- interactionism/",
+          "https://www.simplypsychology.org/ethnomethodology.html",
+          "https://www.simplypsychology.org/role-theory.html"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5628,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   WESTERN SOCIOLOGICAL THOUGHT\nCOURSE CODE     10BH1603\nCOURSE CREDITS  3\n\nObjective:\n 1  To introduce students to key aspects of western sociological thoughts.\n 2  To acquaint students to different types and dimensions of western sociological thoughts.\n 3  To enable students to develop their perspectives on western sociological thoughts.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Define the emergence of western sociological thoughts.\n 2  Describe approaches to the functionalism sociological thoughts.\n 3  Demonstrate the underpinnings of conflict sociological thoughts.\n 4  Theorize the major schools of exchange sociological thoughts.\n 5  Formulate and establish theories on interactionist sociological thoughts.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Emergence of Sociology                                   10\n               Historical background of Sociology, Sociology as a new discipline,\n             Impact of revolutions:, Enlightenment, Renaissance, The French\n              Revolution, The Industrial Revolution., Comte and Positivism\n     2      Theory of Functionalism                                   5\n              Functionalism: Emergence (Herbert spencer and Emile Durkheim),\n              Functionalism of Malinowski, Brown, Talcott Parsons, R.K.\n             Merton.\n     3       Conflict Perspective                                      8\n               Conflict School:, Origin of Conflict/ Critical Theorising,, Conflict\n               theories of Karl Marx,, Ralf Dahrendorf, Lewis Coser., Critical\n            Theory\n     4       Interactionist Theory                                     7\n                Interactionist Theory:, Sociological Imagination., Early\n               Interactionism;, Symbolic Interactionism of Blumer and Goffman,\n             Role theory of Turner;, Ethnomethodology.\n                               Total Hours                       30\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Western Sociological Thought                15\n               Issues related to Western Sociological Thought\n                               Total Hours                       15\n\nTextbook :\n 1  Sociological Theory., Ritzer, George, New Delhi: Tata-Mc Graw Hill, 1996\n 2  Sociological theory in the contemporary era: Text and readings., Appelrouth, S., & Edles,\n     L. D., Pine Forge Press., 2010\n\nReferences:\n 1  Sociological Thought,, Sociological Thought,, Abraham, F. And J.H. Morgan, Madras:\n    MacMillan India Limited., 1985\n 2  Main Concepts in Sociological Thought (2 Volume),, Main Concepts in Sociological\n    Thought (2 Volume),, Aron, Rymond,, Harmondsworth, Middlesex, Penguin Books., 1967\n 3  Master of Sociological Thought,, Master of Sociological Thought,, Coser, Lewis A.,,\n    Rawat Publication), 1979\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\nSupplementary Resources:\n 1  https://courses.lumenlearning.com/wm-introductiontosociology/chapter/the-history-of-\n     sociology/\n 2  https://www.khanacademy.org/humanities/world-history/renaissance-and-reformation\n 3  https://www.history.com/topics/renaissance/renaissance\n 4  https://www.simplypsychology.org/auguste-comte.html\n 5  https://courses.lumenlearning.com/wm-introductiontosociology/chapter/theoretical-\n     perspectives/\n 6  https://www.simplypsychology.org/functionalism.html\n 7  https://courses.lumenlearning.com/wm-introductiontosociology/chapter/social-conflict-\n     theory/\n 8  https://www.britannica.com/biography/Karl-Marx\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 9   https://plato.stanford.edu/entries/critical-theory/\n 10  https://courses.lumenlearning.com/wm-introductiontosociology/chapter/symbolic-\n     interactionism/\n 11  https://www.simplypsychology.org/ethnomethodology.html\n 12  https://www.simplypsychology.org/role-theory.html\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "02ccda4a5a4d2709935623cdd611560114ad8c70614d9f2b83b88ac40444cf02",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    }
+  ],
+  "build_summary": {
+    "extracted": 7,
+    "manual_review": 1,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

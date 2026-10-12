@@ -1,0 +1,1156 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "ba-in-socialogy-psychology-political-science",
+    "course_name": "BA in Socialogy Psychology Political Science",
+    "output_slug": "BA_in_Sociology_Psychology_Political_Science"
+  },
+  "semester": 5,
+  "subject_count": 8,
+  "subjects": [
+    {
+      "subject_id": "43001155000101",
+      "subject_name": "Basic programming with C",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 5,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NETWORK_UNVERIFIED_RETRY",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Source access was blocked/unverified; not evidence the syllabus does not exist."
+      ],
+      "pdf_verification_status": "NETWORK_UNVERIFIED_RETRY_NO_LOCAL_PDF"
+    },
+    {
+      "subject_id": "43001028150401",
+      "subject_name": "English V: introduction to linguistics",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 5,
+      "subject_code": "10BH1504",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1504.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/English V introduction to linguistics [f11201dc4329].pdf",
+      "expected_pdf_sha256": "d0306ba36e77f168f5670d2d126a7a23d410fa3fde90d703b9fb01c48a2e6385",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENGLISH V : INTRODUCTION TO LINGUISTICS",
+        "course_code": "10BH1504",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To introduce students to the fundamental concepts, branches, and application of linguistics.",
+        "To analyse the structure and meaning of language through phonetics, morphology, syntax, semantics, and pragmatics.",
+        "To explore intersection of linguistics and technology, focusing on its applications in digital communication and AI",
+        "To examine the role of linguistics in language teaching, learning, and policy-making."
+      ],
+      "course_outcomes": [
+        "Define and describe the key concepts, functions, and branches of linguistics.",
+        "Analyse the structure of language using linguistic tools like phonetic transcription, morphological analysis, and syntactic patterns.",
+        "Evaluate the impact of technology and AI on language use, communication, and linguistics research.",
+        "Apply linguistic principles to develop insights into language teaching, policy-making, and digital communication contexts. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Foundations of Language and Linguistics",
+            "contact_hours": 10,
+            "topic_lines": [
+              "What is language? : Definitions, characteristics, and functions of",
+              "language; The evolution of language, Introduction to linguistics;",
+              "Defining linguistics; Linguistics as a science; Branches of",
+              "linguistics; Forensic linguistics & Semiotics, Phonetics and",
+              "Phonology; Phonetics: Speech sound, articulation, and transcription;",
+              "Phonology: Sound patterns and phonemes",
+              "2 Structure and Meaning in Language 10",
+              "Morphology; Definition; Types of morphemes (free, bound,",
+              "derivational, inflectional); Morphological analysis of words;",
+              "Structure of words (simple, complex and compound words);",
+              "Various ways of word formation, Syntax; Basic sentence patterns;",
+              "Basics of generative grammar, Semantics and Pragmatics; Meaning",
+              "in language: lexical and sentence semantics; Semantic roles and",
+              "relationships; Language in context: speech acts; Grice’s maxims,",
+              "implicature, deixis, and discourse analysis (basics)",
+              "3 Applications and Advanced Concepts in Linguistics 10",
+              "Technology in Linguistics; Intersection of linguistics and",
+              "technology; Language use in digital space: social media, hashtags,",
+              "emojis, and online communities; Digital communication and its",
+              "impact on language change; Corpus linguistics (basics); The role of",
+              "AI in linguistics, Linguistics and Language Teaching; Language",
+              "policy and planning Language teaching and learning (TESOL, ELT",
+              "basics); Integration of technology in language teaching",
+              "Total Hours 30"
+            ],
+            "topics_text": "What is language? : Definitions, characteristics, and functions of language; The evolution of language, Introduction to linguistics; Defining linguistics; Linguistics as a science; Branches of linguistics; Forensic linguistics & Semiotics, Phonetics and Phonology; Phonetics: Speech sound, articulation, and transcription; Phonology: Sound patterns and phonemes 2 Structure and Meaning in Language 10 Morphology; Definition; Types of morphemes (free, bound, derivational, inflectional); Morphological analysis of words; Structure of words (simple, complex and compound words); Various ways of word formation, Syntax; Basic sentence patterns; Basics of generative grammar, Semantics and Pragmatics; Meaning in language: lexical and sentence semantics; Semantic roles and relationships; Language in context: speech acts; Grice’s maxims, implicature, deixis, and discourse analysis (basics) 3 Applications and Advanced Concepts in Linguistics 10 Technology in Linguistics; Intersection of linguistics and technology; Language use in digital space: social media, hashtags, emojis, and online communities; Digital communication and its impact on language change; Corpus linguistics (basics); The role of AI in linguistics, Linguistics and Language Teaching; Language policy and planning Language teaching and learning (TESOL, ELT basics); Integration of technology in language teaching Total Hours 30",
+            "topics": [
+              "What is language? : Definitions, characteristics, and functions of",
+              "language",
+              "The evolution of language, Introduction to linguistics",
+              "Defining linguistics",
+              "Linguistics as a science",
+              "Branches of",
+              "linguistics",
+              "Forensic linguistics & Semiotics, Phonetics and",
+              "Phonology",
+              "Phonetics: Speech sound, articulation, and transcription",
+              "Phonology: Sound patterns and phonemes",
+              "2 Structure and Meaning in Language 10",
+              "Morphology",
+              "Definition",
+              "Types of morphemes (free, bound,",
+              "derivational, inflectional)",
+              "Morphological analysis of words",
+              "Structure of words (simple, complex and compound words)",
+              "Various ways of word formation, Syntax",
+              "Basic sentence patterns",
+              "Basics of generative grammar, Semantics and Pragmatics",
+              "Meaning",
+              "in language: lexical and sentence semantics",
+              "Semantic roles and",
+              "relationships",
+              "Language in context: speech acts",
+              "Grice’s maxims,",
+              "implicature, deixis, and discourse analysis (basics)",
+              "3 Applications and Advanced Concepts in Linguistics 10",
+              "Technology in Linguistics",
+              "Intersection of linguistics and",
+              "technology",
+              "Language use in digital space: social media, hashtags,",
+              "emojis, and online communities",
+              "Digital communication and its",
+              "impact on language change",
+              "Corpus linguistics (basics)",
+              "The role of",
+              "AI in linguistics, Linguistics and Language Teaching",
+              "Language",
+              "policy and planning Language teaching and learning (TESOL, ELT",
+              "basics)",
+              "Integration of technology in language teaching",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues Related to Introduction to Linguistics",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues Related to Introduction to Linguistics",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Introduction to Linguistics: Language, Grammar, and Semantics , Pushpinder Syal, D.V.",
+              "Jindal, PHI Learning Pvt. Ltd, 2007",
+              "2 Linguistics: An Introduction to Language and Communication., Akmajian, A; Demers,",
+              "R.A.; Farmer, A.K. and Harnish, R.M., MIT Press, 2001"
+            ],
+            "topics_text": "Issues Related to Introduction to Linguistics Total Hours 15 Textbook : 1 Introduction to Linguistics: Language, Grammar, and Semantics , Pushpinder Syal, D.V. Jindal, PHI Learning Pvt. Ltd, 2007 2 Linguistics: An Introduction to Language and Communication., Akmajian, A; Demers, R.A.; Farmer, A.K. and Harnish, R.M., MIT Press, 2001",
+            "topics": [
+              "Issues Related to Introduction to Linguistics",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Introduction to Linguistics: Language, Grammar, and Semantics , Pushpinder Syal, D.V.",
+              "Jindal, PHI Learning Pvt. Ltd, 2007",
+              "2 Linguistics: An Introduction to Language and Communication., Akmajian, A",
+              "Demers,",
+              "R.A.",
+              "Farmer, A.K. and Harnish, R.M., MIT Press, 2001"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "The Study of Language (2nd edition) , The Study of Language (2nd edition) , Yule, G. , Cambridge University Press., 1996"
+        ],
+        "textbooks": [
+          "Introduction to Linguistics: Language, Grammar, and Semantics , Pushpinder Syal, D.V. Jindal, PHI Learning Pvt. Ltd, 2007",
+          "Linguistics: An Introduction to Language and Communication., Akmajian, A; Demers, R.A.; Farmer, A.K. and Harnish, R.M., MIT Press, 2001"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5704,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    ENGLISH V : INTRODUCTION TO LINGUISTICS\nCOURSE CODE     10BH1504\nCOURSE CREDITS  3\n\nObjective:\n 1  To introduce students to the fundamental concepts, branches, and application of linguistics.\n 2  To analyse the structure and meaning of language through phonetics, morphology, syntax,\n     semantics, and pragmatics.\n 3  To explore intersection of linguistics and technology, focusing on its applications in digital\n    communication and AI\n 4  To examine the role of linguistics in language teaching, learning, and policy-making.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Define and describe the key concepts, functions, and branches of linguistics.\n 2  Analyse the structure of language using linguistic tools like phonetic transcription,\n     morphological analysis, and syntactic patterns.\n 3  Evaluate the impact of technology and AI on language use, communication, and linguistics\n     research.\n 4  Apply linguistic principles to develop insights into language teaching, policy-making, and\n      digital communication contexts.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Foundations of Language and Linguistics                    10\n           What is language? : Definitions, characteristics, and functions of\n              language; The evolution of language, Introduction to linguistics;\n             Defining linguistics; Linguistics as a science; Branches of\n                linguistics; Forensic linguistics & Semiotics, Phonetics and\n             Phonology; Phonetics: Speech sound, articulation, and transcription;\n             Phonology: Sound patterns and phonemes\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Structure and Meaning in Language                         10\n            Morphology; Definition; Types of morphemes (free, bound,\n               derivational, inflectional); Morphological analysis of words;\n               Structure of words (simple, complex and compound words);\n             Various ways of word formation, Syntax; Basic sentence patterns;\n              Basics of generative grammar, Semantics and Pragmatics; Meaning\n               in language: lexical and sentence semantics; Semantic roles and\n                relationships; Language in context: speech acts; Grice’s maxims,\n               implicature, deixis, and discourse analysis (basics)\n     3      Applications and Advanced Concepts in Linguistics            10\n             Technology in Linguistics; Intersection of linguistics and\n              technology; Language use in digital space: social media, hashtags,\n              emojis, and online communities; Digital communication and its\n             impact on language change; Corpus linguistics (basics); The role of\n           AI in linguistics, Linguistics and Language Teaching; Language\n              policy and planning Language teaching and learning (TESOL, ELT\n                basics); Integration of technology in language teaching\n                               Total Hours                       30\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues Related to Introduction to Linguistics                  15\n               Issues Related to Introduction to Linguistics\n                               Total Hours                       15\n\nTextbook :\n 1  Introduction to Linguistics: Language, Grammar, and Semantics , Pushpinder Syal, D.V.\n     Jindal, PHI Learning Pvt. Ltd, 2007\n 2  Linguistics: An Introduction to Language and Communication., Akmajian, A; Demers,\n     R.A.; Farmer, A.K. and Harnish, R.M., MIT Press, 2001\n\nReferences:\n 1  The Study of Language (2nd edition) , The Study of Language (2nd edition) , Yule, G. ,\n    Cambridge University Press., 1996\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "d0306ba36e77f168f5670d2d126a7a23d410fa3fde90d703b9fb01c48a2e6385",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028150701",
+      "subject_name": "Health, wellness and yoga",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 5,
+      "subject_code": "10BH1507",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1507.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Health, wellness and yoga [0c95255116d3].pdf",
+      "expected_pdf_sha256": "b2b0f62d94802fd2f1b29d868f127ac710c0e8531c3f3b277186624feaa24efd",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "HEALTH, WELLNESS AND YOGA",
+        "course_code": "10BH1507",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To promote an optimal state of physical, emotional, intellectual, social & spiritual well- being of all the citizens of the country.",
+        "To organize sports and fitness activities outside the regular institutional working hours.",
+        "To focus on creating the ability for self-discipline and self-control in students by Yoga education.",
+        "To make the students aware of various diseases and benefits of good food habits.",
+        "To prepare such a citizen who is physically and mentally fit and can handle all the situation in the life."
+      ],
+      "course_outcomes": [
+        "Physical health",
+        "Mental health",
+        "Spiritual well-being",
+        "Emotion and social connect Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 1 1 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Health and Wellness",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Meaning, dimensions and approaches to health and wellness,",
+              "Factors influencing health, Indicators of good health and poor",
+              "health, Status of health in Gujarat and India. , Common diseases-",
+              "introduction, types & etiology, Communicable diseases- causes &",
+              "prevention, Obesity, Cardiovascular disorder, Diabetes, Liver",
+              "diseases, Adverse effect of alcohol and tobacco on human health.",
+              "2 Yoga education 5",
+              "Definition, explanation and importance of yoga., Historical",
+              "perspective yoga, Definition, types and mental & physical benefits",
+              "asanas, Different types of asanas – Padmasana, Bhujangasana,",
+              "Halasana, Shalabhasana, Dhanurasana, Vajrasana, Chakrasana,",
+              "Shavasana, Pawanmuktasana, Mandukasana and Uttanpadasana.,",
+              "Pranayama and its health benefits- Bhastrika, Kapalbhati, Bhya",
+              "pranayama, Anulomvilom, Bhramari, Udgeeth, Meditation and its",
+              "health benefits",
+              "3 Sports and fitness 5",
+              "Definition, Meaning & Importance of Physical education,",
+              "Components of physical fitness and wellness , Sports Training",
+              "Institutions in India , Physical Education and sports as a need for the",
+              "Society, Stretching exercises, warming up and limbering down",
+              "exercises, Cardiovascular exercises, Rules and regulations of some",
+              "important games-Football, Volleyball, Basketball, Badminton,",
+              "Table tennis, Hockey and Cricket",
+              "Total Hours 15"
+            ],
+            "topics_text": "Meaning, dimensions and approaches to health and wellness, Factors influencing health, Indicators of good health and poor health, Status of health in Gujarat and India. , Common diseases- introduction, types & etiology, Communicable diseases- causes & prevention, Obesity, Cardiovascular disorder, Diabetes, Liver diseases, Adverse effect of alcohol and tobacco on human health. 2 Yoga education 5 Definition, explanation and importance of yoga., Historical perspective yoga, Definition, types and mental & physical benefits asanas, Different types of asanas – Padmasana, Bhujangasana, Halasana, Shalabhasana, Dhanurasana, Vajrasana, Chakrasana, Shavasana, Pawanmuktasana, Mandukasana and Uttanpadasana., Pranayama and its health benefits- Bhastrika, Kapalbhati, Bhya pranayama, Anulomvilom, Bhramari, Udgeeth, Meditation and its health benefits 3 Sports and fitness 5 Definition, Meaning & Importance of Physical education, Components of physical fitness and wellness , Sports Training Institutions in India , Physical Education and sports as a need for the Society, Stretching exercises, warming up and limbering down exercises, Cardiovascular exercises, Rules and regulations of some important games-Football, Volleyball, Basketball, Badminton, Table tennis, Hockey and Cricket Total Hours 15",
+            "topics": [
+              "Meaning, dimensions and approaches to health and wellness,",
+              "Factors influencing health, Indicators of good health and poor",
+              "health, Status of health in Gujarat and India. , Common diseases",
+              "introduction, types & etiology, Communicable diseases- causes &",
+              "prevention, Obesity, Cardiovascular disorder, Diabetes, Liver",
+              "diseases, Adverse effect of alcohol and tobacco on human health.",
+              "2 Yoga education 5",
+              "Definition, explanation and importance of yoga., Historical",
+              "perspective yoga, Definition, types and mental & physical benefits",
+              "asanas, Different types of asanas – Padmasana, Bhujangasana,",
+              "Halasana, Shalabhasana, Dhanurasana, Vajrasana, Chakrasana,",
+              "Shavasana, Pawanmuktasana, Mandukasana and Uttanpadasana.,",
+              "Pranayama and its health benefits- Bhastrika, Kapalbhati, Bhya",
+              "pranayama, Anulomvilom, Bhramari, Udgeeth, Meditation and its",
+              "health benefits",
+              "3 Sports and fitness 5",
+              "Definition, Meaning & Importance of Physical education,",
+              "Components of physical fitness and wellness , Sports Training",
+              "Institutions in India , Physical Education and sports as a need for the",
+              "Society, Stretching exercises, warming up and limbering down",
+              "exercises, Cardiovascular exercises, Rules and regulations of some",
+              "important games-Football, Volleyball, Basketball, Badminton,",
+              "Table tennis, Hockey and Cricket",
+              "Total Hours 15"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues Related to Health, Wellness and Yoga",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues Related to Health, Wellness and Yoga",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Yoga Deepika, , B.K.S Iyengar , Vivekanand Kendra Publisher , 2000",
+              "2 Modern Textbook of Physical Education, Health and Sports , Ajmer Singh, Bains Jagdish,",
+              "Gill J.S., Brar R.S. , Kalyani Publishers, 2022"
+            ],
+            "topics_text": "Issues Related to Health, Wellness and Yoga Total Hours 15 Textbook : 1 Yoga Deepika, , B.K.S Iyengar , Vivekanand Kendra Publisher , 2000 2 Modern Textbook of Physical Education, Health and Sports , Ajmer Singh, Bains Jagdish, Gill J.S., Brar R.S. , Kalyani Publishers, 2022",
+            "topics": [
+              "Issues Related to Health, Wellness and Yoga",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Yoga Deepika, , B.K.S Iyengar , Vivekanand Kendra Publisher , 2000",
+              "2 Modern Textbook of Physical Education, Health and Sports , Ajmer Singh, Bains Jagdish,",
+              "Gill J.S., Brar R.S. , Kalyani Publishers, 2022"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Health and Physical Education, Health and Physical Education, K. K. Verma,, Prakash Brothers, 2005",
+          "Principles of Sports Training , Principles of Sports Training , A.K. Upal, Friends Publication,, 2001"
+        ],
+        "textbooks": [
+          "Yoga Deepika, , B.K.S Iyengar , Vivekanand Kendra Publisher , 2000",
+          "Modern Textbook of Physical Education, Health and Sports , Ajmer Singh, Bains Jagdish, Gill J.S., Brar R.S. , Kalyani Publishers, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5405,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    HEALTH, WELLNESS AND YOGA\nCOURSE CODE     10BH1507\nCOURSE CREDITS  2\n\nObjective:\n 1  To promote an optimal state of physical, emotional, intellectual, social & spiritual well-\n     being of all the citizens of the country.\n 2  To organize sports and fitness activities outside the regular institutional working hours.\n 3  To focus on creating the ability for self-discipline and self-control in students by Yoga\n     education.\n 4  To make the students aware of various diseases and benefits of good food habits.\n 5  To prepare such a citizen who is physically and mentally fit and can handle all the situation\n     in the life.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Physical health\n 2  Mental health\n 3  Spiritual well-being\n 4  Emotion and social connect\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     1            1            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Health and Wellness                                      5\n             Meaning, dimensions and approaches to health and wellness,\n              Factors influencing health, Indicators of good health and poor\n                health, Status of health in Gujarat and India. , Common diseases-\n               introduction, types & etiology, Communicable diseases- causes &\n               prevention, Obesity, Cardiovascular disorder, Diabetes, Liver\n               diseases, Adverse effect of alcohol and tobacco on human health.\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2     Yoga education                                          5\n               Definition, explanation and importance of yoga., Historical\n              perspective yoga, Definition, types and mental & physical benefits\n               asanas, Different types of asanas – Padmasana, Bhujangasana,\n              Halasana, Shalabhasana, Dhanurasana, Vajrasana, Chakrasana,\n             Shavasana, Pawanmuktasana, Mandukasana and Uttanpadasana.,\n            Pranayama and its health benefits- Bhastrika, Kapalbhati, Bhya\n             pranayama, Anulomvilom, Bhramari, Udgeeth, Meditation and its\n               health benefits\n     3      Sports and fitness                                        5\n               Definition, Meaning & Importance of Physical education,\n            Components of physical fitness and wellness , Sports Training\n                Institutions in India , Physical Education and sports as a need for the\n               Society, Stretching exercises, warming up and limbering down\n               exercises, Cardiovascular exercises, Rules and regulations of some\n              important games-Football, Volleyball, Basketball, Badminton,\n             Table tennis, Hockey and Cricket\n                               Total Hours                       15\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues Related to Health, Wellness and Yoga                  15\n               Issues Related to Health, Wellness and Yoga\n                               Total Hours                       15\n\nTextbook :\n 1  Yoga Deepika, , B.K.S Iyengar , Vivekanand Kendra Publisher , 2000\n 2  Modern Textbook of Physical Education, Health and Sports , Ajmer Singh, Bains Jagdish,\n     Gill J.S., Brar R.S. , Kalyani Publishers, 2022\n\nReferences:\n 1  Health and Physical Education, Health and Physical Education, K. K. Verma,, Prakash\n     Brothers, 2005\n 2   Principles of Sports Training , Principles of Sports Training , A.K. Upal, Friends\n     Publication,, 2001\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "b2b0f62d94802fd2f1b29d868f127ac710c0e8531c3f3b277186624feaa24efd",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028150501",
+      "subject_name": "Law and consumer protection",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 5,
+      "subject_code": "10BH1505",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1505.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Law and consumer protection [5d233971b3a8].pdf",
+      "expected_pdf_sha256": "00dfdb825920fdbbf15e3ad88e65016b5e6079cb0fabb4946f9ad1f6f4ede87d",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "LAW AND CONSUMER PROTECTION",
+        "course_code": "10BH1505",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To introduce the concept of 'consumer' and the evolution of consumer rights, emphasizing the need for protection and international consumerism movements.",
+        "To familiarize students with the legal framework of the Consumer Protection Act, 2019, and the organizational structure for consumer dispute resolution, highlighting the evolution of laws in India.",
+        "To provide an in-depth understanding of grievance redress mechanisms, procedures, and legal remedies under the Consumer Protection Act, 2019.",
+        "To explore the roles of sector-specific regulatory bodies and government initiatives in consumer protection across industries such as banking, insurance, and food safety.",
+        "To examine contemporary issues and emerging trends in consumer protection, including unfair trade practices, eco-labeling, and digital consumer rights."
+      ],
+      "course_outcomes": [
+        "Explain the definition of 'consumer,' trace the history of consumer rights, and understand the global need for consumer protection.",
+        "Compare the Consumer Protection Act, 1986 with the 2019 Act, and describe the legal framework and organizational setup for consumer protection",
+        "Identify procedures for filing consumer complaints, outline grievance redress mechanisms, and evaluate legal remedies and penalties",
+        "Assess the functioning of regulatory bodies like the RBI and FSSAI, and analyze the impact of government initiatives on consumer protection.",
+        "Critically evaluate issues such as advertising ethics, green consumerism, and data privacy, proposing solutions for evolving consumer protection challenges. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Definition of 'Consumer' under the Act, Historical development of",
+              "consumer rights, Need for consumer protection, UN Guidelines on",
+              "consumer protection, Consumerism Movement",
+              "2 Legal Framework for Consumer Protection in India 10",
+              "Salient Features of the Consumer Protection Act, 2019, Difference",
+              "between the Consumer Protection Act, 1986 and the Consumer",
+              "Protection Act, 2019, Definition of Key Terms (Deficiency, Defect,",
+              "Unfair Trade Practices, etc.), Organizational set-up under the",
+              "Consumer Protection Act (Consumer Protection Councils, Central",
+              "Consumer Protection Authority, Consumer Disputes Redressal",
+              "Commission-District, State and National)",
+              "3 Grievance Redress Mechanism under the Consumer Protection 5",
+              "Act, 2019",
+              "Who can file a complaint? , Grounds of filing a complaint,",
+              "Limitation period, Procedure for filing and hearing of a complaint,",
+              "Disposal of cases, Relief/Remedy to be provided, Temporary",
+              "Injunction, Enforcement of order, Appeal, frivolous and vexatious",
+              "complaints, Offences and penalties",
+              "4 Sector-Specific Regulatory Bodies and Government Initiatives 5",
+              "RBI and Banking Ombudsman, IRDA and Insurance Ombudsman,",
+              "Food Products: FSSAI (an overview), Electricity Supply: Electricity",
+              "Regulatory Commission, Government Initiatives for Consumer",
+              "Awareness and Protection (National Consumer Helpline (NCH),",
+              "'Jago Grahak Jago' campaign, Consumer Mediation Cells)",
+              "5 Emerging Issues in Consumer Protection 5",
+              "Advertising and Unfair Trade Practices., Green Consumerism and",
+              "Eco-labeling, Data Privacy, and Consumer Rights in the Digital Age",
+              "Total Hours 30"
+            ],
+            "topics_text": "Definition of 'Consumer' under the Act, Historical development of consumer rights, Need for consumer protection, UN Guidelines on consumer protection, Consumerism Movement 2 Legal Framework for Consumer Protection in India 10 Salient Features of the Consumer Protection Act, 2019, Difference between the Consumer Protection Act, 1986 and the Consumer Protection Act, 2019, Definition of Key Terms (Deficiency, Defect, Unfair Trade Practices, etc.), Organizational set-up under the Consumer Protection Act (Consumer Protection Councils, Central Consumer Protection Authority, Consumer Disputes Redressal Commission-District, State and National) 3 Grievance Redress Mechanism under the Consumer Protection 5 Act, 2019 Who can file a complaint? , Grounds of filing a complaint, Limitation period, Procedure for filing and hearing of a complaint, Disposal of cases, Relief/Remedy to be provided, Temporary Injunction, Enforcement of order, Appeal, frivolous and vexatious complaints, Offences and penalties 4 Sector-Specific Regulatory Bodies and Government Initiatives 5 RBI and Banking Ombudsman, IRDA and Insurance Ombudsman, Food Products: FSSAI (an overview), Electricity Supply: Electricity Regulatory Commission, Government Initiatives for Consumer Awareness and Protection (National Consumer Helpline (NCH), 'Jago Grahak Jago' campaign, Consumer Mediation Cells) 5 Emerging Issues in Consumer Protection 5 Advertising and Unfair Trade Practices., Green Consumerism and Eco-labeling, Data Privacy, and Consumer Rights in the Digital Age Total Hours 30",
+            "topics": [
+              "Definition of 'Consumer' under the Act, Historical development of",
+              "consumer rights, Need for consumer protection, UN Guidelines on",
+              "consumer protection, Consumerism Movement",
+              "2 Legal Framework for Consumer Protection in India 10",
+              "Salient Features of the Consumer Protection Act, 2019, Difference",
+              "between the Consumer Protection Act, 1986 and the Consumer",
+              "Protection Act, 2019, Definition of Key Terms (Deficiency, Defect,",
+              "Unfair Trade Practices, etc.), Organizational set-up under the",
+              "Consumer Protection Act (Consumer Protection Councils, Central",
+              "Consumer Protection Authority, Consumer Disputes Redressal",
+              "Commission-District, State and National)",
+              "3 Grievance Redress Mechanism under the Consumer Protection 5",
+              "Act, 2019",
+              "Who can file a complaint? , Grounds of filing a complaint,",
+              "Limitation period, Procedure for filing and hearing of a complaint,",
+              "Disposal of cases, Relief/Remedy to be provided, Temporary",
+              "Injunction, Enforcement of order, Appeal, frivolous and vexatious",
+              "complaints, Offences and penalties",
+              "4 Sector-Specific Regulatory Bodies and Government Initiatives 5",
+              "RBI and Banking Ombudsman, IRDA and Insurance Ombudsman,",
+              "Food Products: FSSAI (an overview), Electricity Supply: Electricity",
+              "Regulatory Commission, Government Initiatives for Consumer",
+              "Awareness and Protection (National Consumer Helpline (NCH),",
+              "'Jago Grahak Jago' campaign, Consumer Mediation Cells)",
+              "5 Emerging Issues in Consumer Protection 5",
+              "Advertising and Unfair Trade Practices., Green Consumerism and",
+              "Eco-labeling, Data Privacy, and Consumer Rights in the Digital Age",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues Related to Law and Consumer Protection",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues Related to Law and Consumer Protection",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Law of Consumer Protection: Principles and Practice. , Singh, A. , Eastern Book",
+              "Company, 2015"
+            ],
+            "topics_text": "Issues Related to Law and Consumer Protection Total Hours 15 Textbook : 1 Law of Consumer Protection: Principles and Practice. , Singh, A. , Eastern Book Company, 2015",
+            "topics": [
+              "Issues Related to Law and Consumer Protection",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Law of Consumer Protection: Principles and Practice. , Singh, A. , Eastern Book",
+              "Company, 2015"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Law of Consumer Protection in India. , Law of Consumer Protection in India. , Majumdar, P.K. , Orient Publishing Company, 2018",
+          "Consumer Protection Law and Practice. , Consumer Protection Law and Practice. , Agarwal, V.K. , Bharat Law House Pvt. Ltd., 2024",
+          "The Law of Consumer Protection in India: Justice Within Reach, The Law of Consumer Protection in India: Justice Within Reach, Singh, G. , Deep & Deep Publications, 1996 References:",
+          ". Consumer Protection in India: Issues and Concerns. , . Consumer Protection in India: Issues and Concerns. , Mishra, M.N. , Ayushamna Publication Publications, 2013"
+        ],
+        "textbooks": [
+          "Law of Consumer Protection: Principles and Practice. , Singh, A. , Eastern Book Company, 2015"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6925,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   LAW AND CONSUMER PROTECTION\nCOURSE CODE     10BH1505\nCOURSE CREDITS  3\n\nObjective:\n 1  To introduce the concept of 'consumer' and the evolution of consumer rights, emphasizing\n     the need for protection and international consumerism movements.\n 2  To familiarize students with the legal framework of the Consumer Protection Act, 2019,\n    and the organizational structure for consumer dispute resolution, highlighting the evolution\n     of laws in India.\n 3  To provide an in-depth understanding of grievance redress mechanisms, procedures, and\n     legal remedies under the Consumer Protection Act, 2019.\n 4  To explore the roles of sector-specific regulatory bodies and government initiatives in\n    consumer protection across industries such as banking, insurance, and food safety.\n 5  To examine contemporary issues and emerging trends in consumer protection, including\n     unfair trade practices, eco-labeling, and digital consumer rights.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Explain the definition of 'consumer,' trace the history of consumer rights, and understand\n     the global need for consumer protection.\n 2  Compare the Consumer Protection Act, 1986 with the 2019 Act, and describe the legal\n    framework and organizational setup for consumer protection\n 3  Identify procedures for filing consumer complaints, outline grievance redress mechanisms,\n    and evaluate legal remedies and penalties\n 4  Assess the functioning of regulatory bodies like the RBI and FSSAI, and analyze the\n    impact of government initiatives on consumer protection.\n 5   Critically evaluate issues such as advertising ethics, green consumerism, and data privacy,\n     proposing solutions for evolving consumer protection challenges.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction                                             5\n               Definition of 'Consumer' under the Act, Historical development of\n            consumer rights, Need for consumer protection, UN Guidelines on\n            consumer protection, Consumerism Movement\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Legal Framework for Consumer Protection in India           10\n               Salient Features of the Consumer Protection Act, 2019, Difference\n             between the Consumer Protection Act, 1986 and the Consumer\n               Protection Act, 2019, Definition of Key Terms (Deficiency, Defect,\n              Unfair Trade Practices, etc.), Organizational set-up under the\n            Consumer Protection Act (Consumer Protection Councils, Central\n            Consumer Protection Authority, Consumer Disputes Redressal\n              Commission-District, State and National)\n     3      Grievance Redress Mechanism under the Consumer Protection  5\n              Act, 2019\n         Who can file a complaint? , Grounds of filing a complaint,\n              Limitation period, Procedure for filing and hearing of a complaint,\n              Disposal of cases, Relief/Remedy to be provided, Temporary\n               Injunction, Enforcement of order, Appeal, frivolous and vexatious\n              complaints, Offences and penalties\n     4       Sector-Specific Regulatory Bodies and Government Initiatives   5\n           RBI and Banking Ombudsman, IRDA and Insurance Ombudsman,\n            Food Products: FSSAI (an overview), Electricity Supply: Electricity\n             Regulatory Commission, Government Initiatives for Consumer\n            Awareness and Protection (National Consumer Helpline (NCH),\n               'Jago Grahak Jago' campaign, Consumer Mediation Cells)\n     5      Emerging Issues in Consumer Protection                     5\n              Advertising and Unfair Trade Practices., Green Consumerism and\n               Eco-labeling, Data Privacy, and Consumer Rights in the Digital Age\n                               Total Hours                       30\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues Related to Law and Consumer Protection               15\n               Issues Related to Law and Consumer Protection\n                               Total Hours                       15\n\nTextbook :\n 1  Law of Consumer Protection: Principles and Practice. , Singh, A. , Eastern Book\n    Company, 2015\n\nReferences:\n 1  Law of Consumer Protection in India. , Law of Consumer Protection in India. , Majumdar,\n     P.K. , Orient Publishing Company, 2018\n 2  Consumer Protection Law and Practice. , Consumer Protection Law and Practice. ,\n    Agarwal, V.K. , Bharat Law House Pvt. Ltd., 2024\n 3  The Law of Consumer Protection in India: Justice Within Reach, The Law of Consumer\n     Protection in India: Justice Within Reach, Singh, G. , Deep & Deep Publications, 1996\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 4    . Consumer Protection in India: Issues and Concerns. , . Consumer Protection in India:\n     Issues and Concerns. , Mishra, M.N. , Ayushamna Publication Publications, 2013\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "00dfdb825920fdbbf15e3ad88e65016b5e6079cb0fabb4946f9ad1f6f4ede87d",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028150201",
+      "subject_name": "Political science V: public administration",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 5,
+      "subject_code": "10BH1502",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1502.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Political science V public administration [993a42afe196].pdf",
+      "expected_pdf_sha256": "f5ed3db9d5c4d6933e2a5a477969b058f3e15524b31ec8be2c91b149158db4ed",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "POLITICAL SCIENCE V: PUBLIC ADMINISTRATION",
+        "course_code": "10BH1502",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To understand the meaning, scope, and relevance of public administration in various contexts, including its role in both public and private sectors.",
+        "To investigate the dynamics of public policy formulation, agenda setting, intervention, and evaluation, considering constraints such as economic, political feasibility, and globalization, and utilizing models for policy analysis.",
+        "To make students learn administrative principles and processes and develop their reflective capacity over the subject matter and allied areas.",
+        "To make students aware of bureaucratic forms and procedures.",
+        "To assess the role of governance in the 21st century."
+      ],
+      "course_outcomes": [
+        "Demonstrate a comprehensive understanding of the nature, scope, and significance of public administration.",
+        "Evaluate the public-private dichotomy, as well as the evolution and application of various theories in public administration",
+        "Develop proficiency in identifying and discussing different forms of bureaucracy, organizational structures, leadership styles, and their implications in public administration practices",
+        "Identify the relationship between Law and Governance. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Public Administration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Meaning and Nature of Public Administration: Scope and",
+              "Relevance, Public-Private Dichotomy, New Public Administration,",
+              "Theories of Public Administration: Classical Theory, Scientific",
+              "Management Theory, Human Relations Theory, Bureaucratic",
+              "Theory – Marx and Weber, Decision-making Theory, Riggsian",
+              "Model., New Public Management",
+              "2 Forms of Bureaucracy 5",
+              "Meaning and Features of Organization, Mechanistic and Humanist",
+              "Views, Kinds of Organizations, Leadership: Qualities, Styles &",
+              "Techniques; Unity in Command, Meaning and Significance of",
+              "Neutral Bureaucracy",
+              "3 Public Policy 10",
+              "Public Policy: Meaning, Agenda Setting, Policy Intervention, Policy",
+              "Evaluation, Constraints on Public Policy- Economics Constraints,",
+              "Political Feasibility, Impact of Globalization, Models to understand",
+              "Public Policy Dynamics",
+              "4 Law, Development and Good Governance 7",
+              "Governance and Public Administration, Understanding Governance",
+              "in 21st Century, Law Enforcement and Administration of Justice, E-",
+              "Governance - An Enabling Tool for Good Governance, Rural",
+              "Governance - Empowering the people at the grassroots, Urban",
+              "Governance in India",
+              "Total Hours 30"
+            ],
+            "topics_text": "Meaning and Nature of Public Administration: Scope and Relevance, Public-Private Dichotomy, New Public Administration, Theories of Public Administration: Classical Theory, Scientific Management Theory, Human Relations Theory, Bureaucratic Theory – Marx and Weber, Decision-making Theory, Riggsian Model., New Public Management 2 Forms of Bureaucracy 5 Meaning and Features of Organization, Mechanistic and Humanist Views, Kinds of Organizations, Leadership: Qualities, Styles & Techniques; Unity in Command, Meaning and Significance of Neutral Bureaucracy 3 Public Policy 10 Public Policy: Meaning, Agenda Setting, Policy Intervention, Policy Evaluation, Constraints on Public Policy- Economics Constraints, Political Feasibility, Impact of Globalization, Models to understand Public Policy Dynamics 4 Law, Development and Good Governance 7 Governance and Public Administration, Understanding Governance in 21st Century, Law Enforcement and Administration of Justice, E- Governance - An Enabling Tool for Good Governance, Rural Governance - Empowering the people at the grassroots, Urban Governance in India Total Hours 30",
+            "topics": [
+              "Meaning and Nature of Public Administration: Scope and",
+              "Relevance, Public-Private Dichotomy, New Public Administration,",
+              "Theories of Public Administration: Classical Theory, Scientific",
+              "Management Theory, Human Relations Theory, Bureaucratic",
+              "Theory – Marx and Weber, Decision-making Theory, Riggsian",
+              "Model., New Public Management",
+              "2 Forms of Bureaucracy 5",
+              "Meaning and Features of Organization, Mechanistic and Humanist",
+              "Views, Kinds of Organizations, Leadership: Qualities, Styles &",
+              "Techniques",
+              "Unity in Command, Meaning and Significance of",
+              "Neutral Bureaucracy",
+              "3 Public Policy 10",
+              "Public Policy: Meaning, Agenda Setting, Policy Intervention, Policy",
+              "Evaluation, Constraints on Public Policy- Economics Constraints,",
+              "Political Feasibility, Impact of Globalization, Models to understand",
+              "Public Policy Dynamics",
+              "4 Law, Development and Good Governance 7",
+              "Governance and Public Administration, Understanding Governance",
+              "in 21st Century, Law Enforcement and Administration of Justice, E",
+              "Governance - An Enabling Tool for Good Governance, Rural",
+              "Governance - Empowering the people at the grassroots, Urban",
+              "Governance in India",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues Related to Public Administration",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues Related to Public Administration",
+              "Total Hours 15",
+              "Textbook :",
+              "1 New horizons of Public Administration (7th ed.). , Bhattacharya, M. , Jawahar Publishers",
+              "& Distributors., 2018",
+              "2 Understanding Public Policy (15th ed.). , Dye, T. R. , Pearsons., 2021"
+            ],
+            "topics_text": "Issues Related to Public Administration Total Hours 15 Textbook : 1 New horizons of Public Administration (7th ed.). , Bhattacharya, M. , Jawahar Publishers & Distributors., 2018 2 Understanding Public Policy (15th ed.). , Dye, T. R. , Pearsons., 2021",
+            "topics": [
+              "Issues Related to Public Administration",
+              "Total Hours 15",
+              "Textbook :",
+              "1 New horizons of Public Administration (7th ed.). , Bhattacharya, M. , Jawahar Publishers",
+              "& Distributors., 2018",
+              "2 Understanding Public Policy (15th ed.). , Dye, T. R. , Pearsons., 2021"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Public Administration (2nd ed.)., Public Administration (2nd ed.)., Laxmikanth, M. , McGraw Hill., 2022",
+          "Public administration in India (2nd ed.). , Public administration in India (2nd ed.). , Sarkar, S. , PHI Learning., 2018",
+          "The Oxford Handbook of Public Policy. , The Oxford Handbook of Public Policy. , Goodin, R., Moran, M., & Rein, M. (Eds.). , Oxford University Press., 2008",
+          "Governance: Issues and Challenges (1st ed.). , Governance: Issues and Challenges (1st ed.). , Singh, S. , Sage, New Delhi, India: , 2016"
+        ],
+        "textbooks": [
+          "New horizons of Public Administration (7th ed.). , Bhattacharya, M. , Jawahar Publishers & Distributors., 2018",
+          "Understanding Public Policy (15th ed.). , Dye, T. R. , Pearsons., 2021"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6050,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    POLITICAL SCIENCE V: PUBLIC ADMINISTRATION\nCOURSE CODE     10BH1502\nCOURSE CREDITS  3\n\nObjective:\n 1  To understand the meaning, scope, and relevance of public administration in various\n     contexts, including its role in both public and private sectors.\n 2  To investigate the dynamics of public policy formulation, agenda setting, intervention, and\n     evaluation, considering constraints such as economic, political feasibility, and\n     globalization, and utilizing models for policy analysis.\n 3  To make students learn administrative principles and processes and develop their reflective\n     capacity over the subject matter and allied areas.\n 4  To make students aware of bureaucratic forms and procedures.\n 5  To assess the role of governance in the 21st century.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Demonstrate a comprehensive understanding of the nature, scope, and significance of\n     public administration.\n 2  Evaluate the public-private dichotomy, as well as the evolution and application of various\n     theories in public administration\n 3  Develop proficiency in identifying and discussing different forms of bureaucracy,\n     organizational structures, leadership styles, and their implications in public administration\n     practices\n 4  Identify the relationship between Law and Governance.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Public Administration                       8\n            Meaning and Nature of Public Administration: Scope and\n              Relevance, Public-Private Dichotomy, New Public Administration,\n              Theories of Public Administration: Classical Theory, Scientific\n           Management Theory, Human Relations Theory, Bureaucratic\n            Theory – Marx and Weber, Decision-making Theory, Riggsian\n             Model., New Public Management\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2     Forms of Bureaucracy                                    5\n            Meaning and Features of Organization, Mechanistic and Humanist\n             Views, Kinds of Organizations, Leadership: Qualities, Styles &\n             Techniques; Unity in Command, Meaning and Significance of\n              Neutral Bureaucracy\n     3      Public Policy                                            10\n              Public Policy: Meaning, Agenda Setting, Policy Intervention, Policy\n              Evaluation, Constraints on Public Policy- Economics Constraints,\n                Political Feasibility, Impact of Globalization, Models to understand\n              Public Policy Dynamics\n     4     Law, Development and Good Governance                    7\n            Governance and Public Administration, Understanding Governance\n               in 21st Century, Law Enforcement and Administration of Justice, E-\n            Governance - An Enabling Tool for Good Governance, Rural\n            Governance - Empowering the people at the grassroots, Urban\n            Governance in India\n                               Total Hours                       30\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues Related to Public Administration                      15\n               Issues Related to Public Administration\n                               Total Hours                       15\n\nTextbook :\n 1  New horizons of Public Administration (7th ed.). , Bhattacharya, M. , Jawahar Publishers\n   & Distributors., 2018\n 2   Understanding Public Policy (15th ed.). , Dye, T. R. , Pearsons., 2021\n\nReferences:\n 1  Public Administration (2nd ed.)., Public Administration (2nd ed.)., Laxmikanth, M. ,\n   McGraw Hill., 2022\n 2   Public administration in India (2nd ed.). , Public administration in India (2nd ed.). ,\n     Sarkar, S. , PHI Learning., 2018\n 3  The Oxford Handbook of Public Policy. , The Oxford Handbook of Public Policy. ,\n    Goodin, R., Moran, M., & Rein, M. (Eds.). , Oxford University Press., 2008\n 4  Governance: Issues and Challenges (1st ed.). , Governance: Issues and Challenges (1st ed.).\n        , Singh, S. , Sage, New Delhi, India: , 2016\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "f5ed3db9d5c4d6933e2a5a477969b058f3e15524b31ec8be2c91b149158db4ed",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028150101",
+      "subject_name": "Psychology V: social psychology",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 5,
+      "subject_code": "10BH1501",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1501.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Psychology V social psychology [d017f3395f0b].pdf",
+      "expected_pdf_sha256": "14f827d6c9ee5f1dfcec0224af5559de039522c334089ad8fff1055ec18ab7af",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PSYCHOLOGY V: SOCIAL PSYCHOLOGY",
+        "course_code": "10BH1501",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To develop an understanding of the individual in relation to the social world.",
+        "To introduce students to the realm of social influence, as to how individuals think, feel, and behave in social situations.",
+        "To make students understand the individuals and groups in respect to patterns of social behaviour and attitudes",
+        "To help students gain insight into the dynamics of intergroup relationships, conflict, prejudice and cooperation"
+      ],
+      "course_outcomes": [
+        "To know the scope of studying social psychology and the methods to gather data in the social context to explain them",
+        "To understand the significance of social cognition, attitudes, stereotypes and prejudices in explaining human behaviour in the social contexts.",
+        "To understand the significant aspects of group behaviour and social influence that constitute the core of human relationships. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Social Psychology",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Social Psychology: A Working Definition, History of Social",
+              "Psychology, Research methods in Social Psychology, Recent trends",
+              "and advancements in Social Psychology, Introduction to forensic",
+              "and clinical applications of Social Psychology",
+              "2 Understanding and Evaluating the Social World 7",
+              "Social Cognition and Social Perceptions – Social Comparison",
+              "Theory, Attitudes, Attitude-behaviour link, Cognitive Dissonance,",
+              "Theories of Attitude Change, Persuasion and Attitude Change –",
+              "Petty and Cacioppo’s Elaboration Likelihood Model",
+              "3 Social Interaction and Influence 8",
+              "Interpersonal attraction – Zajonc’s Mere Exposure effect, etc, Pro-",
+              "Social Behaviour v/s Altruism, Darlene and Latane’s Decision Stage",
+              "Model of Helping. Empathy Altruism, Empathy Joy hypothesis,",
+              "Negative State Relief Model, Aggression, Theories of Aggression,",
+              "Social Influence: Compliance, Conformity, Obedience, Prevention",
+              "of attitude change",
+              "4 Group Dynamics and Inter-group Relations 10",
+              "Nature of groups – Group Tasks and Social loafing, Consequences",
+              "of belonging to a group - performance, decision making",
+              "(groupthink), cooperation and conflict, Nature of intergroup",
+              "relations - inter-group conflict, intervention techniques, Stereotypes,",
+              "Prejudice, Discrimination, Tajfel and Turner’s Social Identity",
+              "Theory, Muzaffer Sherif’s Realistic Group Conflict Theory,",
+              "Theories of Leadership",
+              "Total Hours 30"
+            ],
+            "topics_text": "Social Psychology: A Working Definition, History of Social Psychology, Research methods in Social Psychology, Recent trends and advancements in Social Psychology, Introduction to forensic and clinical applications of Social Psychology 2 Understanding and Evaluating the Social World 7 Social Cognition and Social Perceptions – Social Comparison Theory, Attitudes, Attitude-behaviour link, Cognitive Dissonance, Theories of Attitude Change, Persuasion and Attitude Change – Petty and Cacioppo’s Elaboration Likelihood Model 3 Social Interaction and Influence 8 Interpersonal attraction – Zajonc’s Mere Exposure effect, etc, Pro- Social Behaviour v/s Altruism, Darlene and Latane’s Decision Stage Model of Helping. Empathy Altruism, Empathy Joy hypothesis, Negative State Relief Model, Aggression, Theories of Aggression, Social Influence: Compliance, Conformity, Obedience, Prevention of attitude change 4 Group Dynamics and Inter-group Relations 10 Nature of groups – Group Tasks and Social loafing, Consequences of belonging to a group - performance, decision making (groupthink), cooperation and conflict, Nature of intergroup relations - inter-group conflict, intervention techniques, Stereotypes, Prejudice, Discrimination, Tajfel and Turner’s Social Identity Theory, Muzaffer Sherif’s Realistic Group Conflict Theory, Theories of Leadership Total Hours 30",
+            "topics": [
+              "Social Psychology: A Working Definition, History of Social",
+              "Psychology, Research methods in Social Psychology, Recent trends",
+              "and advancements in Social Psychology, Introduction to forensic",
+              "and clinical applications of Social Psychology",
+              "2 Understanding and Evaluating the Social World 7",
+              "Social Cognition and Social Perceptions – Social Comparison",
+              "Theory, Attitudes, Attitude-behaviour link, Cognitive Dissonance,",
+              "Theories of Attitude Change, Persuasion and Attitude Change –",
+              "Petty and Cacioppo’s Elaboration Likelihood Model",
+              "3 Social Interaction and Influence 8",
+              "Interpersonal attraction – Zajonc’s Mere Exposure effect, etc, Pro",
+              "Social Behaviour v/s Altruism, Darlene and Latane’s Decision Stage",
+              "Model of Helping. Empathy Altruism, Empathy Joy hypothesis,",
+              "Negative State Relief Model, Aggression, Theories of Aggression,",
+              "Social Influence: Compliance, Conformity, Obedience, Prevention",
+              "of attitude change",
+              "4 Group Dynamics and Inter-group Relations 10",
+              "Nature of groups – Group Tasks and Social loafing, Consequences",
+              "of belonging to a group - performance, decision making",
+              "(groupthink), cooperation and conflict, Nature of intergroup",
+              "relations - inter-group conflict, intervention techniques, Stereotypes,",
+              "Prejudice, Discrimination, Tajfel and Turner’s Social Identity",
+              "Theory, Muzaffer Sherif’s Realistic Group Conflict Theory,",
+              "Theories of Leadership",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues Related to Social Psychology",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues Related to Social Psychology",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Social Psychology (15th global ed.). , Branscombe, N. R., & Baron, R. A. , Pearson",
+              "Education., 2023"
+            ],
+            "topics_text": "Issues Related to Social Psychology Total Hours 15 Textbook : 1 Social Psychology (15th global ed.). , Branscombe, N. R., & Baron, R. A. , Pearson Education., 2023",
+            "topics": [
+              "Issues Related to Social Psychology",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Social Psychology (15th global ed.). , Branscombe, N. R., & Baron, R. A. , Pearson",
+              "Education., 2023"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Introduction to Psychology (8th Revised ed.), Introduction to Psychology (8th Revised ed.), Morgan, C. T., King, R. A., Weisz, J. R., & Schopler, J., MedTech Science Press, 2024",
+          "Psychology (7th ed., South Asian Edition), Psychology (7th ed., South Asian Edition), Baron, R. A., & Misra, G., Pearson Education, 2016",
+          "The Psychological Realm: An Introduction (2nd ed.), The Psychological Realm: An Introduction (2nd ed.), Chadha, N. K., & Seth, S., Pinnacle Learning, 2021"
+        ],
+        "textbooks": [
+          "Social Psychology (15th global ed.). , Branscombe, N. R., & Baron, R. A. , Pearson Education., 2023"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5856,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   PSYCHOLOGY V: SOCIAL PSYCHOLOGY\nCOURSE CODE     10BH1501\nCOURSE CREDITS  3\n\nObjective:\n 1  To develop an understanding of the individual in relation to the social world.\n 2  To introduce students to the realm of social influence, as to how individuals think, feel, and\n    behave in social situations.\n 3  To make students understand the individuals and groups in respect to patterns of social\n     behaviour and attitudes\n 4  To help students gain insight into the dynamics of intergroup relationships, conflict,\n     prejudice and cooperation\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To know the scope of studying social psychology and the methods to gather data in the\n     social context to explain them\n 2  To understand the significance of social cognition, attitudes, stereotypes and prejudices in\n     explaining human behaviour in the social contexts.\n 3  To understand the significant aspects of group behaviour and social influence that\n     constitute the core of human relationships.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Social Psychology                           5\n              Social Psychology: A Working Definition, History of Social\n             Psychology, Research methods in Social Psychology, Recent trends\n            and advancements in Social Psychology, Introduction to forensic\n            and clinical applications of Social Psychology\n     2      Understanding and Evaluating the Social World              7\n              Social Cognition and Social Perceptions – Social Comparison\n             Theory, Attitudes, Attitude-behaviour link, Cognitive Dissonance,\n              Theories of Attitude Change, Persuasion and Attitude Change –\n               Petty and Cacioppo’s Elaboration Likelihood Model\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3       Social Interaction and Influence                            8\n               Interpersonal attraction – Zajonc’s Mere Exposure effect, etc, Pro-\n              Social Behaviour v/s Altruism, Darlene and Latane’s Decision Stage\n           Model of Helping. Empathy Altruism, Empathy Joy hypothesis,\n             Negative State Relief Model, Aggression, Theories of Aggression,\n              Social Influence: Compliance, Conformity, Obedience, Prevention\n              of attitude change\n     4     Group Dynamics and Inter-group Relations                  10\n             Nature of groups – Group Tasks and Social loafing, Consequences\n              of belonging to a group - performance, decision making\n               (groupthink), cooperation and conflict, Nature of intergroup\n                relations - inter-group conflict, intervention techniques, Stereotypes,\n               Prejudice, Discrimination, Tajfel and Turner’s Social Identity\n             Theory, Muzaffer Sherif’s Realistic Group Conflict Theory,\n              Theories of Leadership\n                               Total Hours                       30\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues Related to Social Psychology                          15\n               Issues Related to Social Psychology\n                               Total Hours                       15\n\nTextbook :\n 1  Social Psychology (15th global ed.). , Branscombe, N. R., & Baron, R. A.  , Pearson\n     Education., 2023\n\nReferences:\n 1   Introduction to Psychology (8th Revised ed.), Introduction to Psychology (8th Revised\n      ed.), Morgan, C. T., King, R. A., Weisz, J. R., & Schopler, J., MedTech Science Press,\n    2024\n 2   Psychology (7th ed., South Asian Edition), Psychology (7th ed., South Asian Edition),\n     Baron, R. A., & Misra, G., Pearson Education, 2016\n 3  The Psychological Realm: An Introduction (2nd ed.), The Psychological Realm: An\n     Introduction (2nd ed.), Chadha, N. K., & Seth, S., Pinnacle Learning, 2021\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "14f827d6c9ee5f1dfcec0224af5559de039522c334089ad8fff1055ec18ab7af",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028150301",
+      "subject_name": "Sociology V: Indian sociological thought",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 5,
+      "subject_code": "10BH1503",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1503.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Sociology V Indian sociological thought [54a49303b54a].pdf",
+      "expected_pdf_sha256": "b5a7749a0dace4cd9df9c76dbfe49acad7a4db2c16bc5cceaf2d0972ce50509b",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "SOCIOLOGY V: INDIAN SOCIOLOGICAL THOUGHT",
+        "course_code": "10BH1503",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To introduce students to key ingredients of Indian sociological thought.",
+        "To acquaint students with classical and contemporary Indian sociological thought.",
+        "To enable students to develop their perspectives on Indian sociological thought."
+      ],
+      "course_outcomes": [
+        "Define the background of Indian sociological thought.",
+        "Describe contributions of historicalsociological thought.",
+        "Demonstrate the Indological approach to understanding Indian society.",
+        "Theorize the Structural-functional approach to understanding Indian society.",
+        "Formulate and establish Marxist and subaltern theories on Indian society. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "History and Development of Indian Sociological Traditions",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Major Influences on Indian Sociological Traditions, Major Schools",
+              "of Indian Sociological Tradition., Structural Plurality and Cultural",
+              "Diversity.",
+              "2 Structural-Functional Perspective 5",
+              "M. N. Srinivas, S.C. Dube, McKim Marriott, Critiques of the",
+              "Structural Functional Perspective",
+              "3 Indological Perspective 9",
+              "G. S. Ghurye, Lois Dumont , Critiques of Indological Perspective",
+              "4 Marxist Pespective 5",
+              "D.P. Mukherji, A.R. Desai, Ram Krishna Mukherjee. , Critiques of",
+              "Marxist Perspective",
+              "5 Subaltern Perspective 6",
+              "B.R. Ambedkar, Ranajit Guha, David Hardiman , Critiques of",
+              "Subaltern Perspective",
+              "Total Hours 30"
+            ],
+            "topics_text": "Major Influences on Indian Sociological Traditions, Major Schools of Indian Sociological Tradition., Structural Plurality and Cultural Diversity. 2 Structural-Functional Perspective 5 M. N. Srinivas, S.C. Dube, McKim Marriott, Critiques of the Structural Functional Perspective 3 Indological Perspective 9 G. S. Ghurye, Lois Dumont , Critiques of Indological Perspective 4 Marxist Pespective 5 D.P. Mukherji, A.R. Desai, Ram Krishna Mukherjee. , Critiques of Marxist Perspective 5 Subaltern Perspective 6 B.R. Ambedkar, Ranajit Guha, David Hardiman , Critiques of Subaltern Perspective Total Hours 30",
+            "topics": [
+              "Major Influences on Indian Sociological Traditions, Major Schools",
+              "of Indian Sociological Tradition., Structural Plurality and Cultural",
+              "Diversity.",
+              "2 Structural-Functional Perspective 5",
+              "M. N. Srinivas, S.C. Dube, McKim Marriott, Critiques of the",
+              "Structural Functional Perspective",
+              "3 Indological Perspective 9",
+              "G. S. Ghurye, Lois Dumont , Critiques of Indological Perspective",
+              "4 Marxist Pespective 5",
+              "D.P. Mukherji, A.R. Desai, Ram Krishna Mukherjee. , Critiques of",
+              "Marxist Perspective",
+              "5 Subaltern Perspective 6",
+              "B.R. Ambedkar, Ranajit Guha, David Hardiman , Critiques of",
+              "Subaltern Perspective",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues Related to Indian Sociological Thought",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues Related to Indian Sociological Thought",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Indian Sociological Thoughts (3rd Eds.), Nagla, Bhupendra Kumar., Rawat Publications.,",
+              "2022"
+            ],
+            "topics_text": "Issues Related to Indian Sociological Thought Total Hours 15 Textbook : 1 Indian Sociological Thoughts (3rd Eds.), Nagla, Bhupendra Kumar., Rawat Publications., 2022",
+            "topics": [
+              "Issues Related to Indian Sociological Thought",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Indian Sociological Thoughts (3rd Eds.), Nagla, Bhupendra Kumar., Rawat Publications.,",
+              "2022"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Indian Social System, Indian Social System, Ahuja, Ram,:, Rawat Publications, 1999",
+          "Social Inequality, Social Inequality, Beteille, Andre, , OUP, 1974"
+        ],
+        "textbooks": [
+          "Indian Sociological Thoughts (3rd Eds.), Nagla, Bhupendra Kumar., Rawat Publications., 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://egyankosh.ac.in",
+          "https://www.sociologyguide.com",
+          "https://sociologylearners.com",
+          "https://www.academia.edu",
+          "https://www.epw.in"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4212,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    SOCIOLOGY V: INDIAN SOCIOLOGICAL THOUGHT\nCOURSE CODE     10BH1503\nCOURSE CREDITS  3\n\nObjective:\n 1  To introduce students to key ingredients of Indian sociological thought.\n 2  To acquaint students with classical and contemporary Indian sociological thought.\n 3  To enable students to develop their perspectives on Indian sociological thought.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Define the background of Indian sociological thought.\n 2  Describe contributions of historicalsociological thought.\n 3  Demonstrate the Indological approach to understanding Indian society.\n 4  Theorize the Structural-functional approach to understanding Indian society.\n 5  Formulate and establish Marxist and subaltern theories on Indian society.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      History and Development of Indian Sociological Traditions     5\n            Major Influences on Indian Sociological Traditions, Major Schools\n              of Indian Sociological Tradition., Structural Plurality and Cultural\n               Diversity.\n     2       Structural-Functional Perspective                           5\n          M. N. Srinivas, S.C. Dube, McKim Marriott, Critiques of the\n               Structural Functional Perspective\n     3       Indological Perspective                                    9\n            G. S. Ghurye, Lois Dumont , Critiques of Indological Perspective\n     4      Marxist Pespective                                       5\n             D.P. Mukherji, A.R. Desai, Ram Krishna Mukherjee. , Critiques of\n             Marxist Perspective\n     5      Subaltern Perspective                                     6\n             B.R. Ambedkar, Ranajit Guha, David Hardiman , Critiques of\n              Subaltern Perspective\n                               Total Hours                       30\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues Related to Indian Sociological Thought                 15\n               Issues Related to Indian Sociological Thought\n                               Total Hours                       15\n\nTextbook :\n 1  Indian Sociological Thoughts (3rd Eds.), Nagla, Bhupendra Kumar., Rawat Publications.,\n    2022\n\nReferences:\n 1  Indian Social System, Indian Social System, Ahuja, Ram,:, Rawat Publications, 1999\n 2  Social Inequality, Social Inequality, Beteille, Andre, , OUP, 1974\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\nSupplementary Resources:\n 1  https://egyankosh.ac.in\n 2  https://www.sociologyguide.com\n 3  https://sociologylearners.com\n 4  https://www.academia.edu\n 5  https://www.epw.in\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "b5a7749a0dace4cd9df9c76dbfe49acad7a4db2c16bc5cceaf2d0972ce50509b",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028150801",
+      "subject_name": "Universal human values and life skills",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 5,
+      "subject_code": "10BH1508",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1508.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Universal human values and life skills [fb7a478bb6f9].pdf",
+      "expected_pdf_sha256": "9d68e197822b3b8d75e56dbafa22686336638ea566647aaff5b8af806e3ae75c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "UNIVERSAL HUMAN VALUES AND LIFE SKILLS",
+        "course_code": "10BH1508",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [
+        "To develop an understanding of universal human values and their importance in personal and professional life.",
+        "To equip students with essential life skills, including emotional intelligence, decision- making, and effective communication.",
+        "To promote ethical behavior, empathy, and self-awareness for building a harmonious society",
+        "To foster the ability to handle stress, conflict, and relationships with a positive mindset."
+      ],
+      "course_outcomes": [
+        "Demonstrate an understanding of core human values and apply them in day-to-day interactions.",
+        "Apply life skills such as problem-solving, critical thinking, and interpersonal communication in various contexts.",
+        "Exhibit ethical behavior and empathy towards individuals and society, fostering better human relationships.",
+        "Develop the capacity to manage stress and conflicts effectively through self-awareness and emotional regulation. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Understanding Human Values",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Human Values: Definition, importance, and need for",
+              "human values in daily life and society., Core Human Values: Truth:",
+              "Integrity, Honesty, and transparency. Love: Compassion, empathy,",
+              "and kindness. Peace: Inner peace, harmony, and balance. Non-",
+              "violence: Respect for life, tolerance, and conflict resolution;",
+              "Friendship, Role of Human Values in Building Relationships:",
+              "Understanding how values influence trust, respect, and cooperation",
+              "in both personal and professional relationships., Ethical Dilemmas",
+              "and Conflict Resolution: Identifying value-based solutions to ethical",
+              "challenges and conflicts in real-life situations",
+              "2 Universal Human Values and Society 5",
+              "Values in Society: The role of universal human values in shaping",
+              "social behavior and community interactions., Human Values and",
+              "Sustainable Development: How human values contribute to creating",
+              "a sustainable, fair, and inclusive society., The Role of Education in",
+              "Cultivating Human Values: The significance of value-based",
+              "education in fostering a more ethical and value-conscious",
+              "generation., Human Values in the Workplace: Implementing values",
+              "like fairness, transparency, and accountability in professional",
+              "settings.",
+              "3 Essential Life Skills for Personal Development 8",
+              "Self-Awareness and Emotional Intelligence, Effective",
+              "Communication and Active Listening, Goal Setting and Time",
+              "Management, Stress and Resilience Management",
+              "4 Life Skills for Social and Professional Success 7",
+              "Problem Solving and Decision Makin, Teamwork and",
+              "Collaboration, Ethical Leadership, Work-Life Balance",
+              "Total Hours 30"
+            ],
+            "topics_text": "Introduction to Human Values: Definition, importance, and need for human values in daily life and society., Core Human Values: Truth: Integrity, Honesty, and transparency. Love: Compassion, empathy, and kindness. Peace: Inner peace, harmony, and balance. Non- violence: Respect for life, tolerance, and conflict resolution; Friendship, Role of Human Values in Building Relationships: Understanding how values influence trust, respect, and cooperation in both personal and professional relationships., Ethical Dilemmas and Conflict Resolution: Identifying value-based solutions to ethical challenges and conflicts in real-life situations 2 Universal Human Values and Society 5 Values in Society: The role of universal human values in shaping social behavior and community interactions., Human Values and Sustainable Development: How human values contribute to creating a sustainable, fair, and inclusive society., The Role of Education in Cultivating Human Values: The significance of value-based education in fostering a more ethical and value-conscious generation., Human Values in the Workplace: Implementing values like fairness, transparency, and accountability in professional settings. 3 Essential Life Skills for Personal Development 8 Self-Awareness and Emotional Intelligence, Effective Communication and Active Listening, Goal Setting and Time Management, Stress and Resilience Management 4 Life Skills for Social and Professional Success 7 Problem Solving and Decision Makin, Teamwork and Collaboration, Ethical Leadership, Work-Life Balance Total Hours 30",
+            "topics": [
+              "Introduction to Human Values: Definition, importance, and need for",
+              "human values in daily life and society., Core Human Values: Truth:",
+              "Integrity, Honesty, and transparency. Love: Compassion, empathy,",
+              "and kindness. Peace: Inner peace, harmony, and balance. Non",
+              "violence: Respect for life, tolerance, and conflict resolution",
+              "Friendship, Role of Human Values in Building Relationships:",
+              "Understanding how values influence trust, respect, and cooperation",
+              "in both personal and professional relationships., Ethical Dilemmas",
+              "and Conflict Resolution: Identifying value-based solutions to ethical",
+              "challenges and conflicts in real-life situations",
+              "2 Universal Human Values and Society 5",
+              "Values in Society: The role of universal human values in shaping",
+              "social behavior and community interactions., Human Values and",
+              "Sustainable Development: How human values contribute to creating",
+              "a sustainable, fair, and inclusive society., The Role of Education in",
+              "Cultivating Human Values: The significance of value-based",
+              "education in fostering a more ethical and value-conscious",
+              "generation., Human Values in the Workplace: Implementing values",
+              "like fairness, transparency, and accountability in professional",
+              "settings.",
+              "3 Essential Life Skills for Personal Development 8",
+              "Self-Awareness and Emotional Intelligence, Effective",
+              "Communication and Active Listening, Goal Setting and Time",
+              "Management, Stress and Resilience Management",
+              "4 Life Skills for Social and Professional Success 7",
+              "Problem Solving and Decision Makin, Teamwork and",
+              "Collaboration, Ethical Leadership, Work-Life Balance",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues Related to Universal Human Values and Life Skills",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues Related to Universal Human Values and Life Skills",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Essentials of Human Values. , Chakraborty, S. K. , Wheeler Publishing., 2007",
+              "2 Education in Values and Human Rights., Chitakra, M. G., A.P.H Publishing, 2003"
+            ],
+            "topics_text": "Issues Related to Universal Human Values and Life Skills Total Hours 15 Textbook : 1 Essentials of Human Values. , Chakraborty, S. K. , Wheeler Publishing., 2007 2 Education in Values and Human Rights., Chitakra, M. G., A.P.H Publishing, 2003",
+            "topics": [
+              "Issues Related to Universal Human Values and Life Skills",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Essentials of Human Values. , Chakraborty, S. K. , Wheeler Publishing., 2007",
+              "2 Education in Values and Human Rights., Chitakra, M. G., A.P.H Publishing, 2003"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Human values and professional ethics. , Human values and professional ethics. , Gaur, R. R., Sangal, R., & Bagaria, G. P., Excel Books., 2010",
+          "Value Education and Professional Ethics , Value Education and Professional Ethics , Anand, R. , Satya Prakashan, 2019",
+          "Universal Human Values and Professional Ethics. , Universal Human Values and Professional Ethics. , Nagaraj, A., & Bajpai, B. L, New Age International Publishers, 2011"
+        ],
+        "textbooks": [
+          "Essentials of Human Values. , Chakraborty, S. K. , Wheeler Publishing., 2007",
+          "Education in Values and Human Rights., Chitakra, M. G., A.P.H Publishing, 2003"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.aicte-india.org/uhv",
+          "https://egyankosh.ac.in",
+          "https://www.unesco.org/en/education",
+          "https://www.mindtools.com",
+          "https://www.who.int/health-topics/life-skills"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6388,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    UNIVERSAL HUMAN VALUES AND LIFE SKILLS\nCOURSE CODE     10BH1508\nCOURSE CREDITS  3\n\nObjective:\n 1  To develop an understanding of universal human values and their importance in personal\n    and professional life.\n 2  To equip students with essential life skills, including emotional intelligence, decision-\n    making, and effective communication.\n 3  To promote ethical behavior, empathy, and self-awareness for building a harmonious\n     society\n 4  To foster the ability to handle stress, conflict, and relationships with a positive mindset.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Demonstrate an understanding of core human values and apply them in day-to-day\n     interactions.\n 2  Apply life skills such as problem-solving, critical thinking, and interpersonal\n    communication in various contexts.\n 3  Exhibit ethical behavior and empathy towards individuals and society, fostering better\n    human relationships.\n 4  Develop the capacity to manage stress and conflicts effectively through self-awareness and\n     emotional regulation.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Understanding Human Values                              10\n               Introduction to Human Values: Definition, importance, and need for\n           human values in daily life and society., Core Human Values: Truth:\n                Integrity, Honesty, and transparency. Love: Compassion, empathy,\n            and kindness. Peace: Inner peace, harmony, and balance. Non-\n               violence: Respect for life, tolerance, and conflict resolution;\n               Friendship, Role of Human Values in Building Relationships:\n             Understanding how values influence trust, respect, and cooperation\n               in both personal and professional relationships., Ethical Dilemmas\n            and Conflict Resolution: Identifying value-based solutions to ethical\n              challenges and conflicts in real-life situations\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Universal Human Values and Society                        5\n             Values in Society: The role of universal human values in shaping\n               social behavior and community interactions., Human Values and\n              Sustainable Development: How human values contribute to creating\n             a sustainable, fair, and inclusive society., The Role of Education in\n               Cultivating Human Values: The significance of value-based\n              education in fostering a more ethical and value-conscious\n               generation., Human Values in the Workplace: Implementing values\n                like fairness, transparency, and accountability in professional\n                settings.\n     3       Essential Life Skills for Personal Development                8\n             Self-Awareness and Emotional Intelligence, Effective\n            Communication and Active Listening, Goal Setting and Time\n            Management, Stress and Resilience Management\n     4       Life Skills for Social and Professional Success                 7\n            Problem Solving and Decision Makin, Teamwork and\n               Collaboration, Ethical Leadership, Work-Life Balance\n                               Total Hours                       30\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues Related to Universal Human Values and Life Skills       15\n               Issues Related to Universal Human Values and Life Skills\n                               Total Hours                       15\n\nTextbook :\n 1  Essentials of Human Values. , Chakraborty, S. K. , Wheeler Publishing., 2007\n 2  Education in Values and Human Rights., Chitakra, M. G., A.P.H Publishing, 2003\n\nReferences:\n 1  Human values and professional ethics. , Human values and professional ethics. , Gaur, R.\n     R., Sangal, R., & Bagaria, G. P., Excel Books., 2010\n 2  Value Education and Professional Ethics , Value Education and Professional Ethics ,\n    Anand, R. , Satya Prakashan, 2019\n 3  Universal Human Values and Professional Ethics. , Universal Human Values and\n     Professional Ethics. , Nagaraj, A., & Bajpai, B. L, New Age International Publishers, 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         15.00         20.00         20.00         20.00         15.00\n\n\nSupplementary Resources:\n 1  https://www.aicte-india.org/uhv\n 2  https://egyankosh.ac.in\n 3  https://www.unesco.org/en/education\n 4  https://www.mindtools.com\n 5  https://www.who.int/health-topics/life-skills\n\n\n\n\n\nDR. TRIPTI CHOWDHURY                     MR. ANUGRAH PRATAP SINGH RAJAWAT\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "9d68e197822b3b8d75e56dbafa22686336638ea566647aaff5b8af806e3ae75c",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    }
+  ],
+  "build_summary": {
+    "extracted": 7,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 1,
+    "extraction_errors": 0
+  }
+}

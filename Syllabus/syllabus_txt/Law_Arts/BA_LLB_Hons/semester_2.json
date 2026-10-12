@@ -1,0 +1,781 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "ba-llb-hons-",
+    "course_name": "BA LLB (Hons)",
+    "output_slug": "BA_LLB_Hons"
+  },
+  "semester": 2,
+  "subject_count": 5,
+  "subjects": [
+    {
+      "subject_id": "41001021220201",
+      "subject_name": "ECONOMICS II",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 2,
+      "subject_code": "10BA2202",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/ECO-II.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ECONOMICS II [aabcee025a32].pdf",
+      "expected_pdf_sha256": "15521892a7f6aa0503c34147aa391075fc648d64d583e9051bf97ad4f317091c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ECONOMICS II (MACROECONOMICS)",
+        "course_code": "10BA2202",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "Economics I"
+      },
+      "objectives": [
+        "To acquaint students with basic concepts of Macroeconomics.",
+        "To enable the students to enhance the level of understanding by supporting the functioning of these concepts with their evolution over the period of time by discussion of various Classical and Keynesian Theories.",
+        "To orient students to understand and digest interface between Law and Economics by discussion of various Laws and Acts which are based on various theories of Macroeconomics."
+      ],
+      "course_outcomes": [
+        "Define the functioning of Macroeconomic concepts in the real-world phenomenon.",
+        "Explain the functioning of Macroeconomic concepts in the real-world phenomenon.",
+        "Demonstrate various economic issues and come up with meaningful solutions to the economic problems",
+        "Analyze and evaluate the private and public sector banking in India",
+        "Develop the structural framework and functioning of various Laws and Acts which are built upon Macroeconomic Theories and Principles. Pre-requisite of course:Economics I"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to macroeconomics",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to macroeconomics: Scope, importance and limitations,",
+              "Interdependence of micro and macroeconomics, Goals of",
+              "macroeconomic policy., Development of macroeconomics: school",
+              "of thoughts (classical, Keynesian and post Keynesian), Business",
+              "cycles: meaning, phases, features, impact on the economy.",
+              "2 Theory of money and banking 10",
+              "Concept of money, functions of money, impact of money: inflation",
+              "and deflation, Supply and demand for money., Central banking:",
+              "functions, credit control through monetary policy, Commercial",
+              "banking: functions, organization, and operation., Non- banking",
+              "financial institution: meaning and role, distinction between bank and",
+              "NBFI., Money markets and capital markets.",
+              "3 Issues in economic development 10",
+              "Concept of economic development and growth, factors of economic",
+              "development and obstacles of economic development, Infrastructure",
+              "and development, Poverty, Unemployment and inequalities of",
+              "income: concept and policy measures, Debate on state vs market.,",
+              "Inclusive growth.",
+              "4 Principles of public finance 13",
+              "Tax system its meaning and classification, Public finance vs private",
+              "finance, Fiscal policy –concept, objective and instruments., Central",
+              "budget, Burden and deficits and debts.",
+              "5 Liberalization, globalization and related issues 5",
+              "New economic policy: Structural Adjustment Programme (SAP).,",
+              "Free trade and protection., International Institution: IMF, WB and",
+              "WTO. SEZ, FDI.",
+              "Total Hours 45"
+            ],
+            "topics_text": "Introduction to macroeconomics: Scope, importance and limitations, Interdependence of micro and macroeconomics, Goals of macroeconomic policy., Development of macroeconomics: school of thoughts (classical, Keynesian and post Keynesian), Business cycles: meaning, phases, features, impact on the economy. 2 Theory of money and banking 10 Concept of money, functions of money, impact of money: inflation and deflation, Supply and demand for money., Central banking: functions, credit control through monetary policy, Commercial banking: functions, organization, and operation., Non- banking financial institution: meaning and role, distinction between bank and NBFI., Money markets and capital markets. 3 Issues in economic development 10 Concept of economic development and growth, factors of economic development and obstacles of economic development, Infrastructure and development, Poverty, Unemployment and inequalities of income: concept and policy measures, Debate on state vs market., Inclusive growth. 4 Principles of public finance 13 Tax system its meaning and classification, Public finance vs private finance, Fiscal policy –concept, objective and instruments., Central budget, Burden and deficits and debts. 5 Liberalization, globalization and related issues 5 New economic policy: Structural Adjustment Programme (SAP)., Free trade and protection., International Institution: IMF, WB and WTO. SEZ, FDI. Total Hours 45",
+            "topics": [
+              "Introduction to macroeconomics: Scope, importance and limitations,",
+              "Interdependence of micro and macroeconomics, Goals of",
+              "macroeconomic policy., Development of macroeconomics: school",
+              "of thoughts (classical, Keynesian and post Keynesian), Business",
+              "cycles: meaning, phases, features, impact on the economy.",
+              "2 Theory of money and banking 10",
+              "Concept of money, functions of money, impact of money: inflation",
+              "and deflation, Supply and demand for money., Central banking:",
+              "functions, credit control through monetary policy, Commercial",
+              "banking: functions, organization, and operation., Non- banking",
+              "financial institution: meaning and role, distinction between bank and",
+              "NBFI., Money markets and capital markets.",
+              "3 Issues in economic development 10",
+              "Concept of economic development and growth, factors of economic",
+              "development and obstacles of economic development, Infrastructure",
+              "and development, Poverty, Unemployment and inequalities of",
+              "income: concept and policy measures, Debate on state vs market.,",
+              "Inclusive growth.",
+              "4 Principles of public finance 13",
+              "Tax system its meaning and classification, Public finance vs private",
+              "finance, Fiscal policy –concept, objective and instruments., Central",
+              "budget, Burden and deficits and debts.",
+              "5 Liberalization, globalization and related issues 5",
+              "New economic policy: Structural Adjustment Programme (SAP).,",
+              "Free trade and protection., International Institution: IMF, WB and",
+              "WTO. SEZ, FDI.",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Macro Economics",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Macro Economics",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Macro Economic Theory, D.D. Chaturvedi, International Book House Pvt. Ltd, New Delhi,",
+              "2012"
+            ],
+            "topics_text": "Issues related to Macro Economics Total Hours 15 Textbook : 1 Macro Economic Theory, D.D. Chaturvedi, International Book House Pvt. Ltd, New Delhi, 2012",
+            "topics": [
+              "Issues related to Macro Economics",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Macro Economic Theory, D.D. Chaturvedi, International Book House Pvt. Ltd, New Delhi,",
+              "2012"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Indian economy,, Indian economy,, I.C. Dhingra, Sultan Chand & Sons, New Delhi, 2013"
+        ],
+        "textbooks": [
+          "Macro Economic Theory, D.D. Chaturvedi, International Book House Pvt. Ltd, New Delhi, 2012"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5032244 Supplementary Resources:",
+          "https://www.elibrary.imf.org/downloadpdf/display/book/9781557752222/9781557752222. pdf"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5866,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    ECONOMICS II (MACROECONOMICS)\nCOURSE CODE     10BA2202\nCOURSE CREDITS  4\n\nObjective:\n 1  To acquaint students with basic concepts of Macroeconomics.\n 2  To enable the students to enhance the level of understanding by supporting the functioning\n     of these concepts with their evolution over the period of time by discussion of various\n     Classical and Keynesian Theories.\n 3  To orient students to understand and digest interface between Law and Economics by\n     discussion of various Laws and Acts which are based on various theories of\n    Macroeconomics.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Define the functioning of Macroeconomic concepts in the real-world phenomenon.\n 2  Explain the functioning of Macroeconomic concepts in the real-world phenomenon.\n 3  Demonstrate various economic issues and come up with meaningful solutions to the\n    economic problems\n 4  Analyze and evaluate the private and public sector banking in India\n 5  Develop the structural framework and functioning of various Laws and Acts which are\n      built upon Macroeconomic Theories and Principles.\n\n\nPre-requisite of course:Economics I\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to macroeconomics                            7\n               Introduction to macroeconomics: Scope, importance and limitations,\n              Interdependence of micro and macroeconomics, Goals of\n            macroeconomic policy., Development of macroeconomics: school\n              of thoughts (classical, Keynesian and post Keynesian), Business\n               cycles: meaning, phases, features, impact on the economy.\n     2      Theory of money and banking                              10\n             Concept of money, functions of money, impact of money: inflation\n            and deflation, Supply and demand for money., Central banking:\n               functions, credit control through monetary policy, Commercial\n              banking: functions, organization, and operation., Non- banking\n               financial institution: meaning and role, distinction between bank and\n             NBFI., Money markets and capital markets.\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3       Issues in economic development                            10\n             Concept of economic development and growth, factors of economic\n             development and obstacles of economic development, Infrastructure\n            and development, Poverty, Unemployment and inequalities of\n             income: concept and policy measures, Debate on state vs market.,\n               Inclusive growth.\n     4       Principles of public finance                                13\n            Tax system its meaning and classification, Public finance vs private\n               finance, Fiscal policy –concept, objective and instruments., Central\n              budget, Burden and deficits and debts.\n     5       Liberalization, globalization and related issues                5\n          New economic policy: Structural Adjustment Programme (SAP).,\n             Free trade and protection., International Institution: IMF, WB and\n         WTO. SEZ, FDI.\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Macro Economics                          15\n               Issues related to Macro Economics\n                               Total Hours                       15\n\nTextbook :\n 1  Macro Economic Theory, D.D. Chaturvedi, International Book House Pvt. Ltd, New Delhi,\n    2012\n\nReferences:\n 1  Indian economy,, Indian economy,, I.C. Dhingra, Sultan Chand & Sons, New Delhi, 2013\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\nSupplementary Resources:\n 1  https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5032244\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 2  https://www.elibrary.imf.org/downloadpdf/display/book/9781557752222/9781557752222.\n     pdf\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "15521892a7f6aa0503c34147aa391075fc648d64d583e9051bf97ad4f317091c",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "41010612020401",
+      "subject_name": "INTERNSHIP",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 2,
+      "subject_code": "10FL0204",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/Internship-4.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTERNSHIP [d543318b08ce].pdf",
+      "expected_pdf_sha256": "ad9aaa97a2f496cd02e93048b4cf4d962a569b09c7c651d5925ea60ec0f9c4ba",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "INTERNSHIP (NGO)",
+        "course_code": "10FL0204",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "?To encourage students to make connections between their internships and what they have learned in the related core course ?To provide clear guidelines on the Internship Course assessment process ?To provide assistance in successfully completing the Internship Course assessment process To discuss and provide feedback on draft content and draft presentation of the Internship assessed pieces of work at a stage early enough for a student to correct any perceived defects DR. NONGTHOMBAM BANGKIM SINGH DR. RHISHIKESH NARENDRA DAVE Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)"
+      },
+      "objectives": [
+        "To familiarize students with reality of the society",
+        "To enable student's exposure to the law in practice",
+        "To encourage the development of skills in legal reasoning and analysis among the students.",
+        "To introduce students to basic theoretical perspectives on the creation and application of law.",
+        "To provide students with knowledge and appreciation of the major issues related to laws",
+        "To provide students with awareness of principles underpinning legal doctrine, and of the ways in which conflict of laws can be solved",
+        "To encourage students to make connections between their internships and what they have learned in the related core course",
+        "To provide clear guidelines on the Internship Course assessment process",
+        "To provide assistance in successfully completing the Internship Course assessment process",
+        "To discuss and provide feedback on draft content and draft presentation of the Internship assessed pieces of work at a stage early enough for a student to correct any perceived defects",
+        "This course relates to litigation advocacy and as such this shall be simulation course that shall have two parts. First part shall focus on preparation for trial and trial strategies. It shall also disseminate techniques of examination-in-chief cross examination and re- examination of witnesses, argumentation in courts, bail application, injunction application, etc. The second part shall focus on writing briefs in civil suits and criminal cases, appellate briefs in civil and criminal cases, and writ matters, memorial writings and arguing before the appropriate forums. The students shall be given a case to argue, that shall help to articulate their argumentative zeal as well as capacity. It also provides a unique bonding experience for you and your team and gives you a mini-support system during law school."
+      ],
+      "course_outcomes": [
+        "Develop acquaintance with the functioning of the real world",
+        "Analyse various social issues and come up with meaningful solutions to the social problems",
+        "Comprehend the structural framework and functioning of various laws in society Pre-requisite of course:?To encourage students to make connections between their internships and what they have learned in the related core course ?To provide clear guidelines on the Internship Course assessment process ?To provide assistance in successfully completing the Internship Course assessment process To discuss and provide feedback on draft content and draft presentation of the Internship assessed pieces of work at a stage early enough for a student to correct any perceived defects DR. NONGTHOMBAM BANGKIM SINGH DR. RHISHIKESH NARENDRA DAVE Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand, Universal Law Publishing Co. Pvt. Ltd., 2020"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "Not applicable"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4750,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    INTERNSHIP (NGO)\nCOURSE CODE     10FL0204\nCOURSE CREDITS  2\n\nObjective:\n 1  To familiarize students with reality of the society\n 2  To enable student's exposure to the law in practice\n 3  To encourage the development of skills in legal reasoning and analysis among the students.\n 4  To introduce students to basic theoretical perspectives on the creation and application of\n     law.\n 5  To provide students with knowledge and appreciation of the major issues related to laws\n 6  To provide students with awareness of principles underpinning legal doctrine, and of the\n    ways in which conflict of laws can be solved\n 7  To encourage students to make connections between their internships and what they have\n     learned in the related core course\n 8  To provide clear guidelines on the Internship Course assessment process\n 9  To provide assistance in successfully completing the Internship Course assessment process\n 10 To discuss and provide feedback on draft content and draft presentation of the Internship\n     assessed pieces of work at a stage early enough for a student to correct any perceived\n     defects\n 11 This course relates to litigation advocacy and as such this shall be simulation course that\n     shall have two parts. First part shall focus on preparation for trial and trial strategies. It\n     shall also disseminate techniques of examination-in-chief cross examination and re-\n    examination of witnesses, argumentation in courts, bail application, injunction application,\n      etc. The second part shall focus on writing briefs in civil suits and criminal cases, appellate\n     briefs in civil and criminal cases, and writ matters, memorial writings and arguing before\n     the appropriate forums. The students shall be given a case to argue, that shall help to\n     articulate their argumentative zeal as well as capacity. It also provides a unique bonding\n     experience for you and your team and gives you a mini-support system during law school.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Develop acquaintance with the functioning of the real world\n 2  Analyse various social issues and come up with meaningful solutions to the social\n    problems\n 3  Comprehend the structural framework and functioning of various laws in society\n\n\nPre-requisite of course:?To encourage students to make connections between their internships\nand what they have learned in the related core course ?To provide clear guidelines on the\nInternship Course assessment process ?To provide assistance in successfully completing the\nInternship Course assessment process To discuss and provide feedback on draft content and\ndraft presentation of the Internship assessed pieces of work at a stage early enough for a student\nto correct any perceived defects\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nTextbook :\n 1  Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand, Universal Law\n     Publishing Co. Pvt. Ltd., 2020\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         20.00         20.00         10.00\n\n\nSupplementary Resources:\n 1  Not applicable\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "ad9aaa97a2f496cd02e93048b4cf4d962a569b09c7c651d5925ea60ec0f9c4ba",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "41010612220201",
+      "subject_name": "LAW OF CONTRACT II",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 2,
+      "subject_code": "10FL2202",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/LAW-OF-CONTRACT-II-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/LAW OF CONTRACT II [2de0c960c5e1].pdf",
+      "expected_pdf_sha256": "c5f8889be45925c728bf2ccbe5ecdf44aff4b384143987cdc3c71bc7ad22d4c4",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "LAW OF CONTRACT II",
+        "course_code": "10FL2202",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "Law of Contract-I"
+      },
+      "objectives": [
+        "To make students understand the different kinds of special contracts.",
+        "To provide an insight into the justification for special statutory provisions for certain kinds of contracts including Contract of Indemnity, Guarantee, Bailment and Pledge.",
+        "To make students aware about the laws relating to Contract of Agency and Partnership.",
+        "To help students understand the nature of jurisprudence involved in each case and the technique of interpreting such law.",
+        "To provide students with a practical approach while dealing with special contracts"
+      ],
+      "course_outcomes": [
+        "Recall concepts of special contracts.",
+        "Demonstrate understanding on various principles relating to Contract of Indemnity & Guarantee.",
+        "Experiment with principles and provisions on Bailment & Pledge",
+        "Examine the principle of agency in practice.",
+        "Evaluate the difference between Partnership & Limited Liability Partnership Act and benefits",
+        "Formulate modern contract techniques and develop new drafting skills in the Sale of Goods Act, 1930 with amendments. Pre-requisite of course:Law of Contract-I"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Contract of Indemnity & Guarantee",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Nature and definition, Rights of indemnity holder , Commencement",
+              "of liability, Contract of Guarantee – Nature and definition, Essential",
+              "features of guarantee. , Extent of surety‘s liability, discharge of",
+              "surety, Rights of the surety, Fiduciary role of Surety, Principal",
+              "Debtor and Creditor, Continuing Guarantee and Revocation of",
+              "Continuing Guarantee, Drafting Indemnity Agreements, Drafting",
+              "Guarantee Agreements.",
+              "2 Bailment & Pledge 9",
+              "Nature and definition, Essential features, Rights and duties of bailor",
+              "and bailee, Pledge – Nature and definition., Rights of pawnor and",
+              "pawnee, Pledge by non-owners, Drafting Bailment Agreements.",
+              "3 Agency 9",
+              "Definition and kinds of agency, Essentials of agency, Modes of",
+              "creation of agency, Concept of Sub-Agency, Concept of Co-Agency",
+              ", Duties and rights of agents, Authority of agent – express, implied,",
+              "and ostensible authority., Liabilities- liability of principal & agent.,",
+              "Termination of agency, Drafting ?Contract of Agency?",
+              "4 Indian Partnership Act, 1932 & Limited Liability Partnership 10",
+              "Act, 2008",
+              "Nature and definition of Partnership, Types of Partners., Minor as a",
+              "partner., Concept of limited liability, Nature of Limited Liability",
+              "Partnership, Incorporation of Limited Liability Partnership, Partners",
+              "and their Relations, Registration of Partnership, Dissolution of",
+              "partnership., Drafting of Partnership Deed",
+              "5 The Sale of Goods Act 1930 8",
+              "Concept of Goods, Sale of Goods v. Agreement to Sale, Caveat",
+              "Emptor, Caveat Venditor, Nemo dat quod non habet;, Condition and",
+              "warranties;, Passing of property, rules relating to passing off",
+              "property;, Rights of the unpaid seller., Formation of a Contract of",
+              "Sale of Goods., Performance of a Contract of Sale of Goods",
+              "Total Hours 45"
+            ],
+            "topics_text": "Nature and definition, Rights of indemnity holder , Commencement of liability, Contract of Guarantee – Nature and definition, Essential features of guarantee. , Extent of surety‘s liability, discharge of surety, Rights of the surety, Fiduciary role of Surety, Principal Debtor and Creditor, Continuing Guarantee and Revocation of Continuing Guarantee, Drafting Indemnity Agreements, Drafting Guarantee Agreements. 2 Bailment & Pledge 9 Nature and definition, Essential features, Rights and duties of bailor and bailee, Pledge – Nature and definition., Rights of pawnor and pawnee, Pledge by non-owners, Drafting Bailment Agreements. 3 Agency 9 Definition and kinds of agency, Essentials of agency, Modes of creation of agency, Concept of Sub-Agency, Concept of Co-Agency , Duties and rights of agents, Authority of agent – express, implied, and ostensible authority., Liabilities- liability of principal & agent., Termination of agency, Drafting ?Contract of Agency? 4 Indian Partnership Act, 1932 & Limited Liability Partnership 10 Act, 2008 Nature and definition of Partnership, Types of Partners., Minor as a partner., Concept of limited liability, Nature of Limited Liability Partnership, Incorporation of Limited Liability Partnership, Partners and their Relations, Registration of Partnership, Dissolution of partnership., Drafting of Partnership Deed 5 The Sale of Goods Act 1930 8 Concept of Goods, Sale of Goods v. Agreement to Sale, Caveat Emptor, Caveat Venditor, Nemo dat quod non habet;, Condition and warranties;, Passing of property, rules relating to passing off property;, Rights of the unpaid seller., Formation of a Contract of Sale of Goods., Performance of a Contract of Sale of Goods Total Hours 45",
+            "topics": [
+              "Nature and definition, Rights of indemnity holder , Commencement",
+              "of liability, Contract of Guarantee – Nature and definition, Essential",
+              "features of guarantee. , Extent of surety‘s liability, discharge of",
+              "surety, Rights of the surety, Fiduciary role of Surety, Principal",
+              "Debtor and Creditor, Continuing Guarantee and Revocation of",
+              "Continuing Guarantee, Drafting Indemnity Agreements, Drafting",
+              "Guarantee Agreements.",
+              "2 Bailment & Pledge 9",
+              "Nature and definition, Essential features, Rights and duties of bailor",
+              "and bailee, Pledge – Nature and definition., Rights of pawnor and",
+              "pawnee, Pledge by non-owners, Drafting Bailment Agreements.",
+              "3 Agency 9",
+              "Definition and kinds of agency, Essentials of agency, Modes of",
+              "creation of agency, Concept of Sub-Agency, Concept of Co-Agency",
+              ", Duties and rights of agents, Authority of agent – express, implied,",
+              "and ostensible authority., Liabilities- liability of principal & agent.,",
+              "Termination of agency, Drafting ?Contract of Agency?",
+              "4 Indian Partnership Act, 1932 & Limited Liability Partnership 10",
+              "Act, 2008",
+              "Nature and definition of Partnership, Types of Partners., Minor as a",
+              "partner., Concept of limited liability, Nature of Limited Liability",
+              "Partnership, Incorporation of Limited Liability Partnership, Partners",
+              "and their Relations, Registration of Partnership, Dissolution of",
+              "partnership., Drafting of Partnership Deed",
+              "5 The Sale of Goods Act 1930 8",
+              "Concept of Goods, Sale of Goods v. Agreement to Sale, Caveat",
+              "Emptor, Caveat Venditor, Nemo dat quod non habet",
+              ", Condition and",
+              "warranties",
+              ", Passing of property, rules relating to passing off",
+              "property",
+              ", Rights of the unpaid seller., Formation of a Contract of",
+              "Sale of Goods., Performance of a Contract of Sale of Goods",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Exercises related to Law of Contract",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Exercises related to Law of Contract",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Law of Contracts, Avtar Singh, Eastern Book Company, Lucknow, 2018"
+            ],
+            "topics_text": "Exercises related to Law of Contract Total Hours 15 Textbook : 1 Law of Contracts, Avtar Singh, Eastern Book Company, Lucknow, 2018",
+            "topics": [
+              "Exercises related to Law of Contract",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Law of Contracts, Avtar Singh, Eastern Book Company, Lucknow, 2018"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "M. P. Cheshire, Fifoot, and Furmston's Law of Contract, M. P. Cheshire, Fifoot, and Furmston's Law of Contract, Cheshire, G. C., and Furmston, Oxford University Press, 2007"
+        ],
+        "textbooks": [
+          "Law of Contracts, Avtar Singh, Eastern Book Company, Lucknow, 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://www.legalbites.in/contract-of-indemnity-and-guarantee/",
+          "http://lawtimesjournal.in/bailment-and-pledge/",
+          "https://blog.ipleaders.in/law-of-agency/",
+          "https://www.youtube.com/watch?v=c7ZlQ0dAvRk"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6427,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   LAW OF CONTRACT II\nCOURSE CODE     10FL2202\nCOURSE CREDITS  4\n\nObjective:\n 1  To make students understand the different kinds of special contracts.\n 2  To provide an insight into the justification for special statutory provisions for certain kinds\n     of contracts including Contract of Indemnity, Guarantee, Bailment and Pledge.\n 3  To make students aware about the laws relating to Contract of Agency and Partnership.\n 4  To help students understand the nature of jurisprudence involved in each case and the\n     technique of interpreting such law.\n 5  To provide students with a practical approach while dealing with special contracts\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Recall concepts of special contracts.\n 2  Demonstrate understanding on various principles relating to Contract of Indemnity &\n     Guarantee.\n 3  Experiment with principles and provisions on Bailment & Pledge\n 4  Examine the principle of agency in practice.\n 5  Evaluate the difference between Partnership & Limited Liability Partnership Act and\n     benefits\n 6  Formulate modern contract techniques and develop new drafting skills in the Sale of Goods\n     Act, 1930 with amendments.\n\n\nPre-requisite of course:Law of Contract-I\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Contract of Indemnity & Guarantee                         9\n             Nature and definition, Rights of indemnity holder , Commencement\n              of liability, Contract of Guarantee – Nature and definition, Essential\n               features of guarantee. , Extent of surety‘s liability, discharge of\n                surety, Rights of the surety, Fiduciary role of Surety, Principal\n             Debtor and Creditor, Continuing Guarantee and Revocation of\n             Continuing Guarantee, Drafting Indemnity Agreements, Drafting\n             Guarantee Agreements.\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Bailment & Pledge                                        9\n             Nature and definition, Essential features, Rights and duties of bailor\n            and bailee, Pledge – Nature and definition., Rights of pawnor and\n             pawnee, Pledge by non-owners, Drafting Bailment Agreements.\n     3      Agency                                                 9\n               Definition and kinds of agency, Essentials of agency, Modes of\n               creation of agency, Concept of Sub-Agency, Concept of Co-Agency\n                        , Duties and rights of agents, Authority of agent – express, implied,\n            and ostensible authority., Liabilities- liability of principal & agent.,\n             Termination of agency, Drafting ?Contract of Agency?\n     4      Indian Partnership Act, 1932 & Limited Liability Partnership   10\n              Act, 2008\n             Nature and definition of Partnership, Types of Partners., Minor as a\n                partner., Concept of limited liability, Nature of Limited Liability\n               Partnership, Incorporation of Limited Liability Partnership, Partners\n            and their Relations, Registration of Partnership, Dissolution of\n                partnership., Drafting of Partnership Deed\n     5     The Sale of Goods Act 1930                                8\n             Concept of Goods, Sale of Goods v. Agreement to Sale, Caveat\n             Emptor, Caveat Venditor, Nemo dat quod non habet;, Condition and\n               warranties;, Passing of property, rules relating to passing off\n               property;, Rights of the unpaid seller., Formation of a Contract of\n              Sale of Goods., Performance of a Contract of Sale of Goods\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Exercises related to Law of Contract                        15\n              Exercises related to Law of Contract\n                               Total Hours                       15\n\nTextbook :\n 1  Law of Contracts, Avtar Singh, Eastern Book Company, Lucknow, 2018\n\nReferences:\n 1  M. P. Cheshire, Fifoot, and Furmston's Law of Contract, M. P. Cheshire, Fifoot, and\n     Furmston's Law of Contract, Cheshire, G. C., and Furmston, Oxford University Press, 2007\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\nSupplementary Resources:\n 1  http://www.legalbites.in/contract-of-indemnity-and-guarantee/\n 2   http://lawtimesjournal.in/bailment-and-pledge/\n 3  https://blog.ipleaders.in/law-of-agency/\n 4  https://www.youtube.com/watch?v=c7ZlQ0dAvRk\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "c5f8889be45925c728bf2ccbe5ecdf44aff4b384143987cdc3c71bc7ad22d4c4",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "41101912015201",
+      "subject_name": "LAW THROUGH POPULAR MEDIA",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 2,
+      "subject_code": "10SL0152",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/Law-Through-Popular-Media-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/LAW THROUGH POPULAR MEDIA [31f66c5e1f9a].pdf",
+      "expected_pdf_sha256": "d22e12ef06df95aeb5a151319f6926824f4203be253d5de41719879eb902e7d7",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "LAW THROUGH POPULAR MEDIA",
+        "course_code": "10SL0152",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "?To help learners learn legal language through popular media ?To familiarize learners with various forms of media dealing with law"
+      },
+      "objectives": [
+        "To familiarize learners with various forms of media dealing with law",
+        "To help learners learn legal language through popular media"
+      ],
+      "course_outcomes": [
+        "Understand and analyze the different courtroom situations in a critical manner.",
+        "Use legal language with reference to a particular context.",
+        "Create an argument critically in the field of Law. Pre-requisite of course:?To help learners learn legal language through popular media ?To familiarize learners with various forms of media dealing with law"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Popular Literature",
+            "contact_hours": 15,
+            "topic_lines": [
+              "1. Silence! The Court is in Session - by Vijay Tendulkar • Reading",
+              "and roleplay of selected material from the text, 1. Silence! The",
+              "Court is in Session - by Vijay Tendulkar • Based on the reading,",
+              "there will be a series suitable tasks (e.g. Group discussions, debates,",
+              "quizzes, roleplays, worksheets, et al), 2. The Apple Cart by George",
+              "Bernard Shaw • Reading and roleplay of selected material from the",
+              "text, 2. The Apple Cart by George Bernard Shaw • Based on the",
+              "reading, there will be a series suitable tasks (e.g. Group discussions,",
+              "debates, quizzes, roleplays, worksheets, et al), 3. Selected excerpts",
+              "from Earl Stanley Gardner • Students will be asked to read the",
+              "excerpts before the class, 3. Selected excerpts from Earl Stanley",
+              "Gardner • Based on the reading, there will be a series suitable tasks",
+              "(e.g. Group discussions, debates, quizzes, roleplays, worksheets, et",
+              "al)",
+              "2 Films 15",
+              "1) My Cousin Vinnie(1992) a. Screening of selected scenes, 1) My",
+              "Cousin Vinnie(1992) b. Based on the reading, there will be a series",
+              "suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al), 2) Kramer vs Kramer(1979) a.",
+              "Screening of selected scenes, 2) Kramer vs Kramer(1979) b. Based",
+              "on the reading, there will be a series suitable tasks (e.g. Group",
+              "discussions, script-writing, debates, quizzes, roleplays, worksheets,",
+              "et al), 3) A Few Good Men (1992) a. Screening of selected scenes,",
+              "3) A Few Good Men (1992) b. Based on the reading, there will be a",
+              "series suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al), 4) Amistad (1997) a.",
+              "Screening of selected scenes, 4) Amistad (1997) b. Based on the",
+              "reading, there will be a series suitable tasks (e.g. Group discussions,",
+              "script-writing, debates, quizzes, roleplays, worksheets, et al), 5) To",
+              "Kill A Mocking Bird (1962) a. Screening of selected scenes, 5) To",
+              "Kill A Mocking Bird (1962) b. Based on the reading, there will be a",
+              "series suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al)",
+              "3 Series 15",
+              "1) Boston Legal a. Screening of selected episodes, 1) Boston Legal",
+              "b. Based on the reading, there will be a series suitable tasks (e.g.",
+              "Group discussions, script-writing, debates, quizzes, roleplays,",
+              "worksheets, et al), 2) The Practice a. Screening of selected episodes,",
+              "2) The Practice b. Based on the reading, there will be a series",
+              "suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al), 3) People vs O. J. Simpson a.",
+              "Screening of selected episodes, 3) People vs O. J. Simpson b. Based",
+              "on the reading, there will be a series suitable tasks (e.g. Group",
+              "discussions, script-writing, debates, quizzes, roleplays, worksheets,",
+              "et al)",
+              "Total Hours 45"
+            ],
+            "topics_text": "1. Silence! The Court is in Session - by Vijay Tendulkar • Reading and roleplay of selected material from the text, 1. Silence! The Court is in Session - by Vijay Tendulkar • Based on the reading, there will be a series suitable tasks (e.g. Group discussions, debates, quizzes, roleplays, worksheets, et al), 2. The Apple Cart by George Bernard Shaw • Reading and roleplay of selected material from the text, 2. The Apple Cart by George Bernard Shaw • Based on the reading, there will be a series suitable tasks (e.g. Group discussions, debates, quizzes, roleplays, worksheets, et al), 3. Selected excerpts from Earl Stanley Gardner • Students will be asked to read the excerpts before the class, 3. Selected excerpts from Earl Stanley Gardner • Based on the reading, there will be a series suitable tasks (e.g. Group discussions, debates, quizzes, roleplays, worksheets, et al) 2 Films 15 1) My Cousin Vinnie(1992) a. Screening of selected scenes, 1) My Cousin Vinnie(1992) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 2) Kramer vs Kramer(1979) a. Screening of selected scenes, 2) Kramer vs Kramer(1979) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 3) A Few Good Men (1992) a. Screening of selected scenes, 3) A Few Good Men (1992) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 4) Amistad (1997) a. Screening of selected scenes, 4) Amistad (1997) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 5) To Kill A Mocking Bird (1962) a. Screening of selected scenes, 5) To Kill A Mocking Bird (1962) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al) 3 Series 15 1) Boston Legal a. Screening of selected episodes, 1) Boston Legal b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 2) The Practice a. Screening of selected episodes, 2) The Practice b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 3) People vs O. J. Simpson a. Screening of selected episodes, 3) People vs O. J. Simpson b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al) Total Hours 45",
+            "topics": [
+              "1. Silence! The Court is in Session - by Vijay Tendulkar",
+              "Reading",
+              "and roleplay of selected material from the text, 1. Silence! The",
+              "Court is in Session - by Vijay Tendulkar",
+              "Based on the reading,",
+              "there will be a series suitable tasks (e.g. Group discussions, debates,",
+              "quizzes, roleplays, worksheets, et al), 2. The Apple Cart by George",
+              "Bernard Shaw",
+              "Reading and roleplay of selected material from the",
+              "text, 2. The Apple Cart by George Bernard Shaw",
+              "Based on the",
+              "reading, there will be a series suitable tasks (e.g. Group discussions,",
+              "debates, quizzes, roleplays, worksheets, et al), 3. Selected excerpts",
+              "from Earl Stanley Gardner",
+              "Students will be asked to read the",
+              "excerpts before the class, 3. Selected excerpts from Earl Stanley",
+              "Gardner",
+              "Based on the reading, there will be a series suitable tasks",
+              "(e.g. Group discussions, debates, quizzes, roleplays, worksheets, et",
+              "al)",
+              "2 Films 15",
+              "1) My Cousin Vinnie(1992) a. Screening of selected scenes, 1) My",
+              "Cousin Vinnie(1992) b. Based on the reading, there will be a series",
+              "suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al), 2) Kramer vs Kramer(1979) a.",
+              "Screening of selected scenes, 2) Kramer vs Kramer(1979) b. Based",
+              "on the reading, there will be a series suitable tasks (e.g. Group",
+              "discussions, script-writing, debates, quizzes, roleplays, worksheets,",
+              "et al), 3) A Few Good Men (1992) a. Screening of selected scenes,",
+              "3) A Few Good Men (1992) b. Based on the reading, there will be a",
+              "series suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al), 4) Amistad (1997) a.",
+              "Screening of selected scenes, 4) Amistad (1997) b. Based on the",
+              "reading, there will be a series suitable tasks (e.g. Group discussions,",
+              "script-writing, debates, quizzes, roleplays, worksheets, et al), 5) To",
+              "Kill A Mocking Bird (1962) a. Screening of selected scenes, 5) To",
+              "Kill A Mocking Bird (1962) b. Based on the reading, there will be a",
+              "series suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al)",
+              "3 Series 15",
+              "1) Boston Legal a. Screening of selected episodes, 1) Boston Legal",
+              "b. Based on the reading, there will be a series suitable tasks (e.g.",
+              "Group discussions, script-writing, debates, quizzes, roleplays,",
+              "worksheets, et al), 2) The Practice a. Screening of selected episodes,",
+              "2) The Practice b. Based on the reading, there will be a series",
+              "suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al), 3) People vs O. J. Simpson a.",
+              "Screening of selected episodes, 3) People vs O. J. Simpson b. Based",
+              "on the reading, there will be a series suitable tasks (e.g. Group",
+              "discussions, script-writing, debates, quizzes, roleplays, worksheets,",
+              "et al)",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to LAW THROUGH POPULAR MEDIA",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to LAW THROUGH POPULAR MEDIA",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Silence! The Court Is in Session (Three Crowns). , Priya Adarkar (Translator), Oxford",
+              "University Press, , 1979"
+            ],
+            "topics_text": "Issues related to LAW THROUGH POPULAR MEDIA Total Hours 15 Textbook : 1 Silence! The Court Is in Session (Three Crowns). , Priya Adarkar (Translator), Oxford University Press, , 1979",
+            "topics": [
+              "Issues related to LAW THROUGH POPULAR MEDIA",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Silence! The Court Is in Session (Three Crowns). , Priya Adarkar (Translator), Oxford",
+              "University Press, , 1979"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "Silence! The Court Is in Session (Three Crowns). , Priya Adarkar (Translator), Oxford University Press, , 1979"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.imdb.com/",
+          "https://www.rottentomatoes.com/",
+          "https://tarlton.law.utexas.edu/law-popular-culture",
+          "https://prawfsblawg.blogs.com",
+          "https://balkin.blogspot.com",
+          "https://www.wnycstudios.org/podcasts/radiolab",
+          "https://www.wnycstudios.org/podcasts/radiolabmoreperfect"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7051,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   LAW THROUGH POPULAR MEDIA\nCOURSE CODE     10SL0152\nCOURSE CREDITS  4\n\nObjective:\n 1  To familiarize learners with various forms of media dealing with law\n 2  To help learners learn legal language through popular media\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand and analyze the different courtroom situations in a critical manner.\n 2  Use legal language with reference to a particular context.\n 3  Create an argument critically in the field of Law.\n\n\nPre-requisite of course:?To help learners learn legal language through popular media ?To\nfamiliarize learners with various forms of media dealing with law\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Popular Literature                                       15\n                1. Silence! The Court is in Session - by Vijay Tendulkar • Reading\n            and roleplay of selected material from the text, 1. Silence! The\n             Court is in Session - by Vijay Tendulkar • Based on the reading,\n               there will be a series suitable tasks (e.g. Group discussions, debates,\n               quizzes, roleplays, worksheets, et al), 2. The Apple Cart by George\n             Bernard Shaw • Reading and roleplay of selected material from the\n                 text, 2. The Apple Cart by George Bernard Shaw • Based on the\n               reading, there will be a series suitable tasks (e.g. Group discussions,\n               debates, quizzes, roleplays, worksheets, et al), 3. Selected excerpts\n            from Earl Stanley Gardner • Students will be asked to read the\n              excerpts before the class, 3. Selected excerpts from Earl Stanley\n             Gardner • Based on the reading, there will be a series suitable tasks\n                 (e.g. Group discussions, debates, quizzes, roleplays, worksheets, et\n                 al)\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Films                                                   15\n              1) My Cousin Vinnie(1992) a. Screening of selected scenes, 1) My\n             Cousin Vinnie(1992) b. Based on the reading, there will be a series\n               suitable tasks (e.g. Group discussions, script-writing, debates,\n               quizzes, roleplays, worksheets, et al), 2) Kramer vs Kramer(1979) a.\n             Screening of selected scenes, 2) Kramer vs Kramer(1979) b. Based\n            on the reading, there will be a series suitable tasks (e.g. Group\n               discussions, script-writing, debates, quizzes, roleplays, worksheets,\n                 et al), 3) A Few Good Men (1992) a. Screening of selected scenes,\n              3) A Few Good Men (1992) b. Based on the reading, there will be a\n                series suitable tasks (e.g. Group discussions, script-writing, debates,\n               quizzes, roleplays, worksheets, et al), 4) Amistad (1997) a.\n             Screening of selected scenes, 4) Amistad (1997) b. Based on the\n               reading, there will be a series suitable tasks (e.g. Group discussions,\n                script-writing, debates, quizzes, roleplays, worksheets, et al), 5) To\n               Kill A Mocking Bird (1962) a. Screening of selected scenes, 5) To\n               Kill A Mocking Bird (1962) b. Based on the reading, there will be a\n                series suitable tasks (e.g. Group discussions, script-writing, debates,\n               quizzes, roleplays, worksheets, et al)\n     3       Series                                                   15\n              1) Boston Legal a. Screening of selected episodes, 1) Boston Legal\n                b. Based on the reading, there will be a series suitable tasks (e.g.\n            Group discussions, script-writing, debates, quizzes, roleplays,\n              worksheets, et al), 2) The Practice a. Screening of selected episodes,\n              2) The Practice b. Based on the reading, there will be a series\n               suitable tasks (e.g. Group discussions, script-writing, debates,\n               quizzes, roleplays, worksheets, et al), 3) People vs O. J. Simpson a.\n             Screening of selected episodes, 3) People vs O. J. Simpson b. Based\n            on the reading, there will be a series suitable tasks (e.g. Group\n               discussions, script-writing, debates, quizzes, roleplays, worksheets,\n                 et al)\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to LAW THROUGH POPULAR MEDIA        15\n               Issues related to LAW THROUGH POPULAR MEDIA\n                               Total Hours                       15\n\nTextbook :\n 1  Silence! The Court Is in Session (Three Crowns). , Priya Adarkar (Translator), Oxford\n     University Press, , 1979\n\n\nSuggested Theory Distribution:\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         20.00         20.00         10.00\n\n\nSupplementary Resources:\n 1  https://www.imdb.com/\n 2  https://www.rottentomatoes.com/\n 3  https://tarlton.law.utexas.edu/law-popular-culture\n 4  https://prawfsblawg.blogs.com\n 5  https://balkin.blogspot.com\n 6  https://www.wnycstudios.org/podcasts/radiolab\n 7  https://www.wnycstudios.org/podcasts/radiolabmoreperfect\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "d22e12ef06df95aeb5a151319f6926824f4203be253d5de41719879eb902e7d7",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "41010612220301",
+      "subject_name": "MOOT COURT TRAINING",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 2,
+      "subject_code": "10FL2203",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/MOOT-Court-Training-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MOOT COURT TRAINING [d5b917724d3e].pdf",
+      "expected_pdf_sha256": "5130c7baa585236fd3d1cd86afb7d5227c6ad5a5f88ef85e89683e27f10fb453",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MOOT COURT TRAINING",
+        "course_code": "10FL2203",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To enhance students' researching, reading, and drafting skills specific to a moot court proposition provided by the faculty-coordinator.",
+        "To help students understand the concept and setting of a moot court, including learning legal terminologies and differentiating between relevant and irrelevant information for drafting a moot memorial.",
+        "To develop students' presentation skills used in real court settings and build their confidence in legal advocacy."
+      ],
+      "course_outcomes": [
+        "Identify the legal issues arising from a hypothetical set of facts",
+        "Research the law relevant to these legal issues and formulate legal argument based on this research;",
+        "Advocate an interpretation of the law which is favorable to a particular side of the argument;",
+        "Apply the law accurately and persuasively",
+        "Distinguish any case law which runs contrary to the argument being made",
+        "Present this argument articulately and clearly in an oral forma Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 0 0 50 50",
+      "contents": {
+        "theory_units": [],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Scope And Importance",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Meaning of Moot Court, Difference between Moot Court & Court,",
+              "Difference between Moot and debate, Significance & Importance of",
+              "Moot Court, Hierarchy of Courts"
+            ],
+            "topics_text": "Meaning of Moot Court, Difference between Moot Court & Court, Difference between Moot and debate, Significance & Importance of Moot Court, Hierarchy of Courts",
+            "topics": [
+              "Meaning of Moot Court, Difference between Moot Court & Court,",
+              "Difference between Moot and debate, Significance & Importance of",
+              "Moot Court, Hierarchy of Courts"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Research",
+            "contact_hours": 12,
+            "topic_lines": [
+              "How to approach a problem (relevant/irrelevant facts), Identify",
+              "parties, party interest and possible claims, Kinds of legal disputes-",
+              "Civil and Criminal, Legal terminologies- Claimant, Plaintiff,",
+              "Applicant, Petitioner, Appellant; Respondent, Defendant; Plaint,",
+              "Suit, Application, Appeal, Petition, Affidavit – Deponent;, Cause of",
+              "Action;, Locus Standi – 1) Facts giving rise to a cause of action; 2)",
+              "Identify legal rights violated;, Identify the Jurisdiction of the court",
+              "for filing the case, Identify relevant Legislations/regulations",
+              "applicable",
+              "3 Mode Of Citations 12",
+              "Identify & research for relevant cases, Art of reading case laws,",
+              "How to quote cases and other authorities in the memorial. (The Blue",
+              "Book Citation), Bibliography.",
+              "4 Memorial drafting & Pleading 12",
+              "Develop a theory of the case, Researching and developing an",
+              "outline of the legal points, Identifying and framing of the issues,",
+              "Principles of constructing arguments (IRAC- Issue, Rule,",
+              "Application, Conclusion method of drafting), How to plead",
+              "(Submission of arguments & Rebuttal)",
+              "5 Qualities of Good Mooter 12",
+              "Language, Court manners, Manner to address in the court (Judges,",
+              "Court officials & opponents), Appearance & Presentation., Time",
+              "management, Responses, Rebuttals and Sur-rebuttals, Importance of",
+              "Team work",
+              "Total Hours 60",
+              "Textbook :",
+              "1 ?Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand,, Universal",
+              "Law Publishing Co. Pvt. Ltd., ."
+            ],
+            "topics_text": "How to approach a problem (relevant/irrelevant facts), Identify parties, party interest and possible claims, Kinds of legal disputes- Civil and Criminal, Legal terminologies- Claimant, Plaintiff, Applicant, Petitioner, Appellant; Respondent, Defendant; Plaint, Suit, Application, Appeal, Petition, Affidavit – Deponent;, Cause of Action;, Locus Standi – 1) Facts giving rise to a cause of action; 2) Identify legal rights violated;, Identify the Jurisdiction of the court for filing the case, Identify relevant Legislations/regulations applicable 3 Mode Of Citations 12 Identify & research for relevant cases, Art of reading case laws, How to quote cases and other authorities in the memorial. (The Blue Book Citation), Bibliography. 4 Memorial drafting & Pleading 12 Develop a theory of the case, Researching and developing an outline of the legal points, Identifying and framing of the issues, Principles of constructing arguments (IRAC- Issue, Rule, Application, Conclusion method of drafting), How to plead (Submission of arguments & Rebuttal) 5 Qualities of Good Mooter 12 Language, Court manners, Manner to address in the court (Judges, Court officials & opponents), Appearance & Presentation., Time management, Responses, Rebuttals and Sur-rebuttals, Importance of Team work Total Hours 60 Textbook : 1 ?Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand,, Universal Law Publishing Co. Pvt. Ltd., .",
+            "topics": [
+              "How to approach a problem (relevant/irrelevant facts), Identify",
+              "parties, party interest and possible claims, Kinds of legal disputes",
+              "Civil and Criminal, Legal terminologies- Claimant, Plaintiff,",
+              "Applicant, Petitioner, Appellant",
+              "Respondent, Defendant",
+              "Plaint,",
+              "Suit, Application, Appeal, Petition, Affidavit – Deponent",
+              ", Cause of",
+              "Action",
+              ", Locus Standi – 1) Facts giving rise to a cause of action",
+              "2)",
+              "Identify legal rights violated",
+              ", Identify the Jurisdiction of the court",
+              "for filing the case, Identify relevant Legislations/regulations",
+              "applicable",
+              "3 Mode Of Citations 12",
+              "Identify & research for relevant cases, Art of reading case laws,",
+              "How to quote cases and other authorities in the memorial. (The Blue",
+              "Book Citation), Bibliography.",
+              "4 Memorial drafting & Pleading 12",
+              "Develop a theory of the case, Researching and developing an",
+              "outline of the legal points, Identifying and framing of the issues,",
+              "Principles of constructing arguments (IRAC- Issue, Rule,",
+              "Application, Conclusion method of drafting), How to plead",
+              "(Submission of arguments & Rebuttal)",
+              "5 Qualities of Good Mooter 12",
+              "Language, Court manners, Manner to address in the court (Judges,",
+              "Court officials & opponents), Appearance & Presentation., Time",
+              "management, Responses, Rebuttals and Sur-rebuttals, Importance of",
+              "Team work",
+              "Total Hours 60",
+              "Textbook :",
+              "1 ?Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand,, Universal",
+              "Law Publishing Co. Pvt. Ltd., ."
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Moot Court, Pre-Trial Preparations and Participation in Trial Proceedings., Moot Court, Pre-Trial Preparations and Participation in Trial Proceedings., Sirohi J.P.S.,, ., ."
+        ],
+        "textbooks": [
+          "?Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand,, Universal Law Publishing Co. Pvt. Ltd., ."
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5732,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   MOOT COURT TRAINING\nCOURSE CODE     10FL2203\nCOURSE CREDITS  2\n\nObjective:\n 1  To enhance students' researching, reading, and drafting skills specific to a moot court\n     proposition provided by the faculty-coordinator.\n 2  To help students understand the concept and setting of a moot court, including learning\n     legal terminologies and differentiating between relevant and irrelevant information for\n     drafting a moot memorial.\n 3  To develop students' presentation skills used in real court settings and build their\n     confidence in legal advocacy.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Identify the legal issues arising from a hypothetical set of facts\n 2  Research the law relevant to these legal issues and formulate legal argument based on this\n     research;\n 3  Advocate an interpretation of the law which is favorable to a particular side of the\n    argument;\n 4  Apply the law accurately and persuasively\n 5  Distinguish any case law which runs contrary to the argument being made\n 6  Present this argument articulately and clearly in an oral forma\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            4         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Scope And Importance                                    12\n            Meaning of Moot Court, Difference between Moot Court & Court,\n              Difference between Moot and debate, Significance & Importance of\n           Moot Court, Hierarchy of Courts\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Research                                                12\n         How to approach a problem (relevant/irrelevant facts), Identify\n                parties, party interest and possible claims, Kinds of legal disputes-\n               Civil and Criminal, Legal terminologies- Claimant, Plaintiff,\n              Applicant, Petitioner, Appellant; Respondent, Defendant; Plaint,\n                Suit, Application, Appeal, Petition, Affidavit – Deponent;, Cause of\n               Action;, Locus Standi – 1) Facts giving rise to a cause of action; 2)\n               Identify legal rights violated;, Identify the Jurisdiction of the court\n               for filing the case, Identify relevant Legislations/regulations\n               applicable\n     3     Mode Of Citations                                        12\n               Identify & research for relevant cases, Art of reading case laws,\n         How to quote cases and other authorities in the memorial. (The Blue\n           Book Citation), Bibliography.\n     4      Memorial drafting & Pleading                              12\n            Develop a theory of the case, Researching and developing an\n               outline of the legal points, Identifying and framing of the issues,\n               Principles of constructing arguments (IRAC- Issue, Rule,\n              Application, Conclusion method of drafting), How to plead\n             (Submission of arguments & Rebuttal)\n     5       Qualities of Good Mooter                                  12\n             Language, Court manners, Manner to address in the court (Judges,\n             Court officials & opponents), Appearance & Presentation., Time\n            management, Responses, Rebuttals and Sur-rebuttals, Importance of\n           Team work\n                               Total Hours                       60\n\nTextbook :\n 1  ?Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand,, Universal\n   Law Publishing Co. Pvt. Ltd., .\n\nReferences:\n 1  Moot Court, Pre-Trial Preparations and Participation in Trial Proceedings., Moot Court,\n     Pre-Trial Preparations and Participation in Trial Proceedings., Sirohi J.P.S.,, ., .\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         20.00         10.00         10.00\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "DR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "5130c7baa585236fd3d1cd86afb7d5227c6ad5a5f88ef85e89683e27f10fb453",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    }
+  ],
+  "build_summary": {
+    "extracted": 4,
+    "manual_review": 1,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

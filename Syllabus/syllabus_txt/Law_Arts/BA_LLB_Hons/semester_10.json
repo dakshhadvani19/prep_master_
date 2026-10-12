@@ -1,0 +1,1081 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "ba-llb-hons-",
+    "course_name": "BA LLB (Hons)",
+    "output_slug": "BA_LLB_Hons"
+  },
+  "semester": 10,
+  "subject_count": 10,
+  "subjects": [
+    {
+      "subject_id": "41106120100101",
+      "subject_name": "AIR AND SPACE LAW - Elective Course",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 10,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NETWORK_UNVERIFIED_RETRY",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Source access was blocked/unverified; not evidence the syllabus does not exist."
+      ],
+      "pdf_verification_status": "NETWORK_UNVERIFIED_RETRY_NO_LOCAL_PDF"
+    },
+    {
+      "subject_id": "41161310000301",
+      "subject_name": "COMPARATIVE CONSTITUTION - Constitutional Law",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 10,
+      "subject_code": "10CL01001",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10CL01001-COMPARATIVE-CONSTITUTION-Constitutional-Law-Hons.-Course-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/COMPARATIVE CONSTITUTION - Constitutional Law [03688dbbe083].pdf",
+      "expected_pdf_sha256": "3ca0d5d2cf1919e2ca7e7e1f2230b4c5e178b6a2ae55f7e04b12e2f5ab73336e",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMPARATIVE CONSTITUTION",
+        "course_code": "10CL01001",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "The objective of this paper is to help students to understand the provisions of public law of various jurisdictions in a comparative prospective thereby developing the sense of utility of these provisions for the betterment of society at large",
+        "Further the students should after completion of the course should be in capacity to draw comparative analysis with several constitutions of developed, under developed and developing economies"
+      ],
+      "course_outcomes": [
+        "to understand the meaning, scope, methods, and benefits of comparative constitutional governance of various jurisdictions besides developing a sound understanding of certain fundamental principles of public law of various nations",
+        "to analyze the comparison of different constitutions in the underdeveloped and developing stages. Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Module 1",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Public Law – Meaning, Nature and Scope, Study of Comparative",
+              "Public Law, Relevance, Scope and Limitations, Constitution,",
+              "Constitutional Law and Constitutionalism, Difference between",
+              "Administrative Law and Constitutional Law",
+              "2 Module 2 15",
+              "Systems of Governance and Public Law, Presidential Forms of",
+              "Government vs. parliamentary Form of Government, Federal and"
+            ],
+            "topics_text": "Public Law – Meaning, Nature and Scope, Study of Comparative Public Law, Relevance, Scope and Limitations, Constitution, Constitutional Law and Constitutionalism, Difference between Administrative Law and Constitutional Law 2 Module 2 15 Systems of Governance and Public Law, Presidential Forms of Government vs. parliamentary Form of Government, Federal and",
+            "topics": [
+              "Public Law – Meaning, Nature and Scope, Study of Comparative",
+              "Public Law, Relevance, Scope and Limitations, Constitution,",
+              "Constitutional Law and Constitutionalism, Difference between",
+              "Administrative Law and Constitutional Law",
+              "2 Module 2 15",
+              "Systems of Governance and Public Law, Presidential Forms of",
+              "Government vs. parliamentary Form of Government, Federal and"
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "ary Forms, Other Forms of Governance, Good Governance,",
+            "contact_hours": null,
+            "topic_lines": [
+              "Role of Courts in Federal Countries",
+              "3 Module 3 10",
+              "Review of Public Law, Judicial and Political Review, Concept and",
+              "Origin of Judicial Review, Limitations on Judicial Review",
+              "4 Module 4 10",
+              "Amendment of Public Law, Various Methods of Amendment,",
+              "Supremacy of Legislature in making Public Law, Limitations on",
+              "Amending Power, Theory of Basic Structure",
+              "Total Hours 45"
+            ],
+            "topics_text": "Role of Courts in Federal Countries 3 Module 3 10 Review of Public Law, Judicial and Political Review, Concept and Origin of Judicial Review, Limitations on Judicial Review 4 Module 4 10 Amendment of Public Law, Various Methods of Amendment, Supremacy of Legislature in making Public Law, Limitations on Amending Power, Theory of Basic Structure Total Hours 45",
+            "topics": [
+              "Role of Courts in Federal Countries",
+              "3 Module 3 10",
+              "Review of Public Law, Judicial and Political Review, Concept and",
+              "Origin of Judicial Review, Limitations on Judicial Review",
+              "4 Module 4 10",
+              "Amendment of Public Law, Various Methods of Amendment,",
+              "Supremacy of Legislature in making Public Law, Limitations on",
+              "Amending Power, Theory of Basic Structure",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Comparative Constitution",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Comparative Constitution",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Constitutional Fragments – Societal Constitutionalism and Globalization, Gunther Teubner,",
+              "Oxford University Press, 2012"
+            ],
+            "topics_text": "Issues related to Comparative Constitution Total Hours 15 Textbook : 1 Constitutional Fragments – Societal Constitutionalism and Globalization, Gunther Teubner, Oxford University Press, 2012",
+            "topics": [
+              "Issues related to Comparative Constitution",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Constitutional Fragments – Societal Constitutionalism and Globalization, Gunther Teubner,",
+              "Oxford University Press, 2012"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Judiciary in India-constitutional perspectives, Judiciary in India-constitutional perspectives, Dr G.B.Reddy & V.Geet Rao, Asia Law House, Hyderabad, 2009"
+        ],
+        "textbooks": [
+          "Constitutional Fragments – Societal Constitutionalism and Globalization, Gunther Teubner, Oxford University Press, 2012"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4662,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    COMPARATIVE CONSTITUTION\nCOURSE CODE     10CL01001\nCOURSE CREDITS  4\n\nObjective:\n 1  The objective of this paper is to help students to understand the provisions of public law of\n     various jurisdictions in a comparative prospective thereby developing the sense of utility\n     of these provisions for the betterment of society at large\n 2  Further the students should after completion of the course should be in capacity to draw\n     comparative analysis with several constitutions of developed, under developed and\n     developing economies\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  to understand the meaning, scope, methods, and benefits of comparative constitutional\n    governance of various jurisdictions besides developing a sound understanding of certain\n    fundamental principles of public law of various nations\n 2  to analyze the comparison of different constitutions in the underdeveloped and developing\n     stages.\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Module 1                                                10\n              Public Law – Meaning, Nature and Scope, Study of Comparative\n              Public Law, Relevance, Scope and Limitations, Constitution,\n               Constitutional Law and Constitutionalism, Difference between\n              Administrative Law and Constitutional Law\n     2     Module 2                                                15\n             Systems of Governance and Public Law, Presidential Forms of\n            Government vs. parliamentary Form of Government, Federal and\n              Unitary Forms, Other Forms of Governance, Good Governance,\n             Role of Courts in Federal Countries\n     3     Module 3                                                10\n            Review of Public Law, Judicial and Political Review, Concept and\n              Origin of Judicial Review, Limitations on Judicial Review\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4     Module 4                                                10\n           Amendment of Public Law, Various Methods of Amendment,\n            Supremacy of Legislature in making Public Law, Limitations on\n           Amending Power, Theory of Basic Structure\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Comparative Constitution                   15\n               Issues related to Comparative Constitution\n                               Total Hours                       15\n\nTextbook :\n 1  Constitutional Fragments – Societal Constitutionalism and Globalization, Gunther Teubner,\n    Oxford University Press, 2012\n\nReferences:\n 1  Judiciary in India-constitutional perspectives, Judiciary in India-constitutional perspectives,\n    Dr G.B.Reddy & V.Geet Rao, Asia Law House, Hyderabad, 2009\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "3ca0d5d2cf1919e2ca7e7e1f2230b4c5e178b6a2ae55f7e04b12e2f5ab73336e",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "41103180100101",
+      "subject_name": "Criminology",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 10,
+      "subject_code": "10CR0701",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10CR0701-CRIMINOLOGY-Crime-and-Criminology-Hons.-Course-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Criminology [bdec0cdfed2b].pdf",
+      "expected_pdf_sha256": "eae702f08755bb94a217ab06e89f7d6fb64011f4a622974e75f26ebd713e7d26",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CRIMINOLOGY",
+        "course_code": "10CR0701",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "No Pre-requisite"
+      },
+      "objectives": [
+        "Recognize the causes and consequences of different crimes and criminal behaviour.",
+        "Enhance the ability to understand the concepts, theories & framework of criminology.",
+        "Preparing to deal with the face and address the challenging issues to criminology.",
+        "Enhance the ability to understand the concepts, theories & framework of criminology",
+        "Recognize the causes and consequences of different crimes and criminal behaviour",
+        "Preparing to deal with the face and address the challenging issues to criminology"
+      ],
+      "course_outcomes": [
+        "Explain the underlying philosophies, history, concepts of Criminology.",
+        "Understand the theories of causation of crime.",
+        "Demonstrate the various criminal typologies",
+        "Analyze the concept of punishment.",
+        "Analyze the concept Female Criminality and victimity Pre-requisite of course:No Pre-requisite"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 6,
+            "topic_lines": [
+              "1. Definitions: Crime, Criminology and Criminal Justice, 2.",
+              "Historical Development of criminology - Nature and Scope-",
+              "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
+              "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
+              "Changing concept of crime, Relationship between Criminal Policy,",
+              "Criminal Law and Criminology",
+              "2 Theories of causation of crime 6",
+              "1. Prominent criminological thought currents – Classicalism,",
+              "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
+              "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
+              "Sociological Theories",
+              "3 Criminal Typology 6",
+              "1. Crimes against Human body and Crimes against Property, 2.",
+              "Crimes against vulnerable groups: Crimes against women and",
+              "children, 3. Economic Crimes: white collar crimes and organized",
+              "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
+              "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
+              "Typology: Adult offenders and Juveniles in conflict with law, 11.",
+              "Habitual offenders, 12. Professional offenders",
+              "4 Punishment and its Justification 6",
+              "1. Theories of Punishment – Retribution, Deterrence, Reform and",
+              "Prevention, 2. Kinds of Punishment – with a special emphasis on",
+              "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
+              "Juvenile offenders",
+              "5 Female Criminality and victimity 6",
+              "1. Female Criminality as an aspect of Marginal Criminality, 2.",
+              "Female Victimity and Victimology",
+              "6 National Crime Statistics 6",
+              "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4.",
+              "International crime comparisons, 5. Changing crime patterns, 6.",
+              "Unreported crime, 7. National Crime Record Bureau, 8. Uniform",
+              "Crime Reporting Statistics (UCR), 9. National Crime Victimization",
+              "Surveys (NCVS)",
+              "Total Hours 36"
+            ],
+            "topics_text": "1. Definitions: Crime, Criminology and Criminal Justice, 2. Historical Development of criminology - Nature and Scope- Criminology , 3. Perspective of Crime and Criminal, 4. Difference between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5. Changing concept of crime, Relationship between Criminal Policy, Criminal Law and Criminology 2 Theories of causation of crime 6 1. Prominent criminological thought currents – Classicalism, Positivism and Radicalism, 2. Biological Theories, 3. Economic Theories, 4. Psychological Theories, 5. Political Theories, 6. Sociological Theories 3 Criminal Typology 6 1. Crimes against Human body and Crimes against Property, 2. Crimes against vulnerable groups: Crimes against women and children, 3. Economic Crimes: white collar crimes and organized crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7. Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal Typology: Adult offenders and Juveniles in conflict with law, 11. Habitual offenders, 12. Professional offenders 4 Punishment and its Justification 6 1. Theories of Punishment – Retribution, Deterrence, Reform and Prevention, 2. Kinds of Punishment – with a special emphasis on Capital Punishment, 3. Probation as a form of Punishment, 4. Parole Juvenile offenders 5 Female Criminality and victimity 6 1. Female Criminality as an aspect of Marginal Criminality, 2. Female Victimity and Victimology 6 National Crime Statistics 6 1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4. International crime comparisons, 5. Changing crime patterns, 6. Unreported crime, 7. National Crime Record Bureau, 8. Uniform Crime Reporting Statistics (UCR), 9. National Crime Victimization Surveys (NCVS) Total Hours 36",
+            "topics": [
+              "1. Definitions: Crime, Criminology and Criminal Justice, 2.",
+              "Historical Development of criminology - Nature and Scope",
+              "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
+              "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
+              "Changing concept of crime, Relationship between Criminal Policy,",
+              "Criminal Law and Criminology",
+              "2 Theories of causation of crime 6",
+              "1. Prominent criminological thought currents – Classicalism,",
+              "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
+              "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
+              "Sociological Theories",
+              "3 Criminal Typology 6",
+              "1. Crimes against Human body and Crimes against Property, 2.",
+              "Crimes against vulnerable groups: Crimes against women and",
+              "children, 3. Economic Crimes: white collar crimes and organized",
+              "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
+              "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
+              "Typology: Adult offenders and Juveniles in conflict with law, 11.",
+              "Habitual offenders, 12. Professional offenders",
+              "4 Punishment and its Justification 6",
+              "1. Theories of Punishment – Retribution, Deterrence, Reform and",
+              "Prevention, 2. Kinds of Punishment – with a special emphasis on",
+              "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
+              "Juvenile offenders",
+              "5 Female Criminality and victimity 6",
+              "1. Female Criminality as an aspect of Marginal Criminality, 2.",
+              "Female Victimity and Victimology",
+              "6 National Crime Statistics 6",
+              "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4.",
+              "International crime comparisons, 5. Changing crime patterns, 6.",
+              "Unreported crime, 7. National Crime Record Bureau, 8. Uniform",
+              "Crime Reporting Statistics (UCR), 9. National Crime Victimization",
+              "Surveys (NCVS)",
+              "Total Hours 36"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issue related to Criminology",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issue related to Criminology",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Criminology and Penology, Paranjape ,N.V. , Central Law Publications, 2009"
+            ],
+            "topics_text": "Issue related to Criminology Total Hours 15 Textbook : 1 Criminology and Penology, Paranjape ,N.V. , Central Law Publications, 2009",
+            "topics": [
+              "Issue related to Criminology",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Criminology and Penology, Paranjape ,N.V. , Central Law Publications, 2009"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Criminology. , Criminology. , Ahuja, Ram, Rawat Publication, 2000"
+        ],
+        "textbooks": [
+          "Criminology and Penology, Paranjape ,N.V. , Central Law Publications, 2009"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://cara.nic.in/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6072,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    CRIMINOLOGY\nCOURSE CODE     10CR0701\nCOURSE CREDITS  4\n\nObjective:\n 1  Recognize the causes and consequences of different crimes and criminal behaviour.\n 2  Enhance the ability to understand the concepts, theories & framework of criminology.\n 3  Preparing to deal with the face and address the challenging issues to criminology.\n 4  Enhance the ability to understand the concepts, theories & framework of criminology\n 5  Recognize the causes and consequences of different crimes and criminal behaviour\n 6  Preparing to deal with the face and address the challenging issues to criminology\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Explain the underlying philosophies, history, concepts of Criminology.\n 2  Understand the theories of causation of crime.\n 3  Demonstrate the various criminal typologies\n 4  Analyze the concept of punishment.\n 5  Analyze the concept Female Criminality and victimity\n\n\nPre-requisite of course:No Pre-requisite\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction                                             6\n                1. Definitions: Crime, Criminology and Criminal Justice, 2.\n               Historical Development of criminology - Nature and Scope-\n             Criminology , 3. Perspective of Crime and Criminal, 4. Difference\n             between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.\n            Changing concept of crime, Relationship between Criminal Policy,\n             Criminal Law and Criminology\n     2      Theories of causation of crime                              6\n                1. Prominent criminological thought currents – Classicalism,\n              Positivism and Radicalism, 2. Biological Theories, 3. Economic\n              Theories, 4. Psychological Theories, 5. Political Theories, 6.\n              Sociological Theories\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Criminal Typology                                       6\n                1. Crimes against Human body and Crimes against Property, 2.\n            Crimes against vulnerable groups: Crimes against women and\n               children, 3. Economic Crimes: white collar crimes and organized\n              crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.\n              Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal\n             Typology: Adult offenders and Juveniles in conflict with law, 11.\n              Habitual offenders, 12. Professional offenders\n     4      Punishment and its Justification                            6\n                1. Theories of Punishment – Retribution, Deterrence, Reform and\n              Prevention, 2. Kinds of Punishment – with a special emphasis on\n              Capital Punishment, 3. Probation as a form of Punishment, 4. Parole\n              Juvenile offenders\n     5      Female Criminality and victimity                           6\n                1. Female Criminality as an aspect of Marginal Criminality, 2.\n            Female Victimity and Victimology\n     6      National Crime Statistics                                  6\n                1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4.\n               International crime comparisons, 5. Changing crime patterns, 6.\n             Unreported crime, 7. National Crime Record Bureau, 8. Uniform\n            Crime Reporting Statistics (UCR), 9. National Crime Victimization\n             Surveys (NCVS)\n                               Total Hours                       36\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issue related to Criminology                               15\n               Issue related to Criminology\n                               Total Hours                       15\n\nTextbook :\n 1  Criminology and Penology, Paranjape ,N.V. , Central Law Publications, 2009\n\nReferences:\n 1  Criminology. , Criminology. , Ahuja, Ram, Rawat Publication, 2000\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\nInstructional Method:\n 1  Classroom Teaching\n 2  Seminar\n 3  Tutorial Experiences\n 4  Expert Lectures\n 5  Research Project\n\nSupplementary Resources:\n 1   https://cara.nic.in/\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "eae702f08755bb94a217ab06e89f7d6fb64011f4a622974e75f26ebd713e7d26",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "41106120100301",
+      "subject_name": "CYBER LAW - Elective Course",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 10,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NETWORK_UNVERIFIED_RETRY",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Source access was blocked/unverified; not evidence the syllabus does not exist."
+      ],
+      "pdf_verification_status": "NETWORK_UNVERIFIED_RETRY_NO_LOCAL_PDF"
+    },
+    {
+      "subject_id": "41106120100201",
+      "subject_name": "HEALTH LAW - Elective Course",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 10,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NETWORK_UNVERIFIED_RETRY",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Source access was blocked/unverified; not evidence the syllabus does not exist."
+      ],
+      "pdf_verification_status": "NETWORK_UNVERIFIED_RETRY_NO_LOCAL_PDF"
+    },
+    {
+      "subject_id": "41109160100101",
+      "subject_name": "Intellectual Property Law",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 10,
+      "subject_code": "10FL1606",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10FL1606-INTELLECTUAL-PROPERTY-LAW.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTELLECTUAL PROPERTY LAW [957734d548a1].pdf",
+      "expected_pdf_sha256": "7f96778be595975086d2598025c9dd0b58c5c06b90727d8b33822121cbac4347",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INTELLECTUAL PROPERTY LAW",
+        "course_code": "10FL1606",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To acquaint the students with Intellectual Property Rights in the Indian context",
+        "It aims to give an overview to the student on the practical applicability of international conventions in the Indian scenario.",
+        "To make students understand the legal regime adopted in various forms of Intellectual property laws."
+      ],
+      "course_outcomes": [
+        "To exhibit memory on the basic concept of IP rights",
+        "To Compare product/process patents and relating rules.",
+        "To identify trademarks & geographical indications and their application.",
+        "To examine the provisions relating to the Copyright.",
+        "To appraise importance of industrial designs by interpreting judicial decisions.",
+        "To imagine the consequences of non-protection of trade secrets & key business concerns in commercializing intellectual property. Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTELLECTUAL PROPERTY RIGHTS: AN OVERVIEW",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Difference Between Intellectual Property, Intellectual Property",
+              "Rights & Intellectual Property Law, Types of IP: Trademarks,",
+              "Copyright, Patent, Industrial Design, Trade secrets & GI Traditional",
+              "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
+              "Theories of IP (Jurisprudential aspects), International Conventions:",
+              "Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989;",
+              "Berne Convention, 1886; PCT, 1970; TRIPS",
+              "2 PATENTS 9",
+              "Concept of Patent, Product/Process Patents & Terminology,",
+              "Duration of Patents, Elements of Patentability, Non- Patentable",
+              "Subject Matter, Procedure for Filing of Patent Application,",
+              "Procedure for Opposition Revocation of Patents Assignment and",
+              "licensing of Patents, Compulsory Licensing, Patent Rights and",
+              "Infringement, Covid Pandemic & Pharma Patenting",
+              "3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9",
+              "Introduction & Historical Perspective, Definitions, Different Kinds",
+              "of Marks, Registration of Trade Marks, Application for",
+              "Registration, Objection & Opposition to Registration, Grounds for",
+              "Refusal to Registration, Infringement of Trade Marks, Assignment&",
+              "Transmission, Offences Penalties, Meaning and Nature of",
+              "Geographical Indications, Application for Registration, Conditions",
+              "& Procedure for Registration, Offences and Penalties",
+              "4 COPYRIGHT 9",
+              "Introduction, Meaning of Copyright, Works in which Copyright",
+              "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
+              "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
+              "& Indian perspective of Skill & Judgement Test), Author &",
+              "Ownership of Copyright, Economic and Neighbouring rights, Term",
+              "of Copyright, Copyright Societies & Copyright Board, Assignment",
+              "and Licensing of Copyright, Registration of Copyright, infringement",
+              "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
+              "against Infringement of Copyright",
+              "5 INDUSTRIAL DESIGNS 9",
+              "Concept of Design, What is a Design, Registrable Design, Novelty",
+              "& Originality, Registration of Design, Procedure for Registration,",
+              "Term Duration of Protection, Copyright under Design, Piracy and",
+              "Penalties, Assignment of Designs",
+              "6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4",
+              "CONCERNS IN COMMERCIALISING INTELLECTUAL",
+              "PROPERTY",
+              "Introduction, Legislation Governing Trade Secrets, Protection under",
+              "TRIPS Agreement, What Causes a Business to Lose Trade Secret",
+              "Protection, Competition and Confidentiality Issues, Care &",
+              "Maintenance of Confidential Information, Employee",
+              "Confidentiality, Intellectual Property Issues in the Sale of Business,",
+              ", Assignment of Intellectual Property Rights, Technology Transfer",
+              "Agreements, Legal Auditing of Intellectual Property, Due Diligence",
+              "of Intellectual Property Rights",
+              "Total Hours 45"
+            ],
+            "topics_text": "Difference Between Intellectual Property, Intellectual Property Rights & Intellectual Property Law, Types of IP: Trademarks, Copyright, Patent, Industrial Design, Trade secrets & GI Traditional Knowledge, Plant Varieties, Integrated Circuit Layout Design, Theories of IP (Jurisprudential aspects), International Conventions: Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989; Berne Convention, 1886; PCT, 1970; TRIPS 2 PATENTS 9 Concept of Patent, Product/Process Patents & Terminology, Duration of Patents, Elements of Patentability, Non- Patentable Subject Matter, Procedure for Filing of Patent Application, Procedure for Opposition Revocation of Patents Assignment and licensing of Patents, Compulsory Licensing, Patent Rights and Infringement, Covid Pandemic & Pharma Patenting 3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9 Introduction & Historical Perspective, Definitions, Different Kinds of Marks, Registration of Trade Marks, Application for Registration, Objection & Opposition to Registration, Grounds for Refusal to Registration, Infringement of Trade Marks, Assignment& Transmission, Offences Penalties, Meaning and Nature of Geographical Indications, Application for Registration, Conditions & Procedure for Registration, Offences and Penalties 4 COPYRIGHT 9 Introduction, Meaning of Copyright, Works in which Copyright Subsists (Section 13), Idea-Expression Dichotomy, Test of Originality (Doctrine of Sweat of the Brow, Modicum of creativity & Indian perspective of Skill & Judgement Test), Author & Ownership of Copyright, Economic and Neighbouring rights, Term of Copyright, Copyright Societies & Copyright Board, Assignment and Licensing of Copyright, Registration of Copyright, infringement of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies against Infringement of Copyright 5 INDUSTRIAL DESIGNS 9 Concept of Design, What is a Design, Registrable Design, Novelty & Originality, Registration of Design, Procedure for Registration, Term Duration of Protection, Copyright under Design, Piracy and Penalties, Assignment of Designs 6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4 CONCERNS IN COMMERCIALISING INTELLECTUAL PROPERTY Introduction, Legislation Governing Trade Secrets, Protection under TRIPS Agreement, What Causes a Business to Lose Trade Secret Protection, Competition and Confidentiality Issues, Care & Maintenance of Confidential Information, Employee Confidentiality, Intellectual Property Issues in the Sale of Business, , Assignment of Intellectual Property Rights, Technology Transfer Agreements, Legal Auditing of Intellectual Property, Due Diligence of Intellectual Property Rights Total Hours 45",
+            "topics": [
+              "Difference Between Intellectual Property, Intellectual Property",
+              "Rights & Intellectual Property Law, Types of IP: Trademarks,",
+              "Copyright, Patent, Industrial Design, Trade secrets & GI Traditional",
+              "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
+              "Theories of IP (Jurisprudential aspects), International Conventions:",
+              "Paris Convention 1883",
+              "Madrid Agreement, 1891 & Protocol, 1989",
+              "Berne Convention, 1886",
+              "PCT, 1970",
+              "TRIPS",
+              "2 PATENTS 9",
+              "Concept of Patent, Product/Process Patents & Terminology,",
+              "Duration of Patents, Elements of Patentability, Non- Patentable",
+              "Subject Matter, Procedure for Filing of Patent Application,",
+              "Procedure for Opposition Revocation of Patents Assignment and",
+              "licensing of Patents, Compulsory Licensing, Patent Rights and",
+              "Infringement, Covid Pandemic & Pharma Patenting",
+              "3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9",
+              "Introduction & Historical Perspective, Definitions, Different Kinds",
+              "of Marks, Registration of Trade Marks, Application for",
+              "Registration, Objection & Opposition to Registration, Grounds for",
+              "Refusal to Registration, Infringement of Trade Marks, Assignment&",
+              "Transmission, Offences Penalties, Meaning and Nature of",
+              "Geographical Indications, Application for Registration, Conditions",
+              "& Procedure for Registration, Offences and Penalties",
+              "4 COPYRIGHT 9",
+              "Introduction, Meaning of Copyright, Works in which Copyright",
+              "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
+              "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
+              "& Indian perspective of Skill & Judgement Test), Author &",
+              "Ownership of Copyright, Economic and Neighbouring rights, Term",
+              "of Copyright, Copyright Societies & Copyright Board, Assignment",
+              "and Licensing of Copyright, Registration of Copyright, infringement",
+              "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
+              "against Infringement of Copyright",
+              "5 INDUSTRIAL DESIGNS 9",
+              "Concept of Design, What is a Design, Registrable Design, Novelty",
+              "& Originality, Registration of Design, Procedure for Registration,",
+              "Term Duration of Protection, Copyright under Design, Piracy and",
+              "Penalties, Assignment of Designs",
+              "6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4",
+              "CONCERNS IN COMMERCIALISING INTELLECTUAL",
+              "PROPERTY",
+              "Introduction, Legislation Governing Trade Secrets, Protection under",
+              "TRIPS Agreement, What Causes a Business to Lose Trade Secret",
+              "Protection, Competition and Confidentiality Issues, Care &",
+              "Maintenance of Confidential Information, Employee",
+              "Confidentiality, Intellectual Property Issues in the Sale of Business,",
+              ", Assignment of Intellectual Property Rights, Technology Transfer",
+              "Agreements, Legal Auditing of Intellectual Property, Due Diligence",
+              "of Intellectual Property Rights",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Intellectual Property Law",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Intellectual Property Law",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Intellectual Property Law, P. Narayanan, Eastern Law House, 2020"
+            ],
+            "topics_text": "Issues related to Intellectual Property Law Total Hours 15 Textbook : 1 Intellectual Property Law, P. Narayanan, Eastern Law House, 2020",
+            "topics": [
+              "Issues related to Intellectual Property Law",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Intellectual Property Law, P. Narayanan, Eastern Law House, 2020"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Law relating to Intellectual Property Rights, Law relating to Intellectual Property Rights,"
+        ],
+        "textbooks": [
+          "Intellectual Property Law, P. Narayanan, Eastern Law House, 2020"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 7035,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    INTELLECTUAL PROPERTY LAW\nCOURSE CODE     10FL1606\nCOURSE CREDITS  4\n\nObjective:\n 1  To acquaint the students with Intellectual Property Rights in the Indian context\n 2   It aims to give an overview to the student on the practical applicability of international\n     conventions in the Indian scenario.\n 3  To make students understand the legal regime adopted in various forms of Intellectual\n     property laws.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To exhibit memory on the basic concept of IP rights\n 2  To Compare product/process patents and relating rules.\n 3  To identify trademarks & geographical indications and their application.\n 4  To examine the provisions relating to the Copyright.\n 5  To appraise importance of industrial designs by interpreting judicial decisions.\n 6  To imagine the consequences of non-protection of trade secrets & key business concerns in\n     commercializing intellectual property.\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    INTELLECTUAL PROPERTY RIGHTS: AN OVERVIEW    5\n              Difference Between Intellectual Property, Intellectual Property\n              Rights & Intellectual Property Law, Types of IP: Trademarks,\n              Copyright, Patent, Industrial Design, Trade secrets & GI Traditional\n            Knowledge, Plant Varieties, Integrated Circuit Layout Design,\n              Theories of IP (Jurisprudential aspects), International Conventions:\n               Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989;\n             Berne Convention, 1886; PCT, 1970; TRIPS\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2    PATENTS                                              9\n             Concept of Patent, Product/Process Patents & Terminology,\n             Duration of Patents, Elements of Patentability, Non- Patentable\n              Subject Matter, Procedure for Filing of Patent Application,\n             Procedure for Opposition Revocation of Patents Assignment and\n               licensing of Patents, Compulsory Licensing, Patent Rights and\n              Infringement, Covid Pandemic & Pharma Patenting\n     3    TRADEMARKS & GEOGRAPHICAL INDICATIONS        9\n               Introduction & Historical Perspective, Definitions, Different Kinds\n              of Marks, Registration of Trade Marks, Application for\n               Registration, Objection & Opposition to Registration, Grounds for\n              Refusal to Registration, Infringement of Trade Marks, Assignment&\n              Transmission, Offences Penalties, Meaning and Nature of\n             Geographical Indications, Application for Registration, Conditions\n        & Procedure for Registration, Offences and Penalties\n     4    COPYRIGHT                                           9\n               Introduction, Meaning of Copyright, Works in which Copyright\n               Subsists (Section 13), Idea-Expression Dichotomy, Test of\n               Originality (Doctrine of Sweat of the Brow, Modicum of creativity\n        & Indian perspective of Skill & Judgement Test), Author &\n            Ownership of Copyright, Economic and Neighbouring rights, Term\n              of Copyright, Copyright Societies & Copyright Board, Assignment\n            and Licensing of Copyright, Registration of Copyright, infringement\n              of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies\n               against Infringement of Copyright\n     5     INDUSTRIAL DESIGNS                                  9\n             Concept of Design, What is a Design, Registrable Design, Novelty\n        & Originality, Registration of Design, Procedure for Registration,\n           Term Duration of Protection, Copyright under Design, Piracy and\n               Penalties, Assignment of Designs\n     6    PROTECTION OF TRADE SECRETS & KEY BUSINESS     4\n         CONCERNS IN COMMERCIALISING INTELLECTUAL\n         PROPERTY\n               Introduction, Legislation Governing Trade Secrets, Protection under\n           TRIPS Agreement, What Causes a Business to Lose Trade Secret\n               Protection, Competition and Confidentiality Issues, Care &\n             Maintenance of Confidential Information, Employee\n               Confidentiality, Intellectual Property Issues in the Sale of Business,\n                        , Assignment of Intellectual Property Rights, Technology Transfer\n             Agreements, Legal Auditing of Intellectual Property, Due Diligence\n              of Intellectual Property Rights\n                               Total Hours                       45\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Intellectual Property Law                   15\n               Issues related to Intellectual Property Law\n                               Total Hours                       15\n\nTextbook :\n 1   Intellectual Property Law, P. Narayanan, Eastern Law House, 2020\n\nReferences:\n 1  Law relating to Intellectual Property Rights, Law relating to Intellectual Property Rights,\n     Dr. M.K Bhandari, EBC, 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "7f96778be595975086d2598025c9dd0b58c5c06b90727d8b33822121cbac4347",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "41109160100201",
+      "subject_name": "Intellectual Property Law",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 10,
+      "subject_code": "10FL1606",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10FL1606-INTELLECTUAL-PROPERTY-LAW.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTELLECTUAL PROPERTY LAW [957734d548a1].pdf",
+      "expected_pdf_sha256": "7f96778be595975086d2598025c9dd0b58c5c06b90727d8b33822121cbac4347",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INTELLECTUAL PROPERTY LAW",
+        "course_code": "10FL1606",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To acquaint the students with Intellectual Property Rights in the Indian context",
+        "It aims to give an overview to the student on the practical applicability of international conventions in the Indian scenario.",
+        "To make students understand the legal regime adopted in various forms of Intellectual property laws."
+      ],
+      "course_outcomes": [
+        "To exhibit memory on the basic concept of IP rights",
+        "To Compare product/process patents and relating rules.",
+        "To identify trademarks & geographical indications and their application.",
+        "To examine the provisions relating to the Copyright.",
+        "To appraise importance of industrial designs by interpreting judicial decisions.",
+        "To imagine the consequences of non-protection of trade secrets & key business concerns in commercializing intellectual property. Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTELLECTUAL PROPERTY RIGHTS: AN OVERVIEW",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Difference Between Intellectual Property, Intellectual Property",
+              "Rights & Intellectual Property Law, Types of IP: Trademarks,",
+              "Copyright, Patent, Industrial Design, Trade secrets & GI Traditional",
+              "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
+              "Theories of IP (Jurisprudential aspects), International Conventions:",
+              "Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989;",
+              "Berne Convention, 1886; PCT, 1970; TRIPS",
+              "2 PATENTS 9",
+              "Concept of Patent, Product/Process Patents & Terminology,",
+              "Duration of Patents, Elements of Patentability, Non- Patentable",
+              "Subject Matter, Procedure for Filing of Patent Application,",
+              "Procedure for Opposition Revocation of Patents Assignment and",
+              "licensing of Patents, Compulsory Licensing, Patent Rights and",
+              "Infringement, Covid Pandemic & Pharma Patenting",
+              "3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9",
+              "Introduction & Historical Perspective, Definitions, Different Kinds",
+              "of Marks, Registration of Trade Marks, Application for",
+              "Registration, Objection & Opposition to Registration, Grounds for",
+              "Refusal to Registration, Infringement of Trade Marks, Assignment&",
+              "Transmission, Offences Penalties, Meaning and Nature of",
+              "Geographical Indications, Application for Registration, Conditions",
+              "& Procedure for Registration, Offences and Penalties",
+              "4 COPYRIGHT 9",
+              "Introduction, Meaning of Copyright, Works in which Copyright",
+              "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
+              "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
+              "& Indian perspective of Skill & Judgement Test), Author &",
+              "Ownership of Copyright, Economic and Neighbouring rights, Term",
+              "of Copyright, Copyright Societies & Copyright Board, Assignment",
+              "and Licensing of Copyright, Registration of Copyright, infringement",
+              "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
+              "against Infringement of Copyright",
+              "5 INDUSTRIAL DESIGNS 9",
+              "Concept of Design, What is a Design, Registrable Design, Novelty",
+              "& Originality, Registration of Design, Procedure for Registration,",
+              "Term Duration of Protection, Copyright under Design, Piracy and",
+              "Penalties, Assignment of Designs",
+              "6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4",
+              "CONCERNS IN COMMERCIALISING INTELLECTUAL",
+              "PROPERTY",
+              "Introduction, Legislation Governing Trade Secrets, Protection under",
+              "TRIPS Agreement, What Causes a Business to Lose Trade Secret",
+              "Protection, Competition and Confidentiality Issues, Care &",
+              "Maintenance of Confidential Information, Employee",
+              "Confidentiality, Intellectual Property Issues in the Sale of Business,",
+              ", Assignment of Intellectual Property Rights, Technology Transfer",
+              "Agreements, Legal Auditing of Intellectual Property, Due Diligence",
+              "of Intellectual Property Rights",
+              "Total Hours 45"
+            ],
+            "topics_text": "Difference Between Intellectual Property, Intellectual Property Rights & Intellectual Property Law, Types of IP: Trademarks, Copyright, Patent, Industrial Design, Trade secrets & GI Traditional Knowledge, Plant Varieties, Integrated Circuit Layout Design, Theories of IP (Jurisprudential aspects), International Conventions: Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989; Berne Convention, 1886; PCT, 1970; TRIPS 2 PATENTS 9 Concept of Patent, Product/Process Patents & Terminology, Duration of Patents, Elements of Patentability, Non- Patentable Subject Matter, Procedure for Filing of Patent Application, Procedure for Opposition Revocation of Patents Assignment and licensing of Patents, Compulsory Licensing, Patent Rights and Infringement, Covid Pandemic & Pharma Patenting 3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9 Introduction & Historical Perspective, Definitions, Different Kinds of Marks, Registration of Trade Marks, Application for Registration, Objection & Opposition to Registration, Grounds for Refusal to Registration, Infringement of Trade Marks, Assignment& Transmission, Offences Penalties, Meaning and Nature of Geographical Indications, Application for Registration, Conditions & Procedure for Registration, Offences and Penalties 4 COPYRIGHT 9 Introduction, Meaning of Copyright, Works in which Copyright Subsists (Section 13), Idea-Expression Dichotomy, Test of Originality (Doctrine of Sweat of the Brow, Modicum of creativity & Indian perspective of Skill & Judgement Test), Author & Ownership of Copyright, Economic and Neighbouring rights, Term of Copyright, Copyright Societies & Copyright Board, Assignment and Licensing of Copyright, Registration of Copyright, infringement of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies against Infringement of Copyright 5 INDUSTRIAL DESIGNS 9 Concept of Design, What is a Design, Registrable Design, Novelty & Originality, Registration of Design, Procedure for Registration, Term Duration of Protection, Copyright under Design, Piracy and Penalties, Assignment of Designs 6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4 CONCERNS IN COMMERCIALISING INTELLECTUAL PROPERTY Introduction, Legislation Governing Trade Secrets, Protection under TRIPS Agreement, What Causes a Business to Lose Trade Secret Protection, Competition and Confidentiality Issues, Care & Maintenance of Confidential Information, Employee Confidentiality, Intellectual Property Issues in the Sale of Business, , Assignment of Intellectual Property Rights, Technology Transfer Agreements, Legal Auditing of Intellectual Property, Due Diligence of Intellectual Property Rights Total Hours 45",
+            "topics": [
+              "Difference Between Intellectual Property, Intellectual Property",
+              "Rights & Intellectual Property Law, Types of IP: Trademarks,",
+              "Copyright, Patent, Industrial Design, Trade secrets & GI Traditional",
+              "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
+              "Theories of IP (Jurisprudential aspects), International Conventions:",
+              "Paris Convention 1883",
+              "Madrid Agreement, 1891 & Protocol, 1989",
+              "Berne Convention, 1886",
+              "PCT, 1970",
+              "TRIPS",
+              "2 PATENTS 9",
+              "Concept of Patent, Product/Process Patents & Terminology,",
+              "Duration of Patents, Elements of Patentability, Non- Patentable",
+              "Subject Matter, Procedure for Filing of Patent Application,",
+              "Procedure for Opposition Revocation of Patents Assignment and",
+              "licensing of Patents, Compulsory Licensing, Patent Rights and",
+              "Infringement, Covid Pandemic & Pharma Patenting",
+              "3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9",
+              "Introduction & Historical Perspective, Definitions, Different Kinds",
+              "of Marks, Registration of Trade Marks, Application for",
+              "Registration, Objection & Opposition to Registration, Grounds for",
+              "Refusal to Registration, Infringement of Trade Marks, Assignment&",
+              "Transmission, Offences Penalties, Meaning and Nature of",
+              "Geographical Indications, Application for Registration, Conditions",
+              "& Procedure for Registration, Offences and Penalties",
+              "4 COPYRIGHT 9",
+              "Introduction, Meaning of Copyright, Works in which Copyright",
+              "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
+              "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
+              "& Indian perspective of Skill & Judgement Test), Author &",
+              "Ownership of Copyright, Economic and Neighbouring rights, Term",
+              "of Copyright, Copyright Societies & Copyright Board, Assignment",
+              "and Licensing of Copyright, Registration of Copyright, infringement",
+              "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
+              "against Infringement of Copyright",
+              "5 INDUSTRIAL DESIGNS 9",
+              "Concept of Design, What is a Design, Registrable Design, Novelty",
+              "& Originality, Registration of Design, Procedure for Registration,",
+              "Term Duration of Protection, Copyright under Design, Piracy and",
+              "Penalties, Assignment of Designs",
+              "6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4",
+              "CONCERNS IN COMMERCIALISING INTELLECTUAL",
+              "PROPERTY",
+              "Introduction, Legislation Governing Trade Secrets, Protection under",
+              "TRIPS Agreement, What Causes a Business to Lose Trade Secret",
+              "Protection, Competition and Confidentiality Issues, Care &",
+              "Maintenance of Confidential Information, Employee",
+              "Confidentiality, Intellectual Property Issues in the Sale of Business,",
+              ", Assignment of Intellectual Property Rights, Technology Transfer",
+              "Agreements, Legal Auditing of Intellectual Property, Due Diligence",
+              "of Intellectual Property Rights",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Intellectual Property Law",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Intellectual Property Law",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Intellectual Property Law, P. Narayanan, Eastern Law House, 2020"
+            ],
+            "topics_text": "Issues related to Intellectual Property Law Total Hours 15 Textbook : 1 Intellectual Property Law, P. Narayanan, Eastern Law House, 2020",
+            "topics": [
+              "Issues related to Intellectual Property Law",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Intellectual Property Law, P. Narayanan, Eastern Law House, 2020"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Law relating to Intellectual Property Rights, Law relating to Intellectual Property Rights,"
+        ],
+        "textbooks": [
+          "Intellectual Property Law, P. Narayanan, Eastern Law House, 2020"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 7035,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    INTELLECTUAL PROPERTY LAW\nCOURSE CODE     10FL1606\nCOURSE CREDITS  4\n\nObjective:\n 1  To acquaint the students with Intellectual Property Rights in the Indian context\n 2   It aims to give an overview to the student on the practical applicability of international\n     conventions in the Indian scenario.\n 3  To make students understand the legal regime adopted in various forms of Intellectual\n     property laws.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To exhibit memory on the basic concept of IP rights\n 2  To Compare product/process patents and relating rules.\n 3  To identify trademarks & geographical indications and their application.\n 4  To examine the provisions relating to the Copyright.\n 5  To appraise importance of industrial designs by interpreting judicial decisions.\n 6  To imagine the consequences of non-protection of trade secrets & key business concerns in\n     commercializing intellectual property.\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    INTELLECTUAL PROPERTY RIGHTS: AN OVERVIEW    5\n              Difference Between Intellectual Property, Intellectual Property\n              Rights & Intellectual Property Law, Types of IP: Trademarks,\n              Copyright, Patent, Industrial Design, Trade secrets & GI Traditional\n            Knowledge, Plant Varieties, Integrated Circuit Layout Design,\n              Theories of IP (Jurisprudential aspects), International Conventions:\n               Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989;\n             Berne Convention, 1886; PCT, 1970; TRIPS\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2    PATENTS                                              9\n             Concept of Patent, Product/Process Patents & Terminology,\n             Duration of Patents, Elements of Patentability, Non- Patentable\n              Subject Matter, Procedure for Filing of Patent Application,\n             Procedure for Opposition Revocation of Patents Assignment and\n               licensing of Patents, Compulsory Licensing, Patent Rights and\n              Infringement, Covid Pandemic & Pharma Patenting\n     3    TRADEMARKS & GEOGRAPHICAL INDICATIONS        9\n               Introduction & Historical Perspective, Definitions, Different Kinds\n              of Marks, Registration of Trade Marks, Application for\n               Registration, Objection & Opposition to Registration, Grounds for\n              Refusal to Registration, Infringement of Trade Marks, Assignment&\n              Transmission, Offences Penalties, Meaning and Nature of\n             Geographical Indications, Application for Registration, Conditions\n        & Procedure for Registration, Offences and Penalties\n     4    COPYRIGHT                                           9\n               Introduction, Meaning of Copyright, Works in which Copyright\n               Subsists (Section 13), Idea-Expression Dichotomy, Test of\n               Originality (Doctrine of Sweat of the Brow, Modicum of creativity\n        & Indian perspective of Skill & Judgement Test), Author &\n            Ownership of Copyright, Economic and Neighbouring rights, Term\n              of Copyright, Copyright Societies & Copyright Board, Assignment\n            and Licensing of Copyright, Registration of Copyright, infringement\n              of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies\n               against Infringement of Copyright\n     5     INDUSTRIAL DESIGNS                                  9\n             Concept of Design, What is a Design, Registrable Design, Novelty\n        & Originality, Registration of Design, Procedure for Registration,\n           Term Duration of Protection, Copyright under Design, Piracy and\n               Penalties, Assignment of Designs\n     6    PROTECTION OF TRADE SECRETS & KEY BUSINESS     4\n         CONCERNS IN COMMERCIALISING INTELLECTUAL\n         PROPERTY\n               Introduction, Legislation Governing Trade Secrets, Protection under\n           TRIPS Agreement, What Causes a Business to Lose Trade Secret\n               Protection, Competition and Confidentiality Issues, Care &\n             Maintenance of Confidential Information, Employee\n               Confidentiality, Intellectual Property Issues in the Sale of Business,\n                        , Assignment of Intellectual Property Rights, Technology Transfer\n             Agreements, Legal Auditing of Intellectual Property, Due Diligence\n              of Intellectual Property Rights\n                               Total Hours                       45\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Intellectual Property Law                   15\n               Issues related to Intellectual Property Law\n                               Total Hours                       15\n\nTextbook :\n 1   Intellectual Property Law, P. Narayanan, Eastern Law House, 2020\n\nReferences:\n 1  Law relating to Intellectual Property Rights, Law relating to Intellectual Property Rights,\n     Dr. M.K Bhandari, EBC, 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "7f96778be595975086d2598025c9dd0b58c5c06b90727d8b33822121cbac4347",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "41161310000201",
+      "subject_name": "INTERNATIONAL TAXATION LAW - Business Law",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 10,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NETWORK_UNVERIFIED_RETRY",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Source access was blocked/unverified; not evidence the syllabus does not exist."
+      ],
+      "pdf_verification_status": "NETWORK_UNVERIFIED_RETRY_NO_LOCAL_PDF"
+    },
+    {
+      "subject_id": "41161310000101",
+      "subject_name": "INTERNATIONAL TRADE LAW - Business Law",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 10,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NETWORK_UNVERIFIED_RETRY",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Source access was blocked/unverified; not evidence the syllabus does not exist."
+      ],
+      "pdf_verification_status": "NETWORK_UNVERIFIED_RETRY_NO_LOCAL_PDF"
+    },
+    {
+      "subject_id": "41161310000401",
+      "subject_name": "JUDICIAL PROCESS - Constitutional Law",
+      "course_id": "ba-llb-hons-",
+      "course_name": "BA LLB (Hons)",
+      "semester": 10,
+      "subject_code": "10CL01002",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10CL01002-JUDICIAL-PROCESS-Constitutional-Law-Hons.-Course-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/JUDICIAL PROCESS - Constitutional Law [776d76cff563].pdf",
+      "expected_pdf_sha256": "e65f6418d44610d589fc05bbb266284ecacd7a8e760391fb6451bdb4507ecfd6",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "JUDICIAL PROCESS",
+        "course_code": "10CL01002",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "THE CONSTITUTION OF INDIA, 1950"
+      },
+      "objectives": [
+        "Understand contemporary judicial principles: separation of powers, judiciary independence, and legal profession's role.",
+        "Analyze judicial interpretation methods: philosophy, history, sociology, and their impact on decision-making.",
+        "Evaluate judicial review's constitutional basis, democratic nature, and limitations",
+        "Assess court institutional structures and alternative dispute resolution mechanisms",
+        "Examine precedent doctrine in common law, civil law, and its application in India."
+      ],
+      "course_outcomes": [
+        "Understand the concept of rule of law, separation of powers, and judiciary independence concepts.",
+        "Apply diverse interpretation methods to legal analysis",
+        "Understand judicial review's constitutional role and its boundaries.",
+        "Evaluate court structures and dispute resolution alternatives.",
+        "Critically analyse precedent impact on legal decisions, including judicial innovation and overruling effects. Pre-requisite of course:THE CONSTITUTION OF INDIA, 1950"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "CONTEMPORA RY NATURE OF JUDICIAL PROCESS",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Nature of the Judicial Process: Legislative Intention and Methods of",
+              "Interpretation, Rule of Law and Independence of the Judiciary,",
+              "Notions of Judicial Review: Constitutional Basis, Democratic",
+              "Character, and Scope, Judicial Activism vs. Judicial Self-Restraint:",
+              "Accountability Issues in Justice, Supreme Court's Jurisdiction:",
+              "Article 32 & Article 136, Judicial Appointments and Transfers",
+              "2 INSTITUTION AL STRUCTURIN G OF COURTS 8",
+              "Judicial Structure and Strategic Planning, Comparative Analysis of",
+              "Alternative Dispute Resolution Mechanisms, Challenges facing the",
+              "Indian Adjudicatory System",
+              "3 DOCTRINE OF PRECEDENT STARE DECISIS 10",
+              "Distinguishing Ratio Decidendi and Obiter Dicta, Comparative",
+              "Precedent Analysis, Innovative Constitutional Interpretations,",
+              "Supreme Court's Overruling Authority, Advisory Jurisdiction and",
+              "Precedent, Prospective Overruling Practice, Basic Structure",
+              "Doctrine and Limitations to Constitutional Amendments",
+              "4 INDIAN JUDICIAL PROCESS AND THE POLITICAL 12",
+              "PROCESS",
+              "Judicial Role Debates: Supersession, Commitment, and Transfer,",
+              "Socio-Economic Background of the Indian Judiciary, Influence of",
+              "Public Opinion on the Judicial Process, Appellate Court's Role in",
+              "Constitutional Goal Development and Renovation, The Collegium",
+              "System: Evolution, Critiques, and Prospects",
+              "Total Hours 45"
+            ],
+            "topics_text": "Nature of the Judicial Process: Legislative Intention and Methods of Interpretation, Rule of Law and Independence of the Judiciary, Notions of Judicial Review: Constitutional Basis, Democratic Character, and Scope, Judicial Activism vs. Judicial Self-Restraint: Accountability Issues in Justice, Supreme Court's Jurisdiction: Article 32 & Article 136, Judicial Appointments and Transfers 2 INSTITUTION AL STRUCTURIN G OF COURTS 8 Judicial Structure and Strategic Planning, Comparative Analysis of Alternative Dispute Resolution Mechanisms, Challenges facing the Indian Adjudicatory System 3 DOCTRINE OF PRECEDENT STARE DECISIS 10 Distinguishing Ratio Decidendi and Obiter Dicta, Comparative Precedent Analysis, Innovative Constitutional Interpretations, Supreme Court's Overruling Authority, Advisory Jurisdiction and Precedent, Prospective Overruling Practice, Basic Structure Doctrine and Limitations to Constitutional Amendments 4 INDIAN JUDICIAL PROCESS AND THE POLITICAL 12 PROCESS Judicial Role Debates: Supersession, Commitment, and Transfer, Socio-Economic Background of the Indian Judiciary, Influence of Public Opinion on the Judicial Process, Appellate Court's Role in Constitutional Goal Development and Renovation, The Collegium System: Evolution, Critiques, and Prospects Total Hours 45",
+            "topics": [
+              "Nature of the Judicial Process: Legislative Intention and Methods of",
+              "Interpretation, Rule of Law and Independence of the Judiciary,",
+              "Notions of Judicial Review: Constitutional Basis, Democratic",
+              "Character, and Scope, Judicial Activism vs. Judicial Self-Restraint:",
+              "Accountability Issues in Justice, Supreme Court's Jurisdiction:",
+              "Article 32 & Article 136, Judicial Appointments and Transfers",
+              "2 INSTITUTION AL STRUCTURIN G OF COURTS 8",
+              "Judicial Structure and Strategic Planning, Comparative Analysis of",
+              "Alternative Dispute Resolution Mechanisms, Challenges facing the",
+              "Indian Adjudicatory System",
+              "3 DOCTRINE OF PRECEDENT STARE DECISIS 10",
+              "Distinguishing Ratio Decidendi and Obiter Dicta, Comparative",
+              "Precedent Analysis, Innovative Constitutional Interpretations,",
+              "Supreme Court's Overruling Authority, Advisory Jurisdiction and",
+              "Precedent, Prospective Overruling Practice, Basic Structure",
+              "Doctrine and Limitations to Constitutional Amendments",
+              "4 INDIAN JUDICIAL PROCESS AND THE POLITICAL 12",
+              "PROCESS",
+              "Judicial Role Debates: Supersession, Commitment, and Transfer,",
+              "Socio-Economic Background of the Indian Judiciary, Influence of",
+              "Public Opinion on the Judicial Process, Appellate Court's Role in",
+              "Constitutional Goal Development and Renovation, The Collegium",
+              "System: Evolution, Critiques, and Prospects",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to Judicial Process",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Judicial Process",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Judicial Process, G. P. Tripathi, 2nd edition, 2023"
+            ],
+            "topics_text": "Issues related to Judicial Process Total Hours 15 Textbook : 1 Judicial Process, G. P. Tripathi, 2nd edition, 2023",
+            "topics": [
+              "Issues related to Judicial Process",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Judicial Process, G. P. Tripathi, 2nd edition, 2023"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "\"The Nature of Judicial Process\", \"The Nature of Judicial Process\", Benjamin N. Cardozo, Universal Law Publishing Co., 1995"
+        ],
+        "textbooks": [
+          "Judicial Process, G. P. Tripathi, 2nd edition, 2023"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5197,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    JUDICIAL PROCESS\nCOURSE CODE     10CL01002\nCOURSE CREDITS  4\n\nObjective:\n 1  Understand contemporary judicial principles: separation of powers, judiciary\n     independence, and legal profession's role.\n 2  Analyze judicial interpretation methods: philosophy, history, sociology, and their impact\n    on decision-making.\n 3  Evaluate judicial review's constitutional basis, democratic nature, and limitations\n 4  Assess court institutional structures and alternative dispute resolution mechanisms\n 5  Examine precedent doctrine in common law, civil law, and its application in India.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the concept of rule of law, separation of powers, and judiciary independence\n     concepts.\n 2  Apply diverse interpretation methods to legal analysis\n 3  Understand judicial review's constitutional role and its boundaries.\n 4  Evaluate court structures and dispute resolution alternatives.\n 5   Critically analyse precedent impact on legal decisions, including judicial innovation and\n     overruling effects.\n\n\nPre-requisite of course:THE CONSTITUTION OF INDIA, 1950\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    CONTEMPORA RY NATURE OF JUDICIAL PROCESS     15\n             Nature of the Judicial Process: Legislative Intention and Methods of\n                Interpretation, Rule of Law and Independence of the Judiciary,\n             Notions of Judicial Review: Constitutional Basis, Democratic\n              Character, and Scope, Judicial Activism vs. Judicial Self-Restraint:\n              Accountability Issues in Justice, Supreme Court's Jurisdiction:\n               Article 32 & Article 136, Judicial Appointments and Transfers\n     2     INSTITUTION AL STRUCTURIN G OF COURTS           8\n               Judicial Structure and Strategic Planning, Comparative Analysis of\n               Alternative Dispute Resolution Mechanisms, Challenges facing the\n              Indian Adjudicatory System\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3    DOCTRINE OF PRECEDENT STARE DECISIS             10\n              Distinguishing Ratio Decidendi and Obiter Dicta, Comparative\n              Precedent Analysis, Innovative Constitutional Interpretations,\n            Supreme Court's Overruling Authority, Advisory Jurisdiction and\n              Precedent, Prospective Overruling Practice, Basic Structure\n              Doctrine and Limitations to Constitutional Amendments\n     4     INDIAN JUDICIAL PROCESS AND THE POLITICAL       12\n         PROCESS\n               Judicial Role Debates: Supersession, Commitment, and Transfer,\n             Socio-Economic Background of the Indian Judiciary, Influence of\n              Public Opinion on the Judicial Process, Appellate Court's Role in\n               Constitutional Goal Development and Renovation, The Collegium\n             System: Evolution, Critiques, and Prospects\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to Judicial Process                            15\n               Issues related to Judicial Process\n                               Total Hours                       15\n\nTextbook :\n 1  Judicial Process, G. P. Tripathi, 2nd edition, 2023\n\nReferences:\n 1  \"The Nature of Judicial Process\", \"The Nature of Judicial Process\", Benjamin N. Cardozo,\n     Universal Law Publishing Co., 1995\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "e65f6418d44610d589fc05bbb266284ecacd7a8e760391fb6451bdb4507ecfd6",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    }
+  ],
+  "build_summary": {
+    "extracted": 5,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 5,
+    "extraction_errors": 0
+  }
+}

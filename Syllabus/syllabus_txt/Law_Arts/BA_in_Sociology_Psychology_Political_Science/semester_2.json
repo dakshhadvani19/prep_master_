@@ -1,0 +1,765 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "ba-in-socialogy-psychology-political-science",
+    "course_name": "BA in Socialogy Psychology Political Science",
+    "output_slug": "BA_in_Sociology_Psychology_Political_Science"
+  },
+  "semester": 2,
+  "subject_count": 6,
+  "subjects": [
+    {
+      "subject_id": "43001028120401",
+      "subject_name": "Communication skills II",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 2,
+      "subject_code": "10BH1204",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1204.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Communication skills II [bb6f3605a0f3].pdf",
+      "expected_pdf_sha256": "ae026e78dc0a2f87c6b1366cfea4c9502b2dbaf167414208936256583b0e14e2",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMMUNICATION SKILLS II",
+        "course_code": "10BH1204",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "This advanced course on Public Speaking emphasizes on cultivating practical skill of public speaking in various forms of professional and social settings. The purpose is to groom students in typical public speaking situations and to provide them with the experience of public speaking."
+      ],
+      "course_outcomes": [
+        "Understand importance of communication in personal and professional environments",
+        "Gain experience in interpersonal, group, and public communication",
+        "Develop strategies for effective public speaking offline and online environments",
+        "Students will practice delivery of professional and personal speeches / presentations using visual aids where appropriate to enhance presentation Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 1 1 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Speaking in professional setting",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Art of Story Telling, Methods & Techniques, Ethos & Pathos,",
+              "Imagination, Elaboration, Language & Emotions",
+              "2 Preparing for Public Speaking Formats-I 2",
+              "Group Discussion (GD), Types & Topics of GD, Do’s & Don’ts,",
+              "Evaluation Parameters, Practical GD",
+              "3 Audience & Anxiety 2",
+              "Analyse Audience, Behaviour & Attitude towards audience,",
+              "Overcoming Anxiety, Do’s & Don’ts",
+              "4 Preparing for Public Speaking Formats-II 2",
+              "Debate, Types & Topics, Evaluation Parameters, Practical Debate",
+              "5 Preparing for Public Speaking Formats-III 2",
+              "Impromptu Speaking, Techniques, Do’s & Don’ts, Practical",
+              "Experience",
+              "6 Preparing for Public Speaking Formats-IV 1",
+              "Elocution, Techniques , Analyse and Plan content, Do’s & Don’ts,",
+              "Practical Experience",
+              "7 Preparing for Public Speaking Formats-V 1",
+              "Delivering a 5 Min Talk, Role of Selecting a Topic, Planning,",
+              "Organizing & Delivering a Talk, Practical Experience",
+              "8 Technology & Communica tion Today 1",
+              "Facing Camera Live, Recording Video of Self , Do’s & Don’t’s,",
+              "Practical Experience",
+              "9 Great Speakers & Greet Speeches 1",
+              "Video Demonstration, nalyse the qualities exhibited by the speaker,",
+              "Practical Experience",
+              "10 Demonstrati on & Evaluation 1",
+              "Demonstration by students , Evaluation by students",
+              "Total Hours 15"
+            ],
+            "topics_text": "Art of Story Telling, Methods & Techniques, Ethos & Pathos, Imagination, Elaboration, Language & Emotions 2 Preparing for Public Speaking Formats-I 2 Group Discussion (GD), Types & Topics of GD, Do’s & Don’ts, Evaluation Parameters, Practical GD 3 Audience & Anxiety 2 Analyse Audience, Behaviour & Attitude towards audience, Overcoming Anxiety, Do’s & Don’ts 4 Preparing for Public Speaking Formats-II 2 Debate, Types & Topics, Evaluation Parameters, Practical Debate 5 Preparing for Public Speaking Formats-III 2 Impromptu Speaking, Techniques, Do’s & Don’ts, Practical Experience 6 Preparing for Public Speaking Formats-IV 1 Elocution, Techniques , Analyse and Plan content, Do’s & Don’ts, Practical Experience 7 Preparing for Public Speaking Formats-V 1 Delivering a 5 Min Talk, Role of Selecting a Topic, Planning, Organizing & Delivering a Talk, Practical Experience 8 Technology & Communica tion Today 1 Facing Camera Live, Recording Video of Self , Do’s & Don’t’s, Practical Experience 9 Great Speakers & Greet Speeches 1 Video Demonstration, nalyse the qualities exhibited by the speaker, Practical Experience 10 Demonstrati on & Evaluation 1 Demonstration by students , Evaluation by students Total Hours 15",
+            "topics": [
+              "Art of Story Telling, Methods & Techniques, Ethos & Pathos,",
+              "Imagination, Elaboration, Language & Emotions",
+              "2 Preparing for Public Speaking Formats-I 2",
+              "Group Discussion (GD), Types & Topics of GD, Do’s & Don’ts,",
+              "Evaluation Parameters, Practical GD",
+              "3 Audience & Anxiety 2",
+              "Analyse Audience, Behaviour & Attitude towards audience,",
+              "Overcoming Anxiety, Do’s & Don’ts",
+              "4 Preparing for Public Speaking Formats-II 2",
+              "Debate, Types & Topics, Evaluation Parameters, Practical Debate",
+              "5 Preparing for Public Speaking Formats-III 2",
+              "Impromptu Speaking, Techniques, Do’s & Don’ts, Practical",
+              "Experience",
+              "6 Preparing for Public Speaking Formats-IV 1",
+              "Elocution, Techniques , Analyse and Plan content, Do’s & Don’ts,",
+              "Practical Experience",
+              "7 Preparing for Public Speaking Formats-V 1",
+              "Delivering a 5 Min Talk, Role of Selecting a Topic, Planning,",
+              "Organizing & Delivering a Talk, Practical Experience",
+              "8 Technology & Communica tion Today 1",
+              "Facing Camera Live, Recording Video of Self , Do’s & Don’t’s,",
+              "Practical Experience",
+              "9 Great Speakers & Greet Speeches 1",
+              "Video Demonstration, nalyse the qualities exhibited by the speaker,",
+              "Practical Experience",
+              "10 Demonstrati on & Evaluation 1",
+              "Demonstration by students , Evaluation by students",
+              "Total Hours 15"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical Exercises to Communication Skills II",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issue related to Communication Skills II",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Presentations Zen:Simple Ideas on Presentation Design & Delivery, Garr Reynolds , .,",
+              "2014"
+            ],
+            "topics_text": "Issue related to Communication Skills II Total Hours 15 Textbook : 1 Presentations Zen:Simple Ideas on Presentation Design & Delivery, Garr Reynolds , ., 2014",
+            "topics": [
+              "Issue related to Communication Skills II",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Presentations Zen:Simple Ideas on Presentation Design & Delivery, Garr Reynolds , .,",
+              "2014"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Talk like Ted, Talk like Ted, Carmine Gallo, ., 2014"
+        ],
+        "textbooks": [
+          "Presentations Zen:Simple Ideas on Presentation Design & Delivery, Garr Reynolds , ., 2014"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5051,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   COMMUNICATION SKILLS II\nCOURSE CODE     10BH1204\nCOURSE CREDITS  2\n\nObjective:\n 1  This advanced course on Public Speaking emphasizes on cultivating practical skill of\n     public speaking in various forms of professional and social settings. The purpose is to\n    groom students in typical public speaking situations and to provide them with the\n     experience of public speaking.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand importance of communication in personal and professional environments\n 2  Gain experience in interpersonal, group, and public communication\n 3  Develop strategies for effective public speaking offline and online environments\n 4  Students will practice delivery of professional and personal speeches / presentations using\n     visual aids where appropriate to enhance presentation\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     1            1            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Speaking in professional setting                             2\n             Art of Story Telling, Methods & Techniques, Ethos & Pathos,\n              Imagination, Elaboration, Language & Emotions\n     2      Preparing for Public Speaking Formats-I                    2\n            Group Discussion (GD), Types & Topics of GD, Do’s & Don’ts,\n              Evaluation Parameters, Practical GD\n     3      Audience & Anxiety                                      2\n             Analyse Audience, Behaviour & Attitude towards audience,\n            Overcoming Anxiety, Do’s & Don’ts\n     4      Preparing for Public Speaking Formats-II                    2\n              Debate, Types & Topics, Evaluation Parameters, Practical Debate\n     5      Preparing for Public Speaking Formats-III                   2\n            Impromptu Speaking, Techniques, Do’s & Don’ts, Practical\n             Experience\n     6      Preparing for Public Speaking Formats-IV                   1\n              Elocution, Techniques , Analyse and Plan content, Do’s & Don’ts,\n               Practical Experience\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     7      Preparing for Public Speaking Formats-V                    1\n              Delivering a 5 Min Talk, Role of Selecting a Topic, Planning,\n             Organizing & Delivering a Talk, Practical Experience\n     8      Technology & Communica tion Today                       1\n             Facing Camera Live, Recording Video of Self , Do’s & Don’t’s,\n               Practical Experience\n     9      Great Speakers & Greet Speeches                           1\n            Video Demonstration, nalyse the qualities exhibited by the speaker,\n               Practical Experience\n     10      Demonstrati on & Evaluation                              1\n             Demonstration by students , Evaluation by students\n                               Total Hours                       15\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical Exercises to Communication Skills II                15\n               Issue related to Communication Skills II\n                               Total Hours                       15\n\nTextbook :\n 1  Presentations Zen:Simple Ideas on Presentation Design & Delivery, Garr Reynolds , .,\n    2014\n\nReferences:\n 1  Talk like Ted, Talk like Ted, Carmine Gallo, ., 2014\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "ae026e78dc0a2f87c6b1366cfea4c9502b2dbaf167414208936256583b0e14e2",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028120601",
+      "subject_name": "Critical thinking & argumentative skills",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 2,
+      "subject_code": "10BH1206",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1206.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Critical thinking & argumentative skills [76f6380eeec6].pdf",
+      "expected_pdf_sha256": "07e6eddb892a12cf97dee8e1beb1cb8a85ecf09363ccd8baa941b0083a50d8d1",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CRITICAL THINKING & ARGUMENTATIVE SKILLS",
+        "course_code": "10BH1206",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To underscore the realization and importance of Critical thinking in academics",
+        "To conduct various Practical exercises to inculcate skills and faculties so that they think logically and analytically."
+      ],
+      "course_outcomes": [
+        "Identify the differences between fact and opinion",
+        "Identify, compose and refute propositions of fact, value and policy",
+        "Understand the methods of analyzing evidences in order to organize ,deliver and critique effective e arguments and rebuttals",
+        "Analyze and utilize formal and informal logic to construct arguments which advocate or defend position(s).",
+        "Utilize ethical communication when developing arguments while simultaneously taking into consideration diverse audiences Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Module 1: - Introduction",
+            "contact_hours": 4,
+            "topic_lines": [
+              "What is Critical Thinking, Intellectual Standards to Critical",
+              "thinking., Benefits of Critical thinking., Barrier to Critical thinking,",
+              "Characteristic of Critical thinkers, Inductive and Deductive Logic",
+              "2 Module 2: - Evaluating Arguments 4",
+              "Argument and Non- arguments , Refuting Arguments, Premises and",
+              "Conclusions",
+              "3 Module 3:- Basic Logical Concepts 4",
+              "Inductive and Deductive Arguments, Legal Reasoning – Inductive",
+              "and Deductive.",
+              "4 Module 4:- Logical Fallacies 4",
+              "Fallacious Arguments, Fallacies of Relevance, Fallacies of",
+              "Relevance",
+              "5 Module 5:- Inductive Reasoning 4",
+              "Inductive Generalization b) Induction and Analogy. c) Induction",
+              "and Causal Arguments., Induction and Analogy, Induction and",
+              "Causal Arguments.",
+              "6 Module 6:- Evaluating Inferences 4",
+              "Deductive validity, Assumptions and other relevant arguments.",
+              "7 Module 7:- Information and its Evaluation 2",
+              "Judging the credibility of source, Sources of Information.,",
+              "Testimony as a source of Information",
+              "8 Module 8:- Decision Making 2",
+              "Common flaws in our thinking about decisions. , A model for good",
+              "decision making, Decision procedures and making the right",
+              "decisions",
+              "9 Module 9:- Creative thinking for Legal practice 2",
+              "Six Hat Thinking approach, Lateral Thinking",
+              "Total Hours 30"
+            ],
+            "topics_text": "What is Critical Thinking, Intellectual Standards to Critical thinking., Benefits of Critical thinking., Barrier to Critical thinking, Characteristic of Critical thinkers, Inductive and Deductive Logic 2 Module 2: - Evaluating Arguments 4 Argument and Non- arguments , Refuting Arguments, Premises and Conclusions 3 Module 3:- Basic Logical Concepts 4 Inductive and Deductive Arguments, Legal Reasoning – Inductive and Deductive. 4 Module 4:- Logical Fallacies 4 Fallacious Arguments, Fallacies of Relevance, Fallacies of Relevance 5 Module 5:- Inductive Reasoning 4 Inductive Generalization b) Induction and Analogy. c) Induction and Causal Arguments., Induction and Analogy, Induction and Causal Arguments. 6 Module 6:- Evaluating Inferences 4 Deductive validity, Assumptions and other relevant arguments. 7 Module 7:- Information and its Evaluation 2 Judging the credibility of source, Sources of Information., Testimony as a source of Information 8 Module 8:- Decision Making 2 Common flaws in our thinking about decisions. , A model for good decision making, Decision procedures and making the right decisions 9 Module 9:- Creative thinking for Legal practice 2 Six Hat Thinking approach, Lateral Thinking Total Hours 30",
+            "topics": [
+              "What is Critical Thinking, Intellectual Standards to Critical",
+              "thinking., Benefits of Critical thinking., Barrier to Critical thinking,",
+              "Characteristic of Critical thinkers, Inductive and Deductive Logic",
+              "2 Module 2: - Evaluating Arguments 4",
+              "Argument and Non- arguments , Refuting Arguments, Premises and",
+              "Conclusions",
+              "3 Module 3:- Basic Logical Concepts 4",
+              "Inductive and Deductive Arguments, Legal Reasoning – Inductive",
+              "and Deductive.",
+              "4 Module 4:- Logical Fallacies 4",
+              "Fallacious Arguments, Fallacies of Relevance, Fallacies of",
+              "Relevance",
+              "5 Module 5:- Inductive Reasoning 4",
+              "Inductive Generalization b) Induction and Analogy. c) Induction",
+              "and Causal Arguments., Induction and Analogy, Induction and",
+              "Causal Arguments.",
+              "6 Module 6:- Evaluating Inferences 4",
+              "Deductive validity, Assumptions and other relevant arguments.",
+              "7 Module 7:- Information and its Evaluation 2",
+              "Judging the credibility of source, Sources of Information.,",
+              "Testimony as a source of Information",
+              "8 Module 8:- Decision Making 2",
+              "Common flaws in our thinking about decisions. , A model for good",
+              "decision making, Decision procedures and making the right",
+              "decisions",
+              "9 Module 9:- Creative thinking for Legal practice 2",
+              "Six Hat Thinking approach, Lateral Thinking",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical exercises to critical thinking and argumentative skills",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Practical exercises to critical thinking and argumentative skills",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Critical Thinking – An Introduction, Alec Fisher, Cambridge University Press, 2001"
+            ],
+            "topics_text": "Practical exercises to critical thinking and argumentative skills Total Hours 15 Textbook : 1 Critical Thinking – An Introduction, Alec Fisher, Cambridge University Press, 2001",
+            "topics": [
+              "Practical exercises to critical thinking and argumentative skills",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Critical Thinking – An Introduction, Alec Fisher, Cambridge University Press, 2001"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "An Introduction to Critical Thinking, An Introduction to Critical Thinking, Madhucchanda Sen,, Pearson India, 2001"
+        ],
+        "textbooks": [
+          "Critical Thinking – An Introduction, Alec Fisher, Cambridge University Press, 2001"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5160,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    CRITICAL THINKING & ARGUMENTATIVE SKILLS\nCOURSE CODE     10BH1206\nCOURSE CREDITS  3\n\nObjective:\n 1  To underscore the realization and importance of Critical thinking in academics\n 2  To conduct various Practical exercises to inculcate skills and faculties so that they think\n     logically and analytically.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Identify the differences between fact and opinion\n 2   Identify, compose and refute propositions of fact, value and policy\n 3  Understand the methods of analyzing evidences in order to organize ,deliver and critique\n     effective e arguments and rebuttals\n 4  Analyze and utilize formal and informal logic to construct arguments which advocate or\n    defend position(s).\n 5  Utilize ethical communication when developing arguments while simultaneously taking\n     into consideration diverse audiences\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Module 1: - Introduction                                  4\n           What is Critical Thinking, Intellectual Standards to Critical\n                thinking., Benefits of Critical thinking., Barrier to Critical thinking,\n               Characteristic of Critical thinkers, Inductive and Deductive Logic\n     2     Module 2: - Evaluating Arguments                          4\n            Argument and Non- arguments , Refuting Arguments, Premises and\n             Conclusions\n     3     Module 3:- Basic Logical Concepts                          4\n              Inductive and Deductive Arguments, Legal Reasoning – Inductive\n            and Deductive.\n     4     Module 4:- Logical Fallacies                               4\n               Fallacious Arguments, Fallacies of Relevance, Fallacies of\n             Relevance\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5     Module 5:- Inductive Reasoning                            4\n              Inductive Generalization b) Induction and Analogy. c) Induction\n            and Causal Arguments., Induction and Analogy, Induction and\n             Causal Arguments.\n     6     Module 6:- Evaluating Inferences                           4\n             Deductive validity, Assumptions and other relevant arguments.\n     7     Module 7:- Information and its Evaluation                   2\n             Judging the credibility of source, Sources of Information.,\n             Testimony as a source of Information\n     8     Module 8:- Decision Making                               2\n          Common flaws in our thinking about decisions. , A model for good\n              decision making, Decision procedures and making the right\n              decisions\n     9     Module 9:- Creative thinking for Legal practice               2\n             Six Hat Thinking approach, Lateral Thinking\n                               Total Hours                       30\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical exercises to critical thinking and argumentative skills  15\n               Practical exercises to critical thinking and argumentative skills\n                               Total Hours                       15\n\nTextbook :\n 1   Critical Thinking – An Introduction, Alec Fisher, Cambridge University Press, 2001\n\nReferences:\n 1  An Introduction to Critical Thinking, An Introduction to Critical Thinking, Madhucchanda\n     Sen,, Pearson India, 2001\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "07e6eddb892a12cf97dee8e1beb1cb8a85ecf09363ccd8baa941b0083a50d8d1",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028120501",
+      "subject_name": "English ii: Introduction to English Literature",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 2,
+      "subject_code": "10BH1205",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1205.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/English ii Introduction to English Literature [800a217b48bc].pdf",
+      "expected_pdf_sha256": "f07bb6a643f735e24251332f3053549852e7f0572ffbc754f1fbef944ae4910d",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENGLISH II: INTRODUCTION TO ENGLISH",
+        "course_code": "10BH1205",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To acquaint learners with the various genres of literature",
+        "To enable learners to understand the various literary terms of English literature",
+        "To introduce learners to basic literary trends in English literature",
+        "To develop a democratic understanding of English Literary movements and schools"
+      ],
+      "course_outcomes": [
+        "To acquaint learners with the various genres of literature",
+        "To enable learners to understand the various literary terms of English literature",
+        "To introduce learners to basic literary trends in English literature",
+        "To develop a democratic understanding of English Literary movements and schools Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "An Introduction to Study English Literature",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Chapter I , Chapter II , Chapter III, Chapter IV, Chapter V",
+              "2 Poetry and Poetical Types 8",
+              "The Lyric , The Ode, The Sonnet, The Elegy, The Epic , The Ballad",
+              "3 Drama and Dramatic Types 8",
+              "Tragedy, Comedy, The Masque, The One-Act-Play, The Dramatic",
+              "Monologue Marriage",
+              "4 Novel, Essay and (Auto)Biography 6",
+              "Origin, History and types of Novels , History and types of Novels,",
+              "Origin History and types of Essay , Origin and history of",
+              "(auto)Biography",
+              "Total Hours 30"
+            ],
+            "topics_text": "Chapter I , Chapter II , Chapter III, Chapter IV, Chapter V 2 Poetry and Poetical Types 8 The Lyric , The Ode, The Sonnet, The Elegy, The Epic , The Ballad 3 Drama and Dramatic Types 8 Tragedy, Comedy, The Masque, The One-Act-Play, The Dramatic Monologue Marriage 4 Novel, Essay and (Auto)Biography 6 Origin, History and types of Novels , History and types of Novels, Origin History and types of Essay , Origin and history of (auto)Biography Total Hours 30",
+            "topics": [
+              "Chapter I , Chapter II , Chapter III, Chapter IV, Chapter V",
+              "2 Poetry and Poetical Types 8",
+              "The Lyric , The Ode, The Sonnet, The Elegy, The Epic , The Ballad",
+              "3 Drama and Dramatic Types 8",
+              "Tragedy, Comedy, The Masque, The One-Act-Play, The Dramatic",
+              "Monologue Marriage",
+              "4 Novel, Essay and (Auto)Biography 6",
+              "Origin, History and types of Novels , History and types of Novels,",
+              "Origin History and types of Essay , Origin and history of",
+              "(auto)Biography",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to English Literature",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to Introduction to English Literature",
+              "Total Hours 15",
+              "Textbook :",
+              "1 An Introduction to Study English Literature, W.H. Hudson, ., 2008"
+            ],
+            "topics_text": "Issues related to Introduction to English Literature Total Hours 15 Textbook : 1 An Introduction to Study English Literature, W.H. Hudson, ., 2008",
+            "topics": [
+              "Issues related to Introduction to English Literature",
+              "Total Hours 15",
+              "Textbook :",
+              "1 An Introduction to Study English Literature, W.H. Hudson, ., 2008"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "The Edinburgh Introduction to Studying Literature, The Edinburgh Introduction to Studying Literature, ? Cavanagh, Dermot Alan Gillis, Michelle Keown, James Loxley and Randall Stevenson (Ed). , Edinburgh: Edinburgh University Press, , 2010"
+        ],
+        "textbooks": [
+          "An Introduction to Study English Literature, W.H. Hudson, ., 2008"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.britannica.com/art/English-literature",
+          "https://www.masterclass.com/articles/poetry-101-learn-about-poetry-different-types-of- poems-and-poetic-devices-with-examples",
+          "https://www.studiobinder.com/blog/what-is-a-novel-definition/",
+          "https://englishliterature.education/articles/guides/what-is-drama-what-is-drama-in- literature-features-types-details-students-must-know/",
+          "https://www.jstor.org/stable/23091097",
+          "http://enotes.com/topics/philosophy-art/questions/can-someone-please-define-explain- hippolyte-taines-466182"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4490,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    ENGLISH II: INTRODUCTION TO ENGLISH\n               LITERATURE\nCOURSE CODE     10BH1205\nCOURSE CREDITS  3\n\nObjective:\n 1  To acquaint learners with the various genres of literature\n 2  To enable learners to understand the various literary terms of English literature\n 3  To introduce learners to basic literary trends in English literature\n 4  To develop a democratic understanding of English Literary movements and schools\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To acquaint learners with the various genres of literature\n 2  To enable learners to understand the various literary terms of English literature\n 3  To introduce learners to basic literary trends in English literature\n 4  To develop a democratic understanding of English Literary movements and schools\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     An Introduction to Study English Literature                  8\n             Chapter I , Chapter II , Chapter III, Chapter IV, Chapter V\n     2      Poetry and Poetical Types                                 8\n            The Lyric , The Ode, The Sonnet, The Elegy, The Epic , The Ballad\n     3     Drama and Dramatic Types                                8\n             Tragedy, Comedy, The Masque, The One-Act-Play, The Dramatic\n            Monologue Marriage\n     4       Novel, Essay and (Auto)Biography                          6\n               Origin, History and types of Novels , History and types of Novels,\n              Origin History and types of Essay , Origin and history of\n              (auto)Biography\n                               Total Hours                       30\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to English Literature                          15\n               Issues related to Introduction to English Literature\n                               Total Hours                       15\n\nTextbook :\n 1  An Introduction to Study English Literature, W.H. Hudson, ., 2008\n\nReferences:\n 1  The Edinburgh Introduction to Studying Literature, The Edinburgh Introduction to\n    Studying Literature, ? Cavanagh, Dermot Alan Gillis, Michelle Keown, James Loxley and\n     Randall Stevenson (Ed). , Edinburgh: Edinburgh University Press, , 2010\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\nSupplementary Resources:\n 1  https://www.britannica.com/art/English-literature\n 2  https://www.masterclass.com/articles/poetry-101-learn-about-poetry-different-types-of-\n     poems-and-poetic-devices-with-examples\n 3  https://www.studiobinder.com/blog/what-is-a-novel-definition/\n 4  https://englishliterature.education/articles/guides/what-is-drama-what-is-drama-in-\n     literature-features-types-details-students-must-know/\n 5  https://www.jstor.org/stable/23091097\n 6  http://enotes.com/topics/philosophy-art/questions/can-someone-please-define-explain-\n     hippolyte-taines-466182\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "f07bb6a643f735e24251332f3053549852e7f0572ffbc754f1fbef944ae4910d",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028021001",
+      "subject_name": "Gandhi and Education",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 2,
+      "subject_code": "10BH0210",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH0210.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Gandhi and Education [8265c41ed4ec].pdf",
+      "expected_pdf_sha256": "2bc634c944693b0609e253ee4067c88cfce7aa89375190b7f41445343f4856b3",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "GANDHI AND EDUCATION",
+        "course_code": "10BH0210",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "Acquaint with the basic concepts relating to Gandhi and his views on education.",
+        "Get inspiration from Gandhi's thoughts on education.",
+        "Deliberate Gandhi's Idea of Self-reliant education (Swavalambi Shiksha)"
+      ],
+      "course_outcomes": [
+        "Perceive and understand the socially relevant ideals of Gandhi.",
+        "Value Gandhian perspective on education.",
+        "Appreciate the significance of education in Indian languages.",
+        "Evaluate and assess the application of Gandhian thoughts in the present world.. Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 1 1 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Gandhi’s Philosophy",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Back ground of Gandhian era-Gandhiji’s Life at a glance ,",
+              "Gandhiji’s conception of self, God and world, Gandhiji’s view on",
+              "Swaraj",
+              "2 Gandhi’s Experiment in Education 5",
+              "Gandhi's Philosophy on education , Gandhiji on the medium of",
+              "education – national language – compulsory Education, Gandhi's",
+              "vision on Higher Education, Gandhiji to Students – The Duty of",
+              "Students – Students and Power Politics – Students and Character",
+              "Building – Ahimsa in Education",
+              "3 Gandhi's Educational Thought on Skill and Vocational 5",
+              "Education",
+              "Rural development through Skill and Local Need Based education ,",
+              "Skill education in NEP 2020 and Gandhi , Gandhi's Idea of Self-",
+              "reliance (Swavalambi Shiksha) and its reflection in contemporary",
+              "educational policy.",
+              "Total Hours 15"
+            ],
+            "topics_text": "Back ground of Gandhian era-Gandhiji’s Life at a glance , Gandhiji’s conception of self, God and world, Gandhiji’s view on Swaraj 2 Gandhi’s Experiment in Education 5 Gandhi's Philosophy on education , Gandhiji on the medium of education – national language – compulsory Education, Gandhi's vision on Higher Education, Gandhiji to Students – The Duty of Students – Students and Power Politics – Students and Character Building – Ahimsa in Education 3 Gandhi's Educational Thought on Skill and Vocational 5 Education Rural development through Skill and Local Need Based education , Skill education in NEP 2020 and Gandhi , Gandhi's Idea of Self- reliance (Swavalambi Shiksha) and its reflection in contemporary educational policy. Total Hours 15",
+            "topics": [
+              "Back ground of Gandhian era-Gandhiji’s Life at a glance ,",
+              "Gandhiji’s conception of self, God and world, Gandhiji’s view on",
+              "Swaraj",
+              "2 Gandhi’s Experiment in Education 5",
+              "Gandhi's Philosophy on education , Gandhiji on the medium of",
+              "education – national language – compulsory Education, Gandhi's",
+              "vision on Higher Education, Gandhiji to Students – The Duty of",
+              "Students – Students and Power Politics – Students and Character",
+              "Building – Ahimsa in Education",
+              "3 Gandhi's Educational Thought on Skill and Vocational 5",
+              "Education",
+              "Rural development through Skill and Local Need Based education ,",
+              "Skill education in NEP 2020 and Gandhi , Gandhi's Idea of Self",
+              "reliance (Swavalambi Shiksha) and its reflection in contemporary",
+              "educational policy.",
+              "Total Hours 15"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues Related to Gandhi and Education",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues Related to Gandhi and Education",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Gandhi-His Life and Thought , J.B Kripalani, Division of the Ministry of Information and",
+              "Broadcasting of the Govt of India, 2005"
+            ],
+            "topics_text": "Issues Related to Gandhi and Education Total Hours 15 Textbook : 1 Gandhi-His Life and Thought , J.B Kripalani, Division of the Ministry of Information and Broadcasting of the Govt of India, 2005",
+            "topics": [
+              "Issues Related to Gandhi and Education",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Gandhi-His Life and Thought , J.B Kripalani, Division of the Ministry of Information and",
+              "Broadcasting of the Govt of India, 2005"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Art and Swadeshi, Art and Swadeshi, Coomaraswamy, Anand K, Munshi Ram Manoharalal. Delhi, 1910"
+        ],
+        "textbooks": [
+          "Gandhi-His Life and Thought , J.B Kripalani, Division of the Ministry of Information and Broadcasting of the Govt of India, 2005"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.gandhiheritageportal.org?utm"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4010,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    GANDHI AND EDUCATION\nCOURSE CODE     10BH0210\nCOURSE CREDITS  2\n\nObjective:\n 1  Acquaint with the basic concepts relating to Gandhi and his views on education.\n 2  Get inspiration from Gandhi's thoughts on education.\n 3  Deliberate Gandhi's Idea of Self-reliant education (Swavalambi Shiksha)\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Perceive and understand the socially relevant ideals of Gandhi.\n 2  Value Gandhian perspective on education.\n 3  Appreciate the significance of education in Indian languages.\n 4  Evaluate and assess the application of Gandhian thoughts in the present world..\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     1            1            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Gandhi’s Philosophy                        5\n            Back ground of Gandhian era-Gandhiji’s Life at a glance ,\n              Gandhiji’s conception of self, God and world, Gandhiji’s view on\n             Swaraj\n     2      Gandhi’s Experiment in Education                          5\n              Gandhi's Philosophy on education , Gandhiji on the medium of\n              education – national language – compulsory Education, Gandhi's\n               vision on Higher Education, Gandhiji to Students – The Duty of\n              Students – Students and Power Politics – Students and Character\n              Building – Ahimsa in Education\n     3      Gandhi's Educational Thought on Skill and Vocational         5\n            Education\n             Rural development through Skill and Local Need Based education ,\n                Skill education in NEP 2020 and Gandhi , Gandhi's Idea of Self-\n               reliance (Swavalambi Shiksha) and its reflection in contemporary\n              educational policy.\n                               Total Hours                       15\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues Related to Gandhi and Education                     15\n               Issues Related to Gandhi and Education\n                               Total Hours                       15\n\nTextbook :\n 1  Gandhi-His Life and Thought , J.B Kripalani, Division of the Ministry of Information and\n     Broadcasting of the Govt of India, 2005\n\nReferences:\n 1  Art and Swadeshi, Art and Swadeshi, Coomaraswamy, Anand K, Munshi Ram\n     Manoharalal. Delhi, 1910\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\nSupplementary Resources:\n 1  https://www.gandhiheritageportal.org?utm\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "2bc634c944693b0609e253ee4067c88cfce7aa89375190b7f41445343f4856b3",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028120701",
+      "subject_name": "Internship I",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 2,
+      "subject_code": "10BH1207",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1207.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Internship I [0cebdde6124c].pdf",
+      "expected_pdf_sha256": "3d3454310af55844e4a3e79220dc5120deffca8f8e595c2170210f538773b03e",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "INTERNSHIP I",
+        "course_code": "10BH1207",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "To encourage students to make connections between their internships and what they have learned in the related core course",
+        "To provide clear guidelines on the Internship Course assessment process",
+        "To provide assistance in successfully completing the Internship Course assessment process",
+        "To discuss and provide feedback on draft content and draft presentation of the Internship assessed pieces of work at a stage early enough for a student to correct any perceived defects"
+      ],
+      "course_outcomes": [
+        "Develop acquaintance with the functioning of the real world.",
+        "Analyse various social issues and come up with meaningful solutions to the social problems.",
+        "Comprehend the structural framework and functioning of various laws in society. Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 2716,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    INTERNSHIP I\nCOURSE CODE     10BH1207\nCOURSE CREDITS  2\n\nObjective:\n 1  To encourage students to make connections between their internships and what they have\n     learned in the related core course\n 2  To provide clear guidelines on the Internship Course assessment process\n 3  To provide assistance in successfully completing the Internship Course assessment process\n 4  To discuss and provide feedback on draft content and draft presentation of the Internship\n     assessed pieces of work at a stage early enough for a student to correct any perceived\n     defects\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Develop acquaintance with the functioning of the real world.\n 2  Analyse various social issues and come up with meaningful solutions to the social\n     problems.\n 3  Comprehend the structural framework and functioning of various laws in society.\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "3d3454310af55844e4a3e79220dc5120deffca8f8e595c2170210f538773b03e",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    },
+    {
+      "subject_id": "43001028120301",
+      "subject_name": "Sociology II: Fundamentals of Sociology",
+      "course_id": "ba-in-socialogy-psychology-political-science",
+      "course_name": "BA in Socialogy Psychology Political Science",
+      "semester": 2,
+      "subject_code": "10BH1203",
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/10BH1203.pdf",
+      "source_pdf_repo_path": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Sociology II Fundamentals of Sociology [38fe7ad260c8].pdf",
+      "expected_pdf_sha256": "473c5a71289afa2a48c44b7b6743c7647416bbe6b7717b0927aa171dad50c1d5",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "SOCIOLOGY II: FUNDAMENTALS OF SOCIOLOGY",
+        "course_code": "10BH1203",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "N/A"
+      },
+      "objectives": [
+        "Students will learn about the social system.",
+        "Students will acquaint with social group, culture and religion.",
+        "Students will be able to develop their perspectives on deviance and crime."
+      ],
+      "course_outcomes": [
+        "Define social system",
+        "Describe social groups",
+        "Demonstrate the functions of the cultures",
+        "Theorize the unequal practices of religion",
+        "Formulate and establish theories and empirical evidence of deviance and crime Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "SOCIAL SYSTEM",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Structural aspects of Social System, Functional Problems of Social",
+              "System (AGIL), Social Functions and Dysfunction, Manifest and",
+              "Latent Functions",
+              "2 SOCIAL GROUPS 7",
+              "Definition of Social Groups, Characteristics of Social Groups,",
+              "Types (primary and secondary; in-group and outgroup; Reference",
+              "group).",
+              "3 CULTURE 8",
+              "Meaning and characteristics, Types of culture – popular, elitist, folk,",
+              "and consumer cultures, Pluralism and Multiculturalism, Religion,",
+              "Culture and Personality",
+              "4 SOCIAL CONFORMITY & SOCIAL DEVIANCE 8",
+              "Social Conformity: Meaning & causes, Social Conformity: Social",
+              "conformity & Social control, Social Deviance: Meaning,",
+              "characteristics, forms and factors, Theories of Deviance, Theories of",
+              "Deviation and Social Problem, Deviance and Crime",
+              "Total Hours 30"
+            ],
+            "topics_text": "Structural aspects of Social System, Functional Problems of Social System (AGIL), Social Functions and Dysfunction, Manifest and Latent Functions 2 SOCIAL GROUPS 7 Definition of Social Groups, Characteristics of Social Groups, Types (primary and secondary; in-group and outgroup; Reference group). 3 CULTURE 8 Meaning and characteristics, Types of culture – popular, elitist, folk, and consumer cultures, Pluralism and Multiculturalism, Religion, Culture and Personality 4 SOCIAL CONFORMITY & SOCIAL DEVIANCE 8 Social Conformity: Meaning & causes, Social Conformity: Social conformity & Social control, Social Deviance: Meaning, characteristics, forms and factors, Theories of Deviance, Theories of Deviation and Social Problem, Deviance and Crime Total Hours 30",
+            "topics": [
+              "Structural aspects of Social System, Functional Problems of Social",
+              "System (AGIL), Social Functions and Dysfunction, Manifest and",
+              "Latent Functions",
+              "2 SOCIAL GROUPS 7",
+              "Definition of Social Groups, Characteristics of Social Groups,",
+              "Types (primary and secondary",
+              "in-group and outgroup",
+              "Reference",
+              "group).",
+              "3 CULTURE 8",
+              "Meaning and characteristics, Types of culture – popular, elitist, folk,",
+              "and consumer cultures, Pluralism and Multiculturalism, Religion,",
+              "Culture and Personality",
+              "4 SOCIAL CONFORMITY & SOCIAL DEVIANCE 8",
+              "Social Conformity: Meaning & causes, Social Conformity: Social",
+              "conformity & Social control, Social Deviance: Meaning,",
+              "characteristics, forms and factors, Theories of Deviance, Theories of",
+              "Deviation and Social Problem, Deviance and Crime",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Issues related to concepts and processes of sociology",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Issues related to concepts and processes of sociology",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Sociology: Principles of Sociology with an Introduction to Social Thoughts., Rao, C.N.",
+              "Shankar, Chand & Co Ltd, 2008"
+            ],
+            "topics_text": "Issues related to concepts and processes of sociology Total Hours 15 Textbook : 1 Sociology: Principles of Sociology with an Introduction to Social Thoughts., Rao, C.N. Shankar, Chand & Co Ltd, 2008",
+            "topics": [
+              "Issues related to concepts and processes of sociology",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Sociology: Principles of Sociology with an Introduction to Social Thoughts., Rao, C.N.",
+              "Shankar, Chand & Co Ltd, 2008"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Fundamentals of Sociology, Fundamentals of Sociology, Gisbert, PSJ, Bombay: Orient Longman, 1993"
+        ],
+        "textbooks": [
+          "Sociology: Principles of Sociology with an Introduction to Social Thoughts., Rao, C.N. Shankar, Chand & Co Ltd, 2008"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 3979,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    SOCIOLOGY II: FUNDAMENTALS OF SOCIOLOGY\nCOURSE CODE     10BH1203\nCOURSE CREDITS  3\n\nObjective:\n 1  Students will learn about the social system.\n 2  Students will acquaint with social group, culture and religion.\n 3  Students will be able to develop their perspectives on deviance and crime.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Define social system\n 2  Describe social groups\n 3  Demonstrate the functions of the cultures\n 4  Theorize the unequal practices of religion\n 5  Formulate and establish theories and empirical evidence of deviance and crime\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     SOCIAL SYSTEM                                       7\n               Structural aspects of Social System, Functional Problems of Social\n            System (AGIL), Social Functions and Dysfunction, Manifest and\n              Latent Functions\n     2     SOCIAL GROUPS                                       7\n               Definition of Social Groups, Characteristics of Social Groups,\n            Types (primary and secondary; in-group and outgroup; Reference\n              group).\n     3    CULTURE                                              8\n            Meaning and characteristics, Types of culture – popular, elitist, folk,\n            and consumer cultures, Pluralism and Multiculturalism, Religion,\n              Culture and Personality\n     4     SOCIAL CONFORMITY & SOCIAL DEVIANCE            8\n              Social Conformity: Meaning & causes, Social Conformity: Social\n             conformity & Social control, Social Deviance: Meaning,\n                characteristics, forms and factors, Theories of Deviance, Theories of\n              Deviation and Social Problem, Deviance and Crime\n                               Total Hours                       30\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Issues related to concepts and processes of sociology           15\n               Issues related to concepts and processes of sociology\n                               Total Hours                       15\n\nTextbook :\n 1  Sociology: Principles of Sociology with an Introduction to Social Thoughts., Rao, C.N.\n     Shankar, Chand & Co Ltd, 2008\n\nReferences:\n 1  Fundamentals of Sociology, Fundamentals of Sociology, Gisbert, PSJ, Bombay: Orient\n    Longman, 1993\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         30.00         10.00         20.00         20.00\n\n\n\n\n\nDR. NONGTHOMBAM BANGKIM SINGH                 DR. RHISHIKESH NARENDRA DAVE\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "473c5a71289afa2a48c44b7b6743c7647416bbe6b7717b0927aa171dad50c1d5",
+      "pdf_verification_status": "PDF_PRESENT_TITLE_LEVEL_VERIFIED"
+    }
+  ],
+  "build_summary": {
+    "extracted": 5,
+    "manual_review": 1,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}
