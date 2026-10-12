@@ -1,0 +1,570 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-pharm",
+    "course_name": "B.Pharm",
+    "output_slug": "BPharm"
+  },
+  "semester": 1,
+  "subject_count": 7,
+  "subjects": [
+    {
+      "subject_id": "37013319010501",
+      "subject_name": "Communication skills *",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "37013168010101",
+      "subject_name": "Human Anatomy and Physiology I",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "FALSE_POSITIVE_OR_WRONG_SCOPE_REMOVED",
+      "catalog_action": "NO_WRONG_COURSE_OR_SEMESTER_PDF",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Human Anatomy and Physiology [cac0bc23f422].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_WRONG_COURSE_OR_SEMESTER_PDF",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "FALSE_POSITIVE_OR_WRONG_SCOPE_REMOVED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "B.Pharm label points to an exact byte-identical PGDMLT Human Anatomy and Physiology syllabus (02ML0104), so this duplicate was removed from the active syllabus set."
+      ],
+      "pdf_verification_status": "NO_WRONG_COURSE_OR_SEMESTER_PDF"
+    },
+    {
+      "subject_id": "37013168010201",
+      "subject_name": "Pharmaceutical Analysis I",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "37013168010401",
+      "subject_name": "Pharmaceutical Inorganic Chemistry",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 1,
+      "subject_code": "13PH0106T",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13PH0106T.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Pharmaceutical Inorganic Chemistry [a9f480a25566].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Pharmaceutical Inorganic Chemistry [a9f480a25566].pdf",
+      "expected_pdf_sha256": "b3b6f0dbed97502218ef179391b4ec654d0cd5b22561704e20711d01dd2089a7",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PHARMACEUTICAL INORGANIC AND ANALYTICAL",
+        "course_code": "13PH0106T",
+        "semester_label": "1",
+        "credits": 3,
+        "prerequisite": "1. Basic understanding of general chemistry concepts such as atoms, molecules, ions, acids, bases, and salts, 2. Knowledge of chemical equations, balancing reactions, and stoichiometry, 3. Familiarity with concentration terms such as molarity, normality, percentage strength, and dilution, 4. Elementary understanding of inorganic compounds and their pharmaceutical uses."
+      },
+      "objectives": [
+        "Understand the importance of errors and impurities in pharmaceuticals.",
+        "Comprehend the principles of buffer systems.",
+        "Develop skills in performing and interpreting limit tests and titrimetric analysis.",
+        "Emphasize the importance of inorganic compounds and radiopharmaceuticals in Pharmacy.",
+        "Explain the synthesis and analysis of inorganic compounds/products of pharmaceutical importance."
+      ],
+      "course_outcomes": [
+        "Identify sources and types of errors in pharmaceutical analysis and impurity products.",
+        "Apply concepts of acid-base chemistry, buffer systems with importance of electrolytes.",
+        "Describe and differentiate various analytical techniques used in pharmaceutical analysis, including titrimetric methods, and their specific applications in quality assessment.",
+        "Analyze the properties, mechanisms, and therapeutic uses of gastrointestinal agents, radiopharmaceuticals, expectorants, antidotes, and other pharmaceutical compounds, illustrating their roles in therapy and safety considerations.",
+        "Describe the drugs used in expectorants, emetics, haematinics, poison and antidote, and astringents. Pre-requisite of course:1. Basic understanding of general chemistry concepts such as atoms, molecules, ions, acids, bases, and salts, 2. Knowledge of chemical equations, balancing reactions, and stoichiometry, 3. Familiarity with concentration terms such as molarity, normality, percentage strength, and dilution, 4. Elementary understanding of inorganic compounds and their pharmaceutical uses."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 0 45 15 15 0 0 DR. ASHISHKUMAR VRAJLAL KYADA DR. LALJI HAKUBHAI BALDANIYA Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to pharmaceutical analysis",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Different techniques of analysis, Methods of expressing the strength",
+              "of solutions, Primary and secondary standards with examples.,",
+              "Errors: Sources of errors, types of errors, methods of minimizing",
+              "errors, accuracy, precision, and significant figures., Impurities:",
+              "Definition, types, contents, and regulatory importance. Sources and",
+              "types of impurities in Pharmaceuticals, limit tests for chloride,",
+              "sulphate, iron, arsenic, lead, heavy metals, and modified limit test",
+              "for chloride and sulphate."
+            ],
+            "topics_text": "Different techniques of analysis, Methods of expressing the strength of solutions, Primary and secondary standards with examples., Errors: Sources of errors, types of errors, methods of minimizing errors, accuracy, precision, and significant figures., Impurities: Definition, types, contents, and regulatory importance. Sources and types of impurities in Pharmaceuticals, limit tests for chloride, sulphate, iron, arsenic, lead, heavy metals, and modified limit test for chloride and sulphate.",
+            "topics": [
+              "Different techniques of analysis, Methods of expressing the strength",
+              "of solutions, Primary and secondary standards with examples.,",
+              "Errors: Sources of errors, types of errors, methods of minimizing",
+              "errors, accuracy, precision, and significant figures., Impurities:",
+              "Definition, types, contents, and regulatory importance. Sources and",
+              "types of impurities in Pharmaceuticals, limit tests for chloride,",
+              "sulphate, iron, arsenic, lead, heavy metals, and modified limit test",
+              "for chloride and sulphate."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Acid-Base Chemistry and Buffer Systems in Pharmacy",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Definition of acids, bases, buffers, pH Scale and its significance,",
+              "Buffer equation, calculation of pH for Buffer solution. Isotonicity",
+              "and its application in IV Fluids and Ophthalmic Solutions., Major",
+              "extra and intracellular electrolytes: Functions of major physiological",
+              "ions, Electrolytes used in the replacement therapy: Sodium chloride,",
+              "Potassium chloride, Calcium chloride, and Oral Rehydration Salt",
+              "(ORS), Physiological acid-base balance."
+            ],
+            "topics_text": "Definition of acids, bases, buffers, pH Scale and its significance, Buffer equation, calculation of pH for Buffer solution. Isotonicity and its application in IV Fluids and Ophthalmic Solutions., Major extra and intracellular electrolytes: Functions of major physiological ions, Electrolytes used in the replacement therapy: Sodium chloride, Potassium chloride, Calcium chloride, and Oral Rehydration Salt (ORS), Physiological acid-base balance.",
+            "topics": [
+              "Definition of acids, bases, buffers, pH Scale and its significance,",
+              "Buffer equation, calculation of pH for Buffer solution. Isotonicity",
+              "and its application in IV Fluids and Ophthalmic Solutions., Major",
+              "extra and intracellular electrolytes: Functions of major physiological",
+              "ions, Electrolytes used in the replacement therapy: Sodium chloride,",
+              "Potassium chloride, Calcium chloride, and Oral Rehydration Salt",
+              "(ORS), Physiological acid-base balance."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Acid base titrations",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Theories of acid-base indicators, classification of acid-base",
+              "titrations. Preparation and standardization of titrants, viz.,",
+              "hydrochloric acid and sodium hydroxide. Theory involved in",
+              "titrations of strong, weak, and very weak acids and bases,",
+              "neutralization curves. Assay of Ammonium Hydroxide., Non-",
+              "aqueous titrations: Types of solvents used, acidimetric and",
+              "alkalimetric titration using non-aqueous solvents. Preparation and",
+              "standardization of acidic and basic titrants. Estimation of weakly",
+              "acidic and basic substances using non-aqueous titrants, estimation of",
+              "Sodium benzoate., Precipitation titrations and gravimetry: Principle",
+              "and steps involved in gravimetric analysis, Mohr’s method,",
+              "Volhard’s, Modified Volhard’s, Fajans method. Estimation of",
+              "barium sulphate by gravimetry. , Complexometric titrations:",
+              "Classification, metal ion indicators, masking and demasking",
+              "reagents, preparation and standardization of disodium EDTA.",
+              "Estimation of Magnesium sulphate and Calcium gluconate., Redox",
+              "titrations: Concepts of oxidation and reduction, Types of redox",
+              "titrations viz. Permanganometry, Cerimetry, Iodimetry, Iodometry,",
+              "and titrations with potassium iodate."
+            ],
+            "topics_text": "Theories of acid-base indicators, classification of acid-base titrations. Preparation and standardization of titrants, viz., hydrochloric acid and sodium hydroxide. Theory involved in titrations of strong, weak, and very weak acids and bases, neutralization curves. Assay of Ammonium Hydroxide., Non- aqueous titrations: Types of solvents used, acidimetric and alkalimetric titration using non-aqueous solvents. Preparation and standardization of acidic and basic titrants. Estimation of weakly acidic and basic substances using non-aqueous titrants, estimation of Sodium benzoate., Precipitation titrations and gravimetry: Principle and steps involved in gravimetric analysis, Mohr’s method, Volhard’s, Modified Volhard’s, Fajans method. Estimation of barium sulphate by gravimetry. , Complexometric titrations: Classification, metal ion indicators, masking and demasking reagents, preparation and standardization of disodium EDTA. Estimation of Magnesium sulphate and Calcium gluconate., Redox titrations: Concepts of oxidation and reduction, Types of redox titrations viz. Permanganometry, Cerimetry, Iodimetry, Iodometry, and titrations with potassium iodate.",
+            "topics": [
+              "Theories of acid-base indicators, classification of acid-base",
+              "titrations. Preparation and standardization of titrants, viz.,",
+              "hydrochloric acid and sodium hydroxide. Theory involved in",
+              "titrations of strong, weak, and very weak acids and bases,",
+              "neutralization curves. Assay of Ammonium Hydroxide., Non",
+              "aqueous titrations: Types of solvents used, acidimetric and",
+              "alkalimetric titration using non-aqueous solvents. Preparation and",
+              "standardization of acidic and basic titrants. Estimation of weakly",
+              "acidic and basic substances using non-aqueous titrants, estimation of",
+              "Sodium benzoate., Precipitation titrations and gravimetry: Principle",
+              "and steps involved in gravimetric analysis, Mohr’s method,",
+              "Volhard’s, Modified Volhard’s, Fajans method. Estimation of",
+              "barium sulphate by gravimetry. , Complexometric titrations:",
+              "Classification, metal ion indicators, masking and demasking",
+              "reagents, preparation and standardization of disodium EDTA.",
+              "Estimation of Magnesium sulphate and Calcium gluconate., Redox",
+              "titrations: Concepts of oxidation and reduction, Types of redox",
+              "titrations viz. Permanganometry, Cerimetry, Iodimetry, Iodometry,",
+              "and titrations with potassium iodate."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Gastrointestinal agents",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Acidifiers: Sodium acid phosphate and Dilute Hydrochloric acid.",
+              "Antacids: Ideal properties of antacids, combinations of antacids,",
+              "Sodium bicarbonate*, Aluminium hydroxide gel*., Agents promote",
+              "bowel movements: Magnesium hydroxide, Sodium orthophosphate,",
+              "Sodium Potassium tartrate, and magnesium trisilicate.",
+              "Antimicrobials: Mechanism, classification, Potassium",
+              "permanganate, Boric acid, Hydrogen peroxide*, Chlorinated lime*,",
+              "Iodine and its preparations. , Radiopharmaceuticals: Basics of",
+              "radioactivity, applications of radioisotopes of Sodium Iodide I-131,",
+              "Technetium-99m, Cobalt-60, Phosphorus-32, including safe",
+              "handling, storage, and disposal of radiopharmaceuticals, adhering to",
+              "regulatory guidelines for safety."
+            ],
+            "topics_text": "Acidifiers: Sodium acid phosphate and Dilute Hydrochloric acid. Antacids: Ideal properties of antacids, combinations of antacids, Sodium bicarbonate*, Aluminium hydroxide gel*., Agents promote bowel movements: Magnesium hydroxide, Sodium orthophosphate, Sodium Potassium tartrate, and magnesium trisilicate. Antimicrobials: Mechanism, classification, Potassium permanganate, Boric acid, Hydrogen peroxide*, Chlorinated lime*, Iodine and its preparations. , Radiopharmaceuticals: Basics of radioactivity, applications of radioisotopes of Sodium Iodide I-131, Technetium-99m, Cobalt-60, Phosphorus-32, including safe handling, storage, and disposal of radiopharmaceuticals, adhering to regulatory guidelines for safety.",
+            "topics": [
+              "Acidifiers: Sodium acid phosphate and Dilute Hydrochloric acid.",
+              "Antacids: Ideal properties of antacids, combinations of antacids,",
+              "Sodium bicarbonate*, Aluminium hydroxide gel*., Agents promote",
+              "bowel movements: Magnesium hydroxide, Sodium orthophosphate,",
+              "Sodium Potassium tartrate, and magnesium trisilicate.",
+              "Antimicrobials: Mechanism, classification, Potassium",
+              "permanganate, Boric acid, Hydrogen peroxide*, Chlorinated lime*,",
+              "Iodine and its preparations. , Radiopharmaceuticals: Basics of",
+              "radioactivity, applications of radioisotopes of Sodium Iodide I-131,",
+              "Technetium-99m, Cobalt-60, Phosphorus-32, including safe",
+              "handling, storage, and disposal of radiopharmaceuticals, adhering to",
+              "regulatory guidelines for safety."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Miscellaneous Compounds",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Expectorants: Potassium iodide, Ammonium chloride*., Emetics:",
+              "Copper sulphate*, Sodium potassium tartrate., Haematinics: Ferrous",
+              "sulphate*, Ferrous gluconate., Poison and Antidote: Definition,",
+              "classification of antidotes, Sodium thiosulphate",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Bentley and Driver’s Textbook of Pharmaceutical Chemistry, R. Bentley, J. Driver, Oxford",
+              "University Press, 2020",
+              "2 Inorganic Pharmaceutical Chemistry, M.L. Schroff, CBS Publishers / Oxford Book",
+              "Company, 2008",
+              "3 Pharmaceutical Chemistry-I, Chatwal G.R., Himalaya Publishing House, 2025",
+              "4 Essentials of Pharmaceutical Chemistry, Donald Cairns, Pharmaceutical Press, 2012",
+              "5 Pharmaceutical Chemistry, S.H. Ansari, CBS Publishers, 2022",
+              "6 Practical Pharmaceutical Chemistry, A.H. Beckett, J.B. Stenlake, CBS Publishers, 2020",
+              "7 Quantitative Pharmaceutical Chemistry, Jenkins & Knevel, McGraw Hill, 1977"
+            ],
+            "topics_text": "Expectorants: Potassium iodide, Ammonium chloride*., Emetics: Copper sulphate*, Sodium potassium tartrate., Haematinics: Ferrous sulphate*, Ferrous gluconate., Poison and Antidote: Definition, classification of antidotes, Sodium thiosulphate Total Hours 45 Textbook : 1 Bentley and Driver’s Textbook of Pharmaceutical Chemistry, R. Bentley, J. Driver, Oxford University Press, 2020 2 Inorganic Pharmaceutical Chemistry, M.L. Schroff, CBS Publishers / Oxford Book Company, 2008 3 Pharmaceutical Chemistry-I, Chatwal G.R., Himalaya Publishing House, 2025 4 Essentials of Pharmaceutical Chemistry, Donald Cairns, Pharmaceutical Press, 2012 5 Pharmaceutical Chemistry, S.H. Ansari, CBS Publishers, 2022 6 Practical Pharmaceutical Chemistry, A.H. Beckett, J.B. Stenlake, CBS Publishers, 2020 7 Quantitative Pharmaceutical Chemistry, Jenkins & Knevel, McGraw Hill, 1977",
+            "topics": [
+              "Expectorants: Potassium iodide, Ammonium chloride*., Emetics:",
+              "Copper sulphate*, Sodium potassium tartrate., Haematinics: Ferrous",
+              "sulphate*, Ferrous gluconate., Poison and Antidote: Definition,",
+              "classification of antidotes, Sodium thiosulphate",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Bentley and Driver’s Textbook of Pharmaceutical Chemistry, R. Bentley, J. Driver, Oxford",
+              "University Press, 2020",
+              "2 Inorganic Pharmaceutical Chemistry, M.L. Schroff, CBS Publishers / Oxford Book",
+              "Company, 2008",
+              "3 Pharmaceutical Chemistry-I, Chatwal G.R., Himalaya Publishing House, 2025",
+              "4 Essentials of Pharmaceutical Chemistry, Donald Cairns, Pharmaceutical Press, 2012",
+              "5 Pharmaceutical Chemistry, S.H. Ansari, CBS Publishers, 2022",
+              "6 Practical Pharmaceutical Chemistry, A.H. Beckett, J.B. Stenlake, CBS Publishers, 2020",
+              "7 Quantitative Pharmaceutical Chemistry, Jenkins & Knevel, McGraw Hill, 1977"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Vogel’s Textbook of Quantitative Chemical Analysis, Vogel’s Textbook of Quantitative Chemical Analysis, A.I. Vogel, Pearson Education, 2009",
+          "Practical Pharmaceutical Chemistry Part I & II, Practical Pharmaceutical Chemistry Part I & II, Beckett & Stenlake, Athlone Press, 1988",
+          "Indian Pharmacopoeia, Indian Pharmacopoeia, Indian Pharmacopoeia Commission, IPC, Ghaziabad, 2026",
+          "Remington: The Science and Practice of Pharmacy, Remington: The Science and Practice of Pharmacy, Adejare (Ed.), Pharmaceutical Press, 2020",
+          "Martindale: The Complete Drug Reference, Martindale: The Complete Drug Reference, Pharmaceutical Press, Pharmaceutical Press, 2024",
+          "Handbook of Pharmaceutical Analysis, Handbook of Pharmaceutical Analysis, Raman B. Patel, CRC Press, 2012",
+          "Analytical Chemistry, Analytical Chemistry, Gary D. Christian, Wiley, 2013",
+          "USP–NF (United States Pharmacopeia–National Formulary), USP–NF (United States Pharmacopeia–National Formulary), USP Convention, USP, 2024"
+        ],
+        "textbooks": [
+          "Bentley and Driver’s Textbook of Pharmaceutical Chemistry, R. Bentley, J. Driver, Oxford University Press, 2020",
+          "Inorganic Pharmaceutical Chemistry, M.L. Schroff, CBS Publishers / Oxford Book Company, 2008",
+          "Pharmaceutical Chemistry-I, Chatwal G.R., Himalaya Publishing House, 2025",
+          "Essentials of Pharmaceutical Chemistry, Donald Cairns, Pharmaceutical Press, 2012",
+          "Pharmaceutical Chemistry, S.H. Ansari, CBS Publishers, 2022",
+          "Practical Pharmaceutical Chemistry, A.H. Beckett, J.B. Stenlake, CBS Publishers, 2020",
+          "Quantitative Pharmaceutical Chemistry, Jenkins & Knevel, McGraw Hill, 1977"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "Indian Pharmacopoeia Commission: https://ipc.gov.in",
+          "Central Drugs Standard Control Organization (CDSCO): https://cdsco.gov.in",
+          "World Health Organization Medicines: https://www.who.int/health-topics/medicines",
+          "United States Pharmacopeia: https://www.usp.org",
+          "British Pharmacopoeia: https://www.pharmacopoeia.com"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 10459,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       BACHELOR OF PHARMACY\nSEMESTER         1\nCOURSE TITLE    PHARMACEUTICAL INORGANIC AND ANALYTICAL\n               CHEMISTRY\nCOURSE CODE     13PH0106T\nCOURSE CREDITS  3\n\nObjective:\n 1  Understand the importance of errors and impurities in pharmaceuticals.\n 2  Comprehend the principles of buffer systems.\n 3  Develop skills in performing and interpreting limit tests and titrimetric analysis.\n 4  Emphasize the importance of inorganic compounds and radiopharmaceuticals in Pharmacy.\n 5  Explain the synthesis and analysis of inorganic compounds/products of pharmaceutical\n     importance.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Identify sources and types of errors in pharmaceutical analysis and impurity products.\n 2  Apply concepts of acid-base chemistry, buffer systems with importance of electrolytes.\n 3  Describe and differentiate various analytical techniques used in pharmaceutical analysis,\n     including titrimetric methods, and their specific applications in quality assessment.\n 4  Analyze the properties, mechanisms, and therapeutic uses of gastrointestinal agents,\n     radiopharmaceuticals, expectorants, antidotes, and other pharmaceutical compounds,\n      illustrating their roles in therapy and safety considerations.\n 5  Describe the drugs used in expectorants, emetics, haematinics, poison and antidote, and\n     astringents.\n\n\nPre-requisite of course:1. Basic understanding of general chemistry concepts such as atoms,\nmolecules, ions, acids, bases, and salts, 2. Knowledge of chemical equations, balancing\nreactions, and stoichiometry, 3. Familiarity with concentration terms such as molarity,\nnormality, percentage strength, and dilution, 4. Elementary understanding of inorganic\ncompounds and their pharmaceutical uses.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            0        45     15      15        0          0\n\n\n\n\n\nDR. ASHISHKUMAR VRAJLAL KYADA                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to pharmaceutical analysis                     7\n               Different techniques of analysis, Methods of expressing the strength\n              of solutions, Primary and secondary standards with examples.,\n               Errors: Sources of errors, types of errors, methods of minimizing\n                errors, accuracy, precision, and significant figures., Impurities:\n               Definition, types, contents, and regulatory importance. Sources and\n              types of impurities in Pharmaceuticals, limit tests for chloride,\n               sulphate, iron, arsenic, lead, heavy metals, and modified limit test\n               for chloride and sulphate.\n     2      Acid-Base Chemistry and Buffer Systems in Pharmacy         8\n               Definition of acids, bases, buffers, pH Scale and its significance,\n              Buffer equation, calculation of pH for Buffer solution. Isotonicity\n            and its application in IV Fluids and Ophthalmic Solutions., Major\n               extra and intracellular electrolytes: Functions of major physiological\n                ions, Electrolytes used in the replacement therapy: Sodium chloride,\n             Potassium chloride, Calcium chloride, and Oral Rehydration Salt\n             (ORS), Physiological acid-base balance.\n     3      Acid base titrations                                       14\n              Theories of acid-base indicators, classification of acid-base\n                 titrations. Preparation and standardization of titrants, viz.,\n              hydrochloric acid and sodium hydroxide. Theory involved in\n                 titrations of strong, weak, and very weak acids and bases,\n               neutralization curves. Assay of Ammonium Hydroxide., Non-\n             aqueous titrations: Types of solvents used, acidimetric and\n               alkalimetric titration using non-aqueous solvents. Preparation and\n               standardization of acidic and basic titrants. Estimation of weakly\n               acidic and basic substances using non-aqueous titrants, estimation of\n            Sodium benzoate., Precipitation titrations and gravimetry: Principle\n            and steps involved in gravimetric analysis, Mohr’s method,\n              Volhard’s, Modified Volhard’s, Fajans method. Estimation of\n             barium sulphate by gravimetry. , Complexometric titrations:\n                Classification, metal ion indicators, masking and demasking\n               reagents, preparation and standardization of disodium EDTA.\n              Estimation of Magnesium sulphate and Calcium gluconate., Redox\n                 titrations: Concepts of oxidation and reduction, Types of redox\n                 titrations viz. Permanganometry, Cerimetry, Iodimetry, Iodometry,\n            and titrations with potassium iodate.\n     4       Gastrointestinal agents                                    10\n               Acidifiers: Sodium acid phosphate and Dilute Hydrochloric acid.\n              Antacids: Ideal properties of antacids, combinations of antacids,\n            Sodium bicarbonate*, Aluminium hydroxide gel*., Agents promote\n            bowel movements: Magnesium hydroxide, Sodium orthophosphate,\n            Sodium Potassium tartrate, and magnesium trisilicate.\n              Antimicrobials: Mechanism, classification, Potassium\n             permanganate, Boric acid, Hydrogen peroxide*, Chlorinated lime*,\n              Iodine and its preparations. , Radiopharmaceuticals: Basics of\n                radioactivity, applications of radioisotopes of Sodium Iodide I-131,\n             Technetium-99m, Cobalt-60, Phosphorus-32, including safe\n              handling, storage, and disposal of radiopharmaceuticals, adhering to\n               regulatory guidelines for safety.\n\nDR. ASHISHKUMAR VRAJLAL KYADA                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5      Miscellaneous Compounds                                 6\n              Expectorants: Potassium iodide, Ammonium chloride*., Emetics:\n            Copper sulphate*, Sodium potassium tartrate., Haematinics: Ferrous\n               sulphate*, Ferrous gluconate., Poison and Antidote: Definition,\n                classification of antidotes, Sodium thiosulphate\n                               Total Hours                       45\n\n\nTextbook :\n 1  Bentley and Driver’s Textbook of Pharmaceutical Chemistry, R. Bentley, J. Driver, Oxford\n     University Press, 2020\n 2  Inorganic Pharmaceutical Chemistry, M.L. Schroff, CBS Publishers / Oxford Book\n    Company, 2008\n 3  Pharmaceutical Chemistry-I, Chatwal G.R., Himalaya Publishing House, 2025\n 4  Essentials of Pharmaceutical Chemistry, Donald Cairns, Pharmaceutical Press, 2012\n 5  Pharmaceutical Chemistry, S.H. Ansari, CBS Publishers, 2022\n 6  Practical Pharmaceutical Chemistry, A.H. Beckett, J.B. Stenlake, CBS Publishers, 2020\n 7  Quantitative Pharmaceutical Chemistry, Jenkins & Knevel, McGraw Hill, 1977\n\nReferences:\n 1  Vogel’s Textbook of Quantitative Chemical Analysis, Vogel’s Textbook of Quantitative\n    Chemical Analysis, A.I. Vogel, Pearson Education, 2009\n 2  Practical Pharmaceutical Chemistry Part I & II, Practical Pharmaceutical Chemistry Part I\n   & II, Beckett & Stenlake, Athlone Press, 1988\n 3  Indian Pharmacopoeia, Indian Pharmacopoeia, Indian Pharmacopoeia Commission, IPC,\n    Ghaziabad, 2026\n 4  Remington: The Science and Practice of Pharmacy, Remington: The Science and Practice\n     of Pharmacy, Adejare (Ed.), Pharmaceutical Press, 2020\n 5  Martindale: The Complete Drug Reference, Martindale: The Complete Drug Reference,\n     Pharmaceutical Press, Pharmaceutical Press, 2024\n 6  Handbook of Pharmaceutical Analysis, Handbook of Pharmaceutical Analysis, Raman B.\n     Patel, CRC Press, 2012\n 7  Analytical Chemistry, Analytical Chemistry, Gary D. Christian, Wiley, 2013\n 8  USP–NF (United States Pharmacopeia–National Formulary), USP–NF (United States\n    Pharmacopeia–National Formulary), USP Convention, USP, 2024\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\n\n\nDR. ASHISHKUMAR VRAJLAL KYADA                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    22.00         28.00         24.00         18.00          6.00           2.00\n\nInstructional Method:\n 1  Chalk-and-board numerical problem solving\n 2  Case studies on pharmaceutical impurities and quality control\n 3  Problem-based learning for assay calculations\n 4  Seminar on radiopharmaceutical safety and applications\n 5  Quiz-based formative assessment\n 6  Industry-oriented discussion on pharmacopoeial standards\n\nSupplementary Resources:\n 1  Indian Pharmacopoeia Commission: https://ipc.gov.in\n 2  Central Drugs Standard Control Organization (CDSCO): https://cdsco.gov.in\n 3  World Health Organization Medicines: https://www.who.int/health-topics/medicines\n 4  United States Pharmacopeia: https://www.usp.org\n 5  British Pharmacopoeia: https://www.pharmacopoeia.com\n\n\n\n\n\nDR. ASHISHKUMAR VRAJLAL KYADA                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata."
+      ],
+      "actual_pdf_sha256": "b3b6f0dbed97502218ef179391b4ec654d0cd5b22561704e20711d01dd2089a7",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "37013168010301",
+      "subject_name": "Pharmaceutics I",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "37001329010101",
+      "subject_name": "Remedial Biology *",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "37013131010101",
+      "subject_name": "Remedial Mathematics*",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 1,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 6,
+    "extraction_errors": 0
+  }
+}

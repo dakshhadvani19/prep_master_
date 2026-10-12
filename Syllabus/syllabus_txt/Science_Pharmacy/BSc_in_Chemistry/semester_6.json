@@ -1,0 +1,523 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-sc-in-chemistry",
+    "course_name": "B.Sc in Chemistry",
+    "output_slug": "BSc_in_Chemistry"
+  },
+  "semester": 6,
+  "subject_count": 4,
+  "subjects": [
+    {
+      "subject_id": "31002325035101",
+      "subject_name": "Advanced Inorganic & Industrial Chemistry",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 6,
+      "subject_code": "02CY0355",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/Advanced-Inorganic-Industrial-Chemistry-02CY0355.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Advanced Inorganic & Industrial Chemistry [933d760df1e7].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Advanced Inorganic & Industrial Chemistry [933d760df1e7].pdf",
+      "expected_pdf_sha256": "d3be3edd25da199705828ca7c5c2d1967777478e442023a896baca45d21e269e",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ADVANCED INORGANIC & INDUSTRIAL CHEMISTRY",
+        "course_code": "02CY0355",
+        "semester_label": "6",
+        "credits": 4,
+        "prerequisite": "To understand advanced concepts of inorganic and industrial chemistry."
+      },
+      "objectives": [
+        "To study the introduction, classification, properties, and preparation of polymer",
+        "To study the famous concept of symmetry and its introduction.",
+        "To understand organometallic chemistry.",
+        "Obtain the information regarding polymer and their applications.",
+        "Understand the basic of fertilizers.",
+        "Will get an idea regarding the importance of petrochemicals in current scenario."
+      ],
+      "course_outcomes": [
+        "Understand the concepts of term symmetry",
+        "Be aware of the knowledge of organometallic chemistry.",
+        "Obtain the information regarding polymer and their applications.",
+        "Understand the basic of fertilizers.",
+        "Will get an idea regarding the importance of petrochemicals in current scenario. Pre-requisite of course:To understand advanced concepts of inorganic and industrial chemistry."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Symmetry",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Introduction, symmetry element, symmetry operation,Equivalent",
+              "symmetry elements and equivalent atoms, General relations",
+              "amongst symmetry elements and symmetry operation, symmetry",
+              "classification of molecules, classes of symmetry operations"
+            ],
+            "topics_text": "Introduction, symmetry element, symmetry operation,Equivalent symmetry elements and equivalent atoms, General relations amongst symmetry elements and symmetry operation, symmetry classification of molecules, classes of symmetry operations",
+            "topics": [
+              "Introduction, symmetry element, symmetry operation,Equivalent",
+              "symmetry elements and equivalent atoms, General relations",
+              "amongst symmetry elements and symmetry operation, symmetry",
+              "classification of molecules, classes of symmetry operations"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Organometallic Chemistry",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Introduction, nomenclature of organometallic compounds, ionic",
+              "organometallic compounds, organometallic compounds of various",
+              "group, 18 electron rule, counting of effective numbers of electrons,",
+              "metal carbonyl, metal nitrosyl, nomenclature of organometallic",
+              "compounds"
+            ],
+            "topics_text": "Introduction, nomenclature of organometallic compounds, ionic organometallic compounds, organometallic compounds of various group, 18 electron rule, counting of effective numbers of electrons, metal carbonyl, metal nitrosyl, nomenclature of organometallic compounds",
+            "topics": [
+              "Introduction, nomenclature of organometallic compounds, ionic",
+              "organometallic compounds, organometallic compounds of various",
+              "group, 18 electron rule, counting of effective numbers of electrons,",
+              "metal carbonyl, metal nitrosyl, nomenclature of organometallic",
+              "compounds"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Polymers",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction, classification of polymer, types of polymerisation",
+              "reaction, addition polymerisation, Ziegler-natta catalysed",
+              "polymerisation, stereochemistry of polymers, types of plastic,",
+              "synthesis of Bakelite, phenol formaldehyde, melamine, Teflon, and",
+              "polychloroprene, Low density polyethylene, high density",
+              "polyethylene."
+            ],
+            "topics_text": "Introduction, classification of polymer, types of polymerisation reaction, addition polymerisation, Ziegler-natta catalysed polymerisation, stereochemistry of polymers, types of plastic, synthesis of Bakelite, phenol formaldehyde, melamine, Teflon, and polychloroprene, Low density polyethylene, high density polyethylene.",
+            "topics": [
+              "Introduction, classification of polymer, types of polymerisation",
+              "reaction, addition polymerisation, Ziegler-natta catalysed",
+              "polymerisation, stereochemistry of polymers, types of plastic,",
+              "synthesis of Bakelite, phenol formaldehyde, melamine, Teflon, and",
+              "polychloroprene, Low density polyethylene, high density",
+              "polyethylene."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Fertilizers",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction, Plant nutrients and its role, Classification of fertilizers,",
+              "Properties of fertilizers, Nitrogeneous fertilizers like urea,",
+              "ammonium nitrate, ammonium sulphate, Calcium cyanamide,",
+              "Phosphate fertilizers like super phosphate, triple super phosphate,",
+              "mono ammonium phosphate, diammonium phosphate, Potassium",
+              "fertilizers like potassium chloride, potassium sulphate, potassium",
+              "nitrate, nomenclature in fertilizer industry."
+            ],
+            "topics_text": "Introduction, Plant nutrients and its role, Classification of fertilizers, Properties of fertilizers, Nitrogeneous fertilizers like urea, ammonium nitrate, ammonium sulphate, Calcium cyanamide, Phosphate fertilizers like super phosphate, triple super phosphate, mono ammonium phosphate, diammonium phosphate, Potassium fertilizers like potassium chloride, potassium sulphate, potassium nitrate, nomenclature in fertilizer industry.",
+            "topics": [
+              "Introduction, Plant nutrients and its role, Classification of fertilizers,",
+              "Properties of fertilizers, Nitrogeneous fertilizers like urea,",
+              "ammonium nitrate, ammonium sulphate, Calcium cyanamide,",
+              "Phosphate fertilizers like super phosphate, triple super phosphate,",
+              "mono ammonium phosphate, diammonium phosphate, Potassium",
+              "fertilizers like potassium chloride, potassium sulphate, potassium",
+              "nitrate, nomenclature in fertilizer industry."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Petrochemicals",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction, petrochemicals from C1, petrochemicals from C2,",
+              "petrochemicals from C3.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 A Textbook of Physical Chemistry, K L Kapoor, Macmillan, 2004",
+              "2 Industrial Inorganic Chemistry, Karl Heinz Büchel, John Wiley & Sons, 2008"
+            ],
+            "topics_text": "Introduction, petrochemicals from C1, petrochemicals from C2, petrochemicals from C3. Total Hours 60 Textbook : 1 A Textbook of Physical Chemistry, K L Kapoor, Macmillan, 2004 2 Industrial Inorganic Chemistry, Karl Heinz Büchel, John Wiley & Sons, 2008",
+            "topics": [
+              "Introduction, petrochemicals from C1, petrochemicals from C2,",
+              "petrochemicals from C3.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 A Textbook of Physical Chemistry, K L Kapoor, Macmillan, 2004",
+              "2 Industrial Inorganic Chemistry, Karl Heinz Büchel, John Wiley & Sons, 2008"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Physical Chemistry, Physical Chemistry, Castellan G. W., Narosa Publishing House, 2004",
+          "Essentials of Physical Chemistry, Essentials of Physical Chemistry, Arun Bahl, S Chand Publishing, 2022",
+          "Principal Of Inorganic Chemistry, Principal Of Inorganic Chemistry, K.C. KaliaB.R. PuriL.R. Sharma, VISHAL PUBLISHING CO., 2020",
+          "Concise Inorganic Chemistry, Concise Inorganic Chemistry, J. D. Lee, John Wiley & Sons, 2008"
+        ],
+        "textbooks": [
+          "A Textbook of Physical Chemistry, K L Kapoor, Macmillan, 2004",
+          "Industrial Inorganic Chemistry, Karl Heinz Büchel, John Wiley & Sons, 2008"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "1. http://nptel.ac.in/course.php?disciplineId=104 2. http://ocw.mit.edu/courses/chemistry/ 3. http://vlab.amrita.edu/index.php?sub=2 4. https://www.youtube.com/user/TMPChem 5. https://www.youtube.com/channel/UCqk-dmk3AOFtikaFDpsZorg",
+          "http://ocw.mit.edu/courses/chemistry/",
+          "http://vlab.amrita.edu/index.php?sub=2",
+          "http://www.vlab.co.in/ba_labs_all.php?id=9",
+          "https://www.youtube.com/user/TMPChem",
+          "https://www.youtube.com/playlist?list=PL166048DD75B05C0D",
+          "https://www.youtube.com/channel/UCqk-dmk3AOFtikaFDpsZorg",
+          "https://www.youtube.com/user/PradeepKshetrapal"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7015,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF SCIENCE\nPROGRAM       BACHELOR OF SCIENCE (CHEMISTRY)\nSEMESTER         6\nCOURSE TITLE   ADVANCED INORGANIC & INDUSTRIAL CHEMISTRY\nCOURSE CODE     02CY0355\nCOURSE CREDITS  4\n\nObjective:\n 1  To study the introduction, classification, properties, and preparation of polymer\n 2  To study the famous concept of symmetry and its introduction.\n 3  To understand organometallic chemistry.\n 4  Obtain the information regarding polymer and their applications.\n 5  Understand the basic of fertilizers.\n 6  Will get an idea regarding the importance of petrochemicals in current scenario.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the concepts of term symmetry\n 2  Be aware of the knowledge of organometallic chemistry.\n 3  Obtain the information regarding polymer and their applications.\n 4  Understand the basic of fertilizers.\n 5  Will get an idea regarding the importance of petrochemicals in current scenario.\n\n\nPre-requisite of course:To understand advanced concepts of inorganic and industrial\nchemistry.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Symmetry                                               15\n               Introduction, symmetry element, symmetry operation,Equivalent\n            symmetry elements and equivalent atoms, General relations\n            amongst symmetry elements and symmetry operation, symmetry\n                classification of molecules, classes of symmetry operations\n\n\n\n\n\nDR. SURANJANA VISHALBHAI MAYANI                DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Organometallic Chemistry                                 15\n               Introduction, nomenclature of organometallic compounds, ionic\n              organometallic compounds, organometallic compounds of various\n              group, 18 electron rule, counting of effective numbers of electrons,\n             metal carbonyl, metal nitrosyl, nomenclature of organometallic\n            compounds\n     3      Polymers                                                10\n               Introduction, classification of polymer, types of polymerisation\n                reaction, addition polymerisation, Ziegler-natta catalysed\n              polymerisation, stereochemistry of polymers, types of plastic,\n               synthesis of Bakelite, phenol formaldehyde, melamine, Teflon, and\n              polychloroprene, Low density polyethylene, high density\n              polyethylene.\n     4       Fertilizers                                               10\n               Introduction, Plant nutrients and its role, Classification of fertilizers,\n               Properties of fertilizers, Nitrogeneous fertilizers like urea,\n          ammonium nitrate, ammonium sulphate, Calcium cyanamide,\n             Phosphate fertilizers like super phosphate, triple super phosphate,\n          mono ammonium phosphate, diammonium phosphate, Potassium\n                 fertilizers like potassium chloride, potassium sulphate, potassium\n                 nitrate, nomenclature in fertilizer industry.\n     5      Petrochemicals                                           10\n               Introduction, petrochemicals from C1, petrochemicals from C2,\n              petrochemicals from C3.\n                               Total Hours                       60\n\n\nTextbook :\n 1 A Textbook of Physical Chemistry, K L Kapoor, Macmillan, 2004\n 2  Industrial Inorganic Chemistry, Karl Heinz Büchel, John Wiley & Sons, 2008\n\nReferences:\n 1  Physical Chemistry, Physical Chemistry, Castellan G. W., Narosa Publishing House, 2004\n 2  Essentials of Physical Chemistry, Essentials of Physical Chemistry, Arun Bahl, S Chand\n     Publishing, 2022\n 3  Principal Of Inorganic Chemistry, Principal Of Inorganic Chemistry, K.C. KaliaB.R.\n     PuriL.R. Sharma, VISHAL PUBLISHING CO., 2020\n 4  Concise Inorganic Chemistry, Concise Inorganic Chemistry, J. D. Lee, John Wiley & Sons,\n    2008\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\nDR. SURANJANA VISHALBHAI MAYANI                DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         20.00         30.00         30.00         10.00\n\nInstructional Method:\n 1  The teacher in addition to conventional teaching method by black board, may also use any\n     of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n 5  Use of hazardous/toxic chemicals should be avoided as far as possible in laboratory.\n 6  All students in the laboratory must wear safety goggles and lab coats during lab session.\n\nSupplementary Resources:\n 1   1. http://nptel.ac.in/course.php?disciplineId=104 2. http://ocw.mit.edu/courses/chemistry/ 3.\n     http://vlab.amrita.edu/index.php?sub=2 4. https://www.youtube.com/user/TMPChem 5.\n    https://www.youtube.com/channel/UCqk-dmk3AOFtikaFDpsZorg\n 2  http://ocw.mit.edu/courses/chemistry/\n 3   http://vlab.amrita.edu/index.php?sub=2\n 4   http://www.vlab.co.in/ba_labs_all.php?id=9\n 5  https://www.youtube.com/user/TMPChem\n 6  https://www.youtube.com/playlist?list=PL166048DD75B05C0D\n 7  https://www.youtube.com/channel/UCqk-dmk3AOFtikaFDpsZorg\n 8  https://www.youtube.com/user/PradeepKshetrapal\n\n\n\n\n\nDR. SURANJANA VISHALBHAI MAYANI                DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "d3be3edd25da199705828ca7c5c2d1967777478e442023a896baca45d21e269e",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "31002325035201",
+      "subject_name": "Advanced Organic Chemistry",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 6,
+      "subject_code": "02CY0352",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/02CY0352_ADVANCED-ORGANIC-CHEMISTRY.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Advanced Organic Chemistry [c62be95d63d3].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Advanced Organic Chemistry [c62be95d63d3].pdf",
+      "expected_pdf_sha256": "e170c9fe1131cd5348b316206182642dab662d6ed81b2ea2a64da99c508818cb",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "ADVANCED ORGANIC CHEMISTRY",
+        "course_code": "02CY0352",
+        "semester_label": "6",
+        "credits": 6,
+        "prerequisite": "To understand advanced concepts in organic chemistry"
+      },
+      "objectives": [
+        "To study reactive intermediates, name reactions and rearrangements.",
+        "To make students capable of understanding reagents and its applications.",
+        "To study the introduction, classification and nomenclature of carbohydrates."
+      ],
+      "course_outcomes": [
+        "Understand the concepts of reactive intermediates, name reactions and rearrangements.",
+        "Be aware of the basics of regents and its applications .",
+        "Obtain the information regarding carbohydrates and its chemistry.",
+        "Obtain the information regarding carbohydrates configuration and synthesis. Pre-requisite of course:To understand advanced concepts in organic chemistry"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 5 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Organic Reactions And Their Mechanisms, Organic Reactions And Their Mechanisms, P.S. Kalsi, New Age International, 2009",
+          "Organic Chemistry, Organic Chemistry, Morrison Boyd, Pearson, 1991",
+          "Organic Chemistry, Organic Chemistry, S M Mukherji, S P Singh, R P Kapoor, R Dass, New Age International Publishers, 2012"
+        ],
+        "textbooks": [
+          "Essentials of Carbohydrate Chemistry, John F. Robyt, Springer New York, 2012",
+          "Organic Chemistry Reactions & Reagents, O.P. Agrawal, Krishna Prakashan, 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://nptel.ac.in/course.php?disciplineId=104",
+          "http://ocw.mit.edu/courses/chemistry/",
+          "http://vlab.amrita.edu/index.php?sub=2",
+          "http://www.vlab.co.in/ba_labs_all.php?id=9",
+          "https://www.youtube.com/user/TMPChem",
+          "https://www.youtube.com/playlist?list=PL166048DD75B05C0D",
+          "https://www.youtube.com/channel/UCqk-dmk3AOFtikaFDpsZorg"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6330,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF SCIENCE\nPROGRAM       BACHELOR OF SCIENCE (CHEMISTRY)\nSEMESTER         6\nCOURSE TITLE   ADVANCED ORGANIC CHEMISTRY\nCOURSE CODE     02CY0352\nCOURSE CREDITS  6\n\nObjective:\n 1  To study reactive intermediates, name reactions and rearrangements.\n 2  To make students capable of understanding reagents and its applications.\n 3  To study the introduction, classification and nomenclature of carbohydrates.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the concepts of reactive intermediates, name reactions and rearrangements.\n 2  Be aware of the basics of regents and its applications .\n 3  Obtain the information regarding carbohydrates and its chemistry.\n 4  Obtain the information regarding carbohydrates configuration and synthesis.\n\n\nPre-requisite of course:To understand advanced concepts in organic chemistry\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     5            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Reactive Intermediates, Name Reactions and Rearrangements\n          Homo and heterolytic fission, carbocations, carbanions, free\n                radicals, Introduction to carbenes, nitrenes, benzynes, ylides and\n             enamines.Ullmann reaction, Meerwein-pondorfvarley reaction,\n              Knorr-pyrole reaction, skraup synthesis, Hantzsch-pyridine\n               synthesis, Neber rearrangement, Stevens rearrangement, pinacol-\n              pinacolone rearrangement.\n     2      Reagents and its applications\n            Aluminium isopropoxide, N-bromosuccinimide, Diazomethane,\n             Lithium aluminium hydride, Manganese dioxide, wittig reagent,\n             Selenium dioxide.\n\n\n\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Carbohydrates\n               Introduction, classification and nomenclature, general reactions of\n             monosaccharides (with reference to glucose and fructose),\n              conversion of aldose to corresponding ketose, conversion of aldose\n               to next higher ketose (Wolform method), conversion of aldose to\n              ketose having two more carbon atoms (Sowden method), conversion\n              of ketose to corresponding aldose. Step-up reactions: Kiliani\n               reaction and Swodennitromethane reaction, Step-down reactions:\n             Ruff method, configuration of monosaccharides, ring structure of\n               aldoses, determination of ring size of glucose by methylation\n            method and periodic oxidation method, mutarotation of D(+)\n              glucose.\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiments\n             Experiment - 1, Experiment - 2, Experiment - 3, Experiment - 4,\n             Experiment - 5, Experiment - 6, Experiment - 7, Experiment - 8\n                               Total Hours\n\nTextbook :\n 1  Essentials of Carbohydrate Chemistry, John F. Robyt, Springer New York, 2012\n 2  Organic Chemistry Reactions & Reagents, O.P. Agrawal, Krishna Prakashan, 2019\n\nReferences:\n 1  Organic Reactions And Their Mechanisms, Organic Reactions And Their Mechanisms,\n     P.S. Kalsi, New Age International, 2009\n 2  Organic Chemistry, Organic Chemistry, Morrison Boyd, Pearson, 1991\n 3  Organic Chemistry, Organic Chemistry, S M Mukherji, S P Singh, R P Kapoor, R Dass,\n   New Age International Publishers, 2012\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    10.00         20.00         25.00         25.00         10.00         10.00\n\n\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 1  The teacher in addition to conventional teaching method by black board, may also use any\n     of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n 5  Use of hazardous/toxic chemicals should be avoided as far as possible in laboratory.\n 6  All students in the laboratory must wear safety goggles and lab coats during lab session.\n\nSupplementary Resources:\n 1  http://nptel.ac.in/course.php?disciplineId=104\n 2  http://ocw.mit.edu/courses/chemistry/\n 3  http://vlab.amrita.edu/index.php?sub=2\n 4  http://www.vlab.co.in/ba_labs_all.php?id=9\n 5  https://www.youtube.com/user/TMPChem\n 6  https://www.youtube.com/playlist?list=PL166048DD75B05C0D\n 7  https://www.youtube.com/channel/UCqk-dmk3AOFtikaFDpsZorg\n\n\n\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata.",
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "e170c9fe1131cd5348b316206182642dab662d6ed81b2ea2a64da99c508818cb",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "31002325035301",
+      "subject_name": "Advanced Physical Chemistry",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 6,
+      "subject_code": "02CY0353",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/02CY0353_ADVANCED-PHYSICAL-CHEMISTRY.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Advanced Physical Chemistry [9332487f167d].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Advanced Physical Chemistry [9332487f167d].pdf",
+      "expected_pdf_sha256": "cb6bb724fe7b959feee58a4032168eb5f375998111e1247e05b9bd686f7498b7",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ADVANCED PHYSICAL CHEMISTRY",
+        "course_code": "02CY0353",
+        "semester_label": "6",
+        "credits": 6,
+        "prerequisite": "To understand advanced topics in physical chemistry"
+      },
+      "objectives": [
+        "To study details of the nuclear chemistry.",
+        "To know more about activity and activity coefficient.",
+        "To study the introduction of the crystallography.",
+        "To study the Physical properties and chemical constitution."
+      ],
+      "course_outcomes": [
+        "Understand the concepts of nuclear chemistry",
+        "Will know more about the activity and activity coefficient",
+        "Obtain the information regarding crystallography and its various types. Brief idea regarding unit cell will also get",
+        "Understand the physical properties and chemical constitution Pre-requisite of course:To understand advanced topics in physical chemistry"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 5 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "cell will also get",
+            "contact_hours": null,
+            "topic_lines": [
+              "4 Understand the physical properties and chemical constitution",
+              "Pre-requisite of course:To understand advanced topics in physical chemistry"
+            ],
+            "topics_text": "4 Understand the physical properties and chemical constitution Pre-requisite of course:To understand advanced topics in physical chemistry",
+            "topics": [
+              "4 Understand the physical properties and chemical constitution",
+              "Pre-requisite of course:To understand advanced topics in physical chemistry"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Cell, What is Coordination Number of a Crystal Lattice, X-Ray",
+            "contact_hours": null,
+            "topic_lines": [
+              "Crystallography, Bragg’s Equation, Measurement of Diffraction",
+              "Angle, Rotating Crystal Method, Powder Method,Ionic Crystals,",
+              "Sodium Chloride Crystal, Cesium Chloride Crystal",
+              "4 Physical properties and chemical constitution",
+              "Surface Tension and Chemical Constitution, Use of Parachor",
+              "inElucidating Structure, Viscosity and Chemical Constitution,",
+              "Dunstan Rule, Molar Viscosity, Rheochor, Dipole Moment,",
+              "Determination of Dipole Moment, Dipole Moment and",
+              "MolecularStructure, Dipole Moment and Ionic Character, Molar",
+              "Refraction and Chemical Constitution, Optical Activity and",
+              "Chemical Constitution.(vapour pressure)"
+            ],
+            "topics_text": "Crystallography, Bragg’s Equation, Measurement of Diffraction Angle, Rotating Crystal Method, Powder Method,Ionic Crystals, Sodium Chloride Crystal, Cesium Chloride Crystal 4 Physical properties and chemical constitution Surface Tension and Chemical Constitution, Use of Parachor inElucidating Structure, Viscosity and Chemical Constitution, Dunstan Rule, Molar Viscosity, Rheochor, Dipole Moment, Determination of Dipole Moment, Dipole Moment and MolecularStructure, Dipole Moment and Ionic Character, Molar Refraction and Chemical Constitution, Optical Activity and Chemical Constitution.(vapour pressure)",
+            "topics": [
+              "Crystallography, Bragg’s Equation, Measurement of Diffraction",
+              "Angle, Rotating Crystal Method, Powder Method,Ionic Crystals,",
+              "Sodium Chloride Crystal, Cesium Chloride Crystal",
+              "4 Physical properties and chemical constitution",
+              "Surface Tension and Chemical Constitution, Use of Parachor",
+              "inElucidating Structure, Viscosity and Chemical Constitution,",
+              "Dunstan Rule, Molar Viscosity, Rheochor, Dipole Moment,",
+              "Determination of Dipole Moment, Dipole Moment and",
+              "MolecularStructure, Dipole Moment and Ionic Character, Molar",
+              "Refraction and Chemical Constitution, Optical Activity and",
+              "Chemical Constitution.(vapour pressure)"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Physical Chemistry, Physical Chemistry, Castellan G. W., Narosa Publishing House, 2004",
+          "Essentials of physical chemistry, Essentials of physical chemistry, Bahl, Arun, S. Chand Publishing, 1961",
+          "Physical chemistry, Physical chemistry, Mortimer, R. G., Academic Press, 2000",
+          "Physical chemistry, Physical chemistry, Silbey, R. J., Alberty, R. A., Papadantonakis, G. A., & Bawendi, M. G. (, John Wiley & Sons, 2022"
+        ],
+        "textbooks": [
+          "A Textbook Of Physical Chemistry, K. L. Kapoor, Mcgraw hill education private limited, 2021",
+          "A Textbook of Physical Chemistry, ARTHUR W. ADAMSON, Elsevier , 1973"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://nptel.ac.in/course.php?disciplineId=104",
+          "http://ocw.mit.edu/courses/chemistry/",
+          "http://vlab.amrita.edu/index.php?sub=2",
+          "http://www.vlab.co.in/ba_labs_all.php?id=9",
+          "https://www.youtube.com/user/TMPChem",
+          "https://www.youtube.com/playlist?list=PL166048DD75B05C0D",
+          "https://www.youtube.com/channel/UCqk-dmk3AOFtikaFDpsZorg",
+          "https://www.youtube.com/user/PradeepKshetrapal"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6836,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF SCIENCE\nPROGRAM       BACHELOR OF SCIENCE (CHEMISTRY)\nSEMESTER         6\nCOURSE TITLE   ADVANCED PHYSICAL CHEMISTRY\nCOURSE CODE     02CY0353\nCOURSE CREDITS  6\n\nObjective:\n 1  To study details of the nuclear chemistry.\n 2  To know more about activity and activity coefficient.\n 3  To study the introduction of the crystallography.\n 4  To study the Physical properties and chemical constitution.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the concepts of nuclear chemistry\n 2  Will know more about the activity and activity coefficient\n 3  Obtain the information regarding crystallography and its various types. Brief idea regarding\n     unit cell will also get\n 4  Understand the physical properties and chemical constitution\n\n\nPre-requisite of course:To understand advanced topics in physical chemistry\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     5            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Nuclear Chemistry\n               Introduction, Radioactivity, Types of Radiations, Properties of\n               Radiations, Detection and Measurement of Radioactivity, Types of\n              Radioactive Decay, The Group Displacement Law, Rate of\n              Radioactive Decay, Half-life, Radioactive Dating, Nuclear\n              Reactions, Nuclear Fission Reactions, Nuclear Fusion Reactions,.\n     2       Activity and activity coefficient\n               Introduction, Concept of activity, activity coefficient, mean activity,\n               ionic strength, methods of determining activity and activity\n                coefficient, Equation of Debye- Huckel\n\n\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Crystallography\n              Introduction,Types of Solids, Isotropy and Anisotropy, The habit of\n               aCrystal, Symmetry of Crystals, Miller Indices, How to Find Miller\n               Indices, Crystal Structure, Parameters of the Unit Cells, Cubic Unit\n                Cells, Three Types of Cubic Unit Cells, Calculation of Mass of the\n             Unit Cell, What is Coordination Number of a Crystal Lattice, X-Ray\n              Crystallography, Bragg’s Equation, Measurement of Diffraction\n             Angle, Rotating Crystal Method, Powder Method,Ionic Crystals,\n            Sodium Chloride Crystal, Cesium Chloride Crystal\n     4       Physical properties and chemical constitution\n              Surface Tension and Chemical Constitution, Use of Parachor\n              inElucidating Structure, Viscosity and Chemical Constitution,\n             Dunstan Rule, Molar Viscosity, Rheochor, Dipole Moment,\n             Determination of Dipole Moment, Dipole Moment and\n              MolecularStructure, Dipole Moment and Ionic Character, Molar\n              Refraction and Chemical Constitution, Optical Activity and\n            Chemical Constitution.(vapour pressure)\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiements\n             Experiement - 1, Experiement - 2, Experiement - 3, Experiement -\n                4, Experiement - 5, Experiement - 6, Experiement - 7, Experiement\n                  - 8\n                               Total Hours\n\nTextbook :\n 1 A Textbook Of Physical Chemistry, K. L. Kapoor, Mcgraw hill education private limited,\n    2021\n 2 A Textbook of Physical Chemistry, ARTHUR W. ADAMSON, Elsevier , 1973\n\nReferences:\n 1  Physical Chemistry, Physical Chemistry, Castellan G. W., Narosa Publishing House, 2004\n 2  Essentials of physical chemistry, Essentials of physical chemistry, Bahl, Arun, S. Chand\n     Publishing, 1961\n 3   Physical chemistry, Physical chemistry, Mortimer, R. G., Academic Press, 2000\n 4  Physical chemistry, Physical chemistry, Silbey, R. J., Alberty, R. A., Papadantonakis, G.\n     A., & Bawendi, M. G. (, John Wiley & Sons, 2022\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    10.00         20.00         25.00         25.00         10.00         10.00\n\nInstructional Method:\n 1  The teacher in addition to conventional teaching method by black board, may also use any\n     of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n 5  Use of hazardous/toxic chemicals should be avoided as far as possible in laboratory.\n 6  All students in the laboratory must wear safety goggles and lab coats during lab session.\n\nSupplementary Resources:\n 1  http://nptel.ac.in/course.php?disciplineId=104\n 2  http://ocw.mit.edu/courses/chemistry/\n 3  http://vlab.amrita.edu/index.php?sub=2\n 4  http://www.vlab.co.in/ba_labs_all.php?id=9\n 5  https://www.youtube.com/user/TMPChem\n 6  https://www.youtube.com/playlist?list=PL166048DD75B05C0D\n 7  https://www.youtube.com/channel/UCqk-dmk3AOFtikaFDpsZorg\n 8  https://www.youtube.com/user/PradeepKshetrapal\n\n\n\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata."
+      ],
+      "actual_pdf_sha256": "cb6bb724fe7b959feee58a4032168eb5f375998111e1247e05b9bd686f7498b7",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "31002325035401",
+      "subject_name": "Analytical Spectroscopic Techniques",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 6,
+      "subject_code": "02CY0354",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/02CY0354_ANALYTICAL-SPECTROSCOPIC-TECHNIQUES.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Analytical Spectroscopic Techniques [855b1385a9f3].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Analytical Spectroscopic Techniques [855b1385a9f3].pdf",
+      "expected_pdf_sha256": "96d7403676abfb592b130116d203167545209337c2fd68e17ec6688dacc9040f",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "ANALYTICAL SPECTROSCOPIC TECHNIQUES",
+        "course_code": "02CY0354",
+        "semester_label": "6",
+        "credits": 6,
+        "prerequisite": "Understand characterization of comounds"
+      },
+      "objectives": [
+        "To study the characterization technique i.e. UV spectroscopy.",
+        "To make students capable of understanding IR spectroscopy.",
+        "To study the introduction, and principle of NMR spectroscopy.",
+        "To study the mass spectrometry."
+      ],
+      "course_outcomes": [
+        "Understand the concepts of analytical technique UV spectroscopy.",
+        "Obtain the information regarding the IR spectroscopy.",
+        "Be aware of the basics of NMR spectroscopy.",
+        "Understand the basic of Mass spectrometry and their uses in construction of the molecules. Pre-requisite of course:Understand characterization of comounds"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 5 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Spectroscopy: Principles and instrumentation, Spectroscopy: Principles and instrumentation, Vitha, M. F., John Wiley & Sons, 2018",
+          "Chemical spectroscopy, Chemical spectroscopy, Brode, W. R., John Wiley & Sons, 1939",
+          "Introduction to spectroscopy, Introduction to spectroscopy, Pavia, D. L., Lampman, G. M., Kriz, G. S., & Vyvyan, J. A., Cengage learning, 2014"
+        ],
+        "textbooks": [
+          "A Textbook of Spectroscopy, M.S. Yadav, Anmol Publications Pvt Ltd, 2003",
+          "Spectra of atoms and molecules, Peter F. Bernath, Taylor & Francis, 2017"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://vlab.amrita.edu/index.php?sub=2",
+          "http://nptel.ac.in/course.php?disciplineId=104",
+          "http://ocw.mit.edu/courses/chemistry/",
+          "http://www.vlab.co.in/ba_labs_all.php?id=9",
+          "https://www.youtube.com/user/TMPChem",
+          "https://www.youtube.com/playlist?list=PL166048DD75B05C0D",
+          "https://www.youtube.com/channel/UCqk-dmk3AOFtikaFDpsZorg",
+          "https://www.youtube.com/user/PradeepKshetrapal"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7159,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF SCIENCE\nPROGRAM       BACHELOR OF SCIENCE (CHEMISTRY)\nSEMESTER         6\nCOURSE TITLE    ANALYTICAL SPECTROSCOPIC TECHNIQUES\nCOURSE CODE     02CY0354\nCOURSE CREDITS  6\n\nObjective:\n 1  To study the characterization technique i.e. UV spectroscopy.\n 2  To make students capable of understanding IR spectroscopy.\n 3  To study the introduction, and principle of NMR spectroscopy.\n 4  To study the mass spectrometry.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the concepts of analytical technique UV spectroscopy.\n 2  Obtain the information regarding the IR spectroscopy.\n 3  Be aware of the basics of NMR spectroscopy.\n 4  Understand the basic of Mass spectrometry and their uses in construction of the\n     molecules.\n\n\nPre-requisite of course:Understand characterization of comounds\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     5            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    UV spectroscopy\n               Introduction, Absorption law: lambert’s law and beer’s law,\n            Lambert – beer’s law. Electromagnetic radiation, Wave length,\n          Wave number, Frequency, Energy, Distribution of energy in atoms\n            and molecules, Translational energy, Nuclear energy, Rotational\n              energy, Vibrational energy, Electronic energy, Interaction of\n               radiation with matter, Types of spectra, UV-Visible spectroscopy,\n             Theory, Absorption bands, Types of electronic transition,\n             Absorption shifts and intensity effects, UV absorption by some\n              organic molecules, Applications, Numericals.\n\n\n\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2     IR spectroscopy\n               Introduction, Various types of energies (Translational energy,\n              Rotational energy, Vibrational and electronic energy),\n              Instrumenttion of IR spectrophotometer, Normal modes of vibration\n               (Stretching and bending vibrations), Coupled vibrations and Fermi\n              resonance, Electronic effect, Intramolecular hydrogen bonding,\n              intermolecular hydrogen bonding, Selection rule, Theory of IR\n              absorption spectroscopy, Theory of vibrational rotational spectra, P-\n          Q-R bands, Force constant, Franck-Condon principle, Vibrational\n              coupling, Fermi resonance, Finger print region, Relation between\n             frequency and bond in IR spectra, Numericals.\n     3    NMR Spectroscopy\n               Introduction, Principle, Nuclear quantum number, equivalence and\n              nonequivalent protons with illustrations, Enantiomeric and\n              Diasteriomeric protons, shielding and de shielding proton, Chemical\n                Shift, Paramagnetic anisotropic effect, Relative intensity of signals,\n              Spin-spin coupling and coupling constant, Deuterium labelling,\n              Numericals.\n     4     Mass Spectrometry\n               Introduction, Classification of spectroscopy origin and basic\n                principles, Instrumentation, General Fragmentation modes,\n              important features for mass spectra of alkanes. Numericals based on\n           UV, IR, NMR and Mass spectral data for structure elucidation of\n              organic molecules.\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiments\n             Experiment - 1, Experiment - 2, Experiment - 3, Experiment - 4,\n             Experiment - 5, Experiment - 6, Experiment - 7, Experiment - 8\n                               Total Hours\n\nTextbook :\n 1 A Textbook of Spectroscopy, M.S. Yadav, Anmol Publications Pvt Ltd, 2003\n 2  Spectra of atoms and molecules, Peter F. Bernath, Taylor & Francis, 2017\n\nReferences:\n 1  Spectroscopy: Principles and instrumentation, Spectroscopy: Principles and\n     instrumentation, Vitha, M. F., John Wiley & Sons, 2018\n 2  Chemical spectroscopy, Chemical spectroscopy, Brode, W. R., John Wiley & Sons, 1939\n 3  Introduction to spectroscopy, Introduction to spectroscopy, Pavia, D. L., Lampman, G. M.,\n     Kriz, G. S., & Vyvyan, J. A., Cengage learning, 2014\n\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    10.00         20.00         25.00         25.00         10.00         10.00\n\nInstructional Method:\n 1  The teacher in addition to conventional teaching method by black board, may also use any\n     of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n 5  Use of hazardous/toxic chemicals should be avoided as far as possible in laboratory.\n 6  All students in the laboratory must wear safety goggles and lab coats during lab session.\n\nSupplementary Resources:\n 1   http://vlab.amrita.edu/index.php?sub=2\n 2  http://nptel.ac.in/course.php?disciplineId=104\n 3  http://ocw.mit.edu/courses/chemistry/\n 4  http://www.vlab.co.in/ba_labs_all.php?id=9\n 5  https://www.youtube.com/user/TMPChem\n 6  https://www.youtube.com/playlist?list=PL166048DD75B05C0D\n 7  https://www.youtube.com/channel/UCqk-dmk3AOFtikaFDpsZorg\n 8  https://www.youtube.com/user/PradeepKshetrapal\n\n\n\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata.",
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "96d7403676abfb592b130116d203167545209337c2fd68e17ec6688dacc9040f",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 2,
+    "manual_review": 2,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

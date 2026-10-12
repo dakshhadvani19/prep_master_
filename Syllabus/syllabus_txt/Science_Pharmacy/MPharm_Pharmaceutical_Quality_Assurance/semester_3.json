@@ -1,0 +1,421 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "m-pharm-pharmaceutical-quality-assurence",
+    "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+    "output_slug": "MPharm_Pharmaceutical_Quality_Assurance"
+  },
+  "semester": 3,
+  "subject_count": 5,
+  "subjects": [
+    {
+      "subject_id": "39131317030501",
+      "subject_name": "Interpretation of spectra*",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "39131317030201",
+      "subject_name": "Pharma Journal Club-1",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "catalog_action": "NO_COURSE_CODE_MISMATCH",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Pharma Journal Club-1 [02512937a61d].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_COURSE_CODE_MISMATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "The title-level PDF is retained only as a candidate for matching course-code scope. This occurrence's catalog codes (13MQ0302 | 13MQ0303 | 13MQ0304 | 13MQ0401 | 13MQ0402) do not match the selected PDF's declared codes (13MC0302)."
+      ],
+      "pdf_verification_status": "NO_COURSE_CODE_MISMATCH"
+    },
+    {
+      "subject_id": "39131317030101",
+      "subject_name": "Research Methodology & Biostatistics",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 3,
+      "subject_code": "13MC0301",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13MC0301-2.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Research Methodology & Biostatistics [105ec1a23fe8].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Research Methodology & Biostatistics [105ec1a23fe8].pdf",
+      "expected_pdf_sha256": "99b42d8fc1e3a482706a4ae8bc23ef92e145662ae153e04b32e0edc71291ce92",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "RESEARCH METHODOLOGY & BIOSTATISTICS",
+        "course_code": "13MC0301",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "Nil"
+      },
+      "objectives": [
+        "This course aims to provide students with a comprehensive understanding of research methodologies and the necessary skills to conduct and present research effectively."
+      ],
+      "course_outcomes": [
+        "Understand the meaning, types, and purposes of research, as well as the significance of conducting a literature survey using authenticated sources.",
+        "Identify research problems, develop research proposals, and assess their cost-effectiveness. Gain knowledge about potential sources for research grants.",
+        "Select appropriate research methods (quantitative, qualitative, questionnaire, etc.) and understand the importance of proper documentation in research.",
+        "Apply biostatistics techniques to analyze research results and determine their significance using various methods of comparison.",
+        "Acquire guidelines for writing a thesis, including the structure from abstract to"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 75 15 10 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "General research methodology",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Research, objective, requirements, practical difficulties, review of",
+              "literature, study design, types of studies, strategies to eliminate",
+              "errors/bias, controls, randomization, crossover design, placebo, and",
+              "blinding techniques."
+            ],
+            "topics_text": "Research, objective, requirements, practical difficulties, review of literature, study design, types of studies, strategies to eliminate errors/bias, controls, randomization, crossover design, placebo, and blinding techniques.",
+            "topics": [
+              "Research, objective, requirements, practical difficulties, review of",
+              "literature, study design, types of studies, strategies to eliminate",
+              "errors/bias, controls, randomization, crossover design, placebo, and",
+              "blinding techniques."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Biostatistics",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Definition, application, sample size, the importance of sample size,",
+              "factors influencing sample size, dropouts, statistical tests of",
+              "significance, type of significance tests, parametric tests (students “t”",
+              "test, ANOVA, Correlation coefficient, regression), non-parametric",
+              "tests (Wilcoxon rank tests, analysis of variance, correlation, chi-",
+              "square test), null hypothesis, P values, degree of freedom,",
+              "interpretation of P values."
+            ],
+            "topics_text": "Definition, application, sample size, the importance of sample size, factors influencing sample size, dropouts, statistical tests of significance, type of significance tests, parametric tests (students “t” test, ANOVA, Correlation coefficient, regression), non-parametric tests (Wilcoxon rank tests, analysis of variance, correlation, chi- square test), null hypothesis, P values, degree of freedom, interpretation of P values.",
+            "topics": [
+              "Definition, application, sample size, the importance of sample size,",
+              "factors influencing sample size, dropouts, statistical tests of",
+              "significance, type of significance tests, parametric tests (students “t”",
+              "test, ANOVA, Correlation coefficient, regression), non-parametric",
+              "tests (Wilcoxon rank tests, analysis of variance, correlation, chi",
+              "square test), null hypothesis, P values, degree of freedom,",
+              "interpretation of P values."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Medical research",
+            "contact_hours": 12,
+            "topic_lines": [
+              "History, values in medical ethics, autonomy, beneficence, non-",
+              "maleficence, double effect, conflicts between autonomy and",
+              "beneficence/non-maleficence, euthanasia, informed consent,",
+              "confidentiality, criticisms of orthodox medical ethics, the",
+              "importance of communication, control resolution, guidelines, ethics",
+              "committees, cultural concerns, truth-telling, online business",
+              "practices, conflicts of interest, referral, vendor relationships,",
+              "treatment of family members, sexual relationships, fatality."
+            ],
+            "topics_text": "History, values in medical ethics, autonomy, beneficence, non- maleficence, double effect, conflicts between autonomy and beneficence/non-maleficence, euthanasia, informed consent, confidentiality, criticisms of orthodox medical ethics, the importance of communication, control resolution, guidelines, ethics committees, cultural concerns, truth-telling, online business practices, conflicts of interest, referral, vendor relationships, treatment of family members, sexual relationships, fatality.",
+            "topics": [
+              "History, values in medical ethics, autonomy, beneficence, non",
+              "maleficence, double effect, conflicts between autonomy and",
+              "beneficence/non-maleficence, euthanasia, informed consent,",
+              "confidentiality, criticisms of orthodox medical ethics, the",
+              "importance of communication, control resolution, guidelines, ethics",
+              "committees, cultural concerns, truth-telling, online business",
+              "practices, conflicts of interest, referral, vendor relationships,",
+              "treatment of family members, sexual relationships, fatality."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "CPCSEA guidelines for laboratory animal facilities",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Goals, veterinary care, quarantine, surveillance, diagnosis, treatment",
+              "and control of disease, personal hygiene, location of animal",
+              "facilities to laboratories, anesthesia, euthanasia, physical facilities,",
+              "environment, animal husbandry, record keeping, SOPs, personnel",
+              "and training, transport of lab animals."
+            ],
+            "topics_text": "Goals, veterinary care, quarantine, surveillance, diagnosis, treatment and control of disease, personal hygiene, location of animal facilities to laboratories, anesthesia, euthanasia, physical facilities, environment, animal husbandry, record keeping, SOPs, personnel and training, transport of lab animals.",
+            "topics": [
+              "Goals, veterinary care, quarantine, surveillance, diagnosis, treatment",
+              "and control of disease, personal hygiene, location of animal",
+              "facilities to laboratories, anesthesia, euthanasia, physical facilities,",
+              "environment, animal husbandry, record keeping, SOPs, personnel",
+              "and training, transport of lab animals."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Declaration of Helsinki",
+            "contact_hours": 12,
+            "topic_lines": [
+              "History, introduction, basic principles for all medical research, and",
+              "additional principles for medical research combined with medical",
+              "care.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Research in education, John W. Best Jems V. Kahn,,, Allay Bacon, 2003"
+            ],
+            "topics_text": "History, introduction, basic principles for all medical research, and additional principles for medical research combined with medical care. Total Hours 60 Textbook : 1 Research in education, John W. Best Jems V. Kahn,,, Allay Bacon, 2003",
+            "topics": [
+              "History, introduction, basic principles for all medical research, and",
+              "additional principles for medical research combined with medical",
+              "care.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Research in education, John W. Best Jems V. Kahn,,, Allay Bacon, 2003"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "/topic and will be evaluated at regular intervals. Surprise",
+            "contact_hours": null,
+            "topic_lines": [
+              "tests/quizzes/seminars/tutorials will be conducted. The course includes language practices",
+              "such as group discussion, interviews,etc. to develop the communication skills of the",
+              "students."
+            ],
+            "topics_text": "tests/quizzes/seminars/tutorials will be conducted. The course includes language practices such as group discussion, interviews,etc. to develop the communication skills of the students.",
+            "topics": [
+              "tests/quizzes/seminars/tutorials will be conducted. The course includes language practices",
+              "such as group discussion, interviews,etc. to develop the communication skills of the",
+              "students."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Methodology and techniques of social research, Methodology and techniques of social research, Wilkinson and Bhandarkar, Himalaya Publishing House , 2003",
+          "Presentation skills , Presentation skills , – Michel Halton , – Indian Society for institute education, 2005",
+          "Practical introduction to copyrights , Practical introduction to copyrights , – Gavin , Mofariane, 1989",
+          "Thesis projects in sciences and engineering, Thesis projects in sciences and engineering, Richard M. Devis, , Davis, 1980",
+          "Scientist in the legal system , Scientist in the legal system , Ann Labor Science, Henrik Thorén, Niko Soininen, Niina K, 2021",
+          "Thesis and assessment writing , Thesis and assessment writing , Janolthon Anderson, John Wiley & Sons (Sd), , 1994 References:",
+          "Writing a technical paper , Writing a technical paper , Donald Manzel,, John Wilson, 1962",
+          "Effective business report writing , Effective business report writing , Lel and Brown, , W.S. Brown , 1965",
+          "Protection of industrial property rights , Protection of industrial property rights , Purshottam Das , and Gokul Das. , 1965",
+          "Spelling for Millions , Spelling for Millions , – Edna Furness, Russell G. Stauffer, 1965",
+          "Ayurveda and modern medicine , Ayurveda and modern medicine , – R. D. Lele, Russell G. Stauffer, 1965",
+          "How to write and publish a scientific paper , How to write and publish a scientific paper , – Robert A. Day , Cambridge University Press 4th edition, 1994",
+          "Business statistics , Business statistics , J K Sharma, , PHI publication, Pearson Education India, 2006",
+          "Introduction to Statistical Methods-, Introduction to Statistical Methods-, C. B. Gupta, Vikas Publishing House, 1973",
+          "A first course in Mathematical Statistics, A first course in Mathematical Statistics, C. E. Weatherborn, CUP Archive, 1949",
+          "Introduction to Biostatistics, Introduction to Biostatistics, Mahajan,, Arun Bhadra Khanal , 2018"
+        ],
+        "textbooks": [
+          "Research in education, John W. Best Jems V. Kahn,,, Allay Bacon, 2003"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://www.pharmatext.org",
+          "http://www.pharmainfo.net"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 8290,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       MASTER OF PHARMACY (PHARMACEUTICAL\n               QUALITY ASSURANCE)\nSEMESTER         3\nCOURSE TITLE    RESEARCH METHODOLOGY & BIOSTATISTICS\nCOURSE CODE     13MC0301\nCOURSE CREDITS  4\n\nObjective:\n 1  This course aims to provide students with a comprehensive understanding of research\n    methodologies and the necessary skills to conduct and present research effectively.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the meaning, types, and purposes of research, as well as the significance of\n     conducting a literature survey using authenticated sources.\n 2  Identify research problems, develop research proposals, and assess their cost-effectiveness.\n    Gain knowledge about potential sources for research grants.\n 3  Select appropriate research methods (quantitative, qualitative, questionnaire, etc.) and\n     understand the importance of proper documentation in research.\n 4  Apply biostatistics techniques to analyze research results and determine their significance\n     using various methods of comparison.\n 5  Acquire guidelines for writing a thesis, including the structure from abstract to references.\n    Develop important skills for presenting research, whether orally or through poster\n     presentations.\n\n\nPre-requisite of course:Nil\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        75     15      10        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      General research methodology                             12\n              Research, objective, requirements, practical difficulties, review of\n                 literature, study design, types of studies, strategies to eliminate\n                errors/bias, controls, randomization, crossover design, placebo, and\n              blinding techniques.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2       Biostatistics                                             12\n               Definition, application, sample size, the importance of sample size,\n               factors influencing sample size, dropouts, statistical tests of\n               significance, type of significance tests, parametric tests (students “t”\n                  test, ANOVA, Correlation coefficient, regression), non-parametric\n                 tests (Wilcoxon rank tests, analysis of variance, correlation, chi-\n              square test), null hypothesis, P values, degree of freedom,\n                interpretation of P values.\n     3      Medical research                                         12\n               History, values in medical ethics, autonomy, beneficence, non-\n              maleficence, double effect, conflicts between autonomy and\n              beneficence/non-maleficence, euthanasia, informed consent,\n                confidentiality, criticisms of orthodox medical ethics, the\n             importance of communication, control resolution, guidelines, ethics\n              committees, cultural concerns, truth-telling, online business\n                practices, conflicts of interest, referral, vendor relationships,\n              treatment of family members, sexual relationships, fatality.\n     4    CPCSEA guidelines for laboratory animal facilities            12\n              Goals, veterinary care, quarantine, surveillance, diagnosis, treatment\n            and control of disease, personal hygiene, location of animal\n                 facilities to laboratories, anesthesia, euthanasia, physical facilities,\n              environment, animal husbandry, record keeping, SOPs, personnel\n            and training, transport of lab animals.\n     5      Declaration of Helsinki                                    12\n               History, introduction, basic principles for all medical research, and\n               additional principles for medical research combined with medical\n                care.\n                               Total Hours                       60\n\n\nTextbook :\n 1  Research in education, John W. Best Jems V. Kahn,,, Allay Bacon, 2003\n\nReferences:\n 1  Methodology and techniques of social research, Methodology and techniques of social\n     research, Wilkinson and Bhandarkar, Himalaya Publishing House , 2003\n 2  Presentation skills , Presentation skills , – Michel Halton , – Indian Society for institute\n     education, 2005\n 3  Practical introduction to copyrights , Practical introduction to copyrights , – Gavin ,\n     Mofariane, 1989\n 4  Thesis projects in sciences and engineering, Thesis projects in sciences and engineering,\n    Richard M. Devis, , Davis, 1980\n 5  Scientist in the legal system , Scientist in the legal system , Ann Labor Science, Henrik\n     Thorén, Niko Soininen, Niina K, 2021\n 6  Thesis and assessment writing , Thesis and assessment writing , Janolthon Anderson, John\n    Wiley & Sons (Sd), , 1994\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 7  Writing a technical paper , Writing a technical paper , Donald Manzel,, John Wilson, 1962\n 8  Effective business report writing , Effective business report writing , Lel and Brown, , W.S.\n    Brown , 1965\n 9  Protection of industrial property rights , Protection of industrial property rights ,\n    Purshottam Das , and Gokul Das. , 1965\n 10  Spelling for Millions , Spelling for Millions , – Edna Furness, Russell G. Stauffer, 1965\n 11 Ayurveda and modern medicine , Ayurveda and modern medicine , – R. D. Lele, Russell\n    G. Stauffer, 1965\n 12 How to write and publish a scientific paper , How to write and publish a scientific paper , –\n    Robert A. Day , Cambridge University Press 4th edition, 1994\n 13  Business statistics , Business statistics , J K Sharma, , PHI publication, Pearson Education\n     India, 2006\n 14  Introduction to Statistical Methods-, Introduction to Statistical Methods-, C. B. Gupta,\n    Vikas Publishing House, 1973\n 15 A first course in Mathematical Statistics, A first course in Mathematical Statistics, C. E.\n    Weatherborn, CUP Archive, 1949\n 16  Introduction to Biostatistics, Introduction to Biostatistics, Mahajan,, Arun Bhadra Khanal ,\n    2018\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         20.00         25.00         25.00         10.00         10.00\n\nInstructional Method:\n 1  Lectures will be conducted with the aid of a multi-media projector, blackboard, OHP, etc.\n    Assignments based on course content will be given to the students at the end of each\n     unit/topic and will be evaluated at regular intervals. Surprise\n     tests/quizzes/seminars/tutorials will be conducted. The course includes language practices\n    such as group discussion, interviews,etc. to develop the communication skills of the\n     students.\n\nSupplementary Resources:\n 1  http://www.pharmatext.org\n 2  http://www.pharmainfo.net\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "99b42d8fc1e3a482706a4ae8bc23ef92e145662ae153e04b32e0edc71291ce92",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "39131317030401",
+      "subject_name": "Research Project Work",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "catalog_action": "NO_COURSE_CODE_MISMATCH",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Research Project Work [78054df5b842].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_COURSE_CODE_MISMATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "The title-level PDF is retained only as a candidate for matching course-code scope. This occurrence's catalog codes (13MQ0304 | 13MQ0401 | 13MQ0402 | 13MQ0403) do not match the selected PDF's declared codes (13MC0304)."
+      ],
+      "pdf_verification_status": "NO_COURSE_CODE_MISMATCH"
+    },
+    {
+      "subject_id": "39131317030301",
+      "subject_name": "Research Proposal Presentation",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "catalog_action": "NO_COURSE_CODE_MISMATCH",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Research Proposal Presentation [603b6f133314].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_COURSE_CODE_MISMATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "The title-level PDF is retained only as a candidate for matching course-code scope. This occurrence's catalog codes (13MQ0303 | 13MQ0304 | 13MQ0401 | 13MQ0402 | 13MQ0403) do not match the selected PDF's declared codes (13MC0303)."
+      ],
+      "pdf_verification_status": "NO_COURSE_CODE_MISMATCH"
+    }
+  ],
+  "build_summary": {
+    "extracted": 1,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 4,
+    "extraction_errors": 0
+  }
+}

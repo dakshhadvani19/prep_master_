@@ -1,0 +1,1238 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-sc-in-agricultural-honors",
+    "course_name": "B.Sc in Agricultural Honors",
+    "output_slug": "BSc_in_Agricultural_Honors"
+  },
+  "semester": 2,
+  "subject_count": 13,
+  "subjects": [
+    {
+      "subject_id": "33016119020801",
+      "subject_name": "Crops",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119020501",
+      "subject_name": "Engineering",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "01ME0509",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/02/Python-for-Mechanical-Engineering.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Engineering [72917ef6c1d9].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Engineering [72917ef6c1d9].pdf",
+      "expected_pdf_sha256": "6d5d804ad2194ec4f2cf4b4a8a1e933002fcc19c1308f3b2e063fc2d545d3c73",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "Python for Mechanical Engineering",
+        "course_code": "01ME0509",
+        "semester_label": "5",
+        "credits": null,
+        "prerequisite": "NA Rationale : The course is prepared to provide the basic understating of Python for mechanical engineering. Course Outcome : After completion of this course, student will be able to 1. Understand the basic syntax of python 2. Implementation of various plotting techniques of python in mechanical engineering 3. Development of Python code for Manufacturing. 4. Development of Python code for Mechanical Design 5. Development of Python code for Thermal System 6. Development of Python code for computational"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "After completion of this course, student will be able to",
+        "Understand the basic syntax of python",
+        "Implementation of various plotting techniques of python in mechanical engineering",
+        "Development of Python code for Manufacturing.",
+        "Development of Python code for Mechanical Design",
+        "Development of Python code for Thermal System",
+        "Development of Python code for computational"
+      ],
+      "teaching_and_examination_scheme_text": ": Teaching Scheme Credits Examination Marks Theory Marks Practical Marks Total THEORY TUTORIAL PRACTICAL C Viva Term Marks ESE(E) IA CSE Work (V) (TW) 0 0 4 2 0 0 0 50 50 100 Content : Sr. Total Content No. Hrs. Python-Basic: Data type, Mathematical Operation, Boolean operation, Loops, Function, List, 1 12 Tuple, Set, Dictionary, Class, File handling, Introduction of Library, Numpy, Matplot, Scipy Python for Manufacturing: Code for Metal cutting: 2 Code MRR, Code for Tool Wear, Code on Theory of Metal Cutting, Code for 12 optimum arc gap in welding, Code for welding efficiency, Code for Heat distribution in welding, Code for Design of Riser, Code for metal forming Department of Mechanical Engineering Syllabus for Bachelor of Technology Python for Mechanical Design: Code for kinematics analysis, Code for Gear Train, Code for Cam and follower, 3 12 Code for principal stresses, Code for joints, Code for design Shaft, Code for coupling, Code for design of column Python for Thermal System: Code for hydrostatic forces, Code for fluid kinematics and dynamics, Code for 4 12 viscous and turbulent flow, Code for flow through pipe, Code for first law of thermo dynamics, Code on carnot cycle, Code on Heat Transfer Python for Computation: Python code for ODE, Python code for PDE, Python code Fourier, Python code for 5 12 Matrix algebra, Python code for Vector Calculus, Python code for Numerical Analysis Distribution of Theory Marks R Level U Level A Level N Level E` Level C Level 10 20 25 25 10 10 Legends: R: Remember; U: Understand; A: Apply; N: Analyze; E: Evaluate; C: Create List of Experiments : 1. Python code for basic syntax 2. Python code for different visualization techniques 3. Python code for machining cost estimation 4. Python code for heat distribution in welding 5. Python code for calculating the yield in sand casting 6. Python code for kinematic analysis of quick return mechanism in shaper 7. Python code for design of cam for Lathe machine 8. Python code for design of back gear train for Lathe machine 9. Python code for visualizing the flow pattern in pipes 10. Python code for calculating work done in engine 11. Python code for application of PDE in mechanical engineering 12. Python code for application of Matrix algebra in mechanical engineering Reference books : 1 .Python Programming Fundamentals, Lee, Kent D., Springer 2. Python Workbook: a brief introduction with exercises and solutions, Stephenson, Ben, Springer 3. Core Python Programming, 2nd ed Rao, Nageshwar R Dream Tech Press 4. Core Python Applications Programming, 3rd ed. Chun, Wesley J. Pearson India Education Department of Mechanical Engineering Syllabus for Bachelor of Technology Services Pvt. Ltd 5. Elementary Mechanics Using Python: a modern course combining analytical and numerical techniques Malthe-Sorenssen, Anders Springer 6. Primer on Scientific Programming with Python Langtangen, Hans Petter Springer 7. Introduction to Computation and Programming Using Python Guttag, John V. PHI Learning Private Limited 8. Head First Python: a brain friendly guide, 2nd ed Barry, Paul Shroff Publishers & Distributors Pvt. Ltd. List of Open Base Software / learning website : 1. https://colab.research.google.com 2. https://atom.io 3. https://www.anaconda.com Department of Mechanical Engineering",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5888,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Bachelor of Technology\n\n\n                          Subject Code: 01ME0509\n              Subject Name: Python for Mechanical Engineering\n                      B. Tech. Year - III (Semester - 5)\n\nType of course : Graduate\n\nPrerequisite : NA\n\nRationale  : The course  is prepared  to provide the basic understating  of Python  for mechanical\nengineering.\n\nCourse Outcome :\nAfter completion of this course, student will be able to\n        1.  Understand the basic syntax of python\n        2.  Implementation of various plotting techniques of python in mechanical engineering\n        3.  Development of Python code for Manufacturing.\n        4.  Development of Python code for Mechanical Design\n        5.  Development of Python code for Thermal System\n        6.  Development of Python code for computational\n\nTeaching and Examination Scheme :\n\n        Teaching Scheme           Credits             Examination Marks\n                                                          Theory Marks                 Practical Marks\n                                                                                                                     Total\nTHEORY  TUTORIAL  PRACTICAL    C                                       Viva     Term     Marks\n                                                ESE(E)      IA      CSE              Work\n                                                                                       (V)\n                                                                                 (TW)\n\n   0         0          4         2       0       0       0       50      50      100\n\n\nContent :\n\n   Sr.                                                                               Total\n                                     Content\n  No.                                                                              Hrs.\n       Python-Basic:\n       Data  type,  Mathematical  Operation,  Boolean  operation,  Loops,  Function,  List,\n  1                                                                           12       Tuple,  Set,  Dictionary,  Class,  File  handling,  Introduction  of  Library, Numpy,\n       Matplot, Scipy\n\n      Python for Manufacturing:\n      Code for Metal cutting:\n  2   Code MRR, Code  for Tool Wear, Code on Theory  of Metal Cutting, Code  for    12\n      optimum  arc  gap  in  welding,  Code  for  welding  efficiency,  Code  for  Heat\n        distribution in welding, Code for Design of Riser, Code for metal forming\n\n\n\n             Department of Mechanical Engineering"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Bachelor of Technology\n\n\n      Python for Mechanical Design:\n      Code for kinematics  analysis, Code for Gear Train, Code for Cam and  follower,\n  3                                                                           12      Code  for  principal  stresses, Code  for  joints, Code  for  design  Shaft, Code  for\n        coupling, Code for design of column\n\n      Python for Thermal System:\n      Code  for hydrostatic  forces, Code  for  fluid kinematics and dynamics, Code  for\n  4                                                                           12       viscous and turbulent flow, Code for flow through pipe, Code for first law of thermo\n       dynamics, Code on carnot cycle, Code on Heat Transfer\n      Python for Computation:\n       Python code for ODE, Python code for PDE, Python code Fourier, Python code for\n  5                                                                           12       Matrix  algebra,  Python  code  for  Vector  Calculus,  Python  code  for  Numerical\n       Analysis\n\n\n                                Distribution of Theory Marks\n\n   R Level     U Level    A Level    N Level        E` Level      C Level\n       10            20          25          25            10              10\n\nLegends: R: Remember; U: Understand; A: Apply; N: Analyze; E: Evaluate; C: Create\n\nList of Experiments :\n\n\n        1.  Python code for basic syntax\n\n        2.  Python code for different visualization techniques\n\n        3.  Python code for machining cost estimation\n\n        4.  Python code for heat distribution in welding\n\n        5.  Python code for calculating the yield in sand casting\n\n        6.  Python code for kinematic analysis of quick return mechanism in shaper\n\n        7.  Python code for design of cam for Lathe machine\n\n        8.  Python code for design of back gear train for Lathe machine\n\n        9.  Python code for visualizing the flow pattern in pipes\n\n        10. Python code for calculating work done in engine\n\n        11. Python code for application of PDE in mechanical engineering\n\n        12. Python code for application of Matrix algebra in mechanical engineering\n\nReference books :\n\n\n    1 .Python Programming Fundamentals, Lee, Kent D., Springer\n\n     2.  Python Workbook: a  brief  introduction with  exercises and  solutions, Stephenson, Ben,\n        Springer\n\n     3.  Core Python Programming, 2nd ed Rao, Nageshwar R Dream Tech Press\n\n     4.  Core Python Applications Programming, 3rd ed. Chun, Wesley J. Pearson India Education\n\n             Department of Mechanical Engineering"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Bachelor of Technology\n\n\n        Services Pvt. Ltd\n\n     5.  Elementary Mechanics Using Python: a modern course combining analytical and numerical\n        techniques Malthe-Sorenssen, Anders Springer\n\n     6.  Primer on Scientific Programming with Python Langtangen, Hans Petter Springer\n\n     7.  Introduction to Computation and Programming Using Python Guttag, John V. PHI Learning\n\n        Private Limited\n\n     8. Head  First Python: a brain  friendly  guide, 2nd ed  Barry, Paul Shroff  Publishers &\n         Distributors Pvt. Ltd.\n\n\nList of Open Base Software / learning website :\n\n        1.  https://colab.research.google.com\n        2.  https://atom.io\n        3.  https://www.anaconda.com\n\n\n\n\n\n             Department of Mechanical Engineering"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata.",
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed.",
+        "Official PDF semester differs from the active catalog semester."
+      ],
+      "actual_pdf_sha256": "6d5d804ad2194ec4f2cf4b4a8a1e933002fcc19c1308f3b2e063fc2d545d3c73",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "33161912020101",
+      "subject_name": "English For Special Purpose",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "16SL0201",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/05/16SL0201_English-For-Special-Purposes.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/English For Special Purpose [dde55a3e6d4f].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/English For Special Purpose [dde55a3e6d4f].pdf",
+      "expected_pdf_sha256": "4aee97f8e1c84ef719f5470dce2196d8f6d4da955196ece09a4f214e421e662a",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENGLISH FOR SPECIAL PURPOSE",
+        "course_code": "16SL0201",
+        "semester_label": "2",
+        "credits": 2,
+        "prerequisite": "Theory"
+      },
+      "objectives": [
+        "To teach English language to students for particular vocabulary and skills.",
+        "To help students develop their abilities in listening, speaking, reading and writing."
+      ],
+      "course_outcomes": [
+        "Students will attain skills regarding communication, time management and stress management.",
+        "Develop their critical thinking, decision making and problem solving.",
+        "Students will improve their speaking ability in English both in terms of fluency and comprehensibility.",
+        "Students will attain skills regarding communication, time management and stress management.",
+        "Develop their critical thinking, decision making and problem solving.",
+        "Students will improve their speaking ability in English both in terms of fluency and comprehensibility. Pre-requisite of course:Theory"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 1 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Soft skill and Non-verbal communication",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Soft skill and Non-verbal communication"
+            ],
+            "topics_text": "Soft skill and Non-verbal communication",
+            "topics": [
+              "Soft skill and Non-verbal communication"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Time management and stress management",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Time management and stress management"
+            ],
+            "topics_text": "Time management and stress management",
+            "topics": [
+              "Time management and stress management"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Essentials of business communication",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Essentials of business communication"
+            ],
+            "topics_text": "Essentials of business communication",
+            "topics": [
+              "Essentials of business communication"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Developing 21st century skills like",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Developing 21st century skills like"
+            ],
+            "topics_text": "Developing 21st century skills like",
+            "topics": [
+              "Developing 21st century skills like"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Observation",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Observation"
+            ],
+            "topics_text": "Observation",
+            "topics": [
+              "Observation"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Critical thinking",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Critical thinking"
+            ],
+            "topics_text": "Critical thinking",
+            "topics": [
+              "Critical thinking"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Decision making",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Decision making"
+            ],
+            "topics_text": "Decision making",
+            "topics": [
+              "Decision making"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Problem solving",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Problem solving"
+            ],
+            "topics_text": "Problem solving",
+            "topics": [
+              "Problem solving"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Team work, etc.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Team work, etc.",
+              "Total Hours 13"
+            ],
+            "topics_text": "Team work, etc. Total Hours 13",
+            "topics": [
+              "Team work, etc.",
+              "Total Hours 13"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Reading comprehension: Reading research articles/reports",
+            "contact_hours": 2,
+            "topic_lines": [
+              "from well- known journals.",
+              "Reading comprehension: Reading research articles/reports from",
+              "well- known journals."
+            ],
+            "topics_text": "from well- known journals. Reading comprehension: Reading research articles/reports from well- known journals.",
+            "topics": [
+              "from well- known journals.",
+              "Reading comprehension: Reading research articles/reports from",
+              "well- known journals."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Reading policy documents in the field of agriculture.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Reading policy documents in the field of agriculture."
+            ],
+            "topics_text": "Reading policy documents in the field of agriculture.",
+            "topics": [
+              "Reading policy documents in the field of agriculture."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Summarizing from above 1& 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Summarizing from above 1& 2"
+            ],
+            "topics_text": "Summarizing from above 1& 2",
+            "topics": [
+              "Summarizing from above 1& 2"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Writing Skill: Cover Letters, Application. Essay, Report.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Formal Letters. Invitation, Proposal. Resume",
+              "Writing Skill: Cover Letters, Application. Essay, Report. Formal",
+              "Letters. Invitation, Proposal. Resume"
+            ],
+            "topics_text": "Formal Letters. Invitation, Proposal. Resume Writing Skill: Cover Letters, Application. Essay, Report. Formal Letters. Invitation, Proposal. Resume",
+            "topics": [
+              "Formal Letters. Invitation, Proposal. Resume",
+              "Writing Skill: Cover Letters, Application. Essay, Report. Formal",
+              "Letters. Invitation, Proposal. Resume"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Soft Skills : Presentation ( -pptx with LCD projector ).Group",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Discussions. Interview.",
+              "Soft Skills : Presentation ( -pptx with LCD projector ).Group",
+              "Discussions. Interview."
+            ],
+            "topics_text": "Discussions. Interview. Soft Skills : Presentation ( -pptx with LCD projector ).Group Discussions. Interview.",
+            "topics": [
+              "Discussions. Interview.",
+              "Soft Skills : Presentation ( -pptx with LCD projector ).Group",
+              "Discussions. Interview."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Information & Communication Technology ( ICT ) For",
+            "contact_hours": 2,
+            "topic_lines": [
+              "language learning: Using web 2.0 tools for language learning.",
+              "Identifying and exploring internet resources for continuous",
+              "language development.",
+              "Information & Communication Technology ( ICT ) For language",
+              "learning: Using web 2.0 tools for language learning. Identifying and",
+              "exploring internet resources for continuous language development.",
+              "Total Hours 12",
+              "Textbook :",
+              "1 NA, NA, NA, NA"
+            ],
+            "topics_text": "language learning: Using web 2.0 tools for language learning. Identifying and exploring internet resources for continuous language development. Information & Communication Technology ( ICT ) For language learning: Using web 2.0 tools for language learning. Identifying and exploring internet resources for continuous language development. Total Hours 12 Textbook : 1 NA, NA, NA, NA",
+            "topics": [
+              "language learning: Using web 2.0 tools for language learning.",
+              "Identifying and exploring internet resources for continuous",
+              "language development.",
+              "Information & Communication Technology ( ICT ) For language",
+              "learning: Using web 2.0 tools for language learning. Identifying and",
+              "exploring internet resources for continuous language development.",
+              "Total Hours 12",
+              "Textbook :",
+              "1 NA, NA, NA, NA"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "NA, NA, NA, NA, NA"
+        ],
+        "textbooks": [
+          "NA, NA, NA, NA"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6463,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF AGRICULTURE\nPROGRAM       BACHELOR OF SCIENCE (Hons.) AGRICULTURE\nSEMESTER         2\nCOURSE TITLE    ENGLISH FOR SPECIAL PURPOSE\nCOURSE CODE     16SL0201\nCOURSE CREDITS  2\n\nObjective:\n 1  To teach English language to students for particular vocabulary and skills.\n 2  To help students develop their abilities in listening, speaking, reading and writing.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Students will attain skills regarding communication, time management and stress\n    management.\n 2  Develop their critical thinking, decision making and problem solving.\n 3  Students will improve their speaking ability in English both in terms of fluency and\n     comprehensibility.\n 4  After completion of this course, student will be able to:\n    1 Students will attain skills regarding communication, time management and stress\n    management.\n    2 Develop their critical thinking, decision making and problem solving.\n    3 Students will improve their speaking ability in English both in terms of fluency and\n     comprehensibility.\n\n\nPre-requisite of course:Theory\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     1            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Soft skill and Non-verbal communication                     2\n              Soft skill and Non-verbal communication\n     2     Time management and stress management                   1\n           Time management and stress management\n     3       Essentials of business communication                        1\n               Essentials of business communication\n     4      Developing 21st century skills like                           1\n             Developing 21st century skills like\n\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5      Observation                                             1\n             Observation\n     6       Critical thinking                                         2\n                Critical thinking\n     7      Decision making                                         2\n             Decision making\n     8      Problem solving                                          1\n            Problem solving\n     9     Team work, etc.                                          2\n           Team work, etc.\n                               Total Hours                       13\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Reading comprehension: Reading research articles/reports     2\n           from well- known journals.\n             Reading comprehension: Reading research articles/reports from\n               well- known journals.\n     2      Reading policy documents in the field of agriculture.           2\n             Reading policy documents in the field of agriculture.\n     3      Summarizing from above 1& 2                             2\n            Summarizing from above 1& 2\n     4      Writing Skill: Cover Letters, Application. Essay, Report.       2\n           Formal Letters. Invitation, Proposal. Resume\n             Writing Skill: Cover Letters, Application. Essay, Report. Formal\n                Letters. Invitation, Proposal. Resume\n     5       Soft Skills : Presentation ( -pptx with LCD projector ).Group    2\n              Discussions. Interview.\n              Soft Skills : Presentation ( -pptx with LCD projector ).Group\n              Discussions. Interview.\n     6      Information & Communication Technology ( ICT ) For        2\n            language learning: Using web 2.0 tools for language learning.\n              Identifying and exploring internet resources for continuous\n            language development.\n              Information & Communication Technology ( ICT ) For language\n               learning: Using web 2.0 tools for language learning. Identifying and\n              exploring internet resources for continuous language development.\n                               Total Hours                       12\n\nTextbook :\n 1  NA, NA, NA, NA\n\n\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 1  NA, NA, NA, NA, NA\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    25.00         25.00         20.00         10.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board may also\n     use any of tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\n\n\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata."
+      ],
+      "actual_pdf_sha256": "4aee97f8e1c84ef719f5470dce2196d8f6d4da955196ece09a4f214e421e662a",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "33016119020401",
+      "subject_name": "Fundamentals Of Agriculture Economics",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119020101",
+      "subject_name": "Fundamentals Of Agronomy",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119020701",
+      "subject_name": "Fundamentals Of Genetics",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119020601",
+      "subject_name": "Fundamentals Of Plant Biochemistry",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "DUPLICATE_TITLE_SCOPE_REVIEW",
+      "catalog_action": "NO_DUPLICATE_SCOPE_REVIEW",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Fundamentals Of Plant Biochemistry [78d30305e735].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_DUPLICATE_SCOPE_REVIEW",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "DUPLICATE_TITLE_SCOPE_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "The source report marked this repeated title as requiring course/semester-level scope review. Do not automatically use it to generate questions for this occurrence."
+      ],
+      "pdf_verification_status": "NO_DUPLICATE_SCOPE_REVIEW"
+    },
+    {
+      "subject_id": "33016119020602",
+      "subject_name": "Fundamentals Of Plant Biochemistry",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "DUPLICATE_TITLE_SCOPE_REVIEW",
+      "catalog_action": "NO_DUPLICATE_SCOPE_REVIEW",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Fundamentals Of Plant Biochemistry [78d30305e735].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_DUPLICATE_SCOPE_REVIEW",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "DUPLICATE_TITLE_SCOPE_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "The source report marked this repeated title as requiring course/semester-level scope review. Do not automatically use it to generate questions for this occurrence."
+      ],
+      "pdf_verification_status": "NO_DUPLICATE_SCOPE_REVIEW"
+    },
+    {
+      "subject_id": "33016719020101",
+      "subject_name": "Human Value & Ethics",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119020901",
+      "subject_name": "Introductory Plant Nematology",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "16AS0209",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/05/16AS0209_Introductory-Plant-Nematology.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Introductory Plant Nematology [be2dc538983d].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Introductory Plant Nematology [be2dc538983d].pdf",
+      "expected_pdf_sha256": "8b12359122d0869e1b50b87e91dcccb067d1e1cf30d84f3489961e17ced871b7",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INTRODUCTORY PLANT NEMATOLOGY",
+        "course_code": "16AS0209",
+        "semester_label": "2",
+        "credits": 2,
+        "prerequisite": "To create the awareness among the students about plant diseases caused by nematodes"
+      },
+      "objectives": [
+        "To study different types of plant parasitic nematode, its distribution, anatomy, its symptoms and different diseases caused by them.",
+        "To study different control measures of plant parasitic nematodes."
+      ],
+      "course_outcomes": [
+        "Students will be able to identify the disease which is caused by nematodes",
+        "students will be able to control the disease caused by nematodes",
+        "Student will get detailed knowledge about Plant Parasitic nematode and their biology.",
+        "Student will able to extract nematode from soil and infected plant samples. Pre-requisite of course:To create the awareness among the students about plant diseases caused by nematodes"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 1 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction, History of phytonematology. Economic",
+            "contact_hours": 1,
+            "topic_lines": [
+              "importance",
+              "Introduction, History of phytonematology. Economic importance"
+            ],
+            "topics_text": "importance Introduction, History of phytonematology. Economic importance",
+            "topics": [
+              "importance",
+              "Introduction, History of phytonematology. Economic importance"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "General characteristics of plant pathogenic nematodes",
+            "contact_hours": 1,
+            "topic_lines": [
+              "General characteristics of plant pathogenic nematodes"
+            ],
+            "topics_text": "General characteristics of plant pathogenic nematodes",
+            "topics": [
+              "General characteristics of plant pathogenic nematodes"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Nematode general morphology and biology",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Nematode general morphology and biology"
+            ],
+            "topics_text": "Nematode general morphology and biology",
+            "topics": [
+              "Nematode general morphology and biology"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Classification of nematodes up to family level with emphasis on",
+            "contact_hours": 2,
+            "topic_lines": [
+              "groups containing economically important genera",
+              "Classification of nematodes up to family level with emphasis on",
+              "groups containing economically important genera"
+            ],
+            "topics_text": "groups containing economically important genera Classification of nematodes up to family level with emphasis on groups containing economically important genera",
+            "topics": [
+              "groups containing economically important genera",
+              "Classification of nematodes up to family level with emphasis on",
+              "groups containing economically important genera"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Classification of plant parasitic nematodes based on feeding",
+            "contact_hours": 1,
+            "topic_lines": [
+              "habits",
+              "Classification of plant parasitic nematodes based on feeding habits"
+            ],
+            "topics_text": "habits Classification of plant parasitic nematodes based on feeding habits",
+            "topics": [
+              "habits",
+              "Classification of plant parasitic nematodes based on feeding habits"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Identification of economically important plant nematodes up to",
+            "contact_hours": 1,
+            "topic_lines": [
+              "generic level with the help of keys and description",
+              "Identification of economically important plant nematodes up to",
+              "generic level with the help of keys and description"
+            ],
+            "topics_text": "generic level with the help of keys and description Identification of economically important plant nematodes up to generic level with the help of keys and description",
+            "topics": [
+              "generic level with the help of keys and description",
+              "Identification of economically important plant nematodes up to",
+              "generic level with the help of keys and description"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Symptoms caused by nematodes with examples",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Symptoms caused by nematodes with examples"
+            ],
+            "topics_text": "Symptoms caused by nematodes with examples",
+            "topics": [
+              "Symptoms caused by nematodes with examples"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Interaction between plant parasitic nematodes and disease",
+            "contact_hours": 1,
+            "topic_lines": [
+              "causing fungi, bacteria and viruses",
+              "Interaction between plant parasitic nematodes and disease causing",
+              "fungi, bacteria and viruses"
+            ],
+            "topics_text": "causing fungi, bacteria and viruses Interaction between plant parasitic nematodes and disease causing fungi, bacteria and viruses",
+            "topics": [
+              "causing fungi, bacteria and viruses",
+              "Interaction between plant parasitic nematodes and disease causing",
+              "fungi, bacteria and viruses"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Different methods of nematode management. Cultural methods",
+            "contact_hours": 2,
+            "topic_lines": [
+              "(Crop rotation, fallowing, soil amendments, other land",
+              "management techniques)",
+              "Different methods of nematode management. Cultural methods",
+              "(Crop rotation, fallowing, soil amendments, other land management",
+              "techniques)"
+            ],
+            "topics_text": "(Crop rotation, fallowing, soil amendments, other land management techniques) Different methods of nematode management. Cultural methods (Crop rotation, fallowing, soil amendments, other land management techniques)",
+            "topics": [
+              "(Crop rotation, fallowing, soil amendments, other land",
+              "management techniques)",
+              "Different methods of nematode management. Cultural methods",
+              "(Crop rotation, fallowing, soil amendments, other land management",
+              "techniques)"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Physical methods (Soil solarization, hot water treatment )",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Physical methods (Soil solarization, hot water treatment )"
+            ],
+            "topics_text": "Physical methods (Soil solarization, hot water treatment )",
+            "topics": [
+              "Physical methods (Soil solarization, hot water treatment )"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Biological methods, Chemical methods (fumigants, non",
+            "contact_hours": 1,
+            "topic_lines": [
+              "fumigants)",
+              "Biological methods, Chemical methods (fumigants, non fumigants)"
+            ],
+            "topics_text": "fumigants) Biological methods, Chemical methods (fumigants, non fumigants)",
+            "topics": [
+              "fumigants)",
+              "Biological methods, Chemical methods (fumigants, non fumigants)"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Resistant varieties , IPM",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Resistant varieties , IPM",
+              "Total Hours 14"
+            ],
+            "topics_text": "Resistant varieties , IPM Total Hours 14",
+            "topics": [
+              "Resistant varieties , IPM",
+              "Total Hours 14"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Methods of survey- sampling methods, collection of soil and",
+            "contact_hours": 2,
+            "topic_lines": [
+              "samples",
+              "Methods of survey- sampling methods, collection of soil and",
+              "samples"
+            ],
+            "topics_text": "samples Methods of survey- sampling methods, collection of soil and samples",
+            "topics": [
+              "samples",
+              "Methods of survey- sampling methods, collection of soil and",
+              "samples"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Extraction of nematodes from soil and plant tissues following",
+            "contact_hours": 2,
+            "topic_lines": [
+              "combined Cobb’s sieving technique and Baermann funnel",
+              "technique",
+              "Extraction of nematodes from soil and plant tissues following",
+              "combined Cobb’s sieving technique and Baermann funnel technique"
+            ],
+            "topics_text": "combined Cobb’s sieving technique and Baermann funnel technique Extraction of nematodes from soil and plant tissues following combined Cobb’s sieving technique and Baermann funnel technique",
+            "topics": [
+              "combined Cobb’s sieving technique and Baermann funnel",
+              "technique",
+              "Extraction of nematodes from soil and plant tissues following",
+              "combined Cobb’s sieving technique and Baermann funnel technique"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Counting and estimation of plant parasitic nematodes",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Counting and estimation of plant parasitic nematodes"
+            ],
+            "topics_text": "Counting and estimation of plant parasitic nematodes",
+            "topics": [
+              "Counting and estimation of plant parasitic nematodes"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Preparation of temporary and permanent mounts",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of temporary and permanent mounts"
+            ],
+            "topics_text": "Preparation of temporary and permanent mounts",
+            "topics": [
+              "Preparation of temporary and permanent mounts"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Method of preparation of perineal patterns for identification of",
+            "contact_hours": 2,
+            "topic_lines": [
+              "species of Meloidogyne",
+              "Method of preparation of perineal patterns for identification of",
+              "species of Meloidogyne"
+            ],
+            "topics_text": "species of Meloidogyne Method of preparation of perineal patterns for identification of species of Meloidogyne",
+            "topics": [
+              "species of Meloidogyne",
+              "Method of preparation of perineal patterns for identification of",
+              "species of Meloidogyne"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Study and identification of most important plant parasitic",
+            "contact_hours": 2,
+            "topic_lines": [
+              "nematodes with special reference to their characteristics and",
+              "symptomatology",
+              "Study and identification of most important plant parasitic nematodes",
+              "with special reference to their characteristics and symptomatology"
+            ],
+            "topics_text": "nematodes with special reference to their characteristics and symptomatology Study and identification of most important plant parasitic nematodes with special reference to their characteristics and symptomatology",
+            "topics": [
+              "nematodes with special reference to their characteristics and",
+              "symptomatology",
+              "Study and identification of most important plant parasitic nematodes",
+              "with special reference to their characteristics and symptomatology"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experimental techniques used in pathogenicity studies with root",
+            "contact_hours": 2,
+            "topic_lines": [
+              "-knot nematode",
+              "Experimental techniques used in pathogenicity studies with root-",
+              "knot nematode"
+            ],
+            "topics_text": "-knot nematode Experimental techniques used in pathogenicity studies with root- knot nematode",
+            "topics": [
+              "knot nematode",
+              "Experimental techniques used in pathogenicity studies with root",
+              "knot nematode"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Studies of nematicides and their formulations",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Studies of nematicides and their formulations"
+            ],
+            "topics_text": "Studies of nematicides and their formulations",
+            "topics": [
+              "Studies of nematicides and their formulations"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Methods of nematicides application and their safe use",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Methods of nematicides application and their safe use"
+            ],
+            "topics_text": "Methods of nematicides application and their safe use",
+            "topics": [
+              "Methods of nematicides application and their safe use"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Calculation of nematicides application concentrations",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Calculation of nematicides application concentrations",
+              "Total Hours 20",
+              "Textbook :",
+              "1 NA, NA, NA, NA"
+            ],
+            "topics_text": "Calculation of nematicides application concentrations Total Hours 20 Textbook : 1 NA, NA, NA, NA",
+            "topics": [
+              "Calculation of nematicides application concentrations",
+              "Total Hours 20",
+              "Textbook :",
+              "1 NA, NA, NA, NA"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "A text book of Plant Nematology, A text book of Plant Nematology, Walia A. K. & Baja, Science Technology (ICAR), 2020"
+        ],
+        "textbooks": [
+          "NA, NA, NA, NA"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 8696,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF AGRICULTURE\nPROGRAM       BACHELOR OF SCIENCE (Hons.) AGRICULTURE\nSEMESTER         2\nCOURSE TITLE    INTRODUCTORY PLANT NEMATOLOGY\nCOURSE CODE     16AS0209\nCOURSE CREDITS  2\n\nObjective:\n 1  To study different types of plant parasitic nematode, its distribution, anatomy, its symptoms\n    and different diseases caused by them.\n 2  To study different control measures of plant parasitic nematodes.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Students will be able to identify the disease which is caused by nematodes\n 2  students will be able to control the disease caused by nematodes\n 3  Student will get detailed knowledge about Plant Parasitic nematode and their biology.\n 4  Student will able to extract nematode from soil and infected plant samples.\n\n\nPre-requisite of course:To create the awareness among the students about plant diseases caused\nby nematodes\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     1            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Introduction, History of phytonematology. Economic          1\n            importance\n               Introduction, History of phytonematology. Economic importance\n     2      General characteristics of plant pathogenic nematodes         1\n             General characteristics of plant pathogenic nematodes\n     3     Nematode general morphology and biology                   1\n            Nematode general morphology and biology\n     4       Classification of nematodes up to family level with emphasis on  2\n            groups containing economically important genera\n               Classification of nematodes up to family level with emphasis on\n             groups containing economically important genera\n     5       Classification of plant parasitic nematodes based on feeding     1\n              habits\n               Classification of plant parasitic nematodes based on feeding habits\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6       Identification of economically important plant nematodes up to  1\n             generic level with the help of keys and description\n                Identification of economically important plant nematodes up to\n              generic level with the help of keys and description\n     7     Symptoms caused by nematodes with examples               1\n           Symptoms caused by nematodes with examples\n     8       Interaction between plant parasitic nematodes and disease      1\n             causing fungi, bacteria and viruses\n               Interaction between plant parasitic nematodes and disease causing\n               fungi, bacteria and viruses\n     9       Different methods of nematode management. Cultural methods  2\n            (Crop rotation, fallowing, soil amendments, other land\n           management techniques)\n               Different methods of nematode management. Cultural methods\n             (Crop rotation, fallowing, soil amendments, other land management\n              techniques)\n     10      Physical methods (Soil solarization, hot water treatment )       1\n              Physical methods (Soil solarization, hot water treatment )\n     11      Biological methods, Chemical methods (fumigants, non         1\n             fumigants)\n              Biological methods, Chemical methods (fumigants, non fumigants)\n     12      Resistant varieties , IPM                                   1\n               Resistant varieties , IPM\n                               Total Hours                       14\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Methods of survey- sampling methods, collection of soil and     2\n            samples\n            Methods of survey- sampling methods, collection of soil and\n             samples\n     2      Extraction of nematodes from soil and plant tissues following    2\n           combined Cobb’s sieving technique and Baermann funnel\n             technique\n              Extraction of nematodes from soil and plant tissues following\n            combined Cobb’s sieving technique and Baermann funnel technique\n     3      Counting and estimation of plant parasitic nematodes          2\n             Counting and estimation of plant parasitic nematodes\n     4      Preparation of temporary and permanent mounts             2\n              Preparation of temporary and permanent mounts\n     5     Method of preparation of perineal patterns for identification of  2\n              species of Meloidogyne\n            Method of preparation of perineal patterns for identification of\n              species of Meloidogyne\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6      Study and identification of most important plant parasitic      2\n            nematodes with special reference to their characteristics and\n            symptomatology\n             Study and identification of most important plant parasitic nematodes\n             with special reference to their characteristics and symptomatology\n     7      Experimental techniques used in pathogenicity studies with root 2\n             -knot nematode\n             Experimental techniques used in pathogenicity studies with root-\n             knot nematode\n     8       Studies of nematicides and their formulations                 2\n              Studies of nematicides and their formulations\n     9     Methods of nematicides application and their safe use          2\n            Methods of nematicides application and their safe use\n     10      Calculation of nematicides application concentrations          2\n              Calculation of nematicides application concentrations\n                               Total Hours                       20\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1 A text book of Plant Nematology, A text book of Plant Nematology, Walia A. K. & Baja,\n     Science Technology (ICAR), 2020\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    25.00         25.00         20.00         10.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board may also\n     use any of tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\n\n\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata."
+      ],
+      "actual_pdf_sha256": "8b12359122d0869e1b50b87e91dcccb067d1e1cf30d84f3489961e17ced871b7",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "33016119020201",
+      "subject_name": "Manures, Fertilizers & Soil Fertility Mangement",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016132001301",
+      "subject_name": "NSS/NCC/Physical Education & Yoga Practices",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119020301",
+      "subject_name": "Statistical Methods",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 2,
+    "manual_review": 1,
+    "ocr_review": 0,
+    "missing_pdf": 10,
+    "extraction_errors": 0
+  }
+}

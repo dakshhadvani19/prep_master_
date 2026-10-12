@@ -1,0 +1,462 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "m-pharm-pharmaceutics",
+    "course_name": "M.Pharm Pharmaceutics",
+    "output_slug": "MPharm_Pharmaceutics"
+  },
+  "semester": 2,
+  "subject_count": 6,
+  "subjects": [
+    {
+      "subject_id": "38013133020301",
+      "subject_name": "Computer-Aided Drug Development",
+      "course_id": "m-pharm-pharmaceutics",
+      "course_name": "M.Pharm Pharmaceutics",
+      "semester": 2,
+      "subject_code": "13MC0203",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13MC0203.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Computer-Aided Drug Development [02700be5667d].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Computer-Aided Drug Development [02700be5667d].pdf",
+      "expected_pdf_sha256": "6870164576cef8d8088ba0970f09d639df32bf8df923ba5fbd09a02e0ebd685f",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMPUTER-AIDED DRUG DEVELOPMENT",
+        "course_code": "13MC0203",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "Nil"
+      },
+      "objectives": [
+        "This course is designed to impart knowledge and skills necessary for computer Applications in pharmaceutical research and development who want to understand the application of computers across the entire drug research and development process. Basic theoretical discussions of the principles of more integrated and coherent use of computerized information (informatics) in the drug development process is provided to help the students to clarify the concepts.",
+        "This course is designed to impart knowledge and skills necessary for computer Applications in pharmaceutical research and development who want to understand the application of computers across the entire drug research and development process. Basic theoretical discussions of the principles of more integrated and coherent use of computerized information (informatics) in the drug development process is provided to help the students to clarify the concepts."
+      ],
+      "course_outcomes": [
+        "Understand computational modeling in drug disposition and optimization techniques in pharmaceutical formulation",
+        "Understand computer simulation in pharmacokinetics, pharmacodynamics, biopharmaceutical characterization, and clinical development",
+        "Understand Artificial Intelligence (AI), robotics and computational fluid dynamics(CFD) Pre-requisite of course:Nil"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 75 15 10 0 0 DR. RAMESH BHANAJIBHAI PARMAR DR. LALJI HAKUBHAI BALDANIYA Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit-1",
+            "contact_hours": 12,
+            "topic_lines": [
+              "a. Computers in Pharmaceutical Research and Development: A",
+              "General Overview: History of Computers in Pharmaceutical",
+              "Research and Development. Statistical modeling in Pharmaceutical",
+              "research and development: Descriptive versus Mechanistic",
+              "Modeling, Statistical Parameters, Estimation, Confidence Regions,",
+              "Nonlinearity at the Optimum, Sensitivity Analysis, Optimal Design,",
+              "Population Modeling, b. Quality-by-Design In Pharmaceutical",
+              "Development: Introduction, ICH Q8 guideline, Regulatory and",
+              "industry views on QbD, Scientifically based QbD - examples of",
+              "application."
+            ],
+            "topics_text": "a. Computers in Pharmaceutical Research and Development: A General Overview: History of Computers in Pharmaceutical Research and Development. Statistical modeling in Pharmaceutical research and development: Descriptive versus Mechanistic Modeling, Statistical Parameters, Estimation, Confidence Regions, Nonlinearity at the Optimum, Sensitivity Analysis, Optimal Design, Population Modeling, b. Quality-by-Design In Pharmaceutical Development: Introduction, ICH Q8 guideline, Regulatory and industry views on QbD, Scientifically based QbD - examples of application.",
+            "topics": [
+              "a. Computers in Pharmaceutical Research and Development: A",
+              "General Overview: History of Computers in Pharmaceutical",
+              "Research and Development. Statistical modeling in Pharmaceutical",
+              "research and development: Descriptive versus Mechanistic",
+              "Modeling, Statistical Parameters, Estimation, Confidence Regions,",
+              "Nonlinearity at the Optimum, Sensitivity Analysis, Optimal Design,",
+              "Population Modeling, b. Quality-by-Design In Pharmaceutical",
+              "Development: Introduction, ICH Q8 guideline, Regulatory and",
+              "industry views on QbD, Scientifically based QbD - examples of",
+              "application."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit-2",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Computational Modeling Of Drug Disposition: Introduction,",
+              "Modeling Techniques: Drug Absorption, Solubility, Intestinal",
+              "Permeation, Drug Distribution, Drug Excretion, Active Transport;",
+              "P-GP, BCRP, Nucleoside Transporters, hPEPT1, ASBT, OCT,",
+              "OATP, BBB-Choline Transporter."
+            ],
+            "topics_text": "Computational Modeling Of Drug Disposition: Introduction, Modeling Techniques: Drug Absorption, Solubility, Intestinal Permeation, Drug Distribution, Drug Excretion, Active Transport; P-GP, BCRP, Nucleoside Transporters, hPEPT1, ASBT, OCT, OATP, BBB-Choline Transporter.",
+            "topics": [
+              "Computational Modeling Of Drug Disposition: Introduction,",
+              "Modeling Techniques: Drug Absorption, Solubility, Intestinal",
+              "Permeation, Drug Distribution, Drug Excretion, Active Transport",
+              "P-GP, BCRP, Nucleoside Transporters, hPEPT1, ASBT, OCT,",
+              "OATP, BBB-Choline Transporter."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit-3",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Computer-aided formulation development: Concept of optimization,",
+              "Optimization parameters, Factorial design, Optimization technology",
+              "& Screening design., Computers in Pharmaceutical Formulation:",
+              "Development of pharmaceutical emulsions, microemulsion drug",
+              "carriers Legal Protection of Innovative Uses of Computers in R&D,",
+              "The Ethics of Computing in Pharmaceutical Research, Computers in",
+              "Market analysis"
+            ],
+            "topics_text": "Computer-aided formulation development: Concept of optimization, Optimization parameters, Factorial design, Optimization technology & Screening design., Computers in Pharmaceutical Formulation: Development of pharmaceutical emulsions, microemulsion drug carriers Legal Protection of Innovative Uses of Computers in R&D, The Ethics of Computing in Pharmaceutical Research, Computers in Market analysis",
+            "topics": [
+              "Computer-aided formulation development: Concept of optimization,",
+              "Optimization parameters, Factorial design, Optimization technology",
+              "& Screening design., Computers in Pharmaceutical Formulation:",
+              "Development of pharmaceutical emulsions, microemulsion drug",
+              "carriers Legal Protection of Innovative Uses of Computers in R&D,",
+              "The Ethics of Computing in Pharmaceutical Research, Computers in",
+              "Market analysis"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit-4",
+            "contact_hours": 12,
+            "topic_lines": [
+              "a. Computer-aided biopharmaceutical characterization:",
+              "Gastrointestinal absorption simulation. Introduction, Theoretical",
+              "Background, Model construction, Parameter sensitivity analysis,",
+              "Virtual trial, Fed vs. fasted state, In vitro dissolution and in vitro in",
+              "vivo correlation, Biowaiver considerations, b. Computer",
+              "Simulations in Pharmacokinetics and Pharmacodynamics:",
+              "Introduction, Computer Simulation: Whole Organism, Isolated",
+              "Tissues, Organs, Cell, Proteins, and Genes., c. Computers in",
+              "Clinical Development: Clinical Data Collection and Management,",
+              "Regulation of Computer Systems"
+            ],
+            "topics_text": "a. Computer-aided biopharmaceutical characterization: Gastrointestinal absorption simulation. Introduction, Theoretical Background, Model construction, Parameter sensitivity analysis, Virtual trial, Fed vs. fasted state, In vitro dissolution and in vitro in vivo correlation, Biowaiver considerations, b. Computer Simulations in Pharmacokinetics and Pharmacodynamics: Introduction, Computer Simulation: Whole Organism, Isolated Tissues, Organs, Cell, Proteins, and Genes., c. Computers in Clinical Development: Clinical Data Collection and Management, Regulation of Computer Systems",
+            "topics": [
+              "a. Computer-aided biopharmaceutical characterization:",
+              "Gastrointestinal absorption simulation. Introduction, Theoretical",
+              "Background, Model construction, Parameter sensitivity analysis,",
+              "Virtual trial, Fed vs. fasted state, In vitro dissolution and in vitro in",
+              "vivo correlation, Biowaiver considerations, b. Computer",
+              "Simulations in Pharmacokinetics and Pharmacodynamics:",
+              "Introduction, Computer Simulation: Whole Organism, Isolated",
+              "Tissues, Organs, Cell, Proteins, and Genes., c. Computers in",
+              "Clinical Development: Clinical Data Collection and Management,",
+              "Regulation of Computer Systems"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Unit-5",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Artificial Intelligence (AI), Robotics and Computational fluid",
+              "dynamics: General overview, Pharmaceutical Automation,",
+              "Pharmaceutical applications, Advantages, and Disadvantages.",
+              "Current Challenges and Future Directions.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Computer Applications in Pharmaceutical Research and Development, Sean Ekins, John",
+              "Wiley & Sons., 2006",
+              "Textbook :",
+              "2 Computer-Aided Applications in Pharmaceutical Technology, Jelena Djuris, Woodhead",
+              "Publishing, 2003",
+              "3 Encyclopedia of Pharmaceutical Technology, James Swarbrick, James. G.Boylan, Marcel",
+              "Dekker Inc, New York, 1996"
+            ],
+            "topics_text": "Artificial Intelligence (AI), Robotics and Computational fluid dynamics: General overview, Pharmaceutical Automation, Pharmaceutical applications, Advantages, and Disadvantages. Current Challenges and Future Directions. Total Hours 60 Textbook : 1 Computer Applications in Pharmaceutical Research and Development, Sean Ekins, John Wiley & Sons., 2006 Textbook : 2 Computer-Aided Applications in Pharmaceutical Technology, Jelena Djuris, Woodhead Publishing, 2003 3 Encyclopedia of Pharmaceutical Technology, James Swarbrick, James. G.Boylan, Marcel Dekker Inc, New York, 1996",
+            "topics": [
+              "Artificial Intelligence (AI), Robotics and Computational fluid",
+              "dynamics: General overview, Pharmaceutical Automation,",
+              "Pharmaceutical applications, Advantages, and Disadvantages.",
+              "Current Challenges and Future Directions.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Computer Applications in Pharmaceutical Research and Development, Sean Ekins, John",
+              "Wiley & Sons., 2006",
+              "Textbook :",
+              "2 Computer-Aided Applications in Pharmaceutical Technology, Jelena Djuris, Woodhead",
+              "Publishing, 2003",
+              "3 Encyclopedia of Pharmaceutical Technology, James Swarbrick, James. G.Boylan, Marcel",
+              "Dekker Inc, New York, 1996"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "Computer Applications in Pharmaceutical Research and Development, Sean Ekins, John Wiley & Sons., 2006 Textbook :",
+          "Computer-Aided Applications in Pharmaceutical Technology, Jelena Djuris, Woodhead Publishing, 2003",
+          "Encyclopedia of Pharmaceutical Technology, James Swarbrick, James. G.Boylan, Marcel Dekker Inc, New York, 1996"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 7169,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       MASTER OF PHARMACY (PHARMACEUTICS)\nSEMESTER         2\nCOURSE TITLE    COMPUTER-AIDED DRUG DEVELOPMENT\nCOURSE CODE     13MC0203\nCOURSE CREDITS  4\n\nObjective:\n 1  This course is designed to impart knowledge and skills necessary for computer\n     Applications in pharmaceutical research and development who want to understand the\n     application of computers across the entire drug research and development process. Basic\n     theoretical discussions of the principles of more\n     integrated and coherent use of computerized information (informatics) in the drug\n    development process is provided to help the students to clarify the concepts.\n 2  This course is designed to impart knowledge and skills necessary for computer\n     Applications in pharmaceutical research and development who want to understand the\n     application of computers across the entire drug research and development process. Basic\n     theoretical discussions of the principles of more integrated and coherent use of\n    computerized information (informatics) in the drug development process is provided to\n     help the students to clarify the concepts.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand computational modeling in drug disposition and optimization techniques in\n     pharmaceutical formulation\n 2  Understand computer simulation in pharmacokinetics, pharmacodynamics,\n     biopharmaceutical characterization, and clinical development\n 3  Understand Artificial Intelligence (AI), robotics and computational fluid dynamics(CFD)\n\n\nPre-requisite of course:Nil\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        75     15      10        0          0\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Unit-1                                                  12\n                 a. Computers in Pharmaceutical Research and Development: A\n             General Overview: History of Computers in Pharmaceutical\n             Research and Development. Statistical modeling in Pharmaceutical\n              research and development: Descriptive versus Mechanistic\n             Modeling, Statistical Parameters, Estimation, Confidence Regions,\n              Nonlinearity at the Optimum, Sensitivity Analysis, Optimal Design,\n              Population Modeling, b. Quality-by-Design In Pharmaceutical\n             Development: Introduction, ICH Q8 guideline, Regulatory and\n               industry views on QbD, Scientifically based QbD - examples of\n               application.\n     2      Unit-2                                                  12\n             Computational Modeling Of Drug Disposition: Introduction,\n            Modeling Techniques: Drug Absorption, Solubility, Intestinal\n              Permeation, Drug Distribution, Drug Excretion, Active Transport;\n            P-GP, BCRP, Nucleoside Transporters, hPEPT1, ASBT, OCT,\n          OATP, BBB-Choline Transporter.\n     3      Unit-3                                                  12\n             Computer-aided formulation development: Concept of optimization,\n              Optimization parameters, Factorial design, Optimization technology\n        & Screening design., Computers in Pharmaceutical Formulation:\n            Development of pharmaceutical emulsions, microemulsion drug\n                carriers Legal Protection of Innovative Uses of Computers in R&D,\n            The Ethics of Computing in Pharmaceutical Research, Computers in\n            Market analysis\n     4      Unit-4                                                  12\n                 a. Computer-aided biopharmaceutical characterization:\n               Gastrointestinal absorption simulation. Introduction, Theoretical\n             Background, Model construction, Parameter sensitivity analysis,\n               Virtual trial, Fed vs. fasted state, In vitro dissolution and in vitro in\n             vivo correlation, Biowaiver considerations, b. Computer\n              Simulations in Pharmacokinetics and Pharmacodynamics:\n               Introduction, Computer Simulation: Whole Organism, Isolated\n               Tissues, Organs, Cell, Proteins, and Genes., c. Computers in\n               Clinical Development: Clinical Data Collection and Management,\n              Regulation of Computer Systems\n     5      Unit-5                                                  12\n                Artificial Intelligence (AI), Robotics and Computational fluid\n             dynamics: General overview, Pharmaceutical Automation,\n              Pharmaceutical applications, Advantages, and Disadvantages.\n              Current Challenges and Future Directions.\n                               Total Hours                       60\n\n\nTextbook :\n 1  Computer Applications in Pharmaceutical Research and Development, Sean Ekins, John\n    Wiley & Sons., 2006\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Textbook :\n 2  Computer-Aided Applications in Pharmaceutical Technology, Jelena Djuris, Woodhead\n     Publishing, 2003\n 3  Encyclopedia of Pharmaceutical Technology, James Swarbrick, James. G.Boylan, Marcel\n    Dekker Inc, New York, 1996\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         25.00         25.00         15.00         15.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the blackboard\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "6870164576cef8d8088ba0970f09d639df32bf8df923ba5fbd09a02e0ebd685f",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "38013133020401",
+      "subject_name": "Cosmetics and Cosmeceuticals",
+      "course_id": "m-pharm-pharmaceutics",
+      "course_name": "M.Pharm Pharmaceutics",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "38013133020101",
+      "subject_name": "Molecular Pharmaceutics",
+      "course_id": "m-pharm-pharmaceutics",
+      "course_name": "M.Pharm Pharmaceutics",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "38013133020501",
+      "subject_name": "Pharmaceutics Practicals-2",
+      "course_id": "m-pharm-pharmaceutics",
+      "course_name": "M.Pharm Pharmaceutics",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "38013133020201",
+      "subject_name": "Pharmacokinetics",
+      "course_id": "m-pharm-pharmaceutics",
+      "course_name": "M.Pharm Pharmaceutics",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "38013133020601",
+      "subject_name": "Seminar/assignment",
+      "course_id": "m-pharm-pharmaceutics",
+      "course_name": "M.Pharm Pharmaceutics",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 1,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 5,
+    "extraction_errors": 0
+  }
+}

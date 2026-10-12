@@ -1,0 +1,869 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "m-pharm-pharmaceutical-quality-assurence",
+    "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+    "output_slug": "MPharm_Pharmaceutical_Quality_Assurance"
+  },
+  "semester": 2,
+  "subject_count": 7,
+  "subjects": [
+    {
+      "subject_id": "39131317020301",
+      "subject_name": "Audits and Regulatory Compliance",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 2,
+      "subject_code": "13MQ0203",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13MQ0203.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Audits and Regulatory Compliance [49d52f853c22].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Audits and Regulatory Compliance [49d52f853c22].pdf",
+      "expected_pdf_sha256": "4940bc24a0af008e7565a166e39c4053c5f4c09367b83057c0032166783218e0",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "AUDITS AND REGULATORY COMPLIANCE",
+        "course_code": "13MQ0203",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "Nil"
+      },
+      "objectives": [
+        "This course deals with the understanding and process of auditing in pharmaceutical industries. This subject covers the methodology involved in the auditing process of different in pharmaceutical industries."
+      ],
+      "course_outcomes": [
+        "To understand the importance of auditing",
+        "To understand the methodology of auditing",
+        "To carry out the audit process",
+        "To prepare the auditing report",
+        "To prepare the checklist for auditing Pre-requisite of course:Nil"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 75 15 10 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit-1",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction: Objectives, Management of audit, Responsibilities,",
+              "Planning process, information gathering, administration,",
+              "Classifications of deficiencies"
+            ],
+            "topics_text": "Introduction: Objectives, Management of audit, Responsibilities, Planning process, information gathering, administration, Classifications of deficiencies",
+            "topics": [
+              "Introduction: Objectives, Management of audit, Responsibilities,",
+              "Planning process, information gathering, administration,",
+              "Classifications of deficiencies"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit-2",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Role of quality systems and audits in a pharmaceutical",
+              "manufacturing environment: cGMP Regulations, Quality assurance",
+              "functions, Quality systems approach, Management responsibilities,",
+              "Resources, Manufacturing operations, Evaluation activities,",
+              "Transitioning to a quality system approach, Audit checklist for drug",
+              "industries."
+            ],
+            "topics_text": "Role of quality systems and audits in a pharmaceutical manufacturing environment: cGMP Regulations, Quality assurance functions, Quality systems approach, Management responsibilities, Resources, Manufacturing operations, Evaluation activities, Transitioning to a quality system approach, Audit checklist for drug industries.",
+            "topics": [
+              "Role of quality systems and audits in a pharmaceutical",
+              "manufacturing environment: cGMP Regulations, Quality assurance",
+              "functions, Quality systems approach, Management responsibilities,",
+              "Resources, Manufacturing operations, Evaluation activities,",
+              "Transitioning to a quality system approach, Audit checklist for drug",
+              "industries."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit-3",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Auditing of vendors and production department: Bulk",
+              "Pharmaceutical Chemicals and packaging material Vendor audit,",
+              "Warehouse, and weighing. , Dry Production: Granulation, tableting,",
+              "coating, capsules, sterile production, and packaging."
+            ],
+            "topics_text": "Auditing of vendors and production department: Bulk Pharmaceutical Chemicals and packaging material Vendor audit, Warehouse, and weighing. , Dry Production: Granulation, tableting, coating, capsules, sterile production, and packaging.",
+            "topics": [
+              "Auditing of vendors and production department: Bulk",
+              "Pharmaceutical Chemicals and packaging material Vendor audit,",
+              "Warehouse, and weighing. , Dry Production: Granulation, tableting,",
+              "coating, capsules, sterile production, and packaging."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit-4",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Auditing of Microbiological laboratory: Auditing the manufacturing",
+              "process, Product and process information, General areas of interest",
+              "in the building raw materials, Water, and Packaging materials."
+            ],
+            "topics_text": "Auditing of Microbiological laboratory: Auditing the manufacturing process, Product and process information, General areas of interest in the building raw materials, Water, and Packaging materials.",
+            "topics": [
+              "Auditing of Microbiological laboratory: Auditing the manufacturing",
+              "process, Product and process information, General areas of interest",
+              "in the building raw materials, Water, and Packaging materials."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Unit-5",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Auditing of Quality Assurance and engineering department: Quality",
+              "Assurance Maintenance, Critical systems: HVAC, Water, Water for",
+              "Injection systems, ETP.",
+              "Total Hours 58",
+              "Textbook :",
+              "1 Compliance auditing for Pharmaceutical Manufacturers, Karen Ginsbury and Gil",
+              "Bismuth, Interpharm/CRC, Boca Raton, London New York, Washington D.C., 2000",
+              "2 Pharmaceutical Manufacturing Handbook, Regulations and Quality, Shayne Cox Gad. ,",
+              "Wiley-Interscience, A John Wiley, and sons, Inc., Publications., 1989",
+              "3 Handbook of microbiological Quality control., Rosamund M. Baird, Norman A. Hodges,",
+              "Stephen P. Denyar. , CRC press, 2000",
+              "4 Laboratory auditing for quality and regulatory compliance. , Donald C. Singer, Raluca-",
+              "loana Stefan, Jacobus F. Van Staden., Taylor and Francis , 2005"
+            ],
+            "topics_text": "Auditing of Quality Assurance and engineering department: Quality Assurance Maintenance, Critical systems: HVAC, Water, Water for Injection systems, ETP. Total Hours 58 Textbook : 1 Compliance auditing for Pharmaceutical Manufacturers, Karen Ginsbury and Gil Bismuth, Interpharm/CRC, Boca Raton, London New York, Washington D.C., 2000 2 Pharmaceutical Manufacturing Handbook, Regulations and Quality, Shayne Cox Gad. , Wiley-Interscience, A John Wiley, and sons, Inc., Publications., 1989 3 Handbook of microbiological Quality control., Rosamund M. Baird, Norman A. Hodges, Stephen P. Denyar. , CRC press, 2000 4 Laboratory auditing for quality and regulatory compliance. , Donald C. Singer, Raluca- loana Stefan, Jacobus F. Van Staden., Taylor and Francis , 2005",
+            "topics": [
+              "Auditing of Quality Assurance and engineering department: Quality",
+              "Assurance Maintenance, Critical systems: HVAC, Water, Water for",
+              "Injection systems, ETP.",
+              "Total Hours 58",
+              "Textbook :",
+              "1 Compliance auditing for Pharmaceutical Manufacturers, Karen Ginsbury and Gil",
+              "Bismuth, Interpharm/CRC, Boca Raton, London New York, Washington D.C., 2000",
+              "2 Pharmaceutical Manufacturing Handbook, Regulations and Quality, Shayne Cox Gad. ,",
+              "Wiley-Interscience, A John Wiley, and sons, Inc., Publications., 1989",
+              "3 Handbook of microbiological Quality control., Rosamund M. Baird, Norman A. Hodges,",
+              "Stephen P. Denyar. , CRC press, 2000",
+              "4 Laboratory auditing for quality and regulatory compliance. , Donald C. Singer, Raluca",
+              "loana Stefan, Jacobus F. Van Staden., Taylor and Francis , 2005"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "Compliance auditing for Pharmaceutical Manufacturers, Karen Ginsbury and Gil Bismuth, Interpharm/CRC, Boca Raton, London New York, Washington D.C., 2000",
+          "Pharmaceutical Manufacturing Handbook, Regulations and Quality, Shayne Cox Gad. , Wiley-Interscience, A John Wiley, and sons, Inc., Publications., 1989",
+          "Handbook of microbiological Quality control., Rosamund M. Baird, Norman A. Hodges, Stephen P. Denyar. , CRC press, 2000",
+          "Laboratory auditing for quality and regulatory compliance. , Donald C. Singer, Raluca- loana Stefan, Jacobus F. Van Staden., Taylor and Francis , 2005"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5591,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       MASTER OF PHARMACY (PHARMACEUTICAL\n               QUALITY ASSURANCE)\nSEMESTER         2\nCOURSE TITLE    AUDITS AND REGULATORY COMPLIANCE\nCOURSE CODE    13MQ0203\nCOURSE CREDITS  4\n\nObjective:\n 1  This course deals with the understanding and process of auditing in pharmaceutical\n     industries. This subject covers the methodology involved in the auditing process of\n     different in pharmaceutical industries.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand the importance of auditing\n 2  To understand the methodology of auditing\n 3  To carry out the audit process\n 4  To prepare the auditing report\n 5  To prepare the checklist for auditing\n\n\nPre-requisite of course:Nil\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        75     15      10        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Unit-1                                                  12\n               Introduction: Objectives, Management of audit, Responsibilities,\n             Planning process, information gathering, administration,\n               Classifications of deficiencies\n     2      Unit-2                                                  12\n             Role of quality systems and audits in a pharmaceutical\n             manufacturing environment: cGMP Regulations, Quality assurance\n               functions, Quality systems approach, Management responsibilities,\n              Resources, Manufacturing operations, Evaluation activities,\n              Transitioning to a quality system approach, Audit checklist for drug\n                industries.\n\n\n\n\n\nDR. NASIRBHAI HAJIBHAI VADIA                       DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Unit-3                                                  12\n             Auditing of vendors and production department: Bulk\n              Pharmaceutical Chemicals and packaging material Vendor audit,\n             Warehouse, and weighing. , Dry Production: Granulation, tableting,\n               coating, capsules, sterile production, and packaging.\n     4      Unit-4                                                  12\n             Auditing of Microbiological laboratory: Auditing the manufacturing\n               process, Product and process information, General areas of interest\n               in the building raw materials, Water, and Packaging materials.\n     5      Unit-5                                                  10\n             Auditing of Quality Assurance and engineering department: Quality\n             Assurance Maintenance, Critical systems: HVAC, Water, Water for\n               Injection systems, ETP.\n                               Total Hours                       58\n\n\nTextbook :\n 1  Compliance auditing for Pharmaceutical Manufacturers, Karen Ginsbury and Gil\n    Bismuth, Interpharm/CRC, Boca  Raton, London New York, Washington D.C., 2000\n 2  Pharmaceutical Manufacturing Handbook, Regulations and Quality, Shayne Cox Gad. ,\n     Wiley-Interscience, A John Wiley, and sons, Inc., Publications., 1989\n 3  Handbook of microbiological Quality control., Rosamund M. Baird, Norman A. Hodges,\n    Stephen P. Denyar. , CRC press, 2000\n 4  Laboratory auditing for quality and regulatory compliance. , Donald C. Singer, Raluca-\n     loana Stefan, Jacobus F. Van Staden., Taylor and Francis , 2005\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         25.00         25.00         15.00         10.00          5.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the blackboard\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n\n\n\nDR. NASIRBHAI HAJIBHAI VADIA                       DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. NASIRBHAI HAJIBHAI VADIA                       DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "4940bc24a0af008e7565a166e39c4053c5f4c09367b83057c0032166783218e0",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "39131317020101",
+      "subject_name": "Hazards and Safety Management",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 2,
+      "subject_code": "13MQ0201",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13MQ0201.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Hazards and Safety Management [0f82ca3979be].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Hazards and Safety Management [0f82ca3979be].pdf",
+      "expected_pdf_sha256": "776d1ed2ade13cd0a1fdc11449705210822b861ca642c49bdb627c436390be0b",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "HAZARDS AND SAFETY MANAGEMENT",
+        "course_code": "13MQ0201",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "Nil"
+      },
+      "objectives": [
+        "This course is designed to convey the knowledge necessary to understand issues related to different kinds of hazards and their management. Basic theoretical and practical discussions integrate the proficiency to handle the emergency situation in the pharmaceutical product development process and provide a principle-based approach to solving complex tribulations."
+      ],
+      "course_outcomes": [
+        "Understand basic knowledge about the environment and environmental problems among learners.",
+        "Ensure Provide comprehensive knowledge of the safety standards and safety management in the pharmaceutical industry.",
+        "Empower an idea to clear mechanisms and management in different kinds of hazard management systems",
+        "Teach the method of Hazard assessment, procedure, and methodology for providing a safe industrial atmosphere. Pre-requisite of course:Nil"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 75 15 10 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit-1",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Multidisciplinary nature of environmental studies: Natural",
+              "Resources, Renewable and non-renewable resources, Natural",
+              "resources and associated problems, Forest resources; b) Water",
+              "resources; c) Mineral resources; d) Energy resources; e) Land",
+              "resources, Ecosystems: Concept of an ecosystem and Structure and",
+              "the function of an ecosystem. , Environmental hazards: Hazards",
+              "based on Air, Water, Soil, and Radioisotopes."
+            ],
+            "topics_text": "Multidisciplinary nature of environmental studies: Natural Resources, Renewable and non-renewable resources, Natural resources and associated problems, Forest resources; b) Water resources; c) Mineral resources; d) Energy resources; e) Land resources, Ecosystems: Concept of an ecosystem and Structure and the function of an ecosystem. , Environmental hazards: Hazards based on Air, Water, Soil, and Radioisotopes.",
+            "topics": [
+              "Multidisciplinary nature of environmental studies: Natural",
+              "Resources, Renewable and non-renewable resources, Natural",
+              "resources and associated problems, Forest resources",
+              "b) Water",
+              "resources",
+              "c) Mineral resources",
+              "d) Energy resources",
+              "e) Land",
+              "resources, Ecosystems: Concept of an ecosystem and Structure and",
+              "the function of an ecosystem. , Environmental hazards: Hazards",
+              "based on Air, Water, Soil, and Radioisotopes."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit-2",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Air-based hazards: Sources, Types of Hazards, Air circulation",
+              "maintenance industry for sterile area and non-sterile area,",
+              "Preliminary Hazard Analysis (PHA) , Fire protection system: Fire",
+              "prevention, types of fire extinguishers, and critical Hazard",
+              "management system."
+            ],
+            "topics_text": "Air-based hazards: Sources, Types of Hazards, Air circulation maintenance industry for sterile area and non-sterile area, Preliminary Hazard Analysis (PHA) , Fire protection system: Fire prevention, types of fire extinguishers, and critical Hazard management system.",
+            "topics": [
+              "Air-based hazards: Sources, Types of Hazards, Air circulation",
+              "maintenance industry for sterile area and non-sterile area,",
+              "Preliminary Hazard Analysis (PHA) , Fire protection system: Fire",
+              "prevention, types of fire extinguishers, and critical Hazard",
+              "management system."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit-3",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Chemical-based hazards: Sources of chemical hazards, Hazards of",
+              "Organic Synthesis, sulfonating hazard, Organic solvent hazard,",
+              "Control measures for chemical hazards, Management of",
+              "combustible gases, Toxic gases and Oxygen displacing gases",
+              "management, Regulations for chemical hazards, Management of",
+              "over-Exposure to chemicals and TLV concept."
+            ],
+            "topics_text": "Chemical-based hazards: Sources of chemical hazards, Hazards of Organic Synthesis, sulfonating hazard, Organic solvent hazard, Control measures for chemical hazards, Management of combustible gases, Toxic gases and Oxygen displacing gases management, Regulations for chemical hazards, Management of over-Exposure to chemicals and TLV concept.",
+            "topics": [
+              "Chemical-based hazards: Sources of chemical hazards, Hazards of",
+              "Organic Synthesis, sulfonating hazard, Organic solvent hazard,",
+              "Control measures for chemical hazards, Management of",
+              "combustible gases, Toxic gases and Oxygen displacing gases",
+              "management, Regulations for chemical hazards, Management of",
+              "over-Exposure to chemicals and TLV concept."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit-4",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Fire and Explosion: Introduction, Industrial processes and hazards",
+              "potential, mechanical electrical, thermal and process hazards. Safety",
+              "and hazards regulations, Fire protection system: Fire prevention,",
+              "types of fire extinguishers and critical Hazard management system",
+              "mechanical and chemical explosion, multiphase reactions, transport",
+              "effects, and global rates. Preventive and protective management",
+              "from fires and explosion-electricity passivation, ventilation,",
+              "sprinkling, proofing, relief systems -relief valves, flares, scrubbers."
+            ],
+            "topics_text": "Fire and Explosion: Introduction, Industrial processes and hazards potential, mechanical electrical, thermal and process hazards. Safety and hazards regulations, Fire protection system: Fire prevention, types of fire extinguishers and critical Hazard management system mechanical and chemical explosion, multiphase reactions, transport effects, and global rates. Preventive and protective management from fires and explosion-electricity passivation, ventilation, sprinkling, proofing, relief systems -relief valves, flares, scrubbers.",
+            "topics": [
+              "Fire and Explosion: Introduction, Industrial processes and hazards",
+              "potential, mechanical electrical, thermal and process hazards. Safety",
+              "and hazards regulations, Fire protection system: Fire prevention,",
+              "types of fire extinguishers and critical Hazard management system",
+              "mechanical and chemical explosion, multiphase reactions, transport",
+              "effects, and global rates. Preventive and protective management",
+              "from fires and explosion-electricity passivation, ventilation,",
+              "sprinkling, proofing, relief systems -relief valves, flares, scrubbers."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Unit-5",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Hazard and risk management: Self-protective measures against",
+              "workplace hazards. Critical training for risk management, Process",
+              "of hazard management, ICH guidelines on risk assessment and Risk",
+              "management methods and Tools Factory act and rules, fundamentals",
+              "of accident prevention, elements of a safety program and safety",
+              "management, Physicochemical measurements of effluents, BOD,",
+              "COD, Determination of some contaminants, Effluent treatment",
+              "procedure, Role of emergency services.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Environmental Science, Y.K. Sing, New Age International Pvt, Publishers, 1990",
+              "2 “Quantitative Risk Assessment in Chemical Process Industries”, American Institute of",
+              "Chemical Industries, Centre for Chemical Process safety., 1997",
+              "3 The Biodiversity of India, Bharucha Erach, Mapin Publishing Pvt. Ltd.,, 2000",
+              "4 Hazardous Chemicals: Safety Management and Global Regulations, T.S.S. Dikshith, CRC",
+              "Press, 1990"
+            ],
+            "topics_text": "Hazard and risk management: Self-protective measures against workplace hazards. Critical training for risk management, Process of hazard management, ICH guidelines on risk assessment and Risk management methods and Tools Factory act and rules, fundamentals of accident prevention, elements of a safety program and safety management, Physicochemical measurements of effluents, BOD, COD, Determination of some contaminants, Effluent treatment procedure, Role of emergency services. Total Hours 60 Textbook : 1 Environmental Science, Y.K. Sing, New Age International Pvt, Publishers, 1990 2 “Quantitative Risk Assessment in Chemical Process Industries”, American Institute of Chemical Industries, Centre for Chemical Process safety., 1997 3 The Biodiversity of India, Bharucha Erach, Mapin Publishing Pvt. Ltd.,, 2000 4 Hazardous Chemicals: Safety Management and Global Regulations, T.S.S. Dikshith, CRC Press, 1990",
+            "topics": [
+              "Hazard and risk management: Self-protective measures against",
+              "workplace hazards. Critical training for risk management, Process",
+              "of hazard management, ICH guidelines on risk assessment and Risk",
+              "management methods and Tools Factory act and rules, fundamentals",
+              "of accident prevention, elements of a safety program and safety",
+              "management, Physicochemical measurements of effluents, BOD,",
+              "COD, Determination of some contaminants, Effluent treatment",
+              "procedure, Role of emergency services.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Environmental Science, Y.K. Sing, New Age International Pvt, Publishers, 1990",
+              "2 “Quantitative Risk Assessment in Chemical Process Industries”, American Institute of",
+              "Chemical Industries, Centre for Chemical Process safety., 1997",
+              "3 The Biodiversity of India, Bharucha Erach, Mapin Publishing Pvt. Ltd.,, 2000",
+              "4 Hazardous Chemicals: Safety Management and Global Regulations, T.S.S. Dikshith, CRC",
+              "Press, 1990"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "Environmental Science, Y.K. Sing, New Age International Pvt, Publishers, 1990",
+          "“Quantitative Risk Assessment in Chemical Process Industries”, American Institute of Chemical Industries, Centre for Chemical Process safety., 1997",
+          "The Biodiversity of India, Bharucha Erach, Mapin Publishing Pvt. Ltd.,, 2000",
+          "Hazardous Chemicals: Safety Management and Global Regulations, T.S.S. Dikshith, CRC Press, 1990"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6967,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       MASTER OF PHARMACY (PHARMACEUTICAL\n               QUALITY ASSURANCE)\nSEMESTER         2\nCOURSE TITLE    HAZARDS AND SAFETY MANAGEMENT\nCOURSE CODE    13MQ0201\nCOURSE CREDITS  4\n\nObjective:\n 1  This course is designed to convey the knowledge necessary to understand issues related to\n     different kinds of hazards and their management. Basic theoretical and practical discussions\n     integrate the proficiency to handle the emergency situation in the pharmaceutical product\n    development process and provide a principle-based approach to solving complex\n     tribulations.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand basic knowledge about the environment and environmental problems among\n     learners.\n 2  Ensure\n     Provide comprehensive knowledge of the safety standards and safety management in the\n     pharmaceutical industry.\n 3  Empower an idea to clear mechanisms and management in different kinds of hazard\n    management systems\n 4  Teach the method of Hazard assessment, procedure, and methodology for providing a safe\n     industrial atmosphere.\n\n\nPre-requisite of course:Nil\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        75     15      10        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Unit-1                                                  12\n               Multidisciplinary nature of environmental studies: Natural\n              Resources, Renewable and non-renewable resources, Natural\n              resources and associated problems, Forest resources; b) Water\n               resources; c) Mineral resources; d) Energy resources; e) Land\n               resources, Ecosystems: Concept of an ecosystem and Structure and\n               the function of an ecosystem. , Environmental hazards: Hazards\n             based on Air, Water, Soil, and Radioisotopes.\n\n\nDR. NASIRBHAI HAJIBHAI VADIA                       DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Unit-2                                                  12\n              Air-based hazards: Sources, Types of Hazards, Air circulation\n             maintenance industry for sterile area and non-sterile area,\n              Preliminary Hazard Analysis (PHA) , Fire protection system: Fire\n               prevention, types of fire extinguishers, and critical Hazard\n            management system.\n     3      Unit-3                                                  12\n             Chemical-based hazards: Sources of chemical hazards, Hazards of\n             Organic Synthesis, sulfonating hazard, Organic solvent hazard,\n              Control measures for chemical hazards, Management of\n             combustible gases, Toxic gases and Oxygen displacing gases\n            management, Regulations for chemical hazards, Management of\n             over-Exposure to chemicals and TLV concept.\n     4      Unit-4                                                  12\n               Fire and Explosion: Introduction, Industrial processes and hazards\n                potential, mechanical electrical, thermal and process hazards. Safety\n            and hazards regulations, Fire protection system: Fire prevention,\n              types of fire extinguishers and critical Hazard management system\n             mechanical and chemical explosion, multiphase reactions, transport\n                effects, and global rates. Preventive and protective management\n            from fires and explosion-electricity passivation, ventilation,\n               sprinkling, proofing, relief systems -relief valves, flares, scrubbers.\n     5      Unit-5                                                  12\n            Hazard and risk management: Self-protective measures against\n             workplace hazards. Critical training for risk management, Process\n              of hazard management, ICH guidelines on risk assessment and Risk\n            management methods and Tools Factory act and rules, fundamentals\n              of accident prevention, elements of a safety program and safety\n            management, Physicochemical measurements of effluents, BOD,\n          COD, Determination of some contaminants, Effluent treatment\n              procedure, Role of emergency services.\n                               Total Hours                       60\n\n\nTextbook :\n 1  Environmental Science, Y.K. Sing, New Age International Pvt, Publishers, 1990\n 2  “Quantitative Risk Assessment in Chemical Process Industries”, American Institute of\n    Chemical Industries, Centre for Chemical Process safety., 1997\n 3  The Biodiversity of India, Bharucha Erach, Mapin Publishing Pvt. Ltd.,, 2000\n 4  Hazardous Chemicals: Safety Management and Global Regulations, T.S.S. Dikshith, CRC\n     Press, 1990\n\n\nSuggested Theory Distribution:\n\n\n\n\nDR. NASIRBHAI HAJIBHAI VADIA                       DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         25.00         25.00         15.00         10.00          5.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the blackboard\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. NASIRBHAI HAJIBHAI VADIA                       DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "776d1ed2ade13cd0a1fdc11449705210822b861ca642c49bdb627c436390be0b",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "39131317020401",
+      "subject_name": "Pharmaceutical Manufacturing Technology",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 2,
+      "subject_code": "13MQ0204",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13MQ0204.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Pharmaceutical Manufacturing Technology [75152a057334].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Pharmaceutical Manufacturing Technology [75152a057334].pdf",
+      "expected_pdf_sha256": "97d50c03cbe6635a2771e20beab0d823886ffe807cd79682d50b657228a5ad1d",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PHARMACEUTICAL MANUFACTURING TECHNOLOGY",
+        "course_code": "13MQ0204",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "Nil"
+      },
+      "objectives": [
+        "This course is designed to impart knowledge and skills necessary to train the students in industrial activities during Pharmaceutical Manufacturing."
+      ],
+      "course_outcomes": [
+        "At the completion of this course, it is expected that students will be able to understand,-- The common practice in the pharmaceutical industry developments, plant layout, and production planning",
+        "At the completion of this course, it is expected that students will be able to understand,-- Will be familiar with the principles and practices of aseptic process technology, non-sterile manufacturing technology, and packaging technology.",
+        "At the completion of this course, it is expected that students will be able to understand,-- Have a better understanding of principles and implementation of Quality by design (QbD) and process analytical technology (PAT) in pharmaceutical manufacturing. Pre-requisite of course:Nil"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 75 15 10 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit-1",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Pharmaceutical industry developments: Legal requirements and",
+              "Licenses for API and formulation industry, Plant location- Factors",
+              "influencing., Plant layout: Factors influencing, Special provisions,",
+              "Storage space requirements, sterile and aseptic area layout.,",
+              "Production planning: General principles, production systems,",
+              "calculation of standard cost, process planning, routing, loading,",
+              "scheduling, dispatching of records, and production control."
+            ],
+            "topics_text": "Pharmaceutical industry developments: Legal requirements and Licenses for API and formulation industry, Plant location- Factors influencing., Plant layout: Factors influencing, Special provisions, Storage space requirements, sterile and aseptic area layout., Production planning: General principles, production systems, calculation of standard cost, process planning, routing, loading, scheduling, dispatching of records, and production control.",
+            "topics": [
+              "Pharmaceutical industry developments: Legal requirements and",
+              "Licenses for API and formulation industry, Plant location- Factors",
+              "influencing., Plant layout: Factors influencing, Special provisions,",
+              "Storage space requirements, sterile and aseptic area layout.,",
+              "Production planning: General principles, production systems,",
+              "calculation of standard cost, process planning, routing, loading,",
+              "scheduling, dispatching of records, and production control."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit-2",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Aseptic process technology: Manufacturing, manufacturing",
+              "flowcharts, in process-quality control tests for following sterile",
+              "dosage forms: Ointment, Suspension and Emulsion, Dry powder,",
+              "Solution (Small Volume & large Volume)., Advanced sterile",
+              "product manufacturing technology : Area planning & environmental",
+              "control, wall and floor treatment, fixtures and machineries, change",
+              "rooms, personnel flow, utilities & utilities equipment location,",
+              "engineering and maintenance., Process Automation in",
+              "Pharmaceutical Industry: With specific reference to manufacturing",
+              "of sterile semisolids, Small Volume Parenterals & Large Volume",
+              "Parenterals (SVP & LVP), Monitoring of Parenteral manufacturing",
+              "facility, Cleaning in Place (CIP), Sterilization in Place (SIP),",
+              "Prefilled Syringe, Powdered Jet, Needle Free Injections, and Form",
+              "Fill Seal Technology (FFS)., Lyophilization technology: Principles,",
+              "process, equipment."
+            ],
+            "topics_text": "Aseptic process technology: Manufacturing, manufacturing flowcharts, in process-quality control tests for following sterile dosage forms: Ointment, Suspension and Emulsion, Dry powder, Solution (Small Volume & large Volume)., Advanced sterile product manufacturing technology : Area planning & environmental control, wall and floor treatment, fixtures and machineries, change rooms, personnel flow, utilities & utilities equipment location, engineering and maintenance., Process Automation in Pharmaceutical Industry: With specific reference to manufacturing of sterile semisolids, Small Volume Parenterals & Large Volume Parenterals (SVP & LVP), Monitoring of Parenteral manufacturing facility, Cleaning in Place (CIP), Sterilization in Place (SIP), Prefilled Syringe, Powdered Jet, Needle Free Injections, and Form Fill Seal Technology (FFS)., Lyophilization technology: Principles, process, equipment.",
+            "topics": [
+              "Aseptic process technology: Manufacturing, manufacturing",
+              "flowcharts, in process-quality control tests for following sterile",
+              "dosage forms: Ointment, Suspension and Emulsion, Dry powder,",
+              "Solution (Small Volume & large Volume)., Advanced sterile",
+              "product manufacturing technology : Area planning & environmental",
+              "control, wall and floor treatment, fixtures and machineries, change",
+              "rooms, personnel flow, utilities & utilities equipment location,",
+              "engineering and maintenance., Process Automation in",
+              "Pharmaceutical Industry: With specific reference to manufacturing",
+              "of sterile semisolids, Small Volume Parenterals & Large Volume",
+              "Parenterals (SVP & LVP), Monitoring of Parenteral manufacturing",
+              "facility, Cleaning in Place (CIP), Sterilization in Place (SIP),",
+              "Prefilled Syringe, Powdered Jet, Needle Free Injections, and Form",
+              "Fill Seal Technology (FFS)., Lyophilization technology: Principles,",
+              "process, equipment."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit-3",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Non-sterile manufacturing process technology: Manufacturing,",
+              "manufacturing flowcharts, in process-quality control tests for",
+              "following Non-Sterile solid dosage forms: Tablets (compressed &",
+              "coated), Capsules (Hard & Soft)., Advance non-sterile solid product",
+              "manufacturing technology: Process Automation in Pharmaceutical",
+              "Industry with specific reference to manufacturing of tablets and",
+              "coated products, , Improved Tablet Production: Tablet production",
+              "process, granulation and pelletization equipments, continuous and",
+              "batch mixing, rapid mixing granulators, rota granulators,",
+              "spheronizers and marumerisers, and other specialized granulation",
+              "and drying equipments. Problems encountered, Coating technology:",
+              "Process, equipments, particle coating, fluidized bed coating,",
+              "application techniques. Problems encountered."
+            ],
+            "topics_text": "Non-sterile manufacturing process technology: Manufacturing, manufacturing flowcharts, in process-quality control tests for following Non-Sterile solid dosage forms: Tablets (compressed & coated), Capsules (Hard & Soft)., Advance non-sterile solid product manufacturing technology: Process Automation in Pharmaceutical Industry with specific reference to manufacturing of tablets and coated products, , Improved Tablet Production: Tablet production process, granulation and pelletization equipments, continuous and batch mixing, rapid mixing granulators, rota granulators, spheronizers and marumerisers, and other specialized granulation and drying equipments. Problems encountered, Coating technology: Process, equipments, particle coating, fluidized bed coating, application techniques. Problems encountered.",
+            "topics": [
+              "Non-sterile manufacturing process technology: Manufacturing,",
+              "manufacturing flowcharts, in process-quality control tests for",
+              "following Non-Sterile solid dosage forms: Tablets (compressed &",
+              "coated), Capsules (Hard & Soft)., Advance non-sterile solid product",
+              "manufacturing technology: Process Automation in Pharmaceutical",
+              "Industry with specific reference to manufacturing of tablets and",
+              "coated products, , Improved Tablet Production: Tablet production",
+              "process, granulation and pelletization equipments, continuous and",
+              "batch mixing, rapid mixing granulators, rota granulators,",
+              "spheronizers and marumerisers, and other specialized granulation",
+              "and drying equipments. Problems encountered, Coating technology:",
+              "Process, equipments, particle coating, fluidized bed coating,",
+              "application techniques. Problems encountered."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit-4",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Containers and closures for pharmaceuticals: Types, performance,",
+              "assuring quality of glass; types of plastics used, Drug plastic",
+              "interactions, biological tests, modification of plastics by drugs;",
+              "different types of closures and closure liners; film wrapper; blister",
+              "packs; bubble packs; shrink packaging; foil / plastic pouches, bottle",
+              "seals, tape seals, breakable seals and sealed tubes; quality control of",
+              "packaging material and filling equipment, flexible packaging,",
+              "product package compatibility, transit worthiness of package,",
+              "Stability aspects of packaging. Evaluation of stability of packaging",
+              "material."
+            ],
+            "topics_text": "Containers and closures for pharmaceuticals: Types, performance, assuring quality of glass; types of plastics used, Drug plastic interactions, biological tests, modification of plastics by drugs; different types of closures and closure liners; film wrapper; blister packs; bubble packs; shrink packaging; foil / plastic pouches, bottle seals, tape seals, breakable seals and sealed tubes; quality control of packaging material and filling equipment, flexible packaging, product package compatibility, transit worthiness of package, Stability aspects of packaging. Evaluation of stability of packaging material.",
+            "topics": [
+              "Containers and closures for pharmaceuticals: Types, performance,",
+              "assuring quality of glass",
+              "types of plastics used, Drug plastic",
+              "interactions, biological tests, modification of plastics by drugs",
+              "different types of closures and closure liners",
+              "film wrapper",
+              "blister",
+              "packs",
+              "bubble packs",
+              "shrink packaging",
+              "foil / plastic pouches, bottle",
+              "seals, tape seals, breakable seals and sealed tubes",
+              "quality control of",
+              "packaging material and filling equipment, flexible packaging,",
+              "product package compatibility, transit worthiness of package,",
+              "Stability aspects of packaging. Evaluation of stability of packaging",
+              "material."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Unit-5",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Quality by design (QbD) and process analytical technology (PAT):",
+              "Current approach and its limitations. Why QbD is required,",
+              "Advantages, Elements of QbD, Terminology: QTPP. CMA, CQA,",
+              "CPP, RLD, Design space, Design of Experiments, Risk Assessment",
+              "and mitigation/minimization. Quality by Design, Formulations by",
+              "Design, QbD for drug products, QbD for Drug Substances, QbD for",
+              "Excipients, Analytical QbD. FDA initiative on process analytical",
+              "technology. PAT as a driver for improving quality and reducing",
+              "costs: quality by design (QbD), QA, QC and GAMP. PAT guidance,",
+              "standards and regulatory requirements.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 The Theory and practice of industrial pharmacy, third ed, Lachman L, Liberman HA,",
+              "Kanig JL. , Varghese Publishers, Mumbai , 1991",
+              "2 Martin's physical pharmacy and pharmaceutical sciences, 5 ed.,, Sinko PJ, B.I. Publications",
+              "Pvt. Ltd, , 2006",
+              "3 Pharmaceutical dosage forms: tablets Vol. I-III, 2ed., , Lieberman HA, Lachman L,",
+              "Schwartz JB. , CBS Publishers & distributors, New Delhi, , 2005",
+              "4 Modern Pharmaceutics, 4 ed.,, Banker GS, Rhodes CT. , Marcel Dekker Inc, New York, ,",
+              "2005",
+              "5 Indian Pharmacopoeia. , Controller of Puopoeia Commissionblication, Indian",
+              "PharmacController of Publication, 1996",
+              "6 United States Pharmacopoeia, United States Pharmacopeial Convention, Inc, USA, , United",
+              "States Pharmacopeial Convention, Inc, USA, , 2003",
+              "7 British Pharmacopoeia, BPC, British Pharmacopoeia Commission Office, London, , 2008"
+            ],
+            "topics_text": "Quality by design (QbD) and process analytical technology (PAT): Current approach and its limitations. Why QbD is required, Advantages, Elements of QbD, Terminology: QTPP. CMA, CQA, CPP, RLD, Design space, Design of Experiments, Risk Assessment and mitigation/minimization. Quality by Design, Formulations by Design, QbD for drug products, QbD for Drug Substances, QbD for Excipients, Analytical QbD. FDA initiative on process analytical technology. PAT as a driver for improving quality and reducing costs: quality by design (QbD), QA, QC and GAMP. PAT guidance, standards and regulatory requirements. Total Hours 60 Textbook : 1 The Theory and practice of industrial pharmacy, third ed, Lachman L, Liberman HA, Kanig JL. , Varghese Publishers, Mumbai , 1991 2 Martin's physical pharmacy and pharmaceutical sciences, 5 ed.,, Sinko PJ, B.I. Publications Pvt. Ltd, , 2006 3 Pharmaceutical dosage forms: tablets Vol. I-III, 2ed., , Lieberman HA, Lachman L, Schwartz JB. , CBS Publishers & distributors, New Delhi, , 2005 4 Modern Pharmaceutics, 4 ed.,, Banker GS, Rhodes CT. , Marcel Dekker Inc, New York, , 2005 5 Indian Pharmacopoeia. , Controller of Puopoeia Commissionblication, Indian PharmacController of Publication, 1996 6 United States Pharmacopoeia, United States Pharmacopeial Convention, Inc, USA, , United States Pharmacopeial Convention, Inc, USA, , 2003 7 British Pharmacopoeia, BPC, British Pharmacopoeia Commission Office, London, , 2008",
+            "topics": [
+              "Quality by design (QbD) and process analytical technology (PAT):",
+              "Current approach and its limitations. Why QbD is required,",
+              "Advantages, Elements of QbD, Terminology: QTPP. CMA, CQA,",
+              "CPP, RLD, Design space, Design of Experiments, Risk Assessment",
+              "and mitigation/minimization. Quality by Design, Formulations by",
+              "Design, QbD for drug products, QbD for Drug Substances, QbD for",
+              "Excipients, Analytical QbD. FDA initiative on process analytical",
+              "technology. PAT as a driver for improving quality and reducing",
+              "costs: quality by design (QbD), QA, QC and GAMP. PAT guidance,",
+              "standards and regulatory requirements.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 The Theory and practice of industrial pharmacy, third ed, Lachman L, Liberman HA,",
+              "Kanig JL. , Varghese Publishers, Mumbai , 1991",
+              "2 Martin's physical pharmacy and pharmaceutical sciences, 5 ed.,, Sinko PJ, B.I. Publications",
+              "Pvt. Ltd, , 2006",
+              "3 Pharmaceutical dosage forms: tablets Vol. I-III, 2ed., , Lieberman HA, Lachman L,",
+              "Schwartz JB. , CBS Publishers & distributors, New Delhi, , 2005",
+              "4 Modern Pharmaceutics, 4 ed.,, Banker GS, Rhodes CT. , Marcel Dekker Inc, New York, ,",
+              "2005",
+              "5 Indian Pharmacopoeia. , Controller of Puopoeia Commissionblication, Indian",
+              "PharmacController of Publication, 1996",
+              "6 United States Pharmacopoeia, United States Pharmacopeial Convention, Inc, USA, , United",
+              "States Pharmacopeial Convention, Inc, USA, , 2003",
+              "7 British Pharmacopoeia, BPC, British Pharmacopoeia Commission Office, London, , 2008"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "The Theory and practice of industrial pharmacy, third ed, Lachman L, Liberman HA, Kanig JL. , Varghese Publishers, Mumbai , 1991",
+          "Martin's physical pharmacy and pharmaceutical sciences, 5 ed.,, Sinko PJ, B.I. Publications Pvt. Ltd, , 2006",
+          "Pharmaceutical dosage forms: tablets Vol. I-III, 2ed., , Lieberman HA, Lachman L, Schwartz JB. , CBS Publishers & distributors, New Delhi, , 2005",
+          "Modern Pharmaceutics, 4 ed.,, Banker GS, Rhodes CT. , Marcel Dekker Inc, New York, , 2005",
+          "Indian Pharmacopoeia. , Controller of Puopoeia Commissionblication, Indian PharmacController of Publication, 1996",
+          "United States Pharmacopoeia, United States Pharmacopeial Convention, Inc, USA, , United States Pharmacopeial Convention, Inc, USA, , 2003",
+          "British Pharmacopoeia, BPC, British Pharmacopoeia Commission Office, London, , 2008"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 9539,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       MASTER OF PHARMACY (PHARMACEUTICAL\n               QUALITY ASSURANCE)\nSEMESTER         2\nCOURSE TITLE    PHARMACEUTICAL MANUFACTURING TECHNOLOGY\nCOURSE CODE    13MQ0204\nCOURSE CREDITS  4\n\nObjective:\n 1  This course is designed to impart knowledge and skills necessary to train the students in\n     industrial activities during Pharmaceutical Manufacturing.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  At the completion of this course, it is expected that students will be able to understand,--\n    The common practice in the pharmaceutical industry developments, plant layout, and\n     production planning\n 2  At the completion of this course, it is expected that students will be able to understand,--\n     Will be familiar with the principles and practices of aseptic process technology, non-sterile\n     manufacturing technology, and packaging technology.\n 3  At the completion of this course, it is expected that students will be able to understand,--\n    Have a better understanding of principles and implementation of Quality by design (QbD)\n    and process analytical technology (PAT) in pharmaceutical manufacturing.\n\n\nPre-requisite of course:Nil\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        75     15      10        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Unit-1                                                  12\n              Pharmaceutical industry developments: Legal requirements and\n              Licenses for API and formulation industry, Plant location- Factors\n               influencing., Plant layout: Factors influencing, Special provisions,\n              Storage space requirements, sterile and aseptic area layout.,\n              Production planning: General principles, production systems,\n               calculation of standard cost, process planning, routing, loading,\n              scheduling, dispatching of records, and production control.\n\n\n\n\n\nDR. NASIRBHAI HAJIBHAI VADIA                       DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Unit-2                                                  12\n              Aseptic process technology: Manufacturing, manufacturing\n               flowcharts, in process-quality control tests for following sterile\n             dosage forms: Ointment, Suspension and Emulsion, Dry powder,\n              Solution (Small Volume & large Volume)., Advanced sterile\n              product manufacturing technology : Area planning & environmental\n                control, wall and floor treatment, fixtures and machineries, change\n             rooms, personnel flow, utilities & utilities equipment location,\n              engineering and maintenance., Process Automation in\n              Pharmaceutical Industry: With specific reference to manufacturing\n              of sterile semisolids, Small Volume Parenterals & Large Volume\n               Parenterals (SVP & LVP), Monitoring of Parenteral manufacturing\n                 facility, Cleaning in Place (CIP), Sterilization in Place (SIP),\n                Prefilled Syringe, Powdered Jet, Needle Free Injections, and Form\n                 Fill Seal Technology (FFS)., Lyophilization technology: Principles,\n               process, equipment.\n     3      Unit-3                                                  12\n               Non-sterile manufacturing process technology: Manufacturing,\n             manufacturing flowcharts, in process-quality control tests for\n              following Non-Sterile solid dosage forms: Tablets (compressed &\n               coated), Capsules (Hard & Soft)., Advance non-sterile solid product\n             manufacturing technology: Process Automation in Pharmaceutical\n              Industry with specific reference to manufacturing of tablets and\n              coated products, , Improved Tablet Production: Tablet production\n               process, granulation and pelletization equipments, continuous and\n              batch mixing, rapid mixing granulators, rota granulators,\n              spheronizers and marumerisers, and other specialized granulation\n            and drying equipments. Problems encountered, Coating technology:\n              Process, equipments, particle coating, fluidized bed coating,\n               application techniques. Problems encountered.\n     4      Unit-4                                                  12\n              Containers and closures for pharmaceuticals: Types, performance,\n              assuring quality of glass; types of plastics used, Drug plastic\n                interactions, biological tests, modification of plastics by drugs;\n                different types of closures and closure liners; film wrapper; blister\n              packs; bubble packs; shrink packaging; foil / plastic pouches, bottle\n                seals, tape seals, breakable seals and sealed tubes; quality control of\n             packaging material and filling equipment, flexible packaging,\n              product package compatibility, transit worthiness of package,\n                Stability aspects of packaging. Evaluation of stability of packaging\n               material.\n\n\n\n\n\nDR. NASIRBHAI HAJIBHAI VADIA                       DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5      Unit-5                                                  12\n              Quality by design (QbD) and process analytical technology (PAT):\n              Current approach and its limitations. Why QbD is required,\n             Advantages, Elements of QbD, Terminology: QTPP. CMA, CQA,\n            CPP, RLD, Design space, Design of Experiments, Risk Assessment\n            and mitigation/minimization. Quality by Design, Formulations by\n              Design, QbD for drug products, QbD for Drug Substances, QbD for\n               Excipients, Analytical QbD. FDA initiative on process analytical\n              technology. PAT as a driver for improving quality and reducing\n                costs: quality by design (QbD), QA, QC and GAMP. PAT guidance,\n              standards and regulatory requirements.\n                               Total Hours                       60\n\n\nTextbook :\n 1  The Theory and practice of industrial pharmacy, third ed, Lachman L, Liberman HA,\n    Kanig JL. , Varghese Publishers, Mumbai , 1991\n 2  Martin's physical pharmacy and pharmaceutical sciences, 5 ed.,, Sinko PJ, B.I. Publications\n     Pvt. Ltd, , 2006\n 3  Pharmaceutical dosage forms: tablets Vol. I-III, 2ed., , Lieberman HA, Lachman L,\n    Schwartz JB. , CBS Publishers & distributors, New Delhi, , 2005\n 4  Modern Pharmaceutics, 4 ed.,, Banker GS, Rhodes CT. , Marcel Dekker Inc, New York, ,\n    2005\n 5  Indian Pharmacopoeia. , Controller of Puopoeia Commissionblication, Indian\n     PharmacController of Publication, 1996\n 6  United States Pharmacopoeia, United States Pharmacopeial Convention, Inc, USA, , United\n     States Pharmacopeial Convention, Inc, USA, , 2003\n 7  British Pharmacopoeia, BPC, British Pharmacopoeia Commission Office, London, , 2008\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         25.00         25.00         15.00         10.00          5.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the blackboard\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n\n\nDR. NASIRBHAI HAJIBHAI VADIA                       DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. NASIRBHAI HAJIBHAI VADIA                       DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "97d50c03cbe6635a2771e20beab0d823886ffe807cd79682d50b657228a5ad1d",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "39131317020201",
+      "subject_name": "Pharmaceutical Validation",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "39131317020501",
+      "subject_name": "Quality Assurance Practical-2",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "FALSE_POSITIVE_OR_WRONG_SCOPE_REMOVED",
+      "catalog_action": "NO_WRONG_COURSE_OR_SEMESTER_PDF",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_WRONG_COURSE_OR_SEMESTER_PDF",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "FALSE_POSITIVE_OR_WRONG_SCOPE_REMOVED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Exact duplicate of Quality Assurance Practical-1 from 13MQ0105; no course-code or semester evidence supports using the Practical-1 PDF for semester 2."
+      ],
+      "pdf_verification_status": "NO_WRONG_COURSE_OR_SEMESTER_PDF"
+    },
+    {
+      "subject_id": "39131317020701",
+      "subject_name": "Research writing*",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "39131317020601",
+      "subject_name": "Seminar/assignment",
+      "course_id": "m-pharm-pharmaceutical-quality-assurence",
+      "course_name": "M.Pharm Pharmaceutical Quality Assurence",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 3,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 4,
+    "extraction_errors": 0
+  }
+}

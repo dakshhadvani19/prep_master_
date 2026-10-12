@@ -1,0 +1,990 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-pharm",
+    "course_name": "B.Pharm",
+    "output_slug": "BPharm"
+  },
+  "semester": 2,
+  "subject_count": 5,
+  "subjects": [
+    {
+      "subject_id": "37013168020401",
+      "subject_name": "Computer Applications in Pharmacy*",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 2,
+      "subject_code": "13PH0204",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13PH0204.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Computer Applications in Pharmacy [bbf62bd482c2].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Computer Applications in Pharmacy [bbf62bd482c2].pdf",
+      "expected_pdf_sha256": "5628cc3729a2a676928187828b0f47acfad6de00fa8cecbd04644b12f2dcff7b",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMPUTER APPLICATIONS IN PHARMACY",
+        "course_code": "13PH0204",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "This subject deals with the introduction Database, Database Management system, computer application in clinical studies and use of databases."
+      },
+      "objectives": [
+        "This subject deals with the introduction Database, Database Management system,computer application in clinical studies and use of databases."
+      ],
+      "course_outcomes": [
+        "Know the various types of application of computers in pharmacy",
+        "Know the various types of databases",
+        "Know the various applications of databases in pharmacy Pre-requisite of course:This subject deals with the introduction Database, Database Management system, computer application in clinical studies and use of databases."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 2 75 15 10 35 15 DR. RAMESH BHANAJIBHAI PARMAR DR. LALJI HAKUBHAI BALDANIYA Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Number system",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Number system: Binary number system, Decimal number system,",
+              "Octal number system, Hexadecimal number systems, conversion",
+              "decimal to binary, binary to decimal, octal to binary etc, binary",
+              "addition, binary subtraction – One’s complement ,Two’s",
+              "complement method, binary multiplication, binary division Concept",
+              "of Information Systems and Software : Information gathering,",
+              "requirement and feasibility analysis, data flow diagrams, process",
+              "specifications, input/output design, process life cycle, planning and",
+              "managing the project, Web technologies: Introduction to HTML,",
+              "XML,CSS and Programming languages, introduction to web servers",
+              "and Server Products. Introduction to databases, MYSQL, MS",
+              "ACCESS, Pharmacy Drug database, Application of computers in",
+              "Pharmacy – Drug information storage and retrieval,",
+              "Pharmacokinetics, Mathematical model in Drug design, Hospital",
+              "and Clinical Pharmacy, Electronic Prescribing and discharge (EP)",
+              "systems, barcode medicine identification and automated dispensing",
+              "of drugs, mobile technology and adherence monitoring Diagnostic",
+              "System, Lab-diagnostic System, Patient Monitoring System, Pharma",
+              "Information System??, Bioinformatics: Introduction, Objective of",
+              "Bioinformatics, Bioinformatics Databases, Concept of",
+              "Bioinformatics, Impact of Bioinformatics in Vaccine Discovery??,",
+              "Computers as data analysis in Preclinical development:",
+              "Chromatographic data analysis(CDS), Laboratory Information",
+              "management System (LIMS) and Text Information Management",
+              "System(TIMS)"
+            ],
+            "topics_text": "Number system: Binary number system, Decimal number system, Octal number system, Hexadecimal number systems, conversion decimal to binary, binary to decimal, octal to binary etc, binary addition, binary subtraction – One’s complement ,Two’s complement method, binary multiplication, binary division Concept of Information Systems and Software : Information gathering, requirement and feasibility analysis, data flow diagrams, process specifications, input/output design, process life cycle, planning and managing the project, Web technologies: Introduction to HTML, XML,CSS and Programming languages, introduction to web servers and Server Products. Introduction to databases, MYSQL, MS ACCESS, Pharmacy Drug database, Application of computers in Pharmacy – Drug information storage and retrieval, Pharmacokinetics, Mathematical model in Drug design, Hospital and Clinical Pharmacy, Electronic Prescribing and discharge (EP) systems, barcode medicine identification and automated dispensing of drugs, mobile technology and adherence monitoring Diagnostic System, Lab-diagnostic System, Patient Monitoring System, Pharma Information System??, Bioinformatics: Introduction, Objective of Bioinformatics, Bioinformatics Databases, Concept of Bioinformatics, Impact of Bioinformatics in Vaccine Discovery??, Computers as data analysis in Preclinical development: Chromatographic data analysis(CDS), Laboratory Information management System (LIMS) and Text Information Management System(TIMS)",
+            "topics": [
+              "Number system: Binary number system, Decimal number system,",
+              "Octal number system, Hexadecimal number systems, conversion",
+              "decimal to binary, binary to decimal, octal to binary etc, binary",
+              "addition, binary subtraction – One’s complement ,Two’s",
+              "complement method, binary multiplication, binary division Concept",
+              "of Information Systems and Software : Information gathering,",
+              "requirement and feasibility analysis, data flow diagrams, process",
+              "specifications, input/output design, process life cycle, planning and",
+              "managing the project, Web technologies: Introduction to HTML,",
+              "XML,CSS and Programming languages, introduction to web servers",
+              "and Server Products. Introduction to databases, MYSQL, MS",
+              "ACCESS, Pharmacy Drug database, Application of computers in",
+              "Pharmacy – Drug information storage and retrieval,",
+              "Pharmacokinetics, Mathematical model in Drug design, Hospital",
+              "and Clinical Pharmacy, Electronic Prescribing and discharge (EP)",
+              "systems, barcode medicine identification and automated dispensing",
+              "of drugs, mobile technology and adherence monitoring Diagnostic",
+              "System, Lab-diagnostic System, Patient Monitoring System, Pharma",
+              "Information System??, Bioinformatics: Introduction, Objective of",
+              "Bioinformatics, Bioinformatics Databases, Concept of",
+              "Bioinformatics, Impact of Bioinformatics in Vaccine Discovery??,",
+              "Computers as data analysis in Preclinical development:",
+              "Chromatographic data analysis(CDS), Laboratory Information",
+              "management System (LIMS) and Text Information Management",
+              "System(TIMS)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Web technologies",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to HTML, XML,CSS and Programming 6 languages,",
+              "introduction to web servers and Server Products. Introduction to",
+              "databases, MYSQL, MS ACCESS, Pharmacy Drug database"
+            ],
+            "topics_text": "Introduction to HTML, XML,CSS and Programming 6 languages, introduction to web servers and Server Products. Introduction to databases, MYSQL, MS ACCESS, Pharmacy Drug database",
+            "topics": [
+              "Introduction to HTML, XML,CSS and Programming 6 languages,",
+              "introduction to web servers and Server Products. Introduction to",
+              "databases, MYSQL, MS ACCESS, Pharmacy Drug database"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Application of computers in Pharmacy",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Drug information storage and 6 retrieval, Pharmacokinetics,",
+              "Mathematical model in Drug design, Hospital and Clinical",
+              "Pharmacy, Electronic Prescribing and discharge (EP) systems,",
+              "barcode medicine identification and automated dispensing of drugs,",
+              "mobile technology and adherence monitoring Diagnostic System,",
+              "Lab-diagnostic System, Patient Monitoring System, Pharma",
+              "Information System"
+            ],
+            "topics_text": "Drug information storage and 6 retrieval, Pharmacokinetics, Mathematical model in Drug design, Hospital and Clinical Pharmacy, Electronic Prescribing and discharge (EP) systems, barcode medicine identification and automated dispensing of drugs, mobile technology and adherence monitoring Diagnostic System, Lab-diagnostic System, Patient Monitoring System, Pharma Information System",
+            "topics": [
+              "Drug information storage and 6 retrieval, Pharmacokinetics,",
+              "Mathematical model in Drug design, Hospital and Clinical",
+              "Pharmacy, Electronic Prescribing and discharge (EP) systems,",
+              "barcode medicine identification and automated dispensing of drugs,",
+              "mobile technology and adherence monitoring Diagnostic System,",
+              "Lab-diagnostic System, Patient Monitoring System, Pharma",
+              "Information System"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Bioinformatics",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction, Objective of Bioinformatics, Bioinformatics",
+              "Databases, Concept of Bioinformatics, Impact of Bioinformatics in",
+              "Vaccine Discovery"
+            ],
+            "topics_text": "Introduction, Objective of Bioinformatics, Bioinformatics Databases, Concept of Bioinformatics, Impact of Bioinformatics in Vaccine Discovery",
+            "topics": [
+              "Introduction, Objective of Bioinformatics, Bioinformatics",
+              "Databases, Concept of Bioinformatics, Impact of Bioinformatics in",
+              "Vaccine Discovery"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Computers as data analysis in Preclinical development",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Chromatographic data analysis(CDS), Laboratory Information",
+              "management System (LIMS) and Text Information Management",
+              "System(TIMS)",
+              "Total Hours 30"
+            ],
+            "topics_text": "Chromatographic data analysis(CDS), Laboratory Information management System (LIMS) and Text Information Management System(TIMS) Total Hours 30",
+            "topics": [
+              "Chromatographic data analysis(CDS), Laboratory Information",
+              "management System (LIMS) and Text Information Management",
+              "System(TIMS)",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Computer Applications in Pharmacy",
+            "contact_hours": 60,
+            "topic_lines": [
+              "Experiment-1, Experiment-2, Experiment-3, Experiment-4,",
+              "Experiment-5, Experiment-6, Experiment-7, Experiment-8,",
+              "Experiment-9, Experiment-10, Experiment-11, Experiment-12",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Bioinformatics Concepts Skills and Applications 2Ed (Pb 2019): Concepts, Skills &amp;",
+              "Applications, Rastogi S. C., CBS, 2019",
+              "2 Computer Applications in Pharmaceutical Research and Development by Sean Ekins, BSP,",
+              "Sean Ekins, BSP, 2017"
+            ],
+            "topics_text": "Experiment-1, Experiment-2, Experiment-3, Experiment-4, Experiment-5, Experiment-6, Experiment-7, Experiment-8, Experiment-9, Experiment-10, Experiment-11, Experiment-12 Total Hours 60 Textbook : 1 Bioinformatics Concepts Skills and Applications 2Ed (Pb 2019): Concepts, Skills &amp; Applications, Rastogi S. C., CBS, 2019 2 Computer Applications in Pharmaceutical Research and Development by Sean Ekins, BSP, Sean Ekins, BSP, 2017",
+            "topics": [
+              "Experiment-1, Experiment-2, Experiment-3, Experiment-4,",
+              "Experiment-5, Experiment-6, Experiment-7, Experiment-8,",
+              "Experiment-9, Experiment-10, Experiment-11, Experiment-12",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Bioinformatics Concepts Skills and Applications 2Ed (Pb 2019): Concepts, Skills &amp",
+              "Applications, Rastogi S. C., CBS, 2019",
+              "2 Computer Applications in Pharmaceutical Research and Development by Sean Ekins, BSP,",
+              "Sean Ekins, BSP, 2017"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Computer Applications in Pharmacy, Computer Applications in Pharmacy, William E.Fassett, Dale b. Christensen, Philadelphia : Lea &amp; Febiger,, 1986",
+          "Microsoft Access 2013 Plain and Simple by COUCH, ANDREW_x000D _, PHI Learning, Microsoft Access 2013 Plain and Simple by COUCH, ANDREW_x000D _, PHI Learning, COUCH, ANDREW_x000D, PHI Learning, 2020"
+        ],
+        "textbooks": [
+          "Bioinformatics Concepts Skills and Applications 2Ed (Pb 2019): Concepts, Skills &amp; Applications, Rastogi S. C., CBS, 2019",
+          "Computer Applications in Pharmaceutical Research and Development by Sean Ekins, BSP, Sean Ekins, BSP, 2017"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 7465,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       BACHELOR OF PHARMACY\nSEMESTER         2\nCOURSE TITLE   COMPUTER APPLICATIONS IN PHARMACY\nCOURSE CODE     13PH0204\nCOURSE CREDITS  4\n\nObjective:\n 1  This subject deals with the introduction Database, Database Management system,computer\n     application in clinical studies and use of databases.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Know the various types of application of computers in pharmacy\n 2  Know the various types of databases\n 3  Know the various applications of databases in pharmacy\n\n\nPre-requisite of course:This subject deals with the introduction Database, Database\nManagement system, computer application in clinical studies and use of databases.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            2        75     15      10        35         15\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Number system                                          6\n           Number system: Binary number system, Decimal number system,\n              Octal number system, Hexadecimal number systems, conversion\n             decimal to binary, binary to decimal, octal to binary etc, binary\n               addition, binary subtraction – One’s complement ,Two’s\n            complement method, binary multiplication, binary division Concept\n              of Information Systems and Software : Information gathering,\n              requirement and feasibility analysis, data flow diagrams, process\n                specifications, input/output design, process life cycle, planning and\n            managing the project, Web technologies: Introduction to HTML,\n          XML,CSS and Programming languages, introduction to web servers\n            and Server Products. Introduction to databases, MYSQL, MS\n          ACCESS, Pharmacy Drug database, Application of computers in\n            Pharmacy – Drug information storage and retrieval,\n              Pharmacokinetics, Mathematical model in Drug design, Hospital\n            and Clinical Pharmacy, Electronic Prescribing and discharge (EP)\n              systems, barcode medicine identification and automated dispensing\n              of drugs, mobile technology and adherence monitoring Diagnostic\n             System, Lab-diagnostic System, Patient Monitoring System, Pharma\n              Information System??, Bioinformatics: Introduction, Objective of\n              Bioinformatics, Bioinformatics Databases, Concept of\n              Bioinformatics, Impact of Bioinformatics in Vaccine Discovery??,\n            Computers as data analysis in Preclinical development:\n             Chromatographic data analysis(CDS), Laboratory Information\n            management System (LIMS) and Text Information Management\n            System(TIMS)\n     2    Web technologies                                         6\n               Introduction to HTML, XML,CSS and Programming 6 languages,\n               introduction to web servers and Server Products. Introduction to\n               databases, MYSQL, MS ACCESS, Pharmacy Drug database\n     3      Application of computers in Pharmacy                       6\n            Drug information storage and 6 retrieval, Pharmacokinetics,\n             Mathematical model in Drug design, Hospital and Clinical\n             Pharmacy, Electronic Prescribing and discharge (EP) systems,\n             barcode medicine identification and automated dispensing of drugs,\n             mobile technology and adherence monitoring Diagnostic System,\n              Lab-diagnostic System, Patient Monitoring System, Pharma\n              Information System\n     4      Bioinformatics                                           6\n               Introduction, Objective of Bioinformatics, Bioinformatics\n              Databases, Concept of Bioinformatics, Impact of Bioinformatics in\n             Vaccine Discovery\n     5     Computers as data analysis in Preclinical development         6\n             Chromatographic data analysis(CDS), Laboratory Information\n            management System (LIMS) and Text Information Management\n            System(TIMS)\n                               Total Hours                       30\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Computer Applications in Pharmacy                        60\n              Experiment-1, Experiment-2, Experiment-3, Experiment-4,\n              Experiment-5, Experiment-6, Experiment-7, Experiment-8,\n              Experiment-9, Experiment-10, Experiment-11, Experiment-12\n                               Total Hours                       60\n\nTextbook :\n 1  Bioinformatics Concepts Skills and Applications 2Ed (Pb 2019): Concepts, Skills &amp;\n     Applications, Rastogi S. C., CBS, 2019\n 2  Computer Applications in Pharmaceutical Research and Development by Sean Ekins, BSP,\n    Sean Ekins, BSP, 2017\n\nReferences:\n 1  Computer Applications in Pharmacy, Computer Applications in Pharmacy, William\n     E.Fassett, Dale b. Christensen, Philadelphia : Lea &amp; Febiger,, 1986\n 2  Microsoft Access 2013 Plain and Simple by COUCH, ANDREW_x000D _, PHI Learning,\n     Microsoft Access 2013 Plain and Simple by COUCH, ANDREW_x000D _, PHI Learning,\n   COUCH, ANDREW_x000D, PHI Learning, 2020\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the blackboard\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "5628cc3729a2a676928187828b0f47acfad6de00fa8cecbd04644b12f2dcff7b",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "37013514020101",
+      "subject_name": "Environmental Sciences*",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "37013168020101",
+      "subject_name": "Human Anatomy and Physiology II",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 2,
+      "subject_code": "13PH0201",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13PH0201.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Human Anatomy and Physiology II [7a7153d8f65b].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Human Anatomy and Physiology II [7a7153d8f65b].pdf",
+      "expected_pdf_sha256": "5b46f698bab8a0dbad5463b17805dcb25856d6e11572a96989ebc5649f241104",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "HUMAN ANATOMY AND PHYSIOLOGY-II",
+        "course_code": "13PH0201",
+        "semester_label": "2",
+        "credits": 6,
+        "prerequisite": "Explain the gross morphology, structure and functions of various organs of the human body."
+      },
+      "objectives": [
+        "This subject is designed to impart fundamental knowledge on the structure and functions of the various systems of the human body. It also helps in understanding both homeostatic mechanisms. The subject provides the basic knowledge required to understand the various disciplines of pharmacy"
+      ],
+      "course_outcomes": [
+        "Explain the gross morphology, structure and functions of various organs of the human body.",
+        "Describe the various homeostatic mechanisms and their imbalances.",
+        "Identify the various tissues and organs of different systems of human body.",
+        "Perform the hematological tests like blood cell counts, haemoglobin estimation, bleeding/clotting time etc and also record blood pressure, heart rate, pulse and respiratory volume.",
+        "Appreciate coordinated working pattern of different organs of each system",
+        "Appreciate the interlinked mechanisms in the maintenance of normal functioning (homeostasis) of human body. Pre-requisite of course:Explain the gross morphology, structure and functions of various organs of the human body."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 4 75 15 10 35 15 DR. RAMESH BHANAJIBHAI PARMAR DR. LALJI HAKUBHAI BALDANIYA Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Nervous system",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Nervous system: Organization of nervous system, neuron,",
+              "neuroglia, classification and properties of nerve fibre,",
+              "electrophysiology, action potential, nerve impulse, receptors,",
+              "synapse, neurotransmitters Central nervous system: Meninges,",
+              "ventricles of brain and cerebrospinal fluid.structure and functions of",
+              "brain (cerebrum, brain stem, cerebellum), spinal cord (gross",
+              "structure, functions of afferent and efferent nerve tracts,reflex",
+              "activity), Digestive system Anatomy of GI Tract with special",
+              "reference to anatomy and functions of stomach, ( Acid production in",
+              "the stomach, regulation of acid production through parasympathetic",
+              "nervous system, pepsin role in protein digestion) small intestine and",
+              "large intestine, anatomy and functions of salivary glands, pancreas",
+              "and liver, movements of GIT, digestion and absorption of nutrients",
+              "and disorders of GIT Energetics: Formation and role of ATP,",
+              "Creatinine Phosphate and BMR., Respiratory system Anatomy of",
+              "respiratory system with special reference to anatomy of lungs,",
+              "mechanism of respiration, regulation of respiration Lung Volumes",
+              "and capacities transport of respiratory gases, artificial respiration,",
+              "and resuscitation methods Urinary system?? ?? Anatomy of urinary",
+              "tract with special reference to anatomy of kidney and nephrons,",
+              "functions of kidney and urinary tract, physiology of urine formation,",
+              "micturition reflex and role of kidneys in acid base balance, role of",
+              "RAS in kidney and disorders of kidney, Endocrine system",
+              "Classification of hormones, mechanism of hormone action, structure",
+              "and functions of pituitary gland, thyroid gland, parathyroid gland,",
+              "adrenal gland, pancreas, pineal gland, thymus and their disorders,",
+              "Reproductive system?? Anatomy of male and female reproductive",
+              "system, Functions of male and female reproductive system, sex",
+              "hormones, physiology of menstruation, fertilization,",
+              "spermatogenesis, oogenesis, pregnancy and parturition. Introduction",
+              "to genetics?? Chromosomes, genes and DNA, protein synthesis,",
+              "genetic pattern of inheritance"
+            ],
+            "topics_text": "Nervous system: Organization of nervous system, neuron, neuroglia, classification and properties of nerve fibre, electrophysiology, action potential, nerve impulse, receptors, synapse, neurotransmitters Central nervous system: Meninges, ventricles of brain and cerebrospinal fluid.structure and functions of brain (cerebrum, brain stem, cerebellum), spinal cord (gross structure, functions of afferent and efferent nerve tracts,reflex activity), Digestive system Anatomy of GI Tract with special reference to anatomy and functions of stomach, ( Acid production in the stomach, regulation of acid production through parasympathetic nervous system, pepsin role in protein digestion) small intestine and large intestine, anatomy and functions of salivary glands, pancreas and liver, movements of GIT, digestion and absorption of nutrients and disorders of GIT Energetics: Formation and role of ATP, Creatinine Phosphate and BMR., Respiratory system Anatomy of respiratory system with special reference to anatomy of lungs, mechanism of respiration, regulation of respiration Lung Volumes and capacities transport of respiratory gases, artificial respiration, and resuscitation methods Urinary system?? ?? Anatomy of urinary tract with special reference to anatomy of kidney and nephrons, functions of kidney and urinary tract, physiology of urine formation, micturition reflex and role of kidneys in acid base balance, role of RAS in kidney and disorders of kidney, Endocrine system Classification of hormones, mechanism of hormone action, structure and functions of pituitary gland, thyroid gland, parathyroid gland, adrenal gland, pancreas, pineal gland, thymus and their disorders, Reproductive system?? Anatomy of male and female reproductive system, Functions of male and female reproductive system, sex hormones, physiology of menstruation, fertilization, spermatogenesis, oogenesis, pregnancy and parturition. Introduction to genetics?? Chromosomes, genes and DNA, protein synthesis, genetic pattern of inheritance",
+            "topics": [
+              "Nervous system: Organization of nervous system, neuron,",
+              "neuroglia, classification and properties of nerve fibre,",
+              "electrophysiology, action potential, nerve impulse, receptors,",
+              "synapse, neurotransmitters Central nervous system: Meninges,",
+              "ventricles of brain and cerebrospinal fluid.structure and functions of",
+              "brain (cerebrum, brain stem, cerebellum), spinal cord (gross",
+              "structure, functions of afferent and efferent nerve tracts,reflex",
+              "activity), Digestive system Anatomy of GI Tract with special",
+              "reference to anatomy and functions of stomach, ( Acid production in",
+              "the stomach, regulation of acid production through parasympathetic",
+              "nervous system, pepsin role in protein digestion) small intestine and",
+              "large intestine, anatomy and functions of salivary glands, pancreas",
+              "and liver, movements of GIT, digestion and absorption of nutrients",
+              "and disorders of GIT Energetics: Formation and role of ATP,",
+              "Creatinine Phosphate and BMR., Respiratory system Anatomy of",
+              "respiratory system with special reference to anatomy of lungs,",
+              "mechanism of respiration, regulation of respiration Lung Volumes",
+              "and capacities transport of respiratory gases, artificial respiration,",
+              "and resuscitation methods Urinary system?? ?? Anatomy of urinary",
+              "tract with special reference to anatomy of kidney and nephrons,",
+              "functions of kidney and urinary tract, physiology of urine formation,",
+              "micturition reflex and role of kidneys in acid base balance, role of",
+              "RAS in kidney and disorders of kidney, Endocrine system",
+              "Classification of hormones, mechanism of hormone action, structure",
+              "and functions of pituitary gland, thyroid gland, parathyroid gland,",
+              "adrenal gland, pancreas, pineal gland, thymus and their disorders,",
+              "Reproductive system?? Anatomy of male and female reproductive",
+              "system, Functions of male and female reproductive system, sex",
+              "hormones, physiology of menstruation, fertilization,",
+              "spermatogenesis, oogenesis, pregnancy and parturition. Introduction",
+              "to genetics?? Chromosomes, genes and DNA, protein synthesis,",
+              "genetic pattern of inheritance"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Digestive system",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Anatomy of GI Tract with special reference to anatomy and",
+              "functions of stomach, ( Acid production in the stomach, regulation",
+              "of acid production through parasympathetic nervous system, pepsin",
+              "role in protein digestion) small intestine and large intestine, anatomy",
+              "and functions of salivary glands, pancreas and liver, movements of",
+              "GIT, digestion and absorption of nutrients and disorders of GIT",
+              "Energetics: Formation and role of ATP, Creatinine Phosphate and",
+              "BMR."
+            ],
+            "topics_text": "Anatomy of GI Tract with special reference to anatomy and functions of stomach, ( Acid production in the stomach, regulation of acid production through parasympathetic nervous system, pepsin role in protein digestion) small intestine and large intestine, anatomy and functions of salivary glands, pancreas and liver, movements of GIT, digestion and absorption of nutrients and disorders of GIT Energetics: Formation and role of ATP, Creatinine Phosphate and BMR.",
+            "topics": [
+              "Anatomy of GI Tract with special reference to anatomy and",
+              "functions of stomach, ( Acid production in the stomach, regulation",
+              "of acid production through parasympathetic nervous system, pepsin",
+              "role in protein digestion) small intestine and large intestine, anatomy",
+              "and functions of salivary glands, pancreas and liver, movements of",
+              "GIT, digestion and absorption of nutrients and disorders of GIT",
+              "Energetics: Formation and role of ATP, Creatinine Phosphate and",
+              "BMR."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Respiratory system",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Anatomy of respiratory system with special reference to anatomy of",
+              "lungs, mechanism of respiration, regulation of respiration Lung",
+              "Volumes and capacities transport of respiratory gases, artificial",
+              "respiration, and resuscitation methods Urinary system??? Anatomy",
+              "of urinary tract with special reference to anatomy of kidney and",
+              "nephrons, functions of kidney and urinary tract, physiology of urine",
+              "formation, micturition reflux and role of kidneys in acid base",
+              "balance, role of RAS in kidney and disorders of kidney"
+            ],
+            "topics_text": "Anatomy of respiratory system with special reference to anatomy of lungs, mechanism of respiration, regulation of respiration Lung Volumes and capacities transport of respiratory gases, artificial respiration, and resuscitation methods Urinary system??? Anatomy of urinary tract with special reference to anatomy of kidney and nephrons, functions of kidney and urinary tract, physiology of urine formation, micturition reflux and role of kidneys in acid base balance, role of RAS in kidney and disorders of kidney",
+            "topics": [
+              "Anatomy of respiratory system with special reference to anatomy of",
+              "lungs, mechanism of respiration, regulation of respiration Lung",
+              "Volumes and capacities transport of respiratory gases, artificial",
+              "respiration, and resuscitation methods Urinary system??? Anatomy",
+              "of urinary tract with special reference to anatomy of kidney and",
+              "nephrons, functions of kidney and urinary tract, physiology of urine",
+              "formation, micturition reflux and role of kidneys in acid base",
+              "balance, role of RAS in kidney and disorders of kidney"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Endocrine system",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Classification of hormones, mechanism of hormone action, structure",
+              "and functions of pituitary gland, thyroid gland, parathyroid gland,",
+              "adrenal gland, pancreas, pineal gland, thymus and their disorders"
+            ],
+            "topics_text": "Classification of hormones, mechanism of hormone action, structure and functions of pituitary gland, thyroid gland, parathyroid gland, adrenal gland, pancreas, pineal gland, thymus and their disorders",
+            "topics": [
+              "Classification of hormones, mechanism of hormone action, structure",
+              "and functions of pituitary gland, thyroid gland, parathyroid gland,",
+              "adrenal gland, pancreas, pineal gland, thymus and their disorders"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Reproductive system",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Anatomy of male and female reproductive system, Functions of",
+              "male and female reproductive system, sex hormones, physiology of",
+              "menstruation, fertilization, spermatogenesis, oogenesis, pregnancy",
+              "and parturition. Introduction to genetics??Chromosomes, genes and",
+              "DNA, protein synthesis, genetic pattern of inheritance",
+              "Total Hours 45"
+            ],
+            "topics_text": "Anatomy of male and female reproductive system, Functions of male and female reproductive system, sex hormones, physiology of menstruation, fertilization, spermatogenesis, oogenesis, pregnancy and parturition. Introduction to genetics??Chromosomes, genes and DNA, protein synthesis, genetic pattern of inheritance Total Hours 45",
+            "topics": [
+              "Anatomy of male and female reproductive system, Functions of",
+              "male and female reproductive system, sex hormones, physiology of",
+              "menstruation, fertilization, spermatogenesis, oogenesis, pregnancy",
+              "and parturition. Introduction to genetics??Chromosomes, genes and",
+              "DNA, protein synthesis, genetic pattern of inheritance",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Human Anatomy and Physiology-II",
+            "contact_hours": 60,
+            "topic_lines": [
+              "Experiment-1, Experiment-2, Experiment-3, Experiment-4,",
+              "Experiment-5, Experiment-6, Experiment-7, Experiment-8,",
+              "Experiment-9, Experiment-10, Experiment-11, Experiment-12,",
+              "Experiment-13, Experiment-14, Experiment-15, Experiment-16"
+            ],
+            "topics_text": "Experiment-1, Experiment-2, Experiment-3, Experiment-4, Experiment-5, Experiment-6, Experiment-7, Experiment-8, Experiment-9, Experiment-10, Experiment-11, Experiment-12, Experiment-13, Experiment-14, Experiment-15, Experiment-16",
+            "topics": [
+              "Experiment-1, Experiment-2, Experiment-3, Experiment-4,",
+              "Experiment-5, Experiment-6, Experiment-7, Experiment-8,",
+              "Experiment-9, Experiment-10, Experiment-11, Experiment-12,",
+              "Experiment-13, Experiment-14, Experiment-15, Experiment-16"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Human Anatomy and Physiology-II",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,",
+              "Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,",
+              "Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15",
+              "Total Hours 75",
+              "Textbook :",
+              "1 Textbook of Human Histology, Inderbeer Singh, Jaypee brothers Medical Publishers, 2019",
+              "2 Textbook of Practical Physiology, C.L Ghai, Jaypee brothers Medical Publishers, 2013",
+              "3 Practical workbook of Human Physiology, K Srinageswari and Rajeev Sharma, Jaypee",
+              "brothers Medical Publishers, 2018",
+              "4 Essentials of Medical Physiology, K. Sembulingam and P. Sembulingam., Jaypee brothers",
+              "medical publishers, New Delhi, 1999",
+              "5 Anatomy and Physiology in Health and Illness, Kathleen J.W. Wilson, Churchill",
+              "Livingstone, New York, Elsevier Health Sciences, 1991",
+              "Textbook :",
+              "6 Physiological basis of Medical Practice, Williams &amp; Wilkins, Williams &amp;",
+              "Wilkins, 1984",
+              "7 Text book of Medical Physiology, Arthur Guyton and John.E. Hall., Philadelphia, PA",
+              ": Elsevie, 1956",
+              "8 Principles of Anatomy and Physiology, Tortora Grabowski. Palmetto, Wiley India Pvt. Ltd,",
+              "1996"
+            ],
+            "topics_text": "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6, Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11, Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15 Total Hours 75 Textbook : 1 Textbook of Human Histology, Inderbeer Singh, Jaypee brothers Medical Publishers, 2019 2 Textbook of Practical Physiology, C.L Ghai, Jaypee brothers Medical Publishers, 2013 3 Practical workbook of Human Physiology, K Srinageswari and Rajeev Sharma, Jaypee brothers Medical Publishers, 2018 4 Essentials of Medical Physiology, K. Sembulingam and P. Sembulingam., Jaypee brothers medical publishers, New Delhi, 1999 5 Anatomy and Physiology in Health and Illness, Kathleen J.W. Wilson, Churchill Livingstone, New York, Elsevier Health Sciences, 1991 Textbook : 6 Physiological basis of Medical Practice, Williams &amp; Wilkins, Williams &amp; Wilkins, 1984 7 Text book of Medical Physiology, Arthur Guyton and John.E. Hall., Philadelphia, PA : Elsevie, 1956 8 Principles of Anatomy and Physiology, Tortora Grabowski. Palmetto, Wiley India Pvt. Ltd, 1996",
+            "topics": [
+              "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,",
+              "Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,",
+              "Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15",
+              "Total Hours 75",
+              "Textbook :",
+              "1 Textbook of Human Histology, Inderbeer Singh, Jaypee brothers Medical Publishers, 2019",
+              "2 Textbook of Practical Physiology, C.L Ghai, Jaypee brothers Medical Publishers, 2013",
+              "3 Practical workbook of Human Physiology, K Srinageswari and Rajeev Sharma, Jaypee",
+              "brothers Medical Publishers, 2018",
+              "4 Essentials of Medical Physiology, K. Sembulingam and P. Sembulingam., Jaypee brothers",
+              "medical publishers, New Delhi, 1999",
+              "5 Anatomy and Physiology in Health and Illness, Kathleen J.W. Wilson, Churchill",
+              "Livingstone, New York, Elsevier Health Sciences, 1991",
+              "Textbook :",
+              "6 Physiological basis of Medical Practice, Williams &amp",
+              "Wilkins, Williams &amp",
+              "Wilkins, 1984",
+              "7 Text book of Medical Physiology, Arthur Guyton and John.E. Hall., Philadelphia, PA",
+              ": Elsevie, 1956",
+              "8 Principles of Anatomy and Physiology, Tortora Grabowski. Palmetto, Wiley India Pvt. Ltd,",
+              "1996"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Physiological basis of Medical practice, Physiological basis of Medical practice, Best and Tailor. Williams &amp; Williams co, Wolters Kluwer India Pvt. Ltd., 2011",
+          "Guyton and Hall Textbook of Medical Physiology, Guyton and Hall Textbook of Medical Physiology, Arthur C, Guyton and John E. Hall, Miamisburg, saunders, 2015",
+          "Human Physiology (volume 1 &amp; 2), Human Physiology (volume 1 &amp; 2), Dr. CC Chatterrje., CBS, 2020"
+        ],
+        "textbooks": [
+          "Textbook of Human Histology, Inderbeer Singh, Jaypee brothers Medical Publishers, 2019",
+          "Textbook of Practical Physiology, C.L Ghai, Jaypee brothers Medical Publishers, 2013",
+          "Practical workbook of Human Physiology, K Srinageswari and Rajeev Sharma, Jaypee brothers Medical Publishers, 2018",
+          "Essentials of Medical Physiology, K. Sembulingam and P. Sembulingam., Jaypee brothers medical publishers, New Delhi, 1999",
+          "Anatomy and Physiology in Health and Illness, Kathleen J.W. Wilson, Churchill Livingstone, New York, Elsevier Health Sciences, 1991 Textbook :",
+          "Physiological basis of Medical Practice, Williams &amp; Wilkins, Williams &amp; Wilkins, 1984",
+          "Text book of Medical Physiology, Arthur Guyton and John.E. Hall., Philadelphia, PA : Elsevie, 1956",
+          "Principles of Anatomy and Physiology, Tortora Grabowski. Palmetto, Wiley India Pvt. Ltd, 1996"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 10958,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       BACHELOR OF PHARMACY\nSEMESTER         2\nCOURSE TITLE   HUMAN ANATOMY AND PHYSIOLOGY-II\nCOURSE CODE     13PH0201\nCOURSE CREDITS  6\n\nObjective:\n 1  This subject is designed to impart fundamental knowledge on the structure and functions of\n     the various systems of the human body. It also helps in understanding both homeostatic\n    mechanisms. The subject provides the basic knowledge required to understand the various\n     disciplines of pharmacy\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Explain the gross morphology, structure and functions of various organs of the human\n    body.\n 2  Describe the various homeostatic mechanisms and their imbalances.\n 3  Identify the various tissues and organs of different systems of human body.\n 4  Perform the hematological tests like blood cell counts, haemoglobin estimation,\n     bleeding/clotting time etc and also record blood pressure, heart rate, pulse and respiratory\n    volume.\n 5  Appreciate coordinated working pattern of different organs of each system\n 6  Appreciate the interlinked mechanisms in the maintenance of normal functioning\n     (homeostasis) of human body.\n\n\nPre-requisite of course:Explain the gross morphology, structure and functions of various\norgans of the human body.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            4        75     15      10        35         15\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Nervous system                                          10\n            Nervous system: Organization of nervous system, neuron,\n               neuroglia, classification and properties of nerve fibre,\n               electrophysiology, action potential, nerve impulse, receptors,\n              synapse, neurotransmitters Central nervous system: Meninges,\n               ventricles of brain and cerebrospinal fluid.structure and functions of\n               brain (cerebrum, brain stem, cerebellum), spinal cord (gross\n                structure, functions of afferent and efferent nerve tracts,reflex\n                 activity), Digestive system Anatomy of GI Tract with special\n              reference to anatomy and functions of stomach, ( Acid production in\n               the stomach, regulation of acid production through parasympathetic\n             nervous system, pepsin role in protein digestion) small intestine and\n               large intestine, anatomy and functions of salivary glands, pancreas\n            and liver, movements of GIT, digestion and absorption of nutrients\n            and disorders of GIT Energetics: Formation and role of ATP,\n              Creatinine Phosphate and BMR., Respiratory system Anatomy of\n               respiratory system with special reference to anatomy of lungs,\n            mechanism of respiration, regulation of respiration Lung Volumes\n            and capacities transport of respiratory gases, artificial respiration,\n            and resuscitation methods Urinary system?? ?? Anatomy of urinary\n                 tract with special reference to anatomy of kidney and nephrons,\n              functions of kidney and urinary tract, physiology of urine formation,\n               micturition reflex and role of kidneys in acid base balance, role of\n         RAS in kidney and disorders of kidney, Endocrine system\n               Classification of hormones, mechanism of hormone action, structure\n            and functions of pituitary gland, thyroid gland, parathyroid gland,\n              adrenal gland, pancreas, pineal gland, thymus and their disorders,\n             Reproductive system?? Anatomy of male and female reproductive\n              system, Functions of male and female reproductive system, sex\n             hormones, physiology of menstruation, fertilization,\n              spermatogenesis, oogenesis, pregnancy and parturition. Introduction\n               to genetics?? Chromosomes, genes and DNA, protein synthesis,\n              genetic pattern of inheritance\n     2       Digestive system                                          6\n           Anatomy of GI Tract with special reference to anatomy and\n              functions of stomach, ( Acid production in the stomach, regulation\n              of acid production through parasympathetic nervous system, pepsin\n               role in protein digestion) small intestine and large intestine, anatomy\n            and functions of salivary glands, pancreas and liver, movements of\n            GIT, digestion and absorption of nutrients and disorders of GIT\n               Energetics: Formation and role of ATP, Creatinine Phosphate and\n          BMR.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Respiratory system                                       10\n           Anatomy of respiratory system with special reference to anatomy of\n               lungs, mechanism of respiration, regulation of respiration Lung\n            Volumes and capacities transport of respiratory gases, artificial\n                respiration, and resuscitation methods Urinary system??? Anatomy\n              of urinary tract with special reference to anatomy of kidney and\n              nephrons, functions of kidney and urinary tract, physiology of urine\n              formation, micturition reflux and role of kidneys in acid base\n              balance, role of RAS in kidney and disorders of kidney\n     4      Endocrine system                                        10\n               Classification of hormones, mechanism of hormone action, structure\n            and functions of pituitary gland, thyroid gland, parathyroid gland,\n              adrenal gland, pancreas, pineal gland, thymus and their disorders\n     5      Reproductive system                                      9\n           Anatomy of male and female reproductive system, Functions of\n            male and female reproductive system, sex hormones, physiology of\n              menstruation, fertilization, spermatogenesis, oogenesis, pregnancy\n            and parturition. Introduction to genetics??Chromosomes, genes and\n          DNA, protein synthesis, genetic pattern of inheritance\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Human Anatomy and Physiology-II                         60\n              Experiment-1, Experiment-2, Experiment-3, Experiment-4,\n              Experiment-5, Experiment-6, Experiment-7, Experiment-8,\n              Experiment-9, Experiment-10, Experiment-11, Experiment-12,\n             Experiment-13, Experiment-14, Experiment-15, Experiment-16\n     2     Human Anatomy and Physiology-II                         15\n               Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,\n               Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,\n               Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15\n                               Total Hours                       75\n\nTextbook :\n 1  Textbook of Human Histology, Inderbeer Singh, Jaypee brothers Medical Publishers, 2019\n 2  Textbook of Practical Physiology, C.L Ghai, Jaypee brothers Medical Publishers, 2013\n 3  Practical workbook of Human Physiology, K Srinageswari and Rajeev Sharma, Jaypee\n     brothers Medical Publishers, 2018\n 4  Essentials of Medical Physiology, K. Sembulingam and P. Sembulingam., Jaypee brothers\n    medical publishers, New Delhi, 1999\n 5  Anatomy and Physiology in Health and Illness, Kathleen J.W. Wilson, Churchill\n     Livingstone, New York, Elsevier Health Sciences, 1991\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Textbook :\n 6  Physiological basis of Medical Practice, Williams &amp; Wilkins, Williams &amp;\n     Wilkins, 1984\n 7  Text book of Medical Physiology, Arthur Guyton and John.E. Hall., Philadelphia, PA\n       : Elsevie, 1956\n 8  Principles of Anatomy and Physiology, Tortora Grabowski. Palmetto, Wiley India Pvt. Ltd,\n    1996\n\nReferences:\n 1  Physiological basis of Medical practice, Physiological basis of Medical practice, Best and\n     Tailor. Williams &amp; Williams co, Wolters Kluwer India Pvt. Ltd., 2011\n 2  Guyton and Hall Textbook of Medical Physiology, Guyton and Hall Textbook of Medical\n     Physiology, Arthur C, Guyton and John E. Hall, Miamisburg, saunders, 2015\n 3  Human Physiology (volume 1 &amp; 2), Human Physiology (volume 1 &amp; 2), Dr. CC\n     Chatterrje., CBS, 2020\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the blackboard\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "5b46f698bab8a0dbad5463b17805dcb25856d6e11572a96989ebc5649f241104",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "37013168020301",
+      "subject_name": "Pharmaceutical Engineering",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 2,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "37013168020201",
+      "subject_name": "Pharmaceutical Organic Chemistry I",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 2,
+      "subject_code": "13PH0202",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13PH0202.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Pharmaceutical Organic Chemistry I [3a452d6f646b].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Pharmaceutical Organic Chemistry I [3a452d6f646b].pdf",
+      "expected_pdf_sha256": "02388776d2de3fc9ec75f4c7e519889104e4811b431e519c1ce5207f05feb085",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PHARMACEUTICAL ORGANIC CHEMISTRY-I",
+        "course_code": "13PH0202",
+        "semester_label": "2",
+        "credits": 6,
+        "prerequisite": "write the structure, name and the type of isomerism of the organic compound"
+      },
+      "objectives": [
+        "This subject deals with classification and nomenclature of simple organic compounds,structural isomerism, intermediates forming in reactions, important physical properties, reactions and methods of preparation of these compounds. The syllabus also emphasizes on mechanisms and orientation of reactions."
+      ],
+      "course_outcomes": [
+        "Write the structure, name and the type of isomerism of the organic compound",
+        "Write the reaction, name the reaction and orientation of reactions",
+        "Account for reactivity/stability of compounds",
+        "Identify/confirm the identification of organic compound Pre-requisite of course:write the structure, name and the type of isomerism of the organic compound"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 4 75 15 10 35 15 DR. RAMESH BHANAJIBHAI PARMAR DR. LALJI HAKUBHAI BALDANIYA Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Classification, nomenclature and isomerism",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Classification, nomenclature and isomerism: 7 Classification of",
+              "Organic Compounds Common and IUPAC systems of nomenclature",
+              "of organic compounds (up to 10 Carbons open chain and",
+              "carbocyclic compounds) Structural isomerisms in organic",
+              "compounds, Alkanes*, Alkenes* and Conjugated dienes*: SP",
+              "hybridization in alkanes, Halogenation of alkanes, uses of paraffins,",
+              "Stabilities of alkenes, SP hybridization in alkenes, E1 and E2",
+              "reactions – kinetics, order of reactivity of alkyl halides,",
+              "rearrangement of carbocations, Saytzeffs orientation and evidences.",
+              "E1 verses E2 reactions, Factors affecting E1 and E2 reactions.",
+              "Ozonolysis, electrophilic addition reactions of alkenes,",
+              "Markownikoff’s orientation, free radical addition reactions of",
+              "alkenes, Anti Markownikoff’s orientation. Stability of conjugated",
+              "dienes, Diel-Alder, electrophilic addition, free radical addition",
+              "reactions of conjugated dienes, allylic rearrangement, Alkyl",
+              "halides*: SN1 and SN2 reactions - kinetics, order of reactivity of",
+              "alkyl halides, stereochemistry and rearrangement of carbocations",
+              "SN1 versus SN2 reactions, Factors affecting SN1 and SN2 reactions",
+              "Structure and uses of ethylchloride, Chloroform, trichloroethylene,",
+              "tetrachloroethylene, dichloromethane, tetrachloromethane and",
+              "iodoform Alcohols*- Qualitative tests, Structure and uses of Ethyl",
+              "alcohol, Methyl alcohol, chlorobutanol, Cetosteryl alcohol, Benzyl",
+              "alcohol, Glycerol, Propylene glycol??, Carbonyl compounds*",
+              "(Aldehydes and ketones): Nucleophilic addition Electromeric effect,",
+              "aldol condensation, Crossed Aldol condensation, Cannizzaro",
+              "reaction, Crossed Cannizzaro reaction, Benzoin condensation,",
+              "Perkin condensation, qualitative tests, Structure and uses of",
+              "Formaldehyde, Paraldehyde, Acetone, Chloral hydrate, Hexamine,",
+              "Benzaldehyde, Vanilin, Cinnamaldehyde??, Carboxylic acids*:",
+              "Acidity of carboxylic acids, effect of substituents on acidity,",
+              "inductive effect and qualitative tests for carboxylic acids ,amide and",
+              "ester Structure and Uses of Acetic acid, Lactic acid, Tartaric acid,",
+              "Citric acid, Succinic acid. Oxalic acid, Salicylic acid, Benzoic acid,",
+              "Benzyl benzoate, Dimethyl phthalate, Methyl salicylate and Acetyl",
+              "salicylic acid Aliphatic amines* - Basicity, effect of substituent on",
+              "Basicity. Qualitative test, Structure and uses of Ethanolamine,",
+              "Ethylenediamine, Amphetamine??",
+              "2 Alkanes*, Alkenes* and Conjugated dienes* 10",
+              "SP hybridization in alkanes, Halogenation of alkanes, uses of",
+              "paraffins, Stabilities of alkenes, SP hybridization in alkenes, E1 and",
+              "E2 reactions – kinetics, order of reactivity of alkyl halides,",
+              "rearrangement of carbocations, Saytzeffs orientation and evidences.",
+              "E1 verses E2 reactions, Factors affecting E1 and E2 reactions.",
+              "Ozonolysis, electrophilic addition reactions of alkenes,",
+              "Markownikoff’s orientation, free radical addition reactions of",
+              "alkenes, Anti Markownikoff’s orientation. Stability of conjugated",
+              "dienes, Diel-Alder, electrophilic addition, free radical addition",
+              "reactions of conjugated dienes, allylic rearrangement"
+            ],
+            "topics_text": "Classification, nomenclature and isomerism: 7 Classification of Organic Compounds Common and IUPAC systems of nomenclature of organic compounds (up to 10 Carbons open chain and carbocyclic compounds) Structural isomerisms in organic compounds, Alkanes*, Alkenes* and Conjugated dienes*: SP hybridization in alkanes, Halogenation of alkanes, uses of paraffins, Stabilities of alkenes, SP hybridization in alkenes, E1 and E2 reactions – kinetics, order of reactivity of alkyl halides, rearrangement of carbocations, Saytzeffs orientation and evidences. E1 verses E2 reactions, Factors affecting E1 and E2 reactions. Ozonolysis, electrophilic addition reactions of alkenes, Markownikoff’s orientation, free radical addition reactions of alkenes, Anti Markownikoff’s orientation. Stability of conjugated dienes, Diel-Alder, electrophilic addition, free radical addition reactions of conjugated dienes, allylic rearrangement, Alkyl halides*: SN1 and SN2 reactions - kinetics, order of reactivity of alkyl halides, stereochemistry and rearrangement of carbocations SN1 versus SN2 reactions, Factors affecting SN1 and SN2 reactions Structure and uses of ethylchloride, Chloroform, trichloroethylene, tetrachloroethylene, dichloromethane, tetrachloromethane and iodoform Alcohols*- Qualitative tests, Structure and uses of Ethyl alcohol, Methyl alcohol, chlorobutanol, Cetosteryl alcohol, Benzyl alcohol, Glycerol, Propylene glycol??, Carbonyl compounds* (Aldehydes and ketones): Nucleophilic addition Electromeric effect, aldol condensation, Crossed Aldol condensation, Cannizzaro reaction, Crossed Cannizzaro reaction, Benzoin condensation, Perkin condensation, qualitative tests, Structure and uses of Formaldehyde, Paraldehyde, Acetone, Chloral hydrate, Hexamine, Benzaldehyde, Vanilin, Cinnamaldehyde??, Carboxylic acids*: Acidity of carboxylic acids, effect of substituents on acidity, inductive effect and qualitative tests for carboxylic acids ,amide and ester Structure and Uses of Acetic acid, Lactic acid, Tartaric acid, Citric acid, Succinic acid. Oxalic acid, Salicylic acid, Benzoic acid, Benzyl benzoate, Dimethyl phthalate, Methyl salicylate and Acetyl salicylic acid Aliphatic amines* - Basicity, effect of substituent on Basicity. Qualitative test, Structure and uses of Ethanolamine, Ethylenediamine, Amphetamine?? 2 Alkanes*, Alkenes* and Conjugated dienes* 10 SP hybridization in alkanes, Halogenation of alkanes, uses of paraffins, Stabilities of alkenes, SP hybridization in alkenes, E1 and E2 reactions – kinetics, order of reactivity of alkyl halides, rearrangement of carbocations, Saytzeffs orientation and evidences. E1 verses E2 reactions, Factors affecting E1 and E2 reactions. Ozonolysis, electrophilic addition reactions of alkenes, Markownikoff’s orientation, free radical addition reactions of alkenes, Anti Markownikoff’s orientation. Stability of conjugated dienes, Diel-Alder, electrophilic addition, free radical addition reactions of conjugated dienes, allylic rearrangement",
+            "topics": [
+              "Classification, nomenclature and isomerism: 7 Classification of",
+              "Organic Compounds Common and IUPAC systems of nomenclature",
+              "of organic compounds (up to 10 Carbons open chain and",
+              "carbocyclic compounds) Structural isomerisms in organic",
+              "compounds, Alkanes*, Alkenes* and Conjugated dienes*: SP",
+              "hybridization in alkanes, Halogenation of alkanes, uses of paraffins,",
+              "Stabilities of alkenes, SP hybridization in alkenes, E1 and E2",
+              "reactions – kinetics, order of reactivity of alkyl halides,",
+              "rearrangement of carbocations, Saytzeffs orientation and evidences.",
+              "E1 verses E2 reactions, Factors affecting E1 and E2 reactions.",
+              "Ozonolysis, electrophilic addition reactions of alkenes,",
+              "Markownikoff’s orientation, free radical addition reactions of",
+              "alkenes, Anti Markownikoff’s orientation. Stability of conjugated",
+              "dienes, Diel-Alder, electrophilic addition, free radical addition",
+              "reactions of conjugated dienes, allylic rearrangement, Alkyl",
+              "halides*: SN1 and SN2 reactions - kinetics, order of reactivity of",
+              "alkyl halides, stereochemistry and rearrangement of carbocations",
+              "SN1 versus SN2 reactions, Factors affecting SN1 and SN2 reactions",
+              "Structure and uses of ethylchloride, Chloroform, trichloroethylene,",
+              "tetrachloroethylene, dichloromethane, tetrachloromethane and",
+              "iodoform Alcohols*- Qualitative tests, Structure and uses of Ethyl",
+              "alcohol, Methyl alcohol, chlorobutanol, Cetosteryl alcohol, Benzyl",
+              "alcohol, Glycerol, Propylene glycol??, Carbonyl compounds*",
+              "(Aldehydes and ketones): Nucleophilic addition Electromeric effect,",
+              "aldol condensation, Crossed Aldol condensation, Cannizzaro",
+              "reaction, Crossed Cannizzaro reaction, Benzoin condensation,",
+              "Perkin condensation, qualitative tests, Structure and uses of",
+              "Formaldehyde, Paraldehyde, Acetone, Chloral hydrate, Hexamine,",
+              "Benzaldehyde, Vanilin, Cinnamaldehyde??, Carboxylic acids*:",
+              "Acidity of carboxylic acids, effect of substituents on acidity,",
+              "inductive effect and qualitative tests for carboxylic acids ,amide and",
+              "ester Structure and Uses of Acetic acid, Lactic acid, Tartaric acid,",
+              "Citric acid, Succinic acid. Oxalic acid, Salicylic acid, Benzoic acid,",
+              "Benzyl benzoate, Dimethyl phthalate, Methyl salicylate and Acetyl",
+              "salicylic acid Aliphatic amines* - Basicity, effect of substituent on",
+              "Basicity. Qualitative test, Structure and uses of Ethanolamine,",
+              "Ethylenediamine, Amphetamine??",
+              "2 Alkanes*, Alkenes* and Conjugated dienes* 10",
+              "SP hybridization in alkanes, Halogenation of alkanes, uses of",
+              "paraffins, Stabilities of alkenes, SP hybridization in alkenes, E1 and",
+              "E2 reactions – kinetics, order of reactivity of alkyl halides,",
+              "rearrangement of carbocations, Saytzeffs orientation and evidences.",
+              "E1 verses E2 reactions, Factors affecting E1 and E2 reactions.",
+              "Ozonolysis, electrophilic addition reactions of alkenes,",
+              "Markownikoff’s orientation, free radical addition reactions of",
+              "alkenes, Anti Markownikoff’s orientation. Stability of conjugated",
+              "dienes, Diel-Alder, electrophilic addition, free radical addition",
+              "reactions of conjugated dienes, allylic rearrangement"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Alkyl halides",
+            "contact_hours": 10,
+            "topic_lines": [
+              "SN1and SN2reactions - kinetics, order of reactivity of alkyl halides,",
+              "stereochemistry and rearrangement of carbocations SN1 versus SN2",
+              "reactions, Factors affecting SN1 and SN2 reactions Structure and",
+              "uses of ethylchloride, Chloroform, trichloroethylene,",
+              "tetrachloroethylene, dichloromethane, tetrachloromethane and",
+              "iodoform Alcohols*- Qualitative tests, Structure and uses of Ethyl",
+              "alcohol, Methyl alcohol, chlorobutanol, Cetosteryl alcohol, Benzyl",
+              "alcohol, Glycerol, Propylene glycol",
+              "4 Carbonyl compounds* (Aldehydes and ketones): 10",
+              "Nucleophilic addition, 10 Electromeric effect, aldol condensation,",
+              "Crossed Aldol condensation, Cannizzaro reaction, Crossed",
+              "Cannizzaro reaction, Benzoin condensation, Perkin condensation,",
+              "qualitative tests, Structure and uses of Formaldehyde, Paraldehyde,",
+              "Acetone, Chloral hydrate, Hexamine, Benzaldehyde, Vanilin,",
+              "Cinnamaldehyde"
+            ],
+            "topics_text": "SN1and SN2reactions - kinetics, order of reactivity of alkyl halides, stereochemistry and rearrangement of carbocations SN1 versus SN2 reactions, Factors affecting SN1 and SN2 reactions Structure and uses of ethylchloride, Chloroform, trichloroethylene, tetrachloroethylene, dichloromethane, tetrachloromethane and iodoform Alcohols*- Qualitative tests, Structure and uses of Ethyl alcohol, Methyl alcohol, chlorobutanol, Cetosteryl alcohol, Benzyl alcohol, Glycerol, Propylene glycol 4 Carbonyl compounds* (Aldehydes and ketones): 10 Nucleophilic addition, 10 Electromeric effect, aldol condensation, Crossed Aldol condensation, Cannizzaro reaction, Crossed Cannizzaro reaction, Benzoin condensation, Perkin condensation, qualitative tests, Structure and uses of Formaldehyde, Paraldehyde, Acetone, Chloral hydrate, Hexamine, Benzaldehyde, Vanilin, Cinnamaldehyde",
+            "topics": [
+              "SN1and SN2reactions - kinetics, order of reactivity of alkyl halides,",
+              "stereochemistry and rearrangement of carbocations SN1 versus SN2",
+              "reactions, Factors affecting SN1 and SN2 reactions Structure and",
+              "uses of ethylchloride, Chloroform, trichloroethylene,",
+              "tetrachloroethylene, dichloromethane, tetrachloromethane and",
+              "iodoform Alcohols*- Qualitative tests, Structure and uses of Ethyl",
+              "alcohol, Methyl alcohol, chlorobutanol, Cetosteryl alcohol, Benzyl",
+              "alcohol, Glycerol, Propylene glycol",
+              "4 Carbonyl compounds* (Aldehydes and ketones): 10",
+              "Nucleophilic addition, 10 Electromeric effect, aldol condensation,",
+              "Crossed Aldol condensation, Cannizzaro reaction, Crossed",
+              "Cannizzaro reaction, Benzoin condensation, Perkin condensation,",
+              "qualitative tests, Structure and uses of Formaldehyde, Paraldehyde,",
+              "Acetone, Chloral hydrate, Hexamine, Benzaldehyde, Vanilin,",
+              "Cinnamaldehyde"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Carboxylic acids",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Acidity of carboxylic acids, effect of substituents on acidity,",
+              "inductive effect and qualitative tests for carboxylic acids ,amide and",
+              "ester Structure and Uses of Acetic acid, Lactic acid, Tartaric acid,",
+              "Citric acid, Succinic acid. Oxalic acid, Salicylic acid, Benzoic acid,",
+              "Benzyl benzoate, Dimethyl phthalate, Methyl salicylate and Acetyl",
+              "salicylic acid Aliphatic amines* - Basicity, effect of substituent on",
+              "Basicity. Qualitative test, Structure and uses of Ethanolamine,",
+              "Ethylenediamine, Amphetamine",
+              "Total Hours 45"
+            ],
+            "topics_text": "Acidity of carboxylic acids, effect of substituents on acidity, inductive effect and qualitative tests for carboxylic acids ,amide and ester Structure and Uses of Acetic acid, Lactic acid, Tartaric acid, Citric acid, Succinic acid. Oxalic acid, Salicylic acid, Benzoic acid, Benzyl benzoate, Dimethyl phthalate, Methyl salicylate and Acetyl salicylic acid Aliphatic amines* - Basicity, effect of substituent on Basicity. Qualitative test, Structure and uses of Ethanolamine, Ethylenediamine, Amphetamine Total Hours 45",
+            "topics": [
+              "Acidity of carboxylic acids, effect of substituents on acidity,",
+              "inductive effect and qualitative tests for carboxylic acids ,amide and",
+              "ester Structure and Uses of Acetic acid, Lactic acid, Tartaric acid,",
+              "Citric acid, Succinic acid. Oxalic acid, Salicylic acid, Benzoic acid,",
+              "Benzyl benzoate, Dimethyl phthalate, Methyl salicylate and Acetyl",
+              "salicylic acid Aliphatic amines* - Basicity, effect of substituent on",
+              "Basicity. Qualitative test, Structure and uses of Ethanolamine,",
+              "Ethylenediamine, Amphetamine",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Pharmaceutical Organic Chemistry I",
+            "contact_hours": 60,
+            "topic_lines": [
+              "Experiment-1, Experiment-2, Experiment-3, Experiment-4,",
+              "Experiment-5, Experiment-6, Experiment-7, Experiment-8,",
+              "Experiment-9, Experiment-10, Experiment-11, Experiment-12,",
+              "Experiment-13"
+            ],
+            "topics_text": "Experiment-1, Experiment-2, Experiment-3, Experiment-4, Experiment-5, Experiment-6, Experiment-7, Experiment-8, Experiment-9, Experiment-10, Experiment-11, Experiment-12, Experiment-13",
+            "topics": [
+              "Experiment-1, Experiment-2, Experiment-3, Experiment-4,",
+              "Experiment-5, Experiment-6, Experiment-7, Experiment-8,",
+              "Experiment-9, Experiment-10, Experiment-11, Experiment-12,",
+              "Experiment-13"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Pharmaceutical Organic Chemistry I",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,",
+              "Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,",
+              "Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15",
+              "Total Hours 75",
+              "Textbook :",
+              "1 Textbook of Organic Chemistry, Brian S. Furniss et. al., Pearson Education, 2015",
+              "2 Advanced Practical Organic Chemistry, N.K. Vishnoi, S Chand, 2010",
+              "3 Introduction to Organic Laboratory Techniques: A Microscale Approach, Pavia, Lampman",
+              "and Kriz, Brooks/Cole, 2007",
+              "Textbook :",
+              "4 Organic Reaction Mechanisms, V. K. Ahluwalia, Rakesh Kumar Parashar, Alpha Science",
+              "International Ltd, 2006",
+              "5 Textbook of Organic Chemistry, V. K. Ahluwalia, Rakesh Kumar Parashar, Viva Books,",
+              "2021",
+              "6 Textbook of Organic Chemistry, B.S. Bahl &amp; Arun Bahl., S. Chand, 2019",
+              "7 Organic Chemistry, P.L Soni, Sultan Chand &amp; Sons, 2012",
+              "8 Practical Organic Chemistry, Mann &amp; Saunders, Pearson Education India, 2009"
+            ],
+            "topics_text": "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6, Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11, Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15 Total Hours 75 Textbook : 1 Textbook of Organic Chemistry, Brian S. Furniss et. al., Pearson Education, 2015 2 Advanced Practical Organic Chemistry, N.K. Vishnoi, S Chand, 2010 3 Introduction to Organic Laboratory Techniques: A Microscale Approach, Pavia, Lampman and Kriz, Brooks/Cole, 2007 Textbook : 4 Organic Reaction Mechanisms, V. K. Ahluwalia, Rakesh Kumar Parashar, Alpha Science International Ltd, 2006 5 Textbook of Organic Chemistry, V. K. Ahluwalia, Rakesh Kumar Parashar, Viva Books, 2021 6 Textbook of Organic Chemistry, B.S. Bahl &amp; Arun Bahl., S. Chand, 2019 7 Organic Chemistry, P.L Soni, Sultan Chand &amp; Sons, 2012 8 Practical Organic Chemistry, Mann &amp; Saunders, Pearson Education India, 2009",
+            "topics": [
+              "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,",
+              "Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,",
+              "Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15",
+              "Total Hours 75",
+              "Textbook :",
+              "1 Textbook of Organic Chemistry, Brian S. Furniss et. al., Pearson Education, 2015",
+              "2 Advanced Practical Organic Chemistry, N.K. Vishnoi, S Chand, 2010",
+              "3 Introduction to Organic Laboratory Techniques: A Microscale Approach, Pavia, Lampman",
+              "and Kriz, Brooks/Cole, 2007",
+              "Textbook :",
+              "4 Organic Reaction Mechanisms, V. K. Ahluwalia, Rakesh Kumar Parashar, Alpha Science",
+              "International Ltd, 2006",
+              "5 Textbook of Organic Chemistry, V. K. Ahluwalia, Rakesh Kumar Parashar, Viva Books,",
+              "2021",
+              "6 Textbook of Organic Chemistry, B.S. Bahl &amp",
+              "Arun Bahl., S. Chand, 2019",
+              "7 Organic Chemistry, P.L Soni, Sultan Chand &amp",
+              "Sons, 2012",
+              "8 Practical Organic Chemistry, Mann &amp",
+              "Saunders, Pearson Education India, 2009"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Organic Chemistry, Organic Chemistry, Jonathan Clayden, Nick Greeves, and Stuart Warren, Oxford Universit y Press, 2014",
+          "Organic Chemistry, Organic Chemistry, Morrison and Boyd, Pearson Education India, 2010",
+          "Organic Chemistry, Organic Chemistry, I. L Finar, ELBS, 1985"
+        ],
+        "textbooks": [
+          "Textbook of Organic Chemistry, Brian S. Furniss et. al., Pearson Education, 2015",
+          "Advanced Practical Organic Chemistry, N.K. Vishnoi, S Chand, 2010",
+          "Introduction to Organic Laboratory Techniques: A Microscale Approach, Pavia, Lampman and Kriz, Brooks/Cole, 2007 Textbook :",
+          "Organic Reaction Mechanisms, V. K. Ahluwalia, Rakesh Kumar Parashar, Alpha Science International Ltd, 2006",
+          "Textbook of Organic Chemistry, V. K. Ahluwalia, Rakesh Kumar Parashar, Viva Books, 2021",
+          "Textbook of Organic Chemistry, B.S. Bahl &amp; Arun Bahl., S. Chand, 2019",
+          "Organic Chemistry, P.L Soni, Sultan Chand &amp; Sons, 2012",
+          "Practical Organic Chemistry, Mann &amp; Saunders, Pearson Education India, 2009"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 11187,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       BACHELOR OF PHARMACY\nSEMESTER         2\nCOURSE TITLE    PHARMACEUTICAL ORGANIC CHEMISTRY-I\nCOURSE CODE     13PH0202\nCOURSE CREDITS  6\n\nObjective:\n 1  This subject deals with classification and nomenclature of simple organic\n     compounds,structural isomerism, intermediates forming in reactions, important physical\n     properties, reactions and methods of preparation of these compounds. The syllabus also\n    emphasizes on mechanisms and orientation of reactions.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Write the structure, name and the type of isomerism of the organic compound\n 2  Write the reaction, name the reaction and orientation of reactions\n 3  Account for reactivity/stability of compounds\n 4  Identify/confirm the identification of organic compound\n\n\nPre-requisite of course:write the structure, name and the type of isomerism of the organic\ncompound\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            4        75     15      10        35         15\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Classification, nomenclature and isomerism                  7\n                Classification, nomenclature and isomerism: 7 Classification of\n             Organic Compounds Common and IUPAC systems of nomenclature\n              of organic compounds (up to 10 Carbons open chain and\n              carbocyclic compounds) Structural isomerisms in organic\n            compounds, Alkanes*, Alkenes* and Conjugated dienes*: SP\n               hybridization in alkanes, Halogenation of alkanes, uses of paraffins,\n                Stabilities of alkenes, SP hybridization in alkenes, E1 and E2\n               reactions – kinetics, order of reactivity of alkyl halides,\n             rearrangement of carbocations, Saytzeffs orientation and evidences.\n           E1 verses E2 reactions, Factors affecting E1 and E2 reactions.\n              Ozonolysis, electrophilic addition reactions of alkenes,\n             Markownikoff’s orientation, free radical addition reactions of\n               alkenes, Anti Markownikoff’s orientation. Stability of conjugated\n               dienes, Diel-Alder, electrophilic addition, free radical addition\n               reactions of conjugated dienes, allylic rearrangement, Alkyl\n               halides*: SN1 and SN2 reactions - kinetics, order of reactivity of\n               alkyl halides, stereochemistry and rearrangement of carbocations\n          SN1 versus SN2 reactions, Factors affecting SN1 and SN2 reactions\n               Structure and uses of ethylchloride, Chloroform, trichloroethylene,\n               tetrachloroethylene, dichloromethane, tetrachloromethane and\n             iodoform Alcohols*- Qualitative tests, Structure and uses of Ethyl\n               alcohol, Methyl alcohol, chlorobutanol, Cetosteryl alcohol, Benzyl\n               alcohol, Glycerol, Propylene glycol??, Carbonyl compounds*\n             (Aldehydes and ketones): Nucleophilic addition Electromeric effect,\n               aldol condensation, Crossed Aldol condensation, Cannizzaro\n                reaction, Crossed Cannizzaro reaction, Benzoin condensation,\n              Perkin condensation, qualitative tests, Structure and uses of\n             Formaldehyde, Paraldehyde, Acetone, Chloral hydrate, Hexamine,\n             Benzaldehyde, Vanilin, Cinnamaldehyde??, Carboxylic acids*:\n              Acidity of carboxylic acids, effect of substituents on acidity,\n              inductive effect and qualitative tests for carboxylic acids ,amide and\n                ester Structure and Uses of Acetic acid, Lactic acid, Tartaric acid,\n                Citric acid, Succinic acid. Oxalic acid, Salicylic acid, Benzoic acid,\n             Benzyl benzoate, Dimethyl phthalate, Methyl salicylate and Acetyl\n                salicylic acid Aliphatic amines* - Basicity, effect of substituent on\n               Basicity. Qualitative test, Structure and uses of Ethanolamine,\n              Ethylenediamine, Amphetamine??\n     2      Alkanes*, Alkenes* and Conjugated dienes*                  10\n           SP hybridization in alkanes, Halogenation of alkanes, uses of\n                paraffins, Stabilities of alkenes, SP hybridization in alkenes, E1 and\n           E2 reactions – kinetics, order of reactivity of alkyl halides,\n             rearrangement of carbocations, Saytzeffs orientation and evidences.\n           E1 verses E2 reactions, Factors affecting E1 and E2 reactions.\n              Ozonolysis, electrophilic addition reactions of alkenes,\n             Markownikoff’s orientation, free radical addition reactions of\n               alkenes, Anti Markownikoff’s orientation. Stability of conjugated\n               dienes, Diel-Alder, electrophilic addition, free radical addition\n               reactions of conjugated dienes, allylic rearrangement\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Alkyl halides                                            10\n           SN1and SN2reactions - kinetics, order of reactivity of alkyl halides,\n              stereochemistry and rearrangement of carbocations SN1 versus SN2\n                reactions, Factors affecting SN1 and SN2 reactions Structure and\n              uses of ethylchloride, Chloroform, trichloroethylene,\n               tetrachloroethylene, dichloromethane, tetrachloromethane and\n             iodoform Alcohols*- Qualitative tests, Structure and uses of Ethyl\n               alcohol, Methyl alcohol, chlorobutanol, Cetosteryl alcohol, Benzyl\n               alcohol, Glycerol, Propylene glycol\n     4      Carbonyl compounds* (Aldehydes and ketones):              10\n              Nucleophilic addition, 10 Electromeric effect, aldol condensation,\n             Crossed Aldol condensation, Cannizzaro reaction, Crossed\n             Cannizzaro reaction, Benzoin condensation, Perkin condensation,\n                qualitative tests, Structure and uses of Formaldehyde, Paraldehyde,\n             Acetone, Chloral hydrate, Hexamine, Benzaldehyde, Vanilin,\n            Cinnamaldehyde\n     5      Carboxylic acids                                         8\n              Acidity of carboxylic acids, effect of substituents on acidity,\n              inductive effect and qualitative tests for carboxylic acids ,amide and\n                ester Structure and Uses of Acetic acid, Lactic acid, Tartaric acid,\n                Citric acid, Succinic acid. Oxalic acid, Salicylic acid, Benzoic acid,\n             Benzyl benzoate, Dimethyl phthalate, Methyl salicylate and Acetyl\n                salicylic acid Aliphatic amines* - Basicity, effect of substituent on\n               Basicity. Qualitative test, Structure and uses of Ethanolamine,\n              Ethylenediamine, Amphetamine\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Pharmaceutical Organic Chemistry I                        60\n              Experiment-1, Experiment-2, Experiment-3, Experiment-4,\n              Experiment-5, Experiment-6, Experiment-7, Experiment-8,\n              Experiment-9, Experiment-10, Experiment-11, Experiment-12,\n             Experiment-13\n     2      Pharmaceutical Organic Chemistry I                        15\n               Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,\n               Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,\n               Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15\n                               Total Hours                       75\n\nTextbook :\n 1  Textbook of Organic Chemistry, Brian S. Furniss et. al., Pearson Education, 2015\n 2  Advanced Practical Organic Chemistry, N.K. Vishnoi, S Chand, 2010\n 3  Introduction to Organic Laboratory Techniques: A Microscale Approach, Pavia, Lampman\n    and Kriz, Brooks/Cole, 2007\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Textbook :\n 4  Organic Reaction Mechanisms, V. K. Ahluwalia, Rakesh Kumar Parashar, Alpha Science\n     International Ltd, 2006\n 5  Textbook of Organic Chemistry, V. K. Ahluwalia, Rakesh Kumar Parashar, Viva Books,\n    2021\n 6  Textbook of Organic Chemistry, B.S. Bahl &amp; Arun Bahl., S. Chand, 2019\n 7  Organic Chemistry, P.L Soni, Sultan Chand &amp; Sons, 2012\n 8  Practical Organic Chemistry, Mann &amp; Saunders, Pearson Education India, 2009\n\nReferences:\n 1  Organic Chemistry, Organic Chemistry, Jonathan Clayden, Nick Greeves, and Stuart\n    Warren, Oxford Universit y Press, 2014\n 2  Organic Chemistry, Organic Chemistry, Morrison and Boyd, Pearson Education India,\n    2010\n 3  Organic Chemistry, Organic Chemistry, I. L Finar, ELBS, 1985\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the blackboard\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "02388776d2de3fc9ec75f4c7e519889104e4811b431e519c1ce5207f05feb085",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    }
+  ],
+  "build_summary": {
+    "extracted": 3,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 2,
+    "extraction_errors": 0
+  }
+}

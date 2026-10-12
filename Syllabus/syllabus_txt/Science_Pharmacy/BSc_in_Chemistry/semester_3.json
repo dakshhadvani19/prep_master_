@@ -1,0 +1,403 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-sc-in-chemistry",
+    "course_name": "B.Sc in Chemistry",
+    "output_slug": "BSc_in_Chemistry"
+  },
+  "semester": 3,
+  "subject_count": 5,
+  "subjects": [
+    {
+      "subject_id": "31002318030101",
+      "subject_name": "Career Readiness Programme",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 3,
+      "subject_code": "02CR0301",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/02CR0301_CAREER-READINESS-PROGRAMME.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Career Readiness Programme [29fd7e61d242].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Career Readiness Programme [29fd7e61d242].pdf",
+      "expected_pdf_sha256": "002304ee39a2b87ea13a6c6f208d814156a714644b392f4e33c7c11f83be47af",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CAREER READINESS PROGRAMME",
+        "course_code": "02CR0301",
+        "semester_label": "3",
+        "credits": 2,
+        "prerequisite": "Before studying Career Readiness Program, all students are expected to have basic understanding/knowledge of English language"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Express ideas and information effectively.",
+        "Deduce conclusions from various forms of data including text and speech.",
+        "Choose appropriate alternatives in personal and professional life.",
+        "Act in accordance with one’s own strength. Pre-requisite of course:Before studying Career Readiness Program, all students are expected to have basic understanding/knowledge of English language"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Linguistic of Interaction",
+            "contact_hours": 30,
+            "topic_lines": [
+              "Introduction of subject, Self Discipline, Self Mastery, Beating Self",
+              "Sabotage, Building Self Confidence, Golden Rules of Goal Setting,",
+              "Backward Goal Setting, Visualization, Half Time Review, Breaking",
+              "Bad Habits, Developing Resilience, The Betari Box, Managing",
+              "Yourself, Active Listening Skills, A Good Role Model, Group",
+              "Discussion, Word Class:- Noun , Determiners, Word Class :-",
+              "Adjectives, Collocation, Word Class :- Prepposition , Conjunction,",
+              "Phonology:- Study of Sounds, Phonetics & Pronunciation:-",
+              "Articulation of Sound, CCE-1, READ COMPREHENSION:-",
+              "PROCESSING STRATEGY, Syntax :- Tenses -1, Syntax :- Tenses",
+              "-2, Syntax :- Tenses -3, CCE-2, Syntax :- VOICES - forms &",
+              "Usage, SPOKEN DISCOURSE:- Conversation practice & Role play",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson",
+              "Education India, 2002"
+            ],
+            "topics_text": "Introduction of subject, Self Discipline, Self Mastery, Beating Self Sabotage, Building Self Confidence, Golden Rules of Goal Setting, Backward Goal Setting, Visualization, Half Time Review, Breaking Bad Habits, Developing Resilience, The Betari Box, Managing Yourself, Active Listening Skills, A Good Role Model, Group Discussion, Word Class:- Noun , Determiners, Word Class :- Adjectives, Collocation, Word Class :- Prepposition , Conjunction, Phonology:- Study of Sounds, Phonetics & Pronunciation:- Articulation of Sound, CCE-1, READ COMPREHENSION:- PROCESSING STRATEGY, Syntax :- Tenses -1, Syntax :- Tenses -2, Syntax :- Tenses -3, CCE-2, Syntax :- VOICES - forms & Usage, SPOKEN DISCOURSE:- Conversation practice & Role play Total Hours 30 Textbook : 1 Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson Education India, 2002",
+            "topics": [
+              "Introduction of subject, Self Discipline, Self Mastery, Beating Self",
+              "Sabotage, Building Self Confidence, Golden Rules of Goal Setting,",
+              "Backward Goal Setting, Visualization, Half Time Review, Breaking",
+              "Bad Habits, Developing Resilience, The Betari Box, Managing",
+              "Yourself, Active Listening Skills, A Good Role Model, Group",
+              "Discussion, Word Class:- Noun , Determiners, Word Class :",
+              "Adjectives, Collocation, Word Class :- Prepposition , Conjunction,",
+              "Phonology:- Study of Sounds, Phonetics & Pronunciation:",
+              "Articulation of Sound, CCE-1, READ COMPREHENSION:",
+              "PROCESSING STRATEGY, Syntax :- Tenses -1, Syntax :- Tenses",
+              "2, Syntax :- Tenses -3, CCE-2, Syntax :- VOICES - forms &",
+              "Usage, SPOKEN DISCOURSE:- Conversation practice & Role play",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson",
+              "Education India, 2002"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "High School English Grammar and Composition, High School English Grammar and Composition, P.C. WREN, and H. MARTIN, S Chand , 2019",
+          "Longman Student Grammar of Spoken and Written English, Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson Education India, 2002"
+        ],
+        "textbooks": [
+          "Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson Education India, 2002"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.grammarly.com/i",
+          "http://englishteststore.net/",
+          "http://learnenglish.britishcouncil.org/en/english-grammar",
+          "https://www.englishclub.com/grammar/",
+          "http://www.perfect-english-grammar.com/"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 3765,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF SCIENCE\nPROGRAM       BACHELOR OF SCIENCE (CHEMISTRY)\nSEMESTER         3\nCOURSE TITLE   CAREER READINESS PROGRAMME\nCOURSE CODE     02CR0301\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Express ideas and information effectively.\n 2  Deduce conclusions from various forms of data including text and speech.\n 3  Choose appropriate alternatives in personal and professional life.\n 4  Act in accordance with one’s own strength.\n\n\nPre-requisite of course:Before studying Career Readiness Program, all students are expected to\nhave basic understanding/knowledge of English language\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Linguistic of Interaction                                   30\n               Introduction of subject, Self Discipline, Self Mastery, Beating Self\n              Sabotage, Building Self Confidence, Golden Rules of Goal Setting,\n            Backward Goal Setting, Visualization, Half Time Review, Breaking\n           Bad Habits, Developing Resilience, The Betari Box, Managing\n              Yourself, Active Listening Skills, A Good Role Model, Group\n              Discussion, Word Class:- Noun , Determiners, Word Class :-\n               Adjectives, Collocation, Word Class :- Prepposition , Conjunction,\n             Phonology:- Study of Sounds, Phonetics & Pronunciation:-\n               Articulation of Sound, CCE-1, READ COMPREHENSION:-\n          PROCESSING STRATEGY, Syntax :- Tenses -1, Syntax :- Tenses\n                 -2, Syntax :- Tenses -3, CCE-2, Syntax :- VOICES - forms &\n             Usage, SPOKEN DISCOURSE:- Conversation practice & Role play\n                               Total Hours                       30"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 1  Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson\n    Education India, 2002\n\nReferences:\n 1  High School English Grammar and Composition, High School English Grammar and\n    Composition, P.C. WREN, and H. MARTIN, S Chand , 2019\n 2  Longman Student Grammar of Spoken and Written English, Longman Student Grammar of\n    Spoken and Written English, Biber Douglas, Pearson Education India, 2002\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         25.00         10.00          0.00\n\nInstructional Method:\n 1  The course delivery method will include interaction, class work, demonstration, role play,\n     quiz and brain storming.\n 2  The internal evaluation will be done based on continuous evaluation of students in the class\n     -room.\n 3  Practical/viva examination will be conducted at the end of semester for evaluation of\n    performance of students.\n\nSupplementary Resources:\n 1  https://www.grammarly.com/i\n 2   http://englishteststore.net/\n 3  http://learnenglish.britishcouncil.org/en/english-grammar\n 4  https://www.englishclub.com/grammar/\n 5  http://www.perfect-english-grammar.com/"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "002304ee39a2b87ea13a6c6f208d814156a714644b392f4e33c7c11f83be47af",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "31002325020101",
+      "subject_name": "Chemistry-III",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "31021912020101",
+      "subject_name": "English through non-fiction",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 3,
+      "subject_code": "02SL0201",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/02SL0201_ENGLISH-THROUGH-NON-FICTION.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/English through non-fiction [ef04e29600c8].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/English through non-fiction [ef04e29600c8].pdf",
+      "expected_pdf_sha256": "aa26ef1e400cbb21a45de991abaecf515f2492654876a5815b304bb870b4a999",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENGLISH THROUGH NON-FICTION",
+        "course_code": "02SL0201",
+        "semester_label": "3",
+        "credits": 2,
+        "prerequisite": "Students should have basic knowledge of English language"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Demonstrate adequate vocabulary for different purposes in the context of science",
+        "Apply writing skills based on a given non-fiction text 3",
+        "To develop writing skills focusing on the usage of language in the non-fictional text 5",
+        "Comprehend a given non-fiction text for various academic purposes in the context of Science Pre-requisite of course:Students should have basic knowledge of English language"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Structuring a Speech",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Keynote Speech by Dr. R A Mashelkar at ISBA Conference 2016"
+            ],
+            "topics_text": "Keynote Speech by Dr. R A Mashelkar at ISBA Conference 2016",
+            "topics": [
+              "Keynote Speech by Dr. R A Mashelkar at ISBA Conference 2016"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Tips for Interviews",
+            "contact_hours": 10,
+            "topic_lines": [
+              "A Leader Should know how to Manage - By Abdul Kalam, Eureka",
+              "with Indira Nath - Dr. Indira Nath, Dr. Shubha Tole - In",
+              "Conversation, Interview: Ramanuajan Prize 2015 Recepient",
+              "Amalendu Krishna"
+            ],
+            "topics_text": "A Leader Should know how to Manage - By Abdul Kalam, Eureka with Indira Nath - Dr. Indira Nath, Dr. Shubha Tole - In Conversation, Interview: Ramanuajan Prize 2015 Recepient Amalendu Krishna",
+            "topics": [
+              "A Leader Should know how to Manage - By Abdul Kalam, Eureka",
+              "with Indira Nath - Dr. Indira Nath, Dr. Shubha Tole - In",
+              "Conversation, Interview: Ramanuajan Prize 2015 Recepient",
+              "Amalendu Krishna"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Writing for Popular Media",
+            "contact_hours": 10,
+            "topic_lines": [
+              "\"The man who revolutionised white\" - The Hindu, \"The force",
+              "behind Agni V Launch\" - The Economic Times, \"A Rare Bird\" -",
+              "India Today",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Wonderful Life, Stephen Jay Gould , W. W. Norton & Company, 1990"
+            ],
+            "topics_text": "\"The man who revolutionised white\" - The Hindu, \"The force behind Agni V Launch\" - The Economic Times, \"A Rare Bird\" - India Today Total Hours 30 Textbook : 1 Wonderful Life, Stephen Jay Gould , W. W. Norton & Company, 1990",
+            "topics": [
+              "\"The man who revolutionised white\" - The Hindu, \"The force",
+              "behind Agni V Launch\" - The Economic Times, \"A Rare Bird\"",
+              "India Today",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Wonderful Life, Stephen Jay Gould , W. W. Norton & Company, 1990"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Writing for the Mass Media, Writing for the Mass Media, James G. Stovall, Pearson, 2015",
+          "The Oxford Essential Guide to Writing , The Oxford Essential Guide to Writing , Thomas Kane, Berkeley, 2000"
+        ],
+        "textbooks": [
+          "Wonderful Life, Stephen Jay Gould , W. W. Norton & Company, 1990"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.youtube.com/watch?v=932dJuT6U7w",
+          "https://www.youtube.com/watch?v=laGZaS4sdeU",
+          "https://www.youtube.com/watch?v=yvw--vqJYCk",
+          "https://www.youtube.com/watch?v=VCKZJibUeSA",
+          "www.youtube.com/watch?v=OIReJ4DlFv4",
+          "www.youtube.com/watch?v=jMdxMRKKSA0",
+          "www.youtube.com/watch?v=s8f7rtpXnS4",
+          "www.thehindu.com/news/national/amalendu-krishna-of-tifr-wins-ramanujan- prize/article7500639.ece",
+          "www.forbes india.com/blog/business-strategy/dr-verghese-kurien-a-personal-tribute/",
+          "www.thehindu.com/sci-tech/Bird-named-after-Salim-Ali/article14015954.ece"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 3538,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF SCIENCE\nPROGRAM       BACHELOR OF SCIENCE (CHEMISTRY)\nSEMESTER         3\nCOURSE TITLE    ENGLISH THROUGH NON-FICTION\nCOURSE CODE     02SL0201\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Demonstrate adequate vocabulary for different purposes in the context of science\n 2  Apply writing skills based on a given non-fiction text\n\n 3\n 4  To develop writing skills focusing on the usage of language in the non-fictional text\n\n 5\n 6  Comprehend a given non-fiction text for various academic purposes in the context of\n     Science\n\n\nPre-requisite of course:Students should have basic knowledge of English language\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Structuring a Speech                                      10\n            Keynote Speech by Dr. R A Mashelkar at ISBA Conference 2016\n     2      Tips for Interviews                                       10\n        A Leader Should know how to Manage - By Abdul Kalam, Eureka\n             with Indira Nath - Dr. Indira Nath, Dr. Shubha Tole - In\n              Conversation, Interview: Ramanuajan Prize 2015 Recepient\n           Amalendu Krishna\n     3      Writing for Popular Media                                10\n            \"The man who revolutionised white\" - The Hindu, \"The force\n             behind Agni V Launch\" - The Economic Times, \"A Rare Bird\" -\n               India Today\n                               Total Hours                       30"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 1  Wonderful Life, Stephen Jay Gould , W. W. Norton & Company, 1990\n\nReferences:\n 1  Writing for the Mass Media, Writing for the Mass Media, James G. Stovall, Pearson, 2015\n 2  The Oxford Essential Guide to Writing  , The Oxford Essential Guide to Writing  , Thomas\n    Kane, Berkeley, 2000\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  The course delivery method will include interaction, class work, demonstration, role play,\n     quiz and brain storming.\n\nSupplementary Resources:\n 1  https://www.youtube.com/watch?v=932dJuT6U7w\n 2  https://www.youtube.com/watch?v=laGZaS4sdeU\n 3  https://www.youtube.com/watch?v=yvw--vqJYCk\n 4  https://www.youtube.com/watch?v=VCKZJibUeSA\n 5  www.youtube.com/watch?v=OIReJ4DlFv4\n 6  www.youtube.com/watch?v=jMdxMRKKSA0\n 7  www.youtube.com/watch?v=s8f7rtpXnS4\n 8  www.thehindu.com/news/national/amalendu-krishna-of-tifr-wins-ramanujan-\n     prize/article7500639.ece\n 9  www.forbes india.com/blog/business-strategy/dr-verghese-kurien-a-personal-tribute/\n 10  www.thehindu.com/sci-tech/Bird-named-after-Salim-Ali/article14015954.ece"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata."
+      ],
+      "actual_pdf_sha256": "aa26ef1e400cbb21a45de991abaecf515f2492654876a5815b304bb870b4a999",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "31000938130301",
+      "subject_name": "Fundamental Chemistry-III",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "31021625123101",
+      "subject_name": "Physics-III",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 2,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 3,
+    "extraction_errors": 0
+  }
+}

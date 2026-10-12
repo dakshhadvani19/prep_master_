@@ -1,0 +1,517 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-sc-in-chemistry",
+    "course_name": "B.Sc in Chemistry",
+    "output_slug": "BSc_in_Chemistry"
+  },
+  "semester": 5,
+  "subject_count": 4,
+  "subjects": [
+    {
+      "subject_id": "31002325140401",
+      "subject_name": "Analytical Chemistry",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 5,
+      "subject_code": "02CY0410",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/Analytical-Chemistry-I-02CY0410.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Analytical Chemistry [575a11795ad3].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Analytical Chemistry [575a11795ad3].pdf",
+      "expected_pdf_sha256": "890eac0d7ff52f34efea1d1fb5b5bf2988793203422cd7794f7612006bd7c4bd",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ANALYTICAL CHEMISTRY-I",
+        "course_code": "02CY0410",
+        "semester_label": "1",
+        "credits": 4,
+        "prerequisite": "Before learning analytical chemistry, student should aware about basic principles and theories of analytical chemistry, instrumental methods of analysis and other UG level chemistry."
+      },
+      "objectives": [
+        "To understand the scope and principle of Analytical Chemistry and various electroanalytical methods including radio scattering methods. The emphasis is placed on physico-chemical principles of these methods and their application in chemical analysis."
+      ],
+      "course_outcomes": [
+        "To develop an understanding of the range and theories of instrumental methods available in analytical chemistry.",
+        "To develop knowledge pertaining to the appropriate selection of instruments for the successful analysis of complex mixtures.",
+        "To develop an understanding of the role of the chemist in measurement and problem solving in chemical analysis.",
+        "To extend skills in procedures and instrumental methods applied in analytical tasks. Pre-requisite of course:Before learning analytical chemistry, student should aware about basic principles and theories of analytical chemistry, instrumental methods of analysis and other UG level chemistry."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0 DR. VICKY DEVENDRA JAIN DR. KANTHA DEVI ARUNACHALAM Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basics of Analytical chemistry",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Introduction, The role of analytical chemistry, Classification of",
+              "analytical methods based on their physical property measurement",
+              "(classical and instrumental), Difference between classical Analytical",
+              "methods and instrumental Analytical methods, Advantages and",
+              "disadvantages of classical and instrumental methods, Key factors for",
+              "the selection of Analytical methods, Statistics in Analysis, Types of",
+              "errors Accuracy, Precision, Mean or average, Mean deviation or",
+              "average deviation, Standard deviation, Variance, Coefficient of",
+              "variance, Spread or range, Confidence interval and limit, Rejection",
+              "of result or Q-Test, Confidence interval tests of significance or",
+              "Student T-Test, Chi-square test, F-test, Minimisation of errors,",
+              "Significant figure and computation statistical evaluation of data,",
+              "Computation rules-method for reporting analytical data,",
+              "Numericals."
+            ],
+            "topics_text": "Introduction, The role of analytical chemistry, Classification of analytical methods based on their physical property measurement (classical and instrumental), Difference between classical Analytical methods and instrumental Analytical methods, Advantages and disadvantages of classical and instrumental methods, Key factors for the selection of Analytical methods, Statistics in Analysis, Types of errors Accuracy, Precision, Mean or average, Mean deviation or average deviation, Standard deviation, Variance, Coefficient of variance, Spread or range, Confidence interval and limit, Rejection of result or Q-Test, Confidence interval tests of significance or Student T-Test, Chi-square test, F-test, Minimisation of errors, Significant figure and computation statistical evaluation of data, Computation rules-method for reporting analytical data, Numericals.",
+            "topics": [
+              "Introduction, The role of analytical chemistry, Classification of",
+              "analytical methods based on their physical property measurement",
+              "(classical and instrumental), Difference between classical Analytical",
+              "methods and instrumental Analytical methods, Advantages and",
+              "disadvantages of classical and instrumental methods, Key factors for",
+              "the selection of Analytical methods, Statistics in Analysis, Types of",
+              "errors Accuracy, Precision, Mean or average, Mean deviation or",
+              "average deviation, Standard deviation, Variance, Coefficient of",
+              "variance, Spread or range, Confidence interval and limit, Rejection",
+              "of result or Q-Test, Confidence interval tests of significance or",
+              "Student T-Test, Chi-square test, F-test, Minimisation of errors,",
+              "Significant figure and computation statistical evaluation of data,",
+              "Computation rules-method for reporting analytical data,",
+              "Numericals."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Radiation scattering methods and its applications",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Introduction, Reflection, Refraction, Scattering, Transmission,",
+              "Electromagnetic radiation, Refractive index, Principle and",
+              "Instrumentation of Turbidimetry and Nephelometry, Choice",
+              "between Turbidimetry and Nephelometry analysis, Factor affecting",
+              "to measurement of turbidimetry and Nephelometry. Turbidimetric",
+              "titration. Application and advantages of scattering method."
+            ],
+            "topics_text": "Introduction, Reflection, Refraction, Scattering, Transmission, Electromagnetic radiation, Refractive index, Principle and Instrumentation of Turbidimetry and Nephelometry, Choice between Turbidimetry and Nephelometry analysis, Factor affecting to measurement of turbidimetry and Nephelometry. Turbidimetric titration. Application and advantages of scattering method.",
+            "topics": [
+              "Introduction, Reflection, Refraction, Scattering, Transmission,",
+              "Electromagnetic radiation, Refractive index, Principle and",
+              "Instrumentation of Turbidimetry and Nephelometry, Choice",
+              "between Turbidimetry and Nephelometry analysis, Factor affecting",
+              "to measurement of turbidimetry and Nephelometry. Turbidimetric",
+              "titration. Application and advantages of scattering method."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Colorimetry, Amperometry, Polarimetry and Karl Fischer",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Introduction, Plane polarized light, Optical activity, Specific",
+              "rotation, Optical rotation, circularly polarized light, Reference",
+              "electrode, Indicator electrode, Amperometry, Amperometry",
+              "titration, Equivalence point, Principle and theory of Karl Fischer",
+              "technique, Principle and theory of colorimetry and Polarimetry,",
+              "Advantages and applications of Colorimetry, Amperometry,",
+              "Polarimetry and Karl Fischer."
+            ],
+            "topics_text": "Introduction, Plane polarized light, Optical activity, Specific rotation, Optical rotation, circularly polarized light, Reference electrode, Indicator electrode, Amperometry, Amperometry titration, Equivalence point, Principle and theory of Karl Fischer technique, Principle and theory of colorimetry and Polarimetry, Advantages and applications of Colorimetry, Amperometry, Polarimetry and Karl Fischer.",
+            "topics": [
+              "Introduction, Plane polarized light, Optical activity, Specific",
+              "rotation, Optical rotation, circularly polarized light, Reference",
+              "electrode, Indicator electrode, Amperometry, Amperometry",
+              "titration, Equivalence point, Principle and theory of Karl Fischer",
+              "technique, Principle and theory of colorimetry and Polarimetry,",
+              "Advantages and applications of Colorimetry, Amperometry,",
+              "Polarimetry and Karl Fischer."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Flame Photometry and Atomic Absorption Spectroscopy",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Introduction, Principle and theory of Flame photometry and AAS,",
+              "Instrumentation of Flame Photometery and AAS, Types of burners",
+              "used in Flame Photometry and AAS, Important characteristics and",
+              "requirements of Flame, Factor affecting and Interferences in Flame",
+              "photometry and AAS, Limitations, advantages and application of",
+              "Flame photometry and AAS.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Textbook of Analytical Chemistry , Syed Aftab Iqbal and Ameera Al Haddad, Discovery",
+              "Publishing Pvt.Ltd, 2011",
+              "2 A Textbook of Analytical Chemistry, Y. Anjaneyulu and K. Chandrasekhar, BSP",
+              "BOOKS, 2019",
+              "3 Electrochemical Methods: Fundamentals and Applications, Allen J. Bard and Larry R.",
+              "Faulkner , Wiley, 2001"
+            ],
+            "topics_text": "Introduction, Principle and theory of Flame photometry and AAS, Instrumentation of Flame Photometery and AAS, Types of burners used in Flame Photometry and AAS, Important characteristics and requirements of Flame, Factor affecting and Interferences in Flame photometry and AAS, Limitations, advantages and application of Flame photometry and AAS. Total Hours 60 Textbook : 1 Textbook of Analytical Chemistry , Syed Aftab Iqbal and Ameera Al Haddad, Discovery Publishing Pvt.Ltd, 2011 2 A Textbook of Analytical Chemistry, Y. Anjaneyulu and K. Chandrasekhar, BSP BOOKS, 2019 3 Electrochemical Methods: Fundamentals and Applications, Allen J. Bard and Larry R. Faulkner , Wiley, 2001",
+            "topics": [
+              "Introduction, Principle and theory of Flame photometry and AAS,",
+              "Instrumentation of Flame Photometery and AAS, Types of burners",
+              "used in Flame Photometry and AAS, Important characteristics and",
+              "requirements of Flame, Factor affecting and Interferences in Flame",
+              "photometry and AAS, Limitations, advantages and application of",
+              "Flame photometry and AAS.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Textbook of Analytical Chemistry , Syed Aftab Iqbal and Ameera Al Haddad, Discovery",
+              "Publishing Pvt.Ltd, 2011",
+              "2 A Textbook of Analytical Chemistry, Y. Anjaneyulu and K. Chandrasekhar, BSP",
+              "BOOKS, 2019",
+              "3 Electrochemical Methods: Fundamentals and Applications, Allen J. Bard and Larry R.",
+              "Faulkner , Wiley, 2001"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Analytical Chemistry Basic Techniques and Methods, Analytical Chemistry Basic Techniques and Methods, Priti Malhotra, Springer , 2023",
+          "Fundamental of analytical chemistry , Fundamental of analytical chemistry , B.B.L. Srivastava, IP Innovative Publication Pvt. Ltd., 2019",
+          "Instrumental Methods of Chemical Analysis, Instrumental Methods of Chemical Analysis, V. K. Ahluwalia, Springer , 2023",
+          "Electrochemical Methods: Fundamentals and Applications, Electrochemical Methods: Fundamentals and Applications, Larry R. Faulkner, Allen J. Bard , Wiley , 2000",
+          "Atomic absorption spectroscopy: A practical guide, Atomic absorption spectroscopy: A practical guide, R. J Reynolds (, Griffin, 1970"
+        ],
+        "textbooks": [
+          "Textbook of Analytical Chemistry , Syed Aftab Iqbal and Ameera Al Haddad, Discovery Publishing Pvt.Ltd, 2011",
+          "A Textbook of Analytical Chemistry, Y. Anjaneyulu and K. Chandrasekhar, BSP BOOKS, 2019",
+          "Electrochemical Methods: Fundamentals and Applications, Allen J. Bard and Larry R. Faulkner , Wiley, 2001"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://www.nptel.ac.in/courses/104103069/#",
+          "http://ocw.mit.edu/courses/chemistry/",
+          "http://vlab.amrita.edu/index.php?sub=2",
+          "https://www.youtube.com/watch? v=YY5tpD3HNII&list=PLMGIC1yM49sHKPo0zhdfg_zGmcOm_jXfj",
+          "https://www.youtube.com/watch? v=AbWm_wxh7Jk&list=PLM9MYDnWpEaOe0qo3HhD8Iql_mj404kvh",
+          "https://www.youtube.com/watch?v=I6eZb6s0XW4",
+          "https://www.youtube.com/watch?v=bMNyt0rE5FE&list=PLrClziktuKeOkae-F- jJN6R3zUFaYh1Kk",
+          "https://www.youtube.com/watch? v=GYoos95PGAc&list=PLAFyoFAPvecAb3QorkyyHu4xAoMeGampz"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7892,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF SCIENCE\nPROGRAM       MASTER OF SCIENCE (CHEMISTRY)\nSEMESTER         1\nCOURSE TITLE    ANALYTICAL CHEMISTRY-I\nCOURSE CODE     02CY0410\nCOURSE CREDITS  4\n\nObjective:\n 1  To understand the scope and principle of Analytical Chemistry and various\n     electroanalytical methods including radio scattering methods. The emphasis is placed on\n     physico-chemical principles of these methods and their application in chemical analysis.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To develop an understanding of the range and theories of instrumental methods available in\n     analytical chemistry.\n 2  To develop knowledge pertaining to the appropriate selection of instruments for the\n     successful analysis of complex mixtures.\n 3  To develop an understanding of the role of the chemist in measurement and problem\n     solving in chemical analysis.\n 4  To extend skills in procedures and instrumental methods applied in analytical tasks.\n\n\nPre-requisite of course:Before learning analytical chemistry, student should aware about basic\nprinciples and theories of analytical chemistry, instrumental methods of analysis and other UG\nlevel chemistry.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n\n\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Basics of Analytical chemistry                              15\n               Introduction, The role of analytical chemistry, Classification of\n               analytical methods based on their physical property measurement\n                (classical and instrumental), Difference between classical Analytical\n            methods and instrumental Analytical methods, Advantages and\n              disadvantages of classical and instrumental methods, Key factors for\n               the selection of Analytical methods, Statistics in Analysis, Types of\n               errors Accuracy, Precision, Mean or average, Mean deviation or\n             average deviation, Standard deviation, Variance, Coefficient of\n               variance, Spread or range, Confidence interval and limit, Rejection\n              of result or Q-Test, Confidence interval tests of significance or\n              Student T-Test, Chi-square test, F-test, Minimisation of errors,\n               Significant figure and computation statistical evaluation of data,\n             Computation rules-method for reporting analytical data,\n              Numericals.\n     2      Radiation scattering methods and its applications             15\n               Introduction, Reflection, Refraction, Scattering, Transmission,\n              Electromagnetic radiation, Refractive index, Principle and\n              Instrumentation of Turbidimetry and Nephelometry, Choice\n             between Turbidimetry and Nephelometry analysis, Factor affecting\n               to measurement of turbidimetry and Nephelometry. Turbidimetric\n                 titration. Application and advantages of scattering method.\n     3      Colorimetry, Amperometry, Polarimetry and Karl Fischer      15\n               Introduction, Plane polarized light, Optical activity, Specific\n                rotation, Optical rotation, circularly polarized light, Reference\n               electrode, Indicator electrode, Amperometry, Amperometry\n                 titration, Equivalence point, Principle and theory of Karl Fischer\n              technique, Principle and theory of colorimetry and Polarimetry,\n             Advantages and applications of Colorimetry, Amperometry,\n              Polarimetry and Karl Fischer.\n     4     Flame Photometry and Atomic Absorption Spectroscopy       15\n               Introduction, Principle and theory of Flame photometry and AAS,\n              Instrumentation of Flame Photometery and AAS, Types of burners\n             used in Flame Photometry and AAS, Important characteristics and\n              requirements of Flame, Factor affecting and Interferences in Flame\n             photometry and AAS, Limitations, advantages and application of\n            Flame photometry and AAS.\n                               Total Hours                       60\n\n\nTextbook :\n 1  Textbook of Analytical Chemistry , Syed Aftab Iqbal and Ameera Al Haddad, Discovery\n     Publishing Pvt.Ltd, 2011\n 2 A Textbook of Analytical Chemistry, Y. Anjaneyulu and K. Chandrasekhar, BSP\n   BOOKS, 2019\n 3  Electrochemical Methods: Fundamentals and Applications, Allen J. Bard and Larry R.\n     Faulkner , Wiley, 2001\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 1  Analytical Chemistry Basic Techniques and Methods, Analytical Chemistry Basic\n    Techniques and Methods, Priti Malhotra, Springer , 2023\n 2  Fundamental of analytical chemistry , Fundamental of analytical chemistry , B.B.L.\n     Srivastava, IP Innovative Publication Pvt. Ltd., 2019\n 3  Instrumental Methods of Chemical Analysis, Instrumental Methods of Chemical Analysis,\n    V. K. Ahluwalia, Springer , 2023\n 4  Electrochemical Methods: Fundamentals and Applications, Electrochemical Methods:\n    Fundamentals and Applications, Larry R. Faulkner, Allen J. Bard , Wiley , 2000\n 5  Atomic absorption spectroscopy: A practical guide, Atomic absorption spectroscopy: A\n     practical guide, R. J Reynolds (, Griffin, 1970\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         20.00         25.00         25.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  http://www.nptel.ac.in/courses/104103069/#\n 2  http://ocw.mit.edu/courses/chemistry/\n 3  http://vlab.amrita.edu/index.php?sub=2\n 4  https://www.youtube.com/watch?\n    v=YY5tpD3HNII&list=PLMGIC1yM49sHKPo0zhdfg_zGmcOm_jXfj\n 5  https://www.youtube.com/watch?\n    v=AbWm_wxh7Jk&list=PLM9MYDnWpEaOe0qo3HhD8Iql_mj404kvh\n 6  https://www.youtube.com/watch?v=I6eZb6s0XW4\n 7  https://www.youtube.com/watch?v=bMNyt0rE5FE&list=PLrClziktuKeOkae-F-\n    jJN6R3zUFaYh1Kk\n 8  https://www.youtube.com/watch?\n    v=GYoos95PGAc&list=PLAFyoFAPvecAb3QorkyyHu4xAoMeGampz\n\n\nDR. VICKY DEVENDRA JAIN                          DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata.",
+        "Official PDF semester differs from the active catalog semester."
+      ],
+      "actual_pdf_sha256": "890eac0d7ff52f34efea1d1fb5b5bf2988793203422cd7794f7612006bd7c4bd",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "31002325030101",
+      "subject_name": "Inorganic & Industrial Chemistry",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 5,
+      "subject_code": "02CY0305",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/Inorganic-Industrial-Chemistry-02CY0305.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Inorganic & Industrial Chemistry [e0e68185081d].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Inorganic & Industrial Chemistry [e0e68185081d].pdf",
+      "expected_pdf_sha256": "2b36ffef9c0cf5e0b7ead04bc9089a6b6e38840ea5896507ad9354ee47aa5156",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INORGANIC & INDUSTRIAL CHEMISTRY",
+        "course_code": "02CY0305",
+        "semester_label": "5",
+        "credits": 4,
+        "prerequisite": "Understand basics of chemistry with industrial aspects"
+      },
+      "objectives": [
+        "To study the introduction of coordination chemistry.",
+        "To make students capable of understanding the basics of wave mechanics.",
+        "To study the introduction, properties, manufacture of cement.",
+        "To study the introduction of ceramics, glass and refractories."
+      ],
+      "course_outcomes": [
+        "Understand the concepts of coordination chemistry.",
+        "Be aware of the basics of wave mechanics",
+        "Obtain the information regarding cement.",
+        "Understand the basic of ceramic, glass and refractories. Pre-requisite of course:Understand basics of chemistry with industrial aspects"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Coordination Chemistry",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Introduction, Double salts, coordination compounds, coordination",
+              "complexes and complexes ions, coordination number, classification",
+              "of ligands, valance bond theory, crystal field theory, crystal field",
+              "splitting of energy levels, magnetic properties of metal complexes",
+              "and crystal field theory, ligand field theory, Jahn Teller effect, multi",
+              "electron system."
+            ],
+            "topics_text": "Introduction, Double salts, coordination compounds, coordination complexes and complexes ions, coordination number, classification of ligands, valance bond theory, crystal field theory, crystal field splitting of energy levels, magnetic properties of metal complexes and crystal field theory, ligand field theory, Jahn Teller effect, multi electron system.",
+            "topics": [
+              "Introduction, Double salts, coordination compounds, coordination",
+              "complexes and complexes ions, coordination number, classification",
+              "of ligands, valance bond theory, crystal field theory, crystal field",
+              "splitting of energy levels, magnetic properties of metal complexes",
+              "and crystal field theory, ligand field theory, Jahn Teller effect, multi",
+              "electron system."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Wave mechanics",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Introduction, operators, Algebra of operators, multiplication of",
+              "operators, commutative property, linear operator, commutator of",
+              "operator, operator ? and ?2, momentum operator, Hamiltonian",
+              "operator, particle in a one-dimensional box, Wave function and",
+              "energy of a particle in one dimensional box."
+            ],
+            "topics_text": "Introduction, operators, Algebra of operators, multiplication of operators, commutative property, linear operator, commutator of operator, operator ? and ?2, momentum operator, Hamiltonian operator, particle in a one-dimensional box, Wave function and energy of a particle in one dimensional box.",
+            "topics": [
+              "Introduction, operators, Algebra of operators, multiplication of",
+              "operators, commutative property, linear operator, commutator of",
+              "operator, operator ? and ?2, momentum operator, Hamiltonian",
+              "operator, particle in a one-dimensional box, Wave function and",
+              "energy of a particle in one dimensional box."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Cement",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Introduction, types of cement, raw materials, cement rock",
+              "beneficiation, Manufacturing process of cement, Setting and",
+              "hardening of Portland cement, Properties of cement, Indian",
+              "standards institute (ISI) specification of cement, Mortars and",
+              "concrete, Curing and decay of concrete, Uses of cement."
+            ],
+            "topics_text": "Introduction, types of cement, raw materials, cement rock beneficiation, Manufacturing process of cement, Setting and hardening of Portland cement, Properties of cement, Indian standards institute (ISI) specification of cement, Mortars and concrete, Curing and decay of concrete, Uses of cement.",
+            "topics": [
+              "Introduction, types of cement, raw materials, cement rock",
+              "beneficiation, Manufacturing process of cement, Setting and",
+              "hardening of Portland cement, Properties of cement, Indian",
+              "standards institute (ISI) specification of cement, Mortars and",
+              "concrete, Curing and decay of concrete, Uses of cement."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Ceramic, Glass and Refractories",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Introduction to ceramics, raw materials, classification based on",
+              "reduction in porosity, manufacturing, body preparation using clay",
+              "slip. Introduction to glass, physical and chemical properties of glass,",
+              "raw materials, methods of manufacturing, special types of glasses.",
+              "Introduction to refractories, classification of refractories, properties",
+              "of refractories, manufacturing, fire clay bricks manufacture,",
+              "properties and uses.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 A Textbook of Physical Chemistry - Quantum Chemistry and Molecular Spectroscopy, K L",
+              "Kapoor , McGraw-Hill, 2020",
+              "2 Text Book of Coordination Chemistry, R. K. Sharma, Discovery Publishing House, 2007",
+              "3 Ceramic and Glass Materials, James F. Shackelford, Robert H. Doremus, Springer Science",
+              "& Business Media, 2008",
+              "4 Refractories for the Cement Industry, Prasunjit Sengupta, Springer Cham, 2019"
+            ],
+            "topics_text": "Introduction to ceramics, raw materials, classification based on reduction in porosity, manufacturing, body preparation using clay slip. Introduction to glass, physical and chemical properties of glass, raw materials, methods of manufacturing, special types of glasses. Introduction to refractories, classification of refractories, properties of refractories, manufacturing, fire clay bricks manufacture, properties and uses. Total Hours 60 Textbook : 1 A Textbook of Physical Chemistry - Quantum Chemistry and Molecular Spectroscopy, K L Kapoor , McGraw-Hill, 2020 2 Text Book of Coordination Chemistry, R. K. Sharma, Discovery Publishing House, 2007 3 Ceramic and Glass Materials, James F. Shackelford, Robert H. Doremus, Springer Science & Business Media, 2008 4 Refractories for the Cement Industry, Prasunjit Sengupta, Springer Cham, 2019",
+            "topics": [
+              "Introduction to ceramics, raw materials, classification based on",
+              "reduction in porosity, manufacturing, body preparation using clay",
+              "slip. Introduction to glass, physical and chemical properties of glass,",
+              "raw materials, methods of manufacturing, special types of glasses.",
+              "Introduction to refractories, classification of refractories, properties",
+              "of refractories, manufacturing, fire clay bricks manufacture,",
+              "properties and uses.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 A Textbook of Physical Chemistry - Quantum Chemistry and Molecular Spectroscopy, K L",
+              "Kapoor , McGraw-Hill, 2020",
+              "2 Text Book of Coordination Chemistry, R. K. Sharma, Discovery Publishing House, 2007",
+              "3 Ceramic and Glass Materials, James F. Shackelford, Robert H. Doremus, Springer Science",
+              "& Business Media, 2008",
+              "4 Refractories for the Cement Industry, Prasunjit Sengupta, Springer Cham, 2019"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Concise Inorganic Chemistry, Concise Inorganic Chemistry, J.D. Lee, Oxford University Press, 2008",
+          "Principles of Inorganic Chemistry, Principles of Inorganic Chemistry, B.R. Puri, L.R. Sharma, K.C. Kalia , Vishal Publishing Co., 2020",
+          "Wave Mechanics, Wave Mechanics, Wolfgang Pauli , Dover Publications Inc.,, 2003",
+          "Cement Chemistry, Cement Chemistry, Kuldeep Singh , Notion Press, 2022",
+          "The Complete Book on Glass and Ceramics Technology, The Complete Book on Glass and Ceramics Technology, NIIR Board of Consultants & Engineers, Asia Pacific Business Press Inc, 2017"
+        ],
+        "textbooks": [
+          "A Textbook of Physical Chemistry - Quantum Chemistry and Molecular Spectroscopy, K L Kapoor , McGraw-Hill, 2020",
+          "Text Book of Coordination Chemistry, R. K. Sharma, Discovery Publishing House, 2007",
+          "Ceramic and Glass Materials, James F. Shackelford, Robert H. Doremus, Springer Science & Business Media, 2008",
+          "Refractories for the Cement Industry, Prasunjit Sengupta, Springer Cham, 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.youtube.com/watch?v=XF1d571UWCA",
+          "http://nptel.ac.in/course.php?disciplineId=104 2. http://ocw.mit.edu/courses/chemistry/ 3.",
+          "http://vlab.amrita.edu/index.php?sub=2 4. http://www.vlab.co.in/ba_labs_all.php?id=9 5.",
+          "https://www.youtube.com/user/TMPChem 6.",
+          "https://www.youtube.com/playlist?list=PL166048DD75B05C0D",
+          "https://www.youtube.com/watch?v=XTk83rlUc7A",
+          "https://www.youtube.com/watch?v=58-BDq-jxa8",
+          "https://www.youtube.com/playlist?list=PLADrjVbKQUdxiHfIOM83jygUpYgVlzsom",
+          "https://www.youtube.com/watch?v=RWSZRqn-vx8&list=PLyTVFDODClZi3- R9mqJUhLmKwZbliIEfH",
+          "https://www.youtube.com/watch? v=mqaSPzlnDLA&list=PLTwJBmJyAP3PXCU4xCTRHZEV6MpI9W7gD"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7364,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF SCIENCE\nPROGRAM       BACHELOR OF SCIENCE (CHEMISTRY)\nSEMESTER         5\nCOURSE TITLE    INORGANIC & INDUSTRIAL CHEMISTRY\nCOURSE CODE     02CY0305\nCOURSE CREDITS  4\n\nObjective:\n 1  To study the introduction of coordination chemistry.\n 2  To make students capable of understanding the basics of wave mechanics.\n 3  To study the introduction, properties, manufacture of cement.\n 4  To study the introduction of ceramics, glass and refractories.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the concepts of coordination chemistry.\n 2  Be aware of the basics of wave mechanics\n 3  Obtain the information regarding cement.\n 4  Understand the basic of ceramic, glass and refractories.\n\n\nPre-requisite of course:Understand basics of chemistry with industrial aspects\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Coordination Chemistry                                   15\n               Introduction, Double salts, coordination compounds, coordination\n             complexes and complexes ions, coordination number, classification\n              of ligands, valance bond theory, crystal field theory, crystal field\n                splitting of energy levels, magnetic properties of metal complexes\n            and crystal field theory, ligand field theory, Jahn Teller effect, multi\n               electron system.\n     2     Wave mechanics                                         15\n               Introduction, operators, Algebra of operators, multiplication of\n               operators, commutative property, linear operator, commutator of\n               operator, operator ? and ?2, momentum operator, Hamiltonian\n               operator, particle in a one-dimensional box, Wave function and\n             energy of a particle in one dimensional box.\n\n\n\nDR. SURANJANA VISHALBHAI MAYANI                DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3     Cement                                                 15\n               Introduction, types of cement, raw materials, cement rock\n               beneficiation, Manufacturing process of cement, Setting and\n             hardening of Portland cement, Properties of cement, Indian\n              standards institute (ISI) specification of cement, Mortars and\n               concrete, Curing and decay of concrete, Uses of cement.\n     4      Ceramic, Glass and Refractories                            15\n               Introduction to ceramics, raw materials, classification based on\n              reduction in porosity, manufacturing, body preparation using clay\n                  slip. Introduction to glass, physical and chemical properties of glass,\n            raw materials, methods of manufacturing, special types of glasses.\n               Introduction to refractories, classification of refractories, properties\n              of refractories, manufacturing, fire clay bricks manufacture,\n               properties and uses.\n                               Total Hours                       60\n\n\nTextbook :\n 1 A Textbook of Physical Chemistry - Quantum Chemistry and Molecular Spectroscopy, K L\n    Kapoor , McGraw-Hill, 2020\n 2  Text Book of Coordination Chemistry, R. K. Sharma, Discovery Publishing House, 2007\n 3  Ceramic and Glass Materials, James F. Shackelford, Robert H. Doremus, Springer Science\n   & Business Media, 2008\n 4  Refractories for the Cement Industry, Prasunjit Sengupta, Springer Cham, 2019\n\nReferences:\n 1  Concise Inorganic Chemistry, Concise Inorganic Chemistry, J.D. Lee, Oxford University\n     Press, 2008\n 2  Principles of Inorganic Chemistry, Principles of Inorganic Chemistry, B.R. Puri, L.R.\n    Sharma, K.C. Kalia , Vishal Publishing Co., 2020\n 3  Wave Mechanics, Wave Mechanics, Wolfgang Pauli , Dover Publications Inc.,, 2003\n 4  Cement Chemistry, Cement Chemistry, Kuldeep Singh , Notion Press, 2022\n 5  The Complete Book on Glass and Ceramics Technology, The Complete Book on Glass and\n    Ceramics Technology, NIIR Board of Consultants & Engineers, Asia Pacific Business\n     Press Inc, 2017\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\n\n\nDR. SURANJANA VISHALBHAI MAYANI                DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         20.00         30.00         30.00         10.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, ecourses,\n     Virtual Laboratory\n 5  Use of hazardous/toxic chemicals should be avoided as far as possible in laboratory.\n 6  All students in the laboratory must wear safety goggles and lab coats during lab session.\n\nSupplementary Resources:\n 1  https://www.youtube.com/watch?v=XF1d571UWCA\n 2  http://nptel.ac.in/course.php?disciplineId=104 2. http://ocw.mit.edu/courses/chemistry/ 3.\n 3  http://vlab.amrita.edu/index.php?sub=2 4. http://www.vlab.co.in/ba_labs_all.php?id=9 5.\n 4  https://www.youtube.com/user/TMPChem 6.\n 5  https://www.youtube.com/playlist?list=PL166048DD75B05C0D\n 6  https://www.youtube.com/watch?v=XTk83rlUc7A\n 7  https://www.youtube.com/watch?v=58-BDq-jxa8\n 8  https://www.youtube.com/playlist?list=PLADrjVbKQUdxiHfIOM83jygUpYgVlzsom\n 9  https://www.youtube.com/watch?v=RWSZRqn-vx8&list=PLyTVFDODClZi3-\n    R9mqJUhLmKwZbliIEfH\n 10  https://www.youtube.com/watch?\n    v=mqaSPzlnDLA&list=PLTwJBmJyAP3PXCU4xCTRHZEV6MpI9W7gD\n\n\n\n\n\nDR. SURANJANA VISHALBHAI MAYANI                DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "2b36ffef9c0cf5e0b7ead04bc9089a6b6e38840ea5896507ad9354ee47aa5156",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "31002325030201",
+      "subject_name": "Organic Chemistry",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 5,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "31002325030301",
+      "subject_name": "Physical Chemistry",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 5,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 2,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 2,
+    "extraction_errors": 0
+  }
+}

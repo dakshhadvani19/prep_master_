@@ -1,0 +1,405 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "m-sc-in-pgdmlt",
+    "course_name": "M.Sc in PGDMLT",
+    "output_slug": "MSc_in_PGDMLT"
+  },
+  "semester": 1,
+  "subject_count": 6,
+  "subjects": [
+    {
+      "subject_id": "36021312110101",
+      "subject_name": "Basic and Clinical Pathology",
+      "course_id": "m-sc-in-pgdmlt",
+      "course_name": "M.Sc in PGDMLT",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "MANUAL_COURSE_SCOPE_REVIEW",
+      "catalog_action": "NO_PENDING_MANUAL_REVIEW",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Review_Required/Basic and Clinical Pathology [b0f0aa95f376].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_PENDING_MANUAL_REVIEW",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "MANUAL_COURSE_SCOPE_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "The PDF's opening heading identifies PG DMLT Semester I Basic and Clinical Pathology (02ML0101), while the catalog code evidence only overlaps part of the broader expected-code list. Moved out of the verified tier until the exact course-code/syllabus scope is confirmed."
+      ],
+      "pdf_verification_status": "NO_PENDING_MANUAL_REVIEW"
+    },
+    {
+      "subject_id": "36021312010201",
+      "subject_name": "Basic Hematology",
+      "course_id": "m-sc-in-pgdmlt",
+      "course_name": "M.Sc in PGDMLT",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "36021312010301",
+      "subject_name": "Clinical Biochemistry",
+      "course_id": "m-sc-in-pgdmlt",
+      "course_name": "M.Sc in PGDMLT",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "36021312010401",
+      "subject_name": "Human Anatomy and Physiology",
+      "course_id": "m-sc-in-pgdmlt",
+      "course_name": "M.Sc in PGDMLT",
+      "semester": 1,
+      "subject_code": "02ML0104",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/05/02ML0104-Human-anatomy-and-physiology.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Human Anatomy and Physiology [cac0bc23f422].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Human Anatomy and Physiology [cac0bc23f422].pdf",
+      "expected_pdf_sha256": "2013d14eecf317b3154389f1515d6dda9ca78e6017b294db21e7dc1127d074c4",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Human Anatomy and Physiology (HAP)",
+        "course_code": "02ML0104",
+        "semester_label": "I",
+        "credits": null,
+        "prerequisite": "Fundamental knowledge of organ system of human body."
+      },
+      "objectives": [
+        "To impart fundamental knowledge of the anatomical and physiological architecture of the human body. Credits Earned: 4 Credits"
+      ],
+      "course_outcomes": [
+        "After the completion of the course:",
+        "Students will gain knowledge regarding the basic concepts of cellular physiology.",
+        "Students will be able to distinguish and differentiate between the structure and function of various tissues of the human body.",
+        "Students will gain insights into the structure and inner workings of the nervous and respiratory system.",
+        "Students will become well versed with the structure and function of the lymphatic and circulatory system. Pre-requisite of course: Fundamental knowledge of organ system of human body."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits ESE IA Viva Practical/ Marks Theory Tutorial Practical CSE (I) (E) (M) (V) TW 4 0 0 4 50 30 20 0 0 100 PG DMLT Semester I: Human Anatomy and Physiology (02ML0104) Syllabus for Postgraduate Diploma in Medical Laboratory Technology (PG DMLT)",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Topics Contact",
+            "contact_hours": null,
+            "topic_lines": [
+              "Hours",
+              "Human Cell, Tissue and Skeletal System",
+              "Scope of anatomy and physiology and basic terminology used in these",
+              "subjects. Structure of cell and its components and their functions and cell 1 15",
+              "division in humans.Elementary Tissues of the Human body: epithelial",
+              "connective, muscular and nervous tissues, their sub-types, movements of",
+              "jointsand skeletal system.",
+              "Nervous and Respiratory System",
+              "Respiratory System: Nasal cavity, Paranasal sinuses, Naso-Pharynx, Larynx,",
+              "Trachea and Chief Bronchi, the Lung, Mechanism of breathing. 2 15",
+              "Nervous System: Components, parts of Nervous System, Brain, meninges,",
+              "Nerve terminals, Motor and sensory pathways, Cranial Nerves, Spinal cord",
+              "& their Blood Supply.",
+              "Endocrine System, Digestive System and Urinary System",
+              "Endocrine System:The Endocrine glands and their functions,Regulation of",
+              "endocrine secretion and effect of hyper and hyposecretionof endocrine",
+              "glands. The suprarenal gland, the pineal body, thymusgland, pancreas, sex",
+              "glands."
+            ],
+            "topics_text": "Hours Human Cell, Tissue and Skeletal System Scope of anatomy and physiology and basic terminology used in these subjects. Structure of cell and its components and their functions and cell 1 15 division in humans.Elementary Tissues of the Human body: epithelial connective, muscular and nervous tissues, their sub-types, movements of jointsand skeletal system. Nervous and Respiratory System Respiratory System: Nasal cavity, Paranasal sinuses, Naso-Pharynx, Larynx, Trachea and Chief Bronchi, the Lung, Mechanism of breathing. 2 15 Nervous System: Components, parts of Nervous System, Brain, meninges, Nerve terminals, Motor and sensory pathways, Cranial Nerves, Spinal cord & their Blood Supply. Endocrine System, Digestive System and Urinary System Endocrine System:The Endocrine glands and their functions,Regulation of endocrine secretion and effect of hyper and hyposecretionof endocrine glands. The suprarenal gland, the pineal body, thymusgland, pancreas, sex glands.",
+            "topics": [
+              "Hours",
+              "Human Cell, Tissue and Skeletal System",
+              "Scope of anatomy and physiology and basic terminology used in these",
+              "subjects. Structure of cell and its components and their functions and cell 1 15",
+              "division in humans.Elementary Tissues of the Human body: epithelial",
+              "connective, muscular and nervous tissues, their sub-types, movements of",
+              "jointsand skeletal system.",
+              "Nervous and Respiratory System",
+              "Respiratory System: Nasal cavity, Paranasal sinuses, Naso-Pharynx, Larynx,",
+              "Trachea and Chief Bronchi, the Lung, Mechanism of breathing. 2 15",
+              "Nervous System: Components, parts of Nervous System, Brain, meninges,",
+              "Nerve terminals, Motor and sensory pathways, Cranial Nerves, Spinal cord",
+              "& their Blood Supply.",
+              "Endocrine System, Digestive System and Urinary System",
+              "Endocrine System:The Endocrine glands and their functions,Regulation of",
+              "endocrine secretion and effect of hyper and hyposecretionof endocrine",
+              "glands. The suprarenal gland, the pineal body, thymusgland, pancreas, sex",
+              "glands."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Digestive System: Gastrointestinal tract and associated glands. Function of",
+            "contact_hours": 15,
+            "topic_lines": [
+              "intestine. The process of digestion and absorption, the Liver, the functions of",
+              "liver, the extra hepatic passage.",
+              "Urinary System: The kidney, the Renal Pelvis, Ureter and urinary bladder,",
+              "the urethra, Physiological process involved in excretion. Nephrons,",
+              "mechanism of urine formation osmoregulation by kidney.",
+              "Lymphatic and Circulatory System",
+              "Lymph and Lymphatic system: compositions and formulation and",
+              "circulation of Lymph: Basic physiology and functions of the spleen. 4 15",
+              "Cardiovascular system: Basic anatomy of the heart, physiology of the heart,",
+              "blood vessels and circulation, Basic understanding of the cardiac cycle, heart",
+              "sounds and electrocardiogram. Blood pressure and its regulation.",
+              "Total Hours 60",
+              "PG DMLT Semester I: Human Anatomy and Physiology (02ML0104)",
+              "Syllabus for Postgraduate Diploma in Medical",
+              "Laboratory Technology (PG DMLT)"
+            ],
+            "topics_text": "intestine. The process of digestion and absorption, the Liver, the functions of liver, the extra hepatic passage. Urinary System: The kidney, the Renal Pelvis, Ureter and urinary bladder, the urethra, Physiological process involved in excretion. Nephrons, mechanism of urine formation osmoregulation by kidney. Lymphatic and Circulatory System Lymph and Lymphatic system: compositions and formulation and circulation of Lymph: Basic physiology and functions of the spleen. 4 15 Cardiovascular system: Basic anatomy of the heart, physiology of the heart, blood vessels and circulation, Basic understanding of the cardiac cycle, heart sounds and electrocardiogram. Blood pressure and its regulation. Total Hours 60 PG DMLT Semester I: Human Anatomy and Physiology (02ML0104) Syllabus for Postgraduate Diploma in Medical Laboratory Technology (PG DMLT)",
+            "topics": [
+              "intestine. The process of digestion and absorption, the Liver, the functions of",
+              "liver, the extra hepatic passage.",
+              "Urinary System: The kidney, the Renal Pelvis, Ureter and urinary bladder,",
+              "the urethra, Physiological process involved in excretion. Nephrons,",
+              "mechanism of urine formation osmoregulation by kidney.",
+              "Lymphatic and Circulatory System",
+              "Lymph and Lymphatic system: compositions and formulation and",
+              "circulation of Lymph: Basic physiology and functions of the spleen. 4 15",
+              "Cardiovascular system: Basic anatomy of the heart, physiology of the heart,",
+              "blood vessels and circulation, Basic understanding of the cardiac cycle, heart",
+              "sounds and electrocardiogram. Blood pressure and its regulation.",
+              "Total Hours 60",
+              "PG DMLT Semester I: Human Anatomy and Physiology (02ML0104)",
+              "Syllabus for Postgraduate Diploma in Medical",
+              "Laboratory Technology (PG DMLT)"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6128,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Postgraduate Diploma in Medical\n                               Laboratory Technology (PG DMLT)\n\n                        PG DMLT Semester I\n\n                     Subject Name: Human Anatomy and Physiology (HAP)\n\n                                  Subject Code: 02ML0104\n\n   Objective:To impart fundamental knowledge of the anatomical and physiological architecture of\n    the human body.\n\n    Credits Earned: 4 Credits\n\n   Course Outcomes: After the completion of the course:\n        1.  Students will gain knowledge regarding the basic concepts of cellular physiology.\n        2.  Students will be able to distinguish and differentiate between the structure and function\n           of various tissues of the human body.\n        3.  Students will gain insights into the structure and inner workings of the nervous and\n            respiratory system.\n        4.  Students will become well versed with the structure and function of the lymphatic and\n            circulatory system.\n\n    Pre-requisite of course: Fundamental knowledge of organ system of human body.\n\n                            Teaching and Examination Scheme\n                                                                         Tutorial/ Practical\n  Teaching Scheme (Hours)                Theory Marks\n                                                            Marks          Total\n                                Credits\n                             ESE   IA              Viva     Practical/  Marks\nTheory   Tutorial   Practical                   CSE (I)\n                                         (E)   (M)               (V)    TW\n  4       0        0        4     50    30      20       0        0      100\n\n\n\n\n\n           PG DMLT Semester I: Human Anatomy and Physiology (02ML0104)"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Postgraduate Diploma in Medical\n                                Laboratory Technology (PG DMLT)\n\nContents:\n  Unit                                Topics                               Contact\n                                                                    Hours\n\n      Human Cell, Tissue and Skeletal System\n        Scope of anatomy and physiology and basic terminology used in these\n          subjects. Structure of cell and its components and their functions and cell   1                                                                     15\n          division  in humans.Elementary Tissues of  the Human body:  epithelial\n         connective, muscular and nervous tissues, their sub-types, movements of\n         jointsand skeletal system.\n        Nervous and Respiratory System\n         Respiratory System: Nasal cavity, Paranasal sinuses, Naso-Pharynx, Larynx,\n        Trachea and Chief Bronchi, the Lung, Mechanism of breathing.   2                                                                     15\n        Nervous System: Components, parts of Nervous System, Brain, meninges,\n        Nerve terminals, Motor and sensory pathways, Cranial Nerves, Spinal cord\n     & their Blood Supply.\n        Endocrine System, Digestive System and Urinary System\n        Endocrine System:The Endocrine glands and their functions,Regulation of\n         endocrine secretion and  effect of hyper and hyposecretionof endocrine\n         glands. The suprarenal gland, the pineal body, thymusgland, pancreas, sex\n         glands.\n   3    Digestive System: Gastrointestinal tract and associated glands. Function of    15\n           intestine. The process of digestion and absorption, the Liver, the functions of\n           liver, the extra hepatic passage.\n        Urinary System: The kidney, the Renal Pelvis, Ureter and urinary bladder,\n         the  urethra,  Physiological  process  involved  in  excretion.  Nephrons,\n        mechanism of urine formation osmoregulation by kidney.\n       Lymphatic and Circulatory System\n       Lymph  and  Lymphatic  system:  compositions  and  formulation  and\n          circulation  of Lymph: Basic physiology and  functions  of  the  spleen.   4                                                                     15\n         Cardiovascular system: Basic anatomy of the heart, physiology of the heart,\n        blood vessels and circulation, Basic understanding of the cardiac cycle, heart\n        sounds and electrocardiogram. Blood pressure and its regulation.\n                                     Total Hours                              60\n\n\n\n\n\n           PG DMLT Semester I: Human Anatomy and Physiology (02ML0104)"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Postgraduate Diploma in Medical\n                            Laboratory Technology (PG DMLT)\n\nReferences:\n1. Textbook of Medical Laboratory Technology by Praful B. Godkar\n2. Medical laboratory Technology by KL Mukherjee Volume-I\n3. Haematology for students Practitioners by RamnikSood\n4. Handbook of Medical Laboratory Technology (IInd edition) by V.H. Talib\n5. Haematology (International edition) Emmanuel C.BesaHarwal Publisher\n6. Practical Haematology by JB Dacie\n7. Practical Haematology (8th edition) by Sir John 8. Clinical Haematology by Christopher A.\nLudlam\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n\n                Distribution of Theory for course delivery and evaluation\n\n Remember    Understand      Apply       Analyze       Evaluate        Create\n\n   30%       25%       25%       15%       5%        0%\n\n\n\nInstructional Method:\na.  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to the conventional teaching method by the blackboard,\n   may also use any of tools such as demonstration, role play, Quiz, brainstorming, etc.\n\nb.  The internal evaluation will be done based on continuous evaluation of students in the\n    classroom in the form of attendance, assignments, verbal interactions etc.\n\nc.  Students will use supplementary resources such as online videos, NPTEL videos, e-courses,\n     Virtual Laboratory.\n\n\n\n\n\n         PG DMLT Semester I: Human Anatomy and Physiology (02ML0104)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "2013d14eecf317b3154389f1515d6dda9ca78e6017b294db21e7dc1127d074c4",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "36021312010501",
+      "subject_name": "Lab 1",
+      "course_id": "m-sc-in-pgdmlt",
+      "course_name": "M.Sc in PGDMLT",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "36021312010601",
+      "subject_name": "Techniques",
+      "course_id": "m-sc-in-pgdmlt",
+      "course_name": "M.Sc in PGDMLT",
+      "semester": 1,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 1,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 5,
+    "extraction_errors": 0
+  }
+}

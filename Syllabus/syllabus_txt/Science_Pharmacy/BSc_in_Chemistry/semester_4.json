@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-sc-in-chemistry",
+    "course_name": "B.Sc in Chemistry",
+    "output_slug": "BSc_in_Chemistry"
+  },
+  "semester": 4,
+  "subject_count": 5,
+  "subjects": [
+    {
+      "subject_id": "31002132025301",
+      "subject_name": "Basic Biochemistry",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "31002318040101",
+      "subject_name": "Career Readiness Program",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 4,
+      "subject_code": "02CR0401",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/02CR0401_CAREER-READINESS-PROGRAM.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Career Readiness Program [481224513f76].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Career Readiness Program [481224513f76].pdf",
+      "expected_pdf_sha256": "2736320ac42d8cbd8c765fdf8b5e69c9a4852842900e67fa2a5d3528396f2b61",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "CAREER READINESS PROGRAM",
+        "course_code": "02CR0401",
+        "semester_label": "4",
+        "credits": 2,
+        "prerequisite": "Career Readiness Program (CRP) is a training program designed by the trainers of Training & Counselling Dept. of Marwadi University. The objective of this program is to prepare students to face the ever-changing and challenging global business environment of the 21st century."
+      },
+      "objectives": [
+        "The objective of this program is to prepare students to face the ever-changing and challenging global business environment of the 21st century."
+      ],
+      "course_outcomes": [
+        "Understand the nuances of dealing with public at large",
+        "Exhibit professionalism in formal settings",
+        "Perform effectively in entrance exams and Campus Recruitment drives.",
+        "Communicate ideas effectively Pre-requisite of course:Career Readiness Program (CRP) is a training program designed by the trainers of Training & Counselling Dept. of Marwadi University. The objective of this program is to prepare students to face the ever-changing and challenging global business environment of the 21st century."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "High School English Grammar and Composition, by P. C. Wren and H. Martin, S Chand & Company Limited, 2005",
+          "Better Spoken English, Shreesh Chaudhary, S Chand & Company Limited, 2010"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 3309,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF SCIENCE\nPROGRAM       BACHELOR OF SCIENCE (CHEMISTRY)\nSEMESTER         4\nCOURSE TITLE   CAREER READINESS PROGRAM\nCOURSE CODE     02CR0401\nCOURSE CREDITS  2\n\nObjective:\n 1  The objective of this program is to prepare students to face the ever-changing and\n     challenging global business environment of the 21st century.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the nuances of dealing with public at large\n 2  Exhibit professionalism in formal settings\n 3  Perform effectively in entrance exams and Campus Recruitment drives.\n 4  Communicate ideas effectively\n\n\nPre-requisite of course:Career Readiness Program (CRP) is a training program designed by the\ntrainers of Training & Counselling Dept. of Marwadi University. The objective of this program\nis to prepare students to face the ever-changing and challenging global business environment of\nthe 21st century.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Career Readiness Program\n               Introduction, Logical Problem Solving, Critical Problem Solving,\n              Brainstroming, Creative Thinking, Smart Professionals-Attitude &\n             Behaviour (EQ), Smart Professionals-Unspoken Rules/Etiqqutee,\n           Mid-Sem Revision, Art of Speaking-Speech, Art of Speaking-\n             Impromptu, Art of Speaking-Practice, Note Taking Methods-1,\n              Revision-1, Revision-2, Introduction to VA & LR, Vocabulary –\n                Picture, Syllogism (Basic), Spot the error, Paraphrasing, Analogy,\n              Para- Jumbles, Creative Writing, Tips & Tricks to solve\n             Competitive Exam, Root words, News Article, Odd Word Out, SAP\n          –TEST -4\n                               Total Hours\n\n\n\nMR. DHANANJAY SINGH                              MR. SRIRAM S PADMANABHAN\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 1  High School English Grammar and Composition, by P. C. Wren and H. Martin, S Chand\n   & Company Limited, 2005\n 2  Better Spoken English, Shreesh Chaudhary, S Chand & Company Limited, 2010\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         20.00         35.00         10.00         10.00          5.00\n\n\n\n\n\nMR. DHANANJAY SINGH                              MR. SRIRAM S PADMANABHAN\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata.",
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "2736320ac42d8cbd8c765fdf8b5e69c9a4852842900e67fa2a5d3528396f2b61",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "31002325025101",
+      "subject_name": "Chemistry-IV",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "31021912025101",
+      "subject_name": "English for workplace",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "31002325025201",
+      "subject_name": "Fundametal Chemistry-IV",
+      "course_id": "b-sc-in-chemistry",
+      "course_name": "B.Sc in Chemistry",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 0,
+    "manual_review": 1,
+    "ocr_review": 0,
+    "missing_pdf": 4,
+    "extraction_errors": 0
+  }
+}

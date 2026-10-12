@@ -1,0 +1,872 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-pharm",
+    "course_name": "B.Pharm",
+    "output_slug": "BPharm"
+  },
+  "semester": 7,
+  "subject_count": 6,
+  "subjects": [
+    {
+      "subject_id": "37013168070201",
+      "subject_name": "Industrial Pharmacy-II",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 7,
+      "subject_code": "13PH0702",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13PH0702.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Industrial Pharmacy-II [7496219d4f77].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Industrial Pharmacy-II [7496219d4f77].pdf",
+      "expected_pdf_sha256": "d46eb00eaaef99b2623cf24b507b66522b8e8bf8ff0080f435b21584346a0180",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INDUSTRIAL PHARMACY-II",
+        "course_code": "13PH0702",
+        "semester_label": "7",
+        "credits": 4,
+        "prerequisite": "This course is designed to impart fundamental knowledge on pharmaceutical product development and translation from laboratory to market."
+      },
+      "objectives": [
+        "This course is designed to impart fundamental knowledge on pharmaceutical product development and translation from laboratory to market."
+      ],
+      "course_outcomes": [
+        "Know the process of pilot plant and scale-up of pharmaceutical dosage forms.",
+        "Understand the process of technology transfer from lab scale to commercial batch.",
+        "Know different Laws and Acts that regulate the pharmaceutical industry.",
+        "Understand the approval process and regulatory requirements for drug products. Pre-requisite of course:This course is designed to impart fundamental knowledge on pharmaceutical product development and translation from laboratory to market."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 75 15 10 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Pilot plant scales up techniques",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Pilot plant scales up techniques: General considerations – including",
+              "the significance of personnel requirements, space requirements, raw",
+              "materials, Pilot plant scale-up considerations for solids, liquid orals,",
+              "semi-solids and relevant documentation, SUPAC guidelines,",
+              "Introduction to platform technology."
+            ],
+            "topics_text": "Pilot plant scales up techniques: General considerations – including the significance of personnel requirements, space requirements, raw materials, Pilot plant scale-up considerations for solids, liquid orals, semi-solids and relevant documentation, SUPAC guidelines, Introduction to platform technology.",
+            "topics": [
+              "Pilot plant scales up techniques: General considerations – including",
+              "the significance of personnel requirements, space requirements, raw",
+              "materials, Pilot plant scale-up considerations for solids, liquid orals,",
+              "semi-solids and relevant documentation, SUPAC guidelines,",
+              "Introduction to platform technology."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Technology development and transfer",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Technology development and transfer: WHO guidelines for",
+              "Technology Transfer(TT): Terminology, Technology transfer",
+              "protocol, Quality risk management, Transfer from R & D to",
+              "production (Process, packaging and cleaning), Granularity of TT",
+              "Process (API, excipients, finished products, packaging materials)",
+              "Documentation, Premises and equipment, qualification and",
+              "validation, quality control, analytical method transfer, Approved",
+              "regulatory bodies and agencies, Commercialization - practical",
+              "aspects and problems (case studies), TT agencies in India - APCTD,",
+              "NRDC, TIFAC, BCIL, TBSE / SIDBI; TT related documentation -",
+              "confidentiality agreement, licensing, MoUs, legal issues."
+            ],
+            "topics_text": "Technology development and transfer: WHO guidelines for Technology Transfer(TT): Terminology, Technology transfer protocol, Quality risk management, Transfer from R & D to production (Process, packaging and cleaning), Granularity of TT Process (API, excipients, finished products, packaging materials) Documentation, Premises and equipment, qualification and validation, quality control, analytical method transfer, Approved regulatory bodies and agencies, Commercialization - practical aspects and problems (case studies), TT agencies in India - APCTD, NRDC, TIFAC, BCIL, TBSE / SIDBI; TT related documentation - confidentiality agreement, licensing, MoUs, legal issues.",
+            "topics": [
+              "Technology development and transfer: WHO guidelines for",
+              "Technology Transfer(TT): Terminology, Technology transfer",
+              "protocol, Quality risk management, Transfer from R & D to",
+              "production (Process, packaging and cleaning), Granularity of TT",
+              "Process (API, excipients, finished products, packaging materials)",
+              "Documentation, Premises and equipment, qualification and",
+              "validation, quality control, analytical method transfer, Approved",
+              "regulatory bodies and agencies, Commercialization - practical",
+              "aspects and problems (case studies), TT agencies in India - APCTD,",
+              "NRDC, TIFAC, BCIL, TBSE / SIDBI",
+              "TT related documentation",
+              "confidentiality agreement, licensing, MoUs, legal issues."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Regulatory affairs",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Regulatory affairs: Introduction, Historical overview of Regulatory",
+              "Affairs, Regulatory authorities, Role of Regulatory affairs",
+              "department, Responsibility of Regulatory Affairs Professionals.",
+              "Regulatory requirements for drug approval: Drug Development",
+              "Teams, Non- Clinical Drug Development, Pharmacology, Drug",
+              "Metabolism and Toxicology, General considerations of",
+              "Investigational New Drug (IND) Application, Investigator’s",
+              "Brochure (IB) and New Drug Application (NDA), Clinical research",
+              "/ BE studies, Clinical Research Protocols, Biostatistics in",
+              "Pharmaceutical Product Development, Data Presentation for FDA",
+              "Submissions, Management of Clinical Studies."
+            ],
+            "topics_text": "Regulatory affairs: Introduction, Historical overview of Regulatory Affairs, Regulatory authorities, Role of Regulatory affairs department, Responsibility of Regulatory Affairs Professionals. Regulatory requirements for drug approval: Drug Development Teams, Non- Clinical Drug Development, Pharmacology, Drug Metabolism and Toxicology, General considerations of Investigational New Drug (IND) Application, Investigator’s Brochure (IB) and New Drug Application (NDA), Clinical research / BE studies, Clinical Research Protocols, Biostatistics in Pharmaceutical Product Development, Data Presentation for FDA Submissions, Management of Clinical Studies.",
+            "topics": [
+              "Regulatory affairs: Introduction, Historical overview of Regulatory",
+              "Affairs, Regulatory authorities, Role of Regulatory affairs",
+              "department, Responsibility of Regulatory Affairs Professionals.",
+              "Regulatory requirements for drug approval: Drug Development",
+              "Teams, Non- Clinical Drug Development, Pharmacology, Drug",
+              "Metabolism and Toxicology, General considerations of",
+              "Investigational New Drug (IND) Application, Investigator’s",
+              "Brochure (IB) and New Drug Application (NDA), Clinical research",
+              "/ BE studies, Clinical Research Protocols, Biostatistics in",
+              "Pharmaceutical Product Development, Data Presentation for FDA",
+              "Submissions, Management of Clinical Studies."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Quality management systems",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Quality management systems: Quality management &",
+              "Certifications: Concept of Quality, Total Quality Management,",
+              "Quality by Design (QbD), Six Sigma concept, Out of Specifications",
+              "(OOS),Change control, Introduction to ISO 9000 series of quality",
+              "systems standards, ISO 14000, NABL, GLP"
+            ],
+            "topics_text": "Quality management systems: Quality management & Certifications: Concept of Quality, Total Quality Management, Quality by Design (QbD), Six Sigma concept, Out of Specifications (OOS),Change control, Introduction to ISO 9000 series of quality systems standards, ISO 14000, NABL, GLP",
+            "topics": [
+              "Quality management systems: Quality management &",
+              "Certifications: Concept of Quality, Total Quality Management,",
+              "Quality by Design (QbD), Six Sigma concept, Out of Specifications",
+              "(OOS),Change control, Introduction to ISO 9000 series of quality",
+              "systems standards, ISO 14000, NABL, GLP"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Indian Regulatory Requirements",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Indian Regulatory Requirements: Central Drug Standard Control",
+              "Organization (CDSCO) and State Licensing Authority:",
+              "Organization, Responsibilities, Certificate of Pharmaceutical",
+              "Product (COPP), Regulatory requirements and approval procedures",
+              "for New Drugs.",
+              "Total Hours 45"
+            ],
+            "topics_text": "Indian Regulatory Requirements: Central Drug Standard Control Organization (CDSCO) and State Licensing Authority: Organization, Responsibilities, Certificate of Pharmaceutical Product (COPP), Regulatory requirements and approval procedures for New Drugs. Total Hours 45",
+            "topics": [
+              "Indian Regulatory Requirements: Central Drug Standard Control",
+              "Organization (CDSCO) and State Licensing Authority:",
+              "Organization, Responsibilities, Certificate of Pharmaceutical",
+              "Product (COPP), Regulatory requirements and approval procedures",
+              "for New Drugs.",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Tutorials will be based on the above syllabus",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,",
+              "Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,",
+              "Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15",
+              "Total Hours 15",
+              "Textbook :",
+              "1 ROLE OF REGULATORY AFFAIRS IN A PHARMACEUTICAL INDUSTRY, Y. SRI",
+              "HARSHA, V.SHARMILA REDDY, INTERNATIONAL JOURNAL OF",
+              "PHARMACEUTICAL RESEARCH AND BIO-SCIENCE, 2017"
+            ],
+            "topics_text": "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6, Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11, Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15 Total Hours 15 Textbook : 1 ROLE OF REGULATORY AFFAIRS IN A PHARMACEUTICAL INDUSTRY, Y. SRI HARSHA, V.SHARMILA REDDY, INTERNATIONAL JOURNAL OF PHARMACEUTICAL RESEARCH AND BIO-SCIENCE, 2017",
+            "topics": [
+              "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,",
+              "Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,",
+              "Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15",
+              "Total Hours 15",
+              "Textbook :",
+              "1 ROLE OF REGULATORY AFFAIRS IN A PHARMACEUTICAL INDUSTRY, Y. SRI",
+              "HARSHA, V.SHARMILA REDDY, INTERNATIONAL JOURNAL OF",
+              "PHARMACEUTICAL RESEARCH AND BIO-SCIENCE, 2017"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Regulatory Affairs from Wikipedia, the free encyclopaedia , Regulatory Affairs from Wikipedia, the free encyclopaedia , Wikipedia, Wikipedia, 2022",
+          "International Regulatory Affairs Updates,, International Regulatory Affairs Updates,, Jitendra Kumar Badjatya , Interantional journal of Drug Regulatory affairs, 2013",
+          "A Guide for Prescription Drugs, Medical Devices, and Biologics, A Guide for Prescription Drugs, Medical Devices, and Biologics, Douglas J Pisano and David S. Mantus, CRC press, 2008"
+        ],
+        "textbooks": [
+          "ROLE OF REGULATORY AFFAIRS IN A PHARMACEUTICAL INDUSTRY, Y. SRI HARSHA, V.SHARMILA REDDY, INTERNATIONAL JOURNAL OF PHARMACEUTICAL RESEARCH AND BIO-SCIENCE, 2017"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 7754,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       BACHELOR OF PHARMACY\nSEMESTER         7\nCOURSE TITLE    INDUSTRIAL PHARMACY-II\nCOURSE CODE     13PH0702\nCOURSE CREDITS  4\n\nObjective:\n 1  This course is designed to impart fundamental knowledge on pharmaceutical product\n    development and translation from laboratory to market.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Know the process of pilot plant and scale-up of pharmaceutical dosage forms.\n 2  Understand the process of technology transfer from lab scale to commercial batch.\n 3  Know different Laws and Acts that regulate the pharmaceutical industry.\n 4  Understand the approval process and regulatory requirements for drug products.\n\n\nPre-requisite of course:This course is designed to impart fundamental knowledge on\npharmaceutical product development and translation from laboratory to market.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        75     15      10        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Pilot plant scales up techniques                             10\n                Pilot plant scales up techniques: General considerations – including\n               the significance of personnel requirements, space requirements, raw\n               materials, Pilot plant scale-up considerations for solids, liquid orals,\n              semi-solids and relevant documentation, SUPAC guidelines,\n               Introduction to platform technology.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Technology development and transfer                       10\n             Technology development and transfer: WHO guidelines for\n             Technology Transfer(TT): Terminology, Technology transfer\n               protocol, Quality risk management, Transfer from R & D to\n              production (Process, packaging and cleaning), Granularity of TT\n              Process (API, excipients, finished products, packaging materials)\n             Documentation, Premises and equipment, qualification and\n               validation, quality control, analytical method transfer, Approved\n               regulatory bodies and agencies, Commercialization - practical\n              aspects and problems (case studies), TT agencies in India - APCTD,\n          NRDC, TIFAC, BCIL, TBSE / SIDBI; TT related documentation -\n               confidentiality agreement, licensing, MoUs, legal issues.\n     3      Regulatory affairs                                        10\n             Regulatory affairs: Introduction, Historical overview of Regulatory\n                Affairs, Regulatory authorities, Role of Regulatory affairs\n              department, Responsibility of Regulatory Affairs Professionals.\n             Regulatory requirements for drug approval: Drug Development\n            Teams, Non- Clinical Drug Development, Pharmacology, Drug\n             Metabolism and Toxicology, General considerations of\n               Investigational New Drug (IND) Application, Investigator’s\n             Brochure (IB) and New Drug Application (NDA), Clinical research\n                      / BE studies, Clinical Research Protocols, Biostatistics in\n              Pharmaceutical Product Development, Data Presentation for FDA\n              Submissions, Management of Clinical Studies.\n     4      Quality management systems                               8\n              Quality management systems: Quality management &\n                Certifications: Concept of Quality, Total Quality Management,\n              Quality by Design (QbD), Six Sigma concept, Out of Specifications\n            (OOS),Change control, Introduction to ISO 9000 series of quality\n             systems standards, ISO 14000, NABL, GLP\n     5      Indian Regulatory Requirements                           7\n              Indian Regulatory Requirements: Central Drug Standard Control\n              Organization (CDSCO) and State Licensing Authority:\n              Organization, Responsibilities, Certificate of Pharmaceutical\n             Product (COPP), Regulatory requirements and approval procedures\n               for New Drugs.\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Tutorials will be based on the above syllabus                  15\n               Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,\n               Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,\n               Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15\n                               Total Hours                       15\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Textbook :\n 1  ROLE OF REGULATORY AFFAIRS IN A PHARMACEUTICAL INDUSTRY, Y. SRI\n   HARSHA, V.SHARMILA REDDY, INTERNATIONAL JOURNAL OF\n   PHARMACEUTICAL RESEARCH AND BIO-SCIENCE, 2017\n\nReferences:\n 1  Regulatory Affairs from Wikipedia, the free encyclopaedia , Regulatory Affairs from\n     Wikipedia, the free encyclopaedia , Wikipedia, Wikipedia, 2022\n 2  International Regulatory Affairs Updates,, International Regulatory Affairs Updates,,\n     Jitendra Kumar Badjatya , Interantional journal of Drug Regulatory affairs, 2013\n 3 A Guide for Prescription Drugs, Medical Devices, and Biologics, A Guide for Prescription\n     Drugs, Medical Devices, and Biologics, Douglas J Pisano and David S. Mantus, CRC\n     press, 2008\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         20.00         25.00         25.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the black board\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "d46eb00eaaef99b2623cf24b507b66522b8e8bf8ff0080f435b21584346a0180",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "37013168070101",
+      "subject_name": "Instrumental Methods of Analysis",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 7,
+      "subject_code": "13PH0701",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13PH0701.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Instrumental Methods of Analysis [c232354a4d45].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Instrumental Methods of Analysis [c232354a4d45].pdf",
+      "expected_pdf_sha256": "87dd02bbc000478c2ae3ab9c14a96a4c492d475c4093dc7e79550f5782e25f58",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INSTRUMENTAL METHODS OF ANALYSIS",
+        "course_code": "13PH0701",
+        "semester_label": "7",
+        "credits": 6,
+        "prerequisite": "This subject deals with the application of instrumental methods in qualitative and quantitative analysis of drugs. This subject is designed to impart fundamental knowledge on the principles and instrumentation of spectroscopic and chromatographic technique. This also emphasizes theoretical and practical knowledge of modern analytical instruments that are used for drug testing."
+      },
+      "objectives": [
+        "Scope: This subject deals with the application of instrumental methods in qualitative and quantitative analysis of drugs. This subject is designed to impart fundamental knowledge on the principles and instrumentation of spectroscopic and chromatographic technique. This also emphasizes theoretical and practical knowledge of modern analytical instruments that are used for drug testing.",
+        "This subject deals with the application of instrumental methods in qualitative and quantitative analysis of drugs. This subject is designed to impart fundamental knowledge on the principles and instrumentation of spectroscopic and chromatographic technique. This also emphasizes theoretical and practical knowledge of modern analytical instruments that are used for drug testing.",
+        "This subject deals with the application of instrumental methods in qualitative and quantitative analysis of drugs. This subject is designed to impart fundamental knowledge on the principles and instrumentation of spectroscopic and chromatographic technique. This also emphasizes theoretical and practical knowledge of modern analytical instruments that are used for drug testing."
+      ],
+      "course_outcomes": [
+        "To understand the interaction of matter with electromagnetic radiations and its applications in drug analysis",
+        "To understand the chromatographic separation and analysis of drugs",
+        "Perform quantitative & qualitative analysis of drugs using various analytical instruments. Pre-requisite of course:This subject deals with the application of instrumental methods in qualitative and quantitative analysis of drugs. This subject is designed to impart fundamental knowledge on the principles and instrumentation of spectroscopic and chromatographic technique. This also emphasizes theoretical and practical knowledge of modern analytical instruments that are used for drug testing."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 4 75 15 10 35 15 DR. RAMESH BHANAJIBHAI PARMAR DR. LALJI HAKUBHAI BALDANIYA Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit-1: UV Visible spectroscopy",
+            "contact_hours": 10,
+            "topic_lines": [
+              "UV Visible spectroscopy: Electronic transitions, chromophores,",
+              "auxochromes, spectral shifts, solvent effect on absorption spectra,",
+              "Beer and Lambert’s law, Derivation and deviations.",
+              "Instrumentation: Sources of radiation, wavelength selectors, sample",
+              "cells, detectors: Photo tube, Photomultiplier tube, Photovoltaic cell,",
+              "Silicon Photodiode. Applications: Spectrophotometric titrations,",
+              "Single-component and multi-component analysis. Fluorimetry",
+              "Theory, Concepts of singlet, doublet and triplet electronic states,",
+              "internal and external conversions, factors affecting fluorescence,",
+              "quenching, instrumentation and applications."
+            ],
+            "topics_text": "UV Visible spectroscopy: Electronic transitions, chromophores, auxochromes, spectral shifts, solvent effect on absorption spectra, Beer and Lambert’s law, Derivation and deviations. Instrumentation: Sources of radiation, wavelength selectors, sample cells, detectors: Photo tube, Photomultiplier tube, Photovoltaic cell, Silicon Photodiode. Applications: Spectrophotometric titrations, Single-component and multi-component analysis. Fluorimetry Theory, Concepts of singlet, doublet and triplet electronic states, internal and external conversions, factors affecting fluorescence, quenching, instrumentation and applications.",
+            "topics": [
+              "UV Visible spectroscopy: Electronic transitions, chromophores,",
+              "auxochromes, spectral shifts, solvent effect on absorption spectra,",
+              "Beer and Lambert’s law, Derivation and deviations.",
+              "Instrumentation: Sources of radiation, wavelength selectors, sample",
+              "cells, detectors: Photo tube, Photomultiplier tube, Photovoltaic cell,",
+              "Silicon Photodiode. Applications: Spectrophotometric titrations,",
+              "Single-component and multi-component analysis. Fluorimetry",
+              "Theory, Concepts of singlet, doublet and triplet electronic states,",
+              "internal and external conversions, factors affecting fluorescence,",
+              "quenching, instrumentation and applications."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit-2: IR spectroscopy Introduction",
+            "contact_hours": 10,
+            "topic_lines": [
+              "IR spectroscopy Introduction: Fundamental modes of vibrations in",
+              "polyatomic molecules, sample handling, factors affecting vibrations",
+              "Instrumentation - Sources of radiation, wavelength selectors,",
+              "detectors - Golay cell, Bolometer, Thermocouple, Thermistor,",
+              "Pyroelectric detector and applications. Flame Photometry-Principle,",
+              "interferences, instrumentation and applications. Atomic absorption",
+              "spectroscopy- Principle, interferences, instrumentation and",
+              "Applications. Nepheloturbidometry- Principle, instrumentation and",
+              "applications."
+            ],
+            "topics_text": "IR spectroscopy Introduction: Fundamental modes of vibrations in polyatomic molecules, sample handling, factors affecting vibrations Instrumentation - Sources of radiation, wavelength selectors, detectors - Golay cell, Bolometer, Thermocouple, Thermistor, Pyroelectric detector and applications. Flame Photometry-Principle, interferences, instrumentation and applications. Atomic absorption spectroscopy- Principle, interferences, instrumentation and Applications. Nepheloturbidometry- Principle, instrumentation and applications.",
+            "topics": [
+              "IR spectroscopy Introduction: Fundamental modes of vibrations in",
+              "polyatomic molecules, sample handling, factors affecting vibrations",
+              "Instrumentation - Sources of radiation, wavelength selectors,",
+              "detectors - Golay cell, Bolometer, Thermocouple, Thermistor,",
+              "Pyroelectric detector and applications. Flame Photometry-Principle,",
+              "interferences, instrumentation and applications. Atomic absorption",
+              "spectroscopy- Principle, interferences, instrumentation and",
+              "Applications. Nepheloturbidometry- Principle, instrumentation and",
+              "applications."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit-3: Introduction to chromatography",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to chromatography: Adsorption and partition column",
+              "chromatography - Methodology, advantages, disadvantages and",
+              "applications. Thin-layer chromatography - Introduction, Principle,",
+              "Methodology, Rf values, advantages, disadvantages and",
+              "applications. Paper chromatography-Introduction, methodology,",
+              "development techniques, advantages, disadvantages and",
+              "applications. Electrophoresis – Introduction, factors affecting",
+              "electrophoretic mobility, Techniques of paper, gel, capillary",
+              "electrophoresis, applications."
+            ],
+            "topics_text": "Introduction to chromatography: Adsorption and partition column chromatography - Methodology, advantages, disadvantages and applications. Thin-layer chromatography - Introduction, Principle, Methodology, Rf values, advantages, disadvantages and applications. Paper chromatography-Introduction, methodology, development techniques, advantages, disadvantages and applications. Electrophoresis – Introduction, factors affecting electrophoretic mobility, Techniques of paper, gel, capillary electrophoresis, applications.",
+            "topics": [
+              "Introduction to chromatography: Adsorption and partition column",
+              "chromatography - Methodology, advantages, disadvantages and",
+              "applications. Thin-layer chromatography - Introduction, Principle,",
+              "Methodology, Rf values, advantages, disadvantages and",
+              "applications. Paper chromatography-Introduction, methodology,",
+              "development techniques, advantages, disadvantages and",
+              "applications. Electrophoresis – Introduction, factors affecting",
+              "electrophoretic mobility, Techniques of paper, gel, capillary",
+              "electrophoresis, applications."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit-4: Gas chromatography",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Gas chromatography: Introduction, theory, instrumentation,",
+              "derivatization, temperature programming, advantages,",
+              "disadvantages and applications. High-performance liquid",
+              "chromatography (HPLC)-Introduction, theory, instrumentation,",
+              "advantages and applications."
+            ],
+            "topics_text": "Gas chromatography: Introduction, theory, instrumentation, derivatization, temperature programming, advantages, disadvantages and applications. High-performance liquid chromatography (HPLC)-Introduction, theory, instrumentation, advantages and applications.",
+            "topics": [
+              "Gas chromatography: Introduction, theory, instrumentation,",
+              "derivatization, temperature programming, advantages,",
+              "disadvantages and applications. High-performance liquid",
+              "chromatography (HPLC)-Introduction, theory, instrumentation,",
+              "advantages and applications."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Unit-5: Ion-exchange chromatography",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Ion-exchange chromatography: Introduction, classification, ion",
+              "exchange resins, properties, mechanism of the ion exchange",
+              "process, factors affecting ion exchange, methodology and",
+              "applications. Gel chromatography: Introduction, theory,",
+              "instrumentation and applications. Affinity chromatography -",
+              "Introduction, theory, instrumentation and applications.",
+              "Total Hours 45"
+            ],
+            "topics_text": "Ion-exchange chromatography: Introduction, classification, ion exchange resins, properties, mechanism of the ion exchange process, factors affecting ion exchange, methodology and applications. Gel chromatography: Introduction, theory, instrumentation and applications. Affinity chromatography - Introduction, theory, instrumentation and applications. Total Hours 45",
+            "topics": [
+              "Ion-exchange chromatography: Introduction, classification, ion",
+              "exchange resins, properties, mechanism of the ion exchange",
+              "process, factors affecting ion exchange, methodology and",
+              "applications. Gel chromatography: Introduction, theory,",
+              "instrumentation and applications. Affinity chromatography",
+              "Introduction, theory, instrumentation and applications.",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Tutorials will be based on the above syllabus",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,",
+              "Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,",
+              "Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15"
+            ],
+            "topics_text": "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6, Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11, Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15",
+            "topics": [
+              "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,",
+              "Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,",
+              "Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical",
+            "contact_hours": 60,
+            "topic_lines": [
+              "Determination of absorption maxima and effect of solvents on",
+              "absorption maxima of organic compounds., Estimation of dextrose",
+              "by colourimetry., Estimation of sulphanilamide by colourimetry.,",
+              "Simultaneous estimation of ibuprofen and paracetamol by UV",
+              "spectroscopy., Assay of paracetamol by UV- Spectrophotometry.,",
+              "Estimation of quinine sulphate by fluorimetry., Study of quenching",
+              "of fluorescence., Determination of sodium by flame photometry.,",
+              "Determination of potassium by flame photometry., Determination of",
+              "chlorides and sulphates by nephelo turbidometry., Separation of",
+              "amino acids by paper chromatography., Separation of sugars by",
+              "thin-layer chromatography., Separation of plant pigments by column",
+              "chromatography., Demonstration experiment on HPLC.,",
+              "Demonstration experiment on Gas Chromatography.",
+              "Total Hours 75",
+              "Textbook :",
+              "1 Textbook Pharmaceutical Analysis, Kenneth A. Connors., Wiley, 2007"
+            ],
+            "topics_text": "Determination of absorption maxima and effect of solvents on absorption maxima of organic compounds., Estimation of dextrose by colourimetry., Estimation of sulphanilamide by colourimetry., Simultaneous estimation of ibuprofen and paracetamol by UV spectroscopy., Assay of paracetamol by UV- Spectrophotometry., Estimation of quinine sulphate by fluorimetry., Study of quenching of fluorescence., Determination of sodium by flame photometry., Determination of potassium by flame photometry., Determination of chlorides and sulphates by nephelo turbidometry., Separation of amino acids by paper chromatography., Separation of sugars by thin-layer chromatography., Separation of plant pigments by column chromatography., Demonstration experiment on HPLC., Demonstration experiment on Gas Chromatography. Total Hours 75 Textbook : 1 Textbook Pharmaceutical Analysis, Kenneth A. Connors., Wiley, 2007",
+            "topics": [
+              "Determination of absorption maxima and effect of solvents on",
+              "absorption maxima of organic compounds., Estimation of dextrose",
+              "by colourimetry., Estimation of sulphanilamide by colourimetry.,",
+              "Simultaneous estimation of ibuprofen and paracetamol by UV",
+              "spectroscopy., Assay of paracetamol by UV- Spectrophotometry.,",
+              "Estimation of quinine sulphate by fluorimetry., Study of quenching",
+              "of fluorescence., Determination of sodium by flame photometry.,",
+              "Determination of potassium by flame photometry., Determination of",
+              "chlorides and sulphates by nephelo turbidometry., Separation of",
+              "amino acids by paper chromatography., Separation of sugars by",
+              "thin-layer chromatography., Separation of plant pigments by column",
+              "chromatography., Demonstration experiment on HPLC.,",
+              "Demonstration experiment on Gas Chromatography.",
+              "Total Hours 75",
+              "Textbook :",
+              "1 Textbook Pharmaceutical Analysis, Kenneth A. Connors., Wiley, 2007"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Analytical Chemistry, Analytical Chemistry, Dr. B.K Sharma. , Krishna Prakashan Media, 2014",
+          "Elementary Organic Spectroscopy, Elementary Organic Spectroscopy, Y.R Sharma. , S. Chand, 2013",
+          "Qualitative Chemical Analysis, Qualitative Chemical Analysis, A.I. Vogel. , Pearson Education, 2009",
+          "Pharmaceutical Chemistry, Pharmaceutical Chemistry, A.H. Beckett and J. B. Stenlake. , CBS, 2005",
+          "Organic Chemistry, Organic Chemistry, I. L. Finar. , Pearson Education India, 2002",
+          "Organic Spectroscopy Paperback , Organic Spectroscopy Paperback , William Kemp. , MACMILLAN, 2019",
+          "Quantitative Analysis , Quantitative Analysis , D. C. Garrett., CBS PUBLISHERS AND DISTRIBUTORS , 2005",
+          "Quantitative Analysis, Quantitative Analysis, P. D. Sethi. , CBS Publishers & Distributors, 2015",
+          "Analytical Chemistry, Analytical Chemistry, https://www.wiley.com/en-in/search?pq= %7Crelevance%7Cauthor%3ARobert M. Silverstein, Wiley, 2014"
+        ],
+        "textbooks": [
+          "Textbook Pharmaceutical Analysis, Kenneth A. Connors., Wiley, 2007"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 10586,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       BACHELOR OF PHARMACY\nSEMESTER         7\nCOURSE TITLE    INSTRUMENTAL METHODS OF ANALYSIS\nCOURSE CODE     13PH0701\nCOURSE CREDITS  6\n\nObjective:\n 1  Scope: This subject deals with the application of instrumental methods in qualitative and\n     quantitative analysis of drugs. This subject is designed to impart fundamental knowledge\n    on the principles and instrumentation of spectroscopic and chromatographic technique.\n     This also emphasizes theoretical and practical knowledge of modern analytical instruments\n     that are used for drug testing.\n 2  This subject deals with the application of instrumental methods in qualitative and\n     quantitative analysis of drugs. This subject is designed to impart fundamental knowledge\n    on\n     the principles and instrumentation of spectroscopic and chromatographic technique. This\n     also\n    emphasizes theoretical and practical knowledge of modern analytical instruments that are\n    used for drug testing.\n 3  This subject deals with the application of instrumental methods in qualitative and\n     quantitative analysis of drugs. This subject is designed to impart fundamental knowledge\n    on the principles and instrumentation of spectroscopic and chromatographic technique.\n     This also emphasizes theoretical and practical knowledge of modern analytical instruments\n     that are used for drug testing.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand the interaction of matter with electromagnetic radiations and its applications\n     in drug analysis\n 2  To understand the chromatographic separation and analysis of drugs\n 3  Perform quantitative & qualitative analysis of drugs using various analytical instruments.\n\n\nPre-requisite of course:This subject deals with the application of instrumental methods in\nqualitative and quantitative analysis of drugs. This subject is designed to impart fundamental\nknowledge on the principles and instrumentation of spectroscopic and chromatographic\ntechnique. This also emphasizes theoretical and practical knowledge of modern analytical\ninstruments that are used for drug testing.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            4        75     15      10        35         15\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Unit-1: UV Visible spectroscopy                            10\n        UV Visible spectroscopy: Electronic transitions, chromophores,\n             auxochromes, spectral shifts, solvent effect on absorption spectra,\n             Beer and Lambert’s law, Derivation and deviations.\n              Instrumentation: Sources of radiation, wavelength selectors, sample\n                 cells, detectors: Photo tube, Photomultiplier tube, Photovoltaic cell,\n               Silicon Photodiode. Applications: Spectrophotometric titrations,\n             Single-component and multi-component analysis. Fluorimetry\n             Theory, Concepts of singlet, doublet and triplet electronic states,\n                internal and external conversions, factors affecting fluorescence,\n              quenching, instrumentation and applications.\n     2       Unit-2: IR spectroscopy Introduction                        10\n            IR spectroscopy Introduction: Fundamental modes of vibrations in\n             polyatomic molecules, sample handling, factors affecting vibrations\n              Instrumentation - Sources of radiation, wavelength selectors,\n               detectors - Golay cell, Bolometer, Thermocouple, Thermistor,\n               Pyroelectric detector and applications. Flame Photometry-Principle,\n               interferences, instrumentation and applications. Atomic absorption\n              spectroscopy- Principle, interferences, instrumentation and\n               Applications. Nepheloturbidometry- Principle, instrumentation and\n               applications.\n     3       Unit-3: Introduction to chromatography                     10\n               Introduction to chromatography: Adsorption and partition column\n             chromatography - Methodology, advantages, disadvantages and\n               applications. Thin-layer chromatography - Introduction, Principle,\n             Methodology, Rf values, advantages, disadvantages and\n               applications. Paper chromatography-Introduction, methodology,\n             development techniques, advantages, disadvantages and\n               applications. Electrophoresis – Introduction, factors affecting\n               electrophoretic mobility, Techniques of paper, gel, capillary\n               electrophoresis, applications.\n     4       Unit-4: Gas chromatography                               8\n            Gas chromatography: Introduction, theory, instrumentation,\n                derivatization, temperature programming, advantages,\n              disadvantages and applications. High-performance liquid\n             chromatography (HPLC)-Introduction, theory, instrumentation,\n             advantages and applications.\n     5       Unit-5: Ion-exchange chromatography                       7\n             Ion-exchange chromatography: Introduction, classification, ion\n             exchange resins, properties, mechanism of the ion exchange\n               process, factors affecting ion exchange, methodology and\n               applications. Gel chromatography: Introduction, theory,\n              instrumentation and applications. Affinity chromatography -\n               Introduction, theory, instrumentation and applications.\n                               Total Hours                       45\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Tutorials will be based on the above syllabus                  15\n               Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,\n               Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,\n               Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15\n     2       Practical                                                60\n             Determination of absorption maxima and effect of solvents on\n              absorption maxima of organic compounds., Estimation of dextrose\n            by colourimetry., Estimation of sulphanilamide by colourimetry.,\n             Simultaneous estimation of ibuprofen and paracetamol by UV\n               spectroscopy., Assay of paracetamol by UV- Spectrophotometry.,\n              Estimation of quinine sulphate by fluorimetry., Study of quenching\n              of fluorescence., Determination of sodium by flame photometry.,\n             Determination of potassium by flame photometry., Determination of\n               chlorides and sulphates by nephelo turbidometry., Separation of\n            amino acids by paper chromatography., Separation of sugars by\n               thin-layer chromatography., Separation of plant pigments by column\n              chromatography., Demonstration experiment on HPLC.,\n             Demonstration experiment on Gas Chromatography.\n                               Total Hours                       75\n\nTextbook :\n 1  Textbook Pharmaceutical Analysis, Kenneth A. Connors., Wiley, 2007\n\nReferences:\n 1  Analytical Chemistry, Analytical Chemistry, Dr. B.K Sharma. , Krishna Prakashan Media,\n    2014\n 2  Elementary Organic Spectroscopy, Elementary Organic Spectroscopy, Y.R Sharma. , S.\n    Chand, 2013\n 3  Qualitative Chemical Analysis, Qualitative Chemical Analysis, A.I. Vogel. , Pearson\n     Education, 2009\n 4  Pharmaceutical Chemistry, Pharmaceutical Chemistry, A.H. Beckett and J. B. Stenlake. ,\n    CBS, 2005\n 5  Organic Chemistry, Organic Chemistry, I. L. Finar. , Pearson Education India, 2002\n 6  Organic Spectroscopy Paperback , Organic Spectroscopy Paperback , William Kemp. ,\n   MACMILLAN, 2019\n 7  Quantitative Analysis , Quantitative Analysis , D. C. Garrett., CBS PUBLISHERS AND\n   DISTRIBUTORS , 2005\n 8  Quantitative Analysis, Quantitative Analysis, P. D. Sethi. , CBS Publishers & Distributors,\n    2015\n 9  Analytical Chemistry, Analytical Chemistry, https://www.wiley.com/en-in/search?pq=\n    %7Crelevance%7Cauthor%3ARobert M. Silverstein, Wiley, 2014\n\nSuggested Theory Distribution:\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         20.00         25.00         25.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the black board\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "87dd02bbc000478c2ae3ab9c14a96a4c492d475c4093dc7e79550f5782e25f58",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "37013168070401",
+      "subject_name": "Novel Drug Delivery Systems",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 7,
+      "subject_code": "13PH0704",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13PH0704.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Novel Drug Delivery Systems [569ea6398216].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Novel Drug Delivery Systems [569ea6398216].pdf",
+      "expected_pdf_sha256": "88efb269632a228663633f06144e8cbea1455bec35d7d8739b482250427afd30",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "NOVEL DRUG DELIVERY SYSTEMS",
+        "course_code": "13PH0704",
+        "semester_label": "7",
+        "credits": 4,
+        "prerequisite": "This subject is designed to impart basic knowledge in the area of novel drug delivery systems."
+      },
+      "objectives": [
+        "This subject is designed to impart basic knowledge in the area of novel drug delivery systems."
+      ],
+      "course_outcomes": [
+        "To understand various approaches for the development of novel drug delivery systems.",
+        "To understand the criteria for the selection of drugs and polymers for the development of novel drug delivery systems, their formulation and evaluation. Pre-requisite of course:This subject is designed to impart basic knowledge in the area of novel drug delivery systems."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 75 15 10 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Controlled drug delivery systems",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Controlled drug delivery systems: Introduction,",
+              "terminology/definitions and rationale, advantages, disadvantages,",
+              "selection of drug candidates. Approaches to design controlled",
+              "release formulations based on diffusion, dissolution and ion",
+              "exchange principles. Physicochemical and biological properties of",
+              "drugs relevant to controlled release formulations. Polymers:",
+              "Introduction, classification, properties, advantages and application",
+              "of polymers in the formulation of controlled release drug delivery",
+              "systems."
+            ],
+            "topics_text": "Controlled drug delivery systems: Introduction, terminology/definitions and rationale, advantages, disadvantages, selection of drug candidates. Approaches to design controlled release formulations based on diffusion, dissolution and ion exchange principles. Physicochemical and biological properties of drugs relevant to controlled release formulations. Polymers: Introduction, classification, properties, advantages and application of polymers in the formulation of controlled release drug delivery systems.",
+            "topics": [
+              "Controlled drug delivery systems: Introduction,",
+              "terminology/definitions and rationale, advantages, disadvantages,",
+              "selection of drug candidates. Approaches to design controlled",
+              "release formulations based on diffusion, dissolution and ion",
+              "exchange principles. Physicochemical and biological properties of",
+              "drugs relevant to controlled release formulations. Polymers:",
+              "Introduction, classification, properties, advantages and application",
+              "of polymers in the formulation of controlled release drug delivery",
+              "systems."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Microencapsulation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Microencapsulation: Definition, advantages and disadvantages,",
+              "microspheres/ microcapsules, microparticles, methods of",
+              "microencapsulation, applications. Mucosal Drug Delivery system:",
+              "Introduction, Principles of bioadhesion/ mucoadhesion, concepts,",
+              "advantages and disadvantages, transmucosal permeability and",
+              "formulation considerations of buccal delivery systems. Implantable",
+              "Drug Delivery Systems: Introduction, advantages and",
+              "disadvantages, the concept of implants and osmotic pump."
+            ],
+            "topics_text": "Microencapsulation: Definition, advantages and disadvantages, microspheres/ microcapsules, microparticles, methods of microencapsulation, applications. Mucosal Drug Delivery system: Introduction, Principles of bioadhesion/ mucoadhesion, concepts, advantages and disadvantages, transmucosal permeability and formulation considerations of buccal delivery systems. Implantable Drug Delivery Systems: Introduction, advantages and disadvantages, the concept of implants and osmotic pump.",
+            "topics": [
+              "Microencapsulation: Definition, advantages and disadvantages,",
+              "microspheres/ microcapsules, microparticles, methods of",
+              "microencapsulation, applications. Mucosal Drug Delivery system:",
+              "Introduction, Principles of bioadhesion/ mucoadhesion, concepts,",
+              "advantages and disadvantages, transmucosal permeability and",
+              "formulation considerations of buccal delivery systems. Implantable",
+              "Drug Delivery Systems: Introduction, advantages and",
+              "disadvantages, the concept of implants and osmotic pump."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Transdermal Drug Delivery Systems",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Transdermal Drug Delivery Systems: Introduction, Permeation",
+              "through the skin, factors affecting permeation, permeation",
+              "enhancers, basic components of TDDS, formulation approaches.",
+              "Gastro retentive drug delivery systems: Introduction, advantages,",
+              "disadvantages, approaches for GRDDS – Floating, high-density",
+              "systems, inflatable and gastroadhesive systems and their",
+              "applications. Nasopulmonary drug delivery system: Introduction to",
+              "Nasal and Pulmonary routes of drug delivery, Formulation of",
+              "Inhalers (dry powder and metered dose), nasal sprays, nebulizers."
+            ],
+            "topics_text": "Transdermal Drug Delivery Systems: Introduction, Permeation through the skin, factors affecting permeation, permeation enhancers, basic components of TDDS, formulation approaches. Gastro retentive drug delivery systems: Introduction, advantages, disadvantages, approaches for GRDDS – Floating, high-density systems, inflatable and gastroadhesive systems and their applications. Nasopulmonary drug delivery system: Introduction to Nasal and Pulmonary routes of drug delivery, Formulation of Inhalers (dry powder and metered dose), nasal sprays, nebulizers.",
+            "topics": [
+              "Transdermal Drug Delivery Systems: Introduction, Permeation",
+              "through the skin, factors affecting permeation, permeation",
+              "enhancers, basic components of TDDS, formulation approaches.",
+              "Gastro retentive drug delivery systems: Introduction, advantages,",
+              "disadvantages, approaches for GRDDS – Floating, high-density",
+              "systems, inflatable and gastroadhesive systems and their",
+              "applications. Nasopulmonary drug delivery system: Introduction to",
+              "Nasal and Pulmonary routes of drug delivery, Formulation of",
+              "Inhalers (dry powder and metered dose), nasal sprays, nebulizers."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Targeted drug Delivery",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Targeted drug Delivery: Concepts and approaches advantages and",
+              "disadvantages, introduction to liposomes, niosomes, nanoparticles,",
+              "monoclonal antibodies and their applications."
+            ],
+            "topics_text": "Targeted drug Delivery: Concepts and approaches advantages and disadvantages, introduction to liposomes, niosomes, nanoparticles, monoclonal antibodies and their applications.",
+            "topics": [
+              "Targeted drug Delivery: Concepts and approaches advantages and",
+              "disadvantages, introduction to liposomes, niosomes, nanoparticles,",
+              "monoclonal antibodies and their applications."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Ocular Drug Delivery Systems",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Ocular Drug Delivery Systems: Introduction, intraocular barriers",
+              "and methods to overcome – Preliminary study, ocular formulations",
+              "and ocuserts Intrauterine Drug Delivery Systems: Introduction,",
+              "advantages and disadvantages, development of intrauterine devices",
+              "(IUDs) and applications.",
+              "Total Hours 45"
+            ],
+            "topics_text": "Ocular Drug Delivery Systems: Introduction, intraocular barriers and methods to overcome – Preliminary study, ocular formulations and ocuserts Intrauterine Drug Delivery Systems: Introduction, advantages and disadvantages, development of intrauterine devices (IUDs) and applications. Total Hours 45",
+            "topics": [
+              "Ocular Drug Delivery Systems: Introduction, intraocular barriers",
+              "and methods to overcome – Preliminary study, ocular formulations",
+              "and ocuserts Intrauterine Drug Delivery Systems: Introduction,",
+              "advantages and disadvantages, development of intrauterine devices",
+              "(IUDs) and applications.",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Tutorials will be based on the above syllabus.",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,",
+              "Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,",
+              "Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Novel Drug Delivery Systems, Y. W. Chien, Marcel Dekker, 1992"
+            ],
+            "topics_text": "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6, Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11, Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15 Total Hours 15 Textbook : 1 Novel Drug Delivery Systems, Y. W. Chien, Marcel Dekker, 1992",
+            "topics": [
+              "Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,",
+              "Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,",
+              "Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Novel Drug Delivery Systems, Y. W. Chien, Marcel Dekker, 1992"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Drug Delivery Systems, Drug Delivery Systems, Robinson, J. R., Lee V. H. L, Marcel Dekke, 1992 References:",
+          "Drug Delivery Systems, Drug Delivery Systems, Edith Mathiowitz,, Wiley Interscience Publication, 1999",
+          "Drug Delivery Systems, Drug Delivery Systems, N.K. Jain, CBS PUBLISHERS AND DISTRIBUTORS, 2011",
+          "Drug Delivery Systems, Drug Delivery Systems, S.P. Vyas and R.K. Khar, , Vallabh Prakashan, 2002"
+        ],
+        "textbooks": [
+          "Novel Drug Delivery Systems, Y. W. Chien, Marcel Dekker, 1992"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 7181,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       BACHELOR OF PHARMACY\nSEMESTER         7\nCOURSE TITLE   NOVEL DRUG DELIVERY SYSTEMS\nCOURSE CODE     13PH0704\nCOURSE CREDITS  4\n\nObjective:\n 1  This subject is designed to impart basic knowledge in the area of novel drug delivery\n     systems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand various approaches for the development of novel drug delivery systems.\n 2  To understand the criteria for the selection of drugs and polymers for the development of\n     novel drug delivery systems, their formulation and evaluation.\n\n\nPre-requisite of course:This subject is designed to impart basic knowledge in the area of novel\ndrug delivery systems.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        75     15      10        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Controlled drug delivery systems                           10\n              Controlled drug delivery systems: Introduction,\n               terminology/definitions and rationale, advantages, disadvantages,\n               selection of drug candidates. Approaches to design controlled\n               release formulations based on diffusion, dissolution and ion\n             exchange principles. Physicochemical and biological properties of\n             drugs relevant to controlled release formulations. Polymers:\n               Introduction, classification, properties, advantages and application\n              of polymers in the formulation of controlled release drug delivery\n              systems.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Microencapsulation                                       10\n              Microencapsulation: Definition, advantages and disadvantages,\n              microspheres/ microcapsules, microparticles, methods of\n              microencapsulation, applications. Mucosal Drug Delivery system:\n               Introduction, Principles of bioadhesion/ mucoadhesion, concepts,\n             advantages and disadvantages, transmucosal permeability and\n              formulation considerations of buccal delivery systems. Implantable\n            Drug Delivery Systems: Introduction, advantages and\n              disadvantages, the concept of implants and osmotic pump.\n     3      Transdermal Drug Delivery Systems                        10\n             Transdermal Drug Delivery Systems: Introduction, Permeation\n             through the skin, factors affecting permeation, permeation\n              enhancers, basic components of TDDS, formulation approaches.\n             Gastro retentive drug delivery systems: Introduction, advantages,\n              disadvantages, approaches for GRDDS – Floating, high-density\n              systems, inflatable and gastroadhesive systems and their\n               applications. Nasopulmonary drug delivery system: Introduction to\n             Nasal and Pulmonary routes of drug delivery, Formulation of\n               Inhalers (dry powder and metered dose), nasal sprays, nebulizers.\n     4      Targeted drug Delivery                                    8\n             Targeted drug Delivery: Concepts and approaches advantages and\n              disadvantages, introduction to liposomes, niosomes, nanoparticles,\n             monoclonal antibodies and their applications.\n     5      Ocular Drug Delivery Systems                              7\n             Ocular Drug Delivery Systems: Introduction, intraocular barriers\n            and methods to overcome – Preliminary study, ocular formulations\n            and ocuserts Intrauterine Drug Delivery Systems: Introduction,\n             advantages and disadvantages, development of intrauterine devices\n             (IUDs) and applications.\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Tutorials will be based on the above syllabus.                 15\n               Tutorial-1, Tutorial-2, Tutorial-3, Tutorial-4, Tutorial-5, Tutorial-6,\n               Tutorial-7, Tutorial-8, Tutorial-9, Tutorial-10, Tutorial-11,\n               Tutorial-12, Tutorial-13, Tutorial-14, Tutorial-15\n                               Total Hours                       15\n\nTextbook :\n 1  Novel Drug Delivery Systems, Y. W. Chien, Marcel Dekker, 1992\n\nReferences:\n 1  Drug Delivery Systems, Drug Delivery Systems, Robinson, J. R., Lee V. H. L, Marcel\n    Dekke, 1992\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 2  Drug Delivery Systems, Drug Delivery Systems, Edith Mathiowitz,, Wiley Interscience\n     Publication, 1999\n 3  Drug Delivery Systems, Drug Delivery Systems, N.K. Jain, CBS PUBLISHERS AND\n    DISTRIBUTORS, 2011\n 4  Drug Delivery Systems, Drug Delivery Systems, S.P. Vyas and R.K. Khar, , Vallabh\n     Prakashan, 2002\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         20.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the black board\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "88efb269632a228663633f06144e8cbea1455bec35d7d8739b482250427afd30",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "37013168070301",
+      "subject_name": "Pharmacy Practice",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 7,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "37013168070601",
+      "subject_name": "Practice School",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 7,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "37013168070501",
+      "subject_name": "Quality Assurance",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 7,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 3,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 3,
+    "extraction_errors": 0
+  }
+}

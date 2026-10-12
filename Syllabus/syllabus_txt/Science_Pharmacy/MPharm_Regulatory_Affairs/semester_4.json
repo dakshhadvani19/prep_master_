@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "m-pharm-regulatory-affairs",
+    "course_name": "M.Pharm Regulatory Affairs",
+    "output_slug": "MPharm_Regulatory_Affairs"
+  },
+  "semester": 4,
+  "subject_count": 3,
+  "subjects": [
+    {
+      "subject_id": "40131318040101",
+      "subject_name": "Pharma Journal Club-2",
+      "course_id": "m-pharm-regulatory-affairs",
+      "course_name": "M.Pharm Regulatory Affairs",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "catalog_action": "NO_COURSE_CODE_MISMATCH",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Pharma Journal Club-2 [18fcff7bf4e9].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_COURSE_CODE_MISMATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "The title-level PDF is retained only as a candidate for matching course-code scope. This occurrence's catalog codes (13MR0401 | 13MR0402 | 13MR0403) do not match the selected PDF's declared codes (13MC0401)."
+      ],
+      "pdf_verification_status": "NO_COURSE_CODE_MISMATCH"
+    },
+    {
+      "subject_id": "40131318040201",
+      "subject_name": "Research Progress Presentation",
+      "course_id": "m-pharm-regulatory-affairs",
+      "course_name": "M.Pharm Regulatory Affairs",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "catalog_action": "NO_COURSE_CODE_MISMATCH",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Research Progress Presentation [0e38b38fccd2].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_COURSE_CODE_MISMATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "The title-level PDF is retained only as a candidate for matching course-code scope. This occurrence's catalog codes (13MR0402 | 13MR0403) do not match the selected PDF's declared codes (13MC0402)."
+      ],
+      "pdf_verification_status": "NO_COURSE_CODE_MISMATCH"
+    },
+    {
+      "subject_id": "40131318040301",
+      "subject_name": "Research Work and Colloquium",
+      "course_id": "m-pharm-regulatory-affairs",
+      "course_name": "M.Pharm Regulatory Affairs",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "catalog_action": "NO_COURSE_CODE_MISMATCH",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Research Work and Colloquium [56d212800c99].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_COURSE_CODE_MISMATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "COURSE_CODE_MISMATCH_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "The title-level PDF is retained only as a candidate for matching course-code scope. This occurrence's catalog codes (13MR0403) do not match the selected PDF's declared codes (13MC0403)."
+      ],
+      "pdf_verification_status": "NO_COURSE_CODE_MISMATCH"
+    }
+  ],
+  "build_summary": {
+    "extracted": 0,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 3,
+    "extraction_errors": 0
+  }
+}

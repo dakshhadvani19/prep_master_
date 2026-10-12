@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-pharm",
+    "course_name": "B.Pharm",
+    "output_slug": "BPharm"
+  },
+  "semester": 3,
+  "subject_count": 5,
+  "subjects": [
+    {
+      "subject_id": "37013168030301",
+      "subject_name": "Biochemistry",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "MANUAL_COURSE_SCOPE_REVIEW",
+      "catalog_action": "NO_PENDING_MANUAL_REVIEW",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Review_Required/Biochemistry [11823e834222].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_PENDING_MANUAL_REVIEW",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "MANUAL_COURSE_SCOPE_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Biochemistry was sourced from a PDF named BIOCHEMISTRY-BPT-103 and extracted pages did not expose the expected B.Pharm/M.Sc Microbiology course code. Moved out of the verified tier pending course-specific review."
+      ],
+      "pdf_verification_status": "NO_PENDING_MANUAL_REVIEW"
+    },
+    {
+      "subject_id": "37013168030401",
+      "subject_name": "Pathophysiology",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "37013168030101",
+      "subject_name": "Pharmaceutical Organic Chemistry-II",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 3,
+      "subject_code": "13PH0301",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/13PH0301.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Pharmaceutical Organic Chemistry-II [13d39e5d832f].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Pharmaceutical Organic Chemistry-II [13d39e5d832f].pdf",
+      "expected_pdf_sha256": "f3cda255b3ff9e581c4d456bcccd658c4fbeb337c1cf69cb592b2395073127bf",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PHARMACEUTICAL ORGANIC CHEMISTRY-II",
+        "course_code": "13PH0301",
+        "semester_label": "3",
+        "credits": 6,
+        "prerequisite": "The syllabus emphasizes on mechanisms and orientation of reactions. Chemistry of fats and oils are also included in the syllabus."
+      },
+      "objectives": [
+        "Write the structure, name and the type of isomerism of the organic compound",
+        "Write the reaction, name the reaction and orientation of reactions",
+        "Account for reactivity/stability of compounds,",
+        "Prepare organic compounds",
+        "The syllabus emphasizes on mechanisms and orientation of reactions. Chemistry of fats and oils are also included in the syllabus."
+      ],
+      "course_outcomes": [
+        "Understand mechanisms and orientation of chemical reactions.",
+        "Acquire basic knowledge regarding general methods of preparation of organic compounds.",
+        "Understand the reactions and reactivity of some organic compounds and Apply knowledge of heterocyclic compounds, electrophilic and nucleophilic reactions.",
+        "Understand the chemistry of fats and oils. Pre-requisite of course:The syllabus emphasizes on mechanisms and orientation of reactions. Chemistry of fats and oils are also included in the syllabus."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 4 75 15 10 35 15",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Benzene and its derivatives:",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Analytical, synthetic and other evidences in the derivation of",
+              "structure of benzene, Orbital picture, resonance in benzene,",
+              "aromatic characters, Huckel’s rule. ? Reactions of benzene -",
+              "nitration, sulphonation, halogenation - reactivity, Friedelcrafts",
+              "alkylation - reactivity, limitations, Friedelcrafts acylation. ?",
+              "Substituents, effect of substituents on reactivity and orientation of",
+              "mono substituted benzene compounds towards electrophilic",
+              "substitution reaction. ? Structure and uses of DDT, Saccharin, BHC",
+              "and Chloramine."
+            ],
+            "topics_text": "Analytical, synthetic and other evidences in the derivation of structure of benzene, Orbital picture, resonance in benzene, aromatic characters, Huckel’s rule. ? Reactions of benzene - nitration, sulphonation, halogenation - reactivity, Friedelcrafts alkylation - reactivity, limitations, Friedelcrafts acylation. ? Substituents, effect of substituents on reactivity and orientation of mono substituted benzene compounds towards electrophilic substitution reaction. ? Structure and uses of DDT, Saccharin, BHC and Chloramine.",
+            "topics": [
+              "Analytical, synthetic and other evidences in the derivation of",
+              "structure of benzene, Orbital picture, resonance in benzene,",
+              "aromatic characters, Huckel’s rule. ? Reactions of benzene",
+              "nitration, sulphonation, halogenation - reactivity, Friedelcrafts",
+              "alkylation - reactivity, limitations, Friedelcrafts acylation. ?",
+              "Substituents, effect of substituents on reactivity and orientation of",
+              "mono substituted benzene compounds towards electrophilic",
+              "substitution reaction. ? Structure and uses of DDT, Saccharin, BHC",
+              "and Chloramine."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Phenols",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Acidity of phenols, effect of substituents on acidity, qualitative tests,",
+              "Structure and uses of phenol, cresols, resorcinol, naphthols.",
+              "Aromatic Amines: Basicity of amines, effect of substituents on",
+              "basicity, and synthetic uses of aryl diazonium salts. Aromatic Acids:",
+              "Acidity, effect of substituents on acidity and important reactions of",
+              "benzoic acid."
+            ],
+            "topics_text": "Acidity of phenols, effect of substituents on acidity, qualitative tests, Structure and uses of phenol, cresols, resorcinol, naphthols. Aromatic Amines: Basicity of amines, effect of substituents on basicity, and synthetic uses of aryl diazonium salts. Aromatic Acids: Acidity, effect of substituents on acidity and important reactions of benzoic acid.",
+            "topics": [
+              "Acidity of phenols, effect of substituents on acidity, qualitative tests,",
+              "Structure and uses of phenol, cresols, resorcinol, naphthols.",
+              "Aromatic Amines: Basicity of amines, effect of substituents on",
+              "basicity, and synthetic uses of aryl diazonium salts. Aromatic Acids:",
+              "Acidity, effect of substituents on acidity and important reactions of",
+              "benzoic acid."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Fats and Oils:",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Fatty acids – reactions. Hydrolysis, Hydrogenation, Saponification",
+              "and Rancidity of oils, Drying oils. Analytical constants – Acid",
+              "value, Saponification value, Ester value, Iodine value, Acetyl value,",
+              "Reichert Meissl (RM) value – significance and principle involved in",
+              "their determination."
+            ],
+            "topics_text": "Fatty acids – reactions. Hydrolysis, Hydrogenation, Saponification and Rancidity of oils, Drying oils. Analytical constants – Acid value, Saponification value, Ester value, Iodine value, Acetyl value, Reichert Meissl (RM) value – significance and principle involved in their determination.",
+            "topics": [
+              "Fatty acids – reactions. Hydrolysis, Hydrogenation, Saponification",
+              "and Rancidity of oils, Drying oils. Analytical constants – Acid",
+              "value, Saponification value, Ester value, Iodine value, Acetyl value,",
+              "Reichert Meissl (RM) value – significance and principle involved in",
+              "their determination."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Polynuclear hydrocarbons:",
+            "contact_hours": 8,
+            "topic_lines": [
+              "? Synthesis, reactions. ? Structure and medicinal uses of",
+              "Naphthalene, Phenanthrene, Anthracene, Diphenylmethane,",
+              "Triphenylmethane and their derivatives.? Synthesis, reactions. ?",
+              "Structure and medicinal uses of Naphthalene, Phenanthrene,",
+              "Anthracene, Diphenylmethane, Triphenylmethane and their",
+              "derivatives."
+            ],
+            "topics_text": "? Synthesis, reactions. ? Structure and medicinal uses of Naphthalene, Phenanthrene, Anthracene, Diphenylmethane, Triphenylmethane and their derivatives.? Synthesis, reactions. ? Structure and medicinal uses of Naphthalene, Phenanthrene, Anthracene, Diphenylmethane, Triphenylmethane and their derivatives.",
+            "topics": [
+              "? Synthesis, reactions. ? Structure and medicinal uses of",
+              "Naphthalene, Phenanthrene, Anthracene, Diphenylmethane,",
+              "Triphenylmethane and their derivatives.? Synthesis, reactions. ?",
+              "Structure and medicinal uses of Naphthalene, Phenanthrene,",
+              "Anthracene, Diphenylmethane, Triphenylmethane and their",
+              "derivatives."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Cyclo alkanes:",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Stabilities – Baeyer’s strain theory, limitation of Baeyer’s strain",
+              "theory, Coulson and Moffitt’s modification, Sachse Mohr’s theory",
+              "(Theory of strain less rings), reactions of cyclopropane and",
+              "cyclobutane only.",
+              "Total Hours 45"
+            ],
+            "topics_text": "Stabilities – Baeyer’s strain theory, limitation of Baeyer’s strain theory, Coulson and Moffitt’s modification, Sachse Mohr’s theory (Theory of strain less rings), reactions of cyclopropane and cyclobutane only. Total Hours 45",
+            "topics": [
+              "Stabilities – Baeyer’s strain theory, limitation of Baeyer’s strain",
+              "theory, Coulson and Moffitt’s modification, Sachse Mohr’s theory",
+              "(Theory of strain less rings), reactions of cyclopropane and",
+              "cyclobutane only.",
+              "Total Hours 45"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical",
+            "contact_hours": 60,
+            "topic_lines": [
+              "Experiment no.1, Experiment no.2, Experiment no.3, Experiment",
+              "no.4, Experiment no.5, Experiment no.6, Experiment no.7,",
+              "Experiment no.8, Experiment no.9, Experiment no.10, Experiment",
+              "no.11, Experiment no.12, Experiment no.13"
+            ],
+            "topics_text": "Experiment no.1, Experiment no.2, Experiment no.3, Experiment no.4, Experiment no.5, Experiment no.6, Experiment no.7, Experiment no.8, Experiment no.9, Experiment no.10, Experiment no.11, Experiment no.12, Experiment no.13",
+            "topics": [
+              "Experiment no.1, Experiment no.2, Experiment no.3, Experiment",
+              "no.4, Experiment no.5, Experiment no.6, Experiment no.7,",
+              "Experiment no.8, Experiment no.9, Experiment no.10, Experiment",
+              "no.11, Experiment no.12, Experiment no.13"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Tutorial",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Workshop 1, Workshop 2, Workshop 3, Workshop 4, Workshop 5,",
+              "Workshop 6, Workshop 7, Workshop 8, Workshop 9, Workshop 10,",
+              "Workshop 11, Workshop 12, Workshop 13, Workshop 14,",
+              "Workshop 15",
+              "Total Hours 75",
+              "Textbook :",
+              "1 Organic Chemistry , Morrison and Boyd, Pearson Education India, 2010"
+            ],
+            "topics_text": "Workshop 1, Workshop 2, Workshop 3, Workshop 4, Workshop 5, Workshop 6, Workshop 7, Workshop 8, Workshop 9, Workshop 10, Workshop 11, Workshop 12, Workshop 13, Workshop 14, Workshop 15 Total Hours 75 Textbook : 1 Organic Chemistry , Morrison and Boyd, Pearson Education India, 2010",
+            "topics": [
+              "Workshop 1, Workshop 2, Workshop 3, Workshop 4, Workshop 5,",
+              "Workshop 6, Workshop 7, Workshop 8, Workshop 9, Workshop 10,",
+              "Workshop 11, Workshop 12, Workshop 13, Workshop 14,",
+              "Workshop 15",
+              "Total Hours 75",
+              "Textbook :",
+              "1 Organic Chemistry , Morrison and Boyd, Pearson Education India, 2010"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Organic Chemistry Vol. 1 , Organic Chemistry Vol. 1 , I.L. Finar, Pearson Education India, 2002",
+          "A Textbook of Organic Chemistry , A Textbook of Organic Chemistry , B. S. Bahl & Arun Bahl. , S Chand & Company, 2016",
+          "Textbook of Organic Chemistry , Textbook of Organic Chemistry , P. L. Soni, Sultan Chand & Sons, 2012",
+          "Practical Organic Chemistry, fourth edition, Practical Organic Chemistry, fourth edition, Mann and Saunders. , Pearson Education India, 2009",
+          "Vogel's Textbook of Practical Organic Chemistry, 5 edition, Vogel's Textbook of Practical Organic Chemistry, 5 edition, Brian S. Furniss, Pearson India, 2003",
+          "Advanced Practical Organic Chemistry, Advanced Practical Organic Chemistry, N. K. Vishnoi, S Chand, 2010",
+          "Introduction to Organic Laboratory Techniques: A Small-Scale Approach, International Edition, Introduction to Organic Laboratory Techniques: A Small-Scale Approach, International Edition, Donald L. Pavia, Brooks/Cole, 2010"
+        ],
+        "textbooks": [
+          "Organic Chemistry , Morrison and Boyd, Pearson Education India, 2010"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 8171,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF PHARMACY\nPROGRAM       BACHELOR OF PHARMACY\nSEMESTER         3\nCOURSE TITLE    PHARMACEUTICAL ORGANIC CHEMISTRY-II\nCOURSE CODE     13PH0301\nCOURSE CREDITS  6\n\nObjective:\n 1  Write the structure, name and the type of isomerism of the organic compound\n 2  Write the reaction, name the reaction and orientation of reactions\n 3  Account for reactivity/stability of compounds,\n 4  Prepare organic compounds\n 5  The syllabus emphasizes on mechanisms and orientation of reactions. Chemistry of fats and\n      oils are also included in the syllabus.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand mechanisms and orientation of chemical reactions.\n 2  Acquire basic knowledge regarding general methods of preparation of organic compounds.\n 3  Understand the reactions and reactivity of some organic compounds and Apply knowledge\n     of heterocyclic compounds, electrophilic and nucleophilic reactions.\n 4  Understand the chemistry of fats and oils.\n\n\nPre-requisite of course:The syllabus emphasizes on mechanisms and orientation of reactions.\nChemistry of fats and oils are also included in the syllabus.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            4        75     15      10        35         15\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Benzene and its derivatives:                                10\n               Analytical, synthetic and other evidences in the derivation of\n               structure of benzene, Orbital picture, resonance in benzene,\n              aromatic characters, Huckel’s rule. ? Reactions of benzene -\n                nitration, sulphonation, halogenation - reactivity, Friedelcrafts\n               alkylation - reactivity, limitations, Friedelcrafts acylation. ?\n               Substituents, effect of substituents on reactivity and orientation of\n          mono substituted benzene compounds towards electrophilic\n               substitution reaction. ? Structure and uses of DDT, Saccharin, BHC\n            and Chloramine.\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Phenols                                                 10\n              Acidity of phenols, effect of substituents on acidity, qualitative tests,\n               Structure and uses of phenol, cresols, resorcinol, naphthols.\n             Aromatic Amines: Basicity of amines, effect of substituents on\n                basicity, and synthetic uses of aryl diazonium salts. Aromatic Acids:\n               Acidity, effect of substituents on acidity and important reactions of\n             benzoic acid.\n     3      Fats and Oils:                                            10\n               Fatty acids – reactions. Hydrolysis, Hydrogenation, Saponification\n            and Rancidity of oils, Drying oils. Analytical constants – Acid\n               value, Saponification value, Ester value, Iodine value, Acetyl value,\n              Reichert Meissl (RM) value – significance and principle involved in\n                their determination.\n     4      Polynuclear hydrocarbons:                                8\n             ? Synthesis, reactions. ? Structure and medicinal uses of\n              Naphthalene, Phenanthrene, Anthracene, Diphenylmethane,\n             Triphenylmethane and their derivatives.? Synthesis, reactions. ?\n               Structure and medicinal uses of Naphthalene, Phenanthrene,\n              Anthracene, Diphenylmethane, Triphenylmethane and their\n               derivatives.\n     5      Cyclo alkanes:                                           7\n                Stabilities – Baeyer’s strain theory, limitation of Baeyer’s strain\n               theory, Coulson and Moffitt’s modification, Sachse Mohr’s theory\n             (Theory of strain less rings), reactions of cyclopropane and\n              cyclobutane only.\n                               Total Hours                       45\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical                                                60\n             Experiment no.1, Experiment no.2, Experiment no.3, Experiment\n               no.4, Experiment no.5, Experiment no.6, Experiment no.7,\n             Experiment no.8, Experiment no.9, Experiment no.10, Experiment\n              no.11, Experiment no.12, Experiment no.13\n     2       Tutorial                                                 15\n           Workshop 1, Workshop 2, Workshop 3, Workshop 4, Workshop 5,\n           Workshop 6, Workshop 7, Workshop 8, Workshop 9, Workshop 10,\n           Workshop 11, Workshop 12, Workshop 13, Workshop 14,\n           Workshop 15\n                               Total Hours                       75\n\nTextbook :\n 1  Organic Chemistry , Morrison and Boyd, Pearson Education India, 2010\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 1  Organic Chemistry Vol. 1 , Organic Chemistry Vol. 1 , I.L. Finar, Pearson Education India,\n    2002\n 2 A Textbook of Organic Chemistry , A Textbook of Organic Chemistry , B. S. Bahl & Arun\n     Bahl. , S Chand & Company, 2016\n 3  Textbook of Organic Chemistry , Textbook of Organic Chemistry , P. L. Soni, Sultan\n    Chand & Sons, 2012\n 4  Practical Organic Chemistry, fourth edition, Practical Organic Chemistry, fourth edition,\n   Mann and Saunders. , Pearson Education India, 2009\n 5  Vogel's Textbook of Practical Organic Chemistry, 5 edition, Vogel's Textbook of Practical\n    Organic Chemistry, 5 edition, Brian S. Furniss, Pearson India, 2003\n 6  Advanced Practical Organic Chemistry, Advanced Practical Organic Chemistry, N. K.\n     Vishnoi, S Chand, 2010\n 7  Introduction to Organic Laboratory Techniques: A Small-Scale Approach, International\n     Edition, Introduction to Organic Laboratory Techniques: A Small-Scale Approach,\n     International Edition, Donald L. Pavia, Brooks/Cole, 2010\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and the need of\n     students. The teacher in addition to the conventional teaching method by the blackboard\n    may also use any tools such as demonstration, role play, quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, MOOCs/\n     e-courses, virtual laboratories.\n\n\n\n\n\nDR. RAMESH BHANAJIBHAI PARMAR                   DR. LALJI HAKUBHAI BALDANIYA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "f3cda255b3ff9e581c4d456bcccd658c4fbeb337c1cf69cb592b2395073127bf",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "37013168030501",
+      "subject_name": "Pharmacognosy and Phytochemistry-I",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "37013168030201",
+      "subject_name": "Physical Pharmaceutics-I",
+      "course_id": "b-pharm",
+      "course_name": "B.Pharm",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 1,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 4,
+    "extraction_errors": 0
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "m-sc-in-micorbiology",
+    "course_name": "M.Sc in MicorBiology",
+    "output_slug": "MSc_in_Microbiology"
+  },
+  "semester": 3,
+  "subject_count": 4,
+  "subjects": [
+    {
+      "subject_id": "35002132050101",
+      "subject_name": "Bioprocess Technology",
+      "course_id": "m-sc-in-micorbiology",
+      "course_name": "M.Sc in MicorBiology",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "35021912050101",
+      "subject_name": "Effective Communication skills-II",
+      "course_id": "m-sc-in-micorbiology",
+      "course_name": "M.Sc in MicorBiology",
+      "semester": 3,
+      "subject_code": "02SL0501",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/05/02SL0501-Effective-communications-skills-II.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Effective Communication skills-II [fbb23d1ac3bf].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Effective Communication skills-II [fbb23d1ac3bf].pdf",
+      "expected_pdf_sha256": "fc77aa1c75ea1a949f8048f6a791380e44a0337dbf39854c96e48ad88019a55d",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Effective Communication Skills - II",
+        "course_code": "02SL0501",
+        "semester_label": "III",
+        "credits": 2,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "1: Effective Writing Skills",
+            "contact_hours": null,
+            "topic_lines": [
+              "1. Email Writing",
+              "2. Writing a Research Proposal",
+              "3. Writing a Cover Letter and Resume",
+              "4. Writing Minutes of Meetings",
+              "5. Writing Notices",
+              "6. Proof Reading and Editing"
+            ],
+            "topics_text": "1. Email Writing 2. Writing a Research Proposal 3. Writing a Cover Letter and Resume 4. Writing Minutes of Meetings 5. Writing Notices 6. Proof Reading and Editing",
+            "topics": [
+              "1. Email Writing",
+              "2. Writing a Research Proposal",
+              "3. Writing a Cover Letter and Resume",
+              "4. Writing Minutes of Meetings",
+              "5. Writing Notices",
+              "6. Proof Reading and Editing"
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "2: Effective Interview Skills",
+            "contact_hours": null,
+            "topic_lines": [
+              "1. Group Discussion",
+              "2. Decoding Interview Questions (FAQs)",
+              "3. How to answer information based questions?",
+              "4. How to answer opinion based questions?",
+              "5. How to answer (handle) tricky questions?",
+              "6. Simulated Interview (Mock Interview)",
+              "Marwadi University Page 13 of 25",
+              "Marwadi University",
+              "Master of Science",
+              "Department of Microbiology",
+              "Semester III",
+              "Subject Code: 02SL0501 - Subject Credits: 02",
+              "Subject Name: Effective Communication Skills - II",
+              "Teaching Scheme",
+              "Teaching",
+              "Scheme",
+              "(Hours Evaluation Scheme",
+              "Total per",
+              "Marks week)",
+              "Viva",
+              "Theory ESE IA CSE Term Work"
+            ],
+            "topics_text": "1. Group Discussion 2. Decoding Interview Questions (FAQs) 3. How to answer information based questions? 4. How to answer opinion based questions? 5. How to answer (handle) tricky questions? 6. Simulated Interview (Mock Interview) Marwadi University Page 13 of 25 Marwadi University Master of Science Department of Microbiology Semester III Subject Code: 02SL0501 - Subject Credits: 02 Subject Name: Effective Communication Skills - II Teaching Scheme Teaching Scheme (Hours Evaluation Scheme Total per Marks week) Viva Theory ESE IA CSE Term Work",
+            "topics": [
+              "1. Group Discussion",
+              "2. Decoding Interview Questions (FAQs)",
+              "3. How to answer information based questions?",
+              "4. How to answer opinion based questions?",
+              "5. How to answer (handle) tricky questions?",
+              "6. Simulated Interview (Mock Interview)",
+              "Marwadi University Page 13 of 25",
+              "Marwadi University",
+              "Master of Science",
+              "Department of Microbiology",
+              "Semester III",
+              "Subject Code: 02SL0501 - Subject Credits: 02",
+              "Subject Name: Effective Communication Skills - II",
+              "Teaching Scheme",
+              "Teaching",
+              "Scheme",
+              "(Hours Evaluation Scheme",
+              "Total per",
+              "Marks week)",
+              "Viva",
+              "Theory ESE IA CSE Term Work"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Hours 00 30 20 25 25",
+            "contact_hours": 100,
+            "topic_lines": [
+              "1. IA will consist of the following components (30 marks):",
+              "a. Assignments (20 Marks): Students will prepare three oral assignments.",
+              "b. In-Class Participation (10 Marks)",
+              "2. CSE (20 marks):",
+              "a. (Term End Simulation): Students will carry out simulated tasks at the",
+              "end of the semester. It would comprise individual and group tasks.",
+              "3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be",
+              "based on the CSE, Term Work, Assignments and topics covered in the syllabus.",
+              "4. Term Work (25 Marks):",
+              "a. (Term-End Presentation): Students will make a presentation based on",
+              "topics provided by the faculty, at the end of the semester.",
+              "Marwadi University Page 14 of 25",
+              "Marwadi University",
+              "Master of Science",
+              "Department of Microbiology",
+              "Semester III",
+              "Subject Code: 02SL0501 - Subject Credits: 02",
+              "Subject Name: Effective Communication Skills - II",
+              "Recommended Readings",
+              " Online article:Letterbarn: Sample Employment and Workplace",
+              "Letters: http://letterbarn.blogspot.in/2008/12/sample-recruitment-letters-",
+              "training-and.html",
+              " Online article: Business letter examples: https://www.thebalance.com/business-",
+              "letter-examples-samples-and-writing-tips-2059673",
+              " BBC Learning English video: Writing an Email-18-English at",
+              "work: https://youtu.be/aO3Det4ir8U",
+              " BBC Article: English for",
+              "Email: https://learnenglish.britishcouncil.org/en/english-emails",
+              " Blog: My School: How to write notice and circular: http://english-",
+              "cbse.blogspot.in/2011/09/how-to-write-notice-and-circulars.html",
+              " Online article: Drafting of Notices, Circulars, Minutes and",
+              "Resolutions: http://www.yourarticlelibrary.com/business/reports/drafting-of-",
+              "notices-circulars-minutes-and-resolutions/75904/",
+              "Marwadi University Page 15 of 25"
+            ],
+            "topics_text": "1. IA will consist of the following components (30 marks): a. Assignments (20 Marks): Students will prepare three oral assignments. b. In-Class Participation (10 Marks) 2. CSE (20 marks): a. (Term End Simulation): Students will carry out simulated tasks at the end of the semester. It would comprise individual and group tasks. 3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be based on the CSE, Term Work, Assignments and topics covered in the syllabus. 4. Term Work (25 Marks): a. (Term-End Presentation): Students will make a presentation based on topics provided by the faculty, at the end of the semester. Marwadi University Page 14 of 25 Marwadi University Master of Science Department of Microbiology Semester III Subject Code: 02SL0501 - Subject Credits: 02 Subject Name: Effective Communication Skills - II Recommended Readings  Online article:Letterbarn: Sample Employment and Workplace Letters: http://letterbarn.blogspot.in/2008/12/sample-recruitment-letters- training-and.html  Online article: Business letter examples: https://www.thebalance.com/business- letter-examples-samples-and-writing-tips-2059673  BBC Learning English video: Writing an Email-18-English at work: https://youtu.be/aO3Det4ir8U  BBC Article: English for Email: https://learnenglish.britishcouncil.org/en/english-emails  Blog: My School: How to write notice and circular: http://english- cbse.blogspot.in/2011/09/how-to-write-notice-and-circulars.html  Online article: Drafting of Notices, Circulars, Minutes and Resolutions: http://www.yourarticlelibrary.com/business/reports/drafting-of- notices-circulars-minutes-and-resolutions/75904/ Marwadi University Page 15 of 25",
+            "topics": [
+              "1. IA will consist of the following components (30 marks):",
+              "a. Assignments (20 Marks): Students will prepare three oral assignments.",
+              "b. In-Class Participation (10 Marks)",
+              "2. CSE (20 marks):",
+              "a. (Term End Simulation): Students will carry out simulated tasks at the",
+              "end of the semester. It would comprise individual and group tasks.",
+              "3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be",
+              "based on the CSE, Term Work, Assignments and topics covered in the syllabus.",
+              "4. Term Work (25 Marks):",
+              "a. (Term-End Presentation): Students will make a presentation based on",
+              "topics provided by the faculty, at the end of the semester.",
+              "Marwadi University Page 14 of 25",
+              "Marwadi University",
+              "Master of Science",
+              "Department of Microbiology",
+              "Semester III",
+              "Subject Code: 02SL0501 - Subject Credits: 02",
+              "Subject Name: Effective Communication Skills - II",
+              "Recommended Readings",
+              " Online article:Letterbarn: Sample Employment and Workplace",
+              "Letters: http://letterbarn.blogspot.in/2008/12/sample-recruitment-letters",
+              "training-and.html",
+              " Online article: Business letter examples: https://www.thebalance.com/business",
+              "letter-examples-samples-and-writing-tips-2059673",
+              " BBC Learning English video: Writing an Email-18-English at",
+              "work: https://youtu.be/aO3Det4ir8U",
+              " BBC Article: English for",
+              "Email: https://learnenglish.britishcouncil.org/en/english-emails",
+              " Blog: My School: How to write notice and circular: http://english",
+              "cbse.blogspot.in/2011/09/how-to-write-notice-and-circulars.html",
+              " Online article: Drafting of Notices, Circulars, Minutes and",
+              "Resolutions: http://www.yourarticlelibrary.com/business/reports/drafting-of",
+              "notices-circulars-minutes-and-resolutions/75904/",
+              "Marwadi University Page 15 of 25"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 4366,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                      Master of Science\n                Department of Microbiology\n                       Semester III\n\n                  Subject Code: 02SL0501 - Subject Credits: 02\n                Subject Name: Effective Communication Skills - II\n\nCourse Description\n\nThe course aims  at developing student’s  ability to communicate in English in formal\ncontexts.It will also help students enhance their language skills with reference to interviews.\nThe course will include different interactive activities on diverse aspects of spoken and\nwritten communication through experiential learning.\nCourse Objectives\n\nThe course will enable students\n\n      to become proficient in formal communication in English\n      to prepare for group discussions and personal interviews\n\nUnit 1: Effective Writing Skills\n\n    1.  Email Writing\n\n    2.  Writing a Research Proposal\n\n    3.  Writing a Cover Letter and Resume\n\n    4.  Writing Minutes of Meetings\n\n    5.  Writing Notices\n\n    6.  Proof Reading and Editing\n\nUnit 2: Effective Interview Skills\n\n   1. Group Discussion\n\n    2.  Decoding Interview Questions (FAQs)\n\n    3. How to answer information based questions?\n\n    4. How to answer opinion based questions?\n\n    5. How to answer (handle) tricky questions?\n\n    6.  Simulated Interview (Mock Interview)\n\n\n\n\nMarwadi University                                                  Page 13 of 25"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                      Master of Science\n                Department of Microbiology\n                       Semester III\n\n                  Subject Code: 02SL0501 - Subject Credits: 02\n                Subject Name: Effective Communication Skills - II\n\n\nTeaching Scheme\n\nTeaching\n Scheme\n (Hours                         Evaluation Scheme\n                                                                              Total   per\n                                                                 Marks  week)\n                                                    Viva\n Theory      ESE         IA        CSE             Term Work\n\n02 Hours      00        30        20        25        25       100\n\n    1. IA will consist of the following components (30 marks):\n\n             a.  Assignments (20 Marks): Students will prepare three oral assignments.\n\n            b.  In-Class Participation (10 Marks)\n\n    2. CSE (20 marks):\n             a. (Term End Simulation): Students will carry out simulated tasks at the\n\n           end of the semester. It would comprise individual and group tasks.\n\n    3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be\n\n      based on the CSE, Term Work, Assignments and topics covered in the syllabus.\n\n    4. Term Work (25 Marks):\n\n             a. (Term-End Presentation): Students will make a presentation based on\n\n              topics provided by the faculty, at the end of the semester.\n\n\n\n\n\nMarwadi University                                                  Page 14 of 25"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                      Master of Science\n                Department of Microbiology\n                       Semester III\n\n                  Subject Code: 02SL0501 - Subject Credits: 02\n                Subject Name: Effective Communication Skills - II\n\n\n\n\nRecommended Readings\n\n      Online    article:Letterbarn:   Sample   Employment   and    Workplace\n       Letters: http://letterbarn.blogspot.in/2008/12/sample-recruitment-letters-\n       training-and.html\n\n      Online article: Business letter examples: https://www.thebalance.com/business-\n       letter-examples-samples-and-writing-tips-2059673\n\n      BBC   Learning   English    video:   Writing   an   Email-18-English    at\n      work: https://youtu.be/aO3Det4ir8U\n\n      BBC                                Article: English                              for\n       Email: https://learnenglish.britishcouncil.org/en/english-emails\n\n      Blog:  My  School:  How  to  write  notice  and   circular: http://english-\n       cbse.blogspot.in/2011/09/how-to-write-notice-and-circulars.html\n     Online     article:    Drafting    of    Notices,    Circulars,   Minutes   and\n       Resolutions: http://www.yourarticlelibrary.com/business/reports/drafting-of-\n       notices-circulars-minutes-and-resolutions/75904/\n\n\n\n\n\nMarwadi University                                                  Page 15 of 25"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata."
+      ],
+      "actual_pdf_sha256": "fc77aa1c75ea1a949f8048f6a791380e44a0337dbf39854c96e48ad88019a55d",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "35002132150301",
+      "subject_name": "Molecular Biology",
+      "course_id": "m-sc-in-micorbiology",
+      "course_name": "M.Sc in MicorBiology",
+      "semester": 3,
+      "subject_code": "02MB0463",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/05/02MB0463-Fund-Mol-biology.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Molecular Biology [962ed7e0366a].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Molecular Biology [962ed7e0366a].pdf",
+      "expected_pdf_sha256": "44d62df75d3e4cfdcbe718938e011420671c9ae6caaced8fd64a57dc717ad7d6",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "FUNDAMENTAL MOLECULAR BIOLOGY",
+        "course_code": "02MB0463",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "N.A."
+      },
+      "objectives": [
+        "To develop a better understanding of Molecular biology's fundamentals, emphasizing on key areas of current biology."
+      ],
+      "course_outcomes": [
+        "Develop a profound understanding of the fundamental principles of molecular biology.",
+        "Comprehend the scientific basis of the current understanding in the broad domain of molecular biology.",
+        "Understand the ways to manipulate biological systems at the molecular level for scientific or technological gains.",
+        "Devise suitable strategies using the knowledge in molecular biology to solve technical problems. Pre-requisite of course:N.A."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Nucleic Acid Structure And Genome Organization",
+            "contact_hours": 14,
+            "topic_lines": [
+              "DNA as a genetic material, DNA structure, DNA topology,",
+              "supercoiling, topoisomerases I and II, C-value paradox, structure of",
+              "mRNA, rRNA and tRNA; DNA packaging, structure of chromatin",
+              "and chromosomes, DNA-protein interactions, interrupted genes,",
+              "gene families, unique and repetitive DNA, transposons"
+            ],
+            "topics_text": "DNA as a genetic material, DNA structure, DNA topology, supercoiling, topoisomerases I and II, C-value paradox, structure of mRNA, rRNA and tRNA; DNA packaging, structure of chromatin and chromosomes, DNA-protein interactions, interrupted genes, gene families, unique and repetitive DNA, transposons",
+            "topics": [
+              "DNA as a genetic material, DNA structure, DNA topology,",
+              "supercoiling, topoisomerases I and II, C-value paradox, structure of",
+              "mRNA, rRNA and tRNA",
+              "DNA packaging, structure of chromatin",
+              "and chromosomes, DNA-protein interactions, interrupted genes,",
+              "gene families, unique and repetitive DNA, transposons"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "DNA replication, recombination and repair",
+            "contact_hours": 16,
+            "topic_lines": [
+              "DNA replication in prokaryotes and eukaryotes; enzymes involved",
+              "and mechanism of replication, regulation of replication, role of",
+              "telomerases, Replication of extra-chromosomal DNA, inhibitors of",
+              "replication., Homologous and site specific Recombination,",
+              "Mechanism of recombination, DNA Mutation and repair:",
+              "Spontaneous and Induced mutations, Physical and Chemical",
+              "mutagenesis, Molecular mechanisms of mutagenesis – Transition,",
+              "Transversion, Frame Shifts, mis-sense and non-sense mutations,",
+              "Photo-reactivation, Excision Repair, Mismatch Repair, Post-",
+              "replication Repair, SOS Repair."
+            ],
+            "topics_text": "DNA replication in prokaryotes and eukaryotes; enzymes involved and mechanism of replication, regulation of replication, role of telomerases, Replication of extra-chromosomal DNA, inhibitors of replication., Homologous and site specific Recombination, Mechanism of recombination, DNA Mutation and repair: Spontaneous and Induced mutations, Physical and Chemical mutagenesis, Molecular mechanisms of mutagenesis – Transition, Transversion, Frame Shifts, mis-sense and non-sense mutations, Photo-reactivation, Excision Repair, Mismatch Repair, Post- replication Repair, SOS Repair.",
+            "topics": [
+              "DNA replication in prokaryotes and eukaryotes",
+              "enzymes involved",
+              "and mechanism of replication, regulation of replication, role of",
+              "telomerases, Replication of extra-chromosomal DNA, inhibitors of",
+              "replication., Homologous and site specific Recombination,",
+              "Mechanism of recombination, DNA Mutation and repair:",
+              "Spontaneous and Induced mutations, Physical and Chemical",
+              "mutagenesis, Molecular mechanisms of mutagenesis – Transition,",
+              "Transversion, Frame Shifts, mis-sense and non-sense mutations,",
+              "Photo-reactivation, Excision Repair, Mismatch Repair, Post",
+              "replication Repair, SOS Repair."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Transcription",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Organization of transcriptional units, transcription factors,",
+              "transcription activators and repressors, RNA polymerases.",
+              "Prokaryotic transcription, eukaryotic transcription - initiation,",
+              "elongation and termination events (Rho dependent, Rho",
+              "independent termination) post transcriptional modifications, RNA",
+              "transport, RNA splicing and processing, mRNA stability and",
+              "localization, catalytic RNA, non-coding RNAs"
+            ],
+            "topics_text": "Organization of transcriptional units, transcription factors, transcription activators and repressors, RNA polymerases. Prokaryotic transcription, eukaryotic transcription - initiation, elongation and termination events (Rho dependent, Rho independent termination) post transcriptional modifications, RNA transport, RNA splicing and processing, mRNA stability and localization, catalytic RNA, non-coding RNAs",
+            "topics": [
+              "Organization of transcriptional units, transcription factors,",
+              "transcription activators and repressors, RNA polymerases.",
+              "Prokaryotic transcription, eukaryotic transcription - initiation,",
+              "elongation and termination events (Rho dependent, Rho",
+              "independent termination) post transcriptional modifications, RNA",
+              "transport, RNA splicing and processing, mRNA stability and",
+              "localization, catalytic RNA, non-coding RNAs"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Translation and gene regulation",
+            "contact_hours": 16,
+            "topic_lines": [
+              "Ribosomal structural components, Genetic code, Translation",
+              "process in prokaryotes and eukaryotes: Initiation, elongation and",
+              "termination; translational proof reading, post translational",
+              "modification of proteins, translational inhibitors. , Operon concept,",
+              "regulation of operon ex., lac, his and trp operons, eukaryotic",
+              "transcription regulation",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Genes IX, Benjamin Lewin, Jones and Bartelett Publishers Inc., 2008",
+              "2 Molecular Biology of the Cell, 4th Edition, , Bruce Alberts, Dennis Bray, Julian Lewis,",
+              "Martin Raff, Keith Roberts, and James D. Watson, Garland Publishing., 2004"
+            ],
+            "topics_text": "Ribosomal structural components, Genetic code, Translation process in prokaryotes and eukaryotes: Initiation, elongation and termination; translational proof reading, post translational modification of proteins, translational inhibitors. , Operon concept, regulation of operon ex., lac, his and trp operons, eukaryotic transcription regulation Total Hours 60 Textbook : 1 Genes IX, Benjamin Lewin, Jones and Bartelett Publishers Inc., 2008 2 Molecular Biology of the Cell, 4th Edition, , Bruce Alberts, Dennis Bray, Julian Lewis, Martin Raff, Keith Roberts, and James D. Watson, Garland Publishing., 2004",
+            "topics": [
+              "Ribosomal structural components, Genetic code, Translation",
+              "process in prokaryotes and eukaryotes: Initiation, elongation and",
+              "termination",
+              "translational proof reading, post translational",
+              "modification of proteins, translational inhibitors. , Operon concept,",
+              "regulation of operon ex., lac, his and trp operons, eukaryotic",
+              "transcription regulation",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Genes IX, Benjamin Lewin, Jones and Bartelett Publishers Inc., 2008",
+              "2 Molecular Biology of the Cell, 4th Edition, , Bruce Alberts, Dennis Bray, Julian Lewis,",
+              "Martin Raff, Keith Roberts, and James D. Watson, Garland Publishing., 2004"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Molecular Biology of the Gene, 5th Edition, , Molecular Biology of the Gene, 5th Edition, , Watson James D., Tania Baker, Stephen P. Bell, Alexander Gann, Michael Levine, Richard Lodwick, Pearson Education, Inc. and Dorling Kindersley Publishing, Inc., 2004",
+          "Molecular Biology, 4th Edition, , Molecular Biology, 4th Edition, , Weaver R.,, McGraw Hill Science, 2007"
+        ],
+        "textbooks": [
+          "Genes IX, Benjamin Lewin, Jones and Bartelett Publishers Inc., 2008",
+          "Molecular Biology of the Cell, 4th Edition, , Bruce Alberts, Dennis Bray, Julian Lewis, Martin Raff, Keith Roberts, and James D. Watson, Garland Publishing., 2004"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://books.google.co.in/books/about/Lewin_s_Genes_XI.html? id=yXFfPkLq4yEC&redir_esc=y",
+          "https://www.youtube.com/shorts/Ndl89DpDa08",
+          "https://www.youtube.com/watch? v=g_FQdmP5d5Q&pp=ygUabW9sZWN1bGFyIGJpb2xvZ3kgZ3JhcGhpY3M%3D"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6440,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   FUNDAMENTAL MOLECULAR BIOLOGY\nCOURSE CODE     02MB0463\nCOURSE CREDITS  4\n\nObjective:\n 1  To develop a better understanding of Molecular biology's fundamentals, emphasizing on\n    key areas of current biology.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Develop a profound understanding of the fundamental principles of molecular biology.\n 2  Comprehend the scientific basis of the current understanding in the broad domain of\n     molecular biology.\n 3  Understand the ways to manipulate biological systems at the molecular level for scientific\n     or technological gains.\n 4  Devise suitable strategies using the knowledge in molecular biology to solve technical\n     problems.\n\n\nPre-requisite of course:N.A.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Nucleic Acid Structure And Genome Organization            14\n        DNA as a genetic material, DNA structure, DNA topology,\n               supercoiling, topoisomerases I and II, C-value paradox, structure of\n          mRNA, rRNA and tRNA; DNA packaging, structure of chromatin\n            and chromosomes, DNA-protein interactions, interrupted genes,\n             gene families, unique and repetitive DNA, transposons\n     2    DNA replication, recombination and repair                   16\n        DNA replication in prokaryotes and eukaryotes; enzymes involved\n            and mechanism of replication, regulation of replication, role of\n              telomerases, Replication of extra-chromosomal DNA, inhibitors of\n                replication., Homologous and site specific Recombination,\n            Mechanism of recombination, DNA Mutation and repair:\n             Spontaneous and Induced mutations, Physical and Chemical\n              mutagenesis, Molecular mechanisms of mutagenesis – Transition,\n              Transversion, Frame Shifts, mis-sense and non-sense mutations,\n               Photo-reactivation, Excision Repair, Mismatch Repair, Post-\n               replication Repair, SOS Repair.\n\n\n\nDR. GAURAV VINODBHAI SANGHVI                   DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Transcription                                            14\n              Organization of transcriptional units, transcription factors,\n               transcription activators and repressors, RNA polymerases.\n              Prokaryotic transcription, eukaryotic transcription - initiation,\n              elongation and termination events (Rho dependent, Rho\n             independent termination) post transcriptional modifications, RNA\n                transport, RNA splicing and processing, mRNA stability and\n                localization, catalytic RNA, non-coding RNAs\n     4      Translation and gene regulation                            16\n            Ribosomal structural components, Genetic code, Translation\n              process in prokaryotes and eukaryotes: Initiation, elongation and\n               termination; translational proof reading, post translational\n              modification of proteins, translational inhibitors. , Operon concept,\n               regulation of operon ex., lac, his and trp operons, eukaryotic\n               transcription regulation\n                               Total Hours                       60\n\n\nTextbook :\n 1  Genes IX, Benjamin Lewin, Jones and Bartelett Publishers Inc., 2008\n 2  Molecular Biology of the Cell, 4th Edition, , Bruce Alberts, Dennis Bray, Julian Lewis,\n    Martin Raff, Keith Roberts, and James D. Watson, Garland Publishing., 2004\n\nReferences:\n 1  Molecular Biology of the Gene, 5th Edition, , Molecular Biology of the Gene, 5th Edition, ,\n    Watson James D., Tania Baker, Stephen P. Bell, Alexander Gann, Michael Levine, Richard\n    Lodwick, Pearson Education, Inc. and Dorling Kindersley Publishing, Inc., 2004\n 2  Molecular Biology, 4th Edition, , Molecular Biology, 4th Edition, , Weaver R.,, McGraw\n     Hill Science, 2007\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    10.00         20.00         25.00         25.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, etc.\n\n\n\nDR. GAURAV VINODBHAI SANGHVI                   DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room in the form of attendance, assignments, verbal interactions etc.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://books.google.co.in/books/about/Lewin_s_Genes_XI.html?\n    id=yXFfPkLq4yEC&redir_esc=y\n 2  https://www.youtube.com/shorts/Ndl89DpDa08\n 3  https://www.youtube.com/watch?\n    v=g_FQdmP5d5Q&pp=ygUabW9sZWN1bGFyIGJpb2xvZ3kgZ3JhcGhpY3M%3D\n\n\n\n\n\nDR. GAURAV VINODBHAI SANGHVI                   DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata."
+      ],
+      "actual_pdf_sha256": "44d62df75d3e4cfdcbe718938e011420671c9ae6caaced8fd64a57dc717ad7d6",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "35002132050401",
+      "subject_name": "Pharmaceutical Microbiology",
+      "course_id": "m-sc-in-micorbiology",
+      "course_name": "M.Sc in MicorBiology",
+      "semester": 3,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 2,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 2,
+    "extraction_errors": 0
+  }
+}

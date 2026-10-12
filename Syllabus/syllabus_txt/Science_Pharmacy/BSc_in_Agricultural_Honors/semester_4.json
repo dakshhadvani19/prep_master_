@@ -1,0 +1,1001 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:53:38+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
+  "course": {
+    "course_id": "b-sc-in-agricultural-honors",
+    "course_name": "B.Sc in Agricultural Honors",
+    "output_slug": "BSc_in_Agricultural_Honors"
+  },
+  "semester": 4,
+  "subject_count": 11,
+  "subjects": [
+    {
+      "subject_id": "33016119040501",
+      "subject_name": "Agriculture Marketing, Trade & Prices",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119040101",
+      "subject_name": "Crop Production Technology-II",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "16AS1401",
+      "catalog_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "catalog_action": "YES_CODE_MATCH",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/16AS1401-Agron.-4.5-Crop-Production-Technology-II-Rabi-Crops.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Crop Production Technology-II [f1a2a2869841].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Crop Production Technology-II [f1a2a2869841].pdf",
+      "expected_pdf_sha256": "c3756685b9b39bc1f5658e1d5eb49ab505819039b6881f5bbcd41c33507b8f3d",
+      "question_generation_use": "YES_CODE_MATCH",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_AND_CODE_VERIFIED",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Crop Production Technology-II (Rabi Crops)",
+        "course_code": "16AS1401",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [
+        "To impart basic and fundamental knowledge on principles and practices of rabi crop production.",
+        "To impart knowledge and skill on scientific crop production and management. Credits Earned: 3 Credits (1+2)"
+      ],
+      "course_outcomes": [
+        "After completion of this course, Students will be able to • Students will be able to understand crop husbandry of different rabi crops. • Students will be able to identify good agricultural practices of rabi field crops. • Students will be able to illustrate scientific approaches towards the management of different field crops. • Students will be able to employ the distribution of the crops in different parts of country. • Students will be able to identify new farming technologies that applicable for Rabi season crop production. Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Mid Progressive Term ESE Viva Marks Theory Tutorial Practical Sem Assessment work (E) (V) (M) (PA) (TW)",
+        "0 4 3 40 20 20 10 10 100 Theory Content: Contact Unit Topics Hours Origin, geographical distribution, economic importance, soil and climatic 1 1 requirements, varieties, cultural practices and yield of Rabi crops.",
+        "Cereals- wheat and barley 2",
+        "Pulses- chickpea, lentil, peas, redgram and rajmash 2",
+        "Oilseed- rapeseed, mustard, sunflower, safflower and linseed 2",
+        "Sugar crops-sugarcane and sugar beet 1",
+        "Medicinal and aromatic crops- mentha, lemon grass and citronella 2",
+        "Forage crops –barseem, lucerne and oat 1",
+        "Potato, quinoa, tobacco 2 Total 13 Practical Content: Contact Unit Topics Hours",
+        "Sowing methods of wheat and sugarcane 4",
+        "Identification of weeds in rabi season crops 4",
+        "Study of morphological characteristics of rabi crops 4",
+        "Study of yield contributing characters of rabi season crops 4",
+        "Yield and juice quality analysis of sugarcane 4 Study of important agronomic experiments of rabi crops at experimental 6 4 farms",
+        "Study of rabi forage experiments 4",
+        "Oil extraction of medicinal crops 4",
+        "Visit to research stations of related crops 4 Total 36 Reference Books: • B. Gurarajan, R. Balasubramanian and V. Swaminathan. Recent Strategies on Crop Production. Kalyani Publishers, New Delhi. • Chidda Singh.1997. Modern techniques of raising field crops. Oxford and IBH Publishing Co. Pvt. Ltd., New Delhi. • Rajendra Prasad. Textbook of Field Crops Production - Commercial Crops. Volume II ICAR Publication. • Rajendra Prasad. Textbook of Field Crops Production - Foodgrain Crops. Volume I ICAR Publication. • S.R. Reddy. 2009. Agronomy of Field Crops. Kalyani Publishers, New Delhi. Suggested Theory distribution: The suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as guidelines for teachers and students to achieve effective teaching-learning process. Distribution of Theory for course delivery and evaluation Remember Understand Apply Analyze Evaluate Create 25% 25% 20% 10% 10% 10% Instructional Method:",
+        "The course delivery method will depend upon the requirement of content and need of students. The teacher in addition to conventional teaching method by white board may also use any of tools such as demonstration, role play, quiz, brain storming, MOOCs etc.",
+        "The internal evaluation will be done on the basis of continuous evaluation of students in the class-rooms.",
+        "Practical examination will be conducted at the end of semester for evaluation of performance of students in laboratory/ field.",
+        "Students will use supplementary resources such as online videos, NPTEL videos, e- courses, Virtual Laboratory."
+      ],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Topics",
+            "contact_hours": null,
+            "topic_lines": [
+              "Hours",
+              "Origin, geographical distribution, economic importance, soil and climatic",
+              "1 1",
+              "requirements, varieties, cultural practices and yield of Rabi crops."
+            ],
+            "topics_text": "Hours Origin, geographical distribution, economic importance, soil and climatic 1 1 requirements, varieties, cultural practices and yield of Rabi crops.",
+            "topics": [
+              "Hours",
+              "Origin, geographical distribution, economic importance, soil and climatic",
+              "1 1",
+              "requirements, varieties, cultural practices and yield of Rabi crops."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Cereals- wheat and barley",
+            "contact_hours": 2,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 3,
+            "title": "Pulses- chickpea, lentil, peas, redgram and rajmash",
+            "contact_hours": 2,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 4,
+            "title": "Oilseed- rapeseed, mustard, sunflower, safflower and linseed",
+            "contact_hours": 2,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 5,
+            "title": "Sugar crops-sugarcane and sugar beet",
+            "contact_hours": 1,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 6,
+            "title": "Medicinal and aromatic crops- mentha, lemon grass and citronella",
+            "contact_hours": 2,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 7,
+            "title": "Forage crops –barseem, lucerne and oat",
+            "contact_hours": 1,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 8,
+            "title": "Potato, quinoa, tobacco",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Total 13",
+              "Practical Content:",
+              "Contact"
+            ],
+            "topics_text": "Total 13 Practical Content: Contact",
+            "topics": [
+              "Total 13",
+              "Practical Content:",
+              "Contact"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Topics",
+            "contact_hours": null,
+            "topic_lines": [
+              "Hours"
+            ],
+            "topics_text": "Hours",
+            "topics": [
+              "Hours"
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "Sowing methods of wheat and sugarcane",
+            "contact_hours": 4,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 2,
+            "title": "Identification of weeds in rabi season crops",
+            "contact_hours": 4,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 3,
+            "title": "Study of morphological characteristics of rabi crops",
+            "contact_hours": 4,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 4,
+            "title": "Study of yield contributing characters of rabi season crops",
+            "contact_hours": 4,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 5,
+            "title": "Yield and juice quality analysis of sugarcane",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study of important agronomic experiments of rabi crops at experimental",
+              "6 4",
+              "farms"
+            ],
+            "topics_text": "Study of important agronomic experiments of rabi crops at experimental 6 4 farms",
+            "topics": [
+              "Study of important agronomic experiments of rabi crops at experimental",
+              "6 4",
+              "farms"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Study of rabi forage experiments",
+            "contact_hours": 4,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 8,
+            "title": "Oil extraction of medicinal crops",
+            "contact_hours": 4,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 9,
+            "title": "Visit to research stations of related crops",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Total 36",
+              "Reference Books:",
+              "• B. Gurarajan, R. Balasubramanian and V. Swaminathan. Recent Strategies on Crop",
+              "Production. Kalyani Publishers, New Delhi.",
+              "• Chidda Singh.1997. Modern techniques of raising field crops. Oxford and IBH Publishing",
+              "Co. Pvt. Ltd., New Delhi.",
+              "• Rajendra Prasad. Textbook of Field Crops Production - Commercial Crops. Volume II ICAR",
+              "Publication.",
+              "• Rajendra Prasad. Textbook of Field Crops Production - Foodgrain Crops. Volume I ICAR",
+              "Publication.",
+              "• S.R. Reddy. 2009. Agronomy of Field Crops. Kalyani Publishers, New Delhi."
+            ],
+            "topics_text": "Total 36 Reference Books: • B. Gurarajan, R. Balasubramanian and V. Swaminathan. Recent Strategies on Crop Production. Kalyani Publishers, New Delhi. • Chidda Singh.1997. Modern techniques of raising field crops. Oxford and IBH Publishing Co. Pvt. Ltd., New Delhi. • Rajendra Prasad. Textbook of Field Crops Production - Commercial Crops. Volume II ICAR Publication. • Rajendra Prasad. Textbook of Field Crops Production - Foodgrain Crops. Volume I ICAR Publication. • S.R. Reddy. 2009. Agronomy of Field Crops. Kalyani Publishers, New Delhi.",
+            "topics": [
+              "Total 36",
+              "Reference Books:",
+              "B. Gurarajan, R. Balasubramanian and V. Swaminathan. Recent Strategies on Crop",
+              "Production. Kalyani Publishers, New Delhi.",
+              "Chidda Singh.1997. Modern techniques of raising field crops. Oxford and IBH Publishing",
+              "Co. Pvt. Ltd., New Delhi.",
+              "Rajendra Prasad. Textbook of Field Crops Production - Commercial Crops. Volume II ICAR",
+              "Publication.",
+              "Rajendra Prasad. Textbook of Field Crops Production - Foodgrain Crops. Volume I ICAR",
+              "Publication.",
+              "S.R. Reddy. 2009. Agronomy of Field Crops. Kalyani Publishers, New Delhi."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5781,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for B.Sc. (Hons) Agriculture Year – II (Sem. IV)\n\n                                  Subject Code: 16AS1401\n\n                              Subject Short Name: Agron. 4.5\n\n                  Subject Name: Crop Production Technology-II (Rabi Crops)\n\n   Objective:\n\n       1. To impart basic and fundamental knowledge on principles and practices of rabi crop\n\n          production.\n\n       2. To impart knowledge and skill on scientific crop production and management.\n\n\n   Credits Earned: 3 Credits (1+2)\n\n  Course Outcomes: After completion of this course, Students will be able to\n\n      •  Students will be able to understand crop husbandry of different rabi crops.\n      •  Students will be able to identify good agricultural practices of rabi field crops.\n      •  Students will be able to illustrate scientific approaches towards the management of\n           different field crops.\n      •  Students will be able to employ the distribution of the crops in different parts of country.\n      •  Students will be able to identify new farming technologies that applicable for Rabi season\n         crop production.\n\n                                                                            Tutorial/ Practical\n  Teaching Scheme (Hours)                  Theory Marks\n                                                               Marks\n                                                                                            Total\n                                Credits        Mid   Progressive            Term\n                             ESE                      Viva             Marks\nTheory   Tutorial   Practical              Sem   Assessment            work\n                                         (E)                         (V)\n                                        (M)      (PA)              (TW)\n  1       0        4        3     40    20       20        10       10      100\n\n  Theory Content:\n\n                                                                          Contact\n    Unit  Topics\n                                                                   Hours\n            Origin, geographical distribution, economic importance, soil and climatic\n   1                                                                   1\n            requirements, varieties, cultural practices and yield of Rabi crops.\n\n   2       Cereals- wheat and barley                                         2\n   3       Pulses- chickpea, lentil, peas, redgram and rajmash                     2"
+        },
+        {
+          "page": 2,
+          "text": "4       Oilseed- rapeseed, mustard, sunflower, safflower and linseed             2\n 5      Sugar crops-sugarcane and sugar beet                                1\n 6      Medicinal and aromatic crops- mentha, lemon grass and citronella         2\n 7      Forage crops –barseem, lucerne and oat                              1\n 8       Potato, quinoa, tobacco                                           2\n        Total                                                         13\n\n\n\n\nPractical Content:\n\n                                                                        Contact\n  Unit  Topics\n                                                                 Hours\n 1     Sowing methods of wheat and sugarcane                             4\n 2       Identification of weeds in rabi season crops                           4\n 3      Study of morphological characteristics of rabi crops                    4\n 4      Study of yield contributing characters of rabi season crops               4\n 5      Yield and juice quality analysis of sugarcane                          4\n        Study of important agronomic experiments of rabi crops at experimental\n 6                                                                   4\n        farms\n\n 7      Study of rabi forage experiments                                   4\n 8      Oil extraction of medicinal crops                                   4\n 9       Visit to research stations of related crops                             4\n        Total                                                         36\n\nReference Books:\n •  B. Gurarajan, R. Balasubramanian and V. Swaminathan. Recent  Strategies on Crop\n\n    Production. Kalyani Publishers, New Delhi.\n •  Chidda Singh.1997. Modern techniques of raising field crops. Oxford and IBH Publishing\n\n    Co. Pvt. Ltd., New Delhi.\n •  Rajendra Prasad. Textbook of Field Crops Production - Commercial Crops. Volume II ICAR\n\n     Publication."
+        },
+        {
+          "page": 3,
+          "text": "•  Rajendra Prasad. Textbook of Field Crops Production - Foodgrain Crops. Volume I ICAR\n\n     Publication.\n •  S.R. Reddy. 2009. Agronomy of Field Crops. Kalyani Publishers, New Delhi.\n\nSuggested Theory distribution:\n\n      The suggested theory distribution as per Bloom’s taxonomy is as per follows. This\n\ndistribution serves as guidelines for teachers and students to achieve effective teaching-learning\n\nprocess.\n\n                    Distribution of Theory for course delivery and evaluation\n\n    Remember   Understand   Apply       Analyze      Evaluate      Create\n\n    25%      25%       20%       10%       10%       10%\n\n\nInstructional Method:\n\n    1. The course delivery method will depend upon the requirement of content and need of\n\n        students. The teacher in addition to conventional teaching method by white board may also\n\n       use any of tools such as demonstration, role play, quiz, brain storming, MOOCs etc.\n\n    2. The internal evaluation will be done on the basis of continuous evaluation of students in\n\n       the class-rooms.\n\n    3.  Practical examination  will be conducted  at the end of semester  for evaluation of\n\n       performance of students in laboratory/ field.\n\n    4.  Students will use supplementary resources such as online videos, NPTEL videos, e-\n\n       courses, Virtual Laboratory."
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "c3756685b9b39bc1f5658e1d5eb49ab505819039b6881f5bbcd41c33507b8f3d",
+      "pdf_verification_status": "YES_CODE_MATCH"
+    },
+    {
+      "subject_id": "33016165040101",
+      "subject_name": "Gradial)",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119041001",
+      "subject_name": "Intellectual Property Rights",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "DUPLICATE_TITLE_SCOPE_REVIEW",
+      "catalog_action": "NO_DUPLICATE_SCOPE_REVIEW",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Intellectual Property Rights [258ce92290ec].pdf",
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_DUPLICATE_SCOPE_REVIEW",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "DUPLICATE_TITLE_SCOPE_REVIEW",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "The source report marked this repeated title as requiring course/semester-level scope review. Do not automatically use it to generate questions for this occurrence."
+      ],
+      "pdf_verification_status": "NO_DUPLICATE_SCOPE_REVIEW"
+    },
+    {
+      "subject_id": "33016119041101",
+      "subject_name": "Landscaping",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119040401",
+      "subject_name": "Management Of Beneficial Insects",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "16AS0404",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/05/16AS0404_Management-of-Beneficial-Insects.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Management Of Beneficial Insects [dfee59a44531].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Management Of Beneficial Insects [dfee59a44531].pdf",
+      "expected_pdf_sha256": "00da5d3a4f942910b72c974f32e6b5c570efcbf1c718a5dcd6ca46e8fc3a21b6",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "MANAGEMENT OF BENEFICIAL INSECTS",
+        "course_code": "16AS0404",
+        "semester_label": "4",
+        "credits": 2,
+        "prerequisite": "To know the beneficial insects and its management."
+      },
+      "objectives": [
+        "To provide information regarding Identification, mass rearing, conservation of apiculture, sericulture and lac culture.",
+        "To explore information regarding Identification, mass rearing, conservation of field release of natural enemies and its role."
+      ],
+      "course_outcomes": [
+        "Students will be able to understand the concept of commercial entomology for doubling farmers’ income.",
+        "Students will able to know the field release techniques of bio-control agents and their conservation.",
+        "Students will be able to apply the concept for skill development on different rearing techniques of economically important and other beneficial insects.",
+        "Students will be able to apply the knowledge for entrepreneurial opportunities in entomology.",
+        "Students will analyze the scope, importance and uses of beneficial insects.",
+        "Students will gain knowledge regarding the economic entomology and processed products obtained by it. Pre-requisite of course:To know the beneficial insects and its management."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 1 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Integrated Pest Management: Concepts and Approaches, Integrated Pest Management: Concepts and Approaches, G. S. Dhaliwal, and R. Arora, Kalyani Publisher, 2002",
+          "Agricultural Entomology and Pest Control, Agricultural Entomology and Pest Control, S. Pradhan, ICAR Publication , 1983",
+          "Entomology and Pest Management, Entomology and Pest Management, L. P. Pedigo, Macmillan Publishing Company, 1989",
+          "Insects and Mites of Crops in India, Insects and Mites of Crops in India, M. R. G. K. Nair, ICAR Publication, 1975"
+        ],
+        "textbooks": [
+          "NA, NA, NA, NA"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 8294,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF AGRICULTURE\nPROGRAM       BACHELOR OF SCIENCE (Hons.) AGRICULTURE\nSEMESTER         4\nCOURSE TITLE   MANAGEMENT OF BENEFICIAL INSECTS\nCOURSE CODE     16AS0404\nCOURSE CREDITS  2\n\nObjective:\n 1  To provide information regarding Identification, mass rearing, conservation of apiculture,\n     sericulture and lac culture.\n 2  To explore information regarding Identification, mass rearing, conservation of field release\n     of natural enemies and its role.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Students will be able to understand the concept of commercial entomology for doubling\n     farmers’ income.\n 2  Students will able to know the field release techniques of bio-control agents and their\n     conservation.\n 3  Students will be able to apply the concept for skill development on different rearing\n     techniques of economically important and other beneficial insects.\n 4  Students will be able to apply the knowledge for entrepreneurial opportunities in\n    entomology.\n 5  Students will analyze the scope, importance and uses of beneficial insects.\n 6  Students will gain knowledge regarding the economic entomology and processed products\n     obtained by it.\n\n\nPre-requisite of course:To know the beneficial insects and its management.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     1            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      1                                                       4\n             Importance of beneficial Insects, Beekeeping, pollinating plant and\n                their cycle, bee biology, species of honey bees, commercial methods\n              of rearing, equipment used, seasonal management, bee enemies and\n               diseases. Bee pasturage, bee foraging and communication. Division\n            and uniting of honey bee boxes. Toxicity of pesticides to honey\n               bees.\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      2                                                       5\n            Types of silkworm, voltinism and biology of silkworm.\n              Mulberry/castor cultivation, mulberry varieties and methods of\n              harvesting and preservation of leaves. Rearing and mounting larvae\n            and harvesting of cocoons. Pest and diseases of silkworm and\n            management. Rearing appliances of mulberry silkworm and\n            methods of disinfection.\n     3      3                                                       2\n              Species of lac insect, morphology, biology, host plant, lac\n              production – seed lac, button lac, shellac, lac- products. Enemies of\n               lac insects.\n     4      4                                                       4\n                Identification of major parasitoids and predators commonly being\n             used in biological control. Insect orders bearing predators and\n               parasitoids used in pest control and their mass multiplication\n               techniques. Important species of pollinator, weed killers and\n              scavengers with their importance.\n                               Total Hours                       15\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      1                                                       2\n           Honey bee species, castes of bees\n     2      2                                                       2\n             Beekeeping appliances and seasonal management, bee enemies and\n              disease\n     3      3                                                       2\n            Bee pasturage, bee foraging and communication\n     4      4                                                       2\n              Division and uniting of honey bee boxes\n     5      5                                                       2\n             Migration of honeybee boxes\n     6      6                                                       2\n            Types of silkworm, voltinism and biology of silkworm\n     7      7                                                       2\n              Mulberry/castor cultivation, mulberry varieties and methods of\n              harvesting and preservation of leaves\n     8      8                                                       2\n              Species of lac insect, host plant identification\n     9      9                                                       2\n                Identification of other important pollinators, weed killers and\n              scavengers\n\n\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     10     10                                                      2\n               Insect orders bearing predators and parasitoids used in pest control\n            and their mass multiplication techniques\n     11     11                                                      2\n               Visit to research and training institutions devoted to beekeeping,\n                sericulture, lac culture and natural enemies\n                               Total Hours                       22\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  Integrated Pest Management: Concepts and Approaches, Integrated Pest Management:\n    Concepts and Approaches, G. S. Dhaliwal, and R. Arora, Kalyani Publisher, 2002\n 2  Agricultural Entomology and Pest Control, Agricultural Entomology and Pest Control, S.\n     Pradhan, ICAR Publication , 1983\n 3  Entomology and Pest Management, Entomology and Pest Management, L. P. Pedigo,\n    Macmillan Publishing Company, 1989\n 4  Insects and Mites of Crops in India, Insects and Mites of Crops in India, M. R. G. K. Nair,\n   ICAR Publication, 1975\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    25.00         25.00         20.00         10.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board may also\n     use any of tools such as demonstration, role play, quiz, brain storming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4   Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\n\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata.",
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "00da5d3a4f942910b72c974f32e6b5c570efcbf1c718a5dcd6ca46e8fc3a21b6",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "33016119040801",
+      "subject_name": "Principle Of Integrated Disease Management",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119040901",
+      "subject_name": "Principles Of Seed Technology",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "16AS0409",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/05/16AS0409_Principles-of-Seed-Technology.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Principles Of Seed Technology [bf357fde43aa].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Principles Of Seed Technology [bf357fde43aa].pdf",
+      "expected_pdf_sha256": "60857500288978355112fe870d5fdf7b0c548a3233a75dbc12c8aacfdd5e65fe",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "PRINCIPLES OF SEED TECHNOLOGY",
+        "course_code": "16AS0409",
+        "semester_label": "4",
+        "credits": 3,
+        "prerequisite": "To know about the seed structure, functions and production techniques of different crops."
+      },
+      "objectives": [
+        "To increase agriculture production through the spread of good quality seed of high yielding verities.",
+        "To provide the improved quality seed to the farmers."
+      ],
+      "course_outcomes": [
+        "To acquaint with scope and importance of seed technology in agriculture and the role of officials and legislation, seed act and seed order in quality of seed production.",
+        "To develop an understanding of various seed production techniques for different field crops, the importance of maintenance of purity of crop varieties, and factors causing deterioration of variety.",
+        "To execute various phases of seed certification, field inspection, and seed purity testing.",
+        "To analyze the factors related to genetic and physical purity of seed and its health status of seeds of a variety during seed processing. Pre-requisite of course:To know about the seed structure, functions and production techniques of different crops."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Principles of Seed Technology, Principles of Seed Technology, G. M. Kulkarni, Kalyani Publisher, 2015",
+          "Seed Technology, Seed Technology, R. L. Agrawal, Oxford & IBH, 2008",
+          "Structure Development and Reproduction in Angiosperms, Structure Development and Reproduction in Angiosperms, V. Singh, P. C. Pande & D. K Jain, Kalyani Publishers, 1998"
+        ],
+        "textbooks": [
+          "NA, NA, NA, NA"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 8650,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF AGRICULTURE\nPROGRAM       BACHELOR OF SCIENCE (Hons.) AGRICULTURE\nSEMESTER         4\nCOURSE TITLE    PRINCIPLES OF SEED TECHNOLOGY\nCOURSE CODE     16AS0409\nCOURSE CREDITS  3\n\nObjective:\n 1  To increase agriculture production through the spread of good quality seed of high yielding\n      verities.\n 2  To provide the improved quality seed to the farmers.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To acquaint with scope and importance of seed technology in agriculture and the role of\n      officials and legislation, seed act and seed order in quality of seed production.\n 2  To develop an understanding of various seed production techniques for different field\n     crops, the importance of maintenance of purity of crop varieties, and factors causing\n     deterioration of variety.\n 3  To execute various phases of seed certification, field inspection,\n    and seed purity testing.\n 4  To analyze the factors related to genetic and physical purity of seed\n    and its health status of seeds of a variety during seed processing.\n\n\nPre-requisite of course:To know about the seed structure, functions and production techniques\nof different crops.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      1                                                       6\n            Seed and seed technology: introduction, definition and importance;\n               Deterioration causes of crop varieties and their control;\n             Maintenance of genetic purity during seed production, seed quality;\n               Definition, characters of good quality seed and different classes of\n               seed; Foundation and certified seed production of important cereals,\n               pulses, oilseeds, fodder and vegetables.\n\n\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      2                                                       5\n            Seed certification, phases of certification, procedure for seed\n                certification, field inspection; Seed Act and Seed Act enforcement,\n            Duty and powers of seed inspector, offences and penalties, Seeds\n               control order 1983; Varietal identification through grow out test and\n               electrophoresis, molecular and biochemical test\n     3      3                                                       1\n              Detection of genetically modified crops, transgene contamination in\n          non-GM crops, GM crops and organic seed production\n     4      4                                                       3\n            Seed drying, processing and their steps; Seed testing for quality\n              assessment; Seed treatment, its importance, method of application\n            and seed packing; Seed storage- general principles, stages and\n               factors affecting seed longevity during storage, measures for pest\n            and disease control during storage\n     5      5                                                       2\n            Seed marketing-structure and organization, sales generation\n                 activities, promotional media. Factors affecting seed marketing, role\n              of WTO and OECD in seed marketing\n                               Total Hours                       17\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      1                                                       2\n            Seed production in major cereals- wheat, rice, maize, sorghum and\n               bajra\n     2      2                                                       2\n            Seed production in major pulses- pigeonpea, green gram, black\n             gram, chickpea\n     3      3                                                       2\n            Seed production in major oilseeds- groundnut, sesame, soybean,\n              mustard, castor\n     4      4                                                       2\n            Seed production in cotton\n     5      5                                                       2\n            Seed production in vegetable crops- tomato, brinjal, chillies and\n             okra\n     6      6                                                       2\n            Seed sampling and physical purity test\n     7      7                                                       2\n            Seed Germination and viability test\n     8      8                                                       2\n              Seedling vigour test\n\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     9      9                                                       2\n             Genetic purity test- grow out test and electrophoresis\n     10     10                                                      2\n             Procedure of seed certification\n     11     11                                                      2\n               Field inspection and preparation of field inspection report\n     12     12                                                      2\n               Visit to seed production farms\n     13     13                                                      2\n               Visit to seed testing laboratories\n     14     14                                                      2\n               Visit to seed processing plant\n                               Total Hours                       28\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  Principles of Seed Technology, Principles of Seed Technology, G. M. Kulkarni, Kalyani\n     Publisher, 2015\n 2  Seed Technology, Seed Technology, R. L. Agrawal, Oxford & IBH, 2008\n 3  Structure Development and Reproduction in Angiosperms, Structure Development and\n    Reproduction in Angiosperms, V. Singh, P. C. Pande & D. K Jain, Kalyani Publishers,\n    1998\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    25.00         25.00         20.00         10.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by white board may also\n     use any of tools such as demonstration, role play, quiz, brain storming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\n\n\n\n\nDR. HIMALAY PATEL                               DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata.",
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "60857500288978355112fe870d5fdf7b0c548a3233a75dbc12c8aacfdd5e65fe",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "33016119040601",
+      "subject_name": "Renewable Energy & Green Technology",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    },
+    {
+      "subject_id": "33016119040701",
+      "subject_name": "Rural Sociology & Educational Psychology",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "16AS0112",
+      "catalog_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "catalog_action": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/16AS0112.pdf",
+      "source_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Rural Sociology & Educational Psychology [c737dc1fbb20].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Rural Sociology & Educational Psychology [c737dc1fbb20].pdf",
+      "expected_pdf_sha256": "23ab51145eced36523b295defb07b693207310e5306c51b0b3e5ad2f99eca056",
+      "question_generation_use": "YES_TITLE_MATCH_CODE_NOT_VISIBLE",
+      "title_level_status": "VERIFIED_MARWADI",
+      "pdf_mapping_status": "PDF_PRESENT_TITLE_VERIFIED_CODE_NOT_VISIBLE",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Rural Sociology and Educational Psychology",
+        "course_code": "16AS0112",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [
+        "Provide knowledge on concept and importance of sociology and rural sociology as well as the relationship with Extension Education Credits Earned: 2 Credits (2+0)"
+      ],
+      "course_outcomes": [
+        "After completion of this course, Students will be able to • Know about the concept of rural society. • Identify the role of motivation in agricultural extension. • Illustrate about the role of social groups and culture in agricultural extension. • Analyze the in-depth understanding about educational psychology. Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Mid Progressive Term ESE Viva Marks Theory Tutorial Practical Sem Assessment work (E) (V) (M) (PA) (TW)",
+        "0 0 2 50 30 20 0 0 100 Theory Content: Contact Unit Topics Hours Extension Education and Agricultural Extension: Meaning, definition, 1 1 scope, and importance Sociology and rural sociology: Meaning, definition, scope, importance of",
+        "rural sociology in Agricultural Extension, and interrelationship between 2 rural sociology and Agricultural Extension Indian Rural Society: important characteristics, differences and relationship 3 1 between rural and urban societies. Social Groups: Meaning, definition, classification, factors considered",
+        "information and organization of groups, motivation in group formation and 2 role of social groups in Agricultural Extension. Social Stratification: Meaning, definition, functions, basis for stratification,",
+        "forms of social stratification- characteristics and- differences between class 2 and caste system. Cultural concepts: culture, customs, folkways, mores, taboos, rituals. 6 1 Traditions: Meaning, definition and their role in Agricultural Extension. Social Values and Attitudes: Meaning, definition, types and role of social 7 1 values and attitudes in agricultural Extension. Social Institutions: Meaning, definition, major institutions in rural society, 8 1 functions, and their role in agricultural Extension. Social Organizations: Meaning, definition, types of organizations and role 9 1 of social organizations in agricultural Extension. Social Control: Meaning, definition, need of social control and means of 10 1 social control. Social change: Meaning, definition, nature of social change, dimensions of 11 2 social change and factors of social change. Leadership: Meaning, definition, classification, roles of leader, different methods of selection of professional and lay leaders. Training of Leaders: 12 2 Meaning, definition, methods of training, Advantages and limitations in use of local leaders in Agricultural Extension Psychology and educational psychology: Meaning, definition, scope, and 13 1 importance of educational psychology in Agricultural Extension Intelligence: Meaning, definition, types, factors affecting intelligence and 14 2 importance of intelligence in Agricultural Extension Personality: Meaning, definition, types, factors influencing the personality 15 2 and role of personality in agricultural Extension. Teaching: Learning process: Meaning and definition of teaching, learning, 16 2 learning experience and learning situation, elements of learning situation and its characteristics. Principles of learning and their implication of teaching. Total 24 Reference Books: • A. R. Desai -Rural Sociology in India, 1959, SAGE Publication India Pvt. Ltd. • Dahama O. P. and Bhatnagar, O. P. - Education and Communication for Development, 2019, Oxford and IBH Publiushing. • J.B. Chitambar -Introductory Rural Sociology, 2020, New Age Internation Pvt. Ltd. • M.B. Ghorpade- Essential of psychology, 1977, Himalaya Publishing House. Suggested Theory distribution: The suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as guidelines for teachers and students to achieve effective teaching-learning process. Distribution of Theory for course delivery and evaluation Remember Understand Apply Analyze Evaluate Create 25% 25% 20% 10% 10% 10% Instructional Method:",
+        "The course delivery method will depend upon the requirement of content and need of students. The teacher in addition to conventional teaching method by white board may also use any of tools such as demonstration, role play, quiz, brain storming, MOOCs etc.",
+        "The internal evaluation will be done on the basis of continuous evaluation of students in the class-rooms.",
+        "Students will use supplementary resources such as online videos, NPTEL videos, e- courses, Virtual Laboratory."
+      ],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Topics",
+            "contact_hours": null,
+            "topic_lines": [
+              "Hours",
+              "Extension Education and Agricultural Extension: Meaning, definition,",
+              "1 1",
+              "scope, and importance",
+              "Sociology and rural sociology: Meaning, definition, scope, importance of"
+            ],
+            "topics_text": "Hours Extension Education and Agricultural Extension: Meaning, definition, 1 1 scope, and importance Sociology and rural sociology: Meaning, definition, scope, importance of",
+            "topics": [
+              "Hours",
+              "Extension Education and Agricultural Extension: Meaning, definition,",
+              "1 1",
+              "scope, and importance",
+              "Sociology and rural sociology: Meaning, definition, scope, importance of"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "rural sociology in Agricultural Extension, and interrelationship between",
+            "contact_hours": 2,
+            "topic_lines": [
+              "rural sociology and Agricultural Extension",
+              "Indian Rural Society: important characteristics, differences and relationship",
+              "3 1",
+              "between rural and urban societies.",
+              "Social Groups: Meaning, definition, classification, factors considered"
+            ],
+            "topics_text": "rural sociology and Agricultural Extension Indian Rural Society: important characteristics, differences and relationship 3 1 between rural and urban societies. Social Groups: Meaning, definition, classification, factors considered",
+            "topics": [
+              "rural sociology and Agricultural Extension",
+              "Indian Rural Society: important characteristics, differences and relationship",
+              "3 1",
+              "between rural and urban societies.",
+              "Social Groups: Meaning, definition, classification, factors considered"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "information and organization of groups, motivation in group formation and",
+            "contact_hours": 2,
+            "topic_lines": [
+              "role of social groups in Agricultural Extension.",
+              "Social Stratification: Meaning, definition, functions, basis for stratification,"
+            ],
+            "topics_text": "role of social groups in Agricultural Extension. Social Stratification: Meaning, definition, functions, basis for stratification,",
+            "topics": [
+              "role of social groups in Agricultural Extension.",
+              "Social Stratification: Meaning, definition, functions, basis for stratification,"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "forms of social stratification- characteristics and- differences between class",
+            "contact_hours": 2,
+            "topic_lines": [
+              "and caste system.",
+              "Cultural concepts: culture, customs, folkways, mores, taboos, rituals.",
+              "6 1",
+              "Traditions: Meaning, definition and their role in Agricultural Extension.",
+              "Social Values and Attitudes: Meaning, definition, types and role of social",
+              "7 1",
+              "values and attitudes in agricultural Extension.",
+              "Social Institutions: Meaning, definition, major institutions in rural society,",
+              "8 1",
+              "functions, and their role in agricultural Extension.",
+              "Social Organizations: Meaning, definition, types of organizations and role",
+              "9 1",
+              "of social organizations in agricultural Extension.",
+              "Social Control: Meaning, definition, need of social control and means of",
+              "10 1",
+              "social control.",
+              "Social change: Meaning, definition, nature of social change, dimensions of",
+              "11 2",
+              "social change and factors of social change.",
+              "Leadership: Meaning, definition, classification, roles of leader, different",
+              "methods of selection of professional and lay leaders. Training of Leaders:",
+              "12 2",
+              "Meaning, definition, methods of training, Advantages and limitations in use",
+              "of local leaders in Agricultural Extension",
+              "Psychology and educational psychology: Meaning, definition, scope, and",
+              "13 1",
+              "importance of educational psychology in Agricultural Extension",
+              "Intelligence: Meaning, definition, types, factors affecting intelligence and",
+              "14 2",
+              "importance of intelligence in Agricultural Extension",
+              "Personality: Meaning, definition, types, factors influencing the personality",
+              "15 2",
+              "and role of personality in agricultural Extension.",
+              "Teaching: Learning process: Meaning and definition of teaching, learning,",
+              "16 2",
+              "learning experience and learning situation, elements of learning situation",
+              "and its characteristics. Principles of learning and their implication of",
+              "teaching.",
+              "Total 24",
+              "Reference Books:",
+              "• A. R. Desai -Rural Sociology in India, 1959, SAGE Publication India Pvt. Ltd.",
+              "• Dahama O. P. and Bhatnagar, O. P. - Education and Communication for Development, 2019,",
+              "Oxford and IBH Publiushing.",
+              "• J.B. Chitambar -Introductory Rural Sociology, 2020, New Age Internation Pvt. Ltd.",
+              "• M.B. Ghorpade- Essential of psychology, 1977, Himalaya Publishing House."
+            ],
+            "topics_text": "and caste system. Cultural concepts: culture, customs, folkways, mores, taboos, rituals. 6 1 Traditions: Meaning, definition and their role in Agricultural Extension. Social Values and Attitudes: Meaning, definition, types and role of social 7 1 values and attitudes in agricultural Extension. Social Institutions: Meaning, definition, major institutions in rural society, 8 1 functions, and their role in agricultural Extension. Social Organizations: Meaning, definition, types of organizations and role 9 1 of social organizations in agricultural Extension. Social Control: Meaning, definition, need of social control and means of 10 1 social control. Social change: Meaning, definition, nature of social change, dimensions of 11 2 social change and factors of social change. Leadership: Meaning, definition, classification, roles of leader, different methods of selection of professional and lay leaders. Training of Leaders: 12 2 Meaning, definition, methods of training, Advantages and limitations in use of local leaders in Agricultural Extension Psychology and educational psychology: Meaning, definition, scope, and 13 1 importance of educational psychology in Agricultural Extension Intelligence: Meaning, definition, types, factors affecting intelligence and 14 2 importance of intelligence in Agricultural Extension Personality: Meaning, definition, types, factors influencing the personality 15 2 and role of personality in agricultural Extension. Teaching: Learning process: Meaning and definition of teaching, learning, 16 2 learning experience and learning situation, elements of learning situation and its characteristics. Principles of learning and their implication of teaching. Total 24 Reference Books: • A. R. Desai -Rural Sociology in India, 1959, SAGE Publication India Pvt. Ltd. • Dahama O. P. and Bhatnagar, O. P. - Education and Communication for Development, 2019, Oxford and IBH Publiushing. • J.B. Chitambar -Introductory Rural Sociology, 2020, New Age Internation Pvt. Ltd. • M.B. Ghorpade- Essential of psychology, 1977, Himalaya Publishing House.",
+            "topics": [
+              "and caste system.",
+              "Cultural concepts: culture, customs, folkways, mores, taboos, rituals.",
+              "6 1",
+              "Traditions: Meaning, definition and their role in Agricultural Extension.",
+              "Social Values and Attitudes: Meaning, definition, types and role of social",
+              "7 1",
+              "values and attitudes in agricultural Extension.",
+              "Social Institutions: Meaning, definition, major institutions in rural society,",
+              "8 1",
+              "functions, and their role in agricultural Extension.",
+              "Social Organizations: Meaning, definition, types of organizations and role",
+              "9 1",
+              "of social organizations in agricultural Extension.",
+              "Social Control: Meaning, definition, need of social control and means of",
+              "10 1",
+              "social control.",
+              "Social change: Meaning, definition, nature of social change, dimensions of",
+              "11 2",
+              "social change and factors of social change.",
+              "Leadership: Meaning, definition, classification, roles of leader, different",
+              "methods of selection of professional and lay leaders. Training of Leaders:",
+              "12 2",
+              "Meaning, definition, methods of training, Advantages and limitations in use",
+              "of local leaders in Agricultural Extension",
+              "Psychology and educational psychology: Meaning, definition, scope, and",
+              "13 1",
+              "importance of educational psychology in Agricultural Extension",
+              "Intelligence: Meaning, definition, types, factors affecting intelligence and",
+              "14 2",
+              "importance of intelligence in Agricultural Extension",
+              "Personality: Meaning, definition, types, factors influencing the personality",
+              "15 2",
+              "and role of personality in agricultural Extension.",
+              "Teaching: Learning process: Meaning and definition of teaching, learning,",
+              "16 2",
+              "learning experience and learning situation, elements of learning situation",
+              "and its characteristics. Principles of learning and their implication of",
+              "teaching.",
+              "Total 24",
+              "Reference Books:",
+              "A. R. Desai -Rural Sociology in India, 1959, SAGE Publication India Pvt. Ltd.",
+              "Dahama O. P. and Bhatnagar, O. P. - Education and Communication for Development, 2019,",
+              "Oxford and IBH Publiushing.",
+              "J.B. Chitambar -Introductory Rural Sociology, 2020, New Age Internation Pvt. Ltd.",
+              "M.B. Ghorpade- Essential of psychology, 1977, Himalaya Publishing House."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6942,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for B.Sc. (Hons) Agriculture Year – I (Sem. I)\n\n                                  Subject Code: 16AS0112\n\n                              Subject Short Name: Ag. Ext. 1.2\n\n                  Subject Name: Rural Sociology and Educational Psychology\n\n   Objective:\n\n       1.  Provide knowledge on concept and importance of sociology and rural sociology as well as\n\n          the relationship with Extension Education\n\n\n   Credits Earned: 2 Credits (2+0)\n\n  Course Outcomes: After completion of this course, Students will be able to\n\n      •  Know about the concept of rural society.\n      •   Identify the role of motivation in agricultural extension.\n      •   Illustrate about the role of social groups and culture in agricultural extension.\n      •  Analyze the in-depth understanding about educational psychology.\n\n                                                                            Tutorial/ Practical\n  Teaching Scheme (Hours)                  Theory Marks\n                                                               Marks\n                                                                                            Total\n                                Credits        Mid   Progressive            Term\n                             ESE                      Viva             Marks\nTheory   Tutorial   Practical              Sem   Assessment            work\n                                         (E)                         (V)\n                                        (M)      (PA)              (TW)\n  2       0        0        2     50    30       20         0        0      100\n\n  Theory Content:\n\n                                                                          Contact\n    Unit  Topics\n                                                                   Hours\n           Extension Education and Agricultural Extension: Meaning,  definition,\n   1                                                                   1\n            scope, and importance\n\n           Sociology and rural sociology: Meaning, definition, scope, importance of\n   2       rural sociology in Agricultural Extension, and interrelationship between  2\n             rural sociology and Agricultural Extension\n\n            Indian Rural Society: important characteristics, differences and relationship\n   3                                                                   1\n          between rural and urban societies."
+        },
+        {
+          "page": 2,
+          "text": "Social Groups: Meaning,  definition,  classification,  factors considered\n4      information and organization of groups, motivation in group formation and  2\n        role of social groups in Agricultural Extension.\n\n        Social Stratification: Meaning, definition, functions, basis for stratification,\n5      forms of social stratification- characteristics and- differences between class  2\n       and caste system.\n\n        Cultural concepts:  culture, customs, folkways, mores, taboos,  rituals.\n6                                                                   1\n        Traditions: Meaning, definition and their role in Agricultural Extension.\n\n        Social Values and Attitudes: Meaning, definition, types and role of social\n7                                                                   1\n        values and attitudes in agricultural Extension.\n\n        Social Institutions: Meaning, definition, major institutions in rural society,\n8                                                                   1\n        functions, and their role in agricultural Extension.\n\n        Social Organizations: Meaning, definition, types of organizations and role\n9                                                                   1\n        of social organizations in agricultural Extension.\n\n        Social Control: Meaning, definition, need of social control and means of\n10                                                                  1\n        social control.\n\n        Social change: Meaning, definition, nature of social change, dimensions of\n11                                                                  2\n        social change and factors of social change.\n\n        Leadership: Meaning, definition, classification, roles of leader, different\n\n       methods of selection of professional and lay leaders. Training of Leaders:\n12                                                                  2\n       Meaning, definition, methods of training, Advantages and limitations in use\n\n        of local leaders in Agricultural Extension\n\n       Psychology and educational psychology: Meaning, definition, scope, and\n13                                                                  1\n       importance of educational psychology in Agricultural Extension\n\n        Intelligence: Meaning, definition, types, factors affecting intelligence and\n14                                                                  2\n       importance of intelligence in Agricultural Extension\n\n        Personality: Meaning, definition, types, factors influencing the personality\n15                                                                  2\n       and role of personality in agricultural Extension.\n\n       Teaching: Learning process: Meaning and definition of teaching, learning,\n16                                                                  2\n        learning experience and learning situation, elements of learning situation"
+        },
+        {
+          "page": 3,
+          "text": "and  its characteristics. Principles of learning and their implication of\n\n         teaching.\n\n        Total                                                         24\n\nReference Books:\n  •  A. R. Desai -Rural Sociology in India, 1959, SAGE Publication India Pvt. Ltd.\n  •  Dahama O. P. and Bhatnagar, O. P. - Education and Communication for Development, 2019,\n\n     Oxford and IBH Publiushing.\n  •   J.B. Chitambar -Introductory Rural Sociology, 2020, New Age Internation Pvt. Ltd.\n  •  M.B. Ghorpade- Essential of psychology, 1977, Himalaya Publishing House.\n\nSuggested Theory distribution:\n\n      The suggested theory distribution as per Bloom’s taxonomy is as per follows. This\n\ndistribution serves as guidelines for teachers and students to achieve effective teaching-learning\n\nprocess.\n\n                    Distribution of Theory for course delivery and evaluation\n\n    Remember   Understand   Apply       Analyze      Evaluate      Create\n\n    25%      25%       20%       10%       10%       10%\n\n\nInstructional Method:\n\n    1. The course delivery method will depend upon the requirement of content and need of\n\n        students. The teacher in addition to conventional teaching method by white board may also\n\n       use any of tools such as demonstration, role play, quiz, brain storming, MOOCs etc.\n\n    2. The internal evaluation will be done on the basis of continuous evaluation of students in\n\n       the class-rooms.\n\n    3.  Students will use supplementary resources such as online videos, NPTEL videos, e-\n\n       courses, Virtual Laboratory."
+        }
+      ],
+      "warnings": [
+        "The manifest did not provide a declared subject code; inspect the PDF metadata."
+      ],
+      "actual_pdf_sha256": "23ab51145eced36523b295defb07b693207310e5306c51b0b3e5ad2f99eca056",
+      "pdf_verification_status": "YES_TITLE_MATCH_CODE_NOT_VISIBLE"
+    },
+    {
+      "subject_id": "33016119040201",
+      "subject_name": "Weed Management",
+      "course_id": "b-sc-in-agricultural-honors",
+      "course_name": "B.Sc in Agricultural Honors",
+      "semester": 4,
+      "subject_code": "",
+      "catalog_status": "NETWORK_UNVERIFIED_RETRY",
+      "catalog_action": "NO_NETWORK_VERIFICATION",
+      "source_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "question_generation_use": "NO_NETWORK_VERIFICATION",
+      "title_level_status": "NETWORK_UNVERIFIED_RETRY",
+      "pdf_mapping_status": "NETWORK_UNVERIFIED_RETRY",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Search/source access was blocked or unavailable. This does not mean the syllabus is absent."
+      ],
+      "pdf_verification_status": "NO_NETWORK_VERIFICATION"
+    }
+  ],
+  "build_summary": {
+    "extracted": 2,
+    "manual_review": 2,
+    "ocr_review": 0,
+    "missing_pdf": 7,
+    "extraction_errors": 0
+  }
+}
