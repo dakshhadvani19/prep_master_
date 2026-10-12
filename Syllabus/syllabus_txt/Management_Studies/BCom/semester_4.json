@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "generated_at_utc": "2026-10-12T13:03:10+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
   "course": {
@@ -52,7 +52,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0001"
+        "A same-title PDF was matched to another course variant; this occurrence was not verified, so its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
@@ -101,7 +101,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0008"
+        "The selected same-title PDF's course-code evidence does not match this course occurrence; its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
@@ -457,7 +457,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0004"
+        "A same-title PDF was matched to another course variant; this occurrence was not verified, so its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
@@ -503,7 +503,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0007"
+        "A same-title PDF was matched to another course variant; this occurrence was not verified, so its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
@@ -718,7 +718,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04OE0008"
+        "The selected same-title PDF's course-code evidence does not match this course occurrence; its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
@@ -987,7 +987,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+        "No acceptable official syllabus PDF was verified for this occurrence in the recovery run."
       ],
       "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
       "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
@@ -1037,7 +1037,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0403"
+        "The selected same-title PDF's course-code evidence does not match this course occurrence; its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
@@ -1083,7 +1083,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0002"
+        "A same-title PDF was matched to another course variant; this occurrence was not verified, so its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
@@ -1270,7 +1270,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04MB0303"
+        "The selected same-title PDF's course-code evidence does not match this course occurrence; its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
@@ -1321,7 +1321,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0408"
+        "The selected same-title PDF's course-code evidence does not match this course occurrence; its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
@@ -1367,7 +1367,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0406"
+        "A same-title PDF was matched to another course variant; this occurrence was not verified, so its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
@@ -1413,7 +1413,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0005"
+        "A same-title PDF was matched to another course variant; this occurrence was not verified, so its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
@@ -1463,7 +1463,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0003"
+        "The selected same-title PDF's course-code evidence does not match this course occurrence; its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
@@ -1509,7 +1509,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: page codes not visible in first 8 pages"
+        "A same-title PDF was matched to another course variant; this occurrence was not verified, so its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
@@ -1903,7 +1903,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0401"
+        "The selected same-title PDF's course-code evidence does not match this course occurrence; its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
@@ -2239,7 +2239,7 @@
       "extracted_character_count": 0,
       "source_text_by_page": [],
       "warnings": [
-        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0006"
+        "A same-title PDF was matched to another course variant; this occurrence was not verified, so its content was intentionally not used."
       ],
       "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
       "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
