@@ -38,3 +38,13 @@ This is an internal recovery archive, not a public website data source. Do not i
 - The same 122 IDs are removed from `src/data/subjectIdBridge.json`, `src/data/subjectSemesterMap.json`, and the legacy subject arrays in `src/data/mockData.js` to prevent stale numeric exam routes from resolving them.
 - Restore only after a directly accessible syllabus is validated against the applicable course/program, subject code/title, and semester. Retry sources in priority order: official Marwadi University, GTU, then another credible official university for clearly-labelled comparable references.
 
+
+
+## Diploma syllabus catalog sync — 2026-10-12
+
+- Source: the live Marwadi official Diploma program pages and the checked-in collector inventory/PDF validation manifest under `Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Reports/`.
+- The inventory has 292 parsed occurrences. After deduplicating by course + subject code and rejecting labels contradicted by the PDF's internal title, 240 unique course/code candidates remain. Two Applied Chemistry records (`09GS3102`, Diploma Computer Engineering and Diploma Electrical Engineering) are **not inserted** because their PDF says Semester I/II without a program-specific semester; see `diploma_semester_review_pending_2026-10-12.csv`.
+- Active manifest: `diploma_active_syllabus_catalog_2026-10-12.csv` (238 program-specific, verified, semester-resolved rows). Source records are limited to Marwadi official PDFs; no GTU or other-university fallback is used in this pass.
+- Removal archive: `diploma_removed_subjects_2026-10-12.csv` (99 previous live rows no longer mapped to a current verified course/code entry). These rows are archived before deletion from Supabase. Where a current code/title replacement was identified, the replacement ID and PDF URL are recorded; other rows remain archived for future review.
+- Primary key convention verified from current live rows: `SubjectId = CourseId || LPAD((subject code with each letter converted to its 1-based alphabet number, followed by "01"), 12, '0')`. Example: CourseId 44 + code `09CE2101` gives `44000935210101`. The generated IDs are checked for collisions before insertion.
+- Compatibility files `src/data/subjectIdBridge.json`, `src/data/subjectSemesterMap.json`, and the static Diploma subject arrays must match the final active catalog. The two pending Applied Chemistry entries remain excluded until the intended program semester is confirmed. A network or source-label failure is not treated as proof that the syllabus does not exist.
