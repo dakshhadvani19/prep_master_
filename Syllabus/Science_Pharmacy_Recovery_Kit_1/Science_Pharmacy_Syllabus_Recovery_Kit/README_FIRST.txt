@@ -70,3 +70,12 @@ REPORTS IN Output
 
 SAFETY RULE
 Review PDFs and CSVs before deciding to retain/remove any live PrepMaster subjects. This package performs no database or GitHub writes and does not archive/delete subjects automatically.
+
+
+CURRENT CURATED COLLECTION (2026-10-12)
+---------------------------------------
+- The active verified tier has been curated to 102 PDF files after removing three wrong-course/wrong-semester duplicate copies and moving two course-scope false positives to `Output/Review_Required/`.
+- Use `Output/ACTIVE_PDF_MANIFEST.csv` as the course/subject/semester mapping for development and question generation. It has one row for every current Science & Pharmacy subject occurrence.
+- Only rows whose `question_generation_use` begins with `YES_` should be considered for automatic question generation. `NO_` rows are unresolved, mismatched, invalid, or explicitly pending review.
+- The original validation and occurrence reports are retained as evidence of the pre-cleanup run; some historical rows may refer to moved/deleted PDF paths.
+- Network-unverified titles stay unresolved; blocked access is not proof that no syllabus exists.

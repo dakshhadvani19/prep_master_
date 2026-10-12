@@ -35,3 +35,10 @@ FAILED_NO_MATCHING_OFFICIAL_PDF means no acceptable PDF was found in accessible 
 NETWORK_UNVERIFIED_RETRY and PROCESSING_ERROR_RETRY are not evidence that a subject should be removed.
 No database, GitHub, or production catalog writes were performed. Source IDs from mockData.js are not guaranteed to be live Supabase numeric IDs.
 Review these reports before any keep/remove decision: duplicate_subject_titles.csv, subject_occurrence_report.csv, failed_subjects.csv, pdf_validation_report.csv.
+
+
+CURRENT CURATION NOTE — 2026-10-12
+---------------------------------
+The source catalog still contains 306 subject occurrences and 250 normalized title groups. Three demonstrably misassigned duplicate PDFs were removed from the active tier, and two course-scope false positives were moved to Output/Review_Required. The active Verified_PDFs/Tier_1 set now contains 102 PDFs.
+Use Output/ACTIVE_PDF_MANIFEST.csv (306 rows) for the current course/semester mapping and question-generation status. Only rows marked YES_CODE_MATCH or YES_TITLE_MATCH_CODE_NOT_VISIBLE may be considered; all NO_ rows are blocked for automatic generation.
+The original reports below this note are historical audit evidence from the pre-cleanup run. NETWORK_UNVERIFIED_RETRY statuses do not prove that a syllabus is unavailable.
