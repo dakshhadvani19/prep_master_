@@ -132,6 +132,10 @@ def parse_unit_blocks(text: str) -> dict[str, list[dict[str, Any]]]:
     for line in lines:
         low = line.lower()
 
+        # Do not let synthetic page-boundary markers leak into unit/topic text.
+        if re.fullmatch(r"\[PAGE\s+\d+\]", line, flags=re.IGNORECASE):
+            continue
+
         # These signatures appear between units on some page layouts, not in the syllabus.
         if low.startswith(("digitally signed by", "mr.", "dr.")) or "digitally signed by" in low:
             continue
