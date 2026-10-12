@@ -132,6 +132,10 @@ def parse_unit_blocks(text: str) -> dict[str, list[dict[str, Any]]]:
     for line in lines:
         low = line.lower()
 
+        # These signatures appear between units on some page layouts, not in the syllabus.
+        if low.startswith(("digitally signed by", "mr.", "dr.")) or "digitally signed by" in low:
+            continue
+
         if "suggested list of experiments" in low:
             flush()
             in_experiment_list = True
@@ -318,9 +322,9 @@ def extract_subject(row: dict[str, str]) -> dict[str, Any]:
             {"page": i + 1, "text": text} for i, text in enumerate(page_texts)
         ]
 
-        official_title = re.search(r"COURSE TITLE\s*[:\-]?\s*([^\n]+)", full_text, re.I)
-        official_code = re.search(r"COURSE CODE\s*[:\-]?\s*([A-Z0-9]+)", full_text, re.I)
-        official_semester = re.search(r"\bSEMESTER\s+([A-Z0-9IVX]+)\b", full_text, re.I)
+        official_title = re.search(r"(?:COURSE|SUBJECT)\s+TITLE\s*[:\-]?\s*([^\n]+)", full_text, re.I)
+        official_code = re.search(r"(?:COURSE|SUBJECT)\s+CODE\s*[:\-]?\s*([A-Z0-9]+(?:-[A-Z0-9]+)?)", full_text, re.I)
+        official_semester = re.search(r"\bSEMESTER\s+(VI|IV|V|III|II|I|[1-6])\b", full_text, re.I)
         credits = re.search(r"COURSE CREDITS\s*[:\-]?\s*([0-9.]+)", full_text, re.I)
         prereq = find_between(
             full_text, r"Pre-requisite of course\s*:\s*", [
