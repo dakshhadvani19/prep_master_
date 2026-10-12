@@ -209,6 +209,7 @@ def extract_subject(row: dict[str, str], generated: str) -> dict[str, Any]:
     unique_status = str(row.get("unique_title_status") or "").strip()
     candidate_path = str(row.get("selected_pdf_file") or "").strip()
     candidate_url = str(row.get("selected_pdf_url") or "")
+    candidate_repo_path = (PDF_ROOT / candidate_path).relative_to(ROOT).as_posix() if candidate_path else None
     course_code_evidence = [x.strip() for x in str(row.get("course_code_evidence") or "").split("|") if x.strip()]
     declared_codes = [x.strip() for x in str(row.get("pdf_declared_codes") or "").split("|") if x.strip()]
     raw_hash = str(row.get("sha256") or "").strip().lower()
@@ -236,7 +237,7 @@ def extract_subject(row: dict[str, str], generated: str) -> dict[str, Any]:
             "catalog_status": status, "catalog_action": occurrence_status,
             "source_pdf_url": candidate_url if approved else None,
             "candidate_pdf_url": candidate_url or None,
-            "source_pdf_repo_path": None, "candidate_pdf_repo_path": candidate_path or None,
+            "source_pdf_repo_path": None, "candidate_pdf_repo_path": candidate_repo_path,
             "expected_pdf_sha256": raw_hash or None,
             "extraction_method": EXTRACTION_METHOD, "extraction_status": "PDF_NOT_FOUND",
             "official_document_metadata": {
@@ -286,7 +287,7 @@ def extract_subject(row: dict[str, str], generated: str) -> dict[str, Any]:
             "course_code_evidence": course_code_evidence,
             "catalog_status": status, "catalog_action": occurrence_status,
             "source_pdf_url": candidate_url, "candidate_pdf_url": candidate_url,
-            "source_pdf_repo_path": candidate_path, "candidate_pdf_repo_path": candidate_path or None,
+            "source_pdf_repo_path": candidate_repo_path, "candidate_pdf_repo_path": candidate_repo_path,
             "expected_pdf_sha256": raw_hash or None,
             "extraction_method": EXTRACTION_METHOD,
             "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
@@ -327,7 +328,7 @@ def extract_subject(row: dict[str, str], generated: str) -> dict[str, Any]:
             "course_code_evidence": course_code_evidence,
             "catalog_status": status, "catalog_action": occurrence_status,
             "source_pdf_url": candidate_url, "candidate_pdf_url": candidate_url or None,
-            "source_pdf_repo_path": candidate_path, "candidate_pdf_repo_path": candidate_path or None,
+            "source_pdf_repo_path": candidate_repo_path, "candidate_pdf_repo_path": candidate_repo_path,
             "expected_pdf_sha256": raw_hash or None,
             "extraction_method": EXTRACTION_METHOD, "extraction_status": "EXTRACTION_ERROR",
             "official_document_metadata": {"course_title": None, "course_code": None, "semester_label": None, "credits": None, "prerequisite": None},
