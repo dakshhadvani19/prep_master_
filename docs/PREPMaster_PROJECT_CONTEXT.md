@@ -285,3 +285,11 @@ The Law & Arts PDF content audit temporarily excluded 74 live `public.Subjects` 
 - The same 122 IDs are removed from `src/data/subjectIdBridge.json`, `src/data/subjectSemesterMap.json`, and the legacy subject arrays in `src/data/mockData.js` to prevent stale numeric exam routes from resolving them.
 - Restore only after a directly accessible syllabus is validated against the applicable course/program, subject code/title, and semester. Retry sources in priority order: official Marwadi University, GTU, then another credible official university for clearly-labelled comparable references.
 
+## Diploma syllabus-backed catalog rule (added 2026-10-12)
+
+For Diploma CourseIds 44–49, the active subject catalog is synchronized against the current official Marwadi course-page syllabus PDF inventory. The source manifest is `Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Reports/subject_inventory_from_marwadi_pages.csv`; the synchronized 245-row catalog snapshot is under `global-exam-prep/temp_removed_subjects/diploma_catalog_sync_2026-10-12.csv`.
+
+- Before removing any old subject row, archive its exact SubjectId, name, CourseId, course name, semester and legacy source mapping in `global-exam-prep/temp_removed_subjects/diploma_removed_subjects_2026-10-12.csv`.
+- Resolve duplicate course-code aliases by the actual linked PDF's title/code evidence where available. Do not create two active rows for the same CourseId+source code.
+- Current SubjectId convention verified from live Diploma records: convert letters in the official source code to alphabet positions (A=1…Z=26, no zero-padding per letter), append the existing `01` suffix, left-pad that encoded portion to 12 digits, and prefix CourseId. Example: CourseId 44 + `09CE3102` = `44000935310201`.
+- Whenever a current official code changes, synchronize `Subjects`, `mockData.js`, `subjectIdBridge.json`, and `subjectSemesterMap.json`. Archive old primary keys instead of silently dropping them; an archived record may be restored after its syllabus source is validated.
