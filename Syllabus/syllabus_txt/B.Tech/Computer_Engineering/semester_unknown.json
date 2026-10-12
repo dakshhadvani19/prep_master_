@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:42:16+00:00",
+  "generated_at_utc": "2026-10-12T12:43:06+00:00",
   "program": {
     "program_name": "B.Tech Computer Engineering",
     "program_folder": "Computer Engineering",
@@ -812,8 +812,8 @@
       ],
       "units": [
         {
-          "unit_number": null,
-          "title": "1",
+          "unit_number": 1,
+          "title": null,
           "topic_lines": [
             "2 Tutorial 2 1"
           ],
@@ -823,8 +823,8 @@
           ]
         },
         {
-          "unit_number": null,
-          "title": "2",
+          "unit_number": 2,
+          "title": null,
           "topic_lines": [
             "3 Tutorial 3 1"
           ],
@@ -834,8 +834,8 @@
           ]
         },
         {
-          "unit_number": null,
-          "title": "3",
+          "unit_number": 3,
+          "title": null,
           "topic_lines": [
             "4 Tutorial 4 1"
           ],
@@ -845,8 +845,8 @@
           ]
         },
         {
-          "unit_number": null,
-          "title": "4",
+          "unit_number": 4,
+          "title": null,
           "topic_lines": [
             "5 Tutorial 5 1"
           ],
@@ -856,8 +856,8 @@
           ]
         },
         {
-          "unit_number": null,
-          "title": "5",
+          "unit_number": 5,
+          "title": null,
           "topic_lines": [
             "6 Tutorial 6 1"
           ],
@@ -867,8 +867,8 @@
           ]
         },
         {
-          "unit_number": null,
-          "title": "6",
+          "unit_number": 6,
+          "title": null,
           "topic_lines": [
             "Total Hours 6"
           ],
@@ -1687,7 +1687,7 @@
       "expected_pdf_sha256": "fd0e3ae30ec181e3e68e9b0cf7834d9d4e076941def078c6d76f78c2ac2c86fe",
       "actual_pdf_sha256": "fd0e3ae30ec181e3e68e9b0cf7834d9d4e076941def078c6d76f78c2ac2c86fe",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "page_count": 4,
       "extracted_character_count": 8691,
       "objective_text": "1 This course enables students to analyze and apply open-source technologies through the study of software licensing models, version control systems, package managers, and deployment platforms. Students will also evaluate and use open-source tools for application development, automation, and testing in real-world scenarios. The course emphasizes hands-on exploration and understanding of contributions within open- source communities.",
@@ -1711,97 +1711,7 @@
         "Pre-requisite of course:Basic understanding of operating systems, programming and web",
         "technologies."
       ],
-      "units": [
-        {
-          "unit_number": null,
-          "title": "testing (PyTest, PHPUnit, JUnit), Web testing (Selenium,",
-          "topic_lines": [
-            "JMeter), API testing (Postman), Security testing (OWASP ZAP).",
-            "Total Hours 28",
-            "Suggested List of Experiments:",
-            "Contents : Contact Topics Unit Hours",
-            "1 Practical 1 2",
-            "Explore GitHub/GitLab for open-source projects with different",
-            "licenses.",
-            "2 Practical 2 2",
-            "Setup git and explore commands related to VCS.",
-            "3 Practical 3 2",
-            "Create a GitHub/GitLab repository and upload sample code.",
-            "4 Practical 4 2",
-            "Implement CI/CD Pipeline using GitHub Actions / GitLab CI.",
-            "5 Practical 5 2",
-            "Develop a Laravel/Django based web application.",
-            "6 Practical 6 2",
-            "Deploy a simple app using Nginx/Apache.",
-            "7 Practical 7 2",
-            "Setup Nginx to handle proxy request and load balancing.",
-            "8 Practical 8 2",
-            "Use MongoDB to create a NoSQL database, perform CRUD",
-            "operations, and query documents using basic operators.",
-            "9 Practical 9 2",
-            "Use PostgreSQL to create a relational database, design tables, and",
-            "perform CRUD operations using SQL queries.",
-            "10 Practical 10 2",
-            "Use pytest to test python application.",
-            "11 Practical 11 2",
-            "Use selenium to create browser-based test.",
-            "12 Practical 12 2",
-            "Use Postman to test sample API.",
-            "DR. KRUNAL NARUMAL VAGHELA DR. RAJENDRASINH BAHADURSINH JADEJA",
-            "Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
-            "Suggested List of Experiments:",
-            "Contents : Contact Topics Unit Hours",
-            "13 Practical 13 2",
-            "Use OWASP ZAP to check security integrity.",
-            "14 Practical 14 2",
-            "Use JMeter to test web application for load testing.",
-            "Total Hours 28"
-          ],
-          "topics_text": "JMeter), API testing (Postman), Security testing (OWASP ZAP). Total Hours 28 Suggested List of Experiments: Contents : Contact Topics Unit Hours 1 Practical 1 2 Explore GitHub/GitLab for open-source projects with different licenses. 2 Practical 2 2 Setup git and explore commands related to VCS. 3 Practical 3 2 Create a GitHub/GitLab repository and upload sample code. 4 Practical 4 2 Implement CI/CD Pipeline using GitHub Actions / GitLab CI. 5 Practical 5 2 Develop a Laravel/Django based web application. 6 Practical 6 2 Deploy a simple app using Nginx/Apache. 7 Practical 7 2 Setup Nginx to handle proxy request and load balancing. 8 Practical 8 2 Use MongoDB to create a NoSQL database, perform CRUD operations, and query documents using basic operators. 9 Practical 9 2 Use PostgreSQL to create a relational database, design tables, and perform CRUD operations using SQL queries. 10 Practical 10 2 Use pytest to test python application. 11 Practical 11 2 Use selenium to create browser-based test. 12 Practical 12 2 Use Postman to test sample API. DR. KRUNAL NARUMAL VAGHELA DR. RAJENDRASINH BAHADURSINH JADEJA Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) Suggested List of Experiments: Contents : Contact Topics Unit Hours 13 Practical 13 2 Use OWASP ZAP to check security integrity. 14 Practical 14 2 Use JMeter to test web application for load testing. Total Hours 28",
-          "topics": [
-            "JMeter), API testing (Postman), Security testing (OWASP ZAP).",
-            "Total Hours 28",
-            "Suggested List of Experiments:",
-            "Contents : Contact Topics Unit Hours",
-            "1 Practical 1 2",
-            "Explore GitHub/GitLab for open-source projects with different",
-            "licenses.",
-            "2 Practical 2 2",
-            "Setup git and explore commands related to VCS.",
-            "3 Practical 3 2",
-            "Create a GitHub/GitLab repository and upload sample code.",
-            "4 Practical 4 2",
-            "Implement CI/CD Pipeline using GitHub Actions / GitLab CI.",
-            "5 Practical 5 2",
-            "Develop a Laravel/Django based web application.",
-            "6 Practical 6 2",
-            "Deploy a simple app using Nginx/Apache.",
-            "7 Practical 7 2",
-            "Setup Nginx to handle proxy request and load balancing.",
-            "8 Practical 8 2",
-            "Use MongoDB to create a NoSQL database, perform CRUD",
-            "operations, and query documents using basic operators.",
-            "9 Practical 9 2",
-            "Use PostgreSQL to create a relational database, design tables, and",
-            "perform CRUD operations using SQL queries.",
-            "10 Practical 10 2",
-            "Use pytest to test python application.",
-            "11 Practical 11 2",
-            "Use selenium to create browser-based test.",
-            "12 Practical 12 2",
-            "Use Postman to test sample API.",
-            "DR. KRUNAL NARUMAL VAGHELA DR. RAJENDRASINH BAHADURSINH JADEJA",
-            "Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
-            "Suggested List of Experiments:",
-            "Contents : Contact Topics Unit Hours",
-            "13 Practical 13 2",
-            "Use OWASP ZAP to check security integrity.",
-            "14 Practical 14 2",
-            "Use JMeter to test web application for load testing.",
-            "Total Hours 28"
-          ]
-        }
-      ],
+      "units": [],
       "references": {
         "textbooks": [
           "1 Producing Open Source Software, Karl Fogel, O'Reilly Media, 2005"
@@ -1862,7 +1772,9 @@
           "text": "Supplementary Resources:\n 3  https://docs.github.com/\n 4  https://www.selenium.dev/documentation/\n\n\n\n\n\nDR. KRUNAL NARUMAL VAGHELA             DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": []
+      "warnings": [
+        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
+      ]
     },
     {
       "course_code": "01CE0527",
@@ -4333,10 +4245,10 @@
       "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "page_count": 6,
       "extracted_character_count": 16213,
-      "objective_text": "1 To study the basic structure of a computer organization and architectural of the Arithmetic and Logical",
+      "objective_text": "1 To study the basic structure of a computer organization and architectural of the Arithmetic and Logical unit, the Memory unit, Control unit and I/O unit.",
       "objectives": [
         "1 To study the basic structure of a computer organization and architectural of the Arithmetic",
-        "and Logical"
+        "and Logical unit, the Memory unit, Control unit and I/O unit."
       ],
       "course_outcomes_text": "After completion of this course, student will be able to: 1 Apply the concepts of register transfer, micro-operations, basic computer organization, and instruction cycle. 2 Apply programming techniques using machine and assembly language for arithmetic, logic, and I/O operations. 3 Analyze pipelining techniques and arithmetic algorithms to evaluate the performance of computer systems. 4 Evaluate different memory organization techniques and integrate processor, memory, and I/O subsystems to design a simple computer system. Pre-requisite of course:Fundamentals of Computer, Digital Logic Circuits",
       "course_outcomes": [
@@ -4945,13 +4857,13 @@
       "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "page_count": 4,
       "extracted_character_count": 9100,
-      "objective_text": "1 Students are expected to learn basics of Computer Programming which will help them to apply these concepts in day-to-day life. The course discusses various notations that required for developing algorithm and for C language, which is used in many commercial, industrial as well as industrial applications. Keeping in view wide applications of files, a special",
+      "objective_text": "1 Students are expected to learn basics of Computer Programming which will help them to apply these concepts in day-to-day life. The course discusses various notations that required for developing algorithm and for C language, which is used in many commercial, industrial as well as industrial applications. Keeping in view wide applications of files, a special unit of files is introduced.",
       "objectives": [
         "1 Students are expected to learn basics of Computer Programming which will help them to",
         "apply these concepts in day-to-day life. The course discusses various notations that",
         "required for developing algorithm and for C language, which is used in many commercial,",
         "industrial as well as industrial applications. Keeping in view wide applications of files, a",
-        "special"
+        "special unit of files is introduced."
       ],
       "course_outcomes_text": "After completion of this course, student will be able to: 1 Understand the basic components of computer and programming concepts using flowchart and algorithms. 2 Apply programming principles using C language constructs to solve computational problems. 3 Analyze the use of arrays, strings, and functions for structured programming. 4 Demonstrate the use of pointers, dynamic memory allocation, and data structures like structures and unions. 5 Evaluate different file handling mechanisms for managing data in C programming. Pre-requisite of course:NA",
       "course_outcomes": [
@@ -6721,8 +6633,8 @@
     }
   ],
   "build_summary": {
-    "structured": 2,
-    "manual_review": 64,
+    "structured": 1,
+    "manual_review": 65,
     "ocr_review": 0,
     "hash_mismatch": 0,
     "missing_pdf": 0,

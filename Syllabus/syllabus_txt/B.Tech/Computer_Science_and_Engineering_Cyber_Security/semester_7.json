@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:42:16+00:00",
+  "generated_at_utc": "2026-10-12T12:43:06+00:00",
   "program": {
     "program_name": "B.Tech CSE Cyber Security",
     "program_folder": "Computer Science and Engineering - Cyber Security",
@@ -240,7 +240,7 @@
       "expected_pdf_sha256": "f94416120d1860109a52167ca46a89409018ba164d2a6b2eb3c2c8b42971257b",
       "actual_pdf_sha256": "f94416120d1860109a52167ca46a89409018ba164d2a6b2eb3c2c8b42971257b",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "page_count": 5,
       "extracted_character_count": 12472,
       "objective_text": "1 The course aims to provide students with a foundational understanding of system security by emphasizing the integration of security principles early in the software development lifecycle and identifying common design vulnerabilities. It develops the ability to perform threat modeling using methodologies such as STRIDE and LINDDUN to identify and prioritize risks during the design phase. The course also focuses on applying secure design patterns and best practices for authentication, authorization, and session management, along with designing secure mechanisms for data protection, input validation, and error handling.",
@@ -254,7 +254,7 @@
         "along with designing secure mechanisms for data protection, input validation, and error",
         "handling."
       ],
-      "course_outcomes_text": "After completion of this course, student will be able to: 1 Apply secure design principles and practices within the software development lifecycle to identify and mitigate design-level vulnerabilities. 2 Analyze software designs using threat modeling techniques such as STRIDE and LINDDUN to identify risks and trust boundaries. 3 Apply secure design patterns for authentication, authorization, and session management in software applications. 4 Evaluate data security mechanisms, input validation strategies, and error handling techniques to prevent common vulnerabilities. 5 Design secure software architectures and conduct design reviews using security principles and analysis tools to ensure system security and maintainability Pre-requisite of course:Solid understanding of software engineering principles and practices. Proficiency in object-oriented analysis and design. Experience with designing and implementing software",
+      "course_outcomes_text": "After completion of this course, student will be able to: 1 Apply secure design principles and practices within the software development lifecycle to identify and mitigate design-level vulnerabilities. 2 Analyze software designs using threat modeling techniques such as STRIDE and LINDDUN to identify risks and trust boundaries. 3 Apply secure design patterns for authentication, authorization, and session management in software applications. 4 Evaluate data security mechanisms, input validation strategies, and error handling techniques to prevent common vulnerabilities. 5 Design secure software architectures and conduct design reviews using security principles and analysis tools to ensure system security and maintainability Pre-requisite of course:Solid understanding of software engineering principles and practices. Proficiency in object-oriented analysis and design. Experience with designing and implementing software modules or components. Basic knowledge of common software security vulnerabilities (e.g., OWASP Top 10)",
       "course_outcomes": [
         "After completion of this course, student will be able to:",
         "1 Apply secure design principles and practices within the software development lifecycle to",
@@ -269,23 +269,10 @@
         "and analysis tools to ensure system security and maintainability",
         "Pre-requisite of course:Solid understanding of software engineering principles and practices.",
         "Proficiency in object-oriented analysis and design. Experience with designing and implementing",
-        "software"
+        "software modules or components. Basic knowledge of common software security vulnerabilities",
+        "(e.g., OWASP Top 10)"
       ],
-      "units": [
-        {
-          "unit_number": null,
-          "title": "based on given requirements, including threat modeling and",
-          "topic_lines": [
-            "documentation of design decisions.",
-            "Total Hours 20"
-          ],
-          "topics_text": "documentation of design decisions. Total Hours 20",
-          "topics": [
-            "documentation of design decisions.",
-            "Total Hours 20"
-          ]
-        }
-      ],
+      "units": [],
       "references": {
         "textbooks": [
           "1 Software Security: Building Security In, Gary McGraw, Addison-Wesley Professional,",
@@ -348,12 +335,14 @@
           "text": "Instructional Method:\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  NPTEL Course: Software Security (IIT Kanpur)\n 2  Online Videos: OWASP Foundation Webinars\n 3  E-Course: Secure Software Development (Coursera)\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": []
+      "warnings": [
+        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
+      ]
     }
   ],
   "build_summary": {
-    "structured": 1,
-    "manual_review": 2,
+    "structured": 0,
+    "manual_review": 3,
     "ocr_review": 0,
     "hash_mismatch": 0,
     "missing_pdf": 0,
