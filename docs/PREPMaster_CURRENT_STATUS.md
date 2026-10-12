@@ -166,3 +166,9 @@ Unless the requested task directly requires them, avoid opportunistic rewrites o
 - The same 122 IDs are removed from `src/data/subjectIdBridge.json`, `src/data/subjectSemesterMap.json`, and the legacy subject arrays in `src/data/mockData.js` to prevent stale numeric exam routes from resolving them.
 - Restore only after a directly accessible syllabus is validated against the applicable course/program, subject code/title, and semester. Retry sources in priority order: official Marwadi University, GTU, then another credible official university for clearly-labelled comparable references.
 
+## 2026-10-12 — Diploma syllabus-backed catalog sync
+
+- Current source inventory: Marwadi official Diploma pages and their linked syllabus PDFs, not the prior Supabase subject list alone.
+- Target catalog: 245 unique subjects across Diploma CourseIds 44–49.
+- Planned hosted Supabase transaction: archive 96 previous IDs, add 106 current code-derived IDs, update 31 names/semesters, and retain other supported IDs. See the source manifest and removal archive in `global-exam-prep/temp_removed_subjects/`.
+- `subjectIdBridge.json`, `subjectSemesterMap.json`, and the Diploma arrays in `mockData.js` are synchronized to the same 245 active entries.

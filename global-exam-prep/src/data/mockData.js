@@ -26138,8 +26138,8 @@ export const domains =[
         "semesters": 6,
         "subjects": [
           {
-            "id": "44009131210101",
-            "title": "Mathematics-I",
+            "id": "44009719310201",
+            "title": "Applied Chemistry",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -26148,7 +26148,7 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935210201",
+            "id": "44000935310201",
             "title": "Basics of Web Designing",
             "sem": 1,
             "exams": [
@@ -26158,8 +26158,8 @@ export const domains =[
             ]
           },
           {
-            "id": "44009135110101",
-            "title": "Engineering Drawing",
+            "id": "44009911010101",
+            "title": "Bharatiya Knowledge System",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -26198,9 +26198,9 @@ export const domains =[
             ]
           },
           {
-            "id": "44009121010201",
-            "title": "Enviornment Conservation & Disater Management",
-            "sem": 2,
+            "id": "44009135110101",
+            "title": "Engineering Drawing",
+            "sem": 1,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26208,9 +26208,9 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935110401",
-            "title": "Computer Programming",
-            "sem": 2,
+            "id": "44009121010101",
+            "title": "Indian Constitution",
+            "sem": 1,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26218,8 +26218,18 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935110501",
-            "title": "Computer Network Skills",
+            "id": "44009131210101",
+            "title": "Mathematics-I",
+            "sem": 1,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "44009719210101",
+            "title": "Applied Physics",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -26238,8 +26248,8 @@ export const domains =[
             ]
           },
           {
-            "id": "44009719110101",
-            "title": "Applied Physics",
+            "id": "44000935210501",
+            "title": "Computer Network Skills",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -26248,8 +26258,18 @@ export const domains =[
             ]
           },
           {
-            "id": "44009131210201",
-            "title": "Mathematics-II",
+            "id": "44000935210401",
+            "title": "Computer Programming",
+            "sem": 2,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "44009121010201",
+            "title": "Enviornment Conservation & Disater Management",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -26268,9 +26288,9 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935130201",
-            "title": "Database Management System",
-            "sem": 3,
+            "id": "44009131210201",
+            "title": "Mathematics-II",
+            "sem": 2,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26278,18 +26298,18 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935230101",
-            "title": "Object Oriented Programming With C++",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "44000935230301",
+            "id": "44000935330301",
             "title": "Data Structure",
+            "sem": 3,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "44000935230201",
+            "title": "Database Management System",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -26318,8 +26338,8 @@ export const domains =[
             ]
           },
           {
-            "id": "44009164030101",
-            "title": "Integrated Personality Development Course-II",
+            "id": "44000935330101",
+            "title": "Object Oriented Programming With C++",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -26328,9 +26348,9 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935140301",
-            "title": "Java Programming",
-            "sem": 4,
+            "id": "44000935030401",
+            "title": "Python Programming and Prompt Engineering",
+            "sem": 3,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26348,28 +26368,8 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935240201",
-            "title": "Software Engineering",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "44000935240401",
-            "title": "Web Technology",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "44000935240501",
-            "title": "Operating System",
+            "id": "44000935140301",
+            "title": "Java Programming",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -26388,9 +26388,9 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935050901",
-            "title": "Summer Internship",
-            "sem": 5,
+            "id": "44000935340501",
+            "title": "Operating System",
+            "sem": 4,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26398,9 +26398,19 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935150101",
-            "title": "Mobile Computing",
-            "sem": 5,
+            "id": "44000935340201",
+            "title": "Software Engineering",
+            "sem": 4,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "44000935340401",
+            "title": "Web Technology",
+            "sem": 4,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26410,16 +26420,6 @@ export const domains =[
           {
             "id": "44000935150201",
             "title": "Advance Database Management System",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "44000935150301",
-            "title": "Advance Web Technology",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -26438,8 +26438,8 @@ export const domains =[
             ]
           },
           {
-            "id": "44000935150501",
-            "title": "Project-I",
+            "id": "44000935150301",
+            "title": "Advance Web Technology",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -26451,6 +26451,66 @@ export const domains =[
             "id": "44000935150601",
             "title": "Fundamentals Of IOT With Python",
             "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "44000935150101",
+            "title": "Mobile Computing",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "44000935150501",
+            "title": "Project-I",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "44000935050901",
+            "title": "Summer Internship",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "44000935160301",
+            "title": ".NET",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "44000935160701",
+            "title": "Entrepreneurship Development",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "44000935160601",
+            "title": "Fundametals of Machine Learning",
+            "sem": 6,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26476,36 +26536,6 @@ export const domains =[
               "mid-2",
               "final"
             ]
-          },
-          {
-            "id": "44000935160301",
-            "title": ".NET",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "44000935160601",
-            "title": "Fundametals of Machine Learning",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "44000935160701",
-            "title": "Entrepreneurship Development",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
           }
         ]
       },
@@ -26515,58 +26545,8 @@ export const domains =[
         "semesters": 6,
         "subjects": [
           {
-            "id": "45009121010101",
-            "title": "INDIAN CONSTITUTION",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009121010201",
-            "title": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "45009719110101",
-            "title": "APPLIED PHYSICS",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009131210101",
-            "title": "MATHEMATICS-I",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009135110101",
-            "title": "ENGINEERING DRAWING",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009135210201",
-            "title": "Mechanical Workshop",
+            "title": "Applied Physics",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -26585,9 +26565,49 @@ export const domains =[
             ]
           },
           {
-            "id": "45000935110101",
-            "title": "COMPUTER FUNDAMENTAL SKILL",
-            "sem": 2,
+            "id": "45009135110101",
+            "title": "ENGINEERING DRAWING",
+            "sem": 1,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009121010201",
+            "title": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
+            "sem": 1,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009121010101",
+            "title": "INDIAN CONSTITUTION",
+            "sem": 1,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009131210101",
+            "title": "MATHEMATICS-I",
+            "sem": 1,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009135210201",
+            "title": "Mechanical Workshop",
+            "sem": 1,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26605,8 +26625,18 @@ export const domains =[
             ]
           },
           {
-            "id": "45009131210201",
-            "title": "MATHEMATICS-II",
+            "id": "45000935210101",
+            "title": "COMPUTER FUNDAMENTAL SKILL",
+            "sem": 2,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009135210401",
+            "title": "COMPUTER-AIDED MECHANICAL DRAFTING",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -26625,18 +26655,8 @@ export const domains =[
             ]
           },
           {
-            "id": "45009135210401",
-            "title": "COMPUTER -AIDED MECHANICAL DRAFTING",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "45009164010101",
-            "title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE -I",
+            "title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-I",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -26645,19 +26665,9 @@ export const domains =[
             ]
           },
           {
-            "id": "45009131030201",
-            "title": "MATHEMATICS-III",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009135230101",
-            "title": "THERMODYNAMICS",
-            "sem": 3,
+            "id": "45009131210201",
+            "title": "MATHEMATICS-II",
+            "sem": 2,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26675,8 +26685,18 @@ export const domains =[
             ]
           },
           {
-            "id": "45009135230301",
-            "title": "STRENGTH OF MATERIAL",
+            "id": "45009164030101",
+            "title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE – II",
+            "sem": 3,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009135230501",
+            "title": "MANUFACTURING PROCESS-I",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -26695,8 +26715,8 @@ export const domains =[
             ]
           },
           {
-            "id": "45009135230501",
-            "title": "MANUFACTURING PROCESS -I",
+            "id": "45009131030201",
+            "title": "MATHEMATICS-III",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -26705,9 +26725,29 @@ export const domains =[
             ]
           },
           {
-            "id": "45009164030101",
-            "title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE  – II",
+            "id": "45009135230301",
+            "title": "STRENGTH OF MATERIAL",
             "sem": 3,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009135230101",
+            "title": "THERMODYNAMICS",
+            "sem": 3,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009135240501",
+            "title": "MANUFACTURING PROCESS-II",
+            "sem": 4,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26717,26 +26757,6 @@ export const domains =[
           {
             "id": "45009131040201",
             "title": "MATHEMATICS-IV",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009135240101",
-            "title": "THEORY OF MACHINE",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009135240201",
-            "title": "THERMAL ENGINEERING  – 1",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -26765,8 +26785,8 @@ export const domains =[
             ]
           },
           {
-            "id": "45009135240501",
-            "title": "MANUFACTURING PROCESS -II",
+            "id": "45009135240101",
+            "title": "THEORY OF MACHINE",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -26775,29 +26795,9 @@ export const domains =[
             ]
           },
           {
-            "id": "45009135050801",
-            "title": "SUMMER INTERNSHIP",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009135150101",
-            "title": "INDUSTRIAL ENGINEERING",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009135150301",
-            "title": "THERMAL ENGINEERING -II",
-            "sem": 5,
+            "id": "45009135240201",
+            "title": "THERMAL ENGINEERING – 1",
+            "sem": 4,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26807,26 +26807,6 @@ export const domains =[
           {
             "id": "45009135150401",
             "title": "3D MODELLING SOFTWARE",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009135150501",
-            "title": "PROJECT – I",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45009135150701",
-            "title": "ENTREPRENEURSHIP DEVELOPMENT",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -26845,9 +26825,49 @@ export const domains =[
             ]
           },
           {
-            "id": "45009135160201",
-            "title": "COMPUTER AIDED DESIGN",
-            "sem": 6,
+            "id": "45009135150701",
+            "title": "ENTREPRENEURSHIP DEVELOPMENT",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009135150101",
+            "title": "INDUSTRIAL ENGINEERING",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009135150501",
+            "title": "PROJECT – I",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009135050801",
+            "title": "SUMMER INTERNSHIP",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009135150301",
+            "title": "THERMAL ENGINEERING -II",
+            "sem": 5,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26865,8 +26885,8 @@ export const domains =[
             ]
           },
           {
-            "id": "45009135160501",
-            "title": "PROJECT-II",
+            "id": "45009135160201",
+            "title": "COMPUTER AIDED DESIGN",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -26875,8 +26895,8 @@ export const domains =[
             ]
           },
           {
-            "id": "45009135160601",
-            "title": "POWER PLANT ENGINEERING",
+            "id": "45009135260301",
+            "title": "DESIGN OF MACHINE ELEMENT",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -26895,8 +26915,18 @@ export const domains =[
             ]
           },
           {
-            "id": "45009135260301",
-            "title": "DESIGN OF MACHINE ELEMENT",
+            "id": "45009135160601",
+            "title": "POWER PLANT ENGINEERING",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "45009135160501",
+            "title": "PROJECT-II",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -26912,8 +26942,8 @@ export const domains =[
         "semesters": 6,
         "subjects": [
           {
-            "id": "46009131110101",
-            "title": "Mathematics-1",
+            "id": "46009719310201",
+            "title": "APPLIED CHEMISTRY",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -26922,8 +26952,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46016131000801",
-            "title": "Applied Chemistry",
+            "id": "46009911010101",
+            "title": "BHARATIYA KNOWLEDGE SYSTEM",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -26932,8 +26962,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938110101",
-            "title": "Chemical Engineering Equipment Design",
+            "id": "46000938210101",
+            "title": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -26942,8 +26972,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46091912110101",
-            "title": "Communication Skills-I",
+            "id": "46091912010301",
+            "title": "COMMUNICATION SKILLS",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -26952,8 +26982,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000935110101",
-            "title": "Computer Fundamental Skill",
+            "id": "46000935210101",
+            "title": "COMPUTER FUNDAMENTAL SKILL",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -26962,8 +26992,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46009135110201",
-            "title": "Mechanical Workshop",
+            "id": "46009121010101",
+            "title": "INDIAN CONSTITUTION",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -26972,9 +27002,9 @@ export const domains =[
             ]
           },
           {
-            "id": "46009131110201",
-            "title": "Mathematics-II",
-            "sem": 2,
+            "id": "46009131210101",
+            "title": "MATHEMATICS-I",
+            "sem": 1,
             "exams": [
               "mid-1",
               "mid-2",
@@ -26982,8 +27012,18 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938110201",
-            "title": "Unit Operation – 1",
+            "id": "46009135210201",
+            "title": "MECHANICAL WORKSHOP",
+            "sem": 1,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "46000938210301",
+            "title": "ELECTRICAL PUMPS AND VALVES OPERATION SKILL",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -26993,7 +27033,7 @@ export const domains =[
           },
           {
             "id": "46009135110101",
-            "title": "Engineering Drawing",
+            "title": "ENGINEERING DRAWING",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27002,8 +27042,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46091912110201",
-            "title": "Communication Skills-II",
+            "id": "46009121010201",
+            "title": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27012,8 +27052,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000939110201",
-            "title": "Environment Conservation & Disaster Management",
+            "id": "46000935030501",
+            "title": "GENERATIVE AI & PROMPT ENGINEERING",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27022,8 +27062,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938110301",
-            "title": "Electrical Pumps and Valves Operation Skill",
+            "id": "46009164010101",
+            "title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-I",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27032,8 +27072,28 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938130101",
-            "title": "Unit Operation – II",
+            "id": "46009131210201",
+            "title": "MATHEMATICS-II",
+            "sem": 2,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "46000938210201",
+            "title": "UNIT OPERATION-I",
+            "sem": 2,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "46000938230201",
+            "title": "INDUSTRIAL STOICHIOMETRY",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27042,8 +27102,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938130201",
-            "title": "Industrial Stoichiometry",
+            "id": "46009131030201",
+            "title": "MATHEMATICS-III",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27052,8 +27112,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938130301",
-            "title": "Safety & Pollution Measures",
+            "id": "46000938230401",
+            "title": "REACTOR & BOILER OPERATION SKILL",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27062,8 +27122,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46009131130101",
-            "title": "Basic Calculus",
+            "id": "46000938230301",
+            "title": "SAFETY & POLLUTION MEASURES",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27072,8 +27132,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938130401",
-            "title": "Reactor & Boiler Operation Skill",
+            "id": "46000938230101",
+            "title": "UNIT OPERATION - II",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27082,8 +27142,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938140101",
-            "title": "Unit Operation – III",
+            "id": "46000938240401",
+            "title": "CHEMICAL PROCESS SOFTWARE",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27092,8 +27152,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46016134001101",
-            "title": "Process Heat Transfer",
+            "id": "46000938240501",
+            "title": "GENERAL CHEMICAL TECHNOLOGY",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27102,8 +27162,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938140301",
-            "title": "Plant Utilization and Instrumentation",
+            "id": "46009131040201",
+            "title": "MATHEMATICS-IV",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27112,8 +27172,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46009131140101",
-            "title": "Engineering Mathematics",
+            "id": "46000938240301",
+            "title": "PLANT UTILIZATION AND INSTRUMENTATION",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27122,8 +27182,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938140401",
-            "title": "Chemical Process Software",
+            "id": "46000938240201",
+            "title": "PROCESS HEAT TRANSFER",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27132,8 +27192,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938140501",
-            "title": "General Chemical Technology",
+            "id": "46000938240101",
+            "title": "UNIT OPERATION - III",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27142,8 +27202,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938150101",
-            "title": "Unit Operation – IV",
+            "id": "46000938250201",
+            "title": "CHEMICAL REACTION ENGINEERING & THERMODYNAMICS",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27152,37 +27212,7 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938150201",
-            "title": "Chemical Reaction Engineering & Thermodynamics",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "46000938150301",
-            "title": "Petroleum Refining & Petrochemicals",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "46000938150401",
-            "title": "Project-I",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "46000938150501",
+            "id": "46000938250501",
             "title": "DCS & SCADA",
             "sem": 5,
             "exams": [
@@ -27192,8 +27222,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938150601",
-            "title": "Polymer Technology",
+            "id": "46000938250701",
+            "title": "FERTILIZER TECHNOLOGY",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27202,8 +27232,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938150701",
-            "title": "Fertilizer Technology",
+            "id": "46000938250301",
+            "title": "PERTOLEUM REFINING & PETROCHEMICALS",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27212,8 +27242,48 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938160101",
-            "title": "Chemical Process Equipment Design",
+            "id": "46000938250601",
+            "title": "POLYMER TECHNOLOGY",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "46000938250401",
+            "title": "PROJECT - I",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "46000938050801",
+            "title": "SUMMER INTERNSHIP",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "46000938250101",
+            "title": "UNIT OPERATION - IV",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "46000938260201",
+            "title": "CHEMICAL ENGINEERING PLANT ECONOMICS",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27222,8 +27292,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938160201",
-            "title": "Chemical Engineering Plant Economics",
+            "id": "46000938260101",
+            "title": "CHEMICAL PROCESS EQUIPMENT DESIGN",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27232,8 +27302,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938160301",
-            "title": "Project -II",
+            "id": "46000938260401",
+            "title": "ENTREPRENEURSHIP DEVELOPMENT",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27242,8 +27312,8 @@ export const domains =[
             ]
           },
           {
-            "id": "46000938160401",
-            "title": "Entrepreneurship Development",
+            "id": "46000938260301",
+            "title": "PROJECT-II",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27259,8 +27329,8 @@ export const domains =[
         "semesters": 6,
         "subjects": [
           {
-            "id": "47009131210101",
-            "title": "Mathematics-1",
+            "id": "47009719310201",
+            "title": "APPLIED CHEMISTRY",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -27269,7 +27339,7 @@ export const domains =[
             ]
           },
           {
-            "id": "47009719110101",
+            "id": "47009719210101",
             "title": "Applied Physics",
             "sem": 1,
             "exams": [
@@ -27279,8 +27349,8 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955210101",
-            "title": "DC Circuits",
+            "id": "47009911010101",
+            "title": "Bharatiya Knowledge System",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -27290,7 +27360,7 @@ export const domains =[
           },
           {
             "id": "47091912010301",
-            "title": "Communication Skills",
+            "title": "COMMUNICATION SKILLS",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -27309,8 +27379,28 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955210201",
+            "id": "47000955310101",
+            "title": "DC Circuit",
+            "sem": 1,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47000955310201",
             "title": "Electrical Practice",
+            "sem": 1,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47009135110101",
+            "title": "Engineering Drawing",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -27329,8 +27419,18 @@ export const domains =[
             ]
           },
           {
-            "id": "47009131210201",
-            "title": "Mathematics-II",
+            "id": "47009131210101",
+            "title": "Mathematics I",
+            "sem": 1,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47000955310401",
+            "title": "AC CIRCUIT",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27339,38 +27439,8 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955210401",
-            "title": "AC Circuit",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "47009135110101",
-            "title": "Engineering Drawing",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "47009164010101",
-            "title": "Integrated Personality Development Course-I",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "47000955210501",
-            "title": "Electrical Control Panel Design",
+            "id": "47000955310501",
+            "title": "ELECTRICAL CONTROL PANEL DESIGN",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27389,8 +27459,28 @@ export const domains =[
             ]
           },
           {
-            "id": "47009131030201",
-            "title": "Mathematics-III",
+            "id": "47009164010101",
+            "title": "Integrated Personality Development Course (I.P.D.C.) - I",
+            "sem": 2,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47009131210201",
+            "title": "Mathematics II",
+            "sem": 2,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47000955230401",
+            "title": "Basic Electronics",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27409,36 +27499,6 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955230201",
-            "title": "Generation of Electrical Power",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "47000955230401",
-            "title": "Basic Electronics",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "47009164030101",
-            "title": "Integrated Personality Development Course-II",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "47000955230301",
             "title": "Electrical Measurement and Instrumentation",
             "sem": 3,
@@ -27449,8 +27509,8 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955230501",
-            "title": "Electrical Software Skill-I",
+            "id": "47000955330501",
+            "title": "Electrical Software Skill - I",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27459,8 +27519,28 @@ export const domains =[
             ]
           },
           {
-            "id": "47009131040201",
-            "title": "Mathematics-IV",
+            "id": "47000955330201",
+            "title": "Generation of Electrical Power",
+            "sem": 3,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47009131030201",
+            "title": "Mathematics-III",
+            "sem": 3,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47000955240401",
+            "title": "Digital Electronics and Instruments",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27469,7 +27549,17 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955240101",
+            "id": "47000955340201",
+            "title": "Electrical Power Transmission and Distribution",
+            "sem": 4,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47000955340101",
             "title": "Electrical Rotating AC Machines",
             "sem": 4,
             "exams": [
@@ -27479,8 +27569,8 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955240201",
-            "title": "Electrical Power Transmission and Distribution",
+            "id": "47000955240501",
+            "title": "Electrical Software Skill - II",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27499,8 +27589,8 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955240401",
-            "title": "Digital Electronics and Instruments",
+            "id": "47009131040201",
+            "title": "Mathematics-IV",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27509,18 +27599,8 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955240501",
-            "title": "Electrical Software Skill-II",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "47000955250101",
-            "title": "Switchgear & Protection",
+            "id": "47000955250401",
+            "title": "Application of Microprocessor and Microcontroller",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27529,8 +27609,18 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955250201",
-            "title": "Testing and Maintenance of Electrical Machine",
+            "id": "47000955050901",
+            "title": "Automation and Control in Industrial Applications",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47000955250501",
+            "title": "Electric Vehicle Technologies",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27550,7 +27640,7 @@ export const domains =[
           },
           {
             "id": "47000955250701",
-            "title": "Project – 1",
+            "title": "Project-I",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27569,8 +27659,8 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955250401",
-            "title": "Application of Microprocessor and Microcontroller",
+            "id": "47000955250101",
+            "title": "Switchgear & Protections",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27579,8 +27669,8 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955250501",
-            "title": "Electric Vehicle Technologies",
+            "id": "47000955250201",
+            "title": "Testing and Maintenance of Electrical Machines",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27589,9 +27679,9 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955050901",
-            "title": "Automation and Control in Industrial Applications",
-            "sem": 5,
+            "id": "47000955260401",
+            "title": "Design of Electrical Machine and Equipment",
+            "sem": 6,
             "exams": [
               "mid-1",
               "mid-2",
@@ -27601,6 +27691,16 @@ export const domains =[
           {
             "id": "47000955260101",
             "title": "Electrical Energy Utilization",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47000955061001",
+            "title": "Energy Conservation Strategies and Auditing",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27619,18 +27719,8 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955260901",
-            "title": "Industrial Project/Training",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "47000955260201",
-            "title": "Substation Engineering and Power Quality",
+            "id": "47000955260701",
+            "title": "Industrial Instrumentation and Condition Monitoring",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27649,8 +27739,18 @@ export const domains =[
             ]
           },
           {
-            "id": "47000955260401",
-            "title": "Design of Electrical Machines and Equipment",
+            "id": "47000955260801",
+            "title": "Solar and Wind Power Technologies",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "47000955260201",
+            "title": "Substation Engineering and Power Quality",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27666,8 +27766,8 @@ export const domains =[
         "semesters": 6,
         "subjects": [
           {
-            "id": "48009131110101",
-            "title": "Mathematics-1",
+            "id": "48009719210101",
+            "title": "APPLIED PHYSICS",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -27676,8 +27776,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48009719110101",
-            "title": "Applied Physics",
+            "id": "48009911010101",
+            "title": "BHARATIYA KNOWLEDGE SYSTEM",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -27686,8 +27786,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939110101",
-            "title": "Civil Engineering Materials",
+            "id": "48091912010301",
+            "title": "COMMUNICATION SKILLS",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -27696,8 +27796,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48091912110101",
-            "title": "Communication Skill-1",
+            "id": "48009135110101",
+            "title": "ENGINEERING DRAWING",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -27706,8 +27806,18 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939110201",
-            "title": "Environment Conservation and Disaster Management",
+            "id": "48009121010201",
+            "title": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
+            "sem": 1,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "48009131210101",
+            "title": "MATHEMATICS-I",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -27717,7 +27827,7 @@ export const domains =[
           },
           {
             "id": "48009135210201",
-            "title": "Mechanical Workshop",
+            "title": "MECHANICAL WORKSHOP",
             "sem": 1,
             "exams": [
               "mid-1",
@@ -27726,8 +27836,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48009131110201",
-            "title": "Mathematics-2",
+            "id": "48009719310201",
+            "title": "APPLIED CHEMISTRY",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27736,8 +27846,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939110301",
-            "title": "Applied Mechanics",
+            "id": "48000939210301",
+            "title": "APPLIED MECHANICS",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27746,8 +27856,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48009135110101",
-            "title": "Engineering Drawing",
+            "id": "48000939210101",
+            "title": "CIVIL ENGINEERING MATERIALS",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27756,8 +27866,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48091912110201",
-            "title": "Communication Skill-2",
+            "id": "48000935210101",
+            "title": "COMPUTER FUNDAMENTAL SKILL",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27766,8 +27876,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000935110101",
-            "title": "Computer Fundamental Skills",
+            "id": "48009121010101",
+            "title": "INDIAN CONSTITUTION",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27776,8 +27886,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939110401",
-            "title": "Computer-Aided Drawing",
+            "id": "48009164010101",
+            "title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-I",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27786,8 +27896,18 @@ export const domains =[
             ]
           },
           {
-            "id": "48009131130101",
-            "title": "Basic Calculus",
+            "id": "48009131210201",
+            "title": "MATHEMATICS-II",
+            "sem": 2,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "48000939031001",
+            "title": "BASIC SURVEYING",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27796,8 +27916,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939130101",
-            "title": "Hydraulics",
+            "id": "48000939130701",
+            "title": "BASIC TRANSPORTATION ENGINEERING",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27806,8 +27926,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939130201",
-            "title": "Mechanics of Structure-1",
+            "id": "48000939030801",
+            "title": "BUILDING PLANING AND DIGITAL DRAFTING",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27816,8 +27936,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939130401",
-            "title": "Construction Technology",
+            "id": "48000939330401",
+            "title": "CONSTRUCTION TECHNOLOGY",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27826,8 +27946,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939130501",
-            "title": "Surveying",
+            "id": "48000935030501",
+            "title": "GENERATIVE AI & PROMPT ENGINEERING",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27836,8 +27956,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939130301",
-            "title": "Building Planning and Drawing",
+            "id": "48009131030201",
+            "title": "MATHEMATICS-III",
             "sem": 3,
             "exams": [
               "mid-1",
@@ -27846,8 +27966,18 @@ export const domains =[
             ]
           },
           {
-            "id": "48009131140101",
-            "title": "Engineering Mathematics",
+            "id": "48000939030901",
+            "title": "MECHANICS OF STRUCTURE",
+            "sem": 3,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "48000939040801",
+            "title": "ADVANCE COMPUTER AIDED DRAWING",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27856,8 +27986,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939140101",
-            "title": "Mechanics of Structure-II",
+            "id": "48000939340501",
+            "title": "ADVANCED SURVEYING",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27866,8 +27996,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939140201",
-            "title": "Highway and Transportation Engineering",
+            "id": "48000939340401",
+            "title": "CONCRETE TECHNOLOGY",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27876,8 +28006,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939140301",
-            "title": "Soil Mechanics",
+            "id": "48000939040901",
+            "title": "HYDRAULICS",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27886,8 +28016,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939140401",
-            "title": "Concrete Technology",
+            "id": "48009131040201",
+            "title": "MATHEMATICS-IV",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27896,8 +28026,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939140501",
-            "title": "Advanced Surveying",
+            "id": "48000939140601",
+            "title": "QUANTITY SURVEY AND VALUATION",
             "sem": 4,
             "exams": [
               "mid-1",
@@ -27906,8 +28036,18 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939150101",
-            "title": "Structure Design & Drawing – I",
+            "id": "48000939340301",
+            "title": "SOIL MECHANICS",
+            "sem": 4,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "48000939250601",
+            "title": "ADVANCED CONSTRUCTION TECHNOLOGY",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27916,8 +28056,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48016135001301",
-            "title": "Quantity Survey and Valuation",
+            "id": "48000939051101",
+            "title": "ANALYSIS OF STRUCTURE",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27926,8 +28066,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939150301",
-            "title": "Construction Quality Control and Monitoring",
+            "id": "48000939051001",
+            "title": "ELEMENTARY DESIGN OF RCC AND STEEL SECTIONS",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27936,8 +28076,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939150401",
-            "title": "Water Supply & Sanitary Engineering",
+            "id": "48000939051201",
+            "title": "ENTREPRENEURSHIP AND START-UPS",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -27946,7 +28086,7 @@ export const domains =[
             ]
           },
           {
-            "id": "48000138070501",
+            "id": "48000939250501",
             "title": "PROJECT-I",
             "sem": 5,
             "exams": [
@@ -27956,8 +28096,38 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939160101",
-            "title": "Structure Design & Drawing – II",
+            "id": "48000939250801",
+            "title": "RAILWAY HARBOUR AND TUNNEL ENGINEERING",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "48000939051401",
+            "title": "SUMMER INTERNSHIP",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "48000939050901",
+            "title": "WATER RESOURCES ENGINEERING",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "48000939061601",
+            "title": "ADVANCE DESIGN OF STRUCTURES",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27966,8 +28136,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939160201",
-            "title": "Construction Project Management",
+            "id": "48000939260201",
+            "title": "CONSTRUCTION PROJECT MANAGEMENT",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27976,8 +28146,8 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939160301",
-            "title": "Entrepreneurship in Engineering",
+            "id": "48000939061301",
+            "title": "INTELLECTUAL PROPERTY RIGHTS",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -27986,18 +28156,28 @@ export const domains =[
             ]
           },
           {
-            "id": "48000939160401",
-            "title": "Building Services",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "48000939160501",
+            "id": "48000939260501",
             "title": "PROJECT-II",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "48000939061201",
+            "title": "PUBLIC HEALTH ENGINEERING",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "48000939061101",
+            "title": "STRUCTURE DRAWINGS AND DETAILING",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -28012,16 +28192,6 @@ export const domains =[
         "title": "Diploma Information and Communication Technology",
         "semesters": 6,
         "subjects": [
-          {
-            "id": "49009131110101",
-            "title": "Mathematics-I",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
           {
             "id": "49009719110101",
             "title": "Applied Physics",
@@ -28053,16 +28223,6 @@ export const domains =[
             ]
           },
           {
-            "id": "49016131000901",
-            "title": "Essential Skills of Information Technology",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "49009320010201",
             "title": "Electronic Practice",
             "sem": 1,
@@ -28073,9 +28233,9 @@ export const domains =[
             ]
           },
           {
-            "id": "49009131110201",
-            "title": "Mathematics-II",
-            "sem": 2,
+            "id": "49009131110101",
+            "title": "Mathematics-I",
+            "sem": 1,
             "exams": [
               "mid-1",
               "mid-2",
@@ -28083,8 +28243,8 @@ export const domains =[
             ]
           },
           {
-            "id": "49000939110201",
-            "title": "Environment Conservation & Disaster Management",
+            "id": "49091912110201",
+            "title": "Communication Skills-II",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -28103,8 +28263,8 @@ export const domains =[
             ]
           },
           {
-            "id": "49091912110201",
-            "title": "Communication Skills-II",
+            "id": "49009320010401",
+            "title": "Digital Logic and Design",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -28113,8 +28273,8 @@ export const domains =[
             ]
           },
           {
-            "id": "49009320010401",
-            "title": "Digital Logic and Design",
+            "id": "49000939110201",
+            "title": "Environment Conservation & Disaster Management",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -28133,9 +28293,9 @@ export const domains =[
             ]
           },
           {
-            "id": "49009131130101",
-            "title": "Basic Calculus",
-            "sem": 3,
+            "id": "49009131110201",
+            "title": "Mathematics II",
+            "sem": 2,
             "exams": [
               "mid-1",
               "mid-2",
@@ -28143,9 +28303,9 @@ export const domains =[
             ]
           },
           {
-            "id": "49009320030201",
-            "title": "Object Oriented Programming",
-            "sem": 3,
+            "id": "49009320040401",
+            "title": "Data Communication and Networking",
+            "sem": 4,
             "exams": [
               "mid-1",
               "mid-2",
@@ -28153,39 +28313,9 @@ export const domains =[
             ]
           },
           {
-            "id": "49009320030301",
-            "title": "Analog and Digital Communication",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320030401",
-            "title": "Data Base Management system",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320030501",
-            "title": "Analog and Digital Circuit Design",
-            "sem": 3,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49159320030601",
-            "title": "Operating System",
-            "sem": 3,
+            "id": "49009320040301",
+            "title": "Data Structure and Algorithm design",
+            "sem": 4,
             "exams": [
               "mid-1",
               "mid-2",
@@ -28223,26 +28353,6 @@ export const domains =[
             ]
           },
           {
-            "id": "49009320040301",
-            "title": "Data Structure and Algorithms",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320040401",
-            "title": "Data Communication and Networking",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "49009320040501",
             "title": "Web Technology",
             "sem": 4,
@@ -28253,28 +28363,8 @@ export const domains =[
             ]
           },
           {
-            "id": "49001920060101",
-            "title": "Software Engineering",
-            "sem": 4,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320050101",
-            "title": "Probability and Statistics",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "49009320050201",
-            "title": ".Net Programming",
+            "title": "ASP.NET",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -28293,46 +28383,6 @@ export const domains =[
             ]
           },
           {
-            "id": "49009320050401",
-            "title": "Project I",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320050501",
-            "title": "Microcontroller and Interfacing",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320050601",
-            "title": "Optical and Satellite Communication",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320050701",
-            "title": "Network Routing and Switching",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "49009320050801",
             "title": "Data Analytics and Visualization",
             "sem": 5,
@@ -28343,28 +28393,18 @@ export const domains =[
             ]
           },
           {
-            "id": "49009320050901",
-            "title": "Programming for Mobile Application Development",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320051001",
-            "title": "VLSI",
-            "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "49009320051101",
-            "title": "Engineering Electrodynamics",
+            "title": "Engineering Electromagnetics",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320051401",
+            "title": "Game Development",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -28374,7 +28414,7 @@ export const domains =[
           },
           {
             "id": "49009320051201",
-            "title": "Linux Administration",
+            "title": "Linux Administrator",
             "sem": 5,
             "exams": [
               "mid-1",
@@ -28393,9 +28433,139 @@ export const domains =[
             ]
           },
           {
-            "id": "49009320051401",
-            "title": "Game Development",
+            "id": "49009320050501",
+            "title": "Microcontroller and Interfacing",
             "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320050701",
+            "title": "Network Routing and Switching",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320050601",
+            "title": "Optical and Satellite Communication",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320050101",
+            "title": "Probability and Statistics",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320050901",
+            "title": "Programming with Application Development (Android)",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320050401",
+            "title": "Project I",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320051001",
+            "title": "VLSI",
+            "sem": 5,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320060701",
+            "title": "Advance Java",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320060601",
+            "title": "Big Data Analytics",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320060501",
+            "title": "Cloud Computing",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320061201",
+            "title": "Computer Graphics & Animation",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320061001",
+            "title": "Cyber Security",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320060301",
+            "title": "Embedded Systems",
+            "sem": 6,
+            "exams": [
+              "mid-1",
+              "mid-2",
+              "final"
+            ]
+          },
+          {
+            "id": "49009320061101",
+            "title": "Fundamental of Data Mining",
+            "sem": 6,
             "exams": [
               "mid-1",
               "mid-2",
@@ -28423,48 +28593,8 @@ export const domains =[
             ]
           },
           {
-            "id": "49009320060301",
-            "title": "Embedded System",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "49009320060401",
-            "title": "RF and Microwave Communications",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320060501",
-            "title": "Cloud Computing",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320060601",
-            "title": "Big Data Analytics",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320060701",
-            "title": "Advance Java",
+            "title": "RF and Microwave Communication",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -28474,7 +28604,7 @@ export const domains =[
           },
           {
             "id": "49009320060801",
-            "title": "Sensors and IoT",
+            "title": "Sensor and IoT (SIoT)",
             "sem": 6,
             "exams": [
               "mid-1",
@@ -28485,36 +28615,6 @@ export const domains =[
           {
             "id": "49009320060901",
             "title": "Wireless Technologies",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320061001",
-            "title": "Cyber Security",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320061101",
-            "title": "Fundamentals of Data Mining Techniques",
-            "sem": 6,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "49009320061201",
-            "title": "Computer Graphics and Animation",
             "sem": 6,
             "exams": [
               "mid-1",
