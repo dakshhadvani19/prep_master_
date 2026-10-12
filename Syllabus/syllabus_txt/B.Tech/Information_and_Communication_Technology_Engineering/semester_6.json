@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:43:06+00:00",
+  "generated_at_utc": "2026-10-12T12:44:16+00:00",
   "program": {
     "program_name": "B.Tech Information and Communication Technology",
     "program_folder": "Information and Communication Technology Engineering",
@@ -31,7 +31,7 @@
       "expected_pdf_sha256": "6f7a4ec6caf707d4c2a23e36b4ce3e0ac06425d90770c1fc707443362968698e",
       "actual_pdf_sha256": "6f7a4ec6caf707d4c2a23e36b4ce3e0ac06425d90770c1fc707443362968698e",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 9968,
       "objective_text": "1 This course is designed to understand and analyses various components used in RF and Microwave communications like transmission lines, waveguides, microwave components etc. It also focuses on various methods and tools used to analyses various circuit designs. Subject is extended to the design of strip lines and micro strip lines, MIC, MMIC",
@@ -51,7 +51,290 @@
         "5 Design of microwave strip and integrated Circuits",
         "Pre-requisite of course:Basic understanding of electrodynamics"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Spectrum of RF and microwave frequencies, Frequency bands and",
+              "regions of spectrum allocations, Decibel for power ratios,",
+              "representation of Power-Voltages dBm, dBW, dBµV/m, Modeling",
+              "lumped and distributed components at radio frequencies,",
+              "Propagation of EM waves, Application of RF and microwaves"
+            ],
+            "topics_text": "Spectrum of RF and microwave frequencies, Frequency bands and regions of spectrum allocations, Decibel for power ratios, representation of Power-Voltages dBm, dBW, dBµV/m, Modeling lumped and distributed components at radio frequencies, Propagation of EM waves, Application of RF and microwaves",
+            "topics": [
+              "Spectrum of RF and microwave frequencies, Frequency bands and",
+              "regions of spectrum allocations, Decibel for power ratios,",
+              "representation of Power-Voltages dBm, dBW, dBµV/m, Modeling",
+              "lumped and distributed components at radio frequencies,",
+              "Propagation of EM waves, Application of RF and microwaves"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Transmission lines and distributed systems",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to transmission lines and familiar examples, Lumped",
+              "and distributed systems, Telegraph equations and the waves",
+              "solution, Wave equation, Characteristic impedance and propagation",
+              "velocity, Load effect on the reflected wave, Types of transmission",
+              "lines (coaxial, conductor- pair, printed – microstrip, stripline),",
+              "Standing-wave in a transmission-line, Reflection coefficient and",
+              "voltage-standing-wave-ratio (VSWR), Efficiency of power-transfer,",
+              "Short, open, and matched loads’ impedance as viewed at the end of",
+              "a variable-length transmission line, Reflection parameters,",
+              "Transmission parameters, Wave representation of two-port and the",
+              "s-parameters, Phase velocity and group velocity"
+            ],
+            "topics_text": "Introduction to transmission lines and familiar examples, Lumped and distributed systems, Telegraph equations and the waves solution, Wave equation, Characteristic impedance and propagation velocity, Load effect on the reflected wave, Types of transmission lines (coaxial, conductor- pair, printed – microstrip, stripline), Standing-wave in a transmission-line, Reflection coefficient and voltage-standing-wave-ratio (VSWR), Efficiency of power-transfer, Short, open, and matched loads’ impedance as viewed at the end of a variable-length transmission line, Reflection parameters, Transmission parameters, Wave representation of two-port and the s-parameters, Phase velocity and group velocity",
+            "topics": [
+              "Introduction to transmission lines and familiar examples, Lumped",
+              "and distributed systems, Telegraph equations and the waves",
+              "solution, Wave equation, Characteristic impedance and propagation",
+              "velocity, Load effect on the reflected wave, Types of transmission",
+              "lines (coaxial, conductor- pair, printed – microstrip, stripline),",
+              "Standing-wave in a transmission-line, Reflection coefficient and",
+              "voltage-standing-wave-ratio (VSWR), Efficiency of power-transfer,",
+              "Short, open, and matched loads’ impedance as viewed at the end of",
+              "a variable-length transmission line, Reflection parameters,",
+              "Transmission parameters, Wave representation of two-port and the",
+              "s-parameters, Phase velocity and group velocity"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "The Smith Chart and Impedance Matching",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Smith chart – impedance on the reflection plane, Review of",
+              "transmission lines and impedances matching , L, pi, T, sections,",
+              "transmission lines and stubs"
+            ],
+            "topics_text": "Smith chart – impedance on the reflection plane, Review of transmission lines and impedances matching , L, pi, T, sections, transmission lines and stubs",
+            "topics": [
+              "Smith chart – impedance on the reflection plane, Review of",
+              "transmission lines and impedances matching , L, pi, T, sections,",
+              "transmission lines and stubs"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Microwave Components",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Wave-guide tees, Magic tee, Directional couples, Circulars and",
+              "isolators, Corners, Bends, Twists, Flanges, Matched termination,",
+              "Coupling probes, Loops"
+            ],
+            "topics_text": "Wave-guide tees, Magic tee, Directional couples, Circulars and isolators, Corners, Bends, Twists, Flanges, Matched termination, Coupling probes, Loops",
+            "topics": [
+              "Wave-guide tees, Magic tee, Directional couples, Circulars and",
+              "isolators, Corners, Bends, Twists, Flanges, Matched termination,",
+              "Coupling probes, Loops"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Microwave Tubes and Circuits",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Limitations of conventional tubes at UHF & Microwave, Klystrons,",
+              "Velocity modulation, Multi cavity klystron, Reflex klystron,",
+              "Traveling wave tube, Magnetron"
+            ],
+            "topics_text": "Limitations of conventional tubes at UHF & Microwave, Klystrons, Velocity modulation, Multi cavity klystron, Reflex klystron, Traveling wave tube, Magnetron",
+            "topics": [
+              "Limitations of conventional tubes at UHF & Microwave, Klystrons,",
+              "Velocity modulation, Multi cavity klystron, Reflex klystron,",
+              "Traveling wave tube, Magnetron"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Micro Strip & Integrated Circuits",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Strip lines, micro strip lines, MIC, MMIC"
+            ],
+            "topics_text": "Strip lines, micro strip lines, MIC, MMIC",
+            "topics": [
+              "Strip lines, micro strip lines, MIC, MMIC"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment-01",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Introduction to HFSS Software"
+            ],
+            "topics_text": "Introduction to HFSS Software",
+            "topics": [
+              "Introduction to HFSS Software"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment-02",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To Understand 3D Modeling, Properties, Commands & Attributes",
+              "for Antenna Design"
+            ],
+            "topics_text": "To Understand 3D Modeling, Properties, Commands & Attributes for Antenna Design",
+            "topics": [
+              "To Understand 3D Modeling, Properties, Commands & Attributes",
+              "for Antenna Design"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment-03",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To Apply Wave Port Excitation, Radiation Setup & Analysis to",
+              "antenna using HFSS"
+            ],
+            "topics_text": "To Apply Wave Port Excitation, Radiation Setup & Analysis to antenna using HFSS",
+            "topics": [
+              "To Apply Wave Port Excitation, Radiation Setup & Analysis to",
+              "antenna using HFSS"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment-04",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To create, simulate, and analyze a UHF probe using the Ansoft",
+              "HFSS Design Environment"
+            ],
+            "topics_text": "To create, simulate, and analyze a UHF probe using the Ansoft HFSS Design Environment",
+            "topics": [
+              "To create, simulate, and analyze a UHF probe using the Ansoft",
+              "HFSS Design Environment"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment-05",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To create, simulate, and analyze a Monopole and Dipole Antenna",
+              "using the Ansoft HFSS Design Environment."
+            ],
+            "topics_text": "To create, simulate, and analyze a Monopole and Dipole Antenna using the Ansoft HFSS Design Environment.",
+            "topics": [
+              "To create, simulate, and analyze a Monopole and Dipole Antenna",
+              "using the Ansoft HFSS Design Environment."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment-06",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To create, simulate, and analyze a waveguide horn Antennas using",
+              "the Ansoft HFSS Design Environment."
+            ],
+            "topics_text": "To create, simulate, and analyze a waveguide horn Antennas using the Ansoft HFSS Design Environment.",
+            "topics": [
+              "To create, simulate, and analyze a waveguide horn Antennas using",
+              "the Ansoft HFSS Design Environment."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment-07",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To create, simulate, and analyze Horn Antenna using the Ansoft",
+              "HFSS Design Environment."
+            ],
+            "topics_text": "To create, simulate, and analyze Horn Antenna using the Ansoft HFSS Design Environment.",
+            "topics": [
+              "To create, simulate, and analyze Horn Antenna using the Ansoft",
+              "HFSS Design Environment."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment-08",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To create, simulate, and analyze Helix Antenna using the Ansoft",
+              "HFSS Design Environment."
+            ],
+            "topics_text": "To create, simulate, and analyze Helix Antenna using the Ansoft HFSS Design Environment.",
+            "topics": [
+              "To create, simulate, and analyze Helix Antenna using the Ansoft",
+              "HFSS Design Environment."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment-09",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To create, simulate, and analyze Array Antenna using the Ansoft",
+              "HFSS Design Environment"
+            ],
+            "topics_text": "To create, simulate, and analyze Array Antenna using the Ansoft HFSS Design Environment",
+            "topics": [
+              "To create, simulate, and analyze Array Antenna using the Ansoft",
+              "HFSS Design Environment"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To create, simulate, and analyze Probe Feed Patch Antenna using",
+              "the Ansoft HFSS Design Environment."
+            ],
+            "topics_text": "To create, simulate, and analyze Probe Feed Patch Antenna using the Ansoft HFSS Design Environment.",
+            "topics": [
+              "To create, simulate, and analyze Probe Feed Patch Antenna using",
+              "the Ansoft HFSS Design Environment."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To create, simulate, and analyze Slot Coupled Patch Antenna using",
+              "the Ansoft HFSS Design Environment."
+            ],
+            "topics_text": "To create, simulate, and analyze Slot Coupled Patch Antenna using the Ansoft HFSS Design Environment.",
+            "topics": [
+              "To create, simulate, and analyze Slot Coupled Patch Antenna using",
+              "the Ansoft HFSS Design Environment."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To create, simulate, and analyze corner reflector using the Ansoft",
+              "HFSS Design Environment."
+            ],
+            "topics_text": "To create, simulate, and analyze corner reflector using the Ansoft HFSS Design Environment.",
+            "topics": [
+              "To create, simulate, and analyze corner reflector using the Ansoft",
+              "HFSS Design Environment."
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Microwave Devices and Circuits, Samuel Liao, phi, 1980",
@@ -121,9 +404,7 @@
           "text": "Instructional Method:\n 3  Students may use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory, etc.\n 4  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method (Chalk and Talk) may\n     use any of the tools such as demonstration, role play, Quiz, brainstorming, Flipped\n      class, Project based learning, Collaborative learning, MOOCs etc. for effective teaching.\n\nSupplementary Resources:\n 1  http://www.ni.com/product-documentation/3992/en\n 2  https://www.keysight.com/main/editorial.jspx?cc=IN&lc=eng&ckey=2129625&id=2\n    129625&cmpid=zzfindrfresource\n 3  https://www.udemy.com/rf-microwave-radio-transmission-theory-online-course- rahsoft-\n    rahch200\n 4  https://rfandwireless.com/tutorials\n 5  https://www.qsl.net/va3iul/Files/RF_courses_lectures.htm\n 6  https://nptel.ac.in/courses/108101112\n\n\n\n\n\nMR. CHANDRASINH DHIRUBHA PARMAR        DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CT1610",
@@ -141,7 +422,7 @@
       "expected_pdf_sha256": "5779781fc92a8840c44ee2a3eadd5054d67016ca493a5ff187867dc3909a2f85",
       "actual_pdf_sha256": "5779781fc92a8840c44ee2a3eadd5054d67016ca493a5ff187867dc3909a2f85",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 10058,
       "objective_text": "1 The goal of the course is to introduce students to the fundamentals of satellite Communication. The course enables analysis and design of satellite links for various types of services and familiarity with terms and techniques related to performance evaluation and the availability of such links. It also uses to enable the students to become familiar with satellites and satellite services.",
@@ -163,7 +444,320 @@
         "4 Interpret role of satellite in various applications",
         "Pre-requisite of course:Analog and digital Communication"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Satellite Communication",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Historical background, Basic concepts of Satellite Communications,",
+              "Communication Networks and Services, Growth of Satellite",
+              "communications. Satellite in Networks"
+            ],
+            "topics_text": "Historical background, Basic concepts of Satellite Communications, Communication Networks and Services, Growth of Satellite communications. Satellite in Networks",
+            "topics": [
+              "Historical background, Basic concepts of Satellite Communications,",
+              "Communication Networks and Services, Growth of Satellite",
+              "communications. Satellite in Networks"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Satellite Orbits",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Kepler’s Laws, Newton’s law, orbital parameters, orbital",
+              "perturbations, station keeping, geo stationary and non Geo-",
+              "stationary orbits, Look Angle Determination, Limits of visibility,",
+              "eclipse-Sub satellite point, Sun transit outage-Launching",
+              "Procedures, launch vehicles and propulsion"
+            ],
+            "topics_text": "Kepler’s Laws, Newton’s law, orbital parameters, orbital perturbations, station keeping, geo stationary and non Geo- stationary orbits, Look Angle Determination, Limits of visibility, eclipse-Sub satellite point, Sun transit outage-Launching Procedures, launch vehicles and propulsion",
+            "topics": [
+              "Kepler’s Laws, Newton’s law, orbital parameters, orbital",
+              "perturbations, station keeping, geo stationary and non Geo-",
+              "stationary orbits, Look Angle Determination, Limits of visibility,",
+              "eclipse-Sub satellite point, Sun transit outage-Launching",
+              "Procedures, launch vehicles and propulsion"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Space Segment",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Introduction, The Power Supply, Attitude Control, Spinning satellite",
+              "stabilization, Momentum wheel stabilization, Station Keeping,",
+              "Thermal Control, TT&C Subsystem, Transponders: The wideband",
+              "receiver, The input demultiplexer, The power amplifier, The",
+              "Antenna Subsystem"
+            ],
+            "topics_text": "Introduction, The Power Supply, Attitude Control, Spinning satellite stabilization, Momentum wheel stabilization, Station Keeping, Thermal Control, TT&C Subsystem, Transponders: The wideband receiver, The input demultiplexer, The power amplifier, The Antenna Subsystem",
+            "topics": [
+              "Introduction, The Power Supply, Attitude Control, Spinning satellite",
+              "stabilization, Momentum wheel stabilization, Station Keeping,",
+              "Thermal Control, TT&C Subsystem, Transponders: The wideband",
+              "receiver, The input demultiplexer, The power amplifier, The",
+              "Antenna Subsystem"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Earth Segment",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction – Receive – Only home TV systems, Outdoor unit –",
+              "Indoor unit for analog (FM) TV, Master antenna TV system,",
+              "Community antenna TV system, Transmit – Receive earth stations"
+            ],
+            "topics_text": "Introduction – Receive – Only home TV systems, Outdoor unit – Indoor unit for analog (FM) TV, Master antenna TV system, Community antenna TV system, Transmit – Receive earth stations",
+            "topics": [
+              "Introduction – Receive – Only home TV systems, Outdoor unit –",
+              "Indoor unit for analog (FM) TV, Master antenna TV system,",
+              "Community antenna TV system, Transmit – Receive earth stations"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "The Space Link",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction, Equivalent Isotropic Radiated Power, Transmission",
+              "Losses: Free-space transmission, Feeder losses, Antenna",
+              "misalignment losses, Fixed atmospheric and ionospheric losses, The",
+              "Link-Power Budget Equation, System Noise, Carrier-to-Noise",
+              "Ratio, The Uplink: Saturation flux density, Input backoff,",
+              "Downlink, Output back-off, Satellite TWTA output, Combined",
+              "Uplink and Downlink C/N Ratio. Inter-satellite Link."
+            ],
+            "topics_text": "Introduction, Equivalent Isotropic Radiated Power, Transmission Losses: Free-space transmission, Feeder losses, Antenna misalignment losses, Fixed atmospheric and ionospheric losses, The Link-Power Budget Equation, System Noise, Carrier-to-Noise Ratio, The Uplink: Saturation flux density, Input backoff, Downlink, Output back-off, Satellite TWTA output, Combined Uplink and Downlink C/N Ratio. Inter-satellite Link.",
+            "topics": [
+              "Introduction, Equivalent Isotropic Radiated Power, Transmission",
+              "Losses: Free-space transmission, Feeder losses, Antenna",
+              "misalignment losses, Fixed atmospheric and ionospheric losses, The",
+              "Link-Power Budget Equation, System Noise, Carrier-to-Noise",
+              "Ratio, The Uplink: Saturation flux density, Input backoff,",
+              "Downlink, Output back-off, Satellite TWTA output, Combined",
+              "Uplink and Downlink C/N Ratio. Inter-satellite Link."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Satellite Access",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Introduction, Single Access, Preassigned FDMA, Demand-Assigned",
+              "FDMA, Spade System, TDMA, Preassigned TDMA, Demand-",
+              "assigned TDMA, Satellite-Switched TDMA, Code-Division",
+              "Multiple Access"
+            ],
+            "topics_text": "Introduction, Single Access, Preassigned FDMA, Demand-Assigned FDMA, Spade System, TDMA, Preassigned TDMA, Demand- assigned TDMA, Satellite-Switched TDMA, Code-Division Multiple Access",
+            "topics": [
+              "Introduction, Single Access, Preassigned FDMA, Demand-Assigned",
+              "FDMA, Spade System, TDMA, Preassigned TDMA, Demand-",
+              "assigned TDMA, Satellite-Switched TDMA, Code-Division",
+              "Multiple Access"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Satellite Applications",
+            "contact_hours": 4,
+            "topic_lines": [
+              "INSAT, VSAT, Mobile satellite services: GSM, GPS, Direct",
+              "Broadcast satellites (DBS)- Direct to home Broadcast (DTH),",
+              "GRAMSAT, Specialized services – E –mail, Video conferencing"
+            ],
+            "topics_text": "INSAT, VSAT, Mobile satellite services: GSM, GPS, Direct Broadcast satellites (DBS)- Direct to home Broadcast (DTH), GRAMSAT, Specialized services – E –mail, Video conferencing",
+            "topics": [
+              "INSAT, VSAT, Mobile satellite services: GSM, GPS, Direct",
+              "Broadcast satellites (DBS)- Direct to home Broadcast (DTH),",
+              "GRAMSAT, Specialized services – E –mail, Video conferencing"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Advances in Satellite Communication",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Satellite based societal application for national development,",
+              "Disaster management, Microwave remote sensors, Digital signal",
+              "processing for microwave sensors, Optical and infrared remote",
+              "sensing."
+            ],
+            "topics_text": "Satellite based societal application for national development, Disaster management, Microwave remote sensors, Digital signal processing for microwave sensors, Optical and infrared remote sensing.",
+            "topics": [
+              "Satellite based societal application for national development,",
+              "Disaster management, Microwave remote sensors, Digital signal",
+              "processing for microwave sensors, Optical and infrared remote",
+              "sensing."
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Understanding the basic concepts of satellite communication"
+            ],
+            "topics_text": "Understanding the basic concepts of satellite communication",
+            "topics": [
+              "Understanding the basic concepts of satellite communication"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To setup a communication link between uplink transmitter and",
+              "downlink receiver using Satellite."
+            ],
+            "topics_text": "To setup a communication link between uplink transmitter and downlink receiver using Satellite.",
+            "topics": [
+              "To setup a communication link between uplink transmitter and",
+              "downlink receiver using Satellite."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To setup an Active satellite communication link and demonstrate",
+              "link fail operation"
+            ],
+            "topics_text": "To setup an Active satellite communication link and demonstrate link fail operation",
+            "topics": [
+              "To setup an Active satellite communication link and demonstrate",
+              "link fail operation"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To communicate voice & Video signal through satellite link"
+            ],
+            "topics_text": "To communicate voice & Video signal through satellite link",
+            "topics": [
+              "To communicate voice & Video signal through satellite link"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Observe the effect of Different combinations of uplink and",
+              "downlink frequencies on satellite link."
+            ],
+            "topics_text": "Observe the effect of Different combinations of uplink and downlink frequencies on satellite link.",
+            "topics": [
+              "Observe the effect of Different combinations of uplink and",
+              "downlink frequencies on satellite link."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To transmit and receive three separate signals (Audio, Video ,Tone)",
+              "simultaneously through satellite link"
+            ],
+            "topics_text": "To transmit and receive three separate signals (Audio, Video ,Tone) simultaneously through satellite link",
+            "topics": [
+              "To transmit and receive three separate signals (Audio, Video ,Tone)",
+              "simultaneously through satellite link"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study radiation pattern and beam width of patch antenna."
+            ],
+            "topics_text": "To study radiation pattern and beam width of patch antenna.",
+            "topics": [
+              "To study radiation pattern and beam width of patch antenna."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To transmit and receive function generator signals through satellite",
+              "link."
+            ],
+            "topics_text": "To transmit and receive function generator signals through satellite link.",
+            "topics": [
+              "To transmit and receive function generator signals through satellite",
+              "link."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To measure the signal parameters in an analog FM/FDM TV",
+              "satellite link."
+            ],
+            "topics_text": "To measure the signal parameters in an analog FM/FDM TV satellite link.",
+            "topics": [
+              "To measure the signal parameters in an analog FM/FDM TV",
+              "satellite link."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To transmit digital waveforms through a satellite communication",
+              "link."
+            ],
+            "topics_text": "To transmit digital waveforms through a satellite communication link.",
+            "topics": [
+              "To transmit digital waveforms through a satellite communication",
+              "link."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To Calculate Bit Error Rate in a satellite communication link."
+            ],
+            "topics_text": "To Calculate Bit Error Rate in a satellite communication link.",
+            "topics": [
+              "To Calculate Bit Error Rate in a satellite communication link."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To write a program to observe the variations in the antenna look",
+              "angles for the earth station antennas."
+            ],
+            "topics_text": "To write a program to observe the variations in the antenna look angles for the earth station antennas.",
+            "topics": [
+              "To write a program to observe the variations in the antenna look",
+              "angles for the earth station antennas."
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 The Satellite Communication Applications: Hand Book, B. Elbert, Artech House Bostan,",
@@ -225,9 +819,7 @@
           "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         20.00         30.00         25.00         15.00          5.00\n\nInstructional Method:\n 1  The internal evaluation will be done on the basis of continuous evaluation of students in\n     the laboratory and class-room.\n 2  Practical examination will be conducted at the end of the semester for evaluation of\n    performance of students in laboratory.\n 3  Students may use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory, etc.\n 4  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method (Chalk and Talk) may\n     use any of the tools such as demonstration, role play, Quiz, brainstorming, Flipped\n      class, Project based learning, Collaborative learning, MOOCs etc. for effective teaching.\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/117105131/\n 2  https://ocw.mit.edu/search/ocwsearch.htm?q=satellite%20communication 3.www.radio-\n     electronics.com\n\n\n\n\n\nMR. CHANDRASINH DHIRUBHA PARMAR        DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CT1611",
@@ -245,7 +837,7 @@
       "expected_pdf_sha256": "6d681b18a7a748d8c644afbd79270f39d8099b7661cc700db45152677846d0f9",
       "actual_pdf_sha256": "6d681b18a7a748d8c644afbd79270f39d8099b7661cc700db45152677846d0f9",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 10137,
       "objective_text": "1 This course is intended to analyse the basics of cloud computing, and make aware students with diversified technologies working for cloud architecture. Course will be focusing on architecture, service models, privacy & security in the cloud.",
@@ -268,7 +860,358 @@
         "5 Deploy applications over commercial cloud computing infrastructures such as AWS",
         "Pre-requisite of course:Operating System and Computer Networks"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction of Cloud & Amazon Web Service",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Introduction of cloud computing, how it works Types of cloud, what",
+              "is Virtualization, Advantages of Cloud, AWS history, Dashboard,",
+              "AWS Overview, Architecture"
+            ],
+            "topics_text": "Introduction of cloud computing, how it works Types of cloud, what is Virtualization, Advantages of Cloud, AWS history, Dashboard, AWS Overview, Architecture",
+            "topics": [
+              "Introduction of cloud computing, how it works Types of cloud, what",
+              "is Virtualization, Advantages of Cloud, AWS history, Dashboard,",
+              "AWS Overview, Architecture"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Cloud Service Models",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Software as a Service (SaaS), Infrastructure As a Services (IaaS),",
+              "Platform As a service (PaaS)"
+            ],
+            "topics_text": "Software as a Service (SaaS), Infrastructure As a Services (IaaS), Platform As a service (PaaS)",
+            "topics": [
+              "Software as a Service (SaaS), Infrastructure As a Services (IaaS),",
+              "Platform As a service (PaaS)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Identity & Access Management",
+            "contact_hours": 5,
+            "topic_lines": [
+              "IAM Overview and Policies, IAM Users, Groups, Access Key,",
+              "Secret Access Key, MFA, Report"
+            ],
+            "topics_text": "IAM Overview and Policies, IAM Users, Groups, Access Key, Secret Access Key, MFA, Report",
+            "topics": [
+              "IAM Overview and Policies, IAM Users, Groups, Access Key,",
+              "Secret Access Key, MFA, Report"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Elastic Cloud Computing (EC2)",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Amazon EC2 Overview, Elastic Block Storage (EBS), Amazon",
+              "Machine Image (AMI), Instance Purchasing Options, Introduction",
+              "to EC2 Instance Types Security Group Elastic, Public & private IP",
+              "Overview, Amazon EBS & Snapshot, AWS CLI, Bootstrap Script,",
+              "Elastic Load Balancing (ELB), Auto Scaling"
+            ],
+            "topics_text": "Amazon EC2 Overview, Elastic Block Storage (EBS), Amazon Machine Image (AMI), Instance Purchasing Options, Introduction to EC2 Instance Types Security Group Elastic, Public & private IP Overview, Amazon EBS & Snapshot, AWS CLI, Bootstrap Script, Elastic Load Balancing (ELB), Auto Scaling",
+            "topics": [
+              "Amazon EC2 Overview, Elastic Block Storage (EBS), Amazon",
+              "Machine Image (AMI), Instance Purchasing Options, Introduction",
+              "to EC2 Instance Types Security Group Elastic, Public & private IP",
+              "Overview, Amazon EBS & Snapshot, AWS CLI, Bootstrap Script,",
+              "Elastic Load Balancing (ELB), Auto Scaling"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Virtual Private Cloud (VPC)",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Amazon Virtual Private Cloud (VPC), Amazon VPC and Subnets,",
+              "Route Table, Internet Gateway"
+            ],
+            "topics_text": "Amazon Virtual Private Cloud (VPC), Amazon VPC and Subnets, Route Table, Internet Gateway",
+            "topics": [
+              "Amazon Virtual Private Cloud (VPC), Amazon VPC and Subnets,",
+              "Route Table, Internet Gateway"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Amazon Simple Storage Service (S3)",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Simple Storage Service (S3), S3 Object Storage and Buckets,",
+              "Security on bucket, Logging & event, Glacier, Versioning &",
+              "Lifecycle Policy, Cross region replication"
+            ],
+            "topics_text": "Simple Storage Service (S3), S3 Object Storage and Buckets, Security on bucket, Logging & event, Glacier, Versioning & Lifecycle Policy, Cross region replication",
+            "topics": [
+              "Simple Storage Service (S3), S3 Object Storage and Buckets,",
+              "Security on bucket, Logging & event, Glacier, Versioning &",
+              "Lifecycle Policy, Cross region replication"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Route 53",
+            "contact_hours": 3,
+            "topic_lines": [
+              "DNS Records, Website Hosting, Health Check"
+            ],
+            "topics_text": "DNS Records, Website Hosting, Health Check",
+            "topics": [
+              "DNS Records, Website Hosting, Health Check"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Databases",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Relation Database System, DB engine & Instance details, Security,",
+              "Parameter group, Monitoring Resourcing, DynamoDB, Elasticache"
+            ],
+            "topics_text": "Relation Database System, DB engine & Instance details, Security, Parameter group, Monitoring Resourcing, DynamoDB, Elasticache",
+            "topics": [
+              "Relation Database System, DB engine & Instance details, Security,",
+              "Parameter group, Monitoring Resourcing, DynamoDB, Elasticache"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "CloudWatch & Monitoring",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Cloud Watch, Matrices, Alarm & notification"
+            ],
+            "topics_text": "Cloud Watch, Matrices, Alarm & notification",
+            "topics": [
+              "Cloud Watch, Matrices, Alarm & notification"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Setup Windows Instance in AWS Cloud using EC2 service and",
+              "install IIS"
+            ],
+            "topics_text": "Setup Windows Instance in AWS Cloud using EC2 service and install IIS",
+            "topics": [
+              "Setup Windows Instance in AWS Cloud using EC2 service and",
+              "install IIS"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Setup Linux Instance in AWS Cloud using EC2 service and install",
+              "Apache(httpd)"
+            ],
+            "topics_text": "Setup Linux Instance in AWS Cloud using EC2 service and install Apache(httpd)",
+            "topics": [
+              "Setup Linux Instance in AWS Cloud using EC2 service and install",
+              "Apache(httpd)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Add and modify features in Existing Windows Instance"
+            ],
+            "topics_text": "Add and modify features in Existing Windows Instance",
+            "topics": [
+              "Add and modify features in Existing Windows Instance"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Build Your Virtual Private Cloud (VPC) and Launch a Web Server"
+            ],
+            "topics_text": "Build Your Virtual Private Cloud (VPC) and Launch a Web Server",
+            "topics": [
+              "Build Your Virtual Private Cloud (VPC) and Launch a Web Server"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working with Amazon Elastic Block Store (EBS)"
+            ],
+            "topics_text": "Working with Amazon Elastic Block Store (EBS)",
+            "topics": [
+              "Working with Amazon Elastic Block Store (EBS)"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Introduction to AWS Identity and Access Management (IAM)"
+            ],
+            "topics_text": "Introduction to AWS Identity and Access Management (IAM)",
+            "topics": [
+              "Introduction to AWS Identity and Access Management (IAM)"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Deploy a Web Application on AWS"
+            ],
+            "topics_text": "Deploy a Web Application on AWS",
+            "topics": [
+              "Deploy a Web Application on AWS"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Using Auto Scaling with AWS Lambda and Lifecycle Hooks"
+            ],
+            "topics_text": "Using Auto Scaling with AWS Lambda and Lifecycle Hooks",
+            "topics": [
+              "Using Auto Scaling with AWS Lambda and Lifecycle Hooks"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Implementing a Serverless Architecture with AWS Managed",
+              "Service"
+            ],
+            "topics_text": "Implementing a Serverless Architecture with AWS Managed Service",
+            "topics": [
+              "Implementing a Serverless Architecture with AWS Managed",
+              "Service"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Launching EC2 Spot Instances with Auto Scaling and Amazon",
+              "CloudWatch"
+            ],
+            "topics_text": "Launching EC2 Spot Instances with Auto Scaling and Amazon CloudWatch",
+            "topics": [
+              "Launching EC2 Spot Instances with Auto Scaling and Amazon",
+              "CloudWatch"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create Static Website Using S3"
+            ],
+            "topics_text": "Create Static Website Using S3",
+            "topics": [
+              "Create Static Website Using S3"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Crease S3 Bucket and Upload and Download file"
+            ],
+            "topics_text": "Crease S3 Bucket and Upload and Download file",
+            "topics": [
+              "Crease S3 Bucket and Upload and Download file"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create Lifecycle Policy using S3"
+            ],
+            "topics_text": "Create Lifecycle Policy using S3",
+            "topics": [
+              "Create Lifecycle Policy using S3"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment-14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Setup Versioning & Configure Cross Region Replication in S3"
+            ],
+            "topics_text": "Setup Versioning & Configure Cross Region Replication in S3",
+            "topics": [
+              "Setup Versioning & Configure Cross Region Replication in S3"
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Experiment-15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create Load Balancer using EC2 Service"
+            ],
+            "topics_text": "Create Load Balancer using EC2 Service",
+            "topics": [
+              "Create Load Balancer using EC2 Service"
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Experiment-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "RDS : Create Database & Connect"
+            ],
+            "topics_text": "RDS : Create Database & Connect",
+            "topics": [
+              "RDS : Create Database & Connect"
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Experiment-17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create Autoscaling Group and Configure Multi Factor",
+              "Authentication"
+            ],
+            "topics_text": "Create Autoscaling Group and Configure Multi Factor Authentication",
+            "topics": [
+              "Create Autoscaling Group and Configure Multi Factor",
+              "Authentication"
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Cloud Computing for Dummies, Judith Hurwitz, R Bloor, M.Kanfman, F.Halper, Wiley",
@@ -335,9 +1278,7 @@
           "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     5.00          15.00         20.00         20.00         20.00         20.00\n\nInstructional Method:\n 1  The internal evaluation will be done on the basis of continuous evaluation of students in\n     the laboratory and class-room.\n 2  Practical examination will be conducted at the end of the semester for evaluation of\n    performance of students in laboratory.\n 3  Students may use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory, etc.\n 4  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method (Chalk and Talk) may\n     use any of the tools such as demonstration, role play, Quiz, brainstorming, Flipped\n      class, Project based learning, Collaborative learning, MOOCs etc. for effective teaching.\n\nSupplementary Resources:\n 1  https://onlinecourses.nptel.ac.in/noc17_cs23/preview\n 2  https://www.edx.org/micromasters/cloud-computing\n 3  https://aws.amazon.com/training/awsacademy/cloud-computing-architecture\n 4  https://www.coursera.org/specializations/cloud-computing\n\n\n\n\n\nMR. CHANDRASINH DHIRUBHA PARMAR        DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CT1618",
@@ -355,7 +1296,7 @@
       "expected_pdf_sha256": "7c09eefe8f1ad74c583a8640905c62d5daa36f95b5f8d7ecb07c7eacc9c09dd6",
       "actual_pdf_sha256": "7c09eefe8f1ad74c583a8640905c62d5daa36f95b5f8d7ecb07c7eacc9c09dd6",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 10391,
       "objective_text": "1 The objective of the course is to introduce to fundamentals of IoT and understand applications of IoT in various domains. Explore hardware, software, communication and data management enablers for IoT and learn to use them along with fulfilling security requirements of IoT.",
@@ -378,7 +1319,374 @@
         "Pre-requisite of course:Introduction to Single Board Computer Programming, Computer",
         "Networks, Internet and Web Technology"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Internet of Things",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Definitions, Core Concepts, Related Concepts, Challenges, IoT",
+              "framework, IoT Reference Models, IoT Architecture: IoTWF",
+              "architecture, architecture for adequate design for required security,",
+              "architecture of edge computing, OPC unified architecture, oneM2M"
+            ],
+            "topics_text": "Definitions, Core Concepts, Related Concepts, Challenges, IoT framework, IoT Reference Models, IoT Architecture: IoTWF architecture, architecture for adequate design for required security, architecture of edge computing, OPC unified architecture, oneM2M",
+            "topics": [
+              "Definitions, Core Concepts, Related Concepts, Challenges, IoT",
+              "framework, IoT Reference Models, IoT Architecture: IoTWF",
+              "architecture, architecture for adequate design for required security,",
+              "architecture of edge computing, OPC unified architecture, oneM2M"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "IoT Devices",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Classification of Things in IoT, Sensors and its classification,",
+              "Actuators and its classification, Working principles of various",
+              "sensors, MEMS, Smart Objects, Case study – Sensor tag energy",
+              "harvesting, batteries and super capacitors,interfacing of sensors with",
+              "microcontroller"
+            ],
+            "topics_text": "Classification of Things in IoT, Sensors and its classification, Actuators and its classification, Working principles of various sensors, MEMS, Smart Objects, Case study – Sensor tag energy harvesting, batteries and super capacitors,interfacing of sensors with microcontroller",
+            "topics": [
+              "Classification of Things in IoT, Sensors and its classification,",
+              "Actuators and its classification, Working principles of various",
+              "sensors, MEMS, Smart Objects, Case study – Sensor tag energy",
+              "harvesting, batteries and super capacitors,interfacing of sensors with",
+              "microcontroller"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "IoT Protocols",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Communication Criteria, Access technologies and communication",
+              "protocols, Bluetooth, BLE, LoRaWAN, WirelessHART,",
+              "Zwave,LTE-M, NB-IoT, Sigfox, 6LowPAN, 6TiSCH, LLN, RPL,",
+              "MQTT, Publish-Subscribe Operation, Packet Structure, Transport",
+              "Layer (TCP, MPTCP, UDP, DCCP, SCTP)-(TLS, DTLS), Session",
+              "Layer-HTTP, XMPP, AMQP"
+            ],
+            "topics_text": "Communication Criteria, Access technologies and communication protocols, Bluetooth, BLE, LoRaWAN, WirelessHART, Zwave,LTE-M, NB-IoT, Sigfox, 6LowPAN, 6TiSCH, LLN, RPL, MQTT, Publish-Subscribe Operation, Packet Structure, Transport Layer (TCP, MPTCP, UDP, DCCP, SCTP)-(TLS, DTLS), Session Layer-HTTP, XMPP, AMQP",
+            "topics": [
+              "Communication Criteria, Access technologies and communication",
+              "protocols, Bluetooth, BLE, LoRaWAN, WirelessHART,",
+              "Zwave,LTE-M, NB-IoT, Sigfox, 6LowPAN, 6TiSCH, LLN, RPL,",
+              "MQTT, Publish-Subscribe Operation, Packet Structure, Transport",
+              "Layer (TCP, MPTCP, UDP, DCCP, SCTP)-(TLS, DTLS), Session",
+              "Layer-HTTP, XMPP, AMQP"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Security in IoT",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Protocols and technologies, Lightweight formats for crypto security,",
+              "CoAP, DTLS, Object security for constrained RESTful",
+              "environments, OAUTH based authorization, Denial of Service",
+              "attacks, selective jamming in wireless networks, Intrusion detection",
+              "systems and firewalls"
+            ],
+            "topics_text": "Protocols and technologies, Lightweight formats for crypto security, CoAP, DTLS, Object security for constrained RESTful environments, OAUTH based authorization, Denial of Service attacks, selective jamming in wireless networks, Intrusion detection systems and firewalls",
+            "topics": [
+              "Protocols and technologies, Lightweight formats for crypto security,",
+              "CoAP, DTLS, Object security for constrained RESTful",
+              "environments, OAUTH based authorization, Denial of Service",
+              "attacks, selective jamming in wireless networks, Intrusion detection",
+              "systems and firewalls"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Recent trends in IoT",
+            "contact_hours": 6,
+            "topic_lines": [
+              "IoT application domains: Smart Cities, Smart Manufacturing, Smart",
+              "Grid, Smart Buildings, Intelligent Transportation Systems,",
+              "Healthcare"
+            ],
+            "topics_text": "IoT application domains: Smart Cities, Smart Manufacturing, Smart Grid, Smart Buildings, Intelligent Transportation Systems, Healthcare",
+            "topics": [
+              "IoT application domains: Smart Cities, Smart Manufacturing, Smart",
+              "Grid, Smart Buildings, Intelligent Transportation Systems,",
+              "Healthcare"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Demonstrate the working of raspberry pi"
+            ],
+            "topics_text": "Demonstrate the working of raspberry pi",
+            "topics": [
+              "Demonstrate the working of raspberry pi"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Hands-on experimentation on connecting Raspberry Pi with existing",
+              "system components."
+            ],
+            "topics_text": "Hands-on experimentation on connecting Raspberry Pi with existing system components.",
+            "topics": [
+              "Hands-on experimentation on connecting Raspberry Pi with existing",
+              "system components."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To sense temperature and humidity using sensors interfaced with",
+              "IoT hardwareboard."
+            ],
+            "topics_text": "To sense temperature and humidity using sensors interfaced with IoT hardwareboard.",
+            "topics": [
+              "To sense temperature and humidity using sensors interfaced with",
+              "IoT hardwareboard."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To detect presence using proximity sensor interfaced with IoT",
+              "hardwareboard."
+            ],
+            "topics_text": "To detect presence using proximity sensor interfaced with IoT hardwareboard.",
+            "topics": [
+              "To detect presence using proximity sensor interfaced with IoT",
+              "hardwareboard."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To detect distance of object using ultrasonic sensor interfaced with",
+              "IoT hardware board."
+            ],
+            "topics_text": "To detect distance of object using ultrasonic sensor interfaced with IoT hardware board.",
+            "topics": [
+              "To detect distance of object using ultrasonic sensor interfaced with",
+              "IoT hardware board."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To interface pressure sensor with IoT hardware board and read",
+              "sensed data."
+            ],
+            "topics_text": "To interface pressure sensor with IoT hardware board and read sensed data.",
+            "topics": [
+              "To interface pressure sensor with IoT hardware board and read",
+              "sensed data."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To read RFID tag using RFID reader interfaced with IoT hardware",
+              "board."
+            ],
+            "topics_text": "To read RFID tag using RFID reader interfaced with IoT hardware board.",
+            "topics": [
+              "To read RFID tag using RFID reader interfaced with IoT hardware",
+              "board."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To control LED on IoT hardware board using Bluetooth module",
+              "interfaced with it."
+            ],
+            "topics_text": "To control LED on IoT hardware board using Bluetooth module interfaced with it.",
+            "topics": [
+              "To control LED on IoT hardware board using Bluetooth module",
+              "interfaced with it."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To get location data using GPS module interfaced with IoT",
+              "hardware module on webpage."
+            ],
+            "topics_text": "To get location data using GPS module interfaced with IoT hardware module on webpage.",
+            "topics": [
+              "To get location data using GPS module interfaced with IoT",
+              "hardware module on webpage."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To understand implementation of MQTT using ContikiOS."
+            ],
+            "topics_text": "To understand implementation of MQTT using ContikiOS.",
+            "topics": [
+              "To understand implementation of MQTT using ContikiOS."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To understand implementation of CoAP using ContikiOS."
+            ],
+            "topics_text": "To understand implementation of CoAP using ContikiOS.",
+            "topics": [
+              "To understand implementation of CoAP using ContikiOS."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To create IPv6 network and configure network stack using Cooja",
+              "simulator."
+            ],
+            "topics_text": "To create IPv6 network and configure network stack using Cooja simulator.",
+            "topics": [
+              "To create IPv6 network and configure network stack using Cooja",
+              "simulator."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Demonstrate a smart object API gateway service reference",
+              "implementation in IoT toolkit."
+            ],
+            "topics_text": "Demonstrate a smart object API gateway service reference implementation in IoT toolkit.",
+            "topics": [
+              "Demonstrate a smart object API gateway service reference",
+              "implementation in IoT toolkit."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment-14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Sketch the architecture of IoT Tool kit and explain each entity in",
+              "brief."
+            ],
+            "topics_text": "Sketch the architecture of IoT Tool kit and explain each entity in brief.",
+            "topics": [
+              "Sketch the architecture of IoT Tool kit and explain each entity in",
+              "brief."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Experiment-15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write and explain working of an HTTP- to-CoAP semantic mapping",
+              "proxy in IoT toolkit."
+            ],
+            "topics_text": "Write and explain working of an HTTP- to-CoAP semantic mapping proxy in IoT toolkit.",
+            "topics": [
+              "Write and explain working of an HTTP- to-CoAP semantic mapping",
+              "proxy in IoT toolkit."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Experiment-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Describe gateway-as-a-service deployment in IoT tool kit."
+            ],
+            "topics_text": "Describe gateway-as-a-service deployment in IoT tool kit.",
+            "topics": [
+              "Describe gateway-as-a-service deployment in IoT tool kit."
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Experiment-17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Explain application framework and embedded software agents for",
+              "IoT tool kit."
+            ],
+            "topics_text": "Explain application framework and embedded software agents for IoT tool kit.",
+            "topics": [
+              "Explain application framework and embedded software agents for",
+              "IoT tool kit."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Experiment-18",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Define and Explain Eclipse IoTProject."
+            ],
+            "topics_text": "Define and Explain Eclipse IoTProject.",
+            "topics": [
+              "Define and Explain Eclipse IoTProject."
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Experiment-19",
+            "contact_hours": 2,
+            "topic_lines": [
+              "List and summarize few Eclipse IoTProjects."
+            ],
+            "topics_text": "List and summarize few Eclipse IoTProjects.",
+            "topics": [
+              "List and summarize few Eclipse IoTProjects."
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Experiment-20",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Give overview of Zetta."
+            ],
+            "topics_text": "Give overview of Zetta.",
+            "topics": [
+              "Give overview of Zetta."
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Internet of Things A to Z: Technologies and Applications, Q. F. Hassan, IEEE Press,Wiley,",
@@ -431,9 +1739,7 @@
           "text": "References:\n 1  The Internet of Things Enabling Technologies, Platforms, and Use Cases, The Internet of\n    Things Enabling Technologies, Platforms, and Use Cases, P. Raj, A. Raman, CRCPress,\n    2017\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    15.00         30.00         20.00         15.00         10.00         10.00\n\nInstructional Method:\n 1  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 2  Practical examination will be conducted at the end of the semester for evaluation of\n    performance of students in laboratory.\n 3  Students may use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory, etc.\n 4  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method (Chalk and Talk) may\n     use any of the tools such as demonstration, role play, Quiz, brainstorming, Flipped\n      class, Project based learning, Collaborative learning, MOOCs etc. for effective teaching.\n\nSupplementary Resources:\n 1  https://www.coursera.org/specializations/iot\n 2  https://www.coursera.org/specializations/internet-of-things\n 3  https://nptel.ac.in/courses/106/105/106105166\n\n\n\n\n\nMR. CHANDRASINH DHIRUBHA PARMAR        DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CT1619",
@@ -451,7 +1757,7 @@
       "expected_pdf_sha256": "2aa2f583b4a314875544c45a986d8b743ea0f09e28fb9787a33350696c71b702",
       "actual_pdf_sha256": "2aa2f583b4a314875544c45a986d8b743ea0f09e28fb9787a33350696c71b702",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 10462,
       "objective_text": "1 This course will introduce the students to the Verilog Hardware Description Language (HDL). Students will learn to model the hardware using hardware description language.",
@@ -469,7 +1775,426 @@
         "5 Interpret the data sheets of CPLD and FPGA",
         "Pre-requisite of course:Digital Electronics"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Digital Circuit Design Flow",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction to digital circuit design flow, VLSI design flow,",
+              "Behavioral design, data path design, logic design, physical design,",
+              "manufacturing. VLSI design style, FPGA based design, standard",
+              "cell based design, Full custom design"
+            ],
+            "topics_text": "Introduction to digital circuit design flow, VLSI design flow, Behavioral design, data path design, logic design, physical design, manufacturing. VLSI design style, FPGA based design, standard cell based design, Full custom design",
+            "topics": [
+              "Introduction to digital circuit design flow, VLSI design flow,",
+              "Behavioral design, data path design, logic design, physical design,",
+              "manufacturing. VLSI design style, FPGA based design, standard",
+              "cell based design, Full custom design"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Introduction to Verilog",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Concept of module , Data types in Verilog, Features of Verilog,",
+              "Verilog operators"
+            ],
+            "topics_text": "Concept of module , Data types in Verilog, Features of Verilog, Verilog operators",
+            "topics": [
+              "Concept of module , Data types in Verilog, Features of Verilog,",
+              "Verilog operators"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Verilog Modeling",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Behavioral modeling and structural modeling, Explanation of",
+              "modeling with different examples, modeling 16x1 multiplexer,",
+              "modeling 16 bit adder, Switch level modeling"
+            ],
+            "topics_text": "Behavioral modeling and structural modeling, Explanation of modeling with different examples, modeling 16x1 multiplexer, modeling 16 bit adder, Switch level modeling",
+            "topics": [
+              "Behavioral modeling and structural modeling, Explanation of",
+              "modeling with different examples, modeling 16x1 multiplexer,",
+              "modeling 16 bit adder, Switch level modeling"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Verilog Description Styles",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Data flow and behavioral(procedure statements), Example of",
+              "decoder and D-latch, Various examples using blocking and non",
+              "blocking assignment, Analysing that how the modelling style",
+              "influences the simulator and synthesis tool."
+            ],
+            "topics_text": "Data flow and behavioral(procedure statements), Example of decoder and D-latch, Various examples using blocking and non blocking assignment, Analysing that how the modelling style influences the simulator and synthesis tool.",
+            "topics": [
+              "Data flow and behavioral(procedure statements), Example of",
+              "decoder and D-latch, Various examples using blocking and non",
+              "blocking assignment, Analysing that how the modelling style",
+              "influences the simulator and synthesis tool."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Verilog Test benches",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Writing Verilog test benches, write test bench for combinational",
+              "design, write test bench for sequential design, generating test",
+              "vectors"
+            ],
+            "topics_text": "Writing Verilog test benches, write test bench for combinational design, write test bench for sequential design, generating test vectors",
+            "topics": [
+              "Writing Verilog test benches, write test bench for combinational",
+              "design, write test bench for sequential design, generating test",
+              "vectors"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Modeling Finite State Machine",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Moore Machine, Mealy Machine, Examples"
+            ],
+            "topics_text": "Moore Machine, Mealy Machine, Examples",
+            "topics": [
+              "Moore Machine, Mealy Machine, Examples"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Data path and Controller design",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Data path design includes functional circuits, registers, multiplexers,",
+              "bus, adders, multipliers, counters etc., Controller design includes",
+              "Finite State Machine and provide control to the data path,, Example",
+              "to explain above concept"
+            ],
+            "topics_text": "Data path design includes functional circuits, registers, multiplexers, bus, adders, multipliers, counters etc., Controller design includes Finite State Machine and provide control to the data path,, Example to explain above concept",
+            "topics": [
+              "Data path design includes functional circuits, registers, multiplexers,",
+              "bus, adders, multipliers, counters etc., Controller design includes",
+              "Finite State Machine and provide control to the data path,, Example",
+              "to explain above concept"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Modeling Memory and register banks",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Concepts of modeling memory, How to model memory and",
+              "initialize memory, concepts of modeling register bank"
+            ],
+            "topics_text": "Concepts of modeling memory, How to model memory and initialize memory, concepts of modeling register bank",
+            "topics": [
+              "Concepts of modeling memory, How to model memory and",
+              "initialize memory, concepts of modeling register bank"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Verilog modeling of processor",
+            "contact_hours": 4,
+            "topic_lines": [
+              "RISC Processor, Basic pipe line concepts, Understanding pipe line",
+              "implementation"
+            ],
+            "topics_text": "RISC Processor, Basic pipe line concepts, Understanding pipe line implementation",
+            "topics": [
+              "RISC Processor, Basic pipe line concepts, Understanding pipe line",
+              "implementation"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Programmable Logic Devices",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Introduction to Programmable Logic Devices"
+            ],
+            "topics_text": "Introduction to Programmable Logic Devices",
+            "topics": [
+              "Introduction to Programmable Logic Devices"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code to implement given logic functions."
+            ],
+            "topics_text": "Write the Verilog code to implement given logic functions.",
+            "topics": [
+              "Write the Verilog code to implement given logic functions."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code from the given logic circuit."
+            ],
+            "topics_text": "Write the Verilog code from the given logic circuit.",
+            "topics": [
+              "Write the Verilog code from the given logic circuit."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code for designing 16x1 Multiplexer with 2x1",
+              "multiplexer."
+            ],
+            "topics_text": "Write the Verilog code for designing 16x1 Multiplexer with 2x1 multiplexer.",
+            "topics": [
+              "Write the Verilog code for designing 16x1 Multiplexer with 2x1",
+              "multiplexer."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code for designing 4x16 decoder with 2x4",
+              "decoder."
+            ],
+            "topics_text": "Write the Verilog code for designing 4x16 decoder with 2x4 decoder.",
+            "topics": [
+              "Write the Verilog code for designing 4x16 decoder with 2x4",
+              "decoder."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code for designing 8 to 3 priority encoder."
+            ],
+            "topics_text": "Write the Verilog code for designing 8 to 3 priority encoder.",
+            "topics": [
+              "Write the Verilog code for designing 8 to 3 priority encoder."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code for designing half adder and full adder",
+              "circuit."
+            ],
+            "topics_text": "Write the Verilog code for designing half adder and full adder circuit.",
+            "topics": [
+              "Write the Verilog code for designing half adder and full adder",
+              "circuit."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code for designing 4 bit ripple carry adder circuit."
+            ],
+            "topics_text": "Write the Verilog code for designing 4 bit ripple carry adder circuit.",
+            "topics": [
+              "Write the Verilog code for designing 4 bit ripple carry adder circuit."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code for designing binary to gray code converter",
+              "circuit."
+            ],
+            "topics_text": "Write the Verilog code for designing binary to gray code converter circuit.",
+            "topics": [
+              "Write the Verilog code for designing binary to gray code converter",
+              "circuit."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code for designing BCD to seven segment",
+              "converter circuit."
+            ],
+            "topics_text": "Write the Verilog code for designing BCD to seven segment converter circuit.",
+            "topics": [
+              "Write the Verilog code for designing BCD to seven segment",
+              "converter circuit."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code for D latch, SR latch and JK latch."
+            ],
+            "topics_text": "Write the Verilog code for D latch, SR latch and JK latch.",
+            "topics": [
+              "Write the Verilog code for D latch, SR latch and JK latch."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code for D flip flop, SR flip flop, JK flip flop."
+            ],
+            "topics_text": "Write the Verilog code for D flip flop, SR flip flop, JK flip flop.",
+            "topics": [
+              "Write the Verilog code for D flip flop, SR flip flop, JK flip flop."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write the Verilog code for designing T-flip flop using D-flip-flop"
+            ],
+            "topics_text": "Write the Verilog code for designing T-flip flop using D-flip-flop",
+            "topics": [
+              "Write the Verilog code for designing T-flip flop using D-flip-flop"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design 4-bit shift register with asynchronous clear and enable using",
+              "verilog."
+            ],
+            "topics_text": "Design 4-bit shift register with asynchronous clear and enable using verilog.",
+            "topics": [
+              "Design 4-bit shift register with asynchronous clear and enable using",
+              "verilog."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment-14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design 4-bit shift register with synchronous reset using Verilog."
+            ],
+            "topics_text": "Design 4-bit shift register with synchronous reset using Verilog.",
+            "topics": [
+              "Design 4-bit shift register with synchronous reset using Verilog."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Experiment-15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design 4 bit up/down counter with parallel load using Verilog."
+            ],
+            "topics_text": "Design 4 bit up/down counter with parallel load using Verilog.",
+            "topics": [
+              "Design 4 bit up/down counter with parallel load using Verilog."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Experiment-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design Moore machine(FSM) with example using Verilog."
+            ],
+            "topics_text": "Design Moore machine(FSM) with example using Verilog.",
+            "topics": [
+              "Design Moore machine(FSM) with example using Verilog."
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Experiment-17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design Mealy machine(FSM) with example using Verilog."
+            ],
+            "topics_text": "Design Mealy machine(FSM) with example using Verilog.",
+            "topics": [
+              "Design Mealy machine(FSM) with example using Verilog."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Experiment-18",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design 4 bit ALU which performs the following tasks. a. Add",
+              "b.Subtract c.Multiplication d. Division e. OR f. AND g. Invert",
+              "h.XOR"
+            ],
+            "topics_text": "Design 4 bit ALU which performs the following tasks. a. Add b.Subtract c.Multiplication d. Division e. OR f. AND g. Invert h.XOR",
+            "topics": [
+              "Design 4 bit ALU which performs the following tasks. a. Add",
+              "b.Subtract c.Multiplication d. Division e. OR f. AND g. Invert",
+              "h.XOR"
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Experiment-19",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Implement bus structure to transfer data among registers using two",
+              "different approaches. a. Using tristate driver b. Using multiplexer"
+            ],
+            "topics_text": "Implement bus structure to transfer data among registers using two different approaches. a. Using tristate driver b. Using multiplexer",
+            "topics": [
+              "Implement bus structure to transfer data among registers using two",
+              "different approaches. a. Using tristate driver b. Using multiplexer"
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Experiment-20",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design control circuit for a simple processor to perform basic",
+              "operations mentioned below. a. load data into register b. copy data",
+              "from register to register c. add d. subtract"
+            ],
+            "topics_text": "Design control circuit for a simple processor to perform basic operations mentioned below. a. load data into register b. copy data from register to register c. add d. subtract",
+            "topics": [
+              "Design control circuit for a simple processor to perform basic",
+              "operations mentioned below. a. load data into register b. copy data",
+              "from register to register c. add d. subtract"
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Verilog HDL Synthesis-A practical primer, J.Bhaskar, star galaxy, 1999",
@@ -529,9 +2254,7 @@
           "text": "Suggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     5.00          20.00         35.00         30.00          0.00          10.00\n\nInstructional Method:\n 1  Course delivery is combined use of white board/black board and power point presentation\n     using projector as per requirement.\n 2  Students will be assessed with continuous evaluation approach with assignments and\n     quizzes at regular interval.\n 3  For effective communication with students, canvas LMS (Learning Management System)\n      is used.\n 4  Students are given opportunity to interact with mentors from industries through mock\n     interview.\n\nSupplementary Resources:\n 1  Hardware Modeling Using Verilog: Prof.Indranil Sengupta, IIT Kharagpur\n     https://nptel.ac.in/courses/106/105/106105165/\n 2  Digital System Design with PLDs and FPGAs: Prof. Kuruvilla Varghese, IISc Bangalore\n     https://nptel.ac.in/courses/117/108/117108040/\n 3  https://www.edaplayground.com/\n\n\n\n\n\nMR. CHANDRASINH DHIRUBHA PARMAR        DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CT1621",
@@ -549,7 +2272,7 @@
       "expected_pdf_sha256": "043fdde26a55610a52b63ce71a34bdce9d16e59bb6b1f16ac304c6dc2d7c2c3b",
       "actual_pdf_sha256": "043fdde26a55610a52b63ce71a34bdce9d16e59bb6b1f16ac304c6dc2d7c2c3b",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 10219,
       "objective_text": "1 Computer vision focuses on the development of algorithms and techniques to analyze and interpret the visible world around us. This requires an understanding of the fundamental concepts related to multi-dimensional signal processing, feature extraction, stochastic optimization, deep neural networks etc. Knowledge of these concepts is necessary for research and further developments in the field of computer vision. Applications range from biometrics, medical diagnosis, document processing, mining of visual content, surveillance, advanced rendering, etc. 2 Computer vision focuses on the development of algorithms and techniques to analyze and interpret the visible world around us. This requires an understanding of the fundamental concepts related to multi-dimensional signal processing, feature extraction, stochastic optimization, etc. Knowledge of these concepts is necessary for research and further developments in the field of computer vision. Applications range from Biometrics, Medical diagnosis, document processing, mining of visual content, surveillance, advanced rendering, etc.",
@@ -583,7 +2306,310 @@
         "Pre-requisite of course:Linear Algebra, Vector Calculus, Programming using Python, Basics of",
         "Machine Learning"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Image Formation",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Orthographic and Perspective Projection, Camera model, Camera",
+              "calibration, Intrinsic and Extrinsic parameters, Binocular Stereopsis:",
+              "Camera and Epipolar Geometry, Homography, Rectification, DLT,",
+              "RANSAC, Stereo Vision"
+            ],
+            "topics_text": "Orthographic and Perspective Projection, Camera model, Camera calibration, Intrinsic and Extrinsic parameters, Binocular Stereopsis: Camera and Epipolar Geometry, Homography, Rectification, DLT, RANSAC, Stereo Vision",
+            "topics": [
+              "Orthographic and Perspective Projection, Camera model, Camera",
+              "calibration, Intrinsic and Extrinsic parameters, Binocular Stereopsis:",
+              "Camera and Epipolar Geometry, Homography, Rectification, DLT,",
+              "RANSAC, Stereo Vision"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Feature Extraction",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Edge Detection, Line Detection, Interest Points and Corners",
+              "Detection, Shape Analysis, SIFT, SURF, HOG."
+            ],
+            "topics_text": "Edge Detection, Line Detection, Interest Points and Corners Detection, Shape Analysis, SIFT, SURF, HOG.",
+            "topics": [
+              "Edge Detection, Line Detection, Interest Points and Corners",
+              "Detection, Shape Analysis, SIFT, SURF, HOG."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Shape from X",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Light at Surfaces, Phong Model, Reflectance, Photometric Stereo,",
+              "Surface Properties, Shape from Shading, Shape from Texture,",
+              "Motion and Edges"
+            ],
+            "topics_text": "Light at Surfaces, Phong Model, Reflectance, Photometric Stereo, Surface Properties, Shape from Shading, Shape from Texture, Motion and Edges",
+            "topics": [
+              "Light at Surfaces, Phong Model, Reflectance, Photometric Stereo,",
+              "Surface Properties, Shape from Shading, Shape from Texture,",
+              "Motion and Edges"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Segmentation",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Region Growing, Basic Clustering Methods, Watershed algorithm,",
+              "K-Means algorithm, Mean-Shift algorithm, Agglomerative",
+              "Clustering with a graph, Normalized cuts, Grab-cut, Hough",
+              "Transform"
+            ],
+            "topics_text": "Region Growing, Basic Clustering Methods, Watershed algorithm, K-Means algorithm, Mean-Shift algorithm, Agglomerative Clustering with a graph, Normalized cuts, Grab-cut, Hough Transform",
+            "topics": [
+              "Region Growing, Basic Clustering Methods, Watershed algorithm,",
+              "K-Means algorithm, Mean-Shift algorithm, Agglomerative",
+              "Clustering with a graph, Normalized cuts, Grab-cut, Hough",
+              "Transform"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Recent trends and applications",
+            "contact_hours": 9,
+            "topic_lines": [
+              "CNN, R-CNN, U-Nets, Mask R-CNN for computer vision, Self-",
+              "supervised Learning, Reinforcement Learning in vision, Face",
+              "Recognition, Emotion Recognition,, Activity Recognition, Optical",
+              "Character Recognition, Biometrics, In-vehicle vision systems"
+            ],
+            "topics_text": "CNN, R-CNN, U-Nets, Mask R-CNN for computer vision, Self- supervised Learning, Reinforcement Learning in vision, Face Recognition, Emotion Recognition,, Activity Recognition, Optical Character Recognition, Biometrics, In-vehicle vision systems",
+            "topics": [
+              "CNN, R-CNN, U-Nets, Mask R-CNN for computer vision, Self-",
+              "supervised Learning, Reinforcement Learning in vision, Face",
+              "Recognition, Emotion Recognition,, Activity Recognition, Optical",
+              "Character Recognition, Biometrics, In-vehicle vision systems"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate Camera Calibration"
+            ],
+            "topics_text": "Simulate Camera Calibration",
+            "topics": [
+              "Simulate Camera Calibration"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate Image Rectification"
+            ],
+            "topics_text": "Simulate Image Rectification",
+            "topics": [
+              "Simulate Image Rectification"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate Image Stitching using key points detection, matching the",
+              "descriptors, RANSAC and wrapping transformation using",
+              "Homography"
+            ],
+            "topics_text": "Simulate Image Stitching using key points detection, matching the descriptors, RANSAC and wrapping transformation using Homography",
+            "topics": [
+              "Simulate Image Stitching using key points detection, matching the",
+              "descriptors, RANSAC and wrapping transformation using",
+              "Homography"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate Edge detection using Laplacian, Sobel, Prewitt and Canny",
+              "detectors"
+            ],
+            "topics_text": "Simulate Edge detection using Laplacian, Sobel, Prewitt and Canny detectors",
+            "topics": [
+              "Simulate Edge detection using Laplacian, Sobel, Prewitt and Canny",
+              "detectors"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate Corner detection using Harris and Shi-Tomasi detectors"
+            ],
+            "topics_text": "Simulate Corner detection using Harris and Shi-Tomasi detectors",
+            "topics": [
+              "Simulate Corner detection using Harris and Shi-Tomasi detectors"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Implement code to i. Calculate fundamental matrix using SIFT and",
+              "FLANN and ii. Find and draw Epilines on images."
+            ],
+            "topics_text": "Implement code to i. Calculate fundamental matrix using SIFT and FLANN and ii. Find and draw Epilines on images.",
+            "topics": [
+              "Implement code to i. Calculate fundamental matrix using SIFT and",
+              "FLANN and ii. Find and draw Epilines on images."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Reconstruct 3D object using Shape from Shading approach"
+            ],
+            "topics_text": "Reconstruct 3D object using Shape from Shading approach",
+            "topics": [
+              "Reconstruct 3D object using Shape from Shading approach"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate code to calculate Histogram of Gradients"
+            ],
+            "topics_text": "Simulate code to calculate Histogram of Gradients",
+            "topics": [
+              "Simulate code to calculate Histogram of Gradients"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate code to create Depth map from Stereo images"
+            ],
+            "topics_text": "Simulate code to create Depth map from Stereo images",
+            "topics": [
+              "Simulate code to create Depth map from Stereo images"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate code to segment an image of mutually touching coins",
+              "using distance transform along with Watershed algorithm"
+            ],
+            "topics_text": "Simulate code to segment an image of mutually touching coins using distance transform along with Watershed algorithm",
+            "topics": [
+              "Simulate code to segment an image of mutually touching coins",
+              "using distance transform along with Watershed algorithm"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate code to segment images using K-means algorithm"
+            ],
+            "topics_text": "Simulate code to segment images using K-means algorithm",
+            "topics": [
+              "Simulate code to segment images using K-means algorithm"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate code to segment images using mean-shift algorithm."
+            ],
+            "topics_text": "Simulate code to segment images using mean-shift algorithm.",
+            "topics": [
+              "Simulate code to segment images using mean-shift algorithm."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulate code to segment images using Grab-cut algorithm"
+            ],
+            "topics_text": "Simulate code to segment images using Grab-cut algorithm",
+            "topics": [
+              "Simulate code to segment images using Grab-cut algorithm"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform object detection with R-CNN"
+            ],
+            "topics_text": "Perform object detection with R-CNN",
+            "topics": [
+              "Perform object detection with R-CNN"
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Experiment 15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform object detection with YOLO algorithm"
+            ],
+            "topics_text": "Perform object detection with YOLO algorithm",
+            "topics": [
+              "Perform object detection with YOLO algorithm"
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Experiment 16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform semantic image segmentation with U-Nets"
+            ],
+            "topics_text": "Perform semantic image segmentation with U-Nets",
+            "topics": [
+              "Perform semantic image segmentation with U-Nets"
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Experiment 17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform image segmentation with Mask R-CNN"
+            ],
+            "topics_text": "Perform image segmentation with Mask R-CNN",
+            "topics": [
+              "Perform image segmentation with Mask R-CNN"
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Computer Vision- A model approach, D. Forsyth , Pearson, 2016",
@@ -650,9 +2676,7 @@
           "text": "Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     5.00          20.00         30.00         15.00         20.00         10.00\n\nInstructional Method:\n 1  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 2  Practical examination will be conducted at the end of the semester for evaluation of\n    performance of students in laboratory.\n 3  Students may use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory, etc.\n 4  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method (Chalk and Talk) may\n     use any of the tools such as demonstration, role play, Quiz, brainstorming, Flipped\n      class, Project based learning, Collaborative learning, MOOCs etc. for effective teaching.\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/106105216/\n 2  https://nptel.ac.in/courses/106106224/\n 3  https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-801-machine-\n     visionfall-2004/index.htm\n 4  https://www.udacity.com/course/introduction-to-computer-vision--ud810\n 5  https://www.coursera.org/learn/computer-vision-basics/\n\n\n\n\n\nMR. CHANDRASINH DHIRUBHA PARMAR        DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CT1623",
@@ -670,7 +2694,7 @@
       "expected_pdf_sha256": "60a5c85b9149cbaf7375aa0d03cd0269960ee5c988949313b7bdab31a386199c",
       "actual_pdf_sha256": "60a5c85b9149cbaf7375aa0d03cd0269960ee5c988949313b7bdab31a386199c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 10529,
       "objective_text": "1 This course develops programming ability of students to create dynamic web applications using server-side technology with Java Database Connectivity. Students can learn networking and remote method invocation using Java API. Different Java frameworks like Spring, Java Server Faces and Hibernate will increase ability of students in web application development.",
@@ -693,7 +2717,326 @@
         "Spring and Hibernate base upon the requirement.",
         "Pre-requisite of course:Object Oriented Programming with JAVA"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "JDBC Programming",
+            "contact_hours": 6,
+            "topic_lines": [
+              "The JDBC Connectivity Model, Database Programming:",
+              "Connecting to the Database, Creating a SQL Query, Getting the",
+              "Results, Updating Database Data, Error Checking and the",
+              "SQLException Class, The SQLWarning Class, The Statement",
+              "Interface, PreparedStatement, CallableStatement The ResultSet",
+              "Interface, Updatable Result Sets, JDBC Types, Executing SQL",
+              "Queries, ResultSetMetaData, Executing SQL, Updates, Transaction",
+              "Management"
+            ],
+            "topics_text": "The JDBC Connectivity Model, Database Programming: Connecting to the Database, Creating a SQL Query, Getting the Results, Updating Database Data, Error Checking and the SQLException Class, The SQLWarning Class, The Statement Interface, PreparedStatement, CallableStatement The ResultSet Interface, Updatable Result Sets, JDBC Types, Executing SQL Queries, ResultSetMetaData, Executing SQL, Updates, Transaction Management",
+            "topics": [
+              "The JDBC Connectivity Model, Database Programming:",
+              "Connecting to the Database, Creating a SQL Query, Getting the",
+              "Results, Updating Database Data, Error Checking and the",
+              "SQLException Class, The SQLWarning Class, The Statement",
+              "Interface, PreparedStatement, CallableStatement The ResultSet",
+              "Interface, Updatable Result Sets, JDBC Types, Executing SQL",
+              "Queries, ResultSetMetaData, Executing SQL, Updates, Transaction",
+              "Management"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Servlet API and Overview Servlet Model",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Overview of Servlet, Servlet Life Cycle, HTTP Methods Structure",
+              "and Deployment descriptor ServletContext and ServletConfig",
+              "interface, Attributes in Servelt, Request Dispacher interface The",
+              "Filter API: Filter, FilterChain, Filter Config Cookies, Session",
+              "Management: Understanding state and session, Understanding",
+              "Session Timeout and Session Tracking, URL Rewriting"
+            ],
+            "topics_text": "Overview of Servlet, Servlet Life Cycle, HTTP Methods Structure and Deployment descriptor ServletContext and ServletConfig interface, Attributes in Servelt, Request Dispacher interface The Filter API: Filter, FilterChain, Filter Config Cookies, Session Management: Understanding state and session, Understanding Session Timeout and Session Tracking, URL Rewriting",
+            "topics": [
+              "Overview of Servlet, Servlet Life Cycle, HTTP Methods Structure",
+              "and Deployment descriptor ServletContext and ServletConfig",
+              "interface, Attributes in Servelt, Request Dispacher interface The",
+              "Filter API: Filter, FilterChain, Filter Config Cookies, Session",
+              "Management: Understanding state and session, Understanding",
+              "Session Timeout and Session Tracking, URL Rewriting"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Java Server Pages JSP Overview",
+            "contact_hours": 9,
+            "topic_lines": [
+              "The Problem with Servlets, Life Cycle of JSP Page, JSP Processing,",
+              "JSP Application Design with MVC, Setting Up the JSP",
+              "Environment. JSP Directives, JSP Action, JSP Implicit Objects JSP",
+              "Form Processing, JSP Session and Cookies Handling, JSP Standard",
+              "Tag Libraries, JSP Custom Tag, JSP Expression Language, JSP",
+              "Exception Handling"
+            ],
+            "topics_text": "The Problem with Servlets, Life Cycle of JSP Page, JSP Processing, JSP Application Design with MVC, Setting Up the JSP Environment. JSP Directives, JSP Action, JSP Implicit Objects JSP Form Processing, JSP Session and Cookies Handling, JSP Standard Tag Libraries, JSP Custom Tag, JSP Expression Language, JSP Exception Handling",
+            "topics": [
+              "The Problem with Servlets, Life Cycle of JSP Page, JSP Processing,",
+              "JSP Application Design with MVC, Setting Up the JSP",
+              "Environment. JSP Directives, JSP Action, JSP Implicit Objects JSP",
+              "Form Processing, JSP Session and Cookies Handling, JSP Standard",
+              "Tag Libraries, JSP Custom Tag, JSP Expression Language, JSP",
+              "Exception Handling"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Hibernate 4.0",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Overview of Hibernate, Hibernate Architecture, Hibernate Mapping",
+              "Types, Hibernate O/R Mapping, Hibernate Annotation, Hibernate",
+              "Query Language"
+            ],
+            "topics_text": "Overview of Hibernate, Hibernate Architecture, Hibernate Mapping Types, Hibernate O/R Mapping, Hibernate Annotation, Hibernate Query Language",
+            "topics": [
+              "Overview of Hibernate, Hibernate Architecture, Hibernate Mapping",
+              "Types, Hibernate O/R Mapping, Hibernate Annotation, Hibernate",
+              "Query Language"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Spring",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Introduction to spring, Dependency Injection, Spring AOP, Spring",
+              "ORM, Spring MVC"
+            ],
+            "topics_text": "Introduction to spring, Dependency Injection, Spring AOP, Spring ORM, Spring MVC",
+            "topics": [
+              "Introduction to spring, Dependency Injection, Spring AOP, Spring",
+              "ORM, Spring MVC"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "WAP that will retrieve data from Database and display on Console",
+              "screen. (JDBC)"
+            ],
+            "topics_text": "WAP that will retrieve data from Database and display on Console screen. (JDBC)",
+            "topics": [
+              "WAP that will retrieve data from Database and display on Console",
+              "screen. (JDBC)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "WAP that will take firstName, surName, email from user. Store that",
+              "data into DB and display data from DB. (JDBC)"
+            ],
+            "topics_text": "WAP that will take firstName, surName, email from user. Store that data into DB and display data from DB. (JDBC)",
+            "topics": [
+              "WAP that will take firstName, surName, email from user. Store that",
+              "data into DB and display data from DB. (JDBC)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Search userDOB by passing arguments as date to servlet by submit",
+              "the search.jsp page at SearchResult.java servlet that returns the rows",
+              "of result back to clientResult.jsp page. (Servlet)."
+            ],
+            "topics_text": "Search userDOB by passing arguments as date to servlet by submit the search.jsp page at SearchResult.java servlet that returns the rows of result back to clientResult.jsp page. (Servlet).",
+            "topics": [
+              "Search userDOB by passing arguments as date to servlet by submit",
+              "the search.jsp page at SearchResult.java servlet that returns the rows",
+              "of result back to clientResult.jsp page. (Servlet)."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create one class file named DBTransaction.java file under classes",
+              "directory. That returns the connection obj. to servlet ConServlet.java",
+              "file under same classes folder. Use this servlet for controller. Accept",
+              "the data from CV.jsp page as forms data pass it to servlet that",
+              "redirect data to the InsertData() method of DBTransaction.java file.",
+              "Use ServletContext for controller (JDBC-Servlet)."
+            ],
+            "topics_text": "Create one class file named DBTransaction.java file under classes directory. That returns the connection obj. to servlet ConServlet.java file under same classes folder. Use this servlet for controller. Accept the data from CV.jsp page as forms data pass it to servlet that redirect data to the InsertData() method of DBTransaction.java file. Use ServletContext for controller (JDBC-Servlet).",
+            "topics": [
+              "Create one class file named DBTransaction.java file under classes",
+              "directory. That returns the connection obj. to servlet ConServlet.java",
+              "file under same classes folder. Use this servlet for controller. Accept",
+              "the data from CV.jsp page as forms data pass it to servlet that",
+              "redirect data to the InsertData() method of DBTransaction.java file.",
+              "Use ServletContext for controller (JDBC-Servlet)."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Take USerName and Email-id from user in html page. Store email-",
+              "id in xml file also. Display both values in servlet. (Servlet)"
+            ],
+            "topics_text": "Take USerName and Email-id from user in html page. Store email- id in xml file also. Display both values in servlet. (Servlet)",
+            "topics": [
+              "Take USerName and Email-id from user in html page. Store email-",
+              "id in xml file also. Display both values in servlet. (Servlet)"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "A servlet program to do session tracking and session counter using",
+              "serssionListener."
+            ],
+            "topics_text": "A servlet program to do session tracking and session counter using serssionListener.",
+            "topics": [
+              "A servlet program to do session tracking and session counter using",
+              "serssionListener."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "JSP program to demonstrate arithmetic operations."
+            ],
+            "topics_text": "JSP program to demonstrate arithmetic operations.",
+            "topics": [
+              "JSP program to demonstrate arithmetic operations."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Gets two numbers in html page from the user and submit that",
+              "numbers in jsp page,print appropriate output using methods. (JSP)"
+            ],
+            "topics_text": "Gets two numbers in html page from the user and submit that numbers in jsp page,print appropriate output using methods. (JSP)",
+            "topics": [
+              "Gets two numbers in html page from the user and submit that",
+              "numbers in jsp page,print appropriate output using methods. (JSP)"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Get value from user and create cookie in another jsp page and also",
+              "view that cookie. (JSP)"
+            ],
+            "topics_text": "Get value from user and create cookie in another jsp page and also view that cookie. (JSP)",
+            "topics": [
+              "Get value from user and create cookie in another jsp page and also",
+              "view that cookie. (JSP)"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Get value from user and create session in another jsp page and also",
+              "view. (JSP)"
+            ],
+            "topics_text": "Get value from user and create session in another jsp page and also view. (JSP)",
+            "topics": [
+              "Get value from user and create session in another jsp page and also",
+              "view. (JSP)"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Session Demo program. Create login.jsp and check it from",
+              "user_master db and set session for next UserAccount.jsp page.",
+              "(JDBC-JSP)"
+            ],
+            "topics_text": "Session Demo program. Create login.jsp and check it from user_master db and set session for next UserAccount.jsp page. (JDBC-JSP)",
+            "topics": [
+              "Session Demo program. Create login.jsp and check it from",
+              "user_master db and set session for next UserAccount.jsp page.",
+              "(JDBC-JSP)"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create employee_master table and check if user is authenticated or",
+              "not by login module and set appropriate session. Every time",
+              "whenver user loged in the last Access Time should be shown to",
+              "user. give logout link and destory the session attributes and redirect",
+              "the user to again login page. (JDBC-JSP)"
+            ],
+            "topics_text": "Create employee_master table and check if user is authenticated or not by login module and set appropriate session. Every time whenver user loged in the last Access Time should be shown to user. give logout link and destory the session attributes and redirect the user to again login page. (JDBC-JSP)",
+            "topics": [
+              "Create employee_master table and check if user is authenticated or",
+              "not by login module and set appropriate session. Every time",
+              "whenver user loged in the last Access Time should be shown to",
+              "user. give logout link and destory the session attributes and redirect",
+              "the user to again login page. (JDBC-JSP)"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "JSP program to demonstrate jsp: forward action tag."
+            ],
+            "topics_text": "JSP program to demonstrate jsp: forward action tag.",
+            "topics": [
+              "JSP program to demonstrate jsp: forward action tag."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment-14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create one user login registration page in jsp with all required form",
+              "fields and insert into database. insertion of data done at servlet level",
+              "where connection method is created in servlet. Accept the client",
+              "httpServletRequest. (JDBC-Servlet-JSP)"
+            ],
+            "topics_text": "Create one user login registration page in jsp with all required form fields and insert into database. insertion of data done at servlet level where connection method is created in servlet. Accept the client httpServletRequest. (JDBC-Servlet-JSP)",
+            "topics": [
+              "Create one user login registration page in jsp with all required form",
+              "fields and insert into database. insertion of data done at servlet level",
+              "where connection method is created in servlet. Accept the client",
+              "httpServletRequest. (JDBC-Servlet-JSP)"
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Java The Complete Reference, Herbert Schildt., McGraw Hill Professional, 2018",
@@ -751,9 +3094,7 @@
           "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     5.00          25.00         30.00         20.00         10.00         10.00\n\nInstructional Method:\n 1  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 2   Practical examination will be conducted at the end of the semester for evaluation of\n    performance of students in laboratory.\n 3  Students may use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory, etc.\n 4  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method (Chalk and Talk) may\n     use any of the tools such as demonstration, role play, Quiz, brainstorming, Flipped\n      class, Project based learning, Collaborative learning, MOOCs etc. for effective teaching.\n\nSupplementary Resources:\n 1  www.nptel.com\n 2  www.javatpoint.com\n 3  https://www.codejava.net/struts-tutorials\n 4  https://www.tutorialspoint.com/java/index.htm\n\n\n\n\n\nMR. CHANDRASINH DHIRUBHA PARMAR        DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CT1625",
@@ -771,7 +3112,7 @@
       "expected_pdf_sha256": "14bda19bcb565306c26452e01a43b67d6fd1a17f67cb5489c85bacae5b7656e6",
       "actual_pdf_sha256": "14bda19bcb565306c26452e01a43b67d6fd1a17f67cb5489c85bacae5b7656e6",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 9089,
       "objective_text": "1 The objective of the course is to understand modern web technologies based on JavaScript.",
@@ -792,7 +3133,298 @@
         "be familiar with DOM(Document Object Model) in browser. Basic understanding of",
         "Node/express will speed up the learning process but is not recommended."
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Client-side JS Framework – ReactJS",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction to ReactJS, Introducing JSX, Rendering Elements,",
+              "Component and Props, State and Life Cycle, Handling Events,",
+              "Conditional Rendering, List and Keys, Forms, Lifting State Up,",
+              "Composition vs Inheritance, Thinking in React, Manual and Unit",
+              "Testing"
+            ],
+            "topics_text": "Introduction to ReactJS, Introducing JSX, Rendering Elements, Component and Props, State and Life Cycle, Handling Events, Conditional Rendering, List and Keys, Forms, Lifting State Up, Composition vs Inheritance, Thinking in React, Manual and Unit Testing",
+            "topics": [
+              "Introduction to ReactJS, Introducing JSX, Rendering Elements,",
+              "Component and Props, State and Life Cycle, Handling Events,",
+              "Conditional Rendering, List and Keys, Forms, Lifting State Up,",
+              "Composition vs Inheritance, Thinking in React, Manual and Unit",
+              "Testing"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Server-side JS Framework – Node JS",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Get started with Node.js, Node Package Manager, Modules",
+              "Asynchronous Program, Callbacks, Events and Event Loop,",
+              "Streams and Buffers, Connect Node.js to Database, Web Sockets,",
+              "API using NodeJS"
+            ],
+            "topics_text": "Get started with Node.js, Node Package Manager, Modules Asynchronous Program, Callbacks, Events and Event Loop, Streams and Buffers, Connect Node.js to Database, Web Sockets, API using NodeJS",
+            "topics": [
+              "Get started with Node.js, Node Package Manager, Modules",
+              "Asynchronous Program, Callbacks, Events and Event Loop,",
+              "Streams and Buffers, Connect Node.js to Database, Web Sockets,",
+              "API using NodeJS"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Express JS",
+            "contact_hours": 12,
+            "topic_lines": [
+              "MVC Pattern, Introduction to Express, Routing, HTTP Interaction,",
+              "Handle Form Data, Handle Query Parameters, Cookies and",
+              "Sessions, User Authentication, Error Handle, Create and Consume",
+              "RESTful Services, Use Templates, Functional and Unit Testing"
+            ],
+            "topics_text": "MVC Pattern, Introduction to Express, Routing, HTTP Interaction, Handle Form Data, Handle Query Parameters, Cookies and Sessions, User Authentication, Error Handle, Create and Consume RESTful Services, Use Templates, Functional and Unit Testing",
+            "topics": [
+              "MVC Pattern, Introduction to Express, Routing, HTTP Interaction,",
+              "Handle Form Data, Handle Query Parameters, Cookies and",
+              "Sessions, User Authentication, Error Handle, Create and Consume",
+              "RESTful Services, Use Templates, Functional and Unit Testing"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "MongoDB",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Introduction to MongoDB, CRUD Operations in Mongodb,",
+              "Introduction to Mongoose, Core concepts of Mongoose, Extending",
+              "Models - Working with hooks, Validation of model data, Creating",
+              "custom static methods, Creating custom instance methods, CRUD",
+              "operations with Mongoose"
+            ],
+            "topics_text": "Introduction to MongoDB, CRUD Operations in Mongodb, Introduction to Mongoose, Core concepts of Mongoose, Extending Models - Working with hooks, Validation of model data, Creating custom static methods, Creating custom instance methods, CRUD operations with Mongoose",
+            "topics": [
+              "Introduction to MongoDB, CRUD Operations in Mongodb,",
+              "Introduction to Mongoose, Core concepts of Mongoose, Extending",
+              "Models - Working with hooks, Validation of model data, Creating",
+              "custom static methods, Creating custom instance methods, CRUD",
+              "operations with Mongoose"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Cloud & Deployment",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Basics of Devops and Cloud Infrastructure, In-depth of DNS and",
+              "network terminologies, Introduction to AWS, AWS-ECS, EC2,",
+              "Docker, Kubernetes, Git Basics, Git with CI/CD, Hosting website",
+              "on various platforms."
+            ],
+            "topics_text": "Basics of Devops and Cloud Infrastructure, In-depth of DNS and network terminologies, Introduction to AWS, AWS-ECS, EC2, Docker, Kubernetes, Git Basics, Git with CI/CD, Hosting website on various platforms.",
+            "topics": [
+              "Basics of Devops and Cloud Infrastructure, In-depth of DNS and",
+              "network terminologies, Introduction to AWS, AWS-ECS, EC2,",
+              "Docker, Kubernetes, Git Basics, Git with CI/CD, Hosting website",
+              "on various platforms."
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create an application for student result management using React JS."
+            ],
+            "topics_text": "Create an application for student result management using React JS.",
+            "topics": [
+              "Create an application for student result management using React JS."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Develop a web application which involves database operations",
+              "using NodeJS"
+            ],
+            "topics_text": "Develop a web application which involves database operations using NodeJS",
+            "topics": [
+              "Develop a web application which involves database operations",
+              "using NodeJS"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Improve any React (+NodeJS) application by adding Error",
+              "Handling."
+            ],
+            "topics_text": "Improve any React (+NodeJS) application by adding Error Handling.",
+            "topics": [
+              "Improve any React (+NodeJS) application by adding Error",
+              "Handling."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Develop a web application which involves database operations",
+              "using Express"
+            ],
+            "topics_text": "Develop a web application which involves database operations using Express",
+            "topics": [
+              "Develop a web application which involves database operations",
+              "using Express"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create modern, scalable and high-speed Web Applications with",
+              "React and Node.js +Express"
+            ],
+            "topics_text": "Create modern, scalable and high-speed Web Applications with React and Node.js +Express",
+            "topics": [
+              "Create modern, scalable and high-speed Web Applications with",
+              "React and Node.js +Express"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a RESTful service with Node, Express and MongoDB"
+            ],
+            "topics_text": "Create a RESTful service with Node, Express and MongoDB",
+            "topics": [
+              "Create a RESTful service with Node, Express and MongoDB"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Frontend: Using ReactJS, make Image Carousel, FAQ/Accordion",
+              "and Shopping item list with filters."
+            ],
+            "topics_text": "Frontend: Using ReactJS, make Image Carousel, FAQ/Accordion and Shopping item list with filters.",
+            "topics": [
+              "Frontend: Using ReactJS, make Image Carousel, FAQ/Accordion",
+              "and Shopping item list with filters."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Frontend: Using ReactJS, integrate video player like a youtube",
+              "clone"
+            ],
+            "topics_text": "Frontend: Using ReactJS, integrate video player like a youtube clone",
+            "topics": [
+              "Frontend: Using ReactJS, integrate video player like a youtube",
+              "clone"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Frontend: Using ReactJS, make a e-commerce website (flipkart or",
+              "amazon) clone"
+            ],
+            "topics_text": "Frontend: Using ReactJS, make a e-commerce website (flipkart or amazon) clone",
+            "topics": [
+              "Frontend: Using ReactJS, make a e-commerce website (flipkart or",
+              "amazon) clone"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Backend: Using NodeJS, build a real time chat application or email",
+              "sender."
+            ],
+            "topics_text": "Backend: Using NodeJS, build a real time chat application or email sender.",
+            "topics": [
+              "Backend: Using NodeJS, build a real time chat application or email",
+              "sender."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Backend: Using NodeJS, build a job search platform or e-commerce",
+              "platform api to search and filter."
+            ],
+            "topics_text": "Backend: Using NodeJS, build a job search platform or e-commerce platform api to search and filter.",
+            "topics": [
+              "Backend: Using NodeJS, build a job search platform or e-commerce",
+              "platform api to search and filter."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Database: Using MongoDB, build the CRUD operations with",
+              "NodeJS"
+            ],
+            "topics_text": "Database: Using MongoDB, build the CRUD operations with NodeJS",
+            "topics": [
+              "Database: Using MongoDB, build the CRUD operations with",
+              "NodeJS"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Database: using MongoDB, NodeJS and ReactJS, build a project to",
+              "fetch and post data from frontend to database."
+            ],
+            "topics_text": "Database: using MongoDB, NodeJS and ReactJS, build a project to fetch and post data from frontend to database.",
+            "topics": [
+              "Database: using MongoDB, NodeJS and ReactJS, build a project to",
+              "fetch and post data from frontend to database."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment-14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Deployment: Using AWS, deploy the project in EC2 instances or",
+              "use Lambda functionalities to build APIs."
+            ],
+            "topics_text": "Deployment: Using AWS, deploy the project in EC2 instances or use Lambda functionalities to build APIs.",
+            "topics": [
+              "Deployment: Using AWS, deploy the project in EC2 instances or",
+              "use Lambda functionalities to build APIs."
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Node.js by Example, Krasimir Tsonev, Packt Publishing Ltd, 2015",
@@ -849,14 +3481,12 @@
           "text": "Instructional Method:\n 4  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method (Chalk and Talk) may\n     use any of the tools such as demonstration, role play, Quiz, brainstorming, Flipped\n      class, Project based learning, Collaborative learning, MOOCs etc. for effective teaching.\n\nSupplementary Resources:\n 1  https://reactjs.org/docs/getting-started.html\n 2  https://nodejs.dev/en/learn/\n\n\n\n\n\nMR. CHANDRASINH DHIRUBHA PARMAR        DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     }
   ],
   "build_summary": {
-    "structured": 0,
-    "manual_review": 8,
+    "structured": 8,
+    "manual_review": 0,
     "ocr_review": 0,
     "hash_mismatch": 0,
     "missing_pdf": 0,

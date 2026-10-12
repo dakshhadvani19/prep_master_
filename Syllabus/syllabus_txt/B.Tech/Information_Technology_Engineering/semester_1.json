@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:43:06+00:00",
+  "generated_at_utc": "2026-10-12T12:44:16+00:00",
   "program": {
     "program_name": "B.Tech Information Technology",
     "program_folder": "Information Technology Engineering",
@@ -31,7 +31,7 @@
       "expected_pdf_sha256": "a55fe8c835ec93f76b0addc5941d3971524932215f2e9721ca57d2a3e6af476c",
       "actual_pdf_sha256": "a55fe8c835ec93f76b0addc5941d3971524932215f2e9721ca57d2a3e6af476c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 5,
       "extracted_character_count": 13929,
       "objective_text": "1 Students are expected to learn basics of Computer Programming which will help them to apply these concepts in day-to-day life. The course discusses various notations that are required for developing algorithm in C language, which is used in many commercial as well as industrial applications. 2 Students are expected to learn basics of Computer Programming which will help them to apply these concepts in day-to-day life. The course discusses various notations that required for developing algorithm and for C language, which is used in many commercial, industrial as well as industrial applications. Keeping in view wide applications of files, a special unit of files is introduced. 3 Students are expected to learn basics of Computer Programming which will help them to apply these concepts in day-to-day life. The course discusses various notations that required for developing algorithm and for C language, which is used in many commercial, industrial as well as industrial applications. Keeping in view wide applications of files, a special unit of files is introduced.",
@@ -63,7 +63,440 @@
         "5 Develop confidence to self-educate new programming languages.",
         "Pre-requisite of course:NA"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 6,
+            "topic_lines": [
+              "File Management:, Languages Low level ± high Number level,",
+              "System ± Binary ± Decimal conversion problems, Flowchart,",
+              "Algorithm, Problem solving using flowchart and algorithm"
+            ],
+            "topics_text": "File Management:, Languages Low level ± high Number level, System ± Binary ± Decimal conversion problems, Flowchart, Algorithm, Problem solving using flowchart and algorithm",
+            "topics": [
+              "File Management:, Languages Low level ± high Number level,",
+              "System ± Binary ± Decimal conversion problems, Flowchart,",
+              "Algorithm, Problem solving using flowchart and algorithm"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "C Programming Basics",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to C Programming, Structure of µC¶ program,",
+              "Compilation and linking processes, Constants, Variables, Data",
+              "Types, C Tokens, Expression using operators in µC¶ Type",
+              "Conversion and Type Casting"
+            ],
+            "topics_text": "Introduction to C Programming, Structure of µC¶ program, Compilation and linking processes, Constants, Variables, Data Types, C Tokens, Expression using operators in µC¶ Type Conversion and Type Casting",
+            "topics": [
+              "Introduction to C Programming, Structure of µC¶ program,",
+              "Compilation and linking processes, Constants, Variables, Data",
+              "Types, C Tokens, Expression using operators in µC¶ Type",
+              "Conversion and Type Casting"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Control Structure and Looping",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Decision Making statements, Decision Making statements,",
+              "Conditional operator, Looping ± Entry and Exit control loops,",
+              "Concept of jump, Break and continue"
+            ],
+            "topics_text": "Decision Making statements, Decision Making statements, Conditional operator, Looping ± Entry and Exit control loops, Concept of jump, Break and continue",
+            "topics": [
+              "Decision Making statements, Decision Making statements,",
+              "Conditional operator, Looping ± Entry and Exit control loops,",
+              "Concept of jump, Break and continue"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Array and String",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Declaration and initialization of array, Types of arrays, Sorting and",
+              "matrix operation using array, Strings ± string operations, String",
+              "array, String functions"
+            ],
+            "topics_text": "Declaration and initialization of array, Types of arrays, Sorting and matrix operation using array, Strings ± string operations, String array, String functions",
+            "topics": [
+              "Declaration and initialization of array, Types of arrays, Sorting and",
+              "matrix operation using array, Strings ± string operations, String",
+              "array, String functions"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Functions",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Functions ± Definition of function, Declaration of function, Call by",
+              "value, Call by references, Recursion"
+            ],
+            "topics_text": "Functions ± Definition of function, Declaration of function, Call by value, Call by references, Recursion",
+            "topics": [
+              "Functions ± Definition of function, Declaration of function, Call by",
+              "value, Call by references, Recursion"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Structure and Union",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Need of structure data type, Structure definition, structure",
+              "declaration, Structure within structure, Difference between structure",
+              "and union"
+            ],
+            "topics_text": "Need of structure data type, Structure definition, structure declaration, Structure within structure, Difference between structure and union",
+            "topics": [
+              "Need of structure data type, Structure definition, structure",
+              "declaration, Structure within structure, Difference between structure",
+              "and union"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Pointers and Dynamic Memory Allocation",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Pointers ± Definition, Initialization, Pointer arithmetic, Pointer and",
+              "array, Chain of pointer, DMA concepts, DMA functions, malloc(),",
+              "calloc(), realloc(), free()"
+            ],
+            "topics_text": "Pointers ± Definition, Initialization, Pointer arithmetic, Pointer and array, Chain of pointer, DMA concepts, DMA functions, malloc(), calloc(), realloc(), free()",
+            "topics": [
+              "Pointers ± Definition, Initialization, Pointer arithmetic, Pointer and",
+              "array, Chain of pointer, DMA concepts, DMA functions, malloc(),",
+              "calloc(), realloc(), free()"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "File Management",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Introduction to file management, File Handling function"
+            ],
+            "topics_text": "Introduction to file management, File Handling function",
+            "topics": [
+              "Introduction to file management, File Handling function"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "a. Motivational videos on Programming b. Introduction to Turbo C+",
+              "+ IDE c. Develop a program to print ³Hello World´ d. Develop a",
+              "program to print your address i) using single printf ii) using multiple",
+              "printf e. Develop a program to print addition of 2 numbers (with",
+              "scanf)"
+            ],
+            "topics_text": "a. Motivational videos on Programming b. Introduction to Turbo C+ + IDE c. Develop a program to print ³Hello World´ d. Develop a program to print your address i) using single printf ii) using multiple printf e. Develop a program to print addition of 2 numbers (with scanf)",
+            "topics": [
+              "a. Motivational videos on Programming b. Introduction to Turbo C+",
+              "+ IDE c. Develop a program to print ³Hello World´ d. Develop a",
+              "program to print your address i) using single printf ii) using multiple",
+              "printf e. Develop a program to print addition of 2 numbers (with",
+              "scanf)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "a. Develop a program to convert temperature from Fahrenheit to",
+              "Celsius (Formula: f = 1.8 * c + 32) \\n b. Develop a program to find",
+              "percentage of 5 subjects c. Develop a program to convert seconds",
+              "into hours, minutes & seconds and print in HH:MM:SS [e.g. 10000",
+              "seconds mean 2:46:40 (2 Hours, 46 Minutes, 40 Seconds)]"
+            ],
+            "topics_text": "a. Develop a program to convert temperature from Fahrenheit to Celsius (Formula: f = 1.8 * c + 32) \\n b. Develop a program to find percentage of 5 subjects c. Develop a program to convert seconds into hours, minutes & seconds and print in HH:MM:SS [e.g. 10000 seconds mean 2:46:40 (2 Hours, 46 Minutes, 40 Seconds)]",
+            "topics": [
+              "a. Develop a program to convert temperature from Fahrenheit to",
+              "Celsius (Formula: f = 1.8 * c + 32) \\n b. Develop a program to find",
+              "percentage of 5 subjects c. Develop a program to convert seconds",
+              "into hours, minutes & seconds and print in HH:MM:SS [e.g. 10000",
+              "seconds mean 2:46:40 (2 Hours, 46 Minutes, 40 Seconds)]"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Using simple if a. Develop a program to check whether the given",
+              "number is positive or negative b. Develop a program to find out",
+              "largest number from given three numbers using Logical Operator",
+              "(&&) Using if«else« a. Develop a program to check whether the",
+              "given number is positive or negative Using nested if a. Develop a",
+              "program to find out largest number from given three numbers",
+              "without using Logical Operator (&&)"
+            ],
+            "topics_text": "Using simple if a. Develop a program to check whether the given number is positive or negative b. Develop a program to find out largest number from given three numbers using Logical Operator (&&) Using if«else« a. Develop a program to check whether the given number is positive or negative Using nested if a. Develop a program to find out largest number from given three numbers without using Logical Operator (&&)",
+            "topics": [
+              "Using simple if a. Develop a program to check whether the given",
+              "number is positive or negative b. Develop a program to find out",
+              "largest number from given three numbers using Logical Operator",
+              "(&&) Using if«else« a. Develop a program to check whether the",
+              "given number is positive or negative Using nested if a. Develop a",
+              "program to find out largest number from given three numbers",
+              "without using Logical Operator (&&)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Using if«else if« else a. Develop a program to check whether the",
+              "given year is leap year or not. [If a year can be divisible by 4 but not",
+              "divisible by 100 then it is leap year but if it is divisible by 400 then",
+              "it is leap year] b. Develop a program to perform Addition,",
+              "Subtraction, Multiplication and Division of 2 numbers as per user¶s",
+              "choice c. Three sides of a triangle are entered through the keyboard,",
+              "develop a program to check whether the triangle is isosceles,",
+              "equilateral, scalene or right-angled triangle"
+            ],
+            "topics_text": "Using if«else if« else a. Develop a program to check whether the given year is leap year or not. [If a year can be divisible by 4 but not divisible by 100 then it is leap year but if it is divisible by 400 then it is leap year] b. Develop a program to perform Addition, Subtraction, Multiplication and Division of 2 numbers as per user¶s choice c. Three sides of a triangle are entered through the keyboard, develop a program to check whether the triangle is isosceles, equilateral, scalene or right-angled triangle",
+            "topics": [
+              "Using if«else if« else a. Develop a program to check whether the",
+              "given year is leap year or not. [If a year can be divisible by 4 but not",
+              "divisible by 100 then it is leap year but if it is divisible by 400 then",
+              "it is leap year] b. Develop a program to perform Addition,",
+              "Subtraction, Multiplication and Division of 2 numbers as per user¶s",
+              "choice c. Three sides of a triangle are entered through the keyboard,",
+              "develop a program to check whether the triangle is isosceles,",
+              "equilateral, scalene or right-angled triangle"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Using Conditional operator (expr1?expr2:expr3) a. Develop a",
+              "program to find out largest number from given 2 numbers b.",
+              "Develop a program to read 3 numbers, multiply largest number from",
+              "first two numbers to third one Using Switch statement a. Develop a",
+              "program to print day name based on day number"
+            ],
+            "topics_text": "Using Conditional operator (expr1?expr2:expr3) a. Develop a program to find out largest number from given 2 numbers b. Develop a program to read 3 numbers, multiply largest number from first two numbers to third one Using Switch statement a. Develop a program to print day name based on day number",
+            "topics": [
+              "Using Conditional operator (expr1?expr2:expr3) a. Develop a",
+              "program to find out largest number from given 2 numbers b.",
+              "Develop a program to read 3 numbers, multiply largest number from",
+              "first two numbers to third one Using Switch statement a. Develop a",
+              "program to print day name based on day number"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Discuss while loop a. Develop a program to print 1 to 10 b. Develop",
+              "a program to find factorial of the given number c. Develop a",
+              "program to find whether the given number is prime or not using",
+              "break d. Develop a program to print digits of given number e.",
+              "Develop a program to check whether the given number is",
+              "palindrome or not f. Develop a program to check whether the given",
+              "number is Armstrong or not"
+            ],
+            "topics_text": "Discuss while loop a. Develop a program to print 1 to 10 b. Develop a program to find factorial of the given number c. Develop a program to find whether the given number is prime or not using break d. Develop a program to print digits of given number e. Develop a program to check whether the given number is palindrome or not f. Develop a program to check whether the given number is Armstrong or not",
+            "topics": [
+              "Discuss while loop a. Develop a program to print 1 to 10 b. Develop",
+              "a program to find factorial of the given number c. Develop a",
+              "program to find whether the given number is prime or not using",
+              "break d. Develop a program to print digits of given number e.",
+              "Develop a program to check whether the given number is",
+              "palindrome or not f. Develop a program to check whether the given",
+              "number is Armstrong or not"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Discuss for loop a. Develop a program to print numbers from 1 to"
+            ],
+            "topics_text": "Discuss for loop a. Develop a program to print numbers from 1 to",
+            "topics": [
+              "Discuss for loop a. Develop a program to print numbers from 1 to"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "b. Develop a program to print odd numbers from 1 to n c",
+            "contact_hours": null,
+            "topic_lines": [
+              "Develop a program to calculate the sum of first n natural numbers d.",
+              "Develop a program to display the n terms of odd natural number and",
+              "their sum e. Develop a program to find factors of the given number"
+            ],
+            "topics_text": "Develop a program to calculate the sum of first n natural numbers d. Develop a program to display the n terms of odd natural number and their sum e. Develop a program to find factors of the given number",
+            "topics": [
+              "Develop a program to calculate the sum of first n natural numbers d.",
+              "Develop a program to display the n terms of odd natural number and",
+              "their sum e. Develop a program to find factors of the given number"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Discuss nested for loop a. Develop a program to find the sum of 1 +",
+              "(1+2) + (1+2+3) + (1+2+3+4 « 1+2+3+4 « n) b. Develop a",
+              "program to compute the value of ???? by using the formula ????=1+",
+              "??1!+??22!+??33!+??44!+? c. Develop a program to find out prime",
+              "numbers between given two numbers"
+            ],
+            "topics_text": "Discuss nested for loop a. Develop a program to find the sum of 1 + (1+2) + (1+2+3) + (1+2+3+4 « 1+2+3+4 « n) b. Develop a program to compute the value of ???? by using the formula ????=1+ ??1!+??22!+??33!+??44!+? c. Develop a program to find out prime numbers between given two numbers",
+            "topics": [
+              "Discuss nested for loop a. Develop a program to find the sum of 1 +",
+              "(1+2) + (1+2+3) + (1+2+3+4 « 1+2+3+4 « n) b. Develop a",
+              "program to compute the value of ???? by using the formula ????=1+",
+              "??1!+??22!+??33!+??44!+? c. Develop a program to find out prime",
+              "numbers between given two numbers"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "a. Develop a program to display following patterns 1 1 1 * * * * * *",
+              "* * * * * * 2 3 0 1 A B * * * * * * * * * * * 4 5 6 1 0 1 2 3 4 * * * *",
+              "* * * * * * 7 8 9 10 0 1 0 1 C D E F * * * * * * * * * * * * * b.",
+              "Develop a program to draw Pascal's triangle"
+            ],
+            "topics_text": "a. Develop a program to display following patterns 1 1 1 * * * * * * * * * * * * 2 3 0 1 A B * * * * * * * * * * * 4 5 6 1 0 1 2 3 4 * * * * * * * * * * 7 8 9 10 0 1 0 1 C D E F * * * * * * * * * * * * * b. Develop a program to draw Pascal's triangle",
+            "topics": [
+              "a. Develop a program to display following patterns 1 1 1 * * * * * *",
+              "* * * * * 2 3 0 1 A B * * * * * * * * * * * 4 5 6 1 0 1 2 3 4 * * * *",
+              "* * * * * 7 8 9 10 0 1 0 1 C D E F * * * * * * * * * * * * * b.",
+              "Develop a program to draw Pascal's triangle"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "a. Develop a program to count number of positive or negative",
+              "number from an array of n numbers b. Develop a program to read n",
+              "numbers in an array and print them in reverse order c. Develop a",
+              "program to find Max, Min, Sum, Avg of given numbers from an",
+              "array d. Develop a program to sort elements of an array in an",
+              "ascending order"
+            ],
+            "topics_text": "a. Develop a program to count number of positive or negative number from an array of n numbers b. Develop a program to read n numbers in an array and print them in reverse order c. Develop a program to find Max, Min, Sum, Avg of given numbers from an array d. Develop a program to sort elements of an array in an ascending order",
+            "topics": [
+              "a. Develop a program to count number of positive or negative",
+              "number from an array of n numbers b. Develop a program to read n",
+              "numbers in an array and print them in reverse order c. Develop a",
+              "program to find Max, Min, Sum, Avg of given numbers from an",
+              "array d. Develop a program to sort elements of an array in an",
+              "ascending order"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical 11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "a. Develop a program to read values in two-dimensional array and",
+              "print them in matrix form b. Develop a program to count number of",
+              "positive, negative and zero elements from 3 X 3 matrix c. Develop a",
+              "program to perform addition of two matrices d. Develop a program",
+              "to calculate the length of given string using strlen e. Develop a",
+              "program to copy string using strcpy f. Develop a program to",
+              "compare two strings using strcmp g. Develop a program to",
+              "concatenate two strings using strcat h. Develop a program to reverse",
+              "string using strrev"
+            ],
+            "topics_text": "a. Develop a program to read values in two-dimensional array and print them in matrix form b. Develop a program to count number of positive, negative and zero elements from 3 X 3 matrix c. Develop a program to perform addition of two matrices d. Develop a program to calculate the length of given string using strlen e. Develop a program to copy string using strcpy f. Develop a program to compare two strings using strcmp g. Develop a program to concatenate two strings using strcat h. Develop a program to reverse string using strrev",
+            "topics": [
+              "a. Develop a program to read values in two-dimensional array and",
+              "print them in matrix form b. Develop a program to count number of",
+              "positive, negative and zero elements from 3 X 3 matrix c. Develop a",
+              "program to perform addition of two matrices d. Develop a program",
+              "to calculate the length of given string using strlen e. Develop a",
+              "program to copy string using strcpy f. Develop a program to",
+              "compare two strings using strcmp g. Develop a program to",
+              "concatenate two strings using strcat h. Develop a program to reverse",
+              "string using strrev"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "a. Develop a program to count simple interest using function b.",
+              "Develop a program to generate Fibonacci series of N given number",
+              "using function name fibbo. (e.g. 0 1 1 2 3 5 8« c. Develop a",
+              "program to find the factorial of a given number using recursion"
+            ],
+            "topics_text": "a. Develop a program to count simple interest using function b. Develop a program to generate Fibonacci series of N given number using function name fibbo. (e.g. 0 1 1 2 3 5 8« c. Develop a program to find the factorial of a given number using recursion",
+            "topics": [
+              "a. Develop a program to count simple interest using function b.",
+              "Develop a program to generate Fibonacci series of N given number",
+              "using function name fibbo. (e.g. 0 1 1 2 3 5 8« c. Develop a",
+              "program to find the factorial of a given number using recursion"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Structure and Union a. Develop a program to create structure of",
+              "book with book title, author name, publication, and price. Read data",
+              "of n books and display them. b. Develop a program to access",
+              "members of a union using union variable Pointers a. Develop a",
+              "program to print value and address of a variable b. Develop a",
+              "program to swap value of two numbers using pointer"
+            ],
+            "topics_text": "Structure and Union a. Develop a program to create structure of book with book title, author name, publication, and price. Read data of n books and display them. b. Develop a program to access members of a union using union variable Pointers a. Develop a program to print value and address of a variable b. Develop a program to swap value of two numbers using pointer",
+            "topics": [
+              "Structure and Union a. Develop a program to create structure of",
+              "book with book title, author name, publication, and price. Read data",
+              "of n books and display them. b. Develop a program to access",
+              "members of a union using union variable Pointers a. Develop a",
+              "program to print value and address of a variable b. Develop a",
+              "program to swap value of two numbers using pointer"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical 14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "a. Develop a program to display content of a file b. Develop a",
+              "program to copy source file to destination file"
+            ],
+            "topics_text": "a. Develop a program to display content of a file b. Develop a program to copy source file to destination file",
+            "topics": [
+              "a. Develop a program to display content of a file b. Develop a",
+              "program to copy source file to destination file"
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Programming in ANSI C, E. Balagurusamy, McGraw Hill Education (India) Private",
@@ -124,7 +557,7 @@
         }
       ],
       "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
+        "Repeated practical_units unit number 10; inspect the source PDF."
       ]
     },
     {
@@ -168,7 +601,10 @@
         "➢ Prepare Project Reports and write officials documents.",
         "➢ Prepare Worksheets with Calculations,"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
       "references": {
         "textbooks": [],
         "references": [
@@ -248,7 +684,7 @@
         }
       ],
       "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
+        "PDF text was extracted, but syllabus units/topics could not be parsed confidently."
       ]
     },
     {
@@ -267,7 +703,7 @@
       "expected_pdf_sha256": "5d0dffc0e92bec7d9830e6faaffad682c968143cd84f3097ccd032dc8eaf552e",
       "actual_pdf_sha256": "5d0dffc0e92bec7d9830e6faaffad682c968143cd84f3097ccd032dc8eaf552e",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 9991,
       "objective_text": "Students are expected to learn basics of Electrical Engineering which will help them to apply these concepts in day to day life. The course is divided into two parts: Electrical Circuits and Electrical Components. Keeping in view wide applications of batteries, a special unit of battery is introduced. To understand the construction and operation of various components and electronics circuits based on Diodes, BJT & OpAmp. Credits Earned: 5 Credits",
@@ -290,7 +726,163 @@
         "➢ Define the role of electrical apparatus used in household applications. (Knowledge)",
         "Pre-requisite of course: N.A."
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamental of DC Circuits",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition of Current, Voltage, e.m.f., Power Energy, Resistance, Open circuit and",
+              "Short circuit, Kirchoff’s Laws, Nodal Analysis, Mesh Analysis of Electrical Networks"
+            ],
+            "topics_text": "Definition of Current, Voltage, e.m.f., Power Energy, Resistance, Open circuit and Short circuit, Kirchoff’s Laws, Nodal Analysis, Mesh Analysis of Electrical Networks",
+            "topics": [
+              "Definition of Current, Voltage, e.m.f., Power Energy, Resistance, Open circuit and",
+              "Short circuit, Kirchoff’s Laws, Nodal Analysis, Mesh Analysis of Electrical Networks"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Electromechanical Energy Conversion",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Principle, singly excited magnetic system and doubly excited magnetic system,",
+              "physical concept of torque production, electromagnetic torque and reluctance torque.",
+              "Principle and operation of DC machine, Induction motor and transformer."
+            ],
+            "topics_text": "Principle, singly excited magnetic system and doubly excited magnetic system, physical concept of torque production, electromagnetic torque and reluctance torque. Principle and operation of DC machine, Induction motor and transformer.",
+            "topics": [
+              "Principle, singly excited magnetic system and doubly excited magnetic system,",
+              "physical concept of torque production, electromagnetic torque and reluctance torque.",
+              "Principle and operation of DC machine, Induction motor and transformer."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "AC Circuits",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to AC quantities, Phasor representation of alternating quantities, Analysis",
+              "of series RL circuit, RC circuit, RLC circuit, Parallel and series-parallel AC circuits,",
+              "phasor method, admittance method.",
+              "Polyphase system",
+              "Introduction, terminology, phase sequence, voltage and current relationship in star and",
+              "Proposed Syllabus for B.Tech. sem-1 w.e.f. 2021-22",
+              "MARWADI UNIVERSITY",
+              "BACHELOR OF TECHNOLOGY",
+              "DEPARTMENT OF ELECTRICAL ENGINEERING",
+              "delta connection."
+            ],
+            "topics_text": "Introduction to AC quantities, Phasor representation of alternating quantities, Analysis of series RL circuit, RC circuit, RLC circuit, Parallel and series-parallel AC circuits, phasor method, admittance method. Polyphase system Introduction, terminology, phase sequence, voltage and current relationship in star and Proposed Syllabus for B.Tech. sem-1 w.e.f. 2021-22 MARWADI UNIVERSITY BACHELOR OF TECHNOLOGY DEPARTMENT OF ELECTRICAL ENGINEERING delta connection.",
+            "topics": [
+              "Introduction to AC quantities, Phasor representation of alternating quantities, Analysis",
+              "of series RL circuit, RC circuit, RLC circuit, Parallel and series-parallel AC circuits,",
+              "phasor method, admittance method.",
+              "Polyphase system",
+              "Introduction, terminology, phase sequence, voltage and current relationship in star and",
+              "Proposed Syllabus for B.Tech. sem-1 w.e.f. 2021-22",
+              "MARWADI UNIVERSITY",
+              "BACHELOR OF TECHNOLOGY",
+              "DEPARTMENT OF ELECTRICAL ENGINEERING",
+              "delta connection."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Semiconductor Diodes",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Energy Band Diagram of conductor, semiconductor and insulator; Crystal Structure of",
+              "Semiconductor Materials, Intrinsic and Extrinsic Semiconductor Materials. Symbol",
+              "and Construction, Operating Characteristics in Forward and Reverse Bias,",
+              "Applications of Diode as Switch, Clipper, Clamper and Rectifier; Special Purpose",
+              "Diodes : Zener Diode; Optical Diodes like LED, Photo Diode, Seven Segment Display"
+            ],
+            "topics_text": "Energy Band Diagram of conductor, semiconductor and insulator; Crystal Structure of Semiconductor Materials, Intrinsic and Extrinsic Semiconductor Materials. Symbol and Construction, Operating Characteristics in Forward and Reverse Bias, Applications of Diode as Switch, Clipper, Clamper and Rectifier; Special Purpose Diodes : Zener Diode; Optical Diodes like LED, Photo Diode, Seven Segment Display",
+            "topics": [
+              "Energy Band Diagram of conductor, semiconductor and insulator; Crystal Structure of",
+              "Semiconductor Materials, Intrinsic and Extrinsic Semiconductor Materials. Symbol",
+              "and Construction, Operating Characteristics in Forward and Reverse Bias,",
+              "Applications of Diode as Switch, Clipper, Clamper and Rectifier; Special Purpose",
+              "Diodes : Zener Diode; Optical Diodes like LED, Photo Diode, Seven Segment Display"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Transistors",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Bipolar junction transistor:",
+              "History of BJT invention; Types, Symbol and Construction of BJT; Basic Operation of",
+              "BJT; BJT Configurations: Common Base, Common Emitter, Common Collector with",
+              "Operation, Input/output Characteristics; Applications of Transistors as Switch and",
+              "Amplifier.",
+              "Field effect transistor:",
+              "Types, Symbol, Construction, Operation, Input/output Characteristics and Applications",
+              "of Junction Field Effect Transistor (JFET), Metal Oxide Semiconductor Field Effect",
+              "Transistor (MOSFET)"
+            ],
+            "topics_text": "Bipolar junction transistor: History of BJT invention; Types, Symbol and Construction of BJT; Basic Operation of BJT; BJT Configurations: Common Base, Common Emitter, Common Collector with Operation, Input/output Characteristics; Applications of Transistors as Switch and Amplifier. Field effect transistor: Types, Symbol, Construction, Operation, Input/output Characteristics and Applications of Junction Field Effect Transistor (JFET), Metal Oxide Semiconductor Field Effect Transistor (MOSFET)",
+            "topics": [
+              "Bipolar junction transistor:",
+              "History of BJT invention; Types, Symbol and Construction of BJT; Basic Operation of",
+              "BJT; BJT Configurations: Common Base, Common Emitter, Common Collector with",
+              "Operation, Input/output Characteristics; Applications of Transistors as Switch and",
+              "Amplifier.",
+              "Field effect transistor:",
+              "Types, Symbol, Construction, Operation, Input/output Characteristics and Applications",
+              "of Junction Field Effect Transistor (JFET), Metal Oxide Semiconductor Field Effect",
+              "Transistor (MOSFET)"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Operational Amplifiers",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to OpAmp, Differential and Common Mode Operation, OpAmp Basics,",
+              "Practical OpAmp Circuits, Negative feedback in OpAmp, inverting and non-inverting",
+              "amplifier, OpAmp Applications as Comparator, Summer, Integrator and Differentiator"
+            ],
+            "topics_text": "Introduction to OpAmp, Differential and Common Mode Operation, OpAmp Basics, Practical OpAmp Circuits, Negative feedback in OpAmp, inverting and non-inverting amplifier, OpAmp Applications as Comparator, Summer, Integrator and Differentiator",
+            "topics": [
+              "Introduction to OpAmp, Differential and Common Mode Operation, OpAmp Basics,",
+              "Practical OpAmp Circuits, Negative feedback in OpAmp, inverting and non-inverting",
+              "amplifier, OpAmp Applications as Comparator, Summer, Integrator and Differentiator"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Batteries",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Electric cell, types of cells, Equivalent circuits, grouping of cells, batteries, Important",
+              "terminologies of battery, charging method, Application of battery."
+            ],
+            "topics_text": "Electric cell, types of cells, Equivalent circuits, grouping of cells, batteries, Important terminologies of battery, charging method, Application of battery.",
+            "topics": [
+              "Electric cell, types of cells, Equivalent circuits, grouping of cells, batteries, Important",
+              "terminologies of battery, charging method, Application of battery."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Safety and Protection",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Electric Shock, First aid for electric shock, importance of grounding, Fuse, MCB,",
+              "ELCB."
+            ],
+            "topics_text": "Electric Shock, First aid for electric shock, importance of grounding, Fuse, MCB, ELCB.",
+            "topics": [
+              "Electric Shock, First aid for electric shock, importance of grounding, Fuse, MCB,",
+              "ELCB."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
       "references": {
         "textbooks": [],
         "references": [
@@ -385,9 +977,7 @@
           "text": "MARWADI UNIVERSITY\n                     BACHELOR OF TECHNOLOGY\n                     DEPARTMENT OF ELECTRICAL ENGINEERING\n\n3. http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6- 002-circuits-and-\nelectronics-spring-2007/video-lectures/\n\n4. https://www.facstaff.bucknell.edu/mastascu/eLessonsHTML/EEIndex.html\n\n5. http://www.electrical4u.com/nature-of-electricity/\n\n6. http://vlab.amrita.edu/index.php\n\n7. http://textofvideo.nptel.iitm.ac.in/video.php?courseId=117103063\n\n8. https://www.coursera.org/course/eefunlab\n\n9. https://www.coursera.org/course/introtoelectronics\n\n10. https://www.edx.org/course/circuits-electronics-1-basic-circuit-mitx-6-002-1x\n\n11. http://www.learnabout-electronics.org\n\n12. http://www.electronics-tutorials.ws\n\n13. http://101science.com/Radio.htm\n\n14. http://www.electronicsandyou.com\n\n\n\n\n\nProposed Syllabus for B.Tech. sem-1 w.e.f. 2021-22"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01GS1101",
@@ -405,7 +995,7 @@
       "expected_pdf_sha256": "d59efd3426bbd75db43c0020b61dd08e0137d55336f8dc07339293e6c09bf95c",
       "actual_pdf_sha256": "d59efd3426bbd75db43c0020b61dd08e0137d55336f8dc07339293e6c09bf95c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 9928,
       "objective_text": "1 The graduates will be able to solve non-traditional problems that potentially draw on knowledge in multiple areas of physics. 2 Understand basic physics of semicond applications. 3 Acquire knowledge of magnetic materials. 4 Obtain knowledge of mechanism of various lasers and apply it for optical fibre communication 5 Prepare different basic logic gate circuits and check its application in various engg. fields 6 apply various numerical analysis methods to solve scientific problems/develop mathematical models. 7 The graduates will be able to solve non on knowledge in multiple areas of physics",
@@ -435,7 +1025,212 @@
         "mathematical models.",
         "Pre-requisite of course:NA"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Electronic Materials",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction, Free electron theory, Types of electronic materials,",
+              "metals, semiconductors, insulators Density of states and energy",
+              "band diagrams, Kronig-Penny model, Energy bands in solids, E-K",
+              "diagram, Direct and indirect bandgaps, Occupation probability,",
+              "Fermi level, Effective mass"
+            ],
+            "topics_text": "Introduction, Free electron theory, Types of electronic materials, metals, semiconductors, insulators Density of states and energy band diagrams, Kronig-Penny model, Energy bands in solids, E-K diagram, Direct and indirect bandgaps, Occupation probability, Fermi level, Effective mass",
+            "topics": [
+              "Introduction, Free electron theory, Types of electronic materials,",
+              "metals, semiconductors, insulators Density of states and energy",
+              "band diagrams, Kronig-Penny model, Energy bands in solids, E-K",
+              "diagram, Direct and indirect bandgaps, Occupation probability,",
+              "Fermi level, Effective mass"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Semiconductor Physics",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Intrinsic and extrinsic semiconductors, Carrier generation and",
+              "recombination, Carrier transport: diffusion and drift, P-N Junction,",
+              "Metal-semiconductor junction (Ohmic and Schottky), Optical loss",
+              "and gain, Photovoltaic effect, Solar cell."
+            ],
+            "topics_text": "Intrinsic and extrinsic semiconductors, Carrier generation and recombination, Carrier transport: diffusion and drift, P-N Junction, Metal-semiconductor junction (Ohmic and Schottky), Optical loss and gain, Photovoltaic effect, Solar cell.",
+            "topics": [
+              "Intrinsic and extrinsic semiconductors, Carrier generation and",
+              "recombination, Carrier transport: diffusion and drift, P-N Junction,",
+              "Metal-semiconductor junction (Ohmic and Schottky), Optical loss",
+              "and gain, Photovoltaic effect, Solar cell."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Magnetic Materials",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Definitions : Magnetic induction, Auxiliary Magnetic field,",
+              "Magnetic dipole, Dipole moment, Magnetization, Magnetic",
+              "parameters, Bohr magnetron, Classification of Magnetic Materials",
+              "based on magnetic moment, Soft and Hard Magnetic Materials,,",
+              "Anti-ferromagnetic materials, Ferrites,, Magnetic recording and",
+              "readout, Magnetic storage devices."
+            ],
+            "topics_text": "Definitions : Magnetic induction, Auxiliary Magnetic field, Magnetic dipole, Dipole moment, Magnetization, Magnetic parameters, Bohr magnetron, Classification of Magnetic Materials based on magnetic moment, Soft and Hard Magnetic Materials,, Anti-ferromagnetic materials, Ferrites,, Magnetic recording and readout, Magnetic storage devices.",
+            "topics": [
+              "Definitions : Magnetic induction, Auxiliary Magnetic field,",
+              "Magnetic dipole, Dipole moment, Magnetization, Magnetic",
+              "parameters, Bohr magnetron, Classification of Magnetic Materials",
+              "based on magnetic moment, Soft and Hard Magnetic Materials,,",
+              "Anti-ferromagnetic materials, Ferrites,, Magnetic recording and",
+              "readout, Magnetic storage devices."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Lasers and Fibre Optics",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Introduction to interaction of radiation with matter, Coherence,",
+              "Principle and working of Laser,, Population inversion, Pumping,",
+              "Types of Lasers: Ruby laser, He-Ne laser, Applications of laser.,",
+              "Fibre Optics: Introduction, , Total internal reflection, Acceptance",
+              "angle, Acceptance cone and Numerical aperture,, Step and Graded",
+              "index fibres, Losses associated with optical fibres, Applications of",
+              "optical fibres"
+            ],
+            "topics_text": "Introduction to interaction of radiation with matter, Coherence, Principle and working of Laser,, Population inversion, Pumping, Types of Lasers: Ruby laser, He-Ne laser, Applications of laser., Fibre Optics: Introduction, , Total internal reflection, Acceptance angle, Acceptance cone and Numerical aperture,, Step and Graded index fibres, Losses associated with optical fibres, Applications of optical fibres",
+            "topics": [
+              "Introduction to interaction of radiation with matter, Coherence,",
+              "Principle and working of Laser,, Population inversion, Pumping,",
+              "Types of Lasers: Ruby laser, He-Ne laser, Applications of laser.,",
+              "Fibre Optics: Introduction, , Total internal reflection, Acceptance",
+              "angle, Acceptance cone and Numerical aperture,, Step and Graded",
+              "index fibres, Losses associated with optical fibres, Applications of",
+              "optical fibres"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Digital electronics",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction – Logic levels, Basic logic gates: OR, AND , NOT",
+              "gates, Universal logic gates:NAND and NOR gates, Symbolic",
+              "representation,, Boolean expression and Truth table for all above",
+              "logic gates, Integrated circuits– Levels of integration, SSI, MSI, LSI",
+              "and VLSI-Advantages of ICs"
+            ],
+            "topics_text": "Introduction – Logic levels, Basic logic gates: OR, AND , NOT gates, Universal logic gates:NAND and NOR gates, Symbolic representation,, Boolean expression and Truth table for all above logic gates, Integrated circuits– Levels of integration, SSI, MSI, LSI and VLSI-Advantages of ICs",
+            "topics": [
+              "Introduction – Logic levels, Basic logic gates: OR, AND , NOT",
+              "gates, Universal logic gates:NAND and NOR gates, Symbolic",
+              "representation,, Boolean expression and Truth table for all above",
+              "logic gates, Integrated circuits– Levels of integration, SSI, MSI, LSI",
+              "and VLSI-Advantages of ICs"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Numerical Methods",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Representations of numbers: Roundoff error, truncation error,,",
+              "significant error, error in numerical computations, Solution of",
+              "transcendental and algebraic equations, Bisection, secant, Regula",
+              "Falsi, fixed-point, Newton-Raphson, Graffe's methods"
+            ],
+            "topics_text": "Representations of numbers: Roundoff error, truncation error,, significant error, error in numerical computations, Solution of transcendental and algebraic equations, Bisection, secant, Regula Falsi, fixed-point, Newton-Raphson, Graffe's methods",
+            "topics": [
+              "Representations of numbers: Roundoff error, truncation error,,",
+              "significant error, error in numerical computations, Solution of",
+              "transcendental and algebraic equations, Bisection, secant, Regula",
+              "Falsi, fixed-point, Newton-Raphson, Graffe's methods"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment",
+            "contact_hours": 24,
+            "topic_lines": [
+              "To determine of Resistivity and band Gap of Semiconductor by",
+              "Four probe method at different temperature, To measure Numerical",
+              "aperture of a given optical fiber using optical fiber kit, To observe",
+              "various types of losses occurs in optical fibre using fibre kit., To",
+              "determine the wavelength of laser light with a diffraction grating,",
+              "To construct basic gates using PN junction diode, To find out the",
+              "Fill Factor of a given solar cell., To study the variation of Hall",
+              "Voltage with probe current at constant magnetic field., To study the",
+              "variation of Hall Voltage with magnetic field at constant probe",
+              "current., To obtain hysteresis curve ( B.H Curve ) for a given",
+              "ferromagnetic material (Thinrods) on a DSO using solenoid and",
+              "then to determine the related magnetic constant from it., To",
+              "Measure the voltage and current of the parallelcombinations, To",
+              "verify Boolean Algebra and Demorgan’s Theorem, To determine",
+              "the volume magnetic susceptibility of Manganese sulphate solution",
+              "at different"
+            ],
+            "topics_text": "To determine of Resistivity and band Gap of Semiconductor by Four probe method at different temperature, To measure Numerical aperture of a given optical fiber using optical fiber kit, To observe various types of losses occurs in optical fibre using fibre kit., To determine the wavelength of laser light with a diffraction grating, To construct basic gates using PN junction diode, To find out the Fill Factor of a given solar cell., To study the variation of Hall Voltage with probe current at constant magnetic field., To study the variation of Hall Voltage with magnetic field at constant probe current., To obtain hysteresis curve ( B.H Curve ) for a given ferromagnetic material (Thinrods) on a DSO using solenoid and then to determine the related magnetic constant from it., To Measure the voltage and current of the parallelcombinations, To verify Boolean Algebra and Demorgan’s Theorem, To determine the volume magnetic susceptibility of Manganese sulphate solution at different",
+            "topics": [
+              "To determine of Resistivity and band Gap of Semiconductor by",
+              "Four probe method at different temperature, To measure Numerical",
+              "aperture of a given optical fiber using optical fiber kit, To observe",
+              "various types of losses occurs in optical fibre using fibre kit., To",
+              "determine the wavelength of laser light with a diffraction grating,",
+              "To construct basic gates using PN junction diode, To find out the",
+              "Fill Factor of a given solar cell., To study the variation of Hall",
+              "Voltage with probe current at constant magnetic field., To study the",
+              "variation of Hall Voltage with magnetic field at constant probe",
+              "current., To obtain hysteresis curve ( B.H Curve ) for a given",
+              "ferromagnetic material (Thinrods) on a DSO using solenoid and",
+              "then to determine the related magnetic constant from it., To",
+              "Measure the voltage and current of the parallelcombinations, To",
+              "verify Boolean Algebra and Demorgan’s Theorem, To determine",
+              "the volume magnetic susceptibility of Manganese sulphate solution",
+              "at different"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment-1",
+            "contact_hours": 22,
+            "topic_lines": [
+              "To Verify the truth table of the Half adder & Full Subtractor., To",
+              "Determine the Wavelength of Laser Light with a Diffraction",
+              "Grating., To find out fill factor of given a Solar cell., To study the",
+              "V-I Characteristics of a Light emitting diode (LED)., To draw the",
+              "V-I characteristic of Zener diode and to determine Zener breakdown",
+              "voltage., To verify truth table of logic gates using PN junction",
+              "diode., To determine the Numerical aperture and acceptance angle",
+              "of the given optical fibre., To determine the Width of the slit by",
+              "diffraction., To verify inverse square law using Inverse square law",
+              "kit., To draw V-I characteristics of PN Junction diode and to",
+              "determine knee or cut in voltage., To determine of Resistivity and",
+              "band Gap of Semiconductor by Four Probe method at different",
+              "temperatures. (V. Lab)"
+            ],
+            "topics_text": "To Verify the truth table of the Half adder & Full Subtractor., To Determine the Wavelength of Laser Light with a Diffraction Grating., To find out fill factor of given a Solar cell., To study the V-I Characteristics of a Light emitting diode (LED)., To draw the V-I characteristic of Zener diode and to determine Zener breakdown voltage., To verify truth table of logic gates using PN junction diode., To determine the Numerical aperture and acceptance angle of the given optical fibre., To determine the Width of the slit by diffraction., To verify inverse square law using Inverse square law kit., To draw V-I characteristics of PN Junction diode and to determine knee or cut in voltage., To determine of Resistivity and band Gap of Semiconductor by Four Probe method at different temperatures. (V. Lab)",
+            "topics": [
+              "To Verify the truth table of the Half adder & Full Subtractor., To",
+              "Determine the Wavelength of Laser Light with a Diffraction",
+              "Grating., To find out fill factor of given a Solar cell., To study the",
+              "V-I Characteristics of a Light emitting diode (LED)., To draw the",
+              "V-I characteristic of Zener diode and to determine Zener breakdown",
+              "voltage., To verify truth table of logic gates using PN junction",
+              "diode., To determine the Numerical aperture and acceptance angle",
+              "of the given optical fibre., To determine the Width of the slit by",
+              "diffraction., To verify inverse square law using Inverse square law",
+              "kit., To draw V-I characteristics of PN Junction diode and to",
+              "determine knee or cut in voltage., To determine of Resistivity and",
+              "band Gap of Semiconductor by Four Probe method at different",
+              "temperatures. (V. Lab)"
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Engineering Physics, Dattu R Joshi, McGraw hill Publications, 2017",
@@ -493,14 +1288,12 @@
           "text": "Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         20.00         35.00         10.00         10.00          5.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, also use\n    any of tools such as demonstration, role play, Quiz, brainstorming, case studies etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in classroom.\n 4  Students will use supplementary resources such as online videos\n\nSupplementary Resources:\n 1  https://www.wolframalpha.com/examples/mathematics/applied-mathematics/numerical-\n     analysis/\n 2  https://nptel.ac.in/courses/115/107/115107095/\n 3  https://nptel.ac.in/content/storage2/courses/112108150/pdf/Web_Pages/WEBP_M16.pdf\n 4  https://nptel.ac.in/courses/115/102/115102025/\n\n\n\n\n\nDR. PRAKASH VASHRAMBHAI KANJARIYA             DR. KANTHA DEVI ARUNACHALAM\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     }
   ],
   "build_summary": {
-    "structured": 0,
-    "manual_review": 4,
+    "structured": 3,
+    "manual_review": 1,
     "ocr_review": 0,
     "hash_mismatch": 0,
     "missing_pdf": 0,

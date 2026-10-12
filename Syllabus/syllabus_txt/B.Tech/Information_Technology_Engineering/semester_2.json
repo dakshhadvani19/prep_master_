@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:43:06+00:00",
+  "generated_at_utc": "2026-10-12T12:44:16+00:00",
   "program": {
     "program_name": "B.Tech Information Technology",
     "program_folder": "Information Technology Engineering",
@@ -31,7 +31,7 @@
       "expected_pdf_sha256": "90c9013e784739b822e2a9c2f90f6e820579677bbf5b0e7cbcd966d1de9a945c",
       "actual_pdf_sha256": "90c9013e784739b822e2a9c2f90f6e820579677bbf5b0e7cbcd966d1de9a945c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 6301,
       "objective_text": "Engineering Graphics is the language of engineering. It is the fundamental core skill enhances problem solving ability which improves the engineering knowledge. Moreover, it is creating link between imagination and realization.",
@@ -53,7 +53,71 @@
         "Credits",
         "Pre-requisite of course: Zeal to learn the subject."
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Plain scales",
+            "contact_hours": null,
+            "topic_lines": [
+              "Engineering Curves:",
+              "Introduction to engineering curves with classification and application.2 7",
+              "Construction of Ellipse, Parabola and Hyperbola with normal and tangent to",
+              "the curve. Construction of Involutes, Spirals and Cycloidal curve with normal",
+              "and tangent to the curve.",
+              "Projection of Points and straight Lines:",
+              "Introduction to principal planes. Point projection located in same and",
+              "different quadrants. Line projection with inclination to one RP and two RP,3 7",
+              "True length of Line.",
+              "Syllabus for Bachelor of Technology",
+              "Mechanical Engineering",
+              "Projections of Plane Surfaces:",
+              "Projection of Polygons, circle and ellipse with inclination to one RP and two",
+              "4 6 RP. Method for projection of plane surfaces.",
+              "Orthographic Projections:",
+              "Introduction to Orthographic Projection, Plane of Projection. Projection of5 2",
+              "the object on the principal planes. Front view, Top view and sides view using",
+              "First and Third angle Projection methods. Sectional Orthographic.",
+              "Isometric Projections:",
+              "Isometric View, Conversion of Orthographic view to isometric view. Isometric6 2",
+              "Scale, Difference between Isometric View and Projection.",
+              "Computer Aided Drawing: (To be cover in Laboratory)",
+              "8 -",
+              "Introduction to CAD, Basic commands in 3D modelling software. Implementation",
+              "of 3D Printing."
+            ],
+            "topics_text": "Engineering Curves: Introduction to engineering curves with classification and application.2 7 Construction of Ellipse, Parabola and Hyperbola with normal and tangent to the curve. Construction of Involutes, Spirals and Cycloidal curve with normal and tangent to the curve. Projection of Points and straight Lines: Introduction to principal planes. Point projection located in same and different quadrants. Line projection with inclination to one RP and two RP,3 7 True length of Line. Syllabus for Bachelor of Technology Mechanical Engineering Projections of Plane Surfaces: Projection of Polygons, circle and ellipse with inclination to one RP and two 4 6 RP. Method for projection of plane surfaces. Orthographic Projections: Introduction to Orthographic Projection, Plane of Projection. Projection of5 2 the object on the principal planes. Front view, Top view and sides view using First and Third angle Projection methods. Sectional Orthographic. Isometric Projections: Isometric View, Conversion of Orthographic view to isometric view. Isometric6 2 Scale, Difference between Isometric View and Projection. Computer Aided Drawing: (To be cover in Laboratory) 8 - Introduction to CAD, Basic commands in 3D modelling software. Implementation of 3D Printing.",
+            "topics": [
+              "Engineering Curves:",
+              "Introduction to engineering curves with classification and application.2 7",
+              "Construction of Ellipse, Parabola and Hyperbola with normal and tangent to",
+              "the curve. Construction of Involutes, Spirals and Cycloidal curve with normal",
+              "and tangent to the curve.",
+              "Projection of Points and straight Lines:",
+              "Introduction to principal planes. Point projection located in same and",
+              "different quadrants. Line projection with inclination to one RP and two RP,3 7",
+              "True length of Line.",
+              "Syllabus for Bachelor of Technology",
+              "Mechanical Engineering",
+              "Projections of Plane Surfaces:",
+              "Projection of Polygons, circle and ellipse with inclination to one RP and two",
+              "4 6 RP. Method for projection of plane surfaces.",
+              "Orthographic Projections:",
+              "Introduction to Orthographic Projection, Plane of Projection. Projection of5 2",
+              "the object on the principal planes. Front view, Top view and sides view using",
+              "First and Third angle Projection methods. Sectional Orthographic.",
+              "Isometric Projections:",
+              "Isometric View, Conversion of Orthographic view to isometric view. Isometric6 2",
+              "Scale, Difference between Isometric View and Projection.",
+              "Computer Aided Drawing: (To be cover in Laboratory)",
+              "8 -",
+              "Introduction to CAD, Basic commands in 3D modelling software. Implementation",
+              "of 3D Printing."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
       "references": {
         "textbooks": [],
         "references": [],
@@ -77,14 +141,12 @@
           "text": "Syllabus for Bachelor of Technology\n\n                       Mechanical Engineering\n\nInstructional Method:\n\na.   The course delivery method will depend upon the requirement of content and\nneed of students. The teacher in addition to conventional teaching method by black\nboard,  may  also  use  any  of  tools  such  as  demonstration,  role  play,  Quiz,\nbrainstorming\n\nb.   The internal evaluation will be done on the basis of continuous evaluation of\n     students in the laboratory and class-room.\n\nc.    Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nd.   Students will use supplementary resources such as online videos, NPTEL videos,\n    e-courses"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     }
   ],
   "build_summary": {
-    "structured": 0,
-    "manual_review": 1,
+    "structured": 1,
+    "manual_review": 0,
     "ocr_review": 0,
     "hash_mismatch": 0,
     "missing_pdf": 0,

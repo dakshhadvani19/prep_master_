@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:43:06+00:00",
+  "generated_at_utc": "2026-10-12T12:44:16+00:00",
   "program": {
     "program_name": "B.Tech Mechanical Engineering Artificial Intelligence and Machine Learning",
     "program_folder": "Mechanical Engineering - Artificial Intelligence and Machine Learning",
@@ -31,7 +31,7 @@
       "expected_pdf_sha256": "9141d31dc55e6798dacb65dea79863688de51d2175211b89fe426b254e1e3cb3",
       "actual_pdf_sha256": "9141d31dc55e6798dacb65dea79863688de51d2175211b89fe426b254e1e3cb3",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 3,
       "extracted_character_count": 5693,
       "objective_text": "1 N/A",
@@ -49,7 +49,109 @@
         "5 Apply unsupervised learning techniques like PCA and clustering in real-world scenarios.",
         "Pre-requisite of course:Basic knowledge of statistical concepts."
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit 1: Foundations of Machine Learning in Business",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Machine Learning, Learning Systems and Real-",
+              "world ML Applications, Importance of ML in Business Analytics,,",
+              "Variable Types and Terminology, Function Approximation,",
+              "Concept of Learning and Types of Machine Learning, Curse of",
+              "Dimensionality, Bias-Variance Tradeoff, Overfitting and",
+              "Underfitting,, Model Selection Techniques, No Free Lunch",
+              "Theorem"
+            ],
+            "topics_text": "Introduction to Machine Learning, Learning Systems and Real- world ML Applications, Importance of ML in Business Analytics,, Variable Types and Terminology, Function Approximation, Concept of Learning and Types of Machine Learning, Curse of Dimensionality, Bias-Variance Tradeoff, Overfitting and Underfitting,, Model Selection Techniques, No Free Lunch Theorem",
+            "topics": [
+              "Introduction to Machine Learning, Learning Systems and Real-",
+              "world ML Applications, Importance of ML in Business Analytics,,",
+              "Variable Types and Terminology, Function Approximation,",
+              "Concept of Learning and Types of Machine Learning, Curse of",
+              "Dimensionality, Bias-Variance Tradeoff, Overfitting and",
+              "Underfitting,, Model Selection Techniques, No Free Lunch",
+              "Theorem"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit 2: Predictive Modeling ± Regression and Classification",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Linear Regression, Simple Linear Regression,, Model Accuracy: R²,",
+              "Logistic Regression, Linear Discriminant Analysis (LDA), Bayes",
+              "Theorem, Naïve Bayes Classifier"
+            ],
+            "topics_text": "Linear Regression, Simple Linear Regression,, Model Accuracy: R², Logistic Regression, Linear Discriminant Analysis (LDA), Bayes Theorem, Naïve Bayes Classifier",
+            "topics": [
+              "Linear Regression, Simple Linear Regression,, Model Accuracy: R²,",
+              "Logistic Regression, Linear Discriminant Analysis (LDA), Bayes",
+              "Theorem, Naïve Bayes Classifier"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit 3: Resampling, Regularization, and Tree-Based",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Techniques",
+              "Model Evaluation and Resampling Methods,, Cross-Validation:",
+              "LOOCV, k-Fold, The Bootstrap Method,, Principal Component",
+              "Regression (PCR),, Decision Trees for Classification and",
+              "Regression, Advantages and Disadvantages of Decision Trees,,",
+              "EnsembleMethods: Bagging, Random Forest, Boosting"
+            ],
+            "topics_text": "Techniques Model Evaluation and Resampling Methods,, Cross-Validation: LOOCV, k-Fold, The Bootstrap Method,, Principal Component Regression (PCR),, Decision Trees for Classification and Regression, Advantages and Disadvantages of Decision Trees,, EnsembleMethods: Bagging, Random Forest, Boosting",
+            "topics": [
+              "Techniques",
+              "Model Evaluation and Resampling Methods,, Cross-Validation:",
+              "LOOCV, k-Fold, The Bootstrap Method,, Principal Component",
+              "Regression (PCR),, Decision Trees for Classification and",
+              "Regression, Advantages and Disadvantages of Decision Trees,,",
+              "EnsembleMethods: Bagging, Random Forest, Boosting"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit 4: Support Vector Machines and Applications",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Concepts of Margins and Hyperplanes,, Maximum Margin",
+              "Classifier, Support Vector Classifier, Business Applications",
+              "andInterpretation of SVM Models"
+            ],
+            "topics_text": "Concepts of Margins and Hyperplanes,, Maximum Margin Classifier, Support Vector Classifier, Business Applications andInterpretation of SVM Models",
+            "topics": [
+              "Concepts of Margins and Hyperplanes,, Maximum Margin",
+              "Classifier, Support Vector Classifier, Business Applications",
+              "andInterpretation of SVM Models"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Unit 5: Unsupervised Learning for Business Insights",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Principal Component Analysis (PCA),, Principal Components and",
+              "Dimensionality Reduction, Interpreting PCA for Business Data,,",
+              "Clustering Techniques: K-Means, Hierarchical Clustering, Choosing",
+              "the Right Number of Clusters,, Use Cases in",
+              "CustomerSegmentation, Market Basket Analysis"
+            ],
+            "topics_text": "Principal Component Analysis (PCA),, Principal Components and Dimensionality Reduction, Interpreting PCA for Business Data,, Clustering Techniques: K-Means, Hierarchical Clustering, Choosing the Right Number of Clusters,, Use Cases in CustomerSegmentation, Market Basket Analysis",
+            "topics": [
+              "Principal Component Analysis (PCA),, Principal Components and",
+              "Dimensionality Reduction, Interpreting PCA for Business Data,,",
+              "Clustering Techniques: K-Means, Hierarchical Clustering, Choosing",
+              "the Right Number of Clusters,, Use Cases in",
+              "CustomerSegmentation, Market Basket Analysis"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
       "references": {
         "textbooks": [
           "1 Kumar, U. D. (2020). Business analytics: The science of data-driven decision making(2nd",
@@ -103,14 +205,12 @@
           "text": "Supplementary Resources:\n 3  https://www.questionpro.com/features/correlation-analysis.html\n 4  https://www.sciencedirect.com/topics/medicine-and-dentistry/regression-analysis\n 5  https://www.aptech.com/blog/introduction-to-the-fundamentals-of-time-series-data-and-\n     analysis\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     }
   ],
   "build_summary": {
-    "structured": 0,
-    "manual_review": 1,
+    "structured": 1,
+    "manual_review": 0,
     "ocr_review": 0,
     "hash_mismatch": 0,
     "missing_pdf": 0,

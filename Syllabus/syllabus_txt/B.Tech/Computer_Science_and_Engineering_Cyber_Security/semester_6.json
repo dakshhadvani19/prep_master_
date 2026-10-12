@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:43:06+00:00",
+  "generated_at_utc": "2026-10-12T12:44:16+00:00",
   "program": {
     "program_name": "B.Tech CSE Cyber Security",
     "program_folder": "Computer Science and Engineering - Cyber Security",
@@ -31,7 +31,7 @@
       "expected_pdf_sha256": "6e8e7fab1342f000281ca294d200d808d55e81b5fad5e6cb43bb4365eceffd5d",
       "actual_pdf_sha256": "6e8e7fab1342f000281ca294d200d808d55e81b5fad5e6cb43bb4365eceffd5d",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 12002,
       "objective_text": "1 Students will be able to apply modeling and control techniques to represent and simulate cyber-physical systems using tools such as Simulink and Stateflow, analyze the interaction between sensing, computation, communication, and actuation in real-time systems to understand system behavior and dependencies, and evaluate design choices including communication protocols, timing constraints, and reliability trade-offs to develop efficient and robust cyber-physical system solutions.",
@@ -61,7 +61,312 @@
         "control systems or dynamical systems (basic calculus and differential equations). Basic",
         "knowledge of computer networks."
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Cyber Physical Systems",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition and Characteristics of CPS, Distinction from Embedded",
+              "Systems, IoT, and Sensor Networks, Key Concepts: Physical",
+              "dynamics, sensing, actuation, computation, communication,",
+              "feedback loops, Societal Impact and Challenges of CPS (Safety,",
+              "Security, Privacy, Reliability, Usability), Examples of CPS across",
+              "domains: Smart Grid, Autonomous Vehicles, Medical Devices,",
+              "Industrial Control Systems (SCADA), Smart Buildings"
+            ],
+            "topics_text": "Definition and Characteristics of CPS, Distinction from Embedded Systems, IoT, and Sensor Networks, Key Concepts: Physical dynamics, sensing, actuation, computation, communication, feedback loops, Societal Impact and Challenges of CPS (Safety, Security, Privacy, Reliability, Usability), Examples of CPS across domains: Smart Grid, Autonomous Vehicles, Medical Devices, Industrial Control Systems (SCADA), Smart Buildings",
+            "topics": [
+              "Definition and Characteristics of CPS, Distinction from Embedded",
+              "Systems, IoT, and Sensor Networks, Key Concepts: Physical",
+              "dynamics, sensing, actuation, computation, communication,",
+              "feedback loops, Societal Impact and Challenges of CPS (Safety,",
+              "Security, Privacy, Reliability, Usability), Examples of CPS across",
+              "domains: Smart Grid, Autonomous Vehicles, Medical Devices,",
+              "Industrial Control Systems (SCADA), Smart Buildings"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Modeling Physical Dynamics for CPS",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to Modeling Physical Processes: State-space models,",
+              "differential equations (brief review), Hybrid Systems: Modeling",
+              "systems with interacting continuous and discrete dynamics,",
+              "Modeling Techniques: Bond graphs, Simulink/Stateflow",
+              "(introduction), Modeling Tools and Simulation Environments for",
+              "CPS, Abstraction and Hybridization of Physical Systems"
+            ],
+            "topics_text": "Introduction to Modeling Physical Processes: State-space models, differential equations (brief review), Hybrid Systems: Modeling systems with interacting continuous and discrete dynamics, Modeling Techniques: Bond graphs, Simulink/Stateflow (introduction), Modeling Tools and Simulation Environments for CPS, Abstraction and Hybridization of Physical Systems",
+            "topics": [
+              "Introduction to Modeling Physical Processes: State-space models,",
+              "differential equations (brief review), Hybrid Systems: Modeling",
+              "systems with interacting continuous and discrete dynamics,",
+              "Modeling Techniques: Bond graphs, Simulink/Stateflow",
+              "(introduction), Modeling Tools and Simulation Environments for",
+              "CPS, Abstraction and Hybridization of Physical Systems"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Control and Real-Time Aspects in CPS",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to Control Theory for CPS: Feedback control, stability,",
+              "performance, Digital Control: Sampling, quantization, real-time",
+              "constraints, Digital Control: Sampling, quantization, real-time",
+              "constraints, CPS Control Design Considerations: Handling delays,",
+              "uncertainties, and packet loss in networked control systems, and",
+              "Validation of CPS Control Logic"
+            ],
+            "topics_text": "Introduction to Control Theory for CPS: Feedback control, stability, performance, Digital Control: Sampling, quantization, real-time constraints, Digital Control: Sampling, quantization, real-time constraints, CPS Control Design Considerations: Handling delays, uncertainties, and packet loss in networked control systems, and Validation of CPS Control Logic",
+            "topics": [
+              "Introduction to Control Theory for CPS: Feedback control, stability,",
+              "performance, Digital Control: Sampling, quantization, real-time",
+              "constraints, Digital Control: Sampling, quantization, real-time",
+              "constraints, CPS Control Design Considerations: Handling delays,",
+              "uncertainties, and packet loss in networked control systems, and",
+              "Validation of CPS Control Logic"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "CPS Networking and Communication",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Networking Requirements for CPS: Timeliness, reliability, safety-",
+              "critical communication, Wireless Communication in CPS:",
+              "Challenges (interference, range), protocols (e.g., Zigbee, Bluetooth",
+              "Low Energy, WirelessHART), Wired Communication in CPS:",
+              "Industrial Ethernet, Fieldbuses (e.g., Modbus, Profibus - concepts),",
+              "Networked Control Systems (NCS): Architectures, challenges of",
+              "communication constraints on control performance, Time",
+              "Synchronization in Distributed CPS"
+            ],
+            "topics_text": "Networking Requirements for CPS: Timeliness, reliability, safety- critical communication, Wireless Communication in CPS: Challenges (interference, range), protocols (e.g., Zigbee, Bluetooth Low Energy, WirelessHART), Wired Communication in CPS: Industrial Ethernet, Fieldbuses (e.g., Modbus, Profibus - concepts), Networked Control Systems (NCS): Architectures, challenges of communication constraints on control performance, Time Synchronization in Distributed CPS",
+            "topics": [
+              "Networking Requirements for CPS: Timeliness, reliability, safety-",
+              "critical communication, Wireless Communication in CPS:",
+              "Challenges (interference, range), protocols (e.g., Zigbee, Bluetooth",
+              "Low Energy, WirelessHART), Wired Communication in CPS:",
+              "Industrial Ethernet, Fieldbuses (e.g., Modbus, Profibus - concepts),",
+              "Networked Control Systems (NCS): Architectures, challenges of",
+              "communication constraints on control performance, Time",
+              "Synchronization in Distributed CPS"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "CPS Security, Safety, and Applications",
+            "contact_hours": 8,
+            "topic_lines": [
+              "CPS Security Threats: Attacks on sensors, actuators, control logic,",
+              "communication networks (e.g., Stuxnet overview), Vulnerabilities at",
+              "the Cyber-Physical Interface: Exploiting physical properties via",
+              "cyber means, cyber effects on physical systems, CPS Security",
+              "Mechanisms: Secure boot, secure communication protocols",
+              "(adapted for CPS constraints), intrusion detection for CPS, CPS",
+              "Safety: Hazard analysis, safety standards (overview), achieving",
+              "safety in the presence of cyber threats, Case Studies of CPS",
+              "Applications: Detailed look at the architecture, challenges, and",
+              "security of selected real-world CPS"
+            ],
+            "topics_text": "CPS Security Threats: Attacks on sensors, actuators, control logic, communication networks (e.g., Stuxnet overview), Vulnerabilities at the Cyber-Physical Interface: Exploiting physical properties via cyber means, cyber effects on physical systems, CPS Security Mechanisms: Secure boot, secure communication protocols (adapted for CPS constraints), intrusion detection for CPS, CPS Safety: Hazard analysis, safety standards (overview), achieving safety in the presence of cyber threats, Case Studies of CPS Applications: Detailed look at the architecture, challenges, and security of selected real-world CPS",
+            "topics": [
+              "CPS Security Threats: Attacks on sensors, actuators, control logic,",
+              "communication networks (e.g., Stuxnet overview), Vulnerabilities at",
+              "the Cyber-Physical Interface: Exploiting physical properties via",
+              "cyber means, cyber effects on physical systems, CPS Security",
+              "Mechanisms: Secure boot, secure communication protocols",
+              "(adapted for CPS constraints), intrusion detection for CPS, CPS",
+              "Safety: Hazard analysis, safety standards (overview), achieving",
+              "safety in the presence of cyber threats, Case Studies of CPS",
+              "Applications: Detailed look at the architecture, challenges, and",
+              "security of selected real-world CPS"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulating a Simple Physical System: Using a simulation tool (e.g.,",
+              "Python with SciPy, MATLAB/Simulink, OpenModelica) to model",
+              "and simulate the dynamics of a basic physical system (e.g., a simple",
+              "pendulum, a mass-spring-damper system)."
+            ],
+            "topics_text": "Simulating a Simple Physical System: Using a simulation tool (e.g., Python with SciPy, MATLAB/Simulink, OpenModelica) to model and simulate the dynamics of a basic physical system (e.g., a simple pendulum, a mass-spring-damper system).",
+            "topics": [
+              "Simulating a Simple Physical System: Using a simulation tool (e.g.,",
+              "Python with SciPy, MATLAB/Simulink, OpenModelica) to model",
+              "and simulate the dynamics of a basic physical system (e.g., a simple",
+              "pendulum, a mass-spring-damper system)."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Implementing a Basic Digital Control Loop: Writing code on a",
+              "microcontroller or in a simulation environment to implement a",
+              "simple feedback control system (e.g., controlling an LED brightness",
+              "based on a sensor input)."
+            ],
+            "topics_text": "Implementing a Basic Digital Control Loop: Writing code on a microcontroller or in a simulation environment to implement a simple feedback control system (e.g., controlling an LED brightness based on a sensor input).",
+            "topics": [
+              "Implementing a Basic Digital Control Loop: Writing code on a",
+              "microcontroller or in a simulation environment to implement a",
+              "simple feedback control system (e.g., controlling an LED brightness",
+              "based on a sensor input)."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Interfacing Sensors and Actuators: Connecting a sensor (e.g.,",
+              "temperature, light) and an actuator (e.g., LED, motor) to a",
+              "microcontroller or single-board computer and writing code to read",
+              "sensor data and control the actuator."
+            ],
+            "topics_text": "Interfacing Sensors and Actuators: Connecting a sensor (e.g., temperature, light) and an actuator (e.g., LED, motor) to a microcontroller or single-board computer and writing code to read sensor data and control the actuator.",
+            "topics": [
+              "Interfacing Sensors and Actuators: Connecting a sensor (e.g.,",
+              "temperature, light) and an actuator (e.g., LED, motor) to a",
+              "microcontroller or single-board computer and writing code to read",
+              "sensor data and control the actuator."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Analyzing Network Traffic in a Simulated CPS: Using a network",
+              "simulator (e.g., NS-3, Mininet) to set up a simple CPS network and",
+              "analyze the characteristics of control or sensor data packets."
+            ],
+            "topics_text": "Analyzing Network Traffic in a Simulated CPS: Using a network simulator (e.g., NS-3, Mininet) to set up a simple CPS network and analyze the characteristics of control or sensor data packets.",
+            "topics": [
+              "Analyzing Network Traffic in a Simulated CPS: Using a network",
+              "simulator (e.g., NS-3, Mininet) to set up a simple CPS network and",
+              "analyze the characteristics of control or sensor data packets."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Simulating a Denial-of-Service (DoS) Attack on a CPS Network:",
+              "Introducing network congestion or delay in a simulated CPS",
+              "environment and observing the impact on control performance (in a",
+              "safe, simulated environment)."
+            ],
+            "topics_text": "Simulating a Denial-of-Service (DoS) Attack on a CPS Network: Introducing network congestion or delay in a simulated CPS environment and observing the impact on control performance (in a safe, simulated environment).",
+            "topics": [
+              "Simulating a Denial-of-Service (DoS) Attack on a CPS Network:",
+              "Introducing network congestion or delay in a simulated CPS",
+              "environment and observing the impact on control performance (in a",
+              "safe, simulated environment)."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Implementing Basic Authentication for a CPS Device: Adding a",
+              "simple authentication mechanism (e.g., password or key-based) for",
+              "accessing or sending commands to a simulated or real CPS",
+              "component."
+            ],
+            "topics_text": "Implementing Basic Authentication for a CPS Device: Adding a simple authentication mechanism (e.g., password or key-based) for accessing or sending commands to a simulated or real CPS component.",
+            "topics": [
+              "Implementing Basic Authentication for a CPS Device: Adding a",
+              "simple authentication mechanism (e.g., password or key-based) for",
+              "accessing or sending commands to a simulated or real CPS",
+              "component."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Exploring a CPS Testbed (Virtual or Physical): Working with a pre-",
+              "built virtual lab environment or a physical testbed to interact with",
+              "and observe the behavior of a more complex CPS example (e.g., a",
+              "simulated smart grid component, a robotic arm)."
+            ],
+            "topics_text": "Exploring a CPS Testbed (Virtual or Physical): Working with a pre- built virtual lab environment or a physical testbed to interact with and observe the behavior of a more complex CPS example (e.g., a simulated smart grid component, a robotic arm).",
+            "topics": [
+              "Exploring a CPS Testbed (Virtual or Physical): Working with a pre-",
+              "built virtual lab environment or a physical testbed to interact with",
+              "and observe the behavior of a more complex CPS example (e.g., a",
+              "simulated smart grid component, a robotic arm)."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Analyzing Data from a CPS: Processing and analyzing sensor data",
+              "collected from a simulated or real CPS to identify anomalies or",
+              "patterns."
+            ],
+            "topics_text": "Analyzing Data from a CPS: Processing and analyzing sensor data collected from a simulated or real CPS to identify anomalies or patterns.",
+            "topics": [
+              "Analyzing Data from a CPS: Processing and analyzing sensor data",
+              "collected from a simulated or real CPS to identify anomalies or",
+              "patterns."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Investigating Security Vulnerabilities in a Simple CPS Model:",
+              "Using a provided vulnerable CPS model (in a safe environment) to",
+              "explore how cyber inputs can affect physical outputs or vice versa."
+            ],
+            "topics_text": "Investigating Security Vulnerabilities in a Simple CPS Model: Using a provided vulnerable CPS model (in a safe environment) to explore how cyber inputs can affect physical outputs or vice versa.",
+            "topics": [
+              "Investigating Security Vulnerabilities in a Simple CPS Model:",
+              "Using a provided vulnerable CPS model (in a safe environment) to",
+              "explore how cyber inputs can affect physical outputs or vice versa."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Mini-Project: Designing a Basic Secure CPS Component: Designing",
+              "and potentially implementing (in simulation or on hardware) a small",
+              "CPS component that incorporates basic security considerations",
+              "(e.g.,authenticated sensor data transmission, input validation for",
+              "actuator commands)."
+            ],
+            "topics_text": "Mini-Project: Designing a Basic Secure CPS Component: Designing and potentially implementing (in simulation or on hardware) a small CPS component that incorporates basic security considerations (e.g.,authenticated sensor data transmission, input validation for actuator commands).",
+            "topics": [
+              "Mini-Project: Designing a Basic Secure CPS Component: Designing",
+              "and potentially implementing (in simulation or on hardware) a small",
+              "CPS component that incorporates basic security considerations",
+              "(e.g.,authenticated sensor data transmission, input validation for",
+              "actuator commands)."
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 \"Introduction to Embedded Systems: A Cyber-Physical Systems Approach, Edward A. Lee",
@@ -117,9 +422,7 @@
           "text": "Textbook :\n 1  \"Introduction to Embedded Systems: A Cyber-Physical Systems Approach, Edward A. Lee\n    and Sanjit A. Seshia, LeeSeshia.org, 2011\n\nReferences:\n 1  Cyber-Physical Systems: From Theory to Practice, Cyber-Physical Systems: From Theory\n     to Practice, Raj Rajkumar, Insup Lee, Lui Sha, John Stankovic, CRC Press, 2016\n 2  Principles of Cyber-Physical Systems, Principles of Cyber-Physical Systems, Rajeev Alur,\n   MIT Press, 2015\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          30.00         30.00         20.00         20.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  NPTEL Course: Foundations of Cyber Physical Systems\n 2  Coursera: Cyber-Physical Systems: Modeling and Simulation\n 3  Udacity: Cyber-Physical Systems Design & Analysis\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CC0605",
@@ -137,7 +440,7 @@
       "expected_pdf_sha256": "f7fcc7a0bf0405e7d8dcbc4259cceee3a031e306d363fbccbd6e5c40ef3f6949",
       "actual_pdf_sha256": "f7fcc7a0bf0405e7d8dcbc4259cceee3a031e306d363fbccbd6e5c40ef3f6949",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 10045,
       "objective_text": "1 Students can gain knowledge of the Metasploit Framework and explore different security aspects of Vulnerability Assessment and Penetration Testing (VAPT) and its relevant domains, understand different domains of red teaming, explore different attacking methods used in red teaming security, and gain knowledge of different security tools and techniques of penetration testing.",
@@ -163,7 +466,268 @@
         "Pre-requisite of course:Cybersecurity Fundamentals. Basic Networking Knowledge. Ethical",
         "and Legal Awareness."
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Metasploit",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Importance of Penetration Testing, Vulnerability Assessment vs",
+              "Penetration, Testing, the need for a penetration testing framework,",
+              "Installing Metasploit on Windows & Linux"
+            ],
+            "topics_text": "Importance of Penetration Testing, Vulnerability Assessment vs Penetration, Testing, the need for a penetration testing framework, Installing Metasploit on Windows & Linux",
+            "topics": [
+              "Importance of Penetration Testing, Vulnerability Assessment vs",
+              "Penetration, Testing, the need for a penetration testing framework,",
+              "Installing Metasploit on Windows & Linux"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Metasploit Components",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Anatomy and Structure of Metasploit, Graphical Structure of MSF,",
+              "Libraries, Interfaces, Metasploit Components, Auxiliaries, Exploits,",
+              "Encoders, Payloads, Post, Nops, Understanding the MSFconsole,",
+              "Variables in Metasploit (LHOST, LPORT, RHOST, RPORT)"
+            ],
+            "topics_text": "Anatomy and Structure of Metasploit, Graphical Structure of MSF, Libraries, Interfaces, Metasploit Components, Auxiliaries, Exploits, Encoders, Payloads, Post, Nops, Understanding the MSFconsole, Variables in Metasploit (LHOST, LPORT, RHOST, RPORT)",
+            "topics": [
+              "Anatomy and Structure of Metasploit, Graphical Structure of MSF,",
+              "Libraries, Interfaces, Metasploit Components, Auxiliaries, Exploits,",
+              "Encoders, Payloads, Post, Nops, Understanding the MSFconsole,",
+              "Variables in Metasploit (LHOST, LPORT, RHOST, RPORT)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Information Gathering with Metasploit",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Enumerating protocols, Password sniffing, Advanced recon with",
+              "Shodan, Passive Info. gathering, Active info. gathering, 5 Port",
+              "scanning- The Nmap way, Host discovery with ARP Sweep, UDP",
+              "Service Sweeper, SMB scanning and enumeration, Detecting SSH",
+              "versions, FTP scanning, SMTP enumeration, SNMP Enumeration,",
+              "HTTP Scanning, WinRM scanning and brute forcing."
+            ],
+            "topics_text": "Enumerating protocols, Password sniffing, Advanced recon with Shodan, Passive Info. gathering, Active info. gathering, 5 Port scanning- The Nmap way, Host discovery with ARP Sweep, UDP Service Sweeper, SMB scanning and enumeration, Detecting SSH versions, FTP scanning, SMTP enumeration, SNMP Enumeration, HTTP Scanning, WinRM scanning and brute forcing.",
+            "topics": [
+              "Enumerating protocols, Password sniffing, Advanced recon with",
+              "Shodan, Passive Info. gathering, Active info. gathering, 5 Port",
+              "scanning- The Nmap way, Host discovery with ARP Sweep, UDP",
+              "Service Sweeper, SMB scanning and enumeration, Detecting SSH",
+              "versions, FTP scanning, SMTP enumeration, SNMP Enumeration,",
+              "HTTP Scanning, WinRM scanning and brute forcing."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Meterpreter-1",
+            "contact_hours": 7,
+            "topic_lines": [
+              "What is Meterpreter?, Meterpreter core commands, Meterpreter file",
+              "system commands, Meterpreter networking commands, Meterpreter",
+              "system commands, Dumping the Hashes and cracking with JTR",
+              "(John the ripper), Shell command, Privilege escalation, MSF",
+              "VENOM"
+            ],
+            "topics_text": "What is Meterpreter?, Meterpreter core commands, Meterpreter file system commands, Meterpreter networking commands, Meterpreter system commands, Dumping the Hashes and cracking with JTR (John the ripper), Shell command, Privilege escalation, MSF VENOM",
+            "topics": [
+              "What is Meterpreter?, Meterpreter core commands, Meterpreter file",
+              "system commands, Meterpreter networking commands, Meterpreter",
+              "system commands, Dumping the Hashes and cracking with JTR",
+              "(John the ripper), Shell command, Privilege escalation, MSF",
+              "VENOM"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Post-Exploitation",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Privilege escalation, Metasploit Macro Exploits, Exploiting a",
+              "Windows machine, Social engineering with Metasploit, Browser",
+              "Auto pwn"
+            ],
+            "topics_text": "Privilege escalation, Metasploit Macro Exploits, Exploiting a Windows machine, Social engineering with Metasploit, Browser Auto pwn",
+            "topics": [
+              "Privilege escalation, Metasploit Macro Exploits, Exploiting a",
+              "Windows machine, Social engineering with Metasploit, Browser",
+              "Auto pwn"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Study the architecture and different modules of the Metasploit",
+              "Framework to understand its working mechanism in Kali Linux.",
+              "Gain familiarity with various module types such as exploits,",
+              "payloads, auxiliary, and post modules used in penetration testing."
+            ],
+            "topics_text": "Study the architecture and different modules of the Metasploit Framework to understand its working mechanism in Kali Linux. Gain familiarity with various module types such as exploits, payloads, auxiliary, and post modules used in penetration testing.",
+            "topics": [
+              "Study the architecture and different modules of the Metasploit",
+              "Framework to understand its working mechanism in Kali Linux.",
+              "Gain familiarity with various module types such as exploits,",
+              "payloads, auxiliary, and post modules used in penetration testing."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform protocol enumeration using Metasploit integrated with",
+              "Nmap. Analyze the identified services and protocols to determine",
+              "potential vulnerabilities in the target system."
+            ],
+            "topics_text": "Perform protocol enumeration using Metasploit integrated with Nmap. Analyze the identified services and protocols to determine potential vulnerabilities in the target system.",
+            "topics": [
+              "Perform protocol enumeration using Metasploit integrated with",
+              "Nmap. Analyze the identified services and protocols to determine",
+              "potential vulnerabilities in the target system."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform network scanning using Metasploit with Nmap. Identify",
+              "live hosts and open ports within a network to understand the attack",
+              "surface."
+            ],
+            "topics_text": "Perform network scanning using Metasploit with Nmap. Identify live hosts and open ports within a network to understand the attack surface.",
+            "topics": [
+              "Perform network scanning using Metasploit with Nmap. Identify",
+              "live hosts and open ports within a network to understand the attack",
+              "surface."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Gather information about a target website using Metasploit modules",
+              "and Nmap. Analyze server details, technologies, and possible entry",
+              "points for further assessment."
+            ],
+            "topics_text": "Gather information about a target website using Metasploit modules and Nmap. Analyze server details, technologies, and possible entry points for further assessment.",
+            "topics": [
+              "Gather information about a target website using Metasploit modules",
+              "and Nmap. Analyze server details, technologies, and possible entry",
+              "points for further assessment."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform SMB scanning and enumeration using Metasploit. Identify",
+              "shared resources, system information, and possible",
+              "misconfigurations in SMB services."
+            ],
+            "topics_text": "Perform SMB scanning and enumeration using Metasploit. Identify shared resources, system information, and possible misconfigurations in SMB services.",
+            "topics": [
+              "Perform SMB scanning and enumeration using Metasploit. Identify",
+              "shared resources, system information, and possible",
+              "misconfigurations in SMB services."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform privilege escalation using Metasploit modules. Analyze",
+              "system weaknesses that allow elevation of access rights after initial",
+              "compromise."
+            ],
+            "topics_text": "Perform privilege escalation using Metasploit modules. Analyze system weaknesses that allow elevation of access rights after initial compromise.",
+            "topics": [
+              "Perform privilege escalation using Metasploit modules. Analyze",
+              "system weaknesses that allow elevation of access rights after initial",
+              "compromise."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Demonstrate exploitation of a target system using a malicious PDF",
+              "generated through Metasploit. Understand how file-based payload",
+              "delivery can be used to gain access in a controlled environment."
+            ],
+            "topics_text": "Demonstrate exploitation of a target system using a malicious PDF generated through Metasploit. Understand how file-based payload delivery can be used to gain access in a controlled environment.",
+            "topics": [
+              "Demonstrate exploitation of a target system using a malicious PDF",
+              "generated through Metasploit. Understand how file-based payload",
+              "delivery can be used to gain access in a controlled environment."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Identify FTP-related vulnerabilities and exploit the target system",
+              "using Metasploit. Evaluate weak configurations and outdated",
+              "services that can be leveraged during exploitation."
+            ],
+            "topics_text": "Identify FTP-related vulnerabilities and exploit the target system using Metasploit. Evaluate weak configurations and outdated services that can be leveraged during exploitation.",
+            "topics": [
+              "Identify FTP-related vulnerabilities and exploit the target system",
+              "using Metasploit. Evaluate weak configurations and outdated",
+              "services that can be leveraged during exploitation."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Exploit a target system using msfvenom and Meterpreter to",
+              "establish a reverse TCP connection. Understand the process of",
+              "payload generation, delivery, and session handling for remote",
+              "access in a controlled environment."
+            ],
+            "topics_text": "Exploit a target system using msfvenom and Meterpreter to establish a reverse TCP connection. Understand the process of payload generation, delivery, and session handling for remote access in a controlled environment.",
+            "topics": [
+              "Exploit a target system using msfvenom and Meterpreter to",
+              "establish a reverse TCP connection. Understand the process of",
+              "payload generation, delivery, and session handling for remote",
+              "access in a controlled environment."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform WinRM scanning and brute-force attacks using Metasploit.",
+              "Analyze authentication mechanisms and identify weaknesses such",
+              "as poor credential management in remote access services."
+            ],
+            "topics_text": "Perform WinRM scanning and brute-force attacks using Metasploit. Analyze authentication mechanisms and identify weaknesses such as poor credential management in remote access services.",
+            "topics": [
+              "Perform WinRM scanning and brute-force attacks using Metasploit.",
+              "Analyze authentication mechanisms and identify weaknesses such",
+              "as poor credential management in remote access services."
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Metasploit Penetration Testing Cookbook, Abhinav singh, Packt Publishing, 2012"
@@ -223,9 +787,7 @@
           "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           5.00          25.00         30.00         20.00         20.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  “Advanced Penetration Testing: Hacking the World's Most Secure Networks” by Wil\n    Allsopp\n 2  “Mastering Metasploit” by Nipun Jaswal\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CC0606",
@@ -243,7 +805,7 @@
       "expected_pdf_sha256": "a6296f9c154ef082695aeec8f453c0abfb62a84acf469720a180c7a6697db0c8",
       "actual_pdf_sha256": "a6296f9c154ef082695aeec8f453c0abfb62a84acf469720a180c7a6697db0c8",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 11545,
       "objective_text": "1 Students will be able to apply concepts of program execution, memory layout, and vulnerability exploitation to develop proof-of-concept exploits and shell scripts for security tasks, analyze software vulnerabilities including buffer overflows, heap issues, and format- string flaws using debugging and fuzzing techniques, and evaluate exploitation strategies along with modern mitigation mechanisms to understand their impact on exploit development and post-exploitation processes",
@@ -274,7 +836,302 @@
         "Familiarity with a command-line interface (Linux is preferred). Basic understanding of",
         "networking concepts."
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Foundations of Program Execution and Vulnerabilities",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to Exploit Development: Concepts, goals, ethical",
+              "considerations, Computer Architecture Review (relevant to",
+              "exploitation): CPU registers, memory organization (stack, heap,",
+              "data, text segments), Program Compilation and Execution Process,",
+              "Introduction to Assembly Language (basic x86/x64):,",
+              "Understanding function calls, stack operations, Debugging",
+              "Fundamentals: Using tools like GDB or WinDbg to inspect memory",
+              "and registers,, Introduction to Common Vulnerability Classes:",
+              "Buffer overflows, integer overflows, format string vulnerabilities,",
+              "race conditions (overview)"
+            ],
+            "topics_text": "Introduction to Exploit Development: Concepts, goals, ethical considerations, Computer Architecture Review (relevant to exploitation): CPU registers, memory organization (stack, heap, data, text segments), Program Compilation and Execution Process, Introduction to Assembly Language (basic x86/x64):, Understanding function calls, stack operations, Debugging Fundamentals: Using tools like GDB or WinDbg to inspect memory and registers,, Introduction to Common Vulnerability Classes: Buffer overflows, integer overflows, format string vulnerabilities, race conditions (overview)",
+            "topics": [
+              "Introduction to Exploit Development: Concepts, goals, ethical",
+              "considerations, Computer Architecture Review (relevant to",
+              "exploitation): CPU registers, memory organization (stack, heap,",
+              "data, text segments), Program Compilation and Execution Process,",
+              "Introduction to Assembly Language (basic x86/x64):,",
+              "Understanding function calls, stack operations, Debugging",
+              "Fundamentals: Using tools like GDB or WinDbg to inspect memory",
+              "and registers,, Introduction to Common Vulnerability Classes:",
+              "Buffer overflows, integer overflows, format string vulnerabilities,",
+              "race conditions (overview)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Stack Buffer Overflow Exploitation",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Deep Dive into Stack Buffer Overflows: How they occur,",
+              "overwriting return addresses, Controlling Program Execution Flow,",
+              "Introduction to Shellcode: Purpose, writing basic shellcode (e.g.,",
+              "execve(\"/bin/sh\"), Shellcode Encoding and Decoding Techniques",
+              "(e.g., XOR, shikata ga nai - basic concepts), Developing Stack",
+              "Buffer Overflow Exploits (non-networked examples), Basic",
+              "Protections and Bypass (e.g., No-Execute bit/DEP - conceptual)"
+            ],
+            "topics_text": "Deep Dive into Stack Buffer Overflows: How they occur, overwriting return addresses, Controlling Program Execution Flow, Introduction to Shellcode: Purpose, writing basic shellcode (e.g., execve(\"/bin/sh\"), Shellcode Encoding and Decoding Techniques (e.g., XOR, shikata ga nai - basic concepts), Developing Stack Buffer Overflow Exploits (non-networked examples), Basic Protections and Bypass (e.g., No-Execute bit/DEP - conceptual)",
+            "topics": [
+              "Deep Dive into Stack Buffer Overflows: How they occur,",
+              "overwriting return addresses, Controlling Program Execution Flow,",
+              "Introduction to Shellcode: Purpose, writing basic shellcode (e.g.,",
+              "execve(\"/bin/sh\"), Shellcode Encoding and Decoding Techniques",
+              "(e.g., XOR, shikata ga nai - basic concepts), Developing Stack",
+              "Buffer Overflow Exploits (non-networked examples), Basic",
+              "Protections and Bypass (e.g., No-Execute bit/DEP - conceptual)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Introduction to Shell Scripting for Security",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Shell Scripting Fundamentals (Bash): Basic syntax, variables,",
+              "input/output, File Operations and Permissions in Scripts,",
+              "Conditional Statements and Loops, Command Substitution and",
+              "Piping, Essential Shell Commands for Security Tasks: grep, awk,",
+              "sed, find, User and Permission Management using Scripts"
+            ],
+            "topics_text": "Shell Scripting Fundamentals (Bash): Basic syntax, variables, input/output, File Operations and Permissions in Scripts, Conditional Statements and Loops, Command Substitution and Piping, Essential Shell Commands for Security Tasks: grep, awk, sed, find, User and Permission Management using Scripts",
+            "topics": [
+              "Shell Scripting Fundamentals (Bash): Basic syntax, variables,",
+              "input/output, File Operations and Permissions in Scripts,",
+              "Conditional Statements and Loops, Command Substitution and",
+              "Piping, Essential Shell Commands for Security Tasks: grep, awk,",
+              "sed, find, User and Permission Management using Scripts"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Advanced Vulnerability Classes and Exploitation Concepts",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Heap Overflows: Understanding heap memory management and",
+              "common heap exploitation techniques (introduction), Format String",
+              "Vulnerabilities: How they occur, reading/writing memory using",
+              "format strings, Return-Oriented Programming (ROP): Concepts and",
+              "basic chain building (introduction), Integer Overflows and",
+              "Underflows: Detecting and exploiting integer vulnerabilities,",
+              "Introduction to Fuzzing for vulnerability discovery (basic concepts)"
+            ],
+            "topics_text": "Heap Overflows: Understanding heap memory management and common heap exploitation techniques (introduction), Format String Vulnerabilities: How they occur, reading/writing memory using format strings, Return-Oriented Programming (ROP): Concepts and basic chain building (introduction), Integer Overflows and Underflows: Detecting and exploiting integer vulnerabilities, Introduction to Fuzzing for vulnerability discovery (basic concepts)",
+            "topics": [
+              "Heap Overflows: Understanding heap memory management and",
+              "common heap exploitation techniques (introduction), Format String",
+              "Vulnerabilities: How they occur, reading/writing memory using",
+              "format strings, Return-Oriented Programming (ROP): Concepts and",
+              "basic chain building (introduction), Integer Overflows and",
+              "Underflows: Detecting and exploiting integer vulnerabilities,",
+              "Introduction to Fuzzing for vulnerability discovery (basic concepts)"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Integrating Shell Scripting and Exploit Development",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Using Shell Scripts for Reconnaissance: Automating port scanning",
+              "(nmap scripting basics), service banner grabbing, Writing Scripts",
+              "for Vulnerability Scanning and Analysis (integrating command-line",
+              "tools), Automating Exploit Delivery and Execution using Shell",
+              "Scripts, Creating Simple Security Tools using Shell Scripting, Post-",
+              "Exploitation, Scripting: Automating data exfiltration or privilege",
+              "escalation tasks (in a controlled lab), Defense and Mitigation:",
+              "Introduction to exploit mitigation techniques and how they affect",
+              "exploitation"
+            ],
+            "topics_text": "Using Shell Scripts for Reconnaissance: Automating port scanning (nmap scripting basics), service banner grabbing, Writing Scripts for Vulnerability Scanning and Analysis (integrating command-line tools), Automating Exploit Delivery and Execution using Shell Scripts, Creating Simple Security Tools using Shell Scripting, Post- Exploitation, Scripting: Automating data exfiltration or privilege escalation tasks (in a controlled lab), Defense and Mitigation: Introduction to exploit mitigation techniques and how they affect exploitation",
+            "topics": [
+              "Using Shell Scripts for Reconnaissance: Automating port scanning",
+              "(nmap scripting basics), service banner grabbing, Writing Scripts",
+              "for Vulnerability Scanning and Analysis (integrating command-line",
+              "tools), Automating Exploit Delivery and Execution using Shell",
+              "Scripts, Creating Simple Security Tools using Shell Scripting, Post-",
+              "Exploitation, Scripting: Automating data exfiltration or privilege",
+              "escalation tasks (in a controlled lab), Defense and Mitigation:",
+              "Introduction to exploit mitigation techniques and how they affect",
+              "exploitation"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Setting up a Safe Exploit Development Lab: Installing and",
+              "configuring virtual machines (e.g., using VirtualBox or VMware)",
+              "and vulnerable application environments (e.g., Metasploitable,",
+              "purposefully vulnerable VMs)"
+            ],
+            "topics_text": "Setting up a Safe Exploit Development Lab: Installing and configuring virtual machines (e.g., using VirtualBox or VMware) and vulnerable application environments (e.g., Metasploitable, purposefully vulnerable VMs)",
+            "topics": [
+              "Setting up a Safe Exploit Development Lab: Installing and",
+              "configuring virtual machines (e.g., using VirtualBox or VMware)",
+              "and vulnerable application environments (e.g., Metasploitable,",
+              "purposefully vulnerable VMs)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Basic Shell Scripting Fundamentals: Writing and executing simple",
+              "Bash scripts for file manipulation, variable usage, and command",
+              "execution."
+            ],
+            "topics_text": "Basic Shell Scripting Fundamentals: Writing and executing simple Bash scripts for file manipulation, variable usage, and command execution.",
+            "topics": [
+              "Basic Shell Scripting Fundamentals: Writing and executing simple",
+              "Bash scripts for file manipulation, variable usage, and command",
+              "execution."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Writing Shell Scripts for Basic System Information Gathering:",
+              "Creating scripts to extract and format system information (OS",
+              "version, running processes, network configuration)"
+            ],
+            "topics_text": "Writing Shell Scripts for Basic System Information Gathering: Creating scripts to extract and format system information (OS version, running processes, network configuration)",
+            "topics": [
+              "Writing Shell Scripts for Basic System Information Gathering:",
+              "Creating scripts to extract and format system information (OS",
+              "version, running processes, network configuration)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Debugging a Simple C Program: Using GDB to set breakpoints,",
+              "step through code, inspect variables, and examine memory layout."
+            ],
+            "topics_text": "Debugging a Simple C Program: Using GDB to set breakpoints, step through code, inspect variables, and examine memory layout.",
+            "topics": [
+              "Debugging a Simple C Program: Using GDB to set breakpoints,",
+              "step through code, inspect variables, and examine memory layout."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Identifying a Stack Buffer Overflow: Analyzing a provided",
+              "vulnerable C program and using a debugger to confirm a buffer",
+              "overflow condition"
+            ],
+            "topics_text": "Identifying a Stack Buffer Overflow: Analyzing a provided vulnerable C program and using a debugger to confirm a buffer overflow condition",
+            "topics": [
+              "Identifying a Stack Buffer Overflow: Analyzing a provided",
+              "vulnerable C program and using a debugger to confirm a buffer",
+              "overflow condition"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Developing a Basic Stack Buffer Overflow Exploit (Return Address",
+              "Overwrite): Writing a Python or C program to exploit the vulnerable",
+              "application by overwriting the return address to redirect execution to",
+              "a specific location within the program."
+            ],
+            "topics_text": "Developing a Basic Stack Buffer Overflow Exploit (Return Address Overwrite): Writing a Python or C program to exploit the vulnerable application by overwriting the return address to redirect execution to a specific location within the program.",
+            "topics": [
+              "Developing a Basic Stack Buffer Overflow Exploit (Return Address",
+              "Overwrite): Writing a Python or C program to exploit the vulnerable",
+              "application by overwriting the return address to redirect execution to",
+              "a specific location within the program."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Creating and Executing Simple Shellcode: Writing and testing basic",
+              "shellcode (e.g., /bin/sh execution) in a controlled environment and",
+              "embedding it in a simple program."
+            ],
+            "topics_text": "Creating and Executing Simple Shellcode: Writing and testing basic shellcode (e.g., /bin/sh execution) in a controlled environment and embedding it in a simple program.",
+            "topics": [
+              "Creating and Executing Simple Shellcode: Writing and testing basic",
+              "shellcode (e.g., /bin/sh execution) in a controlled environment and",
+              "embedding it in a simple program."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Using Shell Scripting for Automated Port Scanning: Writing a Bash",
+              "script that utilizes nmap or other tools to scan a range of IP",
+              "addresses for open ports and report the results"
+            ],
+            "topics_text": "Using Shell Scripting for Automated Port Scanning: Writing a Bash script that utilizes nmap or other tools to scan a range of IP addresses for open ports and report the results",
+            "topics": [
+              "Using Shell Scripting for Automated Port Scanning: Writing a Bash",
+              "script that utilizes nmap or other tools to scan a range of IP",
+              "addresses for open ports and report the results"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Automating Exploit Execution with a Shell Script: Creating a shell",
+              "script that compiles or runs a proof-of-concept exploit program and",
+              "handles its input/output (in a controlled environment)."
+            ],
+            "topics_text": "Automating Exploit Execution with a Shell Script: Creating a shell script that compiles or runs a proof-of-concept exploit program and handles its input/output (in a controlled environment).",
+            "topics": [
+              "Automating Exploit Execution with a Shell Script: Creating a shell",
+              "script that compiles or runs a proof-of-concept exploit program and",
+              "handles its input/output (in a controlled environment)."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Analyzing a Simple Exploit Script: Examining a provided script",
+              "(e.g., a Python script for a simple web vulnerability or a Bash script",
+              "for a known OS vulnerability) to understand its functionality and",
+              "how it leverages scripting for exploitation or automation."
+            ],
+            "topics_text": "Analyzing a Simple Exploit Script: Examining a provided script (e.g., a Python script for a simple web vulnerability or a Bash script for a known OS vulnerability) to understand its functionality and how it leverages scripting for exploitation or automation.",
+            "topics": [
+              "Analyzing a Simple Exploit Script: Examining a provided script",
+              "(e.g., a Python script for a simple web vulnerability or a Bash script",
+              "for a known OS vulnerability) to understand its functionality and",
+              "how it leverages scripting for exploitation or automation."
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 “Hacking: The Art of Exploitation, Jon Erickson, No Starch Press, 2008"
@@ -333,14 +1190,12 @@
           "text": "Textbook :\n 1  “Hacking: The Art of Exploitation, Jon Erickson, No Starch Press, 2008\n\nReferences:\n 1  Practical Binary Analysis: Build Your Own Linux Tools for Binary Instrumentation,\n     Analysis, and Disassembly, Practical Binary Analysis: Build Your Own Linux Tools for\n    Binary Instrumentation, Analysis, and Disassembly, Dennis Andriesse , No Starch Press,\n    2018\n 2  Shellcoder’s Handbook: Discovering and Exploiting Security Holes, Shellcoder’s\n    Handbook: Discovering and Exploiting Security Holes, Chris Anley et al. , Wiley\n     Publishing, Inc., 2007\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           4.00          28.00         28.00         20.00         20.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  NPTEL Course: Foundations of Cyber Security (Exploitation & SE) – IIT Kanpur (Prof.\n    Manindra Agrawal)\n 2   “Software Security” – University of Maryland (Coursera)\n 3  Virtual lab / VM : Metasploitable 2 & 3\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     }
   ],
   "build_summary": {
-    "structured": 0,
-    "manual_review": 3,
+    "structured": 3,
+    "manual_review": 0,
     "ocr_review": 0,
     "hash_mismatch": 0,
     "missing_pdf": 0,

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:43:06+00:00",
+  "generated_at_utc": "2026-10-12T12:44:16+00:00",
   "program": {
     "program_name": "B.Tech Information Technology",
     "program_folder": "Information Technology Engineering",
@@ -42,7 +42,10 @@
         " Analyze data using various visual representations and descriptive measures",
         " Apply text analytics tools of Python for processing text data and carrying out sentiment analysis"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
       "references": {
         "textbooks": [
           "Sr. No Author/s Name of the Book Publisher Edition and Year",
@@ -74,7 +77,7 @@
         }
       ],
       "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
+        "PDF text was extracted, but syllabus units/topics could not be parsed confidently."
       ]
     }
   ],

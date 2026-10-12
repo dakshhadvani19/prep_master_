@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:43:06+00:00",
+  "generated_at_utc": "2026-10-12T12:44:16+00:00",
   "program": {
     "program_name": "B.Tech CSE Cyber Security",
     "program_folder": "Computer Science and Engineering - Cyber Security",
@@ -31,7 +31,7 @@
       "expected_pdf_sha256": "76d1e75fb3ccb812768387d488255cde77955e3c9821b78265e729e7ad8bfdb6",
       "actual_pdf_sha256": "76d1e75fb3ccb812768387d488255cde77955e3c9821b78265e729e7ad8bfdb6",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 9851,
       "objective_text": "1 To introduce the fundamental concepts, components, and evolution of the Internet of Things (IoT). To explore the integration of IoT with cloud platforms, especially Microsoft Azure, and its services. To understand the security aspects of IoT applications across various cloud technologies and architectures. To examine the role and security of SCADA systems and emerging technologies like AI in cloud-integrated IoT environments.",
@@ -56,7 +56,262 @@
         "concepts (sensors, microcontrollers), Familiarity with Operating Systems and Cloud",
         "fundamentals, Introductory knowledge of Cybersecurity concepts (CIA triad, threats)"
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION OF IOT",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition of IOT, History of IOT, Need of IOT - Benefits of IOT,",
+              "IOT Classes & Stages, Use of IOT, Types of IOT Devices, RFID,",
+              "Fingerprints, Eye Retina , Multiple Authentication,Types of Sensors",
+              "& It’s use, Introduction of Arduino & Raspberry Pi, Arduino Cases",
+              "in IOT, Raspberry Pi in IOT ,Use of Arduino & Raspberry Pi in",
+              "IOT."
+            ],
+            "topics_text": "Definition of IOT, History of IOT, Need of IOT - Benefits of IOT, IOT Classes & Stages, Use of IOT, Types of IOT Devices, RFID, Fingerprints, Eye Retina , Multiple Authentication,Types of Sensors & It’s use, Introduction of Arduino & Raspberry Pi, Arduino Cases in IOT, Raspberry Pi in IOT ,Use of Arduino & Raspberry Pi in IOT.",
+            "topics": [
+              "Definition of IOT, History of IOT, Need of IOT - Benefits of IOT,",
+              "IOT Classes & Stages, Use of IOT, Types of IOT Devices, RFID,",
+              "Fingerprints, Eye Retina , Multiple Authentication,Types of Sensors",
+              "& It’s use, Introduction of Arduino & Raspberry Pi, Arduino Cases",
+              "in IOT, Raspberry Pi in IOT ,Use of Arduino & Raspberry Pi in",
+              "IOT."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "IOT WITH CLOUD",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction of Microsoft Azure :What is it’s Need, Benefits of",
+              "Microsoft Azure Cloud , Services of Microsoft Azure with IOT,",
+              "Services that can be connected in IOT, Introduction to Azure IOT",
+              "Hub , Use of Azure IOT Hub , Services that can be connected,",
+              "Azure IOT Edge , Description of Microsoft Azure Cloud Services in",
+              "IOT, 2.10.IOT Hub Device Provisioning Service (DPS), Case study",
+              "for Smart Parking Management System."
+            ],
+            "topics_text": "Introduction of Microsoft Azure :What is it’s Need, Benefits of Microsoft Azure Cloud , Services of Microsoft Azure with IOT, Services that can be connected in IOT, Introduction to Azure IOT Hub , Use of Azure IOT Hub , Services that can be connected, Azure IOT Edge , Description of Microsoft Azure Cloud Services in IOT, 2.10.IOT Hub Device Provisioning Service (DPS), Case study for Smart Parking Management System.",
+            "topics": [
+              "Introduction of Microsoft Azure :What is it’s Need, Benefits of",
+              "Microsoft Azure Cloud , Services of Microsoft Azure with IOT,",
+              "Services that can be connected in IOT, Introduction to Azure IOT",
+              "Hub , Use of Azure IOT Hub , Services that can be connected,",
+              "Azure IOT Edge , Description of Microsoft Azure Cloud Services in",
+              "IOT, 2.10.IOT Hub Device Provisioning Service (DPS), Case study",
+              "for Smart Parking Management System."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "IOT SECURITY WITH VARIOUS CLOUD PLATFORMS",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Serverless Computing, Advantages of Serverless Computing,,",
+              "Introduction to Security, What is Kubernetes, Advantages &",
+              "Disadvantages of Kubernetes, Architecture of Kubernetes,",
+              "Correlated Kubernetes, Docker & Container, Difference between",
+              "Kubernetes vs Docker vs Container, Case study using Microsoft",
+              "Azure Cloud using IOT Hub & IOT Edge for Smart Garbage",
+              "Management System."
+            ],
+            "topics_text": "Serverless Computing, Advantages of Serverless Computing,, Introduction to Security, What is Kubernetes, Advantages & Disadvantages of Kubernetes, Architecture of Kubernetes, Correlated Kubernetes, Docker & Container, Difference between Kubernetes vs Docker vs Container, Case study using Microsoft Azure Cloud using IOT Hub & IOT Edge for Smart Garbage Management System.",
+            "topics": [
+              "Serverless Computing, Advantages of Serverless Computing,,",
+              "Introduction to Security, What is Kubernetes, Advantages &",
+              "Disadvantages of Kubernetes, Architecture of Kubernetes,",
+              "Correlated Kubernetes, Docker & Container, Difference between",
+              "Kubernetes vs Docker vs Container, Case study using Microsoft",
+              "Azure Cloud using IOT Hub & IOT Edge for Smart Garbage",
+              "Management System."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "INTRODUCTION OF SCADA",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to SCADA, Use of SCADA, Advantages of SCADA,",
+              "Disadvantages of SCADA in Azure, Framework for SCADA,, Steps",
+              "for SCADA System Installation, Monitoring - RBAC - Data Leak -",
+              "Identity & Access Management - Training."
+            ],
+            "topics_text": "Introduction to SCADA, Use of SCADA, Advantages of SCADA, Disadvantages of SCADA in Azure, Framework for SCADA,, Steps for SCADA System Installation, Monitoring - RBAC - Data Leak - Identity & Access Management - Training.",
+            "topics": [
+              "Introduction to SCADA, Use of SCADA, Advantages of SCADA,",
+              "Disadvantages of SCADA in Azure, Framework for SCADA,, Steps",
+              "for SCADA System Installation, Monitoring - RBAC - Data Leak -",
+              "Identity & Access Management - Training."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "SCADA SECURITY WITH CLOUD TRENDING",
+            "contact_hours": 6,
+            "topic_lines": [
+              "TECHNOLOGIES",
+              "Enabled Technologies in IOT Devices, Role of AI in Microsoft",
+              "Azure Cloud, Benefits of AI in Microsoft Cloud, Use of AI in",
+              "Microsoft Azure Cloud, Web Development in Cloud, Software",
+              "Development in Cloud,, Data Storage in Cloud, Cyber Attack in",
+              "Cloud, Roles & Responsibilities."
+            ],
+            "topics_text": "TECHNOLOGIES Enabled Technologies in IOT Devices, Role of AI in Microsoft Azure Cloud, Benefits of AI in Microsoft Cloud, Use of AI in Microsoft Azure Cloud, Web Development in Cloud, Software Development in Cloud,, Data Storage in Cloud, Cyber Attack in Cloud, Roles & Responsibilities.",
+            "topics": [
+              "TECHNOLOGIES",
+              "Enabled Technologies in IOT Devices, Role of AI in Microsoft",
+              "Azure Cloud, Benefits of AI in Microsoft Cloud, Use of AI in",
+              "Microsoft Azure Cloud, Web Development in Cloud, Software",
+              "Development in Cloud,, Data Storage in Cloud, Cyber Attack in",
+              "Cloud, Roles & Responsibilities."
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Prepare a documentation on Types of Sensor & IOT Hardware",
+              "Components including it’s Use & Requirements."
+            ],
+            "topics_text": "Prepare a documentation on Types of Sensor & IOT Hardware Components including it’s Use & Requirements.",
+            "topics": [
+              "Prepare a documentation on Types of Sensor & IOT Hardware",
+              "Components including it’s Use & Requirements."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a experiment for Controlling the LED blink rate with the",
+              "potentiometer interfacing with Arduino."
+            ],
+            "topics_text": "Create a experiment for Controlling the LED blink rate with the potentiometer interfacing with Arduino.",
+            "topics": [
+              "Create a experiment for Controlling the LED blink rate with the",
+              "potentiometer interfacing with Arduino."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Prepare a experiment for the Detection of the light using photo",
+              "resistor in Arduino."
+            ],
+            "topics_text": "Prepare a experiment for the Detection of the light using photo resistor in Arduino.",
+            "topics": [
+              "Prepare a experiment for the Detection of the light using photo",
+              "resistor in Arduino."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Prepare a experiment on Interfacing on Servo Motor in Arduino",
+              "including Motion Sensor & Wires."
+            ],
+            "topics_text": "Prepare a experiment on Interfacing on Servo Motor in Arduino including Motion Sensor & Wires.",
+            "topics": [
+              "Prepare a experiment on Interfacing on Servo Motor in Arduino",
+              "including Motion Sensor & Wires."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Deploy an experiment on Interfacing on DC Motor in Arduino",
+              "including Proximity, Pressure Sensor & Wires."
+            ],
+            "topics_text": "Deploy an experiment on Interfacing on DC Motor in Arduino including Proximity, Pressure Sensor & Wires.",
+            "topics": [
+              "Deploy an experiment on Interfacing on DC Motor in Arduino",
+              "including Proximity, Pressure Sensor & Wires."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Check all the Services that can be correlated in IOT and include it in",
+              "the necessary IOT Experiments."
+            ],
+            "topics_text": "Check all the Services that can be correlated in IOT and include it in the necessary IOT Experiments.",
+            "topics": [
+              "Check all the Services that can be correlated in IOT and include it in",
+              "the necessary IOT Experiments."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create one Smart Gate Management System with Microsoft Azure",
+              "Cloud using IOT Service."
+            ],
+            "topics_text": "Create one Smart Gate Management System with Microsoft Azure Cloud using IOT Service.",
+            "topics": [
+              "Create one Smart Gate Management System with Microsoft Azure",
+              "Cloud using IOT Service."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Prepare a Experiment on Smart Light Management System with",
+              "Thermal Sensor."
+            ],
+            "topics_text": "Prepare a Experiment on Smart Light Management System with Thermal Sensor.",
+            "topics": [
+              "Prepare a Experiment on Smart Light Management System with",
+              "Thermal Sensor."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Prepare a Experiment on Smart Home Management System with",
+              "Humidity Sensor for controlling the Light, Fan & other equipment."
+            ],
+            "topics_text": "Prepare a Experiment on Smart Home Management System with Humidity Sensor for controlling the Light, Fan & other equipment.",
+            "topics": [
+              "Prepare a Experiment on Smart Home Management System with",
+              "Humidity Sensor for controlling the Light, Fan & other equipment."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Prepare a Experiment on Smart Traffic Management System with",
+              "Level Sensor & Electric Current Sensor."
+            ],
+            "topics_text": "Prepare a Experiment on Smart Traffic Management System with Level Sensor & Electric Current Sensor.",
+            "topics": [
+              "Prepare a Experiment on Smart Traffic Management System with",
+              "Level Sensor & Electric Current Sensor."
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 Fundamentals of IOT, Rajan Gupta (Author), Supriya Madan (Author)., BPB Publications,",
@@ -117,9 +372,7 @@
           "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         25.00         25.00         20.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory or class-room.\n\nSupplementary Resources:\n 1  https://mrcet.com/downloads/digital_notes/EEE/IoT%20&%20Applications%20Digital\n    %20Notes.pdf\n 2  https://en.wikipedia.org/wiki/Internet_of_things\n 3 AWS IoT Core (for comparison learning) - https://aws.amazon.com/iot-core/\n 4  Microsoft Learn – Azure IoT - https://learn.microsoft.com/en-us/training/azure/\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CC0505",
@@ -137,7 +390,7 @@
       "expected_pdf_sha256": "f49475dde05081e21ba94ab239976ae96cdb0907961551bd569fa27bed5d0dc4",
       "actual_pdf_sha256": "f49475dde05081e21ba94ab239976ae96cdb0907961551bd569fa27bed5d0dc4",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 4,
       "extracted_character_count": 9282,
       "objective_text": "1 The objective of this course is to provide a comprehensive understanding of cloud computing concepts, architectures, and service models, along with the deployment and management of cloud-based applications. It aims to develop practical skills in using cloud platforms and tools while emphasizing security principles, including data protection, identity and access management, and risk mitigation in cloud environments. The course also focuses on analyzing cloud vulnerabilities, implementing security best practices, and ensuring compliance with industry standards to build secure and scalable cloud solutions.",
@@ -161,7 +414,252 @@
         "Pre-requisite of course:Understanding of the Internet. Basic Programming Knowledge. Basic",
         "Network Security Concepts."
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION OF CLOUD COMPUTING",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition of Cloud Computing, What is Cloud Computing & Need",
+              "of Cloud Computing, Types of Cloud, Different Types of Cloud",
+              "Services, Benefits of Cloud Computing, Challenges of Cloud",
+              "Computing, Introduction to Cloud Platforms & it’s use, Role of",
+              "Cloud with the Virtualization"
+            ],
+            "topics_text": "Definition of Cloud Computing, What is Cloud Computing & Need of Cloud Computing, Types of Cloud, Different Types of Cloud Services, Benefits of Cloud Computing, Challenges of Cloud Computing, Introduction to Cloud Platforms & it’s use, Role of Cloud with the Virtualization",
+            "topics": [
+              "Definition of Cloud Computing, What is Cloud Computing & Need",
+              "of Cloud Computing, Types of Cloud, Different Types of Cloud",
+              "Services, Benefits of Cloud Computing, Challenges of Cloud",
+              "Computing, Introduction to Cloud Platforms & it’s use, Role of",
+              "Cloud with the Virtualization"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "AWS CLOUD",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction of AWS, What is it’s Need and Benefits, Services of",
+              "AWS, Introduction to EC2 & AMI, Introduction to s3, What is",
+              "Network & it’s Role in Cloud, Network Security Group with Ports,",
+              "Description of Sub nets, Description of IAM, Use of Key Pair",
+              "Login, Use of Auto Scaling, Use of Load balancer, Introduction to",
+              "VPC, What is it’s use in Web Development"
+            ],
+            "topics_text": "Introduction of AWS, What is it’s Need and Benefits, Services of AWS, Introduction to EC2 & AMI, Introduction to s3, What is Network & it’s Role in Cloud, Network Security Group with Ports, Description of Sub nets, Description of IAM, Use of Key Pair Login, Use of Auto Scaling, Use of Load balancer, Introduction to VPC, What is it’s use in Web Development",
+            "topics": [
+              "Introduction of AWS, What is it’s Need and Benefits, Services of",
+              "AWS, Introduction to EC2 & AMI, Introduction to s3, What is",
+              "Network & it’s Role in Cloud, Network Security Group with Ports,",
+              "Description of Sub nets, Description of IAM, Use of Key Pair",
+              "Login, Use of Auto Scaling, Use of Load balancer, Introduction to",
+              "VPC, What is it’s use in Web Development"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "CLOUD COMPUTING THREATS, DOCKER, CONTAINER",
+            "contact_hours": 7,
+            "topic_lines": [
+              "& KUBERNETES",
+              "Serverless Computing, Advantages of Serverless Computing,",
+              "Introduction to OWASP, What is Docker, Advantages &",
+              "Disadvantages of Docker, Architecture of Docker, What is",
+              "Container, ,Advantages & Disadvantages of Container, Architecture",
+              "of Container, Difference between Docker vs Container,, What is",
+              "Kubernetes - Advantages & Disadvantages of Kubernetes -",
+              "Architecture of Kubernetes,, Difference between Kubernetes vs",
+              "Docker, Difference between Kubernetes vs Docker vs Container"
+            ],
+            "topics_text": "& KUBERNETES Serverless Computing, Advantages of Serverless Computing, Introduction to OWASP, What is Docker, Advantages & Disadvantages of Docker, Architecture of Docker, What is Container, ,Advantages & Disadvantages of Container, Architecture of Container, Difference between Docker vs Container,, What is Kubernetes - Advantages & Disadvantages of Kubernetes - Architecture of Kubernetes,, Difference between Kubernetes vs Docker, Difference between Kubernetes vs Docker vs Container",
+            "topics": [
+              "& KUBERNETES",
+              "Serverless Computing, Advantages of Serverless Computing,",
+              "Introduction to OWASP, What is Docker, Advantages &",
+              "Disadvantages of Docker, Architecture of Docker, What is",
+              "Container, ,Advantages & Disadvantages of Container, Architecture",
+              "of Container, Difference between Docker vs Container,, What is",
+              "Kubernetes - Advantages & Disadvantages of Kubernetes -",
+              "Architecture of Kubernetes,, Difference between Kubernetes vs",
+              "Docker, Difference between Kubernetes vs Docker vs Container"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "CLOUD SECURITY",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to NIST, NIST Framework, Security in Cloud,",
+              "Necessary Steps in Cloud,, Security in AWS, Framework for Cloud",
+              "Security, Required/Necessary S teps, Monitoring, RBAC, Data",
+              "Governance, Identity & Access Management, Training"
+            ],
+            "topics_text": "Introduction to NIST, NIST Framework, Security in Cloud, Necessary Steps in Cloud,, Security in AWS, Framework for Cloud Security, Required/Necessary S teps, Monitoring, RBAC, Data Governance, Identity & Access Management, Training",
+            "topics": [
+              "Introduction to NIST, NIST Framework, Security in Cloud,",
+              "Necessary Steps in Cloud,, Security in AWS, Framework for Cloud",
+              "Security, Required/Necessary S teps, Monitoring, RBAC, Data",
+              "Governance, Identity & Access Management, Training"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "CLOUD WITH TRENDING TECHNOLOGIES",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Enabled Technologies in Cloud, Role of AI in Cloud, Benefits of AI",
+              "in Cloud, Use of AI in Cloud - Web Development in Cloud,",
+              "Development in Cloud, Data Storage in Cloud, Cyber Attack in",
+              "Cloud"
+            ],
+            "topics_text": "Enabled Technologies in Cloud, Role of AI in Cloud, Benefits of AI in Cloud, Use of AI in Cloud - Web Development in Cloud, Development in Cloud, Data Storage in Cloud, Cyber Attack in Cloud",
+            "topics": [
+              "Enabled Technologies in Cloud, Role of AI in Cloud, Benefits of AI",
+              "in Cloud, Use of AI in Cloud - Web Development in Cloud,",
+              "Development in Cloud, Data Storage in Cloud, Cyber Attack in",
+              "Cloud"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create the account in Amazon Web Services Cloud with all the",
+              "necessary fields & Payment methods"
+            ],
+            "topics_text": "Create the account in Amazon Web Services Cloud with all the necessary fields & Payment methods",
+            "topics": [
+              "Create the account in Amazon Web Services Cloud with all the",
+              "necessary fields & Payment methods"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Deploy EC2 with all the necessary steps that are Required"
+            ],
+            "topics_text": "Deploy EC2 with all the necessary steps that are Required",
+            "topics": [
+              "Deploy EC2 with all the necessary steps that are Required"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create S3 (Simple Storage Service) with Storage of 8GB and",
+              "Upload One Image & Video and check it out."
+            ],
+            "topics_text": "Create S3 (Simple Storage Service) with Storage of 8GB and Upload One Image & Video and check it out.",
+            "topics": [
+              "Create S3 (Simple Storage Service) with Storage of 8GB and",
+              "Upload One Image & Video and check it out."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Add & Use all the necessary steps for Auto Scaling"
+            ],
+            "topics_text": "Add & Use all the necessary steps for Auto Scaling",
+            "topics": [
+              "Add & Use all the necessary steps for Auto Scaling"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create one Virtual Private Cloud with different types of Sub net that",
+              "can be Connected"
+            ],
+            "topics_text": "Create one Virtual Private Cloud with different types of Sub net that can be Connected",
+            "topics": [
+              "Create one Virtual Private Cloud with different types of Sub net that",
+              "can be Connected"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Deploy IAM and check out all the required credentials in it"
+            ],
+            "topics_text": "Deploy IAM and check out all the required credentials in it",
+            "topics": [
+              "Deploy IAM and check out all the required credentials in it"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create one SNS (Simple Notification Service) and check it with",
+              "your Registered Email Id"
+            ],
+            "topics_text": "Create one SNS (Simple Notification Service) and check it with your Registered Email Id",
+            "topics": [
+              "Create one SNS (Simple Notification Service) and check it with",
+              "your Registered Email Id"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Deploy one RDS (Relational DataBase Service) and enter all the",
+              "required Data in it"
+            ],
+            "topics_text": "Deploy one RDS (Relational DataBase Service) and enter all the required Data in it",
+            "topics": [
+              "Deploy one RDS (Relational DataBase Service) and enter all the",
+              "required Data in it"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Connect one Load balancer and do Coding in Programming",
+              "Languages of your Choice like Python, Java etc."
+            ],
+            "topics_text": "Connect one Load balancer and do Coding in Programming Languages of your Choice like Python, Java etc.",
+            "topics": [
+              "Connect one Load balancer and do Coding in Programming",
+              "Languages of your Choice like Python, Java etc."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create one DynamoDB for storing the Data & Compare with RDS",
+              "including it’s Use & Functionalities."
+            ],
+            "topics_text": "Create one DynamoDB for storing the Data & Compare with RDS including it’s Use & Functionalities.",
+            "topics": [
+              "Create one DynamoDB for storing the Data & Compare with RDS",
+              "including it’s Use & Functionalities."
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 “Cloud Computing” - A Hands on Approach” , Arshdeep Bahga (Author), Vijay Madisetti",
@@ -221,9 +719,7 @@
           "text": "Supplementary Resources:\n 2  “edX” – Introduction to Cloud Computing (IBM)\n 3  “Pluralsight” – Cloud Security Fundamentals\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     },
     {
       "course_code": "01CC0506",
@@ -241,7 +737,7 @@
       "expected_pdf_sha256": "364c51128febe96a35af351a7e11b97be3d1ad6c591136cd313575f8a2dbffee",
       "actual_pdf_sha256": "364c51128febe96a35af351a7e11b97be3d1ad6c591136cd313575f8a2dbffee",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "page_count": 5,
       "extracted_character_count": 13231,
       "objective_text": "1 Students will gain the ability to select appropriate server hardware, install operating systems such as Windows Server and Linux, and configure essential services using both graphical and command-line tools. They will develop skills to install, configure, and troubleshoot core network services including DNS, DHCP, web servers, and file sharing across platforms. The course also equips students to monitor server performance, manage logs, apply updates, and automate routine tasks through scripting and scheduled jobs. Emphasis is placed on securing server environments through hardening techniques, firewall configuration, and enforcement of security policies. Additionally, students will work with virtualization, manage containers using Docker, and perform basic cloud administration tasks. They will also learn to create and deploy Bash and PowerShell scripts to automate administrative activities such as user management, backups, and service monitoring.",
@@ -277,7 +773,322 @@
         "command-line interface (either Windows Command Prompt/PowerShell or Linux Bash). An",
         "introductory course in operating systems is beneficial."
       ],
-      "units": [],
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Server Deployment and Core OS Administration",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Server Hardware Overview (focus on selection, installation, and",
+              "basic troubleshooting), Server Operating System Installation:",
+              "Planning, unattended installations, post-installation tasks for",
+              "Windows Server and a major Linux distribution, Introduction to",
+              "Server Virtualization Platforms (Hyper-V, VMware ESXi, KVM):",
+              "Installation and basic VM creation/management., Command-line",
+              "and GUI Administration Tools: Mastering essential tools for server",
+              "interaction., Managing Local Users, Groups, and Permissions",
+              "(practical application on servers). File Systems Management:",
+              "Partitioning, formatting, mounting, and managing storage using OS",
+              "tools"
+            ],
+            "topics_text": "Server Hardware Overview (focus on selection, installation, and basic troubleshooting), Server Operating System Installation: Planning, unattended installations, post-installation tasks for Windows Server and a major Linux distribution, Introduction to Server Virtualization Platforms (Hyper-V, VMware ESXi, KVM): Installation and basic VM creation/management., Command-line and GUI Administration Tools: Mastering essential tools for server interaction., Managing Local Users, Groups, and Permissions (practical application on servers). File Systems Management: Partitioning, formatting, mounting, and managing storage using OS tools",
+            "topics": [
+              "Server Hardware Overview (focus on selection, installation, and",
+              "basic troubleshooting), Server Operating System Installation:",
+              "Planning, unattended installations, post-installation tasks for",
+              "Windows Server and a major Linux distribution, Introduction to",
+              "Server Virtualization Platforms (Hyper-V, VMware ESXi, KVM):",
+              "Installation and basic VM creation/management., Command-line",
+              "and GUI Administration Tools: Mastering essential tools for server",
+              "interaction., Managing Local Users, Groups, and Permissions",
+              "(practical application on servers). File Systems Management:",
+              "Partitioning, formatting, mounting, and managing storage using OS",
+              "tools"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Essential Network Services Administration",
+            "contact_hours": 7,
+            "topic_lines": [
+              "DNS Server Configuration and Management: Installing, configuring",
+              "zones, managing records, and troubleshooting DNS issues on",
+              "Windows Server and Linux (BIND), DHCP Server Configuration",
+              "and Management: Installing, configuring scopes,, and",
+              "troubleshooting DHCP issues., Web Server Administration:",
+              "Installation, basic configuration, virtual hosts, and managing",
+              "modules/extensions for Apache, Nginx, and IIS. File Sharing",
+              "Services Configuration: Setting up and securing file shares using",
+              "Samba (Linux-Windows),, NFS (Linux), and Windows Shared",
+              "Folders. Remote Access Services: Configuring SSH server on Linux",
+              "and RDP on Windows Server, securing remote connections."
+            ],
+            "topics_text": "DNS Server Configuration and Management: Installing, configuring zones, managing records, and troubleshooting DNS issues on Windows Server and Linux (BIND), DHCP Server Configuration and Management: Installing, configuring scopes,, and troubleshooting DHCP issues., Web Server Administration: Installation, basic configuration, virtual hosts, and managing modules/extensions for Apache, Nginx, and IIS. File Sharing Services Configuration: Setting up and securing file shares using Samba (Linux-Windows),, NFS (Linux), and Windows Shared Folders. Remote Access Services: Configuring SSH server on Linux and RDP on Windows Server, securing remote connections.",
+            "topics": [
+              "DNS Server Configuration and Management: Installing, configuring",
+              "zones, managing records, and troubleshooting DNS issues on",
+              "Windows Server and Linux (BIND), DHCP Server Configuration",
+              "and Management: Installing, configuring scopes,, and",
+              "troubleshooting DHCP issues., Web Server Administration:",
+              "Installation, basic configuration, virtual hosts, and managing",
+              "modules/extensions for Apache, Nginx, and IIS. File Sharing",
+              "Services Configuration: Setting up and securing file shares using",
+              "Samba (Linux-Windows),, NFS (Linux), and Windows Shared",
+              "Folders. Remote Access Services: Configuring SSH server on Linux",
+              "and RDP on Windows Server, securing remote connections."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Server Maintenance and Monitoring",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Server Updates and Patch Management: Implementing strategies for",
+              "applying OS and application updates (WSUS, package managers),",
+              "scheduling updates. Monitoring Server Performance: Using OS-",
+              "native tools (Task Manager, Performance Monitor, top, htop, sar) to",
+              "monitor CPU, memory, disk, and network. Log Management and",
+              "Monitoring: Configuring system logs, using log viewing tools, basic",
+              "log analysis for operational issues, Scheduled Tasks and",
+              "Automation: Creating and managing cron jobs (Linux) and Task",
+              "Scheduler tasks (Windows) for routine maintenance, Server Backup",
+              "and Restoration: Implementing basic backup strategies using OS",
+              "tools or simple backup software, performing test restores."
+            ],
+            "topics_text": "Server Updates and Patch Management: Implementing strategies for applying OS and application updates (WSUS, package managers), scheduling updates. Monitoring Server Performance: Using OS- native tools (Task Manager, Performance Monitor, top, htop, sar) to monitor CPU, memory, disk, and network. Log Management and Monitoring: Configuring system logs, using log viewing tools, basic log analysis for operational issues, Scheduled Tasks and Automation: Creating and managing cron jobs (Linux) and Task Scheduler tasks (Windows) for routine maintenance, Server Backup and Restoration: Implementing basic backup strategies using OS tools or simple backup software, performing test restores.",
+            "topics": [
+              "Server Updates and Patch Management: Implementing strategies for",
+              "applying OS and application updates (WSUS, package managers),",
+              "scheduling updates. Monitoring Server Performance: Using OS-",
+              "native tools (Task Manager, Performance Monitor, top, htop, sar) to",
+              "monitor CPU, memory, disk, and network. Log Management and",
+              "Monitoring: Configuring system logs, using log viewing tools, basic",
+              "log analysis for operational issues, Scheduled Tasks and",
+              "Automation: Creating and managing cron jobs (Linux) and Task",
+              "Scheduler tasks (Windows) for routine maintenance, Server Backup",
+              "and Restoration: Implementing basic backup strategies using OS",
+              "tools or simple backup software, performing test restores."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Server Security Implementation",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Server Hardening Practices: Disabling unnecessary services and",
+              "features,, securing default accounts. Configuring OS-Level",
+              "Firewalls: Implementing and managing firewall rules",
+              "(iptables/firewalld Windows Firewall) to restrict network access,",
+              "Account Security: Implementing password policies, account",
+              "lockout, and auditing login attempts, Introduction to Server Security",
+              "Scanning Tools (basic usage for vulnerability identification).,",
+              "Securing Remote Administration Interfaces. Basic Intrusion",
+              "Detection/Prevention Configuration (e.g., fail2ban on Linux)"
+            ],
+            "topics_text": "Server Hardening Practices: Disabling unnecessary services and features,, securing default accounts. Configuring OS-Level Firewalls: Implementing and managing firewall rules (iptables/firewalld Windows Firewall) to restrict network access, Account Security: Implementing password policies, account lockout, and auditing login attempts, Introduction to Server Security Scanning Tools (basic usage for vulnerability identification)., Securing Remote Administration Interfaces. Basic Intrusion Detection/Prevention Configuration (e.g., fail2ban on Linux)",
+            "topics": [
+              "Server Hardening Practices: Disabling unnecessary services and",
+              "features,, securing default accounts. Configuring OS-Level",
+              "Firewalls: Implementing and managing firewall rules",
+              "(iptables/firewalld Windows Firewall) to restrict network access,",
+              "Account Security: Implementing password policies, account",
+              "lockout, and auditing login attempts, Introduction to Server Security",
+              "Scanning Tools (basic usage for vulnerability identification).,",
+              "Securing Remote Administration Interfaces. Basic Intrusion",
+              "Detection/Prevention Configuration (e.g., fail2ban on Linux)"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Advanced Server Topics and Cloud Management",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Scripting for Server Administration: Developing practical scripts",
+              "(Bash, PowerShell) for automating common tasks (user creation,",
+              "file backups, service restarts)., Introduction to Configuration",
+              "Management Concepts (Puppet, Chef, Ansible - conceptual",
+              "overview)., Managing Servers in a Virtualized Environment:",
+              "Advanced VM configuration, snapshots, resource allocation.,",
+              "Introduction to Container Management (Docker): Building and",
+              "running basic containers. Cloud Server Administration: Deploying",
+              "and managing virtual machines in a cloud environment,,",
+              "understanding basic cloud networking and storage for servers.",
+              "Disaster Recovery Concepts for Servers."
+            ],
+            "topics_text": "Scripting for Server Administration: Developing practical scripts (Bash, PowerShell) for automating common tasks (user creation, file backups, service restarts)., Introduction to Configuration Management Concepts (Puppet, Chef, Ansible - conceptual overview)., Managing Servers in a Virtualized Environment: Advanced VM configuration, snapshots, resource allocation., Introduction to Container Management (Docker): Building and running basic containers. Cloud Server Administration: Deploying and managing virtual machines in a cloud environment,, understanding basic cloud networking and storage for servers. Disaster Recovery Concepts for Servers.",
+            "topics": [
+              "Scripting for Server Administration: Developing practical scripts",
+              "(Bash, PowerShell) for automating common tasks (user creation,",
+              "file backups, service restarts)., Introduction to Configuration",
+              "Management Concepts (Puppet, Chef, Ansible - conceptual",
+              "overview)., Managing Servers in a Virtualized Environment:",
+              "Advanced VM configuration, snapshots, resource allocation.,",
+              "Introduction to Container Management (Docker): Building and",
+              "running basic containers. Cloud Server Administration: Deploying",
+              "and managing virtual machines in a cloud environment,,",
+              "understanding basic cloud networking and storage for servers.",
+              "Disaster Recovery Concepts for Servers."
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Automated OS Installation: Performing an unattended installation of",
+              "a Windows Server or Linux distribution."
+            ],
+            "topics_text": "Automated OS Installation: Performing an unattended installation of a Windows Server or Linux distribution.",
+            "topics": [
+              "Automated OS Installation: Performing an unattended installation of",
+              "a Windows Server or Linux distribution."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Advanced Disk Management: Configuring LVM in Linux or",
+              "creating dynamic disks and RAID volumes in Windows Server."
+            ],
+            "topics_text": "Advanced Disk Management: Configuring LVM in Linux or creating dynamic disks and RAID volumes in Windows Server.",
+            "topics": [
+              "Advanced Disk Management: Configuring LVM in Linux or",
+              "creating dynamic disks and RAID volumes in Windows Server."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Scripting for User Management: Writing scripts to automate the",
+              "creation, modification, or deletion of multiple user accounts."
+            ],
+            "topics_text": "Scripting for User Management: Writing scripts to automate the creation, modification, or deletion of multiple user accounts.",
+            "topics": [
+              "Scripting for User Management: Writing scripts to automate the",
+              "creation, modification, or deletion of multiple user accounts."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Configuring and Securing SSH and RDP: Setting up SSH key-based",
+              "authentication on Linux and securing RDP access on Windows",
+              "Server."
+            ],
+            "topics_text": "Configuring and Securing SSH and RDP: Setting up SSH key-based authentication on Linux and securing RDP access on Windows Server.",
+            "topics": [
+              "Configuring and Securing SSH and RDP: Setting up SSH key-based",
+              "authentication on Linux and securing RDP access on Windows",
+              "Server."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Advanced Web Server Configuration: Configuring virtual hosts,",
+              "SSL certificates (self-signed), and basic access control for a web",
+              "server."
+            ],
+            "topics_text": "Advanced Web Server Configuration: Configuring virtual hosts, SSL certificates (self-signed), and basic access control for a web server.",
+            "topics": [
+              "Advanced Web Server Configuration: Configuring virtual hosts,",
+              "SSL certificates (self-signed), and basic access control for a web",
+              "server."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Implementing and Testing Server Backups and Restores:",
+              "Configuring a backup job and performing a full or partial restoration",
+              "of server data."
+            ],
+            "topics_text": "Implementing and Testing Server Backups and Restores: Configuring a backup job and performing a full or partial restoration of server data.",
+            "topics": [
+              "Implementing and Testing Server Backups and Restores:",
+              "Configuring a backup job and performing a full or partial restoration",
+              "of server data."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Configuring Advanced Firewall Rules: Implementing more complex",
+              "firewall rules based on ports, protocols, and source/destination IP",
+              "addresses."
+            ],
+            "topics_text": "Configuring Advanced Firewall Rules: Implementing more complex firewall rules based on ports, protocols, and source/destination IP addresses.",
+            "topics": [
+              "Configuring Advanced Firewall Rules: Implementing more complex",
+              "firewall rules based on ports, protocols, and source/destination IP",
+              "addresses."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Setting up Centralized Logging (Basic): Configuring multiple",
+              "servers to send logs to a central log collection point and viewing",
+              "them."
+            ],
+            "topics_text": "Setting up Centralized Logging (Basic): Configuring multiple servers to send logs to a central log collection point and viewing them.",
+            "topics": [
+              "Setting up Centralized Logging (Basic): Configuring multiple",
+              "servers to send logs to a central log collection point and viewing",
+              "them."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Monitoring Server Performance and Setting Alerts: Using",
+              "monitoring tools to track key performance indicators and configure",
+              "alerts for thresholds."
+            ],
+            "topics_text": "Monitoring Server Performance and Setting Alerts: Using monitoring tools to track key performance indicators and configure alerts for thresholds.",
+            "topics": [
+              "Monitoring Server Performance and Setting Alerts: Using",
+              "monitoring tools to track key performance indicators and configure",
+              "alerts for thresholds."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Deploying and Managing a Basic Server in the Cloud: Launching a",
+              "virtual machine instance in a cloud environment (e.g., AWS EC2,",
+              "Azure VM) and performing basic administration tasks."
+            ],
+            "topics_text": "Deploying and Managing a Basic Server in the Cloud: Launching a virtual machine instance in a cloud environment (e.g., AWS EC2, Azure VM) and performing basic administration tasks.",
+            "topics": [
+              "Deploying and Managing a Basic Server in the Cloud: Launching a",
+              "virtual machine instance in a cloud environment (e.g., AWS EC2,",
+              "Azure VM) and performing basic administration tasks."
+            ]
+          }
+        ]
+      },
       "references": {
         "textbooks": [
           "1 \"Windows Server 2019 & PowerShell All-in-One For Dummies, ara Perrott & Jeffrey R.",
@@ -342,14 +1153,12 @@
           "text": "Supplementary Resources:\n 1  “Microsoft Learn – Windows Server Documentation\" https://learn.microsoft.com/en-\n     us/windows-server/\n 2  “Red Hat or Ubuntu Server Guides (Linux Server Administration)”\n     https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/\n 3  “Docker Documentation” https://docs.docker.com/\n 4  CIS Benchmarks (Server Security) - https://www.cisecurity.org\n 5  NIST Security Guidelines\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
-      ]
+      "warnings": []
     }
   ],
   "build_summary": {
-    "structured": 0,
-    "manual_review": 3,
+    "structured": 3,
+    "manual_review": 0,
     "ocr_review": 0,
     "hash_mismatch": 0,
     "missing_pdf": 0,
