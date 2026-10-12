@@ -1,0 +1,2119 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 46,
+    "course_name": "Diploma Chemical Engineering",
+    "output_slug": "Chemical_Engineering"
+  },
+  "semester": 2,
+  "subject_count": 7,
+  "subjects": [
+    {
+      "subject_id": "46000938210301",
+      "subject_name": "ELECTRICAL PUMPS AND VALVES OPERATION SKILL",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 2,
+      "subject_code": "09CH2103",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2103.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2103 - ELECTRICAL PUMPS AND VALVES OPERATION SKILL (.pdf",
+      "expected_pdf_sha256": "d5a7593ae3ab5c82eb5bcb690129cb422150069a962512a254540a1b4df2ff48",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ELECTRICAL PUMPS AND VALVES OPERATION SKILL",
+        "course_code": "09CH2103",
+        "semester_label": "2",
+        "credits": 2,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "To understand the basic operating technique and working of Industrial pumps, valves, Flow measurement, and Temperature ± Pressure measurement device used in chemical process industries, also understand application of measuring instruments of electrical parameters, construction & operation of electrical motors used for pump and valve operation. Also understand electrical control strategy for value control as well as various electrical transducers used for flow, pressure and temperature measurement"
+      ],
+      "course_outcomes": [
+        "Different type of Industrial Pumps and Valves.",
+        "Basic electrical parameters measuring instruments",
+        "Different type of electrical motor used for pump and valve operation",
+        "Different Types of Flow Measurement Devices and electrical transducer used for it.",
+        "Different Types of Temperature measurement Devices and electrical transducer used for it.",
+        "Different Types of Pressure measurement Devices and electrical transducer used for it"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Pumps",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Classification of pumps and basic technology related to operation,",
+              "operating practice of reciprocating pumps, Positive displacement",
+              "pump, centrifugal pump, rotary pumps, Measurement of various",
+              "electrical quantities and application of various electrical measuring",
+              "instruments. Construction and operation of electrical motor used for",
+              "all above pump application."
+            ],
+            "topics_text": "Classification of pumps and basic technology related to operation, operating practice of reciprocating pumps, Positive displacement pump, centrifugal pump, rotary pumps, Measurement of various electrical quantities and application of various electrical measuring instruments. Construction and operation of electrical motor used for all above pump application.",
+            "topics": [
+              "Classification of pumps and basic technology related to operation,",
+              "operating practice of reciprocating pumps, Positive displacement",
+              "pump, centrifugal pump, rotary pumps, Measurement of various",
+              "electrical quantities and application of various electrical measuring",
+              "instruments. Construction and operation of electrical motor used for",
+              "all above pump application."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Valves",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Classification of valves and basic technology related to operation",
+              "and working, of Isolation valve, regulating valve, back flow",
+              "prevention valve, pressure relief valve, gate valve, globe valve, ball",
+              "valve and diapharm valve Working, construction and operation of",
+              "electrical motor and control system used for various valve."
+            ],
+            "topics_text": "Classification of valves and basic technology related to operation and working, of Isolation valve, regulating valve, back flow prevention valve, pressure relief valve, gate valve, globe valve, ball valve and diapharm valve Working, construction and operation of electrical motor and control system used for various valve.",
+            "topics": [
+              "Classification of valves and basic technology related to operation",
+              "and working, of Isolation valve, regulating valve, back flow",
+              "prevention valve, pressure relief valve, gate valve, globe valve, ball",
+              "valve and diapharm valve Working, construction and operation of",
+              "electrical motor and control system used for various valve."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Flow measurement",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Classification of flow measurement devices, basic technology",
+              "related to measurement. Operating practice of venturi meter, orifice",
+              "meter, rotameter, pitot-tube Working, construction and operation of",
+              "electrical transducer used for flow measurement devices"
+            ],
+            "topics_text": "Classification of flow measurement devices, basic technology related to measurement. Operating practice of venturi meter, orifice meter, rotameter, pitot-tube Working, construction and operation of electrical transducer used for flow measurement devices",
+            "topics": [
+              "Classification of flow measurement devices, basic technology",
+              "related to measurement. Operating practice of venturi meter, orifice",
+              "meter, rotameter, pitot-tube Working, construction and operation of",
+              "electrical transducer used for flow measurement devices"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Temperature measurement devices",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Working and operating practice of Thermometer, Thermocouple,",
+              "Thermistors, Thermowell and Pyrometer. Working, construction",
+              "and operation of electrical transducer used for temperature",
+              "measurement devices"
+            ],
+            "topics_text": "Working and operating practice of Thermometer, Thermocouple, Thermistors, Thermowell and Pyrometer. Working, construction and operation of electrical transducer used for temperature measurement devices",
+            "topics": [
+              "Working and operating practice of Thermometer, Thermocouple,",
+              "Thermistors, Thermowell and Pyrometer. Working, construction",
+              "and operation of electrical transducer used for temperature",
+              "measurement devices"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Pressure measurement devices",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Working and operating practice of U-tube manometer, Inclined tube",
+              "Manometer, Pressure gauge. Working, construction and operation of",
+              "electrical transducer used for pressure measurement devices",
+              "Total Hours 56"
+            ],
+            "topics_text": "Working and operating practice of U-tube manometer, Inclined tube Manometer, Pressure gauge. Working, construction and operation of electrical transducer used for pressure measurement devices Total Hours 56",
+            "topics": [
+              "Working and operating practice of U-tube manometer, Inclined tube",
+              "Manometer, Pressure gauge. Working, construction and operation of",
+              "electrical transducer used for pressure measurement devices",
+              "Total Hours 56"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment - 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of reciprocating pumps,",
+              "single acting piston pump, double acting simplex pump"
+            ],
+            "topics_text": "To study, working and operating practice of reciprocating pumps, single acting piston pump, double acting simplex pump",
+            "topics": [
+              "To study, working and operating practice of reciprocating pumps,",
+              "single acting piston pump, double acting simplex pump"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment - 2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study and measurement of various electrical quantities by using",
+              "electrical measuring instruments."
+            ],
+            "topics_text": "To study and measurement of various electrical quantities by using electrical measuring instruments.",
+            "topics": [
+              "To study and measurement of various electrical quantities by using",
+              "electrical measuring instruments."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment - 3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study construction, working and operation of electrical motor",
+              "used for reciprocating pumps, single acting piston pump, double",
+              "acting simplex pump."
+            ],
+            "topics_text": "To study construction, working and operation of electrical motor used for reciprocating pumps, single acting piston pump, double acting simplex pump.",
+            "topics": [
+              "To study construction, working and operation of electrical motor",
+              "used for reciprocating pumps, single acting piston pump, double",
+              "acting simplex pump."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment - 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of diaphragm pump and centrifugal",
+              "pump."
+            ],
+            "topics_text": "Working and operating practice of diaphragm pump and centrifugal pump.",
+            "topics": [
+              "Working and operating practice of diaphragm pump and centrifugal",
+              "pump."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment - 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Working, construction and operation of electrical motor used for",
+              "diaphragm pump and centrifugal pump"
+            ],
+            "topics_text": "Working, construction and operation of electrical motor used for diaphragm pump and centrifugal pump",
+            "topics": [
+              "Working, construction and operation of electrical motor used for",
+              "diaphragm pump and centrifugal pump"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment - 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of isolation valve, regulating valve,",
+              "back flow prevention valve and pressure relief valve"
+            ],
+            "topics_text": "Working and operating practice of isolation valve, regulating valve, back flow prevention valve and pressure relief valve",
+            "topics": [
+              "Working and operating practice of isolation valve, regulating valve,",
+              "back flow prevention valve and pressure relief valve"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment - 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working, construction and operation of electrical motor and control",
+              "system used for isolation valve, regulating valve, back flow",
+              "prevention valve and pressure relief valve."
+            ],
+            "topics_text": "Working, construction and operation of electrical motor and control system used for isolation valve, regulating valve, back flow prevention valve and pressure relief valve.",
+            "topics": [
+              "Working, construction and operation of electrical motor and control",
+              "system used for isolation valve, regulating valve, back flow",
+              "prevention valve and pressure relief valve."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment - 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of gate valve and globe valve"
+            ],
+            "topics_text": "Working and operating practice of gate valve and globe valve",
+            "topics": [
+              "Working and operating practice of gate valve and globe valve"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment - 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working, construction and operation of electrical motor and control",
+              "system used for gate valve and globe valve"
+            ],
+            "topics_text": "Working, construction and operation of electrical motor and control system used for gate valve and globe valve",
+            "topics": [
+              "Working, construction and operation of electrical motor and control",
+              "system used for gate valve and globe valve"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment - 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of ball valve and diaphragm valve."
+            ],
+            "topics_text": "Working and operating practice of ball valve and diaphragm valve.",
+            "topics": [
+              "Working and operating practice of ball valve and diaphragm valve."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment - 11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working, construction and operation of electrical motor and control",
+              "system used for ball valve and diaphragm valve."
+            ],
+            "topics_text": "Working, construction and operation of electrical motor and control system used for ball valve and diaphragm valve.",
+            "topics": [
+              "Working, construction and operation of electrical motor and control",
+              "system used for ball valve and diaphragm valve."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment - 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of venturi meter"
+            ],
+            "topics_text": "Working and operating practice of venturi meter",
+            "topics": [
+              "Working and operating practice of venturi meter"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment - 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of orifice Meter"
+            ],
+            "topics_text": "Working and operating practice of orifice Meter",
+            "topics": [
+              "Working and operating practice of orifice Meter"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment - 14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of rotameter"
+            ],
+            "topics_text": "Working and operating practice of rotameter",
+            "topics": [
+              "Working and operating practice of rotameter"
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Experiment - 15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of pitot-tube."
+            ],
+            "topics_text": "Working and operating practice of pitot-tube.",
+            "topics": [
+              "Working and operating practice of pitot-tube."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Experiment - 16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working, construction and operation of electrical transducer used",
+              "for flow measurement devices"
+            ],
+            "topics_text": "Working, construction and operation of electrical transducer used for flow measurement devices",
+            "topics": [
+              "Working, construction and operation of electrical transducer used",
+              "for flow measurement devices"
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Experiment - 17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of U-tube manometer"
+            ],
+            "topics_text": "Working and operating practice of U-tube manometer",
+            "topics": [
+              "Working and operating practice of U-tube manometer"
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Experiment - 18",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Working and operating practice of inclined tube manometer"
+            ],
+            "topics_text": "Working and operating practice of inclined tube manometer",
+            "topics": [
+              "Working and operating practice of inclined tube manometer"
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Experiment - 19",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of pressure gauges."
+            ],
+            "topics_text": "Working and operating practice of pressure gauges.",
+            "topics": [
+              "Working and operating practice of pressure gauges."
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Experiment - 20",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of thermowell"
+            ],
+            "topics_text": "Working and operating practice of thermowell",
+            "topics": [
+              "Working and operating practice of thermowell"
+            ]
+          },
+          {
+            "unit_number": 21,
+            "title": "Experiment - 21",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of thermister"
+            ],
+            "topics_text": "Working and operating practice of thermister",
+            "topics": [
+              "Working and operating practice of thermister"
+            ]
+          },
+          {
+            "unit_number": 22,
+            "title": "Experiment - 22",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and operating practice of temperature pyrometer"
+            ],
+            "topics_text": "Working and operating practice of temperature pyrometer",
+            "topics": [
+              "Working and operating practice of temperature pyrometer"
+            ]
+          },
+          {
+            "unit_number": 23,
+            "title": "Experiment - 23",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working, construction and operation of electrical transducer used",
+              "for pressure and temperature measurement devices",
+              "Total Hours 56"
+            ],
+            "topics_text": "Working, construction and operation of electrical transducer used for pressure and temperature measurement devices Total Hours 56",
+            "topics": [
+              "Working, construction and operation of electrical transducer used",
+              "for pressure and temperature measurement devices",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Mass Transfer Operations , Mass Transfer Operations , by R. E. Treybal, McGraw Hill, 1981",
+          "Unit Operation-1, Unit Operation-1, K. A. Gavhane, Nirali Publication, 2001",
+          "Text Book of Electrical Technology Vol-I, II, III and IV, Text Book of Electrical Technology Vol-I, II, III and IV, B. L. Theraja, S. Chand &Co. Ltd., 2014",
+          "Basic Electrical Engineering, Basic Electrical Engineering, V.N. Mittal, ata-McGraw-Hill, 2006"
+        ],
+        "textbooks": [
+          "Unit Operation of Chemical Engineering , W. L. McCabe, J. C. Smith, P. Harriott, McGraw-Hill, 2018 References:",
+          "Mass Transfer Operations , Mass Transfer Operations , by R. E. Treybal, McGraw Hill, 1981",
+          "Unit Operation-1, Unit Operation-1, K. A. Gavhane, Nirali Publication, 2001",
+          "Text Book of Electrical Technology Vol-I, II, III and IV, Text Book of Electrical Technology Vol-I, II, III and IV, B. L. Theraja, S. Chand &Co. Ltd., 2014",
+          "Basic Electrical Engineering, Basic Electrical Engineering, V.N. Mittal, ata-McGraw-Hill, 2006"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://onlinecourses.nptel.ac.in/noc24_me69/preview"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 10840,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         2\nCOURSE TITLE    ELECTRICAL PUMPS AND VALVES OPERATION SKILL\nCOURSE CODE     09CH2103\nCOURSE CREDITS  2\n\nObjective:\n 1  To understand the basic operating technique and working of Industrial pumps, valves, Flow\n    measurement, and Temperature ± Pressure measurement device used in chemical process\n     industries, also understand application of measuring instruments of electrical parameters,\n     construction & operation of electrical motors used for pump and valve operation. Also\n     understand electrical control strategy for value control as well as various electrical\n     transducers used for flow, pressure and temperature measurement\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Different type of Industrial Pumps and Valves.\n 2  Basic electrical parameters measuring instruments\n 3  Different type of electrical motor used for pump and valve operation\n 4  Different Types of Flow Measurement Devices and electrical transducer used for it.\n 5  Different Types of Temperature measurement Devices and electrical transducer used for it.\n 6  Different Types of Pressure measurement Devices and electrical transducer used for it\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            4         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Pumps                                                  12\n               Classification of pumps and basic technology related to operation,\n              operating practice of reciprocating pumps, Positive displacement\n            pump, centrifugal pump, rotary pumps, Measurement of various\n                electrical quantities and application of various electrical measuring\n               instruments. Construction and operation of electrical motor used for\n                  all above pump application.\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Valves                                                  12\n               Classification of valves and basic technology related to operation\n            and working, of Isolation valve, regulating valve, back flow\n              prevention valve, pressure relief valve, gate valve, globe valve, ball\n              valve and diapharm valve Working, construction and operation of\n                electrical motor and control system used for various valve.\n     3      Flow measurement                                       12\n               Classification of flow measurement devices, basic technology\n               related to measurement. Operating practice of venturi meter, orifice\n              meter, rotameter, pitot-tube Working, construction and operation of\n                electrical transducer used for flow measurement devices\n     4      Temperature measurement devices                          10\n            Working and operating practice of Thermometer, Thermocouple,\n              Thermistors, Thermowell and Pyrometer. Working, construction\n            and operation of electrical transducer used for temperature\n            measurement devices\n     5      Pressure measurement devices                              10\n            Working and operating practice of U-tube manometer, Inclined tube\n            Manometer, Pressure gauge. Working, construction and operation of\n                electrical transducer used for pressure measurement devices\n                               Total Hours                       56\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment - 1                                           4\n           To study, working and operating practice of reciprocating pumps,\n               single acting piston pump, double acting simplex pump\n     2      Experiment - 2                                           4\n           To study and measurement of various electrical quantities by using\n                electrical measuring instruments.\n     3      Experiment - 3                                           4\n           To study construction, working and operation of electrical motor\n             used for reciprocating pumps, single acting piston pump, double\n               acting simplex pump.\n     4      Experiment - 4                                           2\n            Working and operating practice of diaphragm pump and centrifugal\n            pump.\n     5      Experiment - 5                                           4\n             Working, construction and operation of electrical motor used for\n             diaphragm pump and centrifugal pump\n     6      Experiment - 6                                           2\n            Working and operating practice of isolation valve, regulating valve,\n             back flow prevention valve and pressure relief valve\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     7      Experiment - 7                                           2\n             Working, construction and operation of electrical motor and control\n             system used for isolation valve, regulating valve, back flow\n              prevention valve and pressure relief valve.\n     8      Experiment - 8                                           2\n            Working and operating practice of gate valve and globe valve\n     9      Experiment - 9                                           2\n             Working, construction and operation of electrical motor and control\n             system used for gate valve and globe valve\n     10     Experiment - 10                                          2\n            Working and operating practice of ball valve and diaphragm valve.\n     11     Experiment - 11                                          2\n             Working, construction and operation of electrical motor and control\n             system used for ball valve and diaphragm valve.\n     12     Experiment - 12                                          2\n            Working and operating practice of venturi meter\n     13     Experiment - 13                                          2\n            Working and operating practice of orifice Meter\n     14     Experiment - 14                                          2\n            Working and operating practice of rotameter\n     15     Experiment - 15                                          2\n            Working and operating practice of pitot-tube.\n     16     Experiment - 16                                          2\n             Working, construction and operation of electrical transducer used\n               for flow measurement devices\n     17     Experiment - 17                                          2\n            Working and operating practice of U-tube manometer\n     18     Experiment - 18                                          4\n            Working and operating practice of inclined tube manometer\n     19     Experiment - 19                                          2\n            Working and operating practice of pressure gauges.\n     20     Experiment - 20                                          2\n            Working and operating practice of thermowell\n     21     Experiment - 21                                          2\n            Working and operating practice of thermister\n     22     Experiment - 22                                          2\n            Working and operating practice of temperature pyrometer\n     23     Experiment - 23                                          2\n             Working, construction and operation of electrical transducer used\n               for pressure and temperature measurement devices\n                               Total Hours                       56\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Textbook :\n 1  Unit Operation of Chemical Engineering , W. L. McCabe, J. C. Smith, P. Harriott,\n    McGraw-Hill, 2018\n\nReferences:\n 1  Mass Transfer Operations , Mass Transfer Operations , by R. E. Treybal, McGraw Hill,\n    1981\n 2  Unit Operation-1, Unit Operation-1, K. A. Gavhane, Nirali Publication, 2001\n 3  Text Book of Electrical Technology Vol-I, II, III and IV, Text Book of Electrical\n    Technology Vol-I, II, III and IV, B. L. Theraja, S. Chand &Co. Ltd., 2014\n 4  Basic Electrical Engineering, Basic Electrical Engineering, V.N. Mittal, ata-McGraw-Hill,\n    2006\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         10.00         10.00\n\nInstructional Method:\n 1  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory.\n 2  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nSupplementary Resources:\n 1  https://onlinecourses.nptel.ac.in/noc24_me69/preview\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "d5a7593ae3ab5c82eb5bcb690129cb422150069a962512a254540a1b4df2ff48"
+    },
+    {
+      "subject_id": "46009135110101",
+      "subject_name": "ENGINEERING DRAWING",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 2,
+      "subject_code": "09ME1101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME1101.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09ME1101 - ENGINEERING DRAWING (.pdf",
+      "expected_pdf_sha256": "67759b337778c8ca641d082d560efa0c053a45c200639b423ad5778bec6f8a09",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENGINEERING DRAWING",
+        "course_code": "09ME1101",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "Engineering Drawing is language of Engineer through which they can communicate with other person and transfer their ideas. Engineers are able to read and understand the drawing and able to use of drawing instruments. The curriculum aim is to develop the skill to draw and read several drawing, curves and projections. Main goal of this subject is to develop thoughts & explaining concepts. Developing of diagram order & practice of drawing apparatus well."
+      ],
+      "course_outcomes": [
+        "Construct basic and intermediate geometry.",
+        "To expand their technical communication skill.",
+        "Interpret engineering drawings using fundamental technical mathematics.",
+        "To recognize and know the resolutions and the methods of engineering drawing.",
+        "To advance their visualization skills so that they can apply these skills in emerging new products.",
+        "Understand the theory of projection."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25 MR. NAVNITKUMAR JAGJIVANBHAI PATEL DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Engineering Curves",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Overview to Engineering Graphics and Introduction of engineering",
+              "curves, Classification & application of Engineering Curves,",
+              "Construction of Conics-Construction of Ellipse by arc of circle",
+              "method, Concentric Circle Method, Rectangle Method, Oblong",
+              "Method, PARABOLA-Rectangle Method,Method of Tangents (",
+              "Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix",
+              "± focus Method for Ellipse, Parabola and Hyperbola with tangent",
+              "and normal, Cycloidal Curves- Cycloid with tangent and normal,",
+              "Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes",
+              "& Spirals along with normal and tangent"
+            ],
+            "topics_text": "Overview to Engineering Graphics and Introduction of engineering curves, Classification & application of Engineering Curves, Construction of Conics-Construction of Ellipse by arc of circle method, Concentric Circle Method, Rectangle Method, Oblong Method, PARABOLA-Rectangle Method,Method of Tangents ( Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix ± focus Method for Ellipse, Parabola and Hyperbola with tangent and normal, Cycloidal Curves- Cycloid with tangent and normal, Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes & Spirals along with normal and tangent",
+            "topics": [
+              "Overview to Engineering Graphics and Introduction of engineering",
+              "curves, Classification & application of Engineering Curves,",
+              "Construction of Conics-Construction of Ellipse by arc of circle",
+              "method, Concentric Circle Method, Rectangle Method, Oblong",
+              "Method, PARABOLA-Rectangle Method,Method of Tangents (",
+              "Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix",
+              "± focus Method for Ellipse, Parabola and Hyperbola with tangent",
+              "and normal, Cycloidal Curves- Cycloid with tangent and normal,",
+              "Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes",
+              "& Spirals along with normal and tangent"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Projection of Points and Lines",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to principal planes of projections & Projections of the",
+              "points located in same quadrant and different quadrants, Projections",
+              "of line with its inclination to one reference plane, Projections of line",
+              "with its inclination to two reference planes, Problems of line",
+              "inclined to two reference planes, True length and inclination with",
+              "the reference planes, True length and inclination with the reference",
+              "planes - Problems, True length and inclination with the reference",
+              "planes - Problems"
+            ],
+            "topics_text": "Introduction to principal planes of projections & Projections of the points located in same quadrant and different quadrants, Projections of line with its inclination to one reference plane, Projections of line with its inclination to two reference planes, Problems of line inclined to two reference planes, True length and inclination with the reference planes, True length and inclination with the reference planes - Problems, True length and inclination with the reference planes - Problems",
+            "topics": [
+              "Introduction to principal planes of projections & Projections of the",
+              "points located in same quadrant and different quadrants, Projections",
+              "of line with its inclination to one reference plane, Projections of line",
+              "with its inclination to two reference planes, Problems of line",
+              "inclined to two reference planes, True length and inclination with",
+              "the reference planes, True length and inclination with the reference",
+              "planes - Problems, True length and inclination with the reference",
+              "planes - Problems"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Projection of planes",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction of different types of plane and overview of projection",
+              "of plane, Projections of planes (polygons, circle and ellipse) with its",
+              "inclination to one reference plane, Problems of projection of planes",
+              "inclined to one reference plane, Projections of planes (polygons,",
+              "circle and ellipse) with its inclination to one reference plane,",
+              "Problems, Concept of auxiliary plane method for projections of the",
+              "plane, Problems"
+            ],
+            "topics_text": "Introduction of different types of plane and overview of projection of plane, Projections of planes (polygons, circle and ellipse) with its inclination to one reference plane, Problems of projection of planes inclined to one reference plane, Projections of planes (polygons, circle and ellipse) with its inclination to one reference plane, Problems, Concept of auxiliary plane method for projections of the plane, Problems",
+            "topics": [
+              "Introduction of different types of plane and overview of projection",
+              "of plane, Projections of planes (polygons, circle and ellipse) with its",
+              "inclination to one reference plane, Problems of projection of planes",
+              "inclined to one reference plane, Projections of planes (polygons,",
+              "circle and ellipse) with its inclination to one reference plane,",
+              "Problems, Concept of auxiliary plane method for projections of the",
+              "plane, Problems"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Orthographic Projections",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Fundamental of projection with classification, Principal planes of",
+              "projection,, Projections from the pictorial view of the object on the",
+              "principal planes for view from front, top and sides using first angle",
+              "projection method and third angle projection method, Problems of",
+              "orthographic projections, Problems of orthographic projections, Full",
+              "sectional view., Problems of sectional view"
+            ],
+            "topics_text": "Fundamental of projection with classification, Principal planes of projection,, Projections from the pictorial view of the object on the principal planes for view from front, top and sides using first angle projection method and third angle projection method, Problems of orthographic projections, Problems of orthographic projections, Full sectional view., Problems of sectional view",
+            "topics": [
+              "Fundamental of projection with classification, Principal planes of",
+              "projection,, Projections from the pictorial view of the object on the",
+              "principal planes for view from front, top and sides using first angle",
+              "projection method and third angle projection method, Problems of",
+              "orthographic projections, Problems of orthographic projections, Full",
+              "sectional view., Problems of sectional view"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Overview to Engineering Graphics",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Drawing instruments and accessories, Use drawing instruments and",
+              "materials effectively, Follow and apply standard practice as per",
+              "B.I.S. for planning and layout, choose appropriate scale factor for",
+              "the drawing as per given situation, Write annotations on a drawing",
+              "where ever necessary. Choose appropriate line and dimensioning",
+              "style for a given geometrical entity, Develop the skill to draw",
+              "polygons, circles and lines with different geometric situations. Use",
+              "of plane scales and R. F."
+            ],
+            "topics_text": "Drawing instruments and accessories, Use drawing instruments and materials effectively, Follow and apply standard practice as per B.I.S. for planning and layout, choose appropriate scale factor for the drawing as per given situation, Write annotations on a drawing where ever necessary. Choose appropriate line and dimensioning style for a given geometrical entity, Develop the skill to draw polygons, circles and lines with different geometric situations. Use of plane scales and R. F.",
+            "topics": [
+              "Drawing instruments and accessories, Use drawing instruments and",
+              "materials effectively, Follow and apply standard practice as per",
+              "B.I.S. for planning and layout, choose appropriate scale factor for",
+              "the drawing as per given situation, Write annotations on a drawing",
+              "where ever necessary. Choose appropriate line and dimensioning",
+              "style for a given geometrical entity, Develop the skill to draw",
+              "polygons, circles and lines with different geometric situations. Use",
+              "of plane scales and R. F."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Isometric Projections and Isometric View or Drawing",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Isometric Scale, Conversion of orthographic views into isometric",
+              "projection, isometric view or drawing",
+              "Total Hours 28"
+            ],
+            "topics_text": "Isometric Scale, Conversion of orthographic views into isometric projection, isometric view or drawing Total Hours 28",
+            "topics": [
+              "Isometric Scale, Conversion of orthographic views into isometric",
+              "projection, isometric view or drawing",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practice Sheet",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Use of Drawing Instruments, Practice of drawing instruments,",
+              "Planning and layout as per IS., Scaling method. Draw Following: a.",
+              "Different Types of line. b. Draw equilateral triangle and square c.",
+              "Types of dimensioning. d. Alphabets and numerical (Vertical &",
+              "inclined as Per IS). e. Draw Polygon using universal method f.",
+              "Dimensioning methods. g. Draw Title Block using stencil. h. Draw",
+              "plain scale and diagonal scale",
+              "2 Engineering Curves[L] 8"
+            ],
+            "topics_text": "Use of Drawing Instruments, Practice of drawing instruments, Planning and layout as per IS., Scaling method. Draw Following: a. Different Types of line. b. Draw equilateral triangle and square c. Types of dimensioning. d. Alphabets and numerical (Vertical & inclined as Per IS). e. Draw Polygon using universal method f. Dimensioning methods. g. Draw Title Block using stencil. h. Draw plain scale and diagonal scale 2 Engineering Curves[L] 8",
+            "topics": [
+              "Use of Drawing Instruments, Practice of drawing instruments,",
+              "Planning and layout as per IS., Scaling method. Draw Following: a.",
+              "Different Types of line. b. Draw equilateral triangle and square c.",
+              "Types of dimensioning. d. Alphabets and numerical (Vertical &",
+              "inclined as Per IS). e. Draw Polygon using universal method f.",
+              "Dimensioning methods. g. Draw Title Block using stencil. h. Draw",
+              "plain scale and diagonal scale",
+              "2 Engineering Curves[L] 8"
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "Problems of Conical Curves, 2 Problem of Cycloid, 3 Problem of",
+            "contact_hours": null,
+            "topic_lines": [
+              "Involute, 4 Problem of spiral.",
+              "3 Projections of Points & line[L] 10",
+              "To draw a projection of points for 10 different conditions. To draw",
+              "projections of lines with different conditions. (4 Problems)",
+              "4 Projections of Planes[L] 10",
+              "To draw projections of different plane with different conditions(4",
+              "Problems)",
+              "5 Orthographic Projections[L] 16",
+              "To draw orthographic projections of different objects (2 Problems)",
+              "6 Isometric Projections[L] 6",
+              "To draw isometric projections for given orthographic views. (2",
+              "Problems)",
+              "Total Hours 56"
+            ],
+            "topics_text": "Involute, 4 Problem of spiral. 3 Projections of Points & line[L] 10 To draw a projection of points for 10 different conditions. To draw projections of lines with different conditions. (4 Problems) 4 Projections of Planes[L] 10 To draw projections of different plane with different conditions(4 Problems) 5 Orthographic Projections[L] 16 To draw orthographic projections of different objects (2 Problems) 6 Isometric Projections[L] 6 To draw isometric projections for given orthographic views. (2 Problems) Total Hours 56",
+            "topics": [
+              "Involute, 4 Problem of spiral.",
+              "3 Projections of Points & line[L] 10",
+              "To draw a projection of points for 10 different conditions. To draw",
+              "projections of lines with different conditions. (4 Problems)",
+              "4 Projections of Planes[L] 10",
+              "To draw projections of different plane with different conditions(4",
+              "Problems)",
+              "5 Orthographic Projections[L] 16",
+              "To draw orthographic projections of different objects (2 Problems)",
+              "6 Isometric Projections[L] 6",
+              "To draw isometric projections for given orthographic views. (2",
+              "Problems)",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Engineering Graphics, Engineering Graphics, Ramdevsinh Jhala, Mc Graw Hill Education, 2018",
+          "Engineering Graphics, Engineering Graphics, P. J. Shah, S. Chand Publishing, 2008"
+        ],
+        "textbooks": [
+          "Basic Engineering Drawing & Graphics, P. J. Shah, Atul Prakashan, 2022 References:",
+          "Engineering Graphics, Engineering Graphics, Ramdevsinh Jhala, Mc Graw Hill Education, 2018",
+          "Engineering Graphics, Engineering Graphics, P. J. Shah, S. Chand Publishing, 2008"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://nptel.ac.in/courses/112/103/112103019/"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9454,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         2\nCOURSE TITLE    ENGINEERING DRAWING\nCOURSE CODE     09ME1101\nCOURSE CREDITS  4\n\nObjective:\n 1  Engineering Drawing is language of Engineer through which they can communicate with\n     other person and transfer their ideas. Engineers are able to read and understand the drawing\n    and able to use of drawing instruments. The curriculum aim is to develop the skill to draw\n    and read several drawing, curves and projections. Main goal of this subject is to develop\n     thoughts & explaining concepts. Developing of diagram order & practice of drawing\n     apparatus well.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Construct basic and intermediate geometry.\n 2  To expand their technical communication skill.\n 3  Interpret engineering drawings using fundamental technical mathematics.\n 4  To recognize and know the resolutions and the methods of engineering drawing.\n 5  To advance their visualization skills so that they can apply these skills in emerging new\n     products.\n 6  Understand the theory of projection.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Engineering Curves                                       8\n            Overview to Engineering Graphics and Introduction of engineering\n               curves, Classification & application of Engineering Curves,\n              Construction of Conics-Construction of Ellipse by arc of circle\n             method, Concentric Circle Method, Rectangle Method, Oblong\n            Method, PARABOLA-Rectangle Method,Method of Tangents (\n              Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix\n            ± focus Method for Ellipse, Parabola and Hyperbola with tangent\n            and normal, Cycloidal Curves- Cycloid with tangent and normal,\n             Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes\n        & Spirals along with normal and tangent\n     2       Projection of Points and Lines                              7\n               Introduction to principal planes of projections & Projections of the\n               points located in same quadrant and different quadrants, Projections\n              of line with its inclination to one reference plane, Projections of line\n             with its inclination to two reference planes, Problems of line\n               inclined to two reference planes, True length and inclination with\n               the reference planes, True length and inclination with the reference\n              planes - Problems, True length and inclination with the reference\n              planes - Problems\n     3       Projection of planes                                       7\n               Introduction of different types of plane and overview of projection\n              of plane, Projections of planes (polygons, circle and ellipse) with its\n               inclination to one reference plane, Problems of projection of planes\n               inclined to one reference plane, Projections of planes (polygons,\n                circle and ellipse) with its inclination to one reference plane,\n             Problems, Concept of auxiliary plane method for projections of the\n               plane, Problems\n     4      Orthographic Projections                                  6\n             Fundamental of projection with classification, Principal planes of\n                projection,, Projections from the pictorial view of the object on the\n               principal planes for view from front, top and sides using first angle\n               projection method and third angle projection method, Problems of\n              orthographic projections, Problems of orthographic projections, Full\n               sectional view., Problems of sectional view\n     5      Overview to Engineering Graphics                          0\n            Drawing instruments and accessories, Use drawing instruments and\n               materials effectively, Follow and apply standard practice as per\n                B.I.S. for planning and layout, choose appropriate scale factor for\n               the drawing as per given situation, Write annotations on a drawing\n            where ever necessary. Choose appropriate line and dimensioning\n                style for a given geometrical entity, Develop the skill to draw\n              polygons, circles and lines with different geometric situations. Use\n              of plane scales and R. F.\n     6      Isometric Projections and Isometric View or Drawing          0\n              Isometric Scale, Conversion of orthographic views into isometric\n               projection, isometric view or drawing\n                               Total Hours                       28\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practice Sheet                                           6\n            Use of Drawing Instruments, Practice of drawing instruments,\n             Planning and layout as per IS., Scaling method. Draw Following: a.\n               Different Types of line. b. Draw equilateral triangle and square c.\n            Types of dimensioning. d. Alphabets and numerical (Vertical &\n               inclined as Per IS). e. Draw Polygon using universal method f.\n             Dimensioning methods. g. Draw Title Block using stencil. h. Draw\n               plain scale and diagonal scale\n     2      Engineering Curves[L]                                    8\n            1 Problems of Conical Curves, 2 Problem of Cycloid, 3 Problem of\n               Involute, 4 Problem of spiral.\n     3       Projections of Points & line[L]                              10\n           To draw a projection of points for 10 different conditions. To draw\n               projections of lines with different conditions. (4 Problems)\n     4       Projections of Planes[L]                                   10\n           To draw projections of different plane with different conditions(4\n             Problems)\n     5      Orthographic Projections[L]                               16\n           To draw orthographic projections of different objects (2 Problems)\n     6      Isometric Projections[L]                                   6\n           To draw isometric projections for given orthographic views. (2\n             Problems)\n                               Total Hours                       56\n\nTextbook :\n 1  Basic Engineering Drawing & Graphics, P. J. Shah, Atul Prakashan, 2022\n\nReferences:\n 1  Engineering Graphics, Engineering Graphics, Ramdevsinh Jhala, Mc Graw Hill Education,\n    2018\n 2  Engineering Graphics, Engineering Graphics, P. J. Shah, S. Chand Publishing, 2008\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    28.00         32.00         40.00          0.00           0.00           0.00\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/112/103/112103019/\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "67759b337778c8ca641d082d560efa0c053a45c200639b423ad5778bec6f8a09"
+    },
+    {
+      "subject_id": "46009121010201",
+      "subject_name": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 2,
+      "subject_code": "09AU0102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0102.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09AU0102 - ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT (.pdf",
+      "expected_pdf_sha256": "b15bb93d48033ec675765d2bd3272014844e88c1d9c30270f1d878a95d797c25",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENVIRONMENT CONSERVATION & DISASTER",
+        "course_code": "09AU0102",
+        "semester_label": "2",
+        "credits": 0,
+        "prerequisite": "BASIC LIFE SCIENCE"
+      },
+      "objectives": [
+        "To solve various engineering problems to produce eco-friendly products",
+        "To familiarize the students with strategies for addressing various environmental issues",
+        "To familiarize the students with various renewable energy sources and their applications",
+        "Be better prepared to recover from natural and manmade disasters"
+      ],
+      "course_outcomes": [
+        "Understand the ecosystem and its terminology and solve various engineering problems by applying ecosystem knowledge to produce eco±friendly products",
+        "Understand the various types of pollutions and their remedial measures",
+        "Understand different renewable energy resources and their applications",
+        "Understand the role of an engineer concerning climate change and disaster management"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction of Environmental Science",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition of environment, ecosystem, food chain, and food web, he",
+              "necessity of environmental science, Importance of environment and",
+              "scope"
+            ],
+            "topics_text": "Definition of environment, ecosystem, food chain, and food web, he necessity of environmental science, Importance of environment and scope",
+            "topics": [
+              "Definition of environment, ecosystem, food chain, and food web, he",
+              "necessity of environmental science, Importance of environment and",
+              "scope"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Types of pollution with their causes, effects and remedial",
+            "contact_hours": 8,
+            "topic_lines": [
+              "measures",
+              "Air pollution, water pollution, noise pollution, and soil pollution,",
+              "Global environment problems with their causes, effects & remedies:",
+              "climate change"
+            ],
+            "topics_text": "measures Air pollution, water pollution, noise pollution, and soil pollution, Global environment problems with their causes, effects & remedies: climate change",
+            "topics": [
+              "measures",
+              "Air pollution, water pollution, noise pollution, and soil pollution,",
+              "Global environment problems with their causes, effects & remedies:",
+              "climate change"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Renewable Sources of Energy",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Solar energy: basics of solar energy and its importance, Wind",
+              "energy: need, limitations and future scope, Recent trends of",
+              "renewable sources of energy"
+            ],
+            "topics_text": "Solar energy: basics of solar energy and its importance, Wind energy: need, limitations and future scope, Recent trends of renewable sources of energy",
+            "topics": [
+              "Solar energy: basics of solar energy and its importance, Wind",
+              "energy: need, limitations and future scope, Recent trends of",
+              "renewable sources of energy"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Disaster Management",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Concepts and definition of disaster, Disaster management cycle, ole",
+              "of an engineer in disaster management Rescue techniques during a",
+              "disaster, Natural disasters: earthquake, cyclone, flood, tsunami,",
+              "drought, and landslides, Manmade disaster: fire, civil war,",
+              "technological disasters",
+              "Total Hours 28"
+            ],
+            "topics_text": "Concepts and definition of disaster, Disaster management cycle, ole of an engineer in disaster management Rescue techniques during a disaster, Natural disasters: earthquake, cyclone, flood, tsunami, drought, and landslides, Manmade disaster: fire, civil war, technological disasters Total Hours 28",
+            "topics": [
+              "Concepts and definition of disaster, Disaster management cycle, ole",
+              "of an engineer in disaster management Rescue techniques during a",
+              "disaster, Natural disasters: earthquake, cyclone, flood, tsunami,",
+              "drought, and landslides, Manmade disaster: fire, civil war,",
+              "technological disasters",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Environmental Science, Environmental Science, Y. K. Singh, New Age International (P) Ltd., 2006",
+          "Environmental Pollution Control and Engineering,, Environmental Pollution Control and Engineering,, Rao, C. S.,, New Age International Publication,, 2007",
+          "Environmental Sciences,, Environmental Sciences,, Pawar, Kishor R, Narkhede, Sachin, Nirali Prakashan, 2006",
+          "Renewable Energy Resources,, Renewable Energy Resources,, Twidell, John , Weir, Tony,, Taylor and Francis Group, 2004"
+        ],
+        "textbooks": [
+          "Environment Engineering and Disaster Management, Sanjay K., Laxmi Publications, 2018 References:",
+          "Environmental Science, Environmental Science, Y. K. Singh, New Age International (P) Ltd., 2006",
+          "Environmental Pollution Control and Engineering,, Environmental Pollution Control and Engineering,, Rao, C. S.,, New Age International Publication,, 2007",
+          "Environmental Sciences,, Environmental Sciences,, Pawar, Kishor R, Narkhede, Sachin, Nirali Prakashan, 2006",
+          "Renewable Energy Resources,, Renewable Energy Resources,, Twidell, John , Weir, Tony,, Taylor and Francis Group, 2004"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.eco-prayer.org/",
+          "https://www.teriin.org/",
+          "https://cpcb.nic.in/",
+          "http://www.indiaenvironmentportal.org.in/",
+          "https://sdgs.un.org/goals",
+          "https://ndma.gov.in/en/",
+          "http://www.emri.in/",
+          "https://www.isro.gov.in/",
+          "https://bhuvan.nrsc.gov.in/bhuvan_links.php",
+          "IMD | Home",
+          "http://goidirectory.nic.in/index.php"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5901,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         2\nCOURSE TITLE    ENVIRONMENT CONSERVATION & DISASTER\n             MANAGEMENT\nCOURSE CODE     09AU0102\nCOURSE CREDITS  0\n\nObjective:\n 1  To solve various engineering problems to produce eco-friendly products\n 2  To familiarize the students with strategies for addressing various environmental issues\n 3  To familiarize the students with various renewable energy sources and their applications\n 4  Be better prepared to recover from natural and manmade disasters\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the ecosystem and its terminology and solve various engineering\n    problems by applying ecosystem knowledge to produce eco±friendly products\n 2  Understand the various types of pollutions and their remedial measures\n 3  Understand different renewable energy resources and their applications\n 4  Understand the role of an engineer concerning climate change and disaster\n    management\n\n\nPre-requisite of course:BASIC LIFE SCIENCE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0      0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction of Environmental Science                      4\n               Definition of environment, ecosystem, food chain, and food web, he\n               necessity of environmental science, Importance of environment and\n             scope\n     2      Types of pollution with their causes, effects and remedial       8\n            measures\n             Air pollution, water pollution, noise pollution, and soil pollution,\n             Global environment problems with their causes, effects & remedies:\n              climate change\n\n\n\nMR. SMIT MAHENDRABHAI KACHA               DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Renewable Sources of Energy                              6\n              Solar energy: basics of solar energy and its importance, Wind\n              energy: need, limitations and future scope, Recent trends of\n             renewable sources of energy\n     4       Disaster Management                                     10\n             Concepts and definition of disaster, Disaster management cycle, ole\n              of an engineer in disaster management Rescue techniques during a\n                disaster, Natural disasters: earthquake, cyclone, flood, tsunami,\n              drought, and landslides, Manmade disaster: fire, civil war,\n              technological disasters\n                               Total Hours                       28\n\n\nTextbook :\n 1  Environment Engineering and Disaster Management, Sanjay K., Laxmi Publications, 2018\n\nReferences:\n 1  Environmental Science, Environmental Science, Y. K. Singh, New Age International (P)\n     Ltd., 2006\n 2  Environmental Pollution Control and Engineering,, Environmental Pollution Control and\n     Engineering,, Rao, C. S.,, New Age International Publication,, 2007\n 3  Environmental Sciences,, Environmental Sciences,, Pawar, Kishor R, Narkhede, Sachin,\n     Nirali Prakashan, 2006\n 4  Renewable Energy Resources,, Renewable Energy Resources,, Twidell, John , Weir,\n     Tony,, Taylor and Francis Group, 2004\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    30.00         40.00         30.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n\n\n\nMR. SMIT MAHENDRABHAI KACHA               DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 3  Department level examination will be conducted at the end of semester for evaluation of\n    performance of students.\n 4  Students will use supplementary resources such as online videos, videos, e- courses etc.\n\nSupplementary Resources:\n 1  https://www.eco-prayer.org/\n 2  https://www.teriin.org/\n 3   https://cpcb.nic.in/\n 4  http://www.indiaenvironmentportal.org.in/\n 5  https://sdgs.un.org/goals\n 6  https://ndma.gov.in/en/\n 7  http://www.emri.in/\n 8  https://www.isro.gov.in/\n 9  https://bhuvan.nrsc.gov.in/bhuvan_links.php\n 10 IMD | Home\n 11  http://goidirectory.nic.in/index.php\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA               DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "b15bb93d48033ec675765d2bd3272014844e88c1d9c30270f1d878a95d797c25"
+    },
+    {
+      "subject_id": "46000935030501",
+      "subject_name": "GENERATIVE AI & PROMPT ENGINEERING",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 2,
+      "subject_code": "09CE0305",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE0305.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CE0305 - GENERATIVE AI & PROMPT ENGINEERING (.pdf",
+      "expected_pdf_sha256": "8c3c77b8ce0f5e81ea6aad5ff36c9bd49ccf5826d94e59b15c38811a5fae7a8e",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "GENERATIVE AI & PROMPT ENGINEERING",
+        "course_code": "09CE0305",
+        "semester_label": "3",
+        "credits": 1,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "To enable students to understand Generative AI concepts and effectively use prompt engineering techniques to perform engineering tasks such as report generation, inspection, maintenance planning, and documentation without requiring programming knowledge."
+      ],
+      "course_outcomes": [
+        "Apply the basic working principles of Generative AI to identify suitable engineering applications.",
+        "Use appropriate AI tools to perform specific engineering tasks effectively.",
+        "Construct structured and optimized prompts for solving engineering problems.",
+        "Examine and refine AI-generated outputs to improve correctness and usefulness.",
+        "Develop prompt-based solutions to handle real-world engineering workflows."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 2 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "AI IN ENGINEERING PRACTICE",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Basics of Generative AI, AI working principle (prediction concept),",
+              "AI vs Traditional tools, AI tools overview, Engineering applications",
+              "of AI"
+            ],
+            "topics_text": "Basics of Generative AI, AI working principle (prediction concept), AI vs Traditional tools, AI tools overview, Engineering applications of AI",
+            "topics": [
+              "Basics of Generative AI, AI working principle (prediction concept),",
+              "AI vs Traditional tools, AI tools overview, Engineering applications",
+              "of AI"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "SMART USE OF AI TOOLS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Communication with AI, AI tool capabilities & limitations, Tool",
+              "selection for tasks, Common usage mistakes, Data privacy &",
+              "confidentiality, Safety considerations, Bias and incorrect outputs"
+            ],
+            "topics_text": "Communication with AI, AI tool capabilities & limitations, Tool selection for tasks, Common usage mistakes, Data privacy & confidentiality, Safety considerations, Bias and incorrect outputs",
+            "topics": [
+              "Communication with AI, AI tool capabilities & limitations, Tool",
+              "selection for tasks, Common usage mistakes, Data privacy &",
+              "confidentiality, Safety considerations, Bias and incorrect outputs"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "PROMPT DESIGN FUNDAMENTALS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Introduction to prompts and Prompt structure (task, context,",
+              "format), Types of prompts, Step-by-step prompting, Problem",
+              "decomposition, Example-based prompting, Prompt templates",
+              "(report, checklist, SOP)"
+            ],
+            "topics_text": "Introduction to prompts and Prompt structure (task, context, format), Types of prompts, Step-by-step prompting, Problem decomposition, Example-based prompting, Prompt templates (report, checklist, SOP)",
+            "topics": [
+              "Introduction to prompts and Prompt structure (task, context,",
+              "format), Types of prompts, Step-by-step prompting, Problem",
+              "decomposition, Example-based prompting, Prompt templates",
+              "(report, checklist, SOP)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "PRACTICAL ENGINEERING APPLICATIONS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Inspection applications, Maintenance applications, Safety",
+              "applications, Work planning, Structured output generation, Prompt",
+              "refinement, Output comparison, Workflow prompting"
+            ],
+            "topics_text": "Inspection applications, Maintenance applications, Safety applications, Work planning, Structured output generation, Prompt refinement, Output comparison, Workflow prompting",
+            "topics": [
+              "Inspection applications, Maintenance applications, Safety",
+              "applications, Work planning, Structured output generation, Prompt",
+              "refinement, Output comparison, Workflow prompting"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "AI-ASSISTED EVALUATION AND ETHICS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Using AI Tools for Code Generation, Code Debugging and",
+              "Optimization, Prompt Chaining for Step-by-step Development,",
+              "Detecting Hallucinations in AI-generated Code, Responsible AI",
+              "Usage, Data Privacy and Security Considerations, Mini Project",
+              "using Python and Prompt Engineering",
+              "Total Hours 0"
+            ],
+            "topics_text": "Using AI Tools for Code Generation, Code Debugging and Optimization, Prompt Chaining for Step-by-step Development, Detecting Hallucinations in AI-generated Code, Responsible AI Usage, Data Privacy and Security Considerations, Mini Project using Python and Prompt Engineering Total Hours 0",
+            "topics": [
+              "Using AI Tools for Code Generation, Code Debugging and",
+              "Optimization, Prompt Chaining for Step-by-step Development,",
+              "Detecting Hallucinations in AI-generated Code, Responsible AI",
+              "Usage, Data Privacy and Security Considerations, Mini Project",
+              "using Python and Prompt Engineering",
+              "Total Hours 0"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Study and explore AI tools and identify their applications in",
+              "engineering domains"
+            ],
+            "topics_text": "Study and explore AI tools and identify their applications in engineering domains",
+            "topics": [
+              "Study and explore AI tools and identify their applications in",
+              "engineering domains"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Compare AI tools with traditional methods for solving engineering",
+              "tasks."
+            ],
+            "topics_text": "Compare AI tools with traditional methods for solving engineering tasks.",
+            "topics": [
+              "Compare AI tools with traditional methods for solving engineering",
+              "tasks."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design and use effective prompts for communication with AI tools"
+            ],
+            "topics_text": "Design and use effective prompts for communication with AI tools",
+            "topics": [
+              "Design and use effective prompts for communication with AI tools"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Analyze AI-generated outputs to identify errors and improve",
+              "responses"
+            ],
+            "topics_text": "Analyze AI-generated outputs to identify errors and improve responses",
+            "topics": [
+              "Analyze AI-generated outputs to identify errors and improve",
+              "responses"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Demonstrate responsible AI usage considering privacy, safety, and",
+              "bias"
+            ],
+            "topics_text": "Demonstrate responsible AI usage considering privacy, safety, and bias",
+            "topics": [
+              "Demonstrate responsible AI usage considering privacy, safety, and",
+              "bias"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design structured prompts using task, context, and output format"
+            ],
+            "topics_text": "Design structured prompts using task, context, and output format",
+            "topics": [
+              "Design structured prompts using task, context, and output format"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Apply prompting techniques such as step-by-step, decomposition,",
+              "and example-based prompting"
+            ],
+            "topics_text": "Apply prompting techniques such as step-by-step, decomposition, and example-based prompting",
+            "topics": [
+              "Apply prompting techniques such as step-by-step, decomposition,",
+              "and example-based prompting"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Develop prompt templates for report, checklist, and SOP"
+            ],
+            "topics_text": "Develop prompt templates for report, checklist, and SOP",
+            "topics": [
+              "Develop prompt templates for report, checklist, and SOP"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Test and refine prompts to improve output quality"
+            ],
+            "topics_text": "Test and refine prompts to improve output quality",
+            "topics": [
+              "Test and refine prompts to improve output quality"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Generate inspection checklist, maintenance procedure, and safety",
+              "instructions using AI"
+            ],
+            "topics_text": "Generate inspection checklist, maintenance procedure, and safety instructions using AI",
+            "topics": [
+              "Generate inspection checklist, maintenance procedure, and safety",
+              "instructions using AI"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Generate structured outputs (tables/reports) and compare multiple",
+              "AI outputs"
+            ],
+            "topics_text": "Generate structured outputs (tables/reports) and compare multiple AI outputs",
+            "topics": [
+              "Generate structured outputs (tables/reports) and compare multiple",
+              "AI outputs"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design workflow-based prompts for routine engineering tasks"
+            ],
+            "topics_text": "Design workflow-based prompts for routine engineering tasks",
+            "topics": [
+              "Design workflow-based prompts for routine engineering tasks"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Identify and verify incorrect AI outputs and apply prompt chaining"
+            ],
+            "topics_text": "Identify and verify incorrect AI outputs and apply prompt chaining",
+            "topics": [
+              "Identify and verify incorrect AI outputs and apply prompt chaining"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical-14",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Develop a mini project using prompt engineering for real-world",
+              "problem solving",
+              "Total Hours 28"
+            ],
+            "topics_text": "Develop a mini project using prompt engineering for real-world problem solving Total Hours 28",
+            "topics": [
+              "Develop a mini project using prompt engineering for real-world",
+              "problem solving",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Prompt Engineering Guide, Prompt Engineering Guide, OpenAI, OpenAI Documentation, 2023"
+        ],
+        "textbooks": [
+          "AI for Everyone, Andrew Ng, Coursera, 2019 References:",
+          "Prompt Engineering Guide, Prompt Engineering Guide, OpenAI, OpenAI Documentation, 2023"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "NPTEL / SWAYAM Courses on Python Programming and Artificial Intelligence",
+          "OpenAI / Google AI / Microsoft Copilot Official Documentation",
+          "https://www.tutorialspoint.com/prompt_engineering/index.htm"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 8854,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    GENERATIVE AI & PROMPT ENGINEERING\nCOURSE CODE     09CE0305\nCOURSE CREDITS  1\n\nObjective:\n 1  To enable students to understand Generative AI concepts and effectively use prompt\n     engineering techniques to perform engineering tasks such as report generation, inspection,\n    maintenance planning, and documentation without requiring programming knowledge.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply the basic working principles of Generative AI to identify suitable engineering\n     applications.\n 2  Use appropriate AI tools to perform specific engineering tasks effectively.\n 3  Construct structured and optimized prompts for solving engineering problems.\n 4  Examine and refine AI-generated outputs to improve correctness and usefulness.\n 5  Develop prompt-based solutions to handle real-world engineering workflows.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            2         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     AI IN ENGINEERING PRACTICE                         0\n              Basics of Generative AI, AI working principle (prediction concept),\n           AI vs Traditional tools, AI tools overview, Engineering applications\n              of AI\n     2    SMART USE OF AI TOOLS                               0\n            Communication with AI, AI tool capabilities & limitations, Tool\n               selection for tasks, Common usage mistakes, Data privacy &\n                confidentiality, Safety considerations, Bias and incorrect outputs\n     3    PROMPT DESIGN FUNDAMENTALS                     0\n               Introduction to prompts and Prompt structure (task, context,\n               format), Types of prompts, Step-by-step prompting, Problem\n              decomposition, Example-based prompting, Prompt templates\n                (report, checklist, SOP)\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4    PRACTICAL ENGINEERING APPLICATIONS             0\n              Inspection applications, Maintenance applications, Safety\n               applications, Work planning, Structured output generation, Prompt\n              refinement, Output comparison, Workflow prompting\n     5     AI-ASSISTED EVALUATION AND ETHICS                0\n             Using AI Tools for Code Generation, Code Debugging and\n              Optimization, Prompt Chaining for Step-by-step Development,\n              Detecting Hallucinations in AI-generated Code, Responsible AI\n             Usage, Data Privacy and Security Considerations, Mini Project\n              using Python and Prompt Engineering\n                               Total Hours                       0\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical-1                                              2\n             Study and explore AI tools and identify their applications in\n              engineering domains\n     2       Practical-2                                              2\n           Compare AI tools with traditional methods for solving engineering\n                tasks.\n     3       Practical-3                                              2\n             Design and use effective prompts for communication with AI tools\n     4       Practical-4                                              2\n             Analyze AI-generated outputs to identify errors and improve\n              responses\n     5       Practical-5                                              1\n             Demonstrate responsible AI usage considering privacy, safety, and\n               bias\n     6       Practical-6                                              2\n             Design structured prompts using task, context, and output format\n     7       Practical-7                                              2\n            Apply prompting techniques such as step-by-step, decomposition,\n            and example-based prompting\n     8       Practical-8                                              2\n            Develop prompt templates for report, checklist, and SOP\n     9       Practical-9                                              2\n              Test and refine prompts to improve output quality\n     10      Practical-10                                             2\n             Generate inspection checklist, maintenance procedure, and safety\n               instructions using AI\n     11      Practical-11                                             2\n             Generate structured outputs (tables/reports) and compare multiple\n           AI outputs\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     12      Practical-12                                             2\n             Design workflow-based prompts for routine engineering tasks\n     13      Practical-13                                             2\n               Identify and verify incorrect AI outputs and apply prompt chaining\n     14      Practical-14                                             3\n            Develop a mini project using prompt engineering for real-world\n             problem solving\n                               Total Hours                       28\n\nTextbook :\n 1  AI for Everyone, Andrew Ng, Coursera, 2019\n\nReferences:\n 1  Prompt Engineering Guide, Prompt Engineering Guide, OpenAI, OpenAI Documentation,\n    2023\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of the content and need of\n     students. The teacher, in addition to conventional teaching method by blackboard, may also\n     use tools such as demonstration, coding practice, brainstorming sessions, case studies, AI-\n     assisted learning activities and MOOCs.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and classroom through assignments, prompt design activities, coding exercises\n    and mini projects.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory based on programming skills and prompt engineering\n     applications.\n 4  Students will use supplementary resources such as online videos, NPTEL lectures, e-\n     courses, official Python documentation, AI tool user guides and virtual laboratory\n     platforms.\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Supplementary Resources:\n 1  NPTEL / SWAYAM Courses on Python Programming and Artificial Intelligence\n 2  OpenAI / Google AI / Microsoft Copilot Official Documentation\n 3  https://www.tutorialspoint.com/prompt_engineering/index.htm\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8c3c77b8ce0f5e81ea6aad5ff36c9bd49ccf5826d94e59b15c38811a5fae7a8e"
+    },
+    {
+      "subject_id": "46009164010101",
+      "subject_name": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-I",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 2,
+      "subject_code": "09PD0101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09PD0101.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09PD0101 - INTEGRATED PERSONALITY DEVELOPMENT COURSE-I (.pdf",
+      "expected_pdf_sha256": "a7e6a2d6043f5a670e631eb231f76008c1e148691bdc59473f7c65bcfcd05cea",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-",
+        "course_code": "09PD0101",
+        "semester_label": "2",
+        "credits": 2,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        " This course aims to help a person understand and know his / her purpose in life, get a positive thought pattern, gain confidence, improve behaviour, learn better communication and develop a healthy physique with morality and ethics in its core.  Today youth lack the guidance to face insecurity about their health and career, premature relationships and family breakdown, addictions and substance abuse, negative impact of internet and social media etc. This course includes such topics that will cover all aspects and provide solution to the current challenges through creative and interactive activities.  This course will allow students to enjoy, understand and practice invaluable lessons preparing them for a successful future."
+      ],
+      "course_outcomes": [
+        "1. To provide students with a holistic value-based education that will enable them to be successful in their academic, professional, and social lives.",
+        "2. To give the students the tools to develop effective habits, promote personal growth, and improve their well being, stability, and productivity.",
+        "3. To allow students to establish a stronger connection with their family through critical thinking and development of qualities such as unity, forgiveness, empathy, and effective communication.",
+        "4. To provide students with soft skills that complement their hard skills, making them more marketable when entering the workforce.",
+        "5. To enhance awareness of India¶s glory and global values, and to create considerate citizens who strive for the betterment of their family, college, workforce, and nation.",
+        "6. To inspire students to strive for a higher sense of character by learning from role models who have lived principled, disciplined, and value-based lives."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Remaking Yourself Restructuring Yourself",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students learn how self-improvement enables them to secure a",
+              "bright future for themselves. They will learn 6 powerful thought-",
+              "processes that can develop their intellectual, physical, emotional,",
+              "and spiritual quotients."
+            ],
+            "topics_text": "Students learn how self-improvement enables them to secure a bright future for themselves. They will learn 6 powerful thought- processes that can develop their intellectual, physical, emotional, and spiritual quotients.",
+            "topics": [
+              "Students learn how self-improvement enables them to secure a",
+              "bright future for themselves. They will learn 6 powerful thought",
+              "processes that can develop their intellectual, physical, emotional,",
+              "and spiritual quotients."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Remaking Yourself Power of Habit",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will undergo a study of how habits work, the habits of",
+              "successful professionals, and the practical techniques that can be",
+              "used to develop good habits in their life."
+            ],
+            "topics_text": "Students will undergo a study of how habits work, the habits of successful professionals, and the practical techniques that can be used to develop good habits in their life.",
+            "topics": [
+              "Students will undergo a study of how habits work, the habits of",
+              "successful professionals, and the practical techniques that can be",
+              "used to develop good habits in their life."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Learning from Legends- Tendulkar & Tata",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will learn from the inspirational lives of India's two",
+              "legends, Sachin Tendulkar and Ratan Tata. They will implement",
+              "these lessons through relatable case studies."
+            ],
+            "topics_text": "Students will learn from the inspirational lives of India's two legends, Sachin Tendulkar and Ratan Tata. They will implement these lessons through relatable case studies.",
+            "topics": [
+              "Students will learn from the inspirational lives of India's two",
+              "legends, Sachin Tendulkar and Ratan Tata. They will implement",
+              "these lessons through relatable case studies."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "From House to Home Listening & Understanding",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Active listening is an essential part of academic progress and",
+              "communications. Students will learn to listen with their eyes, ears,",
+              "mind, and heart."
+            ],
+            "topics_text": "Active listening is an essential part of academic progress and communications. Students will learn to listen with their eyes, ears, mind, and heart.",
+            "topics": [
+              "Active listening is an essential part of academic progress and",
+              "communications. Students will learn to listen with their eyes, ears,",
+              "mind, and heart."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Facing Failures Welcoming Challenges",
+            "contact_hours": 2,
+            "topic_lines": [
+              "This lecture enables students to revisit the way in which they",
+              "approach challenges. Through the study of successful figures such",
+              "as Disney, Lincoln and Bachchan, students will learn to face",
+              "difficulties through a positive perspective."
+            ],
+            "topics_text": "This lecture enables students to revisit the way in which they approach challenges. Through the study of successful figures such as Disney, Lincoln and Bachchan, students will learn to face difficulties through a positive perspective.",
+            "topics": [
+              "This lecture enables students to revisit the way in which they",
+              "approach challenges. Through the study of successful figures such",
+              "as Disney, Lincoln and Bachchan, students will learn to face",
+              "difficulties through a positive perspective."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Facing Failures Significance of Failures",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Failure is a student¶s daily source of fear, negativity, and",
+              "depression. Students will be given the constructive skills to",
+              "understand failure as formative learning experiences."
+            ],
+            "topics_text": "Failure is a student¶s daily source of fear, negativity, and depression. Students will be given the constructive skills to understand failure as formative learning experiences.",
+            "topics": [
+              "Failure is a student¶s daily source of fear, negativity, and",
+              "depression. Students will be given the constructive skills to",
+              "understand failure as formative learning experiences."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "My India My Pride Glorious Past Part-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "India¶s ancient Rishis, scholars, and intellectuals have made",
+              "tremendous contributions to the world, they developed an advanced,",
+              "sophisticated culture and civilization which began thousands of",
+              "years ago. Students will learn the importance of studying India¶s",
+              "glorious past so that they could develop a strong passion and pride",
+              "for our nation."
+            ],
+            "topics_text": "India¶s ancient Rishis, scholars, and intellectuals have made tremendous contributions to the world, they developed an advanced, sophisticated culture and civilization which began thousands of years ago. Students will learn the importance of studying India¶s glorious past so that they could develop a strong passion and pride for our nation.",
+            "topics": [
+              "India¶s ancient Rishis, scholars, and intellectuals have made",
+              "tremendous contributions to the world, they developed an advanced,",
+              "sophisticated culture and civilization which began thousands of",
+              "years ago. Students will learn the importance of studying India¶s",
+              "glorious past so that they could develop a strong passion and pride",
+              "for our nation."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "My India My Pride Glorious Past Part-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Our ancient concepts can be used to seek revolutionary ideas and to",
+              "generate inspiration. Students will develop a deeper interest in",
+              "India¶s Glorious Past ± by appreciating the need to read about it,",
+              "research it, write about it, and share it."
+            ],
+            "topics_text": "Our ancient concepts can be used to seek revolutionary ideas and to generate inspiration. Students will develop a deeper interest in India¶s Glorious Past ± by appreciating the need to read about it, research it, write about it, and share it.",
+            "topics": [
+              "Our ancient concepts can be used to seek revolutionary ideas and to",
+              "generate inspiration. Students will develop a deeper interest in",
+              "India¶s Glorious Past ± by appreciating the need to read about it,",
+              "research it, write about it, and share it."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Learning from Legends A. P. J. Abdul Kalam",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Dr Kalam¶s inspirational life displayed legendary qualities which",
+              "apply to students (1) Dare to Dream (2) Work Hard (3) Get Good",
+              "Guidance (4) Humility (5) Use Your Talents for the Benefit of",
+              "Others"
+            ],
+            "topics_text": "Dr Kalam¶s inspirational life displayed legendary qualities which apply to students (1) Dare to Dream (2) Work Hard (3) Get Good Guidance (4) Humility (5) Use Your Talents for the Benefit of Others",
+            "topics": [
+              "Dr Kalam¶s inspirational life displayed legendary qualities which",
+              "apply to students (1) Dare to Dream (2) Work Hard (3) Get Good",
+              "Guidance (4) Humility (5) Use Your Talents for the Benefit of",
+              "Others"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Soft Skills Networking & Leadership",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students are taught the means of building a professional network",
+              "and developing a leadership attitude."
+            ],
+            "topics_text": "Students are taught the means of building a professional network and developing a leadership attitude.",
+            "topics": [
+              "Students are taught the means of building a professional network",
+              "and developing a leadership attitude."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Soft Skills Project Management",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will learn the secrets of project management through the",
+              "Akshardham case study. They will then practice these skills through",
+              "an activity relevant to student life."
+            ],
+            "topics_text": "Students will learn the secrets of project management through the Akshardham case study. They will then practice these skills through an activity relevant to student life.",
+            "topics": [
+              "Students will learn the secrets of project management through the",
+              "Akshardham case study. They will then practice these skills through",
+              "an activity relevant to student life."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Remaking Yourself Handling Social Media",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will learn how social media can become addictive and they",
+              "will imbibe simple methods to take back control."
+            ],
+            "topics_text": "Students will learn how social media can become addictive and they will imbibe simple methods to take back control.",
+            "topics": [
+              "Students will learn how social media can become addictive and they",
+              "will imbibe simple methods to take back control."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Facing Failures Power of Faith",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will learn about the power and necessity of faith in our",
+              "daily lives."
+            ],
+            "topics_text": "Students will learn about the power and necessity of faith in our daily lives.",
+            "topics": [
+              "Students will learn about the power and necessity of faith in our",
+              "daily lives."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "From House to Home Bonding the Family",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will understand the importance of strong family",
+              "relationships. They will learn how to overcome the generation gap",
+              "and connect with their family more."
+            ],
+            "topics_text": "Students will understand the importance of strong family relationships. They will learn how to overcome the generation gap and connect with their family more.",
+            "topics": [
+              "Students will understand the importance of strong family",
+              "relationships. They will learn how to overcome the generation gap",
+              "and connect with their family more."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Selfless Service Seva",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will learn that performing seva is beneficial to one¶s",
+              "health, wellbeing, and happiness. It also benefits and inspires others.",
+              "Total Hours 30"
+            ],
+            "topics_text": "Students will learn that performing seva is beneficial to one¶s health, wellbeing, and happiness. It also benefits and inspires others. Total Hours 30",
+            "topics": [
+              "Students will learn that performing seva is beneficial to one¶s",
+              "health, wellbeing, and happiness. It also benefits and inspires others.",
+              "Total Hours 30"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "https://www.baps.org/IPDC/IPDC.aspx, https://www.baps.org/IPDC/IPDC.aspx, ., ., .",
+          ". https://www.youtube.com/c/IPDCbaps/videos, . https://www.youtube.com/c/IPDCbaps/videos, ., ., ."
+        ],
+        "textbooks": [
+          "IPDC Workbook-1, NA, B.A.P.S. Swaminarayan Sanstha, NA References:",
+          "https://www.baps.org/IPDC/IPDC.aspx, https://www.baps.org/IPDC/IPDC.aspx, ., ., .",
+          ". https://www.youtube.com/c/IPDCbaps/videos, . https://www.youtube.com/c/IPDCbaps/videos, ., ., ."
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.youtube.com/c/IPDCbaps/videos",
+          "https://www.baps.org/IPDC/IPDC.aspx"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9908,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         2\nCOURSE TITLE    INTEGRATED PERSONALITY DEVELOPMENT COURSE-\n                          I\nCOURSE CODE     09PD0101\nCOURSE CREDITS  2\n\nObjective:\n 1   This course aims to help a person understand and know his / her purpose in life, get a\n     positive thought pattern, gain confidence, improve behaviour, learn better communication\n    and develop a healthy physique with morality and ethics in its core.  Today youth lack the\n    guidance to face insecurity about their health and career, premature relationships and\n     family breakdown, addictions and substance abuse, negative impact of internet and social\n    media etc. This course includes such topics that will cover all aspects and provide solution\n     to the current challenges through creative and interactive activities.  This course will allow\n     students to enjoy, understand and practice invaluable lessons preparing them for a\n     successful future.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1   1. To provide students with a holistic value-based education that will enable them to be\n     successful in their academic, professional, and social lives.\n 2   2. To give the students the tools to develop effective habits, promote personal growth, and\n    improve their well being, stability, and productivity.\n 3   3. To allow students to establish a stronger connection with their family through critical\n     thinking and development of qualities such as unity, forgiveness, empathy, and effective\n    communication.\n 4   4. To provide students with soft skills that complement their hard skills, making them more\n     marketable when entering the workforce.\n 5   5. To enhance awareness of India¶s glory and global values, and to create considerate\n     citizens who strive for the betterment of their family, college, workforce, and nation.\n 6   6. To inspire students to strive for a higher sense of character by learning from role models\n    who have lived principled, disciplined, and value-based lives.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Remaking Yourself Restructuring Yourself                   2\n              Students learn how self-improvement enables them to secure a\n               bright future for themselves. They will learn 6 powerful thought-\n              processes that can develop their intellectual, physical, emotional,\n            and spiritual quotients.\n     2     Remaking Yourself Power of Habit                          2\n              Students will undergo a study of how habits work, the habits of\n               successful professionals, and the practical techniques that can be\n             used to develop good habits in their life.\n     3      Learning from Legends- Tendulkar & Tata                  2\n              Students will learn from the inspirational lives of India's two\n              legends, Sachin Tendulkar and Ratan Tata. They will implement\n               these lessons through relatable case studies.\n     4     From House to Home Listening & Understanding             2\n             Active listening is an essential part of academic progress and\n             communications. Students will learn to listen with their eyes, ears,\n             mind, and heart.\n     5      Facing Failures Welcoming Challenges                      2\n             This lecture enables students to revisit the way in which they\n             approach challenges. Through the study of successful figures such\n              as Disney, Lincoln and Bachchan, students will learn to face\n                 difficulties through a positive perspective.\n     6      Facing Failures Significance of Failures                      2\n               Failure is a student¶s daily source of fear, negativity, and\n               depression. Students will be given the constructive skills to\n              understand failure as formative learning experiences.\n     7    My India My Pride Glorious Past Part-1                     2\n               India¶s ancient Rishis, scholars, and intellectuals have made\n             tremendous contributions to the world, they developed an advanced,\n               sophisticated culture and civilization which began thousands of\n              years ago. Students will learn the importance of studying India¶s\n               glorious past so that they could develop a strong passion and pride\n               for our nation.\n     8    My India My Pride Glorious Past Part-2                     2\n            Our ancient concepts can be used to seek revolutionary ideas and to\n              generate inspiration. Students will develop a deeper interest in\n               India¶s Glorious Past ± by appreciating the need to read about it,\n              research it, write about it, and share it.\n     9      Learning from Legends A. P. J. Abdul Kalam                 2\n           Dr Kalam¶s inspirational life displayed legendary qualities which\n             apply to students (1) Dare to Dream (2) Work Hard (3) Get Good\n            Guidance (4) Humility (5) Use Your Talents for the Benefit of\n             Others\n     10      Soft Skills Networking & Leadership                        2\n              Students are taught the means of building a professional network\n            and developing a leadership attitude.\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     11      Soft Skills Project Management                             2\n              Students will learn the secrets of project management through the\n            Akshardham case study. They will then practice these skills through\n             an activity relevant to student life.\n     12     Remaking Yourself Handling Social Media                   2\n              Students will learn how social media can become addictive and they\n               will imbibe simple methods to take back control.\n     13      Facing Failures Power of Faith                             2\n              Students will learn about the power and necessity of faith in our\n               daily lives.\n     14    From House to Home Bonding the Family                    2\n              Students will understand the importance of strong family\n                relationships. They will learn how to overcome the generation gap\n            and connect with their family more.\n     15       Selfless Service Seva                                      2\n              Students will learn that performing seva is beneficial to one¶s\n                health, wellbeing, and happiness. It also benefits and inspires others.\n                               Total Hours                       30\n\n\nTextbook :\n 1  IPDC Workbook-1, NA, B.A.P.S. Swaminarayan Sanstha, NA\n\nReferences:\n 1  https://www.baps.org/IPDC/IPDC.aspx, https://www.baps.org/IPDC/IPDC.aspx, ., ., .\n 2    . https://www.youtube.com/c/IPDCbaps/videos, .\n     https://www.youtube.com/c/IPDCbaps/videos, ., ., .\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    50.00         50.00          0.00           0.00           0.00           0.00\n\nInstructional Method:\n 1  Introductory Film: Each lecture begins with a short film that introduces the topic which\n     captivate learner¶s attention and stimulates their curiosity to learn more.\n 2  Lecture Video: Learners watch a lecture video presented by a dynamic speaker. The lecture\n     reinforces the significance and necessity of fundamental principles and skills.\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 3  Student Interactions: Interactive sessions promote stimulating discussion and conversation\n    and help create safe spaces for healthy exchange of ideas. Each session provides a forum in\n    which students are able to openly express their emotions and thoughts.\n 4  Workbook Activities: Workbooks assist learners to begin implementing the values taught\n     in the lecture into their personal lives.\n\nSupplementary Resources:\n 1  https://www.youtube.com/c/IPDCbaps/videos\n 2  https://www.baps.org/IPDC/IPDC.aspx\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "a7e6a2d6043f5a670e631eb231f76008c1e148691bdc59473f7c65bcfcd05cea"
+    },
+    {
+      "subject_id": "46009131210201",
+      "subject_name": "MATHEMATICS-II",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 2,
+      "subject_code": "09MA2102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2102.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09MA2102 - MATHEMATICS-II (.pdf",
+      "expected_pdf_sha256": "fc36771416ade5af3eec2aba082bbced0f828c7acbffcd106d4aef9dca2ec9e6",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MATHEMATICS-II",
+        "course_code": "09MA2102",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "Students are intended to understand the basic concepts and principles of Mathematics such as algebra, mensuration and trigonometry. This knowledge is required to understand and solve Engineering problems. The course will empower students to use proper Mathematical tool to understand Engineering principles and concepts. Main objective of the course is to apply concepts of algebra, mensuration, trigonometry or suitable Mathematical tool to solve given engineering problems."
+      ],
+      "course_outcomes": [
+        "Learn concept of Matrix and Determinant and solve the system of linear equations by using matrix.",
+        "Solve equations of algebraic expressions using algebraic skills.",
+        "Solve the problems using functions.",
+        "Solve the problem of function using the concept of Limit.",
+        "Find the nth term and Sum of arithmetic and geometric progression."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Determinants and Matrices",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction, Algebra of Matrices, Determinant of Matrix, Inverse",
+              "of Matrix up to 3×3 matrix, Solution of Simultaneous Equation (up",
+              "to 3 variable)"
+            ],
+            "topics_text": "Introduction, Algebra of Matrices, Determinant of Matrix, Inverse of Matrix up to 3×3 matrix, Solution of Simultaneous Equation (up to 3 variable)",
+            "topics": [
+              "Introduction, Algebra of Matrices, Determinant of Matrix, Inverse",
+              "of Matrix up to 3×3 matrix, Solution of Simultaneous Equation (up",
+              "to 3 variable)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Equations",
+            "contact_hours": 6,
+            "topic_lines": [
+              "System of Linear Equation, Solution of Quadratic Equation,",
+              "Solution of Cubic Equation"
+            ],
+            "topics_text": "System of Linear Equation, Solution of Quadratic Equation, Solution of Cubic Equation",
+            "topics": [
+              "System of Linear Equation, Solution of Quadratic Equation,",
+              "Solution of Cubic Equation"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Function",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction of Function, Algebra of Function, Example of Function"
+            ],
+            "topics_text": "Introduction of Function, Algebra of Function, Example of Function",
+            "topics": [
+              "Introduction of Function, Algebra of Function, Example of Function"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Limit of functions",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition and some properties of limits, Limit of polynomial and",
+              "rational functions, Limit of trigonometric function, Limit of",
+              "exponential function, Limit at infinity"
+            ],
+            "topics_text": "Definition and some properties of limits, Limit of polynomial and rational functions, Limit of trigonometric function, Limit of exponential function, Limit at infinity",
+            "topics": [
+              "Definition and some properties of limits, Limit of polynomial and",
+              "rational functions, Limit of trigonometric function, Limit of",
+              "exponential function, Limit at infinity"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Arithmetic and Geometric Progression",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Nth term of A.P, Sum of first N terms of A.P, Nth",
+              "term of G.P, Sum of first N terms of G.P",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction, Nth term of A.P, Sum of first N terms of A.P, Nth term of G.P, Sum of first N terms of G.P Total Hours 28",
+            "topics": [
+              "Introduction, Nth term of A.P, Sum of first N terms of A.P, Nth",
+              "term of G.P, Sum of first N terms of G.P",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Determinants and Matrices",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Algebra of Matrices, Determinant of Matrix, Inverse of Matrix up to",
+              "3×3 matrix, Solution of Simultaneous Equation"
+            ],
+            "topics_text": "Algebra of Matrices, Determinant of Matrix, Inverse of Matrix up to 3×3 matrix, Solution of Simultaneous Equation",
+            "topics": [
+              "Algebra of Matrices, Determinant of Matrix, Inverse of Matrix up to",
+              "3×3 matrix, Solution of Simultaneous Equation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Equations",
+            "contact_hours": 6,
+            "topic_lines": [
+              "System of Linear Equation, Solution of Quadratic Equation,",
+              "Solution of Cubic Equation"
+            ],
+            "topics_text": "System of Linear Equation, Solution of Quadratic Equation, Solution of Cubic Equation",
+            "topics": [
+              "System of Linear Equation, Solution of Quadratic Equation,",
+              "Solution of Cubic Equation"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Function",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Algebra of Function, Example of Function"
+            ],
+            "topics_text": "Algebra of Function, Example of Function",
+            "topics": [
+              "Algebra of Function, Example of Function"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Limit of functions",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Limit of polynomial and rational functions, Limit of trigonometric",
+              "function, Limit of exponential function and Limit at infinity"
+            ],
+            "topics_text": "Limit of polynomial and rational functions, Limit of trigonometric function, Limit of exponential function and Limit at infinity",
+            "topics": [
+              "Limit of polynomial and rational functions, Limit of trigonometric",
+              "function, Limit of exponential function and Limit at infinity"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Arithmetic Progression",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Nth term of A. P, Sum of first N terms of A. P",
+              "Total Hours 28"
+            ],
+            "topics_text": "Nth term of A. P, Sum of first N terms of A. P Total Hours 28",
+            "topics": [
+              "Nth term of A. P, Sum of first N terms of A. P",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Higher Engineering Mathematics, Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, 2007"
+        ],
+        "textbooks": [
+          "Class-XI science Mathematics, NCERT, NCERT, 2021",
+          "Class-XII science Mathematics Part=I, NCERT, NCERT, 2021",
+          "Class-X Mathematics, NCERT, NCERT, 2021",
+          "B.S. Grewal, Higher Engineering Mathematics. , -, Khanna Publishers, 2007 References:",
+          "Higher Engineering Mathematics, Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, 2007"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://en.wikipedia.org/wiki/Determinant",
+          "https://en.wikipedia.org/wiki/Equation",
+          "https://en.wikipedia.org/wiki/Function_(mathematics)",
+          "https://en.wikipedia.org/wiki/Limit_of_a_function",
+          "https://en.wikipedia.org/wiki/Arithmetic_progression"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6388,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         2\nCOURSE TITLE    MATHEMATICS-II\nCOURSE CODE     09MA2102\nCOURSE CREDITS  4\n\nObjective:\n 1  Students are intended to understand the basic concepts and principles of Mathematics such\n     as algebra, mensuration and trigonometry. This knowledge is required to understand and\n     solve Engineering problems. The course will empower students to use proper Mathematical\n     tool to understand Engineering principles and concepts. Main objective of the course is to\n     apply concepts of algebra, mensuration, trigonometry or suitable Mathematical tool to\n     solve given engineering problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Learn concept of Matrix and Determinant and solve the system of linear equations by using\n     matrix.\n 2  Solve equations of algebraic expressions using algebraic skills.\n 3  Solve the problems using functions.\n 4  Solve the problem of function using the concept of Limit.\n 5  Find the nth term and Sum of arithmetic and geometric progression.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Determinants and Matrices                                8\n               Introduction, Algebra of Matrices, Determinant of Matrix, Inverse\n              of Matrix up to 3×3 matrix, Solution of Simultaneous Equation (up\n               to 3 variable)\n     2      Equations                                               6\n            System of Linear Equation, Solution of Quadratic Equation,\n              Solution of Cubic Equation\n     3      Function                                                4\n               Introduction of Function, Algebra of Function, Example of Function\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Limit of functions                                        6\n               Definition and some properties of limits, Limit of polynomial and\n                rational functions, Limit of trigonometric function, Limit of\n              exponential function, Limit at infinity\n     5      Arithmetic and Geometric Progression                      4\n               Introduction, Nth term of A.P, Sum of first N terms of A.P, Nth\n             term of G.P, Sum of first N terms of G.P\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Determinants and Matrices                                8\n             Algebra of Matrices, Determinant of Matrix, Inverse of Matrix up to\n           3×3 matrix, Solution of Simultaneous Equation\n     2      Equations                                               6\n            System of Linear Equation, Solution of Quadratic Equation,\n              Solution of Cubic Equation\n     3      Function                                                4\n             Algebra of Function, Example of Function\n     4      Limit of functions                                        6\n             Limit of polynomial and rational functions, Limit of trigonometric\n               function, Limit of exponential function and Limit at infinity\n     5      Arithmetic Progression                                    4\n            Nth term of A. P, Sum of first N terms of A. P\n                               Total Hours                       28\n\nTextbook :\n 1  Class-XI science Mathematics, NCERT, NCERT, 2021\n 2  Class-XII science Mathematics Part=I, NCERT, NCERT, 2021\n 3  Class-X Mathematics, NCERT, NCERT, 2021\n 4  B.S. Grewal, Higher Engineering Mathematics. , -, Khanna Publishers, 2007\n\nReferences:\n 1  Higher Engineering Mathematics, Higher Engineering Mathematics, B.S. Grewal, Khanna\n     Publishers, 2007\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    30.00         30.00         30.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms\n\nSupplementary Resources:\n 1  https://en.wikipedia.org/wiki/Determinant\n 2  https://en.wikipedia.org/wiki/Equation\n 3  https://en.wikipedia.org/wiki/Function_(mathematics)\n 4  https://en.wikipedia.org/wiki/Limit_of_a_function\n 5  https://en.wikipedia.org/wiki/Arithmetic_progression\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "fc36771416ade5af3eec2aba082bbced0f828c7acbffcd106d4aef9dca2ec9e6"
+    },
+    {
+      "subject_id": "46000938210201",
+      "subject_name": "UNIT OPERATION-I",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 2,
+      "subject_code": "09CH2102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2102.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2102 - UNIT OPERATION-I (.pdf",
+      "expected_pdf_sha256": "aa0902dd64205dd1f846c3917e35e2f55c6ed5d47017aa90e80d24383d0cabf6",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "UNIT OPERATION-I",
+        "course_code": "09CH2102",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "Basic concepts of units and dimensions, mass fraction mole fraction, material balance."
+      },
+      "objectives": [
+        "To study about Mechanical Operations generally carried out in Chemical Processes Industries involving solid-solid and solid-liquid handling, mixing and separation.",
+        "To study about Mechanical Operations generally carried out in ChemicalProcesses Industries involving solid-solid and solid-liquid handling, mixing and separation."
+      ],
+      "course_outcomes": [
+        "Understand different properties of particulate solids and methods of out its analysis.",
+        "Express criteria for selection of specific size reduction equipments based on their application.",
+        "Be able to utilize theoretical knowledge for fundamental design of suitable solid liquid separation operation",
+        "To build a bridge between theoretical and practical concepts of unit operation used in chemical industry to solve environmental pollution problems."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Particulate Solids",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Particle characterization, Concept of sphericity, Mixed",
+              "particles size, specific surface area and specific number of particles",
+              "Basic terms in screening, Screen analysis- differential and",
+              "cumulative analysis."
+            ],
+            "topics_text": "Introduction, Particle characterization, Concept of sphericity, Mixed particles size, specific surface area and specific number of particles Basic terms in screening, Screen analysis- differential and cumulative analysis.",
+            "topics": [
+              "Introduction, Particle characterization, Concept of sphericity, Mixed",
+              "particles size, specific surface area and specific number of particles",
+              "Basic terms in screening, Screen analysis- differential and",
+              "cumulative analysis."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Size Reduction and Screening",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction, Crushing Law, Classification of size reduction",
+              "equipments, Crushers, Grinders, Ultra-fine grinders, Cutting",
+              "machines, Open circuit and closed circuit operation, Screen",
+              "effectiveness, Ideal screen and actual screen, Different screening",
+              "equipments"
+            ],
+            "topics_text": "Introduction, Crushing Law, Classification of size reduction equipments, Crushers, Grinders, Ultra-fine grinders, Cutting machines, Open circuit and closed circuit operation, Screen effectiveness, Ideal screen and actual screen, Different screening equipments",
+            "topics": [
+              "Introduction, Crushing Law, Classification of size reduction",
+              "equipments, Crushers, Grinders, Ultra-fine grinders, Cutting",
+              "machines, Open circuit and closed circuit operation, Screen",
+              "effectiveness, Ideal screen and actual screen, Different screening",
+              "equipments"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Filtration, Sedimentation and Centrifugal Separation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Definition and Mechanisms of filtration, Filtration theory, Filter",
+              "media and filter aids, Classification & Selection of filtration",
+              "equipments, Bag filter in air pollution control, Plate and frame filter",
+              "press, Rotary drum filter etc. Batch sedimentation test, Applications",
+              "of sedimentation, Theory of centrifugal separation, centrifugal",
+              "filtration, Classification of centrifuges, Simple bowl centrifuge, Disc",
+              "centrifuge, Tubular-bowl centrifuge, Gas centrifuge"
+            ],
+            "topics_text": "Definition and Mechanisms of filtration, Filtration theory, Filter media and filter aids, Classification & Selection of filtration equipments, Bag filter in air pollution control, Plate and frame filter press, Rotary drum filter etc. Batch sedimentation test, Applications of sedimentation, Theory of centrifugal separation, centrifugal filtration, Classification of centrifuges, Simple bowl centrifuge, Disc centrifuge, Tubular-bowl centrifuge, Gas centrifuge",
+            "topics": [
+              "Definition and Mechanisms of filtration, Filtration theory, Filter",
+              "media and filter aids, Classification & Selection of filtration",
+              "equipments, Bag filter in air pollution control, Plate and frame filter",
+              "press, Rotary drum filter etc. Batch sedimentation test, Applications",
+              "of sedimentation, Theory of centrifugal separation, centrifugal",
+              "filtration, Classification of centrifuges, Simple bowl centrifuge, Disc",
+              "centrifuge, Tubular-bowl centrifuge, Gas centrifuge"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Solid-Solid and Solid-Fluid Separation",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction, Magnetic Separation, Froth Floatation, Cyclone",
+              "Separation and Electrostatic Precipitation",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction, Magnetic Separation, Froth Floatation, Cyclone Separation and Electrostatic Precipitation Total Hours 28",
+            "topics": [
+              "Introduction, Magnetic Separation, Froth Floatation, Cyclone",
+              "Separation and Electrostatic Precipitation",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study the construction and working also find out it`s efficiency",
+              "of Jaw crusher"
+            ],
+            "topics_text": "To study the construction and working also find out it`s efficiency of Jaw crusher",
+            "topics": [
+              "To study the construction and working also find out it`s efficiency",
+              "of Jaw crusher"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study the construction and working also find out it`s efficiency",
+              "of Roll crusher"
+            ],
+            "topics_text": "To study the construction and working also find out it`s efficiency of Roll crusher",
+            "topics": [
+              "To study the construction and working also find out it`s efficiency",
+              "of Roll crusher"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To find out critical speed and efficiency of Ball Mill"
+            ],
+            "topics_text": "To find out critical speed and efficiency of Ball Mill",
+            "topics": [
+              "To find out critical speed and efficiency of Ball Mill"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To separate heavy particles from solid-solid mixture using cyclone",
+              "Separator"
+            ],
+            "topics_text": "To separate heavy particles from solid-solid mixture using cyclone Separator",
+            "topics": [
+              "To separate heavy particles from solid-solid mixture using cyclone",
+              "Separator"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To separate solid particles with the help of forth flotation unit"
+            ],
+            "topics_text": "To separate solid particles with the help of forth flotation unit",
+            "topics": [
+              "To separate solid particles with the help of forth flotation unit"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To separate out solid from slurry with the help of press Filter"
+            ],
+            "topics_text": "To separate out solid from slurry with the help of press Filter",
+            "topics": [
+              "To separate out solid from slurry with the help of press Filter"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study Construction and working of centrifugal filtration"
+            ],
+            "topics_text": "To study Construction and working of centrifugal filtration",
+            "topics": [
+              "To study Construction and working of centrifugal filtration"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study Construction and working of vacuum filtration"
+            ],
+            "topics_text": "To study Construction and working of vacuum filtration",
+            "topics": [
+              "To study Construction and working of vacuum filtration"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To Perform Batch Sedimentation to separate out un-dissolved solid",
+              "form solid water solution"
+            ],
+            "topics_text": "To Perform Batch Sedimentation to separate out un-dissolved solid form solid water solution",
+            "topics": [
+              "To Perform Batch Sedimentation to separate out un-dissolved solid",
+              "form solid water solution"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To find out the screen effectiveness of Sieve Shaker",
+              "Total Hours 20"
+            ],
+            "topics_text": "To find out the screen effectiveness of Sieve Shaker Total Hours 20",
+            "topics": [
+              "To find out the screen effectiveness of Sieve Shaker",
+              "Total Hours 20"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Chemical Engineering Volume-2, Chemical Engineering Volume-2, J. F. Richardson, J. H. Harker and J. R. Backhurst, Butterworth-Heinemann International, 1990",
+          "Principles Of Unit Operations, Principles Of Unit Operations, Alan S. Foust, Leonard A. Wenzel, Curtis W, Wiley-India Publishers, 2008"
+        ],
+        "textbooks": [
+          "Unit Operations of Chemical Engg. by W.L. McCabe, J. C. Smith & Harriott, 6th Edition distribution co., W.L. McCabe, J. C. Smith & Harriott, McGraw Hills India, 2000 References:",
+          "Chemical Engineering Volume-2, Chemical Engineering Volume-2, J. F. Richardson, J. H. Harker and J. R. Backhurst, Butterworth-Heinemann International, 1990",
+          "Principles Of Unit Operations, Principles Of Unit Operations, Alan S. Foust, Leonard A. Wenzel, Curtis W, Wiley-India Publishers, 2008"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://archive.nptel.ac.in/courses/103/107/103107123/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7925,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         2\nCOURSE TITLE    UNIT OPERATION-I\nCOURSE CODE     09CH2102\nCOURSE CREDITS  4\n\nObjective:\n 1  To study about Mechanical Operations generally carried out in Chemical\n     Processes Industries involving solid-solid and solid-liquid handling, mixing and\n     separation.\n 2  To study about Mechanical Operations generally carried out in ChemicalProcesses\n     Industries involving solid-solid and solid-liquid handling, mixing and separation.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand different properties of particulate solids and methods of out its analysis.\n 2  Express criteria for selection of specific size reduction equipments based on their\n     application.\n 3  Be able to utilize theoretical knowledge for fundamental design of suitable solid liquid\n     separation operation\n 4  To build a bridge between theoretical and practical concepts of unit operation used in\n    chemical industry to solve environmental pollution problems.\n\n\nPre-requisite of course:Basic concepts of units and dimensions, mass fraction mole fraction,\nmaterial balance.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Particulate Solids                                         4\n               Introduction, Particle characterization, Concept of sphericity, Mixed\n                particles size, specific surface area and specific number of particles\n             Basic terms in screening, Screen analysis- differential and\n             cumulative analysis.\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2       Size Reduction and Screening                              6\n               Introduction, Crushing Law, Classification of size reduction\n              equipments, Crushers, Grinders, Ultra-fine grinders, Cutting\n             machines, Open circuit and closed circuit operation, Screen\n               effectiveness, Ideal screen and actual screen, Different screening\n             equipments\n     3       Filtration, Sedimentation and Centrifugal Separation          10\n               Definition and Mechanisms of filtration, Filtration theory, Filter\n            media and filter aids, Classification & Selection of filtration\n              equipments, Bag filter in air pollution control, Plate and frame filter\n                press, Rotary drum filter etc. Batch sedimentation test, Applications\n              of sedimentation, Theory of centrifugal separation, centrifugal\n                  filtration, Classification of centrifuges, Simple bowl centrifuge, Disc\n               centrifuge, Tubular-bowl centrifuge, Gas centrifuge\n     4       Solid-Solid and Solid-Fluid Separation                       8\n               Introduction, Magnetic Separation, Froth Floatation, Cyclone\n              Separation and Electrostatic Precipitation\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment-1                                            2\n           To study the construction and working also find out it`s efficiency\n              of Jaw crusher\n     2      Experiment-2                                            2\n           To study the construction and working also find out it`s efficiency\n              of Roll crusher\n     3      Experiment-3                                            2\n           To find out critical speed and efficiency of Ball Mill\n     4      Experiment-4                                            2\n           To separate heavy particles from solid-solid mixture using cyclone\n              Separator\n     5      Experiment-5                                            2\n           To separate solid particles with the help of forth flotation unit\n     6      Experiment-6                                            2\n           To separate out solid from slurry with the help of press Filter\n     7      Experiment-7                                            2\n           To study Construction and working of centrifugal filtration\n     8      Experiment-8                                            2\n           To study Construction and working of vacuum filtration\n     9      Experiment-9                                            2\n           To Perform Batch Sedimentation to separate out un-dissolved solid\n            form solid water solution\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     10     Experiment-10                                           2\n           To find out the screen effectiveness of Sieve Shaker\n                               Total Hours                       20\n\nTextbook :\n 1  Unit Operations of Chemical Engg. by W.L. McCabe, J. C. Smith & Harriott, 6th Edition\n     distribution co., W.L. McCabe, J. C. Smith & Harriott, McGraw Hills India, 2000\n\nReferences:\n 1  Chemical Engineering Volume-2, Chemical Engineering Volume-2, J. F. Richardson, J. H.\n    Harker and J. R. Backhurst, Butterworth-Heinemann International, 1990\n 2  Principles Of Unit Operations, Principles Of Unit Operations, Alan S. Foust, Leonard A.\n    Wenzel, Curtis W, Wiley-India Publishers, 2008\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://archive.nptel.ac.in/courses/103/107/103107123/\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "aa0902dd64205dd1f846c3917e35e2f55c6ed5d47017aa90e80d24383d0cabf6"
+    }
+  ],
+  "build_summary": {
+    "extracted": 7,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

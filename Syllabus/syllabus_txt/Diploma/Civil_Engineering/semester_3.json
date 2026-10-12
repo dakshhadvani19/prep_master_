@@ -1,0 +1,2320 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 48,
+    "course_name": "Diploma Civil Engineering",
+    "output_slug": "Civil_Engineering"
+  },
+  "semester": 3,
+  "subject_count": 7,
+  "subjects": [
+    {
+      "subject_id": "48000939031001",
+      "subject_name": "BASIC SURVEYING",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 3,
+      "subject_code": "09CI0310",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/17.-SEMESTER-3_09CI0310-BASIC-SURVEYING.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09CI0310 - BASIC SURVEYING (.pdf",
+      "expected_pdf_sha256": "b8aa63f2c00787c4a0a793056110b68019b90d70137eb46df33b2731d2c1d621",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BASIC SURVEYING",
+        "course_code": "09CI0310",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "basics of mathamatics"
+      },
+      "objectives": [
+        "To provide basic knowledge of the principles and importance of surveying in civil engineering.",
+        "To familiarize students with various surveying instruments and their uses in field measurements.",
+        "To develop understanding of measurement of distances, angles, and elevations using standard surveying methods.",
+        "To introduce modern surveying techniques such as GPS and their applications in engineering projects."
+      ],
+      "course_outcomes": [
+        "Explain the basic concepts, classification, objectives, and principles of surveying, and use scales in practical surveying tasks.",
+        "Select and use appropriate surveying equipment for linear measurements, identify errors, and compute areas from given data or drawings",
+        "Apply traverse surveying techniques using compass and plane table, eliminate errors, and plot accurate traverse drawings",
+        "Perform levelling operations using dumpy level, auto level, or digital level, and prepare contour maps.",
+        "Explain the basic principles of GPS and apply it for determining location and basic surveying applications."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25 MR. SMIT MAHENDRABHAI KACHA MR. MITTAL KIRITBHAI JOISER Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basics of Surveying",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Measurement of area & Volume , Concept of area & volume, ,",
+              "Simpson rule , Calculation of irregular area , Survey Purpose and",
+              "use , Types of surveying- Primary and Secondary, Classification:",
+              "Plane, Geodetic, Cadastral, Hydrographic, Photogrammetry and",
+              "Aerial, Principles of Surveying, Scales: Engineer’s scale,",
+              "Representative Fraction (RF) and diagonal scale"
+            ],
+            "topics_text": "Measurement of area & Volume , Concept of area & volume, , Simpson rule , Calculation of irregular area , Survey Purpose and use , Types of surveying- Primary and Secondary, Classification: Plane, Geodetic, Cadastral, Hydrographic, Photogrammetry and Aerial, Principles of Surveying, Scales: Engineer’s scale, Representative Fraction (RF) and diagonal scale",
+            "topics": [
+              "Measurement of area & Volume , Concept of area & volume, ,",
+              "Simpson rule , Calculation of irregular area , Survey Purpose and",
+              "use , Types of surveying- Primary and Secondary, Classification:",
+              "Plane, Geodetic, Cadastral, Hydrographic, Photogrammetry and",
+              "Aerial, Principles of Surveying, Scales: Engineer’s scale,",
+              "Representative Fraction (RF) and diagonal scale"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Chain Survey",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Instruments used in chain survey: Metric Chain, Tapes, Arrow,",
+              "Ranging rod, Line ranger, Offset rod, Open cross staff, Optical",
+              "square, Technical terms: Chain survey Station, Base line, Check",
+              "line, Tie line, Offset, Tie station. , Ranging: Direct and Indirect",
+              "Ranging , Methods of Chaining, obstacles in chaining, Errors in",
+              "length: Instrumental error, personal error, error due to natural cause,",
+              "random error, Principles of triangulation, Types of offsets:",
+              "Perpendicular and Oblique. , Conventional Signs, Recording of",
+              "measurements in a field book"
+            ],
+            "topics_text": "Instruments used in chain survey: Metric Chain, Tapes, Arrow, Ranging rod, Line ranger, Offset rod, Open cross staff, Optical square, Technical terms: Chain survey Station, Base line, Check line, Tie line, Offset, Tie station. , Ranging: Direct and Indirect Ranging , Methods of Chaining, obstacles in chaining, Errors in length: Instrumental error, personal error, error due to natural cause, random error, Principles of triangulation, Types of offsets: Perpendicular and Oblique. , Conventional Signs, Recording of measurements in a field book",
+            "topics": [
+              "Instruments used in chain survey: Metric Chain, Tapes, Arrow,",
+              "Ranging rod, Line ranger, Offset rod, Open cross staff, Optical",
+              "square, Technical terms: Chain survey Station, Base line, Check",
+              "line, Tie line, Offset, Tie station. , Ranging: Direct and Indirect",
+              "Ranging , Methods of Chaining, obstacles in chaining, Errors in",
+              "length: Instrumental error, personal error, error due to natural cause,",
+              "random error, Principles of triangulation, Types of offsets:",
+              "Perpendicular and Oblique. , Conventional Signs, Recording of",
+              "measurements in a field book"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Compass Survey",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Compass Traversing- open, closed, Technical Terms: Geographic",
+              "True Magnetic Meridians and Bearings, Whole Circle Bearing,",
+              "system and Reduced Bearing system , Examples on conversion of",
+              "given bearing to another bearing (from one form to another), Fore",
+              "Bearing and Back Bearing,, Calculation of internal and external",
+              "angles from bearings at a station, Dip of Magnetic needle, Magnetic",
+              "Declination , Components of Prismatic Compass and their",
+              "Functions, Methods of using Prismatic Compass- Temporary",
+              "adjustments and observing bearings, Local attraction, , Methods of",
+              "correction of observed bearings - Correction at station and",
+              "correction to included angles, Methods of plotting a traverse and",
+              "closing"
+            ],
+            "topics_text": "Compass Traversing- open, closed, Technical Terms: Geographic True Magnetic Meridians and Bearings, Whole Circle Bearing, system and Reduced Bearing system , Examples on conversion of given bearing to another bearing (from one form to another), Fore Bearing and Back Bearing,, Calculation of internal and external angles from bearings at a station, Dip of Magnetic needle, Magnetic Declination , Components of Prismatic Compass and their Functions, Methods of using Prismatic Compass- Temporary adjustments and observing bearings, Local attraction, , Methods of correction of observed bearings - Correction at station and correction to included angles, Methods of plotting a traverse and closing",
+            "topics": [
+              "Compass Traversing- open, closed, Technical Terms: Geographic",
+              "True Magnetic Meridians and Bearings, Whole Circle Bearing,",
+              "system and Reduced Bearing system , Examples on conversion of",
+              "given bearing to another bearing (from one form to another), Fore",
+              "Bearing and Back Bearing,, Calculation of internal and external",
+              "angles from bearings at a station, Dip of Magnetic needle, Magnetic",
+              "Declination , Components of Prismatic Compass and their",
+              "Functions, Methods of using Prismatic Compass- Temporary",
+              "adjustments and observing bearings, Local attraction, , Methods of",
+              "correction of observed bearings - Correction at station and",
+              "correction to included angles, Methods of plotting a traverse and",
+              "closing"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Levelling",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Basic terminologies: Level surfaces, Horizontal and vertical",
+              "surfaces, Datum, Bench Marks GTS, Permanent, Arbitrary and",
+              "Temporary, Reduced Level, Rise, Fall, Line of collimation, Station,",
+              "Back sight, Fore sight, Intermediate sight, Change point, Height of",
+              "instruments,, Types of levels: Dumpy, Tilting, Auto level, Digital",
+              "level, Components of Dumpy Level and its fundamental axes,",
+              "Temporary adjustments of Level., Types of Leveling Staff: Self-",
+              "reading staff and Target staff , Reduction of level by Line of",
+              "collimation and Rise and Fall Method ,, Leveling Types: Simple,",
+              "Differential, Fly, Profile and Reciprocal Leveling. , Counter,",
+              "Contour intervals, Characteristics of contours, Methods of",
+              "Contouring: Direct and indirect."
+            ],
+            "topics_text": "Basic terminologies: Level surfaces, Horizontal and vertical surfaces, Datum, Bench Marks GTS, Permanent, Arbitrary and Temporary, Reduced Level, Rise, Fall, Line of collimation, Station, Back sight, Fore sight, Intermediate sight, Change point, Height of instruments,, Types of levels: Dumpy, Tilting, Auto level, Digital level, Components of Dumpy Level and its fundamental axes, Temporary adjustments of Level., Types of Leveling Staff: Self- reading staff and Target staff , Reduction of level by Line of collimation and Rise and Fall Method ,, Leveling Types: Simple, Differential, Fly, Profile and Reciprocal Leveling. , Counter, Contour intervals, Characteristics of contours, Methods of Contouring: Direct and indirect.",
+            "topics": [
+              "Basic terminologies: Level surfaces, Horizontal and vertical",
+              "surfaces, Datum, Bench Marks GTS, Permanent, Arbitrary and",
+              "Temporary, Reduced Level, Rise, Fall, Line of collimation, Station,",
+              "Back sight, Fore sight, Intermediate sight, Change point, Height of",
+              "instruments,, Types of levels: Dumpy, Tilting, Auto level, Digital",
+              "level, Components of Dumpy Level and its fundamental axes,",
+              "Temporary adjustments of Level., Types of Leveling Staff: Self",
+              "reading staff and Target staff , Reduction of level by Line of",
+              "collimation and Rise and Fall Method ,, Leveling Types: Simple,",
+              "Differential, Fly, Profile and Reciprocal Leveling. , Counter,",
+              "Contour intervals, Characteristics of contours, Methods of",
+              "Contouring: Direct and indirect."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Introduction to Global Positioning System(GPS)",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction to GPS, Maps, Types of digital map , Fundamentals of",
+              "GPS,, Purpose of GPS , Components of GPS, Field procedures of",
+              "GPS, Observations and applications in Civil Engineering Field",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction to GPS, Maps, Types of digital map , Fundamentals of GPS,, Purpose of GPS , Components of GPS, Field procedures of GPS, Observations and applications in Civil Engineering Field Total Hours 28",
+            "topics": [
+              "Introduction to GPS, Maps, Types of digital map , Fundamentals of",
+              "GPS,, Purpose of GPS , Components of GPS, Field procedures of",
+              "GPS, Observations and applications in Civil Engineering Field",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Example 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Measure distance between two intervisible stations using chain, tape",
+              "and ranging rods"
+            ],
+            "topics_text": "Measure distance between two intervisible stations using chain, tape and ranging rods",
+            "topics": [
+              "Measure distance between two intervisible stations using chain, tape",
+              "and ranging rods"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Example 2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Perform reciprocal ranging and measure distance between two",
+              "stations on uneven ground"
+            ],
+            "topics_text": "Perform reciprocal ranging and measure distance between two stations on uneven ground",
+            "topics": [
+              "Perform reciprocal ranging and measure distance between two",
+              "stations on uneven ground"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Example 3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Determine area of open field using chain and cross staff survey",
+              "method"
+            ],
+            "topics_text": "Determine area of open field using chain and cross staff survey method",
+            "topics": [
+              "Determine area of open field using chain and cross staff survey",
+              "method"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Example 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Measure fore bearing and back bearing of survey lines of open",
+              "traverse using Prismatic Compass"
+            ],
+            "topics_text": "Measure fore bearing and back bearing of survey lines of open traverse using Prismatic Compass",
+            "topics": [
+              "Measure fore bearing and back bearing of survey lines of open",
+              "traverse using Prismatic Compass"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Example 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Measure and correct fore bearing and back bearing of closed",
+              "traverse (3–4 sides) for local attraction and included angles"
+            ],
+            "topics_text": "Measure and correct fore bearing and back bearing of closed traverse (3–4 sides) for local attraction and included angles",
+            "topics": [
+              "Measure and correct fore bearing and back bearing of closed",
+              "traverse (3–4 sides) for local attraction and included angles"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Example 6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Conduct chain and compass survey project for closed traverse with",
+              "minimum five stations and plotting"
+            ],
+            "topics_text": "Conduct chain and compass survey project for closed traverse with minimum five stations and plotting",
+            "topics": [
+              "Conduct chain and compass survey project for closed traverse with",
+              "minimum five stations and plotting"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Example 7",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Perform simple leveling using Dumpy Level / Auto Level and",
+              "leveling staff"
+            ],
+            "topics_text": "Perform simple leveling using Dumpy Level / Auto Level and leveling staff",
+            "topics": [
+              "Perform simple leveling using Dumpy Level / Auto Level and",
+              "leveling staff"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Example 8",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Perform differential leveling and determine reduced levels using HI",
+              "method and rise & fall method"
+            ],
+            "topics_text": "Perform differential leveling and determine reduced levels using HI method and rise & fall method",
+            "topics": [
+              "Perform differential leveling and determine reduced levels using HI",
+              "method and rise & fall method"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Example 9",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Conduct fly leveling with double check using dumpy level/auto",
+              "level and leveling staff"
+            ],
+            "topics_text": "Conduct fly leveling with double check using dumpy level/auto level and leveling staff",
+            "topics": [
+              "Conduct fly leveling with double check using dumpy level/auto",
+              "level and leveling staff"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Example10",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Conduct survey project for contour mapping using block contouring",
+              "method (100 m × 100 m area with 10 m grid)"
+            ],
+            "topics_text": "Conduct survey project for contour mapping using block contouring method (100 m × 100 m area with 10 m grid)",
+            "topics": [
+              "Conduct survey project for contour mapping using block contouring",
+              "method (100 m × 100 m area with 10 m grid)"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Example 11",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Plot contours on A1 size drawing sheet using collected survey data"
+            ],
+            "topics_text": "Plot contours on A1 size drawing sheet using collected survey data",
+            "topics": [
+              "Plot contours on A1 size drawing sheet using collected survey data"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Example 12",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Demonstrate use of Global Positioning System (GPS) in surveying",
+              "applications"
+            ],
+            "topics_text": "Demonstrate use of Global Positioning System (GPS) in surveying applications",
+            "topics": [
+              "Demonstrate use of Global Positioning System (GPS) in surveying",
+              "applications"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Example 13",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Solve numerical problems on chain surveying including correction",
+              "of chain length and area calculation"
+            ],
+            "topics_text": "Solve numerical problems on chain surveying including correction of chain length and area calculation",
+            "topics": [
+              "Solve numerical problems on chain surveying including correction",
+              "of chain length and area calculation"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Example 14",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Solve numerical problems on compass surveying and leveling",
+              "including bearings, included angles, HI method and rise & fall",
+              "method",
+              "Total Hours 56"
+            ],
+            "topics_text": "Solve numerical problems on compass surveying and leveling including bearings, included angles, HI method and rise & fall method Total Hours 56",
+            "topics": [
+              "Solve numerical problems on compass surveying and leveling",
+              "including bearings, included angles, HI method and rise & fall",
+              "method",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Surveying and Levelling Vol-I, Surveying and Levelling Vol-I, S.S. Bhavikatti, I. K. International, 2019",
+          "Surveying Vol. I , Surveying Vol. I , Punmia, B.C,; Jain, Ashok Kumar; Jain, Arun Kumar,, Laxmi Publications Pvt. Ltd, 2020"
+        ],
+        "textbooks": [
+          "Surveying and Levelling Vol-I, Dr. B. C. Punmia, Laxmi Publication, 2019",
+          "Surveying and Levelling, R. Subramanian, Oxford University Press, 2012 References:",
+          "Surveying and Levelling Vol-I, Surveying and Levelling Vol-I, S.S. Bhavikatti, I. K. International, 2019",
+          "Surveying Vol. I , Surveying Vol. I , Punmia, B.C,; Jain, Ashok Kumar; Jain, Arun Kumar,, Laxmi Publications Pvt. Ltd, 2020"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://nptel.ac.in/courses/105107122"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 10575,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    BASIC SURVEYING\nCOURSE CODE     09CI0310\nCOURSE CREDITS  4\n\nObjective:\n 1  To provide basic knowledge of the principles and importance of surveying in civil\n     engineering.\n 2  To familiarize students with various surveying instruments and their uses in field\n    measurements.\n 3  To develop understanding of measurement of distances, angles, and elevations using\n     standard surveying methods.\n 4  To introduce modern surveying techniques such as GPS and their applications in\n     engineering projects.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Explain the basic concepts, classification, objectives, and principles of surveying, and use\n     scales in practical surveying tasks.\n 2  Select and use appropriate surveying equipment for linear measurements, identify errors,\n    and compute areas from given data or drawings\n 3  Apply traverse surveying techniques using compass and plane table, eliminate errors, and\n     plot accurate traverse drawings\n 4  Perform levelling operations using dumpy level, auto level, or digital level, and prepare\n     contour maps.\n 5  Explain the basic principles of GPS and apply it for determining location and basic\n     surveying applications.\n\n\nPre-requisite of course:basics of mathamatics\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Basics of Surveying                                       4\n            Measurement of area & Volume , Concept of area & volume, ,\n            Simpson rule , Calculation of irregular area , Survey Purpose and\n             use , Types of surveying- Primary and Secondary, Classification:\n               Plane, Geodetic, Cadastral, Hydrographic, Photogrammetry and\n               Aerial, Principles of Surveying, Scales: Engineer’s scale,\n              Representative Fraction (RF) and diagonal scale\n     2      Chain Survey                                            8\n              Instruments used in chain survey: Metric Chain, Tapes, Arrow,\n            Ranging rod, Line ranger, Offset rod, Open cross staff, Optical\n               square, Technical terms: Chain survey Station, Base line, Check\n                 line, Tie line, Offset, Tie station. , Ranging: Direct and Indirect\n            Ranging , Methods of Chaining, obstacles in chaining, Errors in\n               length: Instrumental error, personal error, error due to natural cause,\n            random error, Principles of triangulation, Types of offsets:\n              Perpendicular and Oblique. , Conventional Signs, Recording of\n             measurements in a field book\n     3     Compass Survey                                         6\n           Compass Traversing- open, closed, Technical Terms: Geographic\n             True Magnetic Meridians and Bearings, Whole Circle Bearing,\n             system and Reduced Bearing system , Examples on conversion of\n             given bearing to another bearing (from one form to another), Fore\n             Bearing and Back Bearing,, Calculation of internal and external\n              angles from bearings at a station, Dip of Magnetic needle, Magnetic\n              Declination , Components of Prismatic Compass and their\n              Functions, Methods of using Prismatic Compass- Temporary\n              adjustments and observing bearings, Local attraction, , Methods of\n               correction of observed bearings - Correction at station and\n               correction to included angles, Methods of plotting a traverse and\n              closing\n     4       Levelling                                                6\n             Basic terminologies: Level surfaces, Horizontal and vertical\n               surfaces, Datum, Bench Marks GTS, Permanent, Arbitrary and\n             Temporary, Reduced Level, Rise, Fall, Line of collimation, Station,\n            Back sight, Fore sight, Intermediate sight, Change point, Height of\n               instruments,, Types of levels: Dumpy, Tilting, Auto level, Digital\n                level, Components of Dumpy Level and its fundamental axes,\n            Temporary adjustments of Level., Types of Leveling Staff: Self-\n              reading staff and Target staff , Reduction of level by Line of\n              collimation and Rise and Fall Method ,, Leveling Types: Simple,\n                Differential, Fly, Profile and Reciprocal Leveling. , Counter,\n             Contour intervals, Characteristics of contours, Methods of\n              Contouring: Direct and indirect.\n     5      Introduction to Global Positioning System(GPS)              4\n               Introduction to GPS, Maps, Types of digital map , Fundamentals of\n             GPS,, Purpose of GPS , Components of GPS, Field procedures of\n           GPS, Observations and applications in Civil Engineering Field\n                               Total Hours                       28\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Example 1                                               4\n            Measure distance between two intervisible stations using chain, tape\n            and ranging rods\n     2     Example 2                                               4\n             Perform reciprocal ranging and measure distance between two\n                stations on uneven ground\n     3     Example 3                                               4\n             Determine area of open field using chain and cross staff survey\n            method\n     4     Example 4                                               4\n            Measure fore bearing and back bearing of survey lines of open\n               traverse using Prismatic Compass\n     5     Example 5                                               4\n            Measure and correct fore bearing and back bearing of closed\n               traverse (3–4 sides) for local attraction and included angles\n     6     Example 6                                               4\n            Conduct chain and compass survey project for closed traverse with\n           minimum five stations and plotting\n     7     Example 7                                               4\n             Perform simple leveling using Dumpy Level / Auto Level and\n               leveling staff\n     8     Example 8                                               4\n             Perform differential leveling and determine reduced levels using HI\n            method and rise & fall method\n     9     Example 9                                               4\n            Conduct fly leveling with double check using dumpy level/auto\n               level and leveling staff\n     10     Example10                                              4\n            Conduct survey project for contour mapping using block contouring\n            method (100 m × 100 m area with 10 m grid)\n     11     Example 11                                              4\n               Plot contours on A1 size drawing sheet using collected survey data\n     12     Example 12                                              4\n             Demonstrate use of Global Positioning System (GPS) in surveying\n               applications\n     13     Example 13                                              4\n             Solve numerical problems on chain surveying including correction\n              of chain length and area calculation\n     14     Example 14                                              4\n             Solve numerical problems on compass surveying and leveling\n              including bearings, included angles, HI method and rise & fall\n            method\n                               Total Hours                       56\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Textbook :\n 1  Surveying and Levelling Vol-I, Dr. B. C. Punmia, Laxmi Publication, 2019\n 2  Surveying and Levelling, R. Subramanian, Oxford University Press, 2012\n\nReferences:\n 1  Surveying and Levelling Vol-I, Surveying and Levelling Vol-I, S.S. Bhavikatti, I. K.\n     International, 2019\n 2  Surveying Vol. I , Surveying Vol. I , Punmia, B.C,; Jain, Ashok Kumar; Jain, Arun\n    Kumar,, Laxmi Publications Pvt. Ltd, 2020\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         20.00         30.00         30.00         10.00          0.00\n\nInstructional Method:\n 1  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom\n 2  Practical examination will be conducted at the end of the semester for evaluation of the\n    performance of students in the laboratory\n 3  Students will use supplementary resources such as videos, e-courses, virtual laboratory.\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/105107122\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "b8aa63f2c00787c4a0a793056110b68019b90d70137eb46df33b2731d2c1d621"
+    },
+    {
+      "subject_id": "48000939130701",
+      "subject_name": "BASIC TRANSPORTATION ENGINEERING",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 3,
+      "subject_code": "09CI1307",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/18.-SEMESTER-3_09CI1307-BASIC-TRANSPORTATION-ENGINEERING.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09CI1307 - BASIC TRANSPORTATION ENGINEERING (.pdf",
+      "expected_pdf_sha256": "37b49f7c5638600a7dac5ec0900c696b14f077568f45df40b4534588cf6ea180",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BASIC TRANSPORTATION ENGINEERING",
+        "course_code": "09CI1307",
+        "semester_label": "3",
+        "credits": 3,
+        "prerequisite": "NOT REQUIRED"
+      },
+      "objectives": [
+        "To understand and implements the knowledge of construction and maintenance of the various transportation facilities to meet the current market demands",
+        "To explain the importance of transportation engineering.",
+        "To comprehend the concept of construction and maintenance of thehighways.",
+        "To identify the components and defects of railway tracks.",
+        "To understand working and importance of different traffic control devices."
+      ],
+      "course_outcomes": [
+        "To apply transportation planning concepts for evaluating travel demand and selecting suitable modes of transport.",
+        "To apply highway planning principles for classification, pavement selection, and design of road cross-sections.",
+        "To analyze highway materials and drainage systems for performance and maintenance requirements",
+        "To analyze railway track components and maintenance practices for safe and efficient operation.",
+        "To apply and analyze traffic engineering measures including traffic control devices, road safety, and"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 30 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Transportation Engineering",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Background and Importance of transportation, Role of",
+              "Transportation in Nation building, Four-step travel demand",
+              "modeling process, Modes of Transportation with their advantages",
+              "and Limitations, Negative impact of transportation on Environment,",
+              "Recent trends in the field of transportation engineering"
+            ],
+            "topics_text": "Background and Importance of transportation, Role of Transportation in Nation building, Four-step travel demand modeling process, Modes of Transportation with their advantages and Limitations, Negative impact of transportation on Environment, Recent trends in the field of transportation engineering",
+            "topics": [
+              "Background and Importance of transportation, Role of",
+              "Transportation in Nation building, Four-step travel demand",
+              "modeling process, Modes of Transportation with their advantages",
+              "and Limitations, Negative impact of transportation on Environment,",
+              "Recent trends in the field of transportation engineering"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Road Development and Planning",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Road classifications, Highway development in India, Highway",
+              "Planning Objectives, Types of Pavement and Highway cross section",
+              "Elements with its functions, Planning Surveys and Interpretation,",
+              "Highway material, Bitumen & its characteristics, function, and tests,",
+              "Road drainage system: Importance and maintenance"
+            ],
+            "topics_text": "Road classifications, Highway development in India, Highway Planning Objectives, Types of Pavement and Highway cross section Elements with its functions, Planning Surveys and Interpretation, Highway material, Bitumen & its characteristics, function, and tests, Road drainage system: Importance and maintenance",
+            "topics": [
+              "Road classifications, Highway development in India, Highway",
+              "Planning Objectives, Types of Pavement and Highway cross section",
+              "Elements with its functions, Planning Surveys and Interpretation,",
+              "Highway material, Bitumen & its characteristics, function, and tests,",
+              "Road drainage system: Importance and maintenance"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Basics of Railway Engineering",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Classification of Indian Railways, Zones of Indian Railway,",
+              "Permanent way: Ideal requirement, Components; Rail Gauge, types,",
+              "factors affecting selection of a gauge, Rail Joints – requirements and",
+              "its types, Creep of rail – causes and prevention, Rail fixtures and",
+              "fastenings – fish plate, spikes, bolts, keys, bearing plates, Track",
+              "Maintenance- Necessity, Organization of track maintenance, Duties",
+              "of permanent way inspector, gang-man and key man"
+            ],
+            "topics_text": "Classification of Indian Railways, Zones of Indian Railway, Permanent way: Ideal requirement, Components; Rail Gauge, types, factors affecting selection of a gauge, Rail Joints – requirements and its types, Creep of rail – causes and prevention, Rail fixtures and fastenings – fish plate, spikes, bolts, keys, bearing plates, Track Maintenance- Necessity, Organization of track maintenance, Duties of permanent way inspector, gang-man and key man",
+            "topics": [
+              "Classification of Indian Railways, Zones of Indian Railway,",
+              "Permanent way: Ideal requirement, Components",
+              "Rail Gauge, types,",
+              "factors affecting selection of a gauge, Rail Joints – requirements and",
+              "its types, Creep of rail – causes and prevention, Rail fixtures and",
+              "fastenings – fish plate, spikes, bolts, keys, bearing plates, Track",
+              "Maintenance- Necessity, Organization of track maintenance, Duties",
+              "of permanent way inspector, gang-man and key man"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "TrafficEngineering",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Elements of Traffic Engineering, Traffic Control Devices (TCD)-",
+              "Types of traffic signs,RoadMarking, Traffic signals, road",
+              "intersections and Islands, Innovative solutions of parking problems",
+              "in urban area, Road accidents and their remedial measures",
+              "Total Hours 28"
+            ],
+            "topics_text": "Elements of Traffic Engineering, Traffic Control Devices (TCD)- Types of traffic signs,RoadMarking, Traffic signals, road intersections and Islands, Innovative solutions of parking problems in urban area, Road accidents and their remedial measures Total Hours 28",
+            "topics": [
+              "Elements of Traffic Engineering, Traffic Control Devices (TCD)",
+              "Types of traffic signs,RoadMarking, Traffic signals, road",
+              "intersections and Islands, Innovative solutions of parking problems",
+              "in urban area, Road accidents and their remedial measures",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Drawing sketches of cross-sectional elements of road and",
+              "explaining their functions (carriageway, shoulder, camber, etc.)"
+            ],
+            "topics_text": "Drawing sketches of cross-sectional elements of road and explaining their functions (carriageway, shoulder, camber, etc.)",
+            "topics": [
+              "Drawing sketches of cross-sectional elements of road and",
+              "explaining their functions (carriageway, shoulder, camber, etc.)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Drawing sketches of road markings as per Indian Roads Congress",
+              "guidelines"
+            ],
+            "topics_text": "Drawing sketches of road markings as per Indian Roads Congress guidelines",
+            "topics": [
+              "Drawing sketches of road markings as per Indian Roads Congress",
+              "guidelines"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Drawing sketches of traffic signs (regulatory, warning, informatory)",
+              "as per Indian Roads Congress standards"
+            ],
+            "topics_text": "Drawing sketches of traffic signs (regulatory, warning, informatory) as per Indian Roads Congress standards",
+            "topics": [
+              "Drawing sketches of traffic signs (regulatory, warning, informatory)",
+              "as per Indian Roads Congress standards"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Drawing sketches of traffic signals and their phases with standard",
+              "configurations"
+            ],
+            "topics_text": "Drawing sketches of traffic signals and their phases with standard configurations",
+            "topics": [
+              "Drawing sketches of traffic signals and their phases with standard",
+              "configurations"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Sketching various types of road intersections and traffic islands (T,",
+              "Y, rotary, channelized)"
+            ],
+            "topics_text": "Sketching various types of road intersections and traffic islands (T, Y, rotary, channelized)",
+            "topics": [
+              "Sketching various types of road intersections and traffic islands (T,",
+              "Y, rotary, channelized)"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Drawing sketches of types of parking (parallel, perpendicular,",
+              "angled) with standard dimensions"
+            ],
+            "topics_text": "Drawing sketches of types of parking (parallel, perpendicular, angled) with standard dimensions",
+            "topics": [
+              "Drawing sketches of types of parking (parallel, perpendicular,",
+              "angled) with standard dimensions"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determination of penetration value of bitumen using penetration test",
+              "apparatus"
+            ],
+            "topics_text": "Determination of penetration value of bitumen using penetration test apparatus",
+            "topics": [
+              "Determination of penetration value of bitumen using penetration test",
+              "apparatus"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Conducting traffic volume count survey and data analysis for",
+              "different vehicle categories",
+              "Total Hours 28"
+            ],
+            "topics_text": "Conducting traffic volume count survey and data analysis for different vehicle categories Total Hours 28",
+            "topics": [
+              "Conducting traffic volume count survey and data analysis for",
+              "different vehicle categories",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Traffic Engineering and Transport Planning, Traffic Engineering and Transport Planning, L.S. Srinivasa Murthy, Tata McGraw Hill Education Private Limited, 2014",
+          "Transporation Engineering and Planning, Transporation Engineering and Planning, C.S. Papacostas & P.D. Prevedouros, Prentice Hall India, 2002"
+        ],
+        "textbooks": [
+          "Highway Engineering, S.K. Khanna and C.E.G. Gusto, Nem Chand Publications, 2020",
+          "Principles of Transportation Engineering, P.C. Verma & S.C. Sharma, Laxmi Publications, 2019 References:",
+          "Traffic Engineering and Transport Planning, Traffic Engineering and Transport Planning, L.S. Srinivasa Murthy, Tata McGraw Hill Education Private Limited, 2014",
+          "Transporation Engineering and Planning, Transporation Engineering and Planning, C.S. Papacostas & P.D. Prevedouros, Prentice Hall India, 2002"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://ts-nitk.vlabs.ac.in/transportation-engineering/",
+          "https://indianrailways.gov.in/",
+          "https://www.crridom.gov.in/",
+          "https://morth.nic.in/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 8510,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    BASIC TRANSPORTATION ENGINEERING\nCOURSE CODE     09CI1307\nCOURSE CREDITS  3\n\nObjective:\n 1  To understand and implements the knowledge of construction and maintenance of the\n     various transportation facilities to meet the current market demands\n 2  To explain the importance of transportation engineering.\n 3  To comprehend the concept of construction and maintenance of thehighways.\n 4  To identify the components and defects of railway tracks.\n 5  To understand working and importance of different traffic control devices.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To apply transportation planning concepts for evaluating travel demand and selecting\n     suitable modes of transport.\n 2  To apply highway planning principles for classification, pavement selection, and design of\n     road cross-sections.\n 3  To analyze highway materials and drainage systems for performance and maintenance\n     requirements\n 4  To analyze railway track components and maintenance practices for safe and efficient\n     operation.\n 5  To apply and analyze traffic engineering measures including traffic control devices, road\n     safety, and\n\n\nPre-requisite of course:NOT REQUIRED\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        30     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Transportation Engineering                  8\n            Background and Importance of transportation, Role of\n              Transportation in Nation building, Four-step travel demand\n             modeling process, Modes of Transportation with their advantages\n            and Limitations, Negative impact of transportation on Environment,\n             Recent trends in the field of transportation engineering\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2     Road Development and Planning                           8\n           Road classifications, Highway development in India, Highway\n             Planning Objectives, Types of Pavement and Highway cross section\n             Elements with its functions, Planning Surveys and Interpretation,\n           Highway material, Bitumen & its characteristics, function, and tests,\n           Road drainage system: Importance and maintenance\n     3       Basics of Railway Engineering                              8\n               Classification of Indian Railways, Zones of Indian Railway,\n             Permanent way: Ideal requirement, Components; Rail Gauge, types,\n               factors affecting selection of a gauge, Rail Joints – requirements and\n                   its types, Creep of rail – causes and prevention, Rail fixtures and\n               fastenings – fish plate, spikes, bolts, keys, bearing plates, Track\n             Maintenance- Necessity, Organization of track maintenance, Duties\n              of permanent way inspector, gang-man and key man\n     4      TrafficEngineering                                       4\n             Elements of Traffic Engineering, Traffic Control Devices (TCD)-\n            Types of traffic signs,RoadMarking, Traffic signals, road\n               intersections and Islands, Innovative solutions of parking problems\n               in urban area, Road accidents and their remedial measures\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            4\n            Drawing sketches of cross-sectional elements of road and\n              explaining their functions (carriageway, shoulder, camber, etc.)\n     2      Experiment 2                                            4\n            Drawing sketches of road markings as per Indian Roads Congress\n               guidelines\n     3      Experiment 3                                            6\n            Drawing sketches of traffic signs (regulatory, warning, informatory)\n              as per Indian Roads Congress standards\n     4      Experiment 4                                            4\n            Drawing sketches of traffic signals and their phases with standard\n              configurations\n     5      Experiment 5                                            4\n             Sketching various types of road intersections and traffic islands (T,\n            Y, rotary, channelized)\n     6      Experiment 6                                            2\n            Drawing sketches of types of parking (parallel, perpendicular,\n              angled) with standard dimensions\n     7      Experiment 7                                            2\n             Determination of penetration value of bitumen using penetration test\n              apparatus\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     8      Experiment 8                                            2\n             Conducting traffic volume count survey and data analysis for\n                different vehicle categories\n                               Total Hours                       28\n\nTextbook :\n 1  Highway Engineering, S.K. Khanna and C.E.G. Gusto, Nem Chand Publications, 2020\n 2  Principles of Transportation Engineering, P.C. Verma & S.C. Sharma, Laxmi Publications,\n    2019\n\nReferences:\n 1  Traffic Engineering and Transport Planning, Traffic Engineering and Transport Planning,\n     L.S. Srinivasa Murthy, Tata McGraw Hill Education Private Limited, 2014\n 2  Transporation Engineering and Planning, Transporation Engineering and Planning, C.S.\n     Papacostas & P.D. Prevedouros, Prentice Hall India, 2002\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    30.00         30.00         30.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method byblack board, may also\n     use any of tools such as demonstration, role play, Quiz,brainstorming,MOOCs etc.\n 2  The internal evaluation will be done based on continuous evaluation of students in the\n     laboratory and classroom.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as videos, e-courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://ts-nitk.vlabs.ac.in/transportation-engineering/\n 2  https://indianrailways.gov.in/\n 3  https://www.crridom.gov.in/\n 4  https://morth.nic.in/\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "37b49f7c5638600a7dac5ec0900c696b14f077568f45df40b4534588cf6ea180"
+    },
+    {
+      "subject_id": "48000939030801",
+      "subject_name": "BUILDING PLANING AND DIGITAL DRAFTING",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 3,
+      "subject_code": "09CI0308",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/20.-SEMESTER-3_09CI0308-BUILDING-PLANNING-AND-DIGITAL-DRAFTING.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09CI0308 - BUILDING PLANING AND DIGITAL DRAFTING (.pdf",
+      "expected_pdf_sha256": "65245e38ca4e5b440c5559db97d6bf5838391795ac7d1b7a7abd6d0eef43a5e3",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BUILDING PLANNING AND DIGITAL DRAFTING",
+        "course_code": "09CI0308",
+        "semester_label": "3",
+        "credits": 2,
+        "prerequisite": "ENGINEERING DRAWING"
+      },
+      "objectives": [
+        "To understand principles of building planning for residential and public buildings",
+        "To apply building bye-laws and National Building Code (NBC) in design",
+        "To develop manual and digital drafting skills",
+        "To learn AutoCAD for preparation of building drawings",
+        "To integrate planning concepts with digital execution"
+      ],
+      "course_outcomes": [
+        "Apply planning principles and building regulations in design",
+        "Prepare building drawings manually and digitally",
+        "Use AutoCAD for drafting plans, elevations, and sections",
+        "Interpret and develop working drawings with services",
+        "Integrate building planning with modern digital drafting tools"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Principles of Building Planning",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Principles of Building Planning, Types of buildings: Residential,",
+              "Educational, Health, Industrial, Recreational, Principles of planning:",
+              "Aspect, Prospect, Privacy, Grouping, Circulation, Functional",
+              "requirements of buildings (lighting, ventilation, sanitation, safety),",
+              "Spatial planning and land-use considerations, Orientation of",
+              "buildings with respect to climate, Introduction to building",
+              "components: Foundation, plinth, walls, floors, roof, doors, windows"
+            ],
+            "topics_text": "Principles of Building Planning, Types of buildings: Residential, Educational, Health, Industrial, Recreational, Principles of planning: Aspect, Prospect, Privacy, Grouping, Circulation, Functional requirements of buildings (lighting, ventilation, sanitation, safety), Spatial planning and land-use considerations, Orientation of buildings with respect to climate, Introduction to building components: Foundation, plinth, walls, floors, roof, doors, windows",
+            "topics": [
+              "Principles of Building Planning, Types of buildings: Residential,",
+              "Educational, Health, Industrial, Recreational, Principles of planning:",
+              "Aspect, Prospect, Privacy, Grouping, Circulation, Functional",
+              "requirements of buildings (lighting, ventilation, sanitation, safety),",
+              "Spatial planning and land-use considerations, Orientation of",
+              "buildings with respect to climate, Introduction to building",
+              "components: Foundation, plinth, walls, floors, roof, doors, windows"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Building Bye-Laws and Regulations",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Importance and necessity of building bye-laws, Overview of",
+              "National Building Code 2016, Floor Space Index (FSI) and its",
+              "calculation, Setbacks and open space requirements, Height",
+              "regulations for buildings,Rules for natural light and ventilation,",
+              "Sanitation and drainage requirements Fire safety provisions as per",
+              "NBC Parking requirements and standards, Introduction to GDCR",
+              "(General Development Control Regulations) Building plan approval",
+              "process by local authorities"
+            ],
+            "topics_text": "Importance and necessity of building bye-laws, Overview of National Building Code 2016, Floor Space Index (FSI) and its calculation, Setbacks and open space requirements, Height regulations for buildings,Rules for natural light and ventilation, Sanitation and drainage requirements Fire safety provisions as per NBC Parking requirements and standards, Introduction to GDCR (General Development Control Regulations) Building plan approval process by local authorities",
+            "topics": [
+              "Importance and necessity of building bye-laws, Overview of",
+              "National Building Code 2016, Floor Space Index (FSI) and its",
+              "calculation, Setbacks and open space requirements, Height",
+              "regulations for buildings,Rules for natural light and ventilation,",
+              "Sanitation and drainage requirements Fire safety provisions as per",
+              "NBC Parking requirements and standards, Introduction to GDCR",
+              "(General Development Control Regulations) Building plan approval",
+              "process by local authorities"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Building Drawing Fundamentals",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Introduction to building drawing and its importance, Types of",
+              "drawing scales and their uses, Standard lines and lettering",
+              "conventions, Principles of dimensioning, Preparation of building",
+              "plan, Drawing of elevation and section of buildings, Perspective",
+              "drawing: Single-point and Two-point perspective, Use of",
+              "conventional symbols and signs in drawings"
+            ],
+            "topics_text": "Introduction to building drawing and its importance, Types of drawing scales and their uses, Standard lines and lettering conventions, Principles of dimensioning, Preparation of building plan, Drawing of elevation and section of buildings, Perspective drawing: Single-point and Two-point perspective, Use of conventional symbols and signs in drawings",
+            "topics": [
+              "Introduction to building drawing and its importance, Types of",
+              "drawing scales and their uses, Standard lines and lettering",
+              "conventions, Principles of dimensioning, Preparation of building",
+              "plan, Drawing of elevation and section of buildings, Perspective",
+              "drawing: Single-point and Two-point perspective, Use of",
+              "conventional symbols and signs in drawings"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Digital Drafting using AutoCAD",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Introduction to Autodesk AutoCAD and its interface, Basic drawing",
+              "commands: Line, Circle, Rectangle, Editing commands: Erase,",
+              "Undo, Redo, File management: Open, Save, Units setting, Use of",
+              "Grid, Snap, and Zoom tools, Editing tools: Offset, Trim, Extend",
+              "Text creation and editing, Working with layers, Hatch and",
+              "dimensioning tools, Polar tracking, Array command and object",
+              "modification techniques"
+            ],
+            "topics_text": "Introduction to Autodesk AutoCAD and its interface, Basic drawing commands: Line, Circle, Rectangle, Editing commands: Erase, Undo, Redo, File management: Open, Save, Units setting, Use of Grid, Snap, and Zoom tools, Editing tools: Offset, Trim, Extend Text creation and editing, Working with layers, Hatch and dimensioning tools, Polar tracking, Array command and object modification techniques",
+            "topics": [
+              "Introduction to Autodesk AutoCAD and its interface, Basic drawing",
+              "commands: Line, Circle, Rectangle, Editing commands: Erase,",
+              "Undo, Redo, File management: Open, Save, Units setting, Use of",
+              "Grid, Snap, and Zoom tools, Editing tools: Offset, Trim, Extend",
+              "Text creation and editing, Working with layers, Hatch and",
+              "dimensioning tools, Polar tracking, Array command and object",
+              "modification techniques"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Integrated Building Design & Working Drawings",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Preparation of complete residential building drawings, Key plan and",
+              "site plan preparation, Layout planning of buildings, Foundation plan",
+              "and basic structural details, Services drawings: Electrical layout,",
+              "plumbing system, drainage system, Furniture layout and interior",
+              "space planning, Coordination of architectural and service drawings,",
+              "Presentation techniques for building drawings",
+              "Total Hours 0"
+            ],
+            "topics_text": "Preparation of complete residential building drawings, Key plan and site plan preparation, Layout planning of buildings, Foundation plan and basic structural details, Services drawings: Electrical layout, plumbing system, drainage system, Furniture layout and interior space planning, Coordination of architectural and service drawings, Presentation techniques for building drawings Total Hours 0",
+            "topics": [
+              "Preparation of complete residential building drawings, Key plan and",
+              "site plan preparation, Layout planning of buildings, Foundation plan",
+              "and basic structural details, Services drawings: Electrical layout,",
+              "plumbing system, drainage system, Furniture layout and interior",
+              "space planning, Coordination of architectural and service drawings,",
+              "Presentation techniques for building drawings",
+              "Total Hours 0"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Principles of Building Planning",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Types of buildings: Residential, Educational, Health, Industrial,",
+              "Recreational, Principles of planning (aspect, prospect, privacy,",
+              "grouping, circulation), Functional requirements of buildings, Spatial",
+              "and land-use planning, Introduction to building components"
+            ],
+            "topics_text": "Types of buildings: Residential, Educational, Health, Industrial, Recreational, Principles of planning (aspect, prospect, privacy, grouping, circulation), Functional requirements of buildings, Spatial and land-use planning, Introduction to building components",
+            "topics": [
+              "Types of buildings: Residential, Educational, Health, Industrial,",
+              "Recreational, Principles of planning (aspect, prospect, privacy,",
+              "grouping, circulation), Functional requirements of buildings, Spatial",
+              "and land-use planning, Introduction to building components"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Building Bye-Laws and Regulations",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Importance of building bye-laws, National Building Code (NBC",
+              "2016) provisions, FSI, setbacks, height regulations, Rules for light,",
+              "ventilation, sanitation, fire safety, parking, Introduction to GDCR",
+              "and approval process"
+            ],
+            "topics_text": "Importance of building bye-laws, National Building Code (NBC 2016) provisions, FSI, setbacks, height regulations, Rules for light, ventilation, sanitation, fire safety, parking, Introduction to GDCR and approval process",
+            "topics": [
+              "Importance of building bye-laws, National Building Code (NBC",
+              "2016) provisions, FSI, setbacks, height regulations, Rules for light,",
+              "ventilation, sanitation, fire safety, parking, Introduction to GDCR",
+              "and approval process"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Building Drawing Fundamentals",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to building drawing, Scales, lines, lettering,",
+              "dimensioning, Plan, elevation, and section of buildings, Perspective",
+              "drawing (single-point and two-point), Conventional symbols and",
+              "signs, Preparation of line diagrams and detailed drawings"
+            ],
+            "topics_text": "Introduction to building drawing, Scales, lines, lettering, dimensioning, Plan, elevation, and section of buildings, Perspective drawing (single-point and two-point), Conventional symbols and signs, Preparation of line diagrams and detailed drawings",
+            "topics": [
+              "Introduction to building drawing, Scales, lines, lettering,",
+              "dimensioning, Plan, elevation, and section of buildings, Perspective",
+              "drawing (single-point and two-point), Conventional symbols and",
+              "signs, Preparation of line diagrams and detailed drawings"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Digital Drafting using AutoCAD",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Introduction to AutoCAD and interface, Basic commands: Line,",
+              "Circle, Rectangle, Erase, Undo/Redo, File management: Open,",
+              "Save, Units, Grid, Snap, Zoom, Editing commands: Offset, Trim,",
+              "Extend, Text, layers, hatch, and dimensioning tools, Use of polar",
+              "tracking, array, and object modification"
+            ],
+            "topics_text": "Introduction to AutoCAD and interface, Basic commands: Line, Circle, Rectangle, Erase, Undo/Redo, File management: Open, Save, Units, Grid, Snap, Zoom, Editing commands: Offset, Trim, Extend, Text, layers, hatch, and dimensioning tools, Use of polar tracking, array, and object modification",
+            "topics": [
+              "Introduction to AutoCAD and interface, Basic commands: Line,",
+              "Circle, Rectangle, Erase, Undo/Redo, File management: Open,",
+              "Save, Units, Grid, Snap, Zoom, Editing commands: Offset, Trim,",
+              "Extend, Text, layers, hatch, and dimensioning tools, Use of polar",
+              "tracking, array, and object modification"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Integrated Building Design & Working Drawings",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Preparation of complete residential building drawings, Key plan,",
+              "site plan, and layout planning, Foundation plan and structural",
+              "details, Services drawings: electrical, plumbing, drainage, Furniture",
+              "layout and interior planning, Digital submission of drawings and",
+              "presentation",
+              "Total Hours 56"
+            ],
+            "topics_text": "Preparation of complete residential building drawings, Key plan, site plan, and layout planning, Foundation plan and structural details, Services drawings: electrical, plumbing, drainage, Furniture layout and interior planning, Digital submission of drawings and presentation Total Hours 56",
+            "topics": [
+              "Preparation of complete residential building drawings, Key plan,",
+              "site plan, and layout planning, Foundation plan and structural",
+              "details, Services drawings: electrical, plumbing, drainage, Furniture",
+              "layout and interior planning, Digital submission of drawings and",
+              "presentation",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Introduction to AutoCAD 2026 for Civil Engineering Applications, Introduction to AutoCAD 2026 for Civil Engineering Applications, Bernd S. Palm, SDC Publications, 2025",
+          "Practical Autodesk AutoCAD 2023 and AutoCAD LT 2023, Practical Autodesk AutoCAD",
+          "and AutoCAD LT 2023, CAD practical series authors, Packt, 2023"
+        ],
+        "textbooks": [
+          "Building Planning and Drawing, Dr. N. Kumara Swamy, harotar Publishing House Pvt. Ltd., 2019",
+          "A Textbook of Building Planning and Design, Dr. Amol D. Pawar, Mrs. Vaishali S. Limaye, Prakash A. Vedpathak, Nirali Prakashan, 2019 References:",
+          "Introduction to AutoCAD 2026 for Civil Engineering Applications, Introduction to AutoCAD 2026 for Civil Engineering Applications, Bernd S. Palm, SDC Publications, 2025",
+          "Practical Autodesk AutoCAD 2023 and AutoCAD LT 2023, Practical Autodesk AutoCAD",
+          "and AutoCAD LT 2023, CAD practical series authors, Packt, 2023"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://nptel.ac.in/courses/112103019",
+          "https://onlinecourses.swayam2.ac.in/e-learning/preview/ntr25_ed52",
+          "https://swayamlearn.com/online-autocad-learning-course-for-civil-engineering-and- architecture"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9989,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    BUILDING PLANNING AND DIGITAL DRAFTING\nCOURSE CODE     09CI0308\nCOURSE CREDITS  2\n\nObjective:\n 1  To understand principles of building planning for residential and public buildings\n 2  To apply building bye-laws and National Building Code (NBC) in design\n 3  To develop manual and digital drafting skills\n 4  To learn AutoCAD for preparation of building drawings\n 5  To integrate planning concepts with digital execution\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply planning principles and building regulations in design\n 2  Prepare building drawings manually and digitally\n 3  Use AutoCAD for drafting plans, elevations, and sections\n 4  Interpret and develop working drawings with services\n 5  Integrate building planning with modern digital drafting tools\n\n\nPre-requisite of course:ENGINEERING DRAWING\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            4         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Principles of Building Planning                             0\n               Principles of Building Planning, Types of buildings: Residential,\n              Educational, Health, Industrial, Recreational, Principles of planning:\n              Aspect, Prospect, Privacy, Grouping, Circulation, Functional\n              requirements of buildings (lighting, ventilation, sanitation, safety),\n               Spatial planning and land-use considerations, Orientation of\n              buildings with respect to climate, Introduction to building\n             components: Foundation, plinth, walls, floors, roof, doors, windows\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Building Bye-Laws and Regulations                         0\n             Importance and necessity of building bye-laws, Overview of\n              National Building Code 2016, Floor Space Index (FSI) and its\n               calculation, Setbacks and open space requirements, Height\n               regulations for buildings,Rules for natural light and ventilation,\n               Sanitation and drainage requirements Fire safety provisions as per\n         NBC Parking requirements and standards, Introduction to GDCR\n              (General Development Control Regulations) Building plan approval\n              process by local authorities\n     3      Building Drawing Fundamentals                            0\n               Introduction to building drawing and its importance, Types of\n             drawing scales and their uses, Standard lines and lettering\n              conventions, Principles of dimensioning, Preparation of building\n               plan, Drawing of elevation and section of buildings, Perspective\n             drawing: Single-point and Two-point perspective, Use of\n              conventional symbols and signs in drawings\n     4       Digital Drafting using AutoCAD                            0\n               Introduction to Autodesk AutoCAD and its interface, Basic drawing\n            commands: Line, Circle, Rectangle, Editing commands: Erase,\n            Undo, Redo, File management: Open, Save, Units setting, Use of\n              Grid, Snap, and Zoom tools, Editing tools: Offset, Trim, Extend\n             Text creation and editing, Working with layers, Hatch and\n             dimensioning tools, Polar tracking, Array command and object\n              modification techniques\n     5      Integrated Building Design & Working Drawings             0\n              Preparation of complete residential building drawings, Key plan and\n                 site plan preparation, Layout planning of buildings, Foundation plan\n            and basic structural details, Services drawings: Electrical layout,\n            plumbing system, drainage system, Furniture layout and interior\n             space planning, Coordination of architectural and service drawings,\n               Presentation techniques for building drawings\n                               Total Hours                       0\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Principles of Building Planning                             10\n            Types of buildings: Residential, Educational, Health, Industrial,\n               Recreational, Principles of planning (aspect, prospect, privacy,\n              grouping, circulation), Functional requirements of buildings, Spatial\n            and land-use planning, Introduction to building components\n     2      Building Bye-Laws and Regulations                         8\n             Importance of building bye-laws, National Building Code (NBC\n             2016) provisions, FSI, setbacks, height regulations, Rules for light,\n                ventilation, sanitation, fire safety, parking, Introduction to GDCR\n            and approval process\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Building Drawing Fundamentals                            10\n               Introduction to building drawing, Scales, lines, lettering,\n              dimensioning, Plan, elevation, and section of buildings, Perspective\n             drawing (single-point and two-point), Conventional symbols and\n                signs, Preparation of line diagrams and detailed drawings\n     4       Digital Drafting using AutoCAD                            14\n               Introduction to AutoCAD and interface, Basic commands: Line,\n                Circle, Rectangle, Erase, Undo/Redo, File management: Open,\n              Save, Units, Grid, Snap, Zoom, Editing commands: Offset, Trim,\n              Extend, Text, layers, hatch, and dimensioning tools, Use of polar\n               tracking, array, and object modification\n     5      Integrated Building Design & Working Drawings             14\n              Preparation of complete residential building drawings, Key plan,\n                 site plan, and layout planning, Foundation plan and structural\n                 details, Services drawings: electrical, plumbing, drainage, Furniture\n              layout and interior planning, Digital submission of drawings and\n               presentation\n                               Total Hours                       56\n\nTextbook :\n 1  Building Planning and Drawing, Dr. N. Kumara Swamy, harotar Publishing House Pvt.\n     Ltd., 2019\n 2 A Textbook of Building Planning and Design, Dr. Amol D. Pawar, Mrs. Vaishali S.\n    Limaye, Prakash A. Vedpathak, Nirali Prakashan, 2019\n\nReferences:\n 1  Introduction to AutoCAD 2026 for Civil Engineering Applications, Introduction to\n   AutoCAD 2026 for Civil Engineering Applications, Bernd S. Palm, SDC Publications,\n    2025\n 2  Practical Autodesk AutoCAD 2023 and AutoCAD LT 2023, Practical Autodesk AutoCAD\n    2023 and AutoCAD LT 2023, CAD practical series authors, Packt, 2023\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         50.00          0.00           0.00           0.00\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, videos, e- courses, Virtual\n     Laboratory\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/112103019\n 2  https://onlinecourses.swayam2.ac.in/e-learning/preview/ntr25_ed52\n 3  https://swayamlearn.com/online-autocad-learning-course-for-civil-engineering-and-\n     architecture\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09CI0308 - BUILDING PLANING AND DIGITAL DRAFTING (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "65245e38ca4e5b440c5559db97d6bf5838391795ac7d1b7a7abd6d0eef43a5e3"
+    },
+    {
+      "subject_id": "48000939330401",
+      "subject_name": "CONSTRUCTION TECHNOLOGY",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 3,
+      "subject_code": "09CI3304",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/16.-SEMESTER-3_09CI3304-CONSTRUCTION-TECHNOLOGY.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09CI3304 - CONSTRUCTION TECHNOLOGY (.pdf",
+      "expected_pdf_sha256": "151363403888a0729befbc94a500a60920a8acff2b5f9de11f2e4374a01814e6",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CONSTRUCTION TECHNOLOGY",
+        "course_code": "09CI3304",
+        "semester_label": "3",
+        "credits": 3,
+        "prerequisite": "NOT REQUIRED"
+      },
+      "objectives": [
+        "To identify different components of building.",
+        "To understand different types of foundation and their significance.",
+        "To know different types of masonry and their construction.",
+        "To highlight the importance of construction equipments"
+      ],
+      "course_outcomes": [
+        "Apply suitable building components and construction methods for substructure and superstructure based on functional requirements of buildings as per National Building Code of India 2016 classification.",
+        "Select and apply appropriate types of foundations (shallow and deep) for given soil conditions and loading scenarios in practical construction situations.",
+        "Analyze different building components (foundation, walls, floors, roofs, beams, columns, etc.) and construction systems (load bearing, framed, composite) based on strength, stability, and performance.",
+        "Analyze various masonry techniques (stone and brick masonry), bonds, and construction practices to determine their suitability, advantages, and limitations in real projects.",
+        "Evaluate the selection and performance of construction equipment (earthmoving, compacting, hoisting) and construction practices (formwork, scaffolding) based on efficiency, safety, and project requirements."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25 MR. SMIT MAHENDRABHAI KACHA MR. MITTAL KIRITBHAI JOISER Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Overview of Building Components",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Classification of Buildings as per latest National Building Code",
+              "Group A to I, Building classification as per Types of Constructions-",
+              "Load Bearing Structure, Framed Structure, Composite Structure,",
+              "Building Components :Functions of Building Components,",
+              "Substructure – Foundation and Plinth, Superstructure – Walls,",
+              "Partition wall, Cavity wall, Sill, Lintel, Doors and Windows, Floor,",
+              "Roof, Columns, Beams, and Parapet"
+            ],
+            "topics_text": "Classification of Buildings as per latest National Building Code Group A to I, Building classification as per Types of Constructions- Load Bearing Structure, Framed Structure, Composite Structure, Building Components :Functions of Building Components, Substructure – Foundation and Plinth, Superstructure – Walls, Partition wall, Cavity wall, Sill, Lintel, Doors and Windows, Floor, Roof, Columns, Beams, and Parapet",
+            "topics": [
+              "Classification of Buildings as per latest National Building Code",
+              "Group A to I, Building classification as per Types of Constructions",
+              "Load Bearing Structure, Framed Structure, Composite Structure,",
+              "Building Components :Functions of Building Components,",
+              "Substructure – Foundation and Plinth, Superstructure – Walls,",
+              "Partition wall, Cavity wall, Sill, Lintel, Doors and Windows, Floor,",
+              "Roof, Columns, Beams, and Parapet"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Construction of Substructure: Foundation",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Types of foundation and its functions, , Shallow Foundation:",
+              "Stepped Footing, Wall Footing, Column Footing, Shallow",
+              "Foundation: Stepped Footing, Wall Footing, Column Footing, Deep",
+              "Foundation - Pile Foundation, Well foundation and Caissons"
+            ],
+            "topics_text": "Types of foundation and its functions, , Shallow Foundation: Stepped Footing, Wall Footing, Column Footing, Shallow Foundation: Stepped Footing, Wall Footing, Column Footing, Deep Foundation - Pile Foundation, Well foundation and Caissons",
+            "topics": [
+              "Types of foundation and its functions, , Shallow Foundation:",
+              "Stepped Footing, Wall Footing, Column Footing, Shallow",
+              "Foundation: Stepped Footing, Wall Footing, Column Footing, Deep",
+              "Foundation - Pile Foundation, Well foundation and Caissons"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Construction of Superstructure",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Stone Masonry: Terms used in stone masonry- facing, backing,",
+              "hearting, Through stone,corner stone, cornice, Types of stone",
+              "masonry: Rubble masonry, Ashlar Masonry, and their types, Terms",
+              "used in brick masonry- header, stretcher, closer, quoins, course,",
+              "face, back, hearting, bat bond, joints, lap, frog line, level and plumb,",
+              "Bonds in brick masonry- header bond, stretcher bond, English bond,",
+              "and Flemish bond, Requirements of good brick masonry,",
+              "Comparison between stone and brick Masonry, Toolsrequired for",
+              "construction of stone and brick masonry,, Precautions to be",
+              "observed in stone and brick masonry, masonryconstruction, Purpose",
+              "and types of formworks, removal of formwork, Purpose and types",
+              "of Scaffolding"
+            ],
+            "topics_text": "Stone Masonry: Terms used in stone masonry- facing, backing, hearting, Through stone,corner stone, cornice, Types of stone masonry: Rubble masonry, Ashlar Masonry, and their types, Terms used in brick masonry- header, stretcher, closer, quoins, course, face, back, hearting, bat bond, joints, lap, frog line, level and plumb, Bonds in brick masonry- header bond, stretcher bond, English bond, and Flemish bond, Requirements of good brick masonry, Comparison between stone and brick Masonry, Toolsrequired for construction of stone and brick masonry,, Precautions to be observed in stone and brick masonry, masonryconstruction, Purpose and types of formworks, removal of formwork, Purpose and types of Scaffolding",
+            "topics": [
+              "Stone Masonry: Terms used in stone masonry- facing, backing,",
+              "hearting, Through stone,corner stone, cornice, Types of stone",
+              "masonry: Rubble masonry, Ashlar Masonry, and their types, Terms",
+              "used in brick masonry- header, stretcher, closer, quoins, course,",
+              "face, back, hearting, bat bond, joints, lap, frog line, level and plumb,",
+              "Bonds in brick masonry- header bond, stretcher bond, English bond,",
+              "and Flemish bond, Requirements of good brick masonry,",
+              "Comparison between stone and brick Masonry, Toolsrequired for",
+              "construction of stone and brick masonry,, Precautions to be",
+              "observed in stone and brick masonry, masonryconstruction, Purpose",
+              "and types of formworks, removal of formwork, Purpose and types",
+              "of Scaffolding"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Construction Machineries and Equipment",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Excavationand Earth moving equipments: Use and working of",
+              "Power shovel, Drag line, Hoes, Clam shell, Trenching Machines,",
+              "Tractors, Bull-dozer, Rippers, and Scrapers, Compacting",
+              "equipments: functions of plain rollers, ship footed rollers, vibratory,",
+              "and pneumatic rollers,, Hoisting equipments: Types of cranes –",
+              "mobile crane, tower crane and gantry girder",
+              "Total Hours 28"
+            ],
+            "topics_text": "Excavationand Earth moving equipments: Use and working of Power shovel, Drag line, Hoes, Clam shell, Trenching Machines, Tractors, Bull-dozer, Rippers, and Scrapers, Compacting equipments: functions of plain rollers, ship footed rollers, vibratory, and pneumatic rollers,, Hoisting equipments: Types of cranes – mobile crane, tower crane and gantry girder Total Hours 28",
+            "topics": [
+              "Excavationand Earth moving equipments: Use and working of",
+              "Power shovel, Drag line, Hoes, Clam shell, Trenching Machines,",
+              "Tractors, Bull-dozer, Rippers, and Scrapers, Compacting",
+              "equipments: functions of plain rollers, ship footed rollers, vibratory,",
+              "and pneumatic rollers,, Hoisting equipments: Types of cranes –",
+              "mobile crane, tower crane and gantry girder",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of load bearing structure and framed structure and",
+              "identify their components."
+            ],
+            "topics_text": "Draw sketches of load bearing structure and framed structure and identify their components.",
+            "topics": [
+              "Draw sketches of load bearing structure and framed structure and",
+              "identify their components."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of shallow foundations such as stepped footing, wall",
+              "footing and isolated column footing."
+            ],
+            "topics_text": "Draw sketches of shallow foundations such as stepped footing, wall footing and isolated column footing.",
+            "topics": [
+              "Draw sketches of shallow foundations such as stepped footing, wall",
+              "footing and isolated column footing."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of shallow foundations such as combined footing,",
+              "raft foundation and grillage foundation."
+            ],
+            "topics_text": "Draw sketches of shallow foundations such as combined footing, raft foundation and grillage foundation.",
+            "topics": [
+              "Draw sketches of shallow foundations such as combined footing,",
+              "raft foundation and grillage foundation."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of deep foundations such as pile foundation, well",
+              "foundation and caisson."
+            ],
+            "topics_text": "Draw sketches of deep foundations such as pile foundation, well foundation and caisson.",
+            "topics": [
+              "Draw sketches of deep foundations such as pile foundation, well",
+              "foundation and caisson."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of types of stone masonry such as rubble masonry",
+              "and ashlar masonry."
+            ],
+            "topics_text": "Draw sketches of types of stone masonry such as rubble masonry and ashlar masonry.",
+            "topics": [
+              "Draw sketches of types of stone masonry such as rubble masonry",
+              "and ashlar masonry."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of bonds in brick masonry such as header bond,",
+              "stretcher bond, English bond and Flemish bond."
+            ],
+            "topics_text": "Draw sketches of bonds in brick masonry such as header bond, stretcher bond, English bond and Flemish bond.",
+            "topics": [
+              "Draw sketches of bonds in brick masonry such as header bond,",
+              "stretcher bond, English bond and Flemish bond."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of various brick walls using different brick",
+              "dimensions and thicknesses."
+            ],
+            "topics_text": "Draw sketches of various brick walls using different brick dimensions and thicknesses.",
+            "topics": [
+              "Draw sketches of various brick walls using different brick",
+              "dimensions and thicknesses."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of tools required for construction of stone masonry",
+              "and brick masonry."
+            ],
+            "topics_text": "Draw sketches of tools required for construction of stone masonry and brick masonry.",
+            "topics": [
+              "Draw sketches of tools required for construction of stone masonry",
+              "and brick masonry."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of different types of formwork used in construction."
+            ],
+            "topics_text": "Draw sketches of different types of formwork used in construction.",
+            "topics": [
+              "Draw sketches of different types of formwork used in construction."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of different types of scaffolding used in construction."
+            ],
+            "topics_text": "Draw sketches of different types of scaffolding used in construction.",
+            "topics": [
+              "Draw sketches of different types of scaffolding used in construction."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of excavation and earth moving equipment used in",
+              "construction."
+            ],
+            "topics_text": "Draw sketches of excavation and earth moving equipment used in construction.",
+            "topics": [
+              "Draw sketches of excavation and earth moving equipment used in",
+              "construction."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of compacting equipment used in construction."
+            ],
+            "topics_text": "Draw sketches of compacting equipment used in construction.",
+            "topics": [
+              "Draw sketches of compacting equipment used in construction."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Draw sketches of hoisting equipment used in construction."
+            ],
+            "topics_text": "Draw sketches of hoisting equipment used in construction.",
+            "topics": [
+              "Draw sketches of hoisting equipment used in construction."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Prepare a report on safety measures and recent trends in the",
+              "construction field.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Prepare a report on safety measures and recent trends in the construction field. Total Hours 28",
+            "topics": [
+              "Prepare a report on safety measures and recent trends in the",
+              "construction field.",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Repair & Rehabilitation of Structures, Repair & Rehabilitation of Structures, , B.G. Deshpande & S.K. Pallewar, Wheeler Publishing Co. Ltd, 2016",
+          "Green Building Materials and Technologies, Green Building Materials and Technologies, Poonam Choudhary, New Age International Publishers, 2019"
+        ],
+        "textbooks": [
+          "Building Construction, Dr.B.C.Punmia, Er. Ashok Kumar Jain and Dr. Arun Kumar Jain, Laxmi publications, 2019",
+          "Building Construction and Materials, S.C. Rangwala, Charotar Publishing House, 2022 References:",
+          "Repair & Rehabilitation of Structures, Repair & Rehabilitation of Structures, , B.G. Deshpande & S.K. Pallewar, Wheeler Publishing Co. Ltd, 2016",
+          "Green Building Materials and Technologies, Green Building Materials and Technologies, Poonam Choudhary, New Age International Publishers, 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://nptel.ac.in/courses/105102088",
+          "https://theconstructor.org/",
+          "https://www.cecr.in"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 10167,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    CONSTRUCTION TECHNOLOGY\nCOURSE CODE     09CI3304\nCOURSE CREDITS  3\n\nObjective:\n 1  To identify different components of building.\n 2  To understand different types of foundation and their significance.\n 3  To know different types of masonry and their construction.\n 4  To highlight the importance of construction equipments\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply suitable building components and construction methods for substructure and\n     superstructure based on functional requirements of buildings as per National Building Code\n     of India 2016 classification.\n 2  Select and apply appropriate types of foundations (shallow and deep) for given soil\n     conditions and loading scenarios in practical construction situations.\n 3  Analyze different building components (foundation, walls, floors, roofs, beams, columns,\n      etc.) and construction systems (load bearing, framed, composite) based on strength,\n      stability, and performance.\n 4  Analyze various masonry techniques (stone and brick masonry), bonds, and construction\n     practices to determine their suitability, advantages, and limitations in real projects.\n 5  Evaluate the selection and performance of construction equipment (earthmoving,\n     compacting, hoisting) and construction practices (formwork, scaffolding) based on\n     efficiency, safety, and project requirements.\n\n\nPre-requisite of course:NOT REQUIRED\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Overview of Building Components                          8\n               Classification of Buildings as per latest National Building Code\n            Group A to I, Building classification as per Types of Constructions-\n            Load Bearing Structure, Framed Structure, Composite Structure,\n              Building Components :Functions of Building Components,\n              Substructure – Foundation and Plinth, Superstructure – Walls,\n                Partition wall, Cavity wall, Sill, Lintel, Doors and Windows, Floor,\n             Roof, Columns, Beams, and Parapet\n     2      Construction of Substructure: Foundation                   6\n            Types of foundation and its functions, , Shallow Foundation:\n             Stepped Footing, Wall Footing, Column Footing, Shallow\n              Foundation: Stepped Footing, Wall Footing, Column Footing, Deep\n             Foundation - Pile Foundation, Well foundation and Caissons\n     3      Construction of Superstructure                             8\n             Stone Masonry: Terms used in stone masonry- facing, backing,\n               hearting, Through stone,corner stone, cornice, Types of stone\n             masonry: Rubble masonry, Ashlar Masonry, and their types, Terms\n             used in brick masonry- header, stretcher, closer, quoins, course,\n                face, back, hearting, bat bond, joints, lap, frog line, level and plumb,\n            Bonds in brick masonry- header bond, stretcher bond, English bond,\n            and Flemish bond, Requirements of good brick masonry,\n            Comparison between stone and brick Masonry, Toolsrequired for\n               construction of stone and brick masonry,, Precautions to be\n             observed in stone and brick masonry, masonryconstruction, Purpose\n            and types of formworks, removal of formwork, Purpose and types\n              of Scaffolding\n     4      Construction Machineries and Equipment                    6\n             Excavationand Earth moving equipments: Use and working of\n            Power shovel, Drag line, Hoes, Clam shell, Trenching Machines,\n               Tractors, Bull-dozer, Rippers, and Scrapers, Compacting\n             equipments: functions of plain rollers, ship footed rollers, vibratory,\n            and pneumatic rollers,, Hoisting equipments: Types of cranes –\n             mobile crane, tower crane and gantry girder\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            2\n           Draw sketches of load bearing structure and framed structure and\n               identify their components.\n     2      Experiment 2                                            2\n           Draw sketches of shallow foundations such as stepped footing, wall\n              footing and isolated column footing.\n     3      Experiment 3                                            2\n           Draw sketches of shallow foundations such as combined footing,\n                 raft foundation and grillage foundation.\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Experiment 4                                            2\n           Draw sketches of deep foundations such as pile foundation, well\n              foundation and caisson.\n     5      Experiment 5                                            2\n           Draw sketches of types of stone masonry such as rubble masonry\n            and ashlar masonry.\n     6      Experiment 6                                            2\n           Draw sketches of bonds in brick masonry such as header bond,\n                stretcher bond, English bond and Flemish bond.\n     7      Experiment 7                                            2\n           Draw sketches of various brick walls using different brick\n             dimensions and thicknesses.\n     8      Experiment 8                                            2\n           Draw sketches of tools required for construction of stone masonry\n            and brick masonry.\n     9      Experiment 9                                            2\n           Draw sketches of different types of formwork used in construction.\n     10     Experiment 10                                           2\n           Draw sketches of different types of scaffolding used in construction.\n     11     Experiment 11                                           2\n           Draw sketches of excavation and earth moving equipment used in\n               construction.\n     12     Experiment 12                                           2\n           Draw sketches of compacting equipment used in construction.\n     13     Experiment 13                                           2\n           Draw sketches of hoisting equipment used in construction.\n     14     Experiment 14                                           2\n              Prepare a report on safety measures and recent trends in the\n               construction field.\n                               Total Hours                       28\n\nTextbook :\n 1  Building Construction, Dr.B.C.Punmia, Er. Ashok Kumar Jain and Dr. Arun Kumar Jain,\n    Laxmi publications, 2019\n 2  Building Construction and Materials, S.C. Rangwala, Charotar Publishing House, 2022\n\nReferences:\n 1  Repair & Rehabilitation of Structures, Repair & Rehabilitation of Structures, , B.G.\n    Deshpande & S.K. Pallewar, Wheeler Publishing Co. Ltd, 2016\n 2  Green Building Materials and Technologies, Green Building Materials and Technologies,\n    Poonam Choudhary, New Age International Publishers, 2019\n\nSuggested Theory Distribution:\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         20.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board may also\n     use any of tools such as demonstration, role play, Quiz, ,brainstorming ,MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end o the semester for an evaluation of the\n    performance of students in the laboratory\n 4  Students will use supplementary resources such as videos e -courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/105102088\n 2  https://theconstructor.org/\n 3  https://www.cecr.in\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "151363403888a0729befbc94a500a60920a8acff2b5f9de11f2e4374a01814e6"
+    },
+    {
+      "subject_id": "48000935030501",
+      "subject_name": "GENERATIVE AI & PROMPT ENGINEERING",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 3,
+      "subject_code": "09CE0305",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/21.-SEMESTER-3_09CE0305-GENERATIVE-AI-PROMPT-ENGINEERING.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09CE0305 - GENERATIVE AI & PROMPT ENGINEERING (.pdf",
+      "expected_pdf_sha256": "ccd2ad95562e20f5690a1a98156fd4be71c90001221887e74b2ceb1960749385",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "GENERATIVE AI & PROMPT ENGINEERING",
+        "course_code": "09CE0305",
+        "semester_label": "3",
+        "credits": 1,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "To enable students to understand Generative AI concepts and effectively use prompt engineering techniques to perform engineering tasks such as report generation, inspection, maintenance planning, and documentation without requiring programming knowledge."
+      ],
+      "course_outcomes": [
+        "Apply the basic working principles of Generative AI to identify suitable engineering applications.",
+        "Use appropriate AI tools to perform specific engineering tasks effectively.",
+        "Construct structured and optimized prompts for solving engineering problems.",
+        "Examine and refine AI-generated outputs to improve correctness and usefulness.",
+        "Develop prompt-based solutions to handle real-world engineering workflows."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 2 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "AI IN ENGINEERING PRACTICE",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Basics of Generative AI, AI working principle (prediction concept),",
+              "AI vs Traditional tools, AI tools overview, Engineering applications",
+              "of AI"
+            ],
+            "topics_text": "Basics of Generative AI, AI working principle (prediction concept), AI vs Traditional tools, AI tools overview, Engineering applications of AI",
+            "topics": [
+              "Basics of Generative AI, AI working principle (prediction concept),",
+              "AI vs Traditional tools, AI tools overview, Engineering applications",
+              "of AI"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "SMART USE OF AI TOOLS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Communication with AI, AI tool capabilities & limitations, Tool",
+              "selection for tasks, Common usage mistakes, Data privacy &",
+              "confidentiality, Safety considerations, Bias and incorrect outputs"
+            ],
+            "topics_text": "Communication with AI, AI tool capabilities & limitations, Tool selection for tasks, Common usage mistakes, Data privacy & confidentiality, Safety considerations, Bias and incorrect outputs",
+            "topics": [
+              "Communication with AI, AI tool capabilities & limitations, Tool",
+              "selection for tasks, Common usage mistakes, Data privacy &",
+              "confidentiality, Safety considerations, Bias and incorrect outputs"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "PROMPT DESIGN FUNDAMENTALS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Introduction to prompts and Prompt structure (task, context,",
+              "format), Types of prompts, Step-by-step prompting, Problem",
+              "decomposition, Example-based prompting, Prompt templates",
+              "(report, checklist, SOP)"
+            ],
+            "topics_text": "Introduction to prompts and Prompt structure (task, context, format), Types of prompts, Step-by-step prompting, Problem decomposition, Example-based prompting, Prompt templates (report, checklist, SOP)",
+            "topics": [
+              "Introduction to prompts and Prompt structure (task, context,",
+              "format), Types of prompts, Step-by-step prompting, Problem",
+              "decomposition, Example-based prompting, Prompt templates",
+              "(report, checklist, SOP)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "PRACTICAL ENGINEERING APPLICATIONS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Inspection applications, Maintenance applications, Safety",
+              "applications, Work planning, Structured output generation, Prompt",
+              "refinement, Output comparison, Workflow prompting"
+            ],
+            "topics_text": "Inspection applications, Maintenance applications, Safety applications, Work planning, Structured output generation, Prompt refinement, Output comparison, Workflow prompting",
+            "topics": [
+              "Inspection applications, Maintenance applications, Safety",
+              "applications, Work planning, Structured output generation, Prompt",
+              "refinement, Output comparison, Workflow prompting"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "AI-ASSISTED EVALUATION AND ETHICS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Using AI Tools for Code Generation, Code Debugging and",
+              "Optimization, Prompt Chaining for Step-by-step Development,",
+              "Detecting Hallucinations in AI-generated Code, Responsible AI",
+              "Usage, Data Privacy and Security Considerations, Mini Project",
+              "using Python and Prompt Engineering",
+              "Total Hours 0"
+            ],
+            "topics_text": "Using AI Tools for Code Generation, Code Debugging and Optimization, Prompt Chaining for Step-by-step Development, Detecting Hallucinations in AI-generated Code, Responsible AI Usage, Data Privacy and Security Considerations, Mini Project using Python and Prompt Engineering Total Hours 0",
+            "topics": [
+              "Using AI Tools for Code Generation, Code Debugging and",
+              "Optimization, Prompt Chaining for Step-by-step Development,",
+              "Detecting Hallucinations in AI-generated Code, Responsible AI",
+              "Usage, Data Privacy and Security Considerations, Mini Project",
+              "using Python and Prompt Engineering",
+              "Total Hours 0"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Study and explore AI tools and identify their applications in",
+              "engineering domains"
+            ],
+            "topics_text": "Study and explore AI tools and identify their applications in engineering domains",
+            "topics": [
+              "Study and explore AI tools and identify their applications in",
+              "engineering domains"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Compare AI tools with traditional methods for solving engineering",
+              "tasks."
+            ],
+            "topics_text": "Compare AI tools with traditional methods for solving engineering tasks.",
+            "topics": [
+              "Compare AI tools with traditional methods for solving engineering",
+              "tasks."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design and use effective prompts for communication with AI tools"
+            ],
+            "topics_text": "Design and use effective prompts for communication with AI tools",
+            "topics": [
+              "Design and use effective prompts for communication with AI tools"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Analyze AI-generated outputs to identify errors and improve",
+              "responses"
+            ],
+            "topics_text": "Analyze AI-generated outputs to identify errors and improve responses",
+            "topics": [
+              "Analyze AI-generated outputs to identify errors and improve",
+              "responses"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Demonstrate responsible AI usage considering privacy, safety, and",
+              "bias"
+            ],
+            "topics_text": "Demonstrate responsible AI usage considering privacy, safety, and bias",
+            "topics": [
+              "Demonstrate responsible AI usage considering privacy, safety, and",
+              "bias"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design structured prompts using task, context, and output format"
+            ],
+            "topics_text": "Design structured prompts using task, context, and output format",
+            "topics": [
+              "Design structured prompts using task, context, and output format"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Apply prompting techniques such as step-by-step, decomposition,",
+              "and example-based prompting"
+            ],
+            "topics_text": "Apply prompting techniques such as step-by-step, decomposition, and example-based prompting",
+            "topics": [
+              "Apply prompting techniques such as step-by-step, decomposition,",
+              "and example-based prompting"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Develop prompt templates for report, checklist, and SOP"
+            ],
+            "topics_text": "Develop prompt templates for report, checklist, and SOP",
+            "topics": [
+              "Develop prompt templates for report, checklist, and SOP"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Test and refine prompts to improve output quality"
+            ],
+            "topics_text": "Test and refine prompts to improve output quality",
+            "topics": [
+              "Test and refine prompts to improve output quality"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Generate inspection checklist, maintenance procedure, and safety",
+              "instructions using AI"
+            ],
+            "topics_text": "Generate inspection checklist, maintenance procedure, and safety instructions using AI",
+            "topics": [
+              "Generate inspection checklist, maintenance procedure, and safety",
+              "instructions using AI"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Generate structured outputs (tables/reports) and compare multiple",
+              "AI outputs"
+            ],
+            "topics_text": "Generate structured outputs (tables/reports) and compare multiple AI outputs",
+            "topics": [
+              "Generate structured outputs (tables/reports) and compare multiple",
+              "AI outputs"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design workflow-based prompts for routine engineering tasks"
+            ],
+            "topics_text": "Design workflow-based prompts for routine engineering tasks",
+            "topics": [
+              "Design workflow-based prompts for routine engineering tasks"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Identify and verify incorrect AI outputs and apply prompt chaining"
+            ],
+            "topics_text": "Identify and verify incorrect AI outputs and apply prompt chaining",
+            "topics": [
+              "Identify and verify incorrect AI outputs and apply prompt chaining"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical-14",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Develop a mini project using prompt engineering for real-world",
+              "problem solving",
+              "Total Hours 28"
+            ],
+            "topics_text": "Develop a mini project using prompt engineering for real-world problem solving Total Hours 28",
+            "topics": [
+              "Develop a mini project using prompt engineering for real-world",
+              "problem solving",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Prompt Engineering Guide, Prompt Engineering Guide, OpenAI, OpenAI Documentation, 2023"
+        ],
+        "textbooks": [
+          "AI for Everyone, Andrew Ng, Coursera, 2019 References:",
+          "Prompt Engineering Guide, Prompt Engineering Guide, OpenAI, OpenAI Documentation, 2023"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "NPTEL / SWAYAM Courses on Python Programming and Artificial Intelligence",
+          "OpenAI / Google AI / Microsoft Copilot Official Documentation",
+          "https://www.tutorialspoint.com/prompt_engineering/index.htm"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 8858,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    GENERATIVE AI & PROMPT ENGINEERING\nCOURSE CODE     09CE0305\nCOURSE CREDITS  1\n\nObjective:\n 1  To enable students to understand Generative AI concepts and effectively use prompt\n     engineering techniques to perform engineering tasks such as report generation, inspection,\n    maintenance planning, and documentation without requiring programming knowledge.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply the basic working principles of Generative AI to identify suitable engineering\n     applications.\n 2  Use appropriate AI tools to perform specific engineering tasks effectively.\n 3  Construct structured and optimized prompts for solving engineering problems.\n 4  Examine and refine AI-generated outputs to improve correctness and usefulness.\n 5  Develop prompt-based solutions to handle real-world engineering workflows.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            2         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     AI IN ENGINEERING PRACTICE                         0\n              Basics of Generative AI, AI working principle (prediction concept),\n           AI vs Traditional tools, AI tools overview, Engineering applications\n              of AI\n     2    SMART USE OF AI TOOLS                               0\n            Communication with AI, AI tool capabilities & limitations, Tool\n               selection for tasks, Common usage mistakes, Data privacy &\n                confidentiality, Safety considerations, Bias and incorrect outputs\n     3    PROMPT DESIGN FUNDAMENTALS                     0\n               Introduction to prompts and Prompt structure (task, context,\n               format), Types of prompts, Step-by-step prompting, Problem\n              decomposition, Example-based prompting, Prompt templates\n                (report, checklist, SOP)\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4    PRACTICAL ENGINEERING APPLICATIONS             0\n              Inspection applications, Maintenance applications, Safety\n               applications, Work planning, Structured output generation, Prompt\n              refinement, Output comparison, Workflow prompting\n     5     AI-ASSISTED EVALUATION AND ETHICS                0\n             Using AI Tools for Code Generation, Code Debugging and\n              Optimization, Prompt Chaining for Step-by-step Development,\n              Detecting Hallucinations in AI-generated Code, Responsible AI\n             Usage, Data Privacy and Security Considerations, Mini Project\n              using Python and Prompt Engineering\n                               Total Hours                       0\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical-1                                              2\n             Study and explore AI tools and identify their applications in\n              engineering domains\n     2       Practical-2                                              2\n           Compare AI tools with traditional methods for solving engineering\n                tasks.\n     3       Practical-3                                              2\n             Design and use effective prompts for communication with AI tools\n     4       Practical-4                                              2\n             Analyze AI-generated outputs to identify errors and improve\n              responses\n     5       Practical-5                                              1\n             Demonstrate responsible AI usage considering privacy, safety, and\n               bias\n     6       Practical-6                                              2\n             Design structured prompts using task, context, and output format\n     7       Practical-7                                              2\n            Apply prompting techniques such as step-by-step, decomposition,\n            and example-based prompting\n     8       Practical-8                                              2\n            Develop prompt templates for report, checklist, and SOP\n     9       Practical-9                                              2\n              Test and refine prompts to improve output quality\n     10      Practical-10                                             2\n             Generate inspection checklist, maintenance procedure, and safety\n               instructions using AI\n     11      Practical-11                                             2\n             Generate structured outputs (tables/reports) and compare multiple\n           AI outputs\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     12      Practical-12                                             2\n             Design workflow-based prompts for routine engineering tasks\n     13      Practical-13                                             2\n               Identify and verify incorrect AI outputs and apply prompt chaining\n     14      Practical-14                                             3\n            Develop a mini project using prompt engineering for real-world\n             problem solving\n                               Total Hours                       28\n\nTextbook :\n 1  AI for Everyone, Andrew Ng, Coursera, 2019\n\nReferences:\n 1  Prompt Engineering Guide, Prompt Engineering Guide, OpenAI, OpenAI Documentation,\n    2023\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of the content and need of\n     students. The teacher, in addition to conventional teaching method by blackboard, may also\n     use tools such as demonstration, coding practice, brainstorming sessions, case studies, AI-\n     assisted learning activities and MOOCs.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and classroom through assignments, prompt design activities, coding exercises\n    and mini projects.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory based on programming skills and prompt engineering\n     applications.\n 4  Students will use supplementary resources such as online videos, NPTEL lectures, e-\n     courses, official Python documentation, AI tool user guides and virtual laboratory\n     platforms.\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Supplementary Resources:\n 1  NPTEL / SWAYAM Courses on Python Programming and Artificial Intelligence\n 2  OpenAI / Google AI / Microsoft Copilot Official Documentation\n 3  https://www.tutorialspoint.com/prompt_engineering/index.htm\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "ccd2ad95562e20f5690a1a98156fd4be71c90001221887e74b2ceb1960749385"
+    },
+    {
+      "subject_id": "48009131030201",
+      "subject_name": "MATHEMATICS-III",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 3,
+      "subject_code": "09MA0302",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/15.-SEMESTER-3_09MA0302-MATHS-III.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09MA0302 - MATHEMATICS-III (.pdf",
+      "expected_pdf_sha256": "0fdd15f1ed89f25744b762f1eb4b2724d59411370b05cfd15fc6d338a1b25699",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MATHEMATICS-III",
+        "course_code": "09MA0302",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "Students are intended to understand the basic concepts of calculus such as Permutation and Combination, Probability, Binomial Theorem, Differentiation and Vectors. The knowledge of calculus can help to understand and solve problems related to Engineering fields. The course will help students to understand Engineering principles and concepts. Main objective of the course is to apply concepts of Binomial Theorem, Differentiation and Vectors to solve given engineering problems.",
+        "Students are intended to understand the basic concepts of calculus such as Permutation and Combination, Probability, Binomial Theorem, Differentiation and Vectors. The knowledge of calculus can help to understand and solve problems related to Engineering fields. The course will help students to understand Engineering principles and concepts. Main objective of the course is to apply concepts of Binomial Theorem, Differentiation and Vectors to solve given engineering problems."
+      ],
+      "course_outcomes": [
+        "Apply the concepts of permutation and combination to solve problems involving order and selection of objects in real-life and mathematical scenarios",
+        "Apply the basic principles of probability to determine the likelihood of outcomes in various experiments and situations",
+        "Use the binomial theorem to expand expressions with higher-degree terms and solve related algebraic problems",
+        "Apply differentiation techniques to various types of functions to find rates of change and slopes in mathematical and applied contexts",
+        "Apply vector operations to distinguish between scalar and vector quantities, analyse their properties, and calculate the angle between vectors"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25 MR. MRUDURAJSINH JAYENDRASINH DR. RAJESHKUMAR MEGHAJIBHAI PATEL CHUDASAMADigitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Permutation and Combination",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Basic permutation, Basic combination"
+            ],
+            "topics_text": "Introduction, Basic permutation, Basic combination",
+            "topics": [
+              "Introduction, Basic permutation, Basic combination"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Probability",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Classical probability, Compliment of event"
+            ],
+            "topics_text": "Introduction, Classical probability, Compliment of event",
+            "topics": [
+              "Introduction, Classical probability, Compliment of event"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Binomial Theorem",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Binomial theorem (without proof) for positive integral index",
+              "(expansion and general form), Binomial theorem for any index",
+              "(expansion without proof) first and second binomial approximation",
+              "with applications to engineering problems"
+            ],
+            "topics_text": "Binomial theorem (without proof) for positive integral index (expansion and general form), Binomial theorem for any index (expansion without proof) first and second binomial approximation with applications to engineering problems",
+            "topics": [
+              "Binomial theorem (without proof) for positive integral index",
+              "(expansion and general form), Binomial theorem for any index",
+              "(expansion without proof) first and second binomial approximation",
+              "with applications to engineering problems"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differentiation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Definition, Some properties, Derivative of some important",
+              "functions, Chain rule, Derivative of implicit function, Derivative of",
+              "parametric function, Logarithmic differentiation, Second order",
+              "Derivative"
+            ],
+            "topics_text": "Definition, Some properties, Derivative of some important functions, Chain rule, Derivative of implicit function, Derivative of parametric function, Logarithmic differentiation, Second order Derivative",
+            "topics": [
+              "Definition, Some properties, Derivative of some important",
+              "functions, Chain rule, Derivative of implicit function, Derivative of",
+              "parametric function, Logarithmic differentiation, Second order",
+              "Derivative"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Vectors",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Basic concept of Vector and Scalar, addition & subtraction, Product",
+              "of Vectors, Geometric meaning of Scalar and Vector Product,",
+              "Applications of Dot (scalar) and Cross (vector) product, Angle",
+              "between two vectors",
+              "Total Hours 28"
+            ],
+            "topics_text": "Basic concept of Vector and Scalar, addition & subtraction, Product of Vectors, Geometric meaning of Scalar and Vector Product, Applications of Dot (scalar) and Cross (vector) product, Angle between two vectors Total Hours 28",
+            "topics": [
+              "Basic concept of Vector and Scalar, addition & subtraction, Product",
+              "of Vectors, Geometric meaning of Scalar and Vector Product,",
+              "Applications of Dot (scalar) and Cross (vector) product, Angle",
+              "between two vectors",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Permutation and Combination",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Combination, Permutation"
+            ],
+            "topics_text": "Combination, Permutation",
+            "topics": [
+              "Combination, Permutation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Probability",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Classical probability , Compliment of event"
+            ],
+            "topics_text": "Classical probability , Compliment of event",
+            "topics": [
+              "Classical probability , Compliment of event"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Binomial Theorem",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Binomial theorem for positive integral index , Binomial theorem for",
+              "any index"
+            ],
+            "topics_text": "Binomial theorem for positive integral index , Binomial theorem for any index",
+            "topics": [
+              "Binomial theorem for positive integral index , Binomial theorem for",
+              "any index"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differentiation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Some properties and Derivative of some important function, Chain",
+              "rule, Derivative of implicit function and parametric function,",
+              "Logarithmic differentiation, Second order Derivative"
+            ],
+            "topics_text": "Some properties and Derivative of some important function, Chain rule, Derivative of implicit function and parametric function, Logarithmic differentiation, Second order Derivative",
+            "topics": [
+              "Some properties and Derivative of some important function, Chain",
+              "rule, Derivative of implicit function and parametric function,",
+              "Logarithmic differentiation, Second order Derivative"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Vectors",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Algebraic properties of vectors, Basic concept and Geometric",
+              "meaning of Scalar and Vector product, Angle between two vectors",
+              "Total Hours 28"
+            ],
+            "topics_text": "Algebraic properties of vectors, Basic concept and Geometric meaning of Scalar and Vector product, Angle between two vectors Total Hours 28",
+            "topics": [
+              "Algebraic properties of vectors, Basic concept and Geometric",
+              "meaning of Scalar and Vector product, Angle between two vectors",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "NCERT Class-XI science Mathematics , NCERT Class-XI science Mathematics , NCERT, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics Part=I , NCERT, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics Part=II, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022",
+          "Higher Engineering Mathematics, Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, New Delhi, 2007"
+        ],
+        "textbooks": [
+          "Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, New Delhi, 2007",
+          "NCERT Class-XI science Mathematics, -, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=I, -, NCERT, 2022 CHUDASAMA"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.mathsisfun.com/combinatorics/combinations-permutations.html",
+          "https://en.wikipedia.org/wiki/Binomial_theorem",
+          "https://en.wikipedia.org/wiki/Derivative",
+          "https://en.wikipedia.org/wiki/Integral",
+          "https://www.mathsisfun.com/calculus/integration-introduction.html CHUDASAMA"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7880,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    MATHEMATICS-III\nCOURSE CODE     09MA0302\nCOURSE CREDITS  4\n\nObjective:\n 1  Students are intended to understand the basic concepts of calculus such\n     as Permutation and Combination, Probability, Binomial Theorem, Differentiation\n    and Vectors. The knowledge of calculus can help to understand and solve problems\n     related to Engineering fields. The course will help students to understand\n     Engineering principles and concepts. Main objective of the course is to apply\n     concepts of Binomial Theorem, Differentiation and Vectors to solve given\n     engineering problems.\n 2  Students are intended to understand the basic concepts of calculus such as Permutation and\n    Combination, Probability, Binomial Theorem, Differentiation and Vectors. The knowledge\n     of calculus can help to understand and solve problems related to Engineering fields. The\n     course will help students to understand Engineering principles and concepts. Main\n     objective of the course is to apply concepts of Binomial Theorem, Differentiation and\n     Vectors to solve given engineering problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply the concepts of permutation and combination to solve problems involving order and\n     selection of objects in real-life and mathematical scenarios\n 2  Apply the basic principles of probability to determine the likelihood of outcomes in various\n     experiments and situations\n 3  Use the binomial theorem to expand expressions with higher-degree terms and solve related\n     algebraic problems\n 4  Apply differentiation techniques to various types of functions to find rates of change and\n     slopes in mathematical and applied contexts\n 5  Apply vector operations to distinguish between scalar and vector quantities, analyse their\n     properties, and calculate the angle between vectors\n\n\nPre-requisite of course:NA.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH             DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Permutation and Combination                             4\n               Introduction, Basic permutation, Basic combination\n     2       Probability                                              4\n               Introduction, Classical probability, Compliment of event\n     3      Binomial Theorem                                        4\n             Binomial theorem (without proof) for positive integral index\n              (expansion and general form), Binomial theorem for any index\n              (expansion without proof) first and second binomial approximation\n             with applications to engineering problems\n     4       Differentiation                                           10\n               Definition, Some properties, Derivative of some important\n               functions, Chain rule, Derivative of implicit function, Derivative of\n              parametric function, Logarithmic differentiation, Second order\n              Derivative\n     5      Vectors                                                 6\n             Basic concept of Vector and Scalar, addition & subtraction, Product\n              of Vectors, Geometric meaning of Scalar and Vector Product,\n              Applications of Dot (scalar) and Cross (vector) product, Angle\n             between two vectors\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Permutation and Combination                             4\n             Combination, Permutation\n     2       Probability                                              4\n               Classical probability , Compliment of event\n     3      Binomial Theorem                                        4\n             Binomial theorem for positive integral index , Binomial theorem for\n            any index\n     4       Differentiation                                           10\n          Some properties and Derivative of some important function, Chain\n                 rule, Derivative of implicit function and parametric function,\n             Logarithmic differentiation, Second order Derivative\n     5      Vectors                                                 6\n              Algebraic properties of vectors, Basic concept and Geometric\n            meaning of Scalar and Vector product, Angle between two vectors\n                               Total Hours                       28\n\nTextbook :\n 1  Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, New Delhi, 2007\n 2 NCERT Class-XI science Mathematics, -, NCERT, 2022\n 3 NCERT Class-XII science Mathematics Part=I, -, NCERT, 2022\n\n\nMR. MRUDURAJSINH JAYENDRASINH             DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Textbook :\n 4 NCERT Class-XII science Mathematics Part=II, -, NCERT, 2022\n 5 NCERT Class-X Mathematics, -, NCERT, 2022\n\nReferences:\n 1 NCERT Class-XI science Mathematics , NCERT Class-XI science Mathematics , NCERT,\n   NCERT, 2022\n 2 NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics\n     Part=I , NCERT, NCERT, 2022\n 3 NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics\n     Part=II, NCERT, NCERT, 2022\n 4 NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022\n 5  Higher Engineering Mathematics, Higher Engineering Mathematics, B.S. Grewal, Khanna\n     Publishers, New Delhi, 2007\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    30.00         30.00         30.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms.\n\nSupplementary Resources:\n 1  https://www.mathsisfun.com/combinatorics/combinations-permutations.html\n 2  https://en.wikipedia.org/wiki/Binomial_theorem\n 3  https://en.wikipedia.org/wiki/Derivative\n 4  https://en.wikipedia.org/wiki/Integral\n 5  https://www.mathsisfun.com/calculus/integration-introduction.html\n\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH             DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09MA0302 - MATHEMATICS-III (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "0fdd15f1ed89f25744b762f1eb4b2724d59411370b05cfd15fc6d338a1b25699"
+    },
+    {
+      "subject_id": "48000939030901",
+      "subject_name": "MECHANICS OF STRUCTURE",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 3,
+      "subject_code": "09CI0309",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/19.-SEMESTER-3_09CI0309-MECHANICS-OF-STRUCTURE.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09CI0309 - MECHANICS OF STRUCTURE (.pdf",
+      "expected_pdf_sha256": "868a84558fd3a2bd1e98e427f22b5f07652a7abf3020fb8ff2dbc7660eb35347",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MECHAICS OF STRUCTURE",
+        "course_code": "09CI0309",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "APPLIED MECHANICS"
+      },
+      "objectives": [
+        "Calculate stresses and deformations of statically determinate beams",
+        "Analyze different structures under direct and eccentric axial loading for its stability and internal stresses.",
+        "Conduct Analysis of beam for shear & bending stresses and thereby know the selection of section for beam.",
+        "To Calculate stresses and deformations of statically determinate beams.",
+        "To Analyze different structures under direct and eccentric axial loading for its stability and internal stresses",
+        "To Conduct Analysis of beam for shear & bending stresses and thereby know the selection of section for beam"
+      ],
+      "course_outcomes": [
+        "Recognise the ductile or brittle material and its other mechanical properties",
+        "Compute moment of inertia along with asymmetrical and symmetrical sections.",
+        "Draw shear force and bending moment diagram for statically determinate beams.",
+        "Calculate load carrying capacity of column and strut. 5 Compute slope and deflection.",
+        "Compute slope and deflection.",
+        "Calculate direct and bending stress for different structural components."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 2 50 30 20 25 25 MR. SMIT MAHENDRABHAI KACHA MR. MITTAL KIRITBHAI JOISER Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "STRESS & STRAIN IN BEAM",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Types of loads and structures, Stress and strain, Hook’s Law,",
+              "Modulus of elasticity, Factor of safety, Yield, breaking and ultimate",
+              "stresses, Lateral strain and poison’s ratio, Shear stress, shear strain",
+              "and shear modulus, Introduction to Bulk modulus and volumetric",
+              "strain, Strength & Stiffness concept, Strain energy , , Bending",
+              "theorye quations,bending stresses, sectional modulus, and Neutral-",
+              "axis, Shear stress equations and shear distribution diagrams"
+            ],
+            "topics_text": "Types of loads and structures, Stress and strain, Hook’s Law, Modulus of elasticity, Factor of safety, Yield, breaking and ultimate stresses, Lateral strain and poison’s ratio, Shear stress, shear strain and shear modulus, Introduction to Bulk modulus and volumetric strain, Strength & Stiffness concept, Strain energy , , Bending theorye quations,bending stresses, sectional modulus, and Neutral- axis, Shear stress equations and shear distribution diagrams",
+            "topics": [
+              "Types of loads and structures, Stress and strain, Hook’s Law,",
+              "Modulus of elasticity, Factor of safety, Yield, breaking and ultimate",
+              "stresses, Lateral strain and poison’s ratio, Shear stress, shear strain",
+              "and shear modulus, Introduction to Bulk modulus and volumetric",
+              "strain, Strength & Stiffness concept, Strain energy , , Bending",
+              "theorye quations,bending stresses, sectional modulus, and Neutral",
+              "axis, Shear stress equations and shear distribution diagrams"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "ANALYSIS OF BEAM",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Statically determinate beams, Shear force, Bending moment and its",
+              "relation, Sagging and Hogging moment, Point of contra-flexure and",
+              "its application, Shear force and bending moment diagram (only for",
+              "point load & UDL, couple), Introduction to slop and deflection,",
+              "Formula to find slop and deflection for cantilever and Simply",
+              "supported beam subjected to point load and UDL, , Numerical",
+              "problems"
+            ],
+            "topics_text": "Statically determinate beams, Shear force, Bending moment and its relation, Sagging and Hogging moment, Point of contra-flexure and its application, Shear force and bending moment diagram (only for point load & UDL, couple), Introduction to slop and deflection, Formula to find slop and deflection for cantilever and Simply supported beam subjected to point load and UDL, , Numerical problems",
+            "topics": [
+              "Statically determinate beams, Shear force, Bending moment and its",
+              "relation, Sagging and Hogging moment, Point of contra-flexure and",
+              "its application, Shear force and bending moment diagram (only for",
+              "point load & UDL, couple), Introduction to slop and deflection,",
+              "Formula to find slop and deflection for cantilever and Simply",
+              "supported beam subjected to point load and UDL, , Numerical",
+              "problems"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "MOMENT OF INERTIA",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction to moment of inertia, Parallel and perpendicular axis",
+              "theorem, Types of sections and formula to find moment of inertia",
+              "about the sections"
+            ],
+            "topics_text": "Introduction to moment of inertia, Parallel and perpendicular axis theorem, Types of sections and formula to find moment of inertia about the sections",
+            "topics": [
+              "Introduction to moment of inertia, Parallel and perpendicular axis",
+              "theorem, Types of sections and formula to find moment of inertia",
+              "about the sections"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "ANALYSIS OFCOLUMN,STRUT&TRUSS",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction to column and strut, Long and short column, End",
+              "condition and effective length of column,, Modes of failure of",
+              "column, Radius of Gyration and slenderness ratio, Perfect,",
+              "Imperfect truss, ypes of truss with different spans and its",
+              "application, different types of truss under panel point loads by",
+              "method of joints",
+              "Total Hours 42"
+            ],
+            "topics_text": "Introduction to column and strut, Long and short column, End condition and effective length of column,, Modes of failure of column, Radius of Gyration and slenderness ratio, Perfect, Imperfect truss, ypes of truss with different spans and its application, different types of truss under panel point loads by method of joints Total Hours 42",
+            "topics": [
+              "Introduction to column and strut, Long and short column, End",
+              "condition and effective length of column,, Modes of failure of",
+              "column, Radius of Gyration and slenderness ratio, Perfect,",
+              "Imperfect truss, ypes of truss with different spans and its",
+              "application, different types of truss under panel point loads by",
+              "method of joints",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Strength and stiffness experiment using paper models to understand",
+              "load-deformation behavior"
+            ],
+            "topics_text": "Strength and stiffness experiment using paper models to understand load-deformation behavior",
+            "topics": [
+              "Strength and stiffness experiment using paper models to understand",
+              "load-deformation behavior"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Tensile test on mild steel specimen to draw stress-strain curve and",
+              "determine mechanical properties"
+            ],
+            "topics_text": "Tensile test on mild steel specimen to draw stress-strain curve and determine mechanical properties",
+            "topics": [
+              "Tensile test on mild steel specimen to draw stress-strain curve and",
+              "determine mechanical properties"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determination of Young’s Modulus of a given wire material using",
+              "elongation method"
+            ],
+            "topics_text": "Determination of Young’s Modulus of a given wire material using elongation method",
+            "topics": [
+              "Determination of Young’s Modulus of a given wire material using",
+              "elongation method"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determination of impact value of mild steel using IZOD impact",
+              "testing machine"
+            ],
+            "topics_text": "Determination of impact value of mild steel using IZOD impact testing machine",
+            "topics": [
+              "Determination of impact value of mild steel using IZOD impact",
+              "testing machine"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determination of impact value of mild steel using Charpy impact",
+              "testing machine"
+            ],
+            "topics_text": "Determination of impact value of mild steel using Charpy impact testing machine",
+            "topics": [
+              "Determination of impact value of mild steel using Charpy impact",
+              "testing machine"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Analysis of truss using experimental setup and verification by",
+              "analytical method"
+            ],
+            "topics_text": "Analysis of truss using experimental setup and verification by analytical method",
+            "topics": [
+              "Analysis of truss using experimental setup and verification by",
+              "analytical method"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Deflection test on simply supported beam under different loading",
+              "conditions"
+            ],
+            "topics_text": "Deflection test on simply supported beam under different loading conditions",
+            "topics": [
+              "Deflection test on simply supported beam under different loading",
+              "conditions"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Deflection test on cantilever beam with different materials and",
+              "cross-sections"
+            ],
+            "topics_text": "Deflection test on cantilever beam with different materials and cross-sections",
+            "topics": [
+              "Deflection test on cantilever beam with different materials and",
+              "cross-sections"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Shear force and bending moment diagram plotting on graph paper",
+              "for given loading cases"
+            ],
+            "topics_text": "Shear force and bending moment diagram plotting on graph paper for given loading cases",
+            "topics": [
+              "Shear force and bending moment diagram plotting on graph paper",
+              "for given loading cases"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Beam reaction experiment to determine support reactions for",
+              "different loading conditions"
+            ],
+            "topics_text": "Beam reaction experiment to determine support reactions for different loading conditions",
+            "topics": [
+              "Beam reaction experiment to determine support reactions for",
+              "different loading conditions"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Concrete cube compression test to determine compressive strength"
+            ],
+            "topics_text": "Concrete cube compression test to determine compressive strength",
+            "topics": [
+              "Concrete cube compression test to determine compressive strength"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Brick compression test to determine compressive strength of brick"
+            ],
+            "topics_text": "Brick compression test to determine compressive strength of brick",
+            "topics": [
+              "Brick compression test to determine compressive strength of brick"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Comparative study of material behavior under different loading",
+              "conditions (tension, compression, impact)",
+              "Total Hours 28"
+            ],
+            "topics_text": "Comparative study of material behavior under different loading conditions (tension, compression, impact) Total Hours 28",
+            "topics": [
+              "Comparative study of material behavior under different loading",
+              "conditions (tension, compression, impact)",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Strength of Materials, Strength of Materials, Strength of Materials, Strength of Materials, S. Ramurthan, Dhanpath Rai Publication, 2016"
+        ],
+        "textbooks": [
+          "Strength of Materials and Mechanics of structure, Dr. B.C.Punamia, Laxmi Publication, 2017 References:",
+          "Strength of Materials, Strength of Materials, Strength of Materials, Strength of Materials, S. Ramurthan, Dhanpath Rai Publication, 2016"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://nptel.ac.in/courses/105101085"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9067,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    MECHAICS OF STRUCTURE\nCOURSE CODE     09CI0309\nCOURSE CREDITS  4\n\nObjective:\n 1  Calculate stresses and deformations of statically determinate beams\n 2  Analyze different structures under direct and eccentric axial loading for its stability and\n     internal stresses.\n 3  Conduct Analysis of beam for shear & bending stresses and thereby know the selection of\n     section for beam.\n 4  To Calculate stresses and deformations of statically determinate beams.\n 5  To Analyze different structures under direct and eccentric axial loading for its stability and\n     internal stresses\n 6  To Conduct Analysis of beam for shear & bending stresses and thereby know the selection\n     of section for beam\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Recognise the ductile or brittle material and its other mechanical properties\n 2  Compute moment of inertia along with asymmetrical and symmetrical sections.\n 3  Draw shear force and bending moment diagram for statically determinate beams.\n 4  Calculate load carrying capacity of column and strut. 5 Compute slope and deflection.\n 5  Compute slope and deflection.\n 6  Calculate direct and bending stress for different structural components.\n\n\nPre-requisite of course:APPLIED MECHANICS\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            2        50     30      20        25         25\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     STRESS & STRAIN IN BEAM                             8\n            Types of loads and structures, Stress and strain, Hook’s Law,\n            Modulus of elasticity, Factor of safety, Yield, breaking and ultimate\n                stresses, Lateral strain and poison’s ratio, Shear stress, shear strain\n            and shear modulus, Introduction to Bulk modulus and volumetric\n                 strain, Strength & Stiffness concept, Strain energy , , Bending\n              theorye quations,bending stresses, sectional modulus, and Neutral-\n                axis, Shear stress equations and shear distribution diagrams\n     2     ANALYSIS OF BEAM                                    10\n                Statically determinate beams, Shear force, Bending moment and its\n                relation, Sagging and Hogging moment, Point of contra-flexure and\n                   its application, Shear force and bending moment diagram (only for\n               point load & UDL, couple), Introduction to slop and deflection,\n            Formula to find slop and deflection for cantilever and Simply\n              supported beam subjected to point load and UDL, , Numerical\n             problems\n     3    MOMENT OF INERTIA                                  12\n               Introduction to moment of inertia, Parallel and perpendicular axis\n              theorem, Types of sections and formula to find moment of inertia\n             about the sections\n     4     ANALYSIS OFCOLUMN,STRUT&TRUSS                  12\n               Introduction to column and strut, Long and short column, End\n              condition and effective length of column,, Modes of failure of\n             column, Radius of Gyration and slenderness ratio, Perfect,\n              Imperfect truss, ypes of truss with different spans and its\n               application, different types of truss under panel point loads by\n            method of joints\n                               Total Hours                       42\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            2\n              Strength and stiffness experiment using paper models to understand\n              load-deformation behavior\n     2      Experiment 2                                            2\n              Tensile test on mild steel specimen to draw stress-strain curve and\n             determine mechanical properties\n     3      Experiment 3                                            2\n             Determination of Young’s Modulus of a given wire material using\n              elongation method\n     4      Experiment 4                                            2\n             Determination of impact value of mild steel using IZOD impact\n                testing machine\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5      Experiment 5                                            2\n             Determination of impact value of mild steel using Charpy impact\n                testing machine\n     6      Experiment 6                                            2\n              Analysis of truss using experimental setup and verification by\n               analytical method\n     7      Experiment 7                                            2\n              Deflection test on simply supported beam under different loading\n              conditions\n     8      Experiment 8                                            2\n              Deflection test on cantilever beam with different materials and\n               cross-sections\n     9      Experiment 9                                            2\n             Shear force and bending moment diagram plotting on graph paper\n               for given loading cases\n     10     Experiment 10                                           4\n          Beam reaction experiment to determine support reactions for\n                different loading conditions\n     11     Experiment 11                                           2\n             Concrete cube compression test to determine compressive strength\n     12     Experiment 12                                           2\n             Brick compression test to determine compressive strength of brick\n     13     Experiment 13                                           2\n             Comparative study of material behavior under different loading\n              conditions (tension, compression, impact)\n                               Total Hours                       28\n\nTextbook :\n 1  Strength of Materials and Mechanics of structure, Dr. B.C.Punamia, Laxmi Publication,\n    2017\n\nReferences:\n 1  Strength of Materials, Strength of Materials, Strength of Materials, Strength of Materials,\n     S. Ramurthan, Dhanpath Rai Publication, 2016\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         40.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students.The teacher in addition to Conventionalteachingmethodbyblack board, may also\n     use any of tools such as demonstration, role play, Quiz,brainstorming,MOOCs etc.\n 2   The internal evaluation will be done on the basis of continuous evaluation of students in\n     the laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos,videos,e-courses,Virtual\n     Laboratory\n\nSupplementary Resources:\n 1    https://nptel.ac.in/courses/105101085\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "868a84558fd3a2bd1e98e427f22b5f07652a7abf3020fb8ff2dbc7660eb35347"
+    }
+  ],
+  "build_summary": {
+    "extracted": 7,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

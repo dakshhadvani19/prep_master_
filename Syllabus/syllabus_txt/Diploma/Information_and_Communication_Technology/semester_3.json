@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 49,
+    "course_name": "Diploma Information and Communication Technology",
+    "output_slug": "Information_and_Communication_Technology"
+  },
+  "semester": 3,
+  "subject_count": 0,
+  "subjects": [],
+  "build_summary": {
+    "extracted": 0,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

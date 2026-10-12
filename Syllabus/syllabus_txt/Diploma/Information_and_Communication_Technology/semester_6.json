@@ -1,0 +1,1594 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 49,
+    "course_name": "Diploma Information and Communication Technology",
+    "output_slug": "Information_and_Communication_Technology"
+  },
+  "semester": 6,
+  "subject_count": 12,
+  "subjects": [
+    {
+      "subject_id": "49009320060701",
+      "subject_name": "Advance Java",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0607",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MU_Diploma_AJT_syllabus.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0607 - Advance Java (.pdf",
+      "expected_pdf_sha256": "0d2287fed4d753eff2c756c64d006e6a179e94a62e3dc2fdb4e0069f52dc0ae6",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0607",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "Object Oriented Programming with JAVA"
+      },
+      "objectives": [
+        "This course develops programming ability of students to create dynamic web applications using server side technology with Java Database Connectivity. Students can learn networking and remote method invocation using Java API. Different Java frameworks like Spring, Java Server Faces and Hibernate will increase ability of students in web application development. Credits Earned: 4 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to ● Describe the components of J2EE Architecture, MVC Framework and Multi-tier ● Application and Various Network Protocol. (Remember) ● To make use of Servlet and JSP API in the process of enterprise application deployment. (Understand) ● Implement components such as Session, Filters, JSTL, Beans. (Apply) ● Distinguish Application Server, Web Container, JDBC and ORM tools.(Analyze) ● Design and Development of web application having collaboration of Servlets, JSPs, JSF, Spring and Hibernate base upon the requirement. (Apply)."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 3 0 2 4 50 30 20 25 25 150 [PAGE 2] Marwadi University Faculty of Diploma studies Information and Communication Technology",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 8153,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                           Faculty of Diploma studies\n                           Information and Communication Technology\n\n                            Semester – VI\n                      Subject Name: Advance Java\n                         Subject Code: 09CT0607\n\n\n    Objective: This course develops programming ability of students to create dynamic\n   web applications using server side technology with Java Database Connectivity.\n    Students can  learn networking and remote method invocation using Java API.\n     Different Java frameworks like Spring, Java Server Faces and Hibernate will increase\n     ability of students in web application development.\n\n\n\n    Credits Earned: 4 Credits\n\n\n    Course Outcomes: After completion of this course, student will be able to\n  ●  Describe the components of J2EE Architecture, MVC Framework and Multi-tier\n  ●  Application and Various Network Protocol. (Remember)\n  ●  To make use of Servlet and JSP API in the process of enterprise application deployment.\n     (Understand)\n  ●  Implement components such as Session, Filters, JSTL, Beans. (Apply)\n  ●  Distinguish Application Server, Web Container, JDBC and ORM tools.(Analyze)\n  ●  Design and Development of web application having collaboration of Servlets, JSPs, JSF,\n     Spring and Hibernate base upon the requirement. (Apply).\n\n\n    Pre-requisite of course: Object Oriented Programming with JAVA\n\n\n\n\n\n                    Teaching and Examination Scheme\n\n\n                                                                         Tutorial/ Practical\n  Teaching Scheme (Hours)                Theory Marks\n                                                             Marks         Total\n                                Credits\n                                                              Term    Marks\nTheory   Tutorial   Practical        ESE    IA    CSE     Viva\n                                                                 work\n   3       0       2        4     50     30       20       25      25      150"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                                  Faculty of Diploma studies\n                                 Information     and     Communication\n                               Technology\n\n\n\n      Contents:\n\nUn                              Topics                                 Contact  Weightage\n it                                                                     hours      (%)\n\n   JDBC  Programming  The  JDBC  Connectivity  Model,  Database\n     Programming: Connecting to the Database, Creating a SQL Query, Getting the\n      Results, Updating Database Data, Error Checking and the SQLException\n 1.                                                                              20      Class, The SQLWarning Class, The Statement Interface, PreparedStatement,   06\n     CallableStatement The ResultSet  Interface, Updatable Result  Sets, JDBC\n     Types, Executing SQL Queries, ResultSetMetaData, Executing SQL Updates,\n     Transaction Management\n\n\n     Servlet API and Overview Servlet Model: Overview of Servlet,\n 2.   Servlet Life Cycle, HTTP Methods Structure and Deployment descriptor        10        25\n     ServletContext and ServletConfig interface, Attributes in Servelt, Request\n     Dispacher interface The Filter API: Filter, FilterChain, Filter Config Cookies\n     and Session Management: Understanding state and session, Understanding\n     Session Timeout and Session Tracking, URL Rewriting\n\n    Java Server Pages JSP Overview: The Problem with Servlets, Life\n3.   Cycle of JSP Page, JSP Processing, JSP Application Design with MVC,\n      Setting Up the JSP Environment.                                       10        25\n\n     JSP Directives, JSP Action, JSP Implicit Objects JSP Form Processing, JSP\n     Session and Cookies Handling, JSP Session Tracking JSP Database Access,\n     JSP Standard Tag Libraries, JSP Custom Tag, JSP Expression Language, JSP\n     Exception Handling, JSP XML Processing.\n\n\n\n\n\n    Hibernate 4.0 Overview of Hibernate, Hibernate Architecture, Hibernate 4.\n     Mapping Types, Hibernate O/R Mapping, Hibernate Annotation, Hibernate   08        20\n     Query Language\n\n    Spring: Introduction to spring, Dependency Injection,  Spring AOP, Spring\n 5.  ORM, Spring MVC.                                                  08        10\n\n                 TOTAL HOURS                           42"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information     and     Communication\n                           Technology\n\n\n\n\n\nList Of Experiments:\n\n    1. WAP that will retrieve data from Database and display on Console screen. (JDBC)\n    2. WAP that will take firstName, surName, email from user. Store that data into DB and\n       display data from DB. (JDBC)\n    3.  Search userDOB by passing arguments as date to servlet by submit the serch.jsp page\n        at SearchResult.java servlet that returns the rows of result back to clientResult.jsp\n       page. (Servlet).\n    4.  Create one class file named DBTransaction.java file under classes directory. That\n        returns the connection obj. to servlet ConServlet.java file under same classes folder.\n      Use this servlet for controller. Accept the data from CV.jsp page as forms data pass it\n        to servlet that redirect data to the InsertData() method of DBTransaction.java file. Use\n       ServletContext for controller (JDBC-Servlet).\n    5.  Take USerName and Email-id from user in html page. Store email-id in xml file also.\n       Display both values in servlet. (Servlet)\n    6. A servlet program to do session tracking and session counter using serssionListener.\n    7. JSP program to demonstrate arithmetic operations.\n    8.  Gets two numbers in html page from the user and submit that numbers in jsp\n       page,print appropriate output using methods. (JSP)\n    9.  Get value from user and create cookie in another jsp page and also view that cookie.\n       (JSP)\n    10. Get value from user and create session in another jsp page and also view. (JSP)\n    11. Session Demo program. Create login.jsp and check it from user_master db and set\n       session for next UserAccount.jsp page. (JDBC-JSP)\n    12. Create employee_master table and check  if user is authenticated or not by login\n      module and  set  appropriate  session. Every  time whenver  user  loged  in  the\n       lastAccessTime should be shown to user. give logout link and destory the session\n        attributes and redirecte the user to again login page. (JDBC-JSP)\n    13. JSP program to demonstrate jsp:forward action tag.\n    14. Create one user login registeration page in jsp with all required form fields and insert\n        into database. insertion of data done at servlet level where connection method is\n       created in servlet. Accept the client httpServletRequest. (JDBC-Servlet-JSP)\n\nStudent Activity:\n           Complete online course and get certificate of “Advance Java” under Online\n     Programming Certification.\n\nInstructional Method:"
+        },
+        {
+          "page": 4,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information     and     Communication\n                           Technology\n\n\n        a) The course delivery method will depend upon the requirement of content and\n          need of students. The teacher in addition to conventional teaching method by\n          black board, also need to use ICT tools and facilities.\n       b) The internal evaluation will be done on the basis of continuous evaluation of\n           students in the laboratory and class-room..\n        c)  Practical examination will be conducted at the end of semester for evaluation\n           of performance of students in laboratory.\n\n\n\n\n\nReferences\n\nSuggested Resources\n\n   Students will use supplementary resources such as online videos, NPTEL videos, e-\n    courses,\n\nVirtual Resources\n    1)  www.nptel.com                           4) https://www.codejava.net/struts-tutorials\n    2)  www.javatpoint.com\n    3)  https://www.tutorialspoint.com/java/index.htm\nhttps://www.tutorialspoint.com/java/index.htm"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "0d2287fed4d753eff2c756c64d006e6a179e94a62e3dc2fdb4e0069f52dc0ae6"
+    },
+    {
+      "subject_id": "49009320060601",
+      "subject_name": "Big Data Analytics",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0606",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E3-Big-Data-Analytics-_DST31.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0606 - Big Data Analytics (.pdf",
+      "expected_pdf_sha256": "1b11edddf326ad9fcfa8964ddf511ec65774666ab5c96eeae343a125c698f245",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0606",
+        "semester_label": "VI",
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [
+        "Big data is an extremely useful area in the era of computing techniques as it aids in finding useful patterns from large datasets. Large datasets are so huge that they cannot be processed with traditional technologies. We require a special computing system which can handle large data and tandem it with other important aspects like parallel processing, data failure and data pre-processing."
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to and its Tools. (Understand) • Gain Understanding about Big Data Technology • Understand and apply extracting useful patterns from large datasets.industry.(Analyze)(Apply) • Implementation of Big data mining techniques using different software. (Create) •(Apply)Understand how data analytics and data science maps to current • Understanding and implementing Algorithms in an optimized way using various Big Data Tools. Prerequisite of course: Basic knowledge of C language"
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/Practical Total Teaching Scheme (Hours) Credits Theory Marks Marks Marks Term Work Theory Tutorial Practical ESE IA CSE Viva (TW) 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "between traditional Distributed file system and Big Data Software, Big",
+            "contact_hours": null,
+            "topic_lines": [
+              "Data Analytics, Big data Applications.",
+              "Marwadi University",
+              "Faculty of Diploma Studies",
+              "Information and Communication Technology",
+              "Introduction to Hadoop:",
+              "2 How Hadoop works? Hadoop Architecture, Explanation of Hadoop 8",
+              "EcoSystem, Hadoop Basic commands",
+              "Hadoop Input and Output:",
+              "Data Integrity in Hadoop, Data Compression and Data Serialization in 83",
+              "Hadoop, Avro, How Avro works?",
+              "Hadoop MapReduce:",
+              "Mapper, Reducer, MapReduce YARN, Job Scheduling, Sorting and Shuffling"
+            ],
+            "topics_text": "Data Analytics, Big data Applications. Marwadi University Faculty of Diploma Studies Information and Communication Technology Introduction to Hadoop: 2 How Hadoop works? Hadoop Architecture, Explanation of Hadoop 8 EcoSystem, Hadoop Basic commands Hadoop Input and Output: Data Integrity in Hadoop, Data Compression and Data Serialization in 83 Hadoop, Avro, How Avro works? Hadoop MapReduce: Mapper, Reducer, MapReduce YARN, Job Scheduling, Sorting and Shuffling",
+            "topics": [
+              "Data Analytics, Big data Applications.",
+              "Marwadi University",
+              "Faculty of Diploma Studies",
+              "Information and Communication Technology",
+              "Introduction to Hadoop:",
+              "2 How Hadoop works? Hadoop Architecture, Explanation of Hadoop 8",
+              "EcoSystem, Hadoop Basic commands",
+              "Hadoop Input and Output:",
+              "Data Integrity in Hadoop, Data Compression and Data Serialization in 83",
+              "Hadoop, Avro, How Avro works?",
+              "Hadoop MapReduce:",
+              "Mapper, Reducer, MapReduce YARN, Job Scheduling, Sorting and Shuffling"
+            ]
+          },
+          {
+            "unit_number": 84,
+            "title": "in MapReduce, MapReduce Input Formats, MapReduce Output Formats,",
+            "contact_hours": null,
+            "topic_lines": [
+              "How to code in MapReduce program , analyze data using MapReduce.",
+              "Hadoop Ecosystem/Environment: Pig, Hive, Hbase, ZooKeeper",
+              "Pig Latin Structures, Statements, Functions, User-Defined Function in Pig,",
+              "Loading, Storing and Sorting Data in Pig, HiveQL, Tables in Hive, Querying"
+            ],
+            "topics_text": "How to code in MapReduce program , analyze data using MapReduce. Hadoop Ecosystem/Environment: Pig, Hive, Hbase, ZooKeeper Pig Latin Structures, Statements, Functions, User-Defined Function in Pig, Loading, Storing and Sorting Data in Pig, HiveQL, Tables in Hive, Querying",
+            "topics": [
+              "How to code in MapReduce program , analyze data using MapReduce.",
+              "Hadoop Ecosystem/Environment: Pig, Hive, Hbase, ZooKeeper",
+              "Pig Latin Structures, Statements, Functions, User-Defined Function in Pig,",
+              "Loading, Storing and Sorting Data in Pig, HiveQL, Tables in Hive, Querying"
+            ]
+          },
+          {
+            "unit_number": 85,
+            "title": "Data, User-Defined Function in Hive, Introduction to HBase, HBASE vs",
+            "contact_hours": null,
+            "topic_lines": [
+              "RDBMS, What is ZooKeeper, Zoopkeeper Services, Build Application with",
+              "ZooKeeper.",
+              "Apache Spark:",
+              "Introduction to Apache Spark, pySpark, RDD, Working with Key-value",
+              "6 8 pair, Loading and saving data in spark, Learning about Machine Learning",
+              "Library in Spark.",
+              "Total Hours 48"
+            ],
+            "topics_text": "RDBMS, What is ZooKeeper, Zoopkeeper Services, Build Application with ZooKeeper. Apache Spark: Introduction to Apache Spark, pySpark, RDD, Working with Key-value 6 8 pair, Loading and saving data in spark, Learning about Machine Learning Library in Spark. Total Hours 48",
+            "topics": [
+              "RDBMS, What is ZooKeeper, Zoopkeeper Services, Build Application with",
+              "ZooKeeper.",
+              "Apache Spark:",
+              "Introduction to Apache Spark, pySpark, RDD, Working with Key-value",
+              "6 8 pair, Loading and saving data in spark, Learning about Machine Learning",
+              "Library in Spark.",
+              "Total Hours 48"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5692,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                           Faculty of Diploma Studies\n                         Information and Communication Technology\n\n\n                                 Subject Code: 09CT0606\n                             Subject Name: Big Data Analytics\n                          Diploma Year – III (Semester VI)\n\n   Objective:\n\n   Big data is an extremely useful area in the era of computing techniques as it aids in finding useful\n   patterns from large datasets. Large datasets are so huge that they cannot be processed with traditional\n   technologies. We require a special computing system which can handle large data and tandem it with\n   other important aspects like parallel processing, data failure and data pre-processing.\n\n   Course Outcomes: After completion of this course, student will be able to\n\n                                          and its Tools. (Understand)   • Gain Understanding about Big Data Technology   • Understand and apply extracting useful patterns from large datasets.industry.(Analyze)(Apply)   • Implementation of Big data mining techniques using different software. (Create)   •(Apply)Understand how data analytics and data science maps to current   • Understanding and implementing Algorithms in an optimized way using various Big Data Tools.\n\n   Prerequisite of course: Basic knowledge of C language\n\n                                    Teaching and Examination Scheme\n\n                                                                                    Tutorial/Practical       Total\n   Teaching Scheme (Hours)              Credits     Theory Marks\n                                                                    Marks         Marks\n\n                                                                  Term Work\n   Theory       Tutorial     Practical          ESE   IA    CSE   Viva\n                                                                  (TW)\n\n    3           0          2         4       50    30    20      25        25         150\n\n\n\n    Contents:\n\n\n\n                                                                                           Teaching\nS.NO                             TOPIC\n                                                                                                 hours\n\n      Introduction to Big Data\n       Introduction-Distributed file System, What is Big Data? Difference\n                                                                                        8\n  1   between traditional Distributed file system and Big Data Software, Big\n      Data Analytics, Big data Applications."
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                         Faculty of Diploma Studies\n                        Information and Communication Technology\n\n\n    Introduction to Hadoop:\n2  How Hadoop works? Hadoop Architecture, Explanation of Hadoop                    8\n    EcoSystem, Hadoop Basic commands\n\n   Hadoop Input and Output:\n    Data Integrity in Hadoop, Data Compression and Data Serialization in                 83\n    Hadoop, Avro, How Avro works?\n\n   Hadoop MapReduce:\n    Mapper, Reducer, MapReduce YARN, Job Scheduling, Sorting and Shuffling\n                                                                                      84    in MapReduce, MapReduce Input Formats, MapReduce Output Formats,\n   How to code in MapReduce program , analyze data using MapReduce.\n\n\n   Hadoop Ecosystem/Environment: Pig, Hive, Hbase, ZooKeeper\n     Pig Latin Structures, Statements, Functions, User-Defined Function in Pig,\n     Loading, Storing and Sorting Data in Pig, HiveQL, Tables in Hive, Querying\n                                                                                      85    Data, User-Defined Function in Hive, Introduction to HBase, HBASE vs\n    RDBMS, What is ZooKeeper, Zoopkeeper Services, Build Application with\n    ZooKeeper.\n\n\n    Apache Spark:\n     Introduction to Apache Spark, pySpark, RDD, Working with Key-value\n6                                                                                     8     pair, Loading and saving data in spark, Learning about Machine Learning\n     Library in Spark.\n\n\n     Total Hours                                                                       48\n\n\n\n\n References:\n\n  1. Tom White,         The definitive     O Reilly 2012.\n  2. BIG Data and Analytics , Sima Acharya, Subhashini Chhellappan, Willey  3. MongoDB in“HADOOP:Action, Kyle Banker,PiterGuide”,Bakkum , Shaun Verch, Dream tech Press\n  4. Learning Spark: Lightning-Fast Big Data Analysis Paperback by Holden Karau\n\n\n\n Suggested Theory distribution:\n\n The suggested theory distribution as per       taxonomy is as per follows. This distribution serves as\n  guidelines for teachers and students to achieve an effective teaching learning process.                                     Bloom’s"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n\n                    Distribution of Theory for course delivery and evaluation\n\n\n  Remember    Understand      Apply         Analysis       Evaluate        Create\n\n 40%        40%        20%        20%        0%        0%\n\n\n\nSuggested List of Experiments:\n\n1. Installation and use of Hadoop in ubuntu.\n2. Run HDFS commands in a hadoop environment.\n3. Implementation of a MapReduce Algorithm.\n4. Hive Installation.\n5. Run Hive related commands on given data.\n6. UDF creation in Hive to truncate blank space.\n7. Install HBASE and Apply various table queries.\n8. Install MongoDB and execute basic commands in MongoDB Shell.\n9. Connect MongoDB with java.\n10. Install Scala and program in interactive mode and script mode.\n11. Run a job on Apache spark."
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "1b11edddf326ad9fcfa8964ddf511ec65774666ab5c96eeae343a125c698f245"
+    },
+    {
+      "subject_id": "49009320060501",
+      "subject_name": "Cloud Computing",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0605",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E3-Cloud-Computin.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0605 - Cloud Computing (.pdf",
+      "expected_pdf_sha256": "09b00f741bac443431f5580a53670e26ee0c926b1967c9a8f02b510e66e679af",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0605",
+        "semester_label": "VI",
+        "credits": null,
+        "prerequisite": "Operating System, Computer Networks"
+      },
+      "objectives": [
+        "This course is intended to analyse the basics of cloud computing, and make aware students with diversified technologies working for cloud architecture. Course will be focusing on architecture, service models, privacy & security in the cloud. Credits Earned: 5 Credits"
+      ],
+      "course_outcomes": [
+        "After learning this course, students should be able to, 1. Understand and analyse the architecture of Cloud (Analyse). 2. Identify and apply deployment and management options of AWS Cloud Architecture (Apply). 3. Design architectures to decouple infrastructure and reduce interdependencies (Create). 4. Monitor Cloud-Based Resources, creating dashboards, Creating Alarms and configuring notification alerts (Create)."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE Marks Theory Tutorial Practical IA (M) CSE (I) Viva (V) work (E) (TW) 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction of Cloud & Amazon Web Service",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction of cloud computing, What is Virtualization ,",
+              "Infrastructure as a Service(IaaS), Software as a",
+              "Service(Saas), Platform as a Service(PaaS), Advantages of",
+              "Cloud, AWS history , Dashboard, AWS Overview,",
+              "Architecture Discussion",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ],
+            "topics_text": "Introduction of cloud computing, What is Virtualization , Infrastructure as a Service(IaaS), Software as a Service(Saas), Platform as a Service(PaaS), Advantages of Cloud, AWS history , Dashboard, AWS Overview, Architecture Discussion Marwadi University Faculty of Diploma studies Information and Communication Technology",
+            "topics": [
+              "Introduction of cloud computing, What is Virtualization ,",
+              "Infrastructure as a Service(IaaS), Software as a",
+              "Service(Saas), Platform as a Service(PaaS), Advantages of",
+              "Cloud, AWS history , Dashboard, AWS Overview,",
+              "Architecture Discussion",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Identity & Access Management",
+            "contact_hours": 7,
+            "topic_lines": [
+              "IAM Overview and Policies, IAM Users, Groups, Access Key &",
+              "Secret Access Key, MFA, Report"
+            ],
+            "topics_text": "IAM Overview and Policies, IAM Users, Groups, Access Key & Secret Access Key, MFA, Report",
+            "topics": [
+              "IAM Overview and Policies, IAM Users, Groups, Access Key &",
+              "Secret Access Key, MFA, Report"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Elastic Cloud Computing (EC2)",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Amazon EC2 Overview, Elastic Block Storage(EBS), Amazon",
+              "Machine Image(AMI), Introduction to EC2 Instance Types,",
+              "Security Group, Public & private IP Overview, Amazon EBS &",
+              "Snapshot, AWS CLI"
+            ],
+            "topics_text": "Amazon EC2 Overview, Elastic Block Storage(EBS), Amazon Machine Image(AMI), Introduction to EC2 Instance Types, Security Group, Public & private IP Overview, Amazon EBS & Snapshot, AWS CLI",
+            "topics": [
+              "Amazon EC2 Overview, Elastic Block Storage(EBS), Amazon",
+              "Machine Image(AMI), Introduction to EC2 Instance Types,",
+              "Security Group, Public & private IP Overview, Amazon EBS &",
+              "Snapshot, AWS CLI"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Amazon Simple Storage Service (S3)",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Simple Storage Service (S3), S3 Object Storage and Buckets, Web",
+              "Hosting , Glacier, Versioning"
+            ],
+            "topics_text": "Simple Storage Service (S3), S3 Object Storage and Buckets, Web Hosting , Glacier, Versioning",
+            "topics": [
+              "Simple Storage Service (S3), S3 Object Storage and Buckets, Web",
+              "Hosting , Glacier, Versioning"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Cloud Watch Monitoring & SNS",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Monitor Cloud-Based Resources, creating dashboards, Creating",
+              "Alarms and configuring notification alerts"
+            ],
+            "topics_text": "Monitor Cloud-Based Resources, creating dashboards, Creating Alarms and configuring notification alerts",
+            "topics": [
+              "Monitor Cloud-Based Resources, creating dashboards, Creating",
+              "Alarms and configuring notification alerts"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Route 53 & Databases",
+            "contact_hours": 8,
+            "topic_lines": [
+              "DNS Records, Website Hosting, Relational Database System, DB",
+              "engine & Instance details, Setup and Connect MySQL database",
+              "Total 42 hrs."
+            ],
+            "topics_text": "DNS Records, Website Hosting, Relational Database System, DB engine & Instance details, Setup and Connect MySQL database Total 42 hrs.",
+            "topics": [
+              "DNS Records, Website Hosting, Relational Database System, DB",
+              "engine & Instance details, Setup and Connect MySQL database",
+              "Total 42 hrs."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6605,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                           Faculty of Diploma studies\n                          Information and Communication Technology\n\n\n                           Subject Code: 09CT0605\n                       Subject Name: Cloud Computing\n                    Diploma Year – III (Semester VI)\n\n\n     Objective:\n\n    This course is intended to analyse the basics of cloud computing, and make aware\n    students with diversified technologies working for cloud architecture. Course will be\n     focusing on architecture, service models, privacy & security in the cloud.\n\n    Credits Earned: 5 Credits\n\n    Course Outcomes: After learning this course, students should be able to,\n\n      1.   Understand and analyse the architecture of Cloud (Analyse).\n      2.    Identify and  apply deployment and management  options  of AWS  Cloud\n          Architecture (Apply).\n      3.   Design architectures to decouple infrastructure and reduce interdependencies\n           (Create).\n      4.   Monitor Cloud-Based Resources,  creating dashboards,  Creating Alarms and\n          configuring notification alerts (Create).\n\n    Pre-requisite of course: Operating System, Computer Networks\n\n                        Teaching and Examination Scheme\n\n\n                                                               Tutorial/ Practical\n Teaching Scheme (Hours)              Theory Marks\n                                                         Marks\n                                                                                   Total\n                              Credits                             Term\n                               ESE                                 Marks\nTheory  Tutorial  Practical                IA (M)  CSE (I)  Viva (V)   work\n                                       (E)\n                                                         (TW)\n  3       0       2       4     50    30     20      25      25     150\n\n    Contents:\n\n\n Sr No  Course content                                                       Total Hrs.\n  1    Introduction of Cloud & Amazon Web Service                     08\n               Introduction of cloud computing, What is Virtualization  ,\n                Infrastructure   as   a   Service(IaaS),   Software   as   a\n                Service(Saas), Platform as a Service(PaaS), Advantages of\n               Cloud,  AWS   history      ,  Dashboard,  AWS  Overview,\n               Architecture Discussion"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                         Faculty of Diploma studies\n                        Information and Communication Technology\n2     Identity & Access Management                                   07\n          IAM Overview and Policies, IAM Users, Groups, Access Key &\n             Secret Access Key, MFA, Report\n\n3    Elastic Cloud Computing (EC2)                              07\n\n          Amazon EC2 Overview, Elastic Block Storage(EBS), Amazon\n           Machine Image(AMI), Introduction to EC2 Instance Types,\n             Security Group, Public & private IP Overview, Amazon EBS &\n            Snapshot, AWS CLI\n\n4   Amazon Simple Storage Service (S3)                          08\n\n            Simple Storage Service (S3), S3 Object Storage and Buckets, Web\n            Hosting , Glacier, Versioning\n\n5   Cloud Watch Monitoring & SNS                             04\n\n            Monitor Cloud-Based Resources, creating dashboards, Creating\n            Alarms and configuring notification alerts\n\n6    Route 53 & Databases                                          08\n\n          DNS Records, Website Hosting, Relational Database System, DB\n            engine & Instance details, Setup and Connect MySQL database\n\n\n      Total                                                      42 hrs.\n\n\n  References:\n\n\n       Judith Hurwitz, R Bloor, M.Kanfman, F.Halper      Computing for ฀\n       Wiley India Edition, First Edition                                                “Cloud             Dummies”,\n      Rajkumar Buyya, James Broberg, Andrzej M. Goscinski,       Computing: ฀\n       Principles and           Wiley Publication,2011                                                        ”Cloud\n      Tim Mather, SubraKumara swamy, Shahed Latif,       Security and ฀                 Paradigms”,\n       Privacy: An Enterprise Perspective on Risks and        Inc, 2009                                   “Cloud                                                   Compliance”, O’ReillyMedia\n      Mickey Iqbal 2010,  IT Virtualization Best Practices: A Lean, Green Virtualized ฀\n      Data Center       MC Press                               “\n      Frank H. P. Fitzek, Marcos D. Katz,        Clouds: Exploiting Distributed ฀               Approach”,\n       Resourcesin Wireless, Mobile and Social           Wiley Publications, ISBN:       978-0-470-97389-9, Jan 2014.    “Mobile                                           Networks”,\n\n\n\n  Suggested Theory distribution:"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                         Faculty of Diploma studies\n                        Information and Communication Technology\n  The suggested theory distribution as per        taxonomy is as per follows. This\n  distribution serves as guidelines for teachers and students to achieve effective teaching-                                        Bloom’s  learning process\n\n\n\n               Distribution of Theory for course delivery and evaluation\n\n Remember   Understand     Apply       Analyse      Evaluate       Create\n\n5%          15%       20%       20%       0%       40%\n\n\n\n  Instructions:\n\n     a) Students can refer to any reference material for tutorials/assignments.\n     b) Assignments will be evaluated based on a quiz conducted at the end of every\n         Unit.\n\n\n  Suggested List of Experiments:\n\n  Students have to work on given case studies for following tasks to understand practical\n  implementation of lectures outcome.\n\n  1.  Creating Amazon EC2 instances with Microsoft Windows & Linux Server\n  2. Launch a Web Server (IIS & Apache)\n  3. Working with Amazon Elastic Block Store (EBS)\n  4.  Introduction to AWS Identity and Access Management (IAM)\n  5. Deploy a Web Application on AWS\n  6. CloudWatch Monitoring, Creating Dashboard, Setting up Alarms and Notifications\n\n\n Supplementary Resources:\n\n    NPTEL online course:https://onlinecourses.nptel.ac.in/noc17_cs23/preview ฀\n     MOOC:https://www.edx.org/micromasters/cloud-computing ฀\n      Coursera: https://www.coursera.org/specializations/cloud-computing ฀\n    AWS Academy: AWS Cloud Computing Architecture at ฀\n     https://aws.amazon.com/training/awsacademy/cloud-computing-architecture/"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "09b00f741bac443431f5580a53670e26ee0c926b1967c9a8f02b510e66e679af"
+    },
+    {
+      "subject_id": "49009320061201",
+      "subject_name": "Computer Graphics & Animation",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0612",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E4-Computer-Graphics-and-Animation.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0612 - Computer Graphics and Animation (.pdf",
+      "expected_pdf_sha256": "87b1cba873dc1a16bcb28235e68ec38dea4d064e76bc159dd6ed616a9a1c614e",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0612",
+        "semester_label": "VI",
+        "credits": null,
+        "prerequisite": "Basics of programming language C / C++ / Python, Concepts of OOP, Matrix, DBMS, Server side scripting"
+      },
+      "objectives": [
+        "This course facilitates classroom and laboratory learning, letting students learn concepts of graphics and animation. Students will learn different algorithms of graphics and types of transformations. Students will understand 2D and 3Dmodels and operations on it. Student will also learn about creating animations. Credits Earned: 04 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to: 1. Understand basic concepts, tools and algorithms of computer graphics (Understand) 2. Use matrix algebra in computer graphics applications. (Apply) 3. Implement fundamental algorithms and transformations involved in viewing models, projection models, illumination models and the handling of hidden surfaces in polygon-based computer graphics. (Apply) 4. Create Animation by applying fundamentals of animation and digital image processing."
+      ],
+      "teaching_and_examination_scheme_text": ": Tutorial / Theory Marks Teaching Scheme (Hours) Practical Marks Credits Total Marks E I V T Theory Tutorial Practical ESE IA CSE Viva Term Work 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Displays.",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Scan Conversion: Digital Differential Analyzer (DDA) algorithm, Bresenham’s Line",
+              "drawing algorithm. Bresenham’s method of Circle drawing, Midpoint Circle Algorithm,",
+              "Midpoint Ellipse Algorithm, Mid-point criteria, Problems of Aliasing, end-point ordering",
+              "and clipping lines, Scan Converting Circles, Clipping Lines algorithms – Cyrus-Beck,",
+              "Cohen-Sutherland and Liang-Barsky, Clipping Polygons, problem with multiple",
+              "components.",
+              "Two-dimensional Transformations:",
+              "Transformations and Matrices, Transformation Conventions, 2D Transformations,",
+              "Homogeneous Coordinates and Matrix Representation of 2D Transformations,",
+              "Translations and Homogeneous Coordinates, Rotation, Reflection, Scaling, Combined",
+              "Transformation, Transformation of Points, Transformation of the Unit Square, Solid Body",
+              "Transformations, Rotation about an Arbitrary Point, Reflection through an Arbitrary Line,",
+              "A Geometric Interpretation of Homogeneous Coordinates, The Window-to-Viewport 2 08",
+              "Transformations. Three-dimensional Transformations: Three-dimensional Scaling, Three-",
+              "dimensional Shearing, Three-dimensional Rotation, Three-dimensional Reflection, Three-",
+              "dimensional Translation, Multiple Transformation, Rotation about an Arbitrary Axis in",
+              "Space, Reflection through an Arbitrary Plane, Matrix Representation of 3D",
+              "Transformations, Composition of 3D Transformations, Affine and Perspective Geometry,",
+              "Perspective Transformations, Techniques for Generating Perspective Views, Vanishing",
+              "Points, the Perspective Geometry and Camera models, Orthographic Projections,",
+              "Axonometric Projections, Oblique Projections, View volumes for projections.",
+              "Viewing in 3D: Stages in 3D viewing, Canonical View Volume (CVV), Specifying an",
+              "Arbitrary 3D View, Examples of 3D Viewing, The Mathematics of Planar Geometric",
+              "3 08",
+              "Projections, Combined transformation matrices for projections and viewing, Coordinate",
+              "Systems and matrices, camera model and viewing pyramid. Light: Radiometry, Transport,",
+              "Equation, Photometry. Color: Colorimetry, Color Spaces, Chromatic Adaptation, Color",
+              "Appearance.",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology",
+              "Visible-surface Determination: Techniques for efficient Visible-surface Algorithms,",
+              "Categories of algorithms, Back face removal, The z-Buffer Algorithm, Scan-line",
+              "method, Painter’s algorithms (depth sorting), Area subdivision method, BSP trees,",
+              "Visiblesurface Ray Tracing, comparison of the methods."
+            ],
+            "topics_text": "Scan Conversion: Digital Differential Analyzer (DDA) algorithm, Bresenham’s Line drawing algorithm. Bresenham’s method of Circle drawing, Midpoint Circle Algorithm, Midpoint Ellipse Algorithm, Mid-point criteria, Problems of Aliasing, end-point ordering and clipping lines, Scan Converting Circles, Clipping Lines algorithms – Cyrus-Beck, Cohen-Sutherland and Liang-Barsky, Clipping Polygons, problem with multiple components. Two-dimensional Transformations: Transformations and Matrices, Transformation Conventions, 2D Transformations, Homogeneous Coordinates and Matrix Representation of 2D Transformations, Translations and Homogeneous Coordinates, Rotation, Reflection, Scaling, Combined Transformation, Transformation of Points, Transformation of the Unit Square, Solid Body Transformations, Rotation about an Arbitrary Point, Reflection through an Arbitrary Line, A Geometric Interpretation of Homogeneous Coordinates, The Window-to-Viewport 2 08 Transformations. Three-dimensional Transformations: Three-dimensional Scaling, Three- dimensional Shearing, Three-dimensional Rotation, Three-dimensional Reflection, Three- dimensional Translation, Multiple Transformation, Rotation about an Arbitrary Axis in Space, Reflection through an Arbitrary Plane, Matrix Representation of 3D Transformations, Composition of 3D Transformations, Affine and Perspective Geometry, Perspective Transformations, Techniques for Generating Perspective Views, Vanishing Points, the Perspective Geometry and Camera models, Orthographic Projections, Axonometric Projections, Oblique Projections, View volumes for projections. Viewing in 3D: Stages in 3D viewing, Canonical View Volume (CVV), Specifying an Arbitrary 3D View, Examples of 3D Viewing, The Mathematics of Planar Geometric 3 08 Projections, Combined transformation matrices for projections and viewing, Coordinate Systems and matrices, camera model and viewing pyramid. Light: Radiometry, Transport, Equation, Photometry. Color: Colorimetry, Color Spaces, Chromatic Adaptation, Color Appearance. Marwadi University Faculty of Diploma studies Information and Communication Technology Visible-surface Determination: Techniques for efficient Visible-surface Algorithms, Categories of algorithms, Back face removal, The z-Buffer Algorithm, Scan-line method, Painter’s algorithms (depth sorting), Area subdivision method, BSP trees, Visiblesurface Ray Tracing, comparison of the methods.",
+            "topics": [
+              "Scan Conversion: Digital Differential Analyzer (DDA) algorithm, Bresenham’s Line",
+              "drawing algorithm. Bresenham’s method of Circle drawing, Midpoint Circle Algorithm,",
+              "Midpoint Ellipse Algorithm, Mid-point criteria, Problems of Aliasing, end-point ordering",
+              "and clipping lines, Scan Converting Circles, Clipping Lines algorithms – Cyrus-Beck,",
+              "Cohen-Sutherland and Liang-Barsky, Clipping Polygons, problem with multiple",
+              "components.",
+              "Two-dimensional Transformations:",
+              "Transformations and Matrices, Transformation Conventions, 2D Transformations,",
+              "Homogeneous Coordinates and Matrix Representation of 2D Transformations,",
+              "Translations and Homogeneous Coordinates, Rotation, Reflection, Scaling, Combined",
+              "Transformation, Transformation of Points, Transformation of the Unit Square, Solid Body",
+              "Transformations, Rotation about an Arbitrary Point, Reflection through an Arbitrary Line,",
+              "A Geometric Interpretation of Homogeneous Coordinates, The Window-to-Viewport 2 08",
+              "Transformations. Three-dimensional Transformations: Three-dimensional Scaling, Three",
+              "dimensional Shearing, Three-dimensional Rotation, Three-dimensional Reflection, Three",
+              "dimensional Translation, Multiple Transformation, Rotation about an Arbitrary Axis in",
+              "Space, Reflection through an Arbitrary Plane, Matrix Representation of 3D",
+              "Transformations, Composition of 3D Transformations, Affine and Perspective Geometry,",
+              "Perspective Transformations, Techniques for Generating Perspective Views, Vanishing",
+              "Points, the Perspective Geometry and Camera models, Orthographic Projections,",
+              "Axonometric Projections, Oblique Projections, View volumes for projections.",
+              "Viewing in 3D: Stages in 3D viewing, Canonical View Volume (CVV), Specifying an",
+              "Arbitrary 3D View, Examples of 3D Viewing, The Mathematics of Planar Geometric",
+              "3 08",
+              "Projections, Combined transformation matrices for projections and viewing, Coordinate",
+              "Systems and matrices, camera model and viewing pyramid. Light: Radiometry, Transport,",
+              "Equation, Photometry. Color: Colorimetry, Color Spaces, Chromatic Adaptation, Color",
+              "Appearance.",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology",
+              "Visible-surface Determination: Techniques for efficient Visible-surface Algorithms,",
+              "Categories of algorithms, Back face removal, The z-Buffer Algorithm, Scan-line",
+              "method, Painter’s algorithms (depth sorting), Area subdivision method, BSP trees,",
+              "Visiblesurface Ray Tracing, comparison of the methods."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Plane Curves and Surfaces: Curve Representation, Non-parametric Curves, Parametric",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Curves, Parametric, Representation of a Circle, Parametric Representation of an Ellipse,",
+              "Parametric Representation of a Parabola, Parametric Representation of a Hyperbola,",
+              "Representation of Space Curves, Cubic Splines, Bezier Curves, B-spline Curves, B-",
+              "spline Curve Fit, B-spline Curve Subdivision, Parametric Cubic Curves, Quadric",
+              "Surfaces, Bezier Surfaces.",
+              "Computer Animation: Principles of Animation, Key framing, Deformations, Character",
+              "Animation, Physics-based Animation, Procedural Techniques, Groups of Objects. Image",
+              "5 Manipulation and Storage: What is an Image? Digital image file formats, Image 10",
+              "compression standard – JPEG, Image Processing – Digital image enhancement, contrast",
+              "stretching, Histogram Equalization, Smoothing and Median Filtering.",
+              "Total Hours 42",
+              "Suggested Text books / Reference books:",
+              "1. Computer Graphics: Principles and Practice (Hardcover) by James D. Foley",
+              "2. OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 2 by Dave",
+              "Shreiner",
+              "3. Fundamentals of Computer Graphics (Hardcover) by Peter Shirley",
+              "4. Computer Graphics Through OpenGL: From Theory to Experiments by Sumanta Guha"
+            ],
+            "topics_text": "Curves, Parametric, Representation of a Circle, Parametric Representation of an Ellipse, Parametric Representation of a Parabola, Parametric Representation of a Hyperbola, Representation of Space Curves, Cubic Splines, Bezier Curves, B-spline Curves, B- spline Curve Fit, B-spline Curve Subdivision, Parametric Cubic Curves, Quadric Surfaces, Bezier Surfaces. Computer Animation: Principles of Animation, Key framing, Deformations, Character Animation, Physics-based Animation, Procedural Techniques, Groups of Objects. Image 5 Manipulation and Storage: What is an Image? Digital image file formats, Image 10 compression standard – JPEG, Image Processing – Digital image enhancement, contrast stretching, Histogram Equalization, Smoothing and Median Filtering. Total Hours 42 Suggested Text books / Reference books: 1. Computer Graphics: Principles and Practice (Hardcover) by James D. Foley 2. OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 2 by Dave Shreiner 3. Fundamentals of Computer Graphics (Hardcover) by Peter Shirley 4. Computer Graphics Through OpenGL: From Theory to Experiments by Sumanta Guha",
+            "topics": [
+              "Curves, Parametric, Representation of a Circle, Parametric Representation of an Ellipse,",
+              "Parametric Representation of a Parabola, Parametric Representation of a Hyperbola,",
+              "Representation of Space Curves, Cubic Splines, Bezier Curves, B-spline Curves, B",
+              "spline Curve Fit, B-spline Curve Subdivision, Parametric Cubic Curves, Quadric",
+              "Surfaces, Bezier Surfaces.",
+              "Computer Animation: Principles of Animation, Key framing, Deformations, Character",
+              "Animation, Physics-based Animation, Procedural Techniques, Groups of Objects. Image",
+              "5 Manipulation and Storage: What is an Image? Digital image file formats, Image 10",
+              "compression standard – JPEG, Image Processing – Digital image enhancement, contrast",
+              "stretching, Histogram Equalization, Smoothing and Median Filtering.",
+              "Total Hours 42",
+              "Suggested Text books / Reference books:",
+              "1. Computer Graphics: Principles and Practice (Hardcover) by James D. Foley",
+              "2. OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 2 by Dave",
+              "Shreiner",
+              "3. Fundamentals of Computer Graphics (Hardcover) by Peter Shirley",
+              "4. Computer Graphics Through OpenGL: From Theory to Experiments by Sumanta Guha"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 5,
+      "extracted_character_count": 11031,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\n\n\n\n                           Subject Code: 09CT0612\n\n                Subject Name: Computer Graphics & Animation\n                    Diploma Year – III (Semester VI)\n\n\nObjective:\nThis course facilitates classroom and laboratory learning, letting students learn concepts of graphics\nand animation. Students will learn different algorithms of graphics and types of transformations.\nStudents will understand 2D and 3Dmodels and operations on it. Student will also learn about creating\nanimations.\n\n\n\nCredits Earned: 04 Credits\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n    1.  Understand basic concepts, tools and algorithms of computer graphics (Understand)\n    2. Use matrix algebra in computer graphics applications. (Apply)\n    3.  Implement fundamental algorithms and transformations involved in viewing models, projection\n       models, illumination models and the handling of hidden surfaces in polygon-based computer\n        graphics. (Apply)\n    4.  Create Animation by applying fundamentals of animation and digital image processing.\n\n\nPre-requisite of course: Basics of programming language C / C++ / Python, Concepts of OOP, Matrix,\nDBMS, Server side scripting\n\n\nTeaching and Examination Scheme:\n\n\n                                                                       Tutorial /\n                                      Theory Marks\n  Teaching Scheme (Hours)                                         Practical Marks\n                                 Credits                                              Total Marks\n                              E            I     V       T\nTheory   Tutorial    Practical         ESE   IA  CSE  Viva   Term Work\n  3        0         2        4      50    30   20    25        25          150\n\n\n\n\n\nContents:"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\n\n\nUni                                                                                      Contact\n                                         Topics\n  t                                                                                 Hours\n\n\n      Introduction  to Computer Graphics: Overview  of Computer Graphics, Computer\n      Graphics Application and Software, Description of some graphics devices, Input Devices\n       for Operator Interaction, Active and Passive Graphics Devices, Display Technologies,\n      Storage Tube Graphics Displays, Calligraphic Refresh Graphics Displays, Raster Refresh\n      (Raster-Scan) Graphics Displays, Cathode Ray Tube Basics, Color CRT Raster Scan\n      Basics, Video Basics, The Video  Controller, RandomScan Display Processor, LCD\n 1    Displays.                                                                     10\n\n     Scan Conversion: Digital Differential Analyzer (DDA) algorithm, Bresenham’s Line\n     drawing algorithm. Bresenham’s method of Circle drawing, Midpoint Circle Algorithm,\n     Midpoint Ellipse Algorithm, Mid-point criteria, Problems of Aliasing, end-point ordering\n     and clipping lines, Scan Converting Circles, Clipping Lines algorithms – Cyrus-Beck,\n      Cohen-Sutherland  and  Liang-Barsky,  Clipping  Polygons,  problem  with  multiple\n      components.\n\n\n     Two-dimensional Transformations:\n      Transformations  and  Matrices,  Transformation  Conventions, 2D  Transformations,\n     Homogeneous  Coordinates  and  Matrix  Representation  of  2D  Transformations,\n      Translations and Homogeneous Coordinates, Rotation, Reflection, Scaling, Combined\n      Transformation, Transformation of Points, Transformation of the Unit Square, Solid Body\n      Transformations, Rotation about an Arbitrary Point, Reflection through an Arbitrary Line,\n    A Geometric  Interpretation of Homogeneous Coordinates, The Window-to-Viewport 2                                                                                08\n      Transformations. Three-dimensional Transformations: Three-dimensional Scaling, Three-\n      dimensional Shearing, Three-dimensional Rotation, Three-dimensional Reflection, Three-\n      dimensional Translation, Multiple Transformation, Rotation about an Arbitrary Axis in\n      Space,  Reflection  through  an  Arbitrary  Plane,  Matrix  Representation  of  3D\n      Transformations, Composition of 3D Transformations, Affine and Perspective Geometry,\n      Perspective Transformations, Techniques for Generating Perspective Views, Vanishing\n      Points,  the  Perspective  Geometry  and Camera  models,  Orthographic  Projections,\n     Axonometric Projections, Oblique Projections, View volumes for projections.\n\n\n     Viewing in 3D: Stages in 3D viewing, Canonical View Volume (CVV), Specifying an\n      Arbitrary 3D View, Examples of 3D Viewing, The Mathematics of Planar Geometric\n 3                                                                                08\n      Projections, Combined transformation matrices for projections and viewing, Coordinate\n     Systems and matrices, camera model and viewing pyramid. Light: Radiometry, Transport,\n      Equation, Photometry. Color: Colorimetry, Color Spaces, Chromatic Adaptation, Color\n      Appearance."
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\n\n\n    Visible-surface Determination: Techniques for efficient Visible-surface Algorithms,\n    Categories of algorithms, Back face removal, The z-Buffer Algorithm, Scan-line\n    method, Painter’s algorithms (depth sorting), Area subdivision method, BSP  trees,\n    Visiblesurface Ray Tracing, comparison of the methods.\n\n\n4   Plane Curves and Surfaces: Curve Representation, Non-parametric Curves, Parametric       06\n    Curves, Parametric, Representation of a Circle, Parametric Representation of an Ellipse,\n    Parametric Representation of a Parabola, Parametric Representation of a Hyperbola,\n    Representation of Space Curves, Cubic Splines, Bezier Curves, B-spline Curves, B-\n     spline Curve  Fit, B-spline Curve Subdivision, Parametric Cubic Curves, Quadric\n    Surfaces, Bezier Surfaces.\n   Computer Animation: Principles of Animation, Key framing, Deformations, Character\n    Animation, Physics-based Animation, Procedural Techniques, Groups of Objects. Image\n5   Manipulation and  Storage: What  is an Image?  Digital image  file  formats, Image    10\n    compression standard – JPEG, Image Processing – Digital image enhancement, contrast\n     stretching, Histogram Equalization, Smoothing and Median Filtering.\n                                                                       Total Hours      42\n\n\nSuggested Text books / Reference books:\n    1. Computer Graphics: Principles and Practice (Hardcover) by James D. Foley\n    2. OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 2 by Dave\n       Shreiner\n    3.  Fundamentals of Computer Graphics (Hardcover) by Peter Shirley\n    4. Computer Graphics Through OpenGL: From Theory to Experiments by Sumanta Guha\n\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as\nguidelines for teachers and students to achieve effective teaching-learning process.\n\n\n                         Distribution of Theory for course delivery and evaluation\n\n     Remember          Understand       Apply       Analyze        Evaluate       Create\n\n      40%            40%         10%       10%                 -                  -\n\n\nSuggested List of Experiments:\n    1.  Solve the following:\n        (a) Study and enlist the basic functions used for graphics in C/C++/Python language. Give\n       an example for each of them.\n        (b) Draw a co-ordinate axis at the center of the screen."
+        },
+        {
+          "page": 4,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\n\n\n     2.  Solve the following:\n         (a) Divide your screen into four regions, draw circle, rectangle, ellipse and half ellipse in\n       each region with appropriate message.\n        (b) Draw a simple hut on the screen.\n     3. Draw the following basic shapes in the center of the screen:\n          (i) Circle (ii) Rectangle (iii) Square (iv) Concentric Circles (v) Ellipse (vi) Line\n     4.  Solve the following:\n         (a) Develop the program for DDA Line drawing algorithm.\n        (b) Develop the program for Bresenham’s Line drawing algorithm.\n     5.  Solve the following:\n         (a) Develop the program for the mid-point circle drawing algorithm.\n        (b) Develop the program for the mid-point ellipse drawing algorithm.\n     6.  Solve the following:\n         (a) Write a program to implement 2D scaling.\n        (b) Write a program to perform 2D translation.\n     7.  Solve the following:\n         (a) Perform 2D Rotation on a given object.\n        (b) Program to create a house-like figure and perform the following operations:\n          (i) Scaling about the origin followed by translation.\n           (ii) Scaling with reference to an arbitrary point.\n           (iii) Reflect about the line y = mx + c.\n     8.  Solve the following:\n         (a) Write a program to implement Cohen-Sutherland clipping.\n        (b) Write a program to implement Liang–Barsky Line Clipping Algorithm.\n     9.  Solve the following:\n         (a) Write a program to fill a circle using Flood Fill Algorithm.\n        (b) Write a program to fill a circle using Boundary Fill Algorithm.\n    10. Solve the following:\n         (a) Develop a simple text screen saver using graphics functions.\n        (b) Perform smiling face animation using graphic functions.\n         (c) Draw the moving car on the screen.\n\n\n\nOpen Ended Projects:\n\n Student will develop a project like Traffic signal OpenGL, Green house effect animation, etc as part of\n this subject.\n\nStudent Activity:"
+        },
+        {
+          "page": 5,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\n\nComplete online course and get certificate of “Computer Graphics and animation” under Online\nProgramming Certification.\n\nInstructional Method:\n\n        a) The course delivery method will depend upon the requirement of content and need of\n            students. The teacher in addition to conventional teaching method by black board, also need\n            to use Digital media for programming.\n       b) The internal evaluation will be done on the basis of continuous evaluation of students in the\n           laboratory and class-room..\n        c)  Practical examination  will be conducted  at  the end  of semester  for  evaluation  of\n          performance of students in laboratory.\n\nReferences\n    1.  https://www.coursera.org/courses?query=computer%20graphics\n    2.  https://www.edx.org/learn/computer-graphics---"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "87b1cba873dc1a16bcb28235e68ec38dea4d064e76bc159dd6ed616a9a1c614e"
+    },
+    {
+      "subject_id": "49009320061001",
+      "subject_name": "Cyber Security",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0610",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E4-Cyber-Security.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0610 - Cyber Security (.pdf",
+      "expected_pdf_sha256": "d7426c6e9dc8ae497e53f7420d93e09e08c7ec6db895566f9609963c90110d94",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0610",
+        "semester_label": "VI",
+        "credits": null,
+        "prerequisite": "Computer Networks, Discrete Probability, Cryptography"
+      },
+      "objectives": [
+        "Cryptography is an indispensable tool for protecting information in computer systems. It deals with the algorithmic and mathematical perspective of information and network security. In this course you will learn the inner workings of cryptographic systems and how to correctly use them in real-world applications. Credits Earned: 04 Credits"
+      ],
+      "course_outcomes": [
+        "After the completion of the course, the students will be able to: 1. To categorize common types of security threats are risks to the Computer Systems and the nature of common Information hazards. 2. Identify the potential threats to confidentiality, integrity and availability of Computer Systems at personal and organizational level. 3. Gain understanding of different requirements and principles for Electronic Mail, IP Security and Web Security with monitoring and analysis of networks. 4. Gain the understanding and requirements of different firewalls and other wireless security standards."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Credit Total Mid Term Theor Tutoria Practica s ESE Interna Viva Marks Sem work y l l (E) l (I) (V) (M) (TW) 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction and Security Threats",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Threats to security: Viruses and Worms, Intruders, Insiders, Criminal",
+              "organizations, Terrorists, Information warfare",
+              "Avenues of Attack, steps in attack, Security Basics –Confidentiality,",
+              "Integrity, Availability",
+              "Types of attack: Denial of service (DOS), backdoors and trapdoors,",
+              "sniffing, spoofing, man in the middle, replay, TCP/IP Hacking,",
+              "Phishing attacks, Distributed DOS, SQL Injection. Malware: Viruses,",
+              "Logic bombs"
+            ],
+            "topics_text": "Threats to security: Viruses and Worms, Intruders, Insiders, Criminal organizations, Terrorists, Information warfare Avenues of Attack, steps in attack, Security Basics –Confidentiality, Integrity, Availability Types of attack: Denial of service (DOS), backdoors and trapdoors, sniffing, spoofing, man in the middle, replay, TCP/IP Hacking, Phishing attacks, Distributed DOS, SQL Injection. Malware: Viruses, Logic bombs",
+            "topics": [
+              "Threats to security: Viruses and Worms, Intruders, Insiders, Criminal",
+              "organizations, Terrorists, Information warfare",
+              "Avenues of Attack, steps in attack, Security Basics –Confidentiality,",
+              "Integrity, Availability",
+              "Types of attack: Denial of service (DOS), backdoors and trapdoors,",
+              "sniffing, spoofing, man in the middle, replay, TCP/IP Hacking,",
+              "Phishing attacks, Distributed DOS, SQL Injection. Malware: Viruses,",
+              "Logic bombs"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Organizational Security",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Password selection, Piggybacking, Shoulder surfing, Dumpster diving,",
+              "Installing unauthorized software, hardware, Access by non-",
+              "employees.",
+              "People as Security Tool: Security awareness, and Individual user",
+              "responsibilities.",
+              "Physical security: Access controls Biometrics: finger prints, hand prints,",
+              "Retina, Patterns, voice patterns, signature and writing patterns,",
+              "keystrokes, Physical barriers"
+            ],
+            "topics_text": "Password selection, Piggybacking, Shoulder surfing, Dumpster diving, Installing unauthorized software, hardware, Access by non- employees. People as Security Tool: Security awareness, and Individual user responsibilities. Physical security: Access controls Biometrics: finger prints, hand prints, Retina, Patterns, voice patterns, signature and writing patterns, keystrokes, Physical barriers",
+            "topics": [
+              "Password selection, Piggybacking, Shoulder surfing, Dumpster diving,",
+              "Installing unauthorized software, hardware, Access by non",
+              "employees.",
+              "People as Security Tool: Security awareness, and Individual user",
+              "responsibilities.",
+              "Physical security: Access controls Biometrics: finger prints, hand prints,",
+              "Retina, Patterns, voice patterns, signature and writing patterns,",
+              "keystrokes, Physical barriers"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "IP Security",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Overview of IP Security (IPSec); IP Security Architecture; Modes of",
+              "Operation; Security Associations (SA) Security Parameter Index (SPI), SA",
+              "Management, Security Policy; Authentication Header (AH); Internet Key Exchange –"
+            ],
+            "topics_text": "Overview of IP Security (IPSec); IP Security Architecture; Modes of Operation; Security Associations (SA) Security Parameter Index (SPI), SA Management, Security Policy; Authentication Header (AH); Internet Key Exchange –",
+            "topics": [
+              "Overview of IP Security (IPSec)",
+              "IP Security Architecture",
+              "Modes of",
+              "Operation",
+              "Security Associations (SA) Security Parameter Index (SPI), SA",
+              "Management, Security Policy",
+              "Authentication Header (AH)",
+              "Internet Key Exchange –"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Web Security",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Web Security Requirements; Secure Socket Layer (SSL) SSL",
+              "Architecture, SSL Protocol; Transport Layer Security (TLS); Secure Electronic Transaction (SET) Features, Components, Dual Signature,–",
+              "Purchase Request.5 Electronic Mail Security: – 8",
+              "Threats to E-Mail; Requirements and Solutions Confidentiality, Integrity;",
+              "Encryption for Secure E-Mail; Secure E-Mail System PGP (Pretty Good Privacy), S/MIME (Secure Multipurpose Internet– Mail Extensions).6 Firewalls: – 4",
+              "Firewalls, Types, Packet Filtering Gateway, Stateful Inspection Firewall,",
+              "Application Proxy, Guard, Personal Firewalls"
+            ],
+            "topics_text": "Web Security Requirements; Secure Socket Layer (SSL) SSL Architecture, SSL Protocol; Transport Layer Security (TLS); Secure Electronic Transaction (SET) Features, Components, Dual Signature,– Purchase Request.5 Electronic Mail Security: – 8 Threats to E-Mail; Requirements and Solutions Confidentiality, Integrity; Encryption for Secure E-Mail; Secure E-Mail System PGP (Pretty Good Privacy), S/MIME (Secure Multipurpose Internet– Mail Extensions).6 Firewalls: – 4 Firewalls, Types, Packet Filtering Gateway, Stateful Inspection Firewall, Application Proxy, Guard, Personal Firewalls",
+            "topics": [
+              "Web Security Requirements",
+              "Secure Socket Layer (SSL) SSL",
+              "Architecture, SSL Protocol",
+              "Transport Layer Security (TLS)",
+              "Secure Electronic Transaction (SET) Features, Components, Dual Signature,–",
+              "Purchase Request.5 Electronic Mail Security: – 8",
+              "Threats to E-Mail",
+              "Requirements and Solutions Confidentiality, Integrity",
+              "Encryption for Secure E-Mail",
+              "Secure E-Mail System PGP (Pretty Good Privacy), S/MIME (Secure Multipurpose Internet– Mail Extensions).6 Firewalls: – 4",
+              "Firewalls, Types, Packet Filtering Gateway, Stateful Inspection Firewall,",
+              "Application Proxy, Guard, Personal Firewalls"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Wireless Network Security Standards",
+            "contact_hours": 3,
+            "topic_lines": [
+              "IEEE 802.11, IEEE 802.11i Wireless LAN Security, WAP protocol, WAP",
+              "End-to-End Security",
+              "Total 43 hrs"
+            ],
+            "topics_text": "IEEE 802.11, IEEE 802.11i Wireless LAN Security, WAP protocol, WAP End-to-End Security Total 43 hrs",
+            "topics": [
+              "IEEE 802.11, IEEE 802.11i Wireless LAN Security, WAP protocol, WAP",
+              "End-to-End Security",
+              "Total 43 hrs"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 7295,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                         Faculty of Diploma studies\n                        Information and Communication Technology\n\n\n                         Subject Code: 09CT0610\n                       Subject Name: Cyber Security\n                   Diploma Year – III (Semester VI)\n\n\n    Objective: Cryptography is an indispensable tool for protecting information in computer\n     systems. It deals with the algorithmic and mathematical perspective of information and\n    network security. In this course you will learn the inner workings of cryptographic\n     systems and how to correctly use them in real-world applications.\n\n    Credits Earned: 04 Credits\n\n    Course Outcomes:\n\n     After the completion of the course, the students will be able to:\n\n         1. To categorize common types of security threats are risks to the Computer\n           Systems and the nature of common Information hazards.\n         2.  Identify the potential threats to confidentiality, integrity and availability of\n          Computer Systems at personal and organizational level.\n         3.  Gain understanding of different requirements and principles for Electronic\n            Mail, IP Security and Web Security with monitoring and analysis of\n            networks.\n         4.  Gain the understanding and requirements of different firewalls and other\n            wireless security standards.\n\n\n    Pre-requisite of course: Computer Networks, Discrete Probability, Cryptography\n\n                       Teaching and Examination Scheme\n\n\n                                                               Tutorial/ Practical\n Teaching Scheme (Hours)              Theory Marks\n                                                        Marks\n                              Credit                                               Total\n                                    Mid                   Term\nTheor   Tutoria   Practica      s    ESE          Interna    Viva            Marks\n                                 Sem                   work\n  y              l                l               (E)                     l (I)      (V)\n                                      (M)                   (TW)\n  3       0       2       4     50    30     20      25      25     150\n\n\n\n\n\n    Contents:"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                         Faculty of Diploma studies\n                         Information and Communication Technology\nUnit     Topics                                                            Contact\n                                                                  Hours\n1        Introduction and Security Threats:                            5\n         Threats to security: Viruses and Worms, Intruders, Insiders, Criminal\n          organizations, Terrorists, Information warfare\n        Avenues of Attack, steps in attack, Security Basics –Confidentiality,\n           Integrity, Availability\n        Types of attack: Denial of service (DOS), backdoors and trapdoors,\n           sniffing,  spoofing, man  in  the  middle,  replay, TCP/IP  Hacking,\n         Phishing attacks, Distributed DOS, SQL Injection. Malware: Viruses,\n        Logic bombs\n\n2        Organizational Security                                       6\n        Password selection, Piggybacking, Shoulder surfing, Dumpster diving,\n          Installing unauthorized software, hardware, Access by          non-\n         employees.\n         People as Security Tool: Security awareness, and    Individual    user\n           responsibilities.\n         Physical security: Access controls Biometrics: finger prints, hand prints,\n          Retina,  Patterns,  voice  patterns,  signature  and  writing  patterns,\n          keystrokes, Physical barriers\n3        IP Security:                                                  8\n        Overview of IP Security (IPSec); IP Security Architecture; Modes of\n         Operation; Security Associations (SA)  Security Parameter Index (SPI), SA\n        Management, Security Policy; Authentication Header (AH); Internet Key        Exchange                        –\n4     Web Security:                                                9\n       Web  Security  Requirements;  Secure  Socket  Layer  (SSL)     SSL\n          Architecture, SSL  Protocol; Transport Layer  Security  (TLS); Secure          Electronic Transaction (SET)   Features, Components, Dual Signature,–\n         Purchase Request.5        Electronic Mail Security:    –                                  8\n         Threats to E-Mail; Requirements and Solutions  Confidentiality, Integrity;\n         Encryption for Secure E-Mail; Secure E-Mail System  PGP (Pretty Good          Privacy), S/MIME (Secure Multipurpose Internet– Mail Extensions).6        Firewalls:                                     –                4\n          Firewalls, Types, Packet Filtering Gateway, Stateful Inspection Firewall,\n          Application Proxy, Guard, Personal Firewalls\n7       Wireless Network Security Standards                          3\n        IEEE 802.11, IEEE 802.11i Wireless LAN Security, WAP protocol, WAP\n         End-to-End Security\n         Total                                                   43 hrs\n\n\n\n\n\n     References:"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                      Faculty of Diploma studies\n                     Information and Communication Technology\n     1.  Cryptography and Network Security Principles and Practices, 6th edition\n        Atul Kahate [Tata-McGraw-Hill]                                                                        –     2.  Cryptography and Network Security Principles and Practices, 5th edition --\n       William Stallings [Prentice Hall]\n     3.  Cryptography and Network Security  B A Forouzen [TMH]\n     4. Computer Security  Dieter Gollman [Wiley India Education, Second Edition]                                      –     5. Computer  Security  Basics  –  Deborah  Russell  G.T.  Gangenisr  [O’Reilly                       –         Publication]\n\n\n Suggested Theory distribution:\n\n The suggested theory distribution as per        taxonomy is as per follows. This\n distribution serves as guidelines for teachers and students to achieve effective                                      Bloom’s teaching-learning process\n\n\nR Level     U Level     A Level     N Level      E Level      C Level\n10         30         10         10         5          5\n\n\n\n Legends: R: Remembrance; U: Understanding; A: Application, N: Analyze and E:\n Evaluate C: Create and above Levels (Revised Bloom’s Taxonomy)\n\n\n\n\n              Distribution of Theory for course delivery and evaluation\n\nRemember   Understand     Apply       Analyse      Evaluate       Create\n\n  10%       10%       40%       20%       10%       10%\n\n\n\n\n Instructional Method:\n\n a.  The course delivery method will depend upon the requirement of content and\n    need of students. The teacher in addition to conventional teaching method by\n     black board, may also use any of tools such as demonstration, role play, Quiz,\n     brainstorming, MOOCs etc.\n\n b.  The internal evaluation will be done on the basis of continuous evaluation of\n     students in the laboratory and class-room.\n\n                   c.     Students will use supplementary resources such as online\n               videos, NPTEL videos, e-courses, Virtual Laboratory"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "d7426c6e9dc8ae497e53f7420d93e09e08c7ec6db895566f9609963c90110d94"
+    },
+    {
+      "subject_id": "49009320060301",
+      "subject_name": "Embedded Systems",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0603",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E3-Embedded-System.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0603 - Embedded System (.pdf",
+      "expected_pdf_sha256": "2408f7469df0e05ffe6b5bdc10f6d73ecfce448f5fca3b488485bcab8878f9e2",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0603",
+        "semester_label": "VI",
+        "credits": null,
+        "prerequisite": "Digital Electronics, Microprocessor"
+      },
+      "objectives": [
+        "The objective of the subject is to introduce the concepts of embedded systems and AVR microcontroller architecture, programming and various applications based on it. Credits Earned: 4"
+      ],
+      "course_outcomes": [
+        "After learning this course, students should be able to, 1. Learn the concepts of embedded system 2. Understand the features of AVR microcontroller 3. Apply programming skill to interface necessary hardware with microcontroller 4. Develop AVR microcontroller based systems"
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE Marks Theory Tutorial Practical IA (M) CSE (I) Viva (V) work (E) (TW) 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Embedded Systems",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Embedded Systems, Processor Embedded into a System, Embedded",
+              "Hardware Units and Devices In a System, Embedded Software in a system,",
+              "Examples of Embedded Systems, Embedded System-on-chip (SOC) and",
+              "Use of VLSI Circuit Design Technology, Complex Systems Design and",
+              "Processors, Design Process in Embedded System, Formulization of System",
+              "Design, Design Process and Design Examples, Classification of Embedded",
+              "Systems, Skills Required for an Embedded System Designer"
+            ],
+            "topics_text": "Embedded Systems, Processor Embedded into a System, Embedded Hardware Units and Devices In a System, Embedded Software in a system, Examples of Embedded Systems, Embedded System-on-chip (SOC) and Use of VLSI Circuit Design Technology, Complex Systems Design and Processors, Design Process in Embedded System, Formulization of System Design, Design Process and Design Examples, Classification of Embedded Systems, Skills Required for an Embedded System Designer",
+            "topics": [
+              "Embedded Systems, Processor Embedded into a System, Embedded",
+              "Hardware Units and Devices In a System, Embedded Software in a system,",
+              "Examples of Embedded Systems, Embedded System-on-chip (SOC) and",
+              "Use of VLSI Circuit Design Technology, Complex Systems Design and",
+              "Processors, Design Process in Embedded System, Formulization of System",
+              "Design, Design Process and Design Examples, Classification of Embedded",
+              "Systems, Skills Required for an Embedded System Designer"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "AVR microcontroller-History and Features",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Microcontrollers and embedded processors, Criteria for choosing a",
+              "microcontroller, Simplified view of AVR microcontroller, ATMega32",
+              "block diagram, Overview of AVR family",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ],
+            "topics_text": "Microcontrollers and embedded processors, Criteria for choosing a microcontroller, Simplified view of AVR microcontroller, ATMega32 block diagram, Overview of AVR family Marwadi University Faculty of Diploma studies Information and Communication Technology",
+            "topics": [
+              "Microcontrollers and embedded processors, Criteria for choosing a",
+              "microcontroller, Simplified view of AVR microcontroller, ATMega32",
+              "block diagram, Overview of AVR family",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "AVR Microcontroller Architecture and assembly language",
+            "contact_hours": 12,
+            "topic_lines": [
+              "programming:",
+              "General Purpose registers in AVR, The AVR data memory, AVR status",
+              "register, AVR data formats and assembler directives, Assembly Language",
+              "Programming, Program Counter and program ROM space in AVR, RISC",
+              "architecture in AVR, Branch Instructions, CALL instruction and Stack,",
+              "Pipelining, Time delay loop , AVR I/O port programming, Arithmetic and",
+              "Logic instructions, AVR advanced assembly language programming, Bit",
+              "addressability, MACROs, Intel HEX file, AVR Hardware pin connections"
+            ],
+            "topics_text": "programming: General Purpose registers in AVR, The AVR data memory, AVR status register, AVR data formats and assembler directives, Assembly Language Programming, Program Counter and program ROM space in AVR, RISC architecture in AVR, Branch Instructions, CALL instruction and Stack, Pipelining, Time delay loop , AVR I/O port programming, Arithmetic and Logic instructions, AVR advanced assembly language programming, Bit addressability, MACROs, Intel HEX file, AVR Hardware pin connections",
+            "topics": [
+              "programming:",
+              "General Purpose registers in AVR, The AVR data memory, AVR status",
+              "register, AVR data formats and assembler directives, Assembly Language",
+              "Programming, Program Counter and program ROM space in AVR, RISC",
+              "architecture in AVR, Branch Instructions, CALL instruction and Stack,",
+              "Pipelining, Time delay loop , AVR I/O port programming, Arithmetic and",
+              "Logic instructions, AVR advanced assembly language programming, Bit",
+              "addressability, MACROs, Intel HEX file, AVR Hardware pin connections"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "AVR programming in C",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Data types and time delay in C, I/O port programming in C, Logic",
+              "operations in C, Data conversion programs in C, Data serialization in C,",
+              "Memory allocation in C, AVR Timer programming in C, AVR interrupt",
+              "programming in C, AVR serial port programming in C"
+            ],
+            "topics_text": "Data types and time delay in C, I/O port programming in C, Logic operations in C, Data conversion programs in C, Data serialization in C, Memory allocation in C, AVR Timer programming in C, AVR interrupt programming in C, AVR serial port programming in C",
+            "topics": [
+              "Data types and time delay in C, I/O port programming in C, Logic",
+              "operations in C, Data conversion programs in C, Data serialization in C,",
+              "Memory allocation in C, AVR Timer programming in C, AVR interrupt",
+              "programming in C, AVR serial port programming in C"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "AVR Interfacing",
+            "contact_hours": 10,
+            "topic_lines": [
+              "LCD and Keyboard Interfacing, Relay and optoisolator interfacing, Stepper",
+              "and DC Motor control, ADC,DAC and sensor interfacing, SPI Protocol and",
+              "MAX7221 display interfacing, I2C Protocol and DS1307 RTC Interfacing",
+              "Total 42 hrs."
+            ],
+            "topics_text": "LCD and Keyboard Interfacing, Relay and optoisolator interfacing, Stepper and DC Motor control, ADC,DAC and sensor interfacing, SPI Protocol and MAX7221 display interfacing, I2C Protocol and DS1307 RTC Interfacing Total 42 hrs.",
+            "topics": [
+              "LCD and Keyboard Interfacing, Relay and optoisolator interfacing, Stepper",
+              "and DC Motor control, ADC,DAC and sensor interfacing, SPI Protocol and",
+              "MAX7221 display interfacing, I2C Protocol and DS1307 RTC Interfacing",
+              "Total 42 hrs."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6832,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                         Faculty of Diploma studies\n                        Information and Communication Technology\n\n\n                           Subject Code: 09CT0603\n                       Subject Name: Embedded Systems\n\n                    Diploma Year – III ( Semester VI)\n\n\n     Objective: The objective of the subject is to introduce the concepts of embedded\n    systems and AVR microcontroller architecture, programming and various applications\n    based on it.\n\n    Credits Earned: 4\n\n    Course Outcomes: After learning this course, students should be able to,\n\n      1.   Learn the concepts of embedded system\n      2.   Understand the features of AVR microcontroller\n      3.   Apply programming skill to interface necessary hardware with microcontroller\n      4.   Develop AVR microcontroller based systems\n\n\n    Pre-requisite of course: Digital Electronics, Microprocessor\n                        Teaching and Examination Scheme\n\n\n                                                               Tutorial/ Practical\n Teaching Scheme (Hours)              Theory Marks\n                                                         Marks\n                                                                                   Total\n                              Credits                             Term\n                               ESE                                 Marks\nTheory  Tutorial  Practical                IA (M)  CSE (I)  Viva (V)   work\n                                       (E)\n                                                         (TW)\n  3       0       2       4     50    30     20      25      25     150\n\n    Contents:\n\n\n    Unit    Course content                                                  Total Hrs.\n   No\n   1        Introduction to Embedded Systems                               06\n           Embedded Systems, Processor Embedded into a System, Embedded\n            Hardware Units and Devices In a System, Embedded Software in a system,\n            Examples of Embedded Systems, Embedded System-on-chip (SOC) and\n           Use of VLSI Circuit Design Technology, Complex Systems Design and\n              Processors, Design Process in Embedded System, Formulization of System\n             Design, Design Process and Design Examples, Classification of Embedded\n             Systems, Skills Required for an Embedded System Designer\n   2     AVR microcontroller-History and Features                         04\n              Microcontrollers and embedded processors, Criteria for choosing a\n               microcontroller, Simplified view of AVR microcontroller, ATMega32\n             block diagram, Overview of AVR family"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                      Faculty of Diploma studies\n                     Information and Communication Technology\n3     AVR Microcontroller Architecture and assembly language              12\n        programming:\n         General Purpose registers in AVR, The AVR data memory, AVR status\n           register, AVR data formats and assembler directives, Assembly Language\n         Programming, Program Counter and program ROM space in AVR, RISC\n          architecture in AVR, Branch Instructions, CALL instruction and Stack,\n          Pipelining, Time delay loop , AVR I/O port programming, Arithmetic and\n         Logic instructions, AVR advanced assembly language programming, Bit\n           addressability, MACROs, Intel HEX file, AVR Hardware pin connections\n4     AVR programming in C :                                      10\n         Data types and time delay in C, I/O port programming in C, Logic\n          operations in C, Data conversion programs in C, Data serialization in C,\n       Memory allocation in C, AVR Timer programming in C, AVR interrupt\n        programming in C, AVR serial port programming in C\n5     AVR Interfacing :                                           10\n      LCD and Keyboard Interfacing, Relay and optoisolator interfacing, Stepper\n        and DC Motor control, ADC,DAC and sensor interfacing, SPI Protocol and\n       MAX7221 display interfacing, I2C Protocol and DS1307 RTC Interfacing\n        Total                                                   42 hrs.\n\n\n Suggested List of Experiments:\n\n\n 1.   Introduction to simulation tool Atmel Studio for AVR microcontroller programming.\n\n 2.   Introduction to ATMega32 AVR microcontroller development board.\n\n 3.  Write AVR assembly language instructions for simple operations like ADD and load and\n\n     access internal RAM in AVR microcontroller.\n\n 4.  Write AVR assembly language instructions to create loops.\n\n 5.  Write AVR assembly language instructions for conditional and unconditional branching.\n\n 6.  Write AVR assembly language instructions to demonstrate CALL instruction, time delay\n\n     and subroutine.\n\n 7.  Write AVR assembly language instructions to use the ports for input or output.\n\n 8.  Write AVR assembly language instructions for arithmetic and logical operation.\n\n 9.  Write C programs for time delay and I/O operations.\n\n 10. Write C programs for arithmetic and logical operations.\n\n 11. Write C programs for data conversions.\n\n 12. Write C programs for data serialization.\n\n 13. Write C programs for AVR timers.\n\n 14. Interface LCD with AVR microcontroller and write C program.\n\n 15. Interface 4x4 key board with AVR microcontroller and write C program."
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                      Faculty of Diploma studies\n                     Information and Communication Technology\n 16. Interface LM 35 temperature sensor with AVR microcontroller. Program the AVR’s\n\n   ADC in C language. Write a C program to read the temperature and display on port.\n\n 17. Interface stepper motor with AVR microcontroller. Write a program in C to operate the\n\n     stepper motor.\n\n 18. Interface DC motor with AVR microcontroller. Write a program in C to control the\n\n     speed of the motor.\n\n\n\n References:\n\n 1. The AVR  Microcontroller and Embedded  Systems Using Assembly and  C, By\n Muhammad Ali Mazidi, Sarmad Naimi and Sepehr Naimi, Pearson Education.\n 2.  Embedded Systems  Architecture, Programming and  Design, by  Raj Kamal,\n MCGrawHill\n 3. Programming and Customizing the AVR Microcontroller, By Dhananjay Gadre, McGraw\n Hill Education\n 4. AVR ATmega32 data sheet\n\n\n Suggested Theory distribution:\n\n The suggested theory distribution as per        taxonomy is as per follows. This\n distribution serves as guidelines for teachers and students to achieve effective teaching-                                       Bloom’s learning process\n\n\nR Level     U Level     A Level     N Level      E Level      C Level\n30         30         20         10         10         0\n\n\n\n Legends: R: Remembrance; U: Understanding; A: Application, N: Analyze and E: Evaluate\n C: Create and above Levels (Revised Bloom’s Taxonomy)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09CT0603 - Embedded System (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "2408f7469df0e05ffe6b5bdc10f6d73ecfce448f5fca3b488485bcab8878f9e2"
+    },
+    {
+      "subject_id": "49009320061101",
+      "subject_name": "Fundamental of Data Mining",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0611",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E4-Fundamentals-of-Data-Mining-Techniques.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0611 - Fundamentals of Data Mining Techniques (.pdf",
+      "expected_pdf_sha256": "b4b790a72ed0831d87e4c546631e9f480b4d5d10ae960e996f770ec1e0de0ff4",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0611",
+        "semester_label": "VI",
+        "credits": null,
+        "prerequisite": "Basic knowledge of visual studio"
+      },
+      "objectives": [
+        "This course focuses on both concepts and practice. We will introduce (a) the core data mining concepts and practical skills for applying data mining techniques to solve real-world problems. Credits Earned: 04"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to: 1. Understand about Data mining, Clustering and Data processing. 2. Describe the Data mining Tool and its various techniques. 3. Interpret the various Clustering methods and Data mining Application. 4. Evaluate different data mining techniques like classification, prediction, clustering and association rule mining. 5. Apply appropriate data mining algorithms to solve real world problems"
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/Practical Total Teaching Scheme (Hours) Credits Theory Marks Marks Marks Term Work Theory Tutorial Practical ESE IA CSE Viva (TW) 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5748,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                         Faculty of Diploma Studies\n                       Information and Communication Technology\n\n\n                               Subject Code: 09CT0611\n                      Subject Name: Fundamental of Data Mining\n                        Diploma Year – III (Semester VI)\n\n Objective:\n\n This course focuses on both concepts and practice. We will introduce (a) the core data mining concepts and\n practical skills for applying data mining techniques to solve real-world problems.\n\n\n\n Credits Earned: 04\n\n Course Outcomes: After completion of this course, student will be able to:\n\n     1.  Understand about Data mining, Clustering and Data processing.\n     2.  Describe the Data mining Tool and its various techniques.\n     3.  Interpret the various Clustering methods and Data mining Application.\n     4.  Evaluate different data mining techniques like classification, prediction, clustering and association rule\n        mining.\n     5.  Apply appropriate data mining algorithms to solve real world problems\n\n\n Pre-requisite of course: Basic knowledge of visual studio\n\n                                  Teaching and Examination Scheme\n\n\n\n                                                                                      Tutorial/Practical       Total\n      Teaching Scheme (Hours)            Credits     Theory Marks\n                                                                      Marks         Marks\n\n                                                                   Term Work\n    Theory       Tutorial     Practical          ESE   IA    CSE   Viva\n                                                                   (TW)\n\n     3           0          2         4      50    30    20      25        25         150\n\n\n\n Contents:\n\nS.NO                                TOPIC                                          Hours\n\n       Introduction to Data Mining: Introduction: Scope of knowledge Mining: what's data processing;\n      however will knowledge Mining Works, prophetical Modeling: data processing and knowledge     05  1\n      Warehousing: design for data processing: Profitable Applications: knowledge Mining Tools:\n\n      Data Pre-processing: Introduction, knowledge Pre-processing summary, knowledge clean up,\n                                                                                              08  2   knowledge Integration and Transformation, knowledge Reduction, Discretization and construct"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                         Faculty of Diploma Studies\n                        Information and Communication Technology\n\n       Hierarchy Generation.\n\n\n\n      Data Mining Techniques- Introduction, data processing, data Processing Versus direction\n      System, data processing Techniques- Association rules, Classification, Regression, Clustering,      08  3\n      Neural networks.\n\n       Clustering: Introduction, Clustering, Cluster Analysis, Clustering Methods- K means,\n                                                                                              07  4    Hierarchical clustering, Agglomerative clustering, Divisive clustering, clustering and\n       segmentation software, evaluating clusters.\n      Applications of Data mining: Introduction, Business Applications exploitation knowledge\n      Mining- Risk management and targeted promoting, client profiles and have construction,                                                                                              07  5\n      Medical applications, Scientific Applications exploitation data processing, different\n       Applications.\n      Data Mining Tools: Available Tools :XLMiner, WEKA , Basic of WEKA Installing WEKA,\n                                                                                              07  6  WEKA data file format, Data visualization in WEKA, Data filtering, Using the concepts of data\n      mining with WEKA\n                                                                                         Total Hours   42\n\n\n\n Suggested Theory distribution:\n\n The suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as guidelines for\n teachers and students to achieve effective teaching-learning process\n\n\n\n                           Distribution of Theory for course delivery and evaluation\n\nRemember       Understand          Apply          Analyse          Evaluate           Create\n\n   40%          40%          10%          10%             0              0\n\n\n\n Suggested List of Experiment:\n\n    ●  Data Pre-processing and Data Exploration understanding.\n    ●  Study of WEKA Tool.\n    ●  Explore Classification and Clustering using WEKA tool.\n    ●  Apply filters on the dataset using WEKA.\n    ●  Implement Pre-processing in WEKA Tool.\n    ●  Demonstration of Weka Explorer, Mining techniques and Attribute Relation File Format\n       (ARFF) http://archive.ics.uci.edu/ml/"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n\n\n\n\nSUGGESTED LEARNING RESOURCES\n\n List of Books:\n\n           S.No.         Title of Books          Author           Publication\n             1   “Data Mining Concepts and   J. Han,        Morgan Kaufmann\n                   Techniques”            M. Kamber\n             2   “Data mining: Concepts,    M.            John Wiley & Sons Inc.\n                   models, methods and        Kantardzic\n                    algorithms\n             3   “Data Mining:           M. Dunham     Pearson Education.\n                    Introductory and\n                 Advanced Topics”\n\n\nSupplementary Resources:\n\n           ●   Data Mining Tutorial http://www.tutorialspoint.com/data_mining/"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "b4b790a72ed0831d87e4c546631e9f480b4d5d10ae960e996f770ec1e0de0ff4"
+    },
+    {
+      "subject_id": "49009320060101",
+      "subject_name": "Management Information System",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0601",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09CT0601-MIS.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0601 - Management Information System (.pdf",
+      "expected_pdf_sha256": "7a0ec6c7c45e8ae1f18deb91f9a426fad29d9dcb646c315798351ecf440d04ba",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0601",
+        "semester_label": "VI",
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [
+        "The main goals of a MIS are to help executives of an organization make decisions that advance the organization’s strategy and to implement the organizational structure and dynamics of the enterprise for the purpose of managing the organization in a better way for a competitive advantage. Credits Earned: 02 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to: 1. Understand need and importance of Management Information System. [Remember] 2. Elaborate the supporting role of Management in decision-making. [Analyze] 3. Interpret the role of MIS in various functional areas of management. [Understand] 4. Develop and integration of information with MIS.[Apply]"
+      ],
+      "teaching_and_examination_scheme_text": ": Tutorial / Theory Marks Teaching Scheme (Hours) Practical Marks Credits Total Marks E I V T Theory Tutorial Practical ESE IA CSE Viva Term Work 2 0 0 2 50 30 20 0 0 100 [PAGE 2] Marwadi University Faculty of Diploma studies Information and Communication Technology",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Information System and its roles, Classify Information, Elaborate Management",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Information System, Describe Benefits and Limitations of MIS.",
+              "MIS Development:",
+              "Describe the roles of systems analysts, State the Tools used by system analyst in",
+              "2 5",
+              "designing Information system, Describe MIS Development Life Cycle, State the",
+              "features of MIS Development Models, Elaborate MIS Design.",
+              "Decision Support Systems: Introduction, Understanding DSS- Management and 3 6",
+              "DSS-Decision making-types of decisions, Analytics and Business Intelligence- BI",
+              "techniques",
+              "Managing IT Function: Introduction, challenges of managing IT function - modern IT"
+            ],
+            "topics_text": "Information System, Describe Benefits and Limitations of MIS. MIS Development: Describe the roles of systems analysts, State the Tools used by system analyst in 2 5 designing Information system, Describe MIS Development Life Cycle, State the features of MIS Development Models, Elaborate MIS Design. Decision Support Systems: Introduction, Understanding DSS- Management and 3 6 DSS-Decision making-types of decisions, Analytics and Business Intelligence- BI techniques Managing IT Function: Introduction, challenges of managing IT function - modern IT",
+            "topics": [
+              "Information System, Describe Benefits and Limitations of MIS.",
+              "MIS Development:",
+              "Describe the roles of systems analysts, State the Tools used by system analyst in",
+              "2 5",
+              "designing Information system, Describe MIS Development Life Cycle, State the",
+              "features of MIS Development Models, Elaborate MIS Design.",
+              "Decision Support Systems: Introduction, Understanding DSS- Management and 3 6",
+              "DSS-Decision making-types of decisions, Analytics and Business Intelligence- BI",
+              "techniques",
+              "Managing IT Function: Introduction, challenges of managing IT function - modern IT"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "environment - centralization vs. decentralization - IT security - technology selection,",
+            "contact_hours": 5,
+            "topic_lines": [
+              "vendor management - vendor selection - vendor contracts and service levels –",
+              "relationship management - vendor retention or termination",
+              "Integration of Information",
+              "State the areas of MIS Integration with various business function area,",
+              "5 6",
+              "Elaborate following terms",
+              "- ERP, BPO , E-Commerce",
+              "Total Hours 28",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology",
+              "Suggested Text books / Reference books:",
+              "1. Management Information Systems by Davis Tata McGraw-Hill",
+              "2. Management Information systems by W.S. Jawadekar TMH",
+              "3. Information Technology for Management: Transforming Organizations in Digital Economy by",
+              "EfraimTurban, Dorothy Leidner, Ephraim McLean and James Wetherby, Wiley"
+            ],
+            "topics_text": "vendor management - vendor selection - vendor contracts and service levels – relationship management - vendor retention or termination Integration of Information State the areas of MIS Integration with various business function area, 5 6 Elaborate following terms - ERP, BPO , E-Commerce Total Hours 28 Marwadi University Faculty of Diploma studies Information and Communication Technology Suggested Text books / Reference books: 1. Management Information Systems by Davis Tata McGraw-Hill 2. Management Information systems by W.S. Jawadekar TMH 3. Information Technology for Management: Transforming Organizations in Digital Economy by EfraimTurban, Dorothy Leidner, Ephraim McLean and James Wetherby, Wiley",
+            "topics": [
+              "vendor management - vendor selection - vendor contracts and service levels –",
+              "relationship management - vendor retention or termination",
+              "Integration of Information",
+              "State the areas of MIS Integration with various business function area,",
+              "5 6",
+              "Elaborate following terms",
+              "ERP, BPO , E-Commerce",
+              "Total Hours 28",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology",
+              "Suggested Text books / Reference books:",
+              "1. Management Information Systems by Davis Tata McGraw-Hill",
+              "2. Management Information systems by W.S. Jawadekar TMH",
+              "3. Information Technology for Management: Transforming Organizations in Digital Economy by",
+              "EfraimTurban, Dorothy Leidner, Ephraim McLean and James Wetherby, Wiley"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 4876,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\n\n                           Subject Code: 09CT0601\n\n                Subject Name: Management Information System\n                    Diploma Year – III (Semester VI)\n\n\nObjective:\nThe main goals of a MIS are to help executives of an organization make decisions that advance the\norganization’s strategy and to implement the organizational structure and dynamics of the enterprise for\nthe purpose of managing the organization in a better way for a competitive advantage.\n\n\nCredits Earned: 02 Credits\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n\n\n    1.  Understand need and importance of Management Information System. [Remember]\n    2.  Elaborate the supporting role of Management in decision-making. [Analyze]\n    3.  Interpret the role of MIS in various functional areas of management. [Understand]\n    4.  Develop and integration of information with MIS.[Apply]\n\n\n\nTeaching and Examination Scheme:\n\n\n                                                                        Tutorial /\n                                       Theory Marks\n  Teaching Scheme (Hours)                                          Practical Marks\n                                  Credits                                               Total Marks\n                               E            I     V       T\nTheory   Tutorial    Practical          ESE   IA  CSE  Viva   Term Work\n  2        0         0        2      50    30   20     0         0           100"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\nContents:\n                                                                                Contact\nUnit                                  Topics\n                                                                         Hours\n      Introduction to Management Information System\n 1    Information System and  its roles, Classify Information, Elaborate Management       6\n      Information System, Describe Benefits and Limitations of MIS.\n    MIS Development:\n      Describe the roles of systems analysts, State the Tools used by system analyst in\n 2                                                                              5\n      designing Information system, Describe MIS Development Life Cycle, State the\n      features of MIS Development Models, Elaborate MIS Design.\n\n      Decision Support Systems: Introduction, Understanding DSS- Management and 3                                                                              6\n     DSS-Decision making-types of decisions, Analytics and Business Intelligence- BI\n      techniques\n\n     Managing IT Function: Introduction, challenges of managing IT function - modern IT\n 4    environment - centralization vs. decentralization - IT security - technology selection,    5\n      vendor management  - vendor  selection  - vendor  contracts and  service  levels –\n       relationship management - vendor retention or termination\n      Integration of Information\n      State the areas of MIS Integration with various business function area,\n 5                                                                              6\n      Elaborate following terms\n      - ERP, BPO , E-Commerce\n                                                                     Total Hours      28"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\n\n\n\n\nSuggested Text books / Reference books:\n\n1.  Management Information Systems by Davis Tata McGraw-Hill\n2.  Management Information systems by W.S. Jawadekar TMH\n3.  Information Technology for Management: Transforming Organizations in Digital Economy by\n    EfraimTurban, Dorothy Leidner, Ephraim McLean and James Wetherby, Wiley\n\n\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as\nguidelines for teachers and students to achieve effective teaching-learning process.\n\n\n                         Distribution of Theory for course delivery and evaluation\n\n    Remember          Understand       Apply       Analyze        Evaluate        Create\n\n     30%            30%         15%       25%        0%        0%\n\n\n\n\nSupplementary Resources:\n\n1) http://www.mu.ac.in/mis.pdf\n2) http://people.du.ac.in/~ssirpal/presentations/MIS%20Concepts%20&%20Design.pdf\n3) http://www.tutorialspoint.com/management_information_system/mis_tutorial.pdf\n\n\n\n\n\nList of Journals / Periodicals / Magazines / Newspapers / Web resources, etc.\n\n\n1. MIS Quarterly, University of Minnesota\n2. CIO\n3. Computer Express\n4. Digichip\n5. PC World\n6. Computer Shopper\n7. Dataquest"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "7a0ec6c7c45e8ae1f18deb91f9a426fad29d9dcb646c315798351ecf440d04ba"
+    },
+    {
+      "subject_id": "49009320060201",
+      "subject_name": "Project-II",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0602",
+      "catalog_status": "REVIEW_TITLE_OR_CODE_MISMATCH",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/PROJECT-2.pdf",
+      "source_pdf_repo_path": null,
+      "expected_pdf_sha256": "9185d6cdbac30f8f96d5ffea265ec59ccba30131466a1dff20be91e538fe34cc",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {},
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No checked-in PDF matched subject code 09CT0602."
+      ]
+    },
+    {
+      "subject_id": "49009320060401",
+      "subject_name": "RF and Microwave Communication",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0604",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E3-RF-and-Microwave-Communication.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0604 - RF and Microwave Communications (.pdf",
+      "expected_pdf_sha256": "74413bd8933c1b05156494f390f3ee226551d89289ec162a9cade234d85c8808",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0604",
+        "semester_label": "VI",
+        "credits": null,
+        "prerequisite": "Electromagnetic Theory."
+      },
+      "objectives": [
+        "The rationale behind this course is to understand RF and Microwave systems. Credits Earned: 4 Credits"
+      ],
+      "course_outcomes": [
+        "After learning this course, students should be able to, 1. Understand basic concepts and applications of microwave systems. 2. Analyze and solve problems related to microwave transmission lines. 3. Analyze and solve problems related to microwave waveguides. 4. Learn to apply use of various passive and active microwave components for different applications. 5. Understand working of microwave amplifier, oscillator, and mixer circuits."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE Marks Theory Tutorial Practical IA (M) CSE (I) Viva (V) work (E) (TW) 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Microwaves",
+            "contact_hours": 3,
+            "topic_lines": [
+              "History of Microwaves, Microwave frequency bands, General applications",
+              "of Microwaves, Advantages of Microwaves, Microwave Propagation"
+            ],
+            "topics_text": "History of Microwaves, Microwave frequency bands, General applications of Microwaves, Advantages of Microwaves, Microwave Propagation",
+            "topics": [
+              "History of Microwaves, Microwave frequency bands, General applications",
+              "of Microwaves, Advantages of Microwaves, Microwave Propagation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Mathematical model of Microwave Transmission",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Concept of Mode, Characteristics of TEM, TE and TM Modes, Losses",
+              "associated with microwave transmission, Concept of Impedance in",
+              "Microwave transmission",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ],
+            "topics_text": "Concept of Mode, Characteristics of TEM, TE and TM Modes, Losses associated with microwave transmission, Concept of Impedance in Microwave transmission Marwadi University Faculty of Diploma studies Information and Communication Technology",
+            "topics": [
+              "Concept of Mode, Characteristics of TEM, TE and TM Modes, Losses",
+              "associated with microwave transmission, Concept of Impedance in",
+              "Microwave transmission",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Analysis of Microwave Transmission Lines and Waveguides",
+            "contact_hours": 13,
+            "topic_lines": [
+              "Transmission line equations & solutions, reflection and transmission",
+              "coefficient, standing wave and standing wave ratio, line impedance and",
+              "admittance, impedance matching, using stub line, skin effect, application of",
+              "smith chart in solving transmission line problems, Introduction to strip lines,",
+              "Micro strip lines, Rectangular and circular waveguides"
+            ],
+            "topics_text": "Transmission line equations & solutions, reflection and transmission coefficient, standing wave and standing wave ratio, line impedance and admittance, impedance matching, using stub line, skin effect, application of smith chart in solving transmission line problems, Introduction to strip lines, Micro strip lines, Rectangular and circular waveguides",
+            "topics": [
+              "Transmission line equations & solutions, reflection and transmission",
+              "coefficient, standing wave and standing wave ratio, line impedance and",
+              "admittance, impedance matching, using stub line, skin effect, application of",
+              "smith chart in solving transmission line problems, Introduction to strip lines,",
+              "Micro strip lines, Rectangular and circular waveguides"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Microwave Network Analysis",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Equivalent voltages and currents for non-TEM lines, Network parameters",
+              "for microwave circuits, Scattering Parameters"
+            ],
+            "topics_text": "Equivalent voltages and currents for non-TEM lines, Network parameters for microwave circuits, Scattering Parameters",
+            "topics": [
+              "Equivalent voltages and currents for non-TEM lines, Network parameters",
+              "for microwave circuits, Scattering Parameters"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Passive and Active RF and microwave Devices",
+            "contact_hours": 13,
+            "topic_lines": [
+              "Microwave Passive components: Directional Coupler, Power Divider,",
+              "Magic Tee, Hybrid ring, Wave-guide Corners, Bends, Twists, Attenuator,",
+              "Circulator, Isolator and Resonator.",
+              "Microwave Active components: Tunnel diode, Varactor diodes, Step",
+              "recovery diodes, Schottky Barrier diodes, PIN diodes, Gunn Diodes,",
+              "IMPATT and TRAPATT diodes, Parametric Amplifiers, Microwave",
+              "Transistors, Microwave oscillators and Mixers, Klystron, Magnetron"
+            ],
+            "topics_text": "Microwave Passive components: Directional Coupler, Power Divider, Magic Tee, Hybrid ring, Wave-guide Corners, Bends, Twists, Attenuator, Circulator, Isolator and Resonator. Microwave Active components: Tunnel diode, Varactor diodes, Step recovery diodes, Schottky Barrier diodes, PIN diodes, Gunn Diodes, IMPATT and TRAPATT diodes, Parametric Amplifiers, Microwave Transistors, Microwave oscillators and Mixers, Klystron, Magnetron",
+            "topics": [
+              "Microwave Passive components: Directional Coupler, Power Divider,",
+              "Magic Tee, Hybrid ring, Wave-guide Corners, Bends, Twists, Attenuator,",
+              "Circulator, Isolator and Resonator.",
+              "Microwave Active components: Tunnel diode, Varactor diodes, Step",
+              "recovery diodes, Schottky Barrier diodes, PIN diodes, Gunn Diodes,",
+              "IMPATT and TRAPATT diodes, Parametric Amplifiers, Microwave",
+              "Transistors, Microwave oscillators and Mixers, Klystron, Magnetron"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Microwave Frequency Measurement: Wavelength, VSWR,",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Attenuation and Microwave Radiation Hazards: type and",
+              "protection from hazards Total ‘Q’, 42 hrs."
+            ],
+            "topics_text": "Attenuation and Microwave Radiation Hazards: type and protection from hazards Total ‘Q’, 42 hrs.",
+            "topics": [
+              "Attenuation and Microwave Radiation Hazards: type and",
+              "protection from hazards Total ‘Q’, 42 hrs."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6419,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                        Faculty of Diploma studies\n                        Information and Communication Technology\n\n\n                           Subject Code: 09CT0604\n              Subject Name: RF and Microwave Communication\n                    Diploma Year – III (Semester VI)\n\n\n    Objective: The rationale behind this course  is to understand RF and Microwave\n    systems.\n\n    Credits Earned: 4 Credits\n\n   Course Outcomes: After learning this course, students should be able to,\n\n     1.   Understand basic concepts and applications of microwave systems.\n\n     2.   Analyze and solve problems related to microwave transmission lines.\n\n     3.   Analyze and solve problems related to microwave waveguides.\n\n     4.   Learn to apply use of various passive and active microwave components for different\n          applications.\n\n     5.   Understand working of microwave amplifier, oscillator, and mixer circuits.\n\n    Pre-requisite of course: Electromagnetic Theory.\n\n                        Teaching and Examination Scheme\n\n\n                                                               Tutorial/ Practical\n Teaching Scheme (Hours)              Theory Marks\n                                                         Marks\n                                                                                   Total\n                              Credits                             Term\n                               ESE                                 Marks\nTheory  Tutorial  Practical                IA (M)  CSE (I)  Viva (V)   work\n                                       (E)\n                                                         (TW)\n  3       0       2       4     50    30     20      25      25     150\n\n    Contents:\n\n\n Sr No  Course content                                                       Total Hrs.\n  1    Introduction to Microwaves                                    03\n         History of Microwaves, Microwave frequency bands, General applications\n          of Microwaves, Advantages of Microwaves, Microwave Propagation\n  2    Mathematical model of Microwave Transmission                       05\n        Concept of Mode, Characteristics of TEM, TE and TM Modes, Losses\n          associated  with  microwave  transmission,  Concept  of  Impedance  in\n        Microwave transmission"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                      Faculty of Diploma studies\n                     Information and Communication Technology\n3     Analysis of Microwave Transmission Lines and Waveguides              13\n      Transmission  line  equations &  solutions,  reflection and  transmission\n       coefficient, standing wave and standing wave ratio, line impedance and\n      admittance, impedance matching, using stub line, skin effect, application of\n      smith chart in solving transmission line problems, Introduction to strip lines,\n      Micro strip lines, Rectangular and circular waveguides\n4    Microwave Network Analysis                                     05\n      Equivalent voltages and currents for non-TEM lines, Network parameters\n       for microwave circuits, Scattering Parameters\n5     Passive and Active RF and microwave Devices                         13\n     Microwave  Passive components:  Directional  Coupler, Power  Divider,\n     Magic Tee, Hybrid ring, Wave-guide Corners, Bends, Twists, Attenuator,\n       Circulator, Isolator and Resonator.\n     Microwave  Active  components: Tunnel  diode,  Varactor  diodes,  Step\n      recovery  diodes, Schottky  Barrier  diodes, PIN  diodes, Gunn Diodes,\n    IMPATT  and TRAPATT  diodes,  Parametric  Amplifiers,  Microwave\n       Transistors, Microwave oscillators and Mixers, Klystron, Magnetron\n6    Microwave   Frequency   Measurement:   Wavelength,   VSWR,      3\n      Attenuation and     Microwave  Radiation  Hazards:  type and\n      protection from hazards      Total                  ‘Q’,                                        42 hrs.\n\n\n References:\n\n     1.  Sanjeev Gupta, Microwave Engineering, Khanna Pub.\n     2. Annapurna Das, Sisir K.Das- Microwave engineering, McGraw Hill\n     3.  David. M Pozar, Microwave Engineering, Wiley\n     4.  Robert A Collin, Foundations of Microwave Engineering, Wiley\n     5. Samuel Liao, Microwave devices and circuits, PHI\n\n Suggested Theory distribution:\n\n The suggested theory distribution as per        taxonomy is as per follows. This\n distribution serves as guidelines for teachers and students to achieve effective teaching-                                       Bloom’s learning process\n\n\n Legends: R: Remembrance; U: Understanding; A: Application, N: Analyze and E: Evaluate\n C: Create and above Levels (Revised Bloom’s Taxonomy)\n\n               Distribution of Theory for course delivery and evaluation\n\n Remember   Understand     Apply       Analyse      Evaluate       Create\n\n   40%       40%       10%       10%       0%       0%\n\n\n\n Suggested List of Experiments:\n 1 Introduction and identification of microwave component.\n 2 Study of the characteristics of Klystron tube and to determine its electronic tuning range."
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                     Faculty of Diploma studies\n                     Information and Communication Technology\n3 Study of following characteristics of Gunn Diode\n       3.1 Output power and frequency as a function of voltage.\n       3.2 Square wave modulation through PIN diode.\n4 To determine the frequency & wavelength in a rectangular waveguide working in TE10 mode.\n5 Study of function of multi hole directional coupler by measuring the following parameters:\n       5.1 Main line and auxiliary line SWR\n       5.2 Coupling factor and directivity.\n6 To determine the standing wave ratio and reflection coefficient.\n7 To measure an unknown impedance with smith chart.\n8 To measure SWR of ports, isolation and coupling coefficients of Magic Tee.\n9 To measure Input VSWR, Insertion loss and isolation of isolator/ circulator\n10 To measure resonant frequency of Cavity resonator.\n11 To study and perform the square law behavior of a microwave crystal detector.\n12 Introduction to spectrum analyzer and measurement of spectrum of microwave signal using\nthe same.\n\n\nReference Materials:\n  ●  https://nptel.ac.in/courses/108/101/108101112/\n  ●  https://nptel.ac.in/courses/117/105/117105138/\n  ●  https://www.udemy.com/course/rf-microwave-radio-transmission-theory-online-\n       course-rahsoft-rahch200/"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "74413bd8933c1b05156494f390f3ee226551d89289ec162a9cade234d85c8808"
+    },
+    {
+      "subject_id": "49009320060801",
+      "subject_name": "Sensor and IoT (SIoT)",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0608",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E4-Sensors-and-IoT1.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0608 - Sensors and IoT (.pdf",
+      "expected_pdf_sha256": "5d13dfd9cec2bffb95638f65b0df55c6f595854bdec9cdbdf9e637350458d2fb",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0608",
+        "semester_label": "VI",
+        "credits": null,
+        "prerequisite": "Electromagnetic Theory."
+      },
+      "objectives": [
+        "The rationale behind this course is to learn to understand working of sensor, sensor interfacing and develop IoT solutions. Credits Earned: 4 Credits"
+      ],
+      "course_outcomes": [
+        "After learning this course, students should be able to, CO1: To understand the concept of IoT and its architecture. CO2: Interfacing of various sensors with programmable boards CO3: To write programs for various IoT applications. CO4: Integration of various sensors and data transfer protocols. CO5: To develop solutions for different topics in society by means of IoT."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE Marks Theory Tutorial Practical IA (M) CSE (I) Viva (V) work (E) (TW) 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Internet of Things",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Definitions, core concepts, related concepts, IoT reference models,",
+              "IoT architectures, challenges, IoT functional stack"
+            ],
+            "topics_text": "Definitions, core concepts, related concepts, IoT reference models, IoT architectures, challenges, IoT functional stack",
+            "topics": [
+              "Definitions, core concepts, related concepts, IoT reference models,",
+              "IoT architectures, challenges, IoT functional stack"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Sensors",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Working principles, different types, selection of sensors for practical",
+              "applications, Introduction to different types of sensors such as",
+              "capacitive, resistive, temperature, humidity, pressure, ultrasonic,",
+              "gas, Hall effect, PIR, MEMS, Image, IR, Proximity, GPS and GSM",
+              "module, Interfacing sensor with IoT hardware boards",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ],
+            "topics_text": "Working principles, different types, selection of sensors for practical applications, Introduction to different types of sensors such as capacitive, resistive, temperature, humidity, pressure, ultrasonic, gas, Hall effect, PIR, MEMS, Image, IR, Proximity, GPS and GSM module, Interfacing sensor with IoT hardware boards Marwadi University Faculty of Diploma studies Information and Communication Technology",
+            "topics": [
+              "Working principles, different types, selection of sensors for practical",
+              "applications, Introduction to different types of sensors such as",
+              "capacitive, resistive, temperature, humidity, pressure, ultrasonic,",
+              "gas, Hall effect, PIR, MEMS, Image, IR, Proximity, GPS and GSM",
+              "module, Interfacing sensor with IoT hardware boards",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Communication devices and protocols",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Bluetooth and BLE, Wifi, Zigbee, IPv6, 6LowPAN, LTE-M, RFID, NFC,",
+              "LiDAR"
+            ],
+            "topics_text": "Bluetooth and BLE, Wifi, Zigbee, IPv6, 6LowPAN, LTE-M, RFID, NFC, LiDAR",
+            "topics": [
+              "Bluetooth and BLE, Wifi, Zigbee, IPv6, 6LowPAN, LTE-M, RFID, NFC,",
+              "LiDAR"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Application layer: MQTT, CoAP, XMPP, Integrating internet services",
+            "contact_hours": 8,
+            "topic_lines": [
+              "with interoperable data encoding with XML, JSON, CBOR, sensor markup",
+              "language, lightweight web services for IoT"
+            ],
+            "topics_text": "with interoperable data encoding with XML, JSON, CBOR, sensor markup language, lightweight web services for IoT",
+            "topics": [
+              "with interoperable data encoding with XML, JSON, CBOR, sensor markup",
+              "language, lightweight web services for IoT"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "IoT application domains: Smart Cities, Smart Manufacturing, Smart Grid,",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Smart Buildings, Intelligent Transportation Systems, Healthcare",
+              "Total 42 hrs."
+            ],
+            "topics_text": "Smart Buildings, Intelligent Transportation Systems, Healthcare Total 42 hrs.",
+            "topics": [
+              "Smart Buildings, Intelligent Transportation Systems, Healthcare",
+              "Total 42 hrs."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5690,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                         Faculty of Diploma studies\n                        Information and Communication Technology\n\n\n                           Subject Code: 09CT0608\n                     Subject Name: Sensor and IoT (SIoT)\n                    Diploma Year – III (Semester VI)\n\n\n     Objective: The rationale behind this course is to learn to understand working of\n     sensor, sensor interfacing and develop IoT solutions.\n\n    Credits Earned: 4 Credits\n\n    Course Outcomes: After learning this course, students should be able to,\n\n    CO1: To understand the concept of IoT and its architecture.\n\n    CO2: Interfacing of various sensors with programmable boards\n\n    CO3: To write programs for various IoT applications.\n\n    CO4: Integration of various sensors and data transfer protocols.\n\n    CO5: To develop solutions for different topics in society by means of IoT.\n\n    Pre-requisite of course: Electromagnetic Theory.\n\n                        Teaching and Examination Scheme\n\n\n                                                               Tutorial/ Practical\n Teaching Scheme (Hours)              Theory Marks\n                                                         Marks\n                                                                                   Total\n                              Credits                             Term\n                               ESE                                 Marks\nTheory  Tutorial  Practical                IA (M)  CSE (I)  Viva (V)   work\n                                       (E)\n                                                         (TW)\n  3       0       2       4     50    30     20      25      25     150\n\n    Contents:\n\n\n Sr No  Course content                                                       Total Hrs.\n  1    Introduction to Internet of Things:                              08\n         Definitions, core concepts, related concepts, IoT reference models,\n        IoT architectures, challenges, IoT functional stack\n  2    Sensors:                                                    10\n       Working principles, different types, selection of sensors for practical\n         applications, Introduction to different types of sensors such as\n         capacitive, resistive, temperature, humidity, pressure, ultrasonic,\n          gas, Hall effect, PIR, MEMS, Image, IR, Proximity, GPS and GSM\n        module, Interfacing sensor with IoT hardware boards"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                       Faculty of Diploma studies\n                      Information and Communication Technology\n3    Communication devices and protocols:                              08\n      Bluetooth and BLE, Wifi, Zigbee, IPv6, 6LowPAN, LTE-M, RFID, NFC,\n     LiDAR\n\n4     Application layer: MQTT, CoAP, XMPP, Integrating internet services     08\n      with interoperable data encoding with XML, JSON, CBOR, sensor markup\n      language, lightweight web services for IoT\n5    IoT application domains: Smart Cities, Smart Manufacturing, Smart Grid,      08\n      Smart Buildings, Intelligent Transportation Systems, Healthcare\n\n      Total                                                      42 hrs.\n\n\n  References:\n\n      1.  Q. F. Hassan, \"Internet of Things A to Z: Technologies and Applications”, IEEE\n          Press, Wiley\n      2.  D. Hanes, G. Salguerio, P. Grossetete, R. Barton, J. Henry, \" IoT Fundamentals:\n        Networking Technologies, Protocols, and Use Cases for the Internet of Things”,\n       CISCO Press\n      3. Randy Frank, Understanding Smart Sensors, ARTECH House\n      4.  J. Holler, V. Tsiatsis, C. Mulligan, S. Karnouskos, S. Avesand, D. Boyle, “From\n        Machine to Machine to Internet of Things”, Academic Press, ELSEVIER\n      5.  P. Raj, A. Raman, “The Internet of Things Enabling Technologies, Platforms, and\n       Use Cases”,\n  Suggested Theory distribution:\n\n  The suggested theory distribution as per        taxonomy is as per follows. This\n  distribution serves as guidelines for teachers and students to achieve effective teaching-                                        Bloom’s  learning process\n\n\n  Legends: R: Remembrance; U: Understanding; A: Application, N: Analyze and E: Evaluate\n  C: Create and above Levels (Revised Bloom’s Taxonomy)\n\n               Distribution of Theory for course delivery and evaluation\n\n Remember   Understand     Apply       Analyse      Evaluate       Create\n\n   20%       30%       40%       10%       0%       0%\n\n\n\n  Suggested List of Experiments:\n      1. To sense temperate and humidity using sensors interfaced with IoT hardware\n        board.\n      2. To detect presence using proximity sensor interfaced with IoT hardware board.\n      3. To detect distance of object using ultrasonic sensor interfaced with IoT\n       hardware board.\n      4. To interface pressure sensor with IoT hardware board and read sensed data.\n      5. To read RFID tag using RFID reader interfaced with IoT hardware board."
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                     Faculty of Diploma studies\n                     Information and Communication Technology\n    6. To control LED on IoT hardware board using Bluetooth module interfaced with\n           it.\n    7. To get location data using GPS module interfaced with IoT hardware module on\n      webpage.\n    8. To understand implementation of MQTT using ContikiOS.\n    9. To understand implementation of CoAP using ContikiOS.\n   10. To create IPv6 network and configure network stack using Cooja simulator.\n\nReference Materials:\n\n  ●  https://www.coursera.org/specializations/iot\n  ●  https://www.coursera.org/specializations/internet-of-things\n  ●  https://nptel.ac.in/courses/106/105/106105166/"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "5d13dfd9cec2bffb95638f65b0df55c6f595854bdec9cdbdf9e637350458d2fb"
+    },
+    {
+      "subject_id": "49009320060901",
+      "subject_name": "Wireless Technologies",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 6,
+      "subject_code": "09CT0609",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/Wireless-Technologies.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0609 - Wireless Technologies (.pdf",
+      "expected_pdf_sha256": "1f335734079ffbab0e6aabb96c53f9229c04275fd8a5e3cb3532b7a0aa929cb0",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0609",
+        "semester_label": "VI",
+        "credits": null,
+        "prerequisite": "Electromagnetic Theory."
+      },
+      "objectives": [
+        "This course is to make students learn about fundamentals of wireless technologies and various wireless networking architectures. They will also go through significantly latest wireless technologies. Credits Earned: 4 Credits"
+      ],
+      "course_outcomes": [
+        "After learning this course, students should be able to, 1. Understand basic concepts of cellular communication systems. 2. Understand about basic principles behind radio resource management techniques such as power control, channel allocation and handoffs. 3. Evaluate different wireless communication systems and standards. 4. Compare different technologies used for wireless communication systems. 5. Explain the architecture, functioning, protocols, capabilities and application of various wireless communication systems."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE Marks Theory Tutorial Practical IA (M) CSE (I) Viva (V) work (E) (TW) 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Cellular Communication",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Cellular cell concepts: cell structure, frequency reuse, cell splitting, cell",
+              "sectoring, Microcell zone concept, channel assignment, interference,",
+              "capacity, power control, Evolution of cellular communication systems:",
+              "overview and standards of 1G, 2G, 3G and 4G systems",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ],
+            "topics_text": "Cellular cell concepts: cell structure, frequency reuse, cell splitting, cell sectoring, Microcell zone concept, channel assignment, interference, capacity, power control, Evolution of cellular communication systems: overview and standards of 1G, 2G, 3G and 4G systems Marwadi University Faculty of Diploma studies Information and Communication Technology",
+            "topics": [
+              "Cellular cell concepts: cell structure, frequency reuse, cell splitting, cell",
+              "sectoring, Microcell zone concept, channel assignment, interference,",
+              "capacity, power control, Evolution of cellular communication systems:",
+              "overview and standards of 1G, 2G, 3G and 4G systems",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Global System for Mobile Communications (GSM)",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Services and Features, System Architecture, Radio sub systems, Channel",
+              "types, Example of a GSM call, Frame Structure, Signal Processing,",
+              "Protocols, Hand off, GPRS: Architecture, Protocols and Channels, security"
+            ],
+            "topics_text": "Services and Features, System Architecture, Radio sub systems, Channel types, Example of a GSM call, Frame Structure, Signal Processing, Protocols, Hand off, GPRS: Architecture, Protocols and Channels, security",
+            "topics": [
+              "Services and Features, System Architecture, Radio sub systems, Channel",
+              "types, Example of a GSM call, Frame Structure, Signal Processing,",
+              "Protocols, Hand off, GPRS: Architecture, Protocols and Channels, security"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "CDMA",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Architecture of IS-95 CDMA system, CDMA forward channels, CDMA",
+              "reverse channels, Soft handoff, CDMA features, Power control in CDMA,",
+              "Performance of CDMA System, RAKE Receiver, CDMA2000 cellular",
+              "technology"
+            ],
+            "topics_text": "Architecture of IS-95 CDMA system, CDMA forward channels, CDMA reverse channels, Soft handoff, CDMA features, Power control in CDMA, Performance of CDMA System, RAKE Receiver, CDMA2000 cellular technology",
+            "topics": [
+              "Architecture of IS-95 CDMA system, CDMA forward channels, CDMA",
+              "reverse channels, Soft handoff, CDMA features, Power control in CDMA,",
+              "Performance of CDMA System, RAKE Receiver, CDMA2000 cellular",
+              "technology"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Wireless Personal Area Networks: Bluetooth Specifications, Protocols",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Stack, Security Issues, Advantages and Disadvantages, Application, UWB,",
+              "Zigbee, wireless local area networks: IEEE 802.11, network architecture,",
+              "medium access methods, WLAN standards, wireless metropolitan area",
+              "networks: Wimax"
+            ],
+            "topics_text": "Stack, Security Issues, Advantages and Disadvantages, Application, UWB, Zigbee, wireless local area networks: IEEE 802.11, network architecture, medium access methods, WLAN standards, wireless metropolitan area networks: Wimax",
+            "topics": [
+              "Stack, Security Issues, Advantages and Disadvantages, Application, UWB,",
+              "Zigbee, wireless local area networks: IEEE 802.11, network architecture,",
+              "medium access methods, WLAN standards, wireless metropolitan area",
+              "networks: Wimax"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "GPS, wireless local loop, cordless phone, paging systems, RFID, Home RF,",
+            "contact_hours": 8,
+            "topic_lines": [
+              "NFC, Software Defined Radio, Wireless Sensor Networks, Security issues",
+              "and challenges in wireless networks",
+              "Total 42 hrs."
+            ],
+            "topics_text": "NFC, Software Defined Radio, Wireless Sensor Networks, Security issues and challenges in wireless networks Total 42 hrs.",
+            "topics": [
+              "NFC, Software Defined Radio, Wireless Sensor Networks, Security issues",
+              "and challenges in wireless networks",
+              "Total 42 hrs."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6394,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                         Faculty of Diploma studies\n                        Information and Communication Technology\n\n\n                          Subject Code: 09CT0609\n                   Subject Name: Wireless Technologies\n                   Diploma Year – III (Semester VI)\n\n\n     Objective:\n\n     This course is to make students learn about fundamentals of wireless technologies and various\n     wireless networking  architectures. They  will  also go through  significantly  latest  wireless\n     technologies.\n\n     Credits Earned: 4 Credits\n\n    Course Outcomes: After learning this course, students should be able to,\n\n      1.    Understand basic concepts of cellular communication systems.\n\n      2.    Understand about basic principles behind radio resource management techniques such as\n         power control, channel allocation and handoffs.\n\n      3.    Evaluate different wireless communication systems and standards.\n\n      4.   Compare different technologies used for wireless communication systems.\n\n      5.    Explain the architecture, functioning, protocols, capabilities and application of various\n           wireless communication systems.\n\n     Pre-requisite of course: Electromagnetic Theory.\n\n                        Teaching and Examination Scheme\n\n\n                                                                     Tutorial/ Practical\n  Teaching Scheme (Hours)                 Theory Marks\n                                                              Marks\n                                                                                          Total\n                                Credits                               Term\n                                  ESE                                     Marks\nTheory   Tutorial   Practical                  IA (M)   CSE (I)   Viva (V)    work\n                                          (E)\n                                                              (TW)\n  3       0        2       4     50    30      20       25       25      150\n\n    Contents:\n\n\n Sr No   Course content                                                       Total Hrs.\n  1     Introduction to Cellular Communication                            08\n          Cellular cell concepts: cell structure, frequency reuse, cell splitting, cell\n          sectoring, Microcell zone concept, channel assignment, interference,\n          capacity, power control, Evolution of cellular communication systems:\n        overview and standards of 1G, 2G, 3G and 4G systems"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                       Faculty of Diploma studies\n                      Information and Communication Technology\n2     Global System for Mobile Communications (GSM) :                    09\n       Services and Features, System Architecture, Radio sub systems, Channel\n       types, Example  of a GSM  call, Frame  Structure, Signal  Processing,\n       Protocols, Hand off, GPRS: Architecture, Protocols and Channels, security\n3   CDMA:                                                     09\n       Architecture of IS-95 CDMA system, CDMA forward channels, CDMA\n       reverse channels, Soft handoff, CDMA features, Power control in CDMA,\n      Performance of CDMA System, RAKE Receiver, CDMA2000 cellular\n      technology\n4     Wireless Personal Area Networks: Bluetooth  Specifications, Protocols      08\n       Stack, Security Issues, Advantages and Disadvantages, Application, UWB,\n      Zigbee, wireless local area networks: IEEE 802.11, network architecture,\n     medium access methods, WLAN standards, wireless metropolitan area\n      networks: Wimax\n5    GPS, wireless local loop, cordless phone, paging systems, RFID, Home RF,      08\n     NFC, Software Defined Radio, Wireless Sensor Networks, Security issues\n      and challenges in wireless networks\n      Total                                                         42 hrs.\n\n\n  References:\n\n       1. Theodore S. Rappaport, Wireless Communications: Principles and Practices,\n        Pearson\n       2.  William Stallings, Wireless Communication and Networks, Pearson\n       3.  Sanjay Kumar, Wireless Communication: the fundamental and advanced concepts,\n         River Publishers\n       4.  Andrea Goldsmith, “Wireless Communications”, Cambridge University Press\n       5.  Raj Pandya, Mobile and Personal Communication Systems and Services, IEEE Press\n\n  Suggested Theory distribution:\n\n  The suggested theory distribution as per        taxonomy is as per follows. This\n  distribution serves as guidelines for teachers and students to achieve effective teaching-                                        Bloom’s  learning process\n\n\n  Legends: R: Remembrance; U: Understanding; A: Application, N: Analyze and E: Evaluate\n  C: Create and above Levels (Revised Bloom’s Taxonomy)\n\n               Distribution of Theory for course delivery and evaluation\n\n Remember   Understand     Apply       Analyse      Evaluate       Create\n\n   40%       40%       10%       10%       0%       0%"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                     Faculty of Diploma studies\n                     Information and Communication Technology\n\n\nSuggested List of Experiments:\n    1. To perform various AT commands using GSM SIGMA Trainer Kit.\n    2. To Interface GSM module with micro-controller 8051 for message transmission\n      and reception to control any device.\n    3.  Write a MATLAB program to simulate hard and soft handoff.\n    4.  Write a MATLAB program to simulate multipath fading channels defined for\n      GSM, CDMA and WiMAX standards.\n    5.  Write a MATLAB program to parameterize and generate GSM uplink and\n      downlink frames.\n    6.  Write a MATLAB program to parameterize and generate GSM multi-frame\n       structure and simulate power control and propagation loss effects.\n    7.  Write a MATLAB program to plot spectrum of forward and reverse cdma2000\n      waveform.\n    8.  Write a MATLAB program to plot BER for various fading channels.\n    9.  Study full duplex Bluetooth communication using Simulink.\n   10. Write a MATLAB program to generate MAC frames for IEEE 802.15.4 standard\n       (Zigbee).\n   11. Write a MATLAB program to model communication between two NFC devices.\n\n\nReference Materials:\n\n  ●  https://nptel.ac.in/courses/117/102/117102062/\n  ●  https://nptel.ac.in/courses/106/106/106106167/\n  ●  https://www.coursera.org/learn/wireless-communications"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "1f335734079ffbab0e6aabb96c53f9229c04275fd8a5e3cb3532b7a0aa929cb0"
+    }
+  ],
+  "build_summary": {
+    "extracted": 9,
+    "manual_review": 2,
+    "ocr_review": 0,
+    "missing_pdf": 1,
+    "extraction_errors": 0
+  }
+}

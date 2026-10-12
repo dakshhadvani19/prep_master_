@@ -1,0 +1,2024 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 46,
+    "course_name": "Diploma Chemical Engineering",
+    "output_slug": "Chemical_Engineering"
+  },
+  "semester": 4,
+  "subject_count": 6,
+  "subjects": [
+    {
+      "subject_id": "46000938240401",
+      "subject_name": "CHEMICAL PROCESS SOFTWARE",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 4,
+      "subject_code": "09CH2404",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2404.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2404 - CHEMICAL PROCESS SOFTWARE (.pdf",
+      "expected_pdf_sha256": "825499f1c3c19d979514811d415b9a5583bf35f61706e30b248de67933698c58",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CHEMICAL PROCESS SOFTWARE",
+        "course_code": "09CH2404",
+        "semester_label": "4",
+        "credits": 2,
+        "prerequisite": "Basic knowledge of computers, Microsoft office, Chemical engineering operations likes distillation, absorption, extraction, absorption, filtration, etc"
+      },
+      "objectives": [
+        "To study the simulation techniques of chemical processes and to gain skills in using process simulators."
+      ],
+      "course_outcomes": [
+        "Draw the process flow chart in software",
+        "Simulate the various operations of chemical engineering",
+        "Control the process parameter and optimize an output of process"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of simple distillation",
+              "operation."
+            ],
+            "topics_text": "To study, working and operating practice of simple distillation operation.",
+            "topics": [
+              "To study, working and operating practice of simple distillation",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of stream mixing",
+              "operation."
+            ],
+            "topics_text": "To study, working and operating practice of stream mixing operation.",
+            "topics": [
+              "To study, working and operating practice of stream mixing",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of filtration operation."
+            ],
+            "topics_text": "To study, working and operating practice of filtration operation.",
+            "topics": [
+              "To study, working and operating practice of filtration operation."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of flow sheet unit",
+              "operation."
+            ],
+            "topics_text": "To study, working and operating practice of flow sheet unit operation.",
+            "topics": [
+              "To study, working and operating practice of flow sheet unit",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of absorption operation."
+            ],
+            "topics_text": "To study, working and operating practice of absorption operation.",
+            "topics": [
+              "To study, working and operating practice of absorption operation."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of azeotropic distillation",
+              "operation."
+            ],
+            "topics_text": "To study, working and operating practice of azeotropic distillation operation.",
+            "topics": [
+              "To study, working and operating practice of azeotropic distillation",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of stream splitting",
+              "operation."
+            ],
+            "topics_text": "To study, working and operating practice of stream splitting operation.",
+            "topics": [
+              "To study, working and operating practice of stream splitting",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of extractive distillation",
+              "operation."
+            ],
+            "topics_text": "To study, working and operating practice of extractive distillation operation.",
+            "topics": [
+              "To study, working and operating practice of extractive distillation",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of petroleum distillation",
+              "operation."
+            ],
+            "topics_text": "To study, working and operating practice of petroleum distillation operation.",
+            "topics": [
+              "To study, working and operating practice of petroleum distillation",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of liquid-liquid extraction",
+              "operation."
+            ],
+            "topics_text": "To study, working and operating practice of liquid-liquid extraction operation.",
+            "topics": [
+              "To study, working and operating practice of liquid-liquid extraction",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of simple membrane unit",
+              "operation."
+            ],
+            "topics_text": "To study, working and operating practice of simple membrane unit operation.",
+            "topics": [
+              "To study, working and operating practice of simple membrane unit",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of three phase separation",
+              "operation.."
+            ],
+            "topics_text": "To study, working and operating practice of three phase separation operation..",
+            "topics": [
+              "To study, working and operating practice of three phase separation",
+              "operation.."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study, working and operating practice of solid separation",
+              "operation."
+            ],
+            "topics_text": "To study, working and operating practice of solid separation operation.",
+            "topics": [
+              "To study, working and operating practice of solid separation",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 14",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study about PID controllers.",
+              "Total Hours 56"
+            ],
+            "topics_text": "To study about PID controllers. Total Hours 56",
+            "topics": [
+              "To study about PID controllers.",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Process Modeling, Simulation, and Control for Chemical Engineering, Process Modeling, Simulation, and Control for Chemical Engineering, Luyben W.L., McGraw-Hill, 1998",
+          "Process Plant Simulation, Process Plant Simulation, Babu, B.V., Oxford University Press, 2004",
+          "Process Modeling, Process Modeling, Denn, M. M., Longman Sc& Tech., 2007",
+          "Process Analysis and Simulation: Deterministic Systems, Process Analysis and Simulation: Deterministic Systems, Himmelblau, D.M and Bischoff, K.B., John Wiley, 1968 [PAGE 3] References:",
+          "Fundamentals and Modeling of Separation Processes: Absorption, Distillation, Evaporation and Extraction, Fundamentals and Modeling of Separation Processes: Absorption, Distillation, Evaporation and Extraction, Holland, C. D., Prentice-Hall, 1974"
+        ],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://onlinecourses.swayam2.ac.in/aic20_sp08/preview",
+          "https://onlinecourses.nptel.ac.in/noc21_ch44/preview"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6657,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         4\nCOURSE TITLE    CHEMICAL PROCESS SOFTWARE\nCOURSE CODE     09CH2404\nCOURSE CREDITS  2\n\nObjective:\n 1  To study the simulation techniques of chemical processes and to gain skills in using process\n     simulators.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Draw the process flow chart in software\n 2  Simulate the various operations of chemical engineering\n 3  Control the process parameter and optimize an output of process\n\n\nPre-requisite of course:Basic knowledge of computers, Microsoft office, Chemical engineering\noperations likes distillation, absorption, extraction, absorption, filtration, etc\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            4         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            4\n           To study, working and operating practice of simple distillation\n               operation.\n     2      Experiment 2                                            4\n           To study, working and operating practice of stream mixing\n               operation.\n     3      Experiment 3                                            4\n           To study, working and operating practice of filtration operation.\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Experiment 4                                            4\n           To study, working and operating practice of flow sheet unit\n               operation.\n     5      Experiment 5                                            4\n           To study, working and operating practice of absorption operation.\n     6      Experiment 6                                            4\n           To study, working and operating practice of azeotropic distillation\n               operation.\n     7      Experiment 7                                            4\n           To study, working and operating practice of stream splitting\n               operation.\n     8      Experiment 8                                            4\n           To study, working and operating practice of extractive distillation\n               operation.\n     9      Experiment 9                                            4\n           To study, working and operating practice of petroleum distillation\n               operation.\n     10     Experiment 10                                           4\n           To study, working and operating practice of liquid-liquid extraction\n               operation.\n     11     Experiment 11                                           4\n           To study, working and operating practice of simple membrane unit\n               operation.\n     12     Experiment 12                                           4\n           To study, working and operating practice of three phase separation\n               operation..\n     13     Experiment 13                                           4\n           To study, working and operating practice of solid separation\n               operation.\n     14     Experiment 14                                           4\n           To study about PID controllers.\n                               Total Hours                       56\n\n\nReferences:\n 1  Process Modeling, Simulation, and Control for Chemical Engineering, Process Modeling,\n     Simulation, and Control for Chemical Engineering, Luyben W.L., McGraw-Hill, 1998\n 2  Process Plant Simulation, Process Plant Simulation, Babu, B.V., Oxford University Press,\n    2004\n 3  Process Modeling, Process Modeling, Denn, M. M., Longman Sc& Tech., 2007\n 4  Process Analysis and Simulation: Deterministic Systems, Process Analysis and Simulation:\n     Deterministic Systems, Himmelblau, D.M and Bischoff, K.B., John Wiley, 1968\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 5  Fundamentals and Modeling of Separation Processes: Absorption, Distillation, Evaporation\n    and Extraction, Fundamentals and Modeling of Separation Processes: Absorption,\n      Distillation, Evaporation and Extraction, Holland, C. D., Prentice-Hall, 1974\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    40.00         40.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory.\n 3  Students will use supplementary resources such as online videos, NPTEL/SWAYAM\n     videos, e-courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://onlinecourses.swayam2.ac.in/aic20_sp08/preview\n 2  https://onlinecourses.nptel.ac.in/noc21_ch44/preview\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "825499f1c3c19d979514811d415b9a5583bf35f61706e30b248de67933698c58"
+    },
+    {
+      "subject_id": "46000938240501",
+      "subject_name": "GENERAL CHEMICAL TECHNOLOGY",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 4,
+      "subject_code": "09CH2405",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2405.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2405 - GENERAL CHEMICAL TECHNOLOGY (.pdf",
+      "expected_pdf_sha256": "cba6b69f7140da81e33a63473a6c580858edcd6c63bf3480d9551763656ded64",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "GENERAL CHEMICAL TECHNOLOGY",
+        "course_code": "09CH2405",
+        "semester_label": "4",
+        "credits": 3,
+        "prerequisite": "Basic concepts of units and dimensions, mass fraction mole fraction, and material balance."
+      },
+      "objectives": [
+        "To study about General Chemical Technology is useful in chemical engineering for the manufacturing of different chemical product."
+      ],
+      "course_outcomes": [
+        "Understand detailed flow diagram of different chemical process industries.",
+        "Understand basic for the production of different types acids, gasses, coal, polymers."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 2 2 0 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Tutorial 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Scope of chemical Industry, Classification of Chemical Industries."
+            ],
+            "topics_text": "Scope of chemical Industry, Classification of Chemical Industries.",
+            "topics": [
+              "Scope of chemical Industry, Classification of Chemical Industries."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Tutorial 2",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Types / Classification of acids, Physical and chemical properties of",
+              "sulphuric acid, Uses of sulphuric acid, Manufacture of sulphuric",
+              "acid by DCDA process, Uses and physical properties of HCL,",
+              "manufacturing process for HNO3, Manufacture of hydrochloric acid",
+              "by synthetic method."
+            ],
+            "topics_text": "Types / Classification of acids, Physical and chemical properties of sulphuric acid, Uses of sulphuric acid, Manufacture of sulphuric acid by DCDA process, Uses and physical properties of HCL, manufacturing process for HNO3, Manufacture of hydrochloric acid by synthetic method.",
+            "topics": [
+              "Types / Classification of acids, Physical and chemical properties of",
+              "sulphuric acid, Uses of sulphuric acid, Manufacture of sulphuric",
+              "acid by DCDA process, Uses and physical properties of HCL,",
+              "manufacturing process for HNO3, Manufacture of hydrochloric acid",
+              "by synthetic method."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Tutorial 3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Different process of production of soda ash, Manufacturing of soda",
+              "ash by Solvay process, Physical properties of soda ash, caustic soda",
+              "and chlorine, Production of caustic soda by electrolytic process,",
+              "Major engineering problems for manufacturing soda ash, caustic",
+              "soda and chlorine."
+            ],
+            "topics_text": "Different process of production of soda ash, Manufacturing of soda ash by Solvay process, Physical properties of soda ash, caustic soda and chlorine, Production of caustic soda by electrolytic process, Major engineering problems for manufacturing soda ash, caustic soda and chlorine.",
+            "topics": [
+              "Different process of production of soda ash, Manufacturing of soda",
+              "ash by Solvay process, Physical properties of soda ash, caustic soda",
+              "and chlorine, Production of caustic soda by electrolytic process,",
+              "Major engineering problems for manufacturing soda ash, caustic",
+              "soda and chlorine."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Tutorial 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Properties of cement, Types of cement, Manufacturing",
+              "process of Portland cement, Major Engineering problems of cement",
+              "industries, Physical properties of lime, Uses of lime, Manufacturing",
+              "process of lime by hydrated lime process, Major Engineering",
+              "problems of hydrated lime process."
+            ],
+            "topics_text": "Introduction, Properties of cement, Types of cement, Manufacturing process of Portland cement, Major Engineering problems of cement industries, Physical properties of lime, Uses of lime, Manufacturing process of lime by hydrated lime process, Major Engineering problems of hydrated lime process.",
+            "topics": [
+              "Introduction, Properties of cement, Types of cement, Manufacturing",
+              "process of Portland cement, Major Engineering problems of cement",
+              "industries, Physical properties of lime, Uses of lime, Manufacturing",
+              "process of lime by hydrated lime process, Major Engineering",
+              "problems of hydrated lime process."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Tutorial 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Classification of fuel, Method of production of fuel",
+              "gases, producer gas, water gas, coke oven gas, natural gas, ,",
+              "Industrial gases Major engineering problems in manufacturing of",
+              "different types of gasses."
+            ],
+            "topics_text": "Introduction, Classification of fuel, Method of production of fuel gases, producer gas, water gas, coke oven gas, natural gas, , Industrial gases Major engineering problems in manufacturing of different types of gasses.",
+            "topics": [
+              "Introduction, Classification of fuel, Method of production of fuel",
+              "gases, producer gas, water gas, coke oven gas, natural gas, ,",
+              "Industrial gases Major engineering problems in manufacturing of",
+              "different types of gasses."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Tutorial 6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Classification, application of dyes, Azo dyes,",
+              "Anthroquione dyes, Triamyl dyes, dispersed dyes, Miscellaneous",
+              "dyes: azine, thiazines, oxazines, thiazoles, nitro dyes. Various dye",
+              "intermediates and their manufacturing, manufacturing of H-acid,",
+              "Koch acid, Nitro benzene, Chrome blue black"
+            ],
+            "topics_text": "Introduction, Classification, application of dyes, Azo dyes, Anthroquione dyes, Triamyl dyes, dispersed dyes, Miscellaneous dyes: azine, thiazines, oxazines, thiazoles, nitro dyes. Various dye intermediates and their manufacturing, manufacturing of H-acid, Koch acid, Nitro benzene, Chrome blue black",
+            "topics": [
+              "Introduction, Classification, application of dyes, Azo dyes,",
+              "Anthroquione dyes, Triamyl dyes, dispersed dyes, Miscellaneous",
+              "dyes: azine, thiazines, oxazines, thiazoles, nitro dyes. Various dye",
+              "intermediates and their manufacturing, manufacturing of H-acid,",
+              "Koch acid, Nitro benzene, Chrome blue black"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Tutorial 7",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Coking of coal, Distillation of coal tar, Gasification of",
+              "coal, Hydrogenation of coal."
+            ],
+            "topics_text": "Introduction, Coking of coal, Distillation of coal tar, Gasification of coal, Hydrogenation of coal.",
+            "topics": [
+              "Introduction, Coking of coal, Distillation of coal tar, Gasification of",
+              "coal, Hydrogenation of coal."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Standardization of sulphuric acid solution."
+            ],
+            "topics_text": "Standardization of sulphuric acid solution.",
+            "topics": [
+              "Standardization of sulphuric acid solution."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Estimation of CaOH group"
+            ],
+            "topics_text": "Estimation of CaOH group",
+            "topics": [
+              "Estimation of CaOH group"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of. Hydrated lime"
+            ],
+            "topics_text": "Preparation of. Hydrated lime",
+            "topics": [
+              "Preparation of. Hydrated lime"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of phenyl azo-ß Naphthol from Aniline."
+            ],
+            "topics_text": "Preparation of phenyl azo-ß Naphthol from Aniline.",
+            "topics": [
+              "Preparation of phenyl azo-ß Naphthol from Aniline."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of Nitrobenzene from Benzene."
+            ],
+            "topics_text": "Preparation of Nitrobenzene from Benzene.",
+            "topics": [
+              "Preparation of Nitrobenzene from Benzene."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To prepare mordant Yellow dye."
+            ],
+            "topics_text": "To prepare mordant Yellow dye.",
+            "topics": [
+              "To prepare mordant Yellow dye."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of Fast green o dye."
+            ],
+            "topics_text": "Preparation of Fast green o dye.",
+            "topics": [
+              "Preparation of Fast green o dye."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Experiment 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of Disperse Dye."
+            ],
+            "topics_text": "Preparation of Disperse Dye.",
+            "topics": [
+              "Preparation of Disperse Dye."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Experiment 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of soap"
+            ],
+            "topics_text": "Preparation of soap",
+            "topics": [
+              "Preparation of soap"
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Experiment 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of detergent"
+            ],
+            "topics_text": "Preparation of detergent",
+            "topics": [
+              "Preparation of detergent"
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Experiment 11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Proximate analysis of coal."
+            ],
+            "topics_text": "Proximate analysis of coal.",
+            "topics": [
+              "Proximate analysis of coal."
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Experiment 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study about Ultimate analysis of coal."
+            ],
+            "topics_text": "To study about Ultimate analysis of coal.",
+            "topics": [
+              "To study about Ultimate analysis of coal."
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Experiment 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study about Cement manufacturing process."
+            ],
+            "topics_text": "To study about Cement manufacturing process.",
+            "topics": [
+              "To study about Cement manufacturing process."
+            ]
+          },
+          {
+            "unit_number": 21,
+            "title": "Experiment 14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study about Bomb Calorimeter.",
+              "Total Hours 56"
+            ],
+            "topics_text": "To study about Bomb Calorimeter. Total Hours 56",
+            "topics": [
+              "To study about Bomb Calorimeter.",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Chemical Technology , Chemical Technology , G.N. Panday, Nirali Publication, 2004",
+          "Industrial Chemicals , Industrial Chemicals , Faith, keyes and Clark, Hill Publication, 2011"
+        ],
+        "textbooks": [
+          "Outlines of Chemicals Technology, M. Gopala Rao, Mc Hill, 1990",
+          "Chemical Process Industry , Shreve and Austin, Mcgrow Hill, 1987 References:",
+          "Chemical Technology , Chemical Technology , G.N. Panday, Nirali Publication, 2004",
+          "Industrial Chemicals , Industrial Chemicals , Faith, keyes and Clark, Hill Publication, 2011"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://onlinecourses.nptel.ac.in/noc23_ch16/preview#:~:text=ABOUT%20THE %20COURSE%3A&text=Our%20goal%20is%20to%20help,macroscale%20(the %20process)%20domains."
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 8535,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         4\nCOURSE TITLE   GENERAL CHEMICAL TECHNOLOGY\nCOURSE CODE     09CH2405\nCOURSE CREDITS  3\n\nObjective:\n 1  To study about General Chemical Technology is useful in chemical engineering for the\n     manufacturing of different chemical product.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand detailed flow diagram of different chemical process industries.\n 2  Understand basic for the production of different types acids, gasses, coal, polymers.\n\n\nPre-requisite of course:Basic concepts of units and dimensions, mass fraction mole fraction,\nand material balance.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            2            2         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Tutorial 1                                               2\n            Scope of chemical Industry, Classification of Chemical Industries.\n     2       Tutorial 2                                               6\n            Types / Classification of acids, Physical and chemical properties of\n              sulphuric acid, Uses of sulphuric acid, Manufacture of sulphuric\n              acid by DCDA process, Uses and physical properties of HCL,\n             manufacturing process for HNO3, Manufacture of hydrochloric acid\n            by synthetic method.\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3       Tutorial 3                                               4\n               Different process of production of soda ash, Manufacturing of soda\n             ash by Solvay process, Physical properties of soda ash, caustic soda\n            and chlorine, Production of caustic soda by electrolytic process,\n            Major engineering problems for manufacturing soda ash, caustic\n             soda and chlorine.\n     4       Tutorial 4                                               4\n               Introduction, Properties of cement, Types of cement, Manufacturing\n              process of Portland cement, Major Engineering problems of cement\n                industries, Physical properties of lime, Uses of lime, Manufacturing\n              process of lime by hydrated lime process, Major Engineering\n             problems of hydrated lime process.\n     5       Tutorial 5                                               4\n               Introduction, Classification of fuel, Method of production of fuel\n               gases, producer gas, water gas, coke oven gas, natural gas, ,\n                Industrial gases Major engineering problems in manufacturing of\n                different types of gasses.\n     6       Tutorial 6                                               4\n               Introduction, Classification, application of dyes, Azo dyes,\n             Anthroquione dyes, Triamyl dyes, dispersed dyes, Miscellaneous\n              dyes: azine, thiazines, oxazines, thiazoles, nitro dyes. Various dye\n              intermediates and their manufacturing, manufacturing of H-acid,\n           Koch acid, Nitro benzene, Chrome blue black\n     7       Tutorial 7                                               4\n               Introduction, Coking of coal, Distillation of coal tar, Gasification of\n                coal, Hydrogenation of coal.\n     8      Experiment 1                                            2\n              Standardization of sulphuric acid solution.\n     9      Experiment 2                                            2\n              Estimation of CaOH group\n     10     Experiment 3                                            2\n              Preparation of. Hydrated lime\n     11     Experiment 4                                            2\n              Preparation of phenyl azo-ß Naphthol from Aniline.\n     12     Experiment 5                                            2\n              Preparation of Nitrobenzene from Benzene.\n     13     Experiment 6                                            2\n           To prepare mordant Yellow dye.\n     14     Experiment 7                                            2\n              Preparation of Fast green o dye.\n     15     Experiment 8                                            2\n              Preparation of Disperse Dye.\n     16     Experiment 9                                            2\n              Preparation of soap\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     17     Experiment 10                                           2\n              Preparation of detergent\n     18     Experiment 11                                           2\n             Proximate analysis of coal.\n     19     Experiment 12                                           2\n           To study about Ultimate analysis of coal.\n     20     Experiment 13                                           2\n           To study about Cement manufacturing process.\n     21     Experiment 14                                           2\n           To study about Bomb Calorimeter.\n                               Total Hours                       56\n\nTextbook :\n 1  Outlines of Chemicals Technology, M. Gopala Rao, Mc Hill, 1990\n 2  Chemical Process Industry , Shreve and Austin, Mcgrow Hill, 1987\n\nReferences:\n 1  Chemical Technology , Chemical Technology , G.N. Panday, Nirali Publication, 2004\n 2  Industrial Chemicals , Industrial Chemicals , Faith, keyes and Clark, Hill Publication, 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    40.00         40.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Supplementary Resources:\n 1  https://onlinecourses.nptel.ac.in/noc23_ch16/preview#:~:text=ABOUT%20THE\n    %20COURSE%3A&text=Our%20goal%20is%20to%20help,macroscale%20(the\n    %20process)%20domains.\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "cba6b69f7140da81e33a63473a6c580858edcd6c63bf3480d9551763656ded64"
+    },
+    {
+      "subject_id": "46009131040201",
+      "subject_name": "MATHEMATICS-IV",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 4,
+      "subject_code": "09MA0402",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA0402-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09MA0402 - MATHEMATICS-IV (.pdf",
+      "expected_pdf_sha256": "f4cf15bf176b975c878f33d76b9b3dac453388ba0ff66613e762277553ecf5ca",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MATHEMATICS-IV",
+        "course_code": "09MA0402",
+        "semester_label": "4",
+        "credits": 4,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "Students are intended to understand the basic engineering concepts of Algebra,Geometry such as Determinant and Matrices, co-ordinate Geometry, Differential Equation(First order and first degree), Logarithm, Complex Number and vector. The knowledge of Algebra,Geometrycan help to understand and solve problems related to Engineering fields. The course will help students to understand Engineering principles and concepts. Main objective of the course is to apply concepts of Determinant and Matrices, co-ordinate Geometry, Differential Equation (First order and first degree), Logarithm, Complex Number and Vector to solve given engineering problems."
+      ],
+      "course_outcomes": [
+        "Learn complex numbers and their properties and able to solve the quadratic equations with complex roots.",
+        "Find the distance between two points and mid-point of two points.",
+        "Understand the relation between parallel and perpendicular lines, find the equations of different kind of lines.",
+        "Learn about the centre point and radius of the circle and find its equation from them.",
+        "Find the integration of different kind of functions by different methods.",
+        "Classify the degree and order of differential equation and solve the differential equation with first order and first degree."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Complex Number",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Concept, Geometric meaning of complex number , Modulus,",
+              "Amplitude, Square root of complex numbers, Polar form complex",
+              "numbers"
+            ],
+            "topics_text": "Concept, Geometric meaning of complex number , Modulus, Amplitude, Square root of complex numbers, Polar form complex numbers",
+            "topics": [
+              "Concept, Geometric meaning of complex number , Modulus,",
+              "Amplitude, Square root of complex numbers, Polar form complex",
+              "numbers"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Co-ordinate Geometry",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Point : Distance formula, Mid-point formula, Straight Line : Forms",
+              "of equations of straight lines : Slope-Point form, Two points form,",
+              "Intercept form, Parallel and perpendicular lines, Circle : Equation of",
+              "a circle, Centre and radius form"
+            ],
+            "topics_text": "Point : Distance formula, Mid-point formula, Straight Line : Forms of equations of straight lines : Slope-Point form, Two points form, Intercept form, Parallel and perpendicular lines, Circle : Equation of a circle, Centre and radius form",
+            "topics": [
+              "Point : Distance formula, Mid-point formula, Straight Line : Forms",
+              "of equations of straight lines : Slope-Point form, Two points form,",
+              "Intercept form, Parallel and perpendicular lines, Circle : Equation of",
+              "a circle, Centre and radius form"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Integration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Definition and concept, Some particular integrals, Integration by",
+              "substitution method, Integration by parts, Integration by partial",
+              "fraction (for linear factors), Integration of some special types of",
+              "functions"
+            ],
+            "topics_text": "Definition and concept, Some particular integrals, Integration by substitution method, Integration by parts, Integration by partial fraction (for linear factors), Integration of some special types of functions",
+            "topics": [
+              "Definition and concept, Some particular integrals, Integration by",
+              "substitution method, Integration by parts, Integration by partial",
+              "fraction (for linear factors), Integration of some special types of",
+              "functions"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differential Equations (First Order First degree)",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition, Order and degree of a differential equation, Solution of",
+              "first order differential equation by Separable, Homogeneous and",
+              "Integrating factor methods",
+              "Total Hours 28"
+            ],
+            "topics_text": "Definition, Order and degree of a differential equation, Solution of first order differential equation by Separable, Homogeneous and Integrating factor methods Total Hours 28",
+            "topics": [
+              "Definition, Order and degree of a differential equation, Solution of",
+              "first order differential equation by Separable, Homogeneous and",
+              "Integrating factor methods",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Complex Number",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Concept, Modulus, Amplitude, Square root of complex numbers,",
+              "Polar form of complex numbers"
+            ],
+            "topics_text": "Concept, Modulus, Amplitude, Square root of complex numbers, Polar form of complex numbers",
+            "topics": [
+              "Concept, Modulus, Amplitude, Square root of complex numbers,",
+              "Polar form of complex numbers"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Co-ordinate Geometry",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Point : Distance formula, Mid-point formula, Straight Line : Forms",
+              "of equations of straight lines : Slope-Point form, Two points form,",
+              "Intercept form, Parallel and perpendicular lines, Circle : Equation of",
+              "a circle, Centre and radius form"
+            ],
+            "topics_text": "Point : Distance formula, Mid-point formula, Straight Line : Forms of equations of straight lines : Slope-Point form, Two points form, Intercept form, Parallel and perpendicular lines, Circle : Equation of a circle, Centre and radius form",
+            "topics": [
+              "Point : Distance formula, Mid-point formula, Straight Line : Forms",
+              "of equations of straight lines : Slope-Point form, Two points form,",
+              "Intercept form, Parallel and perpendicular lines, Circle : Equation of",
+              "a circle, Centre and radius form"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Integration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Some particular integrals, Integration by substitution method ,",
+              "Integration by parts, Integration by partial fraction and integration",
+              "of some special types of functions"
+            ],
+            "topics_text": "Some particular integrals, Integration by substitution method , Integration by parts, Integration by partial fraction and integration of some special types of functions",
+            "topics": [
+              "Some particular integrals, Integration by substitution method ,",
+              "Integration by parts, Integration by partial fraction and integration",
+              "of some special types of functions"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differential Equations (First Order First degree)",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition, Order and degree of a differential equation, Solution of",
+              "first order differential equation by Separable, Homogeneous and",
+              "Integrating factor methods",
+              "Total Hours 28"
+            ],
+            "topics_text": "Definition, Order and degree of a differential equation, Solution of first order differential equation by Separable, Homogeneous and Integrating factor methods Total Hours 28",
+            "topics": [
+              "Definition, Order and degree of a differential equation, Solution of",
+              "first order differential equation by Separable, Homogeneous and",
+              "Integrating factor methods",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "B.S. Grewal, Higher Engineering Mathematics, B.S. Grewal, Higher Engineering Mathematics, -, Khanna Publishers, New Delhi, 40th Edition, 2007",
+          "NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, -, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics Part=I , -, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics Part=II, -, NCERT, 2022"
+        ],
+        "textbooks": [
+          "NCERT Class-XI science Mathematics, -, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=I, -, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=II, -, NCERT, 2022",
+          "B.S. Grewal, Higher Engineering Mathematics,, -, Khanna Publishers, New Delhi, 40th Edition, 2007"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://ncert.nic.in/textbook.php?kemh1=0-16",
+          "https://ncert.nic.in/textbook.php?lemh1=0-6",
+          "https://ncert.nic.in/textbook.php?lemh2=0-7"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7394,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         4\nCOURSE TITLE    MATHEMATICS-IV\nCOURSE CODE     09MA0402\nCOURSE CREDITS  4\n\nObjective:\n 1  Students are intended to understand the basic engineering concepts of Algebra,Geometry\n    such as Determinant and Matrices, co-ordinate Geometry, Differential Equation(First order\n    and first degree), Logarithm, Complex Number and vector. The knowledge of\n    Algebra,Geometrycan help to understand and solve problems related to Engineering fields.\n    The course will help students to understand Engineering principles and concepts. Main\n     objective of the course is to apply concepts of Determinant and Matrices, co-ordinate\n    Geometry, Differential Equation (First order and first degree), Logarithm, Complex\n    Number and Vector to solve given engineering problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Learn complex numbers and their properties and able to solve the quadratic equations with\n    complex roots.\n 2  Find the distance between two points and mid-point of two points.\n 3  Understand the relation between parallel and perpendicular lines, find the equations of\n     different kind of lines.\n 4  Learn about the centre point and radius of the circle and find its equation from them.\n 5  Find the integration of different kind of functions by different methods.\n 6  Classify the degree and order of differential equation and solve the differential equation\n     with first order and first degree.\n\n\nPre-requisite of course:NA.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Complex Number                                        6\n             Concept, Geometric meaning of complex number , Modulus,\n             Amplitude, Square root of complex numbers, Polar form complex\n            numbers\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Co-ordinate Geometry                                    8\n              Point : Distance formula, Mid-point formula, Straight Line : Forms\n              of equations of straight lines : Slope-Point form, Two points form,\n               Intercept form, Parallel and perpendicular lines, Circle : Equation of\n             a circle, Centre and radius form\n     3       Integration                                              8\n               Definition and concept, Some particular integrals, Integration by\n               substitution method, Integration by parts, Integration by partial\n               fraction (for linear factors), Integration of some special types of\n              functions\n     4       Differential Equations (First Order First degree)              6\n               Definition, Order and degree of a differential equation, Solution of\n                   first order differential equation by Separable, Homogeneous and\n               Integrating factor methods\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Complex Number                                        6\n             Concept, Modulus, Amplitude, Square root of complex numbers,\n              Polar form of complex numbers\n     2      Co-ordinate Geometry                                    8\n              Point : Distance formula, Mid-point formula, Straight Line : Forms\n              of equations of straight lines : Slope-Point form, Two points form,\n               Intercept form, Parallel and perpendicular lines, Circle : Equation of\n             a circle, Centre and radius form\n     3       Integration                                              8\n          Some particular integrals, Integration by substitution method ,\n               Integration by parts, Integration by partial fraction and integration\n              of some special types of functions\n     4       Differential Equations (First Order First degree)              6\n               Definition, Order and degree of a differential equation, Solution of\n                   first order differential equation by Separable, Homogeneous and\n               Integrating factor methods\n                               Total Hours                       28\n\nTextbook :\n 1 NCERT Class-XI science Mathematics, -, NCERT, 2022\n 2 NCERT Class-XII science Mathematics Part=I, -, NCERT, 2022\n 3 NCERT Class-XII science Mathematics Part=II, -, NCERT, 2022\n 4  B.S. Grewal, Higher Engineering Mathematics,, -, Khanna Publishers, New Delhi, 40th\n     Edition, 2007\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 1  B.S. Grewal, Higher Engineering Mathematics, B.S. Grewal, Higher Engineering\n    Mathematics, -, Khanna Publishers, New Delhi, 40th Edition, 2007\n 2 NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, -, NCERT,\n    2022\n 3 NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics\n     Part=I , -, NCERT, 2022\n 4 NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics\n     Part=II, -, NCERT, 2022\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         30.00         30.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms\n\nSupplementary Resources:\n 1  https://ncert.nic.in/textbook.php?kemh1=0-16\n 2  https://ncert.nic.in/textbook.php?lemh1=0-6\n 3  https://ncert.nic.in/textbook.php?lemh2=0-7\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "f4cf15bf176b975c878f33d76b9b3dac453388ba0ff66613e762277553ecf5ca"
+    },
+    {
+      "subject_id": "46000938240301",
+      "subject_name": "PLANT UTILIZATION AND INSTRUMENTATION",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 4,
+      "subject_code": "09CH2403",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2403.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2403 - PLANT UTILIZATION AND INSTRUMENTATION (.pdf",
+      "expected_pdf_sha256": "80a1e64bc1a6d384cf2d20c05df3c6b706f00433d255b3a2c0b4ce1b7633a9da",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PLANT UTILIZATION AND INSTRUMENTATION",
+        "course_code": "09CH2403",
+        "semester_label": "4",
+        "credits": 4,
+        "prerequisite": "Std. X Chemistry, physics, Mathematics"
+      },
+      "objectives": [
+        "To learn to Operate different utility plants and various types of instruments."
+      ],
+      "course_outcomes": [
+        "Use various methods for water softening and purification",
+        "Operate different types of steam generators",
+        "Operate compressors, blowers for handling air and inert gases.",
+        "Use Refrigeration for Various applications.",
+        "Measure temperature, pressure, flow, level and viscosity.",
+        "Operate various control valves and control systems"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic Utility",
+            "contact_hours": 4,
+            "topic_lines": [
+              "List and use of various utilities in chemical plant, Sources of water,",
+              "Types of Water, Hard & Soft water, Boiler Feed water and",
+              "demineralized water. Methods of water softening processes (i) Lime",
+              "soda process (Hot & Cold), (ii) Zeolite process, (iii) Ion exchange",
+              "(iv) Filtration (v)Sterilization"
+            ],
+            "topics_text": "List and use of various utilities in chemical plant, Sources of water, Types of Water, Hard & Soft water, Boiler Feed water and demineralized water. Methods of water softening processes (i) Lime soda process (Hot & Cold), (ii) Zeolite process, (iii) Ion exchange (iv) Filtration (v)Sterilization",
+            "topics": [
+              "List and use of various utilities in chemical plant, Sources of water,",
+              "Types of Water, Hard & Soft water, Boiler Feed water and",
+              "demineralized water. Methods of water softening processes (i) Lime",
+              "soda process (Hot & Cold), (ii) Zeolite process, (iii) Ion exchange",
+              "(iv) Filtration (v)Sterilization"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Steam, Air & Inert Gases",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Utilities: Use of Steam, Air & Inert Gases as utilities, Types of Air",
+              "compressors Reciprocating Air compressors (i) Multistage",
+              "compressors (ii) Rotary compressors"
+            ],
+            "topics_text": "Utilities: Use of Steam, Air & Inert Gases as utilities, Types of Air compressors Reciprocating Air compressors (i) Multistage compressors (ii) Rotary compressors",
+            "topics": [
+              "Utilities: Use of Steam, Air & Inert Gases as utilities, Types of Air",
+              "compressors Reciprocating Air compressors (i) Multistage",
+              "compressors (ii) Rotary compressors"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Refrigeration",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Concept of refrigeration, Methods of Refrigeration: (i) Ice",
+              "Refrigeration, (ii) Evaporative Refrigeration, (iii) Vapor",
+              "Refrigeration System. COP and TOR of refrigeration. Types of",
+              "Primary Refrigerants: Ammonia, Halo Carbons (Freon of Different",
+              "type), HFC (Hydro Fluorocarbon). Types of secondary Refrigerants:",
+              "Water, Brine. Selection of Refrigerants."
+            ],
+            "topics_text": "Concept of refrigeration, Methods of Refrigeration: (i) Ice Refrigeration, (ii) Evaporative Refrigeration, (iii) Vapor Refrigeration System. COP and TOR of refrigeration. Types of Primary Refrigerants: Ammonia, Halo Carbons (Freon of Different type), HFC (Hydro Fluorocarbon). Types of secondary Refrigerants: Water, Brine. Selection of Refrigerants.",
+            "topics": [
+              "Concept of refrigeration, Methods of Refrigeration: (i) Ice",
+              "Refrigeration, (ii) Evaporative Refrigeration, (iii) Vapor",
+              "Refrigeration System. COP and TOR of refrigeration. Types of",
+              "Primary Refrigerants: Ammonia, Halo Carbons (Freon of Different",
+              "type), HFC (Hydro Fluorocarbon). Types of secondary Refrigerants:",
+              "Water, Brine. Selection of Refrigerants."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Basics of Instrumentation",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Importance of instrumentation in chemical plant. Classification of",
+              "instruments, Basic elements of instruments, Static and Dynamic",
+              "Characteristics of instruments, First order system and second order",
+              "system ."
+            ],
+            "topics_text": "Importance of instrumentation in chemical plant. Classification of instruments, Basic elements of instruments, Static and Dynamic Characteristics of instruments, First order system and second order system .",
+            "topics": [
+              "Importance of instrumentation in chemical plant. Classification of",
+              "instruments, Basic elements of instruments, Static and Dynamic",
+              "Characteristics of instruments, First order system and second order",
+              "system ."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Measuring Devices",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Different Temperature scale, Principle, Construction & Working of:",
+              "Mercury in glass thermometer, Bi-metallic thermometer, pressure",
+              "spring thermometer, resistance thermometer, Principles of",
+              "thermoelectricity: See-back effect, Peltier effect and Thomson",
+              "effect. Pressure gauges: diaphragm, Bourdon tube gauge, Dead",
+              "weight Gauge, Strain gauge. Classify: Liquid level measuring",
+              "devices; Direct level measuring devices : Probe and tape, Sight",
+              "glass, Floats; Indirect level measuring devices: Air trap box method,",
+              "Diaphragm box method, Bellow system, Differential pressure",
+              "manometer; Viscosity measurement: Capillary tube method,",
+              "Rotating cylinder method, Torsion viscometer; measurement of",
+              "Specific gravity by hydrometer, Humidity by hygrometer, pH by pH",
+              "meter."
+            ],
+            "topics_text": "Different Temperature scale, Principle, Construction & Working of: Mercury in glass thermometer, Bi-metallic thermometer, pressure spring thermometer, resistance thermometer, Principles of thermoelectricity: See-back effect, Peltier effect and Thomson effect. Pressure gauges: diaphragm, Bourdon tube gauge, Dead weight Gauge, Strain gauge. Classify: Liquid level measuring devices; Direct level measuring devices : Probe and tape, Sight glass, Floats; Indirect level measuring devices: Air trap box method, Diaphragm box method, Bellow system, Differential pressure manometer; Viscosity measurement: Capillary tube method, Rotating cylinder method, Torsion viscometer; measurement of Specific gravity by hydrometer, Humidity by hygrometer, pH by pH meter.",
+            "topics": [
+              "Different Temperature scale, Principle, Construction & Working of:",
+              "Mercury in glass thermometer, Bi-metallic thermometer, pressure",
+              "spring thermometer, resistance thermometer, Principles of",
+              "thermoelectricity: See-back effect, Peltier effect and Thomson",
+              "effect. Pressure gauges: diaphragm, Bourdon tube gauge, Dead",
+              "weight Gauge, Strain gauge. Classify: Liquid level measuring",
+              "devices",
+              "Direct level measuring devices : Probe and tape, Sight",
+              "glass, Floats",
+              "Indirect level measuring devices: Air trap box method,",
+              "Diaphragm box method, Bellow system, Differential pressure",
+              "manometer",
+              "Viscosity measurement: Capillary tube method,",
+              "Rotating cylinder method, Torsion viscometer",
+              "measurement of",
+              "Specific gravity by hydrometer, Humidity by hygrometer, pH by pH",
+              "meter."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Control Valves, Control Loops & Control System",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Function of relays and interlocks, Control loops: Temperature",
+              "control, Pressure control, Flow control, Level control. Process",
+              "control modes : P , P+I , P+I+D, ON ±OFF; uses of PLC and DCS",
+              "System uses of PLC and DCS System",
+              "Total Hours 28"
+            ],
+            "topics_text": "Function of relays and interlocks, Control loops: Temperature control, Pressure control, Flow control, Level control. Process control modes : P , P+I , P+I+D, ON ±OFF; uses of PLC and DCS System uses of PLC and DCS System Total Hours 28",
+            "topics": [
+              "Function of relays and interlocks, Control loops: Temperature",
+              "control, Pressure control, Flow control, Level control. Process",
+              "control modes : P , P+I , P+I+D, ON ±OFF",
+              "uses of PLC and DCS",
+              "System uses of PLC and DCS System",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Operate and test the working of air compressor"
+            ],
+            "topics_text": "Operate and test the working of air compressor",
+            "topics": [
+              "Operate and test the working of air compressor"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Demonstrate different refrigeration cycles"
+            ],
+            "topics_text": "Demonstrate different refrigeration cycles",
+            "topics": [
+              "Demonstrate different refrigeration cycles"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Treatment by lime soda process"
+            ],
+            "topics_text": "Treatment by lime soda process",
+            "topics": [
+              "Treatment by lime soda process"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study about Temperature Pyrometer"
+            ],
+            "topics_text": "Study about Temperature Pyrometer",
+            "topics": [
+              "Study about Temperature Pyrometer"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Measure Temperature by thermometer and thermocouple"
+            ],
+            "topics_text": "Measure Temperature by thermometer and thermocouple",
+            "topics": [
+              "Measure Temperature by thermometer and thermocouple"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Measure Temperature by Bi-metallic thermometer"
+            ],
+            "topics_text": "Measure Temperature by Bi-metallic thermometer",
+            "topics": [
+              "Measure Temperature by Bi-metallic thermometer"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study about Bourdon tube gauge"
+            ],
+            "topics_text": "Study about Bourdon tube gauge",
+            "topics": [
+              "Study about Bourdon tube gauge"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Measure viscosity by capillary tube method"
+            ],
+            "topics_text": "Measure viscosity by capillary tube method",
+            "topics": [
+              "Measure viscosity by capillary tube method"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Measure specific gravity by Hydrometer"
+            ],
+            "topics_text": "Measure specific gravity by Hydrometer",
+            "topics": [
+              "Measure specific gravity by Hydrometer"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Measure humidity by Hair hygrometer"
+            ],
+            "topics_text": "Measure humidity by Hair hygrometer",
+            "topics": [
+              "Measure humidity by Hair hygrometer"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Measure pH by pH meter"
+            ],
+            "topics_text": "Measure pH by pH meter",
+            "topics": [
+              "Measure pH by pH meter"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Prepare a chart of components of DCS system"
+            ],
+            "topics_text": "Prepare a chart of components of DCS system",
+            "topics": [
+              "Prepare a chart of components of DCS system"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Demonstrate working of control valves and actuators using chart"
+            ],
+            "topics_text": "Demonstrate working of control valves and actuators using chart",
+            "topics": [
+              "Demonstrate working of control valves and actuators using chart"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 14",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study about Rotary Compressor",
+              "Total Hours 56"
+            ],
+            "topics_text": "Study about Rotary Compressor Total Hours 56",
+            "topics": [
+              "Study about Rotary Compressor",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Industrial Instrumentation & Control , Industrial Instrumentation & Control , S. K. Singh 3rd edition , Tata-McGrawHil publications, 1987",
+          "Process Instrumentation and Control , Process Instrumentation and Control , A P Kulkarni , Nirali Prakashan, 2011",
+          "Unit operation of chemical Engineering, Unit operation of chemical Engineering, McCabe, Warren L., Julian C. Smith, McGraw Hill Publication, 2004",
+          "Plant utilities, Plant utilities, D. B. Dhone, Nirali Prakashan, 2012",
+          "Process System Analysis & Control, Process System Analysis & Control, Donald R. Coughnour, McGraw Hill Publication, 1991"
+        ],
+        "textbooks": [
+          "Industrial instrumentation, Donald P. Eckman, JohnWilley and Sons publications, 2004 References:",
+          "Industrial Instrumentation & Control , Industrial Instrumentation & Control , S. K. Singh 3rd edition , Tata-McGrawHil publications, 1987",
+          "Process Instrumentation and Control , Process Instrumentation and Control , A P Kulkarni , Nirali Prakashan, 2011",
+          "Unit operation of chemical Engineering, Unit operation of chemical Engineering, McCabe, Warren L., Julian C. Smith, McGraw Hill Publication, 2004",
+          "Plant utilities, Plant utilities, D. B. Dhone, Nirali Prakashan, 2012",
+          "Process System Analysis & Control, Process System Analysis & Control, Donald R. Coughnour, McGraw Hill Publication, 1991"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://onlinecourses.nptel.ac.in/noc21_ch52/preview"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9492,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         4\nCOURSE TITLE    PLANT UTILIZATION AND INSTRUMENTATION\nCOURSE CODE     09CH2403\nCOURSE CREDITS  4\n\nObjective:\n 1  To learn to Operate different utility plants and various types of instruments.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Use various methods for water softening and purification\n 2  Operate different types of steam generators\n 3  Operate compressors, blowers for handling air and inert gases.\n 4  Use Refrigeration for Various applications.\n 5  Measure temperature, pressure, flow, level and viscosity.\n 6  Operate various control valves and control systems\n\n\nPre-requisite of course:Std. X Chemistry, physics, Mathematics\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Basic Utility                                             4\n               List and use of various utilities in chemical plant, Sources of water,\n            Types of Water, Hard & Soft water, Boiler Feed water and\n              demineralized water. Methods of water softening processes (i) Lime\n             soda process (Hot & Cold), (ii) Zeolite process, (iii) Ion exchange\n                 (iv) Filtration (v)Sterilization\n     2      Steam, Air & Inert Gases                                  4\n                 Utilities: Use of Steam, Air & Inert Gases as utilities, Types of Air\n             compressors Reciprocating Air compressors (i) Multistage\n             compressors (ii) Rotary compressors\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3       Refrigeration                                            4\n             Concept of refrigeration, Methods of Refrigeration: (i) Ice\n               Refrigeration, (ii) Evaporative Refrigeration, (iii) Vapor\n               Refrigeration System. COP and TOR of refrigeration. Types of\n             Primary Refrigerants: Ammonia, Halo Carbons (Freon of Different\n                type), HFC (Hydro Fluorocarbon). Types of secondary Refrigerants:\n             Water, Brine. Selection of Refrigerants.\n     4       Basics of Instrumentation                                  2\n             Importance of instrumentation in chemical plant. Classification of\n               instruments, Basic elements of instruments, Static and Dynamic\n               Characteristics of instruments, First order system and second order\n             system .\n     5      Measuring Devices                                       8\n               Different Temperature scale, Principle, Construction & Working of:\n            Mercury in glass thermometer, Bi-metallic thermometer, pressure\n              spring thermometer, resistance thermometer, Principles of\n               thermoelectricity: See-back effect, Peltier effect and Thomson\n                 effect. Pressure gauges: diaphragm, Bourdon tube gauge, Dead\n             weight Gauge, Strain gauge. Classify: Liquid level measuring\n               devices; Direct level measuring devices : Probe and tape, Sight\n                glass, Floats; Indirect level measuring devices: Air trap box method,\n            Diaphragm box method, Bellow system, Differential pressure\n             manometer; Viscosity measurement: Capillary tube method,\n              Rotating cylinder method, Torsion viscometer; measurement of\n               Specific gravity by hydrometer, Humidity by hygrometer, pH by pH\n              meter.\n     6      Control Valves, Control Loops & Control System             6\n             Function of relays and interlocks, Control loops: Temperature\n                control, Pressure control, Flow control, Level control. Process\n               control modes : P , P+I , P+I+D, ON ±OFF; uses of PLC and DCS\n            System uses of PLC and DCS System\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            4\n             Operate and test the working of air compressor\n     2      Experiment 2                                            4\n             Demonstrate different refrigeration cycles\n     3      Experiment 3                                            4\n             Treatment by lime soda process\n     4      Experiment 4                                            4\n             Study about Temperature Pyrometer\n     5      Experiment 5                                            4\n            Measure Temperature by thermometer and thermocouple\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6      Experiment 6                                            4\n            Measure Temperature by Bi-metallic thermometer\n     7      Experiment 7                                            4\n             Study about Bourdon tube gauge\n     8      Experiment 8                                            4\n            Measure viscosity by capillary tube method\n     9      Experiment 9                                            4\n            Measure specific gravity by Hydrometer\n     10     Experiment 10                                           4\n            Measure humidity by Hair hygrometer\n     11     Experiment 11                                           4\n            Measure pH by pH meter\n     12     Experiment 12                                           4\n              Prepare a chart of components of DCS system\n     13     Experiment 13                                           4\n             Demonstrate working of control valves and actuators using chart\n     14     Experiment 14                                           4\n             Study about Rotary Compressor\n                               Total Hours                       56\n\nTextbook :\n 1  Industrial instrumentation, Donald P. Eckman, JohnWilley and Sons publications, 2004\n\nReferences:\n 1  Industrial Instrumentation & Control , Industrial Instrumentation & Control , S. K. Singh\n     3rd edition , Tata-McGrawHil publications, 1987\n 2  Process Instrumentation and Control , Process Instrumentation and Control , A P Kulkarni ,\n     Nirali Prakashan, 2011\n 3  Unit operation of chemical Engineering, Unit operation of chemical Engineering, McCabe,\n    Warren L., Julian C. Smith, McGraw Hill Publication, 2004\n 4  Plant utilities, Plant utilities, D. B. Dhone, Nirali Prakashan, 2012\n 5  Process System Analysis & Control, Process System Analysis & Control, Donald R.\n    Coughnour, McGraw Hill Publication, 1991\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    40.00         40.00         10.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://onlinecourses.nptel.ac.in/noc21_ch52/preview\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "80a1e64bc1a6d384cf2d20c05df3c6b706f00433d255b3a2c0b4ce1b7633a9da"
+    },
+    {
+      "subject_id": "46000938240201",
+      "subject_name": "PROCESS HEAT TRANSFER",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 4,
+      "subject_code": "09CH2402",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2402.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2402 - PROCESS HEAT TRANSFER (.pdf",
+      "expected_pdf_sha256": "098eb3ddeaf3a6226ae3ad12735eb3f370340c70eaf1831c21520ecba7bbe309",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PROCESS HEAT TRANSFER",
+        "course_code": "09CH2402",
+        "semester_label": "4",
+        "credits": 4,
+        "prerequisite": "Basic knowledge of Fluid Flow, Industrial Stoichiometry"
+      },
+      "objectives": [
+        "To learn to Supervise operation and maintenance of various heat transfer equipments."
+      ],
+      "course_outcomes": [
+        "Classify Modes of heat transfer",
+        "Derive equations of steady state heat transfer through wall, cylinder and sphere",
+        "Explain shell and tube heat exchangers",
+        "Explain heat transfer with phase change",
+        "Calculate radiation based on radiation laws"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Heat Transfer",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Definition of Heat Transfer and its importance in process industries,",
+              "Classification of modes of heat transfer, Differentiation of steady",
+              "and unsteady state of heat transfer."
+            ],
+            "topics_text": "Definition of Heat Transfer and its importance in process industries, Classification of modes of heat transfer, Differentiation of steady and unsteady state of heat transfer.",
+            "topics": [
+              "Definition of Heat Transfer and its importance in process industries,",
+              "Classification of modes of heat transfer, Differentiation of steady",
+              "and unsteady state of heat transfer."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Heat Transfer by Conduction.",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Fourier¶s law of heat conduction with Concepts of (a) Heat transfer",
+              "rate (b) Heat flux (c) Temperature gradient, Thermal conductivity.",
+              "Steady state (S.S.) heat conduction through composite wall, S.S.",
+              "heat conduction through composite cylinder up to three layers, S.S.",
+              "heat conduction through composite sphere up to three layers, Simple",
+              "problems by direct use formula. Thermal Conductivity of solids,",
+              "liquids and gases."
+            ],
+            "topics_text": "Fourier¶s law of heat conduction with Concepts of (a) Heat transfer rate (b) Heat flux (c) Temperature gradient, Thermal conductivity. Steady state (S.S.) heat conduction through composite wall, S.S. heat conduction through composite cylinder up to three layers, S.S. heat conduction through composite sphere up to three layers, Simple problems by direct use formula. Thermal Conductivity of solids, liquids and gases.",
+            "topics": [
+              "Fourier¶s law of heat conduction with Concepts of (a) Heat transfer",
+              "rate (b) Heat flux (c) Temperature gradient, Thermal conductivity.",
+              "Steady state (S.S.) heat conduction through composite wall, S.S.",
+              "heat conduction through composite cylinder up to three layers, S.S.",
+              "heat conduction through composite sphere up to three layers, Simple",
+              "problems by direct use formula. Thermal Conductivity of solids,",
+              "liquids and gases."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Heat Transfer by Convection.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Types of Convection, Free convection, Force convection. Newton¶s",
+              "Law of convective heat transfer. Individual and Overall heat transfer",
+              "coefficient. Simple Problems of Convection Simple Problems of",
+              "Convection"
+            ],
+            "topics_text": "Types of Convection, Free convection, Force convection. Newton¶s Law of convective heat transfer. Individual and Overall heat transfer coefficient. Simple Problems of Convection Simple Problems of Convection",
+            "topics": [
+              "Types of Convection, Free convection, Force convection. Newton¶s",
+              "Law of convective heat transfer. Individual and Overall heat transfer",
+              "coefficient. Simple Problems of Convection Simple Problems of",
+              "Convection"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Heat exchangers",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Types of heat exchanger, Double pipe heat exchanger (a) Counter",
+              "current (b) Co-current, Shell and tube heat exchanger: (a) 1-1 Pass",
+              "(b) 1-2 Pass (c) 2-4 Pass, Plate type heat exchanger, Finned type",
+              "(extended surface) heat exchanger, Heat transfer in agitated vessels,",
+              "L.M.T.D."
+            ],
+            "topics_text": "Types of heat exchanger, Double pipe heat exchanger (a) Counter current (b) Co-current, Shell and tube heat exchanger: (a) 1-1 Pass (b) 1-2 Pass (c) 2-4 Pass, Plate type heat exchanger, Finned type (extended surface) heat exchanger, Heat transfer in agitated vessels, L.M.T.D.",
+            "topics": [
+              "Types of heat exchanger, Double pipe heat exchanger (a) Counter",
+              "current (b) Co-current, Shell and tube heat exchanger: (a) 1-1 Pass",
+              "(b) 1-2 Pass (c) 2-4 Pass, Plate type heat exchanger, Finned type",
+              "(extended surface) heat exchanger, Heat transfer in agitated vessels,",
+              "L.M.T.D."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Heat Transfer with Phase Change.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Heat transfer with phase change, Significance of dimensionless",
+              "group Prandtl No., Reynold No., Grashoff No., Nusselt No.,",
+              "Phenomena of Boiling Pool and Nucleate boiling), Phenomena of",
+              "Condensation Drop wise and film wise Condensation and",
+              "Commonly used Condensers."
+            ],
+            "topics_text": "Heat transfer with phase change, Significance of dimensionless group Prandtl No., Reynold No., Grashoff No., Nusselt No., Phenomena of Boiling Pool and Nucleate boiling), Phenomena of Condensation Drop wise and film wise Condensation and Commonly used Condensers.",
+            "topics": [
+              "Heat transfer with phase change, Significance of dimensionless",
+              "group Prandtl No., Reynold No., Grashoff No., Nusselt No.,",
+              "Phenomena of Boiling Pool and Nucleate boiling), Phenomena of",
+              "Condensation Drop wise and film wise Condensation and",
+              "Commonly used Condensers."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Thermal Radiation",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition of radiation, Concepts of radiation Emission of radiation,",
+              "Wavelength of radiation, Emissive power, Black body, Gray body,",
+              "White body, Opaque body, Monochromatic wave length, Radiation",
+              "laws Kirchhoff's Law, Stefan Boltzmann Law, Simple calculations",
+              "of radiation"
+            ],
+            "topics_text": "Definition of radiation, Concepts of radiation Emission of radiation, Wavelength of radiation, Emissive power, Black body, Gray body, White body, Opaque body, Monochromatic wave length, Radiation laws Kirchhoff's Law, Stefan Boltzmann Law, Simple calculations of radiation",
+            "topics": [
+              "Definition of radiation, Concepts of radiation Emission of radiation,",
+              "Wavelength of radiation, Emissive power, Black body, Gray body,",
+              "White body, Opaque body, Monochromatic wave length, Radiation",
+              "laws Kirchhoff's Law, Stefan Boltzmann Law, Simple calculations",
+              "of radiation"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Evaporation",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Characteristics of liquid for evaporation, Single and",
+              "multi effect evaporation with flow arrangement, Types of",
+              "evaporators Evaporator capacity and economy, Duhring's rule and",
+              "its importance.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction, Characteristics of liquid for evaporation, Single and multi effect evaporation with flow arrangement, Types of evaporators Evaporator capacity and economy, Duhring's rule and its importance. Total Hours 28",
+            "topics": [
+              "Introduction, Characteristics of liquid for evaporation, Single and",
+              "multi effect evaporation with flow arrangement, Types of",
+              "evaporators Evaporator capacity and economy, Duhring's rule and",
+              "its importance.",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to PHT Lab",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction to all Experiments of PHT Lab."
+            ],
+            "topics_text": "Introduction to all Experiments of PHT Lab.",
+            "topics": [
+              "Introduction to all Experiments of PHT Lab."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Determine the thermal conductivity of Metal Rod"
+            ],
+            "topics_text": "Determine the thermal conductivity of Metal Rod",
+            "topics": [
+              "Determine the thermal conductivity of Metal Rod"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Determine the thermal conductivity of composite wall"
+            ],
+            "topics_text": "Determine the thermal conductivity of composite wall",
+            "topics": [
+              "Determine the thermal conductivity of composite wall"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Determine the overall heat transfer co-efficient in Agitated vessel"
+            ],
+            "topics_text": "Determine the overall heat transfer co-efficient in Agitated vessel",
+            "topics": [
+              "Determine the overall heat transfer co-efficient in Agitated vessel"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Determine the liquid-liquid overall heat transfer coefficient for shell",
+              "and tube heat exchanger"
+            ],
+            "topics_text": "Determine the liquid-liquid overall heat transfer coefficient for shell and tube heat exchanger",
+            "topics": [
+              "Determine the liquid-liquid overall heat transfer coefficient for shell",
+              "and tube heat exchanger"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Determine the overall heat transfer co-efficient for horizontal double",
+              "pipe heat exchanger."
+            ],
+            "topics_text": "Determine the overall heat transfer co-efficient for horizontal double pipe heat exchanger.",
+            "topics": [
+              "Determine the overall heat transfer co-efficient for horizontal double",
+              "pipe heat exchanger."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Determine the overall heat transfer co-efficient for vertical double",
+              "pipe heat exchanger."
+            ],
+            "topics_text": "Determine the overall heat transfer co-efficient for vertical double pipe heat exchanger.",
+            "topics": [
+              "Determine the overall heat transfer co-efficient for vertical double",
+              "pipe heat exchanger."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 7",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Calculate the rate of condensation in Drop-wise condensation"
+            ],
+            "topics_text": "Calculate the rate of condensation in Drop-wise condensation",
+            "topics": [
+              "Calculate the rate of condensation in Drop-wise condensation"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 8",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Calculate the rate of condensation in Film-wise condensation"
+            ],
+            "topics_text": "Calculate the rate of condensation in Film-wise condensation",
+            "topics": [
+              "Calculate the rate of condensation in Film-wise condensation"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 9",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Determine economy of open pan evaporator."
+            ],
+            "topics_text": "Determine economy of open pan evaporator.",
+            "topics": [
+              "Determine economy of open pan evaporator."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 10",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study and compare different types of Evaporators."
+            ],
+            "topics_text": "Study and compare different types of Evaporators.",
+            "topics": [
+              "Study and compare different types of Evaporators."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 11",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study about Multiple Effect Evaporators."
+            ],
+            "topics_text": "Study about Multiple Effect Evaporators.",
+            "topics": [
+              "Study about Multiple Effect Evaporators."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 12",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study about emissivity of black body and white Body."
+            ],
+            "topics_text": "Study about emissivity of black body and white Body.",
+            "topics": [
+              "Study about emissivity of black body and white Body."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 13",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study about: (a) 1-1 Pass, 1-2 Pass, & 2-4 pass shell and tube Heat",
+              "Exchanger."
+            ],
+            "topics_text": "Study about: (a) 1-1 Pass, 1-2 Pass, & 2-4 pass shell and tube Heat Exchanger.",
+            "topics": [
+              "Study about: (a) 1-1 Pass, 1-2 Pass, & 2-4 pass shell and tube Heat",
+              "Exchanger."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Experiment 14",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study about Pool boiling and nucleate boiling.",
+              "Total Hours 60"
+            ],
+            "topics_text": "Study about Pool boiling and nucleate boiling. Total Hours 60",
+            "topics": [
+              "Study about Pool boiling and nucleate boiling.",
+              "Total Hours 60"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Unit Operation ±II, Unit Operation ±II, Gavhane, K.A., Nirali Prakashan, 2009",
+          "Introduction to Chemical Engineering, Introduction to Chemical Engineering, L.Badger, Julius T. Banchero, McGraw Hill Publication, 2004",
+          "Engineering heat transfer, Engineering heat transfer, Gupta & Prakash, Nem Chand & Brothers, 1999",
+          "Process heat transfer, Process heat transfer, D.Q.Kern, Hill Publication, 1950"
+        ],
+        "textbooks": [
+          "Unit Operations of Chemical Engineering, McCabe, Warren L., Julian C. Smith, McGraw Hill Publication, 2004",
+          "Process Heat Transfer and Chemical Equipment design, D. C. Sikdar, Khanna Publication, 2018",
+          "Process Heat transfer, D. Q. Kern, Hill Publication, 1950 References:",
+          "Unit Operation ±II, Unit Operation ±II, Gavhane, K.A., Nirali Prakashan, 2009",
+          "Introduction to Chemical Engineering, Introduction to Chemical Engineering, L.Badger, Julius T. Banchero, McGraw Hill Publication, 2004",
+          "Engineering heat transfer, Engineering heat transfer, Gupta & Prakash, Nem Chand & Brothers, 1999",
+          "Process heat transfer, Process heat transfer, D.Q.Kern, Hill Publication, 1950"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://archive.nptel.ac.in/courses/103/105/103105140/",
+          "https://ocw.mit.edu/courses/2-051-introduction-to-heat-transfer-fall-2015/"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9795,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         4\nCOURSE TITLE    PROCESS HEAT TRANSFER\nCOURSE CODE     09CH2402\nCOURSE CREDITS  4\n\nObjective:\n 1  To learn to Supervise operation and maintenance of various heat transfer equipments.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Classify Modes of heat transfer\n 2  Derive equations of steady state heat transfer through wall, cylinder and sphere\n 3  Explain shell and tube heat exchangers\n 4  Explain heat transfer with phase change\n 5  Calculate radiation based on radiation laws\n\n\nPre-requisite of course:Basic knowledge of Fluid Flow, Industrial Stoichiometry\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Heat Transfer:                             2\n               Definition of Heat Transfer and its importance in process industries,\n               Classification of modes of heat transfer, Differentiation of steady\n            and unsteady state of heat transfer.\n     2      Heat Transfer by Conduction.                              6\n               Fourier¶s law of heat conduction with Concepts of (a) Heat transfer\n                rate (b) Heat flux (c) Temperature gradient, Thermal conductivity.\n             Steady state (S.S.) heat conduction through composite wall, S.S.\n              heat conduction through composite cylinder up to three layers, S.S.\n              heat conduction through composite sphere up to three layers, Simple\n             problems by direct use formula. Thermal Conductivity of solids,\n               liquids and gases.\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Heat Transfer by Convection.                              2\n            Types of Convection, Free convection, Force convection. Newton¶s\n          Law of convective heat transfer. Individual and Overall heat transfer\n                coefficient. Simple Problems of Convection Simple Problems of\n             Convection\n     4      Heat exchangers                                         6\n            Types of heat exchanger, Double pipe heat exchanger (a) Counter\n               current (b) Co-current, Shell and tube heat exchanger: (a) 1-1 Pass\n               (b) 1-2 Pass (c) 2-4 Pass, Plate type heat exchanger, Finned type\n              (extended surface) heat exchanger, Heat transfer in agitated vessels,\n            L.M.T.D.\n     5      Heat Transfer with Phase Change.                          4\n             Heat transfer with phase change, Significance of dimensionless\n             group Prandtl No., Reynold No., Grashoff No., Nusselt No.,\n            Phenomena of Boiling Pool and Nucleate boiling), Phenomena of\n             Condensation Drop wise and film wise Condensation and\n           Commonly used Condensers.\n     6     Thermal Radiation                                       4\n               Definition of radiation, Concepts of radiation Emission of radiation,\n            Wavelength of radiation, Emissive power, Black body, Gray body,\n            White body, Opaque body, Monochromatic wave length, Radiation\n             laws Kirchhoff's Law, Stefan Boltzmann Law, Simple calculations\n              of radiation\n     7      Evaporation                                             4\n               Introduction, Characteristics of liquid for evaporation, Single and\n              multi effect evaporation with flow arrangement, Types of\n              evaporators Evaporator capacity and economy, Duhring's rule and\n                   its importance.\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to PHT Lab                                  4\n               Introduction to all Experiments of PHT Lab.\n     2      Experiment 1                                            4\n             Determine the thermal conductivity of Metal Rod\n     3      Experiment 2                                            4\n             Determine the thermal conductivity of composite wall\n     4      Experiment 3                                            4\n             Determine the overall heat transfer co-efficient in Agitated vessel\n     5      Experiment 4                                            4\n             Determine the liquid-liquid overall heat transfer coefficient for shell\n            and tube heat exchanger\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6      Experiment 5                                            4\n             Determine the overall heat transfer co-efficient for horizontal double\n              pipe heat exchanger.\n     7      Experiment 6                                            4\n             Determine the overall heat transfer co-efficient for vertical double\n              pipe heat exchanger.\n     8      Experiment 7                                            4\n              Calculate the rate of condensation in Drop-wise condensation\n     9      Experiment 8                                            4\n              Calculate the rate of condensation in Film-wise condensation\n     10     Experiment 9                                            4\n             Determine economy of open pan evaporator.\n     11     Experiment 10                                           4\n             Study and compare different types of Evaporators.\n     12     Experiment 11                                           4\n             Study about Multiple Effect Evaporators.\n     13     Experiment 12                                           4\n             Study about emissivity of black body and white Body.\n     14     Experiment 13                                           4\n             Study about: (a) 1-1 Pass, 1-2 Pass, & 2-4 pass shell and tube Heat\n             Exchanger.\n     15     Experiment 14                                           4\n             Study about Pool boiling and nucleate boiling.\n                               Total Hours                       60\n\nTextbook :\n 1  Unit Operations of Chemical Engineering, McCabe, Warren L., Julian C. Smith, McGraw\n     Hill Publication, 2004\n 2  Process Heat Transfer and Chemical Equipment design, D. C. Sikdar, Khanna Publication,\n    2018\n 3  Process Heat transfer, D. Q. Kern, Hill Publication, 1950\n\nReferences:\n 1  Unit Operation ±II, Unit Operation ±II, Gavhane, K.A., Nirali Prakashan, 2009\n 2  Introduction to Chemical Engineering, Introduction to Chemical Engineering, L.Badger,\n     Julius T. Banchero, McGraw Hill Publication, 2004\n 3  Engineering heat transfer, Engineering heat transfer, Gupta & Prakash, Nem Chand &\n     Brothers, 1999\n 4  Process heat transfer, Process heat transfer, D.Q.Kern, Hill Publication, 1950\n\nSuggested Theory Distribution:\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "The suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    40.00         40.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://archive.nptel.ac.in/courses/103/105/103105140/\n 2  https://ocw.mit.edu/courses/2-051-introduction-to-heat-transfer-fall-2015/\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "098eb3ddeaf3a6226ae3ad12735eb3f370340c70eaf1831c21520ecba7bbe309"
+    },
+    {
+      "subject_id": "46000938240101",
+      "subject_name": "UNIT OPERATION - III",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 4,
+      "subject_code": "09CH2401",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2401.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2401 - UNIT OPERATION - III (.pdf",
+      "expected_pdf_sha256": "82eaa5c8b582faecf2f9f7e8fc5cb465334084f1b5264a014024694a62c054e2",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "UNIT OPERATION ± III",
+        "course_code": "09CH2401",
+        "semester_label": "4",
+        "credits": 4,
+        "prerequisite": "Basic concepts of units and dimensions, basic knowledge of fluid flow, mass fraction & mole fraction, and material balance."
+      },
+      "objectives": [
+        "To introduce the basic fundamentals of several Mass Transfer operations carried out in the industry."
+      ],
+      "course_outcomes": [
+        "Classify various Mass Transfer operations being carried out in the industry.",
+        "Appreciate the importance of various M.T. operations.",
+        "Predict the kind of M.T. operation required for a particular separation."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Mass Transfer Operation",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Importance of Mass Transfer Operation, Classification of Mass",
+              "Transfer Operations, Choice of separation method, Methods of",
+              "conducting Mass Transfer Operations."
+            ],
+            "topics_text": "Importance of Mass Transfer Operation, Classification of Mass Transfer Operations, Choice of separation method, Methods of conducting Mass Transfer Operations.",
+            "topics": [
+              "Importance of Mass Transfer Operation, Classification of Mass",
+              "Transfer Operations, Choice of separation method, Methods of",
+              "conducting Mass Transfer Operations."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Molecular Diffusion in Fluids",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Definition of Diffusion (a) Molecular diffusion (b) Eddy diffusion,",
+              "Difference between molecular & turbulent /Eddy diffusion, Rate of",
+              "diffusion in Mass Transfer, Statement of Fick¶s first law for",
+              "diffusivity, Definition of molar flux, Definition of diffusivity and",
+              "concentration gradient, Effect of temperature / pressure&",
+              "concentration on diffusivity, General equation for steady state",
+              "molecular diffusion in fluids (Laminar flow only), Molecular",
+              "diffusion in gases, Steady state diffusion of following (a)",
+              "Component A through non diffusing B (b) Equimolal counter",
+              "current diffusion A and B"
+            ],
+            "topics_text": "Definition of Diffusion (a) Molecular diffusion (b) Eddy diffusion, Difference between molecular & turbulent /Eddy diffusion, Rate of diffusion in Mass Transfer, Statement of Fick¶s first law for diffusivity, Definition of molar flux, Definition of diffusivity and concentration gradient, Effect of temperature / pressure& concentration on diffusivity, General equation for steady state molecular diffusion in fluids (Laminar flow only), Molecular diffusion in gases, Steady state diffusion of following (a) Component A through non diffusing B (b) Equimolal counter current diffusion A and B",
+            "topics": [
+              "Definition of Diffusion (a) Molecular diffusion (b) Eddy diffusion,",
+              "Difference between molecular & turbulent /Eddy diffusion, Rate of",
+              "diffusion in Mass Transfer, Statement of Fick¶s first law for",
+              "diffusivity, Definition of molar flux, Definition of diffusivity and",
+              "concentration gradient, Effect of temperature / pressure&",
+              "concentration on diffusivity, General equation for steady state",
+              "molecular diffusion in fluids (Laminar flow only), Molecular",
+              "diffusion in gases, Steady state diffusion of following (a)",
+              "Component A through non diffusing B (b) Equimolal counter",
+              "current diffusion A and B"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Interphase Mass Transfer",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Concept of Equilibrium, Diffusion between phases, Local two phase",
+              "mass transfer, Local overall mass transfer co-efficient, Use of local",
+              "and overall mass transfer co-efficient, Average overall mass transfer",
+              "co-efficient, Co-current & Counter current processes.",
+              "4 Gas ± Absorption 5",
+              "Definition and application of absorption, equilibrium solubility of",
+              "gases in liquids, effect of temperature and pressure on solubility,",
+              "choice of solvents, and material balance for the component transfer",
+              "in counter current and concurrent flow, concept of HETP and simple",
+              "problems on absorption.",
+              "5 Liquid ± Liquid Extraction 5",
+              "Definition and application of liquid extraction, liquid equilibrium",
+              "for three component system, system of three liquids one pair",
+              "partially soluble, effect of temperature and pressure on the solubility",
+              "curve, choice of solvents for the operation, simple problems using",
+              "direct formula, various equipments for liq-liq extraction"
+            ],
+            "topics_text": "Concept of Equilibrium, Diffusion between phases, Local two phase mass transfer, Local overall mass transfer co-efficient, Use of local and overall mass transfer co-efficient, Average overall mass transfer co-efficient, Co-current & Counter current processes. 4 Gas ± Absorption 5 Definition and application of absorption, equilibrium solubility of gases in liquids, effect of temperature and pressure on solubility, choice of solvents, and material balance for the component transfer in counter current and concurrent flow, concept of HETP and simple problems on absorption. 5 Liquid ± Liquid Extraction 5 Definition and application of liquid extraction, liquid equilibrium for three component system, system of three liquids one pair partially soluble, effect of temperature and pressure on the solubility curve, choice of solvents for the operation, simple problems using direct formula, various equipments for liq-liq extraction",
+            "topics": [
+              "Concept of Equilibrium, Diffusion between phases, Local two phase",
+              "mass transfer, Local overall mass transfer co-efficient, Use of local",
+              "and overall mass transfer co-efficient, Average overall mass transfer",
+              "co-efficient, Co-current & Counter current processes.",
+              "4 Gas ± Absorption 5",
+              "Definition and application of absorption, equilibrium solubility of",
+              "gases in liquids, effect of temperature and pressure on solubility,",
+              "choice of solvents, and material balance for the component transfer",
+              "in counter current and concurrent flow, concept of HETP and simple",
+              "problems on absorption.",
+              "5 Liquid ± Liquid Extraction 5",
+              "Definition and application of liquid extraction, liquid equilibrium",
+              "for three component system, system of three liquids one pair",
+              "partially soluble, effect of temperature and pressure on the solubility",
+              "curve, choice of solvents for the operation, simple problems using",
+              "direct formula, various equipments for liq-liq extraction"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Leaching",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition and industrial application of leaching, preparation of",
+              "solid, methods of operations and equipment for inplace leaching and",
+              "heap leaching, shanks system, filterpress leaching and equipment",
+              "like Rotacel, Kennedy extractor and Balloman extractor.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Definition and industrial application of leaching, preparation of solid, methods of operations and equipment for inplace leaching and heap leaching, shanks system, filterpress leaching and equipment like Rotacel, Kennedy extractor and Balloman extractor. Total Hours 28",
+            "topics": [
+              "Definition and industrial application of leaching, preparation of",
+              "solid, methods of operations and equipment for inplace leaching and",
+              "heap leaching, shanks system, filterpress leaching and equipment",
+              "like Rotacel, Kennedy extractor and Balloman extractor.",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study for finding out rate of diffusion (liquid gas diffusion)"
+            ],
+            "topics_text": "To study for finding out rate of diffusion (liquid gas diffusion)",
+            "topics": [
+              "To study for finding out rate of diffusion (liquid gas diffusion)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study for finding out diffusion co-efficient (liquid -liquid",
+              "diffusion)"
+            ],
+            "topics_text": "To study for finding out diffusion co-efficient (liquid -liquid diffusion)",
+            "topics": [
+              "To study for finding out diffusion co-efficient (liquid -liquid",
+              "diffusion)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study for Calculation the M.T. coefficient of vaporization of",
+              "Water in Air."
+            ],
+            "topics_text": "To study for Calculation the M.T. coefficient of vaporization of Water in Air.",
+            "topics": [
+              "To study for Calculation the M.T. coefficient of vaporization of",
+              "Water in Air."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study the construction and working of Spray Tower."
+            ],
+            "topics_text": "To study the construction and working of Spray Tower.",
+            "topics": [
+              "To study the construction and working of Spray Tower."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To Study for gas absorption in Tray Tower"
+            ],
+            "topics_text": "To Study for gas absorption in Tray Tower",
+            "topics": [
+              "To Study for gas absorption in Tray Tower"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To Study about different types of tray for tray tower."
+            ],
+            "topics_text": "To Study about different types of tray for tray tower.",
+            "topics": [
+              "To Study about different types of tray for tray tower."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To Study for gas absorption in Packed Tower."
+            ],
+            "topics_text": "To Study for gas absorption in Packed Tower.",
+            "topics": [
+              "To Study for gas absorption in Packed Tower."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To Study about classification and type of packings for packed"
+            ],
+            "topics_text": "To Study about classification and type of packings for packed",
+            "topics": [
+              "To Study about classification and type of packings for packed"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To determine the efficency of single stage extraction."
+            ],
+            "topics_text": "To determine the efficency of single stage extraction.",
+            "topics": [
+              "To determine the efficency of single stage extraction."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To Study the liquid liquid extraction for acetic acid."
+            ],
+            "topics_text": "To Study the liquid liquid extraction for acetic acid.",
+            "topics": [
+              "To Study the liquid liquid extraction for acetic acid."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To perform caffeine extraction from Tea leaves."
+            ],
+            "topics_text": "To perform caffeine extraction from Tea leaves.",
+            "topics": [
+              "To perform caffeine extraction from Tea leaves."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study Leaching process by shanks system."
+            ],
+            "topics_text": "To study Leaching process by shanks system.",
+            "topics": [
+              "To study Leaching process by shanks system."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To Study the construction and working of Balloman extractor."
+            ],
+            "topics_text": "To Study the construction and working of Balloman extractor.",
+            "topics": [
+              "To Study the construction and working of Balloman extractor."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 14",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To Study the construction and working of Rotacel extractor.",
+              "Total Hours 56"
+            ],
+            "topics_text": "To Study the construction and working of Rotacel extractor. Total Hours 56",
+            "topics": [
+              "To Study the construction and working of Rotacel extractor.",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Unit operations in chemical engineering, Unit operations in chemical engineering, McCabe & Smith. , Mc-Graw Hill Publications, 2005",
+          "Introduction to chemical engineering, Introduction to chemical engineering, Badger &Banchero, Mc-Graw Hill Publications, 1955",
+          "Coulson and Richardson¶s CHEMICAL ENGINEERING VOLUME 2, Coulson and Richardson¶s CHEMICAL ENGINEERING VOLUME 2, J. M. COULSON & J. F. RICHARDSON, Elsevier Science, 1991"
+        ],
+        "textbooks": [
+          "Mass Transfer Operations, Robert E. Treybal, Mc-Graw Hill Publications, 1980 References:",
+          "Unit operations in chemical engineering, Unit operations in chemical engineering, McCabe & Smith. , Mc-Graw Hill Publications, 2005",
+          "Introduction to chemical engineering, Introduction to chemical engineering, Badger &Banchero, Mc-Graw Hill Publications, 1955",
+          "Coulson and Richardson¶s CHEMICAL ENGINEERING VOLUME 2, Coulson and Richardson¶s CHEMICAL ENGINEERING VOLUME 2, J. M. COULSON & J. F. RICHARDSON, Elsevier Science, 1991"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://archive.nptel.ac.in/courses/103/103/103103145/",
+          "https://ocw.mit.edu/courses/2-51-intermediate-heat-and-mass-transfer-fall-2008/"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9436,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         4\nCOURSE TITLE    UNIT OPERATION ± III\nCOURSE CODE     09CH2401\nCOURSE CREDITS  4\n\nObjective:\n 1  To introduce the basic fundamentals of several Mass Transfer operations carried out in the\n     industry.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Classify various Mass Transfer operations being carried out in the industry.\n 2  Appreciate the importance of various M.T. operations.\n 3  Predict the kind of M.T. operation required for a particular separation.\n\n\nPre-requisite of course:Basic concepts of units and dimensions, basic knowledge of fluid flow,\nmass fraction & mole fraction, and material balance.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Mass Transfer Operation                    2\n             Importance of Mass Transfer Operation, Classification of Mass\n              Transfer Operations, Choice of separation method, Methods of\n             conducting Mass Transfer Operations.\n     2      Molecular Diffusion in Fluids                              7\n               Definition of Diffusion (a) Molecular diffusion (b) Eddy diffusion,\n              Difference between molecular & turbulent /Eddy diffusion, Rate of\n               diffusion in Mass Transfer, Statement of Fick¶s first law for\n                diffusivity, Definition of molar flux, Definition of diffusivity and\n              concentration gradient, Effect of temperature / pressure&\n              concentration on diffusivity, General equation for steady state\n             molecular diffusion in fluids (Laminar flow only), Molecular\n               diffusion in gases, Steady state diffusion of following (a)\n            Component A through non diffusing B (b) Equimolal counter\n               current diffusion A and B\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Interphase Mass Transfer                                 5\n             Concept of Equilibrium, Diffusion between phases, Local two phase\n            mass transfer, Local overall mass transfer co-efficient, Use of local\n            and overall mass transfer co-efficient, Average overall mass transfer\n                co-efficient, Co-current & Counter current processes.\n     4     Gas ± Absorption                                         5\n               Definition and application of absorption, equilibrium solubility of\n              gases in liquids, effect of temperature and pressure on solubility,\n              choice of solvents, and material balance for the component transfer\n               in counter current and concurrent flow, concept of HETP and simple\n             problems on absorption.\n     5      Liquid ± Liquid Extraction                                5\n               Definition and application of liquid extraction, liquid equilibrium\n               for three component system, system of three liquids one pair\n                partially soluble, effect of temperature and pressure on the solubility\n               curve, choice of solvents for the operation, simple problems using\n                direct formula, various equipments for liq-liq extraction\n     6      Leaching                                                4\n               Definition and industrial application of leaching, preparation of\n                solid, methods of operations and equipment for inplace leaching and\n             heap leaching, shanks system, filterpress leaching and equipment\n                like Rotacel, Kennedy extractor and Balloman extractor.\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            4\n           To study for finding out rate of diffusion (liquid gas diffusion)\n     2      Experiment 2                                            4\n           To study for finding out diffusion co-efficient (liquid -liquid\n               diffusion)\n     3      Experiment 3                                            4\n           To study for Calculation the M.T. coefficient of vaporization of\n            Water in Air.\n     4      Experiment 4                                            4\n           To study the construction and working of Spray Tower.\n     5      Experiment 5                                            4\n           To Study for gas absorption in Tray Tower\n     6      Experiment 6                                            4\n           To Study about different types of tray for tray tower.\n     7      Experiment 7                                            4\n           To Study for gas absorption in Packed Tower.\n     8      Experiment 8                                            4\n           To Study about classification and type of packings for packed\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     9      Experiment 9                                            4\n           To determine the efficency of single stage extraction.\n     10     Experiment 10                                           4\n           To Study the liquid liquid extraction for acetic acid.\n     11     Experiment 11                                           4\n           To perform caffeine extraction from Tea leaves.\n     12     Experiment 12                                           4\n           To study Leaching process by shanks system.\n     13     Experiment 13                                           4\n           To Study the construction and working of Balloman extractor.\n     14     Experiment 14                                           4\n           To Study the construction and working of Rotacel extractor.\n                               Total Hours                       56\n\nTextbook :\n 1  Mass Transfer Operations, Robert E. Treybal, Mc-Graw Hill Publications, 1980\n\nReferences:\n 1  Unit operations in chemical engineering, Unit operations in chemical engineering, McCabe\n   & Smith. , Mc-Graw Hill Publications, 2005\n 2  Introduction to chemical engineering, Introduction to chemical engineering, Badger\n    &Banchero, Mc-Graw Hill Publications, 1955\n 3  Coulson and Richardson¶s CHEMICAL ENGINEERING VOLUME 2, Coulson and\n     Richardson¶s CHEMICAL ENGINEERING VOLUME 2, J. M. COULSON & J. F.\n   RICHARDSON, Elsevier Science, 1991\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    40.00         40.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://archive.nptel.ac.in/courses/103/103/103103145/\n 2  https://ocw.mit.edu/courses/2-51-intermediate-heat-and-mass-transfer-fall-2008/\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "82eaa5c8b582faecf2f9f7e8fc5cb465334084f1b5264a014024694a62c054e2"
+    }
+  ],
+  "build_summary": {
+    "extracted": 6,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

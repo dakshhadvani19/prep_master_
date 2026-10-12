@@ -1,0 +1,1759 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 49,
+    "course_name": "Diploma Information and Communication Technology",
+    "output_slug": "Information_and_Communication_Technology"
+  },
+  "semester": 5,
+  "subject_count": 14,
+  "subjects": [
+    {
+      "subject_id": "49009320050201",
+      "subject_name": "ASP.NET",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0502",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/asp.net_.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0502 - .Net Programming (.pdf",
+      "expected_pdf_sha256": "00df95c61f9957ae75bd953e57b7b5fc597712e97bbe05ebfbb67897c78b33d0",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0502",
+        "semester_label": "V",
+        "credits": null,
+        "prerequisite": "Basic knowledge of visual studio"
+      },
+      "objectives": [
+        "After completion of this course, student will be able to: 1. learn efficient storage mechanisms of data for an easy access. 2. introduce various techniques for representation of the data in the real world. 3. develop application using ASP.NET. 4. teach the concept of protection and management of data. 5. improve the logical ability Credits Earned:"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to: 1. Understand and apply the concept of Client Server architecture. 2. Develop web applications using standard ASP.Net control and validation control. 3. Design and develop interactive web applications using master page and theme"
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/Practical Total Teaching Scheme (Hours) Credits Theory Marks Marks Marks Term Work Theory Tutorial Practical ESE IA CSE Viva (TW) 0 0 6 3 00 30 20 25 25 100 [PAGE 2] Marwadi University Faculty of Diploma Studies Information and Communication Technology",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Web Project (ASP.NET), Opening an Existing Web Site, Building Web Sites, set up of work",
+            "contact_hours": null,
+            "topic_lines": [
+              "environment, start page, the menu system, toolbars, the new project dialog box, graphical",
+              "designer, code designer.",
+              "Working with ASP.Net Web Forms: Types of ASP.Net Files, Web Form Round Trip, Stages in",
+              "Web Form Processing ASP.Net Objects (Request, Response, Server, Application, Session)",
+              "ASP.NetServer Controls",
+              "Introduction of HTML Controls, ASP.Net Server Controls and Validation Controls, Working",
+              "with Properties, Events & Methods of Server Controls (Button, Textbox, Label, Checkbox,"
+            ],
+            "topics_text": "environment, start page, the menu system, toolbars, the new project dialog box, graphical designer, code designer. Working with ASP.Net Web Forms: Types of ASP.Net Files, Web Form Round Trip, Stages in Web Form Processing ASP.Net Objects (Request, Response, Server, Application, Session) ASP.NetServer Controls Introduction of HTML Controls, ASP.Net Server Controls and Validation Controls, Working with Properties, Events & Methods of Server Controls (Button, Textbox, Label, Checkbox,",
+            "topics": [
+              "environment, start page, the menu system, toolbars, the new project dialog box, graphical",
+              "designer, code designer.",
+              "Working with ASP.Net Web Forms: Types of ASP.Net Files, Web Form Round Trip, Stages in",
+              "Web Form Processing ASP.Net Objects (Request, Response, Server, Application, Session)",
+              "ASP.NetServer Controls",
+              "Introduction of HTML Controls, ASP.Net Server Controls and Validation Controls, Working",
+              "with Properties, Events & Methods of Server Controls (Button, Textbox, Label, Checkbox,"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Checkbox list, Radio Button, Link Button, List Box, Drop Down List, Image, Hyperlink,",
+            "contact_hours": null,
+            "topic_lines": [
+              "Panel, Place Holder, File Upload) ,Validation Controls, (Required Field Validator, Compare",
+              "Validator, Range Validator, Regular Expression Validator, Custom validator, Validation",
+              "Summary, Validation Group)",
+              "State Management in ASP.Net"
+            ],
+            "topics_text": "Panel, Place Holder, File Upload) ,Validation Controls, (Required Field Validator, Compare Validator, Range Validator, Regular Expression Validator, Custom validator, Validation Summary, Validation Group) State Management in ASP.Net",
+            "topics": [
+              "Panel, Place Holder, File Upload) ,Validation Controls, (Required Field Validator, Compare",
+              "Validator, Range Validator, Regular Expression Validator, Custom validator, Validation",
+              "Summary, Validation Group)",
+              "State Management in ASP.Net"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "State Management: View State, Session State, Application State, Query String, Cookies",
+            "contact_hours": null,
+            "topic_lines": [
+              "ASP.Net Configuration: Global.asax application file, Web.config file",
+              "Working with Master Page & Themes",
+              "Master Pages: Create Master pages, Create & Develop Content Pages, Nest Master Page,",
+              "Access master page controls from content page. 4 Themes: Create theme, applying existing theme to anapplication, Create Skin",
+              "Applying skin to a control.",
+              "Database Programming using ADO.Net and AJAX",
+              "ADO.Net Components: Connection Object, Command Object, Data Reader, Datasets & Data",
+              "Adapter, Data View."
+            ],
+            "topics_text": "ASP.Net Configuration: Global.asax application file, Web.config file Working with Master Page & Themes Master Pages: Create Master pages, Create & Develop Content Pages, Nest Master Page, Access master page controls from content page. 4 Themes: Create theme, applying existing theme to anapplication, Create Skin Applying skin to a control. Database Programming using ADO.Net and AJAX ADO.Net Components: Connection Object, Command Object, Data Reader, Datasets & Data Adapter, Data View.",
+            "topics": [
+              "ASP.Net Configuration: Global.asax application file, Web.config file",
+              "Working with Master Page & Themes",
+              "Master Pages: Create Master pages, Create & Develop Content Pages, Nest Master Page,",
+              "Access master page controls from content page. 4 Themes: Create theme, applying existing theme to anapplication, Create Skin",
+              "Applying skin to a control.",
+              "Database Programming using ADO.Net and AJAX",
+              "ADO.Net Components: Connection Object, Command Object, Data Reader, Datasets & Data",
+              "Adapter, Data View."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Insert, Update, Delete and Databinding operation using Data Grid, Data List and Repeater",
+            "contact_hours": null,
+            "topic_lines": [
+              "Control.",
+              "ASP.Net AJAX Control: Ajax Framework, Script Manager, Update Panel & Update Progress",
+              "Bar Control of Ajax"
+            ],
+            "topics_text": "Control. ASP.Net AJAX Control: Ajax Framework, Script Manager, Update Panel & Update Progress Bar Control of Ajax",
+            "topics": [
+              "Control.",
+              "ASP.Net AJAX Control: Ajax Framework, Script Manager, Update Panel & Update Progress",
+              "Bar Control of Ajax"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 5,
+      "extracted_character_count": 10776,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n\n                            Subject Code: 09CT0502\n                            Subject Name: ASP.NET\n                     Diploma Year – III (Semester V)\n\nObjective: After completion of this course, student will be able to:\n    1.  learn efficient storage mechanisms of data for an easy access.\n    2.  introduce various techniques for representation of the data in the real world.\n    3.  develop application using ASP.NET.\n    4.  teach the concept of protection and management of data.\n    5.  improve the logical ability\nCredits Earned:\n\nCourse Outcomes: After completion of this course, student will be able to:\n\n    1.  Understand and apply the concept of Client Server architecture.\n    2.  Develop web applications using standard ASP.Net control and validation control.\n    3.  Design and develop interactive web applications using master page and theme\nPre-requisite of course: Basic knowledge of visual studio\n\n                              Teaching and Examination Scheme\n\n\n                                                                                      Tutorial/Practical       Total      Teaching Scheme (Hours)            Credits     Theory Marks                                                                      Marks         Marks\n\n                                                                   Term Work     Theory       Tutorial     Practical          ESE   IA    CSE   Viva                                                                    (TW)\n\n     0           0          6         3       00    30    20      25        25         100"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n\nContents:\n\n\nS.NO                                TOPIC\n\n       Introduction to ASP.Net Web Programming\n       Basics of ASP.NET: Features of ASP.NET, Differences between ASP.NET and Classic ASP,\n     Web Applications and Webpage, Components of Web application, Client Server Architecture,\n    MVC Architecture\n       Creating simple Web Application in ASP.NET: Introduction to Visual Studio, creating a New\n  1   Web Project (ASP.NET), Opening an Existing Web Site, Building Web Sites, set up of work\n       environment, start page, the menu system, toolbars, the new project dialog box, graphical\n       designer, code designer.\n      Working with ASP.Net Web Forms: Types of ASP.Net Files, Web Form Round Trip, Stages in\n     Web Form Processing ASP.Net Objects (Request, Response, Server, Application, Session)\n\n      ASP.NetServer Controls\n       Introduction of HTML Controls, ASP.Net Server Controls and Validation Controls, Working\n       with Properties, Events & Methods of Server Controls (Button, Textbox, Label, Checkbox,\n  2   Checkbox  list, Radio Button, Link Button, List Box, Drop Down List, Image, Hyperlink,\n       Panel, Place Holder, File Upload) ,Validation Controls, (Required Field Validator, Compare\n        Validator, Range Validator, Regular Expression Validator, Custom  validator, Validation\n      Summary, Validation Group)\n\n       State Management in ASP.Net\n  3    State Management: View State, Session State, Application State, Query String, Cookies\n      ASP.Net Configuration: Global.asax application file, Web.config file\n\n      Working with Master Page & Themes\n       Master Pages: Create Master pages, Create & Develop Content Pages, Nest Master Page,\n      Access master page controls from content page.  4      Themes: Create theme, applying existing theme to anapplication, Create Skin\n      Applying skin to a control.\n\n      Database Programming using ADO.Net and AJAX\n     ADO.Net Components: Connection Object, Command Object, Data Reader, Datasets & Data\n       Adapter, Data View.\n  5     Insert, Update, Delete and Databinding operation using Data Grid, Data List and Repeater\n       Control.\n      ASP.Net AJAX Control: Ajax Framework, Script Manager, Update Panel & Update Progress\n      Bar Control of Ajax\n\n\n\n\n\nSuggested Theory distribution:"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as guidelines\nfor teachers and students to achieve effective teaching-learning process\n\n\n                           Distribution of Theory for course delivery and evaluation\n\nRemember       Understand          Apply          Analyse          Evaluate           Create\n\n   40%          40%          10%          10%             0              0\n\n\nSuggested List of Experiment:\n    S. No.                                Practical Exercises                           Approx.\n                                (outcomes in psychomotor domain)                    Hours\n                                                                               Reqd.\n      1   Study of Visual Studio environment. (Create new web project,                       2\n         Open existing web project, building website, and study of toolbars, menu etc.)\n\n      2     a. Design a ASP.Net web form for User Registration having fields First Name, Last     2\n          Name, Email, Password, repass, Age (dd- mm-yyyy), Ph. No., address, city, using\n             different Server Controls.\n               b. Validate all details in above application using validation controls and display all\n             the details in the same form.                                                  2\n\n      3   Create a page in ASP.Net using VB.Net, to choose a color from                      1\n            drop-down-list and display a message “you have chosen ‘color name’ ”.\n\n      4   Design a page that takes name and message from the user and choose a color by     2\n            radio button, select a style for ex.-bold, italic, underline from the checkbox and\n            display in  label  control, when you clicked on display button. And  clear the\n            information when\n          you clicked on clear button.\n      5   Develop a web form to perform add, update, delete operation on                     2\n             List Box control.\n      6   Create a web page, for book sales. Enter the quantity, title and price of the book.     2\n            Calculate the extended price, discount (15%) and after discount, the actual price of\n             the book. Show the summary of book sales. (Like total no of books, total discount\n            given, total discounted amount and average discount.) You will need command\n            buttons- calculate, clear sale.\n\n      7   Design a web page to implement upload and download files                         2\n             functionality using File Upload Control.\n      8   Develop a web page to implement the concept of state                             2\n          management using Cookies"
+        },
+        {
+          "page": 4,
+          "text": "Marwadi University\n                     Faculty of Diploma Studies\n                    Information and Communication Technology\n\nS. No.                                 Practical Exercises                           Approx.\n                             (outcomes in psychomotor domain)                   Hour\n                                                                                                   s\n                                                                            Reqd.\n   9   Develop a web page to implement the concept of state                              2\n       management using Session and Application\n   10  Develop a web page to implement the concept of state                              2\n       management using View State and Query String .\n   11  Create a web application using Global.asax file which will count                      2\n         the number of visitors on web page.\n   12  Use various tags in Web.config file for ASP.NET configuration.                      2\n   13  Create a web site using Master Page Concept having two content                     2\n        pages.\n   14  Create a web application implementing Nested Master Page                         2\n        concept.\n   15  Design a web application to illustrate concept of CSS,Themes                        2\n       and Skin.\n   16  Write sample application to connect to database, Fetching and                       4\n         inserting data from database and using Data Reader\n   17  Develop a User Registration form designed in Experiment 2. Insert user details in        4\n        Database and show the same in\n        DataGrid/Grid View control.\n   18  Create a login page in your web application. Login page must have user name and     6\n       password fields. If user enters correct ID, Password, he must be redirected to the\n       homepage of your\n        website.\n   19  Develop a web application to Add, Update, View and Delete                         6\n        records from Database data shown in Grid view.\n   20  Design a web form showing record in Repeater and Data List.                        4\n   21  Implement Ajax Script Manager and Update Panel concept in                        2\n       above practical.\n   22  Develop a Login application and show Ajax Progress bar while                      3\n        user trying to log in.\n                                                                        Total Hours"
+        },
+        {
+          "page": 5,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n\n\nSUGGESTED LEARNING RESOURCES\n  List of Books:\n           S.No.         Title of Books          Author           Publication\n             1   Murach’s ASP.Net Web    Mike Murach   Mike Murach &\n                 Programming in VB-Net                      Associates\n             2   ASP.NET: The Complete    Matthew      McGraw Hill education\n                   Reference Book           Macdonald\n             3   Programming in Visual       Julia Case     McGraw Hill, latest\n                     Basic. NET                 Bradley, Anita   edition\n                                             C. Millspaugh\n             4   Visual Basic .net             Shelly,         Cengage learning, 2012\n                  Comprehensive Concepts    cashman,\n                  and Techniques            Quasney\n\nSupplementary Resources:\n                 http://www.tutorialspoint.com/asp.net/index.htm\n                 http://www.homeandlearn.co.uk/NET/vbNet.html\n                 https://www.udemy.com/learn-aspnet-from-scratch/?dtcode=QO5KhFV1R5It\n                 http://stepbystepvideotutorials.com/\n                 http://msdn.microsoft.com/en-us/beginner/default.aspx ."
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "00df95c61f9957ae75bd953e57b7b5fc597712e97bbe05ebfbb67897c78b33d0"
+    },
+    {
+      "subject_id": "49009320050301",
+      "subject_name": "Cryptography and Network Security",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0503",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/cryptography-and-network-security.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0503 - Cryptography and Network Security (.pdf",
+      "expected_pdf_sha256": "62d2a55fcd5b85b7415bc85f92ba2c05c16d43bcc4981603f241205b91d73462",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0503",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "Computer Networks, Discrete Probability"
+      },
+      "objectives": [
+        "Cryptography is an indispensable tool for protecting information in computer systems. It deals with the algorithmic and mathematical perspective of information and network security. In this course you will learn the inner workings of cryptographic systems and how to correctly use them in real-world applications. Credits Earned: 05 Credits"
+      ],
+      "course_outcomes": [
+        "After the completion of the course, the students will be able to: ⮚ Compare Various Cryptanalysis Techniques. (Understand) ⮚ Apply the knowledge in the applications ranging from small scale to larger scale security systems. (Apply) ⮚ Apply knowledge in interpreting the secured systems for real world problems. (Apply) ⮚ Analyse the encryption standards and the security strengths of the applied cryptographic algorithm (Analyse) ⮚ Evaluate the performance of the given case study application and solve the fault to improve the security standards (Evaluate)"
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Teaching Scheme (Hours) Theory Marks Practical Marks Total Credits Mid Term ESE Internal MarksTheory Tutorial Practical Sem Viva (V) work (E) (I) (M) (TW) 4 0 2 5 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Security in Computing Environment",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Need for Security; Security Attack – Threats, Vulnerabilities, and Controls,",
+              "Types of Threats (Attacks); Security Services – Confidentiality, Integrity,",
+              "Availability; Information Security; Methods of Protection.",
+              "Marwadi University",
+              "Faculty of Diploma Studies",
+              "Information and Communication Technology"
+            ],
+            "topics_text": "Need for Security; Security Attack – Threats, Vulnerabilities, and Controls, Types of Threats (Attacks); Security Services – Confidentiality, Integrity, Availability; Information Security; Methods of Protection. Marwadi University Faculty of Diploma Studies Information and Communication Technology",
+            "topics": [
+              "Need for Security",
+              "Security Attack – Threats, Vulnerabilities, and Controls,",
+              "Types of Threats (Attacks)",
+              "Security Services – Confidentiality, Integrity,",
+              "Availability",
+              "Information Security",
+              "Methods of Protection.",
+              "Marwadi University",
+              "Faculty of Diploma Studies",
+              "Information and Communication Technology"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Basics of Cryptography",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Terminologies used in Cryptography; Substitution Techniques – The Caesar",
+              "Cipher, One-Time Pads, The Vernam Cipher, Book Cipher; Transposition",
+              "Techniques – Encipherment/Decipherment Complexity, Digrams,",
+              "Trigrams, and Other Patterns, pseudo Random Generators"
+            ],
+            "topics_text": "Terminologies used in Cryptography; Substitution Techniques – The Caesar Cipher, One-Time Pads, The Vernam Cipher, Book Cipher; Transposition Techniques – Encipherment/Decipherment Complexity, Digrams, Trigrams, and Other Patterns, pseudo Random Generators",
+            "topics": [
+              "Terminologies used in Cryptography",
+              "Substitution Techniques – The Caesar",
+              "Cipher, One-Time Pads, The Vernam Cipher, Book Cipher",
+              "Transposition",
+              "Techniques – Encipherment/Decipherment Complexity, Digrams,",
+              "Trigrams, and Other Patterns, pseudo Random Generators"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Symmetric Key Encryption",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Block Ciphers, Cipher Block Chaining Mode, Data Encryption Standard",
+              "(DES) Algorithm – Overview of the DES Algorithm; Double and Triple DES",
+              "– Double DES, Triple DES; Security of the DES; Advanced Encryption",
+              "Standard (AES) Algorithm, AES Expansion, PRG using Block Cipher"
+            ],
+            "topics_text": "Block Ciphers, Cipher Block Chaining Mode, Data Encryption Standard (DES) Algorithm – Overview of the DES Algorithm; Double and Triple DES – Double DES, Triple DES; Security of the DES; Advanced Encryption Standard (AES) Algorithm, AES Expansion, PRG using Block Cipher",
+            "topics": [
+              "Block Ciphers, Cipher Block Chaining Mode, Data Encryption Standard",
+              "(DES) Algorithm – Overview of the DES Algorithm",
+              "Double and Triple DES",
+              "– Double DES, Triple DES",
+              "Security of the DES",
+              "Advanced Encryption",
+              "Standard (AES) Algorithm, AES Expansion, PRG using Block Cipher"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Public Key Encryption",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Integer Factorization Problems, Characteristics of Public Key System; RSA",
+              "Technique – Encryption-Method; Key Exchange; Diffie-Hellman",
+              "Scheme; ElGamal, Elliptic Curve Cryptography, Security analysis"
+            ],
+            "topics_text": "Integer Factorization Problems, Characteristics of Public Key System; RSA Technique – Encryption-Method; Key Exchange; Diffie-Hellman Scheme; ElGamal, Elliptic Curve Cryptography, Security analysis",
+            "topics": [
+              "Integer Factorization Problems, Characteristics of Public Key System",
+              "RSA",
+              "Technique – Encryption-Method",
+              "Key Exchange",
+              "Diffie-Hellman",
+              "Scheme",
+              "ElGamal, Elliptic Curve Cryptography, Security analysis"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "MESSAGE AUTHENTICATION AND INTEGRITY",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Authentication requirement, Authentication function, CBC-MAC, SHA, MD5,",
+              "HMAC, Birthday Attack, Hash function, Security of hash function, Digital",
+              "signature, Biometrics, Passwords, authentication protocols, Kerberos"
+            ],
+            "topics_text": "Authentication requirement, Authentication function, CBC-MAC, SHA, MD5, HMAC, Birthday Attack, Hash function, Security of hash function, Digital signature, Biometrics, Passwords, authentication protocols, Kerberos",
+            "topics": [
+              "Authentication requirement, Authentication function, CBC-MAC, SHA, MD5,",
+              "HMAC, Birthday Attack, Hash function, Security of hash function, Digital",
+              "signature, Biometrics, Passwords, authentication protocols, Kerberos"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Network Security",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Network Concepts; Threats in Networks – Who Attacks Networks? Threats",
+              "in Transit: Eavesdropping and Wiretapping, Protocol Flaws,",
+              "Impersonation; DOS, DDOS, Man in the Middle Attacks, Network Security",
+              "Controls – Architecture, Encryption, Virtual Private Networks, Public Key",
+              "Infrastructure (PKI) and Certificates.",
+              "Total 51 hrs"
+            ],
+            "topics_text": "Network Concepts; Threats in Networks – Who Attacks Networks? Threats in Transit: Eavesdropping and Wiretapping, Protocol Flaws, Impersonation; DOS, DDOS, Man in the Middle Attacks, Network Security Controls – Architecture, Encryption, Virtual Private Networks, Public Key Infrastructure (PKI) and Certificates. Total 51 hrs",
+            "topics": [
+              "Network Concepts",
+              "Threats in Networks – Who Attacks Networks? Threats",
+              "in Transit: Eavesdropping and Wiretapping, Protocol Flaws,",
+              "Impersonation",
+              "DOS, DDOS, Man in the Middle Attacks, Network Security",
+              "Controls – Architecture, Encryption, Virtual Private Networks, Public Key",
+              "Infrastructure (PKI) and Certificates.",
+              "Total 51 hrs"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6911,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                         Faculty of Diploma Studies\n                        Information and Communication Technology\n\n                        Subject Code: 09CT0503\n\n                Subject Name: Cryptography and Network Security\n\n                               Semester -V\n\n   Objective: Cryptography is an indispensable tool for protecting information in computer\n   systems. It deals with the algorithmic and mathematical perspective of information and\n   network security. In this course you will learn the inner workings of cryptographic systems\n   and how to correctly use them in real-world applications.\n\n   Credits Earned: 05 Credits\n\n   Course Outcomes:\n\n   After the completion of the course, the students will be able to:\n\n   ⮚ Compare Various Cryptanalysis Techniques. (Understand)\n   ⮚ Apply the knowledge in the applications ranging from small scale to larger scale security\n          systems. (Apply)\n   ⮚ Apply knowledge in interpreting the secured systems for real world problems. (Apply)\n   ⮚ Analyse the encryption standards and the security strengths of the applied cryptographic\n          algorithm (Analyse)\n   ⮚ Evaluate the performance of the given case study application and solve the fault to improve\n           the security standards (Evaluate)\n\n   Pre-requisite of course: Computer Networks, Discrete Probability\n\n                      Teaching and Examination Scheme\n\n                                                                    Tutorial/\n  Teaching Scheme (Hours)               Theory Marks\n                                                                     Practical Marks\n                                                                                  Total\n                               Credits        Mid                  Term                                 ESE          Internal                 MarksTheory   Tutorial   Practical              Sem            Viva (V)  work\n                                         (E)               (I)\n                                        (M)                  (TW)\n  4       0       2       5     50   30     20      25     25    150\n\n   Contents:\n\n Unit   Topics                                                              Contact\n                                                                     Hours\n   1      Security in Computing Environment:                                 4\n        Need for Security; Security Attack – Threats, Vulnerabilities, and Controls,\n        Types of Threats (Attacks); Security Services – Confidentiality, Integrity,\n           Availability; Information Security; Methods of Protection."
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                      Faculty of Diploma Studies\n                      Information and Communication Technology\n\n\n2     Basics of Cryptography:                                            8\n      Terminologies used in Cryptography; Substitution Techniques – The Caesar\n       Cipher, One-Time Pads, The Vernam Cipher, Book Cipher; Transposition\n      Techniques  –  Encipherment/Decipherment   Complexity,   Digrams,\n      Trigrams, and Other Patterns, pseudo Random Generators\n3    Symmetric Key Encryption:                                         12\n       Block Ciphers, Cipher Block Chaining Mode, Data Encryption Standard\n      (DES) Algorithm – Overview of the DES Algorithm; Double and Triple DES\n      – Double DES, Triple DES; Security of the DES; Advanced Encryption\n      Standard (AES) Algorithm, AES Expansion, PRG using Block Cipher\n4     Public Key Encryption:                                            10\n        Integer Factorization Problems, Characteristics of Public Key System; RSA\n      Technique  –  Encryption-Method;  Key  Exchange;   Diffie-Hellman\n      Scheme; ElGamal, Elliptic Curve Cryptography, Security analysis\n5    MESSAGE AUTHENTICATION AND INTEGRITY                          9\n      Authentication requirement, Authentication function, CBC-MAC, SHA, MD5,\n     HMAC, Birthday Attack, Hash function, Security of hash function, Digital\n       signature, Biometrics, Passwords, authentication protocols, Kerberos\n6    Network Security:                                                 8\n     Network Concepts; Threats in Networks – Who Attacks Networks? Threats\n       in   Transit:   Eavesdropping  and   Wiretapping,   Protocol   Flaws,\n      Impersonation; DOS, DDOS, Man in the Middle Attacks, Network Security\n       Controls – Architecture, Encryption, Virtual Private Networks, Public Key\n       Infrastructure (PKI) and Certificates.\n      Total                                                     51 hrs\n\n\n\n\n\nReferences:\n\n    1.  Cryptography and Network Security Principles and Practices, 6th edition – Atul\n      Kahate [Tata-McGraw-Hill]\n    2.  Cryptography and Network Security Principles and Practices, 5th edition --\n      William Stallings [Prentice Hall]\n    3.  Introduction to Cryptography with Coding Theory -- Washington & Trappe\n       [Pearson].\n    4.  Applied Cryptography: Protocols, Algorithms, and Source Code in C -- Bruce\n       Schneier, [John Wiley & Sons]."
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                      Faculty of Diploma Studies\n                      Information and Communication Technology\n\n\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This\ndistribution serves as guidelines for teachers and students to achieve effective\nteaching-learning process\n\n R Level     U Level     A Level     N Level      E Level      C Level\n 10         30         10         10         5          5\n\n\nLegends: R: Remembrance; U: Understanding; A: Application, N: Analyze and E:\nEvaluate C: Create and above Levels (Revised Bloom’s Taxonomy)\n\nSuggested List of Practical:\n1. Implement Shift Cipher\n2. Implement One Time Pad Cipher\n3. Implement Playfair Cipher\n4. Implement Hill Cipher\n5. Implement Vigenere Cipher\n6. Implement Rail Fence Cipher\n7. Implement RSA cipher\n8. Understand DES cipher implementation\n9. Understand AES cipher implementation\n10. Understand MAC implementation\n\nInstructional Method:\na.  The course delivery method will depend upon the requirement of content and\n   need of students. The teacher in addition to conventional teaching method by\n    black board, may also use any of tools such as demonstration, role play, Quiz,\n    brainstorming, MOOCs etc.\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n    students in the laboratory and class-room.\nc.  Students will use supplementary resources such as online videos, NPTEL videos,\n    e-courses, Virtual Laboratory\n\n\nSupplementary Resources:\n\n1.     https://www.coursera.org/learn/crypto\n2.     https://crypto.stanford.edu/~dabo/courses/OnlineCrypto/\n3.     https://www.udacity.com/course/applied-cryptography--cs387\n4.     https://www.classcentral.com/course/crypto-616\n5.     https://www.edx.org/learn/cryptography"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "62d2a55fcd5b85b7415bc85f92ba2c05c16d43bcc4981603f241205b91d73462"
+    },
+    {
+      "subject_id": "49009320050801",
+      "subject_name": "Data Analytics and Visualization",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0508",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/dst-1-data-analytics-and-visualization.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0508 - Data Analytics and Visualization (.pdf",
+      "expected_pdf_sha256": "46bcb97413436898be0b18f2bb9870ab99afe685bfea0f5778b76e642d98ecdc",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0508",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "Basic Programming"
+      },
+      "objectives": [
+        "After successful completion of this subject, students can get familiar and able to implement various data visualization strategies using Tableau. Students can able to create and plot various visuals like various plots, maps, Trends, forecasting and dashboards and sever based online visuals. Credits Earned: 04 Credits"
+      ],
+      "course_outcomes": [
+        " To differentiate data analytics and data visualizations functions, uses and strategies  To get familiar with Visualization software like, Tableau.  To apply and create various graphical models like plots, maps and dashboards  Understand Server and offline data manipulating and creation techniques  To remember foundations of Data Visualizations in every type of datasets."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term MarksTheory Tutorial Practical ESE IA CSE Viva work 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Data Analytics and Visualization",
+            "contact_hours": null,
+            "topic_lines": [
+              "Data, Qualitative Data, Quantitative Data, Data Strategies, Data 2 Analytics, Advantages, Disadvantages, Data Visualizations,",
+              "Foundations of Data Visualization"
+            ],
+            "topics_text": "Data, Qualitative Data, Quantitative Data, Data Strategies, Data 2 Analytics, Advantages, Disadvantages, Data Visualizations, Foundations of Data Visualization",
+            "topics": [
+              "Data, Qualitative Data, Quantitative Data, Data Strategies, Data 2 Analytics, Advantages, Disadvantages, Data Visualizations,",
+              "Foundations of Data Visualization"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Getting Started with interface",
+            "contact_hours": null,
+            "topic_lines": [
+              "Introduction, Features, Advantage, Disadvantage, Installation, 4",
+              "User Interface and workspace, Repository, Connecting to Data,",
+              "Syllabus for Diploma Engineering",
+              "Information and Communication Technology",
+              "Dimensions and Measures, Data types and default properties,",
+              "building basic views, saving and sharing workspace"
+            ],
+            "topics_text": "Introduction, Features, Advantage, Disadvantage, Installation, 4 User Interface and workspace, Repository, Connecting to Data, Syllabus for Diploma Engineering Information and Communication Technology Dimensions and Measures, Data types and default properties, building basic views, saving and sharing workspace",
+            "topics": [
+              "Introduction, Features, Advantage, Disadvantage, Installation, 4",
+              "User Interface and workspace, Repository, Connecting to Data,",
+              "Syllabus for Diploma Engineering",
+              "Information and Communication Technology",
+              "Dimensions and Measures, Data types and default properties,",
+              "building basic views, saving and sharing workspace"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Creating Basic Visualizations plots",
+            "contact_hours": null,
+            "topic_lines": [
+              "Date functionality - Date aggregations, date parts, tabular charts,",
+              "Bar chart, stacked bars, crosstab report, Scatter Plot, Pie chart, line 9",
+              "chart, Gantt Bar Chart, Individual axes, blended axes, dual axes,",
+              "editing axis, Labelling and Annotations, Titles and Captions"
+            ],
+            "topics_text": "Date functionality - Date aggregations, date parts, tabular charts, Bar chart, stacked bars, crosstab report, Scatter Plot, Pie chart, line 9 chart, Gantt Bar Chart, Individual axes, blended axes, dual axes, editing axis, Labelling and Annotations, Titles and Captions",
+            "topics": [
+              "Date functionality - Date aggregations, date parts, tabular charts,",
+              "Bar chart, stacked bars, crosstab report, Scatter Plot, Pie chart, line 9",
+              "chart, Gantt Bar Chart, Individual axes, blended axes, dual axes,",
+              "editing axis, Labelling and Annotations, Titles and Captions"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Creating Data maps",
+            "contact_hours": null,
+            "topic_lines": [
+              "Concept of mapping data, Geographic map, tree map, Heat map, 7",
+              "Spider maps, Distributing and publishing your data visualization"
+            ],
+            "topics_text": "Concept of mapping data, Geographic map, tree map, Heat map, 7 Spider maps, Distributing and publishing your data visualization",
+            "topics": [
+              "Concept of mapping data, Geographic map, tree map, Heat map, 7",
+              "Spider maps, Distributing and publishing your data visualization"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Manipulating Data",
+            "contact_hours": null,
+            "topic_lines": [
+              "Cleaning data, filtering data, structuring data, sorting data, pivoting 6 data, using size and detail panel, customizing filters, Sorting,",
+              "formatting data with colors"
+            ],
+            "topics_text": "Cleaning data, filtering data, structuring data, sorting data, pivoting 6 data, using size and detail panel, customizing filters, Sorting, formatting data with colors",
+            "topics": [
+              "Cleaning data, filtering data, structuring data, sorting data, pivoting 6 data, using size and detail panel, customizing filters, Sorting,",
+              "formatting data with colors"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Trends and Forecasting 3 Creating trend lines, model types, creating forecast",
+            "contact_hours": null,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          },
+          {
+            "unit_number": 7,
+            "title": "Creating Dashboard and Stories",
+            "contact_hours": null,
+            "topic_lines": [
+              "Multiple tables join, Data Blending, using storytelling, Display 5 designs for dashboard, adding interactivity to dashboard, creating",
+              "multiple visualizations into dashboard"
+            ],
+            "topics_text": "Multiple tables join, Data Blending, using storytelling, Display 5 designs for dashboard, adding interactivity to dashboard, creating multiple visualizations into dashboard",
+            "topics": [
+              "Multiple tables join, Data Blending, using storytelling, Display 5 designs for dashboard, adding interactivity to dashboard, creating",
+              "multiple visualizations into dashboard"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Distributing and publishing your visualization",
+            "contact_hours": null,
+            "topic_lines": [
+              "Various file types, making worksheet interactive using URL, 3 Highlight, publishing online, sharing your visualization, printing",
+              "and exporting"
+            ],
+            "topics_text": "Various file types, making worksheet interactive using URL, 3 Highlight, publishing online, sharing your visualization, printing and exporting",
+            "topics": [
+              "Various file types, making worksheet interactive using URL, 3 Highlight, publishing online, sharing your visualization, printing",
+              "and exporting"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Server Configuration",
+            "contact_hours": null,
+            "topic_lines": [
+              "Single server installation, resolutions, Data Server, Data Security, 2",
+              "Content administration, User rights, permissions precedence",
+              "TOTAL HOURS 41",
+              "Reference Books:",
+              "1. Visual analytics with tableau by Alexander Loth",
+              "2. Learning Tableau 2019: Tools for Business Intelligence, Data Prep, and Visual",
+              "Analytics, 3rd Edition Book by Joshua N. Milligan",
+              "3. Manual of Tableau Server, Tableau Public and Tableau Desktop",
+              "4. Practical Tableau: 100 Tips, Tutorials, and Strategies from a Tableau Zen Master by",
+              "Ryan Sleeper",
+              "MOOC Courses:",
+              "1. Data Visualization with Tableau by Coursera",
+              "2. Creating Dashboards and Storytelling with Tableau by coursera",
+              "3. Training Videos by Tableau software -",
+              "https://www.tableau.com/learn/training/20201",
+              "4. Tableau Specialist Certification Prep by Udemy"
+            ],
+            "topics_text": "Single server installation, resolutions, Data Server, Data Security, 2 Content administration, User rights, permissions precedence TOTAL HOURS 41 Reference Books: 1. Visual analytics with tableau by Alexander Loth 2. Learning Tableau 2019: Tools for Business Intelligence, Data Prep, and Visual Analytics, 3rd Edition Book by Joshua N. Milligan 3. Manual of Tableau Server, Tableau Public and Tableau Desktop 4. Practical Tableau: 100 Tips, Tutorials, and Strategies from a Tableau Zen Master by Ryan Sleeper MOOC Courses: 1. Data Visualization with Tableau by Coursera 2. Creating Dashboards and Storytelling with Tableau by coursera 3. Training Videos by Tableau software - https://www.tableau.com/learn/training/20201 4. Tableau Specialist Certification Prep by Udemy",
+            "topics": [
+              "Single server installation, resolutions, Data Server, Data Security, 2",
+              "Content administration, User rights, permissions precedence",
+              "TOTAL HOURS 41",
+              "Reference Books:",
+              "1. Visual analytics with tableau by Alexander Loth",
+              "2. Learning Tableau 2019: Tools for Business Intelligence, Data Prep, and Visual",
+              "Analytics, 3rd Edition Book by Joshua N. Milligan",
+              "3. Manual of Tableau Server, Tableau Public and Tableau Desktop",
+              "4. Practical Tableau: 100 Tips, Tutorials, and Strategies from a Tableau Zen Master by",
+              "Ryan Sleeper",
+              "MOOC Courses:",
+              "1. Data Visualization with Tableau by Coursera",
+              "2. Creating Dashboards and Storytelling with Tableau by coursera",
+              "3. Training Videos by Tableau software",
+              "https://www.tableau.com/learn/training/20201",
+              "4. Tableau Specialist Certification Prep by Udemy"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5287,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                    Information and Communication Technology\n\n                                 Semester – V\n                   Subject Name: Data Analytics and Visualization\n                              Subject Code: 09CT0508\n\n   Diploma Branches in which this subject is offered: Information and Communication\n    Technology\n\n   Objective: After successful completion of this subject, students can get familiar and\n    able to implement various data visualization strategies using Tableau. Students can\n    able to create and plot various visuals like various plots, maps, Trends, forecasting and\n   dashboards and sever based online visuals.\n\n   Credits Earned: 04 Credits\n\n   Course Outcomes:\n         To differentiate data analytics and data visualizations functions, uses and strategies\n         To get familiar with Visualization software like, Tableau.\n         To apply and create various graphical models like plots, maps and dashboards\n         Understand Server and offline data manipulating and creation techniques\n         To remember foundations of Data Visualizations in every type of datasets.\n\n    Pre-requisite of course: Basic Programming\n\n   Teaching and Examination Scheme\n\n                                                                                Tutorial/ Practical   Teaching Scheme (Hours)                    Theory Marks                                                                  Marks           Total                                   Credits                                                                  Term    MarksTheory    Tutorial    Practical          ESE    IA     CSE      Viva                                                                      work\n  3        0        2        4     50    30      20       25       25       150\n\n   Contents:\n                                                                    Contact    Unit                            Topics                                                                    hours\n     1    Introduction to Data Analytics and Visualization\n            Data, Qualitative Data, Quantitative Data, Data Strategies, Data                                                                     2            Analytics,  Advantages,  Disadvantages,  Data   Visualizations,\n           Foundations of Data Visualization\n     2    Getting Started with interface\n            Introduction,  Features,  Advantage,  Disadvantage,  Installation,     4\n          User Interface and workspace, Repository, Connecting to Data,"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                 Information and Communication Technology\n\n       Dimensions and Measures, Data types and  default  properties,\n        building basic views, saving and sharing workspace\n  3    Creating Basic Visualizations plots\n       Date functionality - Date aggregations, date parts, tabular charts,\n       Bar chart, stacked bars, crosstab report, Scatter Plot, Pie chart, line     9\n         chart, Gantt Bar Chart, Individual axes, blended axes, dual axes,\n        editing axis, Labelling and Annotations, Titles and Captions\n  4    Creating Data maps\n       Concept of mapping data, Geographic map, tree map, Heat map,     7\n        Spider maps, Distributing and publishing your data visualization\n  5    Manipulating Data\n       Cleaning data, filtering data, structuring data, sorting data, pivoting                                                                 6         data, using size and  detail panel, customizing  filters, Sorting,\n        formatting data with colors\n  6    Trends and Forecasting                                                                 3        Creating trend lines, model types, creating forecast\n  7    Creating Dashboard and Stories\n        Multiple tables join, Data Blending, using storytelling, Display                                                                 5        designs for dashboard, adding interactivity to dashboard, creating\n        multiple visualizations into dashboard\n  8    Distributing and publishing your visualization\n       Various  file  types, making worksheet  interactive using URL,                                                                 3        Highlight, publishing online, sharing your visualization, printing\n       and exporting\n  9    Server Configuration\n        Single server installation, resolutions, Data Server, Data Security,     2\n       Content administration, User rights, permissions precedence\n                TOTAL HOURS                           41\n\nReference Books:\n    1.  Visual analytics with tableau by Alexander Loth\n    2.  Learning Tableau 2019: Tools for Business Intelligence, Data Prep, and Visual\n        Analytics, 3rd Edition Book by Joshua N. Milligan\n    3.  Manual of Tableau Server, Tableau Public and Tableau Desktop\n    4.  Practical Tableau: 100 Tips, Tutorials, and Strategies from a Tableau Zen Master by\n       Ryan Sleeper\n\nMOOC Courses:\n     1. Data Visualization with Tableau by Coursera\n     2. Creating Dashboards and Storytelling with Tableau by coursera\n     3. Training Videos by Tableau software -\n       https://www.tableau.com/learn/training/20201\n     4. Tableau Specialist Certification Prep by Udemy"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "46bcb97413436898be0b18f2bb9870ab99afe685bfea0f5778b76e642d98ecdc"
+    },
+    {
+      "subject_id": "49009320051101",
+      "subject_name": "Engineering Electromagnetics",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0511",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e2-engineering-electrodynamics-.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0511 - Engineering Electrodynamics (.pdf",
+      "expected_pdf_sha256": "96e007fb7174c2868e7f9ea5a942e8264631f3015d7f5a5e533ff359997df951",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0511",
+        "semester_label": "V",
+        "credits": null,
+        "prerequisite": "TeachingElementaryandknowledgeExaminationof scienceSchemeand mathematics Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE MarksTheory Tutorial Practical IA (M) CSE (I) Viva (V) work (E) (TW) 3 2 0 4 50 30 20 25 25 150"
+      },
+      "objectives": [
+        "The rationale behind this course is to understand the basics of electromagneticCredits Earned:theory."
+      ],
+      "course_outcomes": [
+        "Credits 1. Understand the physicalAfter learninginterpretationthis course,of coulomb’sstudentslaw,shouldGauss’sbe ablelaw, to,Biot-Savart law, and Amperes Circuital law. 2. Analyze the fundamental principles and laws of electromagnetism. 3. Apply the four basic Maxwell’s equations and be able to apply them to different EM problems. 4. Analyze the effect of electromagnetic wave propagation in free-space, dielectrics, and conductors."
+      ],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6264,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                        Faculty of Diploma studies\n                        Information and Communication Technology\n\n\n\n                          Subject Code: 09CT0511\n                 Subject Name: Engineering Electromagnetics\n                    Diploma Year – III (Semester V)\n\n    Objective:              The  rationale behind  this  course  is  to understand  the  basics  of    electromagneticCredits Earned:theory.   Course Outcomes:Credits     1.  Understand the physicalAfter learninginterpretationthis course,of coulomb’sstudentslaw,shouldGauss’sbe ablelaw, to,Biot-Savart law,\n       and Amperes Circuital law.\n     2.  Analyze the fundamental principles and laws of electromagnetism.\n     3.  Apply the four basic Maxwell’s equations and be able to apply them to different EM\n       problems.\n     4.  Analyze the effect of electromagnetic wave propagation in free-space, dielectrics, and\n        conductors.\n    Pre-requisite of course:                        TeachingElementaryandknowledgeExaminationof scienceSchemeand mathematics\n                                                               Tutorial/ Practical Teaching Scheme (Hours)              Theory Marks                                                         Marks                                                                                   Total                              Credits                             Term                               ESE                                 MarksTheory  Tutorial  Practical                IA (M)  CSE (I)   Viva (V)   work                                       (E)                                                          (TW)  3       2       0       4     50    30     20      25      25     150    Contents:\n\n Sr No  Course content                                                       Total Hrs.\n  1    Vector Analysis                                               07\n         Scalars and Vectors, Scalars and Vector Fields, Vector in 2D and 3D\n         space, Unit Vector, Vector in Rectangular Coordinate System, Position\n         Vector, Distance  Vector, Vector  Addition, and Vector  Subtraction,\n         Vector  Multiplication.  (Dot  Product  and  Cross  Product),  Circular\n          cylindrical co-ordinates., Spherical co-ordinate system, Del Operator,\n         Gradient, Divergence, and Curl"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                      Faculty of Diploma studies\n                     Information and Communication Technology\n2    Coulomb’s law and Electric Field Intensity                          05\n     Coulomb’s Law, Electric field Intensity and Electric Field Intensity due to\n      various Charge Distribution., Electric field Intensity due to line charge\n       distribution, Electric field Intensity due to surface charge distribution.\n3     Electric Flux Density and Gauss’s law.                             05\n       Electric Flux Density, Faraday Experiment and Relation Between D and\n      E, Gauss’s Law, Divergence Theorem and Maxwell  First Equation,\n      Application of Gauss’s Law.\n\n4    Energy and Electric Potential                                    06\n      Definition of Electric Potential, Maxwell Second Equation, and Relation\n     Between Electric Potential and Electric Field Intensity, Electric Dipole,\n     Energy Density in Electrostatic Field\n5    Conductor, Dielectric, and Capacitance                            06\n      Current and current density, Continuity equation of current, Metallic\n      conductors, and boundary condition for conductor free space interface,\n       Dielectric and Boundary Condition for Dielectric-Dielectric Interface,\n      Capacitance due to several Geometry.\n6    The Steady Magnetic Field                                      06\n     The Steady Magnetic Field, Biot-Savarat Law, Magnetic Field due to\n       Infinitely long Current Element, Magnetic Field due to surface current,\n     Ampere Circuital Law and Maxwell 3rd Equation, Application of\n     Ampere Circuital Law, Magnetic Flux Density and Maxwell 4th\n      Equation, Magnetic Potential and Stock Theorem\n7    Electromagnetic wave propagation                                04\n      Electromagnetic wave equation for propagation, phenomena of skin\n       effect, polarization, Standing Wave Ratio, Introduction to waveguides,\n     and radiation from a different antenna.\n      Total                                                      39 hrs.\n\n\n References:\n\n     1.  Elements of Electromagnetics by Matthew N.O. Sadiku, Oxford University Press\n     2.  Engineering Electromagnetics by W.H. Hayt and J A Buck, Tata McGraw Hill\n        Publications\n        Electromagnetics with Applications by Kraus and Fleisch, Tata McGraw Hill\n        Publications     3."
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                     Faculty of Diploma studies\n                     Information and Communication Technology\nSuggested Theory distribution:\nThe suggested theory  distribution as per Bloom’s taxonomy  is as  follows. Thisdistribution serves as guidelines for teachers and students to achieve effective teaching-learning process              Distribution of Theory for course delivery and evaluationRemember   Understand     Apply       Analyze      Evaluate       Create  40%       40%       10%       10%       0%       0%\n\nLegends: R: Remembrance; U: Understanding; A: Application, N: Analyze and E: Evaluate\nC: Create and above Levels (Revised Bloom’s Taxonomy)\n\nSuggested List of Tutorial:\nStudents are required to complete 10 experiments.\n    1. Example of Cylindrical and Spherical Coordinate Systems.\n    2. Example of Gradient, Divergence, and Curl.\n    3. Example of Columb’s Law and\n    4. Example of Electric Field Intensity.\n    5. Example of Various Charge Distribution.\n    6. Example of Electric Field Intensity.\n    7. Example of Electric Flux Density and Gauss’s Law.\n    8. Example of Electric Potential and Energy density.\n    9. Example of Conductor, Dielectric, and Capacitance.\n    10. Example of Steady Magnetic Field.\n\nOpen-Ended Problem:\n    1.  Matlab Program for Cylindrical and Spherical Coordinate Systems.\n    2.  Matlab Program for Electric Field Intensity and Magnetic Field Intensity.\n    3.  Matlab Program for Electric and Magnetic Potential."
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "96e007fb7174c2868e7f9ea5a942e8264631f3015d7f5a5e533ff359997df951"
+    },
+    {
+      "subject_id": "49009320051401",
+      "subject_name": "Game Development",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0514",
+      "catalog_status": "REVIEW_TITLE_OR_CODE_MISMATCH",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e2-game-development.pdf",
+      "source_pdf_repo_path": null,
+      "expected_pdf_sha256": "f4c580f346930eac4215a005fe5717f77cbc3063f68a0e0fda95178d92166e2c",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {},
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No checked-in PDF matched subject code 09CT0514."
+      ]
+    },
+    {
+      "subject_id": "49009320051201",
+      "subject_name": "Linux Administrator",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0512",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e2-linux-administration.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0512 - Linux Administration (.pdf",
+      "expected_pdf_sha256": "51c8ace5d8b02792923561f8755ece294e42aca212c5f12b360a57147101248b",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0512",
+        "semester_label": "V",
+        "credits": null,
+        "prerequisite": "Basic knowledge of Operating System"
+      },
+      "objectives": [
+        "To impart knowledge and skills on various practical and theoretical aspects of Linux operating system (OS) basics and Linux OS based server configuration, management and administration. Credits Earned: 04"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to: 1. Understand Linux utilities to create and manage simple file processing operations and Linux boot processing. 2. Apply Command line in Linux to manage user, user groups, system management, volume management, and troubleshooting application, scheduling task and system level issue. 3. Illustrate client server applications with appropriate security. 4. Configure various services of Linux Apache web server. 5. Evaluate various shell Scripting."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/Practical Total Teaching Scheme (Hours) Credits Theory Marks Marks Marks Term Work Theory Tutorial Practical ESE IA CSE Viva (TW) 3 0 2 4 50 30 20 25 25 150 [PAGE 2] Marwadi University Faculty of Diploma Studies Information and Communication Technology",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 6,
+            "title": "Boot Loaders, The init process, rc scripts, enabling and disabling services, Booting in",
+            "contact_hours": 4,
+            "topic_lines": [
+              "recovery mode",
+              "Core System Services",
+              "05 7 The init Daemon, xinetd and inetd, The Logging Daemon, Configuring, Logging Daemon, The",
+              "CRON program",
+              "Compiling the Linux Kernel 04 8 Kernel concepts, Finding Kernel Source Code, Building the Kernel, Patching the Kernel",
+              "Apache Web Server",
+              "05 9 HTTP Protocol, Installing Apache HTTP Server, Starting up and shutting down apache, Testing",
+              "Apache Installation, Configuring Apache, Troubleshooting Apache",
+              "Total Hours 42",
+              "Marwadi University",
+              "Faculty of Diploma Studies",
+              "Information and Communication Technology"
+            ],
+            "topics_text": "recovery mode Core System Services 05 7 The init Daemon, xinetd and inetd, The Logging Daemon, Configuring, Logging Daemon, The CRON program Compiling the Linux Kernel 04 8 Kernel concepts, Finding Kernel Source Code, Building the Kernel, Patching the Kernel Apache Web Server 05 9 HTTP Protocol, Installing Apache HTTP Server, Starting up and shutting down apache, Testing Apache Installation, Configuring Apache, Troubleshooting Apache Total Hours 42 Marwadi University Faculty of Diploma Studies Information and Communication Technology",
+            "topics": [
+              "recovery mode",
+              "Core System Services",
+              "05 7 The init Daemon, xinetd and inetd, The Logging Daemon, Configuring, Logging Daemon, The",
+              "CRON program",
+              "Compiling the Linux Kernel 04 8 Kernel concepts, Finding Kernel Source Code, Building the Kernel, Patching the Kernel",
+              "Apache Web Server",
+              "05 9 HTTP Protocol, Installing Apache HTTP Server, Starting up and shutting down apache, Testing",
+              "Apache Installation, Configuring Apache, Troubleshooting Apache",
+              "Total Hours 42",
+              "Marwadi University",
+              "Faculty of Diploma Studies",
+              "Information and Communication Technology"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6306,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n                              Subject Code: 09CT0512\n                         Subject Name: Linux Administrator\n                       Diploma Year – III (Semester V)\n\nObjective:\n     To impart knowledge and skills on various practical and theoretical aspects of Linux operating\n       system (OS) basics and Linux OS based server configuration, management and administration.\n\nCredits Earned: 04\n\nCourse Outcomes: After completion of this course, student will be able to:\n    1.  Understand Linux utilities to create and manage simple file processing operations and Linux boot processing.\n    2.  Apply Command line in Linux to manage user, user groups, system management, volume management, and\n        troubleshooting application, scheduling task and system level issue.\n    3.  Illustrate client server applications with appropriate security.\n    4.  Configure various services of Linux Apache web server.\n    5.  Evaluate various shell Scripting.\n\nPre-requisite of course: Basic knowledge of Operating System\n\n\n                                 Teaching and Examination Scheme\n\n\n                                                                                      Tutorial/Practical       Total      Teaching Scheme (Hours)            Credits     Theory Marks                                                                      Marks         Marks\n\n                                                                   Term Work     Theory       Tutorial     Practical          ESE   IA    CSE   Viva                                                                    (TW)\n\n     3           0          2         4      50    30    20      25        25         150"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n\nContents:\n\nS.NO                                TOPIC                                          Hours\n\n      Basics of Linux:\n                                                                                              03  1    History of Linux (GNU/LINUX), Download, installs, update, and manage software packages\n      from Red Hat and yum package repositories.\n      Linux Commands\n      Pwd/cd/ls/who/whoami/who am i/which/cp/mv/rm/mkdir/touch/ hostname/ cat/cal/eject/mount/\n       umount/login/logout /echo/wget/Halt/shutdown/poweroff/reboot/ll/dd/joe/emacs/ln/fdisk/mke2fs/   04  2\n       mtools/pico/sed/wc/whereis/convert/ifconfig/ncftp/scp/hdparm/dmesg/bc/sh/at/atq/trm/date/\n      uptime/su/switchdesk/uname\n\n     Management of File using Command Line\n                                                                                              05  3       Introduction to BASH, Command-line shortcuts, File Types, Ownership and Permissions, File      managementManaging Usersandandmanipulation,Groups   Moving users & its directories, Miscellaneous Tools, Editors\n                                                                                              06  4       Creating and managing user/s and group commands, User management Tools, Users and Access       Permissions,Creating, Viewing,UpdatingandusersEditingand groupText Filesattributes, PAM (Pluggable Authentication Modules)\n                                                                                              06  5    Redirecting Output to a File or Program, I/O Redirection and Pipelines, Editing Text Files from\n       the Shell Prompt, Editing Text Files with a Graphical Editor.\n      Booting and Shutting down\n  6   Boot Loaders, The init process,  rc scripts,  enabling  and disabling services, Booting in      04\n      recovery mode\n      Core System Services\n                                                                                              05  7   The init Daemon, xinetd and inetd, The Logging Daemon, Configuring, Logging Daemon, The\n    CRON program\n      Compiling the Linux Kernel                                                               04  8      Kernel concepts,  Finding Kernel Source Code, Building the Kernel, Patching the Kernel\n     Apache Web Server\n                                                                                              05  9  HTTP Protocol, Installing Apache HTTP Server, Starting up and shutting down apache, Testing\n      Apache Installation, Configuring Apache, Troubleshooting Apache\n                                                                                         Total Hours   42"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as guidelines for\nteachers and students to achieve effective teaching-learning process\n\n\n                                Distribution of Theory for course delivery and evaluation\n\n    Remember       Understand          Apply          Analyse          Evaluate           Create\n\n       40%          40%          10%          10%             0              0\n\n\nSuggested List of Experiment:\n             1.\n             2.                 File Handling Commands\n             3.              User Handling Commands\n             4.             Group Handling Commands\n             5.               Startup and Shutdown Commands\n             6.                 Installation and Configuration of Apache Server               Building and patching Linux Kernel\nSUGGESTED LEARNING RESOURCES\n List 1.of Books:Steve Shah and Wale Soyinka “ Linux Administration: A Begineer’s Guide”, 4th         Edition, Tata McGraw-Hill Publishing Company Limited, New Delhi, ISBN:       978-0072262599      2.  Susan Lauber, Philip Sweany, Rudolf Kastl and George Hacker,       “REDHAT System Administration-1 Student Work book”, REDHAT Inc. 2014\nSupplementary1. https://www.tutorialspoint.com/linux_admin/index.htmResources:               2. https://linode.com/docs/tools-reference/linux-system-administration- basics/               3. opensourceforu.com/2016/07/introduction-linux-system-administration/              4. https://www.linuxfoundation.org"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "51c8ace5d8b02792923561f8755ece294e42aca212c5f12b360a57147101248b"
+    },
+    {
+      "subject_id": "49009320051301",
+      "subject_name": "Machine Learning using Python",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0513",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/machine-learning-using-python_dst-2.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0513 - Machine Learning using Python (.pdf",
+      "expected_pdf_sha256": "bee518d7dbc65653d98f2c7a53e1949617740a8b5cec9dae3299eec1f94d4e2e",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0513",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "Basic Programming"
+      },
+      "objectives": [
+        "After successful completion of this course, students can able to do Python programming with knowledge of various libraries and operations in python scripting. Using Python and related simulation tools students able to implement machine learning algorithms to specifies datasets as well as model evaluation. Credits Earned: 04 Credits"
+      ],
+      "course_outcomes": [
+        " To understand the various Data types , decision making statement and loops in Python scripting  Apply various Machine learning algorithms to specified datasets.  Remember Statistical testing approach towards Machine learning and model evaluation.  Understand List, tuple, function, string and various python libraries in Python programming."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term MarksTheory Tutorial Practical ESE IA CSE Viva work 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Python",
+            "contact_hours": null,
+            "topic_lines": [
+              "Installing Python; basic syntax, interactive shell, editing, saving, and 2",
+              "running a script."
+            ],
+            "topics_text": "Installing Python; basic syntax, interactive shell, editing, saving, and 2 running a script.",
+            "topics": [
+              "Installing Python",
+              "basic syntax, interactive shell, editing, saving, and 2",
+              "running a script."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Data types in python",
+            "contact_hours": null,
+            "topic_lines": [
+              "variables, assignments; immutable variables; numerical types; 2",
+              "arithmetic, Logical operators and expressions; comments in the",
+              "Marwadi University",
+              "Faculty of Diploma Studies",
+              "Information and Communication Technology",
+              "program; understanding error messages"
+            ],
+            "topics_text": "variables, assignments; immutable variables; numerical types; 2 arithmetic, Logical operators and expressions; comments in the Marwadi University Faculty of Diploma Studies Information and Communication Technology program; understanding error messages",
+            "topics": [
+              "variables, assignments",
+              "immutable variables",
+              "numerical types",
+              "2",
+              "arithmetic, Logical operators and expressions",
+              "comments in the",
+              "Marwadi University",
+              "Faculty of Diploma Studies",
+              "Information and Communication Technology",
+              "program",
+              "understanding error messages"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Conditional and Decision Making Statements",
+            "contact_hours": null,
+            "topic_lines": [
+              "Conditions, boolean logic, logical operators; ranges; 4 Control statements: if-else, loops (for, while); break, continue",
+              "statements"
+            ],
+            "topics_text": "Conditions, boolean logic, logical operators; ranges; 4 Control statements: if-else, loops (for, while); break, continue statements",
+            "topics": [
+              "Conditions, boolean logic, logical operators",
+              "ranges",
+              "4 Control statements: if-else, loops (for, while)",
+              "break, continue",
+              "statements"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "String manipulations",
+            "contact_hours": null,
+            "topic_lines": [
+              "subscript operator, indexing, slicing a string; strings and number 3 system: converting strings to numbers and vice versa. Binary, octal,",
+              "hexadecimal numbers"
+            ],
+            "topics_text": "subscript operator, indexing, slicing a string; strings and number 3 system: converting strings to numbers and vice versa. Binary, octal, hexadecimal numbers",
+            "topics": [
+              "subscript operator, indexing, slicing a string",
+              "strings and number 3 system: converting strings to numbers and vice versa. Binary, octal,",
+              "hexadecimal numbers"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Lists, tuples, and dictionaries",
+            "contact_hours": null,
+            "topic_lines": [
+              "Basic list operators, replacing, inserting, removing an element; 6 searching and sorting lists; dictionary literals, adding and removing",
+              "keys, accessing and replacing values; traversing dictionaries."
+            ],
+            "topics_text": "Basic list operators, replacing, inserting, removing an element; 6 searching and sorting lists; dictionary literals, adding and removing keys, accessing and replacing values; traversing dictionaries.",
+            "topics": [
+              "Basic list operators, replacing, inserting, removing an element",
+              "6 searching and sorting lists",
+              "dictionary literals, adding and removing",
+              "keys, accessing and replacing values",
+              "traversing dictionaries."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Functions, Scoping and Abstraction",
+            "contact_hours": null,
+            "topic_lines": [
+              "Functions and scoping, Specifications, Recursion, Global variables, 6",
+              "Modules, Files, System Functions and Parameters"
+            ],
+            "topics_text": "Functions and scoping, Specifications, Recursion, Global variables, 6 Modules, Files, System Functions and Parameters",
+            "topics": [
+              "Functions and scoping, Specifications, Recursion, Global variables, 6",
+              "Modules, Files, System Functions and Parameters"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Basics of Python Libraries",
+            "contact_hours": null,
+            "topic_lines": [
+              "Numpy, Pandas, Seaborn, Matplotlib, Scikit-Learn libraries of 6",
+              "python"
+            ],
+            "topics_text": "Numpy, Pandas, Seaborn, Matplotlib, Scikit-Learn libraries of 6 python",
+            "topics": [
+              "Numpy, Pandas, Seaborn, Matplotlib, Scikit-Learn libraries of 6",
+              "python"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Cleaning and Processing the Data",
+            "contact_hours": null,
+            "topic_lines": [
+              "Understanding Data, Importing Dataset, Identify and Handle 3",
+              "Missing Values, Data Formatting, Data Normalization, Sets"
+            ],
+            "topics_text": "Understanding Data, Importing Dataset, Identify and Handle 3 Missing Values, Data Formatting, Data Normalization, Sets",
+            "topics": [
+              "Understanding Data, Importing Dataset, Identify and Handle 3",
+              "Missing Values, Data Formatting, Data Normalization, Sets"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Machine Learning using Python",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to Machine Learning, Regression, Linear Regression,",
+              "Logistic Regression, Multi Variable Regression, Classification, K-",
+              "Nearest Neighbor"
+            ],
+            "topics_text": "Introduction to Machine Learning, Regression, Linear Regression, Logistic Regression, Multi Variable Regression, Classification, K- Nearest Neighbor",
+            "topics": [
+              "Introduction to Machine Learning, Regression, Linear Regression,",
+              "Logistic Regression, Multi Variable Regression, Classification, K",
+              "Nearest Neighbor"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Model Evaluation",
+            "contact_hours": null,
+            "topic_lines": [
+              "Descriptive Statistics, Grouping, ANOVA, Correlation, R-Squared 4",
+              "and MSE for evaluation",
+              "TOTAL HOURS 43",
+              "Reference books:",
+              "1. Learning Python by Mark Lutz , 6th edition - O’REILLY PUBLICATION",
+              "DOI : https://cfm.ehu.es/ricardo/docs/python/Learning_Python.pdf",
+              "2. Head-First Python, 2nd edition Paul Barry (O’Reilly, 2016)",
+              "3. Python Machine Learning by Sebastian Raschka",
+              "4. Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and",
+              "Techniques to Build Intelligent Systems by Aurelien Geron.",
+              "MOOC Courses:",
+              "1. Machine Learning by Andrew NG – Coursera",
+              "2. Python for everybody by Charles Severance",
+              "3. Data Science: Statistics and Machine Learning Specialization- Coursera",
+              "4. Machine Learning A-Z™: Hands-On Python & R In Data Science- Udemy"
+            ],
+            "topics_text": "Descriptive Statistics, Grouping, ANOVA, Correlation, R-Squared 4 and MSE for evaluation TOTAL HOURS 43 Reference books: 1. Learning Python by Mark Lutz , 6th edition - O’REILLY PUBLICATION DOI : https://cfm.ehu.es/ricardo/docs/python/Learning_Python.pdf 2. Head-First Python, 2nd edition Paul Barry (O’Reilly, 2016) 3. Python Machine Learning by Sebastian Raschka 4. Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems by Aurelien Geron. MOOC Courses: 1. Machine Learning by Andrew NG – Coursera 2. Python for everybody by Charles Severance 3. Data Science: Statistics and Machine Learning Specialization- Coursera 4. Machine Learning A-Z™: Hands-On Python & R In Data Science- Udemy",
+            "topics": [
+              "Descriptive Statistics, Grouping, ANOVA, Correlation, R-Squared 4",
+              "and MSE for evaluation",
+              "TOTAL HOURS 43",
+              "Reference books:",
+              "1. Learning Python by Mark Lutz , 6th edition - O’REILLY PUBLICATION",
+              "DOI : https://cfm.ehu.es/ricardo/docs/python/Learning_Python.pdf",
+              "2. Head-First Python, 2nd edition Paul Barry (O’Reilly, 2016)",
+              "3. Python Machine Learning by Sebastian Raschka",
+              "4. Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and",
+              "Techniques to Build Intelligent Systems by Aurelien Geron.",
+              "MOOC Courses:",
+              "1. Machine Learning by Andrew NG – Coursera",
+              "2. Python for everybody by Charles Severance",
+              "3. Data Science: Statistics and Machine Learning Specialization- Coursera",
+              "4. Machine Learning A-Z™: Hands-On Python & R In Data Science- Udemy"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5114,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                         Faculty of Diploma Studies\n                         Information and Communication Technology\n\n                                 Semester – V\n                   Subject Name: Machine Learning using Python\n                              Subject Code: 09CT0513\n\n   Diploma Branches in which this subject is offered: Information and Communication\n    Technology\n\n    Objective: After successful completion of this course, students can able to do Python\n   programming with knowledge of various libraries and operations in python scripting.\n   Using Python and  related simulation  tools students able  to implement machine\n    learning algorithms to specifies datasets as well as model evaluation.\n\n   Credits Earned: 04 Credits\n\n   Course Outcomes:\n         To understand the various Data types , decision making statement and loops in Python\n             scripting\n         Apply various Machine learning algorithms to specified datasets.\n         Remember  Statistical  testing  approach  towards  Machine  learning  and  model\n             evaluation.\n          Understand  List,  tuple,  function,  string and various python  libraries  in Python\n           programming.\n\n    Pre-requisite of course: Basic Programming\n\n   Teaching and Examination Scheme\n\n                                                                                Tutorial/ Practical   Teaching Scheme (Hours)                   Theory Marks\n                                                                  Marks           Total                                   Credits                                                                  Term    MarksTheory    Tutorial    Practical          ESE    IA     CSE      Viva                                                                      work\n  3        0        2        4     50    30      20       25       25       150\n\n   Contents:\n                                                                    Contact    Unit                            Topics                                                                    hours\n     1    Introduction to Python\n              Installing Python; basic syntax, interactive shell, editing, saving, and     2\n            running a script.\n     2    Data types in python\n             variables,  assignments;  immutable  variables;  numerical  types;     2\n             arithmetic, Logical   operators and expressions; comments in the"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                      Faculty of Diploma Studies\n                      Information and Communication Technology\n\n        program; understanding error messages\n  3    Conditional and Decision Making Statements\n        Conditions, boolean logic, logical operators; ranges;                                                                 4        Control  statements:  if-else,  loops  (for,  while);  break,  continue\n        statements\n  4     String manipulations\n         subscript operator, indexing, slicing a  string; strings and number                                                                 3        system: converting strings to numbers and vice versa. Binary, octal,\n        hexadecimal numbers\n  5     Lists, tuples, and dictionaries\n        Basic  list  operators,  replacing,  inserting, removing an  element;                                                                 6        searching and sorting lists; dictionary literals, adding and removing\n        keys, accessing and replacing values; traversing dictionaries.\n  6     Functions, Scoping and Abstraction\n        Functions and scoping, Specifications, Recursion, Global variables,       6\n       Modules, Files, System Functions and Parameters\n  7    Basics of Python Libraries\n      Numpy, Pandas, Seaborn,  Matplotlib, Scikit-Learn  libraries of     6\n       python\n  8    Cleaning and Processing the Data\n       Understanding  Data,  Importing  Dataset,  Identify and Handle     3\n       Missing Values, Data Formatting, Data Normalization, Sets\n  9    Machine Learning using Python                                 7\n        Introduction to Machine Learning, Regression, Linear Regression,\n        Logistic Regression, Multi Variable Regression, Classification, K-\n        Nearest Neighbor\n  10   Model Evaluation\n        Descriptive Statistics, Grouping, ANOVA, Correlation, R-Squared     4\n       and MSE for evaluation\n                TOTAL HOURS                           43\n\nReference books:\n1.  Learning Python by Mark Lutz , 6th edition - O’REILLY PUBLICATION\n   DOI : https://cfm.ehu.es/ricardo/docs/python/Learning_Python.pdf\n2.  Head-First Python, 2nd edition Paul Barry (O’Reilly, 2016)\n3.  Python Machine Learning by Sebastian Raschka\n4.  Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and\n    Techniques to Build Intelligent Systems by Aurelien Geron.\n\nMOOC Courses:\n1.  Machine Learning by Andrew NG – Coursera\n2.  Python for everybody by Charles Severance\n3.  Data Science: Statistics and Machine Learning Specialization- Coursera\n4.  Machine Learning A-Z™: Hands-On Python & R In Data Science- Udemy"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "bee518d7dbc65653d98f2c7a53e1949617740a8b5cec9dae3299eec1f94d4e2e"
+    },
+    {
+      "subject_id": "49009320050501",
+      "subject_name": "Microcontroller and Interfacing",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0505",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/microcontroller-and-interfacing-syllabus.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0505 - Microcontroller and Interfacing (.pdf",
+      "expected_pdf_sha256": "dbc1e02e5b9c6778817663feef22fdf31bc113e4996307638d3ebb30551e3d9d",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0505",
+        "semester_label": "V",
+        "credits": null,
+        "prerequisite": "Digital Electronics, Microprocessor"
+      },
+      "objectives": [
+        "The objective of the subject is to give an exposure to the microcontroller architecture, programming and various applications based on it. Credits Earned: 4"
+      ],
+      "course_outcomes": [
+        "After learning this course, students should be able to, 1. Understand various features of Microcontroller 2. Develop assembly language programs 3. Apply programming skill to interface necessary hardware with microcontroller 4. Develop microcontroller based systems"
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE MarksTheory Tutorial Practical IA (M) CSE (I) Viva (V) work (E) (TW) 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Microcontroller",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Block diagram of microcontroller, Features of microcontroller,",
+              "Evolution of microcontroller, Difference between microprocessor",
+              "and microcontroller, Microcontroller architecture- Von neuman",
+              "and Harward architecture, RISC and CISC",
+              "2 8051 Microcontroller Architecture 05",
+              "Block diagram of 8051, Pin Diagram of 8051, General purpose",
+              "registers, Special Function Registers, Oscillator and clock circuit,",
+              "circuit, Memory Organization, Internal Program and Data Memory",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology",
+              "3 8051 Assembly Language Programming 08",
+              "Introduction to Program Development Tools(IDE),Concept of",
+              "IDE,Editor,Assembler,Compiler,Linker,Simulator,Debugger,Assembler",
+              "Directives, Programming model of 8051, Addressing modes, data transfer",
+              "instructions, I/O Port programming, Arithmetic and Logical instructions,",
+              "Bit level instructions, Branching instructions (Jump and loop Jump and",
+              "call), Concept of stack, subroutine and related instructions, writing",
+              "programs",
+              "4 8051 Timer/Counter and Programming: Use of counter as timer, 04",
+              "Timer/Counters and associated registers, Various modes of timer/counter",
+              "operations, Time delay programs in Assembly language",
+              "5 8051 Serial Port and Programming: Basics of serial communication, 04",
+              "RS232 standards, 8051 connection to RS232, Serial data input/output and",
+              "associated registers, Various modes of serial data communication, serial",
+              "data communication programs in Assembly language",
+              "6 8051 Interrupts: Concept of Interrupt, interrupt versus polling, Types of 04",
+              "interrupts in 8051, Reset, interrupt control and associated registers,",
+              "interrupt vectors, Interrupt execution, RETI instruction, software generated",
+              "interrupt, interrupt handler subroutine for timer/counter and serial data",
+              "transmission/reception in Assembly language"
+            ],
+            "topics_text": "Block diagram of microcontroller, Features of microcontroller, Evolution of microcontroller, Difference between microprocessor and microcontroller, Microcontroller architecture- Von neuman and Harward architecture, RISC and CISC 2 8051 Microcontroller Architecture 05 Block diagram of 8051, Pin Diagram of 8051, General purpose registers, Special Function Registers, Oscillator and clock circuit, circuit, Memory Organization, Internal Program and Data Memory Marwadi University Faculty of Diploma studies Information and Communication Technology 3 8051 Assembly Language Programming 08 Introduction to Program Development Tools(IDE),Concept of IDE,Editor,Assembler,Compiler,Linker,Simulator,Debugger,Assembler Directives, Programming model of 8051, Addressing modes, data transfer instructions, I/O Port programming, Arithmetic and Logical instructions, Bit level instructions, Branching instructions (Jump and loop Jump and call), Concept of stack, subroutine and related instructions, writing programs 4 8051 Timer/Counter and Programming: Use of counter as timer, 04 Timer/Counters and associated registers, Various modes of timer/counter operations, Time delay programs in Assembly language 5 8051 Serial Port and Programming: Basics of serial communication, 04 RS232 standards, 8051 connection to RS232, Serial data input/output and associated registers, Various modes of serial data communication, serial data communication programs in Assembly language 6 8051 Interrupts: Concept of Interrupt, interrupt versus polling, Types of 04 interrupts in 8051, Reset, interrupt control and associated registers, interrupt vectors, Interrupt execution, RETI instruction, software generated interrupt, interrupt handler subroutine for timer/counter and serial data transmission/reception in Assembly language",
+            "topics": [
+              "Block diagram of microcontroller, Features of microcontroller,",
+              "Evolution of microcontroller, Difference between microprocessor",
+              "and microcontroller, Microcontroller architecture- Von neuman",
+              "and Harward architecture, RISC and CISC",
+              "2 8051 Microcontroller Architecture 05",
+              "Block diagram of 8051, Pin Diagram of 8051, General purpose",
+              "registers, Special Function Registers, Oscillator and clock circuit,",
+              "circuit, Memory Organization, Internal Program and Data Memory",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology",
+              "3 8051 Assembly Language Programming 08",
+              "Introduction to Program Development Tools(IDE),Concept of",
+              "IDE,Editor,Assembler,Compiler,Linker,Simulator,Debugger,Assembler",
+              "Directives, Programming model of 8051, Addressing modes, data transfer",
+              "instructions, I/O Port programming, Arithmetic and Logical instructions,",
+              "Bit level instructions, Branching instructions (Jump and loop Jump and",
+              "call), Concept of stack, subroutine and related instructions, writing",
+              "programs",
+              "4 8051 Timer/Counter and Programming: Use of counter as timer, 04",
+              "Timer/Counters and associated registers, Various modes of timer/counter",
+              "operations, Time delay programs in Assembly language",
+              "5 8051 Serial Port and Programming: Basics of serial communication, 04",
+              "RS232 standards, 8051 connection to RS232, Serial data input/output and",
+              "associated registers, Various modes of serial data communication, serial",
+              "data communication programs in Assembly language",
+              "6 8051 Interrupts: Concept of Interrupt, interrupt versus polling, Types of 04",
+              "interrupts in 8051, Reset, interrupt control and associated registers,",
+              "interrupt vectors, Interrupt execution, RETI instruction, software generated",
+              "interrupt, interrupt handler subroutine for timer/counter and serial data",
+              "transmission/reception in Assembly language"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Interfacing with 8051 Microcontroller",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Interfacing of LEDs, 7 Segment display device, LCD display, DIP",
+              "Switches, Push Button switches, Key denounce techniques, Keyboard",
+              "connections load per key and matrix form, Interfacing A/D converter, D/A",
+              "converter, Relay, opto isolator stepper motor and DC motor."
+            ],
+            "topics_text": "Interfacing of LEDs, 7 Segment display device, LCD display, DIP Switches, Push Button switches, Key denounce techniques, Keyboard connections load per key and matrix form, Interfacing A/D converter, D/A converter, Relay, opto isolator stepper motor and DC motor.",
+            "topics": [
+              "Interfacing of LEDs, 7 Segment display device, LCD display, DIP",
+              "Switches, Push Button switches, Key denounce techniques, Keyboard",
+              "connections load per key and matrix form, Interfacing A/D converter, D/A",
+              "converter, Relay, opto isolator stepper motor and DC motor."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Applications of 8051 Microcontroller",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Temperature measurement using LM 35 temperature sensor, Battery",
+              "voltage monitoring system, Developing Data Acquisition System for",
+              "multiple channel inputs, GSM based application, Measurement of speed",
+              "Total 42 hrs."
+            ],
+            "topics_text": "Temperature measurement using LM 35 temperature sensor, Battery voltage monitoring system, Developing Data Acquisition System for multiple channel inputs, GSM based application, Measurement of speed Total 42 hrs.",
+            "topics": [
+              "Temperature measurement using LM 35 temperature sensor, Battery",
+              "voltage monitoring system, Developing Data Acquisition System for",
+              "multiple channel inputs, GSM based application, Measurement of speed",
+              "Total 42 hrs."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 7008,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                        Faculty of Diploma studies\n                        Information and Communication Technology\n\n\n                          Subject Code : 09CT0505\n                Subject Name: Microcontroller and Interfacing\n\n                    Diploma Year – III ( Semester V)\n\n\n    Objective: The objective of the subject is to give an exposure to the microcontroller\n    architecture, programming and various applications based on it.\n\n    Credits Earned: 4\n\n   Course Outcomes: After learning this course, students should be able to,\n\n     1.   Understand various features of Microcontroller\n\n     2.   Develop assembly language programs\n\n     3.   Apply programming skill to interface necessary hardware with microcontroller\n\n     4.   Develop microcontroller based systems\n\n    Pre-requisite of course: Digital Electronics, Microprocessor\n\n                        Teaching and Examination Scheme\n\n                                                               Tutorial/ Practical\n Teaching Scheme (Hours)              Theory Marks\n                                                         Marks\n                                                                                   Total\n                              Credits                             Term                               ESE                                 MarksTheory  Tutorial  Practical                IA (M)  CSE (I)  Viva (V)   work\n                                       (E)                                                         (TW)\n  3       0       2       4     50    30     20      25      25     150\n\n\n    Contents:\n\n    Unit    Course content                                                  Total Hrs.\n   No\n   1       Introduction to Microcontroller                             05\n           Block diagram of microcontroller, Features of microcontroller,\n            Evolution of microcontroller, Difference between microprocessor\n          and microcontroller, Microcontroller architecture- Von neuman\n          and Harward architecture, RISC and CISC\n   2      8051 Microcontroller Architecture                             05\n            Block diagram of 8051, Pin Diagram of 8051, General purpose\n               registers, Special Function Registers, Oscillator and clock circuit,\n                circuit, Memory Organization, Internal Program and Data Memory"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                     Faculty of Diploma studies\n                     Information and Communication Technology\n3      8051 Assembly Language Programming                         08\n         Introduction to Program Development Tools(IDE),Concept of\n         IDE,Editor,Assembler,Compiler,Linker,Simulator,Debugger,Assembler\n          Directives, Programming model of 8051, Addressing modes, data transfer\n           instructions, I/O Port programming, Arithmetic and Logical instructions,\n          Bit level instructions, Branching instructions (Jump and loop Jump and\n            call), Concept of stack, subroutine and related instructions, writing\n         programs\n\n\n4       8051 Timer/Counter and Programming: Use of counter as timer,           04\n         Timer/Counters and associated registers, Various modes of timer/counter\n          operations, Time delay programs in Assembly language\n5       8051 Serial Port and Programming: Basics of serial communication,        04\n       RS232 standards, 8051 connection to RS232, Serial data input/output and\n          associated registers, Various modes of serial data communication, serial\n          data communication programs in Assembly language\n6       8051 Interrupts: Concept of Interrupt, interrupt versus polling, Types of       04\n           interrupts in 8051, Reset, interrupt control and associated registers,\n           interrupt vectors, Interrupt execution, RETI instruction, software generated\n           interrupt, interrupt handler subroutine for timer/counter and serial data\n          transmission/reception in Assembly language\n7        Interfacing with 8051 Microcontroller                             08\n          Interfacing of LEDs, 7 Segment display device, LCD display, DIP\n          Switches, Push Button switches, Key denounce techniques, Keyboard\n         connections load per key and matrix form, Interfacing A/D converter, D/A\n          converter, Relay, opto isolator stepper motor and DC motor.\n8       Applications of 8051 Microcontroller                           04\n        Temperature measurement using LM 35 temperature sensor, Battery\n         voltage monitoring system, Developing Data Acquisition System for\n         multiple channel inputs, GSM based application, Measurement of speed\n        Total                                                  42 hrs.\n\n\nSuggested List of Experiments:\n\n1.   Introduction to simulation tool for 8051 microcontroller programming.\n\n2.   Introduction to 8051 Trainer board and its features.\n\n3.  Develop Assembly Language Programs with Data Transfer Instructions.\n\n4.  Develop Assembly Language Programs with Arithmetic Instructions ( 8 bit Addition,\n\n    Subtractions, Multiplication and Division)\n\n5.  Develop Assembly Language Programs using Logical Instructions ( AND, OR, NOT)\n\n6.  Develop Assembly Language Programs using Branching instructions.\n\n7.  Develop Assembly Language Programs for Looping, Counting & Indexing concept.\n\n8.  Introduce delay using Timer & Counter by Assembly Language Programming.\n\n9.  Develop Assembly Language Programs using Interrupts."
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                     Faculty of Diploma studies\n                     Information and Communication Technology\n10. Serial Communication and UART programming using Assembly language.\n\n11. Interfacing of LED & 7 Segment display with 8051 Controller.\n\n12. Interface LCD Module with 8051 microcontroller.\n\n13. Interface DAC & ADC with 8051 microcontroller.\n\n14. Interface DC motor and stepper motor with 8051 microcontroller.\n\n\nReferences:\n\n1. The 8051 Microcontroller and Embedded Systems using Assembly and C by\nMuhammad Ali Mazidi, Janice Gillispie Mazidi and Rolin McKinlay ( Second Edition  ,\nPearson Education)\n2. The 8051 Microcontroller & Embedded Systems using Assembly and C By K. J. Ayala,\nD. V. Gadre (Cengage Learning , India Edition).\n3. Microcontrollers: Principles and Applications by Pal Ajit, EEE, PHI New Delhi(Latest\nEdition)\n4. The 8051 Microcontrollers: Architecture, Programming and Applications\nRao Dr. K Uma Pearson Education India, New Delhi,(Latest edition)\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This\ndistribution serves as guidelines for teachers and students to achieve effective teaching-\nlearning process\n\nR Level     U Level     A Level     N Level      E Level      C Level\n30         30         20         10         10         0\n\n\nLegends: R: Remembrance; U: Understanding; A: Application, N: Analyze and E: Evaluate\nC: Create and above Levels (Revised Bloom’s Taxonomy)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09CT0505 - Microcontroller and Interfacing (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "dbc1e02e5b9c6778817663feef22fdf31bc113e4996307638d3ebb30551e3d9d"
+    },
+    {
+      "subject_id": "49009320050701",
+      "subject_name": "Network Routing and Switching",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0507",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e1-network-routing-and-switching.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0507 - Network Routing and Switching (.pdf",
+      "expected_pdf_sha256": "5c85d256ca002e36fc9a73f3692e86de7a1a726ddb53dae1dc2168b30f875a9a",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0507",
+        "semester_label": "V",
+        "credits": null,
+        "prerequisite": "Data Communication and Networking"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "After completion of this course, student will be able to: Describe the function of Network layers and types of networks. (Understanding) Interpret different types of IP Address and sub-netting for different scenarios (Applyy) 1. Classify types of routing and characteristics of routing protocols(Analyze) 2.4. Demonstrate the use of line commands for different operation and configuration of router and 3. switch. (Understanding). 5. Built, modify and test various network topology, access list control with different routing protocol (Applying)"
+      ],
+      "teaching_and_examination_scheme_text": ": Tutorial / Theory Marks Practical Marks Teaching Scheme (Hours) Credits Total Marks E I V TTheory Tutorial Practical ESE IA CSE Viva Term Work 3 0 2 4 50 30 20 25 25 150 [PAGE 2] Marwadi University Faculty of Diploma studies Information and Communication Technology",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Networks, Networking history and Types, OSI Reference Model, TCP/IP 04 Model, Ethernet Technologies and Cabling, Cisco 3 Layer Model",
+            "contact_hours": null,
+            "topic_lines": [
+              "IPIP AddressingAddresses –andComposition,Subnets Types and Classes, Private and Public IP addresses, 2 10 Subnetting, Variable Length Subnet Masks (VLSM), Route Summarization, Troubleshooting IP Addressing",
+              "Routers,IntroductionSwitchesto CiscoandRouters,IOS Switches, IOS & the Boot Process, Using the Command-3 Line Interface (CLI), Basic Configuration of Router and Switches, Configuring Router 12 Interfaces, Gathering Information and Verifying Configuration, Configuring DNS, Telnet & DHCP, Saving, Erasing, Restoring and Backing up Configuration & IOS File, Password Recovery on a Cisco Router, Cisco Discovery Protocol (CDP)",
+              "IPUnderstandingRouting IP Routing, Static, Default and Dynamic Routing, Administrative4 08 Distance and Routing Metrics, Classes of Routing Protocols, Routing Loops, Route Redistribution",
+              "RoutingUnderstandingProtocolsof Enhanced Interior Gateway Routing Protocol (EIGRP), Open Shortest5 10 Path First (OSPF), RIPv1 & RIPv2, Configuring EIGRP, OSPF, RIPv1 & RIPv2, Verifying and Troubleshooting EIGRP, OSPF, RIP",
+              "AccessIntroductionLists,toVLANsAccessandLists,VTPStandard Access Lists, Extended Access Lists, Access Lists - 6 Remote Access, Switch Port, Modifying & Helpful Hints, MAC Address Table, Virtual 5 LANs (VLANs),",
+              "Total Hours 49 Hrs",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology",
+              "Suggested Text books / Reference books:",
+              "1. CCNA INTRO (Introduction to Cisco Networking Technologies) by Todd Lammle, Sybwx , WILEY ( http://www.innos.in/downloads/CISCO%20-%20640-802-ccna.pdf ) 2. Computer Networks by Andrew S Tannebaum, Pearson 3. Data Communication and Networking by Forouzen, Tata McGraw Hill 4. Data and Computer Communication by Williams Stallings, Prentice Hall of IndiaSuggested Theory distribution:",
+              "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distributionserves as guidelines for teachers and students to achieve effective teaching-learning process.",
+              "Distribution of Theory for course delivery and evaluation",
+              "Remember Understand Apply Analyze Evaluate Create",
+              "30% 30% 25% 10% 5% --"
+            ],
+            "topics_text": "IPIP AddressingAddresses –andComposition,Subnets Types and Classes, Private and Public IP addresses, 2 10 Subnetting, Variable Length Subnet Masks (VLSM), Route Summarization, Troubleshooting IP Addressing Routers,IntroductionSwitchesto CiscoandRouters,IOS Switches, IOS & the Boot Process, Using the Command-3 Line Interface (CLI), Basic Configuration of Router and Switches, Configuring Router 12 Interfaces, Gathering Information and Verifying Configuration, Configuring DNS, Telnet & DHCP, Saving, Erasing, Restoring and Backing up Configuration & IOS File, Password Recovery on a Cisco Router, Cisco Discovery Protocol (CDP) IPUnderstandingRouting IP Routing, Static, Default and Dynamic Routing, Administrative4 08 Distance and Routing Metrics, Classes of Routing Protocols, Routing Loops, Route Redistribution RoutingUnderstandingProtocolsof Enhanced Interior Gateway Routing Protocol (EIGRP), Open Shortest5 10 Path First (OSPF), RIPv1 & RIPv2, Configuring EIGRP, OSPF, RIPv1 & RIPv2, Verifying and Troubleshooting EIGRP, OSPF, RIP AccessIntroductionLists,toVLANsAccessandLists,VTPStandard Access Lists, Extended Access Lists, Access Lists - 6 Remote Access, Switch Port, Modifying & Helpful Hints, MAC Address Table, Virtual 5 LANs (VLANs), Total Hours 49 Hrs Marwadi University Faculty of Diploma studies Information and Communication Technology Suggested Text books / Reference books: 1. CCNA INTRO (Introduction to Cisco Networking Technologies) by Todd Lammle, Sybwx , WILEY ( http://www.innos.in/downloads/CISCO%20-%20640-802-ccna.pdf ) 2. Computer Networks by Andrew S Tannebaum, Pearson 3. Data Communication and Networking by Forouzen, Tata McGraw Hill 4. Data and Computer Communication by Williams Stallings, Prentice Hall of IndiaSuggested Theory distribution: The suggested theory distribution as per Bloom’s taxonomy is as follows. This distributionserves as guidelines for teachers and students to achieve effective teaching-learning process. Distribution of Theory for course delivery and evaluation Remember Understand Apply Analyze Evaluate Create 30% 30% 25% 10% 5% --",
+            "topics": [
+              "IPIP AddressingAddresses –andComposition,Subnets Types and Classes, Private and Public IP addresses, 2 10 Subnetting, Variable Length Subnet Masks (VLSM), Route Summarization, Troubleshooting IP Addressing",
+              "Routers,IntroductionSwitchesto CiscoandRouters,IOS Switches, IOS & the Boot Process, Using the Command-3 Line Interface (CLI), Basic Configuration of Router and Switches, Configuring Router 12 Interfaces, Gathering Information and Verifying Configuration, Configuring DNS, Telnet & DHCP, Saving, Erasing, Restoring and Backing up Configuration & IOS File, Password Recovery on a Cisco Router, Cisco Discovery Protocol (CDP)",
+              "IPUnderstandingRouting IP Routing, Static, Default and Dynamic Routing, Administrative4 08 Distance and Routing Metrics, Classes of Routing Protocols, Routing Loops, Route Redistribution",
+              "RoutingUnderstandingProtocolsof Enhanced Interior Gateway Routing Protocol (EIGRP), Open Shortest5 10 Path First (OSPF), RIPv1 & RIPv2, Configuring EIGRP, OSPF, RIPv1 & RIPv2, Verifying and Troubleshooting EIGRP, OSPF, RIP",
+              "AccessIntroductionLists,toVLANsAccessandLists,VTPStandard Access Lists, Extended Access Lists, Access Lists - 6 Remote Access, Switch Port, Modifying & Helpful Hints, MAC Address Table, Virtual 5 LANs (VLANs),",
+              "Total Hours 49 Hrs",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology",
+              "Suggested Text books / Reference books:",
+              "1. CCNA INTRO (Introduction to Cisco Networking Technologies) by Todd Lammle, Sybwx , WILEY ( http://www.innos.in/downloads/CISCO%20-%20640-802-ccna.pdf ) 2. Computer Networks by Andrew S Tannebaum, Pearson 3. Data Communication and Networking by Forouzen, Tata McGraw Hill 4. Data and Computer Communication by Williams Stallings, Prentice Hall of IndiaSuggested Theory distribution:",
+              "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distributionserves as guidelines for teachers and students to achieve effective teaching-learning process.",
+              "Distribution of Theory for course delivery and evaluation",
+              "Remember Understand Apply Analyze Evaluate Create",
+              "30% 30% 25% 10% 5%"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 7139,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                            Faculty of Diploma studies\n                          Information and Communication Technology\n\n                  Diploma Year – III (Semester V)\n              Subject Name: Network Routing and Switching\n                        Subject Code - 09CT0507\n\n Objectives:          By the end of the course, students will be able to understand different network types and layers for the communication. Students will also get knowledge of devices like routers and switch in detail with command line configuration and operation using them for various scenarios. Students will be able to understand different routing topology, access list controlCredits withEarned:different04  routing protocols.                     CreditsCourse Outcomes:                    After completion of this course, student will be able to:        Describe the function of Network layers and types of networks. (Understanding)\n         Interpret different types of IP Address and sub-netting for different scenarios (Applyy)     1.         Classify types of routing and characteristics of routing protocols(Analyze)     2.4.  Demonstrate the use of line commands for different operation and configuration of router and     3.  switch. (Understanding).\n     5.  Built, modify and test various network topology, access list control with different       routing protocol (Applying) Pre-requisite of course:                       Data Communication and Networking\nTeaching and Examination Scheme:\n                                                               Tutorial /                                   Theory Marks                                                               Practical Marks Teaching Scheme (Hours)                               Credits                                           Total Marks                               E            I      V       TTheory  Tutorial   Practical          ESE   IA   CSE  Viva  Term Work  3       0       2       4     50   30  20   25      25          150"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                           Faculty of Diploma studies\n                          Information and Communication Technology\n\nContents:\n                                                                                 ContactUnit                                 Topics     Networks and their Building Blocks                                        Hours\n 1   Introduction to Networks, Networking history and Types, OSI Reference Model, TCP/IP   04      Model, Ethernet Technologies and Cabling, Cisco 3 Layer Model\n      IPIP AddressingAddresses –andComposition,Subnets   Types and Classes, Private and Public IP addresses, 2                                                                    10      Subnetting,   Variable  Length  Subnet  Masks  (VLSM),  Route  Summarization,      Troubleshooting IP Addressing\n     Routers,IntroductionSwitchesto CiscoandRouters,IOS    Switches, IOS & the Boot Process, Using the Command-3    Line Interface (CLI), Basic Configuration of  Router and Switches, Configuring Router   12       Interfaces, Gathering Information and Verifying Configuration, Configuring DNS, Telnet    & DHCP, Saving, Erasing, Restoring and Backing up Configuration & IOS File, Password     Recovery on a Cisco Router, Cisco Discovery Protocol (CDP)\n      IPUnderstandingRouting     IP  Routing,  Static,  Default and Dynamic  Routing,  Administrative4                                                                     08      Distance and Routing Metrics, Classes of Routing Protocols, Routing Loops, Route      Redistribution\n     RoutingUnderstandingProtocolsof Enhanced Interior Gateway Routing Protocol (EIGRP), Open Shortest5                                                                     10      Path First (OSPF), RIPv1 & RIPv2, Configuring EIGRP, OSPF, RIPv1 & RIPv2, Verifying     and Troubleshooting EIGRP, OSPF, RIP\n     AccessIntroductionLists,toVLANsAccessandLists,VTPStandard Access Lists, Extended Access Lists, Access Lists - 6   Remote Access, Switch Port, Modifying & Helpful Hints, MAC Address Table, Virtual        5     LANs (VLANs),\n\n                                                               Total Hours                                                                    49 Hrs"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                            Faculty of Diploma studies\n                          Information and Communication Technology\n\nSuggested Text books / Reference books:\n    1. CCNA INTRO (Introduction to Cisco Networking Technologies) by Todd Lammle, Sybwx ,     WILEY ( http://www.innos.in/downloads/CISCO%20-%20640-802-ccna.pdf )    2. Computer Networks by Andrew S Tannebaum, Pearson    3.  Data Communication and Networking by Forouzen, Tata McGraw Hill    4.  Data and Computer Communication by Williams Stallings, Prentice Hall of IndiaSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distributionserves as guidelines for teachers and students to achieve effective teaching-learning process.\n                   Distribution of Theory for course delivery and evaluation\n    Remember       Understand      Apply      Analyze      Evaluate      Create\n      30%           30%        25%      10%       5%                --\nSuggested List of Experiments:\n\n      Basic Exercises using CLI 1\n      Routing IOS Fundamental Exercises\n\n      Exercises on Routing Fundamentals 2\n\n      Exercises on RIP/EIGRP Routing Scenarios 3\n\n      Exercises on OSPF 4\n      Exercises on Access-Lists 5\n\n      Exercises on DHCP 6\n\n      Exercises on Switch Configuration and VLAN 7 8    Exercises on Route Redistribution\n\n      Exercises on Network Address Translation 9 10"
+        },
+        {
+          "page": 4,
+          "text": "Marwadi University\n                           Faculty of Diploma studies\n                          Information and Communication Technology\n\n\nInstructional Method:\n    1. The course delivery method will depend upon the requirement of content and need of       students. The teacher in addition to conventional teaching method by black board, may       also use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.    2. The internal evaluation will be done on the basis of continuous evaluation of students in       the laboratory and class-room.    3.  Practical examination will be conducted at the end of semester for evaluation of      performance of students in the laboratory.    4.  Students will use supplementary resources such as online videos, NPTEL videos, e-       courses, Virtual Laboratory.Supplementary Resources:\n    1.  https://www.tutorialspoint.com/data_communication_computer_network/index.htm    2.  https://nptel.ac.in/courses/106/105/106105183/    3.  https://www.lammle.com/courses/cisco-ccna/    4.  https://www.youtube.com/channel/UCcpFFuABMD9s1HuqQCt6kiQ    5.  http://www.innos.in/downloads/CISCO%20-%20640-802-ccna.pdf   (online pdf book)    6.  https://www.freeccnaworkbook.com/workbooks/ccna/configuring-static-routing    7.  https://www.netacad.com/    8.  https://www.freeccnastudyguide.com/study-guides/ccna/    9.  https://www.packettracerlab.com/"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "5c85d256ca002e36fc9a73f3692e86de7a1a726ddb53dae1dc2168b30f875a9a"
+    },
+    {
+      "subject_id": "49009320050601",
+      "subject_name": "Optical and Satellite Communication",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0506",
+      "catalog_status": "REVIEW_TITLE_OR_CODE_MISMATCH",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e1-optical-and-satellite-communication.pdf",
+      "source_pdf_repo_path": null,
+      "expected_pdf_sha256": "07140e25394026b524a3a96509c3dddbc065e59bb67b2a0757c8fba26cb203e2",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {},
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No checked-in PDF matched subject code 09CT0506."
+      ]
+    },
+    {
+      "subject_id": "49009320050101",
+      "subject_name": "Probability and Statistics",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0501",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/probability-and-statistics-syllabus.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0501 - Probability and Statistics (.pdf",
+      "expected_pdf_sha256": "cb02a49074a077d9d2f6293fcdb745ffaca4679c882661c4d8a565ebdf1218ff",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0501",
+        "semester_label": "V",
+        "credits": null,
+        "prerequisite": "Knowledge of engineering mathematics and programminglanguage"
+      },
+      "objectives": [
+        "This subject provides foundation knowledge of probability theory and statistical methodswhich can be used to solve applied problems. It will be also helpful for the learners to explorein-depth learning of future subjects related to data analytics.Credits Earned: 03 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to: 1. Understand types, application, techniques for statistical analysis 2. Understand fundamental concepts of random variable and theorems of probability and distribution 3. Apply various methods to identify statistical values and plot statistical data 4. Apply probability distributions, correlation analysis and hypothesis testing 5. Analyse various data set for concluding remarks"
+      ],
+      "teaching_and_examination_scheme_text": ": Tutorial / Theory Marks Total Teaching Scheme (Hours) Practical Marks Credits Mark E I V T s Theory Tutorial Practical ESE IA CSE Viva Term Work 2 2 0 3 50 30 20 25 25 150 [PAGE 2] Marwadi University Faculty of Diploma Studies Information and Communication Technology",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Types of statistics, Application of statistical analysis, Population, 2 Graphical and Tabular Descriptive Techniques Sample, Statistical inference 2 Data, Frequency distribution, Data representation techniques like pie and 4 Numerical Descriptive Techniques bar charts, histograms, line charts, scatter plot etc. Measures of central location mean, median, mode and averages, 3 Measures of variability dispersion, variance and standard deviation, 4 Measures of relative standing and Measures of box plots and linear Data Collection, sampling, and sampling distribution relationship 4 Various methods of collecting data, sampling, sampling plan, sampling, 3 Probability and non-sampling errors, sampling distribution of the mean Assigning probability to events, joint, marginal, and conditional 5 3 probability, probability rules and trees, Theorems for probability, Random Variables and Probability Distributions Identification of right method for various cases Random Variables and continuous and discreet probability 6 5 Distributions, binomial distribution, poisson distribution, probability Hypothesis Testing density functions, normal distribution Testing of Hypothesis, Type I and Type II Errors, Two Tailed and One Tailed 7 5 Test of Hypothesis, Test of Significance of Difference between Two Means, Correlation Analysis Test of Significance for Proportions 8 Total Hours 2 Types of Correlation, Methods of Studying Correlation, Scatter Diagram 28Suggested Text books / Reference books",
+            "contact_hours": null,
+            "topic_lines": [
+              "1. BSTAT A south-Asian Perspective with CourseMate, Gerald Keller and Hitesh Arora, Cengage Learning, 2012. 2. Introduction to Quantitative Methods, ICFAI University 3. Introduction to Probability and Statistics for Engineers and Scientists, S. M. Ross, Academic Press, 2009",
+              "Marwadi University",
+              "Faculty of Diploma Studies",
+              "Information and Communication Technology",
+              "4. Introduction to Probability and Statistics, J.S. Milton & J. C. Arnold, Cengage Learning, 2008 5. A First Course in Probability, S.M. Ross, Prentice Hall, 2001. 6. Introduction to Probability Theory and Statistical Inference, H.J. Larson, Wiley, 1982.Suggested Theory distribution:",
+              "The suggested theory distribution as per Bloom’s taxonomy is as per follows. This distributionserves as guidelines for teachers and students to achieve effective teaching-learning process.",
+              "Distribution of Theory for course delivery and evaluation Remember Understand Apply Analyze Evaluate Create 20% 20% 30% 15% 10% 5%",
+              "Suggested list of tutorials with simulation:",
+              "1. Generate histogram, line chart, pie chart, bar chart and scatter plots for data. 2. Measure mean, mode, median and averages for data. 3. Measure variance, standard deviation, and various direct statistics of data. 4. Measure co-variance and coefficient of correlation of data. 5. Find the probability for given outcome. 6. Calculate different types of distributions for given set of condition. 7. Generate distinct probability density functions with simulation or coding. 8. Apply normal distribution on data. 9. Apply hypothesis for given set of data with conditions. 10. Apply various correlation techniques on data with suitable analysis techniques.Supplementary Resources",
+              "https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-",
+              "spring-2014/index.htm 1. http://www.maths.uq.edu.au/probweb/teaching.html",
+              "https://oli.cmu.edu/jcourse/lms/students/syllabus.do?section=729ec6a50a0001dc1fc85045eaf 2. 859e5 3. https://nptel.ac.in/courses/111/105/111105041/",
+              "https://nptel.ac.in/courses/111/106/111106112/ 4. https://swayam.gov.in/nd1_noc20_ma22/preview 5. 6."
+            ],
+            "topics_text": "1. BSTAT A south-Asian Perspective with CourseMate, Gerald Keller and Hitesh Arora, Cengage Learning, 2012. 2. Introduction to Quantitative Methods, ICFAI University 3. Introduction to Probability and Statistics for Engineers and Scientists, S. M. Ross, Academic Press, 2009 Marwadi University Faculty of Diploma Studies Information and Communication Technology 4. Introduction to Probability and Statistics, J.S. Milton & J. C. Arnold, Cengage Learning, 2008 5. A First Course in Probability, S.M. Ross, Prentice Hall, 2001. 6. Introduction to Probability Theory and Statistical Inference, H.J. Larson, Wiley, 1982.Suggested Theory distribution: The suggested theory distribution as per Bloom’s taxonomy is as per follows. This distributionserves as guidelines for teachers and students to achieve effective teaching-learning process. Distribution of Theory for course delivery and evaluation Remember Understand Apply Analyze Evaluate Create 20% 20% 30% 15% 10% 5% Suggested list of tutorials with simulation: 1. Generate histogram, line chart, pie chart, bar chart and scatter plots for data. 2. Measure mean, mode, median and averages for data. 3. Measure variance, standard deviation, and various direct statistics of data. 4. Measure co-variance and coefficient of correlation of data. 5. Find the probability for given outcome. 6. Calculate different types of distributions for given set of condition. 7. Generate distinct probability density functions with simulation or coding. 8. Apply normal distribution on data. 9. Apply hypothesis for given set of data with conditions. 10. Apply various correlation techniques on data with suitable analysis techniques.Supplementary Resources https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics- spring-2014/index.htm 1. http://www.maths.uq.edu.au/probweb/teaching.html https://oli.cmu.edu/jcourse/lms/students/syllabus.do?section=729ec6a50a0001dc1fc85045eaf 2. 859e5 3. https://nptel.ac.in/courses/111/105/111105041/ https://nptel.ac.in/courses/111/106/111106112/ 4. https://swayam.gov.in/nd1_noc20_ma22/preview 5. 6.",
+            "topics": [
+              "1. BSTAT A south-Asian Perspective with CourseMate, Gerald Keller and Hitesh Arora, Cengage Learning, 2012. 2. Introduction to Quantitative Methods, ICFAI University 3. Introduction to Probability and Statistics for Engineers and Scientists, S. M. Ross, Academic Press, 2009",
+              "Marwadi University",
+              "Faculty of Diploma Studies",
+              "Information and Communication Technology",
+              "4. Introduction to Probability and Statistics, J.S. Milton & J. C. Arnold, Cengage Learning, 2008 5. A First Course in Probability, S.M. Ross, Prentice Hall, 2001. 6. Introduction to Probability Theory and Statistical Inference, H.J. Larson, Wiley, 1982.Suggested Theory distribution:",
+              "The suggested theory distribution as per Bloom’s taxonomy is as per follows. This distributionserves as guidelines for teachers and students to achieve effective teaching-learning process.",
+              "Distribution of Theory for course delivery and evaluation Remember Understand Apply Analyze Evaluate Create 20% 20% 30% 15% 10% 5%",
+              "Suggested list of tutorials with simulation:",
+              "1. Generate histogram, line chart, pie chart, bar chart and scatter plots for data. 2. Measure mean, mode, median and averages for data. 3. Measure variance, standard deviation, and various direct statistics of data. 4. Measure co-variance and coefficient of correlation of data. 5. Find the probability for given outcome. 6. Calculate different types of distributions for given set of condition. 7. Generate distinct probability density functions with simulation or coding. 8. Apply normal distribution on data. 9. Apply hypothesis for given set of data with conditions. 10. Apply various correlation techniques on data with suitable analysis techniques.Supplementary Resources",
+              "https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics",
+              "spring-2014/index.htm 1. http://www.maths.uq.edu.au/probweb/teaching.html",
+              "https://oli.cmu.edu/jcourse/lms/students/syllabus.do?section=729ec6a50a0001dc1fc85045eaf 2. 859e5 3. https://nptel.ac.in/courses/111/105/111105041/",
+              "https://nptel.ac.in/courses/111/106/111106112/ 4. https://swayam.gov.in/nd1_noc20_ma22/preview 5. 6."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6727,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                            Faculty of Diploma Studies\n                            Information and Communication Technology\n\n                   Diploma Year – III (Semester V)\n                  Subject Name: Probability and Statistics\n                         Subject Code - 09CT0501\n\nObjective:\nThis subject provides foundation knowledge of probability theory and statistical methodswhich can be used to solve applied problems. It will be also helpful for the learners to explorein-depth learning of future subjects related to data analytics.Credits Earned: 03                    CreditsCourse Outcomes:                    After completion of this course, student will be able to:    1. Understand types, application, techniques for statistical analysis    2. Understand fundamental concepts of random variable and theorems of probability and       distribution    3. Apply various methods to identify statistical values and plot statistical data    4. Apply probability distributions, correlation analysis and hypothesis testing    5.  Analyse various data set for concluding remarksPre-requisite of course:                     Knowledge of engineering mathematics and programminglanguageTeaching and Examination Scheme:\n                                                                      Tutorial /                                       Theory Marks                          Total   Teaching Scheme (Hours)                                       Practical Marks                                   Credits                                   Mark                                   E             I      V       T                                                                                          s  Theory   Tutorial   Practical          ESE   IA   CSE  Viva  Term Work   2        2        0        3     50   30   20    25       25      150"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                             Faculty of Diploma Studies\n                            Information and Communication Technology\n\nContents:\n\n                                                                          Contact   Unit                             Topics                                                                  Hours\n           Statistics\n   1    Types  of  statistics, Application  of  statistical  analysis, Population,       2         Graphical and Tabular Descriptive Techniques         Sample, Statistical inference   2    Data, Frequency distribution, Data representation techniques like pie and     4        Numerical Descriptive Techniques         bar charts, histograms, line charts, scatter plot etc.         Measures of central location mean, median, mode and averages,   3    Measures of variability dispersion, variance and standard deviation,       4         Measures of relative standing and Measures of box plots and linear        Data Collection, sampling, and sampling distribution          relationship   4    Various methods of collecting data, sampling, sampling plan, sampling,       3         Probability        and non-sampling errors, sampling distribution of the mean          Assigning  probability  to  events,  joint,  marginal, and  conditional   5                                                                 3           probability, probability rules and trees, Theorems for probability,       Random Variables and Probability Distributions           Identification of right method for various cases       Random  Variables  and  continuous  and   discreet   probability   6                                                                 5          Distributions, binomial distribution, poisson distribution, probability        Hypothesis Testing          density functions, normal distribution         Testing of Hypothesis, Type I and Type II Errors, Two Tailed and One Tailed   7                                                                 5         Test of Hypothesis, Test of Significance of Difference between Two Means,         Correlation Analysis         Test of Significance for Proportions   8                                                        Total Hours       2        Types of Correlation, Methods of Studying Correlation, Scatter Diagram                                                                     28Suggested Text books / Reference books:\n    1. BSTAT A south-Asian Perspective with CourseMate, Gerald Keller and Hitesh Arora,      Cengage Learning, 2012.    2.  Introduction to Quantitative Methods, ICFAI University    3.  Introduction to Probability and Statistics for Engineers and Scientists, S. M. Ross,      Academic Press, 2009"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                             Faculty of Diploma Studies\n                            Information and Communication Technology\n    4.  Introduction to Probability and Statistics, J.S. Milton & J. C. Arnold, Cengage Learning,      2008    5. A First Course in Probability, S.M. Ross, Prentice Hall, 2001.    6.  Introduction to Probability Theory and Statistical Inference, H.J. Larson, Wiley, 1982.Suggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This distributionserves as guidelines for teachers and students to achieve effective teaching-learning process.\n                   Distribution of Theory for course delivery and evaluation    Remember       Understand      Apply      Analyze      Evaluate      Create     20%          20%       30%      15%       10%      5%\nSuggested list of tutorials with simulation:\n    1.  Generate histogram, line chart, pie chart, bar chart and scatter plots for data.    2. Measure mean, mode, median and averages for data.    3. Measure variance, standard deviation, and various direct statistics of data.    4. Measure co-variance and coefficient of correlation of data.    5.  Find the probability for given outcome.    6.  Calculate different types of distributions for given set of condition.    7.  Generate distinct probability density functions with simulation or coding.    8. Apply normal distribution on data.    9. Apply hypothesis for given set of data with conditions.    10. Apply various correlation techniques on data with suitable analysis techniques.Supplementary Resources\n\n        https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-\n       spring-2014/index.htm    1.       http://www.maths.uq.edu.au/probweb/teaching.html\n       https://oli.cmu.edu/jcourse/lms/students/syllabus.do?section=729ec6a50a0001dc1fc85045eaf    2.      859e5    3.        https://nptel.ac.in/courses/111/105/111105041/\n        https://nptel.ac.in/courses/111/106/111106112/    4.       https://swayam.gov.in/nd1_noc20_ma22/preview    5.    6."
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "cb02a49074a077d9d2f6293fcdb745ffaca4679c882661c4d8a565ebdf1218ff"
+    },
+    {
+      "subject_id": "49009320050901",
+      "subject_name": "Programming with Application Development (Android)",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0509",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0509_programming-with-application-developement-android.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0509 - Programming for Mobile Application Development (.pdf",
+      "expected_pdf_sha256": "db842854eaeea636bc87a83cc08b579eeaa507a1559f4ffb2824c27c1fa68342",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0509",
+        "semester_label": "V",
+        "credits": null,
+        "prerequisite": "Basics of programming language, Concepts of OOP"
+      },
+      "objectives": [
+        "This course facilitates classroom and laboratory learning, letting students learn kotlin programming language and develop competence and confidence in android app development. Students will understand the Android Platform and apply advanced features, Sensors, APIs so the students can independently create and deploy Android Applications with SQLite. Credits Earned: 05 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to: 1. Illustrate and explain basic concepts of Kotlin programming. (Understand) 2. Understand the architecture and user interface of android. (Understand) 3. Select appropriate controls and layouts based on problem definition. (Analyze) 4. Understand the real-life situation and solve it using advanced features, APIs and sensors available in android with SQLite database. (Apply) 5. Build, publish and monetize the Android apps using Kotlin programming. (Create)"
+      ],
+      "teaching_and_examination_scheme_text": ": Tutorial / Theory Marks Teaching Scheme (Hours) Practical Marks Credits Total Marks E I V T Theory Tutorial Practical ESE IA CSE Viva Term Work 4 0 2 5 50 30 20 25 25 150 [PAGE 2] Marwadi University Faculty of Diploma Studies Information and Communication Technology",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 5,
+            "title": "recording video, adding media to mediastore.",
+            "contact_hours": 6,
+            "topic_lines": [
+              " Managing Bluetooth",
+              " Monitor and manage Wifi",
+              "Telephony API, Publishing, Monetizing & Distributing the Android Application:",
+              " Hardware support for telephony, using telephony 6 10",
+              " introducing SMS Send & Receive,",
+              " Signing, publishing, monetizing & distributing applications.",
+              "Introduction of other mobile application development technology/framework:",
+              "7  iOS Development Framework 02",
+              " Flutter",
+              "Total Hours 56",
+              "Suggested Text books / Reference books:",
+              "1. Kotlin for Android App Development, Peter Sommerhoff, Addison-Wesley",
+              "2. Pro Android with Kotlin - Developing Modern Mobile Apps, Peter Spath, Apress"
+            ],
+            "topics_text": " Managing Bluetooth  Monitor and manage Wifi Telephony API, Publishing, Monetizing & Distributing the Android Application:  Hardware support for telephony, using telephony 6 10  introducing SMS Send & Receive,  Signing, publishing, monetizing & distributing applications. Introduction of other mobile application development technology/framework: 7  iOS Development Framework 02  Flutter Total Hours 56 Suggested Text books / Reference books: 1. Kotlin for Android App Development, Peter Sommerhoff, Addison-Wesley 2. Pro Android with Kotlin - Developing Modern Mobile Apps, Peter Spath, Apress",
+            "topics": [
+              " Managing Bluetooth",
+              " Monitor and manage Wifi",
+              "Telephony API, Publishing, Monetizing & Distributing the Android Application:",
+              " Hardware support for telephony, using telephony 6 10",
+              " introducing SMS Send & Receive,",
+              " Signing, publishing, monetizing & distributing applications.",
+              "Introduction of other mobile application development technology/framework:",
+              "7  iOS Development Framework 02",
+              " Flutter",
+              "Total Hours 56",
+              "Suggested Text books / Reference books:",
+              "1. Kotlin for Android App Development, Peter Sommerhoff, Addison-Wesley",
+              "2. Pro Android with Kotlin - Developing Modern Mobile Apps, Peter Spath, Apress"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 7081,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                      Faculty of Diploma Studies\n                      Information and Communication Technology\n\n                           Subject Code: 09CT0509\n      Subject Name: Programming with Application Development (Android)\n                     Diploma Year – III (Semester V)\n\nObjective:\nThis course facilitates classroom and laboratory learning, letting students learn kotlin programming\nlanguage and develop competence and  confidence  in  android app development.  Students  will\nunderstand the Android Platform and apply advanced features, Sensors, APIs so the students can\nindependently create and deploy Android Applications with SQLite.\n\nCredits Earned: 05 Credits\n\nCourse Outcomes: After completion of this course, student will be able to:\n    1.  Illustrate and explain basic concepts of Kotlin programming. (Understand)\n    2.  Understand the architecture and user interface of android. (Understand)\n    3.  Select appropriate controls and layouts based on problem definition. (Analyze)\n    4.  Understand the real-life situation and solve it using advanced features, APIs and sensors\n       available in android with SQLite database. (Apply)\n    5.  Build, publish and monetize the Android apps using Kotlin programming. (Create)\n\nPre-requisite of course: Basics of programming language, Concepts of OOP\n\n\nTeaching and Examination Scheme:\n\n                                                                          Tutorial /                                         Theory Marks   Teaching Scheme (Hours)                                          Practical Marks\n                                    Credits                                               Total Marks                                E            I     V       T\n Theory   Tutorial    Practical          ESE   IA  CSE  Viva   Term Work\n   4        0         2        5      50    30   20    25        25           150"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                      Faculty of Diploma Studies\n                      Information and Communication Technology\n\n\nContents:\n\n                                                                                          Contact Unit                                      Topics                                                                                  Hours\n      Introduction to KOTLIN Programming:\n        Basics of Kotlin, Operations and Priorities, Decision Making\n 1      Loop Control, Data Structures (Collections), Functions                             06\n        Object-Oriented Programming:  Inheritance,  abstract,  interface, super and  this,\n            visibility modifiers.\n      Introduction to Android and User Interface:\n        ANDROID SDK Features, Introduction to Development Features\n        Developing  for ANDROID,  developing  for  mobile and embedded  devices,\n       ANDROID development tools\n 2      Basics  of an ANDROID  application,  introduction  to  manifest,  externalizing      10\n           resources, application lifecycle, ANDROID activities\n        Widgets:  Button,  TextView,  ImageView,  ProgressBar,  ListView,  EditText,\n          Calendar, DateTime etc\n        Working with Intent\n     Android Storage: Files, Shared Preferences, SQLite Database\n         Creating, saving and retrieving shared preferences\n        Including static files as resources, working with the file system\n        Introducing ANDROID databases\n 3      Content values and cursors                                                    10\n        Working with SQLite databases\n        Creating content providers\n        Using content providers\n        Native ANDROID Content providers\n     Enhancing User Experience, Maps & Location Based Service, Sensors\n        Material design, RecyclerView, CardView, TabLayout, ViewPager\n        Menus and dialogs, drawable and gradients\n        Using location-based services\n 4       Selecting a location provider                                                  12\n        Finding your current location\n        Creating map-based activities\n        Hardware sensors, Sensors and sensor manager, monitoring devices movement and\n           orientation"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                      Faculty of Diploma Studies\n                      Information and Communication Technology\n      Audio, Video, Camera, Bluetooth, Wifi:\n        Playing audio and video manipulating raw audio, using camera to take pictures,\n  5       recording video, adding media to mediastore.                                     06\n        Managing Bluetooth\n        Monitor and manage Wifi\n      Telephony API, Publishing, Monetizing & Distributing the Android Application:\n        Hardware support for telephony, using telephony  6                                                                                10\n        introducing SMS Send & Receive,\n        Signing, publishing, monetizing & distributing applications.\n      Introduction of other mobile application development technology/framework:\n  7      iOS Development Framework                                                 02\n         Flutter\n                                                                           Total Hours      56\n\n\nSuggested Text books / Reference books:\n    1.  Kotlin for Android App Development, Peter Sommerhoff, Addison-Wesley\n    2. Pro Android with Kotlin - Developing Modern Mobile Apps, Peter Spath, Apress\n\n\n\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as\nguidelines for teachers and students to achieve effective teaching-learning process.\n\n\n\n                         Distribution of Theory for course delivery and evaluation\n\n    Remember          Understand       Apply       Analyze        Evaluate        Create\n     10%            25%         25%       20%        10%       15%"
+        },
+        {
+          "page": 4,
+          "text": "Marwadi University\n                      Faculty of Diploma Studies\n                      Information and Communication Technology\n\nSuggested List of Experiments:\n    1.  Object-oriented concepts-based program in Kotlin\n    2.  Introduction to android operating system and study of basic widgets.\n    3.  Study of android lifecycle and demonstration of it.\n    4.  Study of list views and adapters\n    5.  Study of dialog interfaces in android\n    6.  Study of intents and types of intents\n    7.  Study of android database (SQLite)\n    8.  Study of material design\n    9.  Study of map and location-based activities\n    10. Study of Sensors in android\n    11. Study of audio, video and camera services in android\n    12. Study of Bluetooth and Wi-Fi in android\n    13. Study of telephony API in android\n    14. Publishing android app on Playstore and monetization\n\n\nSupplementary Resources:\n    1.  https://developer.android.com/index.html\n    2.  https://developer.android.com/kotlin\n    3.  https://www.coursera.org/learn/kotlin-for-java-developers\n    4.  https://swayam.gov.in/nd2_aic20_sp02\n    5.  https://flutter.dev/\n    6.  https://developer.apple.com/develop/"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "db842854eaeea636bc87a83cc08b579eeaa507a1559f4ffb2824c27c1fa68342"
+    },
+    {
+      "subject_id": "49009320050401",
+      "subject_name": "Project I",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0504",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/project-1-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0504 - Project I (.pdf",
+      "expected_pdf_sha256": "782380054cb88c8518bbae43f2a36027f2243ef1a1a331448d8119dae395fa89",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0504",
+        "semester_label": "V",
+        "credits": null,
+        "prerequisite": "Basic knowledge of all academic subjects and readiness to explore new things"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "After completion of this course, student will be able to: 1. Investigate the chosen topic in depth 2. Apply the concepts and theories learnt in previous subjects 3. Apply the various methodologies to design project for specific application 4. Explore the new ideas & the possible areas to work ahead 5. Sharpen the skills in specific direction"
+      ],
+      "teaching_and_examination_scheme_text": ": Tutorial / Theory Marks Practical Marks Teaching Scheme (Hours) Credits Total Marks E I V T Theory Tutorial Practical ESE IA CSE Viva Term Work 0 0 4 02 00 00 00 50 50 100 [PAGE 2] Marwadi University Faculty of Diploma studies Information and Communication Technology",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 2,
+            "title": "Define the project with proper report, reason, and justification, Prepare the problem",
+            "contact_hours": 10,
+            "topic_lines": [
+              "definition and presentation in particular format.",
+              "Diagram, Design and Algorithm"
+            ],
+            "topics_text": "definition and presentation in particular format. Diagram, Design and Algorithm",
+            "topics": [
+              "definition and presentation in particular format.",
+              "Diagram, Design and Algorithm"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Prepare block diagram, circuit diagram, required software and hardware for the",
+            "contact_hours": 15,
+            "topic_lines": [
+              "implementation of project, Development of algorithm and flowchart wherever required.",
+              "Design, Simulate, Assemble and Test"
+            ],
+            "topics_text": "implementation of project, Development of algorithm and flowchart wherever required. Design, Simulate, Assemble and Test",
+            "topics": [
+              "implementation of project, Development of algorithm and flowchart wherever required.",
+              "Design, Simulate, Assemble and Test"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Design layout using required tool, do simulation as per requirements, partial implement using",
+            "contact_hours": 15,
+            "topic_lines": [
+              "breadboard, general purpose PCB, various hardware modules, software platform, test and",
+              "troubleshoot if required.",
+              "Project Report and Presentation"
+            ],
+            "topics_text": "breadboard, general purpose PCB, various hardware modules, software platform, test and troubleshoot if required. Project Report and Presentation",
+            "topics": [
+              "breadboard, general purpose PCB, various hardware modules, software platform, test and",
+              "troubleshoot if required.",
+              "Project Report and Presentation"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Prepare project report and presentation as per the given format from the department,",
+            "contact_hours": 10,
+            "topic_lines": [
+              "presentation as per the rules and schedule from the department.",
+              "Total Hours 55 Hrs"
+            ],
+            "topics_text": "presentation as per the rules and schedule from the department. Total Hours 55 Hrs",
+            "topics": [
+              "presentation as per the rules and schedule from the department.",
+              "Total Hours 55 Hrs"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5728,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\n\n                   Diploma Year – III (Semester V)\n                          Subject Name: Project I\n                         Subject Code - 09CT0504\n\nObjectives:          The subject provides hands-on learning experience to the students with theopportunity to explore a problem or issue of personal or professional interest and toaddress that problem or issue through focused study and applied research under thedirection of a faculty member. This course also provides platform to implement and learntconcepts in various subjects in case of project design and to provide in-depth exposure inthe field of software, data analytics, embedded, VLSI, networking, and security.. It is alsouseful to enhance students' ability to think critically and creatively, to solve practicalproblems, to make reasoned and ethical decisions, and to communicate effectively.Credits Earned: 02 Credits\n\nCourse Outcomes:                    After completion of this course, student will be able to:    1.     Investigate the chosen topic in depth    2.    Apply the concepts and theories learnt in previous subjects    3.    Apply the various methodologies to design project for specific application    4.     Explore the new ideas & the possible areas to work ahead    5.    Sharpen the skills in specific directionPre-requisite of course: Basic knowledge of all academic subjects and readiness to explore new\nthings\n\n\nTeaching and Examination Scheme:\n\n                                                                    Tutorial /                                     Theory Marks                                                                   Practical Marks Teaching Scheme (Hours)\n                                Credits                                             Total Marks                             E           I     V       T\n\nTheory   Tutorial   Practical         ESE  IA  CSE  Viva   Term Work\n\n  0        0       4         02     00   00   00    50       50           100"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\n\nContents:\n                                                                                     Contact Unit                                   Topics                                                                              Hours\n\n      Project Identification\n 1                                                                            05      Gathering the information through website, media, Industry or research organization, visit of\n       faculty, discussion , industry interaction, review of literature\n\n     Problem Definition and Project Finalization\n\n 2   Define  the  project with proper  report,  reason, and  justification, Prepare  the problem    10\n       definition and presentation in particular format.\n\n     Diagram, Design and Algorithm\n\n3     Prepare  block  diagram,  circuit  diagram,  required  software  and  hardware  for  the    15\n      implementation of project, Development of algorithm and flowchart wherever required.\n\n      Design, Simulate, Assemble and Test\n\n4     Design layout using required tool, do simulation as per requirements, partial implement using    15\n      breadboard, general purpose PCB, various hardware modules, software platform, test and\n       troubleshoot if required.\n\n      Project Report and Presentation\n\n5     Prepare project report and presentation as per the given format from the department,    10\n       presentation as per the rules and schedule from the department.\n\n                                                                   Total Hours    55 Hrs\n\n\nSuggested Theory distribution:\n\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution serves as\nguidelines for teachers and students to achieve effective teaching-learning process.\n\n\n                      Distribution of Theory for course delivery and evaluation\n\n     Remember        Understand      Apply      Analyze       Evaluate       Create\n\n       20%            20%         30%       10%         10%       10%"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                             Faculty of Diploma studies\n                            Information and Communication Technology\n\nSuggested Student Activity:\n\n           i. Prepare and submit project definition document in prescribed format.\n           ii. Visit industry if required\n           iii. Get help from innovative council/research organization for design solution.\n         iv. Report regarding stage wise progress to institute guide/industry mentor regularly.\n        v. Continuous practicing of latest circuit design and simulation tools/software.\n         vi. Study of intellectual property rights for patenting the project.\n\n\nSPECIAL INSTRUCTIONAL STRATEGIES (if any)\n\n            i. One day IDP awareness workshop.\n            ii. Industry survey.\n            iii. Seminar/Symposium\n          iv. Group discussion/Debate\n         v. Expert lectures of resource persons from industries/research organizations.\n          vi. Arranging Industrial visit.\n\nSupplementary Resources:\n\nList of Magazines\n              I.    Electronics for you,\n            II.    Electronic design news,\n           III.    Elector electronics,\n        IV.    Electronics project manuals\n\nList of Software/Learning Websites\n               I.    http://www.electronicsproject.org\n             II.    http://www.circuiteasy.com\n            III.    http://www.electronics-project-design.com\n               http://www.electronicsschematic.com         IV."
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "782380054cb88c8518bbae43f2a36027f2243ef1a1a331448d8119dae395fa89"
+    },
+    {
+      "subject_id": "49009320051001",
+      "subject_name": "VLSI",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 5,
+      "subject_code": "09CT0510",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/vlsi_syllabus.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0510 - VLSI (.pdf",
+      "expected_pdf_sha256": "f8de702c6b558c825a538700e4d0dc89463e71784c79ecb0aba321064d36733c",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0510",
+        "semester_label": "V",
+        "credits": null,
+        "prerequisite": "Digital Electronics, Basic Electronics"
+      },
+      "objectives": [
+        "The objective of the subject is to give an exposure to the VLSI design flow, CMOSCreditsdigitalEarned:logic4circuits and introduction to HDL programming."
+      ],
+      "course_outcomes": [
+        "Understand VLSIAfterdesignlearningflow this course, students should be able to, 1. 2. Learn CMOS fundamentals 3. Learn CMOS logic circuits 4. Develop programs for various circuits using HDL"
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE MarksTheory Tutorial Practical IA (M) CSE (I) Viva (V) work (E) (TW) 3 0 2 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to VLSI Design",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Historical perspective, VLSI design flow, Design Methodologies, Y- chart, Full custom design, standard cell based design, FPGA based 2 Manufacturing Process of CMOS digital IC 04 design Silicon wafer, Photolithography, Simplified process sequences, process flow for fabrication of n-type MOS transistor, CMOS n-well process, 3 MOS Transistor 07 Layout design rules MOS structure, MOS system under external bias and energy band diagram, Understanding accumulation, depletion and inversion,",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology",
+              "Structure and operation of MOS transistor, MOSFET current-voltage"
+            ],
+            "topics_text": "Historical perspective, VLSI design flow, Design Methodologies, Y- chart, Full custom design, standard cell based design, FPGA based 2 Manufacturing Process of CMOS digital IC 04 design Silicon wafer, Photolithography, Simplified process sequences, process flow for fabrication of n-type MOS transistor, CMOS n-well process, 3 MOS Transistor 07 Layout design rules MOS structure, MOS system under external bias and energy band diagram, Understanding accumulation, depletion and inversion, Marwadi University Faculty of Diploma studies Information and Communication Technology Structure and operation of MOS transistor, MOSFET current-voltage",
+            "topics": [
+              "Historical perspective, VLSI design flow, Design Methodologies, Y- chart, Full custom design, standard cell based design, FPGA based 2 Manufacturing Process of CMOS digital IC 04 design Silicon wafer, Photolithography, Simplified process sequences, process flow for fabrication of n-type MOS transistor, CMOS n-well process, 3 MOS Transistor 07 Layout design rules MOS structure, MOS system under external bias and energy band diagram, Understanding accumulation, depletion and inversion,",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology",
+              "Structure and operation of MOS transistor, MOSFET current-voltage"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "MOS Inverters 07 characteristics, MOSFET scaling, MOSFET capacitance",
+            "contact_hours": null,
+            "topic_lines": [
+              "Voltage Transfer Characteristics(VTC) of Ideal inverter, Typical VTC of a",
+              "realistic n-MOS inverter, Noise Immunity and Noise Margins, Resistive",
+              "load inverter and its analysis, Inverter with n-Type MOSFET",
+              "load(Enhancement-Load NMOS Inverter and Depletion-Load NMOS",
+              "Inverter), CMOS Inverter"
+            ],
+            "topics_text": "Voltage Transfer Characteristics(VTC) of Ideal inverter, Typical VTC of a realistic n-MOS inverter, Noise Immunity and Noise Margins, Resistive load inverter and its analysis, Inverter with n-Type MOSFET load(Enhancement-Load NMOS Inverter and Depletion-Load NMOS Inverter), CMOS Inverter",
+            "topics": [
+              "Voltage Transfer Characteristics(VTC) of Ideal inverter, Typical VTC of a",
+              "realistic n-MOS inverter, Noise Immunity and Noise Margins, Resistive",
+              "load inverter and its analysis, Inverter with n-Type MOSFET",
+              "load(Enhancement-Load NMOS Inverter and Depletion-Load NMOS",
+              "Inverter), CMOS Inverter"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Combinational MOS logic circuits",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Two input NAND gate and NOR gate with depletion NMOS load, CMOS",
+              "logic circuits, CMOS NOR(2-input) and CMOS NAND(2-input) gate,",
+              "Complex logic circuits, CMOS Transmission gates"
+            ],
+            "topics_text": "Two input NAND gate and NOR gate with depletion NMOS load, CMOS logic circuits, CMOS NOR(2-input) and CMOS NAND(2-input) gate, Complex logic circuits, CMOS Transmission gates",
+            "topics": [
+              "Two input NAND gate and NOR gate with depletion NMOS load, CMOS",
+              "logic circuits, CMOS NOR(2-input) and CMOS NAND(2-input) gate,",
+              "Complex logic circuits, CMOS Transmission gates"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Sequential MOS logic circuits",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction, CMOS SR latch based on 2-input NOR gates, CMOS SR",
+              "latch based on 2-input NAND gates, Clocked SR latch, Clocked JK latch,",
+              "JK Master-Slave flip-flops, CMOS D-latch and edge triggered D-flip-flop"
+            ],
+            "topics_text": "Introduction, CMOS SR latch based on 2-input NOR gates, CMOS SR latch based on 2-input NAND gates, Clocked SR latch, Clocked JK latch, JK Master-Slave flip-flops, CMOS D-latch and edge triggered D-flip-flop",
+            "topics": [
+              "Introduction, CMOS SR latch based on 2-input NOR gates, CMOS SR",
+              "latch based on 2-input NAND gates, Clocked SR latch, Clocked JK latch,",
+              "JK Master-Slave flip-flops, CMOS D-latch and edge triggered D-flip-flop"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Introduction to HDL",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Types of HDL, Describing hardware in HDL, basic concepts,behavioural",
+              "design, structural design",
+              "Total 42 hrs."
+            ],
+            "topics_text": "Types of HDL, Describing hardware in HDL, basic concepts,behavioural design, structural design Total 42 hrs.",
+            "topics": [
+              "Types of HDL, Describing hardware in HDL, basic concepts,behavioural",
+              "design, structural design",
+              "Total 42 hrs."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5780,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                        Faculty of Diploma studies\n                        Information and Communication Technology\n\n                          Subject Code : 09CT0510\n                             Subject Name: VLSI\n                    Diploma Year – III ( Semester V)\n\n    Objective:             The objective of the subject is to give an exposure to the VLSI design flow,   CMOSCreditsdigitalEarned:logic4circuits and introduction to HDL programming.\n\n   Course Outcomes:         Understand VLSIAfterdesignlearningflow this course, students should be able to,     1.     2.   Learn CMOS fundamentals     3.   Learn CMOS logic circuits     4.   Develop programs for various circuits using HDL    Pre-requisite of course:                                Digital Electronics, Basic Electronics                        Teaching and Examination Scheme\n                                                               Tutorial/ Practical Teaching Scheme (Hours)              Theory Marks                                                         Marks                                                                                   Total                              Credits                             Term                               ESE                                 MarksTheory  Tutorial  Practical                IA (M)  CSE (I)   Viva (V)   work                                       (E)                                                          (TW)  3       0       2       4     50    30     20      25      25     150\n\n    Contents:\n\n    Unit    Course content                                                  Total Hrs.\n   No\n   1       Introduction to VLSI Design                                 04\n              Historical perspective, VLSI design flow, Design Methodologies, Y-               chart, Full custom design, standard cell based design, FPGA based   2       Manufacturing Process of CMOS digital IC                        04             design               Silicon wafer, Photolithography, Simplified process sequences, process             flow for fabrication of n-type MOS transistor, CMOS n-well process,   3     MOS Transistor                                            07            Layout design rules         MOS structure, MOS system under external bias and energy band             diagram, Understanding accumulation, depletion and inversion,"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                     Faculty of Diploma studies\n                     Information and Communication Technology\n         Structure and operation of MOS transistor, MOSFET current-voltage\n4     MOS Inverters                                              07          characteristics, MOSFET scaling, MOSFET capacitance\n         Voltage Transfer Characteristics(VTC) of Ideal inverter, Typical VTC of a\n            realistic n-MOS inverter, Noise Immunity and Noise Margins, Resistive\n         load inverter and its analysis, Inverter with n-Type MOSFET\n         load(Enhancement-Load NMOS Inverter and Depletion-Load NMOS\n           Inverter), CMOS Inverter\n5       Combinational MOS logic circuits                                07\n       Two input NAND gate and NOR gate with depletion NMOS load, CMOS\n          logic circuits, CMOS NOR(2-input) and CMOS NAND(2-input) gate,\n        Complex logic circuits, CMOS Transmission gates\n6        Sequential MOS logic circuits                                   07\n          Introduction, CMOS SR latch based on 2-input NOR gates, CMOS SR\n           latch based on 2-input NAND gates, Clocked SR latch, Clocked JK latch,\n       JK Master-Slave flip-flops, CMOS D-latch and edge triggered D-flip-flop\n7        Introduction to HDL                                         06\n        Types of HDL, Describing hardware in HDL, basic concepts,behavioural\n          design, structural design\n        Total                                                   42 hrs.\n\nSuggested List of Experiments:\n\n1.  Write the HDL code for AND, OR and INV logic gates and do simulation.\n2.  Write the HDL code for NAND and NOR logic gates and do simulation.\n3.  Write the HDL code for XOR and XNOR logic gates and do simulation.\n4.  Write the HDL code for basic arithmetic circuits adder and subtractor. Do the simulation.\n5.  Write the HDL code for decoder circuits and do the simulation.\n6.  Write the HDL code for multiplexer circuit and do simulation.\n7.  Write the HDL code for encoder circuit and do simulation.\n8.  Write the HDL code for demultiplexer and do simulation.\n9.  Write the HDL code for SR latch and simulate.\n10. Write the HDL code for D latch and simulate.\n11. Write the HDL code for D flip-flop and simulate.\n12. Write the HDL code for T flip-flop and simulate.\n13. Write the HDL code for 4-bit register (Parallel in Parallel out) and simulate.\n\n\n14. Write the HDL code for shift register and simulate.\n15. Write the HDL code for up counter and down counter and simulate."
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                     Faculty of Diploma studies\n                     Information and Communication Technology\nReferences:1. CMOS Digital Integrated Circuits by Sung Mo Kang and Leblebici, TMH2. Introduction to VLSI Circuits and Systems by Uyemura J P, Wiley India3. Verilog HDL by Samir Palnitkar4. VHDL modeling of systems by Znawabi, TMHSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. Thisdistribution serves as guidelines for teachers and students to achieve effective teaching-learning process\n30        30        20        10        10        0R Level    U Level     A Level    N Level     E Level     C Level\nLegends: R: Remembrance; U: Understanding; A: Application, N: Analyze and E:\nEvaluate C: Create and above Levels (Revised Bloom’s Taxonomy)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09CT0510 - VLSI (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "f8de702c6b558c825a538700e4d0dc89463e71784c79ecb0aba321064d36733c"
+    }
+  ],
+  "build_summary": {
+    "extracted": 11,
+    "manual_review": 1,
+    "ocr_review": 0,
+    "missing_pdf": 2,
+    "extraction_errors": 0
+  }
+}

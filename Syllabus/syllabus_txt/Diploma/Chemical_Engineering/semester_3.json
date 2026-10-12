@@ -1,0 +1,1573 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 46,
+    "course_name": "Diploma Chemical Engineering",
+    "output_slug": "Chemical_Engineering"
+  },
+  "semester": 3,
+  "subject_count": 5,
+  "subjects": [
+    {
+      "subject_id": "46000938230201",
+      "subject_name": "INDUSTRIAL STOICHIOMETRY",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 3,
+      "subject_code": "09CH2302",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2302.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2302 - INDUSTRIAL STOICHIOMETRY (.pdf",
+      "expected_pdf_sha256": "8cf736ff45095912cac722caa791f142074ac1483b81f7ea4823821e3afc47e0",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INDUSTRIAL STOICHIOMETRY",
+        "course_code": "09CH2302",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "Basic Chemistry, Mathematics"
+      },
+      "objectives": [
+        "To learn various quantitative methods to calculate the results related to basic chemical processes"
+      ],
+      "course_outcomes": [
+        "Prepare a solution of certain concentration",
+        "Predict the condition of gas or gas mixtures",
+        "Balance the IN & OUT going material streams in a process."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Importance of process calculations, Dimensions and systems of",
+              "units, Fundamental quantities, Derived quantities, Definition and",
+              "units of force, volume, pressure, work energy, power, heat, Simple",
+              "unit conversion problems in FPS, MKS and SI systems."
+            ],
+            "topics_text": "Importance of process calculations, Dimensions and systems of units, Fundamental quantities, Derived quantities, Definition and units of force, volume, pressure, work energy, power, heat, Simple unit conversion problems in FPS, MKS and SI systems.",
+            "topics": [
+              "Importance of process calculations, Dimensions and systems of",
+              "units, Fundamental quantities, Derived quantities, Definition and",
+              "units of force, volume, pressure, work energy, power, heat, Simple",
+              "unit conversion problems in FPS, MKS and SI systems."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Basic Chemical Calculations",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Definition of Atomic weight and Molecular wt., Calculation of",
+              "Molecular weight of various compounds, Introduction to",
+              "Avogadro’s Number & Moles concept, relation between Mole and",
+              "Atomic weight, Basic Mole calculations, Equivalent weight,",
+              "density, specific gravity. Properties of Solutions and calculations:",
+              "Molarity, Normality, Molality. Properties of gases and calculations:",
+              "Dalton’s Law of partial pressure, Charle’s Law, Boyle’s Law, Gay-",
+              "Lussac’s Law, Ideal Gas Law. NTP & STP"
+            ],
+            "topics_text": "Definition of Atomic weight and Molecular wt., Calculation of Molecular weight of various compounds, Introduction to Avogadro’s Number & Moles concept, relation between Mole and Atomic weight, Basic Mole calculations, Equivalent weight, density, specific gravity. Properties of Solutions and calculations: Molarity, Normality, Molality. Properties of gases and calculations: Dalton’s Law of partial pressure, Charle’s Law, Boyle’s Law, Gay- Lussac’s Law, Ideal Gas Law. NTP & STP",
+            "topics": [
+              "Definition of Atomic weight and Molecular wt., Calculation of",
+              "Molecular weight of various compounds, Introduction to",
+              "Avogadro’s Number & Moles concept, relation between Mole and",
+              "Atomic weight, Basic Mole calculations, Equivalent weight,",
+              "density, specific gravity. Properties of Solutions and calculations:",
+              "Molarity, Normality, Molality. Properties of gases and calculations:",
+              "Dalton’s Law of partial pressure, Charle’s Law, Boyle’s Law, Gay",
+              "Lussac’s Law, Ideal Gas Law. NTP & STP"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Material Balance In Process Without Chemical Reactions",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition of Law of Conversation of Mass, Process flow diagram,",
+              "significance of Material balance in chemical industry, Simple M.B.",
+              "problems on operations like Drying, Distillation, Absorption,",
+              "Mixing, Evaporation. Introduction to Recycle & By-pass operation."
+            ],
+            "topics_text": "Definition of Law of Conversation of Mass, Process flow diagram, significance of Material balance in chemical industry, Simple M.B. problems on operations like Drying, Distillation, Absorption, Mixing, Evaporation. Introduction to Recycle & By-pass operation.",
+            "topics": [
+              "Definition of Law of Conversation of Mass, Process flow diagram,",
+              "significance of Material balance in chemical industry, Simple M.B.",
+              "problems on operations like Drying, Distillation, Absorption,",
+              "Mixing, Evaporation. Introduction to Recycle & By-pass operation."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Material Balance In Process Involving Chemical Reactions",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition: limiting Reactant, Excess reactant, Simple problems for",
+              "finding yield, conversion and composition, Simple calculation of",
+              "material balance based on reaction."
+            ],
+            "topics_text": "Definition: limiting Reactant, Excess reactant, Simple problems for finding yield, conversion and composition, Simple calculation of material balance based on reaction.",
+            "topics": [
+              "Definition: limiting Reactant, Excess reactant, Simple problems for",
+              "finding yield, conversion and composition, Simple calculation of",
+              "material balance based on reaction."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Energy Balance",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Concept of Heat capacity and Specific Heat , Concept of heat",
+              "capacity of gas and liquid mixture, Concept of latent heat of Fusion,",
+              "Sublimation, Vaporization, Sensible Heat, Calculations of Heat of",
+              "Reaction from heat of formation and combustion Data."
+            ],
+            "topics_text": "Concept of Heat capacity and Specific Heat , Concept of heat capacity of gas and liquid mixture, Concept of latent heat of Fusion, Sublimation, Vaporization, Sensible Heat, Calculations of Heat of Reaction from heat of formation and combustion Data.",
+            "topics": [
+              "Concept of Heat capacity and Specific Heat , Concept of heat",
+              "capacity of gas and liquid mixture, Concept of latent heat of Fusion,",
+              "Sublimation, Vaporization, Sensible Heat, Calculations of Heat of",
+              "Reaction from heat of formation and combustion Data."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Combustion",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Types of fuels, Calorific values of fuels: GCV & NCV, Brief idea",
+              "about Proximate and Ultimate analysis of solid fuels, Bomb",
+              "calorimeter working, Simple problems to find out calorific values of",
+              "fuels and mixtures. Concept of Flue gas.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Types of fuels, Calorific values of fuels: GCV & NCV, Brief idea about Proximate and Ultimate analysis of solid fuels, Bomb calorimeter working, Simple problems to find out calorific values of fuels and mixtures. Concept of Flue gas. Total Hours 28",
+            "topics": [
+              "Types of fuels, Calorific values of fuels: GCV & NCV, Brief idea",
+              "about Proximate and Ultimate analysis of solid fuels, Bomb",
+              "calorimeter working, Simple problems to find out calorific values of",
+              "fuels and mixtures. Concept of Flue gas.",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Tutorial 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "tutorial"
+            ],
+            "topics_text": "tutorial",
+            "topics": [
+              "tutorial"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Tutorial 2",
+            "contact_hours": 6,
+            "topic_lines": [
+              "tutorial"
+            ],
+            "topics_text": "tutorial",
+            "topics": [
+              "tutorial"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Tutorial 3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Tutorial"
+            ],
+            "topics_text": "Tutorial",
+            "topics": [
+              "Tutorial"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Tutorial 4",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Tutorial"
+            ],
+            "topics_text": "Tutorial",
+            "topics": [
+              "Tutorial"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Tutorial 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Tutorial"
+            ],
+            "topics_text": "Tutorial",
+            "topics": [
+              "Tutorial"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Tutorial 6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Tutorial",
+              "Total Hours 28"
+            ],
+            "topics_text": "Tutorial Total Hours 28",
+            "topics": [
+              "Tutorial",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Stoichiometry, Stoichiometry, B.I. Bhatt, S.M. Vora, McGraw Hill Publication, 2015 [PAGE 3] References:",
+          "Basic principles of calculation in chemical engineering , Basic principles of calculation in chemical engineering , David Himmelbau, PHI Publications, 2016"
+        ],
+        "textbooks": [
+          "Introduction to Process calculations , K.A. Gavhane, Nirali Publications., 2017 References:",
+          "Stoichiometry, Stoichiometry, B.I. Bhatt, S.M. Vora, McGraw Hill Publication, 2015"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://onlinecourses.nptel.ac.in/noc22_ch02/preview"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6983,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    INDUSTRIAL STOICHIOMETRY\nCOURSE CODE     09CH2302\nCOURSE CREDITS  4\n\nObjective:\n 1  To learn various quantitative methods to calculate the results related to basic chemical\n     processes\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Prepare a solution of certain concentration\n 2  Predict the condition of gas or gas mixtures\n 3  Balance the IN & OUT going material streams in a process.\n\n\nPre-requisite of course:Basic Chemistry, Mathematics\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction                                             3\n             Importance of process calculations, Dimensions and systems of\n                units, Fundamental quantities, Derived quantities, Definition and\n               units of force, volume, pressure, work energy, power, heat, Simple\n               unit conversion problems in FPS, MKS and SI systems.\n     2      Basic Chemical Calculations                               7\n               Definition of Atomic weight and Molecular wt., Calculation of\n             Molecular weight of various compounds, Introduction to\n             Avogadro’s Number & Moles concept, relation between Mole and\n            Atomic weight, Basic Mole calculations, Equivalent weight,\n               density, specific gravity. Properties of Solutions and calculations:\n              Molarity, Normality, Molality. Properties of gases and calculations:\n              Dalton’s Law of partial pressure, Charle’s Law, Boyle’s Law, Gay-\n              Lussac’s Law, Ideal Gas Law. NTP & STP\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Material Balance In Process Without Chemical Reactions       6\n               Definition of Law of Conversation of Mass, Process flow diagram,\n               significance of Material balance in chemical industry, Simple M.B.\n             problems on operations like Drying, Distillation, Absorption,\n             Mixing, Evaporation. Introduction to Recycle & By-pass operation.\n     4      Material Balance In Process Involving Chemical Reactions      4\n               Definition: limiting Reactant, Excess reactant, Simple problems for\n              finding yield, conversion and composition, Simple calculation of\n               material balance based on reaction.\n     5      Energy Balance                                          4\n             Concept of Heat capacity and Specific Heat , Concept of heat\n              capacity of gas and liquid mixture, Concept of latent heat of Fusion,\n              Sublimation, Vaporization, Sensible Heat, Calculations of Heat of\n             Reaction from heat of formation and combustion Data.\n     6      Combustion                                             4\n            Types of fuels, Calorific values of fuels: GCV & NCV, Brief idea\n             about Proximate and Ultimate analysis of solid fuels, Bomb\n              calorimeter working, Simple problems to find out calorific values of\n               fuels and mixtures. Concept of Flue gas.\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Tutorial 1                                               4\n                 tutorial\n     2       Tutorial 2                                               6\n                 tutorial\n     3       Tutorial 3                                               4\n               Tutorial\n     4       Tutorial 4                                               6\n               Tutorial\n     5       Tutorial 5                                               4\n               Tutorial\n     6       Tutorial 6                                               4\n               Tutorial\n                               Total Hours                       28\n\nTextbook :\n 1   Introduction to Process calculations , K.A. Gavhane, Nirali Publications., 2017\n\nReferences:\n 1   Stoichiometry, Stoichiometry, B.I. Bhatt, S.M. Vora, McGraw Hill Publication, 2015\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 2  Basic principles of calculation in chemical engineering , Basic principles of calculation in\n    chemical engineering , David Himmelbau, PHI Publications, 2016\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         10.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may\n     also use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in\n     the laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://onlinecourses.nptel.ac.in/noc22_ch02/preview\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8cf736ff45095912cac722caa791f142074ac1483b81f7ea4823821e3afc47e0"
+    },
+    {
+      "subject_id": "46009131030201",
+      "subject_name": "MATHEMATICS-III",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 3,
+      "subject_code": "09MA0302",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA0302-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09MA0302 - MATHEMATICS-III (.pdf",
+      "expected_pdf_sha256": "435836a4130c7b5fef0a26531886488b0c5c9d13c6735f891e5e77b150fba386",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MATHEMATICS-III",
+        "course_code": "09MA0302",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "Students are intended to understand the basic concepts of calculus such as Permutation and Combination, Probability, Binomial Theorem, Differentiation and Vectors. The knowledge of calculus can help to understand and solve problems related to Engineering fields. The course will help students to understand Engineering principles and concepts. Main objective of the course is to apply concepts of Binomial Theorem, Differentiation and Vectors to solve given engineering problems.",
+        "Students are intended to understand the basic concepts of calculus such as Permutation and Combination, Probability, Binomial Theorem, Differentiation and Vectors. The knowledge of calculus can help to understand and solve problems related to Engineering fields. The course will help students to understand Engineering principles and concepts. Main objective of the course is to apply concepts of Binomial Theorem, Differentiation and Vectors to solve given engineering problems."
+      ],
+      "course_outcomes": [
+        "Apply the concepts of permutation and combination to solve problems involving order and selection of objects in real-life and mathematical scenarios",
+        "Apply the basic principles of probability to determine the likelihood of outcomes in various experiments and situations",
+        "Use the binomial theorem to expand expressions with higher-degree terms and solve related algebraic problems",
+        "Apply differentiation techniques to various types of functions to find rates of change and slopes in mathematical and applied contexts",
+        "Apply vector operations to distinguish between scalar and vector quantities, analyse their properties, and calculate the angle between vectors"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25 MR. MRUDURAJSINH JAYENDRASINH DR. RAJESHKUMAR MEGHAJIBHAI PATEL CHUDASAMADigitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Permutation and Combination",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Basic permutation, Basic combination"
+            ],
+            "topics_text": "Introduction, Basic permutation, Basic combination",
+            "topics": [
+              "Introduction, Basic permutation, Basic combination"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Probability",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Classical probability, Compliment of event"
+            ],
+            "topics_text": "Introduction, Classical probability, Compliment of event",
+            "topics": [
+              "Introduction, Classical probability, Compliment of event"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Binomial Theorem",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Binomial theorem (without proof) for positive integral index",
+              "(expansion and general form), Binomial theorem for any index",
+              "(expansion without proof) first and second binomial approximation",
+              "with applications to engineering problems"
+            ],
+            "topics_text": "Binomial theorem (without proof) for positive integral index (expansion and general form), Binomial theorem for any index (expansion without proof) first and second binomial approximation with applications to engineering problems",
+            "topics": [
+              "Binomial theorem (without proof) for positive integral index",
+              "(expansion and general form), Binomial theorem for any index",
+              "(expansion without proof) first and second binomial approximation",
+              "with applications to engineering problems"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differentiation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Definition, Some properties, Derivative of some important",
+              "functions, Chain rule, Derivative of implicit function, Derivative of",
+              "parametric function, Logarithmic differentiation, Second order",
+              "Derivative"
+            ],
+            "topics_text": "Definition, Some properties, Derivative of some important functions, Chain rule, Derivative of implicit function, Derivative of parametric function, Logarithmic differentiation, Second order Derivative",
+            "topics": [
+              "Definition, Some properties, Derivative of some important",
+              "functions, Chain rule, Derivative of implicit function, Derivative of",
+              "parametric function, Logarithmic differentiation, Second order",
+              "Derivative"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Vectors",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Basic concept of Vector and Scalar, addition & subtraction, Product",
+              "of Vectors, Geometric meaning of Scalar and Vector Product,",
+              "Applications of Dot (scalar) and Cross (vector) product, Angle",
+              "between two vectors",
+              "Total Hours 28"
+            ],
+            "topics_text": "Basic concept of Vector and Scalar, addition & subtraction, Product of Vectors, Geometric meaning of Scalar and Vector Product, Applications of Dot (scalar) and Cross (vector) product, Angle between two vectors Total Hours 28",
+            "topics": [
+              "Basic concept of Vector and Scalar, addition & subtraction, Product",
+              "of Vectors, Geometric meaning of Scalar and Vector Product,",
+              "Applications of Dot (scalar) and Cross (vector) product, Angle",
+              "between two vectors",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Permutation and Combination",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Combination, Permutation"
+            ],
+            "topics_text": "Combination, Permutation",
+            "topics": [
+              "Combination, Permutation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Probability",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Classical probability , Compliment of event"
+            ],
+            "topics_text": "Classical probability , Compliment of event",
+            "topics": [
+              "Classical probability , Compliment of event"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Binomial Theorem",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Binomial theorem for positive integral index , Binomial theorem for",
+              "any index"
+            ],
+            "topics_text": "Binomial theorem for positive integral index , Binomial theorem for any index",
+            "topics": [
+              "Binomial theorem for positive integral index , Binomial theorem for",
+              "any index"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differentiation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Some properties and Derivative of some important function, Chain",
+              "rule, Derivative of implicit function and parametric function,",
+              "Logarithmic differentiation, Second order Derivative"
+            ],
+            "topics_text": "Some properties and Derivative of some important function, Chain rule, Derivative of implicit function and parametric function, Logarithmic differentiation, Second order Derivative",
+            "topics": [
+              "Some properties and Derivative of some important function, Chain",
+              "rule, Derivative of implicit function and parametric function,",
+              "Logarithmic differentiation, Second order Derivative"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Vectors",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Algebraic properties of vectors, Basic concept and Geometric",
+              "meaning of Scalar and Vector product, Angle between two vectors",
+              "Total Hours 28"
+            ],
+            "topics_text": "Algebraic properties of vectors, Basic concept and Geometric meaning of Scalar and Vector product, Angle between two vectors Total Hours 28",
+            "topics": [
+              "Algebraic properties of vectors, Basic concept and Geometric",
+              "meaning of Scalar and Vector product, Angle between two vectors",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "NCERT Class-XI science Mathematics , NCERT Class-XI science Mathematics , NCERT, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics Part=I , NCERT, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics Part=II, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022",
+          "Higher Engineering Mathematics, Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, New Delhi, 2007"
+        ],
+        "textbooks": [
+          "Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, New Delhi, 2007",
+          "NCERT Class-XI science Mathematics, -, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=I, -, NCERT, 2022 CHUDASAMA"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.mathsisfun.com/combinatorics/combinations-permutations.html",
+          "https://en.wikipedia.org/wiki/Binomial_theorem",
+          "https://en.wikipedia.org/wiki/Derivative",
+          "https://en.wikipedia.org/wiki/Integral",
+          "https://www.mathsisfun.com/calculus/integration-introduction.html CHUDASAMA"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7876,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    MATHEMATICS-III\nCOURSE CODE     09MA0302\nCOURSE CREDITS  4\n\nObjective:\n 1  Students are intended to understand the basic concepts of calculus such\n     as Permutation and Combination, Probability, Binomial Theorem, Differentiation\n    and Vectors. The knowledge of calculus can help to understand and solve problems\n     related to Engineering fields. The course will help students to understand\n     Engineering principles and concepts. Main objective of the course is to apply\n     concepts of Binomial Theorem, Differentiation and Vectors to solve given\n     engineering problems.\n 2  Students are intended to understand the basic concepts of calculus such as Permutation and\n    Combination, Probability, Binomial Theorem, Differentiation and Vectors. The knowledge\n     of calculus can help to understand and solve problems related to Engineering fields. The\n     course will help students to understand Engineering principles and concepts. Main\n     objective of the course is to apply concepts of Binomial Theorem, Differentiation and\n     Vectors to solve given engineering problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply the concepts of permutation and combination to solve problems involving order and\n     selection of objects in real-life and mathematical scenarios\n 2  Apply the basic principles of probability to determine the likelihood of outcomes in various\n     experiments and situations\n 3  Use the binomial theorem to expand expressions with higher-degree terms and solve related\n     algebraic problems\n 4  Apply differentiation techniques to various types of functions to find rates of change and\n     slopes in mathematical and applied contexts\n 5  Apply vector operations to distinguish between scalar and vector quantities, analyse their\n     properties, and calculate the angle between vectors\n\n\nPre-requisite of course:NA.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH             DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Permutation and Combination                             4\n               Introduction, Basic permutation, Basic combination\n     2       Probability                                              4\n               Introduction, Classical probability, Compliment of event\n     3      Binomial Theorem                                        4\n             Binomial theorem (without proof) for positive integral index\n              (expansion and general form), Binomial theorem for any index\n              (expansion without proof) first and second binomial approximation\n             with applications to engineering problems\n     4       Differentiation                                           10\n               Definition, Some properties, Derivative of some important\n               functions, Chain rule, Derivative of implicit function, Derivative of\n              parametric function, Logarithmic differentiation, Second order\n              Derivative\n     5      Vectors                                                 6\n             Basic concept of Vector and Scalar, addition & subtraction, Product\n              of Vectors, Geometric meaning of Scalar and Vector Product,\n              Applications of Dot (scalar) and Cross (vector) product, Angle\n             between two vectors\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Permutation and Combination                             4\n             Combination, Permutation\n     2       Probability                                              4\n               Classical probability , Compliment of event\n     3      Binomial Theorem                                        4\n             Binomial theorem for positive integral index , Binomial theorem for\n            any index\n     4       Differentiation                                           10\n          Some properties and Derivative of some important function, Chain\n                 rule, Derivative of implicit function and parametric function,\n             Logarithmic differentiation, Second order Derivative\n     5      Vectors                                                 6\n              Algebraic properties of vectors, Basic concept and Geometric\n            meaning of Scalar and Vector product, Angle between two vectors\n                               Total Hours                       28\n\nTextbook :\n 1  Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, New Delhi, 2007\n 2 NCERT Class-XI science Mathematics, -, NCERT, 2022\n 3 NCERT Class-XII science Mathematics Part=I, -, NCERT, 2022\n\n\nMR. MRUDURAJSINH JAYENDRASINH             DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Textbook :\n 4 NCERT Class-XII science Mathematics Part=II, -, NCERT, 2022\n 5 NCERT Class-X Mathematics, -, NCERT, 2022\n\nReferences:\n 1 NCERT Class-XI science Mathematics , NCERT Class-XI science Mathematics , NCERT,\n   NCERT, 2022\n 2 NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics\n     Part=I , NCERT, NCERT, 2022\n 3 NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics\n     Part=II, NCERT, NCERT, 2022\n 4 NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022\n 5  Higher Engineering Mathematics, Higher Engineering Mathematics, B.S. Grewal, Khanna\n     Publishers, New Delhi, 2007\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    30.00         30.00         30.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms.\n\nSupplementary Resources:\n 1  https://www.mathsisfun.com/combinatorics/combinations-permutations.html\n 2  https://en.wikipedia.org/wiki/Binomial_theorem\n 3  https://en.wikipedia.org/wiki/Derivative\n 4  https://en.wikipedia.org/wiki/Integral\n 5  https://www.mathsisfun.com/calculus/integration-introduction.html\n\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH             DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "435836a4130c7b5fef0a26531886488b0c5c9d13c6735f891e5e77b150fba386"
+    },
+    {
+      "subject_id": "46000938230401",
+      "subject_name": "REACTOR & BOILER OPERATION SKILL",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 3,
+      "subject_code": "09CH2304",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2304.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2304 - REACTOR & BOILER OPERATION SKILL (.pdf",
+      "expected_pdf_sha256": "29d87ae94fa789a3440d210a8fcb26045aaf856ed7f67504a41d33c7462e2522",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "REACTOR & BOILER OPERATION SKILL",
+        "course_code": "09CH2304",
+        "semester_label": "3",
+        "credits": 3,
+        "prerequisite": "Knowledge of basic chemistry"
+      },
+      "objectives": [
+        "To study about Reactor and Boiler Operation for getting well developed skill for working, construction and operation of different types of reactors and boilers used in Chemical Processes Industries",
+        "To study about Reactor and Boiler Operation for getting well developed skill for working, construction and operation of different types of reactors and boilers used in Chemical Processes Industries"
+      ],
+      "course_outcomes": [
+        "Working and operation of different types of Boilers used in process industries",
+        "Working and operation of different types of Reactors used in chemical industries",
+        "Identify accessories of boiler",
+        "Identify mounting of boiler"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Generation of steam",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction and definition of steam, Types of Steam, vaporization,",
+              "basic of boiling and evaporation, Properties of steam and",
+              "terminologies, heat energy basic related to production of steam,"
+            ],
+            "topics_text": "Introduction and definition of steam, Types of Steam, vaporization, basic of boiling and evaporation, Properties of steam and terminologies, heat energy basic related to production of steam,",
+            "topics": [
+              "Introduction and definition of steam, Types of Steam, vaporization,",
+              "basic of boiling and evaporation, Properties of steam and",
+              "terminologies, heat energy basic related to production of steam,"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Basic of Boiler",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Classification of boiler according to tube content, furnace condition,",
+              "pressure of steam, mobility of boiler and heat source, Importance of",
+              "steam trap, Circulation of water, different types of cycle for boiler"
+            ],
+            "topics_text": "Classification of boiler according to tube content, furnace condition, pressure of steam, mobility of boiler and heat source, Importance of steam trap, Circulation of water, different types of cycle for boiler",
+            "topics": [
+              "Classification of boiler according to tube content, furnace condition,",
+              "pressure of steam, mobility of boiler and heat source, Importance of",
+              "steam trap, Circulation of water, different types of cycle for boiler"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Types of boiler and their working and construction",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Basic technologies related to different boilers, simple vertical boiler,",
+              "Cochran boiler, Babcock and Wilcox boiler, Different types of",
+              "mountings and accessories of boiler, Application of boiler in",
+              "industries"
+            ],
+            "topics_text": "Basic technologies related to different boilers, simple vertical boiler, Cochran boiler, Babcock and Wilcox boiler, Different types of mountings and accessories of boiler, Application of boiler in industries",
+            "topics": [
+              "Basic technologies related to different boilers, simple vertical boiler,",
+              "Cochran boiler, Babcock and Wilcox boiler, Different types of",
+              "mountings and accessories of boiler, Application of boiler in",
+              "industries"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Batch Reactor & Semi Batch Reactor",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Mass and energy balances around a volume element. Performance",
+              "equation of Batch reactor design equation. Concept of semi batch",
+              "reactor"
+            ],
+            "topics_text": "Mass and energy balances around a volume element. Performance equation of Batch reactor design equation. Concept of semi batch reactor",
+            "topics": [
+              "Mass and energy balances around a volume element. Performance",
+              "equation of Batch reactor design equation. Concept of semi batch",
+              "reactor"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Mixed Flow Reactor",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Mass and energy balances around an element. Performance equation",
+              "of Mixed flow reactor design equation effect of concentration and",
+              "temperature on conversion"
+            ],
+            "topics_text": "Mass and energy balances around an element. Performance equation of Mixed flow reactor design equation effect of concentration and temperature on conversion",
+            "topics": [
+              "Mass and energy balances around an element. Performance equation",
+              "of Mixed flow reactor design equation effect of concentration and",
+              "temperature on conversion"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Plug Flow Reactor",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Mass and energy balances around an element. Performance equation",
+              "of Plug flow reactor design equation",
+              "Total Hours 28"
+            ],
+            "topics_text": "Mass and energy balances around an element. Performance equation of Plug flow reactor design equation Total Hours 28",
+            "topics": [
+              "Mass and energy balances around an element. Performance equation",
+              "of Plug flow reactor design equation",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and construction of Cochran boiler"
+            ],
+            "topics_text": "Working and construction of Cochran boiler",
+            "topics": [
+              "Working and construction of Cochran boiler"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To Study about different kind of steam"
+            ],
+            "topics_text": "To Study about different kind of steam",
+            "topics": [
+              "To Study about different kind of steam"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and construction of Babcock and wilcox boiler"
+            ],
+            "topics_text": "Working and construction of Babcock and wilcox boiler",
+            "topics": [
+              "Working and construction of Babcock and wilcox boiler"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study of construction and working of mountings of boiler"
+            ],
+            "topics_text": "To study of construction and working of mountings of boiler",
+            "topics": [
+              "To study of construction and working of mountings of boiler"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study of construction and working of accessories of boiler"
+            ],
+            "topics_text": "To study of construction and working of accessories of boiler",
+            "topics": [
+              "To study of construction and working of accessories of boiler"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and construction of plug flow reactor"
+            ],
+            "topics_text": "Working and construction of plug flow reactor",
+            "topics": [
+              "Working and construction of plug flow reactor"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To find out the conversion of plug flow reactor using its",
+              "performance equation"
+            ],
+            "topics_text": "To find out the conversion of plug flow reactor using its performance equation",
+            "topics": [
+              "To find out the conversion of plug flow reactor using its",
+              "performance equation"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and construction of batch reactor"
+            ],
+            "topics_text": "Working and construction of batch reactor",
+            "topics": [
+              "Working and construction of batch reactor"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To find out the conversion of batch reactor using its performance",
+              "equation"
+            ],
+            "topics_text": "To find out the conversion of batch reactor using its performance equation",
+            "topics": [
+              "To find out the conversion of batch reactor using its performance",
+              "equation"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Working and construction of Continues stirred reactor and mixed",
+              "flow reactor"
+            ],
+            "topics_text": "Working and construction of Continues stirred reactor and mixed flow reactor",
+            "topics": [
+              "Working and construction of Continues stirred reactor and mixed",
+              "flow reactor"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study about application of reactors in chemical Process",
+              "Industries"
+            ],
+            "topics_text": "To study about application of reactors in chemical Process Industries",
+            "topics": [
+              "To study about application of reactors in chemical Process",
+              "Industries"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To find out the conversion of Continues stirred reactor using its",
+              "performance equation"
+            ],
+            "topics_text": "To find out the conversion of Continues stirred reactor using its performance equation",
+            "topics": [
+              "To find out the conversion of Continues stirred reactor using its",
+              "performance equation"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study about application of boiler in thermal power station"
+            ],
+            "topics_text": "To study about application of boiler in thermal power station",
+            "topics": [
+              "To study about application of boiler in thermal power station"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study about classification of boiler",
+              "Total Hours 28"
+            ],
+            "topics_text": "To study about classification of boiler Total Hours 28",
+            "topics": [
+              "To study about classification of boiler",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Elements of Mechanical Engineering, Elements of Mechanical Engineering, N.M. Bhatt, Mahajan Publication, 2013",
+          "Elements of Mechanical Engineering, Elements of Mechanical Engineering, N.V. Rachchh , McGraw-Hill Publication, 2015"
+        ],
+        "textbooks": [
+          "Fundamental of Mechanical Engineering, R.B. Varia, Atul Prakashan, 2014",
+          "Chemical Engineering Kinetics 2nd Edition, J. M. Smith, McGraw - Hill, 1981 References:",
+          "Elements of Mechanical Engineering, Elements of Mechanical Engineering, N.M. Bhatt, Mahajan Publication, 2013",
+          "Elements of Mechanical Engineering, Elements of Mechanical Engineering, N.V. Rachchh , McGraw-Hill Publication, 2015"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://archive.nptel.ac.in/courses/103/103/103103153/"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 8518,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE   REACTOR & BOILER OPERATION SKILL\nCOURSE CODE     09CH2304\nCOURSE CREDITS  3\n\nObjective:\n 1  To study about Reactor and Boiler Operation for getting well developed skill for working,\n     construction and operation of different types of reactors and boilers used in Chemical\n     Processes Industries\n 2  To study about Reactor and Boiler Operation for getting well developed skill for working,\n     construction and operation of different types of reactors and boilers used in Chemical\n     Processes Industries\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Working and operation of different types of Boilers used in process industries\n 2  Working and operation of different types of Reactors used in chemical industries\n 3  Identify accessories of boiler\n 4  Identify mounting of boiler\n\n\nPre-requisite of course:Knowledge of basic chemistry\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Generation of steam                                      4\n               Introduction and definition of steam, Types of Steam, vaporization,\n               basic of boiling and evaporation, Properties of steam and\n               terminologies, heat energy basic related to production of steam,\n     2      Basic of Boiler                                           6\n               Classification of boiler according to tube content, furnace condition,\n              pressure of steam, mobility of boiler and heat source, Importance of\n             steam trap, Circulation of water, different types of cycle for boiler\n     3      Types of boiler and their working and construction            6\n             Basic technologies related to different boilers, simple vertical boiler,\n            Cochran boiler, Babcock and Wilcox boiler, Different types of\n             mountings and accessories of boiler, Application of boiler in\n               industries\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Batch Reactor & Semi Batch Reactor                        4\n           Mass and energy balances around a volume element. Performance\n              equation of Batch reactor design equation. Concept of semi batch\n               reactor\n     5     Mixed Flow Reactor                                      4\n           Mass and energy balances around an element. Performance equation\n              of Mixed flow reactor design equation effect of concentration and\n              temperature on conversion\n     6      Plug Flow Reactor                                        4\n           Mass and energy balances around an element. Performance equation\n              of Plug flow reactor design equation\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            2\n            Working and construction of Cochran boiler\n     2      Experiment 2                                            2\n           To Study about different kind of steam\n     3      Experiment 3                                            2\n            Working and construction of Babcock and wilcox boiler\n     4      Experiment 4                                            2\n           To study of construction and working of mountings of boiler\n     5      Experiment 5                                            2\n           To study of construction and working of accessories of boiler\n     6      Experiment 6                                            2\n            Working and construction of plug flow reactor\n     7      Experiment 7                                            2\n           To find out the conversion of plug flow reactor using its\n             performance equation\n     8      Experiment 8                                            2\n            Working and construction of batch reactor\n     9      Experiment 9                                            2\n           To find out the conversion of batch reactor using its performance\n              equation\n     10     Experiment 10                                           2\n            Working and construction of Continues stirred reactor and mixed\n             flow reactor\n     11     Experiment 11                                           2\n           To study about application of reactors in chemical Process\n               Industries\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     12     Experiment 12                                           2\n           To find out the conversion of Continues stirred reactor using its\n             performance equation\n     13     Experiment 13                                           2\n           To study about application of boiler in thermal power station\n     14     Experiment 14                                           2\n           To study about classification of boiler\n                               Total Hours                       28\n\nTextbook :\n 1  Fundamental of Mechanical Engineering, R.B. Varia, Atul Prakashan, 2014\n 2  Chemical Engineering Kinetics 2nd Edition, J. M. Smith, McGraw - Hill, 1981\n\nReferences:\n 1  Elements of Mechanical Engineering, Elements of Mechanical Engineering, N.M. Bhatt,\n    Mahajan Publication, 2013\n 2  Elements of Mechanical Engineering, Elements of Mechanical Engineering, N.V. Rachchh\n        , McGraw-Hill Publication, 2015\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         10.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Supplementary Resources:\n 1  https://archive.nptel.ac.in/courses/103/103/103103153/\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "29d87ae94fa789a3440d210a8fcb26045aaf856ed7f67504a41d33c7462e2522"
+    },
+    {
+      "subject_id": "46000938230301",
+      "subject_name": "SAFETY & POLLUTION MEASURES",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 3,
+      "subject_code": "09CH2303",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2303.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2303 - SAFETY & POLLUTION MEASURES (.pdf",
+      "expected_pdf_sha256": "952d2b1a28b15cacf0beec99e8da5b9b5651d68c0e18854ebb046908ebd8590b",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "SAFETY & POLLUTION MEASURES",
+        "course_code": "09CH2303",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "Knowledge of basic chemistry."
+      },
+      "objectives": [
+        "To study about safety consideration and pollution measures is to get knowledge about safety consideration, risk and hazards management and pollution strategies in process engineering plant."
+      ],
+      "course_outcomes": [
+        "Basic knowledge of chemistry and environmental science",
+        "Understood about the Safety, Safety codes and standards.",
+        "Understood importance about Hazards and personal protective equipment used in industries.",
+        "Understood about pollution and pollutants and their effect on human health."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Safety, Safety codes and standards, PPE",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition of Safety, Importance of Safety in Chemical Industries,",
+              "Development of safety organization, Indian standards (IS) and",
+              "codes, International Standards like ISO 9001, ISO 14001,",
+              "OHSAS18001,18002, Protection for head, ears, eyes, face,",
+              "respiratory organs, hands, feet etc"
+            ],
+            "topics_text": "Definition of Safety, Importance of Safety in Chemical Industries, Development of safety organization, Indian standards (IS) and codes, International Standards like ISO 9001, ISO 14001, OHSAS18001,18002, Protection for head, ears, eyes, face, respiratory organs, hands, feet etc",
+            "topics": [
+              "Definition of Safety, Importance of Safety in Chemical Industries,",
+              "Development of safety organization, Indian standards (IS) and",
+              "codes, International Standards like ISO 9001, ISO 14001,",
+              "OHSAS18001,18002, Protection for head, ears, eyes, face,",
+              "respiratory organs, hands, feet etc"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Hazard Identification and control Techaniques",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Deffination of Hazards and types Hazards, Classification of",
+              "Chemical Hazards, occupational health hazards and control,",
+              "Prevention of diseases due to chemical effect, Hazard and",
+              "Operatability study (HAZOP), HAZAN and HAZOP, Fault Tree",
+              "analysis (FTA)Even Tree analysis (ETA)"
+            ],
+            "topics_text": "Deffination of Hazards and types Hazards, Classification of Chemical Hazards, occupational health hazards and control, Prevention of diseases due to chemical effect, Hazard and Operatability study (HAZOP), HAZAN and HAZOP, Fault Tree analysis (FTA)Even Tree analysis (ETA)",
+            "topics": [
+              "Deffination of Hazards and types Hazards, Classification of",
+              "Chemical Hazards, occupational health hazards and control,",
+              "Prevention of diseases due to chemical effect, Hazard and",
+              "Operatability study (HAZOP), HAZAN and HAZOP, Fault Tree",
+              "analysis (FTA)Even Tree analysis (ETA)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Control of Chemical Hazards",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Ventilation and lighting, Safety factors: Heat and Temperature",
+              "hazards, Thermal Hazards, Chemical burns and their effect, Colour",
+              "codes and symbols for safety, Different types of symbols in",
+              "chemical industries"
+            ],
+            "topics_text": "Ventilation and lighting, Safety factors: Heat and Temperature hazards, Thermal Hazards, Chemical burns and their effect, Colour codes and symbols for safety, Different types of symbols in chemical industries",
+            "topics": [
+              "Ventilation and lighting, Safety factors: Heat and Temperature",
+              "hazards, Thermal Hazards, Chemical burns and their effect, Colour",
+              "codes and symbols for safety, Different types of symbols in",
+              "chemical industries"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Types of pollution and pollutants",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Definition of pollution and pollutant, Sources of Pollution, Effect of",
+              "pollution on Human health, Air pollution, Water pollution, Land",
+              "pollution."
+            ],
+            "topics_text": "Definition of pollution and pollutant, Sources of Pollution, Effect of pollution on Human health, Air pollution, Water pollution, Land pollution.",
+            "topics": [
+              "Definition of pollution and pollutant, Sources of Pollution, Effect of",
+              "pollution on Human health, Air pollution, Water pollution, Land",
+              "pollution."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Air Pollution",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Classification of Air Pollutants, Sources of Air Pollution Effect of",
+              "Air pollution on human health, animals and material Ambient air",
+              "sampling, particulate and gaseous sample collection methods"
+            ],
+            "topics_text": "Classification of Air Pollutants, Sources of Air Pollution Effect of Air pollution on human health, animals and material Ambient air sampling, particulate and gaseous sample collection methods",
+            "topics": [
+              "Classification of Air Pollutants, Sources of Air Pollution Effect of",
+              "Air pollution on human health, animals and material Ambient air",
+              "sampling, particulate and gaseous sample collection methods"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Water Pollution & Waste Water Treatment",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Introduction of Water Pollution, Classification & Sources of Water",
+              "Pollution Characterization of water : BOD, COD, VM, Suspended",
+              "Matter, Dissolved solids, pH"
+            ],
+            "topics_text": "Introduction of Water Pollution, Classification & Sources of Water Pollution Characterization of water : BOD, COD, VM, Suspended Matter, Dissolved solids, pH",
+            "topics": [
+              "Introduction of Water Pollution, Classification & Sources of Water",
+              "Pollution Characterization of water : BOD, COD, VM, Suspended",
+              "Matter, Dissolved solids, pH"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Land pollution",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Sources and Types of Soil pollution, Impact of soil pollution on soil",
+              "quality, Effect of industrial pollutants on soil"
+            ],
+            "topics_text": "Sources and Types of Soil pollution, Impact of soil pollution on soil quality, Effect of industrial pollutants on soil",
+            "topics": [
+              "Sources and Types of Soil pollution, Impact of soil pollution on soil",
+              "quality, Effect of industrial pollutants on soil"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Noise pollution",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Parameters for measurement of Noise, Sources of Noise Pollution,",
+              "Measurement of noise pollution, Effects and control of Noise",
+              "Pollution, effect on human`s health",
+              "Total Hours 28"
+            ],
+            "topics_text": "Parameters for measurement of Noise, Sources of Noise Pollution, Measurement of noise pollution, Effects and control of Noise Pollution, effect on human`s health Total Hours 28",
+            "topics": [
+              "Parameters for measurement of Noise, Sources of Noise Pollution,",
+              "Measurement of noise pollution, Effects and control of Noise",
+              "Pollution, effect on human`s health",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Demonstration of various personal protective devices."
+            ],
+            "topics_text": "Demonstration of various personal protective devices.",
+            "topics": [
+              "Demonstration of various personal protective devices."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Identification colour & colour codes for pipe & gas cylinder for",
+              "various chemicals"
+            ],
+            "topics_text": "Identification colour & colour codes for pipe & gas cylinder for various chemicals",
+            "topics": [
+              "Identification colour & colour codes for pipe & gas cylinder for",
+              "various chemicals"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Identification of first aid for different hazard or accidents."
+            ],
+            "topics_text": "Identification of first aid for different hazard or accidents.",
+            "topics": [
+              "Identification of first aid for different hazard or accidents."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To Identification of health hazard & remedies for it"
+            ],
+            "topics_text": "To Identification of health hazard & remedies for it",
+            "topics": [
+              "To Identification of health hazard & remedies for it"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Case study regarding safety and its regulation in process industries."
+            ],
+            "topics_text": "Case study regarding safety and its regulation in process industries.",
+            "topics": [
+              "Case study regarding safety and its regulation in process industries."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Sampling of ambient air, Particulate and gaseous effluent"
+            ],
+            "topics_text": "Sampling of ambient air, Particulate and gaseous effluent",
+            "topics": [
+              "Sampling of ambient air, Particulate and gaseous effluent"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determination of COD of the given effluent sample."
+            ],
+            "topics_text": "Determination of COD of the given effluent sample.",
+            "topics": [
+              "Determination of COD of the given effluent sample."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To estimate chloride content of given water sample"
+            ],
+            "topics_text": "To estimate chloride content of given water sample",
+            "topics": [
+              "To estimate chloride content of given water sample"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determination of hydrogen ion concentration (pH) of sample"
+            ],
+            "topics_text": "Determination of hydrogen ion concentration (pH) of sample",
+            "topics": [
+              "Determination of hydrogen ion concentration (pH) of sample"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To determine BOD of given sample"
+            ],
+            "topics_text": "To determine BOD of given sample",
+            "topics": [
+              "To determine BOD of given sample"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determination total dissolved solids in given effluent sample."
+            ],
+            "topics_text": "Determination total dissolved solids in given effluent sample.",
+            "topics": [
+              "Determination total dissolved solids in given effluent sample."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Prepare an Environmental Audit report of any process Industry."
+            ],
+            "topics_text": "Prepare an Environmental Audit report of any process Industry.",
+            "topics": [
+              "Prepare an Environmental Audit report of any process Industry."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of Detail charts of various Pollutants and sources of",
+              "pollution"
+            ],
+            "topics_text": "Preparation of Detail charts of various Pollutants and sources of pollution",
+            "topics": [
+              "Preparation of Detail charts of various Pollutants and sources of",
+              "pollution"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Study of Pollutants and Scheme of Pollution control in a chemical",
+              "process plant",
+              "Total Hours 28"
+            ],
+            "topics_text": "Study of Pollutants and Scheme of Pollution control in a chemical process plant Total Hours 28",
+            "topics": [
+              "Study of Pollutants and Scheme of Pollution control in a chemical",
+              "process plant",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Essential of Environment (337), Essential of Environment (337), Course Learning Manual prepared by CEC, Directorate of Technical Education, 2000",
+          "Environmental Pollution control, Environmental Pollution control, S. S. Rao, Wiley Eastern Ltd, 2015"
+        ],
+        "textbooks": [
+          "Fundamentals of Industrial Safety & Health, K.U.Mistry, Siddharth Prakashan, 2008",
+          "Text Book of Environmental Pollution and Control-1998, Dr. H. S. Bhatia, Galgotia Publication, 1998 References:",
+          "Essential of Environment (337), Essential of Environment (337), Course Learning Manual prepared by CEC, Directorate of Technical Education, 2000",
+          "Environmental Pollution control, Environmental Pollution control, S. S. Rao, Wiley Eastern Ltd, 2015"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://archive.nptel.ac.in/courses/103/107/103107156/"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9293,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    SAFETY & POLLUTION MEASURES\nCOURSE CODE     09CH2303\nCOURSE CREDITS  4\n\nObjective:\n 1  To study about safety consideration and pollution measures is to get knowledge about\n     safety consideration, risk and hazards management and pollution strategies in process\n     engineering plant.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Basic knowledge of chemistry and environmental science\n 2  Understood about the Safety, Safety codes and standards.\n 3  Understood importance about Hazards and personal protective equipment used in\n     industries.\n 4  Understood about pollution and pollutants and their effect on human health.\n\n\nPre-requisite of course:Knowledge of basic chemistry.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Safety, Safety codes and standards, PPE                     4\n               Definition of Safety, Importance of Safety in Chemical Industries,\n            Development of safety organization, Indian standards (IS) and\n              codes, International Standards like ISO 9001, ISO 14001,\n            OHSAS18001,18002, Protection for head, ears, eyes, face,\n               respiratory organs, hands, feet etc\n     2     Hazard Identification and control Techaniques                8\n              Deffination of Hazards and types Hazards, Classification of\n            Chemical Hazards, occupational health hazards and control,\n              Prevention of diseases due to chemical effect, Hazard and\n               Operatability study (HAZOP), HAZAN and HAZOP, Fault Tree\n               analysis (FTA)Even Tree analysis (ETA)\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Control of Chemical Hazards                              2\n               Ventilation and lighting, Safety factors: Heat and Temperature\n              hazards, Thermal Hazards, Chemical burns and their effect, Colour\n             codes and symbols for safety, Different types of symbols in\n             chemical industries\n     4      Types of pollution and pollutants                           2\n               Definition of pollution and pollutant, Sources of Pollution, Effect of\n               pollution on Human health, Air pollution, Water pollution, Land\n               pollution.\n     5      Air Pollution                                            3\n               Classification of Air Pollutants, Sources of Air Pollution Effect of\n             Air pollution on human health, animals and material Ambient air\n              sampling, particulate and gaseous sample collection methods\n     6     Water Pollution & Waste Water Treatment                  3\n               Introduction of Water Pollution, Classification & Sources of Water\n               Pollution Characterization of water : BOD, COD, VM, Suspended\n              Matter, Dissolved solids, pH\n     7     Land pollution                                           3\n             Sources and Types of Soil pollution, Impact of soil pollution on soil\n                quality, Effect of industrial pollutants on soil\n     8      Noise pollution                                           3\n             Parameters for measurement of Noise, Sources of Noise Pollution,\n            Measurement of noise pollution, Effects and control of Noise\n               Pollution, effect on human`s health\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            2\n             Demonstration of various personal protective devices.\n     2      Experiment 2                                            2\n                Identification colour & colour codes for pipe & gas cylinder for\n              various chemicals\n     3      Experiment 3                                            2\n                Identification of first aid for different hazard or accidents.\n     4      Experiment 4                                            2\n           To Identification of health hazard & remedies for it\n     5      Experiment 5                                            2\n            Case study regarding safety and its regulation in process industries.\n     6      Experiment 6                                            2\n            Sampling of ambient air, Particulate and gaseous effluent\n     7      Experiment 7                                            2\n             Determination of COD of the given effluent sample.\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     8      Experiment 8                                            2\n           To estimate chloride content of given water sample\n     9      Experiment 9                                            2\n             Determination of hydrogen ion concentration (pH) of sample\n     10     Experiment 10                                           2\n           To determine BOD of given sample\n     11     Experiment 11                                           2\n             Determination total dissolved solids in given effluent sample.\n     12     Experiment 12                                           2\n              Prepare an Environmental Audit report of any process Industry.\n     13     Experiment 13                                           2\n              Preparation of Detail charts of various Pollutants and sources of\n               pollution\n     14     Experiment 14                                           2\n             Study of Pollutants and Scheme of Pollution control in a chemical\n              process plant\n                               Total Hours                       28\n\nTextbook :\n 1  Fundamentals of Industrial Safety & Health, K.U.Mistry, Siddharth Prakashan, 2008\n 2  Text Book of Environmental Pollution and Control-1998, Dr. H. S. Bhatia, Galgotia\n     Publication, 1998\n\nReferences:\n 1  Essential of Environment (337), Essential of Environment (337), Course Learning Manual\n     prepared by CEC, Directorate of Technical Education, 2000\n 2  Environmental Pollution control, Environmental Pollution control, S. S. Rao, Wiley\n     Eastern Ltd, 2015\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         10.00         10.00          0.00           0.00\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc. The\n     internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room. Practical examination will be conducted at the end of semester\n     for evaluation of performance of students in laboratory. Students will use supplementary\n     resources such as online videos, NPTEL videos, e-courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://archive.nptel.ac.in/courses/103/107/103107156/\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "952d2b1a28b15cacf0beec99e8da5b9b5651d68c0e18854ebb046908ebd8590b"
+    },
+    {
+      "subject_id": "46000938230101",
+      "subject_name": "UNIT OPERATION - II",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 3,
+      "subject_code": "09CH2301",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2301.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2301 - UNIT OPERATION - II (.pdf",
+      "expected_pdf_sha256": "7169e275ad83056e7fdbc2e21322e750b08a608d7b81514cde36b2843fd49b9a",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "UNIT OPERATION - II",
+        "course_code": "09CH2301",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "Concepts of units and dimensions, knowledge of basic physics."
+      },
+      "objectives": [
+        "To study about Fluid Flow Operations generally carried out in Chemical Processes Industries involving.",
+        "To study about Fluid Flow Operations generally carried out in Chemical Processes Industries involving"
+      ],
+      "course_outcomes": [
+        "Understand basic parameters, types of flow and behaviour of fluid.",
+        "Understand different kind of fittings and joints.",
+        "Operate different type of pumps and valves.",
+        "Operate different type of flow measurement devices."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fluid Statics and its Applications",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction of Fluid static and dynamics, Nature of Fluid, Ideal",
+              "fluid & Real fluid, Pressure Concept: Definitions of static head,",
+              "Static pressure, Gauge pressure, Absolute pressure, Dynamic",
+              "pressure, Total pressure, Vacuum (negative pressure),",
+              "Manometers–Simple U Tube manometer, Purpose of pressure",
+              "measurement. Mechanical pressure gauges, Bourdon tube,",
+              "diaphragm & bellow gauges. Continuous Gravity Decanter,",
+              "Centrifugal Decanter."
+            ],
+            "topics_text": "Introduction of Fluid static and dynamics, Nature of Fluid, Ideal fluid & Real fluid, Pressure Concept: Definitions of static head, Static pressure, Gauge pressure, Absolute pressure, Dynamic pressure, Total pressure, Vacuum (negative pressure), Manometers–Simple U Tube manometer, Purpose of pressure measurement. Mechanical pressure gauges, Bourdon tube, diaphragm & bellow gauges. Continuous Gravity Decanter, Centrifugal Decanter.",
+            "topics": [
+              "Introduction of Fluid static and dynamics, Nature of Fluid, Ideal",
+              "fluid & Real fluid, Pressure Concept: Definitions of static head,",
+              "Static pressure, Gauge pressure, Absolute pressure, Dynamic",
+              "pressure, Total pressure, Vacuum (negative pressure),",
+              "Manometers–Simple U Tube manometer, Purpose of pressure",
+              "measurement. Mechanical pressure gauges, Bourdon tube,",
+              "diaphragm & bellow gauges. Continuous Gravity Decanter,",
+              "Centrifugal Decanter."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Fluid–Flow Phenomena",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Reynolds No. and it`s significant, The Velocity Field, Velocity",
+              "gradient and rate of shear, Boundary layer, Boundary layer",
+              "separation and Wake formation, Classify fluid with example,",
+              "Viscosity concept: Absolute, Kinematic, Relative viscosity, Steady",
+              "state and unsteady state conditions."
+            ],
+            "topics_text": "Reynolds No. and it`s significant, The Velocity Field, Velocity gradient and rate of shear, Boundary layer, Boundary layer separation and Wake formation, Classify fluid with example, Viscosity concept: Absolute, Kinematic, Relative viscosity, Steady state and unsteady state conditions.",
+            "topics": [
+              "Reynolds No. and it`s significant, The Velocity Field, Velocity",
+              "gradient and rate of shear, Boundary layer, Boundary layer",
+              "separation and Wake formation, Classify fluid with example,",
+              "Viscosity concept: Absolute, Kinematic, Relative viscosity, Steady",
+              "state and unsteady state conditions."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Basic Equations of Fluid Flow",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Continuity equation, Average velocity, Mass velocity, Bernoulli",
+              "Equation with Derivation, Correction factors in Bernoulli Equation,",
+              "Significance of Hagen–Poiseuilles Equation. Introduction to",
+              "compressible fluid, Mach- Number"
+            ],
+            "topics_text": "Continuity equation, Average velocity, Mass velocity, Bernoulli Equation with Derivation, Correction factors in Bernoulli Equation, Significance of Hagen–Poiseuilles Equation. Introduction to compressible fluid, Mach- Number",
+            "topics": [
+              "Continuity equation, Average velocity, Mass velocity, Bernoulli",
+              "Equation with Derivation, Correction factors in Bernoulli Equation,",
+              "Significance of Hagen–Poiseuilles Equation. Introduction to",
+              "compressible fluid, Mach- Number"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Friction in Flowing Fluid",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Explain: Friction factor chart, Roughness of pipe, Define skin",
+              "friction, form friction, Hydraulic radius and equivalent diameter,",
+              "Friction loss from Sudden expansion of cross section, Friction loss",
+              "from sudden Contraction of cross section."
+            ],
+            "topics_text": "Explain: Friction factor chart, Roughness of pipe, Define skin friction, form friction, Hydraulic radius and equivalent diameter, Friction loss from Sudden expansion of cross section, Friction loss from sudden Contraction of cross section.",
+            "topics": [
+              "Explain: Friction factor chart, Roughness of pipe, Define skin",
+              "friction, form friction, Hydraulic radius and equivalent diameter,",
+              "Friction loss from Sudden expansion of cross section, Friction loss",
+              "from sudden Contraction of cross section."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Transportation of Fluid",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Difference between pipe & tube. Different types of fittings & joints-",
+              "their applications Explain: various Types of valves like: Gate",
+              "valves, Globe valve, Check valves, Non-Return Valve, Control",
+              "valve, Pumps: Classification of pumps. Construction and working of",
+              "Reciprocating and centrifugal pump and Diaphragm pump.",
+              "Developed head and power requirement, Suction lift and Cavitation",
+              "in centrifugal pump, Characteristic curves of Centrifugal pump,",
+              "Simple problems based on NPSH, Efficiency, Head and H.P.,"
+            ],
+            "topics_text": "Difference between pipe & tube. Different types of fittings & joints- their applications Explain: various Types of valves like: Gate valves, Globe valve, Check valves, Non-Return Valve, Control valve, Pumps: Classification of pumps. Construction and working of Reciprocating and centrifugal pump and Diaphragm pump. Developed head and power requirement, Suction lift and Cavitation in centrifugal pump, Characteristic curves of Centrifugal pump, Simple problems based on NPSH, Efficiency, Head and H.P.,",
+            "topics": [
+              "Difference between pipe & tube. Different types of fittings & joints",
+              "their applications Explain: various Types of valves like: Gate",
+              "valves, Globe valve, Check valves, Non-Return Valve, Control",
+              "valve, Pumps: Classification of pumps. Construction and working of",
+              "Reciprocating and centrifugal pump and Diaphragm pump.",
+              "Developed head and power requirement, Suction lift and Cavitation",
+              "in centrifugal pump, Characteristic curves of Centrifugal pump,",
+              "Simple problems based on NPSH, Efficiency, Head and H.P.,"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Flow Measurement",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Different methods of flow measurement, Classification of flow",
+              "measuring devices, Construction, working principles and",
+              "application of flow meters like Rotameter, Orifice meter,",
+              "Venturimeter, Pitot tube, all types of weirs., Derivation of equation",
+              "for Orifice meter and Venturimeter, Simple example based on",
+              "formula of Orifice meter, Venturimeter.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Different methods of flow measurement, Classification of flow measuring devices, Construction, working principles and application of flow meters like Rotameter, Orifice meter, Venturimeter, Pitot tube, all types of weirs., Derivation of equation for Orifice meter and Venturimeter, Simple example based on formula of Orifice meter, Venturimeter. Total Hours 28",
+            "topics": [
+              "Different methods of flow measurement, Classification of flow",
+              "measuring devices, Construction, working principles and",
+              "application of flow meters like Rotameter, Orifice meter,",
+              "Venturimeter, Pitot tube, all types of weirs., Derivation of equation",
+              "for Orifice meter and Venturimeter, Simple example based on",
+              "formula of Orifice meter, Venturimeter.",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment No.1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Reynolds’s Experiment"
+            ],
+            "topics_text": "Reynolds’s Experiment",
+            "topics": [
+              "Reynolds’s Experiment"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment No. 2",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Bernoulli’s Experiment"
+            ],
+            "topics_text": "Bernoulli’s Experiment",
+            "topics": [
+              "Bernoulli’s Experiment"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment No. 3",
+            "contact_hours": 8,
+            "topic_lines": [
+              "V. Notch & Rectangular Notch"
+            ],
+            "topics_text": "V. Notch & Rectangular Notch",
+            "topics": [
+              "V. Notch & Rectangular Notch"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Venturi meter"
+            ],
+            "topics_text": "Venturi meter",
+            "topics": [
+              "Venturi meter"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment No. 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Orifice meter"
+            ],
+            "topics_text": "Orifice meter",
+            "topics": [
+              "Orifice meter"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment No. 6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Pitot tube"
+            ],
+            "topics_text": "Pitot tube",
+            "topics": [
+              "Pitot tube"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment No. 7",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Study of Pipes, Tubes & Fittings"
+            ],
+            "topics_text": "Study of Pipes, Tubes & Fittings",
+            "topics": [
+              "Study of Pipes, Tubes & Fittings"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment No. 8",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Reciprocating Pump"
+            ],
+            "topics_text": "Reciprocating Pump",
+            "topics": [
+              "Reciprocating Pump"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment No. 9",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Centrifugal Pump",
+              "Total Hours 56"
+            ],
+            "topics_text": "Centrifugal Pump Total Hours 56",
+            "topics": [
+              "Centrifugal Pump",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Introduction to Chemical Engineering, Introduction to Chemical Engineering, L.Badge & Julius T. Banchero, McGraw-Hill, 2001",
+          "Unit Operation – II , Unit Operation – II , K. A. Gavhane, Nirali Publication, 2012",
+          "Unit Operations of Chemical Engineering , Unit Operations of Chemical Engineering , P. Chattopadhyay , Nirali Publication, 2010"
+        ],
+        "textbooks": [
+          "Unit Operations of Chemical Enggineering, W.L. McCabe, J. C. Smith & Harriott, McGraw-Hill, 2007 References:",
+          "Introduction to Chemical Engineering, Introduction to Chemical Engineering, L.Badge & Julius T. Banchero, McGraw-Hill, 2001",
+          "Unit Operation – II , Unit Operation – II , K. A. Gavhane, Nirali Publication, 2012",
+          "Unit Operations of Chemical Engineering , Unit Operations of Chemical Engineering , P. Chattopadhyay , Nirali Publication, 2010"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.vlab.co.in/broad-area-chemical-engineering",
+          "https://onlinecourses.nptel.ac.in/noc22_ch03/preview"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 8469,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    UNIT OPERATION - II\nCOURSE CODE     09CH2301\nCOURSE CREDITS  4\n\nObjective:\n 1  To study about Fluid Flow Operations generally carried out in Chemical Processes\n     Industries involving.\n 2  To study about Fluid Flow Operations generally carried out in Chemical Processes\n     Industries involving\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand basic parameters, types of flow and behaviour of fluid.\n 2  Understand different kind of fittings and joints.\n 3  Operate different type of pumps and valves.\n 4  Operate different type of flow measurement devices.\n\n\nPre-requisite of course:Concepts of units and dimensions, knowledge of basic physics.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fluid Statics and its Applications                           4\n               Introduction of Fluid static and dynamics, Nature of Fluid, Ideal\n                fluid & Real fluid, Pressure Concept: Definitions of static head,\n                Static pressure, Gauge pressure, Absolute pressure, Dynamic\n               pressure, Total pressure, Vacuum (negative pressure),\n            Manometers–Simple U Tube manometer, Purpose of pressure\n             measurement. Mechanical pressure gauges, Bourdon tube,\n             diaphragm & bellow gauges. Continuous Gravity Decanter,\n              Centrifugal Decanter.\n     2      Fluid–Flow Phenomena                                   4\n             Reynolds No. and it`s significant, The Velocity Field, Velocity\n               gradient and rate of shear, Boundary layer, Boundary layer\n               separation and Wake formation, Classify fluid with example,\n              Viscosity concept: Absolute, Kinematic, Relative viscosity, Steady\n                state and unsteady state conditions.\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Basic Equations of Fluid Flow                              6\n              Continuity equation, Average velocity, Mass velocity, Bernoulli\n             Equation with Derivation, Correction factors in Bernoulli Equation,\n              Significance of Hagen–Poiseuilles Equation. Introduction to\n              compressible fluid, Mach- Number\n     4       Friction in Flowing Fluid                                  4\n              Explain: Friction factor chart, Roughness of pipe, Define skin\n                 friction, form friction, Hydraulic radius and equivalent diameter,\n               Friction loss from Sudden expansion of cross section, Friction loss\n            from sudden Contraction of cross section.\n     5      Transportation of Fluid                                   6\n              Difference between pipe & tube. Different types of fittings & joints-\n                their applications Explain: various Types of valves like: Gate\n               valves, Globe valve, Check valves, Non-Return Valve, Control\n               valve, Pumps: Classification of pumps. Construction and working of\n              Reciprocating and centrifugal pump and Diaphragm pump.\n            Developed head and power requirement, Suction lift and Cavitation\n               in centrifugal pump, Characteristic curves of Centrifugal pump,\n             Simple problems based on NPSH, Efficiency, Head and H.P.,\n     6      Flow Measurement                                       4\n               Different methods of flow measurement, Classification of flow\n             measuring devices, Construction, working principles and\n               application of flow meters like Rotameter, Orifice meter,\n              Venturimeter, Pitot tube, all types of weirs., Derivation of equation\n               for Orifice meter and Venturimeter, Simple example based on\n             formula of Orifice meter, Venturimeter.\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment No.1                                         4\n             Reynolds’s Experiment\n     2      Experiment No. 2                                         8\n               Bernoulli’s Experiment\n     3      Experiment No. 3                                         8\n            V. Notch & Rectangular Notch\n     4      Experiment 4                                            8\n              Venturi meter\n     5      Experiment No. 5                                         4\n               Orifice meter\n     6      Experiment No. 6                                         4\n                Pitot tube\n     7      Experiment No. 7                                         8\n             Study of Pipes, Tubes & Fittings\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     8      Experiment No. 8                                         6\n              Reciprocating Pump\n     9      Experiment No. 9                                         6\n              Centrifugal Pump\n                               Total Hours                       56\n\nTextbook :\n 1  Unit Operations of Chemical Enggineering, W.L. McCabe, J. C. Smith & Harriott,\n    McGraw-Hill, 2007\n\nReferences:\n 1  Introduction to Chemical Engineering, Introduction to Chemical Engineering, L.Badge &\n     Julius T. Banchero, McGraw-Hill, 2001\n 2  Unit Operation – II , Unit Operation – II , K. A. Gavhane, Nirali Publication, 2012\n 3  Unit Operations of Chemical Engineering , Unit Operations of Chemical Engineering , P.\n    Chattopadhyay , Nirali Publication, 2010\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         10.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://www.vlab.co.in/broad-area-chemical-engineering\n 2  https://onlinecourses.nptel.ac.in/noc22_ch03/preview\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "7169e275ad83056e7fdbc2e21322e750b08a608d7b81514cde36b2843fd49b9a"
+    }
+  ],
+  "build_summary": {
+    "extracted": 5,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

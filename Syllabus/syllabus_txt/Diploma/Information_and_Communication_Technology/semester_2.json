@@ -1,0 +1,989 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 49,
+    "course_name": "Diploma Information and Communication Technology",
+    "output_slug": "Information_and_Communication_Technology"
+  },
+  "semester": 2,
+  "subject_count": 6,
+  "subjects": [
+    {
+      "subject_id": "49091912110201",
+      "subject_name": "Communication Skills-II",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 2,
+      "subject_code": "09SL1102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09sl1102-6.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09SL1102 - Communication Skills-II (.pdf",
+      "expected_pdf_sha256": "35ae6a0d32c0886b46f3e94746fcc3db0f8372b16b498561d54184c266c12e8f",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09SL1102",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "NA."
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva* work 0 0 2 1 00 30 20 25 25 100 *Viva will be based on Presentation and Assignments 1. Assignments: Students will write 3 assignments. It carries 20% of the total marks of the course. 2. Term Paper: A short article on the topics given. The term paper carries 20% of the total marks of the course. 3. Term-End presentation: Students will make a presentation based on their term paper at the end of the semester. Presentation carries 20% of the total marks of the course. 4. Viva: Viva will be conducted at the end of the semester which carries 20% of the total marks of the course. 5. In-Class Participation: It carries 20% of the weightage of the total marks of the course. [PAGE 2] Syllabus for Diploma Engineering All Branches",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 3131,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                       All Branches\n\n                                 Semester – II\n                       Subject Name: Communication Skills-II\n\n                              Subject Code: 09SL1102\n\n\n   Diploma Branches in which this subject is offered: All Branches\n\n   Course Description:\n   The course has been designed to make the students confident in speaking English with\n    the help of language functions. It also focuses on developing students’ presentation\n     skills\n\n   Course Objectives:\n   The course will enable students\n     To share information on familiar matters/issues in English\n     To make effective presentation in English\n     To gain confidence in speaking English\n\n    Credits Earned: 1 Credits\n\n    Pre-requisite of course: NA.\n\n                       Teaching and Examination Scheme\n                                                                         Tutorial/ Practical\n  Teaching Scheme (Hours)                Theory Marks\n                                                            Marks          Total\n                                Credits\n                                                             Term    Marks\nTheory   Tutorial   Practical         ESE   IA    CSE     Viva*\n                                                                 work\n  0       0        2        1     00    30      20       25       25      100\n\n   *Viva will be based on Presentation and Assignments\n     1. Assignments: Students will write 3 assignments. It carries 20% of the total marks\n    of the course.\n     2. Term Paper: A short article on the topics given. The term paper carries 20% of\n    the total marks of the course.\n     3. Term-End presentation: Students will make a presentation based on their term\n    paper at the end of the semester. Presentation carries 20% of the total marks of the\n    course.\n     4. Viva: Viva will be conducted at the end of the semester which carries 20% of the\n     total marks of the course.\n     5. In-Class Participation: It carries 20% of the weightage of the total marks of the\n    course."
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                   All Branches\n\nContents:\n\nUnit 1: Speaking/Interacting in an Academic Context\n\n1.     Greetings\n2.     Introducing Self & Peers\n3.     Asking and Sharing Information\n4.     Sharing/talking about likes and dislikes/preferences\n5.     Describing Events/Experiences/Objects\n6.     Discussions\n8.     Expressing Views\n9.     Facing Viva Voce\n\nUnit 2: Effective Presentation Skills\n\n1.     Introduction to Effective Presentation Skills\n2.     Preparing the Presentation (Collection of Data/Information, exploring the topic\n         etc.)\n3.     Using ICT in the Presentation\n4.     Getting Ready for the Presentation\n5.      Effective Body Language\n6.      Effective Pronunciation\n7.      Interacting with Audience (Q & A)\n8.      Practice (presentation with video recording)\n9.     Feedback and Suggestions\n\n\nRecommended Readings/ Viewings: TED Talks, INK Talks, Toastmasters Videos,\n\nVideos of good speakers like Steve Jobs etc."
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "35ae6a0d32c0886b46f3e94746fcc3db0f8372b16b498561d54184c266c12e8f"
+    },
+    {
+      "subject_id": "49000935110401",
+      "subject_name": "Computer Programming",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 2,
+      "subject_code": "09CE1104",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ce1104-2.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CE1104 - Computer Programming (.pdf",
+      "expected_pdf_sha256": "4fa9740366cce44d337c2b12aa48a6ffb4ef5b775c555099116ce87ad687f9c8",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CE1104",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "This Course will help to develop programming skills in the students, using a structured programming language `C'. Students will learn stepped procedure of any program development process using flowchart and algorithms. The programming skill will help to work with advance level programming languages which in turn will be helping in developing programs for the scientific, research and business purposes. Credits Earned: 4 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to  Recognize importance of C language.  Consider problems logically through flow charts and algorithms.  Illustrate various programming syntax.  Analyze the various control structures that requires to use in real time applications  Convert real time applications into algorithms and device the program using C language notations.  Established basic programming principles using C language.  Categorizes various loops in C language."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 0 4 4 50 30 20 25 25 150 [PAGE 2] Syllabus of Diploma Engineering Computer Engineering",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Problem solving using flowchart and algorithm, Flowchart-Importance of flowchart,",
+              "Symbols of flowchart, how to prepare flowchart, Algorithm design, Pseudo code"
+            ],
+            "topics_text": "Problem solving using flowchart and algorithm, Flowchart-Importance of flowchart, Symbols of flowchart, how to prepare flowchart, Algorithm design, Pseudo code",
+            "topics": [
+              "Problem solving using flowchart and algorithm, Flowchart-Importance of flowchart,",
+              "Symbols of flowchart, how to prepare flowchart, Algorithm design, Pseudo code"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Basic of C language",
+            "contact_hours": 6,
+            "topic_lines": [
+              "History of C, Structure of C program, compilation and execution, „C‟ tokens,",
+              "character set, Data Types, Keywords, Identifiers, constants & variables, declaring",
+              "and assigning value to variable, operators, Input and output function, Type",
+              "conversion and type casting"
+            ],
+            "topics_text": "History of C, Structure of C program, compilation and execution, „C‟ tokens, character set, Data Types, Keywords, Identifiers, constants & variables, declaring and assigning value to variable, operators, Input and output function, Type conversion and type casting",
+            "topics": [
+              "History of C, Structure of C program, compilation and execution, „C‟ tokens,",
+              "character set, Data Types, Keywords, Identifiers, constants & variables, declaring",
+              "and assigning value to variable, operators, Input and output function, Type",
+              "conversion and type casting"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Decision statements & looping",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Decision making statements, simple If statement, If-else, nested If-else, else-if",
+              "ladder, switched statement, goto statement",
+              "Looping statements, simple for loop, nested for loop, while & do-while loop"
+            ],
+            "topics_text": "Decision making statements, simple If statement, If-else, nested If-else, else-if ladder, switched statement, goto statement Looping statements, simple for loop, nested for loop, while & do-while loop",
+            "topics": [
+              "Decision making statements, simple If statement, If-else, nested If-else, else-if",
+              "ladder, switched statement, goto statement",
+              "Looping statements, simple for loop, nested for loop, while & do-while loop"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Array and String",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Types of array, declaration & initialization of 1-D array, operation in array",
+              "String- declaration & initialization, string functions, string arrays"
+            ],
+            "topics_text": "Types of array, declaration & initialization of 1-D array, operation in array String- declaration & initialization, string functions, string arrays",
+            "topics": [
+              "Types of array, declaration & initialization of 1-D array, operation in array",
+              "String- declaration & initialization, string functions, string arrays"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Function",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Definition of function, Built-in-function- Math function, console & standard i/o",
+              "function, user defined function, recursion"
+            ],
+            "topics_text": "Definition of function, Built-in-function- Math function, console & standard i/o function, user defined function, recursion",
+            "topics": [
+              "Definition of function, Built-in-function- Math function, console & standard i/o",
+              "function, user defined function, recursion"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Structure & Union",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Definition of structure, need of structure, declaration of structure, array within",
+              "structure, structure within structure, structure and union difference"
+            ],
+            "topics_text": "Definition of structure, need of structure, declaration of structure, array within structure, structure within structure, structure and union difference",
+            "topics": [
+              "Definition of structure, need of structure, declaration of structure, array within",
+              "structure, structure within structure, structure and union difference"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Pointer",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Pointer-definition, importance of pointers, declaration & initialization of pointer,",
+              "accessing the address of a variable through pointers, pointer & array, pointer & string"
+            ],
+            "topics_text": "Pointer-definition, importance of pointers, declaration & initialization of pointer, accessing the address of a variable through pointers, pointer & array, pointer & string",
+            "topics": [
+              "Pointer-definition, importance of pointers, declaration & initialization of pointer,",
+              "accessing the address of a variable through pointers, pointer & array, pointer & string"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "File management",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Introduction, file management functions, opening and closing a file, Input/ Output",
+              "operations on files, error handling during I/O operations, Random Access to file",
+              "Total Hours 29",
+              "Syllabus of Diploma Engineering",
+              "Computer Engineering"
+            ],
+            "topics_text": "Introduction, file management functions, opening and closing a file, Input/ Output operations on files, error handling during I/O operations, Random Access to file Total Hours 29 Syllabus of Diploma Engineering Computer Engineering",
+            "topics": [
+              "Introduction, file management functions, opening and closing a file, Input/ Output",
+              "operations on files, error handling during I/O operations, Random Access to file",
+              "Total Hours 29",
+              "Syllabus of Diploma Engineering",
+              "Computer Engineering"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 5,
+      "extracted_character_count": 10333,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus of Diploma Engineering\n\n                                 Computer Engineering\n\n                                           Semester: II\n\n                               Subject Name: Computer Programming\n\n                                          Subject Code: 09CE1104\n\n    Objective: This Course will help to develop programming  skills in the students, using a\n    structured programming language `C'. Students will learn stepped procedure of any program\n   development process using flowchart and algorithms. The programming skill will help to work\n    with advance level programming languages which in turn  will be helping in developing\n   programs for the scientific, research and business purposes.\n\n    Credits Earned: 4 Credits\n\n   Course Outcomes: After completion of this course, student will be able to\n\n    Recognize importance of C language.\n\n    Consider problems logically through flow charts and algorithms.\n\n     Illustrate various programming syntax.\n\n    Analyze the various control structures that requires to use in real time applications\n\n    Convert real time applications into algorithms and device the program using C language notations.\n\n    Established basic programming principles using C language.\n\n    Categorizes various loops in C language.\n\n\n\n    Pre-requisite of course: NA.\n\n                               Teaching and Examination Scheme\n                                                                                Tutorial/ Practical\n   Teaching Scheme (Hours)                   Theory Marks\n                                                                  Marks           Total\n                                   Credits\n                                                                   Term    Marks\nTheory    Tutorial    Practical          ESE    IA     CSE      Viva\n                                                                      work\n  2        0         4         4      50     30       20        25        25       150"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus of Diploma Engineering\n\n                              Computer Engineering\n\nContents:\n Unit                                    Topics                                   Contact\n                                                                          Hours\n1       Introduction:                                                              4\n        Problem solving using flowchart and algorithm, Flowchart-Importance of flowchart,\n        Symbols of flowchart, how to prepare flowchart, Algorithm design, Pseudo code\n\n2       Basic of C language:                                                        6\n         History of C, Structure of C program, compilation and execution, „C‟ tokens,\n         character set, Data Types, Keywords, Identifiers, constants & variables, declaring\n        and  assigning  value  to  variable,  operators,  Input and  output  function, Type\n         conversion and type casting\n\n3       Decision statements & looping:                                               5\n        Decision making statements, simple  If statement,  If-else, nested  If-else,  else-if\n          ladder, switched statement, goto statement\n        Looping statements, simple for loop, nested for loop, while & do-while loop\n\n4      Array and String:                                                          4\n        Types of array, declaration & initialization of 1-D array, operation in array\n          String- declaration & initialization, string functions, string arrays\n\n5       Function:                                                                 3\n         Definition of function, Built-in-function- Math function, console & standard i/o\n         function, user defined function, recursion\n\n6       Structure & Union:                                                        3\n         Definition of structure, need of structure, declaration of structure, array within\n          structure, structure within structure, structure and union difference\n\n\n7       Pointer:                                                                  2\n          Pointer-definition, importance of pointers, declaration & initialization of pointer,\n         accessing the address of a variable through pointers, pointer & array, pointer & string\n\n\n8        File management:                                                          2\n         Introduction, file management functions, opening and closing a file, Input/ Output\n         operations on files, error handling during I/O operations, Random Access to file\n\n                                        Total Hours                                 29"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus of Diploma Engineering\n\n                              Computer Engineering\n\nReferences:\n\n1. Balagurusamy. E, “Programming in ANSI C”, Tata McGraw Hill, Sixth edition, 2012.\n2. Ashok N Kamthane, “Computer Programming”, Pearson education, Second Impression, 2008.\n3. Kanetkar Yashavant, “Let us 'C'”, BPB publications, fourth revised edition.\n4. Reema Theraja, “Programming in C”, Oxford University Press, First Edition, 2011.\n\n\nSuggested Theory distribution:\n\nThe suggested theory distribution as per Bloom‟s taxonomy is as per follows. This distribution serves as\nguidelines for teachers and students to achieve effective teaching-learning process\n\n                      Distribution of Theory for course delivery and evaluation\n\n     Remember    Understand      Apply       Analyze       Evaluate        Create\n\n       35%        35%        30%       0%        0%        0%\n\n\n\nSuggested List of Experiments:\n\n\n1. Write a program to print student detail.\n\n2. Write a program to calculate simple interest.\n\n3. Write a program that accepts centigrade and convert it into Fahrenheit.\n\n4. Write a program that accepts two numbers in A and B interchange value of A and B variable.\n\n5. Write a program to demonstrate the use of Arithmetic and Bitwise operators by getting two numbers\n   from the user.\n\n6. Write a program that accepts a number from keyboard and find whether the number is ODD or EVEN\n   using Conditional operators.\n\n7. Write a program that accepts three numbers from the user and print maximum of them.\n\n8. Write a program to input the Name and the Salary of an Employee. Calculate and print the Name,\n   Salary and Bonus of the Employee, where bonus= 5.3% if salary is at least Rs. 10,000 and 6.5%\n   otherwise.\n\n9. Admission to professional course is subject to the following conditions.\n\n  Marks in Mathematics>=60\n\n  Marks in Physics>=50"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus of Diploma Engineering\n\n                              Computer Engineering\n\n  Marks in Chemistry>=40\n\n   Total in all three subjects>=200 or total in mathematics and physics>=150\n\n   Given the marks in the three subjects, Write a program to process the application to list the eligible\n      candidates.\n\n10. Write a program that accepts two numbers and one code (1,2,3,4) from the user. According to the\n    code, the operations to be performed, using switch case statements as follows: (Code : 1→ Addition,\n  2→ Subtraction, 3→ Multiplication, 4→ Division).\n\n11. Write a program that reads the marks for five subjects of a student. Calculate and print the grade for\n    the student [i.e. Grade A,B,C,D and F] using Else-If ladder.\n\n12. Write a program that do sum=1+3+5+…….N terms Print value of Sum.\n\n13. Write a program to print the Fibonacci Series[i.e 1,1,2,3,5,8,13…N terms].\n\n14. Write a program to accept one number from the user. i) Display reverse of that number. ii) Find if it is\n   Armstrong or not.\n\n15. Write a program that accepts a number from the user and print prime numbers from 0 to that number.\n\n16. Write a C program to display following different Patterns.\n\n\n\n\n\n                 1               1\n                  1 2             0 1\n                 1 2 3            1 0 1\n                 1 2 3 4          0 1 0 1\n\n            A                a\n             B C            b c\n            D E F           d e f\n\n\n\n17. Write a program to accept 5 numbers in an array and display it.\n\n18. Write a program to accept 9 numbers in form of matrix and display in matrix form.\n\n19. Write a program to accept 5 numbers in array and find maximum and minimum value of it.\n\n20. Write a program to sort all elements of 1-D array in ascending and descending order."
+        },
+        {
+          "page": 5,
+          "text": "Syllabus of Diploma Engineering\n\n                              Computer Engineering\n\n21. Write a program to calculate and display addition of two matrixes.\n\n22. Write a program to count number of vowels in a given string.\n\n23. Write a program to check whether entered string is palindrome or not.\n\n24. Write a program to demonstrate the Library function for string.\n\n25. Write a function which receives number as argument and return sum of digit.\n\n26. Write a program to calculate Factorial using recursion in UDF.\n\n27. Write a program to calculate total number of positive, negative and zero value in array using UDF.\n\n28. Write a program to swap two numbers using UDF and pointer.\n\n29. Write a program using pointer to read in an array of integers and print its elements in reverse order.\n\n30. Write a C program to create a structure of employees with Full Name, Last Name, City and Salary.\n    Display it for n employees.\n\n31. Write a program to demonstrate nested structure.(make structures for circle and rectangle)\n\n32. Write a program to create array of structure. Make a structure for student having student_no,\n    student_name, student_marks and enter details for 5 students.\n\n33. Write a program to Display contents of a file on screen. Use functions (fopen, fclose, getc,putchar,eof)\n\n34. Write a program to count number of characters in a file.\n\n\n\nInstructional Method:\n a.  The course delivery method will depend upon the requirement of content and need of students. The\n     teacher in addition to conventional teaching method by black board, may also use any of tools such\n     as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n b.  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n c.  Practical examination will be conducted at the end of semester for evaluation of performance of\n     students in laboratory.\n d.  Students will use supplementary resources such as online videos, NPTEL videos, e-courses, Virtual\n    Laboratory"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "4fa9740366cce44d337c2b12aa48a6ffb4ef5b775c555099116ce87ad687f9c8"
+    },
+    {
+      "subject_id": "49009320010401",
+      "subject_name": "Digital Logic and Design",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 2,
+      "subject_code": "09CT0104",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0104-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0104 - Digital Logic and Design (.pdf",
+      "expected_pdf_sha256": "867dcdf2d05bd155c6aeae908224c8679d2b7b32172bbdcc4db5a0560bf303f3",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0104",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "Elementary knowledge of science and mathematics [PAGE 2] Syllabus for Diploma Engineering Information and Communication Technology"
+      },
+      "objectives": [
+        "The subject aims to prepare the students,  To understand the basic of Digital Electronic concepts required in analysis and design of digital electronic circuits and systems.  To understand the number system, logic gates, Boolean algebra, etc.  To understand Construction and operation of various digital circuits such as Adder, Subtractor, Multiplexer, Demultiplexer, Decoder, Encoder, Flip-flops, Counters Registers.  To devolve the capability to Simplify, Analyze Various Digital Electronic Circuits. Credits Earned: 3 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to  Perform conversion between various number systems.  Apply knowledge of Boolean algebra and other minimization techniques for digital circuit design.  Identify, formulate and solve a problem based on combinational and sequential circuits  Select the appropriate hardware and software tools for combinational and sequential circuit design.  Design various counters.  Verify the functions of various digital integrated circuits.  Evaluate the specifications of logic families.  Create a course project using digital integrated circuits."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 0 2 3 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction: 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Digital and Analog systems, logic level and pulse waveforms, elements of",
+              "digital logic, Functions of digital logic"
+            ],
+            "topics_text": "Digital and Analog systems, logic level and pulse waveforms, elements of digital logic, Functions of digital logic",
+            "topics": [
+              "Digital and Analog systems, logic level and pulse waveforms, elements of",
+              "digital logic, Functions of digital logic"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Number systems and binary codes : 6",
+            "contact_hours": 13,
+            "topic_lines": [
+              "Number System: Binary number system (addition, subtraction,",
+              "multiplication, Division), Octal and Hexadecimal Number system,",
+              "Conversion from binary to decimal, octal and hexadecimal and vice versa,",
+              "Representation of Signed Numbers.",
+              "Codes : BCD, XS-3, Gray Code ( with Conversion), Alphanumerical Code"
+            ],
+            "topics_text": "Number System: Binary number system (addition, subtraction, multiplication, Division), Octal and Hexadecimal Number system, Conversion from binary to decimal, octal and hexadecimal and vice versa, Representation of Signed Numbers. Codes : BCD, XS-3, Gray Code ( with Conversion), Alphanumerical Code",
+            "topics": [
+              "Number System: Binary number system (addition, subtraction,",
+              "multiplication, Division), Octal and Hexadecimal Number system,",
+              "Conversion from binary to decimal, octal and hexadecimal and vice versa,",
+              "Representation of Signed Numbers.",
+              "Codes : BCD, XS-3, Gray Code ( with Conversion), Alphanumerical Code"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Logic Gates & Boolean Algebra 7",
+            "contact_hours": 24,
+            "topic_lines": [
+              "Logic Gates: Positive and Negative logic, AND, OR , NOT, NAND, NOR,",
+              "X-OR Gate, X-NOR Gate ( all gates with symbol, working principal and",
+              "truth table), Conversion from Universal Gate to all other Gates,",
+              "Boolean Algebra & Mapping Methods for Simplification: Boolean",
+              "Algebra, Karnaugh Maps, Realizing Logic Function with Gates."
+            ],
+            "topics_text": "Logic Gates: Positive and Negative logic, AND, OR , NOT, NAND, NOR, X-OR Gate, X-NOR Gate ( all gates with symbol, working principal and truth table), Conversion from Universal Gate to all other Gates, Boolean Algebra & Mapping Methods for Simplification: Boolean Algebra, Karnaugh Maps, Realizing Logic Function with Gates.",
+            "topics": [
+              "Logic Gates: Positive and Negative logic, AND, OR , NOT, NAND, NOR,",
+              "X-OR Gate, X-NOR Gate ( all gates with symbol, working principal and",
+              "truth table), Conversion from Universal Gate to all other Gates,",
+              "Boolean Algebra & Mapping Methods for Simplification: Boolean",
+              "Algebra, Karnaugh Maps, Realizing Logic Function with Gates."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Combinational logic design: 7.5",
+            "contact_hours": 33,
+            "topic_lines": [
+              "Combinational Circuits and its implementations, Arithmetic Circuits - Adders",
+              "and Subtractor, BCD Adder, Look-Ahead Carry Generator, Multiplier,",
+              "Magnitude comparator. Multiplexer and it’s application, Encoders,",
+              "Demultiplexers and Decoders and it’s application, Parity Generation and",
+              "Checking, Code Conversion."
+            ],
+            "topics_text": "Combinational Circuits and its implementations, Arithmetic Circuits - Adders and Subtractor, BCD Adder, Look-Ahead Carry Generator, Multiplier, Magnitude comparator. Multiplexer and it’s application, Encoders, Demultiplexers and Decoders and it’s application, Parity Generation and Checking, Code Conversion.",
+            "topics": [
+              "Combinational Circuits and its implementations, Arithmetic Circuits - Adders",
+              "and Subtractor, BCD Adder, Look-Ahead Carry Generator, Multiplier,",
+              "Magnitude comparator. Multiplexer and it’s application, Encoders,",
+              "Demultiplexers and Decoders and it’s application, Parity Generation and",
+              "Checking, Code Conversion."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Sequential circuits: 5",
+            "contact_hours": 25,
+            "topic_lines": [
+              "Flip-flops: Latch and Flip-flop, S-R flip-flops, D flip flop, J-K flip flop,",
+              "Application of flip flops",
+              "Registers: Classification , Serial in serial-out, serial-in parallel-out, parallel-",
+              "in serial-out and parallel-in parallel out shift register",
+              "Counters: Asynchronous (ripple) 4-bit binary counter, BCD Counter,",
+              "Synchronous counters, UP/DOWN counter, Ring counters."
+            ],
+            "topics_text": "Flip-flops: Latch and Flip-flop, S-R flip-flops, D flip flop, J-K flip flop, Application of flip flops Registers: Classification , Serial in serial-out, serial-in parallel-out, parallel- in serial-out and parallel-in parallel out shift register Counters: Asynchronous (ripple) 4-bit binary counter, BCD Counter, Synchronous counters, UP/DOWN counter, Ring counters.",
+            "topics": [
+              "Flip-flops: Latch and Flip-flop, S-R flip-flops, D flip flop, J-K flip flop,",
+              "Application of flip flops",
+              "Registers: Classification , Serial in serial-out, serial-in parallel-out, parallel",
+              "in serial-out and parallel-in parallel out shift register",
+              "Counters: Asynchronous (ripple) 4-bit binary counter, BCD Counter,",
+              "Synchronous counters, UP/DOWN counter, Ring counters."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Programmable Devices",
+            "contact_hours": 3,
+            "topic_lines": [
+              "1.5 Introduction to Programmable Logic Devices, Programmable Logic Arrays",
+              "Syllabus for Diploma Engineering",
+              "Information and Communication Technology",
+              "(PLA), Programmable Array Logic (PAL).",
+              "TOTAL HOURS 28 100"
+            ],
+            "topics_text": "1.5 Introduction to Programmable Logic Devices, Programmable Logic Arrays Syllabus for Diploma Engineering Information and Communication Technology (PLA), Programmable Array Logic (PAL). TOTAL HOURS 28 100",
+            "topics": [
+              "1.5 Introduction to Programmable Logic Devices, Programmable Logic Arrays",
+              "Syllabus for Diploma Engineering",
+              "Information and Communication Technology",
+              "(PLA), Programmable Array Logic (PAL).",
+              "TOTAL HOURS 28 100"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 9082,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                 Information and Communication Technology\n\n\n\n                              Semester – II\n\n                   Subject Name: Digital Logic and Design\n\n                          Subject Code: 09CT0104\n\nDiploma Branches in which this subject is offered: Information and Communication\nTechnology\n\nObjective:\n\nThe subject aims to prepare the students,\n      To understand the basic of Digital Electronic concepts required in analysis and design\n        of digital electronic circuits and systems.\n      To understand the number system, logic gates, Boolean algebra, etc.\n      To understand Construction and operation of various digital circuits such as Adder,\n        Subtractor, Multiplexer, Demultiplexer, Decoder, Encoder, Flip-flops, Counters\n        Registers.\n      To devolve the capability to Simplify, Analyze Various Digital Electronic Circuits.\n\n\nCredits Earned: 3 Credits\n\nCourse Outcomes: After completion of this course, student will be able to\n\n\n       Perform conversion between various number systems.\n      Apply knowledge of Boolean algebra and other minimization techniques for digital\n         circuit design.\n       Identify, formulate and solve a problem based on combinational and sequential\n         circuits\n       Select the appropriate hardware and software tools for combinational and sequential\n         circuit design.\n      Design various counters.\n       Verify the functions of various digital integrated circuits.\n       Evaluate the specifications of logic families.\n       Create a course project using digital integrated circuits.\n\nPre-requisite of course: Elementary knowledge of science and mathematics"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                     Information and Communication Technology\n\n\n                     Teaching and Examination Scheme\n\n\n\n                                                                                 Tutorial/ Practical\n    Teaching Scheme (Hours)                   Theory Marks\n                                                                   Marks           Total\n                                    Credits\n                                                                   Term    Marks\n Theory    Tutorial    Practical          ESE    IA     CSE      Viva\n                                                                       work\n   2        0         2         3      50     30       20        25        25       150\n\n    Contents:\n\nUnit                                 Topics                                Contact   Weightage\n                                                                          hours      (%)\n\n 1     Introduction:                                                        1          2\n\n        Digital and Analog systems, logic level and pulse waveforms, elements of\n         digital logic, Functions of digital logic\n\n 2    Number systems and binary codes :                                      6         13\n      Number   System:   Binary  number   system   (addition,   subtraction,\n         multiplication,   Division),  Octal  and  Hexadecimal  Number  system,\n       Conversion from binary to decimal, octal and hexadecimal and vice versa,\n        Representation of Signed Numbers.\n      Codes : BCD, XS-3, Gray Code ( with Conversion), Alphanumerical Code\n 3     Logic Gates & Boolean Algebra                                         7         24\n       Logic Gates: Positive and Negative logic, AND, OR , NOT, NAND, NOR,\n      X-OR Gate, X-NOR Gate ( all gates with symbol, working principal and\n         truth table), Conversion from Universal Gate to all other Gates,\n       Boolean Algebra & Mapping Methods  for  Simplification:  Boolean\n        Algebra, Karnaugh Maps, Realizing Logic Function with Gates.\n 4    Combinational logic design:                                                    7.5         33\n       Combinational Circuits and its implementations, Arithmetic Circuits - Adders\n       and Subtractor, BCD Adder, Look-Ahead Carry Generator, Multiplier,\n       Magnitude  comparator.  Multiplexer  and   it’s   application,  Encoders,\n        Demultiplexers and Decoders and  it’s application, Parity Generation and\n       Checking, Code Conversion.\n 5     Sequential circuits:                                                   5         25\n        Flip-flops: Latch and Flip-flop, S-R flip-flops, D flip flop, J-K flip flop,\n        Application of flip flops\n        Registers: Classification , Serial in serial-out, serial-in parallel-out, parallel-\n         in serial-out and parallel-in parallel out shift register\n\n\n       Counters:  Asynchronous  (ripple)  4-bit  binary  counter, BCD  Counter,\n       Synchronous counters, UP/DOWN counter, Ring counters.\n 6    Programmable Devices:                                                          3\n                                                                                         1.5        Introduction to Programmable Logic Devices, Programmable Logic Arrays"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                 Information and Communication Technology\n\n   (PLA), Programmable Array Logic (PAL).\n                TOTAL HOURS                                 28        100\n\n\n\nSuggested Theory distribution:\n\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process.\n\n\n               Distribution of Theory for course delivery and evaluation\n\n  Remember  Understand      Apply        Analyse       Evaluate       Create\n\n   15%       20%        30%        20%       10%       5%\n\n\n\n\nSuggested List of Experiments:\n\n  Sr.  Unit           Name of Topics               Contact\n No.   No.                                                     Hours\n\n   1      2    Implement and verify the functionality of Basic and            2\n               Advance Logic Gates.\n   2      2    Implement and  verify 2 input  basic  logic  gates using      2\n          NAND gate.\n   3      2    Implement and verify 2 input basic logic gates using NOR      2\n                    gate.\n   4      1    Implement and verify a circuit to Convert 4 bit Binary to      2\n               Gray Code using logic gates and vice versa\n\n   5      3    Implement and verify half and full Adder Circuit               2\n\n   6      3    Implement and verify half and full Subtractor Circuit.           2\n\n   7      3    Implement and verify 4 bit Parallel Adder circuit.              2\n\n   8      3    Implement and verify the 3X8 Decoder circuit.                2\n\n   9      3    Implement and verify the 8X1Multiplexer circuit.              2\n\n  10     3    Implement and verify BCD to Seven segment LED Display      2\n                     circuit.\n  11     4    Implement and verify the functionality of the SR & JK      2\n                   Flip-Flop.\n  12     4    Implement and verify the working of the Shift Register.         2\n  13     4    Implement and verify the working of the 4  bit Ripple      2\n                 Counter.\n  14     4    Implement and verify the working of 4 bit UP - DOWN      2\n                 Counter."
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                                 Information and Communication Technology\n\n\n\nStudent Activity:\n\nDesign and Develop mini project using Various Digital IC and display devices.\n\nInstructional Method:\na.  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may\n     also use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\nb.  The internal evaluation will be done on the basis of continuous evaluation of students in\n     the laboratory and class-room.\nc.   Practical examination  will be conducted  at the end of semester for evaluation of\n    performance of students in laboratory.\nd.   Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\n\n Reference Books:\n\n\n1. Fundamentals of Digital        A. Anand Kumar     PHI Learning, New Delhi, 2nd Edition\n   Circuits                                                or latest\n\n2.   Digital Logic and Computer     M. Morris Mano     Pearson Education, New Delhi, 2011\n    Design                                                 or latest\n3.   Digital Principles and           Malvino and Leech  TMH Pub., New Delhi, 6th Edition or\n    Application                                                     latest\n4.  Morden Digital Electronics         Jain, R P       TMH Education , New Delhi, 3rd\n                                                           Edition or latest\n5.   Digital Electronics               Kharate G.K.     OXFORD University Press, 2010\n\n\n\nSupplementary Resources / Open Source Software:\n\n    1.  PSpices and NGSpice\n\n    2.  Xcircuit\n\n    3. NPTEL website and IITs virtual laboratory\n    4.  Multisim\n    5.  Quartus"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "867dcdf2d05bd155c6aeae908224c8679d2b7b32172bbdcc4db5a0560bf303f3"
+    },
+    {
+      "subject_id": "49000939110201",
+      "subject_name": "Environment Conservation & Disaster Management",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 2,
+      "subject_code": "09CI1102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ci1102-6.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CI1102 - Environment Conservation & Disaster Management (.pdf",
+      "expected_pdf_sha256": "8ae100d5a1bdf0daa1bbfbd018aaff984c9d80552efe6a44e6938050e255b371",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CI1102",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [
+        "Objectives of introducing this subject at first year level in all the branches are:  To sensitize the students to environmental concerns and their impact on society and business  To familiarize the students with strategies for addressing environmental issues  Be better prepared to recover from a major natural catastrophe Credits Earned: 2 Credits"
+      ],
+      "course_outcomes": [
+        "On the completion of the course student will be able to:  Identify environmental factors and their impact on society and business  Articulate strategies to deal with environmental issues  Develop an ethical orientation to managing the environment  To gain knowledge about disaster and understand Engineering challenges for Hazard Management  apply tools & techniques for disaster risk assessment of Infrastructure, preparing disaster management plan and Damage Assessment  role of Engineer in climate change which is one of humanity’s biggest challenges of the 21st century"
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 0 0 4 2 0 30 20 25 25 100 [PAGE 2] Syllabus for Diploma Engineering Civil Engineering",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": null,
+            "topic_lines": [
+              " What is Environment",
+              " Why to study Environmental Conservation 4 10",
+              " Importance of environment and scope",
+              "2  Global Environment Problems",
+              " Causes, Effects & Remedies: Global Warming, 2 5",
+              "Acid Rain, Ozone Depletion, Climate Change"
+            ],
+            "topics_text": " What is Environment  Why to study Environmental Conservation 4 10  Importance of environment and scope 2  Global Environment Problems  Causes, Effects & Remedies: Global Warming, 2 5 Acid Rain, Ozone Depletion, Climate Change",
+            "topics": [
+              " What is Environment",
+              " Why to study Environmental Conservation 4 10",
+              " Importance of environment and scope",
+              "2  Global Environment Problems",
+              " Causes, Effects & Remedies: Global Warming, 2 5",
+              "Acid Rain, Ozone Depletion, Climate Change"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Environmental By-laws",
+            "contact_hours": null,
+            "topic_lines": [
+              " Indian law of Environment 2 5"
+            ],
+            "topics_text": " Indian law of Environment 2 5",
+            "topics": [
+              " Indian law of Environment 2 5"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Pollution Types & its Effects",
+            "contact_hours": null,
+            "topic_lines": [
+              " Air Pollution",
+              " Water Pollution 8 19",
+              " Solid Waste Pollution",
+              " Noise Pollution",
+              "Disaster Management"
+            ],
+            "topics_text": " Air Pollution  Water Pollution 8 19  Solid Waste Pollution  Noise Pollution Disaster Management",
+            "topics": [
+              " Air Pollution",
+              " Water Pollution 8 19",
+              " Solid Waste Pollution",
+              " Noise Pollution",
+              "Disaster Management"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Introduction",
+            "contact_hours": null,
+            "topic_lines": [
+              " Concepts and definition of Disaster, Hazard,",
+              "6 15 Risk, Vulnerability, Capacity",
+              " Disaster and Development",
+              " Role of Engineer in Disaster management"
+            ],
+            "topics_text": " Concepts and definition of Disaster, Hazard, 6 15 Risk, Vulnerability, Capacity  Disaster and Development  Role of Engineer in Disaster management",
+            "topics": [
+              " Concepts and definition of Disaster, Hazard,",
+              "6 15 Risk, Vulnerability, Capacity",
+              " Disaster and Development",
+              " Role of Engineer in Disaster management"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Natural Disasters",
+            "contact_hours": null,
+            "topic_lines": [
+              " Earthquake",
+              " Cyclone 8 19",
+              " Floods",
+              " Volcanoes"
+            ],
+            "topics_text": " Earthquake  Cyclone 8 19  Floods  Volcanoes",
+            "topics": [
+              " Earthquake",
+              " Cyclone 8 19",
+              " Floods",
+              " Volcanoes"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Man Made Disaster",
+            "contact_hours": null,
+            "topic_lines": [
+              " Armed conflicts and civil strip",
+              " Technological disasters 8 19",
+              " Human Settlement",
+              " Slow Disasters (famine, draught,",
+              " epidemics)",
+              "Syllabus for Diploma Engineering",
+              "Civil Engineering"
+            ],
+            "topics_text": " Armed conflicts and civil strip  Technological disasters 8 19  Human Settlement  Slow Disasters (famine, draught,  epidemics) Syllabus for Diploma Engineering Civil Engineering",
+            "topics": [
+              " Armed conflicts and civil strip",
+              " Technological disasters 8 19",
+              " Human Settlement",
+              " Slow Disasters (famine, draught,",
+              " epidemics)",
+              "Syllabus for Diploma Engineering",
+              "Civil Engineering"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Rapid Onset Disasters",
+            "contact_hours": null,
+            "topic_lines": [
+              " Air Crash",
+              " tidal waves 4 10",
+              " Tsunami"
+            ],
+            "topics_text": " Air Crash  tidal waves 4 10  Tsunami",
+            "topics": [
+              " Air Crash",
+              " tidal waves 4 10",
+              " Tsunami"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 6077,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                            Civil Engineering\n\n                                 Semester – II\n\n          Subject Name: Environment Conservation & Disaster Management\n\n                              Subject Code: 09CI1102\n\n   Diploma Branches in which this subject is offered: Civil, Mechanical, Electrical,\n    Computer, Chemical Engineering\n\n\n    Objective: Objectives of introducing this subject at first year level in all the branches\n     are:\n         To sensitize the students to environmental concerns and their impact on\n            society and business\n         To familiarize the students with strategies for addressing environmental issues\n         Be better prepared to recover from a major natural catastrophe\n\n    Credits Earned: 2 Credits\n\n   Course Outcomes:\n\n        On the completion of the course student will be able to:\n\n          Identify environmental factors and their impact on society and business\n          Articulate strategies to deal with environmental issues\n         Develop an ethical orientation to managing the environment\n\n         To gain knowledge about disaster and understand Engineering challenges for\n          Hazard Management\n         apply tools & techniques for disaster risk assessment of Infrastructure,\n           preparing disaster management plan and Damage Assessment\n          role of Engineer in climate change which is one of humanity’s biggest\n           challenges of the 21st century\n\n\n                       Teaching and Examination Scheme\n\n                                                                         Tutorial/ Practical\n  Teaching Scheme (Hours)                Theory Marks\n                                                            Marks          Total\n                                Credits\n                                                             Term    Marks\nTheory   Tutorial   Practical         ESE   IA    CSE     Viva\n                                                                 work\n\n  0       0        4        2      0     30      20       25       25      100"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                        Civil Engineering\n\nContents:\n\n Unit                     Topics                    Contact  Weightag\n                                                    hours     e (%)\n\n\n Environment Conservation\n\n 1      Introduction\n        What is Environment\n        Why to study Environmental Conservation          4        10\n        Importance of environment and scope\n\n 2      Global Environment Problems\n         Causes, Effects & Remedies: Global Warming,       2         5\n         Acid Rain, Ozone Depletion, Climate Change\n\n 3     Environmental By-laws\n        Indian law of Environment                       2         5\n\n 4      Pollution Types & its Effects\n         Air Pollution\n         Water Pollution                                                     8        19\n         Solid Waste Pollution\n         Noise Pollution\n\n\n Disaster Management\n\n 5      Introduction\n         Concepts and definition of Disaster, Hazard,\n                                                     6        15          Risk, Vulnerability, Capacity\n         Disaster and Development\n         Role of Engineer in Disaster management\n 6     Natural Disasters\n         Earthquake\n         Cyclone                                      8        19\n         Floods\n         Volcanoes\n\n 7    Man Made Disaster\n         Armed conflicts and civil strip\n         Technological disasters                                                     8        19\n         Human Settlement\n         Slow Disasters (famine, draught,\n         epidemics)"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                        Civil Engineering\n\n\n 8     Rapid Onset Disasters\n         Air Crash\n         tidal waves                                   4        10\n         Tsunami\n\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This\ndistribution serves as  guidelines  for  teachers and  students  to achieve  effective\nteaching-learning process\n\n              Distribution of Theory for course delivery and evaluation\n\n  Remember  Understand     Apply      Analyse     Evaluate      Create\n\n   35%      40%       15%       10%      0%      0%\n\n\nSuggested List of Experiments:\n\n  Sr.                     Name\n No.\n\n   1    Digital sound level meters (to check noise pollution)\n\n   2    Digital air quality meter (to measure air pollution)\n\n   3    Digital handheld anemometer (to measure wind speeds)\n\n   4    Digital hand held pyranometer (to measure solar radiation levels)\n\n\nInstructional Method:\na.  The course delivery method will depend upon the requirement of content and\n    need of students. The teacher in addition to conventional teaching method by\n    black board, may also use any of tools such as demonstration, role play, Quiz,\n    brainstorming, MOOCs etc.\n\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n    students in the laboratory and class-room.\nc.   Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\nd.  Students will use supplementary resources such as online videos, videos, e-\n     courses, Virtual Laboratory"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                                        Civil Engineering\n\n\n\n\nText Books:\n    1. Environment Engineering and Disaster Management Sharma, Sanjay K. Luxmi\n       Publications, New Delhi\n\nReference Books:\n    1.  Environmental Studies by Anandita Basak, Pearson\n    2.  Mechanics Environment Engineering and Disaster Management Sharma,\n       Sanjay K. Luxmi Publications, New Delhi\n\n    3.  Singh R.B. (Ed.), Natural Hazards and Disaster Management Vulnerability &\n       Mitigation, Rawat Publications. Mechanics of Materials: Hibbler R C; Pearson\n       Education\n    4. Modh Satish, Introduction to Disaster Management, Macmillan"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8ae100d5a1bdf0daa1bbfbd018aaff984c9d80552efe6a44e6938050e255b371"
+    },
+    {
+      "subject_id": "49009320010501",
+      "subject_name": "ICT Workshop",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 2,
+      "subject_code": "09CT0105",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0105_ictw.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09CT0105 - ICT Workshop (.pdf",
+      "expected_pdf_sha256": "8b40f5a9d07d9903d329dc2b6d22f5424297e64eaa641b6cc22fd2dfe3cd52a8",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CT0105",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "Electronics Practice"
+      },
+      "objectives": [
+        "This course deals with basic introduction of system components of electronic systems, and provides hands on practice in assembling, interconnecting, testing, and repairing such system by making use of various tools. Also, this course will provide ​a much needed knowledge of computer hardware and networking, enabling them to identify and rectify the onboard computer hardware, software and network related problems. With the help of this course the student will be able to understand the hardware specifications that are required to run operating system and various application programs. Credits Earned: ​3 Credits"
+      ],
+      "course_outcomes": [
+        "​After completion of this course, student will be able to 1. Understand Basic Computer components and tools. 2. The students will apply knowledge of engineering to design and conduct experiments using PCB design software. 3. Identify the existing configuration of the computers and peripherals. 4. Apply their knowledge about computer peripherals to identify / rectify problems onboard. 5. Integrate the PCs into local area network and re-install operating system and various application programs."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 0 0 6 3 00 30 20 25 25 100 [PAGE 2] Marwadi University Faculty of Diploma studies Information and Communication Technology",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction and Assembling of computer 8",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Basics of computer modules, Assembling various computer parts like",
+              "Processor (CPU), Computer Case, Optical Drives, Memory, Power",
+              "Supply, Motherboard, Processor Fan, Case Fan"
+            ],
+            "topics_text": "Basics of computer modules, Assembling various computer parts like Processor (CPU), Computer Case, Optical Drives, Memory, Power Supply, Motherboard, Processor Fan, Case Fan",
+            "topics": [
+              "Basics of computer modules, Assembling various computer parts like",
+              "Processor (CPU), Computer Case, Optical Drives, Memory, Power",
+              "Supply, Motherboard, Processor Fan, Case Fan"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Introduction to various network components 10",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Understanding Network Components like Routers, Hubs, Switch,",
+              "Bridge, Gateways, NICs, Wireless Access Points, Modems"
+            ],
+            "topics_text": "Understanding Network Components like Routers, Hubs, Switch, Bridge, Gateways, NICs, Wireless Access Points, Modems",
+            "topics": [
+              "Understanding Network Components like Routers, Hubs, Switch,",
+              "Bridge, Gateways, NICs, Wireless Access Points, Modems"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "PCB Design Process 13",
+            "contact_hours": 18,
+            "topic_lines": [
+              "Conception Level Introduction: Specifying Parts, Packages and Pin",
+              "Names, Libraries and Checking foot prints of the components, Partlist,",
+              "Placing Parts, Routing Traces, Modifying Traces, Mounting Holes,",
+              "Adding Text, PCB Layout, Pattern Transfer."
+            ],
+            "topics_text": "Conception Level Introduction: Specifying Parts, Packages and Pin Names, Libraries and Checking foot prints of the components, Partlist, Placing Parts, Routing Traces, Modifying Traces, Mounting Holes, Adding Text, PCB Layout, Pattern Transfer.",
+            "topics": [
+              "Conception Level Introduction: Specifying Parts, Packages and Pin",
+              "Names, Libraries and Checking foot prints of the components, Partlist,",
+              "Placing Parts, Routing Traces, Modifying Traces, Mounting Holes,",
+              "Adding Text, PCB Layout, Pattern Transfer."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Installation of operating system 10",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Introduction to Operating systems, Step wise process to install",
+              "Operating Systems"
+            ],
+            "topics_text": "Introduction to Operating systems, Step wise process to install Operating Systems",
+            "topics": [
+              "Introduction to Operating systems, Step wise process to install",
+              "Operating Systems"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Establishment of local area network and implementation of file 12",
+            "contact_hours": 18,
+            "topic_lines": [
+              "sharing on network",
+              "Understanding basic Network Topologies, Cramping of LAN, Setting",
+              "up connections between PCs, File Transferring and Sharing"
+            ],
+            "topics_text": "sharing on network Understanding basic Network Topologies, Cramping of LAN, Setting up connections between PCs, File Transferring and Sharing",
+            "topics": [
+              "sharing on network",
+              "Understanding basic Network Topologies, Cramping of LAN, Setting",
+              "up connections between PCs, File Transferring and Sharing"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "User Centric Applications using open source boards and IDE 17",
+            "contact_hours": 24,
+            "topic_lines": [
+              "Various boards, hardware specifications, components and various pins,",
+              "connection with hardware and libraries, ​Program structure, use of built",
+              "in functions and use define functions, implementation of project",
+              "TOTAL HOURS 70 100",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ],
+            "topics_text": "Various boards, hardware specifications, components and various pins, connection with hardware and libraries, ​Program structure, use of built in functions and use define functions, implementation of project TOTAL HOURS 70 100 Marwadi University Faculty of Diploma studies Information and Communication Technology",
+            "topics": [
+              "Various boards, hardware specifications, components and various pins,",
+              "connection with hardware and libraries, ​Program structure, use of built",
+              "in functions and use define functions, implementation of project",
+              "TOTAL HOURS 70 100",
+              "Marwadi University",
+              "Faculty of Diploma studies",
+              "Information and Communication Technology"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 7312,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                        Faculty of Diploma studies\n                        Information and Communication Technology\n                                Semester​ – II                            Subject Name: ICT Workshop\n\n                               Subject Code: 09CT0105\n\n   Diploma Branches in which this subject is offered: ​Information & Communication\n    Technology\n\n    Objective:\n\n    This course deals with basic introduction of system components of electronic systems,\n    and provides hands on practice in assembling, interconnecting, testing, and repairing\n    such system by making use of various tools. Also, this course will provide ​a much needed\n    knowledge of computer hardware and networking, enabling them to identify and rectify the\n    onboard computer hardware, software and network related problems. With the help of this\n    course the student will be able to understand the hardware specifications that are required to\n    run operating system and various application programs.\n\n    Credits Earned: ​3 Credits\n\n    Course Outcomes: ​After completion of this course, student will be able to\n\n\n         1.  Understand Basic Computer components and tools.\n         2. The students will apply knowledge of engineering to design and conduct\n           experiments using PCB design software.\n         3.  Identify the existing configuration of the computers and peripherals.\n         4.  Apply  their knowledge about computer  peripherals  to  identify  /  rectify\n          problems onboard.\n         5.  Integrate the PCs into local area network and re-install operating system and\n           various application programs.\n\n    Pre-requisite of course: Electronics Practice\n\n\n\n                     Teaching and Examination Scheme\n\n                                                                         Tutorial/ Practical\n  Teaching Scheme (Hours)                Theory Marks\n                                                            Marks          Total\n                                Credits\n                                                             Term    Marks\nTheory   Tutorial   Practical         ESE   IA    CSE     Viva\n                                                                 work\n   0       0        6        3     00    30      20       25       25      100"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                         Faculty of Diploma studies\n                        Information and Communication Technology\n\n\n\n\n\n     Contents:\n\nUnit                              Topics                             Contact   Weightag\n                                                                    hours     e (%)\n\n  1    Introduction and Assembling of computer                          8         12\n       Basics of computer modules, Assembling various computer parts like\n        Processor (CPU), Computer Case, Optical Drives, Memory, Power\n       Supply, Motherboard, Processor Fan, Case Fan\n\n  2    Introduction to various network components                        10        14\n       Understanding Network Components  like Routers, Hubs, Switch,\n        Bridge, Gateways, NICs, Wireless Access Points, Modems\n\n  3   PCB Design Process                                              13        18\n       Conception Level Introduction: Specifying Parts, Packages and Pin\n      Names, Libraries and Checking foot prints of the components, Partlist,\n       Placing Parts, Routing Traces, Modifying Traces, Mounting Holes,\n      Adding Text, PCB Layout, Pattern Transfer.\n\n  4     Installation of operating system                                   10        14\n        Introduction  to  Operating  systems,  Step wise  process  to  install\n       Operating Systems\n\n  5    Establishment of local area network and implementation of file     12        18\n       sharing on network\n       Understanding basic Network Topologies, Cramping of LAN, Setting\n       up connections between PCs, File Transferring and Sharing\n\n  6    User Centric Applications using open source boards and IDE            17        24\n       Various boards, hardware specifications, components and various pins,\n       connection with hardware and libraries, ​Program structure, use of built\n        in functions and use define functions, implementation of project\n\n                 TOTAL HOURS                              70        100"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                     Faculty of Diploma studies\n                     Information and Communication Technology\n\n\nSuggested List of Experiments:\n\n  Sr.  Unit                 Name of Topics\n No.   No.\n\n   1     1    Measure amplitude & frequencies of different type of waveforms using\n          CRO & Function Generator.\n\n   2     1     Identify, find value and test different types of resistors, capacitors.  ( also include\n                     transistor, diode, relay)\n\n   3     7     Prepare LAN Cable using cramping tools.\n\n   4     7     Setting up connection LAN connection using switch between more than 2\n               computers.\n\n   5     4    Understand setup and configure simple home wifi-router.\n\n   6     5     Create schematic and layout of given electronic circuit using any PCB design\n                   software.\n\n   7     5    Understand and perform PCB etching and drilling process on single layer\n                pcb.\n\n   8     6     Install single bootable operating system step by step on computer.\n\n\n   9   ALL   Understand and perform voltage regulation using 78XX and 79XX ICs.\n\n  10     7     Interfacing of Temperature and Humidity sensors\n\n  11     7    Speed and intensity control using PWM.\n\n  12     7     Integration of bluetooth module with mobile phone.\n\n  13   ALL   Prepare one project on general single layer pcb. (Project will be suggested\n              by faculty)\n\n  14     7    Prepare one project on social/community needs (Project will be suggested\n              by faculty)"
+        },
+        {
+          "page": 4,
+          "text": "Marwadi University\n                     Faculty of Diploma studies\n                     Information and Communication Technology\n\n\nStudent Activity:\n\nComplete online course and get certificate for any one topic suggested by faculty\nmember.\nPrepare one project using single layer PCB designing. ( project will be suggested by faculty\nmember)\n\n\nInstructional Method:\n\na.  The course delivery method will depend upon the requirement of content and need\n    of students. The teacher in addition to conventional teaching method by black board,\n   may also use any of tools such as demonstration, role play, Quiz, brainstorming,\n   MOOCs etc.\n\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n    students in the laboratory and class-room.\n\nc.   Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nd.  Students will use supplementary resources such as online videos, NPTEL videos,\n    e-courses, Virtual Laboratory\n\n\n Reference Books:\n\n\n\n    1.  Al Williams, “Build Your Own Printed Circuit Board”, Mc GrawHill, 2003 or latest edition\n    2.  BPB, “Hobby Electronics Project Special”, B P B, 2011\n\n\nSuggested Resources\n\n        1.     www.freepcb.com/\n\n        2.     https://en.wikipedia.org/wiki/Networking_cables\n\n        3.     http://www.groundcontrol.com/galileo/ch5-ethernet.htm"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8b40f5a9d07d9903d329dc2b6d22f5424297e64eaa641b6cc22fd2dfe3cd52a8"
+    },
+    {
+      "subject_id": "49009131110201",
+      "subject_name": "Mathematics II",
+      "course_id": 49,
+      "course_name": "Diploma Information and Communication Technology",
+      "semester": 2,
+      "subject_code": "09MA1102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ma1102-6.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Information and Communication Technology/Semester_Unspecified/09MA1102 - Mathematics-II (.pdf",
+      "expected_pdf_sha256": "642df151a25a7420f3daf0e73e6ed7f2a30664304da53b97fab58e1d5ea5721b",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09MA1102",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "Students are intended to understand the basic concepts and principles of Mathematics such as algebra, mensuration and trigonometry. This knowledge is required to understand and solve Engineering problems. The course will empower students to use proper Mathematical tool to understand Engineering principles and concepts. Main objective of the course is to apply concepts of algebra, mensuration, trigonometry or suitable Mathematical tool to solve given engineering problems."
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to  Operate, simplify and evaluate algebraic expressions  Solve simple problems on algebraic expressions and equations using algebraic skills.  Perform the four fundamental operations on algebraic expressions.  Find the perimeter of closed plane figures and area of rectangle and square  Compute for the surface areas and volumes of different types of solids  Identify faces Surfaces, edges and corners of solid objects and construct the net of solid objects.  Define and evaluate each of the six trigonometric functions.  Prove trigonometric functions.  Solve problems involving oblique triangles by the use of the sine and cosine laws."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 4 0 4 50 30 20 25 25 150 [PAGE 2] Syllabus for Diploma Engineering All Branch",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Algebra 12",
+            "contact_hours": 8,
+            "topic_lines": [
+              "1. Introduction",
+              "2. Polynomial in one variable",
+              "3. Addition, Subtraction of Polynomial",
+              "4. Multiplication, Division of Polynomial",
+              "5. Algebraic Identities",
+              "6. Linear Equations in Two Variables",
+              "7. Graphical Method of solving of Two Variables",
+              "8. Substitution Method of solving of Two Variables",
+              "9. Elimination Method of solving of Two Variables",
+              "10. Cross- Multiplication Method of solving of Two",
+              "Variables"
+            ],
+            "topics_text": "1. Introduction 2. Polynomial in one variable 3. Addition, Subtraction of Polynomial 4. Multiplication, Division of Polynomial 5. Algebraic Identities 6. Linear Equations in Two Variables 7. Graphical Method of solving of Two Variables 8. Substitution Method of solving of Two Variables 9. Elimination Method of solving of Two Variables 10. Cross- Multiplication Method of solving of Two Variables",
+            "topics": [
+              "1. Introduction",
+              "2. Polynomial in one variable",
+              "3. Addition, Subtraction of Polynomial",
+              "4. Multiplication, Division of Polynomial",
+              "5. Algebraic Identities",
+              "6. Linear Equations in Two Variables",
+              "7. Graphical Method of solving of Two Variables",
+              "8. Substitution Method of solving of Two Variables",
+              "9. Elimination Method of solving of Two Variables",
+              "10. Cross- Multiplication Method of solving of Two",
+              "Variables"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Area, Surface area and Volume 12",
+            "contact_hours": 8,
+            "topic_lines": [
+              "1. Area and perimeter of square and Rectangle",
+              "2. Area and perimeter parallelogram and triangle",
+              "3. Area and perimeter circle and semi circle",
+              "4. Surface area of solids – cube, cuboids, cylinder and",
+              "Sphere",
+              "5. Volume of solids – cube, cuboids, cylinder and Sphere"
+            ],
+            "topics_text": "1. Area and perimeter of square and Rectangle 2. Area and perimeter parallelogram and triangle 3. Area and perimeter circle and semi circle 4. Surface area of solids – cube, cuboids, cylinder and Sphere 5. Volume of solids – cube, cuboids, cylinder and Sphere",
+            "topics": [
+              "1. Area and perimeter of square and Rectangle",
+              "2. Area and perimeter parallelogram and triangle",
+              "3. Area and perimeter circle and semi circle",
+              "4. Surface area of solids – cube, cuboids, cylinder and",
+              "Sphere",
+              "5. Volume of solids – cube, cuboids, cylinder and Sphere"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Trigonometry 12",
+            "contact_hours": 8,
+            "topic_lines": [
+              "1. Introduction",
+              "2. Trigonometric Ratios",
+              "3. Trigonometric Ratios of Some Specific Angles",
+              "4. Trigonometric Ratios of Complementary Angles",
+              "5. Trigonometric Identities.",
+              "Total 36 24",
+              "Syllabus for Diploma Engineering",
+              "All Branch",
+              "List of Tutorials:",
+              "LAB",
+              "HOURS",
+              "Unit 1 : Algebra",
+              "Polynomial in one variable 2",
+              "Addition, Subtraction of Polynomial 2",
+              "Multiplication, Division of Polynomial 2",
+              "Algebraic Identities 4",
+              "Linear Equations in Two Variables 2",
+              "Graphical Method of solving of Two Variables 2",
+              "Substitution Method of solving of Two Variables 2",
+              "Elimination Method of solving of Two Variables 2",
+              "Cross- Multiplication Method of solving of Two Variables 2",
+              "Unit 2 : Area, Surface area and Volume",
+              "Area and perimeter of square and Rectangle 2",
+              "Area and perimeter parallelogram and triangle 2",
+              "Area and perimeter circle and semi circle 2",
+              "Surface area of solids – cube, cuboids, cylinder and Sphere 4",
+              "Volume of solids – cube, cuboids, cylinder and Sphere 4",
+              "Unit 3 : Trigonometry",
+              "Trigonometric Ratios 2",
+              "Trigonometric Ratios of Some Specific Angles 2",
+              "Trigonometric Ratios of Complementary Angles 4",
+              "Trigonometric Identities. 4",
+              "TOTAL 48"
+            ],
+            "topics_text": "1. Introduction 2. Trigonometric Ratios 3. Trigonometric Ratios of Some Specific Angles 4. Trigonometric Ratios of Complementary Angles 5. Trigonometric Identities. Total 36 24 Syllabus for Diploma Engineering All Branch List of Tutorials: LAB HOURS Unit 1 : Algebra Polynomial in one variable 2 Addition, Subtraction of Polynomial 2 Multiplication, Division of Polynomial 2 Algebraic Identities 4 Linear Equations in Two Variables 2 Graphical Method of solving of Two Variables 2 Substitution Method of solving of Two Variables 2 Elimination Method of solving of Two Variables 2 Cross- Multiplication Method of solving of Two Variables 2 Unit 2 : Area, Surface area and Volume Area and perimeter of square and Rectangle 2 Area and perimeter parallelogram and triangle 2 Area and perimeter circle and semi circle 2 Surface area of solids – cube, cuboids, cylinder and Sphere 4 Volume of solids – cube, cuboids, cylinder and Sphere 4 Unit 3 : Trigonometry Trigonometric Ratios 2 Trigonometric Ratios of Some Specific Angles 2 Trigonometric Ratios of Complementary Angles 4 Trigonometric Identities. 4 TOTAL 48",
+            "topics": [
+              "1. Introduction",
+              "2. Trigonometric Ratios",
+              "3. Trigonometric Ratios of Some Specific Angles",
+              "4. Trigonometric Ratios of Complementary Angles",
+              "5. Trigonometric Identities.",
+              "Total 36 24",
+              "Syllabus for Diploma Engineering",
+              "All Branch",
+              "List of Tutorials:",
+              "LAB",
+              "HOURS",
+              "Unit 1 : Algebra",
+              "Polynomial in one variable 2",
+              "Addition, Subtraction of Polynomial 2",
+              "Multiplication, Division of Polynomial 2",
+              "Algebraic Identities 4",
+              "Linear Equations in Two Variables 2",
+              "Graphical Method of solving of Two Variables 2",
+              "Substitution Method of solving of Two Variables 2",
+              "Elimination Method of solving of Two Variables 2",
+              "Cross- Multiplication Method of solving of Two Variables 2",
+              "Unit 2 : Area, Surface area and Volume",
+              "Area and perimeter of square and Rectangle 2",
+              "Area and perimeter parallelogram and triangle 2",
+              "Area and perimeter circle and semi circle 2",
+              "Surface area of solids – cube, cuboids, cylinder and Sphere 4",
+              "Volume of solids – cube, cuboids, cylinder and Sphere 4",
+              "Unit 3 : Trigonometry",
+              "Trigonometric Ratios 2",
+              "Trigonometric Ratios of Some Specific Angles 2",
+              "Trigonometric Ratios of Complementary Angles 4",
+              "Trigonometric Identities. 4",
+              "TOTAL 48"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 6845,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                         All Branch\n\n                                   Semester – II\n\n                             Subject Name: Mathematics II\n\n                               Subject Code: 09MA1102\n\n     Diploma Branches in which this subject is offered: All Branch\n\n\n      Objective: Students are intended to understand the basic concepts and principles of\n     Mathematics such as algebra, mensuration and trigonometry. This knowledge  is\n      required to understand and solve Engineering problems. The course will empower\n      students to use proper Mathematical tool to understand Engineering principles and\n      concepts. Main objective of the course is to apply concepts of algebra, mensuration,\n      trigonometry or suitable Mathematical tool to solve given engineering problems.\n\n     Course Outcomes: After completion of this course, student will be able to\n\n       Operate, simplify and evaluate algebraic expressions\n\n       Solve simple problems on algebraic expressions and equations using\n              algebraic skills.\n\n       Perform the four fundamental operations on algebraic expressions.\n\n       Find the perimeter of closed plane figures and area of rectangle and\n             square\n\n      Compute for the surface areas and volumes of different types of solids\n\n       Identify faces Surfaces, edges and corners of solid objects and construct\n              the net of solid objects.\n\n       Define and evaluate each of the six trigonometric functions.\n\n       Prove trigonometric functions.\n\n       Solve problems involving oblique triangles by the use of the sine and\n             cosine laws.\n\n      Pre-requisite of course: NA.\n\n                         Teaching and Examination Scheme\n                                                                         Tutorial/ Practical\n  Teaching Scheme (Hours)                Theory Marks\n                                                            Marks          Total\n                                Credits\n                                                             Term    Marks\nTheory   Tutorial   Practical         ESE   IA    CSE     Viva\n                                                                 work\n\n  2       4        0        4     50    30      20       25       25      150"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                      All Branch\n\n   Contents\n\n                             Topics                         Lab     Lecture\nUnit                                                     Hours    Hours\n  1          Algebra                                            12        8\n            1.  Introduction\n            2.  Polynomial in one variable\n            3.  Addition, Subtraction of Polynomial\n            4.  Multiplication, Division of Polynomial\n            5.  Algebraic Identities\n            6.  Linear Equations in Two Variables\n            7.  Graphical Method of solving of Two Variables\n            8.  Substitution Method of solving of Two Variables\n            9.  Elimination Method of solving of Two Variables\n           10. Cross- Multiplication Method of solving of Two\n              Variables\n\n  2    Area, Surface area and Volume                              12        8\n            1.  Area and perimeter of square and Rectangle\n            2.  Area and perimeter parallelogram and triangle\n            3.  Area and perimeter circle and semi circle\n            4.  Surface area of solids – cube, cuboids, cylinder and\n             Sphere\n            5. Volume of solids – cube, cuboids, cylinder and Sphere\n\n  3         Trigonometry                                       12        8\n            1.  Introduction\n            2.  Trigonometric Ratios\n            3.  Trigonometric Ratios of Some Specific Angles\n            4.  Trigonometric Ratios of Complementary Angles\n            5.  Trigonometric Identities.\nTotal                                                           36        24"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                        All Branch\n\nList of Tutorials:\n\n                                                    LAB\n                                                  HOURS\n\nUnit 1 : Algebra\nPolynomial in one variable                                            2\nAddition, Subtraction of Polynomial                                    2\nMultiplication, Division of Polynomial                                  2\nAlgebraic Identities                                                  4\nLinear Equations in Two Variables                                     2\nGraphical Method of solving of Two Variables                            2\nSubstitution Method of solving of Two Variables                          2\nElimination Method of solving of Two Variables                          2\nCross- Multiplication Method of solving of Two Variables                  2\n\nUnit 2 : Area, Surface area and Volume\nArea and perimeter of square and Rectangle                              2\nArea and perimeter parallelogram and triangle                             2\nArea and perimeter circle and semi circle                                 2\nSurface area of solids – cube, cuboids, cylinder and Sphere                  4\nVolume of solids – cube, cuboids, cylinder and Sphere                      4\n\nUnit 3 : Trigonometry\nTrigonometric Ratios                                                2\nTrigonometric Ratios of Some Specific Angles                            2\nTrigonometric Ratios of Complementary Angles                           4\nTrigonometric Identities.                                              4\n    TOTAL                                                    48\n\n\n\n\nReferences Links:\n\n 1.  http://study.com/academi/lession\n\n 2.  http;//mathforum.org/library/drmath/sets/mid- ratio.html\n\n 3.  http://www.homeschoolmath.net/teching/proportions.php"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                                    All Branch\n\n Suggested Theory distribution:\n The suggested theory distribution as per Bloom’s taxonomy is as per follows. This\n distribution serves as  guidelines  for  teachers and  students  to achieve  effective\n teaching-learning process\n\n\n              Distribution of Theory for course delivery and evaluation\n\nRemember         Understand     Apply     Analyze     Evaluate        Create\n\n    30%          30%       30%      10%             ---                 ---\n\n\n\n\n    Instructional Method:\na.  The course delivery method will depend upon the requirement of content and need\n     of students. The teacher in addition to conventional teaching method by black\n    board, may also use any of tools such as demonstration, Quiz, brainstorming.\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n     students in the class-rooms"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "642df151a25a7420f3daf0e73e6ed7f2a30664304da53b97fab58e1d5ea5721b"
+    }
+  ],
+  "build_summary": {
+    "extracted": 5,
+    "manual_review": 1,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

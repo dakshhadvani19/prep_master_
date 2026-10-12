@@ -1,0 +1,2019 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 46,
+    "course_name": "Diploma Chemical Engineering",
+    "output_slug": "Chemical_Engineering"
+  },
+  "semester": 1,
+  "subject_count": 8,
+  "subjects": [
+    {
+      "subject_id": "46009719310201",
+      "subject_name": "APPLIED CHEMISTRY",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 1,
+      "subject_code": "09GS3102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09GS3102.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09GS3102 - APPLIED CHEMISTRY (.pdf",
+      "expected_pdf_sha256": "8a03971aef766b8b286a16408abecf32992cbbc1b680276fdd0676a66d06c549",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "APPLIED CHEMISTRY",
+        "course_code": "09GS3102",
+        "semester_label": "1",
+        "credits": 3,
+        "prerequisite": "Basic concepts of Chemistry& Mathematics"
+      },
+      "objectives": [
+        "To study fundamentals of chemistry, make students capable of understanding and learning the concepts of electrochemistry, study basics of organic chemistry, study the synthesis, properties and applications of polymers used in our day-to-day life, study the applications of chemistry in our day-to-day life"
+      ],
+      "course_outcomes": [
+        "Understand the concepts of fundamental of chemistry and organic chemistry",
+        "Will be aware of the basics of reaction mechanism and structure & stability of reacting constituents",
+        "Obtain the information regarding the electromotive force and cells",
+        "Understand the use of chemistry in our day-to-day life",
+        "Identify various electrochemical systems for use in domestic and industrial settings"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic Concepts of Chemistry",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction, Importance of Chemistry, Nature of matter,",
+              "classification based on physical state, classification based on",
+              "chemical structure, Physical quantities, atomic mass, molecular",
+              "mass, molar mass and mole concept, Atomic number, atomic mass,",
+              "isotope, isobar and isotone. Bohr's atomic model, Quantum",
+              "numbers, shape of s, p, d and f orbitals, rules of electron",
+              "arrangement in orbitals."
+            ],
+            "topics_text": "Introduction, Importance of Chemistry, Nature of matter, classification based on physical state, classification based on chemical structure, Physical quantities, atomic mass, molecular mass, molar mass and mole concept, Atomic number, atomic mass, isotope, isobar and isotone. Bohr's atomic model, Quantum numbers, shape of s, p, d and f orbitals, rules of electron arrangement in orbitals.",
+            "topics": [
+              "Introduction, Importance of Chemistry, Nature of matter,",
+              "classification based on physical state, classification based on",
+              "chemical structure, Physical quantities, atomic mass, molecular",
+              "mass, molar mass and mole concept, Atomic number, atomic mass,",
+              "isotope, isobar and isotone. Bohr's atomic model, Quantum",
+              "numbers, shape of s, p, d and f orbitals, rules of electron",
+              "arrangement in orbitals."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "General Organic Chemistry",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction, tetravalency of carbon, hybridization, sp, sp2 and sp3",
+              "hybrid orbitals with examples, functional groups, IUPAC",
+              "nomenclature of organic compounds, inductive effect, main types of",
+              "organic reactions."
+            ],
+            "topics_text": "Introduction, tetravalency of carbon, hybridization, sp, sp2 and sp3 hybrid orbitals with examples, functional groups, IUPAC nomenclature of organic compounds, inductive effect, main types of organic reactions.",
+            "topics": [
+              "Introduction, tetravalency of carbon, hybridization, sp, sp2 and sp3",
+              "hybrid orbitals with examples, functional groups, IUPAC",
+              "nomenclature of organic compounds, inductive effect, main types of",
+              "organic reactions."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Electromotive Force",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction, Types of electrochemical cells and examples, Half-",
+              "cell, Reversible and irreversible cell, Convention sign, Types of",
+              "electrodes, cell reactions, Representation of cell, emfof cell, emf",
+              "series. Thermodynamicderivation of Nernst equation. Standard",
+              "cells. Half-cells/electrodes, different types ofelectrodes (with",
+              "examples). Standard electrode potential (IUPAC convention)",
+              "andprinciples of its determination. Types of cells: electrolytic,",
+              "galvanic and concentration cells"
+            ],
+            "topics_text": "Introduction, Types of electrochemical cells and examples, Half- cell, Reversible and irreversible cell, Convention sign, Types of electrodes, cell reactions, Representation of cell, emfof cell, emf series. Thermodynamicderivation of Nernst equation. Standard cells. Half-cells/electrodes, different types ofelectrodes (with examples). Standard electrode potential (IUPAC convention) andprinciples of its determination. Types of cells: electrolytic, galvanic and concentration cells",
+            "topics": [
+              "Introduction, Types of electrochemical cells and examples, Half",
+              "cell, Reversible and irreversible cell, Convention sign, Types of",
+              "electrodes, cell reactions, Representation of cell, emfof cell, emf",
+              "series. Thermodynamicderivation of Nernst equation. Standard",
+              "cells. Half-cells/electrodes, different types ofelectrodes (with",
+              "examples). Standard electrode potential (IUPAC convention)",
+              "andprinciples of its determination. Types of cells: electrolytic,",
+              "galvanic and concentration cells"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Polymers",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction, classification of polymers, industrial manufacturing,",
+              "properties and uses of some important polymers: Polythene, Teflon,",
+              "Polyacrylonitrile, Polyvinyl chloride, Polystyrene",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction, classification of polymers, industrial manufacturing, properties and uses of some important polymers: Polythene, Teflon, Polyacrylonitrile, Polyvinyl chloride, Polystyrene Total Hours 28",
+            "topics": [
+              "Introduction, classification of polymers, industrial manufacturing,",
+              "properties and uses of some important polymers: Polythene, Teflon,",
+              "Polyacrylonitrile, Polyvinyl chloride, Polystyrene",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determine the strength of given acidic solution using standard",
+              "solution of base"
+            ],
+            "topics_text": "Determine the strength of given acidic solution using standard solution of base",
+            "topics": [
+              "Determine the strength of given acidic solution using standard",
+              "solution of base"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Organic qualitative analysis of given compounds"
+            ],
+            "topics_text": "Organic qualitative analysis of given compounds",
+            "topics": [
+              "Organic qualitative analysis of given compounds"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To determine molecular weight of a polymer using Ostwald",
+              "micrometer"
+            ],
+            "topics_text": "To determine molecular weight of a polymer using Ostwald micrometer",
+            "topics": [
+              "To determine molecular weight of a polymer using Ostwald",
+              "micrometer"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Assign IUPAC names to first five members of Alkane and Alkene",
+              "series"
+            ],
+            "topics_text": "Assign IUPAC names to first five members of Alkane and Alkene series",
+            "topics": [
+              "Assign IUPAC names to first five members of Alkane and Alkene",
+              "series"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Identification and analysis of the given organic substances"
+            ],
+            "topics_text": "Identification and analysis of the given organic substances",
+            "topics": [
+              "Identification and analysis of the given organic substances"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of (Any one) polystyrene, urea formaldehyde, phenol",
+              "formaldehyde"
+            ],
+            "topics_text": "Preparation of (Any one) polystyrene, urea formaldehyde, phenol formaldehyde",
+            "topics": [
+              "Preparation of (Any one) polystyrene, urea formaldehyde, phenol",
+              "formaldehyde"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Inorganic qualitative analysis of given compounds"
+            ],
+            "topics_text": "Inorganic qualitative analysis of given compounds",
+            "topics": [
+              "Inorganic qualitative analysis of given compounds"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Standardize KMnO4 solution by preparing standard oxalic acid and",
+              "to estimate ferrous ions and its Characterization"
+            ],
+            "topics_text": "Standardize KMnO4 solution by preparing standard oxalic acid and to estimate ferrous ions and its Characterization",
+            "topics": [
+              "Standardize KMnO4 solution by preparing standard oxalic acid and",
+              "to estimate ferrous ions and its Characterization"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Standardization of Acid Solution"
+            ],
+            "topics_text": "Standardization of Acid Solution",
+            "topics": [
+              "Standardization of Acid Solution"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Standardization of Base solution"
+            ],
+            "topics_text": "Standardization of Base solution",
+            "topics": [
+              "Standardization of Base solution"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of 0.1M standard solution of oxalic acid"
+            ],
+            "topics_text": "Preparation of 0.1M standard solution of oxalic acid",
+            "topics": [
+              "Preparation of 0.1M standard solution of oxalic acid"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determination of melting point of solid compound"
+            ],
+            "topics_text": "Determination of melting point of solid compound",
+            "topics": [
+              "Determination of melting point of solid compound"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study pH of solutions of sodium chloride, ferric chloride"
+            ],
+            "topics_text": "To study pH of solutions of sodium chloride, ferric chloride",
+            "topics": [
+              "To study pH of solutions of sodium chloride, ferric chloride"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Examination of the given compounds through inorganic qualitative",
+              "analysis",
+              "Total Hours 28"
+            ],
+            "topics_text": "Examination of the given compounds through inorganic qualitative analysis Total Hours 28",
+            "topics": [
+              "Examination of the given compounds through inorganic qualitative",
+              "analysis",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Organic Reactions and their Mechanisms, Organic Reactions and their Mechanisms, P. S. Kalsi, New Age International Publishers, 2008",
+          "Organic Chemistry, 6th edition, Organic Chemistry, 6th edition, R. T. Morrison and R. N. Boyd, Prentice Hall of India, 2001",
+          "Principles of Inorganic Chemistry, Principles of Inorganic Chemistry, B. R. Puri, L. R. Sharma, K. C. Kalia, Vallabh Publications, 1998",
+          "Engineering Chemistry, Engineering Chemistry, Shikha Agarwal, Cambridge Uni. Press, 2019",
+          "Engineering Chemistry, Engineering Chemistry, Jain & Jain, Dhanpat Rai Publishing Co. (P) Ltd., 2015"
+        ],
+        "textbooks": [
+          "A Textbook of Physical Chemistry, Arun Bahl & J. D. Tuli, Chand Publishing, 2013 References:",
+          "Organic Reactions and their Mechanisms, Organic Reactions and their Mechanisms, P. S. Kalsi, New Age International Publishers, 2008",
+          "Organic Chemistry, 6th edition, Organic Chemistry, 6th edition, R. T. Morrison and R. N. Boyd, Prentice Hall of India, 2001",
+          "Principles of Inorganic Chemistry, Principles of Inorganic Chemistry, B. R. Puri, L. R. Sharma, K. C. Kalia, Vallabh Publications, 1998",
+          "Engineering Chemistry, Engineering Chemistry, Shikha Agarwal, Cambridge Uni. Press, 2019",
+          "Engineering Chemistry, Engineering Chemistry, Jain & Jain, Dhanpat Rai Publishing Co. (P) Ltd., 2015"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.youtube.com/watch?v=xDlTrdbajAs. 3. https://www.youtube.com/watch? v=vZ02XIyflJY&list",
+          "https://www.youtube.com/watch?v=WqFFc3lyQR8&list=PLCzaIJYXP5YcO YkYm1U0DjCyf4ZMbK2-1",
+          "https://www.youtube.com/watch?v=hML72IJVioA&list=PLCzaIJYXP5YczzI 1gDyoaozNSAaE8n88H"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9641,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    APPLIED CHEMISTRY\nCOURSE CODE     09GS3102\nCOURSE CREDITS  3\n\nObjective:\n 1  To study fundamentals of chemistry, make students capable of understanding and learning\n     the concepts of electrochemistry, study basics of organic chemistry, study the synthesis,\n     properties and applications of polymers used in our day-to-day life, study the applications\n     of chemistry in our day-to-day life\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the concepts of fundamental of chemistry and organic chemistry\n 2  Will be aware of the basics of reaction mechanism and structure & stability of reacting\n     constituents\n 3  Obtain the information regarding the electromotive force and cells\n 4  Understand the use of chemistry in our day-to-day life\n 5  Identify various electrochemical systems for use in domestic and industrial settings\n\n\nPre-requisite of course:Basic concepts of Chemistry& Mathematics\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Basic Concepts of Chemistry                               6\n               Introduction, Importance of Chemistry, Nature of matter,\n                classification based on physical state, classification based on\n             chemical structure, Physical quantities, atomic mass, molecular\n             mass, molar mass and mole concept, Atomic number, atomic mass,\n               isotope, isobar and isotone. Bohr's atomic model, Quantum\n             numbers, shape of s, p, d and f orbitals, rules of electron\n             arrangement in orbitals.\n     2      General Organic Chemistry                                8\n               Introduction, tetravalency of carbon, hybridization, sp, sp2 and sp3\n              hybrid orbitals with examples, functional groups, IUPAC\n             nomenclature of organic compounds, inductive effect, main types of\n              organic reactions.\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI                  MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Electromotive Force                                      8\n               Introduction, Types of electrochemical cells and examples, Half-\n                  cell, Reversible and irreversible cell, Convention sign, Types of\n               electrodes, cell reactions, Representation of cell, emfof cell, emf\n                 series. Thermodynamicderivation of Nernst equation. Standard\n                 cells. Half-cells/electrodes, different types ofelectrodes (with\n              examples). Standard electrode potential (IUPAC convention)\n              andprinciples of its determination. Types of cells: electrolytic,\n              galvanic and concentration cells\n     4      Polymers                                                6\n               Introduction, classification of polymers, industrial manufacturing,\n               properties and uses of some important polymers: Polythene, Teflon,\n               Polyacrylonitrile, Polyvinyl chloride, Polystyrene\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            2\n             Determine the strength of given acidic solution using standard\n               solution of base\n     2      Experiment 2                                            2\n             Organic qualitative analysis of given compounds\n     3      Experiment 3                                            2\n           To determine molecular weight of a polymer using Ostwald\n             micrometer\n     4      Experiment 4                                            2\n             Assign IUPAC names to first five members of Alkane and Alkene\n                series\n     5      Experiment 5                                            2\n                Identification and analysis of the given organic substances\n     6      Experiment 6                                            2\n              Preparation of (Any one) polystyrene, urea formaldehyde, phenol\n             formaldehyde\n     7      Experiment 7                                            2\n              Inorganic qualitative analysis of given compounds\n     8      Experiment 8                                            2\n              Standardize KMnO4 solution by preparing standard oxalic acid and\n               to estimate ferrous ions and its Characterization\n     9      Experiment 9                                            2\n              Standardization of Acid Solution\n     10     Experiment 10                                           2\n              Standardization of Base solution\n     11     Experiment 11                                           2\n              Preparation of 0.1M standard solution of oxalic acid\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI                  MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     12     Experiment 12                                           2\n             Determination of melting point of solid compound\n     13     Experiment 13                                           2\n           To study pH of solutions of sodium chloride, ferric chloride\n     14     Experiment 14                                           2\n             Examination of the given compounds through inorganic qualitative\n               analysis\n                               Total Hours                       28\n\nTextbook :\n 1 A Textbook of Physical Chemistry, Arun Bahl & J. D. Tuli, Chand Publishing, 2013\n\nReferences:\n 1  Organic Reactions and their Mechanisms, Organic Reactions and their Mechanisms, P. S.\n     Kalsi, New Age International Publishers, 2008\n 2  Organic Chemistry, 6th edition, Organic Chemistry, 6th edition, R. T. Morrison and R. N.\n    Boyd, Prentice Hall of India, 2001\n 3  Principles of Inorganic Chemistry, Principles of Inorganic Chemistry, B. R. Puri, L. R.\n    Sharma, K. C. Kalia, Vallabh Publications, 1998\n 4  Engineering Chemistry, Engineering Chemistry, Shikha Agarwal, Cambridge Uni. Press,\n    2019\n 5  Engineering Chemistry, Engineering Chemistry, Jain & Jain, Dhanpat Rai Publishing Co.\n     (P) Ltd., 2015\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    35.00         35.00         30.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI                  MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n 5  Use of hazardous/toxic chemicals should be avoided as far as possible in laboratory\n 6  All students in the laboratory must wear safety goggles and lab coats during lab session\n\nSupplementary Resources:\n 1  https://www.youtube.com/watch?v=xDlTrdbajAs. 3. https://www.youtube.com/watch?\n    v=vZ02XIyflJY&list\n 2  https://www.youtube.com/watch?v=WqFFc3lyQR8&list=PLCzaIJYXP5YcO\n    YkYm1U0DjCyf4ZMbK2-1\n 3  https://www.youtube.com/watch?v=hML72IJVioA&list=PLCzaIJYXP5YczzI\n    1gDyoaozNSAaE8n88H\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI                  MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8a03971aef766b8b286a16408abecf32992cbbc1b680276fdd0676a66d06c549"
+    },
+    {
+      "subject_id": "46009911010101",
+      "subject_name": "BHARATIYA KNOWLEDGE SYSTEM",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 1,
+      "subject_code": "09IK0101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09IK0101.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09IK0101 - BHARATIYA KNOWLEDGE SYSTEM (.pdf",
+      "expected_pdf_sha256": "4a114a597511cde0e9ecd42167e50edd0bc030077def3d9f75a332e78b54cfe1",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BHARATIYA KNOWLEDGE SYSTEM",
+        "course_code": "09IK0101",
+        "semester_label": "1",
+        "credits": 2,
+        "prerequisite": "Not required"
+      },
+      "objectives": [
+        "Educate students with the foundational texts and classifications of Bharatiya Knowledge Systems and their historical evolution",
+        "Explore India’s ancient contributions to mathematics, language sciences and astronomy",
+        "Highlight technological and architectural advancements in ancient Bharat",
+        "Introduce philosophical concepts such as life stages, life goals, karma, rebirth, and the quest for Moksha in Indian tradition"
+      ],
+      "course_outcomes": [
+        "Describe the structure of Bharatiya Knowledge Systems and recognize key philosophical and literary traditions",
+        "Explain ancient Indian developments in mathematics, astronomy, and their relevance to modern science",
+        "Identify technological and architectural innovations rooted in ancient Indian practices",
+        "Express core Indian philosophies related to the purpose of life, spiritual evolution, and ethical living."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Bharatiya Knowledge Systems (BKS)",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition and classification of BKS, Caturdasa-Vidyasthana, The",
+              "Vedic Corps & Philosophical Systems (Introduction to the Four",
+              "Vedas , Vedangas ,Vedic School of Philosophy), Wisdom through",
+              "the Ages ( Puranas – An Encyclopaedical Work, Itihasa as a Source",
+              "of Wisdom)"
+            ],
+            "topics_text": "Definition and classification of BKS, Caturdasa-Vidyasthana, The Vedic Corps & Philosophical Systems (Introduction to the Four Vedas , Vedangas ,Vedic School of Philosophy), Wisdom through the Ages ( Puranas – An Encyclopaedical Work, Itihasa as a Source of Wisdom)",
+            "topics": [
+              "Definition and classification of BKS, Caturdasa-Vidyasthana, The",
+              "Vedic Corps & Philosophical Systems (Introduction to the Four",
+              "Vedas , Vedangas ,Vedic School of Philosophy), Wisdom through",
+              "the Ages ( Puranas – An Encyclopaedical Work, Itihasa as a Source",
+              "of Wisdom)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Science and Mathematics in Ancient Bharat",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Indian Language Sciences (Components of a Language , Sanskrit",
+              "and Role of Sanskrit in Natural Language Processing), Number",
+              "System and Units of Measurement (Number System in India –",
+              "Historical Evidence , Measurement for Time, Distance and Weight),",
+              "Mathematics (An overview of the Development of Mathematics in",
+              "India , Arithmetic, Geometry, Trigonometry and Algebra in Ancient",
+              "texts), Astronomy ( Vedanga Jyotish , Measuring Time & Calendar)"
+            ],
+            "topics_text": "Indian Language Sciences (Components of a Language , Sanskrit and Role of Sanskrit in Natural Language Processing), Number System and Units of Measurement (Number System in India – Historical Evidence , Measurement for Time, Distance and Weight), Mathematics (An overview of the Development of Mathematics in India , Arithmetic, Geometry, Trigonometry and Algebra in Ancient texts), Astronomy ( Vedanga Jyotish , Measuring Time & Calendar)",
+            "topics": [
+              "Indian Language Sciences (Components of a Language , Sanskrit",
+              "and Role of Sanskrit in Natural Language Processing), Number",
+              "System and Units of Measurement (Number System in India –",
+              "Historical Evidence , Measurement for Time, Distance and Weight),",
+              "Mathematics (An overview of the Development of Mathematics in",
+              "India , Arithmetic, Geometry, Trigonometry and Algebra in Ancient",
+              "texts), Astronomy ( Vedanga Jyotish , Measuring Time & Calendar)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Engineering, Technology and Architecture in Ancient Bharat",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Metallurgy and Textile Technology (Metals and Metalworking",
+              "Technology ,Iron and Steel Technology ,Textile and Dyeing –",
+              "Indian Specialities), Irrigation and Water Management (Harappan",
+              "and Traditional Water Management System of Gujarat , Historical",
+              "Sites – Sringeverpur, South Indian Water Management System,",
+              "Rain Water Harvesting System), Sacred Ecology and Environment",
+              "(Sacred Hills, Mountains and Forest ,Nakshatrara Gyaan and",
+              "Agriculture,Forest Management and Urban Planning),",
+              "Transportation ( Modes of Transportations and Reforms,",
+              "Development of Trading Techniques), Vastu sastra – The Science of",
+              "Architecture (Town Planning, Civil Architecture ,Temple",
+              "Architecture)"
+            ],
+            "topics_text": "Metallurgy and Textile Technology (Metals and Metalworking Technology ,Iron and Steel Technology ,Textile and Dyeing – Indian Specialities), Irrigation and Water Management (Harappan and Traditional Water Management System of Gujarat , Historical Sites – Sringeverpur, South Indian Water Management System, Rain Water Harvesting System), Sacred Ecology and Environment (Sacred Hills, Mountains and Forest ,Nakshatrara Gyaan and Agriculture,Forest Management and Urban Planning), Transportation ( Modes of Transportations and Reforms, Development of Trading Techniques), Vastu sastra – The Science of Architecture (Town Planning, Civil Architecture ,Temple Architecture)",
+            "topics": [
+              "Metallurgy and Textile Technology (Metals and Metalworking",
+              "Technology ,Iron and Steel Technology ,Textile and Dyeing –",
+              "Indian Specialities), Irrigation and Water Management (Harappan",
+              "and Traditional Water Management System of Gujarat , Historical",
+              "Sites – Sringeverpur, South Indian Water Management System,",
+              "Rain Water Harvesting System), Sacred Ecology and Environment",
+              "(Sacred Hills, Mountains and Forest ,Nakshatrara Gyaan and",
+              "Agriculture,Forest Management and Urban Planning),",
+              "Transportation ( Modes of Transportations and Reforms,",
+              "Development of Trading Techniques), Vastu sastra – The Science of",
+              "Architecture (Town Planning, Civil Architecture ,Temple",
+              "Architecture)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Concepts of Life in Ancient Bharat",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Four Stages of Life , Four Goals of Human Life , Karma & Rebirth,",
+              "Striving for Moksha",
+              "Total Hours 28"
+            ],
+            "topics_text": "Four Stages of Life , Four Goals of Human Life , Karma & Rebirth, Striving for Moksha Total Hours 28",
+            "topics": [
+              "Four Stages of Life , Four Goals of Human Life , Karma & Rebirth,",
+              "Striving for Moksha",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "India’s Glorious Scientific Tradition, India’s Glorious Scientific Tradition, Suresh Soni, Ocean Books Pvt. Ltd., 2025",
+          "Traditional Knowledge System in India, Traditional Knowledge System in India, Amit Jha, Atlantic, 2023",
+          "Pride of India: A Glimpse into India’s Scientific Heritage, Pride of India: A Glimpse into India’s Scientific Heritage, -, Samskrita Bharati, -",
+          "IKS: The Knowledge system of Bharata, IKS: The Knowledge system of Bharata, Prof. Bhag Chand Chauhan, Garuda Prakashan, 2023",
+          "Indian Knowledge Systems: Volume I and II, Indian Knowledge Systems: Volume I and II, Kapil Kapoor and Avadhesh Kumar Singh, D. K. Print World Ltd., 2005",
+          "Ancient India, Ancient India, R. C. Majumdar, Motilal Banarsidass , 1952"
+        ],
+        "textbooks": [
+          "Introduction to Indian Knowledge System: Concepts and Applications, B. Mahadevan, Vinayak Rajat Bhat, Nagendra Pavana, PHI Learning Pvt. Ltd., 2022 References:",
+          "India’s Glorious Scientific Tradition, India’s Glorious Scientific Tradition, Suresh Soni, Ocean Books Pvt. Ltd., 2025",
+          "Traditional Knowledge System in India, Traditional Knowledge System in India, Amit Jha, Atlantic, 2023",
+          "Pride of India: A Glimpse into India’s Scientific Heritage, Pride of India: A Glimpse into India’s Scientific Heritage, -, Samskrita Bharati, -",
+          "IKS: The Knowledge system of Bharata, IKS: The Knowledge system of Bharata, Prof. Bhag Chand Chauhan, Garuda Prakashan, 2023",
+          "Indian Knowledge Systems: Volume I and II, Indian Knowledge Systems: Volume I and II, Kapil Kapoor and Avadhesh Kumar Singh, D. K. Print World Ltd., 2005",
+          "Ancient India, Ancient India, R. C. Majumdar, Motilal Banarsidass , 1952"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://iksindia.org/",
+          "https://www.youtube.com/@IKS_Media_MoE",
+          "https://onlinecourses.swayam2.ac.in/imb23_mg53/preview",
+          "https://onlinecourses.swayam2.ac.in/ntr25_ed18/preview"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6863,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    BHARATIYA KNOWLEDGE SYSTEM\nCOURSE CODE     09IK0101\nCOURSE CREDITS  2\n\nObjective:\n 1  Educate students with the foundational texts and classifications of Bharatiya Knowledge\n    Systems and their historical evolution\n 2  Explore India’s ancient contributions to mathematics, language sciences and astronomy\n 3  Highlight technological and architectural advancements in ancient Bharat\n 4  Introduce philosophical concepts such as life stages, life goals, karma, rebirth, and the\n     quest for Moksha in Indian tradition\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Describe the structure of Bharatiya Knowledge Systems and recognize key philosophical\n    and literary traditions\n 2  Explain ancient Indian developments in mathematics, astronomy, and their relevance to\n    modern science\n 3  Identify technological and architectural innovations rooted in ancient Indian practices\n 4  Express core Indian philosophies related to the purpose of life, spiritual evolution, and\n     ethical living.\n\n\nPre-requisite of course:Not required\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Bharatiya Knowledge Systems (BKS)          6\n               Definition and classification of BKS, Caturdasa-Vidyasthana, The\n             Vedic Corps & Philosophical Systems (Introduction to the Four\n            Vedas , Vedangas ,Vedic School of Philosophy), Wisdom through\n               the Ages ( Puranas – An Encyclopaedical Work, Itihasa as a Source\n              of Wisdom)\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Science and Mathematics in Ancient Bharat                  8\n              Indian Language Sciences (Components of a Language , Sanskrit\n            and Role of Sanskrit in Natural Language Processing), Number\n            System and Units of Measurement (Number System in India –\n               Historical Evidence , Measurement for Time, Distance and Weight),\n             Mathematics (An overview of the Development of Mathematics in\n               India , Arithmetic, Geometry, Trigonometry and Algebra in Ancient\n                 texts), Astronomy ( Vedanga Jyotish , Measuring Time & Calendar)\n     3      Engineering, Technology and Architecture in Ancient Bharat   12\n             Metallurgy and Textile Technology (Metals and Metalworking\n             Technology ,Iron and Steel Technology ,Textile and Dyeing –\n              Indian Specialities), Irrigation and Water Management (Harappan\n            and Traditional Water Management System of Gujarat , Historical\n               Sites – Sringeverpur, South Indian Water Management System,\n             Rain Water Harvesting System), Sacred Ecology and Environment\n              (Sacred Hills, Mountains and Forest ,Nakshatrara Gyaan and\n               Agriculture,Forest Management and Urban Planning),\n              Transportation ( Modes of Transportations and Reforms,\n            Development of Trading Techniques), Vastu sastra – The Science of\n              Architecture (Town Planning, Civil Architecture ,Temple\n               Architecture)\n     4      Concepts of Life in Ancient Bharat                          2\n             Four Stages of Life , Four Goals of Human Life , Karma & Rebirth,\n               Striving for Moksha\n                               Total Hours                       28\n\n\nTextbook :\n 1  Introduction to Indian Knowledge System: Concepts and Applications, B. Mahadevan,\n    Vinayak Rajat Bhat, Nagendra Pavana, PHI Learning Pvt. Ltd., 2022\n\nReferences:\n 1  India’s Glorious Scientific Tradition, India’s Glorious Scientific Tradition, Suresh Soni,\n    Ocean Books Pvt. Ltd., 2025\n 2  Traditional Knowledge System in India, Traditional Knowledge System in India, Amit Jha,\n     Atlantic, 2023\n 3  Pride of India: A Glimpse into India’s Scientific Heritage, Pride of India: A Glimpse into\n     India’s Scientific Heritage, -, Samskrita Bharati, -\n 4  IKS: The Knowledge system of Bharata, IKS: The Knowledge system of Bharata, Prof.\n    Bhag Chand Chauhan, Garuda Prakashan, 2023\n 5  Indian Knowledge Systems: Volume I and II, Indian Knowledge Systems: Volume I and II,\n     Kapil Kapoor and Avadhesh Kumar Singh, D. K. Print World Ltd., 2005\n 6  Ancient India, Ancient India, R. C. Majumdar, Motilal Banarsidass , 1952\n\nSuggested Theory Distribution:\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         20.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method, may also use any of\n     tools such as demonstration, role play, Quiz, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room\n 3  Students will use supplementary resources such as online videos, videos and e-courses\n\nSupplementary Resources:\n 1   https://iksindia.org/\n 2  https://www.youtube.com/@IKS_Media_MoE\n 3  https://onlinecourses.swayam2.ac.in/imb23_mg53/preview\n 4  https://onlinecourses.swayam2.ac.in/ntr25_ed18/preview\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "4a114a597511cde0e9ecd42167e50edd0bc030077def3d9f75a332e78b54cfe1"
+    },
+    {
+      "subject_id": "46000938210101",
+      "subject_name": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 1,
+      "subject_code": "09CH2101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2101.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CH2101 - CHEMICAL ENGINEERING EQUIPMENT DESIGN (.pdf",
+      "expected_pdf_sha256": "02704d97d3c030fa7238a604e15ab644626a2db65ba2d28ea122cc5c5a05cbd0",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
+        "course_code": "09CH2101",
+        "semester_label": "1",
+        "credits": 4,
+        "prerequisite": "Basic concepts of Chemistry & Mathematics."
+      },
+      "objectives": [
+        "To understand various design of equipment’s used in chemical process industries.",
+        "To understand various design of equipment used in chemical process industries."
+      ],
+      "course_outcomes": [
+        "To Know and understand the various equipments used in the Chemical process Industries.",
+        "To Know and understand the flow diagram and block diagram of the chemical process Industries.",
+        "To know and understand the various accessories and mounting of chemical engineering equipments."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Various laboratory equipment and devices",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Basic chemical engineering symbols, Laboratory glass ware,",
+              "instruments and their practice"
+            ],
+            "topics_text": "Basic chemical engineering symbols, Laboratory glass ware, instruments and their practice",
+            "topics": [
+              "Basic chemical engineering symbols, Laboratory glass ware,",
+              "instruments and their practice"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Block Diagram and Flow diagram",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Basic of block diagram and flow diagram of chemical process",
+              "industries"
+            ],
+            "topics_text": "Basic of block diagram and flow diagram of chemical process industries",
+            "topics": [
+              "Basic of block diagram and flow diagram of chemical process",
+              "industries"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Storage vessels and Pressure vessel",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Types of storage vessel and pressure vessel in detail, Heads, Covers,",
+              "and Supports"
+            ],
+            "topics_text": "Types of storage vessel and pressure vessel in detail, Heads, Covers, and Supports",
+            "topics": [
+              "Types of storage vessel and pressure vessel in detail, Heads, Covers,",
+              "and Supports"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Reaction Vessel",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Types of reaction vessel in detail, glass line reactor jacketed reactor",
+              "etc, and different parts of reactor vessel"
+            ],
+            "topics_text": "Types of reaction vessel in detail, glass line reactor jacketed reactor etc, and different parts of reactor vessel",
+            "topics": [
+              "Types of reaction vessel in detail, glass line reactor jacketed reactor",
+              "etc, and different parts of reactor vessel"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Pumps and Valves",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Types of industrial pump and valve, basic technologies like",
+              "cavitation priming"
+            ],
+            "topics_text": "Types of industrial pump and valve, basic technologies like cavitation priming",
+            "topics": [
+              "Types of industrial pump and valve, basic technologies like",
+              "cavitation priming"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Size reduction equipment",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Classification of size reduction equipments, Jaw crusher, Roll",
+              "Crusher, Ball mill etc."
+            ],
+            "topics_text": "Classification of size reduction equipments, Jaw crusher, Roll Crusher, Ball mill etc.",
+            "topics": [
+              "Classification of size reduction equipments, Jaw crusher, Roll",
+              "Crusher, Ball mill etc."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Heat Exchanger equipment",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Shell & Tube heat exchanger, Plate & Frame Heat exchangers,",
+              "Evaporators"
+            ],
+            "topics_text": "Shell & Tube heat exchanger, Plate & Frame Heat exchangers, Evaporators",
+            "topics": [
+              "Shell & Tube heat exchanger, Plate & Frame Heat exchangers,",
+              "Evaporators"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Distillation",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Simple distillation unit, criteria for selecting distillation operation,",
+              "Atmospheric and vacuum distillation unit",
+              "Total Hours 28"
+            ],
+            "topics_text": "Simple distillation unit, criteria for selecting distillation operation, Atmospheric and vacuum distillation unit Total Hours 28",
+            "topics": [
+              "Simple distillation unit, criteria for selecting distillation operation,",
+              "Atmospheric and vacuum distillation unit",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Various laboratory equipment and devices",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Various laboratory equipment and devices"
+            ],
+            "topics_text": "Various laboratory equipment and devices",
+            "topics": [
+              "Various laboratory equipment and devices"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Block Diagram and Flow diagram",
+            "contact_hours": 4,
+            "topic_lines": [
+              "BFD, PFD & PID"
+            ],
+            "topics_text": "BFD, PFD & PID",
+            "topics": [
+              "BFD, PFD & PID"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Storage vessels and Pressure vessel",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Types of storage vessels"
+            ],
+            "topics_text": "Types of storage vessels",
+            "topics": [
+              "Types of storage vessels"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Reaction Vessel",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Types of reaction vessels"
+            ],
+            "topics_text": "Types of reaction vessels",
+            "topics": [
+              "Types of reaction vessels"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Pumps and Valves",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Types of pumps & valves"
+            ],
+            "topics_text": "Types of pumps & valves",
+            "topics": [
+              "Types of pumps & valves"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Size reduction equipment",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Various size reduction equipments"
+            ],
+            "topics_text": "Various size reduction equipments",
+            "topics": [
+              "Various size reduction equipments"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Heat Exchanger equipment",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Different types of heat exchangers"
+            ],
+            "topics_text": "Different types of heat exchangers",
+            "topics": [
+              "Different types of heat exchangers"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Distillation",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Distillation column",
+              "Total Hours 28"
+            ],
+            "topics_text": "Distillation column Total Hours 28",
+            "topics": [
+              "Distillation column",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "“Process equipment design\", by M. V. Joshi.",
+          "“Outline chemical Technology” by Gopal Rao",
+          "“Chemical Engineering plant”, by Vilbrandt & Dryden."
+        ],
+        "textbooks": [
+          "Hand book of chemical engineering, Don W. Green, Robert H. Perry, McGraw-Hill , 2008 References:",
+          "“Process equipment design\", by M. V. Joshi.",
+          "“Outline chemical Technology” by Gopal Rao",
+          "“Chemical Engineering plant”, by Vilbrandt & Dryden."
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://onlinecourses.nptel.ac.in/noc21_ch18/preview"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6475,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    CHEMICAL ENGINEERING EQUIPMENT DESIGN\nCOURSE CODE     09CH2101\nCOURSE CREDITS  4\n\nObjective:\n 1  To understand various design of equipment’s used in chemical process industries.\n 2  To understand various design of equipment used in chemical process industries.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To Know and understand the various equipments used in the Chemical process Industries.\n 2  To Know and understand the flow diagram and block diagram of the chemical process\n     Industries.\n 3  To know and understand the various accessories and mounting of chemical engineering\n     equipments.\n\n\nPre-requisite of course:Basic concepts of Chemistry & Mathematics.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Various laboratory equipment and devices                   3\n             Basic chemical engineering symbols, Laboratory glass ware,\n              instruments and their practice\n     2      Block Diagram and Flow diagram                           3\n             Basic of block diagram and flow diagram of chemical process\n               industries\n     3      Storage vessels and Pressure vessel                          4\n            Types of storage vessel and pressure vessel in detail, Heads, Covers,\n            and Supports\n     4      Reaction Vessel                                          4\n            Types of reaction vessel in detail, glass line reactor jacketed reactor\n                 etc, and different parts of reactor vessel\n     5     Pumps and Valves                                        3\n            Types of industrial pump and valve, basic technologies like\n               cavitation priming\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6       Size reduction equipment                                  3\n               Classification of size reduction equipments, Jaw crusher, Roll\n              Crusher, Ball mill etc.\n     7      Heat Exchanger equipment                                4\n               Shell & Tube heat exchanger, Plate & Frame Heat exchangers,\n              Evaporators\n     8       Distillation                                              4\n             Simple distillation unit, criteria for selecting distillation operation,\n             Atmospheric and vacuum distillation unit\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Various laboratory equipment and devices                   2\n             Various laboratory equipment and devices\n     2      Block Diagram and Flow diagram                           4\n           BFD, PFD & PID\n     3      Storage vessels and Pressure vessel                          2\n            Types of storage vessels\n     4      Reaction Vessel                                          2\n            Types of reaction vessels\n     5     Pumps and Valves                                        4\n            Types of pumps & valves\n     6       Size reduction equipment                                  6\n             Various size reduction equipments\n     7      Heat Exchanger equipment                                4\n               Different types of heat exchangers\n     8       Distillation                                              4\n                Distillation column\n                               Total Hours                       28\n\nTextbook :\n 1  Hand book of chemical engineering, Don W. Green, Robert H. Perry, McGraw-Hill , 2008\n\nReferences:\n 1  “Process equipment design\", by M. V. Joshi.\n 2  “Outline chemical Technology” by Gopal Rao\n 3  “Chemical Engineering plant”, by Vilbrandt & Dryden.\n\nSuggested Theory Distribution:\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         10.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://onlinecourses.nptel.ac.in/noc21_ch18/preview\n\n\n\n\n\nMR. JITESH BHALCHANDRABHAI JOSHI           DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "02704d97d3c030fa7238a604e15ab644626a2db65ba2d28ea122cc5c5a05cbd0"
+    },
+    {
+      "subject_id": "46091912010301",
+      "subject_name": "COMMUNICATION SKILLS",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 1,
+      "subject_code": "09SL0103",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09SL0103.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09SL0103 - COMMUNICATION SKILLS (.pdf",
+      "expected_pdf_sha256": "1907f61de14de2f8e54c582ed7126d0f980811bcd709594aa2a40c40ea940ce1",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMMUNICATION SKILLS",
+        "course_code": "09SL0103",
+        "semester_label": "1",
+        "credits": 3,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "The course will enable students to share information on familiar matters/issues in English;",
+        "The course will enable students to make effective presentation in English;",
+        "The course will enable students to gain confidence in speaking English.",
+        "The course will enable students to enhance their understanding of language in the context",
+        "To share information on familiar matters / issues in English.",
+        "To make effective presentation in English .",
+        "To gain confidence in speaking English",
+        "To enhance their understanding of language in the context.",
+        "The course will enable students • to share information on familiar matters/issues in English; • to make effective presentation in English; • to gain confidence in speaking English. • to enhance their understanding of language in the context"
+      ],
+      "course_outcomes": [
+        "Students will acquire basic knowledge of decoding written content",
+        "Students will be able to develop comprehension skills, improve vocabulary, use proper grammar, and acquire writing skills and speaking skills in English",
+        "Students will gain effective presentation skills"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Reading Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "1. Reading & Structure (Tenses, Parts of Speech, Types of",
+              "Sentences, Subject-Verb Agreement, Modals , Active-Passive),",
+              "Techniques of Reading, Reading Different Types of Texts (Essays,",
+              "Articles, Stories, Reports, Surveys, Reference Books), Reading",
+              "Comprehension Passages (8passages)"
+            ],
+            "topics_text": "1. Reading & Structure (Tenses, Parts of Speech, Types of Sentences, Subject-Verb Agreement, Modals , Active-Passive), Techniques of Reading, Reading Different Types of Texts (Essays, Articles, Stories, Reports, Surveys, Reference Books), Reading Comprehension Passages (8passages)",
+            "topics": [
+              "1. Reading & Structure (Tenses, Parts of Speech, Types of",
+              "Sentences, Subject-Verb Agreement, Modals , Active-Passive),",
+              "Techniques of Reading, Reading Different Types of Texts (Essays,",
+              "Articles, Stories, Reports, Surveys, Reference Books), Reading",
+              "Comprehension Passages (8passages)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Introduction to Writing Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Writing for Different Purposes, Applications &Emails,",
+              "Assignments, Event Reports (Industrial Visits, In-House Events,",
+              "Participation in External Events)",
+              "Total Hours 28"
+            ],
+            "topics_text": "Writing for Different Purposes, Applications &Emails, Assignments, Event Reports (Industrial Visits, In-House Events, Participation in External Events) Total Hours 28",
+            "topics": [
+              "Writing for Different Purposes, Applications &Emails,",
+              "Assignments, Event Reports (Industrial Visits, In-House Events,",
+              "Participation in External Events)",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Speaking Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Greetings, Introducing Self & Peers, Asking and Sharing",
+              "Information, Sharing/talking about likes and dislikes/preferences,",
+              "Describing Events/Experiences/Objects, Discussions, Expressing",
+              "Views, Facing Viva Voce"
+            ],
+            "topics_text": "Greetings, Introducing Self & Peers, Asking and Sharing Information, Sharing/talking about likes and dislikes/preferences, Describing Events/Experiences/Objects, Discussions, Expressing Views, Facing Viva Voce",
+            "topics": [
+              "Greetings, Introducing Self & Peers, Asking and Sharing",
+              "Information, Sharing/talking about likes and dislikes/preferences,",
+              "Describing Events/Experiences/Objects, Discussions, Expressing",
+              "Views, Facing Viva Voce"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Effective Presentation Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Introduction to Effective Presentation Skills, Preparing the",
+              "Presentation (Collection of Data/Information, exploring the topic),",
+              "Using ICT in the Presentation, Getting Ready for the Presentation,",
+              "Effective Body Language, Effective Pronunciation, Interacting with",
+              "Audience (Q & A), Practice (presentation with video recording),",
+              "Feedback and Suggestions",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction to Effective Presentation Skills, Preparing the Presentation (Collection of Data/Information, exploring the topic), Using ICT in the Presentation, Getting Ready for the Presentation, Effective Body Language, Effective Pronunciation, Interacting with Audience (Q & A), Practice (presentation with video recording), Feedback and Suggestions Total Hours 28",
+            "topics": [
+              "Introduction to Effective Presentation Skills, Preparing the",
+              "Presentation (Collection of Data/Information, exploring the topic),",
+              "Using ICT in the Presentation, Getting Ready for the Presentation,",
+              "Effective Body Language, Effective Pronunciation, Interacting with",
+              "Audience (Q & A), Practice (presentation with video recording),",
+              "Feedback and Suggestions",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Communication Skills, Communication Skills, Lata and Kumar, OUP, New Delhi, 2018",
+          "The Ace of Soft Skills, The Ace of Soft Skills, Mahadevan Ramesh, Pearson, UP, 2019"
+        ],
+        "textbooks": [
+          "NA, NA, NA, NA References:",
+          "Communication Skills, Communication Skills, Lata and Kumar, OUP, New Delhi, 2018",
+          "The Ace of Soft Skills, The Ace of Soft Skills, Mahadevan Ramesh, Pearson, UP, 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://youtu.be/UOceysteIjo",
+          "https://youtu.be/hE6I9apUvrk",
+          "https://youtu.be/X3Fz_Gu5WUE"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5944,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE   COMMUNICATION SKILLS\nCOURSE CODE     09SL0103\nCOURSE CREDITS  3\n\nObjective:\n 1  The course will enable students to share information on familiar matters/issues in English;\n 2  The course will enable students to make effective presentation in English;\n 3  The course will enable students to gain confidence in speaking English.\n 4  The course will enable students to enhance their understanding of language in the context\n 5  To share information on familiar matters / issues in English.\n 6  To make effective presentation in English .\n 7  To gain confidence in speaking English\n 8  To enhance their understanding of language in the context.\n 9  The course will enable students • to share information on familiar matters/issues in English;\n      • to make effective presentation in English; • to gain confidence in speaking English. • to\n    enhance their understanding of language in the context\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Students will acquire basic knowledge of decoding written content\n 2  Students will be able to develop comprehension skills, improve vocabulary, use proper\n    grammar, and acquire writing skills and speaking skills in English\n 3  Students will gain effective presentation skills\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Reading Skills                              14\n                1. Reading & Structure (Tenses, Parts of Speech, Types of\n              Sentences, Subject-Verb Agreement, Modals , Active-Passive),\n             Techniques of Reading, Reading Different Types of Texts (Essays,\n                Articles, Stories, Reports, Surveys, Reference Books), Reading\n            Comprehension Passages (8passages)\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Introduction to Writing Skills                              14\n             Writing for Different Purposes, Applications &Emails,\n             Assignments, Event Reports (Industrial Visits, In-House Events,\n               Participation in External Events)\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Speaking Skills                             14\n              Greetings, Introducing Self & Peers, Asking and Sharing\n              Information, Sharing/talking about likes and dislikes/preferences,\n              Describing Events/Experiences/Objects, Discussions, Expressing\n             Views, Facing Viva Voce\n     2       Effective Presentation Skills                                14\n               Introduction to Effective Presentation Skills, Preparing the\n               Presentation (Collection of Data/Information, exploring the topic),\n             Using ICT in the Presentation, Getting Ready for the Presentation,\n               Effective Body Language, Effective Pronunciation, Interacting with\n            Audience (Q & A), Practice (presentation with video recording),\n            Feedback and Suggestions\n                               Total Hours                       28\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  Communication Skills, Communication Skills, Lata and Kumar, OUP, New Delhi, 2018\n 2  The Ace of Soft Skills, The Ace of Soft Skills, Mahadevan Ramesh, Pearson, UP, 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    35.00         35.00         30.00\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as Lecture method combined with discussion ,use of ICT Tools\n    ,Assignments ,,Presentations ,and self study\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n\nSupplementary Resources:\n 1  https://youtu.be/UOceysteIjo\n 2  https://youtu.be/hE6I9apUvrk\n 3  https://youtu.be/X3Fz_Gu5WUE\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "1907f61de14de2f8e54c582ed7126d0f980811bcd709594aa2a40c40ea940ce1"
+    },
+    {
+      "subject_id": "46000935210101",
+      "subject_name": "COMPUTER FUNDAMENTAL SKILL",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 1,
+      "subject_code": "09CE2101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE2101.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09CE2101 - COMPUTER FUNDAMENTAL SKILL (.pdf",
+      "expected_pdf_sha256": "ca8065bc942b4706c2a5cd682dac52bfe9641c02a67b5f16f2dba839ba1693c6",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMPUTER FUNDAMENTAL SKILL",
+        "course_code": "09CE2101",
+        "semester_label": "1",
+        "credits": 2,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "The application of Computer knowledge is essential the students of all disciplines of Engineering in addition to their respective branch of study. Objective of this subject is to make the students understand the functioning of MS-Office. It will also help students in particular for creating business documents, data analysis and graphical representations using office automation like MS-Word, MS-Excel and MS PowerPoint.",
+        "The application of Computer knowledge is essential the students of all disciplines of Engineering in addition to their respective branch of study. Objective of this subject is to make the students understand the functioning of MS-Office. It will also help students in particular for creating business documents, data analysis and graphical representations using office automation like MS-Word, MS-Excel and MS-PowerPoint."
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to Personalize their own desktop",
+        "Use various facilities available in the word processor",
+        "Prepare Power Point presentation with different formats",
+        "Create different types of charts",
+        "Prepare PowerPoint presentation",
+        "Understand Internet concepts and usage of e-mail"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "FUNDAMENTALS OF COMPUTER SYSTEM",
+            "contact_hours": 9,
+            "topic_lines": [
+              "General understanding of various computer hardware components –",
+              "CPU, Memory, Display, Keyboard,Mouse, HDD and other",
+              "Peripheral Devices, Block diagram of computer system,",
+              "Introduction to OS,, General understanding of various computer",
+              "hardware components – CPU, Memory, Display, Keyboard,Mouse,",
+              "HDD and other Peripheral Devices, Block diagram of computer",
+              "system, Introduction to OS,, OS Installation (Linux and MS",
+              "Windows), Unix Shell and Commands, vi editor."
+            ],
+            "topics_text": "General understanding of various computer hardware components – CPU, Memory, Display, Keyboard,Mouse, HDD and other Peripheral Devices, Block diagram of computer system, Introduction to OS,, General understanding of various computer hardware components – CPU, Memory, Display, Keyboard,Mouse, HDD and other Peripheral Devices, Block diagram of computer system, Introduction to OS,, OS Installation (Linux and MS Windows), Unix Shell and Commands, vi editor.",
+            "topics": [
+              "General understanding of various computer hardware components –",
+              "CPU, Memory, Display, Keyboard,Mouse, HDD and other",
+              "Peripheral Devices, Block diagram of computer system,",
+              "Introduction to OS,, General understanding of various computer",
+              "hardware components – CPU, Memory, Display, Keyboard,Mouse,",
+              "HDD and other Peripheral Devices, Block diagram of computer",
+              "system, Introduction to OS,, OS Installation (Linux and MS",
+              "Windows), Unix Shell and Commands, vi editor."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical list",
+            "contact_hours": 32,
+            "topic_lines": [
+              "Study of Basic steps of OS installation (Linux and windows)., Study",
+              "and Explore security features of Operating Systems., (i) Install",
+              "screen saver and change the monitor resolution by 1280X960 (ii)",
+              "Set a new wallpaper (iii) Create, move, delete and rename a folder",
+              "(iv) Copy, paste and cut a folder/file (v) Display the properties for a",
+              "file or folder, (i) Restore files and folders from Recycle bin (ii)",
+              "Create short cuts for folder/file (iii) Find a file or folder by name",
+              "(iv) Select and move two or more files/folders using mouse (v) Sort",
+              "folders/files., Visit five websites and prepare summary report about",
+              "it., Create HTML page contains single paragraph by using basic",
+              "HTML tags., Create a HTML page with an image in background",
+              "and different background color., Write a letter about your College",
+              "about 200 words with two paragraphs and apply following functions",
+              "(i) Set Arial font of size 12 (ii) Bold Title of College (iii) Make a",
+              "justify alignment for paragraph text (iv) Use format Painter to",
+              "format the second paragraph (v) Use 1.5 line spacing in paragraph,",
+              "Create a newsletter of three pages with two columns text. The first",
+              "page contains some formatting bullets and numbers. Set the",
+              "document background colour and add ‘confidential’ as the",
+              "watermark. Give the document a title which should be displayed in",
+              "the header. The header/ footer of the first page should be different",
+              "from other two pages. Also, add author name and date/ time in the",
+              "header. The footer should have the page number., Prepare a table",
+              "using MS word – Sales Analysis for a period of five years for three",
+              "products and sort that data., Make out print of document by setting",
+              "page layout and margins., Create a document shown on the Left",
+              "Margin: 1mm ? Right Margin: 1mm ? Header Margin: 0.8mm from",
+              "the top edge of the paper ? Footer Margin: 0.7mm from the bottom",
+              "edge of the paper Define following header: ? Your investment: for",
+              "odd pages ? Small Savings: for even pages ? Show the page number",
+              "in footer. Save the document with name “INVEST”. Preview the",
+              "document and Print only the first page of the document. Next, print",
+              "the entire document in the landscape mode. following page, Define",
+              "the following settings for the document. ? Page Length: 11mm ?",
+              "Top Margin: 1.5mm ? Bottom Margin: 1.3mm, Prepare a ORIENT",
+              "workbook using following function: ? Add heading as a Orient",
+              "Industries Ltd. in range B2:D2 ? Format the label in the range",
+              "E6:F7, Create border lines above and below this range. Also create a",
+              "border line below range E11:F11 ? Add label Item in cell A6,",
+              "Quantity in cell B6, Unit price in cell C4 and gross values in D4. ?",
+              "Enter sales Tax Rate in cell A4 and 8% in cell B4 with two decimal",
+              "places. ? Use the TODAY() function in cell D4 and NOW() in cell",
+              "E4.Format cell in the mmm dd,yyyy(e.g. Jan 21,2021) format. ?",
+              "Change the date format to dd-mmm-yy(e.g.14-Jan-21) format.,",
+              "Using EXCEL prepare a table for Students marks and perform the",
+              "following functions Total, Average, Percentage, conditional sum.,",
+              "Create a result sheet containing Candidate's Register No., Name and",
+              "Marks for six subjects. Freezing column containing the Candidate’s",
+              "register no and name Calculate the total and result. The result must",
+              "be calculated as below and failed candidates should be turned to red.",
+              "Result is Distinction if Total >= 70 % First Class if Total > = 60 %",
+              "and < 70 % Second Class if Total >= 50 % and < 60 % Pass if Total",
+              ">= 35 % and < 50 % Fail otherwise, Prepare line, bar and pie chart",
+              "to illustrate the subject wise performance of the class for any one",
+              "semester with the following data Operating Systems 98% C",
+              "Programming 54% Electrical and Electronics Engineering 87% C",
+              "Programming Practical 95% Electrical and Electronics Practical",
+              "100% Operating Systems Practical 78%, Using EXCEL sheet",
+              "prepare a table for information about employees in an organization.",
+              "It containing Employee ID, Employee Name, Designation, Gender,",
+              "Hire Date. Perform sorting and filtering function on that table.,",
+              "Prepare excel sheet and Perform linking function between two",
+              "workbook., Prepare a presentation by using Master slide",
+              "Functionality., Perform Hyperlink functionality in PowerPoint",
+              "presentation., Make a marketing presentation of any consumer",
+              "product with at least 10 slides. Use different customized animation",
+              "effects on pictures and clip art on any four of ten slides., Create an",
+              "e-mail id and perform the following ? Write an e-mail inviting your",
+              "friends about an Event that going to be organized by college ? Make",
+              "your own signature and add it to the e-mail message. ? Add a word",
+              "attachment of the venue route ? Send the e-mail to at least 5 of your",
+              "friends. ? Add your Subject Faculty’s email id in CC field and Class",
+              "Coordinator’s email id in BCC field., Make a Google group of at",
+              "least 10 person and share a spreadsheet and invite them to enter",
+              "their details., Study of Browser features, browsing, using various",
+              "search engines, writing search queries, Study of Visit various e-",
+              "governance/Digital India portals, understand their features, services",
+              "offered."
+            ],
+            "topics_text": "Study of Basic steps of OS installation (Linux and windows)., Study and Explore security features of Operating Systems., (i) Install screen saver and change the monitor resolution by 1280X960 (ii) Set a new wallpaper (iii) Create, move, delete and rename a folder (iv) Copy, paste and cut a folder/file (v) Display the properties for a file or folder, (i) Restore files and folders from Recycle bin (ii) Create short cuts for folder/file (iii) Find a file or folder by name (iv) Select and move two or more files/folders using mouse (v) Sort folders/files., Visit five websites and prepare summary report about it., Create HTML page contains single paragraph by using basic HTML tags., Create a HTML page with an image in background and different background color., Write a letter about your College about 200 words with two paragraphs and apply following functions (i) Set Arial font of size 12 (ii) Bold Title of College (iii) Make a justify alignment for paragraph text (iv) Use format Painter to format the second paragraph (v) Use 1.5 line spacing in paragraph, Create a newsletter of three pages with two columns text. The first page contains some formatting bullets and numbers. Set the document background colour and add ‘confidential’ as the watermark. Give the document a title which should be displayed in the header. The header/ footer of the first page should be different from other two pages. Also, add author name and date/ time in the header. The footer should have the page number., Prepare a table using MS word – Sales Analysis for a period of five years for three products and sort that data., Make out print of document by setting page layout and margins., Create a document shown on the Left Margin: 1mm ? Right Margin: 1mm ? Header Margin: 0.8mm from the top edge of the paper ? Footer Margin: 0.7mm from the bottom edge of the paper Define following header: ? Your investment: for odd pages ? Small Savings: for even pages ? Show the page number in footer. Save the document with name “INVEST”. Preview the document and Print only the first page of the document. Next, print the entire document in the landscape mode. following page, Define the following settings for the document. ? Page Length: 11mm ? Top Margin: 1.5mm ? Bottom Margin: 1.3mm, Prepare a ORIENT workbook using following function: ? Add heading as a Orient Industries Ltd. in range B2:D2 ? Format the label in the range E6:F7, Create border lines above and below this range. Also create a border line below range E11:F11 ? Add label Item in cell A6, Quantity in cell B6, Unit price in cell C4 and gross values in D4. ? Enter sales Tax Rate in cell A4 and 8% in cell B4 with two decimal places. ? Use the TODAY() function in cell D4 and NOW() in cell E4.Format cell in the mmm dd,yyyy(e.g. Jan 21,2021) format. ? Change the date format to dd-mmm-yy(e.g.14-Jan-21) format., Using EXCEL prepare a table for Students marks and perform the following functions Total, Average, Percentage, conditional sum., Create a result sheet containing Candidate's Register No., Name and Marks for six subjects. Freezing column containing the Candidate’s register no and name Calculate the total and result. The result must be calculated as below and failed candidates should be turned to red. Result is Distinction if Total >= 70 % First Class if Total > = 60 % and < 70 % Second Class if Total >= 50 % and < 60 % Pass if Total >= 35 % and < 50 % Fail otherwise, Prepare line, bar and pie chart to illustrate the subject wise performance of the class for any one semester with the following data Operating Systems 98% C Programming 54% Electrical and Electronics Engineering 87% C Programming Practical 95% Electrical and Electronics Practical 100% Operating Systems Practical 78%, Using EXCEL sheet prepare a table for information about employees in an organization. It containing Employee ID, Employee Name, Designation, Gender, Hire Date. Perform sorting and filtering function on that table., Prepare excel sheet and Perform linking function between two workbook., Prepare a presentation by using Master slide Functionality., Perform Hyperlink functionality in PowerPoint presentation., Make a marketing presentation of any consumer product with at least 10 slides. Use different customized animation effects on pictures and clip art on any four of ten slides., Create an e-mail id and perform the following ? Write an e-mail inviting your friends about an Event that going to be organized by college ? Make your own signature and add it to the e-mail message. ? Add a word attachment of the venue route ? Send the e-mail to at least 5 of your friends. ? Add your Subject Faculty’s email id in CC field and Class Coordinator’s email id in BCC field., Make a Google group of at least 10 person and share a spreadsheet and invite them to enter their details., Study of Browser features, browsing, using various search engines, writing search queries, Study of Visit various e- governance/Digital India portals, understand their features, services offered.",
+            "topics": [
+              "Study of Basic steps of OS installation (Linux and windows)., Study",
+              "and Explore security features of Operating Systems., (i) Install",
+              "screen saver and change the monitor resolution by 1280X960 (ii)",
+              "Set a new wallpaper (iii) Create, move, delete and rename a folder",
+              "(iv) Copy, paste and cut a folder/file (v) Display the properties for a",
+              "file or folder, (i) Restore files and folders from Recycle bin (ii)",
+              "Create short cuts for folder/file (iii) Find a file or folder by name",
+              "(iv) Select and move two or more files/folders using mouse (v) Sort",
+              "folders/files., Visit five websites and prepare summary report about",
+              "it., Create HTML page contains single paragraph by using basic",
+              "HTML tags., Create a HTML page with an image in background",
+              "and different background color., Write a letter about your College",
+              "about 200 words with two paragraphs and apply following functions",
+              "(i) Set Arial font of size 12 (ii) Bold Title of College (iii) Make a",
+              "justify alignment for paragraph text (iv) Use format Painter to",
+              "format the second paragraph (v) Use 1.5 line spacing in paragraph,",
+              "Create a newsletter of three pages with two columns text. The first",
+              "page contains some formatting bullets and numbers. Set the",
+              "document background colour and add ‘confidential’ as the",
+              "watermark. Give the document a title which should be displayed in",
+              "the header. The header/ footer of the first page should be different",
+              "from other two pages. Also, add author name and date/ time in the",
+              "header. The footer should have the page number., Prepare a table",
+              "using MS word – Sales Analysis for a period of five years for three",
+              "products and sort that data., Make out print of document by setting",
+              "page layout and margins., Create a document shown on the Left",
+              "Margin: 1mm ? Right Margin: 1mm ? Header Margin: 0.8mm from",
+              "the top edge of the paper ? Footer Margin: 0.7mm from the bottom",
+              "edge of the paper Define following header: ? Your investment: for",
+              "odd pages ? Small Savings: for even pages ? Show the page number",
+              "in footer. Save the document with name “INVEST”. Preview the",
+              "document and Print only the first page of the document. Next, print",
+              "the entire document in the landscape mode. following page, Define",
+              "the following settings for the document. ? Page Length: 11mm ?",
+              "Top Margin: 1.5mm ? Bottom Margin: 1.3mm, Prepare a ORIENT",
+              "workbook using following function: ? Add heading as a Orient",
+              "Industries Ltd. in range B2:D2 ? Format the label in the range",
+              "E6:F7, Create border lines above and below this range. Also create a",
+              "border line below range E11:F11 ? Add label Item in cell A6,",
+              "Quantity in cell B6, Unit price in cell C4 and gross values in D4. ?",
+              "Enter sales Tax Rate in cell A4 and 8% in cell B4 with two decimal",
+              "places. ? Use the TODAY() function in cell D4 and NOW() in cell",
+              "E4.Format cell in the mmm dd,yyyy(e.g. Jan 21,2021) format. ?",
+              "Change the date format to dd-mmm-yy(e.g.14-Jan-21) format.,",
+              "Using EXCEL prepare a table for Students marks and perform the",
+              "following functions Total, Average, Percentage, conditional sum.,",
+              "Create a result sheet containing Candidate's Register No., Name and",
+              "Marks for six subjects. Freezing column containing the Candidate’s",
+              "register no and name Calculate the total and result. The result must",
+              "be calculated as below and failed candidates should be turned to red.",
+              "Result is Distinction if Total >= 70 % First Class if Total > = 60 %",
+              "and < 70 % Second Class if Total >= 50 % and < 60 % Pass if Total",
+              ">= 35 % and < 50 % Fail otherwise, Prepare line, bar and pie chart",
+              "to illustrate the subject wise performance of the class for any one",
+              "semester with the following data Operating Systems 98% C",
+              "Programming 54% Electrical and Electronics Engineering 87% C",
+              "Programming Practical 95% Electrical and Electronics Practical",
+              "100% Operating Systems Practical 78%, Using EXCEL sheet",
+              "prepare a table for information about employees in an organization.",
+              "It containing Employee ID, Employee Name, Designation, Gender,",
+              "Hire Date. Perform sorting and filtering function on that table.,",
+              "Prepare excel sheet and Perform linking function between two",
+              "workbook., Prepare a presentation by using Master slide",
+              "Functionality., Perform Hyperlink functionality in PowerPoint",
+              "presentation., Make a marketing presentation of any consumer",
+              "product with at least 10 slides. Use different customized animation",
+              "effects on pictures and clip art on any four of ten slides., Create an",
+              "e-mail id and perform the following ? Write an e-mail inviting your",
+              "friends about an Event that going to be organized by college ? Make",
+              "your own signature and add it to the e-mail message. ? Add a word",
+              "attachment of the venue route ? Send the e-mail to at least 5 of your",
+              "friends. ? Add your Subject Faculty’s email id in CC field and Class",
+              "Coordinator’s email id in BCC field., Make a Google group of at",
+              "least 10 person and share a spreadsheet and invite them to enter",
+              "their details., Study of Browser features, browsing, using various",
+              "search engines, writing search queries, Study of Visit various e",
+              "governance/Digital India portals, understand their features, services",
+              "offered."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "BASICS OF HTML",
+            "contact_hours": 2,
+            "topic_lines": [
+              "HTML Basics, Basic structure of HTML, Tags–HTML title, head,",
+              "body, creation of basic webpage"
+            ],
+            "topics_text": "HTML Basics, Basic structure of HTML, Tags–HTML title, head, body, creation of basic webpage",
+            "topics": [
+              "HTML Basics, Basic structure of HTML, Tags–HTML title, head,",
+              "body, creation of basic webpage"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "OPEN OFFICE-WRITER",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Introduction to WPS Writer – Examples- Creation of new",
+              "documents, opening document, insert a document into another",
+              "document, Page setup, margins, gutters, font properties, Alignment,",
+              "page breaks, customize header-footer, Saving a document, spell",
+              "checker, creating a table, entering and editing, changing format of",
+              "table, height width of row or column, editing-deleting Rows,",
+              "borders, shading, Templates, drawing objects, mail merge, Printing",
+              "a document."
+            ],
+            "topics_text": "Introduction to WPS Writer – Examples- Creation of new documents, opening document, insert a document into another document, Page setup, margins, gutters, font properties, Alignment, page breaks, customize header-footer, Saving a document, spell checker, creating a table, entering and editing, changing format of table, height width of row or column, editing-deleting Rows, borders, shading, Templates, drawing objects, mail merge, Printing a document.",
+            "topics": [
+              "Introduction to WPS Writer – Examples- Creation of new",
+              "documents, opening document, insert a document into another",
+              "document, Page setup, margins, gutters, font properties, Alignment,",
+              "page breaks, customize header-footer, Saving a document, spell",
+              "checker, creating a table, entering and editing, changing format of",
+              "table, height width of row or column, editing-deleting Rows,",
+              "borders, shading, Templates, drawing objects, mail merge, Printing",
+              "a document."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "OPEN OFFICE-SPREADSHEET",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction to Workbook & Worksheets; Various Data Types;",
+              "Using different features with Data, Cell and Texts; Inserting,",
+              "Removing & Resizing of Columns & Rows; Working with data;",
+              "Different Views of Worksheets, Column Freezing, Labels, Hiding,",
+              "Splitting, Use of Formulas, Calculations & Functions; Cell",
+              "Formatting including Borders & Shading; Working with Different",
+              "Chart Types; Printing of Workbook & Worksheets with various",
+              "options."
+            ],
+            "topics_text": "Introduction to Workbook & Worksheets; Various Data Types; Using different features with Data, Cell and Texts; Inserting, Removing & Resizing of Columns & Rows; Working with data; Different Views of Worksheets, Column Freezing, Labels, Hiding, Splitting, Use of Formulas, Calculations & Functions; Cell Formatting including Borders & Shading; Working with Different Chart Types; Printing of Workbook & Worksheets with various options.",
+            "topics": [
+              "Introduction to Workbook & Worksheets",
+              "Various Data Types",
+              "Using different features with Data, Cell and Texts",
+              "Inserting,",
+              "Removing & Resizing of Columns & Rows",
+              "Working with data",
+              "Different Views of Worksheets, Column Freezing, Labels, Hiding,",
+              "Splitting, Use of Formulas, Calculations & Functions",
+              "Cell",
+              "Formatting including Borders & Shading",
+              "Working with Different",
+              "Chart Types",
+              "Printing of Workbook & Worksheets with various",
+              "options."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "PRESENTATIONS",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction - Opening new presentation, Parts of PowerPoint",
+              "window, Features of PowerPoint, Background design, Word art,",
+              "Clip art, Drawings - Animations, Sound, Views, types of views,",
+              "inserting and deleting slides, arranging slides,, slides show,",
+              "rehearsal, setup show, custom show - creating custom presentations,",
+              "auto content wizard, working with auto content wizard"
+            ],
+            "topics_text": "Introduction - Opening new presentation, Parts of PowerPoint window, Features of PowerPoint, Background design, Word art, Clip art, Drawings - Animations, Sound, Views, types of views, inserting and deleting slides, arranging slides,, slides show, rehearsal, setup show, custom show - creating custom presentations, auto content wizard, working with auto content wizard",
+            "topics": [
+              "Introduction - Opening new presentation, Parts of PowerPoint",
+              "window, Features of PowerPoint, Background design, Word art,",
+              "Clip art, Drawings - Animations, Sound, Views, types of views,",
+              "inserting and deleting slides, arranging slides,, slides show,",
+              "rehearsal, setup show, custom show - creating custom presentations,",
+              "auto content wizard, working with auto content wizard"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "INTERNET",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction – Basic Internet skills: Understanding browser,",
+              "efficient use of search engines, awareness about Digital India",
+              "portals (state and national portals) and college portals, Getting",
+              "acquainted with Internet Connection, Browsers, Website URL,",
+              "Open a website, Net Browsing,Email: Creating E-mail id – Sending,",
+              "receiving and deleting E-mail - Email with Attachments – CC and",
+              "BCC, Chatting, Creating Group mail - Google docs.",
+              "Total Hours 74"
+            ],
+            "topics_text": "Introduction – Basic Internet skills: Understanding browser, efficient use of search engines, awareness about Digital India portals (state and national portals) and college portals, Getting acquainted with Internet Connection, Browsers, Website URL, Open a website, Net Browsing,Email: Creating E-mail id – Sending, receiving and deleting E-mail - Email with Attachments – CC and BCC, Chatting, Creating Group mail - Google docs. Total Hours 74",
+            "topics": [
+              "Introduction – Basic Internet skills: Understanding browser,",
+              "efficient use of search engines, awareness about Digital India",
+              "portals (state and national portals) and college portals, Getting",
+              "acquainted with Internet Connection, Browsers, Website URL,",
+              "Open a website, Net Browsing,Email: Creating E-mail id – Sending,",
+              "receiving and deleting E-mail - Email with Attachments – CC and",
+              "BCC, Chatting, Creating Group mail - Google docs.",
+              "Total Hours 74"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "R. Taxali, “Computer Course”, Tata McGraw Hills. New Delhi.",
+          "Wallace Wang, “MS-Office for Dummies”, Wiley India, New Delhi",
+          "Dr. Shailendra Singh, Pawan Thakur, Anurag Jain,” Basic Computer Engineering”, Satya Prakashan, New Delhi, India"
+        ],
+        "textbooks": [
+          "Computer Course, R. Taxali, Tata McGraw Hills, . References:",
+          "R. Taxali, “Computer Course”, Tata McGraw Hills. New Delhi.",
+          "Wallace Wang, “MS-Office for Dummies”, Wiley India, New Delhi",
+          "Dr. Shailendra Singh, Pawan Thakur, Anurag Jain,” Basic Computer Engineering”, Satya Prakashan, New Delhi, India"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "The course delivery method will depend upon the requirement of content and need of students. The teacher in addition to conventional teaching method by black board, may also use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc. b. The internal evaluation will be done on the basis of continuous evaluation of students in the laboratory and class-room. c. Practical examination will be conducted at the end of semester for evaluation of performance of students in laboratory. d. Students will use supplementary resources such as online videos, NPTEL videos, e-courses, Virtual Laboratory e. Online resources, Linux man pages, Wikipedia.",
+          "https://www.geeksforgeeks.org/computer-fundamentals-tutorial/",
+          "https://www.geeksforgeeks.org/computer-fundamentals-tutorial/",
+          "https://byjus.com/govt-exams/computer-fundamentals/",
+          "https://nibmehub.com/opac-service/pdf/read/Fundamentals%20of%20Computers.pdf"
+        ]
+      },
+      "page_count": 5,
+      "extracted_character_count": 15460,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE   COMPUTER FUNDAMENTAL SKILL\nCOURSE CODE     09CE2101\nCOURSE CREDITS  2\n\nObjective:\n 1  The application of Computer knowledge is essential the students of all disciplines of\n     Engineering in addition to their respective branch of study. Objective of this subject is to\n    make the students understand the functioning of MS-Office. It will also help students in\n     particular for creating business documents, data analysis and graphical representations\n     using office automation like MS-Word, MS-Excel and MS PowerPoint.\n 2  The application of Computer knowledge is essential the students of all disciplines of\n     Engineering in addition to their respective branch of study. Objective of this subject is to\n    make the students understand the functioning of MS-Office. It will also help students in\n     particular for creating business documents, data analysis and graphical representations\n     using office automation like MS-Word, MS-Excel and MS-PowerPoint.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  After completion of this course, student will be able to\n     Personalize their own desktop\n 2  Use various facilities available in the word processor\n 3  Prepare Power Point presentation with different formats\n 4  Create different types of charts\n 5  Prepare PowerPoint presentation\n 6  Understand Internet concepts and usage of e-mail\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            4         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    FUNDAMENTALS OF COMPUTER SYSTEM               9\n             General understanding of various computer hardware components –\n           CPU, Memory, Display, Keyboard,Mouse, HDD and other\n               Peripheral Devices, Block diagram of computer system,\n               Introduction to OS,, General understanding of various computer\n             hardware components – CPU, Memory, Display, Keyboard,Mouse,\n        HDD and other Peripheral Devices, Block diagram of computer\n              system, Introduction to OS,, OS Installation (Linux and MS\n            Windows), Unix Shell and Commands, vi editor.\n     2       Practical list                                             32\n             Study of Basic steps of OS installation (Linux and windows)., Study\n            and Explore security features of Operating Systems., (i) Install\n              screen saver and change the monitor resolution by 1280X960 (ii)\n              Set a new wallpaper (iii) Create, move, delete and rename a folder\n                 (iv) Copy, paste and cut a folder/file (v) Display the properties for a\n                  file or folder, (i) Restore files and folders from Recycle bin (ii)\n              Create short cuts for folder/file (iii) Find a file or folder by name\n                 (iv) Select and move two or more files/folders using mouse (v) Sort\n                 folders/files., Visit five websites and prepare summary report about\n                       it., Create HTML page contains single paragraph by using basic\n        HTML tags., Create a HTML page with an image in background\n            and different background color., Write a letter about your College\n             about 200 words with two paragraphs and apply following functions\n                   (i) Set Arial font of size 12 (ii) Bold Title of College (iii) Make a\n                justify alignment for paragraph text (iv) Use format Painter to\n             format the second paragraph (v) Use 1.5 line spacing in paragraph,\n              Create a newsletter of three pages with two columns text. The first\n             page contains some formatting bullets and numbers. Set the\n            document background colour and add ‘confidential’ as the\n             watermark. Give the document a title which should be displayed in\n               the header. The header/ footer of the first page should be different\n            from other two pages. Also, add author name and date/ time in the\n              header. The footer should have the page number., Prepare a table\n              using MS word – Sales Analysis for a period of five years for three\n              products and sort that data., Make out print of document by setting\n             page layout and margins., Create a document shown on the Left\n             Margin: 1mm ? Right Margin: 1mm ? Header Margin: 0.8mm from\n               the top edge of the paper ? Footer Margin: 0.7mm from the bottom\n             edge of the paper Define following header: ? Your investment: for\n            odd pages ? Small Savings: for even pages ? Show the page number\n               in footer. Save the document with name “INVEST”. Preview the\n            document and Print only the first page of the document. Next, print\n               the entire document in the landscape mode. following page, Define\n               the following settings for the document. ? Page Length: 11mm ?\n           Top Margin: 1.5mm ? Bottom Margin: 1.3mm, Prepare a ORIENT\n            workbook using following function: ? Add heading as a Orient\n               Industries Ltd. in range B2:D2 ? Format the label in the range\n             E6:F7, Create border lines above and below this range. Also create a\n              border line below range E11:F11 ? Add label Item in cell A6,\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Quantity in cell B6, Unit price in cell C4 and gross values in D4. ?\n              Enter sales Tax Rate in cell A4 and 8% in cell B4 with two decimal\n               places. ? Use the TODAY() function in cell D4 and NOW() in cell\n             E4.Format cell in the mmm dd,yyyy(e.g. Jan 21,2021) format. ?\n            Change the date format to dd-mmm-yy(e.g.14-Jan-21) format.,\n             Using EXCEL prepare a table for Students marks and perform the\n              following functions Total, Average, Percentage, conditional sum.,\n              Create a result sheet containing Candidate's Register No., Name and\n            Marks for six subjects. Freezing column containing the Candidate’s\n                register no and name Calculate the total and result. The result must\n             be calculated as below and failed candidates should be turned to red.\n              Result is Distinction if Total >= 70 % First Class if Total > = 60 %\n            and < 70 % Second Class if Total >= 50 % and < 60 % Pass if Total\n           >= 35 % and < 50 % Fail otherwise, Prepare line, bar and pie chart\n               to illustrate the subject wise performance of the class for any one\n              semester with the following data Operating Systems 98% C\n            Programming 54% Electrical and Electronics Engineering 87% C\n            Programming Practical 95% Electrical and Electronics Practical\n          100% Operating Systems Practical 78%, Using EXCEL sheet\n              prepare a table for information about employees in an organization.\n                    It containing Employee ID, Employee Name, Designation, Gender,\n             Hire Date. Perform sorting and filtering function on that table.,\n              Prepare excel sheet and Perform linking function between two\n             workbook., Prepare a presentation by using Master slide\n               Functionality., Perform Hyperlink functionality in PowerPoint\n                presentation., Make a marketing presentation of any consumer\n              product with at least 10 slides. Use different customized animation\n                effects on pictures and clip art on any four of ten slides., Create an\n              e-mail id and perform the following ? Write an e-mail inviting your\n               friends about an Event that going to be organized by college ? Make\n             your own signature and add it to the e-mail message. ? Add a word\n              attachment of the venue route ? Send the e-mail to at least 5 of your\n                friends. ? Add your Subject Faculty’s email id in CC field and Class\n              Coordinator’s email id in BCC field., Make a Google group of at\n                least 10 person and share a spreadsheet and invite them to enter\n                their details., Study of Browser features, browsing, using various\n              search engines, writing search queries, Study of Visit various e-\n              governance/Digital India portals, understand their features, services\n               offered.\n     3     BASICS OF HTML                                       2\n        HTML Basics, Basic structure of HTML, Tags–HTML title, head,\n             body, creation of basic webpage\n     4    OPEN OFFICE-WRITER                                 9\n               Introduction to WPS Writer – Examples- Creation of new\n             documents, opening document, insert a document into another\n             document, Page setup, margins, gutters, font properties, Alignment,\n             page breaks, customize header-footer, Saving a document, spell\n              checker, creating a table, entering and editing, changing format of\n                table, height width of row or column, editing-deleting Rows,\n               borders, shading, Templates, drawing objects, mail merge, Printing\n             a document.\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5    OPEN OFFICE-SPREADSHEET                           8\n               Introduction to Workbook & Worksheets; Various Data Types;\n             Using different features with Data, Cell and Texts; Inserting,\n           Removing & Resizing of Columns & Rows; Working with data;\n               Different Views of Worksheets, Column Freezing, Labels, Hiding,\n                Splitting, Use of Formulas, Calculations & Functions; Cell\n             Formatting including Borders & Shading; Working with Different\n             Chart Types; Printing of Workbook & Worksheets with various\n               options.\n     6    PRESENTATIONS                                       8\n               Introduction - Opening new presentation, Parts of PowerPoint\n            window, Features of PowerPoint, Background design, Word art,\n              Clip art, Drawings - Animations, Sound, Views, types of views,\n               inserting and deleting slides, arranging slides,, slides show,\n               rehearsal, setup show, custom show - creating custom presentations,\n              auto content wizard, working with auto content wizard\n     7    INTERNET                                             6\n               Introduction – Basic Internet skills: Understanding browser,\n                efficient use of search engines, awareness about Digital India\n               portals (state and national portals) and college portals, Getting\n              acquainted with Internet Connection, Browsers, Website URL,\n           Open a website, Net Browsing,Email: Creating E-mail id – Sending,\n              receiving and deleting E-mail - Email with Attachments – CC and\n           BCC, Chatting, Creating Group mail - Google docs.\n                               Total Hours                       74\n\nTextbook :\n 1  Computer Course, R. Taxali, Tata McGraw Hills, .\n\nReferences:\n 1  R. Taxali, “Computer Course”, Tata McGraw Hills. New Delhi.\n 2   Wallace Wang, “MS-Office for Dummies”, Wiley India, New Delhi\n 3  Dr. Shailendra Singh, Pawan Thakur, Anurag Jain,” Basic Computer Engineering”, Satya\n     Prakashan, New Delhi, India\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    35.00         35.00         30.00\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 5,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board,\n    may also use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs\n      etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of\n     students in the laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc. b. The\n     internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room. c. Practical examination will be conducted at the end of\n     semester for evaluation of performance of students in laboratory. d. Students will use\n    supplementary resources such as online videos, NPTEL videos, e-courses, Virtual\n     Laboratory e. Online resources, Linux man pages, Wikipedia.\n 2  https://www.geeksforgeeks.org/computer-fundamentals-tutorial/\n 3  https://www.geeksforgeeks.org/computer-fundamentals-tutorial/\n 4  https://byjus.com/govt-exams/computer-fundamentals/\n 5  https://nibmehub.com/opac-service/pdf/read/Fundamentals%20of%20Computers.pdf\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "ca8065bc942b4706c2a5cd682dac52bfe9641c02a67b5f16f2dba839ba1693c6"
+    },
+    {
+      "subject_id": "46009121010101",
+      "subject_name": "INDIAN CONSTITUTION",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 1,
+      "subject_code": "09AU0101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0101.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09AU0101 - INDIAN CONSTITUTION (.pdf",
+      "expected_pdf_sha256": "5bf10e92e66f46034d33f5f5b4a5c87eaea395d87689f78a4f2c899d121f45d7",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INDIAN CONSTITUTION",
+        "course_code": "09AU0101",
+        "semester_label": "1",
+        "credits": 0,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "To know and create awareness about Indian constitution which is consider as pillar of Indian democracy.",
+        "To be familiar with the functionalities of Union government, State government and local government etc. by knowing about the functionalities of Election commission of India.",
+        "To know and create awareness about Indian constitution which is consider as pillar of Indian democracy. To be familiar with the functionalities of Union government, State government and local government etc. by knowing about the functionalities of Election commission of India",
+        "By learning Indian constitution student can maintain integrity in the society and promote to build a great nation. The main objective of the Indian Constitution is to promote harmony throughout the nation."
+      ],
+      "course_outcomes": [
+        "1. To learn about law enactment and importance of Constitution.",
+        "2. To understand the fundamental rights and fundamental duties of the Indian citizen to instill morality, social values, honesty, dignity of life and their social responsibilities.",
+        "3. To create awareness of their surroundings, society, social problems and their suitable solutions while keeping rights and duties of the citizen keeping in mind",
+        "4. To understand powers and functionalities from union to local self-government.",
+        "5. To justify the need for protection of human rights and to know about concept of women empowerment."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 0 0 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "The Constitution – Introduction",
+            "contact_hours": 14,
+            "topic_lines": [
+              "• Meaning of the constitution law and constitutionalism, • The",
+              "History of the Making of the Indian Constitution, • Preamble and",
+              "the Basic Structure, and its Interpretation, • Salient features and",
+              "characteristics of the Constitution of India, • Fundamental Rights",
+              "and Duties and their Interpretation, Right to Equality under Article –",
+              "14, Right to certain Freedom under Article 19, Scope of the Right to",
+              "Life and Personal Liberty under Article 21, Fundamental Duties and",
+              "its legal status, • State Policy Principles- Its importance and",
+              "Implementation"
+            ],
+            "topics_text": "• Meaning of the constitution law and constitutionalism, • The History of the Making of the Indian Constitution, • Preamble and the Basic Structure, and its Interpretation, • Salient features and characteristics of the Constitution of India, • Fundamental Rights and Duties and their Interpretation, Right to Equality under Article – 14, Right to certain Freedom under Article 19, Scope of the Right to Life and Personal Liberty under Article 21, Fundamental Duties and its legal status, • State Policy Principles- Its importance and Implementation",
+            "topics": [
+              "Meaning of the constitution law and constitutionalism,",
+              "The",
+              "History of the Making of the Indian Constitution,",
+              "Preamble and",
+              "the Basic Structure, and its Interpretation,",
+              "Salient features and",
+              "characteristics of the Constitution of India,",
+              "Fundamental Rights",
+              "and Duties and their Interpretation, Right to Equality under Article –",
+              "14, Right to certain Freedom under Article 19, Scope of the Right to",
+              "Life and Personal Liberty under Article 21, Fundamental Duties and",
+              "its legal status,",
+              "State Policy Principles- Its importance and",
+              "Implementation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Union Government",
+            "contact_hours": 4,
+            "topic_lines": [
+              "• Structure of the Indian Union, • President – Role and Power , •",
+              "Prime Minister and Council of Ministers , • Lok Sabha and Rajya",
+              "Sabha"
+            ],
+            "topics_text": "• Structure of the Indian Union, • President – Role and Power , • Prime Minister and Council of Ministers , • Lok Sabha and Rajya Sabha",
+            "topics": [
+              "Structure of the Indian Union,",
+              "President – Role and Power ,",
+              "Prime Minister and Council of Ministers ,",
+              "Lok Sabha and Rajya",
+              "Sabha"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "State Government",
+            "contact_hours": 3,
+            "topic_lines": [
+              "• Governor – Role and Power , • Chief Minister and Council of",
+              "Ministers , • State Secretariat"
+            ],
+            "topics_text": "• Governor – Role and Power , • Chief Minister and Council of Ministers , • State Secretariat",
+            "topics": [
+              "Governor – Role and Power ,",
+              "Chief Minister and Council of",
+              "Ministers ,",
+              "State Secretariat"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Local Administration",
+            "contact_hours": 3,
+            "topic_lines": [
+              "• District Administration , • Municipal Corporation , • Zila",
+              "Panchayat"
+            ],
+            "topics_text": "• District Administration , • Municipal Corporation , • Zila Panchayat",
+            "topics": [
+              "District Administration ,",
+              "Municipal Corporation ,",
+              "Zila",
+              "Panchayat"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Election Commission",
+            "contact_hours": 4,
+            "topic_lines": [
+              "• Role and Functioning , • Chief Election Commissioner , • State",
+              "Election Commission",
+              "Total Hours 28"
+            ],
+            "topics_text": "• Role and Functioning , • Chief Election Commissioner , • State Election Commission Total Hours 28",
+            "topics": [
+              "Role and Functioning ,",
+              "Chief Election Commissioner ,",
+              "State",
+              "Election Commission",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Constitutional Law of India, Constitutional Law of India, Dr. J.N. Pandey, Central Law Agency, 2022"
+        ],
+        "textbooks": [
+          "The Constitution of India, B.L. Fadia, Sahitya Bhawan, 2017 References:",
+          "Constitutional Law of India, Constitutional Law of India, Dr. J.N. Pandey, Central Law Agency, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://legislative.gov.in/constitution-of-india",
+          "https://www.india.gov.in/my-government/constitution-india",
+          "https://www.constitutionofindia.net/constitution_of_india",
+          "https://main.sci.gov.in/constitution",
+          "https://www.youtube.com/watch? v=S_3i0Hf8KMI&list=PL4gSUwMBf0L0p8mciCow7pSMs0ZViBe1R",
+          "https://www.youtube.com/watch? v=9MYY4SXEGCE&list=PLVOgwA_DiGzoFR3j1mSGn5Z_OQLxgodQi"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6125,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    INDIAN CONSTITUTION\nCOURSE CODE     09AU0101\nCOURSE CREDITS  0\n\nObjective:\n 1  To know and create awareness about Indian constitution which is consider as pillar of\n     Indian democracy.\n 2  To be familiar with the functionalities of Union government, State government and local\n    government etc. by knowing about the functionalities of Election commission of India.\n 3  To know and create awareness about Indian constitution which is consider as\n      pillar of Indian democracy. To be familiar with the functionalities of Union government,\n     State government and local government etc. by knowing about the functionalities of\n     Election commission of India\n 4 By learning Indian constitution student can maintain integrity in the society and promote to\n     build a great nation. The main objective of the Indian Constitution is to promote harmony\n     throughout the nation.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1   1. To learn about law enactment and importance of Constitution.\n 2   2. To understand the fundamental rights and fundamental duties of the Indian citizen to\n      instill morality, social values, honesty, dignity of life and their social responsibilities.\n 3   3. To create awareness of their surroundings, society, social problems and their suitable\n     solutions while keeping rights and duties of the citizen keeping in mind\n 4   4. To understand powers and functionalities from union to local self-government.\n 5   5. To justify the need for protection of human rights and to know about concept of women\n    empowerment.\n\n\nPre-requisite of course:NA.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0      0       0         0          0\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     The Constitution – Introduction                            14\n                 • Meaning of the constitution law and constitutionalism, • The\n              History of the Making of the Indian Constitution, • Preamble and\n               the Basic Structure, and its Interpretation, • Salient features and\n                characteristics of the Constitution of India, • Fundamental Rights\n            and Duties and their Interpretation, Right to Equality under Article –\n              14, Right to certain Freedom under Article 19, Scope of the Right to\n              Life and Personal Liberty under Article 21, Fundamental Duties and\n                   its legal status, • State Policy Principles- Its importance and\n             Implementation\n     2      Union Government                                       4\n                 • Structure of the Indian Union, • President – Role and Power , •\n             Prime Minister and Council of Ministers , • Lok Sabha and Rajya\n            Sabha\n     3       State Government                                        3\n                 • Governor – Role and Power , • Chief Minister and Council of\n              Ministers , • State Secretariat\n     4      Local Administration                                     3\n                 • District Administration , • Municipal Corporation , • Zila\n             Panchayat\n     5       Election Commission                                      4\n                 • Role and Functioning , • Chief Election Commissioner , • State\n              Election Commission\n                               Total Hours                       28\n\n\nTextbook :\n 1  The Constitution of India, B.L. Fadia, Sahitya Bhawan, 2017\n\nReferences:\n 1  Constitutional Law of India, Constitutional Law of India, Dr. J.N. Pandey, Central Law\n    Agency, 2022\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    45.00         45.00          5.00           5.00\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 1   a. The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n 3  Students will use supplementary resources such as online videos.\n\nSupplementary Resources:\n 1  https://legislative.gov.in/constitution-of-india\n 2  https://www.india.gov.in/my-government/constitution-india\n 3  https://www.constitutionofindia.net/constitution_of_india\n 4  https://main.sci.gov.in/constitution\n 5  https://www.youtube.com/watch?\n    v=S_3i0Hf8KMI&list=PL4gSUwMBf0L0p8mciCow7pSMs0ZViBe1R\n 6  https://www.youtube.com/watch?\n    v=9MYY4SXEGCE&list=PLVOgwA_DiGzoFR3j1mSGn5Z_OQLxgodQi\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09AU0101 - INDIAN CONSTITUTION (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "5bf10e92e66f46034d33f5f5b4a5c87eaea395d87689f78a4f2c899d121f45d7"
+    },
+    {
+      "subject_id": "46009131210101",
+      "subject_name": "MATHEMATICS-I",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 1,
+      "subject_code": "09MA2101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2101.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09MA2101 - MATHEMATICS-I (.pdf",
+      "expected_pdf_sha256": "61d06ffe78003abf48adcf055d0ce8798553945c8594bc655dee9aeef5aaa80a",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MATHEMATICS-I",
+        "course_code": "09MA2101",
+        "semester_label": "1",
+        "credits": 4,
+        "prerequisite": "Basic Mathematics"
+      },
+      "objectives": [
+        "Students are intended to understand the basic concepts and principles of Mathematics such as basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry. This knowledge is required to understand and solve Engineering problems. The course will empower students to use proper Mathematical tool to understand Engineering principles and concepts. Main objective of the course is to apply concepts of basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry or suitable Mathematical tool to solve given engineering problems."
+      ],
+      "course_outcomes": [
+        "Classify the different types of sets of numbers.",
+        "Understand the laws of power of numbers.",
+        "Find LCM and HCF of numbers.",
+        "Solve simple problems on algebraic expressions.",
+        "Compute the area and perimeter of 2D-shapes and volume and surface area of 3D-shapes.",
+        "Solve the applied problems using right triangle trigonometry."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic calculation",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Set of Numbers, Indices"
+            ],
+            "topics_text": "Set of Numbers, Indices",
+            "topics": [
+              "Set of Numbers, Indices"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "HCF and LCM of numbers",
+            "contact_hours": 4,
+            "topic_lines": [
+              "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF",
+              "and LCM of decimals"
+            ],
+            "topics_text": "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF and LCM of decimals",
+            "topics": [
+              "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF",
+              "and LCM of decimals"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Polynomials",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition, Arithmetic properties of polynomials, Algebraic",
+              "identities"
+            ],
+            "topics_text": "Definition, Arithmetic properties of polynomials, Algebraic identities",
+            "topics": [
+              "Definition, Arithmetic properties of polynomials, Algebraic",
+              "identities"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Mensuration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Area and perimeter of square, rectangle, triangle, trapezium,",
+              "parallelogram, rhombus, circle, Surface area and volume of cube,",
+              "cuboid, cone, cylinder, sphere"
+            ],
+            "topics_text": "Area and perimeter of square, rectangle, triangle, trapezium, parallelogram, rhombus, circle, Surface area and volume of cube, cuboid, cone, cylinder, sphere",
+            "topics": [
+              "Area and perimeter of square, rectangle, triangle, trapezium,",
+              "parallelogram, rhombus, circle, Surface area and volume of cube,",
+              "cuboid, cone, cylinder, sphere"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Trigonometry",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Trigonometry ratios, Concept of angles, Unit circle,",
+              "T- Ratios of multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction to Trigonometry ratios, Concept of angles, Unit circle, T- Ratios of multiple angles, sub-multiple angles Total Hours 28",
+            "topics": [
+              "Introduction to Trigonometry ratios, Concept of angles, Unit circle,",
+              "T- Ratios of multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic calculation",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Set of numbers and indices"
+            ],
+            "topics_text": "Set of numbers and indices",
+            "topics": [
+              "Set of numbers and indices"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "HCF and LCM of numbers",
+            "contact_hours": 4,
+            "topic_lines": [
+              "HCF and LCM of numbers, HCF and LCM of fractions and",
+              "decimals"
+            ],
+            "topics_text": "HCF and LCM of numbers, HCF and LCM of fractions and decimals",
+            "topics": [
+              "HCF and LCM of numbers, HCF and LCM of fractions and",
+              "decimals"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Polynomials",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Arithmetic properties of polynomials, Algebraic identities"
+            ],
+            "topics_text": "Arithmetic properties of polynomials, Algebraic identities",
+            "topics": [
+              "Arithmetic properties of polynomials, Algebraic identities"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Mensuration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Area and perimeter of square, rectangle, triangle, Area and",
+              "perimeter of trapezium, parallelogram, rhombus, circle, Surface area",
+              "and volume of cube, cuboid, cone, Surface area and volume of",
+              "cylinder, sphere"
+            ],
+            "topics_text": "Area and perimeter of square, rectangle, triangle, Area and perimeter of trapezium, parallelogram, rhombus, circle, Surface area and volume of cube, cuboid, cone, Surface area and volume of cylinder, sphere",
+            "topics": [
+              "Area and perimeter of square, rectangle, triangle, Area and",
+              "perimeter of trapezium, parallelogram, rhombus, circle, Surface area",
+              "and volume of cube, cuboid, cone, Surface area and volume of",
+              "cylinder, sphere"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Trigonometry",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of",
+              "multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ],
+            "topics_text": "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of multiple angles, sub-multiple angles Total Hours 28",
+            "topics": [
+              "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of",
+              "multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, NCERT, NCERT, 2022",
+          "NCERT MATHEMATICS for class-VI, NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022"
+        ],
+        "textbooks": [
+          "NCERT Class-XI science Mathematics , NCERT, NCERT, 2022",
+          "NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT, NCERT, 2022 References:",
+          "NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, NCERT, NCERT, 2022",
+          "NCERT MATHEMATICS for class-VI, NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://en.wikipedia.org/wiki/Set_(mathematics)",
+          "https://en.wikipedia.org/wiki/Least_common_multiple",
+          "https://en.wikipedia.org/wiki/Polynomial",
+          "https://en.wikipedia.org/wiki/Mensuration",
+          "https://en.wikipedia.org/wiki/Trigonometry"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6443,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    MATHEMATICS-I\nCOURSE CODE     09MA2101\nCOURSE CREDITS  4\n\nObjective:\n 1  Students are intended to understand the basic concepts and principles of Mathematics such\n     as basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry. This\n    knowledge is required to understand and solve Engineering problems. The course will\n    empower students to use proper Mathematical tool to understand Engineering principles\n    and concepts. Main objective of the course is to apply concepts of basic mathematics, HCF\n    and LCM, polynomials, mensuration and trigonometry or suitable Mathematical tool to\n     solve given engineering problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Classify the different types of sets of numbers.\n 2  Understand the laws of power of numbers.\n 3  Find LCM and HCF of numbers.\n 4  Solve simple problems on algebraic expressions.\n 5  Compute the area and perimeter of 2D-shapes and volume and surface area of 3D-shapes.\n 6  Solve the applied problems using right triangle trigonometry.\n\n\nPre-requisite of course:Basic Mathematics\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Basic calculation                                         2\n              Set of Numbers, Indices\n     2    HCF and LCM of numbers                                4\n         HCF of integer, LCM of integer, HCF and LCM of fractions, HCF\n            and LCM of decimals\n     3      Polynomials                                             4\n               Definition, Arithmetic properties of polynomials, Algebraic\n                identities\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Mensuration                                             8\n            Area and perimeter of square, rectangle, triangle, trapezium,\n              parallelogram, rhombus, circle, Surface area and volume of cube,\n              cuboid, cone, cylinder, sphere\n     5      Trigonometry                                            10\n               Introduction to Trigonometry ratios, Concept of angles, Unit circle,\n             T- Ratios of multiple angles, sub-multiple angles\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Basic calculation                                         2\n              Set of numbers and indices\n     2    HCF and LCM of numbers                                4\n         HCF and LCM of numbers, HCF and LCM of fractions and\n             decimals\n     3      Polynomials                                             4\n              Arithmetic properties of polynomials, Algebraic identities\n     4      Mensuration                                             8\n            Area and perimeter of square, rectangle, triangle, Area and\n              perimeter of trapezium, parallelogram, rhombus, circle, Surface area\n            and volume of cube, cuboid, cone, Surface area and volume of\n               cylinder, sphere\n     5      Trigonometry                                            10\n             Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of\n              multiple angles, sub-multiple angles\n                               Total Hours                       28\n\nTextbook :\n 1 NCERT Class-XI science Mathematics , NCERT, NCERT, 2022\n 2 NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022\n 3 NCERT Class-X Mathematics, NCERT, NCERT, 2022\n\nReferences:\n 1 NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, NCERT,\n   NCERT, 2022\n 2 NCERT MATHEMATICS for class-VI, NCERT MATHEMATICS for class-VI, NCERT,\n   NCERT, 2022\n 3 NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022\n\nSuggested Theory Distribution:\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    30.00         30.00         30.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms\n\nSupplementary Resources:\n 1  https://en.wikipedia.org/wiki/Set_(mathematics)\n 2  https://en.wikipedia.org/wiki/Least_common_multiple\n 3  https://en.wikipedia.org/wiki/Polynomial\n 4  https://en.wikipedia.org/wiki/Mensuration\n 5  https://en.wikipedia.org/wiki/Trigonometry\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "61d06ffe78003abf48adcf055d0ce8798553945c8594bc655dee9aeef5aaa80a"
+    },
+    {
+      "subject_id": "46009135210201",
+      "subject_name": "MECHANICAL WORKSHOP",
+      "course_id": 46,
+      "course_name": "Diploma Chemical Engineering",
+      "semester": 1,
+      "subject_code": "09ME2102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME2102.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Chemical Engineering/Semester_Unspecified/09ME2102 - MECHANICAL WORKSHOP (.pdf",
+      "expected_pdf_sha256": "602ba0c96a82f152658300948693d54e46287fdd2563e66b3f5f1439a3976092",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MECHANICAL WORKSHOP",
+        "course_code": "09ME2102",
+        "semester_label": "1",
+        "credits": 2,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "Workshop training is a pillar of the real industrial situation which supports to grow and boost relevant technical hand skills required by the technician working in the various engineering trades and workshops. Irrespective of branch the use of workshop performs in day to day industrial as well domestic life helps to soften the problems."
+      ],
+      "course_outcomes": [
+        "Choice the appropriate tools essential for definite operation.",
+        "Know applications of hand tools and power tools.",
+        "Know the safety actions required to be taken while using the tools.",
+        "Understand the processes of machine tools"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "To know and gain worth of mechanical engineering in diverse",
+            "contact_hours": 2,
+            "topic_lines": [
+              "fields of engineering",
+              "To know and gain worth of mechanical engineering in diverse fields",
+              "of engineering"
+            ],
+            "topics_text": "fields of engineering To know and gain worth of mechanical engineering in diverse fields of engineering",
+            "topics": [
+              "fields of engineering",
+              "To know and gain worth of mechanical engineering in diverse fields",
+              "of engineering"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "To prepare plant layout for workshop.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To prepare plant layout for workshop."
+            ],
+            "topics_text": "To prepare plant layout for workshop.",
+            "topics": [
+              "To prepare plant layout for workshop."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "To prepare job a by using files and hacksaw.",
+            "contact_hours": 12,
+            "topic_lines": [
+              "To prepare job a by using files and hacksaw."
+            ],
+            "topics_text": "To prepare job a by using files and hacksaw.",
+            "topics": [
+              "To prepare job a by using files and hacksaw."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Hands on practice of punch and hammer.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Hands on practice of punch and hammer."
+            ],
+            "topics_text": "Hands on practice of punch and hammer.",
+            "topics": [
+              "Hands on practice of punch and hammer."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Demonstration of carpentry tools.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Demonstration of carpentry tools."
+            ],
+            "topics_text": "Demonstration of carpentry tools.",
+            "topics": [
+              "Demonstration of carpentry tools."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "To prepare carpentry job (wood material) as per given diagram.",
+            "contact_hours": 10,
+            "topic_lines": [
+              "To prepare carpentry job (wood material) as per given diagram."
+            ],
+            "topics_text": "To prepare carpentry job (wood material) as per given diagram.",
+            "topics": [
+              "To prepare carpentry job (wood material) as per given diagram."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "To. Perform experiment on spot welding.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To. Perform experiment on spot welding."
+            ],
+            "topics_text": "To. Perform experiment on spot welding.",
+            "topics": [
+              "To. Perform experiment on spot welding."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "To perform experiment on arc welding.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To perform experiment on arc welding."
+            ],
+            "topics_text": "To perform experiment on arc welding.",
+            "topics": [
+              "To perform experiment on arc welding."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "To perform experiment on tin smithy.",
+            "contact_hours": 6,
+            "topic_lines": [
+              "To perform experiment on tin smithy."
+            ],
+            "topics_text": "To perform experiment on tin smithy.",
+            "topics": [
+              "To perform experiment on tin smithy."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "To demonstration of plumbing tools.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To demonstration of plumbing tools."
+            ],
+            "topics_text": "To demonstration of plumbing tools.",
+            "topics": [
+              "To demonstration of plumbing tools."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Hands on the practice of power tools.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Hands on the practice of power tools."
+            ],
+            "topics_text": "Hands on the practice of power tools.",
+            "topics": [
+              "Hands on the practice of power tools."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "To interpret the use of drilling machine and to prepare job.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To interpret the use of drilling machine and to prepare job.",
+              "Total Hours 56"
+            ],
+            "topics_text": "To interpret the use of drilling machine and to prepare job. Total Hours 56",
+            "topics": [
+              "To interpret the use of drilling machine and to prepare job.",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Workshop Practice, Workshop Practice, H.S. Bawa, McGraw Hill , 2009"
+        ],
+        "textbooks": [
+          "Workshop Technology, Kr Vinayaka, Sapna Book House, 2015 References:",
+          "Workshop Practice, Workshop Practice, H.S. Bawa, McGraw Hill , 2009"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.aboutmech.com/2020/09/workshop-technology.html"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5225,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE   MECHANICAL WORKSHOP\nCOURSE CODE     09ME2102\nCOURSE CREDITS  2\n\nObjective:\n 1  Workshop training is a pillar of the real industrial situation which supports to grow and\n     boost relevant technical hand skills required by the technician working in the various\n     engineering trades and workshops. Irrespective of branch the use of workshop performs in\n    day to day industrial as well domestic life helps to soften the problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Choice the appropriate tools essential for definite operation.\n 2  Know applications of hand tools and power tools.\n 3  Know the safety actions required to be taken while using the tools.\n 4  Understand the processes of machine tools\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            4         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     To know and gain worth of mechanical engineering in diverse   2\n                fields of engineering\n           To know and gain worth of mechanical engineering in diverse fields\n              of engineering\n     2     To prepare plant layout for workshop.                       4\n           To prepare plant layout for workshop.\n     3     To prepare job a by using files and hacksaw.                  12\n           To prepare job a by using files and hacksaw.\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4     Hands on practice of punch and hammer.                    4\n            Hands on practice of punch and hammer.\n     5      Demonstration of carpentry tools.                           2\n             Demonstration of carpentry tools.\n     6     To prepare carpentry job (wood material) as per given diagram. 10\n           To prepare carpentry job (wood material) as per given diagram.\n     7      To. Perform experiment on spot welding.                     4\n             To. Perform experiment on spot welding.\n     8     To perform experiment on arc welding.                      4\n           To perform experiment on arc welding.\n     9     To perform experiment on tin smithy.                       6\n           To perform experiment on tin smithy.\n     10     To demonstration of plumbing tools.                        2\n           To demonstration of plumbing tools.\n     11     Hands on the practice of power tools.                        2\n            Hands on the practice of power tools.\n     12     To interpret the use of drilling machine and to prepare job.     4\n           To interpret the use of drilling machine and to prepare job.\n                               Total Hours                       56\n\nTextbook :\n 1  Workshop Technology, Kr Vinayaka, Sapna Book House, 2015\n\nReferences:\n 1  Workshop Practice, Workshop Practice, H.S. Bawa, McGraw Hill , 2009\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    28.00         32.00         40.00\n\nInstructional Method:\n 1  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory.\n 2  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 1  https://www.aboutmech.com/2020/09/workshop-technology.html\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "602ba0c96a82f152658300948693d54e46287fdd2563e66b3f5f1439a3976092"
+    }
+  ],
+  "build_summary": {
+    "extracted": 8,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

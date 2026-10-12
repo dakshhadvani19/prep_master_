@@ -1,0 +1,1641 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 47,
+    "course_name": "Diploma Electrical Engineering",
+    "output_slug": "Electrical_Engineering"
+  },
+  "semester": 1,
+  "subject_count": 9,
+  "subjects": [
+    {
+      "subject_id": "47009719210101",
+      "subject_name": "Applied Physics",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 1,
+      "subject_code": "09GS2101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09GS2101_AP.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09GS2101 - APPLIED PHYSICS (.pdf",
+      "expected_pdf_sha256": "d2405b14d027f9b2b8c203aea91c41e9723e9b917198c0f189c7f8726f01a1e4",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09GS2101",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "Basic knowledge of science."
+      },
+      "objectives": [
+        "To prepare the students to have a basic knowledge of fundamental quantities, their units and measurement. To study various cases under laws of motion. To have knowledge of various properties of maters also to have knowledge of fundamentals of electricity and magnetism and to have knowledge about Light and Sound Waves. Credits Earned: 3 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able 1. To measure dimensions of various materials and compare units. 2. To understand and relate phenomena with the help of laws of motion. 3. To identify various states of materials and their relevance. 4. To understand the concept of Electricity and Magnetism and its application in daily life. 5. To get Knowledge about Light and Sound Waves and their applications."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Marks Term Theory Tutorial Practical ESE IA CSE Viva Work 2 0 2 3 50 30 20 25 25 150 [PAGE 2] Syllabus for Diploma Engineering All Branches",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "units- CGS, MKS and SI, introduction to accuracy, precision and",
+            "contact_hours": null,
+            "topic_lines": [
+              "4 20% errors, types of errors, error analysis, Numerical on Error",
+              "Laws of Motion",
+              "Inertia, Newton's first law of motion, momentum, Newton’s",
+              "2 second law of motion, conservation of momentum, Newton's 4 20%",
+              "third law of motion, Numerical on above topics",
+              "Properties of Matter",
+              "Stress & strain along with their types, Hooke's law and modulus",
+              "3 of elasticity-Young, bulk and modulus of rigidity, Viscosity, 6 20%",
+              "newton's law of viscosity, types of flows, Reynold's number,",
+              "surface tension and capillary action",
+              "Electro-Magnetism",
+              "Current electricity: current, EMF and Ohm's law, resistance,",
+              "series and parallel, Numerical on above topics 4",
+              "Magnetism: Magnetic field and properties, electro-magnetic 6 20%",
+              "induction-self-inductance and mutual inductance, faraday’s law,",
+              "applications-transformer",
+              "Waves: Light & Sound",
+              "Light: Properties, Reflection, Refraction, Snell’s law, Dispersion",
+              "5 of light 8 20%",
+              "Sound: Characteristics – (Amplitude, Wavelength, Crest,",
+              "Trough, Frequency, Time Period), Definition of Resonance with",
+              "Examples, Formula for Velocity of Sound and factors affecting",
+              "it, Ultrasonic Sound Waves – Uses, properties, Applications,",
+              "Radioactive rays - Properties and uses of Alpha, Beta and",
+              "Gamma particles.",
+              "Syllabus for Diploma Engineering",
+              "All Branches"
+            ],
+            "topics_text": "4 20% errors, types of errors, error analysis, Numerical on Error Laws of Motion Inertia, Newton's first law of motion, momentum, Newton’s 2 second law of motion, conservation of momentum, Newton's 4 20% third law of motion, Numerical on above topics Properties of Matter Stress & strain along with their types, Hooke's law and modulus 3 of elasticity-Young, bulk and modulus of rigidity, Viscosity, 6 20% newton's law of viscosity, types of flows, Reynold's number, surface tension and capillary action Electro-Magnetism Current electricity: current, EMF and Ohm's law, resistance, series and parallel, Numerical on above topics 4 Magnetism: Magnetic field and properties, electro-magnetic 6 20% induction-self-inductance and mutual inductance, faraday’s law, applications-transformer Waves: Light & Sound Light: Properties, Reflection, Refraction, Snell’s law, Dispersion 5 of light 8 20% Sound: Characteristics – (Amplitude, Wavelength, Crest, Trough, Frequency, Time Period), Definition of Resonance with Examples, Formula for Velocity of Sound and factors affecting it, Ultrasonic Sound Waves – Uses, properties, Applications, Radioactive rays - Properties and uses of Alpha, Beta and Gamma particles. Syllabus for Diploma Engineering All Branches",
+            "topics": [
+              "4 20% errors, types of errors, error analysis, Numerical on Error",
+              "Laws of Motion",
+              "Inertia, Newton's first law of motion, momentum, Newton’s",
+              "2 second law of motion, conservation of momentum, Newton's 4 20%",
+              "third law of motion, Numerical on above topics",
+              "Properties of Matter",
+              "Stress & strain along with their types, Hooke's law and modulus",
+              "3 of elasticity-Young, bulk and modulus of rigidity, Viscosity, 6 20%",
+              "newton's law of viscosity, types of flows, Reynold's number,",
+              "surface tension and capillary action",
+              "Electro-Magnetism",
+              "Current electricity: current, EMF and Ohm's law, resistance,",
+              "series and parallel, Numerical on above topics 4",
+              "Magnetism: Magnetic field and properties, electro-magnetic 6 20%",
+              "induction-self-inductance and mutual inductance, faraday’s law,",
+              "applications-transformer",
+              "Waves: Light & Sound",
+              "Light: Properties, Reflection, Refraction, Snell’s law, Dispersion",
+              "5 of light 8 20%",
+              "Sound: Characteristics – (Amplitude, Wavelength, Crest,",
+              "Trough, Frequency, Time Period), Definition of Resonance with",
+              "Examples, Formula for Velocity of Sound and factors affecting",
+              "it, Ultrasonic Sound Waves – Uses, properties, Applications,",
+              "Radioactive rays - Properties and uses of Alpha, Beta and",
+              "Gamma particles.",
+              "Syllabus for Diploma Engineering",
+              "All Branches"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 7487,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                                                 All Branches\n\n\n\n\n                              Semester – I/II\n\n                        Subject Name: Applied Physics\n\n                          Subject Code: 09GS2101\n\n\n\nDiploma Branches in which this subject is offered: Mechanical Engineering, Electrical\nEngineering, Civil Engineering, Computer Engineering, Information and Communication\nTechnology, Chemical Engineering\n\n\nObjective: To prepare the students to have a basic knowledge of fundamental quantities,\ntheir units and measurement. To study various cases under laws of motion. To have\nknowledge of various properties of maters also to have knowledge of fundamentals of\nelectricity and magnetism and to have knowledge about Light and Sound Waves.\n\n\nCredits Earned: 3 Credits\n\nCourse Outcomes: After completion of this course, student will be able\n    1. To measure dimensions of various materials and compare units.\n    2. To understand and relate phenomena with the help of laws of motion.\n    3. To identify various states of materials and their relevance.\n    4. To understand the concept of Electricity and Magnetism and its application in daily\n          life.\n    5. To get Knowledge about Light and Sound Waves and their applications.\n\nPre-requisite of course: Basic knowledge of science.\n\n                    Teaching and Examination Scheme\n\n                                                           Tutorial/ Practical\n Teaching Scheme (Hours)           Theory Marks        Marks        Total                              Credits\n                                                                  Marks                                                        Term\n Theory  Tutorial  Practical        ESE   IA  CSE      Viva                                                     Work\n   2       0       2       3     50   30    20      25       25      150"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                                                       All Branches\n\n\nContents:\n  Unit\n                              Unit title and content                     Hours    Weightage   No.\n          Units, Dimensions and Measurements\n           Definition of unit, Fundamental and Derived units, systems of\n    1      units- CGS, MKS and SI, introduction to accuracy, precision and\n                                                                       4        20%            errors, types of errors, error analysis, Numerical on Error\n\n\n\n       Laws of Motion\n            Inertia, Newton's  first law of motion, momentum, Newton’s\n    2     second law of motion, conservation of momentum, Newton's                                                                       4        20%\n            third law of motion, Numerical on above topics\n\n\n         Properties of Matter\n           Stress & strain along with their types, Hooke's law and modulus\n    3     of elasticity-Young, bulk and modulus of rigidity, Viscosity,                                                                       6        20%\n          newton's law of viscosity, types of flows, Reynold's number,\n           surface tension and capillary action\n\n         Electro-Magnetism\n          Current electricity: current, EMF and Ohm's law, resistance,\n            series and parallel, Numerical on above topics    4\n         Magnetism: Magnetic  field and  properties, electro-magnetic      6        20%\n           induction-self-inductance and mutual inductance, faraday’s law,\n           applications-transformer\n\n\n        Waves: Light & Sound\n           Light: Properties, Reflection, Refraction, Snell’s law, Dispersion\n    5           of light                                                                       8        20%\n\n         Sound:  Characteristics  –  (Amplitude,  Wavelength,  Crest,\n          Trough, Frequency, Time Period), Definition of Resonance with\n          Examples, Formula for Velocity of Sound and factors affecting\n                 it, Ultrasonic Sound Waves – Uses, properties, Applications,\n          Radioactive rays -   Properties and uses of Alpha, Beta and\n       Gamma particles."
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                                                       All Branches\n\n\n\nSuggested List of Experiments:\n\n\n   Sr.                                                                        Contact\n                      Name of Topics  No.                                                                  Hours\n\n\n          Vernier Calipers\n   1    To know the use of the Vernier Calipers and to measure the length, width and height      2\n          of the given rectangular block.\n\n         Micrometer Screw gauge   2                                                                        2\n        To measure the diameter of the small sphere using micrometer screw gauge.\n\n   3    To determine the value of acceleration due to gravity by using simple pendulum          2\n\n   4    To measure co- efficient of Static Friction of a given Surface                        2\n\n        To determine Young’s Modulus of elasticity of a given wire using Searle’s\n   5                                                                        2\n          Apparatus\n\n        To determine surface tension of a liquid by capillary tube using travelling\n   6                                                                        2\n          microscope\n\n   7    To calculate refractive index of material of prism using Spectrometer Device            2\n\n   8     Demonstrate sound waves creating vibrations and observing their effect                2\n\n   9    To verify Ohm’s Law                                                    2\n\n   10   To study Resistors in series                                                2\n\n   11   To study Resistors in parallel                                               2\n\n   12   To verify Faraday’s Law                                                  2\n\n                                        Total                                        24\n\n\n\n     Instructional Method:\n      a.  The course delivery method will depend upon the requirement of content and need of students.\n        The teacher in addition to conventional teaching method by black board, may also use any of\n          tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n\n      b.  The internal evaluation will be done on the basis of continuous evaluation of\n          students in the laboratory and class-room.\n\n      c.   Practical examination will be conducted at the end of semester for evaluation of\n         performance of students in laboratory.\n\n      d.  Students will use supplementary resources such as online videos, NPTEL videos, e-courses,\n          Virtual Laboratory"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                                                                 All Branches\n\n\nReferences:\n     1.  Halliday, Jearl Walker, and Robert Resnick, \"Fundamentals of Physics\", (New York and London:\n       John Wiley & Sons, 1962)\n     2.  Physics textbooks NCERT\n     3.  P.G. Bhandarkar, “Applied physics”, Nirali Publication\n     4.  R.K. Gaur and S.I. Gupta, “Engg. Physics” Dhanpat Rai & Sons, Delhi.\n\n\n\nSupplementary Resources:\n     1. http://nptel.ac.in/courses/115106090/15\n\n     2. http://nptel.ac.in/courses/115104088/\n     3. http://hyperphysics.phy-astr.gsu.edu/hbase/index.html\n\n     4. http://vlab.amrita.edu/index.php"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "d2405b14d027f9b2b8c203aea91c41e9723e9b917198c0f189c7f8726f01a1e4"
+    },
+    {
+      "subject_id": "47009911010101",
+      "subject_name": "Bharatiya Knowledge System",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 1,
+      "subject_code": "09IK0101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09IK0101_BKS.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09IK0101 - BHARATIYA KNOWLEDGE SYSTEM (.pdf",
+      "expected_pdf_sha256": "ab25cf6633ddf84ceaddc9a8dec59b013d5cf9462d6ec12c21bb997236fc56b6",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09IK0101",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "• Educate students with the foundational texts and classifications of Bharatiya Knowledge Systems and their historical evolution. • Explore India’s ancient contributions to mathematics, language sciences and astronomy. • Highlight technological and architectural advancements in ancient Bharat. • Introduce philosophical concepts such as life stages, life goals, karma, rebirth, and the quest for Moksha in Indian tradition. Credits Earned: 2"
+      ],
+      "course_outcomes": [
+        "Students will be able to • Describe the structure of Bharatiya Knowledge Systems and recognize key philosophical and literary traditions. • Explain ancient Indian developments in mathematics, astronomy, and their relevance to modern science. • Identify technological and architectural innovations rooted in ancient Indian practices. • Express core Indian philosophies related to the purpose of life, spiritual evolution, and ethical living."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 0 0 2 50 30 20 - - 100 [PAGE 2] Syllabus for Diploma Engineering All Branches",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Bharatiya Knowledge Systems (BKS)",
+            "contact_hours": 6,
+            "topic_lines": [
+              "1.1 Definition and classification of BKS",
+              "1.2 Caturdaśa-Vidyāsthāna",
+              "1.3 The Vedic Corps & Philosophical Systems",
+              "1.3.1 Introduction to the Four Vedas",
+              "1.3.2 Vedāṅgas",
+              "1.3.3 Vedic School of Philosophy",
+              "1.4 Wisdom through the Ages",
+              "1.4.1 Purāṇas – An Encyclopaedical Work",
+              "1.4.2 Itihāsa as a Source of Wisdom"
+            ],
+            "topics_text": "1.1 Definition and classification of BKS 1.2 Caturdaśa-Vidyāsthāna 1.3 The Vedic Corps & Philosophical Systems 1.3.1 Introduction to the Four Vedas 1.3.2 Vedāṅgas 1.3.3 Vedic School of Philosophy 1.4 Wisdom through the Ages 1.4.1 Purāṇas – An Encyclopaedical Work 1.4.2 Itihāsa as a Source of Wisdom",
+            "topics": [
+              "1.1 Definition and classification of BKS",
+              "1.2 Caturdaśa-Vidyāsthāna",
+              "1.3 The Vedic Corps & Philosophical Systems",
+              "1.3.1 Introduction to the Four Vedas",
+              "1.3.2 Vedāṅgas",
+              "1.3.3 Vedic School of Philosophy",
+              "1.4 Wisdom through the Ages",
+              "1.4.1 Purāṇas – An Encyclopaedical Work",
+              "1.4.2 Itihāsa as a Source of Wisdom"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Science and Mathematics in Ancient Bharat",
+            "contact_hours": 8,
+            "topic_lines": [
+              "2.1 Indian Language Sciences",
+              "2.1.1 Components of a Language",
+              "2.1.2 Sanskrit and Role of Sanskrit in Natural Language Processing",
+              "2.2 Number System and Units of Measurement",
+              "2.2.1 Number System in India – Historical Evidence",
+              "2.2.2 Measurement for Time, Distance and Weight",
+              "2.3 Mathematics",
+              "2.3.1 An overview of the Development of Mathematics in India",
+              "2.3.2 Arithmetic, Geometry, Trigonometry and Algebra in Ancient",
+              "texts",
+              "2.4 Astronomy",
+              "2.4.1 Vedanga Jyotish",
+              "2.4.2 Measuring Time & Calendar"
+            ],
+            "topics_text": "2.1 Indian Language Sciences 2.1.1 Components of a Language 2.1.2 Sanskrit and Role of Sanskrit in Natural Language Processing 2.2 Number System and Units of Measurement 2.2.1 Number System in India – Historical Evidence 2.2.2 Measurement for Time, Distance and Weight 2.3 Mathematics 2.3.1 An overview of the Development of Mathematics in India 2.3.2 Arithmetic, Geometry, Trigonometry and Algebra in Ancient texts 2.4 Astronomy 2.4.1 Vedanga Jyotish 2.4.2 Measuring Time & Calendar",
+            "topics": [
+              "2.1 Indian Language Sciences",
+              "2.1.1 Components of a Language",
+              "2.1.2 Sanskrit and Role of Sanskrit in Natural Language Processing",
+              "2.2 Number System and Units of Measurement",
+              "2.2.1 Number System in India – Historical Evidence",
+              "2.2.2 Measurement for Time, Distance and Weight",
+              "2.3 Mathematics",
+              "2.3.1 An overview of the Development of Mathematics in India",
+              "2.3.2 Arithmetic, Geometry, Trigonometry and Algebra in Ancient",
+              "texts",
+              "2.4 Astronomy",
+              "2.4.1 Vedanga Jyotish",
+              "2.4.2 Measuring Time & Calendar"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Engineering, Technology and Architecture in Ancient Bharat",
+            "contact_hours": 12,
+            "topic_lines": [
+              "3.1 Metallurgy and Textile Technology",
+              "3.1.1 Metals and Metalworking Technology",
+              "3.1.2 Iron and Steel Technology",
+              "3.1.3 Textile and Dyeing – Indian Specialities",
+              "3.2 Irrigation and Water Management",
+              "3.2.1 Harappan and Traditional Water Management System of Gujarat",
+              "3.2.2 Historical Sites – Sringeverpur, South Indian Water Management",
+              "System, Rain Water Harvesting System",
+              "3.3 Sacred Ecology and Environment",
+              "3.3.1 Sacred Hills, Mountains and Forest",
+              "Syllabus for Diploma Engineering",
+              "All Branches",
+              "3.3.2 Nakshatrara Gyaan and Agriculture",
+              "3.3.3 Forest Management and Urban Planning",
+              "3.4 Transportation",
+              "3.4.1 Modes of Transportations and Reforms",
+              "3.4.2 Development of Trading Techniques",
+              "3.5 Vastu sastra – The Science of Architecture",
+              "3.5.1 Town Planning",
+              "3.5.2 Civil Architecture",
+              "3.5.3 Temple Architecture"
+            ],
+            "topics_text": "3.1 Metallurgy and Textile Technology 3.1.1 Metals and Metalworking Technology 3.1.2 Iron and Steel Technology 3.1.3 Textile and Dyeing – Indian Specialities 3.2 Irrigation and Water Management 3.2.1 Harappan and Traditional Water Management System of Gujarat 3.2.2 Historical Sites – Sringeverpur, South Indian Water Management System, Rain Water Harvesting System 3.3 Sacred Ecology and Environment 3.3.1 Sacred Hills, Mountains and Forest Syllabus for Diploma Engineering All Branches 3.3.2 Nakshatrara Gyaan and Agriculture 3.3.3 Forest Management and Urban Planning 3.4 Transportation 3.4.1 Modes of Transportations and Reforms 3.4.2 Development of Trading Techniques 3.5 Vastu sastra – The Science of Architecture 3.5.1 Town Planning 3.5.2 Civil Architecture 3.5.3 Temple Architecture",
+            "topics": [
+              "3.1 Metallurgy and Textile Technology",
+              "3.1.1 Metals and Metalworking Technology",
+              "3.1.2 Iron and Steel Technology",
+              "3.1.3 Textile and Dyeing – Indian Specialities",
+              "3.2 Irrigation and Water Management",
+              "3.2.1 Harappan and Traditional Water Management System of Gujarat",
+              "3.2.2 Historical Sites – Sringeverpur, South Indian Water Management",
+              "System, Rain Water Harvesting System",
+              "3.3 Sacred Ecology and Environment",
+              "3.3.1 Sacred Hills, Mountains and Forest",
+              "Syllabus for Diploma Engineering",
+              "All Branches",
+              "3.3.2 Nakshatrara Gyaan and Agriculture",
+              "3.3.3 Forest Management and Urban Planning",
+              "3.4 Transportation",
+              "3.4.1 Modes of Transportations and Reforms",
+              "3.4.2 Development of Trading Techniques",
+              "3.5 Vastu sastra – The Science of Architecture",
+              "3.5.1 Town Planning",
+              "3.5.2 Civil Architecture",
+              "3.5.3 Temple Architecture"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Concepts of Life in Ancient Bharat",
+            "contact_hours": 2,
+            "topic_lines": [
+              "4.1 Four Stages of Life (Ashramas)",
+              "4.2 Four Goals of Human Life (Purusharthas)",
+              "4.3 Karma & Rebirth",
+              "4.4 Striving for Moksha"
+            ],
+            "topics_text": "4.1 Four Stages of Life (Ashramas) 4.2 Four Goals of Human Life (Purusharthas) 4.3 Karma & Rebirth 4.4 Striving for Moksha",
+            "topics": [
+              "4.1 Four Stages of Life (Ashramas)",
+              "4.2 Four Goals of Human Life (Purusharthas)",
+              "4.3 Karma & Rebirth",
+              "4.4 Striving for Moksha"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [
+          "Introduction to Indian B. Mahadevan, Vinayak PHI Learning Pvt. Knowledge System: Rajat Bhat, Nagendra Ltd. Concepts and Applications Pavana",
+          "Indian Knowledge Systems: Kapil Kapoor and D. K. Print World Volume I and II Avadhesh Kumar Singh Ltd.",
+          "Ancient India R. C. Majumdar Motilal Banarsidass",
+          "IKS: The Knowledge system Prof. Bhag Chand Garuda Prakashan of Bharata Chauhan",
+          "India’s Glorious Scientific Suresh Soni Ocean Books Pvt. Tradition Ltd.",
+          "Traditional Knowledge Amit Jha Atlantic System in India",
+          "Pride of India: A Glimpse - Samskrita Bharati into India’s Scientific Heritage"
+        ],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 7455,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                          All Branches\n\n\n                                    Semester – I\n\n                      Subject Name: Bharatiya Knowledge System\n\n                                Subject Code: 09IK0101\n\n     Diploma Branches in which this subject is offered: All Branches\n\n      Objective:\n               •  Educate students with the foundational  texts and  classifications of\n                   Bharatiya Knowledge Systems and their historical evolution.\n               •  Explore India’s ancient contributions to mathematics, language sciences\n                 and astronomy.\n               •  Highlight  technological and  architectural advancements  in  ancient\n                    Bharat.\n               •  Introduce philosophical concepts such as life stages, life goals, karma,\n                       rebirth, and the quest for Moksha in Indian tradition.\n\n      Credits Earned: 2\n\n     Course Outcomes: Students will be able to\n               •  Describe the structure of Bharatiya Knowledge Systems and recognize\n                 key philosophical and literary traditions.\n               •  Explain ancient Indian developments in mathematics, astronomy, and\n                       their relevance to modern science.\n               •   Identify technological and architectural innovations rooted in ancient\n                    Indian practices.\n               •  Express core Indian philosophies related to the purpose of life, spiritual\n                     evolution, and ethical living.\n\n\n\n      Pre-requisite of course: NA\n\n\n\n                         Teaching and Examination Scheme\n                                                                         Tutorial/ Practical\n  Teaching Scheme (Hours)                 Theory Marks\n                                                            Marks          Total\n                                Credits\n                                                             Term    Marks\nTheory   Tutorial   Practical         ESE   IA    CSE     Viva\n                                                                 work\n\n  2       0        0        2     50    30      20           -             -       100"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                          All Branches\n\n\n     Contents\n\n\n                                                                          LectureUnit                               Topics\n                                                                          (Hours)\n 1    Introduction to Bharatiya Knowledge Systems (BKS)                        6\n          1.1 Definition and classification of BKS\n          1.2 Caturdaśa-Vidyāsthāna\n          1.3 The Vedic Corps & Philosophical Systems\n               1.3.1 Introduction to the Four Vedas\n               1.3.2 Vedāṅgas\n               1.3.3 Vedic School of Philosophy\n          1.4 Wisdom through the Ages\n               1.4.1 Purāṇas – An Encyclopaedical Work\n               1.4.2 Itihāsa as a Source of Wisdom\n\n  2    Science and Mathematics in Ancient Bharat                               8\n          2.1 Indian Language Sciences\n               2.1.1 Components of a Language\n               2.1.2 Sanskrit and Role of Sanskrit in Natural Language Processing\n          2.2 Number System and Units of Measurement\n               2.2.1 Number System in India – Historical Evidence\n               2.2.2 Measurement for Time, Distance and Weight\n          2.3 Mathematics\n               2.3.1 An overview of the Development of Mathematics in India\n               2.3.2 Arithmetic, Geometry, Trigonometry and Algebra in Ancient\n                texts\n          2.4 Astronomy\n               2.4.1 Vedanga Jyotish\n               2.4.2 Measuring Time & Calendar\n\n  3    Engineering, Technology and Architecture in Ancient Bharat                12\n          3.1 Metallurgy and Textile Technology\n               3.1.1 Metals and Metalworking Technology\n               3.1.2 Iron and Steel Technology\n               3.1.3 Textile and Dyeing – Indian Specialities\n          3.2 Irrigation and Water Management\n               3.2.1 Harappan and Traditional Water Management System of Gujarat\n               3.2.2 Historical Sites – Sringeverpur, South Indian Water Management\n             System, Rain Water Harvesting System\n          3.3 Sacred Ecology and Environment\n               3.3.1 Sacred Hills, Mountains and Forest"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                        All Branches\n\n\n             3.3.2 Nakshatrara Gyaan and Agriculture\n             3.3.3 Forest Management and Urban Planning\n        3.4 Transportation\n             3.4.1 Modes of Transportations and Reforms\n             3.4.2 Development of Trading Techniques\n        3.5 Vastu sastra – The Science of Architecture\n             3.5.1 Town Planning\n             3.5.2 Civil Architecture\n             3.5.3 Temple Architecture\n\n\n4   Concepts of Life in Ancient Bharat                                       2\n        4.1 Four Stages of Life (Ashramas)\n        4.2 Four Goals of Human Life (Purusharthas)\n        4.3 Karma & Rebirth\n        4.4 Striving for Moksha\n\n\n\n    Suggested Theory distribution:\n\n   The suggested theory distribution as per Bloom’s taxonomy is as per follows. This\n     distribution serves as guidelines for teachers and students to achieve effective teaching-\n    learning process.\n\n\n                   Distribution of Theory for course delivery and evaluation\n\n      Remember      Understand    Apply     Analyse     Evaluate     Create\n\n       40%         40%       20%     0%      0%      0%\n\n\n\n    Instructional Method:\n\n     a. The course delivery method will depend upon the requirement of content and need of\n    students. The teacher in addition to conventional teaching method, may also use any of\n    tools such as demonstration, role play, Quiz, MOOCs etc.\n     b. The internal evaluation will be done on the basis of continuous evaluation of students\n    in the class-room.\n     c. Students will use supplementary resources such as online videos, videos and e-\n    courses."
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                                    All Branches\n\n\nRecommended Books:\n\n  Sr.           Title of Books              Author             Publication\n No.\n  1     Introduction    to    Indian  B. Mahadevan, Vinayak  PHI Learning  Pvt.\n       Knowledge        System:  Rajat  Bhat,  Nagendra  Ltd.\n        Concepts and Applications    Pavana\n  2     Indian Knowledge Systems:  Kapil   Kapoor   and  D. K. Print World\n       Volume I and II            Avadhesh Kumar Singh  Ltd.\n  3    Ancient India               R. C. Majumdar          Motilal Banarsidass\n  4    IKS: The Knowledge system  Prof.   Bhag   Chand  Garuda Prakashan\n        of Bharata                Chauhan\n  5     India’s  Glorious  Scientific  Suresh Soni           Ocean Books  Pvt.\n         Tradition                                               Ltd.\n  6     Traditional     Knowledge  Amit Jha                 Atlantic\n       System in India\n  7     Pride of India: A Glimpse   -                       Samskrita Bharati\n         into    India’s    Scientific\n        Heritage\n\n\nSupplementary Resources:\n\n    1.  https://iksindia.org/\n    2.  https://www.youtube.com/@IKS_Media_MoE\n    3.  https://onlinecourses.swayam2.ac.in/imb23_mg53/preview\n    4.  https://onlinecourses.swayam2.ac.in/ntr25_ed18/preview"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "ab25cf6633ddf84ceaddc9a8dec59b013d5cf9462d6ec12c21bb997236fc56b6"
+    },
+    {
+      "subject_id": "47091912010301",
+      "subject_name": "COMMUNICATION SKILLS",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 1,
+      "subject_code": "09SL0103",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09SL0103-CS.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09SL0103 - COMMUNICATION SKILLS (.pdf",
+      "expected_pdf_sha256": "6a7c1b4a165cc5ef0e226f8eb6242067934a709d04a99df8e24f288da58c2a4c",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMMUNICATION SKILLS",
+        "course_code": "09SL0103",
+        "semester_label": "1",
+        "credits": 3,
+        "prerequisite": "Coming soon..."
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Reading Skills",
+            "contact_hours": 0,
+            "topic_lines": [
+              "1. Reading & Structure (Tenses, Parts of Speech, Types of",
+              "Sentences, Subject-Verb Agreement, Modals , Active-Passive),",
+              "Techniques of Reading, Reading Different Types of Texts (Essays,",
+              "Articles, Stories, Reports, Surveys, Reference Books), Reading",
+              "Comprehension Passages (8passages)"
+            ],
+            "topics_text": "1. Reading & Structure (Tenses, Parts of Speech, Types of Sentences, Subject-Verb Agreement, Modals , Active-Passive), Techniques of Reading, Reading Different Types of Texts (Essays, Articles, Stories, Reports, Surveys, Reference Books), Reading Comprehension Passages (8passages)",
+            "topics": [
+              "1. Reading & Structure (Tenses, Parts of Speech, Types of",
+              "Sentences, Subject-Verb Agreement, Modals , Active-Passive),",
+              "Techniques of Reading, Reading Different Types of Texts (Essays,",
+              "Articles, Stories, Reports, Surveys, Reference Books), Reading",
+              "Comprehension Passages (8passages)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Introduction to Writing Skills",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Writing for Different Purposes, Applications &Emails,",
+              "Assignments, Event Reports (Industrial Visits, In-House Events,",
+              "Participation in External Events)"
+            ],
+            "topics_text": "Writing for Different Purposes, Applications &Emails, Assignments, Event Reports (Industrial Visits, In-House Events, Participation in External Events)",
+            "topics": [
+              "Writing for Different Purposes, Applications &Emails,",
+              "Assignments, Event Reports (Industrial Visits, In-House Events,",
+              "Participation in External Events)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Introduction to Speaking Skills",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Greetings, Introducing Self & Peers, Asking and Sharing",
+              "Information, Sharing/talking about likes and dislikes/preferences,",
+              "Describing Events/Experiences/Objects, Discussions, Expressing",
+              "Views, Facing Viva Voce"
+            ],
+            "topics_text": "Greetings, Introducing Self & Peers, Asking and Sharing Information, Sharing/talking about likes and dislikes/preferences, Describing Events/Experiences/Objects, Discussions, Expressing Views, Facing Viva Voce",
+            "topics": [
+              "Greetings, Introducing Self & Peers, Asking and Sharing",
+              "Information, Sharing/talking about likes and dislikes/preferences,",
+              "Describing Events/Experiences/Objects, Discussions, Expressing",
+              "Views, Facing Viva Voce"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Effective Presentation Skills",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Introduction to Effective Presentation Skills, Preparing the",
+              "Presentation (Collection of Data/Information, exploring the topic),",
+              "Using ICT in the Presentation, Getting Ready for the Presentation,",
+              "Effective Body Language, Effective Pronunciation, Interacting with",
+              "Audience (Q & A), Practice (presentation with video recording),",
+              "Feedback and Suggestions",
+              "Total Hours 0"
+            ],
+            "topics_text": "Introduction to Effective Presentation Skills, Preparing the Presentation (Collection of Data/Information, exploring the topic), Using ICT in the Presentation, Getting Ready for the Presentation, Effective Body Language, Effective Pronunciation, Interacting with Audience (Q & A), Practice (presentation with video recording), Feedback and Suggestions Total Hours 0",
+            "topics": [
+              "Introduction to Effective Presentation Skills, Preparing the",
+              "Presentation (Collection of Data/Information, exploring the topic),",
+              "Using ICT in the Presentation, Getting Ready for the Presentation,",
+              "Effective Body Language, Effective Pronunciation, Interacting with",
+              "Audience (Q & A), Practice (presentation with video recording),",
+              "Feedback and Suggestions",
+              "Total Hours 0"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Technical Communication: Principles and Practice by Meenakshi Raman (Oxford)",
+          "Lata and Kumar, Communication Skills, OUP, New Delhi, 2018",
+          "Ramesh and Ramesh, The Ace of Soft Skills, Pearson, UP, 2019"
+        ],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 3357,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE        DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (COMPUTER ENGINEERING)\nSEMESTER         1\nCOURSE TITLE   COMMUNICATION SKILLS\nCOURSE CODE     09SL0103\nCOURSE CREDITS  3\n\nObjective:\n\nCourse Outcomes: After completion of this course, student will be able to:\n\nPre-requisite of course:Coming soon...\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                                  Tutorial                                       Topics    Unit                                                          Hours\n     1      Introduction to Reading Skills                              0\n                1. Reading & Structure (Tenses, Parts of Speech, Types of\n              Sentences, Subject-Verb Agreement, Modals , Active-Passive),\n             Techniques of Reading, Reading Different Types of Texts (Essays,\n                Articles, Stories, Reports, Surveys, Reference Books), Reading\n            Comprehension Passages (8passages)\n     2      Introduction to Writing Skills                              0\n             Writing for Different Purposes, Applications &Emails,\n             Assignments, Event Reports (Industrial Visits, In-House Events,\n               Participation in External Events)\n     3      Introduction to Speaking Skills                             0\n              Greetings, Introducing Self & Peers, Asking and Sharing\n              Information, Sharing/talking about likes and dislikes/preferences,\n              Describing Events/Experiences/Objects, Discussions, Expressing\n             Views, Facing Viva Voce\n     4       Effective Presentation Skills                                0\n               Introduction to Effective Presentation Skills, Preparing the\n               Presentation (Collection of Data/Information, exploring the topic),\n             Using ICT in the Presentation, Getting Ready for the Presentation,\n               Effective Body Language, Effective Pronunciation, Interacting with\n            Audience (Q & A), Practice (presentation with video recording),\n            Feedback and Suggestions\n                               Total Hours                       0\n\n\n\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "References:\n 1  Technical Communication: Principles and Practice by Meenakshi Raman (Oxford)\n 2  Lata and Kumar, Communication Skills, OUP, New Delhi, 2018\n 3  Ramesh and Ramesh, The Ace of Soft Skills, Pearson, UP, 2019\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n\n\nInstructional Method:\n\nSupplementary Resources:\n\n\n\n\n\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "6a7c1b4a165cc5ef0e226f8eb6242067934a709d04a99df8e24f288da58c2a4c"
+    },
+    {
+      "subject_id": "47000935210101",
+      "subject_name": "Computer Fundamental Skill",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 1,
+      "subject_code": "09CE2101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE2101-Computer-Fundamental-Skill.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09CE2101 - COMPUTER FUNDAMENTAL SKILL (.pdf",
+      "expected_pdf_sha256": "bfd86b67b504c500e9e5c30cd8602e328ec07752369b7a5c330bd0d45c19b241",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09CE2101",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "The application of Computer knowledge is essential the students of all disciplines of Engineering in addition to their respective branch of study. Objective of this subject is to make the students understand the functioning of MS-Office. It will also help students in particular for creating business documents, data analysis and graphical representations using office automation like MS-Word, MS-Excel and MS- PowerPoint. Credits Earned: 2 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to  Personalize their own desktop  Use various facilities available in the word processor  Prepare Power Point presentation with different formats  Create different types of charts  Prepare PowerPoint presentation  Understand Internet concepts and usage of e-mail"
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE Viva Marks Theory Tutorial Practical IA (CSE) work (E) (V) (TW) 0 0 4 2 00 30 20 25 25 100 [PAGE 2] Syllabus for Diploma Engineering Computer Engineering",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "FUNDAMENTALS OF COMPUTER SYSTEM",
+            "contact_hours": 9,
+            "topic_lines": [
+              "General understanding of various computer hardware components – CPU,",
+              "Memory, Display, Keyboard,Mouse, HDD and other Peripheral Devices,",
+              "Block diagram of computer system, Introduction to OS, My Computer &",
+              "Recycle bin, Desktop, Icons and Explorer, Screen description, Dialog Boxes",
+              "& Toolbars, taskbar, Working with Files & Folders, simple operations like",
+              "copy, delete, moving of files and folders from one drive to another,",
+              "Shortcuts, use of Control Panel, setting common devices using control panel,",
+              "modem, printers, audio, network, fonts, creating users, internet settings, Start",
+              "button & Program lists, Installing and Uninstalling new Software program",
+              "on your computer - Copying in CD/DVD settings.",
+              "OS Installation (Linux and MS Windows), Unix Shell and Commands, vi",
+              "editor."
+            ],
+            "topics_text": "General understanding of various computer hardware components – CPU, Memory, Display, Keyboard,Mouse, HDD and other Peripheral Devices, Block diagram of computer system, Introduction to OS, My Computer & Recycle bin, Desktop, Icons and Explorer, Screen description, Dialog Boxes & Toolbars, taskbar, Working with Files & Folders, simple operations like copy, delete, moving of files and folders from one drive to another, Shortcuts, use of Control Panel, setting common devices using control panel, modem, printers, audio, network, fonts, creating users, internet settings, Start button & Program lists, Installing and Uninstalling new Software program on your computer - Copying in CD/DVD settings. OS Installation (Linux and MS Windows), Unix Shell and Commands, vi editor.",
+            "topics": [
+              "General understanding of various computer hardware components – CPU,",
+              "Memory, Display, Keyboard,Mouse, HDD and other Peripheral Devices,",
+              "Block diagram of computer system, Introduction to OS, My Computer &",
+              "Recycle bin, Desktop, Icons and Explorer, Screen description, Dialog Boxes",
+              "& Toolbars, taskbar, Working with Files & Folders, simple operations like",
+              "copy, delete, moving of files and folders from one drive to another,",
+              "Shortcuts, use of Control Panel, setting common devices using control panel,",
+              "modem, printers, audio, network, fonts, creating users, internet settings, Start",
+              "button & Program lists, Installing and Uninstalling new Software program",
+              "on your computer - Copying in CD/DVD settings.",
+              "OS Installation (Linux and MS Windows), Unix Shell and Commands, vi",
+              "editor."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "BASICS OF HTML",
+            "contact_hours": 2,
+            "topic_lines": [
+              "HTML Basics, Basic structure of HTML, Tags–HTML title, head, body,",
+              "creation of basic webpage"
+            ],
+            "topics_text": "HTML Basics, Basic structure of HTML, Tags–HTML title, head, body, creation of basic webpage",
+            "topics": [
+              "HTML Basics, Basic structure of HTML, Tags–HTML title, head, body,",
+              "creation of basic webpage"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "OPEN OFFICE-WRITER",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Introduction to WPS Writer – Examples- Creation of new documents,",
+              "opening document, insert a document into another document, Page",
+              "setup, margins, gutters, font properties, Alignment, page breaks,",
+              "customize header-footer, Saving a document, spell checker, creating a",
+              "table, entering and editing, changing format of table, height width of",
+              "row or column, editing-deleting Rows, borders, shading, Templates,",
+              "drawing objects, mail merge, Printing a document."
+            ],
+            "topics_text": "Introduction to WPS Writer – Examples- Creation of new documents, opening document, insert a document into another document, Page setup, margins, gutters, font properties, Alignment, page breaks, customize header-footer, Saving a document, spell checker, creating a table, entering and editing, changing format of table, height width of row or column, editing-deleting Rows, borders, shading, Templates, drawing objects, mail merge, Printing a document.",
+            "topics": [
+              "Introduction to WPS Writer – Examples- Creation of new documents,",
+              "opening document, insert a document into another document, Page",
+              "setup, margins, gutters, font properties, Alignment, page breaks,",
+              "customize header-footer, Saving a document, spell checker, creating a",
+              "table, entering and editing, changing format of table, height width of",
+              "row or column, editing-deleting Rows, borders, shading, Templates,",
+              "drawing objects, mail merge, Printing a document."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "OPEN OFFICE-SPREADSHEET",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction to Workbook & Worksheets; Various Data Types; Using",
+              "different features with Data, Cell and Texts; Inserting, Removing &",
+              "Resizing of Columns & Rows; Working with data; Different Views of",
+              "Worksheets; Column Freezing, Labels, Hiding, Splitting, Use of Formulas,",
+              "Calculations & Functions; Cell Formatting including Borders & Shading;",
+              "Working with Different Chart Types; Printing of Workbook & Worksheets",
+              "with various options.",
+              "Syllabus for Diploma Engineering",
+              "Computer Engineering"
+            ],
+            "topics_text": "Introduction to Workbook & Worksheets; Various Data Types; Using different features with Data, Cell and Texts; Inserting, Removing & Resizing of Columns & Rows; Working with data; Different Views of Worksheets; Column Freezing, Labels, Hiding, Splitting, Use of Formulas, Calculations & Functions; Cell Formatting including Borders & Shading; Working with Different Chart Types; Printing of Workbook & Worksheets with various options. Syllabus for Diploma Engineering Computer Engineering",
+            "topics": [
+              "Introduction to Workbook & Worksheets",
+              "Various Data Types",
+              "Using",
+              "different features with Data, Cell and Texts",
+              "Inserting, Removing &",
+              "Resizing of Columns & Rows",
+              "Working with data",
+              "Different Views of",
+              "Worksheets",
+              "Column Freezing, Labels, Hiding, Splitting, Use of Formulas,",
+              "Calculations & Functions",
+              "Cell Formatting including Borders & Shading",
+              "Working with Different Chart Types",
+              "Printing of Workbook & Worksheets",
+              "with various options.",
+              "Syllabus for Diploma Engineering",
+              "Computer Engineering"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "PRESENTATIONS",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction - Opening new presentation, Parts of PowerPoint window,",
+              "Features of PowerPoint, Background design, Word art, Clip art, Drawings -",
+              "Animations, Sound, Views, types of views, inserting and deleting slides,",
+              "arranging slides, slides show, rehearsal, setup show, custom show - creating",
+              "custom presentations, auto content wizard, working with auto content wizard"
+            ],
+            "topics_text": "Introduction - Opening new presentation, Parts of PowerPoint window, Features of PowerPoint, Background design, Word art, Clip art, Drawings - Animations, Sound, Views, types of views, inserting and deleting slides, arranging slides, slides show, rehearsal, setup show, custom show - creating custom presentations, auto content wizard, working with auto content wizard",
+            "topics": [
+              "Introduction - Opening new presentation, Parts of PowerPoint window,",
+              "Features of PowerPoint, Background design, Word art, Clip art, Drawings",
+              "Animations, Sound, Views, types of views, inserting and deleting slides,",
+              "arranging slides, slides show, rehearsal, setup show, custom show - creating",
+              "custom presentations, auto content wizard, working with auto content wizard"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "INTERNET",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction – Basic Internet skills: Understanding browser, efficient use of",
+              "search engines, awareness about Digital India portals (state and national",
+              "portals) and college portals, Getting acquainted with Internet Connection,",
+              "Browsers, Website URL, Open a website, Net Browsing,Email: Creating E-",
+              "mail id – Sending, receiving and deleting E-mail - Email with Attachments –",
+              "CC and BCC, Chatting, Creating Group mail - Google docs.",
+              "Total Hours 42",
+              "Reference Books:",
+              "1. R. Taxali, “Computer Course”, Tata McGraw Hills. New Delhi.",
+              "2. Wallace Wang, “MS-Office for Dummies”, Wiley India, New Delhi",
+              "3. Dr. Shailendra Singh, Pawan Thakur, Anurag Jain,” Basic Computer Engineering”,",
+              "Satya Prakashan, New Delhi, India"
+            ],
+            "topics_text": "Introduction – Basic Internet skills: Understanding browser, efficient use of search engines, awareness about Digital India portals (state and national portals) and college portals, Getting acquainted with Internet Connection, Browsers, Website URL, Open a website, Net Browsing,Email: Creating E- mail id – Sending, receiving and deleting E-mail - Email with Attachments – CC and BCC, Chatting, Creating Group mail - Google docs. Total Hours 42 Reference Books: 1. R. Taxali, “Computer Course”, Tata McGraw Hills. New Delhi. 2. Wallace Wang, “MS-Office for Dummies”, Wiley India, New Delhi 3. Dr. Shailendra Singh, Pawan Thakur, Anurag Jain,” Basic Computer Engineering”, Satya Prakashan, New Delhi, India",
+            "topics": [
+              "Introduction – Basic Internet skills: Understanding browser, efficient use of",
+              "search engines, awareness about Digital India portals (state and national",
+              "portals) and college portals, Getting acquainted with Internet Connection,",
+              "Browsers, Website URL, Open a website, Net Browsing,Email: Creating E",
+              "mail id – Sending, receiving and deleting E-mail - Email with Attachments –",
+              "CC and BCC, Chatting, Creating Group mail - Google docs.",
+              "Total Hours 42",
+              "Reference Books:",
+              "1. R. Taxali, “Computer Course”, Tata McGraw Hills. New Delhi.",
+              "2. Wallace Wang, “MS-Office for Dummies”, Wiley India, New Delhi",
+              "3. Dr. Shailendra Singh, Pawan Thakur, Anurag Jain,” Basic Computer Engineering”,",
+              "Satya Prakashan, New Delhi, India"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 7,
+      "extracted_character_count": 13556,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                               Computer Engineering\n\n\n                                 Subject Code: 09CE2101\n\n                       Subject Name: Computer Fundamental Skill\n\n                             Diploma Studies Year - I\n\n    Objective: The application of Computer knowledge is essential the students of all\n    disciplines of Engineering in addition to their respective branch of study. Objective of\n     this subject is to make the students understand the functioning of MS-Office. It will\n    also help students in particular for creating business documents, data analysis and\n    graphical representations using office automation like MS-Word, MS-Excel and MS-\n    PowerPoint.\n\n    Credits Earned: 2 Credits\n\n   Course Outcomes: After completion of this course, student will be able to\n\n      Personalize their own desktop\n\n      Use various facilities available in the word processor\n\n      Prepare Power Point presentation with different formats\n\n      Create different types of charts\n\n      Prepare PowerPoint presentation\n\n      Understand Internet concepts and usage of e-mail\n\n\n\n    Pre-requisite of course: NA.\n\n                       Teaching and Examination Scheme\n                                                                         Tutorial/ Practical\n  Teaching Scheme (Hours)                Theory Marks\n                                                            Marks\n                                                                                         Total\n                                Credits                                Term\n                             ESE                    Viva             Marks\nTheory   Tutorial   Practical                 IA     (CSE)             work\n                                         (E)                      (V)\n                                                            (TW)\n  0       0        4        2     00    30      20       25       25      100"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                             Computer Engineering\n\n\n  Contents:\nUnit                                    Topics                                  Contact\n                                                                        Hours\n\n 1   FUNDAMENTALS OF COMPUTER SYSTEM                           9\n       General understanding of various computer hardware components – CPU,\n      Memory, Display, Keyboard,Mouse, HDD and other Peripheral Devices,\n      Block diagram of computer system, Introduction to OS, My Computer &\n       Recycle bin, Desktop, Icons and Explorer, Screen description, Dialog Boxes\n    & Toolbars, taskbar, Working with Files & Folders, simple operations like\n       copy,  delete, moving of  files and  folders from one drive  to  another,\n        Shortcuts, use of Control Panel, setting common devices using control panel,\n      modem, printers, audio, network, fonts, creating users, internet settings, Start\n       button & Program lists, Installing and Uninstalling new Software program\n      on your computer - Copying in CD/DVD settings.\n\n     OS Installation (Linux and MS Windows), Unix Shell and Commands, vi\n        editor.\n\n\n 2   BASICS OF HTML                                                     2\n    HTML Basics, Basic structure of HTML, Tags–HTML  title, head, body,\n        creation of basic webpage\n\n 3   OPEN OFFICE-WRITER                                               9\n        Introduction to WPS Writer – Examples- Creation of new documents,\n       opening document, insert a document into another document, Page\n        setup,  margins,  gutters,  font  properties, Alignment, page  breaks,\n       customize header-footer, Saving a document, spell checker, creating a\n         table, entering and editing, changing format of table, height width of\n      row or column, editing-deleting Rows, borders, shading, Templates,\n       drawing objects, mail merge, Printing a document.\n\n 4   OPEN OFFICE-SPREADSHEET                                        8\n\n        Introduction  to Workbook & Worksheets; Various Data Types; Using\n        different  features with  Data,  Cell and  Texts;  Inserting, Removing &\n       Resizing of Columns & Rows; Working with data; Different Views of\n       Worksheets; Column Freezing, Labels, Hiding, Splitting, Use of Formulas,\n        Calculations & Functions; Cell Formatting including Borders & Shading;\n      Working with Different Chart Types; Printing of Workbook & Worksheets\n       with various options."
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                            Computer Engineering\n\n\n5   PRESENTATIONS                                                      8\n\n      Introduction  - Opening new presentation, Parts of PowerPoint window,\n      Features of PowerPoint, Background design, Word art, Clip art, Drawings -\n     Animations, Sound, Views, types of views, inserting and deleting  slides,\n      arranging slides, slides show, rehearsal, setup show, custom show - creating\n     custom presentations, auto content wizard, working with auto content wizard\n\n6   INTERNET                                                             6\n\n      Introduction – Basic Internet skills: Understanding browser, efficient use of\n      search engines, awareness about Digital India portals (state and national\n      portals) and college portals, Getting acquainted with Internet Connection,\n     Browsers, Website URL, Open a website, Net Browsing,Email: Creating E-\n      mail id – Sending, receiving and deleting E-mail - Email with Attachments –\n    CC and BCC, Chatting, Creating Group mail - Google docs.\n\n                                     Total Hours                                 42\n\n\n\n Reference Books:\n\n 1. R. Taxali, “Computer Course”, Tata McGraw Hills. New Delhi.\n\n 2. Wallace Wang, “MS-Office for Dummies”, Wiley India, New Delhi\n\n 3. Dr. Shailendra Singh, Pawan Thakur, Anurag Jain,” Basic Computer Engineering”,\n\n   Satya Prakashan, New Delhi, India\n\n\n\n Suggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This\n distribution serves as  guidelines  for  teachers and  students  to achieve  effective\n teaching-learning process\n                Distribution of Theory for course delivery and evaluation\n\nRemember    Understand      Apply       Analyze       Evaluate        Create\n\n   35%        35%       30%       0%        0%        0%"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                            Computer Engineering\n\n\nSuggested List of Experiments:\n\n\n  1   Study of Basic steps of OS installation (Linux and windows).\n  2   Study and Explore security features of Operating Systems.\n  3     (i)      Install screen saver and change the monitor resolution by 1280X960\n         (ii)    Set a new wallpaper\n          (iii)    Create, move, delete and rename a folder\n        (iv)   Copy, paste and cut a folder/file\n       (v)    Display the properties for a file or folder\n  4     (i)     Restore files and folders from Recycle bin\n         (ii)    Create short cuts for folder/file\n          (iii)   Find a file or folder by name\n        (iv)    Select and move two or more files/folders using mouse\n       (v)    Sort folders/files.\n  5    Visit five websites and prepare summary report about it.\n  6    Create HTML page contains single paragraph by using basic HTML tags.\n\n  7    Create a HTML page with an image in background and different background\n        color.\n\n  8    Write a letter about your College about 200 words with two paragraphs and\n       apply following functions\n         (i)     Set Arial font of size 12\n         (ii)    Bold Title of College\n          (iii)   Make a justify alignment for paragraph text\n        (iv)   Use format Painter to format the second paragraph\n       (v)    Use 1.5 line spacing in paragraph\n  9    Create a newsletter of three pages with two columns text. The first page contains\n      some formatting bullets and numbers. Set the document background colour and\n      add ‘confidential’ as the watermark. Give the document a title which should be\n       displayed in the header. The header/ footer of the first page should be different\n      from other two pages. Also, add author name and date/ time in the header. The\n       footer should have the page number.\n 10   Prepare a table using MS word – Sales Analysis for a period of five years for\n       three products and sort that data.\n 11  Make out print of document by setting page layout and margins.\n 12   Create a document shown on the following page, Define the following settings\n        for the document.\n            Page Length: 11mm\n            Top Margin: 1.5mm\n            Bottom Margin: 1.3mm"
+        },
+        {
+          "page": 5,
+          "text": "Syllabus for Diploma Engineering\n\n                      Computer Engineering\n\n\n      Left Margin: 1mm\n     Right Margin: 1mm\n     Header Margin: 0.8mm from the top edge of the paper\n     Footer Margin: 0.7mm from the bottom edge of the paper\nDefine following header:\n     Your investment: for odd pages\n     Small Savings: for even pages\n     Show the page number in footer.\n\nSave the document with name “INVEST”. Preview the document and Print only\nthe first page of the document. Next, print the entire document in the landscape\nmode."
+        },
+        {
+          "page": 6,
+          "text": "Syllabus for Diploma Engineering\n\n                           Computer Engineering\n\n\n13      Prepare a ORIENT workbook using following function:\n          Add heading as a Orient Industries Ltd. in range B2:D2\n          Format the label in the range A4:F4, Create border lines above and below\n               this range. Also create a border line below range A10:F10\n          Add label Item in cell A4, Quantity in cell B4, Unit price in cell C4 and\n             gross values in D4.\n          Enter sales Tax Rate in cell A6 and 8% in cell B6 with two decimal places.\n          Use the TODAY() function in cell E10 and NOW() in cell F10.Format cell\n              in the mmm dd,yyyy(e.g. Jan 21,2021) format.\n          Change the date format to dd-mmm-yy(e.g.14-Jan-21) format.\n 14   Using EXCEL prepare a table for Students marks and perform the following\n       functions Total, Average, Percentage, conditional sum.\n\n 15   Create a result sheet containing Candidate's Register No., Name and Marks for\n       six subjects. Freezing column containing the Candidate’s register no and name\n       Calculate the total and result. The result must be calculated as below and failed\n       candidates should be turned to red.\n       Result is Distinction if Total >= 70 %\n\n        First Class if Total > = 60 % and < 70 %\n\n      Second Class if Total >= 50 % and < 60 %\n\n      Pass if Total >= 35 % and < 50 %\n       Fail otherwise\n 16   Prepare line, bar and pie chart to illustrate the subject wise performance of the\n       class for any one semester with the following data\n\n                        Operating Systems           98%\n\n                C Programming             54%\n\n                            Electrical    and    Electronics  87%\n                        Engineering\n\n                C Programming Practical       95%\n\n                            Electrical    and    Electronics  100\n                            Practical             %\n\n                        Operating Systems Practical     78%\n\n 17   Using EXCEL sheet prepare a table for information about employees in an\n       organization. It containing Employee ID, Employee Name, Designation, Gender,\n      Hire Date. Perform sorting and filtering function on that table.\n 18   Prepare excel sheet and Perform linking function between two workbook.\n\n 19   Prepare a presentation by using Master slide Functionality.\n\n 20   Perform Hyperlink functionality in PowerPoint presentation.\n 21  Make a marketing presentation of any consumer product with at least 10 slides."
+        },
+        {
+          "page": 7,
+          "text": "Syllabus for Diploma Engineering\n\n                            Computer Engineering\n\n\n      Use different customized animation effects on pictures and clip art on any four\n       of ten slides.\n\n 22   Create an e-mail id and perform the following\n          Write an e-mail inviting your friends about an Event that going to be\n           organized by college\n         Make your own signature and add it to the e-mail message.\n         Add a word attachment of the venue route\n         Send the e-mail to at least 5 of your friends.\n         Add your Subject Faculty’s email id in CC field and Class Coordinator’s\n           email id in BCC field.\n 23  Make a Google group of at least 10 person and share a spreadsheet and invite\n      them to enter their details.\n\n 24   Study of Browser features, browsing, using various search engines, writing\n       search queries\n\n 25   Study of  Visit various e-governance/Digital  India  portals, understand  their\n        features, services offered.\n\n\nInstructional Method:\na.  The course delivery method will depend upon the requirement of content and need\n    of students. The teacher in addition to conventional teaching method by black\n    board, may  also use any  of  tools such  as  demonstration,  role  play, Quiz,\n    brainstorming, MOOCs etc.\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n    students in the laboratory and class-room.\nc.   Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nd.  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\ne.  Online resources, Linux man pages, Wikipedia."
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09CE2101 - COMPUTER FUNDAMENTAL SKILL (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "bfd86b67b504c500e9e5c30cd8602e328ec07752369b7a5c330bd0d45c19b241"
+    },
+    {
+      "subject_id": "47000955310101",
+      "subject_name": "DC Circuit",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 1,
+      "subject_code": "09EE3101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09EE3101-DC-Circuit.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09EE3101 - DC CIRCUIT (.pdf",
+      "expected_pdf_sha256": "3d4cc8da1175a88ab202f048b70720f6736873119f2d0f7c4546650e752a0198",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09EE3101",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "Basic knowledge of physics"
+      },
+      "objectives": [
+        "The students understand basic knowledge of Electrical circuit and network. To estimate value of voltage across or current through component of circuit/network. Solve the circuit using various theorems and methods. To design charging and discharging of capacitors for various applications. To analyse magnetic circuit and differentiate magnetic and electric circuits. Credits Earned: 5 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able 1. To understand and apply the fundamental concepts of electricity, including current, voltage, resistance, energy, power, and efficiency. 2. To Apply Ohm’s Law, Kirchhoff’s Laws, and basic network theorems to solve DC electrical circuits. 3. To analyze the behavior and interrelationship of electrical components (resistors, capacitors, inductors) in various circuit configurations. 4. To understand and apply electrostatics, magnetism, electromagnetic induction, and their practical applications in electrical systems."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 2 2 5 50 30 20 25 25 150 [PAGE 2] Syllabus for Diploma Engineering Electrical Engineering",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic Concepts of Electricity: 3",
+            "contact_hours": 11,
+            "topic_lines": [
+              " Introduction of electricity",
+              " Nature of electricity",
+              " Electric potential",
+              " Electric current",
+              " Electromotive force and potential difference",
+              "Definition work, power and energy and it’s units",
+              " Resistance, Specific resistance, Conductance,",
+              "Conductivity",
+              " Conductors, Semiconductors, and Insulators",
+              " Computation of resistance of metallic and composite",
+              "conductors",
+              " Effect of temperature on resistance",
+              " Temperature co-efficient of resistance",
+              " Effect of temperature on resistivity",
+              " Source of electric energy",
+              " Dependent and independent sources, its types",
+              " Basic concepts of voltage source and current source",
+              " Ohm’s Law",
+              " Combination of resistance; Resistances in series,",
+              "parallel, power rating of resistor,",
+              " Short and open circuits",
+              " Series-parallel combination of resistance",
+              " Star-delta and delta-star transformation",
+              " Electrical and mechanical work, power, energy, and",
+              "efficiency",
+              " Thermal effect of electric current",
+              " Laws of electric heating"
+            ],
+            "topics_text": " Introduction of electricity  Nature of electricity  Electric potential  Electric current  Electromotive force and potential difference Definition work, power and energy and it’s units  Resistance, Specific resistance, Conductance, Conductivity  Conductors, Semiconductors, and Insulators  Computation of resistance of metallic and composite conductors  Effect of temperature on resistance  Temperature co-efficient of resistance  Effect of temperature on resistivity  Source of electric energy  Dependent and independent sources, its types  Basic concepts of voltage source and current source  Ohm’s Law  Combination of resistance; Resistances in series, parallel, power rating of resistor,  Short and open circuits  Series-parallel combination of resistance  Star-delta and delta-star transformation  Electrical and mechanical work, power, energy, and efficiency  Thermal effect of electric current  Laws of electric heating",
+            "topics": [
+              " Introduction of electricity",
+              " Nature of electricity",
+              " Electric potential",
+              " Electric current",
+              " Electromotive force and potential difference",
+              "Definition work, power and energy and it’s units",
+              " Resistance, Specific resistance, Conductance,",
+              "Conductivity",
+              " Conductors, Semiconductors, and Insulators",
+              " Computation of resistance of metallic and composite",
+              "conductors",
+              " Effect of temperature on resistance",
+              " Temperature co-efficient of resistance",
+              " Effect of temperature on resistivity",
+              " Source of electric energy",
+              " Dependent and independent sources, its types",
+              " Basic concepts of voltage source and current source",
+              " Ohm’s Law",
+              " Combination of resistance",
+              "Resistances in series,",
+              "parallel, power rating of resistor,",
+              " Short and open circuits",
+              " Series-parallel combination of resistance",
+              " Star-delta and delta-star transformation",
+              " Electrical and mechanical work, power, energy, and",
+              "efficiency",
+              " Thermal effect of electric current",
+              " Laws of electric heating"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Electrical Circuit and Network Analysis: 2",
+            "contact_hours": 7,
+            "topic_lines": [
+              " Introduction",
+              " Network terminology",
+              " Kirchhoff’s Law ; Kirchhoff’s current law, Kirchhoff’s",
+              "voltage law, Solution of network by Kirchhoff’s law",
+              " Mesh analysis and nodal analysis of network;",
+              " Maxwell’s mesh / loop current methods",
+              " Types of electric circuits; Linear, Non-liner, Active",
+              "and passive network",
+              " Network theorems; Superposition theorem,",
+              "Thevenin’s theorem, Norton’s theorem, Maximum",
+              "power transfer theorem, Reciprocity theorem, Duality",
+              "in electric circuit",
+              "Syllabus for Diploma Engineering",
+              "Electrical Engineering"
+            ],
+            "topics_text": " Introduction  Network terminology  Kirchhoff’s Law ; Kirchhoff’s current law, Kirchhoff’s voltage law, Solution of network by Kirchhoff’s law  Mesh analysis and nodal analysis of network;  Maxwell’s mesh / loop current methods  Types of electric circuits; Linear, Non-liner, Active and passive network  Network theorems; Superposition theorem, Thevenin’s theorem, Norton’s theorem, Maximum power transfer theorem, Reciprocity theorem, Duality in electric circuit Syllabus for Diploma Engineering Electrical Engineering",
+            "topics": [
+              " Introduction",
+              " Network terminology",
+              " Kirchhoff’s Law",
+              "Kirchhoff’s current law, Kirchhoff’s",
+              "voltage law, Solution of network by Kirchhoff’s law",
+              " Mesh analysis and nodal analysis of network",
+              " Maxwell’s mesh / loop current methods",
+              " Types of electric circuits",
+              "Linear, Non-liner, Active",
+              "and passive network",
+              " Network theorems",
+              "Superposition theorem,",
+              "Thevenin’s theorem, Norton’s theorem, Maximum",
+              "power transfer theorem, Reciprocity theorem, Duality",
+              "in electric circuit",
+              "Syllabus for Diploma Engineering",
+              "Electrical Engineering"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Electrostatics and Capacitance: 9",
+            "contact_hours": 32,
+            "topic_lines": [
+              " Introduction",
+              " Static electricity, Electric charge",
+              " Laws of electrostatics",
+              " Electric field, Electric lines of force, Electric field",
+              "intensity, Electric flux and flux density",
+              " Absolute and relative permittivity",
+              " Coulomb’s laws of electrostatics",
+              " Electric potential, potential difference and gradient,",
+              "Potential at a Point, Potential due to charge",
+              " Dielectric strength",
+              " Gauss’s theorem, Electrostatic induction Capacitor",
+              "and capacitance, Permittivity, Capacitance of parallel",
+              "plate capacitors, Factor affecting capacitors,",
+              "Capacitance of Multiplate capacitor",
+              " Type of capacitors",
+              " Capacitors in series, parallel, Capacitors in series -",
+              "parallel",
+              " Energy stored in capacitor",
+              " Rise and decay of voltage and current in RC circuit"
+            ],
+            "topics_text": " Introduction  Static electricity, Electric charge  Laws of electrostatics  Electric field, Electric lines of force, Electric field intensity, Electric flux and flux density  Absolute and relative permittivity  Coulomb’s laws of electrostatics  Electric potential, potential difference and gradient, Potential at a Point, Potential due to charge  Dielectric strength  Gauss’s theorem, Electrostatic induction Capacitor and capacitance, Permittivity, Capacitance of parallel plate capacitors, Factor affecting capacitors, Capacitance of Multiplate capacitor  Type of capacitors  Capacitors in series, parallel, Capacitors in series - parallel  Energy stored in capacitor  Rise and decay of voltage and current in RC circuit",
+            "topics": [
+              " Introduction",
+              " Static electricity, Electric charge",
+              " Laws of electrostatics",
+              " Electric field, Electric lines of force, Electric field",
+              "intensity, Electric flux and flux density",
+              " Absolute and relative permittivity",
+              " Coulomb’s laws of electrostatics",
+              " Electric potential, potential difference and gradient,",
+              "Potential at a Point, Potential due to charge",
+              " Dielectric strength",
+              " Gauss’s theorem, Electrostatic induction Capacitor",
+              "and capacitance, Permittivity, Capacitance of parallel",
+              "plate capacitors, Factor affecting capacitors,",
+              "Capacitance of Multiplate capacitor",
+              " Type of capacitors",
+              " Capacitors in series, parallel, Capacitors in series",
+              "parallel",
+              " Energy stored in capacitor",
+              " Rise and decay of voltage and current in RC circuit"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Electromagnetism and magnetic Circuits: 7",
+            "contact_hours": 25,
+            "topic_lines": [
+              "Introduction",
+              " Magnet, Important properties of a magnet,",
+              "Classification of magnetic materials",
+              " Terms related to magnetic circuit; Pole Strength, Laws",
+              "of magnetism, Magnetic field, Magnetic lines of force,",
+              "Magnetic flux, Magnetic flux density, Magnetic field",
+              "strength, Magnetic force, Electromagnet,",
+              "Electromagnetism, Reluctance, Permeance,",
+              "Permeability, Intensity of magnetization Susceptibility",
+              " Rules for magnetic circuit",
+              " Magnetic field of solenoid",
+              " Current carrying conductor in magnetic field",
+              " Force between two parallel conductor",
+              " Magnetic circuit; Composite magnetic circuits,",
+              "Leakage factor, Fringing",
+              " Comparison between magnetic and electric circuit",
+              " Hysteresis loop; Importance of hysteresis loop",
+              "Syllabus for Diploma Engineering",
+              "Electrical Engineering"
+            ],
+            "topics_text": "Introduction  Magnet, Important properties of a magnet, Classification of magnetic materials  Terms related to magnetic circuit; Pole Strength, Laws of magnetism, Magnetic field, Magnetic lines of force, Magnetic flux, Magnetic flux density, Magnetic field strength, Magnetic force, Electromagnet, Electromagnetism, Reluctance, Permeance, Permeability, Intensity of magnetization Susceptibility  Rules for magnetic circuit  Magnetic field of solenoid  Current carrying conductor in magnetic field  Force between two parallel conductor  Magnetic circuit; Composite magnetic circuits, Leakage factor, Fringing  Comparison between magnetic and electric circuit  Hysteresis loop; Importance of hysteresis loop Syllabus for Diploma Engineering Electrical Engineering",
+            "topics": [
+              "Introduction",
+              " Magnet, Important properties of a magnet,",
+              "Classification of magnetic materials",
+              " Terms related to magnetic circuit",
+              "Pole Strength, Laws",
+              "of magnetism, Magnetic field, Magnetic lines of force,",
+              "Magnetic flux, Magnetic flux density, Magnetic field",
+              "strength, Magnetic force, Electromagnet,",
+              "Electromagnetism, Reluctance, Permeance,",
+              "Permeability, Intensity of magnetization Susceptibility",
+              " Rules for magnetic circuit",
+              " Magnetic field of solenoid",
+              " Current carrying conductor in magnetic field",
+              " Force between two parallel conductor",
+              " Magnetic circuit",
+              "Composite magnetic circuits,",
+              "Leakage factor, Fringing",
+              " Comparison between magnetic and electric circuit",
+              " Hysteresis loop",
+              "Importance of hysteresis loop",
+              "Syllabus for Diploma Engineering",
+              "Electrical Engineering"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Electromagnetic Induction: 7",
+            "contact_hours": 25,
+            "topic_lines": [
+              " Introduction",
+              " Faraday’s laws of electromagnetic induction",
+              " Induced E.M.F.; dynamically induced e.m.f, statically",
+              "induced e.m.f., self-induced e.m.f and mutually",
+              "induced e.m.f.",
+              " Fleming’s right hand rule and left hand rule",
+              " Lenz’s law",
+              " Self-inductance, mutual inductance",
+              " Co-efficient of coupling",
+              " Series and parallel connection of Inductor",
+              " Types of Inductor",
+              " Energy stored in magnetic field",
+              " Lifting power of magnet",
+              " Rise and decay of current in an inductive circuit"
+            ],
+            "topics_text": " Introduction  Faraday’s laws of electromagnetic induction  Induced E.M.F.; dynamically induced e.m.f, statically induced e.m.f., self-induced e.m.f and mutually induced e.m.f.  Fleming’s right hand rule and left hand rule  Lenz’s law  Self-inductance, mutual inductance  Co-efficient of coupling  Series and parallel connection of Inductor  Types of Inductor  Energy stored in magnetic field  Lifting power of magnet  Rise and decay of current in an inductive circuit",
+            "topics": [
+              " Introduction",
+              " Faraday’s laws of electromagnetic induction",
+              " Induced E.M.F.",
+              "dynamically induced e.m.f, statically",
+              "induced e.m.f., self-induced e.m.f and mutually",
+              "induced e.m.f.",
+              " Fleming’s right hand rule and left hand rule",
+              " Lenz’s law",
+              " Self-inductance, mutual inductance",
+              " Co-efficient of coupling",
+              " Series and parallel connection of Inductor",
+              " Types of Inductor",
+              " Energy stored in magnetic field",
+              " Lifting power of magnet",
+              " Rise and decay of current in an inductive circuit"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 6,
+      "extracted_character_count": 12327,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                         Electrical Engineering\n\n                                  Semester – I\n\n                            Subject Name: DC Circuit\n\n                            Subject Code: 09EE3101\n\n   Diploma Branches in which this subject is offered: Electrical Engineering\n\n    Objective: The students understand basic knowledge of Electrical circuit and network.\n   To estimate value of voltage across or current through component of circuit/network.\n    Solve the  circuit using various theorems and methods. To design charging and\n    discharging of capacitors for various applications. To analyse magnetic circuit and\n    differentiate magnetic and electric circuits.\n\n\n    Credits Earned: 5 Credits\n\n   Course Outcomes: After completion of this course, student will be able\n          1.  To understand and apply the fundamental concepts of electricity, including current, voltage,\n            resistance, energy, power, and efficiency.\n          2.  To Apply Ohm’s Law, Kirchhoff’s Laws, and basic network theorems to solve DC\n             electrical circuits.\n          3.  To  analyze  the  behavior and  interrelationship  of  electrical components  (resistors,\n            capacitors, inductors) in various circuit configurations.\n          4.  To understand and apply electrostatics, magnetism, electromagnetic induction, and their\n            practical applications in electrical systems.\n\n    Pre-requisite of course: Basic knowledge of physics\n\n                       Teaching and Examination Scheme\n                                                                          Tutorial/ Practical  Teaching Scheme (Hours)                Theory Marks\n                                                            Marks          Total\n                                Credits\n                                                             Term    Marks\nTheory   Tutorial   Practical         ESE   IA    CSE     Viva                                                                work\n  2        2        2        5     50    30      20       25       25      150"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                     Electrical Engineering\n\nContents:\n Unit                       Topics                      Contact   Weightage\n                                                        hours      (%)\n\n   1    Basic Concepts of Electricity:                         3         11\n         Introduction of electricity\n         Nature of electricity\n         Electric potential\n         Electric current\n         Electromotive force and potential difference\n           Definition work, power and energy and it’s units\n         Resistance,  Specific  resistance,  Conductance,\n        Conductivity\n         Conductors, Semiconductors, and Insulators\n         Computation of resistance of metallic and composite\n          conductors\n         Effect of temperature on resistance\n         Temperature co-efficient of resistance\n         Effect of temperature on resistivity\n         Source of electric energy\n         Dependent and independent sources, its types\n         Basic concepts of voltage source and current source\n        Ohm’s Law\n         Combination of resistance; Resistances  in  series,\n             parallel, power rating of resistor,\n         Short and open circuits\n         Series-parallel combination of resistance\n         Star-delta and delta-star transformation\n         Electrical and mechanical work, power, energy, and\n            efficiency\n        Thermal effect of electric current\n        Laws of electric heating\n   2   Electrical Circuit and Network Analysis:                2        7\n         Introduction\n        Network terminology\n         Kirchhoff’s Law ; Kirchhoff’s current law, Kirchhoff’s\n           voltage law, Solution of network by Kirchhoff’s law\n        Mesh analysis and nodal analysis of network;\n        Maxwell’s mesh / loop current methods\n        Types of electric circuits; Linear, Non-liner, Active\n         and passive network\n        Network    theorems;    Superposition    theorem,\n          Thevenin’s theorem, Norton’s theorem, Maximum\n         power transfer theorem, Reciprocity theorem, Duality\n            in electric circuit"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                  Electrical Engineering\n\n3    Electrostatics and Capacitance:                       9        32\n      Introduction\n      Static electricity, Electric charge\n     Laws of electrostatics\n      Electric  field, Electric lines of force, Electric field\n         intensity, Electric flux and flux density\n     Absolute and relative permittivity\n     Coulomb’s laws of electrostatics\n      Electric potential, potential difference and gradient,\n        Potential at a Point, Potential due to charge\n      Dielectric strength\n     Gauss’s theorem,  Electrostatic induction Capacitor\n       and capacitance, Permittivity, Capacitance of parallel\n        plate   capacitors,   Factor   affecting   capacitors,\n       Capacitance of Multiplate capacitor\n     Type of capacitors\n      Capacitors in series, parallel, Capacitors in series -\n        parallel\n     Energy stored in capacitor\n     Rise and decay of voltage and current in RC circuit\n4    Electromagnetism and magnetic Circuits:              7        25\n     Introduction\n     Magnet,   Important   properties   of   a   magnet,\n        Classification of magnetic materials\n     Terms related to magnetic circuit; Pole Strength, Laws\n       of magnetism, Magnetic field, Magnetic lines of force,\n       Magnetic flux, Magnetic flux density, Magnetic field\n        strength,    Magnetic     force,     Electromagnet,\n       Electromagnetism,      Reluctance,     Permeance,\n        Permeability, Intensity of magnetization Susceptibility\n     Rules for magnetic circuit\n     Magnetic field of solenoid\n      Current carrying conductor in magnetic field\n     Force between two parallel conductor\n     Magnetic circuit; Composite magnetic circuits,\n       Leakage factor, Fringing\n     Comparison between magnetic and electric circuit\n      Hysteresis loop; Importance of hysteresis loop"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                                     Electrical Engineering\n\n   5   Electromagnetic Induction:                         7          25\n         Introduction\n         Faraday’s laws of electromagnetic induction\n        Induced E.M.F.; dynamically induced e.m.f, statically\n          induced e.m.f., self-induced e.m.f and mutually\n          induced e.m.f.\n        Fleming’s right hand rule and left hand rule\n        Lenz’s law\n         Self-inductance, mutual inductance\n         Co-efficient of coupling\n         Series and parallel connection of Inductor\n        Types of Inductor\n        Energy stored in magnetic field\n         Lifting power of magnet\n        Rise and decay of current in an inductive circuit\n\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This\ndistribution serves as guidelines for teachers and students to achieve effective teaching-\nlearning process\n              Distribution of Theory for course delivery and evaluation\n\n  Remember  Understand     Apply      Analyse     Evaluate      Create\n\n   40%      40%       10%      10%      0%      0%"
+        },
+        {
+          "page": 5,
+          "text": "Syllabus for Diploma Engineering\n\n                                     Electrical Engineering\n\n\nSuggested List of Experiments:\n\n  Sr.   Unit           Name of Topics                Contact\n No.   No.                                                     Hours\n   1     1    Measure electrical quantities using voltmeter, ammeter,    2\n                wattmeter and energy meter for given electrical network\n\n   2     1     Identification the value of given resistor using digital    2\n                multimeter to confirm with colour code.\n\n   3     1     Verify Ohm's Law using voltmeter and ammeter.          2\n\n   4     1    Connect resistor in series and parallel combination on      2\n                bread  board and measure  its  value  using  digital\n                multimeter.\n\n   5     1    Perform star to delta and delta to star conversion.          2\n\n   6     1    Perform Kirchhoff’s current and voltage law.             2\n\n   7     2    Use voltmeter, ammeter to determine current through the     2\n                given branch of electric network by applying node and\n             mesh analysis.\n\n   8     2    Use voltmeter, ammeter to determine current through the     2\n                given branch and voltage across the given element of\n                   circuit by applying superposition theorem.\n\n   9     2    Use voltmeter, ammeter to determine circuit parameter     2\n                  in a given circuit by applying Thevenin’s theorem.\n\n  10     2    Use voltmeter, ammeter to determine circuit parameter     2\n                  in a given circuit by applying Norton’s theorem.\n\n  11     2    Use voltmeter, ammeter to determine circuit parameter     2\n                  in a given circuit by applying Maximum power transfer\n                theorem.\n\n  12     3     Identification and finding value of capacitor and connect     2\n                 capacitor in series and parallel combination on bread\n               board and measure its value using digital multimeter.\n\n  13     4    Determine the permeability of magnetic material by    2\n                  plotting its B-H curve using Virtual lab.\n\n  14     5    Perform   experiment    of    faraday’s   laws   of    2\n                electromagnetic induction using Virtual lab."
+        },
+        {
+          "page": 6,
+          "text": "Syllabus for Diploma Engineering\n\n                                     Electrical Engineering\n\nSuggested List of Tutorials:\n\n  Sr.   Unit           Name of Topics                Contact\n No.   No.                                                     Hours\n   1     1   Tutorial – 1                                        3\n                Tutorial on Basic Concepts of Electricity\n   2     2   Tutorial – 2                                           2\n                Tutorial on Electrical Circuit and Network Analysis\n   3     3   Tutorial – 3                                           9\n                Tutorial on Electrostatics and Capacitance\n   4     4   Tutorial – 4                                        7\n                Tutorial on Electromagnetism and magnetic Circuits\n   5     5   Tutorial – 5                                           7\n                Tutorial on Electromagnetic Induction\n\n\nInstructional Method:\na.  The course delivery method will depend upon the requirement of content and need\n    of students. The teacher in addition to conventional teaching method by black\n    board, may also use any of  tools such as demonstration,  role  play, Quiz,\n    brainstorming, MOOCs etc.\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n    students in the laboratory and class-room.\nc.   Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nd.   Students will use supplementary resources such as online videos, NPTEL videos,\n     e-courses, Virtual Laboratory.\n\nReferences:\n    1.  B. L. Theraja, \"A Text Book of Electrical Technology Vol-I\", S. Chand & Co.\n        Ltd., 2014\n    2.  Tarlok Singh, \"Fundamental of Electrical Engineering\", S. K. Kataria & Sons,\n      2012\n    3.   J. B. Gupta, \"A Course of Electrical Technology Vol-I\", Kataria & Sons, 2012\n    4.  S.K. Sahdev, \"Fundamentals of Electrical Engineering & Electronics\",\n      Dhanpat Rai & Co. LTD., 2014\n    5.  U. A. Bakshi & V. U. Bakshi, \"Basic Electrical Engineering\", Technical\n       Publication Pune, 2012\n    6.  R. Jadeja, T. Trivedi & A.Ved, “Elements of Electrical Engineering” Tata-\n      McGraw-Hill, 2018\n    7.  U. A. Patel, \"Elements of Electrical Engineering\", Atul Prakashan, 2016\n\n Supplementary Resources:\n     1. http://nptel.ac.in/courses/108108076/\n\n     2. http://nptel.ac.in/downloads/108105053/\n     3. http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-\n       002-circuits-and-electronics-spring-2007/video-lectures/\n     4. http://www.electrical4u.com/nature-of-electricity/"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "3d4cc8da1175a88ab202f048b70720f6736873119f2d0f7c4546650e752a0198"
+    },
+    {
+      "subject_id": "47000955310201",
+      "subject_name": "Electrical Practice",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 1,
+      "subject_code": "09EE3102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09EE3102-EP.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09EE3102 - ELECTRICAL PRACTICE (.pdf",
+      "expected_pdf_sha256": "350896689033106e313c1e0728f04bb41ab3157d006950ef3530b2abf5c57d23",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09EE3102",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "Basic knowledge of physics."
+      },
+      "objectives": [
+        "To provide students with hands-on experience and practical skills in electrical systems, enabling them to design, analyze, and troubleshoot electrical circuits and equipment, while also emphasizing safety and industry standards. Credits Earned: 2 Credits"
+      ],
+      "course_outcomes": [
+        "After learning the course the students should be able: 1. To apply appropriate electrical safety practices and fire hazard prevention to minimize accidents, equipment damage, and risk to human life. 2. To apply appropriate protective devices based on electrical load requirements and utilize electrical symbols, wires, and cables in residential and industrial wiring diagrams. 3. To understand, select and effectively use appropriate tools as per requirement of electrical work. 4. To understand, select and effectively use appropriate measuring instruments as per requirements."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 0 0 4 2 00 30 20 25 25 100 List of Experiments: Sr. Contact Name of Experiment No. Hours 1 To understand electric hazards & safety, safety rules and application of 2 electrical personal protective equipments. 2 To understand electric shock, its effect and precaution using Silvester’s 2 method, Eve’s rocking method, Modern month-to-mouth respiration method and Artificial resuscitator. 3 Identify various type of fire and select suitable fire extinguishers as per class 2 of fire. 4 Identify the different symbols and abbreviations used in electric network. 2 [PAGE 2] Syllabus for Diploma Engineering Electrical Engineering 5 Use various tools such as Bearing Puller, Pipe Bender, Pipe Cutter, Pipe 4 Wrench, Chisel, Spanners, Wrenches, Soldering Instruments, Poker, Electric Hand Drills, Hacksaw, Mallet, Hand Tongs, Tester, Continuity Tester, Test lamp, Screwdriver, Electrician’s Knife, Files, Pliers, Cutter, Crimping tool, Poker, Hammer, Hand Drill, Drilling Machine, Spirit Level etc. for electric work and study color code for electric wire. 6 Identify different types of wires; single strand wire, multi strand wire, shielded 2 wire, multi core wire etc. and make wire joints. 7 Identify different types of switches used for different application as per current 4 and voltage rating; SPST, SPDT, DPST, DPDT, two-way switch, multi point switch, rotary switch, heavy duty switch, toggle switch, push button etc. and Distribution board used for electric network; LDB, DCDB, MDB, HDB, ASB, MLDB, MCB, MCCB etc. 8 Identify the different classes of sockets and plugs according to standards (IEC, 2 CEE, NEMA, BS etc.,) and understand their applications. 9 Identify different types of fuses, such as Re-wireable, HRC (High Rupturing 2 Capacity), and Kit-Kat, and demonstrate operation of fuse. 10 Understand concept of lamp with power rating and illumination, also use 2 fixtures & reflectors for lightening purpose. 11 Identify and use materials required for wiring; wire ties, Lag, Glands, wire 4 tray, Ferrules, Strip connectors, etc. 12 To prepare house wiring diagram and understand different method of wiring. 4 13 To understand internal electric wire connection, working and repair different 8 electric home appliances; Lamps, CFL, Fluorescent tubes light and type, LED, Fan and energy saving by fan, Refrigerator, Washing machine, Toaster, LED etc. 14 To prepare extension board as per requirement and draw house wiring 2 diagram. 15 To use measuring instrument for measurement electric parameters; voltmeter, 6 Ammeter, Multimeter, Wattmeter, Frequency meter, Clip-on-meter, Megger, Energy meter, Earth tester, Test lamp and Tachometer etc. 16 To understand general techniques for trouble-shooting and repairing of 2 electrical home appliance and equipment. 17 Practice breadboard and soldering to prepare electric circuit on PCB. 4 References: 1. R. P. Singh, \"Electrical Workshop\", I.K. International Publishing House Pvt. Ltd., 2013 2. G. K. Mithal, \"Electrical Engineering Materials\", Khanna Publication, 2011 3. Singh, S. K. Surjit, \"Electrical Engineering Drawing I & II\", Kataria & Sons, 2012 4. S.L. Bhatia, \"Handbook of Electrical Engineering\", Khanna Publication, 2012 5. S. L. Uppal & G. C. Garg, \"Electrical Wiring, Estimating and Costing\", Khanna Publication, 2012 [PAGE 3] Syllabus for Diploma Engineering Electrical Engineering Instructional Method: a. The course delivery method will depend upon the requirement of content and need of students. The teacher in addition to conventional teaching method by black board, may also use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc. b. The internal evaluation will be done on the basis of continuous evaluation of students in the laboratory. c. Practical examination will be conducted at the end of semester for evaluation of performance of students in laboratory. d. Students will use supplementary resources such as online videos, NPTEL videos, e-courses, Virtual Laboratory Supplementary Resources: 1. http://nptel.ac.in/courses/108108076/ 2. http://nptel.ac.in/downloads/108105053/ 3. http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6- 002-circuits-and-electronics-spring-2007/video-lectures/ 4. https://www.facstaff.bucknell.edu/mastascu/eLessonsHTML/EEIndex.html 5. http://www.electrical4u.com/nature-of-electricity/",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6798,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                     Electrical Engineering\n\n\n                              Semester – I\n\n                      Subject Name: Electrical Practice\n\n                          Subject Code: 09EE3102\n\n Diploma Branches in which this subject is offered: Electrical Engineering\n\n Objective: To provide students with hands-on experience and practical skills in electrical\n systems, enabling them to design, analyze, and troubleshoot  electrical circuits and\n equipment, while also emphasizing safety and industry standards.\n\n Credits Earned: 2 Credits\n\n Course Outcomes: After learning the course the students should be able:\n\n  1. To apply appropriate  electrical safety practices and  fire hazard prevention  to\n     minimize accidents, equipment damage, and risk to human life.\n  2. To apply appropriate protective devices based on electrical load requirements and\n      utilize electrical symbols, wires, and cables in residential and industrial wiring\n     diagrams.\n  3. To understand, select and effectively use appropriate tools as per requirement of\n      electrical work.\n  4. To understand, select and effectively use appropriate measuring instruments as per\n     requirements.\n\n\n Pre-requisite of course: Basic knowledge of physics.\n\n\n                    Teaching and Examination Scheme\n                                                            Tutorial/ Practical  Teaching Scheme (Hours)          Theory Marks\n                                                  Marks          Total\n                              Credits\n                                                   Term    Marks  Theory Tutorial  Practical       ESE  IA  CSE   Viva\n                                                     work\n    0      0       4       2     00   30   20    25      25       100\n\n\nList of Experiments:\n\n\n Sr.                                                                    Contact\n                       Name of Experiment\n No.                                                               Hours\n  1  To understand  electric hazards & safety, safety rules and application of    2\n       electrical personal protective equipments.\n\n  2  To understand  electric shock,  its  effect and precaution using  Silvester’s    2\n      method, Eve’s rocking method, Modern month-to-mouth respiration method\n      and Artificial resuscitator.\n\n  3   Identify various type of fire and select suitable fire extinguishers as per class    2\n      of fire.\n  4   Identify the different symbols and abbreviations used in electric network.         2"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                     Electrical Engineering\n\n  5   Use various tools such as Bearing Puller, Pipe Bender, Pipe Cutter, Pipe    4\n     Wrench, Chisel, Spanners, Wrenches, Soldering Instruments, Poker, Electric\n     Hand Drills, Hacksaw, Mallet, Hand Tongs, Tester, Continuity Tester, Test\n      lamp, Screwdriver, Electrician’s Knife, Files, Pliers, Cutter, Crimping tool,\n      Poker, Hammer, Hand Drill, Drilling Machine, Spirit Level etc. for electric\n     work and study color code for electric wire.\n  6   Identify different types of wires; single strand wire, multi strand wire, shielded    2\n       wire, multi core wire etc. and make wire joints.\n\n  7   Identify different types of switches used for different application as per current    4\n      and voltage rating; SPST, SPDT, DPST, DPDT, two-way switch, multi point\n       switch, rotary switch, heavy duty switch, toggle switch, push button etc. and\n       Distribution board used for electric network; LDB, DCDB, MDB, HDB, ASB,\n    MLDB, MCB, MCCB etc.\n  8   Identify the different classes of sockets and plugs according to standards (IEC,    2\n     CEE, NEMA, BS etc.,) and understand their applications.\n\n  9   Identify different types of fuses, such as Re-wireable, HRC (High Rupturing    2\n      Capacity), and Kit-Kat, and demonstrate operation of fuse.\n 10  Understand concept of lamp with power rating and illumination, also use    2\n       fixtures & reflectors for lightening purpose.\n 11   Identify and use materials required for wiring; wire ties, Lag, Glands, wire    4\n       tray, Ferrules, Strip connectors, etc.\n 12  To prepare house wiring diagram and understand different method of wiring.      4\n 13  To understand internal electric wire connection, working and repair different    8\n       electric home appliances; Lamps, CFL, Fluorescent tubes light and type, LED,\n     Fan and energy saving by fan, Refrigerator, Washing machine, Toaster, LED\n       etc.\n 14  To prepare extension board as per requirement and draw house wiring    2\n      diagram.\n 15  To use measuring instrument for measurement electric parameters; voltmeter,    6\n     Ammeter, Multimeter, Wattmeter, Frequency meter, Clip-on-meter, Megger,\n      Energy meter, Earth tester, Test lamp and Tachometer etc.\n 16  To  understand  general techniques  for  trouble-shooting and  repairing  of    2\n       electrical home appliance and equipment.\n 17   Practice breadboard and soldering to prepare electric circuit on PCB.            4\n\n\nReferences:\n     1.  R. P. Singh, \"Electrical Workshop\", I.K. International Publishing House Pvt. Ltd.,\n      2013\n     2.  G. K. Mithal, \"Electrical Engineering Materials\", Khanna Publication, 2011\n     3.  Singh, S. K. Surjit, \"Electrical Engineering Drawing I & II\", Kataria & Sons,\n      2012\n     4.  S.L. Bhatia, \"Handbook of Electrical Engineering\", Khanna Publication, 2012\n     5.  S. L. Uppal & G. C. Garg, \"Electrical Wiring, Estimating and Costing\", Khanna\n        Publication, 2012"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                     Electrical Engineering\n\nInstructional Method:\na.  The course delivery method will depend upon the requirement of content and\n    need of students. The teacher in addition to conventional teaching method by\n    black board, may also use any of tools such as demonstration, role play, Quiz,\n    brainstorming, MOOCs etc.\n\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n    students in the laboratory.\n\nc.   Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\nd.   Students will use supplementary resources such as online videos, NPTEL videos,\n     e-courses, Virtual Laboratory\n\n\nSupplementary Resources:\n     1. http://nptel.ac.in/courses/108108076/\n     2. http://nptel.ac.in/downloads/108105053/\n     3. http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-\n       002-circuits-and-electronics-spring-2007/video-lectures/\n     4. https://www.facstaff.bucknell.edu/mastascu/eLessonsHTML/EEIndex.html\n\n     5. http://www.electrical4u.com/nature-of-electricity/"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "350896689033106e313c1e0728f04bb41ab3157d006950ef3530b2abf5c57d23"
+    },
+    {
+      "subject_id": "47009135110101",
+      "subject_name": "Engineering Drawing",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 1,
+      "subject_code": "09ME1101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME1101-Engineering-Drawing.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09ME1101 - ENGINEERING DRAWING (.pdf",
+      "expected_pdf_sha256": "2d2b8df030a998f022b0ed9c462d552a74a02053fb575b63b626f09aa35513cc",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09ME1101",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "Engineering Drawing is language of Engineer through which they can communicate with other person and transfer their ideas. Engineers are able to read and understand the drawing and able to use of drawing instruments. The curriculum aim is to develop the skill to draw and read several drawing, curves and projections. Main goal of this subject is to develop thoughts& explaining concepts. Developing of diagram order & practice of drawing apparatus well. Credits Earned: 4 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to  Construct fundamental and intermediate geometry.  To expand their technical communication skill.  Understand engineering drawings using fundamental technical mathematics.  To recognize and know the resolutions and the methods of engineering drawing.  To move ahead their visualization skills so that they can apply these skills in emerging novel products.  Understand the theory of projection."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE Viva Marks Theory Tutorial Practical IA (CSE) work (E) (V) (TW) 2 0 4 4 50 30 20 25 25 150",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Overview to Engineering Graphics: Drawing instruments and",
+            "contact_hours": 10,
+            "topic_lines": [
+              "accessories, utilize drawing instruments and materials",
+              "effectively. Follow and apply standard practice as per B.I.S. for",
+              "planning and outline, select appropriate scale factor for the",
+              "drawing as per given condition; Write remarks on a drawing",
+              "where ever necessary. select suitable line & dimensioning style",
+              "for a given geometrical object; improved the skill to draw",
+              "polygons, circles and lines with different geometric situations:",
+              "Use of plane scales and R. F."
+            ],
+            "topics_text": "accessories, utilize drawing instruments and materials effectively. Follow and apply standard practice as per B.I.S. for planning and outline, select appropriate scale factor for the drawing as per given condition; Write remarks on a drawing where ever necessary. select suitable line & dimensioning style for a given geometrical object; improved the skill to draw polygons, circles and lines with different geometric situations: Use of plane scales and R. F.",
+            "topics": [
+              "accessories, utilize drawing instruments and materials",
+              "effectively. Follow and apply standard practice as per B.I.S. for",
+              "planning and outline, select appropriate scale factor for the",
+              "drawing as per given condition",
+              "Write remarks on a drawing",
+              "where ever necessary. select suitable line & dimensioning style",
+              "for a given geometrical object",
+              "improved the skill to draw",
+              "polygons, circles and lines with different geometric situations:",
+              "Use of plane scales and R. F."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Engineering Curves: Types & application of Engineering 08",
+            "contact_hours": 20,
+            "topic_lines": [
+              "Curves, Construction of Conics, Cycloidal Curves, and",
+              "Involutes & Spirals the length of with normal and tangent to",
+              "each curvature."
+            ],
+            "topics_text": "Curves, Construction of Conics, Cycloidal Curves, and Involutes & Spirals the length of with normal and tangent to each curvature.",
+            "topics": [
+              "Curves, Construction of Conics, Cycloidal Curves, and",
+              "Involutes & Spirals the length of with normal and tangent to",
+              "each curvature."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Projections of Points and Lines: Introduction: Principal Planes 07",
+            "contact_hours": 20,
+            "topic_lines": [
+              "of Projections, Projections of the points positioned in same",
+              "quadrant and different quadrants, Projections of line with",
+              "inclination to one reference plane and with two reference planes,",
+              "True length and its inclination with the reference planes."
+            ],
+            "topics_text": "of Projections, Projections of the points positioned in same quadrant and different quadrants, Projections of line with inclination to one reference plane and with two reference planes, True length and its inclination with the reference planes.",
+            "topics": [
+              "of Projections, Projections of the points positioned in same",
+              "quadrant and different quadrants, Projections of line with",
+              "inclination to one reference plane and with two reference planes,",
+              "True length and its inclination with the reference planes."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Projections of Planes: Projections of planes: - polygons, circle 07",
+            "contact_hours": 15,
+            "topic_lines": [
+              "and ellipse with its inclination to one orientation plane and with",
+              "two reference plane; idea of auxiliary plane method for",
+              "projections of the plane."
+            ],
+            "topics_text": "and ellipse with its inclination to one orientation plane and with two reference plane; idea of auxiliary plane method for projections of the plane.",
+            "topics": [
+              "and ellipse with its inclination to one orientation plane and with",
+              "two reference plane",
+              "idea of auxiliary plane method for",
+              "projections of the plane."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Orthographic Projections: Fundamental of projection with 06",
+            "contact_hours": 20,
+            "topic_lines": [
+              "classification; Principal planes of projection, Projections from",
+              "the graphic view of the entity on the principal planes for",
+              "observation from front, top & sides by means of first angle and",
+              "third angle projection technique, full sectional view."
+            ],
+            "topics_text": "classification; Principal planes of projection, Projections from the graphic view of the entity on the principal planes for observation from front, top & sides by means of first angle and third angle projection technique, full sectional view.",
+            "topics": [
+              "classification",
+              "Principal planes of projection, Projections from",
+              "the graphic view of the entity on the principal planes for",
+              "observation from front, top & sides by means of first angle and",
+              "third angle projection technique, full sectional view."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Isometric Projections and Isometric View or Drawing",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Isometric Scale, transformation (redefine) of orthographic views",
+              "into isometric projection, isometric view or drawing.",
+              "Note: Topic No. 1 & 6 of the above mentioned syllabus to be covered in Practical",
+              "Hours."
+            ],
+            "topics_text": "Isometric Scale, transformation (redefine) of orthographic views into isometric projection, isometric view or drawing. Note: Topic No. 1 & 6 of the above mentioned syllabus to be covered in Practical Hours.",
+            "topics": [
+              "Isometric Scale, transformation (redefine) of orthographic views",
+              "into isometric projection, isometric view or drawing.",
+              "Note: Topic No. 1 & 6 of the above mentioned syllabus to be covered in Practical",
+              "Hours."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 8059,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                  Mechanical Engineering\n\n\n                                  Semester – I\n\n                        Subject Name: Engineering Drawing\n\n                             Subject Code: 09ME1101\n\n   Diploma Branches in which this subject is offered: Civil Engineering, Chemical\n    Engineering, Computer Engineering, Electrical Engineering, Mechanical Engineering.\n\n\n\n    Objective: Engineering Drawing  is language of Engineer through which they can\n    communicate with other person and transfer their ideas. Engineers are able to read and\n    understand the drawing and able to use of drawing instruments. The curriculum aim is\n    to develop the skill to draw and read several drawing, curves and projections.\n\n   Main goal of this subject is to develop thoughts& explaining concepts. Developing of\n    diagram order & practice of drawing apparatus well.\n\n    Credits Earned: 4 Credits\n\n   Course Outcomes: After completion of this course, student will be able to\n\n\n      Construct fundamental and intermediate geometry.\n     To expand their technical communication skill.\n      Understand engineering drawings using fundamental technical mathematics.\n     To recognize and know the resolutions and the methods of engineering\n           drawing.\n     To move ahead their visualization skills so that they can apply these skills in\n          emerging novel products.\n      Understand the theory of projection.\n\n    Pre-requisite of course: NA.\n\n                       Teaching and Examination Scheme\n                                                                          Tutorial/ Practical\n  Teaching Scheme (Hours)                Theory Marks\n                                                            Marks\n                                                                                        Total\n                                Credits                               Term\n                             ESE                    Viva             Marks\nTheory   Tutorial   Practical                IA     (CSE)             work\n                                         (E)                      (V)\n                                                            (TW)\n  2       0        4        4     50    30      20       25       25      150\n\n\n\n\n\n    Contents:\n      sr.                           Topics                          Teaching hrs.   weightage"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                              Mechanical Engineering\n\n\nno.\n\n1    Overview to Engineering Graphics: Drawing instruments and            -            10\n      accessories,   utilize  drawing   instruments  and   materials\n       effectively. Follow and apply standard practice as per B.I.S. for\n      planning and outline,  select appropriate scale factor  for the\n     drawing as per given condition; Write remarks on a drawing\n     where ever necessary. select suitable line & dimensioning style\n       for a given geometrical object; improved the  skill  to draw\n      polygons, circles and lines with different geometric situations:\n     Use of plane scales and R. F.\n\n2    Engineering Curves: Types &  application  of  Engineering       08           20\n      Curves,  Construction  of  Conics,  Cycloidal  Curves,  and\n      Involutes & Spirals the length of with normal and tangent to\n      each curvature.\n\n3    Projections of Points and Lines: Introduction: Principal Planes       07           20\n      of Projections, Projections of the points positioned in same\n      quadrant and  different  quadrants,  Projections  of  line  with\n       inclination to one reference plane and with two reference planes,\n     True length and its inclination with the reference planes.\n\n4    Projections of Planes: Projections of planes: - polygons, circle       07           15\n     and ellipse with its inclination to one orientation plane and with\n     two  reference  plane;  idea  of  auxiliary  plane method  for\n      projections of the plane.\n\n5    Orthographic  Projections: Fundamental  of projection with       06           20\n       classification; Principal planes of projection, Projections from\n      the graphic view of the  entity on the principal planes  for\n      observation from front, top & sides by means of first angle and\n       third angle projection technique, full sectional view.\n\n6    Isometric  Projections and  Isometric View  or Drawing:            -            15\n      Isometric Scale, transformation (redefine) of orthographic views\n       into isometric projection, isometric view or drawing.\n\n\nNote: Topic No. 1 & 6 of the above mentioned syllabus to be covered in Practical\nHours.\nReferences:\n\n    1.  Engineering Graphics by P. J. Shah\n    2.  Engineering Drawing by N D Bhatt\n    3.  Engineering Graphics by Arunoday Kumar\n    4.  Engineering Graphics by Mahajan Publications\n    5.  Engineering Graphics by Books India Publications\n\nSuggested Theory distribution:"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                               Mechanical Engineering\n\n\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This\ndistribution serves  as  guidelines  for  teachers and  students  to achieve  effective\nteaching-learning process\n               Distribution of Theory for course delivery and evaluation\n\nRemember    Understand      Apply        Analyse       Evaluate        Create\n\n  20%        20%        30%        15%        10%       5%\n\nSuggested List of Drawing Sheets:\n    1.  Practice Sheet\n         Use of Drawing Instruments:\n         Faculty will demonstrate-\n             a: Practice of drawing instruments.\n            b: Planning and layout as per IS.\n             c: Scaling method.\n         Draw Following.\n             a: Draw horizontal, vertical, 30 degree, 45 degree, 60 & 75-degree line\n           using Tee & Set square/drafter.\n            b: Different Types of line.\n             c. Draw equilateral triangle and square\n            d. Types of dimensioning.\n             e. Alphabets and numerical (Vertical & inclined as Per IS).\n                 f. Draw Polygon using universal method\n            g. Dimensioning methods.\n             h. Draw Title Block using stencil.\n                   i. Draw plain scale and diagonal scale.\n    2.  Engineering Curves\n         2 Problems of Conical Curves,\n         1 Problem of Cycloid,\n         1 Problem of Involute,\n         1 Problem of spiral.\n    3.  Projections of Points & line\n         To draw a projection of points for 10 different conditions.\n         To draw projections of lines with different conditions. (4 Problems)\n    4.  Projections of Planes\n         To draw projections of different plane with different conditions(4\n          Problems)\n    5.  Orthographic Projections\n         To draw orthographic projections of different objects (2 Problems)\n    6.  Isometric Projections\n         To draw isometric projections for given orthographic views. (2 Problems)\n\n   Drawing Instruments to purchase:\n    1.  Mini Drafter\n    2.  Set square (45, 30-60)\n    3.  Lead Pencil (2H and 4H grade only for any Engg. Drawing.)"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                              Mechanical Engineering\n\n\n    4.  Circle master\n    5. Compass\n    6.  Drawing clips\n    7.  Eraser\n    8.  Sheet Container\n    9.  Drawing Sheet (A2 Size)\n\n\nInstructional Method:\na.  The course delivery method will depend upon the requirement of content and\n    need of students. The teacher in addition to conventional teaching method by\n    black board, may also use any of tools such as demonstration, role play, Quiz,\n    brainstorming, MOOCs etc.\n\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n    students in the laboratory and class-room.\n\nc.   Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nd.  Students will use supplementary resources such as online videos, NPTEL videos,\n     e-courses, Virtual Laboratory"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "2d2b8df030a998f022b0ed9c462d552a74a02053fb575b63b626f09aa35513cc"
+    },
+    {
+      "subject_id": "47009121010101",
+      "subject_name": "Indian Constitution",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 1,
+      "subject_code": "09AU0101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0101-Indian-Constitution.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09AU0101 - INDIAN CONSTITUTION (.pdf",
+      "expected_pdf_sha256": "ff545c0e1bfb3074b3febae8f2b82e9fc5a071f31a1b0ed70c5b4112b9330c7f",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09AU0101",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "To know and create awareness about Indian constitution which is consider as pillar of Indian democracy. To be familiar with the functionalities of Union government, State government and local government etc. by knowing about the functionalities of Election commission of India. Credits Earned: Non-Credit"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able 1. To learn about law enactment and importance of Constitution. 2. To understand the fundamental rights and fundamental duties of the Indian citizen to instill morality, social values, honesty, dignity of life and their social responsibilities. 3. To create awareness of their surroundings, society, social problems and their suitable solutions while keeping rights and duties of the citizen keeping in mind 4. To understand powers and functionalities from union to local self-government. 5. To justify the need for protection of human rights and to know about concept of women empowerment."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 0 0 0 0 0 0 0 0 0 [PAGE 2] Syllabus for Diploma Engineering Diploma Engineering All Branches",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "The Constitution – Introduction 14",
+            "contact_hours": 50,
+            "topic_lines": [
+              "• Meaning of the constitution law and",
+              "constitutionalism",
+              "• The History of the Making of the Indian",
+              "Constitution",
+              "• Preamble and the Basic Structure, and its",
+              "Interpretation",
+              "• Salient features and characteristics of the",
+              "Constitution of India",
+              "• Fundamental Rights and Duties and their",
+              "Interpretation, Right to Equality under Article – 14,",
+              "Right to certain Freedom under Article 19, Scope of",
+              "the Right to Life and Personal Liberty under Article",
+              "21, Fundamental Duties and its legal status",
+              "• State Policy Principles- Its importance and",
+              "Implementation"
+            ],
+            "topics_text": "• Meaning of the constitution law and constitutionalism • The History of the Making of the Indian Constitution • Preamble and the Basic Structure, and its Interpretation • Salient features and characteristics of the Constitution of India • Fundamental Rights and Duties and their Interpretation, Right to Equality under Article – 14, Right to certain Freedom under Article 19, Scope of the Right to Life and Personal Liberty under Article 21, Fundamental Duties and its legal status • State Policy Principles- Its importance and Implementation",
+            "topics": [
+              "Meaning of the constitution law and",
+              "constitutionalism",
+              "The History of the Making of the Indian",
+              "Constitution",
+              "Preamble and the Basic Structure, and its",
+              "Interpretation",
+              "Salient features and characteristics of the",
+              "Constitution of India",
+              "Fundamental Rights and Duties and their",
+              "Interpretation, Right to Equality under Article – 14,",
+              "Right to certain Freedom under Article 19, Scope of",
+              "the Right to Life and Personal Liberty under Article",
+              "21, Fundamental Duties and its legal status",
+              "State Policy Principles- Its importance and",
+              "Implementation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Union Government 4",
+            "contact_hours": 14,
+            "topic_lines": [
+              "• Structure of the Indian Union",
+              "• President – Role and Power",
+              "• Prime Minister and Council of Ministers",
+              "• Lok Sabha and Rajya Sabha"
+            ],
+            "topics_text": "• Structure of the Indian Union • President – Role and Power • Prime Minister and Council of Ministers • Lok Sabha and Rajya Sabha",
+            "topics": [
+              "Structure of the Indian Union",
+              "President – Role and Power",
+              "Prime Minister and Council of Ministers",
+              "Lok Sabha and Rajya Sabha"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "State Government 3",
+            "contact_hours": 11,
+            "topic_lines": [
+              "• Governor – Role and Power",
+              "• Chief Minister and Council of Ministers",
+              "• State Secretariat"
+            ],
+            "topics_text": "• Governor – Role and Power • Chief Minister and Council of Ministers • State Secretariat",
+            "topics": [
+              "Governor – Role and Power",
+              "Chief Minister and Council of Ministers",
+              "State Secretariat"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Local Administration 3",
+            "contact_hours": 11,
+            "topic_lines": [
+              "• District Administration",
+              "• Municipal Corporation",
+              "• Zila Panchayat"
+            ],
+            "topics_text": "• District Administration • Municipal Corporation • Zila Panchayat",
+            "topics": [
+              "District Administration",
+              "Municipal Corporation",
+              "Zila Panchayat"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Election Commission 4",
+            "contact_hours": 14,
+            "topic_lines": [
+              "• Role and Functioning",
+              "• Chief Election Commissioner",
+              "• State Election Commission"
+            ],
+            "topics_text": "• Role and Functioning • Chief Election Commissioner • State Election Commission",
+            "topics": [
+              "Role and Functioning",
+              "Chief Election Commissioner",
+              "State Election Commission"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5731,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                Diploma Engineering All Branches\n\n                                 Semester – I\n\n\n                          Subject Name: Indian Constitution\n\n\n                               Subject Code: 09AU0101\n\n   Diploma Branches in which this subject is offered: All Diploma Engineering branches\n\n    Objective: To know and create awareness about Indian constitution which is consider as\n     pillar of Indian democracy. To be familiar with the functionalities of Union government,\n    State government and local government etc. by knowing about the functionalities of\n    Election commission of India.\n\n\n    Credits Earned: Non-Credit\n\n   Course Outcomes: After completion of this course, student will be able\n\n          1.  To learn about law enactment and importance of Constitution.\n          2.  To understand the fundamental rights and fundamental duties of the Indian citizen to\n                instill morality, social values, honesty, dignity of life and their social responsibilities.\n          3.  To create awareness of their surroundings, society, social problems and their suitable\n             solutions while keeping rights and duties of the citizen keeping in mind\n          4.  To understand powers and functionalities from union to local self-government.\n          5.  To justify the need for protection of human rights and to know about concept of\n         women empowerment.\n\n    Pre-requisite of course: NA\n\n                       Teaching and Examination Scheme\n                                                                         Tutorial/ Practical\n  Teaching Scheme (Hours)                Theory Marks                                                            Marks          Total\n                                Credits\n                                                             Term    Marks\nTheory   Tutorial   Practical         ESE   IA    CSE     Viva                                                                 work\n  2       0        0        0      0     0       0        0        0      0"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                             Diploma Engineering All Branches\n\nContents:\n Unit                     Topics                    Contact  Weightage\n                                                    hours     (%)\n\n   1   The Constitution – Introduction                  14        50\n       •  Meaning of the constitution law and\n             constitutionalism\n       •  The History of the Making of the Indian\n            Constitution\n       •  Preamble and the Basic Structure, and its\n             Interpretation\n       •  Salient features and characteristics of the\n            Constitution of India\n       •  Fundamental Rights and Duties and their\n             Interpretation, Right to Equality under Article – 14,\n           Right to certain Freedom under Article 19, Scope of\n            the Right to Life and Personal Liberty under Article\n            21, Fundamental Duties and its legal status\n       •  State Policy Principles- Its importance and\n           Implementation\n   2  Union Government                              4        14\n       •  Structure of the Indian Union\n       •  President – Role and Power\n       • Prime Minister and Council of Ministers\n       • Lok Sabha and Rajya Sabha\n   3    State Government                              3        11\n       • Governor – Role and Power\n       •  Chief Minister and Council of Ministers\n       •  State Secretariat\n   4    Local Administration                           3        11\n       •  District Administration\n       •  Municipal Corporation\n        •  Zila Panchayat\n\n   5   Election Commission                            4        14\n       •  Role and Functioning\n       •  Chief Election Commissioner\n       •  State Election Commission\n\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This\ndistribution serves as  guidelines  for  teachers and  students  to achieve  effective\nteaching-learning process\n              Distribution of Theory for course delivery and evaluation\n\n  Remember  Understand     Apply      Analyse     Evaluate      Create\n\n   45%      45%      5%       5%       0%      0%"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                             Diploma Engineering All Branches\n\nInstructional Method:\na.  The course delivery method will depend upon the requirement of content and\n    need of students. The teacher in addition to conventional teaching method by\n    black board, may also use any of tools such as demonstration, role play, Quiz,\n    brainstorming, MOOCs etc.\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n    students in the classroom.\n\nc.   Students will use supplementary resources such as online videos.\n\nReferences:\n\n\n    1.  Dr. J.N. Pandey, \" Constitutional Law of India \", Central Law Agency\n    2.  M.P. Jain, \" Indian Constitutional Law \", LexisNexis J. B. Gupta, \"A Course of\n        Electrical Technology Vol-I\", Kataria & Sons, 2012\n    3.  Udai Raj Rai, \" Constitutional Law – I Structure \", Eastern Book Company\n    4.  B.L. Fadia, “The Constitution of India” Sahitya Bhawan; New edition (2017)\n\n\n Supplementary Resources:\n\n     1. https://legislative.gov.in/constitution-of-india\n     2. https://www.india.gov.in/my-government/constitution-india\n\n     3. https://www.constitutionofindia.net/constitution_of_india\n     4. https://main.sci.gov.in/constitution\n     5. https://www.youtube.com/watch?v=S_3i0Hf8KMI&list=PL4gSUwMBf0\n     L0p8mciCow7pSMs0ZViBe1R\n\n     6. https://www.youtube.com/watch?v=9MYY4SXEGCE&list=PLVOgwA_\n     DiGzoFR3j1mSGn5Z_OQLxgodQi"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "ff545c0e1bfb3074b3febae8f2b82e9fc5a071f31a1b0ed70c5b4112b9330c7f"
+    },
+    {
+      "subject_id": "47009131210101",
+      "subject_name": "Mathematics I",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 1,
+      "subject_code": "09MA2101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2101-Mathematics-I.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09MA2101 - MATHEMATICS-I (.pdf",
+      "expected_pdf_sha256": "28aafd604001ae8b4624ee64940f20728a629bccf5dc79114ea6eea7a25928af",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09MA2101",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "Students are intended to understand the basic concepts and principles of Mathematics such as basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry. This knowledge is required to understand and solve Engineering problems. The course will empower students to use proper Mathematical tool to understand Engineering principles and concepts. Main objective of the course is to apply concepts of basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry or suitable Mathematical tool to solve given engineering problems. Credits Earned: 3 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to ➢ classify the different types of sets of numbers. ➢ understand the laws of power of numbers. ➢ find LCM and HCF of numbers. ➢ solve simple problems on algebraic expressions. ➢ compute the area and perimeter of 2D-shapes and volume and surface area of 3D-shapes. ➢ solve the applied problems using right triangle trigonometry."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 2 0 3 50 30 20 25 25 150 [PAGE 2] Syllabus for Diploma Engineering All Branches",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic calculation 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "1. Set of Numbers",
+              "2. Indices"
+            ],
+            "topics_text": "1. Set of Numbers 2. Indices",
+            "topics": [
+              "1. Set of Numbers",
+              "2. Indices"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "HCF and LCM of numbers 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "1. HCF of integer",
+              "2. LCM of integer",
+              "3. HCF and LCM of fractions",
+              "4. HCF and LCM of decimals"
+            ],
+            "topics_text": "1. HCF of integer 2. LCM of integer 3. HCF and LCM of fractions 4. HCF and LCM of decimals",
+            "topics": [
+              "1. HCF of integer",
+              "2. LCM of integer",
+              "3. HCF and LCM of fractions",
+              "4. HCF and LCM of decimals"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Polynomials 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "1. Definition",
+              "2. Arithmetic properties of polynomials",
+              "3. Algebraic identities"
+            ],
+            "topics_text": "1. Definition 2. Arithmetic properties of polynomials 3. Algebraic identities",
+            "topics": [
+              "1. Definition",
+              "2. Arithmetic properties of polynomials",
+              "3. Algebraic identities"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Mensuration 8",
+            "contact_hours": 8,
+            "topic_lines": [
+              "1. Area and perimeter of square, rectangle, triangle,",
+              "trapezium, parallelogram, rhombus, circle",
+              "2. Surface area and volume of cube, cuboid, cone, cylinder,",
+              "sphere"
+            ],
+            "topics_text": "1. Area and perimeter of square, rectangle, triangle, trapezium, parallelogram, rhombus, circle 2. Surface area and volume of cube, cuboid, cone, cylinder, sphere",
+            "topics": [
+              "1. Area and perimeter of square, rectangle, triangle,",
+              "trapezium, parallelogram, rhombus, circle",
+              "2. Surface area and volume of cube, cuboid, cone, cylinder,",
+              "sphere"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Trigonometry 10",
+            "contact_hours": 10,
+            "topic_lines": [
+              "1. Introduction to Trigonometry ratios",
+              "2. Concept of angles",
+              "3. Unit circle",
+              "4. T- Ratios of multiple angles, sub-multiple angles",
+              "Total 28 28",
+              "Syllabus for Diploma Engineering",
+              "All Branches",
+              "List of Tutorials:",
+              "Lab",
+              "Topics",
+              "Hours",
+              "Unit 1: Basic calculation",
+              "1. Set of numbers and indices 2",
+              "Unit-2: HCF and LCM of numbers",
+              "1. HCF and LCM of numbers 2",
+              "2. HCF and LCM of fractions and decimals 2",
+              "Unit-3: Polynomials",
+              "1. Arithmetic properties of polynomials 2",
+              "2. Algebraic identities 2",
+              "Unit 4: Mensuration",
+              "1. Area and perimeter of square, rectangle, triangle 2",
+              "2. Area and perimeter of trapezium, parallelogram, rhombus, circle 2",
+              "3. Surface area and volume of cube, cuboid, cone 2",
+              "4. Surface area and volume of cylinder, sphere 2",
+              "Unit 5: Trigonometry",
+              "1. Trigonometric Ratios 2",
+              "2. Concept of angles 2",
+              "3. Unit circle 2",
+              "4. T- Ratios of multiple angles, sub-multiple angles 4",
+              "Total 28",
+              "Syllabus for Diploma Engineering",
+              "All Branches"
+            ],
+            "topics_text": "1. Introduction to Trigonometry ratios 2. Concept of angles 3. Unit circle 4. T- Ratios of multiple angles, sub-multiple angles Total 28 28 Syllabus for Diploma Engineering All Branches List of Tutorials: Lab Topics Hours Unit 1: Basic calculation 1. Set of numbers and indices 2 Unit-2: HCF and LCM of numbers 1. HCF and LCM of numbers 2 2. HCF and LCM of fractions and decimals 2 Unit-3: Polynomials 1. Arithmetic properties of polynomials 2 2. Algebraic identities 2 Unit 4: Mensuration 1. Area and perimeter of square, rectangle, triangle 2 2. Area and perimeter of trapezium, parallelogram, rhombus, circle 2 3. Surface area and volume of cube, cuboid, cone 2 4. Surface area and volume of cylinder, sphere 2 Unit 5: Trigonometry 1. Trigonometric Ratios 2 2. Concept of angles 2 3. Unit circle 2 4. T- Ratios of multiple angles, sub-multiple angles 4 Total 28 Syllabus for Diploma Engineering All Branches",
+            "topics": [
+              "1. Introduction to Trigonometry ratios",
+              "2. Concept of angles",
+              "3. Unit circle",
+              "4. T- Ratios of multiple angles, sub-multiple angles",
+              "Total 28 28",
+              "Syllabus for Diploma Engineering",
+              "All Branches",
+              "List of Tutorials:",
+              "Lab",
+              "Topics",
+              "Hours",
+              "Unit 1: Basic calculation",
+              "1. Set of numbers and indices 2",
+              "Unit-2: HCF and LCM of numbers",
+              "1. HCF and LCM of numbers 2",
+              "2. HCF and LCM of fractions and decimals 2",
+              "Unit-3: Polynomials",
+              "1. Arithmetic properties of polynomials 2",
+              "2. Algebraic identities 2",
+              "Unit 4: Mensuration",
+              "1. Area and perimeter of square, rectangle, triangle 2",
+              "2. Area and perimeter of trapezium, parallelogram, rhombus, circle 2",
+              "3. Surface area and volume of cube, cuboid, cone 2",
+              "4. Surface area and volume of cylinder, sphere 2",
+              "Unit 5: Trigonometry",
+              "1. Trigonometric Ratios 2",
+              "2. Concept of angles 2",
+              "3. Unit circle 2",
+              "4. T- Ratios of multiple angles, sub-multiple angles 4",
+              "Total 28",
+              "Syllabus for Diploma Engineering",
+              "All Branches"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 6821,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                         All Branches\n\n                                   Semester – I\n\n                             Subject Name: Mathematics I\n\n                               Subject Code: 09MA2101\n\n     Diploma Branches in which this subject is offered: All Branches\n\n      Objective: Students are intended to understand the basic concepts and principles of\n     Mathematics such as basic mathematics, HCF and LCM, polynomials, mensuration and\n      trigonometry. This knowledge  is required to understand and solve Engineering\n      problems. The course will empower students to use proper Mathematical tool to\n      understand Engineering principles and concepts. Main objective of the course is to\n      apply concepts of basic mathematics, HCF and LCM, polynomials, mensuration and\n      trigonometry or suitable Mathematical tool to solve given engineering problems.\n\n      Credits Earned: 3 Credits\n\n     Course Outcomes: After completion of this course, student will be able to\n\n     ➢  classify the different types of sets of numbers.\n\n     ➢  understand the laws of power of numbers.\n\n     ➢  find LCM and HCF of numbers.\n\n     ➢  solve simple problems on algebraic expressions.\n\n     ➢ compute the area and perimeter of 2D-shapes and volume and surface area\n             of 3D-shapes.\n\n     ➢  solve the applied problems using right triangle trigonometry.\n\n\n\n      Pre-requisite of course: NA.\n\n                         Teaching and Examination Scheme\n                                                                       Tutorial/ Practical\n  Teaching Scheme (Hours)                 Theory Marks\n                                                            Marks          Total\n                                Credits\n                                                             Term    Marks\nTheory   Tutorial   Practical         ESE   IA    CSE     Viva\n                                                                 work\n\n  2       2        0        3      50    30      20       25       25      150"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                      All Branches\n\n   Contents\n\n                                                       Lab     LectureUnit                           Topics\n                                                         Hours    Hours\n  1   Basic calculation                                          2         2\n            1.  Set of Numbers\n            2.  Indices\n\n  2  HCF and LCM of numbers                                 4         4\n            1. HCF of integer\n            2. LCM of integer\n            3. HCF and LCM of fractions\n            4. HCF and LCM of decimals\n  3   Polynomials                                              4         4\n            1.  Definition\n            2.  Arithmetic properties of polynomials\n            3.  Algebraic identities\n\n  4   Mensuration                                              8         8\n            1.  Area  and  perimeter  of  square,  rectangle,  triangle,\n              trapezium, parallelogram, rhombus, circle\n            2.  Surface area and volume of cube, cuboid, cone, cylinder,\n              sphere\n\n  5   Trigonometry                                            10        10\n            1.  Introduction to Trigonometry ratios\n            2.  Concept of angles\n            3.  Unit circle\n            4.  T- Ratios of multiple angles, sub-multiple angles\nTotal                                                             28        28"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                        All Branches\n\nList of Tutorials:\n                                                  Lab\n                       Topics\n                                                     Hours\n\nUnit 1: Basic calculation\n    1.  Set of numbers and indices                                              2\n\n\nUnit-2: HCF and LCM of numbers\n    1. HCF and LCM of numbers                                              2\n    2. HCF and LCM of fractions and decimals                                  2\n\n\nUnit-3: Polynomials\n    1.  Arithmetic properties of polynomials                                      2\n    2.  Algebraic identities                                                   2\n\n\nUnit 4: Mensuration\n    1.  Area and perimeter of square, rectangle, triangle                             2\n    2.  Area and perimeter of trapezium, parallelogram, rhombus, circle                2\n    3.  Surface area and volume of cube, cuboid, cone                              2\n    4.  Surface area and volume of cylinder, sphere                                 2\n\n\nUnit 5: Trigonometry\n    1.  Trigonometric Ratios                                                   2\n    2.  Concept of angles                                                     2\n    3.  Unit circle                                                           2\n    4.  T- Ratios of multiple angles, sub-multiple angles                             4\n\n     Total                                                28"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                                       All Branches\n\n\n\n    References Books:\n\nSr      Title of books             Book Link                            Publication\nno.\n1    NCERT Class-XI science     https://ncert.nic.in/textbook.php?kem  NCERT\n      Mathematics              h1=0-16\n2    NCERT MATHEMATICS    https://ncert.nic.in/textbook.php?femh NCERT\n        for class-VI                1=0-14\n3    NCERT Class-X              https://ncert.nic.in/textbook.php?jemh NCERT\n      Mathematics               1=0-15\n\n\n    References Links:\n\n        1.  https://en.wikipedia.org/wiki/Set_(mathematics)\n\n        2.  https://en.wikipedia.org/wiki/Least_common_multiple\n\n        3.  https://en.wikipedia.org/wiki/Polynomial\n\n        4.  https://en.wikipedia.org/wiki/Mensuration\n\n        5.  https://en.wikipedia.org/wiki/Trigonometry\n\n\n   Suggested Theory distribution:\n   The suggested theory distribution as per Bloom’s taxonomy is as per follows. This\n    distribution serves as guidelines for teachers and students to achieve effective teaching-\n    learning process\n\n\n                 Distribution of Theory for course delivery and evaluation\n\n   Remember       Understand     Apply      Analyse     Evaluate        Create\n\n    30%          30%       30%      10%             ---                ---\n\n\n\n\n       Instructional Method:\n\n    a.  The course delivery method will depend upon the requirement of content and need\n        of students. The teacher in addition to conventional teaching method by black board,\n     may also use any of tools such as demonstration, Quiz, brainstorming.\n\n    b.  The internal evaluation will be done on the basis of continuous evaluation of\n        students in the class-rooms"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09MA2101 - MATHEMATICS-I (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "28aafd604001ae8b4624ee64940f20728a629bccf5dc79114ea6eea7a25928af"
+    }
+  ],
+  "build_summary": {
+    "extracted": 8,
+    "manual_review": 1,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

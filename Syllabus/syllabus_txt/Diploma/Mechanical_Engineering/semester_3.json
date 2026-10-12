@@ -1,0 +1,2182 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 45,
+    "course_name": "Diploma Mechanical Engineering",
+    "output_slug": "Mechanical_Engineering"
+  },
+  "semester": 3,
+  "subject_count": 7,
+  "subjects": [
+    {
+      "subject_id": "45009135230201",
+      "subject_name": "FLUID MECHANICS AND HYDRAULIC MACHINE",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 3,
+      "subject_code": "09ME2302",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FMHM.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME2302 - FLUID MECHANICS AND HYDRAULIC MACHINE (.pdf",
+      "expected_pdf_sha256": "b165dfc3e96b54c18e3eb9335e3be86808686879ab4b52e966cba3c1850ddf05",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "FLUID MECHANICS AND HYDRAULIC MACHINE",
+        "course_code": "09ME2302",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "This subject introduces in mechanical to understand the fundamental of the fluid mechanics such as behaviour and flow properties of fluid, fundamental equation like mass, energy and momentum conservation of fluid flow thereby developing an understanding of fluid dynamics in variety of fields. The application of these basic equations has been highlighted for flow measurements. There is an important role of hydraulic machinery in the conversation of hydraulic energy to mechanical energy and vice-versa. Hydraulic turbine is used for meeting our day-to-day power demands. Hydraulic system has wide range of applications in machine tools and other field. Similarly pneumatic control is extensively used as an effective method of automation technique."
+      ],
+      "course_outcomes": [
+        "To provide the students with a solid foundation in fluid flow principles.",
+        "To provide the students’ knowledge in calculating performance analysis in turbines and pumps and can be used in power plants.",
+        "To impart knowledge in measuring pressure, discharge and velocity of fluid flow.",
+        "To gain knowledge in performance testing of Hydraulic Turbines and Hydraulic Pumps at constant speed and Head.",
+        "Analyze a variety of practical fluid-flow devices and utilize fluid mechanics principles in design."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamental of Fluid",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Classification and Concept of fluid, properties of fluid, Newton’s",
+              "law, simple numerical example, surface tension and capillarity"
+            ],
+            "topics_text": "Classification and Concept of fluid, properties of fluid, Newton’s law, simple numerical example, surface tension and capillarity",
+            "topics": [
+              "Classification and Concept of fluid, properties of fluid, Newton’s",
+              "law, simple numerical example, surface tension and capillarity"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Fluid pressure & Measuring Device",
+            "contact_hours": 7,
+            "topic_lines": [
+              "fluid pressure at point Pascal’s law, Absolute and gauge pressure,",
+              "measurement of pressure, simple manometer, differential",
+              "manometer"
+            ],
+            "topics_text": "fluid pressure at point Pascal’s law, Absolute and gauge pressure, measurement of pressure, simple manometer, differential manometer",
+            "topics": [
+              "fluid pressure at point Pascal’s law, Absolute and gauge pressure,",
+              "measurement of pressure, simple manometer, differential",
+              "manometer"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Fluid kinematics",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Description of fluid Motion, types of fluid flow, types of flow lines,",
+              "Continuity Equation, momentum equation (without derivation),",
+              "Simple numerical problems"
+            ],
+            "topics_text": "Description of fluid Motion, types of fluid flow, types of flow lines, Continuity Equation, momentum equation (without derivation), Simple numerical problems",
+            "topics": [
+              "Description of fluid Motion, types of fluid flow, types of flow lines,",
+              "Continuity Equation, momentum equation (without derivation),",
+              "Simple numerical problems"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Fluid Dynamics",
+            "contact_hours": 8,
+            "topic_lines": [
+              "various types of head, Euler’s equation for motion (Concept and",
+              "definition. Understanding various terms in Euler’s equation (No",
+              "derivation)), Bernoulli’s Equation and it’s practical application,",
+              "Venturimeter, Orificemeter, Rotameter"
+            ],
+            "topics_text": "various types of head, Euler’s equation for motion (Concept and definition. Understanding various terms in Euler’s equation (No derivation)), Bernoulli’s Equation and it’s practical application, Venturimeter, Orificemeter, Rotameter",
+            "topics": [
+              "various types of head, Euler’s equation for motion (Concept and",
+              "definition. Understanding various terms in Euler’s equation (No",
+              "derivation)), Bernoulli’s Equation and it’s practical application,",
+              "Venturimeter, Orificemeter, Rotameter"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Fluid flow through pipes",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Reynolds’s experiment, friction factor, Darcy-weisbach formula,",
+              "Moody’s chart, Water hammer effect, minor energy losses, Simple",
+              "numerical examples"
+            ],
+            "topics_text": "Reynolds’s experiment, friction factor, Darcy-weisbach formula, Moody’s chart, Water hammer effect, minor energy losses, Simple numerical examples",
+            "topics": [
+              "Reynolds’s experiment, friction factor, Darcy-weisbach formula,",
+              "Moody’s chart, Water hammer effect, minor energy losses, Simple",
+              "numerical examples"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Hydraulic pumps & prime movers",
+            "contact_hours": 10,
+            "topic_lines": [
+              "classification and concept of pumps, Detailed study (construction,",
+              "working and applications) of Centrifugal pump, Reciprocating",
+              "pump, Rotary positive displacement pumps, Gear pump and Van",
+              "pump, vacuum pump, Simple numerical to calculate performance of",
+              "pump, working principal and application pelton wheel, Francis",
+              "turbine, Kaplan turbine, Concept of hydraulic system",
+              "Total Hours 42"
+            ],
+            "topics_text": "classification and concept of pumps, Detailed study (construction, working and applications) of Centrifugal pump, Reciprocating pump, Rotary positive displacement pumps, Gear pump and Van pump, vacuum pump, Simple numerical to calculate performance of pump, working principal and application pelton wheel, Francis turbine, Kaplan turbine, Concept of hydraulic system Total Hours 42",
+            "topics": [
+              "classification and concept of pumps, Detailed study (construction,",
+              "working and applications) of Centrifugal pump, Reciprocating",
+              "pump, Rotary positive displacement pumps, Gear pump and Van",
+              "pump, vacuum pump, Simple numerical to calculate performance of",
+              "pump, working principal and application pelton wheel, Francis",
+              "turbine, Kaplan turbine, Concept of hydraulic system",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Demonstrate various fluid properties",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Demonstrate various fluid properties"
+            ],
+            "topics_text": "Demonstrate various fluid properties",
+            "topics": [
+              "Demonstrate various fluid properties"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Demonstrate and measure the pressure using manometer",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Demonstrate and measure the pressure using manometer"
+            ],
+            "topics_text": "Demonstrate and measure the pressure using manometer",
+            "topics": [
+              "Demonstrate and measure the pressure using manometer"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Demonstrate and measure the pressure using various Pressure",
+            "contact_hours": 2,
+            "topic_lines": [
+              "gauges",
+              "Demonstrate and measure the pressure using various Pressure",
+              "gauges"
+            ],
+            "topics_text": "gauges Demonstrate and measure the pressure using various Pressure gauges",
+            "topics": [
+              "gauges",
+              "Demonstrate and measure the pressure using various Pressure",
+              "gauges"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Measure fluid flow using Venturi meter",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Measure fluid flow using Venturi meter"
+            ],
+            "topics_text": "Measure fluid flow using Venturi meter",
+            "topics": [
+              "Measure fluid flow using Venturi meter"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Measure fluid flow using Orifice meter",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Measure fluid flow using Orifice meter"
+            ],
+            "topics_text": "Measure fluid flow using Orifice meter",
+            "topics": [
+              "Measure fluid flow using Orifice meter"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Verify Bernoulli’s theorem",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Verify Bernoulli’s theorem"
+            ],
+            "topics_text": "Verify Bernoulli’s theorem",
+            "topics": [
+              "Verify Bernoulli’s theorem"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Measure fluid flow using Rectangular and Triangular Notches",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Measure fluid flow using Rectangular and Triangular Notches"
+            ],
+            "topics_text": "Measure fluid flow using Rectangular and Triangular Notches",
+            "topics": [
+              "Measure fluid flow using Rectangular and Triangular Notches"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Estimate Reynolds number using given test rig",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Estimate Reynolds number using given test rig"
+            ],
+            "topics_text": "Estimate Reynolds number using given test rig",
+            "topics": [
+              "Estimate Reynolds number using given test rig"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "To determine Darcy-Weisbach Fluid friction factor for the give",
+            "contact_hours": 2,
+            "topic_lines": [
+              "pipes",
+              "To determine Darcy-Weisbach Fluid friction factor for the give",
+              "pipes"
+            ],
+            "topics_text": "pipes To determine Darcy-Weisbach Fluid friction factor for the give pipes",
+            "topics": [
+              "pipes",
+              "To determine Darcy-Weisbach Fluid friction factor for the give",
+              "pipes"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Determine major and minor head loss through pipes",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determine major and minor head loss through pipes"
+            ],
+            "topics_text": "Determine major and minor head loss through pipes",
+            "topics": [
+              "Determine major and minor head loss through pipes"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Perform testing of centrifugal pump as per BIS",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform testing of centrifugal pump as per BIS"
+            ],
+            "topics_text": "Perform testing of centrifugal pump as per BIS",
+            "topics": [
+              "Perform testing of centrifugal pump as per BIS"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Perform testing of reciprocating pump as per BIS",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform testing of reciprocating pump as per BIS",
+              "Total Hours 28"
+            ],
+            "topics_text": "Perform testing of reciprocating pump as per BIS Total Hours 28",
+            "topics": [
+              "Perform testing of reciprocating pump as per BIS",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Fluid mechanics& hydraulic Machines, Fluid mechanics& hydraulic Machines, R.K.Bansal, Lakhsmi publication, 1989",
+          "Fluid mechanics& hydraulic Machines, Fluid mechanics& hydraulic Machines, R. S. Khurmi, S.Chand Publication, 2012"
+        ],
+        "textbooks": [
+          "Fluid mechanics& hydraulics, R.P. Rethaliya, Atul Prakashan, 2018 References:",
+          "Fluid mechanics& hydraulic Machines, Fluid mechanics& hydraulic Machines, R.K.Bansal, Lakhsmi publication, 1989",
+          "Fluid mechanics& hydraulic Machines, Fluid mechanics& hydraulic Machines, R. S. Khurmi, S.Chand Publication, 2012"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://fmc-nitk.vlabs.ac.in/",
+          "https://servicios.inii.ucr.ac.cr/hidraulica/build/"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 8876,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    FLUID MECHANICS AND HYDRAULIC MACHINE\nCOURSE CODE     09ME2302\nCOURSE CREDITS  4\n\nObjective:\n 1  This subject introduces in mechanical to understand the fundamental of the fluid mechanics\n    such as behaviour and flow properties of fluid, fundamental equation like mass, energy and\n    momentum conservation of fluid flow thereby developing an understanding of fluid\n    dynamics in variety of fields. The application of these basic equations has been highlighted\n     for flow measurements. There is an important role of hydraulic machinery in the\n     conversation of hydraulic energy to mechanical energy and vice-versa. Hydraulic turbine is\n    used for meeting our day-to-day power demands. Hydraulic system has wide range of\n     applications in machine tools and other field. Similarly pneumatic control is extensively\n    used as an effective method of automation technique.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To provide the students with a solid foundation in fluid flow principles.\n 2  To provide the students’ knowledge in calculating performance analysis in turbines and\n    pumps and can be used in power plants.\n 3  To impart knowledge in measuring pressure, discharge and velocity of fluid flow.\n 4  To gain knowledge in performance testing of Hydraulic Turbines and Hydraulic Pumps at\n     constant speed and Head.\n 5  Analyze a variety of practical fluid-flow devices and utilize fluid mechanics principles in\n     design.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fundamental of Fluid                                     5\n               Classification and Concept of fluid, properties of fluid, Newton’s\n              law, simple numerical example, surface tension and capillarity\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Fluid pressure & Measuring Device                         7\n                fluid pressure at point Pascal’s law, Absolute and gauge pressure,\n            measurement of pressure, simple manometer, differential\n            manometer\n     3      Fluid kinematics                                         6\n              Description of fluid Motion, types of fluid flow, types of flow lines,\n              Continuity Equation, momentum equation (without derivation),\n             Simple numerical problems\n     4      Fluid Dynamics                                          8\n              various types of head, Euler’s equation for motion (Concept and\n                definition. Understanding various terms in Euler’s equation (No\n                derivation)), Bernoulli’s Equation and it’s practical application,\n              Venturimeter, Orificemeter, Rotameter\n     5      Fluid flow through pipes                                   6\n             Reynolds’s experiment, friction factor, Darcy-weisbach formula,\n            Moody’s chart, Water hammer effect, minor energy losses, Simple\n             numerical examples\n     6      Hydraulic pumps & prime movers                          10\n                classification and concept of pumps, Detailed study (construction,\n             working and applications) of Centrifugal pump, Reciprocating\n            pump, Rotary positive displacement pumps, Gear pump and Van\n            pump, vacuum pump, Simple numerical to calculate performance of\n            pump, working principal and application pelton wheel, Francis\n                turbine, Kaplan turbine, Concept of hydraulic system\n                               Total Hours                       42\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Demonstrate various fluid properties                        4\n             Demonstrate various fluid properties\n     2      Demonstrate and measure the pressure using manometer       4\n             Demonstrate and measure the pressure using manometer\n     3      Demonstrate and measure the pressure using various Pressure  2\n            gauges\n             Demonstrate and measure the pressure using various Pressure\n             gauges\n     4     Measure fluid flow using Venturi meter                      2\n            Measure fluid flow using Venturi meter\n     5     Measure fluid flow using Orifice meter                      2\n            Measure fluid flow using Orifice meter\n     6      Verify Bernoulli’s theorem                                 2\n              Verify Bernoulli’s theorem\n     7     Measure fluid flow using Rectangular and Triangular Notches  2\n            Measure fluid flow using Rectangular and Triangular Notches\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     8      Estimate Reynolds number using given test rig                2\n              Estimate Reynolds number using given test rig\n     9     To determine Darcy-Weisbach Fluid friction factor for the give  2\n             pipes\n           To determine Darcy-Weisbach Fluid friction factor for the give\n              pipes\n     10     Determine major and minor head loss through pipes           2\n             Determine major and minor head loss through pipes\n     11     Perform testing of centrifugal pump as per BIS               2\n             Perform testing of centrifugal pump as per BIS\n     12     Perform testing of reciprocating pump as per BIS             2\n             Perform testing of reciprocating pump as per BIS\n                               Total Hours                       28\n\nTextbook :\n 1  Fluid mechanics& hydraulics, R.P. Rethaliya, Atul Prakashan, 2018\n\nReferences:\n 1  Fluid mechanics& hydraulic Machines, Fluid mechanics& hydraulic Machines,\n     R.K.Bansal, Lakhsmi publication, 1989\n 2  Fluid mechanics& hydraulic Machines, Fluid mechanics& hydraulic Machines, R. S.\n    Khurmi, S.Chand Publication, 2012\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    28.00         35.00         37.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Supplementary Resources:\n 1  https://fmc-nitk.vlabs.ac.in/\n 2   https://servicios.inii.ucr.ac.cr/hidraulica/build/\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "b165dfc3e96b54c18e3eb9335e3be86808686879ab4b52e966cba3c1850ddf05"
+    },
+    {
+      "subject_id": "45009164030101",
+      "subject_name": "INTEGRATED PERSONALITY DEVELOPMENT COURSE – II",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 3,
+      "subject_code": "09PD0301",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/IPDC-II.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09PD0301 - INTEGRATED PERSONALITY DEVELOPMENT COURSE – II (.pdf",
+      "expected_pdf_sha256": "73dd03ca49eae34d2003d8dccf3241b8d8de55899d94cfd938601fee760ba9d3",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE",
+        "course_code": "09PD0301",
+        "semester_label": "3",
+        "credits": 2,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "To provide students with a holistic education – focused on increasing their intelligence quotient, spiritual quotient, emotional quotient and physical quotient.",
+        "To provide students with hard and soft skills, making them more marketable when entering the workforce.",
+        "To educate students on their social responsibilities as citizens of India and have a greater sense of social responsibility.",
+        "To provide students with a value-based education which will enable them to be successful in their family, professional, and social relationships by improving their moral and ethical values.",
+        "To teach self-analysis and self-improvement exercises to enhance the potential of the participants.",
+        "To have a broader sense of self-confidence and a defined identity."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Facing Failures Insignificance of Failures",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Failures are insigni?cant because they do not de?ne you. How we",
+              "choose to handle our failures is much more signi?cant. Students will",
+              "learn ?ve powerful techniques to make their failures insigni?cant."
+            ],
+            "topics_text": "Failures are insigni?cant because they do not de?ne you. How we choose to handle our failures is much more signi?cant. Students will learn ?ve powerful techniques to make their failures insigni?cant.",
+            "topics": [
+              "Failures are insigni?cant because they do not de?ne you. How we",
+              "choose to handle our failures is much more signi?cant. Students will",
+              "learn ?ve powerful techniques to make their failures insigni?cant."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Facing Failures Power of Faith",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Learn about the power and necessity of faith in our daily lives."
+            ],
+            "topics_text": "Learn about the power and necessity of faith in our daily lives.",
+            "topics": [
+              "Learn about the power and necessity of faith in our daily lives."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Facing Failures Practicing Faith",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Learn about the necessity and tools to practice faith in their lives."
+            ],
+            "topics_text": "Learn about the necessity and tools to practice faith in their lives.",
+            "topics": [
+              "Learn about the necessity and tools to practice faith in their lives."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "From House to Home Bonding the Family",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Explore four ways to bond with their family - appreciation, meeting",
+              "on a regular basis, being helpful, and to have transparency when",
+              "communicating with each other."
+            ],
+            "topics_text": "Explore four ways to bond with their family - appreciation, meeting on a regular basis, being helpful, and to have transparency when communicating with each other.",
+            "topics": [
+              "Explore four ways to bond with their family - appreciation, meeting",
+              "on a regular basis, being helpful, and to have transparency when",
+              "communicating with each other."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Learning from Legends Leading without Leading",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Explore a new approach to leadership, through humility."
+            ],
+            "topics_text": "Explore a new approach to leadership, through humility.",
+            "topics": [
+              "Explore a new approach to leadership, through humility."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "My India My Pride Glorious Past Part-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "India's ancient Rishis, scholars and intellectuals have made",
+              "tremendous contributions to the world, they developed an advanced,",
+              "sophisticated culture and civilization which began thousands of",
+              "years ago. Students will learn the importance of studying India's",
+              "glorious past, so that they could develop a strong passion and pride",
+              "for our nation."
+            ],
+            "topics_text": "India's ancient Rishis, scholars and intellectuals have made tremendous contributions to the world, they developed an advanced, sophisticated culture and civilization which began thousands of years ago. Students will learn the importance of studying India's glorious past, so that they could develop a strong passion and pride for our nation.",
+            "topics": [
+              "India's ancient Rishis, scholars and intellectuals have made",
+              "tremendous contributions to the world, they developed an advanced,",
+              "sophisticated culture and civilization which began thousands of",
+              "years ago. Students will learn the importance of studying India's",
+              "glorious past, so that they could develop a strong passion and pride",
+              "for our nation."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "My India My Pride Glorious Past Part-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Our ancient concepts can be used to seek revolutionary ideas and to",
+              "generate inspiration. Students will develop a deeper interest in",
+              "India's Glorious Past – by appreciating the need to read about it,",
+              "research it, write about it and share it."
+            ],
+            "topics_text": "Our ancient concepts can be used to seek revolutionary ideas and to generate inspiration. Students will develop a deeper interest in India's Glorious Past – by appreciating the need to read about it, research it, write about it and share it.",
+            "topics": [
+              "Our ancient concepts can be used to seek revolutionary ideas and to",
+              "generate inspiration. Students will develop a deeper interest in",
+              "India's Glorious Past – by appreciating the need to read about it,",
+              "research it, write about it and share it."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "My India My Pride Present Scenario",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To implement the transformation of India from a developing",
+              "country into a developed country it is necessary to have a value-",
+              "based citizens. Students will see how the transformation to a greater",
+              "India relies on the vision and efforts of themselves as youth."
+            ],
+            "topics_text": "To implement the transformation of India from a developing country into a developed country it is necessary to have a value- based citizens. Students will see how the transformation to a greater India relies on the vision and efforts of themselves as youth.",
+            "topics": [
+              "To implement the transformation of India from a developing",
+              "country into a developed country it is necessary to have a value",
+              "based citizens. Students will see how the transformation to a greater",
+              "India relies on the vision and efforts of themselves as youth."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Remaking Yourself Begin with the End in Mind",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Learn to visualize their future goals and will structure their life",
+              "through smart goals to give themselves direction and ultimately take",
+              "them to where they want to go."
+            ],
+            "topics_text": "Learn to visualize their future goals and will structure their life through smart goals to give themselves direction and ultimately take them to where they want to go.",
+            "topics": [
+              "Learn to visualize their future goals and will structure their life",
+              "through smart goals to give themselves direction and ultimately take",
+              "them to where they want to go."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "My India My Pride An Ideal Citizen-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Learn that to become value-based citizens, they must ?rst develop",
+              "good values in their lives. They start by focusing on these four:",
+              "responsibility, accountability, honesty, and integrity."
+            ],
+            "topics_text": "Learn that to become value-based citizens, they must ?rst develop good values in their lives. They start by focusing on these four: responsibility, accountability, honesty, and integrity.",
+            "topics": [
+              "Learn that to become value-based citizens, they must ?rst develop",
+              "good values in their lives. They start by focusing on these four:",
+              "responsibility, accountability, honesty, and integrity."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "My India My Pride An Ideal Citizen-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Learn that by developing the values of loyalty, sincerity and",
+              "punctuality; they become indispensable and can leave a strong",
+              "impression. They will start developing these values by trying to",
+              "keep perfection in every small task and by looking at the bigger",
+              "picture."
+            ],
+            "topics_text": "Learn that by developing the values of loyalty, sincerity and punctuality; they become indispensable and can leave a strong impression. They will start developing these values by trying to keep perfection in every small task and by looking at the bigger picture.",
+            "topics": [
+              "Learn that by developing the values of loyalty, sincerity and",
+              "punctuality",
+              "they become indispensable and can leave a strong",
+              "impression. They will start developing these values by trying to",
+              "keep perfection in every small task and by looking at the bigger",
+              "picture."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Learning from Legends A. P. J. Abdul Kalam",
+            "contact_hours": 2,
+            "topic_lines": [
+              "which are applicable to students (1) Dare to Dream (2) Rise to the",
+              "Challenge (3) Get Good Guidance (4) Humility (5) Use Talents for",
+              "the Bene?t of Others"
+            ],
+            "topics_text": "which are applicable to students (1) Dare to Dream (2) Rise to the Challenge (3) Get Good Guidance (4) Humility (5) Use Talents for the Bene?t of Others",
+            "topics": [
+              "which are applicable to students (1) Dare to Dream (2) Rise to the",
+              "Challenge (3) Get Good Guidance (4) Humility (5) Use Talents for",
+              "the Bene?t of Others"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Essentials of Profession Writing a Resume",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Understand the difference between a resume and CV, and learn how",
+              "to create a great resume."
+            ],
+            "topics_text": "Understand the difference between a resume and CV, and learn how to create a great resume.",
+            "topics": [
+              "Understand the difference between a resume and CV, and learn how",
+              "to create a great resume."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Review Lecture Student Voice",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will review the semester by sharing their experiences",
+              "through classroom interaction.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Students will review the semester by sharing their experiences through classroom interaction. Total Hours 28",
+            "topics": [
+              "Students will review the semester by sharing their experiences",
+              "through classroom interaction.",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "IPDC Workbook , -, -, -"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://ipdc.org/",
+          "https://www.youtube.com/c/IPDCbaps/videos"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 8058,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    INTEGRATED PERSONALITY DEVELOPMENT COURSE\n                              - II\nCOURSE CODE     09PD0301\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To provide students with a holistic education – focused on increasing their intelligence\n     quotient, spiritual quotient, emotional quotient and physical quotient.\n 2  To provide students with hard and soft skills, making them more marketable when entering\n     the workforce.\n 3  To educate students on their social responsibilities as citizens of India and have a greater\n     sense of social responsibility.\n 4  To provide students with a value-based education which will enable them to be successful\n     in their family, professional, and social relationships by improving their moral and ethical\n     values.\n 5  To teach self-analysis and self-improvement exercises to enhance the potential of the\n     participants.\n 6  To have a broader sense of self-confidence and a defined identity.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Facing Failures Insignificance of Failures                    2\n               Failures are insigni?cant because they do not de?ne you. How we\n             choose to handle our failures is much more signi?cant. Students will\n               learn ?ve powerful techniques to make their failures insigni?cant.\n     2      Facing Failures Power of Faith                             2\n             Learn about the power and necessity of faith in our daily lives.\n     3      Facing Failures Practicing Faith                            2\n             Learn about the necessity and tools to practice faith in their lives.\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4     From House to Home Bonding the Family                    2\n             Explore four ways to bond with their family - appreciation, meeting\n            on a regular basis, being helpful, and to have transparency when\n            communicating with each other.\n     5      Learning from Legends Leading without Leading             2\n             Explore a new approach to leadership, through humility.\n     6    My India My Pride Glorious Past Part-1                     2\n                India's ancient Rishis, scholars and intellectuals have made\n             tremendous contributions to the world, they developed an advanced,\n               sophisticated culture and civilization which began thousands of\n              years ago. Students will learn the importance of studying India's\n               glorious past, so that they could develop a strong passion and pride\n               for our nation.\n     7    My India My Pride Glorious Past Part-2                     2\n            Our ancient concepts can be used to seek revolutionary ideas and to\n              generate inspiration. Students will develop a deeper interest in\n                India's Glorious Past – by appreciating the need to read about it,\n              research it, write about it and share it.\n     8    My India My Pride Present Scenario                        2\n           To implement the transformation of India from a developing\n              country into a developed country it is necessary to have a value-\n             based citizens. Students will see how the transformation to a greater\n               India relies on the vision and efforts of themselves as youth.\n     9     Remaking Yourself Begin with the End in Mind               2\n             Learn to visualize their future goals and will structure their life\n             through smart goals to give themselves direction and ultimately take\n            them to where they want to go.\n     10    My India My Pride An Ideal Citizen-1                       2\n             Learn that to become value-based citizens, they must ?rst develop\n            good values in their lives. They start by focusing on these four:\n                responsibility, accountability, honesty, and integrity.\n     11    My India My Pride An Ideal Citizen-2                       2\n             Learn that by developing the values of loyalty, sincerity and\n               punctuality; they become indispensable and can leave a strong\n              impression. They will start developing these values by trying to\n             keep perfection in every small task and by looking at the bigger\n                picture.\n     12     Learning from Legends A. P. J. Abdul Kalam                 2\n              Dr. Kalam's inspirational life displayed these legendary qualities\n            which are applicable to students (1) Dare to Dream (2) Rise to the\n             Challenge (3) Get Good Guidance (4) Humility (5) Use Talents for\n               the Bene?t of Others\n     13      Essentials of Profession Writing a Resume                    2\n             Understand the difference between a resume and CV, and learn how\n               to create a great resume.\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     14     Review Lecture Student Voice                              2\n              Students will review the semester by sharing their experiences\n             through classroom interaction.\n                               Total Hours                       28\n\n\nTextbook :\n 1  IPDC Workbook , -, -, -\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n\n\nInstructional Method:\n 1  Introductory Film: Each lecture begins with a short film that introduces the topic which\n     captivate learner’s attention and stimulates their curiosity to learn more.\n 2  Lecture Video: Learners watch a lecture video presented by a dynamic speaker. The lecture\n     reinforces the significance and necessity of fundamental principles and skills.\n 3  Student Interactions: Interactive sessions promote stimulating discussion and conversation\n    and help create safe spaces for healthy exchange of ideas. Each session provides a forum in\n    which students are able to openly express their emotions and thoughts.\n 4  Workbook Activities: Workbooks assist learners to begin implementing the values taught\n     in the lecture into their personal lives.\n\nSupplementary Resources:\n 1   https://ipdc.org/\n 2  https://www.youtube.com/c/IPDCbaps/videos\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "73dd03ca49eae34d2003d8dccf3241b8d8de55899d94cfd938601fee760ba9d3"
+    },
+    {
+      "subject_id": "45009135230501",
+      "subject_name": "MANUFACTURING PROCESS-I",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 3,
+      "subject_code": "09ME2305",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MP-I.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME2305 - MANUFACTURING PROCESS-I (.pdf",
+      "expected_pdf_sha256": "eaeaf5bad72e033c1c8712b8b6f51964decd1f4ad6ed61081902e5024c697246",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MANUFACTURING PROCESS-I",
+        "course_code": "09ME2305",
+        "semester_label": "3",
+        "credits": 3,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "This subject of manufacturing processes provides knowledge regarding different types of manufacturing processes used to produce variety of metal products used in mechanical and other machines and equipment. It also develops understanding that can be used to suggest and manipulate vital process parameters related to different manufacturing processes so that the high quality component may be produced at low cost and in minimum time, this is important if we want to compete in today’s global market. As a mechanical engineer the knowledge and practical skills in different manufacturing processes are essential and hence emphasis is also given in this course towards skills development."
+      ],
+      "course_outcomes": [
+        "To apply the knowledge of manufacturing process in the field of manufacturing.",
+        "Demonstrate knowledge of metal working processes.",
+        "Employ knowledge of joining metals permanently or temporarily with application of heat.",
+        "Suggest appropriate casting method suitable for a given industrial component, identify casting defects, their causes and suggest remedies."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 6 0 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to manufacturing processes and properties of",
+            "contact_hours": 4,
+            "topic_lines": [
+              "metal",
+              "Nature, role and scope of manufacturing processes, Classification of",
+              "manufacturing process,, properties of metal, condition affecting",
+              "manufacturing process."
+            ],
+            "topics_text": "metal Nature, role and scope of manufacturing processes, Classification of manufacturing process,, properties of metal, condition affecting manufacturing process.",
+            "topics": [
+              "metal",
+              "Nature, role and scope of manufacturing processes, Classification of",
+              "manufacturing process,, properties of metal, condition affecting",
+              "manufacturing process."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Metal working processes",
+            "contact_hours": 8,
+            "topic_lines": [
+              "detail explanation of hot working Process, cold working process,",
+              "different between hot & amp; cold working process, classification,",
+              "definition &amp;explanation of Rolling, Forging, Spinning,",
+              "Drawing, Extrusion, and Swaging processes. Cost terminology",
+              "associated with forging shop, The procedure of calculating material",
+              "cost of a product for forging shop (including input weight, cut",
+              "weight, forged weight etc.), etc.).Procedure of estimating cost of",
+              "forging dies. Procedure of estimating forging cost. Given the forged",
+              "component, estimate forging cost"
+            ],
+            "topics_text": "detail explanation of hot working Process, cold working process, different between hot & amp; cold working process, classification, definition &amp;explanation of Rolling, Forging, Spinning, Drawing, Extrusion, and Swaging processes. Cost terminology associated with forging shop, The procedure of calculating material cost of a product for forging shop (including input weight, cut weight, forged weight etc.), etc.).Procedure of estimating cost of forging dies. Procedure of estimating forging cost. Given the forged component, estimate forging cost",
+            "topics": [
+              "detail explanation of hot working Process, cold working process,",
+              "different between hot & amp",
+              "cold working process, classification,",
+              "definition &amp",
+              "explanation of Rolling, Forging, Spinning,",
+              "Drawing, Extrusion, and Swaging processes. Cost terminology",
+              "associated with forging shop, The procedure of calculating material",
+              "cost of a product for forging shop (including input weight, cut",
+              "weight, forged weight etc.), etc.).Procedure of estimating cost of",
+              "forging dies. Procedure of estimating forging cost. Given the forged",
+              "component, estimate forging cost"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Metal casting process",
+            "contact_hours": 34,
+            "topic_lines": [
+              "Explanation of different types of foundries, detail explanation of",
+              "pattern, Pattern importance, types, drawing and color code, material,",
+              "making process, allowance and their values and application, Detail",
+              "explanation of cores Types, Need, Making materials and its",
+              "properties, testing methods, sintering, applications., Working and",
+              "applications of furnaces, Moulding sand, moulding equipment’s,",
+              "major specifications, type of mould ,mould making, Salvage",
+              "techniques, recovery of sand, casting processes: basic principle,",
+              "working, process parameters and applications, Casting defects,",
+              "safety precautions in foundry non- metal casting : injection",
+              "moulding, blow moulding., Cost terminology associated with",
+              "foundry shop, The procedure of calculating material cost of a",
+              "product for foundry shop, Procedure of estimating cost of pattern",
+              "making, Procedure of estimating foundry cost, Given the casting",
+              "component, estimate foundry cost."
+            ],
+            "topics_text": "Explanation of different types of foundries, detail explanation of pattern, Pattern importance, types, drawing and color code, material, making process, allowance and their values and application, Detail explanation of cores Types, Need, Making materials and its properties, testing methods, sintering, applications., Working and applications of furnaces, Moulding sand, moulding equipment’s, major specifications, type of mould ,mould making, Salvage techniques, recovery of sand, casting processes: basic principle, working, process parameters and applications, Casting defects, safety precautions in foundry non- metal casting : injection moulding, blow moulding., Cost terminology associated with foundry shop, The procedure of calculating material cost of a product for foundry shop, Procedure of estimating cost of pattern making, Procedure of estimating foundry cost, Given the casting component, estimate foundry cost.",
+            "topics": [
+              "Explanation of different types of foundries, detail explanation of",
+              "pattern, Pattern importance, types, drawing and color code, material,",
+              "making process, allowance and their values and application, Detail",
+              "explanation of cores Types, Need, Making materials and its",
+              "properties, testing methods, sintering, applications., Working and",
+              "applications of furnaces, Moulding sand, moulding equipment’s,",
+              "major specifications, type of mould ,mould making, Salvage",
+              "techniques, recovery of sand, casting processes: basic principle,",
+              "working, process parameters and applications, Casting defects,",
+              "safety precautions in foundry non- metal casting : injection",
+              "moulding, blow moulding., Cost terminology associated with",
+              "foundry shop, The procedure of calculating material cost of a",
+              "product for foundry shop, Procedure of estimating cost of pattern",
+              "making, Procedure of estimating foundry cost, Given the casting",
+              "component, estimate foundry cost."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Welding process",
+            "contact_hours": 26,
+            "topic_lines": [
+              "Introduction and classification, explanation, working, construction",
+              "of welding, application of Gas welding, Arc welding, Resistance",
+              "welding, Elements of cost in arc welding. Factors effecting arc",
+              "welding cost, Estimating cost elements for: Consumables in arc",
+              "welding and gas cutting, Gas cutting, and Arc welding, Estimation",
+              "of production cost of given welding job for above methods"
+            ],
+            "topics_text": "Introduction and classification, explanation, working, construction of welding, application of Gas welding, Arc welding, Resistance welding, Elements of cost in arc welding. Factors effecting arc welding cost, Estimating cost elements for: Consumables in arc welding and gas cutting, Gas cutting, and Arc welding, Estimation of production cost of given welding job for above methods",
+            "topics": [
+              "Introduction and classification, explanation, working, construction",
+              "of welding, application of Gas welding, Arc welding, Resistance",
+              "welding, Elements of cost in arc welding. Factors effecting arc",
+              "welding cost, Estimating cost elements for: Consumables in arc",
+              "welding and gas cutting, Gas cutting, and Arc welding, Estimation",
+              "of production cost of given welding job for above methods"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Soldering Process",
+            "contact_hours": 6,
+            "topic_lines": [
+              "working principle, setup sketch, specifications of equipment, tools",
+              "and consumables, function of each element, process parameters for",
+              "various materials"
+            ],
+            "topics_text": "working principle, setup sketch, specifications of equipment, tools and consumables, function of each element, process parameters for various materials",
+            "topics": [
+              "working principle, setup sketch, specifications of equipment, tools",
+              "and consumables, function of each element, process parameters for",
+              "various materials"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Brazing Process",
+            "contact_hours": 6,
+            "topic_lines": [
+              "working principle, setup sketch, specification of equipment, various",
+              "materials practical application",
+              "Total Hours 84"
+            ],
+            "topics_text": "working principle, setup sketch, specification of equipment, various materials practical application Total Hours 84",
+            "topics": [
+              "working principle, setup sketch, specification of equipment, various",
+              "materials practical application",
+              "Total Hours 84"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Elements of Workshop Technology, Elements of Workshop Technology, Choudhary Hajra Sk, Media Publishers & Promoters, India, 2009"
+        ],
+        "textbooks": [
+          "Manufacturing Engineering, J. A. Vadher, Atul prakashan, 2018 References:",
+          "Elements of Workshop Technology, Elements of Workshop Technology, Choudhary Hajra Sk, Media Publishers & Promoters, India, 2009"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.reliance-foundry.com/blog/how-to-weld-cast-iron",
+          "https://mm-coep.vlabs.ac.in/exp/welding-ndyag-laser/procedure.html"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7594,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         3\nCOURSE TITLE   MANUFACTURING PROCESS-I\nCOURSE CODE     09ME2305\nCOURSE CREDITS  3\n\nObjective:\n 1  This subject of manufacturing processes provides knowledge regarding\n     different types of manufacturing processes used to produce variety of metal products\n    used in mechanical and other machines and equipment. It also develops understanding\n     that can be used to suggest and manipulate vital process parameters related to different\n     manufacturing processes so that the high quality component may be produced at low\n     cost and in minimum time, this is important if we want to compete in today’s global\n     market. As a mechanical engineer the knowledge and practical skills in different\n     manufacturing processes are essential and hence emphasis is also given in this course\n    towards skills development.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To apply the knowledge of manufacturing process in the field of manufacturing.\n 2  Demonstrate knowledge of metal working processes.\n 3  Employ knowledge of joining metals permanently or temporarily with application of heat.\n 4  Suggest appropriate casting method suitable for a given industrial component, identify\n     casting defects, their causes and suggest remedies.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            6         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to manufacturing processes and properties of      4\n             metal\n              Nature, role and scope of manufacturing processes, Classification of\n             manufacturing process,, properties of metal, condition affecting\n             manufacturing process.\n     2      Metal working processes                                   8\n                detail explanation of hot working Process, cold working process,\n                different between hot & amp; cold working process, classification,\n               definition &amp;explanation of Rolling, Forging, Spinning,\n             Drawing, Extrusion, and Swaging processes. Cost terminology\n               associated with forging shop, The procedure of calculating material\n               cost of a product for forging shop (including input weight, cut\n              weight, forged weight etc.), etc.).Procedure of estimating cost of\n              forging dies. Procedure of estimating forging cost. Given the forged\n             component, estimate forging cost\n     3      Metal casting process                                     34\n              Explanation of different types of foundries, detail explanation of\n                pattern, Pattern importance, types, drawing and color code, material,\n            making process, allowance and their values and application, Detail\n              explanation of cores Types, Need, Making materials and its\n               properties, testing methods, sintering, applications., Working and\n               applications of furnaces, Moulding sand, moulding equipment’s,\n             major specifications, type of mould ,mould making, Salvage\n               techniques, recovery of sand, casting processes: basic principle,\n             working, process parameters and applications, Casting defects,\n               safety precautions in foundry non- metal casting : injection\n             moulding, blow moulding., Cost terminology associated with\n             foundry shop, The procedure of calculating material cost of a\n              product for foundry shop, Procedure of estimating cost of pattern\n             making, Procedure of estimating foundry cost, Given the casting\n             component, estimate foundry cost.\n     4      Welding process                                          26\n               Introduction and classification, explanation, working, construction\n              of welding, application of Gas welding, Arc welding, Resistance\n              welding, Elements of cost in arc welding. Factors effecting arc\n             welding cost, Estimating cost elements for: Consumables in arc\n             welding and gas cutting, Gas cutting, and Arc welding, Estimation\n              of production cost of given welding job for above methods\n     5      Soldering Process                                        6\n             working principle, setup sketch, specifications of equipment, tools\n            and consumables, function of each element, process parameters for\n              various materials\n     6      Brazing Process                                          6\n             working principle, setup sketch, specification of equipment, various\n               materials practical application\n                               Total Hours                       84\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Textbook :\n 1  Manufacturing Engineering, J. A. Vadher, Atul prakashan, 2018\n\nReferences:\n 1  Elements of Workshop Technology, Elements of Workshop Technology, Choudhary Hajra\n     Sk, Media Publishers & Promoters, India, 2009\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         40.00         30.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, V– Lab, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://www.reliance-foundry.com/blog/how-to-weld-cast-iron\n 2  https://mm-coep.vlabs.ac.in/exp/welding-ndyag-laser/procedure.html\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "eaeaf5bad72e033c1c8712b8b6f51964decd1f4ad6ed61081902e5024c697246"
+    },
+    {
+      "subject_id": "45009135230401",
+      "subject_name": "MATERIAL SCIENCE AND METALLURGY",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 3,
+      "subject_code": "09ME2304",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MSM.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME2304 - MATERIAL SCIENCE AND METALLURGY (.pdf",
+      "expected_pdf_sha256": "cb0cad1febf03f1d18713a53562922d731393c1ec8e1a3ab46f8d4571b1582da",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MATERIAL SCIENCE AND METALLURGY",
+        "course_code": "09ME2304",
+        "semester_label": "3",
+        "credits": 3,
+        "prerequisite": "Applied Mechanics"
+      },
+      "objectives": [
+        "Engineering Materials play an important role as the vital tool for solving the problems of material selection and application in the production and manufacturing of equipment/machines, devices, tools, etc. Hence, this course provides the fundamental science and principle relevant to material. Furthermore, course provides the understanding the relationship between microstructure and properties of material. This course possess the knowledge about phase diagrams, various types of heat treatment processes, electrolysis and powder metallurgy concept. Therefore, an engineering diploma student must be conversant with the properties, composition and behavior of materials from the point of view of reliability and performance of the product. Subject is concerned with the changes in structure and properties of matter. The study of basic concepts of material science and metallurgy will help the students understanding engineering subjects where the emphasis is laid on the application of these materials"
+      ],
+      "course_outcomes": [
+        "To identify the properties of metals with respect to crystal structure and grain size.",
+        "Understand the concept of phase diagrams of material.",
+        "Classify the ferrous and nonferrous metal.",
+        "To understand various heat treatment processes.",
+        "To understand concept of powder metallurgy."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "ENGINEERING MATERIALS",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Types of bonds, Construction and characteristic of electrovalent,",
+              "covalent, hydrogen and metallic, Intermolecular force of attraction,",
+              "Molecular arrangement in different phases, Structure of solid,",
+              "Properties of material, Solidification of metals, Nano Materials"
+            ],
+            "topics_text": "Types of bonds, Construction and characteristic of electrovalent, covalent, hydrogen and metallic, Intermolecular force of attraction, Molecular arrangement in different phases, Structure of solid, Properties of material, Solidification of metals, Nano Materials",
+            "topics": [
+              "Types of bonds, Construction and characteristic of electrovalent,",
+              "covalent, hydrogen and metallic, Intermolecular force of attraction,",
+              "Molecular arrangement in different phases, Structure of solid,",
+              "Properties of material, Solidification of metals, Nano Materials"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "PHASE DIAGRAMS",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Equilibrium diagrams, Time Temperature Transformation curve-",
+              "(TTT curve), Iron carbon equilibrium diagram, Concept,",
+              "characteristics & need, , Heat treatment processes, Annealing,",
+              "normalizing, carburizing, case hardening, hardening, tempering etc,",
+              "Types of furnaces, Quenching mediums"
+            ],
+            "topics_text": "Equilibrium diagrams, Time Temperature Transformation curve- (TTT curve), Iron carbon equilibrium diagram, Concept, characteristics & need, , Heat treatment processes, Annealing, normalizing, carburizing, case hardening, hardening, tempering etc, Types of furnaces, Quenching mediums",
+            "topics": [
+              "Equilibrium diagrams, Time Temperature Transformation curve",
+              "(TTT curve), Iron carbon equilibrium diagram, Concept,",
+              "characteristics & need, , Heat treatment processes, Annealing,",
+              "normalizing, carburizing, case hardening, hardening, tempering etc,",
+              "Types of furnaces, Quenching mediums"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "METALLURGICAL MICROSCOPE",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Metallographic examination and microstructures need and",
+              "importance, Principle & working of metallurgical microscope,",
+              "Preparation of specimen for microscopic examinations"
+            ],
+            "topics_text": "Metallographic examination and microstructures need and importance, Principle & working of metallurgical microscope, Preparation of specimen for microscopic examinations",
+            "topics": [
+              "Metallographic examination and microstructures need and",
+              "importance, Principle & working of metallurgical microscope,",
+              "Preparation of specimen for microscopic examinations"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "METALS AND ITS ALLOYS",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Classification of metal, Flow diagram for the production of iron and",
+              "steel, ferrous metal and classification, Nonferrous & classification,",
+              "Composition and properties, Coding method as per BIS, ASME,",
+              "Microstructure mostly used for ferrous and nonferrous material"
+            ],
+            "topics_text": "Classification of metal, Flow diagram for the production of iron and steel, ferrous metal and classification, Nonferrous & classification, Composition and properties, Coding method as per BIS, ASME, Microstructure mostly used for ferrous and nonferrous material",
+            "topics": [
+              "Classification of metal, Flow diagram for the production of iron and",
+              "steel, ferrous metal and classification, Nonferrous & classification,",
+              "Composition and properties, Coding method as per BIS, ASME,",
+              "Microstructure mostly used for ferrous and nonferrous material"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "NON METALLIC MATERIALS",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction and classification of nonmetallic material,",
+              "Classification of Polymers, Properties and applications of polymers,",
+              "Surface coating methods, setup, working, Composites, Nonmetallic",
+              "material properties, Designation & coding"
+            ],
+            "topics_text": "Introduction and classification of nonmetallic material, Classification of Polymers, Properties and applications of polymers, Surface coating methods, setup, working, Composites, Nonmetallic material properties, Designation & coding",
+            "topics": [
+              "Introduction and classification of nonmetallic material,",
+              "Classification of Polymers, Properties and applications of polymers,",
+              "Surface coating methods, setup, working, Composites, Nonmetallic",
+              "material properties, Designation & coding"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "ELECTROLYSIS",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Introduction, Electrolytes and Non-electrolytes, Types of",
+              "electrolytes, Construction and working of electrochemical cell,",
+              "Standard conditions, Corrosion-types and reasons"
+            ],
+            "topics_text": "Introduction, Electrolytes and Non-electrolytes, Types of electrolytes, Construction and working of electrochemical cell, Standard conditions, Corrosion-types and reasons",
+            "topics": [
+              "Introduction, Electrolytes and Non-electrolytes, Types of",
+              "electrolytes, Construction and working of electrochemical cell,",
+              "Standard conditions, Corrosion-types and reasons"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "FLUID AND POWDER MATERIALS",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Classification of fluid and powder materials, Oils, Types and",
+              "properties, Designation methods as per BIS, Paints and varnishes,",
+              "Powder metallurgy",
+              "Total Hours 28"
+            ],
+            "topics_text": "Classification of fluid and powder materials, Oils, Types and properties, Designation methods as per BIS, Paints and varnishes, Powder metallurgy Total Hours 28",
+            "topics": [
+              "Classification of fluid and powder materials, Oils, Types and",
+              "properties, Designation methods as per BIS, Paints and varnishes,",
+              "Powder metallurgy",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Demonstration of metallurgical microscope",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Demonstration of metallurgical microscope"
+            ],
+            "topics_text": "Demonstration of metallurgical microscope",
+            "topics": [
+              "Demonstration of metallurgical microscope"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Examine the microstructure of given specimen by metallurgical",
+            "contact_hours": 2,
+            "topic_lines": [
+              "microscope",
+              "Examine the microstructure of given specimen by metallurgical",
+              "microscope"
+            ],
+            "topics_text": "microscope Examine the microstructure of given specimen by metallurgical microscope",
+            "topics": [
+              "microscope",
+              "Examine the microstructure of given specimen by metallurgical",
+              "microscope"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Preparation of specimen and observe microstructure",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Preparation of specimen and observe microstructure"
+            ],
+            "topics_text": "Preparation of specimen and observe microstructure",
+            "topics": [
+              "Preparation of specimen and observe microstructure"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Tension test on ductile material",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Tension test on ductile material"
+            ],
+            "topics_text": "Tension test on ductile material",
+            "topics": [
+              "Tension test on ductile material"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Hardness testing of given material using BHN test",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Hardness testing of given material using BHN test"
+            ],
+            "topics_text": "Hardness testing of given material using BHN test",
+            "topics": [
+              "Hardness testing of given material using BHN test"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Hardness testing of given material using RHN test",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Hardness testing of given material using RHN test"
+            ],
+            "topics_text": "Hardness testing of given material using RHN test",
+            "topics": [
+              "Hardness testing of given material using RHN test"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Heat treatment process on mild steel to study effect of annealing",
+            "contact_hours": 2,
+            "topic_lines": [
+              "process",
+              "Heat treatment process on mild steel to study effect of annealing",
+              "process"
+            ],
+            "topics_text": "process Heat treatment process on mild steel to study effect of annealing process",
+            "topics": [
+              "process",
+              "Heat treatment process on mild steel to study effect of annealing",
+              "process"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "To show the effect of different quenching media (Oil, Water) on",
+            "contact_hours": 2,
+            "topic_lines": [
+              "the hardness of mild steel",
+              "To show the effect of different quenching media (Oil, Water) on the",
+              "hardness of mild steel"
+            ],
+            "topics_text": "the hardness of mild steel To show the effect of different quenching media (Oil, Water) on the hardness of mild steel",
+            "topics": [
+              "the hardness of mild steel",
+              "To show the effect of different quenching media (Oil, Water) on the",
+              "hardness of mild steel"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "To study about various types of corrosive materials",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study about various types of corrosive materials"
+            ],
+            "topics_text": "To study about various types of corrosive materials",
+            "topics": [
+              "To study about various types of corrosive materials"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "To understand designation and coding of ferrous and",
+            "contact_hours": 2,
+            "topic_lines": [
+              "nonferrous metals",
+              "To understand designation and coding of ferrous and nonferrous",
+              "metals"
+            ],
+            "topics_text": "nonferrous metals To understand designation and coding of ferrous and nonferrous metals",
+            "topics": [
+              "nonferrous metals",
+              "To understand designation and coding of ferrous and nonferrous",
+              "metals"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "To understand the process of powder metallurgy",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To understand the process of powder metallurgy"
+            ],
+            "topics_text": "To understand the process of powder metallurgy",
+            "topics": [
+              "To understand the process of powder metallurgy"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Selection of suitable material for given application",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Selection of suitable material for given application"
+            ],
+            "topics_text": "Selection of suitable material for given application",
+            "topics": [
+              "Selection of suitable material for given application"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "PHASE DIAGRAMS",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Equilibrium diagrams, Time Temperature Transformation curve-",
+              "(TTT curve), Iron carbon equilibrium diagram, Concept,",
+              "characteristics & need, Heat treatment processes, Annealing,",
+              "normalizing, carburizing, case hardening, hardening, tempering etc,",
+              "Types of furnaces, Quenching mediums"
+            ],
+            "topics_text": "Equilibrium diagrams, Time Temperature Transformation curve- (TTT curve), Iron carbon equilibrium diagram, Concept, characteristics & need, Heat treatment processes, Annealing, normalizing, carburizing, case hardening, hardening, tempering etc, Types of furnaces, Quenching mediums",
+            "topics": [
+              "Equilibrium diagrams, Time Temperature Transformation curve",
+              "(TTT curve), Iron carbon equilibrium diagram, Concept,",
+              "characteristics & need, Heat treatment processes, Annealing,",
+              "normalizing, carburizing, case hardening, hardening, tempering etc,",
+              "Types of furnaces, Quenching mediums"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "ELECTROLYSIS",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Introduction, Electrolytes and Non-electrolytes, Types of",
+              "electrolytes, Construction and working of electrochemical cell,",
+              "Standard conditions, Corrosion-types and reasons",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction, Electrolytes and Non-electrolytes, Types of electrolytes, Construction and working of electrochemical cell, Standard conditions, Corrosion-types and reasons Total Hours 28",
+            "topics": [
+              "Introduction, Electrolytes and Non-electrolytes, Types of",
+              "electrolytes, Construction and working of electrochemical cell,",
+              "Standard conditions, Corrosion-types and reasons",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Materials science, Materials science, R.K. Rajput, Laxmi publication, dariya ganj, New Delhi, 2013",
+          "Materials science, Materials science, R.S. Khurmi, S. chand publication, 2016"
+        ],
+        "textbooks": [
+          "Material Science and Metallurgy, G H Upadhyay, Atul Prakashan, 2018 References:",
+          "Materials science, Materials science, R.K. Rajput, Laxmi publication, dariya ganj, New Delhi, 2013",
+          "Materials science, Materials science, R.S. Khurmi, S. chand publication, 2016"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://nptel.ac.in/courses/113106032"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 10139,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    MATERIAL SCIENCE AND METALLURGY\nCOURSE CODE     09ME2304\nCOURSE CREDITS  3\n\nObjective:\n 1  Engineering Materials play an important role as the vital tool for solving the problems of\n     material selection and application in the production and manufacturing of\n     equipment/machines, devices, tools, etc. Hence, this course provides the fundamental\n     science and principle relevant to material. Furthermore, course provides the understanding\n     the relationship between microstructure and properties of material. This course possess the\n    knowledge about phase diagrams, various types of heat treatment processes, electrolysis\n    and powder metallurgy concept. Therefore, an engineering diploma student must be\n     conversant with the properties, composition and behavior of materials from the point of\n    view of reliability and performance of the product. Subject is concerned with the changes\n     in structure and properties of matter. The study of basic concepts of material science and\n     metallurgy will help the students understanding engineering subjects where the emphasis is\n     laid on the application of these materials\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To identify the properties of metals with respect to crystal structure and grain size.\n 2  Understand the concept of phase diagrams of material.\n 3  Classify the ferrous and nonferrous metal.\n 4  To understand various heat treatment processes.\n 5  To understand concept of powder metallurgy.\n\n\nPre-requisite of course:Applied Mechanics\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    ENGINEERING MATERIALS                             5\n            Types of bonds, Construction and characteristic of electrovalent,\n               covalent, hydrogen and metallic, Intermolecular force of attraction,\n             Molecular arrangement in different phases, Structure of solid,\n               Properties of material, Solidification of metals, Nano Materials\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2    PHASE DIAGRAMS:                                     2\n              Equilibrium diagrams, Time Temperature Transformation curve-\n           (TTT curve), Iron carbon equilibrium diagram, Concept,\n                characteristics & need, , Heat treatment processes, Annealing,\n              normalizing, carburizing, case hardening, hardening, tempering etc,\n            Types of furnaces, Quenching mediums\n     3    METALLURGICAL MICROSCOPE                       3\n              Metallographic examination and microstructures need and\n              importance, Principle & working of metallurgical microscope,\n              Preparation of specimen for microscopic examinations\n     4    METALS AND ITS ALLOYS                              6\n               Classification of metal, Flow diagram for the production of iron and\n                 steel, ferrous metal and classification, Nonferrous & classification,\n             Composition and properties, Coding method as per BIS, ASME,\n              Microstructure mostly used for ferrous and nonferrous material\n     5    NON METALLIC MATERIALS                           6\n               Introduction and classification of nonmetallic material,\n               Classification of Polymers, Properties and applications of polymers,\n              Surface coating methods, setup, working, Composites, Nonmetallic\n               material properties, Designation & coding\n     6     ELECTROLYSIS                                        2\n               Introduction, Electrolytes and Non-electrolytes, Types of\n                electrolytes, Construction and working of electrochemical cell,\n             Standard conditions, Corrosion-types and reasons\n     7     FLUID AND POWDER MATERIALS                      4\n               Classification of fluid and powder materials, Oils, Types and\n               properties, Designation methods as per BIS, Paints and varnishes,\n            Powder metallurgy\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Demonstration of metallurgical microscope                   2\n             Demonstration of metallurgical microscope\n     2     Examine the microstructure of given specimen by metallurgical 2\n            microscope\n            Examine the microstructure of given specimen by metallurgical\n             microscope\n     3      Preparation of specimen and observe microstructure           2\n              Preparation of specimen and observe microstructure\n     4      Tension test on ductile material                             2\n             Tension test on ductile material\n     5      Hardness testing of given material using BHN test             2\n             Hardness testing of given material using BHN test\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6      Hardness testing of given material using RHN test             2\n             Hardness testing of given material using RHN test\n     7      Heat treatment process on mild steel to study effect of annealing 2\n             process\n             Heat treatment process on mild steel to study effect of annealing\n              process\n     8     To show the effect of different quenching media (Oil, Water) on 2\n             the hardness of mild steel\n           To show the effect of different quenching media (Oil, Water) on the\n              hardness of mild steel\n     9     To study about various types of corrosive materials            2\n           To study about various types of corrosive materials\n     10     To understand designation and coding of ferrous and          2\n             nonferrous metals\n           To understand designation and coding of ferrous and nonferrous\n              metals\n     11     To understand the process of powder metallurgy              2\n           To understand the process of powder metallurgy\n     12      Selection of suitable material for given application             2\n              Selection of suitable material for given application\n     13    PHASE DIAGRAMS                                     2\n              Equilibrium diagrams, Time Temperature Transformation curve-\n           (TTT curve), Iron carbon equilibrium diagram, Concept,\n                characteristics & need, Heat treatment processes, Annealing,\n              normalizing, carburizing, case hardening, hardening, tempering etc,\n            Types of furnaces, Quenching mediums\n     14    ELECTROLYSIS                                        2\n               Introduction, Electrolytes and Non-electrolytes, Types of\n                electrolytes, Construction and working of electrochemical cell,\n             Standard conditions, Corrosion-types and reasons\n                               Total Hours                       28\n\nTextbook :\n 1  Material Science and Metallurgy, G H Upadhyay, Atul Prakashan, 2018\n\nReferences:\n 1  Materials science, Materials science, R.K. Rajput, Laxmi publication, dariya ganj, New\n     Delhi, 2013\n 2  Materials science, Materials science, R.S. Khurmi, S. chand publication, 2016\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    28.00         35.00         37.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, Virtual lab, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses.\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/113106032\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "cb0cad1febf03f1d18713a53562922d731393c1ec8e1a3ab46f8d4571b1582da"
+    },
+    {
+      "subject_id": "45009131030201",
+      "subject_name": "MATHEMATICS-III",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 3,
+      "subject_code": "09MA0302",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATHS-III.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09MA0302 - MATHEMATICS-III (.pdf",
+      "expected_pdf_sha256": "10485061e7dcbdfb391b156adbaf5e07f18f8fd23fa3f0f893746dafb712bb86",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MATHEMATICS-III",
+        "course_code": "09MA0302",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "Students are intended to understand the basic concepts of calculus such as Permutation and Combination, Probability, Binomial Theorem, Differentiation and Vectors. The knowledge of calculus can help to understand and solve problems related to Engineering fields. The course will help students to understand Engineering principles and concepts. Main objective of the course is to apply concepts of Binomial Theorem, Differentiation and Vectors to solve given engineering problems."
+      ],
+      "course_outcomes": [
+        "Understand the order and selection of the objects using permutation and combination.",
+        "Understand and apply the basic concept of probability.",
+        "Expand the terms with higher degree using binomial theorem.",
+        "Differentiate the various function.",
+        "Learn the difference between scalar and vector, the properties of vectors and find the angle between them."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Permutation and Combination",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Basic permutation, Basic combination"
+            ],
+            "topics_text": "Introduction, Basic permutation, Basic combination",
+            "topics": [
+              "Introduction, Basic permutation, Basic combination"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Probability",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Classical probability, Compliment of event"
+            ],
+            "topics_text": "Introduction, Classical probability, Compliment of event",
+            "topics": [
+              "Introduction, Classical probability, Compliment of event"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Binomial Theorem",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Binomial theorem (without proof) for positive integral index",
+              "(expansion and general form), Binomial theorem for any index",
+              "(expansion without proof) first and second binomial approximation",
+              "with applications to engineering problems"
+            ],
+            "topics_text": "Binomial theorem (without proof) for positive integral index (expansion and general form), Binomial theorem for any index (expansion without proof) first and second binomial approximation with applications to engineering problems",
+            "topics": [
+              "Binomial theorem (without proof) for positive integral index",
+              "(expansion and general form), Binomial theorem for any index",
+              "(expansion without proof) first and second binomial approximation",
+              "with applications to engineering problems"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differentiation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Definition, Some properties, Derivative of some important",
+              "functions, Chain rule, Derivative of implicit function, Derivative of",
+              "parametric function, Logarithmic differentiation, Second order",
+              "Derivative"
+            ],
+            "topics_text": "Definition, Some properties, Derivative of some important functions, Chain rule, Derivative of implicit function, Derivative of parametric function, Logarithmic differentiation, Second order Derivative",
+            "topics": [
+              "Definition, Some properties, Derivative of some important",
+              "functions, Chain rule, Derivative of implicit function, Derivative of",
+              "parametric function, Logarithmic differentiation, Second order",
+              "Derivative"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Vectors",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Basic concept of Vector and Scalar, addition & subtraction, Product",
+              "of Vectors, Geometric meaning of Scalar and Vector Product,",
+              "Applications of Dot (scalar) and Cross (vector) product, Angle",
+              "between two vectors",
+              "Total Hours 28"
+            ],
+            "topics_text": "Basic concept of Vector and Scalar, addition & subtraction, Product of Vectors, Geometric meaning of Scalar and Vector Product, Applications of Dot (scalar) and Cross (vector) product, Angle between two vectors Total Hours 28",
+            "topics": [
+              "Basic concept of Vector and Scalar, addition & subtraction, Product",
+              "of Vectors, Geometric meaning of Scalar and Vector Product,",
+              "Applications of Dot (scalar) and Cross (vector) product, Angle",
+              "between two vectors",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Permutation and Combination",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Combination, Permutation"
+            ],
+            "topics_text": "Combination, Permutation",
+            "topics": [
+              "Combination, Permutation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Probability",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Classical probability , Compliment of event"
+            ],
+            "topics_text": "Classical probability , Compliment of event",
+            "topics": [
+              "Classical probability , Compliment of event"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Binomial Theorem",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Binomial theorem for positive integral index , Binomial theorem for",
+              "any index"
+            ],
+            "topics_text": "Binomial theorem for positive integral index , Binomial theorem for any index",
+            "topics": [
+              "Binomial theorem for positive integral index , Binomial theorem for",
+              "any index"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differentiation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Some properties and Derivative of some important function, Chain",
+              "rule, Derivative of implicit function and parametric function,",
+              "Logarithmic differentiation, Second order Derivative"
+            ],
+            "topics_text": "Some properties and Derivative of some important function, Chain rule, Derivative of implicit function and parametric function, Logarithmic differentiation, Second order Derivative",
+            "topics": [
+              "Some properties and Derivative of some important function, Chain",
+              "rule, Derivative of implicit function and parametric function,",
+              "Logarithmic differentiation, Second order Derivative"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Vectors",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Algebraic properties of vectors, Basic concept and Geometric",
+              "meaning of Scalar and Vector product, Angle between two vectors",
+              "Total Hours 28"
+            ],
+            "topics_text": "Algebraic properties of vectors, Basic concept and Geometric meaning of Scalar and Vector product, Angle between two vectors Total Hours 28",
+            "topics": [
+              "Algebraic properties of vectors, Basic concept and Geometric",
+              "meaning of Scalar and Vector product, Angle between two vectors",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "NCERT Class-XI science Mathematics , NCERT Class-XI science Mathematics , NCERT, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics Part=I , NCERT, NCERT, 2022 [PAGE 3] References:",
+          "NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics Part=II, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022",
+          "Higher Engineering Mathematics, Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, New Delhi, 2007"
+        ],
+        "textbooks": [
+          "Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, New Delhi, 2007 References:",
+          "NCERT Class-XI science Mathematics , NCERT Class-XI science Mathematics , NCERT, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics Part=I , NCERT, NCERT, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.mathsisfun.com/combinatorics/combinations-permutations.html",
+          "https://en.wikipedia.org/wiki/Binomial_theorem",
+          "https://en.wikipedia.org/wiki/Derivative",
+          "https://en.wikipedia.org/wiki/Integral",
+          "https://www.mathsisfun.com/calculus/integration-introduction.html"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6894,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    MATHEMATICS-III\nCOURSE CODE     09MA0302\nCOURSE CREDITS  4\n\nObjective:\n 1  Students are intended to understand the basic concepts of calculus such as Permutation and\n    Combination, Probability, Binomial Theorem, Differentiation and Vectors. The knowledge\n     of calculus can help to understand and solve problems related to Engineering fields. The\n     course will help students to understand Engineering principles and concepts. Main\n     objective of the course is to apply concepts of Binomial Theorem, Differentiation and\n     Vectors to solve given engineering problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the order and selection of the objects using permutation and\n     combination.\n 2  Understand and apply the basic concept of probability.\n 3  Expand the terms with higher degree using binomial theorem.\n 4  Differentiate the various function.\n 5  Learn the difference between scalar and vector, the properties of vectors\n    and find the angle between them.\n\n\nPre-requisite of course:NA.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Permutation and Combination                             4\n               Introduction, Basic permutation, Basic combination\n     2       Probability                                              4\n               Introduction, Classical probability, Compliment of event\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Binomial Theorem                                        4\n             Binomial theorem (without proof) for positive integral index\n              (expansion and general form), Binomial theorem for any index\n              (expansion without proof) first and second binomial approximation\n             with applications to engineering problems\n     4       Differentiation                                           10\n               Definition, Some properties, Derivative of some important\n               functions, Chain rule, Derivative of implicit function, Derivative of\n              parametric function, Logarithmic differentiation, Second order\n              Derivative\n     5      Vectors                                                 6\n             Basic concept of Vector and Scalar, addition & subtraction, Product\n              of Vectors, Geometric meaning of Scalar and Vector Product,\n              Applications of Dot (scalar) and Cross (vector) product, Angle\n             between two vectors\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Permutation and Combination                             4\n             Combination, Permutation\n     2       Probability                                              4\n               Classical probability , Compliment of event\n     3      Binomial Theorem                                        4\n             Binomial theorem for positive integral index , Binomial theorem for\n            any index\n     4       Differentiation                                           10\n          Some properties and Derivative of some important function, Chain\n                 rule, Derivative of implicit function and parametric function,\n             Logarithmic differentiation, Second order Derivative\n     5      Vectors                                                 6\n              Algebraic properties of vectors, Basic concept and Geometric\n            meaning of Scalar and Vector product, Angle between two vectors\n                               Total Hours                       28\n\nTextbook :\n 1  Higher Engineering Mathematics, B.S. Grewal, Khanna Publishers, New Delhi, 2007\n\nReferences:\n 1 NCERT Class-XI science Mathematics , NCERT Class-XI science Mathematics , NCERT,\n   NCERT, 2022\n 2 NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics\n     Part=I , NCERT, NCERT, 2022\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 3 NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics\n     Part=II, NCERT, NCERT, 2022\n 4 NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022\n 5  Higher Engineering Mathematics, Higher Engineering Mathematics, B.S. Grewal, Khanna\n     Publishers, New Delhi, 2007\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         30.00         30.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms.\n\nSupplementary Resources:\n 1  https://www.mathsisfun.com/combinatorics/combinations-permutations.html\n 2  https://en.wikipedia.org/wiki/Binomial_theorem\n 3  https://en.wikipedia.org/wiki/Derivative\n 4  https://en.wikipedia.org/wiki/Integral\n 5  https://www.mathsisfun.com/calculus/integration-introduction.html\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09MA0302 - MATHEMATICS-III (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "10485061e7dcbdfb391b156adbaf5e07f18f8fd23fa3f0f893746dafb712bb86"
+    },
+    {
+      "subject_id": "45009135230301",
+      "subject_name": "STRENGTH OF MATERIAL",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 3,
+      "subject_code": "09ME2303",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SOM.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME2303 - STRENGTH OF MATERIAL (.pdf",
+      "expected_pdf_sha256": "dc5956c5d2c58ea608d72da2dd7ab749fda4e7afca9ed85fc193aa4067110531",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "STRENGTH OF MATERIAL",
+        "course_code": "09ME2303",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "Applied Mechanics"
+      },
+      "objectives": [
+        "In Applied Mechanics, students have studied the effects of different force systems in previous semester. Different mechanical components subjected to load in different ways and react in a different way. In this subject, students will study analysis of structure under transverse loading, direct, lateral loading along with shear loading. Also studies the analysis of components which are subjected to torsional stress. This subject will build strong foundation to analysis and design of machine elements."
+      ],
+      "course_outcomes": [
+        "Understand effect and behavior of direct stress and combined stress on member.",
+        "Calculate moment of inertia of symmetric and asymmetric sections.",
+        "Draw shear force and bending moment diagram for statically determinant beams.",
+        "Apply theory of banding to determine stresses in beams and deflection induced in static beam.",
+        "Understand behavior of torsional members, column and strut.",
+        "Determine principal stresses on a plane in strained structural material."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 2 50 30 20 25 25 MR. NAVNITKUMAR JAGJIVANBHAI PATEL DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Direct Stress & Strain",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Different types of structures and loadsDifferent types of structures",
+              "and loads, Direct Stress, linear strain, Hook’s law, calculate",
+              "numerical on Direct stress and Linear strain, Stress Strain curve of",
+              "Mild steel, Modulus of Elasticity, Yield Breaking & Ultimate Stress",
+              "and Factor of Safety, Lateral Strain and Poisson’s Ratio,",
+              "Temperature Stress & Strain with & without yielding, Shear stress,",
+              "shear strain and shear modulus, Bulk Modulus & Volumetric Strain,",
+              "Differentiate Sudden, Gradual & Impact load, Strain energy & proof",
+              "resilience for sudden, gradual & impact load with numerical",
+              "problems"
+            ],
+            "topics_text": "Different types of structures and loadsDifferent types of structures and loads, Direct Stress, linear strain, Hook’s law, calculate numerical on Direct stress and Linear strain, Stress Strain curve of Mild steel, Modulus of Elasticity, Yield Breaking & Ultimate Stress and Factor of Safety, Lateral Strain and Poisson’s Ratio, Temperature Stress & Strain with & without yielding, Shear stress, shear strain and shear modulus, Bulk Modulus & Volumetric Strain, Differentiate Sudden, Gradual & Impact load, Strain energy & proof resilience for sudden, gradual & impact load with numerical problems",
+            "topics": [
+              "Different types of structures and loadsDifferent types of structures",
+              "and loads, Direct Stress, linear strain, Hook’s law, calculate",
+              "numerical on Direct stress and Linear strain, Stress Strain curve of",
+              "Mild steel, Modulus of Elasticity, Yield Breaking & Ultimate Stress",
+              "and Factor of Safety, Lateral Strain and Poisson’s Ratio,",
+              "Temperature Stress & Strain with & without yielding, Shear stress,",
+              "shear strain and shear modulus, Bulk Modulus & Volumetric Strain,",
+              "Differentiate Sudden, Gradual & Impact load, Strain energy & proof",
+              "resilience for sudden, gradual & impact load with numerical",
+              "problems"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Moment of Inertia",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Moment of Inertia & its Importance, Parallel & Perpendicular Axis",
+              "Theorem, Formula of Moment of Inertia of solid & hollow sections",
+              "like rectangle, triangle, circle, Moment of Inertia of I section,",
+              "Channel section, Angle section and T section"
+            ],
+            "topics_text": "Moment of Inertia & its Importance, Parallel & Perpendicular Axis Theorem, Formula of Moment of Inertia of solid & hollow sections like rectangle, triangle, circle, Moment of Inertia of I section, Channel section, Angle section and T section",
+            "topics": [
+              "Moment of Inertia & its Importance, Parallel & Perpendicular Axis",
+              "Theorem, Formula of Moment of Inertia of solid & hollow sections",
+              "like rectangle, triangle, circle, Moment of Inertia of I section,",
+              "Channel section, Angle section and T section"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Shear Force & Bending Moment Diagram",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Statically Determinate beams like Cantilever, Simply Supported &",
+              "Over Hang Beam, Relation between Shear Force and Banding",
+              "Moment, Sagging & Hogging Bending Moment and its Importance,",
+              "Point of Contra flexure & its importance, S.F. & B.M. diagram for",
+              "cantilever, simply supported & over hang beam elements subjected",
+              "to point load and/or UDL"
+            ],
+            "topics_text": "Statically Determinate beams like Cantilever, Simply Supported & Over Hang Beam, Relation between Shear Force and Banding Moment, Sagging & Hogging Bending Moment and its Importance, Point of Contra flexure & its importance, S.F. & B.M. diagram for cantilever, simply supported & over hang beam elements subjected to point load and/or UDL",
+            "topics": [
+              "Statically Determinate beams like Cantilever, Simply Supported &",
+              "Over Hang Beam, Relation between Shear Force and Banding",
+              "Moment, Sagging & Hogging Bending Moment and its Importance,",
+              "Point of Contra flexure & its importance, S.F. & B.M. diagram for",
+              "cantilever, simply supported & over hang beam elements subjected",
+              "to point load and/or UDL"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Stress and deflection in Beam",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Bending Theory Equation, Bending stress, sectional Modulus",
+              "Neutral Axis, Application of Bending theory to statically",
+              "determinate beams elements having rectangular or circular section",
+              "to determine stress, Slope & Deflection, Formulation for cantilever",
+              "Beam subjected to Point load at free end and with full UDL,",
+              "Formula for S. S. Beam subjected to point load at MID Span and",
+              "with full UDL, Numerical problems on slope and deflection for",
+              "above both"
+            ],
+            "topics_text": "Bending Theory Equation, Bending stress, sectional Modulus Neutral Axis, Application of Bending theory to statically determinate beams elements having rectangular or circular section to determine stress, Slope & Deflection, Formulation for cantilever Beam subjected to Point load at free end and with full UDL, Formula for S. S. Beam subjected to point load at MID Span and with full UDL, Numerical problems on slope and deflection for above both",
+            "topics": [
+              "Bending Theory Equation, Bending stress, sectional Modulus",
+              "Neutral Axis, Application of Bending theory to statically",
+              "determinate beams elements having rectangular or circular section",
+              "to determine stress, Slope & Deflection, Formulation for cantilever",
+              "Beam subjected to Point load at free end and with full UDL,",
+              "Formula for S. S. Beam subjected to point load at MID Span and",
+              "with full UDL, Numerical problems on slope and deflection for",
+              "above both"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Column & Strut",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Column & Strut, Short & Long column, End condition of column",
+              "and effective length of column & modes of failure in columnEnd",
+              "condition of column and effective length of column & modes of",
+              "failure in column, Radius of Gyration, Slenderness ratio, Euler’s",
+              "crippling load & its numerical, Rankin’s load buckling load & its",
+              "numerical"
+            ],
+            "topics_text": "Column & Strut, Short & Long column, End condition of column and effective length of column & modes of failure in columnEnd condition of column and effective length of column & modes of failure in column, Radius of Gyration, Slenderness ratio, Euler’s crippling load & its numerical, Rankin’s load buckling load & its numerical",
+            "topics": [
+              "Column & Strut, Short & Long column, End condition of column",
+              "and effective length of column & modes of failure in columnEnd",
+              "condition of column and effective length of column & modes of",
+              "failure in column, Radius of Gyration, Slenderness ratio, Euler’s",
+              "crippling load & its numerical, Rankin’s load buckling load & its",
+              "numerical"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Combine Direct & Bending Stresses",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Eccentricity, Formula for combined direct & Bending stresses,",
+              "Limit of Eccentricity, Core section for rectangular & Circular,",
+              "Numerical on combined stresses for rectangle & circular section"
+            ],
+            "topics_text": "Eccentricity, Formula for combined direct & Bending stresses, Limit of Eccentricity, Core section for rectangular & Circular, Numerical on combined stresses for rectangle & circular section",
+            "topics": [
+              "Eccentricity, Formula for combined direct & Bending stresses,",
+              "Limit of Eccentricity, Core section for rectangular & Circular,",
+              "Numerical on combined stresses for rectangle & circular section"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Principal Plane & Principal Stress",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Formulas for normal, tangential & resultant stresses due to direct",
+              "orthogonal stresses & shear stress, Numerical on Principal plane &",
+              "principal stress, Formulas for principal stresses and for location of",
+              "principal planes & Numerical"
+            ],
+            "topics_text": "Formulas for normal, tangential & resultant stresses due to direct orthogonal stresses & shear stress, Numerical on Principal plane & principal stress, Formulas for principal stresses and for location of principal planes & Numerical",
+            "topics": [
+              "Formulas for normal, tangential & resultant stresses due to direct",
+              "orthogonal stresses & shear stress, Numerical on Principal plane &",
+              "principal stress, Formulas for principal stresses and for location of",
+              "principal planes & Numerical"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Torsion",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Torsion, Angle of Twist, Polar Moment of Inertia, Torsional",
+              "Rigidity, Formula of Torsional Stress & Numerical, Formula for",
+              "Power Transmitted/ Consumed for shaft of solid and hollow",
+              "sections subjected to Torsion, Numerical",
+              "Total Hours 42"
+            ],
+            "topics_text": "Torsion, Angle of Twist, Polar Moment of Inertia, Torsional Rigidity, Formula of Torsional Stress & Numerical, Formula for Power Transmitted/ Consumed for shaft of solid and hollow sections subjected to Torsion, Numerical Total Hours 42",
+            "topics": [
+              "Torsion, Angle of Twist, Polar Moment of Inertia, Torsional",
+              "Rigidity, Formula of Torsional Stress & Numerical, Formula for",
+              "Power Transmitted/ Consumed for shaft of solid and hollow",
+              "sections subjected to Torsion, Numerical",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Problems based on direct stress and strain",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Problems based on direct stress and strain"
+            ],
+            "topics_text": "Problems based on direct stress and strain",
+            "topics": [
+              "Problems based on direct stress and strain"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Calculate Moment of Inertia of various cross sections.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Calculate Moment of Inertia of various cross sections"
+            ],
+            "topics_text": "Calculate Moment of Inertia of various cross sections",
+            "topics": [
+              "Calculate Moment of Inertia of various cross sections"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Shear force and bending moment diagrams for simply",
+            "contact_hours": 2,
+            "topic_lines": [
+              "supported beams",
+              "Shear force and bending moment diagrams for simply supported",
+              "beams"
+            ],
+            "topics_text": "supported beams Shear force and bending moment diagrams for simply supported beams",
+            "topics": [
+              "supported beams",
+              "Shear force and bending moment diagrams for simply supported",
+              "beams"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Shear force and bending moment diagrams for cantilever beams",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Shear force and bending moment diagrams for cantilever beams"
+            ],
+            "topics_text": "Shear force and bending moment diagrams for cantilever beams",
+            "topics": [
+              "Shear force and bending moment diagrams for cantilever beams"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Problems based on bending stress induced in beam.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Problems based on bending stress induced in beam."
+            ],
+            "topics_text": "Problems based on bending stress induced in beam.",
+            "topics": [
+              "Problems based on bending stress induced in beam."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Problems based on shear stress induced in beam.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Problems based on shear stress induced in beam."
+            ],
+            "topics_text": "Problems based on shear stress induced in beam.",
+            "topics": [
+              "Problems based on shear stress induced in beam."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Problems based on deflection of beam.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Problems based on deflection of beam"
+            ],
+            "topics_text": "Problems based on deflection of beam",
+            "topics": [
+              "Problems based on deflection of beam"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Problems based on column and strut.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Problems based on column and strut"
+            ],
+            "topics_text": "Problems based on column and strut",
+            "topics": [
+              "Problems based on column and strut"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Problems based on combined direct and bending stress.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Problems based on combined direct and bending stress"
+            ],
+            "topics_text": "Problems based on combined direct and bending stress",
+            "topics": [
+              "Problems based on combined direct and bending stress"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Analytical method to determine principal stress.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Analytical method to determine principal stress."
+            ],
+            "topics_text": "Analytical method to determine principal stress.",
+            "topics": [
+              "Analytical method to determine principal stress."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Mohr’s circle method to determine principal stress.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Mohr’s circle method to determine principal stress."
+            ],
+            "topics_text": "Mohr’s circle method to determine principal stress.",
+            "topics": [
+              "Mohr’s circle method to determine principal stress."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Problems based on torsion.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Problems based on torsion.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Problems based on torsion. Total Hours 28",
+            "topics": [
+              "Problems based on torsion.",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "STRENGTH OF MATERIALS, STRENGTH OF MATERIALS, R.S. Khurmi, S. Chand Publication, 2008",
+          "STRENGTH OF MATERIALS, STRENGTH OF MATERIALS, S RAMAMURTHAN, Dhanpat Rai Publishing Company (P) Ltd., 2020"
+        ],
+        "textbooks": [
+          "STRENGTH OF MATERIALS, R.P. Rethaliya, Atul Prakashan, 2016"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://skyciv.com/docs/tutorials/",
+          "https://sm-nitk.vlabs.ac.in/exp/tensile-test-mild-steel/"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 10017,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         3\nCOURSE TITLE    STRENGTH OF MATERIAL\nCOURSE CODE     09ME2303\nCOURSE CREDITS  4\n\nObjective:\n 1  In Applied Mechanics, students have studied the effects of different force systems in\n     previous semester. Different mechanical components subjected to load in different ways\n    and react in a different way. In this subject, students will study analysis of structure under\n     transverse loading, direct, lateral loading along with shear loading. Also studies the\n     analysis of components which are subjected to torsional stress. This subject will build\n     strong foundation to analysis and design of machine elements.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand effect and behavior of direct stress and combined stress on member.\n 2  Calculate moment of inertia of symmetric and asymmetric sections.\n 3  Draw shear force and bending moment diagram for statically determinant beams.\n 4  Apply theory of banding to determine stresses in beams and deflection induced in static\n    beam.\n 5  Understand behavior of torsional members, column and strut.\n 6  Determine principal stresses on a plane in strained structural material.\n\n\nPre-requisite of course:Applied Mechanics\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            2        50     30      20        25         25\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Direct Stress & Strain                                     9\n               Different types of structures and loadsDifferent types of structures\n            and loads, Direct Stress, linear strain, Hook’s law, calculate\n             numerical on Direct stress and Linear strain, Stress Strain curve of\n            Mild steel, Modulus of Elasticity, Yield Breaking & Ultimate Stress\n            and Factor of Safety, Lateral Strain and Poisson’s Ratio,\n             Temperature Stress & Strain with & without yielding, Shear stress,\n              shear strain and shear modulus, Bulk Modulus & Volumetric Strain,\n               Differentiate Sudden, Gradual & Impact load, Strain energy & proof\n                resilience for sudden, gradual & impact load with numerical\n             problems\n     2     Moment of Inertia                                        5\n           Moment of Inertia & its Importance, Parallel & Perpendicular Axis\n            Theorem, Formula of Moment of Inertia of solid & hollow sections\n                like rectangle, triangle, circle, Moment of Inertia of I section,\n             Channel section, Angle section and T section\n     3      Shear Force & Bending Moment Diagram                    7\n                Statically Determinate beams like Cantilever, Simply Supported &\n            Over Hang Beam, Relation between Shear Force and Banding\n            Moment, Sagging & Hogging Bending Moment and its Importance,\n              Point of Contra flexure & its importance, S.F. & B.M. diagram for\n                cantilever, simply supported & over hang beam elements subjected\n               to point load and/or UDL\n     4       Stress and deflection in Beam                              7\n            Bending Theory Equation, Bending stress, sectional Modulus\n              Neutral Axis, Application of Bending theory to statically\n              determinate beams elements having rectangular or circular section\n               to determine stress, Slope & Deflection, Formulation for cantilever\n          Beam subjected to Point load at free end and with full UDL,\n            Formula for S. S. Beam subjected to point load at MID Span and\n             with full UDL, Numerical problems on slope and deflection for\n             above both\n     5     Column & Strut                                          4\n           Column & Strut, Short & Long column, End condition of column\n            and effective length of column & modes of failure in columnEnd\n              condition of column and effective length of column & modes of\n                failure in column, Radius of Gyration, Slenderness ratio, Euler’s\n               crippling load & its numerical, Rankin’s load buckling load & its\n             numerical\n     6     Combine Direct & Bending Stresses                         3\n               Eccentricity, Formula for combined direct & Bending stresses,\n             Limit of Eccentricity, Core section for rectangular & Circular,\n             Numerical on combined stresses for rectangle & circular section\n     7       Principal Plane & Principal Stress                          4\n             Formulas for normal, tangential & resultant stresses due to direct\n              orthogonal stresses & shear stress, Numerical on Principal plane &\n               principal stress, Formulas for principal stresses and for location of\n               principal planes & Numerical\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     8      Torsion                                                 3\n              Torsion, Angle of Twist, Polar Moment of Inertia, Torsional\n               Rigidity, Formula of Torsional Stress & Numerical, Formula for\n            Power Transmitted/ Consumed for shaft of solid and hollow\n               sections subjected to Torsion, Numerical\n                               Total Hours                       42\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Problems based on direct stress and strain                    4\n             Problems based on direct stress and strain\n     2      Calculate Moment of Inertia of various cross sections.          4\n              Calculate Moment of Inertia of various cross sections\n     3      Shear force and bending moment diagrams for simply         2\n            supported beams\n             Shear force and bending moment diagrams for simply supported\n            beams\n     4      Shear force and bending moment diagrams for cantilever beams 2\n             Shear force and bending moment diagrams for cantilever beams\n     5      Problems based on bending stress induced in beam.            2\n             Problems based on bending stress induced in beam.\n     6      Problems based on shear stress induced in beam.              2\n             Problems based on shear stress induced in beam.\n     7      Problems based on deflection of beam.                       2\n             Problems based on deflection of beam\n     8      Problems based on column and strut.                        2\n             Problems based on column and strut\n     9      Problems based on combined direct and bending stress.        2\n             Problems based on combined direct and bending stress\n     10      Analytical method to determine principal stress.               2\n              Analytical method to determine principal stress.\n     11     Mohr’s circle method to determine principal stress.            2\n            Mohr’s circle method to determine principal stress.\n     12     Problems based on torsion.                                 2\n             Problems based on torsion.\n                               Total Hours                       28\n\nTextbook :\n 1 STRENGTH OF MATERIALS, R.P. Rethaliya, Atul Prakashan, 2016\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "References:\n 1 STRENGTH OF MATERIALS, STRENGTH OF MATERIALS, R.S. Khurmi, S. Chand\n     Publication, 2008\n 2 STRENGTH OF MATERIALS, STRENGTH OF MATERIALS, S RAMAMURTHAN,\n    Dhanpat Rai Publishing Company (P) Ltd., 2020\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         50.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses.\n\nSupplementary Resources:\n 1  https://skyciv.com/docs/tutorials/\n 2  https://sm-nitk.vlabs.ac.in/exp/tensile-test-mild-steel/\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "dc5956c5d2c58ea608d72da2dd7ab749fda4e7afca9ed85fc193aa4067110531"
+    },
+    {
+      "subject_id": "45009135230101",
+      "subject_name": "THERMODYNAMICS",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 3,
+      "subject_code": "09ME2301",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/TH.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME2301 - THERMODYNAMICS (.pdf",
+      "expected_pdf_sha256": "22369ff238e6609977d9de2c2cec9a2cd391d141ab5b47c80372d1d091dceaeb",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "THERMODYNAMICS",
+        "course_code": "09ME2301",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "Thermodynamics is a discipline of energy transfer between surrounding and system. From the laws of thermodynamics gives the understanding the relationship between quantities of heat and work in different system. In this course, work and heat transfer with changes in associated properties is studied based on laws of thermodynamics. This course will provide an understanding of the basic principles of thermodynamics which is must for understanding of major fields of mechanical engineering and technology notably in different devices. Main purpose of this subject is to build up the understanding of basic principles of thermodynamics is required in various field of engineering"
+      ],
+      "course_outcomes": [
+        "To understand the laws of thermodynamics",
+        "To understand the practical application related to laws of thermodynamics",
+        "To understand the concept and applications of energy, entropy.",
+        "To understand various gas laws.",
+        "To understand various thermodynamic cycle and its efficiency."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "FUNDAMENTAL OF THERMODYNAMICS",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction of thermodynamics, Basic properties, classification of",
+              "system, Various system and its boundaries Energy, Zeroth law of",
+              "thermodynamics & equilibrium, Processes & cycle, Quasi-static",
+              "process"
+            ],
+            "topics_text": "Introduction of thermodynamics, Basic properties, classification of system, Various system and its boundaries Energy, Zeroth law of thermodynamics & equilibrium, Processes & cycle, Quasi-static process",
+            "topics": [
+              "Introduction of thermodynamics, Basic properties, classification of",
+              "system, Various system and its boundaries Energy, Zeroth law of",
+              "thermodynamics & equilibrium, Processes & cycle, Quasi-static",
+              "process"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "FIRST LAW OF THERMODYNAMIC",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Joule’s experiment, First law of thermodynamics, Control mass &",
+              "control volume concept, Energy equation, Equation of work for",
+              "open system, Application of SFEE, Numerical"
+            ],
+            "topics_text": "Joule’s experiment, First law of thermodynamics, Control mass & control volume concept, Energy equation, Equation of work for open system, Application of SFEE, Numerical",
+            "topics": [
+              "Joule’s experiment, First law of thermodynamics, Control mass &",
+              "control volume concept, Energy equation, Equation of work for",
+              "open system, Application of SFEE, Numerical"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "SECOND LAW OF THERMODYNAMIC",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Second law of thermodynamic, Kelvin-Plank & clausisus statements",
+              "and equivalence, Reversible and irreversible processes, Carnot cycle",
+              "and theorem, corollary, Entropy, Numerical"
+            ],
+            "topics_text": "Second law of thermodynamic, Kelvin-Plank & clausisus statements and equivalence, Reversible and irreversible processes, Carnot cycle and theorem, corollary, Entropy, Numerical",
+            "topics": [
+              "Second law of thermodynamic, Kelvin-Plank & clausisus statements",
+              "and equivalence, Reversible and irreversible processes, Carnot cycle",
+              "and theorem, corollary, Entropy, Numerical"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "IDEAL GASES AND PROCESSES",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Ideal gas laws, Characteristic equation of gas & universal gas",
+              "constant, Specific heat , thermodynamic processes and their",
+              "relationship, Adiabatic and polytropic process, Numerical"
+            ],
+            "topics_text": "Ideal gas laws, Characteristic equation of gas & universal gas constant, Specific heat , thermodynamic processes and their relationship, Adiabatic and polytropic process, Numerical",
+            "topics": [
+              "Ideal gas laws, Characteristic equation of gas & universal gas",
+              "constant, Specific heat , thermodynamic processes and their",
+              "relationship, Adiabatic and polytropic process, Numerical"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "THERMODYNAMIC CYCLE",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Classification of thermodynamic cycle, Concept of power cycle,",
+              "Power producing cycles, Carnot cycle, Otto cycle, Diesel cycle,",
+              "Dual combustion cycle, Brayton cycle.",
+              "Total Hours 42"
+            ],
+            "topics_text": "Classification of thermodynamic cycle, Concept of power cycle, Power producing cycles, Carnot cycle, Otto cycle, Diesel cycle, Dual combustion cycle, Brayton cycle. Total Hours 42",
+            "topics": [
+              "Classification of thermodynamic cycle, Concept of power cycle,",
+              "Power producing cycles, Carnot cycle, Otto cycle, Diesel cycle,",
+              "Dual combustion cycle, Brayton cycle.",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamental of thermodynamics.",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Fundamental of thermodynamics."
+            ],
+            "topics_text": "Fundamental of thermodynamics.",
+            "topics": [
+              "Fundamental of thermodynamics."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Numerical based on energy interaction in system.",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Numerical based on energy interaction in system."
+            ],
+            "topics_text": "Numerical based on energy interaction in system.",
+            "topics": [
+              "Numerical based on energy interaction in system."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Numerical related to first law of thermodynamics.",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Numerical related to first law of thermodynamics."
+            ],
+            "topics_text": "Numerical related to first law of thermodynamics.",
+            "topics": [
+              "Numerical related to first law of thermodynamics."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Numerical based on Steady flow energy equation.",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Numerical based on Steady flow energy equation."
+            ],
+            "topics_text": "Numerical based on Steady flow energy equation.",
+            "topics": [
+              "Numerical based on Steady flow energy equation."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Numerical related to second law of thermodynamics.",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Numerical related to second law of thermodynamics.",
+              "6 6. Numerical based on ideal gas equation and boyle’s law. 1",
+              "Numerical based on ideal gas equation and boyle’s law."
+            ],
+            "topics_text": "Numerical related to second law of thermodynamics. 6 6. Numerical based on ideal gas equation and boyle’s law. 1 Numerical based on ideal gas equation and boyle’s law.",
+            "topics": [
+              "Numerical related to second law of thermodynamics.",
+              "6 6. Numerical based on ideal gas equation and boyle’s law. 1",
+              "Numerical based on ideal gas equation and boyle’s law."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Numerical based on charel’s law and gay-lussac law.",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Numerical based on charel’s law and gay-lussac law."
+            ],
+            "topics_text": "Numerical based on charel’s law and gay-lussac law.",
+            "topics": [
+              "Numerical based on charel’s law and gay-lussac law."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Numerical based on adiabatic process.",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Numerical based on adiabatic process."
+            ],
+            "topics_text": "Numerical based on adiabatic process.",
+            "topics": [
+              "Numerical based on adiabatic process."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Numerical based on polytropic process.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Numerical based on polytropic process."
+            ],
+            "topics_text": "Numerical based on polytropic process.",
+            "topics": [
+              "Numerical based on polytropic process."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Numerical based on otto cycle.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Numerical based on otto cycle."
+            ],
+            "topics_text": "Numerical based on otto cycle.",
+            "topics": [
+              "Numerical based on otto cycle."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Numerical based on diesel cycle.",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Numerical based on diesel cycle."
+            ],
+            "topics_text": "Numerical based on diesel cycle.",
+            "topics": [
+              "Numerical based on diesel cycle."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Numerical based on brayton cycle.",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Numerical based on brayton cycle.",
+              "Total Hours 14"
+            ],
+            "topics_text": "Numerical based on brayton cycle. Total Hours 14",
+            "topics": [
+              "Numerical based on brayton cycle.",
+              "Total Hours 14"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Engineering Thermodynamics, Engineering Thermodynamics, P.K. Nag, McGraw-Hill Education, 2005",
+          "Engineering Thermodynamics, Engineering Thermodynamics, R.K. Rajput, LAXMI PUBLICATIONS (P) LTD, 2007",
+          "Engineering Thermodynamics, Engineering Thermodynamics, J. B. Jones, R.E. Dugan, Prentice Hall India Learning Private Limited, 1998"
+        ],
+        "textbooks": [
+          "Engineering Thermodynamics, R.B. Varia, Atul Prakashan, 2018 References:",
+          "Engineering Thermodynamics, Engineering Thermodynamics, P.K. Nag, McGraw-Hill Education, 2005",
+          "Engineering Thermodynamics, Engineering Thermodynamics, R.K. Rajput, LAXMI PUBLICATIONS (P) LTD, 2007",
+          "Engineering Thermodynamics, Engineering Thermodynamics, J. B. Jones, R.E. Dugan, Prentice Hall India Learning Private Limited, 1998"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.learnthermo.com/tutorials.php"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7460,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         3\nCOURSE TITLE   THERMODYNAMICS\nCOURSE CODE     09ME2301\nCOURSE CREDITS  4\n\nObjective:\n 1  Thermodynamics is a discipline of energy transfer between surrounding and system. From\n     the laws of thermodynamics gives the understanding the relationship between quantities of\n     heat and work in different system. In this course, work and heat transfer with changes in\n     associated properties is studied based on laws of thermodynamics. This course will provide\n    an understanding of the basic principles of thermodynamics which is must for\n     understanding of major fields of mechanical engineering and technology notably in\n     different devices. Main purpose of this subject is to build up the understanding of basic\n     principles of thermodynamics is required in various field of engineering\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand the laws of thermodynamics\n 2  To understand the practical application related to laws of thermodynamics\n 3  To understand the concept and applications of energy, entropy.\n 4  To understand various gas laws.\n 5  To understand various thermodynamic cycle and its efficiency.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    FUNDAMENTAL OF THERMODYNAMICS                6\n               Introduction of thermodynamics, Basic properties, classification of\n              system, Various system and its boundaries Energy, Zeroth law of\n             thermodynamics & equilibrium, Processes & cycle, Quasi-static\n              process\n     2     FIRST LAW OF THERMODYNAMIC                      7\n               Joule’s experiment, First law of thermodynamics, Control mass &\n               control volume concept, Energy equation, Equation of work for\n            open system, Application of SFEE, Numerical\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3    SECOND LAW OF THERMODYNAMIC                   9\n            Second law of thermodynamic, Kelvin-Plank & clausisus statements\n            and equivalence, Reversible and irreversible processes, Carnot cycle\n            and theorem, corollary, Entropy, Numerical\n     4     IDEAL GASES AND PROCESSES                         11\n               Ideal gas laws, Characteristic equation of gas & universal gas\n               constant, Specific heat , thermodynamic processes and their\n                relationship, Adiabatic and polytropic process, Numerical\n     5    THERMODYNAMIC CYCLE                             9\n               Classification of thermodynamic cycle, Concept of power cycle,\n            Power producing cycles, Carnot cycle, Otto cycle, Diesel cycle,\n            Dual combustion cycle, Brayton cycle.\n                               Total Hours                       42\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fundamental of thermodynamics.                           1\n             Fundamental of thermodynamics.\n     2      Numerical based on energy interaction in system.              1\n             Numerical based on energy interaction in system.\n     3      Numerical related to first law of thermodynamics.             1\n             Numerical related to first law of thermodynamics.\n     4      Numerical based on Steady flow energy equation.             1\n             Numerical based on Steady flow energy equation.\n     5      Numerical related to second law of thermodynamics.           1\n             Numerical related to second law of thermodynamics.\n     6        6. Numerical based on ideal gas equation and boyle’s law.       1\n             Numerical based on ideal gas equation and boyle’s law.\n     7      Numerical based on charel’s law and gay-lussac law.           1\n             Numerical based on charel’s law and gay-lussac law.\n     8      Numerical based on adiabatic process.                       1\n             Numerical based on adiabatic process.\n     9      Numerical based on polytropic process.                      2\n             Numerical based on polytropic process.\n     10     Numerical based on otto cycle.                              2\n             Numerical based on otto cycle.\n     11     Numerical based on diesel cycle.                            1\n             Numerical based on diesel cycle.\n     12     Numerical based on brayton cycle.                          1\n             Numerical based on brayton cycle.\n                               Total Hours                       14\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Textbook :\n 1  Engineering Thermodynamics, R.B. Varia, Atul Prakashan, 2018\n\nReferences:\n 1  Engineering Thermodynamics, Engineering Thermodynamics, P.K. Nag, McGraw-Hill\n     Education, 2005\n 2  Engineering Thermodynamics, Engineering Thermodynamics, R.K. Rajput, LAXMI\n   PUBLICATIONS (P) LTD, 2007\n 3  Engineering Thermodynamics, Engineering Thermodynamics, J. B. Jones, R.E. Dugan,\n     Prentice Hall India Learning Private Limited, 1998\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    28.00         35.00         37.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://www.learnthermo.com/tutorials.php\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "22369ff238e6609977d9de2c2cec9a2cd391d141ab5b47c80372d1d091dceaeb"
+    }
+  ],
+  "build_summary": {
+    "extracted": 7,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

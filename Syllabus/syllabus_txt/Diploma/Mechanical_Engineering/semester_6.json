@@ -1,0 +1,1426 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 45,
+    "course_name": "Diploma Mechanical Engineering",
+    "output_slug": "Mechanical_Engineering"
+  },
+  "semester": 6,
+  "subject_count": 6,
+  "subjects": [
+    {
+      "subject_id": "45009135160401",
+      "subject_name": "CNC PROGRAMMING",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 6,
+      "subject_code": "09ME1604",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CNCP.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME1604 - CNC PROGRAMMING (.pdf",
+      "expected_pdf_sha256": "3e3e0deeffd928b6bbd9434b463763e5b12707157e0cc7b6d34ef79996bb14aa",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CNC PROGRAMMING",
+        "course_code": "09ME1604",
+        "semester_label": "6",
+        "credits": 2,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "conventional machines are less in use for manufacturing. CNC machines (computerized numerical control machines) are taking place of conventional machines. Efficient use of CNC machines requires excellent knowledge of programming and use of CNC tooling. In this course an attempt has been made to focus exclusively on constructional features of CNC machines, their programming and tooling, so that students may learn to use the CNC machines efficiently for manufacturing desired products."
+      ],
+      "course_outcomes": [
+        "Identify parameters governing for selection of CNC machines.",
+        "Pre-set tool on CNC machines, Use qualified tools and tool holders on CNC machines.",
+        "Identify various work holding and tool holding devices.",
+        "Prepare part program by using applicable codes like G& M also apply advanced CNC part programming features like canned cycle, do loop, subroutine Describe procedure for setting various compensations on CNC",
+        "Select suitable standard for CAD/CAM interfacing"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamentals of CNC",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Concept, features and differences of NC (Numerical Control), CNC",
+              "(Computerized Numerical Control) and DNC (Direct Numerical",
+              "Control), Advantages and limitations of CNC. Selection criteria for",
+              "CNC machines"
+            ],
+            "topics_text": "Concept, features and differences of NC (Numerical Control), CNC (Computerized Numerical Control) and DNC (Direct Numerical Control), Advantages and limitations of CNC. Selection criteria for CNC machines",
+            "topics": [
+              "Concept, features and differences of NC (Numerical Control), CNC",
+              "(Computerized Numerical Control) and DNC (Direct Numerical",
+              "Control), Advantages and limitations of CNC. Selection criteria for",
+              "CNC machines"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Constructional features of CNC machines",
+            "contact_hours": 0,
+            "topic_lines": [
+              "CNC machines: Types, classification, working and constructional",
+              "features, Spindle drives and axes drives on CNC machines. Machine",
+              "structure- Requirements and reasons, Elements of CNC machines -",
+              "Types, sketch, working and importance of: Slide ways, Re-",
+              "circulating ball screw, Feedback devices (transducers, encoders),",
+              "Automatic tool changer (ATC). Automatic pallet changer (APC),",
+              "CNC axes and motion nomenclature"
+            ],
+            "topics_text": "CNC machines: Types, classification, working and constructional features, Spindle drives and axes drives on CNC machines. Machine structure- Requirements and reasons, Elements of CNC machines - Types, sketch, working and importance of: Slide ways, Re- circulating ball screw, Feedback devices (transducers, encoders), Automatic tool changer (ATC). Automatic pallet changer (APC), CNC axes and motion nomenclature",
+            "topics": [
+              "CNC machines: Types, classification, working and constructional",
+              "features, Spindle drives and axes drives on CNC machines. Machine",
+              "structure- Requirements and reasons, Elements of CNC machines",
+              "Types, sketch, working and importance of: Slide ways, Re",
+              "circulating ball screw, Feedback devices (transducers, encoders),",
+              "Automatic tool changer (ATC). Automatic pallet changer (APC),",
+              "CNC axes and motion nomenclature"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "CNC Turning & Machining Centers",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Types, Features, Axes nomenclature, Specification, Work holding",
+              "devices -types, working and applications, Tool holding and",
+              "changing devices - types, working and applications of CNC turning",
+              "centres, and CNC machining centres"
+            ],
+            "topics_text": "Types, Features, Axes nomenclature, Specification, Work holding devices -types, working and applications, Tool holding and changing devices - types, working and applications of CNC turning centres, and CNC machining centres",
+            "topics": [
+              "Types, Features, Axes nomenclature, Specification, Work holding",
+              "devices -types, working and applications, Tool holding and",
+              "changing devices - types, working and applications of CNC turning",
+              "centres, and CNC machining centres"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Part Programming",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Axes Identification in CNC turning and machining centers, Machine",
+              "zero, home position, work piece zero, program zero, CNC part",
+              "programming: Programming format and Structure of part program,",
+              "ISO G and M codes for turning and milling-meaning and",
+              "applications of important codes, Compensations: Tool length",
+              "compensation, Pitch error compensation, Tool radius compensation,",
+              "Simple part programming for turning using ISO format having",
+              "straight turning, taper turning (linear interpolation) and",
+              "convex/concave turning (circular interpolation), Simple part",
+              "programming for milling using ISO format, Importance, types,",
+              "applications and format for: Canned cycles, Macro, Do loops,",
+              "Subroutine, Mirror image, CNC turning and milling part",
+              "programming using canned cycles, Do loops and Subroutine"
+            ],
+            "topics_text": "Axes Identification in CNC turning and machining centers, Machine zero, home position, work piece zero, program zero, CNC part programming: Programming format and Structure of part program, ISO G and M codes for turning and milling-meaning and applications of important codes, Compensations: Tool length compensation, Pitch error compensation, Tool radius compensation, Simple part programming for turning using ISO format having straight turning, taper turning (linear interpolation) and convex/concave turning (circular interpolation), Simple part programming for milling using ISO format, Importance, types, applications and format for: Canned cycles, Macro, Do loops, Subroutine, Mirror image, CNC turning and milling part programming using canned cycles, Do loops and Subroutine",
+            "topics": [
+              "Axes Identification in CNC turning and machining centers, Machine",
+              "zero, home position, work piece zero, program zero, CNC part",
+              "programming: Programming format and Structure of part program,",
+              "ISO G and M codes for turning and milling-meaning and",
+              "applications of important codes, Compensations: Tool length",
+              "compensation, Pitch error compensation, Tool radius compensation,",
+              "Simple part programming for turning using ISO format having",
+              "straight turning, taper turning (linear interpolation) and",
+              "convex/concave turning (circular interpolation), Simple part",
+              "programming for milling using ISO format, Importance, types,",
+              "applications and format for: Canned cycles, Macro, Do loops,",
+              "Subroutine, Mirror image, CNC turning and milling part",
+              "programming using canned cycles, Do loops and Subroutine"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Maintenance of CNC Machine",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Types of machine tools maintenance, Systems and Sub systems of",
+              "CNC machines, CNC Maintenance practice: Tools required, Daily",
+              "checklist, Problems related to mechanical systems, Backlash,",
+              "Causes and precautions of electronics system",
+              "Total Hours 0"
+            ],
+            "topics_text": "Types of machine tools maintenance, Systems and Sub systems of CNC machines, CNC Maintenance practice: Tools required, Daily checklist, Problems related to mechanical systems, Backlash, Causes and precautions of electronics system Total Hours 0",
+            "topics": [
+              "Types of machine tools maintenance, Systems and Sub systems of",
+              "CNC machines, CNC Maintenance practice: Tools required, Daily",
+              "checklist, Problems related to mechanical systems, Backlash,",
+              "Causes and precautions of electronics system",
+              "Total Hours 0"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Collect mechanical components manufactured on CNC machines",
+              "And show Difference compared to conventional machining"
+            ],
+            "topics_text": "Collect mechanical components manufactured on CNC machines And show Difference compared to conventional machining",
+            "topics": [
+              "Collect mechanical components manufactured on CNC machines",
+              "And show Difference compared to conventional machining"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Identify operations on that components"
+            ],
+            "topics_text": "Identify operations on that components",
+            "topics": [
+              "Identify operations on that components"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Prepare conventional process plan for at least two components"
+            ],
+            "topics_text": "Prepare conventional process plan for at least two components",
+            "topics": [
+              "Prepare conventional process plan for at least two components"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Demonstrate constructional features and modes of operations of",
+              "CNC"
+            ],
+            "topics_text": "Demonstrate constructional features and modes of operations of CNC",
+            "topics": [
+              "Demonstrate constructional features and modes of operations of",
+              "CNC"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Demonstrate and interpret CNC controllers features"
+            ],
+            "topics_text": "Demonstrate and interpret CNC controllers features",
+            "topics": [
+              "Demonstrate and interpret CNC controllers features"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Demonstrate inserts, holders and tool management systems"
+            ],
+            "topics_text": "Demonstrate inserts, holders and tool management systems",
+            "topics": [
+              "Demonstrate inserts, holders and tool management systems"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 16,
+            "topic_lines": [
+              "Develop and simulate CNC turning part program (at least five) and",
+              "identify errors and manufacture on CNC turning machine"
+            ],
+            "topics_text": "Develop and simulate CNC turning part program (at least five) and identify errors and manufacture on CNC turning machine",
+            "topics": [
+              "Develop and simulate CNC turning part program (at least five) and",
+              "identify errors and manufacture on CNC turning machine"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 16,
+            "topic_lines": [
+              "Develop and simulate CNC milling part program (at least three) and",
+              "identify errors and manufacture on CNC milling machine",
+              "Total Hours 56"
+            ],
+            "topics_text": "Develop and simulate CNC milling part program (at least three) and identify errors and manufacture on CNC milling machine Total Hours 56",
+            "topics": [
+              "Develop and simulate CNC milling part program (at least three) and",
+              "identify errors and manufacture on CNC milling machine",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "CNC Fundamental and Programming, CNC Fundamental and Programming, V. J. Patel, Charotar Publication, 2022",
+          "Introduction to NC/CNC Machines, Introduction to NC/CNC Machines, Vishal S, S.K.Kataria & Sons, 2004"
+        ],
+        "textbooks": [
+          "Computer Aided Manufacturing, Atul Makvana, Atul Prakashan, 2018 References:",
+          "CNC Fundamental and Programming, CNC Fundamental and Programming, V. J. Patel, Charotar Publication, 2022",
+          "Introduction to NC/CNC Machines, Introduction to NC/CNC Machines, Vishal S, S.K.Kataria & Sons, 2004"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.cnccookbook.com/cnc-programming-g-code/",
+          "https://gcodetutor.com/fanuc-training-course.html"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 8922,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         6\nCOURSE TITLE   CNC PROGRAMMING\nCOURSE CODE     09ME1604\nCOURSE CREDITS  2\n\nObjective:\n 1  conventional machines are less in use for manufacturing. CNC machines (computerized\n     numerical control machines) are taking place of conventional machines. Efficient use of\n   CNC machines requires excellent knowledge of programming and use of CNC tooling. In\n      this course an attempt has been made to focus exclusively on constructional features of\n   CNC machines, their programming and tooling, so that students may learn to use the CNC\n    machines efficiently for manufacturing desired products.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Identify parameters governing for selection of CNC machines.\n 2  Pre-set tool on CNC machines, Use qualified tools and tool holders on CNC machines.\n 3  Identify various work holding and tool holding devices.\n 4  Prepare part program by using applicable codes like G& M also apply advanced CNC part\n    programming features like canned cycle, do loop, subroutine Describe procedure for setting\n     various compensations on CNC\n 5  Select suitable standard for CAD/CAM interfacing\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            4         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fundamentals of CNC                                    0\n             Concept, features and differences of NC (Numerical Control), CNC\n             (Computerized Numerical Control) and DNC (Direct Numerical\n               Control), Advantages and limitations of CNC. Selection criteria for\n         CNC machines\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Constructional features of CNC machines                    0\n         CNC machines: Types, classification, working and constructional\n                features, Spindle drives and axes drives on CNC machines. Machine\n                structure- Requirements and reasons, Elements of CNC machines -\n             Types, sketch, working and importance of: Slide ways, Re-\n               circulating ball screw, Feedback devices (transducers, encoders),\n             Automatic tool changer (ATC). Automatic pallet changer (APC),\n         CNC axes and motion nomenclature\n     3    CNC Turning & Machining Centers                         0\n             Types, Features, Axes nomenclature, Specification, Work holding\n              devices -types, working and applications, Tool holding and\n             changing devices - types, working and applications of CNC turning\n                centres, and CNC machining centres\n     4      Part Programming                                       0\n            Axes Identification in CNC turning and machining centers, Machine\n               zero, home position, work piece zero, program zero, CNC part\n             programming: Programming format and Structure of part program,\n           ISO G and M codes for turning and milling-meaning and\n               applications of important codes, Compensations: Tool length\n             compensation, Pitch error compensation, Tool radius compensation,\n             Simple part programming for turning using ISO format having\n                straight turning, taper turning (linear interpolation) and\n             convex/concave turning (circular interpolation), Simple part\n            programming for milling using ISO format, Importance, types,\n               applications and format for: Canned cycles, Macro, Do loops,\n              Subroutine, Mirror image, CNC turning and milling part\n            programming using canned cycles, Do loops and Subroutine\n     5      Maintenance of CNC Machine                              0\n            Types of machine tools maintenance, Systems and Sub systems of\n         CNC machines, CNC Maintenance practice: Tools required, Daily\n                checklist, Problems related to mechanical systems, Backlash,\n             Causes and precautions of electronics system\n                               Total Hours                       0\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            4\n              Collect mechanical components manufactured on CNC machines\n          And show Difference compared to conventional machining\n     2      Experiment 2                                            2\n               Identify operations on that components\n     3      Experiment 3                                            4\n              Prepare conventional process plan for at least two components\n     4      Experiment 4                                            6\n             Demonstrate constructional features and modes of operations of\n         CNC\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5      Experiment 5                                            4\n             Demonstrate and interpret CNC controllers features\n     6      Experiment 6                                            4\n             Demonstrate inserts, holders and tool management systems\n     7      Experiment 7                                            16\n            Develop and simulate CNC turning part program (at least five) and\n               identify errors and manufacture on CNC turning machine\n     8      Experiment 8                                            16\n            Develop and simulate CNC milling part program (at least three) and\n               identify errors and manufacture on CNC milling machine\n                               Total Hours                       56\n\nTextbook :\n 1  Computer Aided Manufacturing, Atul Makvana, Atul Prakashan, 2018\n\nReferences:\n 1 CNC Fundamental and Programming, CNC Fundamental and Programming, V. J. Patel,\n     Charotar Publication, 2022\n 2  Introduction to NC/CNC Machines, Introduction to NC/CNC Machines, Vishal S,\n     S.K.Kataria & Sons, 2004\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         30.00         40.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Supplementary Resources:\n 1  https://www.cnccookbook.com/cnc-programming-g-code/\n 2  https://gcodetutor.com/fanuc-training-course.html\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "3e3e0deeffd928b6bbd9434b463763e5b12707157e0cc7b6d34ef79996bb14aa"
+    },
+    {
+      "subject_id": "45009135160201",
+      "subject_name": "COMPUTER AIDED DESIGN",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 6,
+      "subject_code": "09ME1602",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CAD.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME1602 - COMPUTER AIDED DESIGN (.pdf",
+      "expected_pdf_sha256": "f396d40b672db0d974a44002c052582b170f05749723ce7a2e1335b64d4a9317",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMPUTER AIDED DESIGN",
+        "course_code": "09ME1602",
+        "semester_label": "6",
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "The students of mechanical engineering are involved in modelling, designing, manufacturing, inspection and planning activities (such as preparing design and production drawing, process plans, preparing bill of materials, etc.) in industries. For all such activities, reference document is the modelling and drawing of component/assembly to be manufactured.The industrial practices of modelling and designing are also important for the students to make them aware of modelling and designing practices, symbols, codes, norms and standards generally used in industries.This course has been introduced at Diploma level in order to develop the skills in student so that they can generate various modelling and digital production drawings as required by industry using appropriate CAD software."
+      ],
+      "course_outcomes": [
+        "Perform geometric 2D transformation.",
+        "Describe functions of CAD workstation, its types and configuration.",
+        "Describe characteristics of features based CAD package.",
+        "Prepare simple surface model using AutoCAD.",
+        "AutoCAD-3D feature and 2D commands overview.",
+        "Prepare solid Model of industrial parts and its assembly using parametric modelling software."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamentals of CAD",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Terminology & Computer graphics CAD definition, concept &",
+              "need. Process in CAD, Functional areas of CAD. Coordinate",
+              "systems in CAD. Geometric transformation-concept and types,",
+              "Dimensional (2D) geometric transformation- translation, scaling,",
+              "rotation and mirror with numeric examples"
+            ],
+            "topics_text": "Terminology & Computer graphics CAD definition, concept & need. Process in CAD, Functional areas of CAD. Coordinate systems in CAD. Geometric transformation-concept and types, Dimensional (2D) geometric transformation- translation, scaling, rotation and mirror with numeric examples",
+            "topics": [
+              "Terminology & Computer graphics CAD definition, concept &",
+              "need. Process in CAD, Functional areas of CAD. Coordinate",
+              "systems in CAD. Geometric transformation-concept and types,",
+              "Dimensional (2D) geometric transformation- translation, scaling,",
+              "rotation and mirror with numeric examples"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Hardware of CAD",
+            "contact_hours": 6,
+            "topic_lines": [
+              "CAD Workstation-types, functions and configuration , Input and",
+              "output devices (including voice, gesture, 3 dimensional (3D) printer,",
+              "etc.)-types , configuration and applications"
+            ],
+            "topics_text": "CAD Workstation-types, functions and configuration , Input and output devices (including voice, gesture, 3 dimensional (3D) printer, etc.)-types , configuration and applications",
+            "topics": [
+              "CAD Workstation-types, functions and configuration , Input and",
+              "output devices (including voice, gesture, 3 dimensional (3D) printer,",
+              "etc.)-types , configuration and applications"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Geometric modeling",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Difference of 2D & 3D models. Concept, types, features and",
+              "applications of Geometric modeling , Solid modeling methods like",
+              "Constructive Solid Geometry , Pure primitives & Boundary",
+              "Representation , Example and concept of Feature based modeling.",
+              "Parametric & non parametric modeling-concept",
+              "4 3D Modeling using AutoCAD 10",
+              "Introduction to AutoCAD-3D features and 2D commands overview",
+              ", 3D primitives-types and defining parameters , User coordinate",
+              "system (UCS) and its options , 3D draw commands, modify and",
+              "editing commands Viewing & views generation , CAD surface",
+              "modeling commands",
+              "5 3D parametric modeling 12",
+              "Introduction to parametric modeling software , Sketching",
+              "interfacing overview , 3D working plane introductions , 3D",
+              "modeling. Assembly modeling. Views generation",
+              "Total Hours 42"
+            ],
+            "topics_text": "Difference of 2D & 3D models. Concept, types, features and applications of Geometric modeling , Solid modeling methods like Constructive Solid Geometry , Pure primitives & Boundary Representation , Example and concept of Feature based modeling. Parametric & non parametric modeling-concept 4 3D Modeling using AutoCAD 10 Introduction to AutoCAD-3D features and 2D commands overview , 3D primitives-types and defining parameters , User coordinate system (UCS) and its options , 3D draw commands, modify and editing commands Viewing & views generation , CAD surface modeling commands 5 3D parametric modeling 12 Introduction to parametric modeling software , Sketching interfacing overview , 3D working plane introductions , 3D modeling. Assembly modeling. Views generation Total Hours 42",
+            "topics": [
+              "Difference of 2D & 3D models. Concept, types, features and",
+              "applications of Geometric modeling , Solid modeling methods like",
+              "Constructive Solid Geometry , Pure primitives & Boundary",
+              "Representation , Example and concept of Feature based modeling.",
+              "Parametric & non parametric modeling-concept",
+              "4 3D Modeling using AutoCAD 10",
+              "Introduction to AutoCAD-3D features and 2D commands overview",
+              ", 3D primitives-types and defining parameters , User coordinate",
+              "system (UCS) and its options , 3D draw commands, modify and",
+              "editing commands Viewing & views generation , CAD surface",
+              "modeling commands",
+              "5 3D parametric modeling 12",
+              "Introduction to parametric modeling software , Sketching",
+              "interfacing overview , 3D working plane introductions , 3D",
+              "modeling. Assembly modeling. Views generation",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Prepare a 2D drawing using different command in AutoCAD"
+            ],
+            "topics_text": "Prepare a 2D drawing using different command in AutoCAD",
+            "topics": [
+              "Prepare a 2D drawing using different command in AutoCAD"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Prepare 3D solid models using AutoCAD (Four mechanical",
+              "components)"
+            ],
+            "topics_text": "Prepare 3D solid models using AutoCAD (Four mechanical components)",
+            "topics": [
+              "Prepare 3D solid models using AutoCAD (Four mechanical",
+              "components)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Prepare simple surface model using AutoCAD (Three mechanical",
+              "components)"
+            ],
+            "topics_text": "Prepare simple surface model using AutoCAD (Three mechanical components)",
+            "topics": [
+              "Prepare simple surface model using AutoCAD (Three mechanical",
+              "components)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Prepare 3D solid model using 3D Modelling software (Three",
+              "models that includes base features, Extrude/Protrude/Revolve)"
+            ],
+            "topics_text": "Prepare 3D solid model using 3D Modelling software (Three models that includes base features, Extrude/Protrude/Revolve)",
+            "topics": [
+              "Prepare 3D solid model using 3D Modelling software (Three",
+              "models that includes base features, Extrude/Protrude/Revolve)"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Prepare 3D solid models using 3D modelling software (Four models",
+              "that includes engineering features)"
+            ],
+            "topics_text": "Prepare 3D solid models using 3D modelling software (Four models that includes engineering features)",
+            "topics": [
+              "Prepare 3D solid models using 3D modelling software (Four models",
+              "that includes engineering features)"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Bring Actual mechanical assembly from industry/real life/scrap",
+              "shop/garage/etc. (made up of at least 4 to 5 mechanical",
+              "components), dismantle the same, measure dimensions and sketch it",
+              "in software",
+              "Total Hours 28"
+            ],
+            "topics_text": "Bring Actual mechanical assembly from industry/real life/scrap shop/garage/etc. (made up of at least 4 to 5 mechanical components), dismantle the same, measure dimensions and sketch it in software Total Hours 28",
+            "topics": [
+              "Bring Actual mechanical assembly from industry/real life/scrap",
+              "shop/garage/etc. (made up of at least 4 to 5 mechanical",
+              "components), dismantle the same, measure dimensions and sketch it",
+              "in software",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "CAD/CAM Theory and Practice, CAD/CAM Theory and Practice, Ibrahim Zaid, Tata McGraw Hill, 2010",
+          "Machine drawing including AutoCAD, Machine drawing including AutoCAD, Ajeetsingh, McGraw Hill, 2017"
+        ],
+        "textbooks": [
+          "Computer Aided Design, S. Y. Ragadia, Atul Prakashan, 2018 References:",
+          "CAD/CAM Theory and Practice, CAD/CAM Theory and Practice, Ibrahim Zaid, Tata McGraw Hill, 2010",
+          "Machine drawing including AutoCAD, Machine drawing including AutoCAD, Ajeetsingh, McGraw Hill, 2017"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.thesourcecad.com/autocad-tutorials/",
+          "https://support.ptc.com/help/creo/creo_pma/r9.0/usascii/index.html#page/tutorials_pma/pm a_tutorials.html"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7832,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         6\nCOURSE TITLE   COMPUTER AIDED DESIGN\nCOURSE CODE     09ME1602\nCOURSE CREDITS  4\n\nObjective:\n 1  The students of mechanical engineering are involved in modelling, designing,\n     manufacturing, inspection and planning activities (such as preparing design and production\n     drawing, process plans, preparing bill of materials, etc.) in industries. For all such activities,\n     reference document is the modelling and drawing of component/assembly to be\n    manufactured.The industrial practices of modelling and designing are also important for the\n     students to make them aware of modelling and designing practices, symbols, codes, norms\n    and standards generally used in industries.This course has been introduced at Diploma level\n     in order to develop the skills in student so that they can generate various modelling and\n      digital production drawings as required by industry using appropriate CAD software.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Perform geometric 2D transformation.\n 2  Describe functions of CAD workstation, its types and configuration.\n 3  Describe characteristics of features based CAD package.\n 4  Prepare simple surface model using AutoCAD.\n 5  AutoCAD-3D feature and 2D commands overview.\n 6  Prepare solid Model of industrial parts and its assembly using parametric modelling\n     software.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fundamentals of CAD                                    6\n             Terminology & Computer graphics CAD definition, concept &\n              need. Process in CAD, Functional areas of CAD. Coordinate\n             systems in CAD. Geometric transformation-concept and types,\n             Dimensional (2D) geometric transformation- translation, scaling,\n               rotation and mirror with numeric examples\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2     Hardware of CAD                                        6\n        CAD Workstation-types, functions and configuration , Input and\n              output devices (including voice, gesture, 3 dimensional (3D) printer,\n                etc.)-types , configuration and applications\n     3      Geometric modeling                                      8\n              Difference of 2D & 3D models. Concept, types, features and\n               applications of Geometric modeling , Solid modeling methods like\n              Constructive Solid Geometry , Pure primitives & Boundary\n              Representation , Example and concept of Feature based modeling.\n              Parametric & non parametric modeling-concept\n     4     3D Modeling using AutoCAD                              10\n               Introduction to AutoCAD-3D features and 2D commands overview\n                        , 3D primitives-types and defining parameters , User coordinate\n             system (UCS) and its options , 3D draw commands, modify and\n               editing commands Viewing & views generation , CAD surface\n             modeling commands\n     5     3D parametric modeling                                   12\n               Introduction to parametric modeling software , Sketching\n               interfacing overview , 3D working plane introductions , 3D\n             modeling. Assembly modeling. Views generation\n                               Total Hours                       42\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            4\n              Prepare a 2D drawing using different command in AutoCAD\n     2      Experiment 2                                            4\n              Prepare 3D solid models using AutoCAD (Four mechanical\n             components)\n     3      Experiment 3                                            4\n              Prepare simple surface model using AutoCAD (Three mechanical\n             components)\n     4      Experiment 4                                            4\n              Prepare 3D solid model using 3D Modelling software (Three\n            models that includes base features, Extrude/Protrude/Revolve)\n     5      Experiment 5                                            6\n              Prepare 3D solid models using 3D modelling software (Four models\n                that includes engineering features)\n     6      Experiment 6                                            6\n             Bring Actual mechanical assembly from industry/real life/scrap\n               shop/garage/etc. (made up of at least 4 to 5 mechanical\n             components), dismantle the same, measure dimensions and sketch it\n               in software\n                               Total Hours                       28\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Textbook :\n 1  Computer Aided Design, S. Y. Ragadia, Atul Prakashan, 2018\n\nReferences:\n 1 CAD/CAM Theory and Practice, CAD/CAM Theory and Practice, Ibrahim Zaid, Tata\n   McGraw Hill, 2010\n 2  Machine drawing including AutoCAD, Machine drawing including AutoCAD, Ajeetsingh,\n   McGraw Hill, 2017\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         40.00         30.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://www.thesourcecad.com/autocad-tutorials/\n 2  https://support.ptc.com/help/creo/creo_pma/r9.0/usascii/index.html#page/tutorials_pma/pm\n     a_tutorials.html\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09ME1602 - COMPUTER AIDED DESIGN (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "f396d40b672db0d974a44002c052582b170f05749723ce7a2e1335b64d4a9317"
+    },
+    {
+      "subject_id": "45009135260301",
+      "subject_name": "DESIGN OF MACHINE ELEMENT",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 6,
+      "subject_code": "09ME2603",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/DME.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME2603 - DESIGN OF MACHINE ELEMENT (.pdf",
+      "expected_pdf_sha256": "3c1ecbe79cf2d00294431321f8cd0936d03d8c499eb1258e0b3b384c7e077371",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "DESIGN OF MACHINE ELEMENT",
+        "course_code": "09ME2603",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "Applied Mechanics, Strength of Material, Engineering Drawing, Theory of Machine."
+      },
+      "objectives": [
+        "For production any machine part or component, its detailed design is required. Design of any machine part or component includes selection of material for that as well as determine its shape and size and prepared a detailed drawing. Thus, designing of component required knowledge of subjects Mathematics, Engineering Mechanics, Strength of Materials, Theory of Machines, Workshop Processes and Engineering Drawing which students have already studied in previous semesters. This course provides knowledge of designing various mechanical components like cotter joint, knuckle joint, power screw, springs, levers, coupling etc. After learning this subject, students will be able to analyse mechanical components subjected to different stresses and moments like direct stress, bending stress, twisting moment, combined stress etc"
+      ],
+      "course_outcomes": [
+        "Understand basics of design procedure and selection of material",
+        "Analyze the component subjected to direct loading.",
+        "Analyze the mechanical component under the effect of combined stress",
+        "Design of shafts, keys and couplings",
+        "Design of pressure vessel",
+        "Analyze the component subjected to bending load."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Design of machine elements subjected to direct stresses",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Illustration of machine components subjected to direct stresses with",
+              "numerical examples, design procedure for cotter joint, knuckle joint,",
+              "welded joint (fillet and lap joint), riveted joint, threaded joint"
+            ],
+            "topics_text": "Illustration of machine components subjected to direct stresses with numerical examples, design procedure for cotter joint, knuckle joint, welded joint (fillet and lap joint), riveted joint, threaded joint",
+            "topics": [
+              "Illustration of machine components subjected to direct stresses with",
+              "numerical examples, design procedure for cotter joint, knuckle joint,",
+              "welded joint (fillet and lap joint), riveted joint, threaded joint"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Design of machine elements subjected to bending stresses",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Fundamental principal of bending and its equation, modulus of",
+              "elasticity for various sections of elements subjected to pure bending",
+              "like lever, beam, axels etc., Types of lever and its design procedure,",
+              "design of leaf spring"
+            ],
+            "topics_text": "Fundamental principal of bending and its equation, modulus of elasticity for various sections of elements subjected to pure bending like lever, beam, axels etc., Types of lever and its design procedure, design of leaf spring",
+            "topics": [
+              "Fundamental principal of bending and its equation, modulus of",
+              "elasticity for various sections of elements subjected to pure bending",
+              "like lever, beam, axels etc., Types of lever and its design procedure,",
+              "design of leaf spring"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Introduction",
+            "contact_hours": 5,
+            "topic_lines": [
+              "General design process and factors to be considered, material",
+              "selection for design, stress concentration, factor of safety, Bearing",
+              "classification and designation, standardization and preferred",
+              "numbers."
+            ],
+            "topics_text": "General design process and factors to be considered, material selection for design, stress concentration, factor of safety, Bearing classification and designation, standardization and preferred numbers.",
+            "topics": [
+              "General design process and factors to be considered, material",
+              "selection for design, stress concentration, factor of safety, Bearing",
+              "classification and designation, standardization and preferred",
+              "numbers."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Design of machine elements subjected to direct and twisting",
+            "contact_hours": 9,
+            "topic_lines": [
+              "moments",
+              "Fundamental of twisting moment and it¶s equation, types of shaft",
+              "and design procedure for shaft, types of keys and it¶s design",
+              "procedure, types of coupling, design of muff and flange coupling,",
+              "types of spring and it¶s terminology"
+            ],
+            "topics_text": "moments Fundamental of twisting moment and it¶s equation, types of shaft and design procedure for shaft, types of keys and it¶s design procedure, types of coupling, design of muff and flange coupling, types of spring and it¶s terminology",
+            "topics": [
+              "moments",
+              "Fundamental of twisting moment and it¶s equation, types of shaft",
+              "and design procedure for shaft, types of keys and it¶s design",
+              "procedure, types of coupling, design of muff and flange coupling,",
+              "types of spring and it¶s terminology"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Design of machine elements subjected to direct and bending",
+            "contact_hours": 7,
+            "topic_lines": [
+              "stresses",
+              "Concept of eccentric loading, design of C-Clamp, bracket,",
+              "foundation bolt and bolts in flange"
+            ],
+            "topics_text": "stresses Concept of eccentric loading, design of C-Clamp, bracket, foundation bolt and bolts in flange",
+            "topics": [
+              "stresses",
+              "Concept of eccentric loading, design of C-Clamp, bracket,",
+              "foundation bolt and bolts in flange"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Pressure vessel",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Types and application of pressure vessel, design of thin and thick",
+              "cylinder, design of spherical vessel",
+              "Total Hours 42"
+            ],
+            "topics_text": "Types and application of pressure vessel, design of thin and thick cylinder, design of spherical vessel Total Hours 42",
+            "topics": [
+              "Types and application of pressure vessel, design of thin and thick",
+              "cylinder, design of spherical vessel",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Examples on elements subjected to bending stress (levers and",
+            "contact_hours": 4,
+            "topic_lines": [
+              "beam)",
+              "Examples on elements subjected to bending stress (levers and beam)"
+            ],
+            "topics_text": "beam) Examples on elements subjected to bending stress (levers and beam)",
+            "topics": [
+              "beam)",
+              "Examples on elements subjected to bending stress (levers and beam)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Examples on combined loading",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Examples on combined loading"
+            ],
+            "topics_text": "Examples on combined loading",
+            "topics": [
+              "Examples on combined loading"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Examples on elements subjected to direct stress (cotter joint,",
+            "contact_hours": 6,
+            "topic_lines": [
+              "knuckle joint, welded joint, riveted joint etc.)",
+              "Examples on elements subjected to direct stress (cotter joint,",
+              "knuckle joint, welded joint, riveted joint etc.)"
+            ],
+            "topics_text": "knuckle joint, welded joint, riveted joint etc.) Examples on elements subjected to direct stress (cotter joint, knuckle joint, welded joint, riveted joint etc.)",
+            "topics": [
+              "knuckle joint, welded joint, riveted joint etc.)",
+              "Examples on elements subjected to direct stress (cotter joint,",
+              "knuckle joint, welded joint, riveted joint etc.)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Examples on design of thin and thick cylinders",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Examples on design of thin and thick cylinders"
+            ],
+            "topics_text": "Examples on design of thin and thick cylinders",
+            "topics": [
+              "Examples on design of thin and thick cylinders"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Examples on preferred numbers.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Examples on preferred numbers."
+            ],
+            "topics_text": "Examples on preferred numbers.",
+            "topics": [
+              "Examples on preferred numbers."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Examples on design of shafts, keys and coupling",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Examples on design of shafts, keys and coupling",
+              "Total Hours 28"
+            ],
+            "topics_text": "Examples on design of shafts, keys and coupling Total Hours 28",
+            "topics": [
+              "Examples on design of shafts, keys and coupling",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Design of Machine Elements, Design of Machine Elements, V B Bhandari, McGraw Hill, 2010",
+          "Machine Design, Machine Design, R. S. Khurmi, S. Chand publication, 2005"
+        ],
+        "textbooks": [
+          "Design of Machine Elements, S. B. Soni, Atul Prakashan, 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://ecoursesonline.iasri.res.in/course/view.php?id=521",
+          "https://archive.nptel.ac.in/courses/112/105/112105125/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7394,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    DESIGN OF MACHINE ELEMENT\nCOURSE CODE     09ME2603\nCOURSE CREDITS  4\n\nObjective:\n 1  For production any machine part or component, its detailed design is required. Design of\n    any machine part or component includes selection of material for that as well as determine\n      its shape and size and prepared a detailed drawing. Thus, designing of component required\n    knowledge of subjects Mathematics, Engineering Mechanics, Strength of Materials, Theory\n     of Machines, Workshop Processes and Engineering Drawing which students have already\n     studied in previous semesters. This course provides knowledge of designing various\n    mechanical components like cotter joint, knuckle joint, power screw, springs, levers,\n     coupling etc. After learning this subject, students will be able to analyse mechanical\n    components subjected to different stresses and moments like direct stress, bending stress,\n     twisting moment, combined stress etc\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand basics of design procedure and selection of material\n 2  Analyze the component subjected to direct loading.\n 3  Analyze the mechanical component under the effect of combined stress\n 4  Design of shafts, keys and couplings\n 5  Design of pressure vessel\n 6  Analyze the component subjected to bending load.\n\n\nPre-requisite of course:Applied Mechanics, Strength of Material, Engineering Drawing,\nTheory of Machine.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Design of machine elements subjected to direct stresses         8\n                Illustration of machine components subjected to direct stresses with\n             numerical examples, design procedure for cotter joint, knuckle joint,\n            welded joint (fillet and lap joint), riveted joint, threaded joint\n     2      Design of machine elements subjected to bending stresses       8\n             Fundamental principal of bending and its equation, modulus of\n                 elasticity for various sections of elements subjected to pure bending\n                like lever, beam, axels etc., Types of lever and its design procedure,\n              design of leaf spring\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Introduction                                             5\n             General design process and factors to be considered, material\n               selection for design, stress concentration, factor of safety, Bearing\n                classification and designation, standardization and preferred\n             numbers.\n     4      Design of machine elements subjected to direct and twisting     9\n           moments\n             Fundamental of twisting moment and it¶s equation, types of shaft\n            and design procedure for shaft, types of keys and it¶s design\n              procedure, types of coupling, design of muff and flange coupling,\n              types of spring and it¶s terminology\n     5      Design of machine elements subjected to direct and bending     7\n               stresses\n             Concept of eccentric loading, design of C-Clamp, bracket,\n              foundation bolt and bolts in flange\n     6      Pressure vessel                                           5\n            Types and application of pressure vessel, design of thin and thick\n               cylinder, design of spherical vessel\n                               Total Hours                       42\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Examples on elements subjected to bending stress (levers and   4\n           beam)\n            Examples on elements subjected to bending stress (levers and beam)\n     2      Examples on combined loading                             6\n            Examples on combined loading\n     3      Examples on elements subjected to direct stress (cotter joint,    6\n            knuckle joint, welded joint, riveted joint etc.)\n            Examples on elements subjected to direct stress (cotter joint,\n             knuckle joint, welded joint, riveted joint etc.)\n     4      Examples on design of thin and thick cylinders                4\n            Examples on design of thin and thick cylinders\n     5      Examples on preferred numbers.                           4\n            Examples on preferred numbers.\n     6      Examples on design of shafts, keys and coupling               4\n            Examples on design of shafts, keys and coupling\n                               Total Hours                       28\n\nTextbook :\n 1  Design of Machine Elements, S. B. Soni, Atul Prakashan, 2018\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 1  Design of Machine Elements, Design of Machine Elements, V B Bhandari, McGraw Hill,\n    2010\n 2  Machine Design, Machine Design, R. S. Khurmi, S. Chand publication, 2005\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    26.00         37.00         37.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and needof\n     students. The teacher in addition to conventional teaching method by blackboard, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos ,e-courses\n\nSupplementary Resources:\n 1  http://ecoursesonline.iasri.res.in/course/view.php?id=521\n 2  https://archive.nptel.ac.in/courses/112/105/112105125/\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "3c1ecbe79cf2d00294431321f8cd0936d03d8c499eb1258e0b3b384c7e077371"
+    },
+    {
+      "subject_id": "45009135260101",
+      "subject_name": "INDUSTRIAL MANAGEMENT",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 6,
+      "subject_code": "09ME2601",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/IM.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME2601 - INDUSTRIAL MANAGEMENT (.pdf",
+      "expected_pdf_sha256": "1bfa48d0774f06e728f2ba4c6c7e1d6db09f9a1f08d743915ab953c2db6dc931",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INDUSTRIAL MANAGEMENT",
+        "course_code": "09ME2601",
+        "semester_label": "6",
+        "credits": 3,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "As per the current scenario and tough competition in the market optimum utilization of resources is necessary. Industrial management shows how to use the optimum resources and to achieve maximum efficiency in industries. More over quality and cost control are also effective parameter on the product. Quality and cost control parameter needs to day to day supervision. Main aims of this syllabus to deal with regular industries issues and improve the production, Planning and cost control over the product."
+      ],
+      "course_outcomes": [
+        "Basics of industrial management",
+        "Study and prepare CPM and PERT diagram for given activities",
+        "Concept of inventory control and material management",
+        "To study about needs and importance of PPC",
+        "Study and prepare value analysis of given product",
+        "To study about recent developments in industrial management"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Concept of industrial management, Definition and function of",
+              "management, Structure of organization, Concept, meaning and",
+              "importance of division of labor, Centralization and decentralization",
+              "of industrial management, Concept of moral and productivity, Job",
+              "satisfaction factor, Important provision of factory act and labor laws"
+            ],
+            "topics_text": "Concept of industrial management, Definition and function of management, Structure of organization, Concept, meaning and importance of division of labor, Centralization and decentralization of industrial management, Concept of moral and productivity, Job satisfaction factor, Important provision of factory act and labor laws",
+            "topics": [
+              "Concept of industrial management, Definition and function of",
+              "management, Structure of organization, Concept, meaning and",
+              "importance of division of labor, Centralization and decentralization",
+              "of industrial management, Concept of moral and productivity, Job",
+              "satisfaction factor, Important provision of factory act and labor laws"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "CRITICAL PATH METHOD (CPM) AND PROGRAMME",
+            "contact_hours": 10,
+            "topic_lines": [
+              "EVALUATION REVIEW TECHNIQUE (PERT)",
+              "Terminology of CPM and PERT, Features and application, Concept",
+              "of network diagram, Draw network diagram for a real life project,",
+              "Determine critical path on network, Concept of floats and crashing",
+              "of network, Application"
+            ],
+            "topics_text": "EVALUATION REVIEW TECHNIQUE (PERT) Terminology of CPM and PERT, Features and application, Concept of network diagram, Draw network diagram for a real life project, Determine critical path on network, Concept of floats and crashing of network, Application",
+            "topics": [
+              "EVALUATION REVIEW TECHNIQUE (PERT)",
+              "Terminology of CPM and PERT, Features and application, Concept",
+              "of network diagram, Draw network diagram for a real life project,",
+              "Determine critical path on network, Concept of floats and crashing",
+              "of network, Application"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "MATERIALS MANAGEMENT",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Definition, Material management, relationship with other parameter,",
+              "Importance of material management, Objectives of purchasing,",
+              "Purchase procedure, terms and forms used in purchase department,",
+              "Function, Classification of storekeeping, Function of store, Concept",
+              "of inventory control, Economic order quantity, Material requirement",
+              "planning"
+            ],
+            "topics_text": "Definition, Material management, relationship with other parameter, Importance of material management, Objectives of purchasing, Purchase procedure, terms and forms used in purchase department, Function, Classification of storekeeping, Function of store, Concept of inventory control, Economic order quantity, Material requirement planning",
+            "topics": [
+              "Definition, Material management, relationship with other parameter,",
+              "Importance of material management, Objectives of purchasing,",
+              "Purchase procedure, terms and forms used in purchase department,",
+              "Function, Classification of storekeeping, Function of store, Concept",
+              "of inventory control, Economic order quantity, Material requirement",
+              "planning"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "PRODUCTION PLANING AND CONTROL",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Need and importance of PPC, Function of PPC, General approach",
+              "of production, Classification of production, Scheduling-meaning",
+              "and need for productivity, Grantt chart method to prepare and",
+              "format, Critical ratio, Concept of bottlenecking"
+            ],
+            "topics_text": "Need and importance of PPC, Function of PPC, General approach of production, Classification of production, Scheduling-meaning and need for productivity, Grantt chart method to prepare and format, Critical ratio, Concept of bottlenecking",
+            "topics": [
+              "Need and importance of PPC, Function of PPC, General approach",
+              "of production, Classification of production, Scheduling-meaning",
+              "and need for productivity, Grantt chart method to prepare and",
+              "format, Critical ratio, Concept of bottlenecking"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "VALUE ANALYSIS AND COST CONTROL",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition, Terminology in VA, Process and importance, Flow",
+              "diagram, DARSIRI method for VA, Two case study on VA, Types",
+              "of waste, Method to reduce wastage, Cost control method and guide",
+              "lines."
+            ],
+            "topics_text": "Definition, Terminology in VA, Process and importance, Flow diagram, DARSIRI method for VA, Two case study on VA, Types of waste, Method to reduce wastage, Cost control method and guide lines.",
+            "topics": [
+              "Definition, Terminology in VA, Process and importance, Flow",
+              "diagram, DARSIRI method for VA, Two case study on VA, Types",
+              "of waste, Method to reduce wastage, Cost control method and guide",
+              "lines."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "RECENT TRENDS IN INDUSTRIAL MANAGEMENT",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Concept features and application of enterprise resource planning,",
+              "Features of MS project, Importance of logistic concept and need,",
+              "Just in time concept, Necessity of supply chain management,",
+              "Introduction to GeM",
+              "Total Hours 42"
+            ],
+            "topics_text": "Concept features and application of enterprise resource planning, Features of MS project, Importance of logistic concept and need, Just in time concept, Necessity of supply chain management, Introduction to GeM Total Hours 42",
+            "topics": [
+              "Concept features and application of enterprise resource planning,",
+              "Features of MS project, Importance of logistic concept and need,",
+              "Just in time concept, Necessity of supply chain management,",
+              "Introduction to GeM",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Industrial Engineering & Management, Industrial Engineering & Management, O. P. Khanna, Dhanpat Rai Publication, 1980"
+        ],
+        "textbooks": [
+          "Industrial Management, D. R. Patel, Atul Prakashan, 2018 References:",
+          "Industrial Engineering & Management, Industrial Engineering & Management, O. P. Khanna, Dhanpat Rai Publication, 1980"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "www.youtube.com/watch?v=SF53ZZsP4ik",
+          "www.youtube.com/watch?v=iPZlQ3Zx5zc",
+          "web.stanford.edu/class/cee320/CEE320B/CPM.pdf",
+          "www.criticaltools.com/pertchartexpertsoftware.htm",
+          "en.wikipedia.org/wiki/Program_evaluation_and_review_technique",
+          "www.netmba.com/operations/project/pert/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6318,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         6\nCOURSE TITLE    INDUSTRIAL MANAGEMENT\nCOURSE CODE     09ME2601\nCOURSE CREDITS  3\n\nObjective:\n 1  As per the current scenario and tough competition in the market optimum utilization of\n     resources is necessary. Industrial management shows how to use the optimum resources\n    and to achieve maximum efficiency in industries. More over quality and cost control are\n     also effective parameter on the product. Quality and cost control parameter needs to day to\n    day supervision. Main aims of this syllabus to deal with regular industries issues and\n    improve the production, Planning and cost control over the product.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Basics of industrial management\n 2  Study and prepare CPM and PERT diagram for given activities\n 3  Concept of inventory control and material management\n 4  To study about needs and importance of PPC\n 5  Study and prepare value analysis of given product\n 6  To study about recent developments in industrial management\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    INTRODUCTION                                        6\n             Concept of industrial management, Definition and function of\n            management, Structure of organization, Concept, meaning and\n             importance of division of labor, Centralization and decentralization\n              of industrial management, Concept of moral and productivity, Job\n                satisfaction factor, Important provision of factory act and labor laws\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2     CRITICAL PATH METHOD (CPM) AND PROGRAMME    10\n         EVALUATION REVIEW TECHNIQUE (PERT)\n             Terminology of CPM and PERT, Features and application, Concept\n              of network diagram, Draw network diagram for a real life project,\n             Determine critical path on network, Concept of floats and crashing\n              of network, Application\n     3    MATERIALS MANAGEMENT                            8\n               Definition, Material management, relationship with other parameter,\n             Importance of material management, Objectives of purchasing,\n             Purchase procedure, terms and forms used in purchase department,\n              Function, Classification of storekeeping, Function of store, Concept\n              of inventory control, Economic order quantity, Material requirement\n              planning\n     4    PRODUCTION PLANING AND CONTROL                 10\n           Need and importance of PPC, Function of PPC, General approach\n              of production, Classification of production, Scheduling-meaning\n            and need for productivity, Grantt chart method to prepare and\n              format, Critical ratio, Concept of bottlenecking\n     5    VALUE ANALYSIS AND COST CONTROL                 4\n               Definition, Terminology in VA, Process and importance, Flow\n              diagram, DARSIRI method for VA, Two case study on VA, Types\n              of waste, Method to reduce wastage, Cost control method and guide\n                 lines.\n     6    RECENT TRENDS IN INDUSTRIAL MANAGEMENT       4\n             Concept features and application of enterprise resource planning,\n              Features of MS project, Importance of logistic concept and need,\n               Just in time concept, Necessity of supply chain management,\n               Introduction to GeM\n                               Total Hours                       42\n\n\nTextbook :\n 1  Industrial Management, D. R. Patel, Atul Prakashan, 2018\n\nReferences:\n 1  Industrial Engineering & Management, Industrial Engineering & Management, O. P.\n    Khanna, Dhanpat Rai Publication, 1980\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    28.00         35.00         37.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in\n     class-room.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, e-courses\n\nSupplementary Resources:\n 1  www.youtube.com/watch?v=SF53ZZsP4ik\n 2  www.youtube.com/watch?v=iPZlQ3Zx5zc\n 3  web.stanford.edu/class/cee320/CEE320B/CPM.pdf\n 4  www.criticaltools.com/pertchartexpertsoftware.htm\n 5  en.wikipedia.org/wiki/Program_evaluation_and_review_technique\n 6  www.netmba.com/operations/project/pert/\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "1bfa48d0774f06e728f2ba4c6c7e1d6db09f9a1f08d743915ab953c2db6dc931"
+    },
+    {
+      "subject_id": "45009135160601",
+      "subject_name": "POWER PLANT ENGINEERING",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 6,
+      "subject_code": "09ME1606",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/PPE.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME1606 - POWER PLANT ENGINEERING (.pdf",
+      "expected_pdf_sha256": "7c6d20ee662d0c740c83313ceee7dc2b277119fe4f7232801fc59b633ccc5e3f",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "POWER PLANT ENGINEERING",
+        "course_code": "09ME1606",
+        "semester_label": "6",
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "Requirement of power in Indian industry is very huge. In India even today power generation is less compare to power consumption. Every sector of Indian economy required power and energy, economy growth of any sector is also depends on growth of this sector. Fuel supply and distribution is also an area where country is still developing smooth lines of supply. Many private as well as public sector are looking for business opportunity in this area. Growth in business create more job opportunity to the students in this field. Hence, this course attempts to provide them basic knowledge of the technologies available at plant level and would also acquaint them with the latest technological advances taking place in this sector."
+      ],
+      "course_outcomes": [
+        "Identify elements and their functions of different power sources or power plants.",
+        "Operate equipment of different power plants",
+        "Analyze economics and factor affecting the power plants.",
+        "Identify performance parameters of power plants."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION TO POWER PLANTS",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Need of energy in India, Introduction to Power plants – concept,",
+              "types, conversion of energy, National Grids, Hydro power plant,",
+              "Diesel power plant,, Nuclear power plant, Classification and",
+              "fundamentals of all power plants,, Detail about power plant in",
+              "Gujarat."
+            ],
+            "topics_text": "Need of energy in India, Introduction to Power plants – concept, types, conversion of energy, National Grids, Hydro power plant, Diesel power plant,, Nuclear power plant, Classification and fundamentals of all power plants,, Detail about power plant in Gujarat.",
+            "topics": [
+              "Need of energy in India, Introduction to Power plants – concept,",
+              "types, conversion of energy, National Grids, Hydro power plant,",
+              "Diesel power plant,, Nuclear power plant, Classification and",
+              "fundamentals of all power plants,, Detail about power plant in",
+              "Gujarat."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "STEAM POWER PLANTS",
+            "contact_hours": 17,
+            "topic_lines": [
+              "Working of Rankine cycle, reheats cycle regenerative cycle, reheat",
+              "regenerative cycle. P-v and T-s diagram of all cycle, working of",
+              "high pressure boiler, Fluidized based combustion boiler, principle,",
+              "types, need; Need of water treatment plant for boilers,, Super",
+              "heaters and air pre heaters, coal handling system, pulverized fuel",
+              "system,, Electro-Static Precipitators (ESP), performance parameter,,",
+              "control system, monitoring system, Need of record keeping."
+            ],
+            "topics_text": "Working of Rankine cycle, reheats cycle regenerative cycle, reheat regenerative cycle. P-v and T-s diagram of all cycle, working of high pressure boiler, Fluidized based combustion boiler, principle, types, need; Need of water treatment plant for boilers,, Super heaters and air pre heaters, coal handling system, pulverized fuel system,, Electro-Static Precipitators (ESP), performance parameter,, control system, monitoring system, Need of record keeping.",
+            "topics": [
+              "Working of Rankine cycle, reheats cycle regenerative cycle, reheat",
+              "regenerative cycle. P-v and T-s diagram of all cycle, working of",
+              "high pressure boiler, Fluidized based combustion boiler, principle,",
+              "types, need",
+              "Need of water treatment plant for boilers,, Super",
+              "heaters and air pre heaters, coal handling system, pulverized fuel",
+              "system,, Electro-Static Precipitators (ESP), performance parameter,,",
+              "control system, monitoring system, Need of record keeping."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "GAS TURBINE POWER PLANT",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction, Brayton cycle concept, open cycle gas turbine,, closed",
+              "cycle gas turbine, Essential accessory and other equipment,,",
+              "performance parameter of gas turbine power plant, Advantages over",
+              "other"
+            ],
+            "topics_text": "Introduction, Brayton cycle concept, open cycle gas turbine,, closed cycle gas turbine, Essential accessory and other equipment,, performance parameter of gas turbine power plant, Advantages over other",
+            "topics": [
+              "Introduction, Brayton cycle concept, open cycle gas turbine,, closed",
+              "cycle gas turbine, Essential accessory and other equipment,,",
+              "performance parameter of gas turbine power plant, Advantages over",
+              "other"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "SOLAR AND WIND POWER PLANTS",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Wind power plant- Introduction, advantages, disadvantages;,",
+              "potential of wind energy in India, Solar power plan Introduction,",
+              "types of solar panel, conversion of solar energy, satellite solar",
+              "power system, concept of zero energy house, potential of solar",
+              "energy in India."
+            ],
+            "topics_text": "Wind power plant- Introduction, advantages, disadvantages;, potential of wind energy in India, Solar power plan Introduction, types of solar panel, conversion of solar energy, satellite solar power system, concept of zero energy house, potential of solar energy in India.",
+            "topics": [
+              "Wind power plant- Introduction, advantages, disadvantages",
+              ",",
+              "potential of wind energy in India, Solar power plan Introduction,",
+              "types of solar panel, conversion of solar energy, satellite solar",
+              "power system, concept of zero energy house, potential of solar",
+              "energy in India."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "ECONOMIC ANALYSIS OF POWER PLANTS",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Electrical energy cost, Selection of type of generation, Performance",
+              "and load deviation of power plants, Calculate performance of power",
+              "plants based on load variations",
+              "Total Hours 42"
+            ],
+            "topics_text": "Electrical energy cost, Selection of type of generation, Performance and load deviation of power plants, Calculate performance of power plants based on load variations Total Hours 42",
+            "topics": [
+              "Electrical energy cost, Selection of type of generation, Performance",
+              "and load deviation of power plants, Calculate performance of power",
+              "plants based on load variations",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "To make survey about need of energy in India.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To make survey about need of energy in India."
+            ],
+            "topics_text": "To make survey about need of energy in India.",
+            "topics": [
+              "To make survey about need of energy in India."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "To study about steam based power plant.",
+            "contact_hours": 6,
+            "topic_lines": [
+              "To study about steam based power plant."
+            ],
+            "topics_text": "To study about steam based power plant.",
+            "topics": [
+              "To study about steam based power plant."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "To study about gas turbine power plant.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study about gas turbine power plant."
+            ],
+            "topics_text": "To study about gas turbine power plant.",
+            "topics": [
+              "To study about gas turbine power plant."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "To study about solar power plant",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study about solar power plant"
+            ],
+            "topics_text": "To study about solar power plant",
+            "topics": [
+              "To study about solar power plant"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "To study about wind power plant.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study about wind power plant."
+            ],
+            "topics_text": "To study about wind power plant.",
+            "topics": [
+              "To study about wind power plant."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "To study about nuclear power plant.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study about nuclear power plant."
+            ],
+            "topics_text": "To study about nuclear power plant.",
+            "topics": [
+              "To study about nuclear power plant."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "To study about economic analysis of power plants.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To study about economic analysis of power plants.",
+              "Total Hours 28"
+            ],
+            "topics_text": "To study about economic analysis of power plants. Total Hours 28",
+            "topics": [
+              "To study about economic analysis of power plants.",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Power Plant Engineering, Power Plant Engineering, Dr. P C Sharma, S. K. Kataria Publication, 2013",
+          "Power Plant Engineering, Power Plant Engineering, P K Nag, Tata Mc Graw Hill Publication, 2002"
+        ],
+        "textbooks": [
+          "Power Plant Engineering, R. B. Varia, Atul Prakashan, 2018 References:",
+          "Power Plant Engineering, Power Plant Engineering, Dr. P C Sharma, S. K. Kataria Publication, 2013",
+          "Power Plant Engineering, Power Plant Engineering, P K Nag, Tata Mc Graw Hill Publication, 2002"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://onlinecourses.nptel.ac.in/noc21_me86/preview"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7184,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         6\nCOURSE TITLE   POWER PLANT ENGINEERING\nCOURSE CODE     09ME1606\nCOURSE CREDITS  4\n\nObjective:\n 1  Requirement of power in Indian industry is very huge. In India even today power\n     generation is less compare to power consumption. Every sector of Indian economy required\n    power and energy, economy growth of any sector is also depends on growth of this sector.\n     Fuel supply and distribution is also an area where country is still developing smooth lines\n     of supply. Many private as well as public sector are looking for business opportunity in this\n     area. Growth in business create more job opportunity to the students in this field. Hence,\n      this course attempts to provide them basic knowledge of the technologies available at plant\n     level and would also acquaint them with the latest technological advances taking place in\n      this sector.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Identify elements and their functions of different power sources or power plants.\n 2  Operate equipment of different power plants\n 3  Analyze economics and factor affecting the power plants.\n 4  Identify performance parameters of power plants.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    INTRODUCTION TO POWER PLANTS                    8\n           Need of energy in India, Introduction to Power plants – concept,\n               types, conversion of energy, National Grids, Hydro power plant,\n              Diesel power plant,, Nuclear power plant, Classification and\n             fundamentals of all power plants,, Detail about power plant in\n               Gujarat.\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2    STEAM POWER PLANTS                                17\n            Working of Rankine cycle, reheats cycle regenerative cycle, reheat\n               regenerative cycle. P-v and T-s diagram of all cycle, working of\n             high pressure boiler, Fluidized based combustion boiler, principle,\n               types, need; Need of water treatment plant for boilers,, Super\n               heaters and air pre heaters, coal handling system, pulverized fuel\n               system,, Electro-Static Precipitators (ESP), performance parameter,,\n               control system, monitoring system, Need of record keeping.\n     3    GAS TURBINE POWER PLANT                           7\n               Introduction, Brayton cycle concept, open cycle gas turbine,, closed\n              cycle gas turbine, Essential accessory and other equipment,,\n             performance parameter of gas turbine power plant, Advantages over\n               other\n     4    SOLAR AND WIND POWER PLANTS                     5\n           Wind power plant- Introduction, advantages, disadvantages;,\n               potential of wind energy in India, Solar power plan Introduction,\n              types of solar panel, conversion of solar energy, satellite solar\n            power system, concept of zero energy house, potential of solar\n             energy in India.\n     5    ECONOMIC ANALYSIS OF POWER PLANTS              5\n                Electrical energy cost, Selection of type of generation, Performance\n            and load deviation of power plants, Calculate performance of power\n               plants based on load variations\n                               Total Hours                       42\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     To make survey about need of energy in India.                2\n           To make survey about need of energy in India.\n     2     To study about steam based power plant.                     6\n           To study about steam based power plant.\n     3     To study about gas turbine power plant.                     4\n           To study about gas turbine power plant.\n     4     To study about solar power plant                           4\n           To study about solar power plant\n     5     To study about wind power plant.                           4\n           To study about wind power plant.\n     6     To study about nuclear power plant.                         4\n           To study about nuclear power plant.\n     7     To study about economic analysis of power plants.             4\n           To study about economic analysis of power plants.\n                               Total Hours                       28\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Textbook :\n 1  Power Plant Engineering, R. B. Varia, Atul Prakashan, 2018\n\nReferences:\n 1  Power Plant Engineering, Power Plant Engineering, Dr. P C Sharma, S. K. Kataria\n     Publication, 2013\n 2  Power Plant Engineering, Power Plant Engineering, P K Nag, Tata Mc Graw Hill\n     Publication, 2002\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    26.00         37.00         37.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://onlinecourses.nptel.ac.in/noc21_me86/preview\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "7c6d20ee662d0c740c83313ceee7dc2b277119fe4f7232801fc59b633ccc5e3f"
+    },
+    {
+      "subject_id": "45009135160501",
+      "subject_name": "PROJECT-II",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 6,
+      "subject_code": "09ME1605",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/P-II.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME1605 - PROJECT-II (.pdf",
+      "expected_pdf_sha256": "45ce92fc08d86b8535df5384704ac9508d4f56a80b6bf06be2bcdb36fb9f7993",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PROJECT-II",
+        "course_code": "09ME1605",
+        "semester_label": "6",
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "This course empowers the students to practice a portion of the engineering information or potentially abilities created amid the program to new circumstance or issue for which there are number of engineering solution. This course includes a planning of the project which is to be completed within allocated time limit and the preparation of a report. This course is also helps to develop ability to plan, use, monitor and control resources optimally and economically. By studying this course abilities like creativity, imitativeness and performance qualities are also developed in students. Leadership development and supervision skills are also integrated objectives of learning this course."
+      ],
+      "course_outcomes": [
+        "Identify the problem and apply innovative, creative and logical approach for problem solving.",
+        "To plan material and processes optimally and economically.",
+        "Plan, use, monitor and control resources optimally and economically."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 8 0 0 0 50 50",
+      "contents": {
+        "theory_units": [],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "PRIMARY ACTIVITIES",
+            "contact_hours": 18,
+            "topic_lines": [
+              "Keep project report of V semester course Project-I • Project",
+              "innovative ideas , Project innovative ideas , Appreciate the",
+              "importance of course outcomes , Recheck and correct model or",
+              "drawing if required , Industrial visit or industrial survey , Work",
+              "allocation matrix"
+            ],
+            "topics_text": "Keep project report of V semester course Project-I • Project innovative ideas , Project innovative ideas , Appreciate the importance of course outcomes , Recheck and correct model or drawing if required , Industrial visit or industrial survey , Work allocation matrix",
+            "topics": [
+              "Keep project report of V semester course Project-I",
+              "Project",
+              "innovative ideas , Project innovative ideas , Appreciate the",
+              "importance of course outcomes , Recheck and correct model or",
+              "drawing if required , Industrial visit or industrial survey , Work",
+              "allocation matrix"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "PROJECT EXECUTION",
+            "contact_hours": 38,
+            "topic_lines": [
+              "Execute project preparation activities as per work allocation matrix.",
+              "(Option of flexi time based work can also be practiced. For this",
+              "option, it may not be necessary to exactly follow the time table",
+              "slots. This can be on continuous base also along with time table",
+              "slots)."
+            ],
+            "topics_text": "Execute project preparation activities as per work allocation matrix. (Option of flexi time based work can also be practiced. For this option, it may not be necessary to exactly follow the time table slots. This can be on continuous base also along with time table slots).",
+            "topics": [
+              "Execute project preparation activities as per work allocation matrix.",
+              "(Option of flexi time based work can also be practiced. For this",
+              "option, it may not be necessary to exactly follow the time table",
+              "slots. This can be on continuous base also along with time table",
+              "slots)."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "DRAFT PROJECT REPORT",
+            "contact_hours": 28,
+            "topic_lines": [
+              "Documentation of final project report which includes following in",
+              "sequence. • Title page • Certificate • Index • Acknowledgement •",
+              "Project title, Assembly and detail production drawings • List of",
+              "activities and work allocation matrix • Plant layout with dimensions",
+              "• List and specifications of machineries, equipment and tools • Bill",
+              "of material with make or buy decision, Specifications of bought out",
+              "parts • Process sheets-As per format given in course Industrial",
+              "engineering • Flow process charts • Specification and consumption",
+              "of consumables • Details of inspection / testing carried out., Details",
+              "of rework / rectifications carried out • Cost estimation • Monitoring",
+              "and control report/sheet • Notes on troubleshooting/ conclusion •"
+            ],
+            "topics_text": "Documentation of final project report which includes following in sequence. • Title page • Certificate • Index • Acknowledgement • Project title, Assembly and detail production drawings • List of activities and work allocation matrix • Plant layout with dimensions • List and specifications of machineries, equipment and tools • Bill of material with make or buy decision, Specifications of bought out parts • Process sheets-As per format given in course Industrial engineering • Flow process charts • Specification and consumption of consumables • Details of inspection / testing carried out., Details of rework / rectifications carried out • Cost estimation • Monitoring and control report/sheet • Notes on troubleshooting/ conclusion •",
+            "topics": [
+              "Documentation of final project report which includes following in",
+              "sequence.",
+              "Title page",
+              "Certificate",
+              "Index",
+              "Acknowledgement",
+              "Project title, Assembly and detail production drawings",
+              "List of",
+              "activities and work allocation matrix",
+              "Plant layout with dimensions",
+              "List and specifications of machineries, equipment and tools",
+              "Bill",
+              "of material with make or buy decision, Specifications of bought out",
+              "parts",
+              "Process sheets-As per format given in course Industrial",
+              "engineering",
+              "Flow process charts",
+              "Specification and consumption",
+              "of consumables",
+              "Details of inspection / testing carried out., Details",
+              "of rework / rectifications carried out",
+              "Cost estimation",
+              "Monitoring",
+              "and control report/sheet",
+              "Notes on troubleshooting/ conclusion"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "A Hands-On Guide to Designing and Making Physical Things, A Hands-On Guide to Designing and Making Physical Things, Brian Bunnell and Samer Najia, Dale Dougherty, 2020"
+        ],
+        "textbooks": [
+          "NA, NA, NA, NA References:",
+          "A Hands-On Guide to Designing and Making Physical Things, A Hands-On Guide to Designing and Making Physical Things, Brian Bunnell and Samer Najia, Dale Dougherty, 2020"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.forecast.app/blog/project-planning",
+          "https://nevonprojects.com/project-ideas/electronics-ideas/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6081,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         6\nCOURSE TITLE    PROJECT-II\nCOURSE CODE     09ME1605\nCOURSE CREDITS  4\n\nObjective:\n 1  This course empowers the students to practice a portion of the engineering information or\n     potentially abilities created amid the program to new circumstance or issue for which there\n     are number of engineering solution. This course includes a planning of the project which is\n     to be completed within allocated time limit and the preparation of a report. This course is\n     also helps to develop ability to plan, use, monitor and control resources optimally and\n     economically. By studying this course abilities like creativity, imitativeness and\n    performance qualities are also developed in students. Leadership development and\n     supervision skills are also integrated objectives of learning this course.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Identify the problem and apply innovative, creative and logical approach for problem\n     solving.\n 2  To plan material and processes optimally and economically.\n 3  Plan, use, monitor and control resources optimally and economically.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            8         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    PRIMARY ACTIVITIES                                  18\n           Keep project report of V semester course Project-I • Project\n              innovative ideas , Project innovative ideas , Appreciate the\n             importance of course outcomes , Recheck and correct model or\n             drawing if required , Industrial visit or industrial survey , Work\n               allocation matrix\n     2    PROJECT EXECUTION                                  38\n             Execute project preparation activities as per work allocation matrix.\n             (Option of flexi time based work can also be practiced. For this\n               option, it may not be necessary to exactly follow the time table\n                 slots. This can be on continuous base also along with time table\n                 slots).\n     3    DRAFT PROJECT REPORT                              28\n             Documentation of final project report which includes following in\n              sequence. • Title page • Certificate • Index • Acknowledgement •\n               Project title, Assembly and detail production drawings • List of\n                 activities and work allocation matrix • Plant layout with dimensions\n                 • List and specifications of machineries, equipment and tools • Bill\n              of material with make or buy decision, Specifications of bought out\n               parts • Process sheets-As per format given in course Industrial\n              engineering • Flow process charts • Specification and consumption\n              of consumables • Details of inspection / testing carried out., Details\n              of rework / rectifications carried out • Cost estimation • Monitoring\n            and control report/sheet • Notes on troubleshooting/ conclusion •\n             References • Presentation including moments at work-photographs\n               in action\n     4    DRAFT GUIDE                                          28\n        MS Office report guidelines: • PAGE : A4 (ON ONE SIDE) •\n         MARGIN : TOP 25mm : BOTTOM 25mm : RIGHT 20mm : LEFT\n         35mm • FONT : TIMES NEW ROMAN • SIZE : TITLE : 12\n         BOLD : CONTENT : 12 : SPACING : 18 points • HEADER :\n           TITLE OF THE PROJECT, PAGE NUMBER ON TOP RIGHT. •\n         FOOTER : ACADEMIC YEAR, SHORT NAME OF THE\n           INSTITUTE\n                               Total Hours                       112\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1 A Hands-On Guide to Designing and Making Physical Things, A Hands-On Guide to\n    Designing and Making Physical Things, Brian Bunnell and Samer Najia, Dale Dougherty,\n    2020\n\nSuggested Theory Distribution:\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         40.00         30.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students.\n 2  Viva examination will be conducted at the end of semester for evaluation of performance of\n     students\n\nSupplementary Resources:\n 1  https://www.forecast.app/blog/project-planning\n 2  https://nevonprojects.com/project-ideas/electronics-ideas/\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "45ce92fc08d86b8535df5384704ac9508d4f56a80b6bf06be2bcdb36fb9f7993"
+    }
+  ],
+  "build_summary": {
+    "extracted": 6,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

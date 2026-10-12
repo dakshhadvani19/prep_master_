@@ -1,0 +1,1347 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 45,
+    "course_name": "Diploma Mechanical Engineering",
+    "output_slug": "Mechanical_Engineering"
+  },
+  "semester": 1,
+  "subject_count": 7,
+  "subjects": [
+    {
+      "subject_id": "45009719110101",
+      "subject_name": "Applied Physics",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 1,
+      "subject_code": "09GS1101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-1_09GS1101-Applied-Physics.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09GS1101 - APPLIED PHYSICS (.pdf",
+      "expected_pdf_sha256": "aa2083978d03e39b03d80008fc58b759f1e94120a63e3fea4c34709436a0bd0e",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09GS1101",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "Basic knowledge of science."
+      },
+      "objectives": [
+        "To prepare the students to have a basic knowledge of fundamental quantities, their units and measurement. To study various cases under laws of motion. To have knowledge of various states of maters also to have knowledge of fundamentals of electricity and magnetism. Credits Earned: 5 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able 1. To measure dimensions of various materials and compare units. 2. To understand and relate phenomena with the help of laws of motion. 3. To identify various states of materials and their relevance. 4. To understand role of various laws of electricity and use of electrical components and basic circuits. 5. To understand role of magnetism and its applications."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Teaching Scheme (Hours) Theory Marks Practical Total Credits Marks Marks Term Theory Tutorial Practical ESE IA CSE Viva Work 4 0 2 5 50 30 20 25 25 150 [PAGE 2] Syllabus for Diploma Engineering All Branches",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "units- CGS, MKS and SI, Dimensional Formula, Uses and",
+            "contact_hours": null,
+            "topic_lines": [
+              "5 20% limitations of dimensional analysis, introduction to accuracy,",
+              "precision and errors, types of errors, error analysis",
+              "Laws of Motion",
+              "Introduction to Motion, Displacement and Distance, Average"
+            ],
+            "topics_text": "5 20% limitations of dimensional analysis, introduction to accuracy, precision and errors, types of errors, error analysis Laws of Motion Introduction to Motion, Displacement and Distance, Average",
+            "topics": [
+              "5 20% limitations of dimensional analysis, introduction to accuracy,",
+              "precision and errors, types of errors, error analysis",
+              "Laws of Motion",
+              "Introduction to Motion, Displacement and Distance, Average"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "speed, velocity and acceleration, Inertia, Newton's first law of",
+            "contact_hours": null,
+            "topic_lines": [
+              "10 20% motion, momentum, Newton's second law of motion,",
+              "conservation of momentum, Newton's third law of motion",
+              "Properties of Matter",
+              "Stress, strain, Hooke's law and modulus of elasticity-Young,"
+            ],
+            "topics_text": "10 20% motion, momentum, Newton's second law of motion, conservation of momentum, Newton's third law of motion Properties of Matter Stress, strain, Hooke's law and modulus of elasticity-Young,",
+            "topics": [
+              "10 20% motion, momentum, Newton's second law of motion,",
+              "conservation of momentum, Newton's third law of motion",
+              "Properties of Matter",
+              "Stress, strain, Hooke's law and modulus of elasticity-Young,"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "bulk and modulus of rigidity, Viscosity, newton's law of",
+            "contact_hours": null,
+            "topic_lines": [
+              "10 20% viscosity, types of flows, Reynold's number, surface tension",
+              "and capillary action, Ideal gas, ideal gas equation, Gas laws",
+              "Electricity",
+              "Static electricity: electric charge, coloumb's law, electric field,",
+              "electric flux, capacitance, types of capacitors, capacitors in 4",
+              "series and parallel 10 20%",
+              "Current electricity: current, EMF and Ohm's law, resistance,",
+              "series and parallel",
+              "Magnetism",
+              "Magnetic field, thumb rule, magnetic forces, Biot-Savart Law,",
+              "5 electro-magnetic induction-self-inductance and mutual 10 20%",
+              "inductance, faraday's law, lenz's law, applications-transformer"
+            ],
+            "topics_text": "10 20% viscosity, types of flows, Reynold's number, surface tension and capillary action, Ideal gas, ideal gas equation, Gas laws Electricity Static electricity: electric charge, coloumb's law, electric field, electric flux, capacitance, types of capacitors, capacitors in 4 series and parallel 10 20% Current electricity: current, EMF and Ohm's law, resistance, series and parallel Magnetism Magnetic field, thumb rule, magnetic forces, Biot-Savart Law, 5 electro-magnetic induction-self-inductance and mutual 10 20% inductance, faraday's law, lenz's law, applications-transformer",
+            "topics": [
+              "10 20% viscosity, types of flows, Reynold's number, surface tension",
+              "and capillary action, Ideal gas, ideal gas equation, Gas laws",
+              "Electricity",
+              "Static electricity: electric charge, coloumb's law, electric field,",
+              "electric flux, capacitance, types of capacitors, capacitors in 4",
+              "series and parallel 10 20%",
+              "Current electricity: current, EMF and Ohm's law, resistance,",
+              "series and parallel",
+              "Magnetism",
+              "Magnetic field, thumb rule, magnetic forces, Biot-Savart Law,",
+              "5 electro-magnetic induction-self-inductance and mutual 10 20%",
+              "inductance, faraday's law, lenz's law, applications-transformer"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 7060,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                   All Branches\n\n\n\n                             Semester – I/II\n\n                       Subject Name: Applied Physics\n\n                          Subject Code: 09GS1101\n\n\n\nDiploma Branches in which this subject  is offered: Mechanical Engineering,\nElectrical Engineering, Civil Engineering, Computer Engineering\n\n\nObjective: To prepare the students to have a basic knowledge of fundamental\nquantities, their units and measurement. To study various cases under laws of motion.\nTo have knowledge  of  various  states  of  maters  also  to have knowledge  of\nfundamentals of electricity and magnetism.\n\n\nCredits Earned: 5 Credits\n\nCourse Outcomes: After completion of this course, student will be able\n    1. To measure dimensions of various materials and compare units.\n    2. To understand and relate phenomena with the help of laws of motion.\n    3. To identify various states of materials and their relevance.\n    4. To understand  role  of  various laws  of  electricity and use  of  electrical\n      components and basic circuits.\n    5. To understand role of magnetism and its applications.\n\nPre-requisite of course: Basic knowledge of science.\n\n                    Teaching and Examination Scheme\n\n                                                                   Tutorial/\n  Teaching Scheme (Hours)            Theory Marks        Practical                                                                                  Total\n                                 Credits                      Marks                                                                    Marks\n                                                         Term\n Theory   Tutorial   Practical         ESE  IA  CSE    Viva\n                                                     Work\n   4       0       2       5     50   30    20    25     25     150"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                      All Branches\n\n   Contents:\nUnit\n                          Unit title and content                     Hours    Weightage\nNo.\n          Units, Dimensions and Measurements\n        Definition of unit, Fundamental and Derived units, systems of\n 1      units- CGS, MKS and SI, Dimensional Formula, Uses and\n                                                               5       20%         limitations of dimensional analysis, introduction to accuracy,\n        precision and errors, types of errors, error analysis\n\n        Laws of Motion\n        Introduction to Motion, Displacement and Distance, Average\n 2     speed, velocity and acceleration, Inertia, Newton's first law of\n                                                              10      20%        motion,  momentum,  Newton's  second  law  of  motion,\n        conservation of momentum, Newton's third law of motion\n\n          Properties of Matter\n         Stress, strain, Hooke's law and modulus of elasticity-Young,\n 3     bulk and modulus of  rigidity, Viscosity, newton's law of\n                                                              10      20%         viscosity, types of flows, Reynold's number, surface tension\n       and capillary action, Ideal gas, ideal gas equation, Gas laws\n\n           Electricity\n         Static electricity: electric charge, coloumb's law, electric field,\n         electric flux, capacitance, types of capacitors, capacitors in 4\n         series                   and                         parallel     10      20%\n        Current electricity: current, EMF and Ohm's law, resistance,\n         series and parallel\n\n        Magnetism\n       Magnetic field, thumb rule, magnetic forces, Biot-Savart Law,\n 5        electro-magnetic   induction-self-inductance   and   mutual     10      20%\n        inductance, faraday's law, lenz's law, applications-transformer\n\n\n\n   Suggested Theory distribution:\n\n  The suggested theory distribution as per Bloom’s taxonomy is as per follows. This\n   distribution serves as guidelines  for  teachers and  students  to achieve  effective\n   teaching-learning process.\n\n                 Distribution of Theory for course delivery and evaluation\n\n    Remember  Understand     Apply      Analyse     Evaluate      Create\n\n     40%      40%       15%      5%       0%      0%"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                   All Branches\n\nSuggested List of Experiments:\n\n  Sr.                Name of Topics                      Contact\n  No.                                                        Hours\n\n       Galvanometer\n   1     (i) To determine resistance of a galvanometer using half          2\n         deflection method\n        Conversion of Galvanometer into Ammeter and Voltmeter\n           (i) To convert a given Galvanometer into Ammeter of a\n   2    desired range.                                           4\n           (ii) To convert a given Galvanometer into Voltmeter of a\n         desired range.\n        Vernier Calipers\n           (i) To know the use of the Vernier Calipers.\n   3                                                          4\n           (ii) To measure the length, width and height of the given\n         rectangular block.\n       Micrometer Screw gauge\n   4     (i) To measure the diameter of the small sphere using            2\n        micrometer screw gauge.\n       Newton’s second law of motion\n           (i) To find the acceleration of a ball.\n   5                                                          4\n           (ii) To find the distance covered by the ball in the given\n        time interval.\n         Resistors and Capacitors\n   6     (i) To study Resistors in series and parallel.                    4\n           (ii) To study Capacitors in series and parallel.\n\n\nInstructional Method:\n\na.  The course delivery method will depend upon the requirement of content and\n    need of students. The teacher in addition to conventional teaching method by\n    black board, may also use any of tools such as demonstration, role play, Quiz,\n    brainstorming, MOOCs etc.\n\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n    students in the laboratory and class-room.\nc.   Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nd.  Students will use supplementary resources such as online videos, NPTEL videos,\n     e-courses, Virtual Laboratory\n\n\n\n\n\nReferences:"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                                   All Branches\n\n    1.  Halliday, Jearl Walker, and Robert Resnick, \"Fundamentals of Physics\", (New York\n       and London: John Wiley & Sons, 1962)\n    2.  Physics textbooks NCERT\n    3.  P.G. Bhandarkar, “Applied physics”, Nirali Publication\n    4.  R.K. Gaur and S.I. Gupta, “Engg. Physics” Dhanpat Rai & Sons, Delhi.\n\n\nSupplementary Resources:\n     1. http://nptel.ac.in/courses/115106090/15\n\n     2. http://nptel.ac.in/courses/115104088/\n\n     3. http://hyperphysics.phy-astr.gsu.edu/hbase/index.html\n     4. http://vlab.amrita.edu/index.php"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "aa2083978d03e39b03d80008fc58b759f1e94120a63e3fea4c34709436a0bd0e"
+    },
+    {
+      "subject_id": "45091912010301",
+      "subject_name": "COMMUNICATION SKILLS",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 1,
+      "subject_code": "09SL0103",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CS.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09SL0103 - COMMUNICATION SKILLS (.pdf",
+      "expected_pdf_sha256": "16f11b18f50c1d27f66f270d5bd80d8c7b1409ffa863472f45841009af2878e5",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMMUNICATION SKILLS",
+        "course_code": "09SL0103",
+        "semester_label": "1",
+        "credits": 3,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "To share information on familiar matters / issues in English.",
+        "To make effective presentation in English .",
+        "To gain confidence in speaking English",
+        "To enhance their understanding of language in the context."
+      ],
+      "course_outcomes": [
+        "Students will acquire basic knowledge of decoding written content",
+        "Students will be able to develop comprehension skills, improve vocabulary, use proper grammar, and acquire writing skills and speaking skills in English",
+        "Students will gain effective presentation skills"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Reading Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "1. Reading & Structure (Tenses, Parts of Speech, Types of",
+              "Sentences, Subject-Verb Agreement, Modals , Active-Passive),",
+              "Techniques of Reading, Reading Different Types of Texts (Essays,",
+              "Articles, Stories, Reports, Surveys, Reference Books), Reading",
+              "Comprehension Passages (8passages)"
+            ],
+            "topics_text": "1. Reading & Structure (Tenses, Parts of Speech, Types of Sentences, Subject-Verb Agreement, Modals , Active-Passive), Techniques of Reading, Reading Different Types of Texts (Essays, Articles, Stories, Reports, Surveys, Reference Books), Reading Comprehension Passages (8passages)",
+            "topics": [
+              "1. Reading & Structure (Tenses, Parts of Speech, Types of",
+              "Sentences, Subject-Verb Agreement, Modals , Active-Passive),",
+              "Techniques of Reading, Reading Different Types of Texts (Essays,",
+              "Articles, Stories, Reports, Surveys, Reference Books), Reading",
+              "Comprehension Passages (8passages)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Introduction to Writing Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Writing for Different Purposes, Applications &Emails,",
+              "Assignments, Event Reports (Industrial Visits, In-House Events,",
+              "Participation in External Events)",
+              "Total Hours 28"
+            ],
+            "topics_text": "Writing for Different Purposes, Applications &Emails, Assignments, Event Reports (Industrial Visits, In-House Events, Participation in External Events) Total Hours 28",
+            "topics": [
+              "Writing for Different Purposes, Applications &Emails,",
+              "Assignments, Event Reports (Industrial Visits, In-House Events,",
+              "Participation in External Events)",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Speaking Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Greetings, Introducing Self & Peers, Asking and Sharing",
+              "Information, Sharing/talking about likes and dislikes/preferences,",
+              "Describing Events/Experiences/Objects, Discussions, Expressing",
+              "Views, Facing Viva Voce"
+            ],
+            "topics_text": "Greetings, Introducing Self & Peers, Asking and Sharing Information, Sharing/talking about likes and dislikes/preferences, Describing Events/Experiences/Objects, Discussions, Expressing Views, Facing Viva Voce",
+            "topics": [
+              "Greetings, Introducing Self & Peers, Asking and Sharing",
+              "Information, Sharing/talking about likes and dislikes/preferences,",
+              "Describing Events/Experiences/Objects, Discussions, Expressing",
+              "Views, Facing Viva Voce"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Effective Presentation Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Introduction to Effective Presentation Skills, Preparing the",
+              "Presentation (Collection of Data/Information, exploring the topic),",
+              "Using ICT in the Presentation, Getting Ready for the Presentation,",
+              "Effective Body Language, Effective Pronunciation, Interacting with",
+              "Audience (Q & A), Practice (presentation with video recording),",
+              "Feedback and Suggestions",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction to Effective Presentation Skills, Preparing the Presentation (Collection of Data/Information, exploring the topic), Using ICT in the Presentation, Getting Ready for the Presentation, Effective Body Language, Effective Pronunciation, Interacting with Audience (Q & A), Practice (presentation with video recording), Feedback and Suggestions Total Hours 28",
+            "topics": [
+              "Introduction to Effective Presentation Skills, Preparing the",
+              "Presentation (Collection of Data/Information, exploring the topic),",
+              "Using ICT in the Presentation, Getting Ready for the Presentation,",
+              "Effective Body Language, Effective Pronunciation, Interacting with",
+              "Audience (Q & A), Practice (presentation with video recording),",
+              "Feedback and Suggestions",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Communication Skills, Communication Skills, Lata and Kumar, OUP, New Delhi, 2018",
+          "The Ace of Soft Skills, The Ace of Soft Skills, Mahadevan Ramesh, Pearson, UP, 2019"
+        ],
+        "textbooks": [
+          "NA, NA, NA, NA References:",
+          "Communication Skills, Communication Skills, Lata and Kumar, OUP, New Delhi, 2018",
+          "The Ace of Soft Skills, The Ace of Soft Skills, Mahadevan Ramesh, Pearson, UP, 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://youtu.be/UOceysteIjo",
+          "https://youtu.be/hE6I9apUvrk",
+          "https://youtu.be/X3Fz_Gu5WUE"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4884,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         1\nCOURSE TITLE   COMMUNICATION SKILLS\nCOURSE CODE     09SL0103\nCOURSE CREDITS  3\n\nObjective:\n 1  To share information on familiar matters / issues in English.\n 2  To make effective presentation in English .\n 3  To gain confidence in speaking English\n 4  To enhance their understanding of language in the context.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Students will acquire basic knowledge of decoding written content\n 2  Students will be able to develop comprehension skills, improve vocabulary, use proper\n    grammar, and acquire writing skills and speaking skills in English\n 3  Students will gain effective presentation skills\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Reading Skills                              14\n                1. Reading & Structure (Tenses, Parts of Speech, Types of\n              Sentences, Subject-Verb Agreement, Modals , Active-Passive),\n             Techniques of Reading, Reading Different Types of Texts (Essays,\n                Articles, Stories, Reports, Surveys, Reference Books), Reading\n            Comprehension Passages (8passages)\n     2      Introduction to Writing Skills                              14\n             Writing for Different Purposes, Applications &Emails,\n             Assignments, Event Reports (Industrial Visits, In-House Events,\n               Participation in External Events)\n                               Total Hours                       28\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Speaking Skills                             14\n              Greetings, Introducing Self & Peers, Asking and Sharing\n              Information, Sharing/talking about likes and dislikes/preferences,\n              Describing Events/Experiences/Objects, Discussions, Expressing\n             Views, Facing Viva Voce\n     2       Effective Presentation Skills                                14\n               Introduction to Effective Presentation Skills, Preparing the\n               Presentation (Collection of Data/Information, exploring the topic),\n             Using ICT in the Presentation, Getting Ready for the Presentation,\n               Effective Body Language, Effective Pronunciation, Interacting with\n            Audience (Q & A), Practice (presentation with video recording),\n            Feedback and Suggestions\n                               Total Hours                       28\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  Communication Skills, Communication Skills, Lata and Kumar, OUP, New Delhi, 2018\n 2  The Ace of Soft Skills, The Ace of Soft Skills, Mahadevan Ramesh, Pearson, UP, 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    35.00         35.00         30.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as Lecture method combined with discussion ,use of ICT Tools\n    ,Assignments ,,Presentations ,and self study\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n\nSupplementary Resources:\n 1  https://youtu.be/UOceysteIjo\n 2  https://youtu.be/hE6I9apUvrk\n 3  https://youtu.be/X3Fz_Gu5WUE\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "16f11b18f50c1d27f66f270d5bd80d8c7b1409ffa863472f45841009af2878e5"
+    },
+    {
+      "subject_id": "45009135110101",
+      "subject_name": "ENGINEERING DRAWING",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 1,
+      "subject_code": "09ME1101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/ED.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME1101 - ENGINEERING DRAWING (.pdf",
+      "expected_pdf_sha256": "885f8e70bd0844236ba4601974b9e7560c1ca58ec9a5a8353d62102681b67f44",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENGINEERING DRAWING",
+        "course_code": "09ME1101",
+        "semester_label": "1",
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "Engineering Drawing is language of Engineer through which they can communicate with other person and transfer their ideas. Engineers are able to read and understand the drawing and able to use of drawing instruments. The curriculum aim is to develop the skill to draw and read several drawing, curves and projections. Main goal of this subject is to develop thoughts & explaining concepts. Developing of diagram order & practice of drawing apparatus well."
+      ],
+      "course_outcomes": [
+        "Construct basic and intermediate geometry.",
+        "To expand their technical communication skill.",
+        "Interpret engineering drawings using fundamental technical mathematics.",
+        "To recognize and know the resolutions and the methods of engineering drawing.",
+        "To advance their visualization skills so that they can apply these skills in emerging new products.",
+        "Understand the theory of projection."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25 MR. NAVNITKUMAR JAGJIVANBHAI PATEL DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Engineering Curves",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Overview to Engineering Graphics and Introduction of engineering",
+              "curves, Classification & application of Engineering Curves,",
+              "Construction of Conics-Construction of Ellipse by arc of circle",
+              "method, Concentric Circle Method, Rectangle Method, Oblong",
+              "Method, PARABOLA-Rectangle Method,Method of Tangents (",
+              "Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix",
+              "– focus Method for Ellipse, Parabola and Hyperbola with tangent",
+              "and normal, Cycloidal Curves- Cycloid with tangent and normal,",
+              "Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes",
+              "& Spirals along with normal and tangent"
+            ],
+            "topics_text": "Overview to Engineering Graphics and Introduction of engineering curves, Classification & application of Engineering Curves, Construction of Conics-Construction of Ellipse by arc of circle method, Concentric Circle Method, Rectangle Method, Oblong Method, PARABOLA-Rectangle Method,Method of Tangents ( Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix – focus Method for Ellipse, Parabola and Hyperbola with tangent and normal, Cycloidal Curves- Cycloid with tangent and normal, Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes & Spirals along with normal and tangent",
+            "topics": [
+              "Overview to Engineering Graphics and Introduction of engineering",
+              "curves, Classification & application of Engineering Curves,",
+              "Construction of Conics-Construction of Ellipse by arc of circle",
+              "method, Concentric Circle Method, Rectangle Method, Oblong",
+              "Method, PARABOLA-Rectangle Method,Method of Tangents (",
+              "Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix",
+              "– focus Method for Ellipse, Parabola and Hyperbola with tangent",
+              "and normal, Cycloidal Curves- Cycloid with tangent and normal,",
+              "Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes",
+              "& Spirals along with normal and tangent"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Projection of Points and Lines",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to principal planes of projections & Projections of the",
+              "points located in same quadrant and different quadrants, Projections",
+              "of line with its inclination to one reference plane, Projections of line",
+              "with its inclination to two reference planes, Problems of line",
+              "inclined to two reference planes, True length and inclination with",
+              "the reference planes, True length and inclination with the reference",
+              "planes - Problems, True length and inclination with the reference",
+              "planes - Problems"
+            ],
+            "topics_text": "Introduction to principal planes of projections & Projections of the points located in same quadrant and different quadrants, Projections of line with its inclination to one reference plane, Projections of line with its inclination to two reference planes, Problems of line inclined to two reference planes, True length and inclination with the reference planes, True length and inclination with the reference planes - Problems, True length and inclination with the reference planes - Problems",
+            "topics": [
+              "Introduction to principal planes of projections & Projections of the",
+              "points located in same quadrant and different quadrants, Projections",
+              "of line with its inclination to one reference plane, Projections of line",
+              "with its inclination to two reference planes, Problems of line",
+              "inclined to two reference planes, True length and inclination with",
+              "the reference planes, True length and inclination with the reference",
+              "planes - Problems, True length and inclination with the reference",
+              "planes - Problems"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Projection of planes",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction of different types of plane and overview of projection",
+              "of plane, Projections of planes (polygons, circle and ellipse) with its",
+              "inclination to one reference plane, Problems of projection of planes",
+              "inclined to one reference plane, Projections of planes (polygons,",
+              "circle and ellipse) with its inclination to one reference plane,",
+              "Problems, Concept of auxiliary plane method for projections of the",
+              "plane, Problems"
+            ],
+            "topics_text": "Introduction of different types of plane and overview of projection of plane, Projections of planes (polygons, circle and ellipse) with its inclination to one reference plane, Problems of projection of planes inclined to one reference plane, Projections of planes (polygons, circle and ellipse) with its inclination to one reference plane, Problems, Concept of auxiliary plane method for projections of the plane, Problems",
+            "topics": [
+              "Introduction of different types of plane and overview of projection",
+              "of plane, Projections of planes (polygons, circle and ellipse) with its",
+              "inclination to one reference plane, Problems of projection of planes",
+              "inclined to one reference plane, Projections of planes (polygons,",
+              "circle and ellipse) with its inclination to one reference plane,",
+              "Problems, Concept of auxiliary plane method for projections of the",
+              "plane, Problems"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Orthographic Projections",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Fundamental of projection with classification, Principal planes of",
+              "projection,, Projections from the pictorial view of the object on the",
+              "principal planes for view from front, top and sides using first angle",
+              "projection method and third angle projection method, Problems of",
+              "orthographic projections, Problems of orthographic projections, Full",
+              "sectional view., Problems of sectional view"
+            ],
+            "topics_text": "Fundamental of projection with classification, Principal planes of projection,, Projections from the pictorial view of the object on the principal planes for view from front, top and sides using first angle projection method and third angle projection method, Problems of orthographic projections, Problems of orthographic projections, Full sectional view., Problems of sectional view",
+            "topics": [
+              "Fundamental of projection with classification, Principal planes of",
+              "projection,, Projections from the pictorial view of the object on the",
+              "principal planes for view from front, top and sides using first angle",
+              "projection method and third angle projection method, Problems of",
+              "orthographic projections, Problems of orthographic projections, Full",
+              "sectional view., Problems of sectional view"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Overview to Engineering Graphics",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Drawing instruments and accessories, Use drawing instruments and",
+              "materials effectively, Follow and apply standard practice as per",
+              "B.I.S. for planning and layout, choose appropriate scale factor for",
+              "the drawing as per given situation, Write annotations on a drawing",
+              "where ever necessary. Choose appropriate line and dimensioning",
+              "style for a given geometrical entity, Develop the skill to draw",
+              "polygons, circles and lines with different geometric situations. Use",
+              "of plane scales and R. F."
+            ],
+            "topics_text": "Drawing instruments and accessories, Use drawing instruments and materials effectively, Follow and apply standard practice as per B.I.S. for planning and layout, choose appropriate scale factor for the drawing as per given situation, Write annotations on a drawing where ever necessary. Choose appropriate line and dimensioning style for a given geometrical entity, Develop the skill to draw polygons, circles and lines with different geometric situations. Use of plane scales and R. F.",
+            "topics": [
+              "Drawing instruments and accessories, Use drawing instruments and",
+              "materials effectively, Follow and apply standard practice as per",
+              "B.I.S. for planning and layout, choose appropriate scale factor for",
+              "the drawing as per given situation, Write annotations on a drawing",
+              "where ever necessary. Choose appropriate line and dimensioning",
+              "style for a given geometrical entity, Develop the skill to draw",
+              "polygons, circles and lines with different geometric situations. Use",
+              "of plane scales and R. F."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Isometric Projections and Isometric View or Drawing",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Isometric Scale, Conversion of orthographic views into isometric",
+              "projection, isometric view or drawing",
+              "Total Hours 28"
+            ],
+            "topics_text": "Isometric Scale, Conversion of orthographic views into isometric projection, isometric view or drawing Total Hours 28",
+            "topics": [
+              "Isometric Scale, Conversion of orthographic views into isometric",
+              "projection, isometric view or drawing",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practice Sheet",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Use of Drawing Instruments, Practice of drawing instruments,",
+              "Planning and layout as per IS., Scaling method. Draw Following: a.",
+              "Different Types of line. b. Draw equilateral triangle and square c.",
+              "Types of dimensioning. d. Alphabets and numerical (Vertical &",
+              "inclined as Per IS). e. Draw Polygon using universal method f.",
+              "Dimensioning methods. g. Draw Title Block using stencil. h. Draw",
+              "plain scale and diagonal scale",
+              "2 Engineering Curves[L] 8"
+            ],
+            "topics_text": "Use of Drawing Instruments, Practice of drawing instruments, Planning and layout as per IS., Scaling method. Draw Following: a. Different Types of line. b. Draw equilateral triangle and square c. Types of dimensioning. d. Alphabets and numerical (Vertical & inclined as Per IS). e. Draw Polygon using universal method f. Dimensioning methods. g. Draw Title Block using stencil. h. Draw plain scale and diagonal scale 2 Engineering Curves[L] 8",
+            "topics": [
+              "Use of Drawing Instruments, Practice of drawing instruments,",
+              "Planning and layout as per IS., Scaling method. Draw Following: a.",
+              "Different Types of line. b. Draw equilateral triangle and square c.",
+              "Types of dimensioning. d. Alphabets and numerical (Vertical &",
+              "inclined as Per IS). e. Draw Polygon using universal method f.",
+              "Dimensioning methods. g. Draw Title Block using stencil. h. Draw",
+              "plain scale and diagonal scale",
+              "2 Engineering Curves[L] 8"
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "Problems of Conical Curves, 2 Problem of Cycloid, 3 Problem of",
+            "contact_hours": null,
+            "topic_lines": [
+              "Involute, 4 Problem of spiral.",
+              "3 Projections of Points & line[L] 10",
+              "To draw a projection of points for 10 different conditions. To draw",
+              "projections of lines with different conditions. (4 Problems)",
+              "4 Projections of Planes[L] 10",
+              "To draw projections of different plane with different conditions(4",
+              "Problems)",
+              "5 Orthographic Projections[L] 16",
+              "To draw orthographic projections of different objects (2 Problems)",
+              "6 Isometric Projections[L] 6",
+              "To draw isometric projections for given orthographic views. (2",
+              "Problems)",
+              "Total Hours 56"
+            ],
+            "topics_text": "Involute, 4 Problem of spiral. 3 Projections of Points & line[L] 10 To draw a projection of points for 10 different conditions. To draw projections of lines with different conditions. (4 Problems) 4 Projections of Planes[L] 10 To draw projections of different plane with different conditions(4 Problems) 5 Orthographic Projections[L] 16 To draw orthographic projections of different objects (2 Problems) 6 Isometric Projections[L] 6 To draw isometric projections for given orthographic views. (2 Problems) Total Hours 56",
+            "topics": [
+              "Involute, 4 Problem of spiral.",
+              "3 Projections of Points & line[L] 10",
+              "To draw a projection of points for 10 different conditions. To draw",
+              "projections of lines with different conditions. (4 Problems)",
+              "4 Projections of Planes[L] 10",
+              "To draw projections of different plane with different conditions(4",
+              "Problems)",
+              "5 Orthographic Projections[L] 16",
+              "To draw orthographic projections of different objects (2 Problems)",
+              "6 Isometric Projections[L] 6",
+              "To draw isometric projections for given orthographic views. (2",
+              "Problems)",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Engineering Graphics, Engineering Graphics, Ramdevsinh Jhala, Mc Graw Hill Education, 2018",
+          "Engineering Graphics, Engineering Graphics, P. J. Shah, S. Chand Publishing, 2008"
+        ],
+        "textbooks": [
+          "Basic Engineering Drawing & Graphics, P. J. Shah, Atul Prakashan, 2022 References:",
+          "Engineering Graphics, Engineering Graphics, Ramdevsinh Jhala, Mc Graw Hill Education, 2018",
+          "Engineering Graphics, Engineering Graphics, P. J. Shah, S. Chand Publishing, 2008"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://nptel.ac.in/courses/112/103/112103019/"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9388,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    ENGINEERING DRAWING\nCOURSE CODE     09ME1101\nCOURSE CREDITS  4\n\nObjective:\n 1  Engineering Drawing is language of Engineer through which they can communicate with\n     other person and transfer their ideas. Engineers are able to read and understand the drawing\n    and able to use of drawing instruments. The curriculum aim is to develop the skill to draw\n    and read several drawing, curves and projections.\n    Main goal of this subject is to develop thoughts & explaining concepts. Developing of\n    diagram order & practice of drawing apparatus well.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Construct basic and intermediate geometry.\n 2  To expand their technical communication skill.\n 3  Interpret engineering drawings using fundamental technical mathematics.\n 4  To recognize and know the resolutions and the methods of engineering drawing.\n 5  To advance their visualization skills so that they can apply these skills in emerging new\n     products.\n 6  Understand the theory of projection.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Engineering Curves                                       8\n            Overview to Engineering Graphics and Introduction of engineering\n               curves, Classification & application of Engineering Curves,\n              Construction of Conics-Construction of Ellipse by arc of circle\n             method, Concentric Circle Method, Rectangle Method, Oblong\n            Method, PARABOLA-Rectangle Method,Method of Tangents (\n              Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix\n            – focus Method for Ellipse, Parabola and Hyperbola with tangent\n            and normal, Cycloidal Curves- Cycloid with tangent and normal,\n             Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes\n        & Spirals along with normal and tangent\n     2       Projection of Points and Lines                              7\n               Introduction to principal planes of projections & Projections of the\n               points located in same quadrant and different quadrants, Projections\n              of line with its inclination to one reference plane, Projections of line\n             with its inclination to two reference planes, Problems of line\n               inclined to two reference planes, True length and inclination with\n               the reference planes, True length and inclination with the reference\n              planes - Problems, True length and inclination with the reference\n              planes - Problems\n     3       Projection of planes                                       7\n               Introduction of different types of plane and overview of projection\n              of plane, Projections of planes (polygons, circle and ellipse) with its\n               inclination to one reference plane, Problems of projection of planes\n               inclined to one reference plane, Projections of planes (polygons,\n                circle and ellipse) with its inclination to one reference plane,\n             Problems, Concept of auxiliary plane method for projections of the\n               plane, Problems\n     4      Orthographic Projections                                  6\n             Fundamental of projection with classification, Principal planes of\n                projection,, Projections from the pictorial view of the object on the\n               principal planes for view from front, top and sides using first angle\n               projection method and third angle projection method, Problems of\n              orthographic projections, Problems of orthographic projections, Full\n               sectional view., Problems of sectional view\n     5      Overview to Engineering Graphics                          0\n            Drawing instruments and accessories, Use drawing instruments and\n               materials effectively, Follow and apply standard practice as per\n                B.I.S. for planning and layout, choose appropriate scale factor for\n               the drawing as per given situation, Write annotations on a drawing\n            where ever necessary. Choose appropriate line and dimensioning\n                style for a given geometrical entity, Develop the skill to draw\n              polygons, circles and lines with different geometric situations. Use\n              of plane scales and R. F.\n     6      Isometric Projections and Isometric View or Drawing          0\n              Isometric Scale, Conversion of orthographic views into isometric\n               projection, isometric view or drawing\n                               Total Hours                       28\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practice Sheet                                           6\n            Use of Drawing Instruments, Practice of drawing instruments,\n             Planning and layout as per IS., Scaling method. Draw Following: a.\n               Different Types of line. b. Draw equilateral triangle and square c.\n            Types of dimensioning. d. Alphabets and numerical (Vertical &\n               inclined as Per IS). e. Draw Polygon using universal method f.\n             Dimensioning methods. g. Draw Title Block using stencil. h. Draw\n               plain scale and diagonal scale\n     2      Engineering Curves[L]                                    8\n            1 Problems of Conical Curves, 2 Problem of Cycloid, 3 Problem of\n               Involute, 4 Problem of spiral.\n     3       Projections of Points & line[L]                              10\n           To draw a projection of points for 10 different conditions. To draw\n               projections of lines with different conditions. (4 Problems)\n     4       Projections of Planes[L]                                   10\n           To draw projections of different plane with different conditions(4\n             Problems)\n     5      Orthographic Projections[L]                               16\n           To draw orthographic projections of different objects (2 Problems)\n     6      Isometric Projections[L]                                   6\n           To draw isometric projections for given orthographic views. (2\n             Problems)\n                               Total Hours                       56\n\nTextbook :\n 1  Basic Engineering Drawing & Graphics, P. J. Shah, Atul Prakashan, 2022\n\nReferences:\n 1  Engineering Graphics, Engineering Graphics, Ramdevsinh Jhala, Mc Graw Hill Education,\n    2018\n 2  Engineering Graphics, Engineering Graphics, P. J. Shah, S. Chand Publishing, 2008\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    28.00         32.00         40.00          0.00           0.00           0.00\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/112/103/112103019/\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "885f8e70bd0844236ba4601974b9e7560c1ca58ec9a5a8353d62102681b67f44"
+    },
+    {
+      "subject_id": "45009121010201",
+      "subject_name": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 1,
+      "subject_code": "09AU0102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/ECDM.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09AU0102 - ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT (.pdf",
+      "expected_pdf_sha256": "32d8dca6f6e03350cf4711d2e98b2de4ed9791b63204d7b591ebf7db184ba278",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENVIRONMENT CONSERVATION & DISASTER",
+        "course_code": "09AU0102",
+        "semester_label": "1",
+        "credits": 0,
+        "prerequisite": "BASIC LIFE SCIENCE"
+      },
+      "objectives": [
+        "To solve various engineering problems to produce eco-friendly products",
+        "To familiarize the students with strategies for addressing various environmental issues",
+        "To familiarize the students with various renewable energy sources and their applications",
+        "Be better prepared to recover from natural and manmade disasters"
+      ],
+      "course_outcomes": [
+        "Understand the ecosystem and its terminology and solve various engineering problems by applying ecosystem knowledge to produce eco–friendly products",
+        "Understand the various types of pollutions and their remedial measures",
+        "Understand different renewable energy resources and their applications",
+        "Understand the role of an engineer concerning climate change and disaster management"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction of Environmental Science",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition of environment, ecosystem, food chain, and food web, he",
+              "necessity of environmental science, Importance of environment and",
+              "scope"
+            ],
+            "topics_text": "Definition of environment, ecosystem, food chain, and food web, he necessity of environmental science, Importance of environment and scope",
+            "topics": [
+              "Definition of environment, ecosystem, food chain, and food web, he",
+              "necessity of environmental science, Importance of environment and",
+              "scope"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Types of pollution with their causes, effects and remedial",
+            "contact_hours": 8,
+            "topic_lines": [
+              "measures",
+              "Air pollution, water pollution, noise pollution, and soil pollution,",
+              "Global environment problems with their causes, effects & remedies:",
+              "climate change"
+            ],
+            "topics_text": "measures Air pollution, water pollution, noise pollution, and soil pollution, Global environment problems with their causes, effects & remedies: climate change",
+            "topics": [
+              "measures",
+              "Air pollution, water pollution, noise pollution, and soil pollution,",
+              "Global environment problems with their causes, effects & remedies:",
+              "climate change"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Renewable Sources of Energy",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Solar energy: basics of solar energy and its importance, Wind",
+              "energy: need, limitations and future scope, Recent trends of",
+              "renewable sources of energy"
+            ],
+            "topics_text": "Solar energy: basics of solar energy and its importance, Wind energy: need, limitations and future scope, Recent trends of renewable sources of energy",
+            "topics": [
+              "Solar energy: basics of solar energy and its importance, Wind",
+              "energy: need, limitations and future scope, Recent trends of",
+              "renewable sources of energy"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Disaster Management",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Concepts and definition of disaster, Disaster management cycle, ole",
+              "of an engineer in disaster management Rescue techniques during a",
+              "disaster, Natural disasters: earthquake, cyclone, flood, tsunami,",
+              "drought, and landslides, Manmade disaster: fire, civil war,",
+              "technological disasters",
+              "Total Hours 28"
+            ],
+            "topics_text": "Concepts and definition of disaster, Disaster management cycle, ole of an engineer in disaster management Rescue techniques during a disaster, Natural disasters: earthquake, cyclone, flood, tsunami, drought, and landslides, Manmade disaster: fire, civil war, technological disasters Total Hours 28",
+            "topics": [
+              "Concepts and definition of disaster, Disaster management cycle, ole",
+              "of an engineer in disaster management Rescue techniques during a",
+              "disaster, Natural disasters: earthquake, cyclone, flood, tsunami,",
+              "drought, and landslides, Manmade disaster: fire, civil war,",
+              "technological disasters",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Environmental Science, Environmental Science, Y. K. Singh, New Age International (P) Ltd., 2006"
+        ],
+        "textbooks": [
+          "Environment Engineering and Disaster Management, Sanjay K., Laxmi Publications, 2018 References:",
+          "Environmental Science, Environmental Science, Y. K. Singh, New Age International (P) Ltd., 2006"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.eco-prayer.org/",
+          "https://www.teriin.org/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5228,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    ENVIRONMENT CONSERVATION & DISASTER\n             MANAGEMENT\nCOURSE CODE     09AU0102\nCOURSE CREDITS  0\n\nObjective:\n 1  To solve various engineering problems to produce eco-friendly products\n 2  To familiarize the students with strategies for addressing various environmental issues\n 3  To familiarize the students with various renewable energy sources and their applications\n 4  Be better prepared to recover from natural and manmade disasters\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the ecosystem and its terminology and solve various engineering\n    problems by applying ecosystem knowledge to produce eco–friendly products\n 2  Understand the various types of pollutions and their remedial measures\n 3  Understand different renewable energy resources and their applications\n 4  Understand the role of an engineer concerning climate change and disaster\n    management\n\n\nPre-requisite of course:BASIC LIFE SCIENCE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0      0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction of Environmental Science                      4\n               Definition of environment, ecosystem, food chain, and food web, he\n               necessity of environmental science, Importance of environment and\n             scope\n     2      Types of pollution with their causes, effects and remedial       8\n            measures\n             Air pollution, water pollution, noise pollution, and soil pollution,\n             Global environment problems with their causes, effects & remedies:\n              climate change\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Renewable Sources of Energy                              6\n              Solar energy: basics of solar energy and its importance, Wind\n              energy: need, limitations and future scope, Recent trends of\n             renewable sources of energy\n     4       Disaster Management                                     10\n             Concepts and definition of disaster, Disaster management cycle, ole\n              of an engineer in disaster management Rescue techniques during a\n                disaster, Natural disasters: earthquake, cyclone, flood, tsunami,\n              drought, and landslides, Manmade disaster: fire, civil war,\n              technological disasters\n                               Total Hours                       28\n\n\nTextbook :\n 1  Environment Engineering and Disaster Management, Sanjay K., Laxmi Publications, 2018\n\nReferences:\n 1  Environmental Science, Environmental Science, Y. K. Singh, New Age International (P)\n     Ltd., 2006\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         40.00         30.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n 3  Department level examination will be conducted at the end of semester for evaluation of\n    performance of students.\n 4  Students will use supplementary resources such as online videos, videos, e- courses etc.\n\nSupplementary Resources:\n 1  https://www.eco-prayer.org/\n 2  https://www.teriin.org/\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 3   https://cpcb.nic.in/\n 4  https://www.isro.gov.in/\n 5  https://ndma.gov.in/en/\n 6  http://www.indiaenvironmentportal.org.in/\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "32d8dca6f6e03350cf4711d2e98b2de4ed9791b63204d7b591ebf7db184ba278"
+    },
+    {
+      "subject_id": "45009121010101",
+      "subject_name": "INDIAN CONSTITUTION",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 1,
+      "subject_code": "09AU0101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/IC.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09AU0101 - INDIAN CONSTITUTION (.pdf",
+      "expected_pdf_sha256": "f2d8e5129ae60c4ae8032a3da045d68b3e35de4310e66ea4eccb158030e73d51",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INDIAN CONSTITUTION",
+        "course_code": "09AU0101",
+        "semester_label": "1",
+        "credits": 0,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "To know and create awareness about Indian constitution which is consider as pillar of Indian democracy. To be familiar with the functionalities of Union government, State government and local government etc. by knowing about the functionalities of Election commission of India"
+      ],
+      "course_outcomes": [
+        "1. To learn about law enactment and importance of Constitution.",
+        "2. To understand the fundamental rights and fundamental duties of the Indian citizen to instill morality, social values, honesty, dignity of life and their social responsibilities.",
+        "3. To create awareness of their surroundings, society, social problems and their suitable solutions while keeping rights and duties of the citizen keeping in mind",
+        "4. To understand powers and functionalities from union to local self-government.",
+        "5. To justify the need for protection of human rights and to know about concept of women empowerment."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "The Constitution – Introduction",
+            "contact_hours": 14,
+            "topic_lines": [
+              "• Meaning of the constitution law and constitutionalism, • The",
+              "History of the Making of the Indian Constitution, • Preamble and",
+              "the Basic Structure, and its Interpretation, • Salient features and",
+              "characteristics of the Constitution of India, • Fundamental Rights",
+              "and Duties and their Interpretation, Right to Equality under Article –",
+              "14, Right to certain Freedom under Article 19, Scope of the Right to",
+              "Life and Personal Liberty under Article 21, Fundamental Duties and",
+              "its legal status, • State Policy Principles- Its importance and",
+              "Implementation"
+            ],
+            "topics_text": "• Meaning of the constitution law and constitutionalism, • The History of the Making of the Indian Constitution, • Preamble and the Basic Structure, and its Interpretation, • Salient features and characteristics of the Constitution of India, • Fundamental Rights and Duties and their Interpretation, Right to Equality under Article – 14, Right to certain Freedom under Article 19, Scope of the Right to Life and Personal Liberty under Article 21, Fundamental Duties and its legal status, • State Policy Principles- Its importance and Implementation",
+            "topics": [
+              "Meaning of the constitution law and constitutionalism,",
+              "The",
+              "History of the Making of the Indian Constitution,",
+              "Preamble and",
+              "the Basic Structure, and its Interpretation,",
+              "Salient features and",
+              "characteristics of the Constitution of India,",
+              "Fundamental Rights",
+              "and Duties and their Interpretation, Right to Equality under Article –",
+              "14, Right to certain Freedom under Article 19, Scope of the Right to",
+              "Life and Personal Liberty under Article 21, Fundamental Duties and",
+              "its legal status,",
+              "State Policy Principles- Its importance and",
+              "Implementation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Union Government",
+            "contact_hours": 4,
+            "topic_lines": [
+              "• Structure of the Indian Union, • President – Role and Power , •",
+              "Prime Minister and Council of Ministers , • Lok Sabha and Rajya",
+              "Sabha"
+            ],
+            "topics_text": "• Structure of the Indian Union, • President – Role and Power , • Prime Minister and Council of Ministers , • Lok Sabha and Rajya Sabha",
+            "topics": [
+              "Structure of the Indian Union,",
+              "President – Role and Power ,",
+              "Prime Minister and Council of Ministers ,",
+              "Lok Sabha and Rajya",
+              "Sabha"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "State Government",
+            "contact_hours": 3,
+            "topic_lines": [
+              "• Governor – Role and Power , • Chief Minister and Council of",
+              "Ministers , • State Secretariat"
+            ],
+            "topics_text": "• Governor – Role and Power , • Chief Minister and Council of Ministers , • State Secretariat",
+            "topics": [
+              "Governor – Role and Power ,",
+              "Chief Minister and Council of",
+              "Ministers ,",
+              "State Secretariat"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Local Administration",
+            "contact_hours": 3,
+            "topic_lines": [
+              "• District Administration , • Municipal Corporation , • Zila",
+              "Panchayat"
+            ],
+            "topics_text": "• District Administration , • Municipal Corporation , • Zila Panchayat",
+            "topics": [
+              "District Administration ,",
+              "Municipal Corporation ,",
+              "Zila",
+              "Panchayat"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Election Commission",
+            "contact_hours": 4,
+            "topic_lines": [
+              "• Role and Functioning , • Chief Election Commissioner , • State",
+              "Election Commission",
+              "Total Hours 28"
+            ],
+            "topics_text": "• Role and Functioning , • Chief Election Commissioner , • State Election Commission Total Hours 28",
+            "topics": [
+              "Role and Functioning ,",
+              "Chief Election Commissioner ,",
+              "State",
+              "Election Commission",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Constitutional Law of India, Constitutional Law of India, Dr. J.N. Pandey, Central Law Agency, 2022"
+        ],
+        "textbooks": [
+          "The Constitution of India, B.L. Fadia, Sahitya Bhawan, 2017 References:",
+          "Constitutional Law of India, Constitutional Law of India, Dr. J.N. Pandey, Central Law Agency, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://legislative.gov.in/constitution-of-india"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5761,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    INDIAN CONSTITUTION\nCOURSE CODE     09AU0101\nCOURSE CREDITS  0\n\nObjective:\n 1  To know and create awareness about Indian constitution which is consider as\n      pillar of Indian democracy. To be familiar with the functionalities of Union government,\n     State government and local government etc. by knowing about the functionalities of\n     Election commission of India\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1   1. To learn about law enactment and importance of Constitution.\n 2   2. To understand the fundamental rights and fundamental duties of the Indian citizen to\n      instill morality, social values, honesty, dignity of life and their social responsibilities.\n 3   3. To create awareness of their surroundings, society, social problems and their suitable\n     solutions while keeping rights and duties of the citizen keeping in mind\n 4   4. To understand powers and functionalities from union to local self-government.\n 5   5. To justify the need for protection of human rights and to know about concept of women\n    empowerment.\n\n\nPre-requisite of course:NA.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0      0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     The Constitution – Introduction                            14\n                 • Meaning of the constitution law and constitutionalism, • The\n              History of the Making of the Indian Constitution, • Preamble and\n               the Basic Structure, and its Interpretation, • Salient features and\n                characteristics of the Constitution of India, • Fundamental Rights\n            and Duties and their Interpretation, Right to Equality under Article –\n              14, Right to certain Freedom under Article 19, Scope of the Right to\n              Life and Personal Liberty under Article 21, Fundamental Duties and\n                   its legal status, • State Policy Principles- Its importance and\n             Implementation\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Union Government                                       4\n                 • Structure of the Indian Union, • President – Role and Power , •\n             Prime Minister and Council of Ministers , • Lok Sabha and Rajya\n            Sabha\n     3       State Government                                        3\n                 • Governor – Role and Power , • Chief Minister and Council of\n              Ministers , • State Secretariat\n     4      Local Administration                                     3\n                 • District Administration , • Municipal Corporation , • Zila\n             Panchayat\n     5       Election Commission                                      4\n                 • Role and Functioning , • Chief Election Commissioner , • State\n              Election Commission\n                               Total Hours                       28\n\n\nTextbook :\n 1  The Constitution of India, B.L. Fadia, Sahitya Bhawan, 2017\n\nReferences:\n 1  Constitutional Law of India, Constitutional Law of India, Dr. J.N. Pandey, Central Law\n    Agency, 2022\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    45.00         45.00          5.00           5.00\n\nInstructional Method:\n 1   a. The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n 3  Students will use supplementary resources such as online videos.\n\nSupplementary Resources:\n 1  https://legislative.gov.in/constitution-of-india\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 2  https://www.india.gov.in/my-government/constitution-india\n 3  https://www.constitutionofindia.net/constitution_of_india\n 4  https://main.sci.gov.in/constitution\n 5  https://www.youtube.com/watch?\n    v=S_3i0Hf8KMI&list=PL4gSUwMBf0L0p8mciCow7pSMs0ZViBe1R\n 6  https://www.youtube.com/watch?\n    v=9MYY4SXEGCE&list=PLVOgwA_DiGzoFR3j1mSGn5Z_OQLxgodQi\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09AU0101 - INDIAN CONSTITUTION (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "f2d8e5129ae60c4ae8032a3da045d68b3e35de4310e66ea4eccb158030e73d51"
+    },
+    {
+      "subject_id": "45009131210101",
+      "subject_name": "MATHEMATICS-I",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 1,
+      "subject_code": "09MA2101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATHS-I.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09MA2101 - MATHEMATICS-I (.pdf",
+      "expected_pdf_sha256": "0a1cd09b2a7499423a1329a6e5a96a4def52c819cc42bd9337f61dddd651103d",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MATHEMATICS-I",
+        "course_code": "09MA2101",
+        "semester_label": "1",
+        "credits": 4,
+        "prerequisite": "Basic Mathematics"
+      },
+      "objectives": [
+        "Students are intended to understand the basic concepts and principles of Mathematics such as basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry. This knowledge is required to understand and solve Engineering problems. The course will empower students to use proper Mathematical tool to understand Engineering principles and concepts. Main objective of the course is to apply concepts of basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry or suitable Mathematical tool to solve given engineering problems."
+      ],
+      "course_outcomes": [
+        "Classify the different types of sets of numbers.",
+        "Understand the laws of power of numbers.",
+        "Find LCM and HCF of numbers.",
+        "Solve simple problems on algebraic expressions.",
+        "Compute the area and perimeter of 2D-shapes and volume and surface area of 3D-shapes.",
+        "Solve the applied problems using right triangle trigonometry."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic calculation",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Set of Numbers, Indices"
+            ],
+            "topics_text": "Set of Numbers, Indices",
+            "topics": [
+              "Set of Numbers, Indices"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "HCF and LCM of numbers",
+            "contact_hours": 4,
+            "topic_lines": [
+              "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF",
+              "and LCM of decimals"
+            ],
+            "topics_text": "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF and LCM of decimals",
+            "topics": [
+              "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF",
+              "and LCM of decimals"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Polynomials",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition, Arithmetic properties of polynomials, Algebraic",
+              "identities"
+            ],
+            "topics_text": "Definition, Arithmetic properties of polynomials, Algebraic identities",
+            "topics": [
+              "Definition, Arithmetic properties of polynomials, Algebraic",
+              "identities"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Mensuration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Area and perimeter of square, rectangle, triangle, trapezium,",
+              "parallelogram, rhombus, circle, Surface area and volume of cube,",
+              "cuboid, cone, cylinder, sphere"
+            ],
+            "topics_text": "Area and perimeter of square, rectangle, triangle, trapezium, parallelogram, rhombus, circle, Surface area and volume of cube, cuboid, cone, cylinder, sphere",
+            "topics": [
+              "Area and perimeter of square, rectangle, triangle, trapezium,",
+              "parallelogram, rhombus, circle, Surface area and volume of cube,",
+              "cuboid, cone, cylinder, sphere"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Trigonometry",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Trigonometry ratios, Concept of angles, Unit circle,",
+              "T- Ratios of multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction to Trigonometry ratios, Concept of angles, Unit circle, T- Ratios of multiple angles, sub-multiple angles Total Hours 28",
+            "topics": [
+              "Introduction to Trigonometry ratios, Concept of angles, Unit circle,",
+              "T- Ratios of multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic calculation",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Set of numbers and indices"
+            ],
+            "topics_text": "Set of numbers and indices",
+            "topics": [
+              "Set of numbers and indices"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "HCF and LCM of numbers",
+            "contact_hours": 4,
+            "topic_lines": [
+              "HCF and LCM of numbers, HCF and LCM of fractions and",
+              "decimals"
+            ],
+            "topics_text": "HCF and LCM of numbers, HCF and LCM of fractions and decimals",
+            "topics": [
+              "HCF and LCM of numbers, HCF and LCM of fractions and",
+              "decimals"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Polynomials",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Arithmetic properties of polynomials, Algebraic identities"
+            ],
+            "topics_text": "Arithmetic properties of polynomials, Algebraic identities",
+            "topics": [
+              "Arithmetic properties of polynomials, Algebraic identities"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Mensuration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Area and perimeter of square, rectangle, triangle, Area and",
+              "perimeter of trapezium, parallelogram, rhombus, circle, Surface area",
+              "and volume of cube, cuboid, cone, Surface area and volume of",
+              "cylinder, sphere"
+            ],
+            "topics_text": "Area and perimeter of square, rectangle, triangle, Area and perimeter of trapezium, parallelogram, rhombus, circle, Surface area and volume of cube, cuboid, cone, Surface area and volume of cylinder, sphere",
+            "topics": [
+              "Area and perimeter of square, rectangle, triangle, Area and",
+              "perimeter of trapezium, parallelogram, rhombus, circle, Surface area",
+              "and volume of cube, cuboid, cone, Surface area and volume of",
+              "cylinder, sphere"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Trigonometry",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of",
+              "multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ],
+            "topics_text": "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of multiple angles, sub-multiple angles Total Hours 28",
+            "topics": [
+              "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of",
+              "multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, NCERT, NCERT, 2022",
+          "NCERT MATHEMATICS for class-VI, NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022"
+        ],
+        "textbooks": [
+          "NCERT Class-XI science Mathematics , NCERT, NCERT, 2022",
+          "NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT, NCERT, 2022 References:",
+          "NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, NCERT, NCERT, 2022",
+          "NCERT MATHEMATICS for class-VI, NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://en.wikipedia.org/wiki/Set_(mathematics)",
+          "https://en.wikipedia.org/wiki/Least_common_multiple",
+          "https://en.wikipedia.org/wiki/Polynomial",
+          "https://en.wikipedia.org/wiki/Mensuration",
+          "https://en.wikipedia.org/wiki/Trigonometry"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6375,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    MATHEMATICS-I\nCOURSE CODE     09MA2101\nCOURSE CREDITS  4\n\nObjective:\n 1  Students are intended to understand the basic concepts and principles of Mathematics such\n     as basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry. This\n    knowledge is required to understand and solve Engineering problems. The course will\n    empower students to use proper Mathematical tool to understand Engineering principles\n    and concepts. Main objective of the course is to apply concepts of basic mathematics, HCF\n    and LCM, polynomials, mensuration and trigonometry or suitable Mathematical tool to\n     solve given engineering problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Classify the different types of sets of numbers.\n 2  Understand the laws of power of numbers.\n 3  Find LCM and HCF of numbers.\n 4  Solve simple problems on algebraic expressions.\n 5  Compute the area and perimeter of 2D-shapes and volume and surface area of 3D-shapes.\n 6  Solve the applied problems using right triangle trigonometry.\n\n\nPre-requisite of course:Basic Mathematics\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Basic calculation                                         2\n              Set of Numbers, Indices\n     2    HCF and LCM of numbers                                4\n         HCF of integer, LCM of integer, HCF and LCM of fractions, HCF\n            and LCM of decimals\n     3      Polynomials                                             4\n               Definition, Arithmetic properties of polynomials, Algebraic\n                identities\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Mensuration                                             8\n            Area and perimeter of square, rectangle, triangle, trapezium,\n              parallelogram, rhombus, circle, Surface area and volume of cube,\n              cuboid, cone, cylinder, sphere\n     5      Trigonometry                                            10\n               Introduction to Trigonometry ratios, Concept of angles, Unit circle,\n             T- Ratios of multiple angles, sub-multiple angles\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Basic calculation                                         2\n              Set of numbers and indices\n     2    HCF and LCM of numbers                                4\n         HCF and LCM of numbers, HCF and LCM of fractions and\n             decimals\n     3      Polynomials                                             4\n              Arithmetic properties of polynomials, Algebraic identities\n     4      Mensuration                                             8\n            Area and perimeter of square, rectangle, triangle, Area and\n              perimeter of trapezium, parallelogram, rhombus, circle, Surface area\n            and volume of cube, cuboid, cone, Surface area and volume of\n               cylinder, sphere\n     5      Trigonometry                                            10\n             Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of\n              multiple angles, sub-multiple angles\n                               Total Hours                       28\n\nTextbook :\n 1 NCERT Class-XI science Mathematics , NCERT, NCERT, 2022\n 2 NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022\n 3 NCERT Class-X Mathematics, NCERT, NCERT, 2022\n\nReferences:\n 1 NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, NCERT,\n   NCERT, 2022\n 2 NCERT MATHEMATICS for class-VI, NCERT MATHEMATICS for class-VI, NCERT,\n   NCERT, 2022\n 3 NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022\n\nSuggested Theory Distribution:\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         30.00         30.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms\n\nSupplementary Resources:\n 1  https://en.wikipedia.org/wiki/Set_(mathematics)\n 2  https://en.wikipedia.org/wiki/Least_common_multiple\n 3  https://en.wikipedia.org/wiki/Polynomial\n 4  https://en.wikipedia.org/wiki/Mensuration\n 5  https://en.wikipedia.org/wiki/Trigonometry\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "0a1cd09b2a7499423a1329a6e5a96a4def52c819cc42bd9337f61dddd651103d"
+    },
+    {
+      "subject_id": "45009135210201",
+      "subject_name": "Mechanical Workshop",
+      "course_id": 45,
+      "course_name": "Diploma Mechanical Engineering",
+      "semester": 1,
+      "subject_code": "09ME2102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/WS.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Mechanical Engineering/Semester_Unspecified/09ME2102 - Mechanical Workshop (.pdf",
+      "expected_pdf_sha256": "6a9fd21b5727656599b64a03d3be99457f372e7fbd315673c69ea833a35ba4d3",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MECHANICAL WORKSHOP",
+        "course_code": "09ME2102",
+        "semester_label": "1",
+        "credits": 2,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "Workshop training is a pillar of the real industrial situation which supports to grow and boost relevant technical hand skills required by the technician working in the various engineering trades and workshops. Irrespective of branch the use of workshop performs in day to day industrial as well domestic life helps to soften the problems."
+      ],
+      "course_outcomes": [
+        "Choice the appropriate tools essential for definite operation.",
+        "Know applications of hand tools and power tools.",
+        "Know the safety actions required to be taken while using the tools.",
+        "Understand the processes of machine tools"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "To know and gain worth of mechanical engineering in diverse",
+            "contact_hours": 2,
+            "topic_lines": [
+              "fields of engineering",
+              "To know and gain worth of mechanical engineering in diverse fields",
+              "of engineering"
+            ],
+            "topics_text": "fields of engineering To know and gain worth of mechanical engineering in diverse fields of engineering",
+            "topics": [
+              "fields of engineering",
+              "To know and gain worth of mechanical engineering in diverse fields",
+              "of engineering"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "To prepare plant layout for workshop.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To prepare plant layout for workshop."
+            ],
+            "topics_text": "To prepare plant layout for workshop.",
+            "topics": [
+              "To prepare plant layout for workshop."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "To prepare job a by using files and hacksaw.",
+            "contact_hours": 12,
+            "topic_lines": [
+              "To prepare job a by using files and hacksaw."
+            ],
+            "topics_text": "To prepare job a by using files and hacksaw.",
+            "topics": [
+              "To prepare job a by using files and hacksaw."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Hands on practice of punch and hammer.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Hands on practice of punch and hammer."
+            ],
+            "topics_text": "Hands on practice of punch and hammer.",
+            "topics": [
+              "Hands on practice of punch and hammer."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Demonstration of carpentry tools.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Demonstration of carpentry tools."
+            ],
+            "topics_text": "Demonstration of carpentry tools.",
+            "topics": [
+              "Demonstration of carpentry tools."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "To prepare carpentry job (wood material) as per given diagram.",
+            "contact_hours": 10,
+            "topic_lines": [
+              "To prepare carpentry job (wood material) as per given diagram."
+            ],
+            "topics_text": "To prepare carpentry job (wood material) as per given diagram.",
+            "topics": [
+              "To prepare carpentry job (wood material) as per given diagram."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "To. Perform experiment on spot welding.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To. Perform experiment on spot welding."
+            ],
+            "topics_text": "To. Perform experiment on spot welding.",
+            "topics": [
+              "To. Perform experiment on spot welding."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "To perform experiment on arc welding.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To perform experiment on arc welding."
+            ],
+            "topics_text": "To perform experiment on arc welding.",
+            "topics": [
+              "To perform experiment on arc welding."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "To perform experiment on tin smithy.",
+            "contact_hours": 6,
+            "topic_lines": [
+              "To perform experiment on tin smithy."
+            ],
+            "topics_text": "To perform experiment on tin smithy.",
+            "topics": [
+              "To perform experiment on tin smithy."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "To demonstration of plumbing tools.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To demonstration of plumbing tools."
+            ],
+            "topics_text": "To demonstration of plumbing tools.",
+            "topics": [
+              "To demonstration of plumbing tools."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Hands on the practice of power tools.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Hands on the practice of power tools."
+            ],
+            "topics_text": "Hands on the practice of power tools.",
+            "topics": [
+              "Hands on the practice of power tools."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "To interpret the use of drilling machine and to prepare job.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To interpret the use of drilling machine and to prepare job.",
+              "Total Hours 56"
+            ],
+            "topics_text": "To interpret the use of drilling machine and to prepare job. Total Hours 56",
+            "topics": [
+              "To interpret the use of drilling machine and to prepare job.",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Workshop Practice, Workshop Practice, H.S. Bawa, McGraw Hill , 2009"
+        ],
+        "textbooks": [
+          "Workshop Technology, Kr Vinayaka, Sapna Book House, 2015 References:",
+          "Workshop Practice, Workshop Practice, H.S. Bawa, McGraw Hill , 2009"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.aboutmech.com/2020/09/workshop-technology.html"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5192,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (MECHANICAL\n                ENGINEERING)\nSEMESTER         1\nCOURSE TITLE   MECHANICAL WORKSHOP\nCOURSE CODE     09ME2102\nCOURSE CREDITS  2\n\nObjective:\n 1  Workshop training is a pillar of the real industrial situation which supports to grow and\n     boost relevant technical hand skills required by the technician working in the various\n     engineering trades and workshops. Irrespective of branch the use of workshop performs in\n    day to day industrial as well domestic life helps to soften the problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Choice the appropriate tools essential for definite operation.\n 2  Know applications of hand tools and power tools.\n 3  Know the safety actions required to be taken while using the tools.\n 4  Understand the processes of machine tools\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            4         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     To know and gain worth of mechanical engineering in diverse   2\n                fields of engineering\n           To know and gain worth of mechanical engineering in diverse fields\n              of engineering\n     2     To prepare plant layout for workshop.                       4\n           To prepare plant layout for workshop.\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3     To prepare job a by using files and hacksaw.                  12\n           To prepare job a by using files and hacksaw.\n     4     Hands on practice of punch and hammer.                    4\n            Hands on practice of punch and hammer.\n     5      Demonstration of carpentry tools.                           2\n             Demonstration of carpentry tools.\n     6     To prepare carpentry job (wood material) as per given diagram. 10\n           To prepare carpentry job (wood material) as per given diagram.\n     7      To. Perform experiment on spot welding.                     4\n             To. Perform experiment on spot welding.\n     8     To perform experiment on arc welding.                      4\n           To perform experiment on arc welding.\n     9     To perform experiment on tin smithy.                       6\n           To perform experiment on tin smithy.\n     10     To demonstration of plumbing tools.                        2\n           To demonstration of plumbing tools.\n     11     Hands on the practice of power tools.                        2\n            Hands on the practice of power tools.\n     12     To interpret the use of drilling machine and to prepare job.     4\n           To interpret the use of drilling machine and to prepare job.\n                               Total Hours                       56\n\nTextbook :\n 1  Workshop Technology, Kr Vinayaka, Sapna Book House, 2015\n\nReferences:\n 1  Workshop Practice, Workshop Practice, H.S. Bawa, McGraw Hill , 2009\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    28.00         32.00         40.00\n\nInstructional Method:\n 1  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory.\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 2  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nSupplementary Resources:\n 1  https://www.aboutmech.com/2020/09/workshop-technology.html\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "6a9fd21b5727656599b64a03d3be99457f372e7fbd315673c69ea833a35ba4d3"
+    }
+  ],
+  "build_summary": {
+    "extracted": 7,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

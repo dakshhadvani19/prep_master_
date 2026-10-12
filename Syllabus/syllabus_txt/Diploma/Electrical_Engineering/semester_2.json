@@ -1,0 +1,1571 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 47,
+    "course_name": "Diploma Electrical Engineering",
+    "output_slug": "Electrical_Engineering"
+  },
+  "semester": 2,
+  "subject_count": 5,
+  "subjects": [
+    {
+      "subject_id": "47000955310401",
+      "subject_name": "AC CIRCUIT",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 2,
+      "subject_code": "09EE3104",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09EE3104-AC-Circuit.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09EE3104 - AC CIRCUIT (.pdf",
+      "expected_pdf_sha256": "254e790666c15f13485dec72074a2b3c5df3c7f454c2207dadd6a1e56fc4b8be",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "AC CIRCUIT",
+        "course_code": "09EE3104",
+        "semester_label": "2",
+        "credits": 5,
+        "prerequisite": "Basic knowledge of physics and D.C. Circuits."
+      },
+      "objectives": [
+        "This is one of the important subjects of electrical engineering. After studying this student should be understand the basic concept of A.C. circuits for highly effectively working as a skilled electrical engineer. This subject teach to students apply the principle of A.C. circuit; solve the problem of electrical industry and electric network. Basically electrical engineering dividedly power generation, transmission, distribution and utilization in form of A.C. so every electrical engineer should know basic concept of A.C. system. To solve the problem by using the knowledge of fundamental concept of series-parallel circuit and poly-phase circuits. To analyse and measure various type of powers in terms of power factor using watt meters."
+      ],
+      "course_outcomes": [
+        "To understand & apply various parameters of AC circuit",
+        "To understand and troubleshoot problems related to single phase AC series and parallel circuits.",
+        "To analyse and understand single phase and three phase AC circuit.",
+        "To analyse and measure various type of powers and power factor."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 2 50 30 20 25 25 MR. MRUDURAJSINH JAYENDRASINH MR. MITTAL KIRITBHAI JOISER CHUDASAMADigitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamentals of AC circuit",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction, Advantage of AC system over DC system, Definition",
+              "related to AC system Generation of alternating EMF(Basic",
+              "Alternator) Equation and waveform of alternating EMF, RMS",
+              "value, Mean value or Average value Form factor, Peak factor or",
+              "crest factor Different form of alternating voltage and current, Pharos",
+              "representation of alternating quantity Phase of alternating quantity,",
+              "Define: phase and phase difference, Addition and subtraction of",
+              "alternating quantities, Mathematical representation of phasor",
+              "Mathematical operation of vector"
+            ],
+            "topics_text": "Introduction, Advantage of AC system over DC system, Definition related to AC system Generation of alternating EMF(Basic Alternator) Equation and waveform of alternating EMF, RMS value, Mean value or Average value Form factor, Peak factor or crest factor Different form of alternating voltage and current, Pharos representation of alternating quantity Phase of alternating quantity, Define: phase and phase difference, Addition and subtraction of alternating quantities, Mathematical representation of phasor Mathematical operation of vector",
+            "topics": [
+              "Introduction, Advantage of AC system over DC system, Definition",
+              "related to AC system Generation of alternating EMF(Basic",
+              "Alternator) Equation and waveform of alternating EMF, RMS",
+              "value, Mean value or Average value Form factor, Peak factor or",
+              "crest factor Different form of alternating voltage and current, Pharos",
+              "representation of alternating quantity Phase of alternating quantity,",
+              "Define: phase and phase difference, Addition and subtraction of",
+              "alternating quantities, Mathematical representation of phasor",
+              "Mathematical operation of vector"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Analysis AC series circuit",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction, Pure resistive, inductive and capacitive AC circuit and",
+              "its voltage and current response., AC circuit with series elements, R-",
+              "L, R-C, L-C , R-L-C combination of AC series circuit, Impedance",
+              "triangle, power triangle, power factor Resonance circuit, bandwidth,",
+              "quality factor in series circuit"
+            ],
+            "topics_text": "Introduction, Pure resistive, inductive and capacitive AC circuit and its voltage and current response., AC circuit with series elements, R- L, R-C, L-C , R-L-C combination of AC series circuit, Impedance triangle, power triangle, power factor Resonance circuit, bandwidth, quality factor in series circuit",
+            "topics": [
+              "Introduction, Pure resistive, inductive and capacitive AC circuit and",
+              "its voltage and current response., AC circuit with series elements, R",
+              "L, R-C, L-C , R-L-C combination of AC series circuit, Impedance",
+              "triangle, power triangle, power factor Resonance circuit, bandwidth,",
+              "quality factor in series circuit"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Analysis AC parallel circuit",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Introduction, Method of solving parallel circuit, Phasor algebra",
+              "method, Admittance method, Complex algebra method, AC circuit",
+              "with parallel elements, Resonance, bandwidth, quality factor in",
+              "parallel circuit, Series-parallel circuit, Comparison between series",
+              "and parallel resonance circuit"
+            ],
+            "topics_text": "Introduction, Method of solving parallel circuit, Phasor algebra method, Admittance method, Complex algebra method, AC circuit with parallel elements, Resonance, bandwidth, quality factor in parallel circuit, Series-parallel circuit, Comparison between series and parallel resonance circuit",
+            "topics": [
+              "Introduction, Method of solving parallel circuit, Phasor algebra",
+              "method, Admittance method, Complex algebra method, AC circuit",
+              "with parallel elements, Resonance, bandwidth, quality factor in",
+              "parallel circuit, Series-parallel circuit, Comparison between series",
+              "and parallel resonance circuit"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Three phase AC circuits",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Introduction Advantages of three phase system over single phase",
+              "system, Generation of three phase EMF and its waveform Phasor",
+              "and complex representation of three phase supply, Term related to",
+              "three phase AC system, Numbering of phase, phase sequence and",
+              "polarity Balance and unbalance load Concept of line value and",
+              "phase value, Types of three phase connection, phase and line",
+              "quantity in three phase star and delta connection"
+            ],
+            "topics_text": "Introduction Advantages of three phase system over single phase system, Generation of three phase EMF and its waveform Phasor and complex representation of three phase supply, Term related to three phase AC system, Numbering of phase, phase sequence and polarity Balance and unbalance load Concept of line value and phase value, Types of three phase connection, phase and line quantity in three phase star and delta connection",
+            "topics": [
+              "Introduction Advantages of three phase system over single phase",
+              "system, Generation of three phase EMF and its waveform Phasor",
+              "and complex representation of three phase supply, Term related to",
+              "three phase AC system, Numbering of phase, phase sequence and",
+              "polarity Balance and unbalance load Concept of line value and",
+              "phase value, Types of three phase connection, phase and line",
+              "quantity in three phase star and delta connection"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "AC power analysis",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Power triangle, active power, reactive power, ,",
+              "apparent power and power factor. Causes of low power factor,",
+              "Disadvantages of low power factor Advantages of power factor",
+              "improvement, Various methods of improving power factor",
+              "Measurement of single phase power and three phase power",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction, Power triangle, active power, reactive power, , apparent power and power factor. Causes of low power factor, Disadvantages of low power factor Advantages of power factor improvement, Various methods of improving power factor Measurement of single phase power and three phase power Total Hours 28",
+            "topics": [
+              "Introduction, Power triangle, active power, reactive power, ,",
+              "apparent power and power factor. Causes of low power factor,",
+              "Disadvantages of low power factor Advantages of power factor",
+              "improvement, Various methods of improving power factor",
+              "Measurement of single phase power and three phase power",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Use DSO to determine basic terminology of AC waveform."
+            ],
+            "topics_text": "Use DSO to determine basic terminology of AC waveform.",
+            "topics": [
+              "Use DSO to determine basic terminology of AC waveform."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Use electrical measuring instruments to measures various electrical",
+              "parameters."
+            ],
+            "topics_text": "Use electrical measuring instruments to measures various electrical parameters.",
+            "topics": [
+              "Use electrical measuring instruments to measures various electrical",
+              "parameters."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determine inductance and resistance of inductive load and find",
+              "active power flow through resistor."
+            ],
+            "topics_text": "Determine inductance and resistance of inductive load and find active power flow through resistor.",
+            "topics": [
+              "Determine inductance and resistance of inductive load and find",
+              "active power flow through resistor."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determine parameter of series R-L circuit, draw phasor diagram."
+            ],
+            "topics_text": "Determine parameter of series R-L circuit, draw phasor diagram.",
+            "topics": [
+              "Determine parameter of series R-L circuit, draw phasor diagram."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determine parameter of series R-C circuit, draw phasor diagram"
+            ],
+            "topics_text": "Determine parameter of series R-C circuit, draw phasor diagram",
+            "topics": [
+              "Determine parameter of series R-C circuit, draw phasor diagram"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determine parameter of series R-L-C circuit, draw phasor diagram."
+            ],
+            "topics_text": "Determine parameter of series R-L-C circuit, draw phasor diagram.",
+            "topics": [
+              "Determine parameter of series R-L-C circuit, draw phasor diagram."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Use variable frequency supply to create resonance in given series R-",
+              "L-C circuit."
+            ],
+            "topics_text": "Use variable frequency supply to create resonance in given series R- L-C circuit.",
+            "topics": [
+              "Use variable frequency supply to create resonance in given series R",
+              "L-C circuit."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determine parameter of parallel R-L-C circuit, draw phasor",
+              "diagram."
+            ],
+            "topics_text": "Determine parameter of parallel R-L-C circuit, draw phasor diagram.",
+            "topics": [
+              "Determine parameter of parallel R-L-C circuit, draw phasor",
+              "diagram."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Use voltmeter, ammeter, wattmeter, power factor meter to",
+              "determine voltage, current, power and power factor for RLC parallel",
+              "circuit with series connection of resistor and inductor in parallel",
+              "with capacitor."
+            ],
+            "topics_text": "Use voltmeter, ammeter, wattmeter, power factor meter to determine voltage, current, power and power factor for RLC parallel circuit with series connection of resistor and inductor in parallel with capacitor.",
+            "topics": [
+              "Use voltmeter, ammeter, wattmeter, power factor meter to",
+              "determine voltage, current, power and power factor for RLC parallel",
+              "circuit with series connection of resistor and inductor in parallel",
+              "with capacitor."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Use variable frequency supply to create resonance in given parallel",
+              "R-L-C circuit."
+            ],
+            "topics_text": "Use variable frequency supply to create resonance in given parallel R-L-C circuit.",
+            "topics": [
+              "Use variable frequency supply to create resonance in given parallel",
+              "R-L-C circuit."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To measure phase and line quantity relationship in star and delta",
+              "connection in a three phase system."
+            ],
+            "topics_text": "To measure phase and line quantity relationship in star and delta connection in a three phase system.",
+            "topics": [
+              "To measure phase and line quantity relationship in star and delta",
+              "connection in a three phase system."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determination of power in three phase balanced circuit using two",
+              "watt meter and three watt meter method."
+            ],
+            "topics_text": "Determination of power in three phase balanced circuit using two watt meter and three watt meter method.",
+            "topics": [
+              "Determination of power in three phase balanced circuit using two",
+              "watt meter and three watt meter method."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Determination of power in three phase unbalanced circuit using",
+              "three watt meter method."
+            ],
+            "topics_text": "Determination of power in three phase unbalanced circuit using three watt meter method.",
+            "topics": [
+              "Determination of power in three phase unbalanced circuit using",
+              "three watt meter method."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Tutorial 1",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Tutorial on Fundamentals of AC circuit"
+            ],
+            "topics_text": "Tutorial on Fundamentals of AC circuit",
+            "topics": [
+              "Tutorial on Fundamentals of AC circuit"
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Tutorial 2",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Tutorial on Analysis AC series circuit"
+            ],
+            "topics_text": "Tutorial on Analysis AC series circuit",
+            "topics": [
+              "Tutorial on Analysis AC series circuit"
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Tutorial 3",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Tutorial on Analysis AC parallel circuit"
+            ],
+            "topics_text": "Tutorial on Analysis AC parallel circuit",
+            "topics": [
+              "Tutorial on Analysis AC parallel circuit"
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Tutorial 4",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Tutorial on Three phase AC circuits"
+            ],
+            "topics_text": "Tutorial on Three phase AC circuits",
+            "topics": [
+              "Tutorial on Three phase AC circuits"
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Tutorial 5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Tutorial on AC power analysis",
+              "Total Hours 56"
+            ],
+            "topics_text": "Tutorial on AC power analysis Total Hours 56",
+            "topics": [
+              "Tutorial on AC power analysis",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "A Text Book of Electrical Technology Vol-I, A Text Book of Electrical Technology Vol-I, B. L. Theraja, S. Chand & Co. Ltd, 2014",
+          "Fundamental of Electrical Engineering, Fundamental of Electrical Engineering, Tarlok Singh, S. K. Kataria & Sons, 2012",
+          "Theory and Problem in Basic Electrical Engineering, Theory and Problem in Basic Electrical Engineering, D.P. Kothari and I.J. Nagrath, Prentice Hall India, 2012",
+          "Fundamentals of Electrical Engineering & Electronics, Fundamentals of Electrical Engineering & Electronics, S.K. Sahdev, Dhanpat Rai & Co. LTD., 2014",
+          "Basic Electrical Engineering, Basic Electrical Engineering, U. A. Bakshi & V. U. Bakshi, Technical Publication Pune, 2012",
+          "Elements of Electrical Engineering, Elements of Electrical Engineering, U. A. Patel, Atul Prakashan, 2016",
+          "Elements of Electrical Engineering, Elements of Electrical Engineering, R. Jadeja, T. Trivedi & A.Ved,, Tata-McGraw-Hill, 2018",
+          "Basic Electrical Engineering, Basic Electrical Engineering, V.N. Mittal, Tata-McGraw- Hill, 2006"
+        ],
+        "textbooks": [
+          "A Text Book of Electrical Technology Vol-I, B. L. Theraja, S. Chand & Co. Ltd, 2014",
+          "Fundamental of Electrical Engineering, Tarlok Singh, S. K. Kataria & Sons, 2012",
+          "Theory and Problem in Basic Electrical Engineering, D.P. Kothari and I.J. Nagrath, Prentice Hall India, 2012",
+          "Fundamentals of Electrical Engineering & Electronics, S.K. Sahdev, Dhanpat Rai & Co. LTD., 2014",
+          "Basic Electrical Engineering, U. A. Bakshi & V. U. Bakshi, Technical Publication Pune, 2012",
+          "Elements of Electrical Engineering, U. A. Patel, Atul Prakashan, 2016",
+          "Elements of Electrical Engineering, R. Jadeja, T. Trivedi & A.Ved,, Tata-McGraw-Hill, 2018",
+          "Basic Electrical Engineering, V.N. Mittal, Tata-McGraw-Hill, 2006 References:",
+          "A Text Book of Electrical Technology Vol-I, A Text Book of Electrical Technology Vol-I, B. L. Theraja, S. Chand & Co. Ltd, 2014",
+          "Fundamental of Electrical Engineering, Fundamental of Electrical Engineering, Tarlok Singh, S. K. Kataria & Sons, 2012",
+          "Theory and Problem in Basic Electrical Engineering, Theory and Problem in Basic Electrical Engineering, D.P. Kothari and I.J. Nagrath, Prentice Hall India, 2012",
+          "Fundamentals of Electrical Engineering & Electronics, Fundamentals of Electrical Engineering & Electronics, S.K. Sahdev, Dhanpat Rai & Co. LTD., 2014",
+          "Basic Electrical Engineering, Basic Electrical Engineering, U. A. Bakshi & V. U. Bakshi, Technical Publication Pune, 2012",
+          "Elements of Electrical Engineering, Elements of Electrical Engineering, U. A. Patel, Atul Prakashan, 2016",
+          "Elements of Electrical Engineering, Elements of Electrical Engineering, R. Jadeja, T. Trivedi & A.Ved,, Tata-McGraw-Hill, 2018",
+          "Basic Electrical Engineering, Basic Electrical Engineering, V.N. Mittal, Tata-McGraw- Hill, 2006"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://nptel.ac.in/courses/108108076/",
+          "http://nptel.ac.in/downloads/108105053/",
+          "http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6- 002-circuits- and-electronics-spring-2007/video-lectures/",
+          "https://www.facstaff.bucknell.edu/mastascu/eLessonsHTML/EEIndex.html",
+          "http://www.electrical4u.com/nature-of-electricity/",
+          "http://vlab.amrita.edu/index.php CHUDASAMA"
+        ]
+      },
+      "page_count": 5,
+      "extracted_character_count": 12723,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (ELECTRICAL\n                ENGINEERING)\nSEMESTER         2\nCOURSE TITLE   AC CIRCUIT\nCOURSE CODE     09EE3104\nCOURSE CREDITS  5\n\nObjective:\n 1  This is one of the important subjects of electrical engineering. After studying this student\n     should be understand the basic concept of A.C. circuits for highly effectively working as a\n     skilled electrical engineer. This subject teach to students apply the principle of A.C. circuit;\n     solve the problem of electrical industry and electric network. Basically electrical\n     engineering dividedly power generation, transmission, distribution and utilization in form\n     of A.C. so every electrical engineer should know basic concept of A.C. system. To solve\n     the problem by using the knowledge of fundamental concept of series-parallel circuit and\n     poly-phase circuits. To analyse and measure various type of powers in terms of power\n     factor using watt meters.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand & apply various parameters of AC circuit\n 2  To understand and troubleshoot problems related to single phase AC series and parallel\n      circuits.\n 3  To analyse and understand single phase and three phase AC circuit.\n 4  To analyse and measure various type of powers and power factor.\n\n\nPre-requisite of course:Basic knowledge of physics and D.C. Circuits.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            2        50     30      20        25         25\n\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH                    MR. MITTAL KIRITBHAI JOISER\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fundamentals of AC circuit                                6\n               Introduction, Advantage of AC system over DC system, Definition\n               related to AC system Generation of alternating EMF(Basic\n               Alternator) Equation and waveform of alternating EMF, RMS\n               value, Mean value or Average value Form factor, Peak factor or\n                crest factor Different form of alternating voltage and current, Pharos\n               representation of alternating quantity Phase of alternating quantity,\n              Define: phase and phase difference, Addition and subtraction of\n               alternating quantities, Mathematical representation of phasor\n             Mathematical operation of vector\n     2      Analysis AC series circuit                                  8\n               Introduction, Pure resistive, inductive and capacitive AC circuit and\n                   its voltage and current response., AC circuit with series elements, R-\n              L, R-C, L-C , R-L-C combination of AC series circuit, Impedance\n                triangle, power triangle, power factor Resonance circuit, bandwidth,\n               quality factor in series circuit\n     3      Analysis AC parallel circuit                                5\n               Introduction, Method of solving parallel circuit, Phasor algebra\n             method, Admittance method, Complex algebra method, AC circuit\n             with parallel elements, Resonance, bandwidth, quality factor in\n                parallel circuit, Series-parallel circuit, Comparison between series\n            and parallel resonance circuit\n     4      Three phase AC circuits                                   5\n               Introduction Advantages of three phase system over single phase\n              system, Generation of three phase EMF and its waveform Phasor\n            and complex representation of three phase supply, Term related to\n               three phase AC system, Numbering of phase, phase sequence and\n               polarity Balance and unbalance load Concept of line value and\n             phase value, Types of three phase connection, phase and line\n               quantity in three phase star and delta connection\n     5    AC power analysis                                        4\n               Introduction, Power triangle, active power, reactive power, ,\n              apparent power and power factor. Causes of low power factor,\n             Disadvantages of low power factor Advantages of power factor\n             improvement, Various methods of improving power factor\n            Measurement of single phase power and three phase power\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            2\n            Use DSO to determine basic terminology of AC waveform.\n     2      Experiment 2                                            2\n            Use electrical measuring instruments to measures various electrical\n              parameters.\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH                    MR. MITTAL KIRITBHAI JOISER\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Experiment 3                                            2\n             Determine inductance and resistance of inductive load and find\n               active power flow through resistor.\n     4      Experiment 4                                            2\n             Determine parameter of series R-L circuit, draw phasor diagram.\n     5      Experiment 5                                            2\n             Determine parameter of series R-C circuit, draw phasor diagram\n     6      Experiment 6                                            2\n             Determine parameter of series R-L-C circuit, draw phasor diagram.\n     7      Experiment 7                                            2\n            Use variable frequency supply to create resonance in given series R-\n           L-C circuit.\n     8      Experiment 8                                            2\n             Determine parameter of parallel R-L-C circuit, draw phasor\n              diagram.\n     9      Experiment 9                                            2\n            Use voltmeter, ammeter, wattmeter, power factor meter to\n             determine voltage, current, power and power factor for RLC parallel\n                circuit with series connection of resistor and inductor in parallel\n             with capacitor.\n     10     Experiment 10                                           2\n            Use variable frequency supply to create resonance in given parallel\n           R-L-C circuit.\n     11     Experiment 11                                           4\n           To measure phase and line quantity relationship in star and delta\n              connection in a three phase system.\n     12     Experiment 12                                           2\n             Determination of power in three phase balanced circuit using two\n              watt meter and three watt meter method.\n     13     Experiment 13                                           2\n             Determination of power in three phase unbalanced circuit using\n               three watt meter method.\n     14      Tutorial 1                                               6\n               Tutorial on Fundamentals of AC circuit\n     15      Tutorial 2                                               8\n               Tutorial on Analysis AC series circuit\n     16      Tutorial 3                                               5\n               Tutorial on Analysis AC parallel circuit\n     17      Tutorial 4                                               5\n               Tutorial on Three phase AC circuits\n     18      Tutorial 5                                               4\n               Tutorial on AC power analysis\n                               Total Hours                       56\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH                    MR. MITTAL KIRITBHAI JOISER\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Textbook :\n 1 A Text Book of Electrical Technology Vol-I, B. L. Theraja, S. Chand & Co. Ltd, 2014\n 2  Fundamental of Electrical Engineering, Tarlok Singh, S. K. Kataria & Sons, 2012\n 3  Theory and Problem in Basic Electrical Engineering, D.P. Kothari and I.J. Nagrath,\n     Prentice Hall India, 2012\n 4  Fundamentals of Electrical Engineering & Electronics, S.K. Sahdev, Dhanpat Rai & Co.\n    LTD., 2014\n 5  Basic Electrical Engineering, U. A. Bakshi & V. U. Bakshi, Technical Publication Pune,\n    2012\n 6   Elements of Electrical Engineering, U. A. Patel, Atul Prakashan, 2016\n 7  Elements of Electrical Engineering, R. Jadeja, T. Trivedi & A.Ved,, Tata-McGraw-Hill,\n    2018\n 8   Basic Electrical Engineering, V.N. Mittal, Tata-McGraw-Hill, 2006\n\nReferences:\n 1 A Text Book of Electrical Technology Vol-I, A Text Book of Electrical Technology Vol-I,\n    B. L. Theraja, S. Chand & Co. Ltd, 2014\n 2  Fundamental of Electrical Engineering, Fundamental of Electrical Engineering, Tarlok\n     Singh, S. K. Kataria & Sons, 2012\n 3  Theory and Problem in Basic Electrical Engineering, Theory and Problem in Basic\n     Electrical Engineering, D.P. Kothari and I.J. Nagrath, Prentice Hall India, 2012\n 4  Fundamentals of Electrical Engineering & Electronics, Fundamentals of Electrical\n     Engineering & Electronics, S.K. Sahdev, Dhanpat Rai & Co. LTD., 2014\n 5  Basic Electrical Engineering, Basic Electrical Engineering, U. A. Bakshi & V. U. Bakshi,\n     Technical Publication Pune, 2012\n 6  Elements of Electrical Engineering, Elements of Electrical Engineering, U. A. Patel, Atul\n     Prakashan, 2016\n 7  Elements of Electrical Engineering, Elements of Electrical Engineering, R. Jadeja, T.\n     Trivedi & A.Ved,, Tata-McGraw-Hill, 2018\n 8  Basic Electrical Engineering, Basic Electrical Engineering, V.N. Mittal, Tata-McGraw-\n      Hill, 2006\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         10.00         10.00\n\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH                    MR. MITTAL KIRITBHAI JOISER\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 5,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  http://nptel.ac.in/courses/108108076/\n 2  http://nptel.ac.in/downloads/108105053/\n 3  http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6- 002-circuits-\n     and-electronics-spring-2007/video-lectures/\n 4  https://www.facstaff.bucknell.edu/mastascu/eLessonsHTML/EEIndex.html\n 5  http://www.electrical4u.com/nature-of-electricity/\n 6  http://vlab.amrita.edu/index.php\n\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH                    MR. MITTAL KIRITBHAI JOISER\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "254e790666c15f13485dec72074a2b3c5df3c7f454c2207dadd6a1e56fc4b8be"
+    },
+    {
+      "subject_id": "47000955310501",
+      "subject_name": "ELECTRICAL CONTROL PANEL DESIGN",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 2,
+      "subject_code": "09EE3105",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09EE3105-ECPD.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09EE3105 - ELECTRICAL CONTROL PANEL DESIGN (.pdf",
+      "expected_pdf_sha256": "22c25e22ff362b69e0c1edf214a48a0f0e0844792f0bd57a26ca328827be24ff",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ELECTRICAL CONTROL PANEL DESIGN",
+        "course_code": "09EE3105",
+        "semester_label": "2",
+        "credits": 3,
+        "prerequisite": "Basic knowledge of DC circuit, AC circuit and electrical practices."
+      },
+      "objectives": [
+        "The electrical control panel is the brain center for all process industry and represent important element in the proper working and performance of the system. To prepare students with the knowledge and practical skills required to design, interpret, and implement electrical control panels used in industrial and commercial applications, ensuring safety, functionality, and adherence to standards."
+      ],
+      "course_outcomes": [
+        "To understand & apply the use of appropriate tools and testing equipment for electrical panels, and develop panel wiring diagrams using software tools in compliance with electrical standards.",
+        "To understand & apply the concepts of switchgear, measuring equipment, earthing, busbar arrangements, contactors, and interlocking in electrical panel.",
+        "To apply skills in the installation, operation, testing, and maintenance of electrical panels.",
+        "To understand concept of automation and electrical drive."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 6 0 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Experiment 1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To apply knowledge of types of cable, cable construction, cable",
+              "lying, cable joint, cable ratting & size, cable tray, lug and lug",
+              "crimping for connection to panel."
+            ],
+            "topics_text": "To apply knowledge of types of cable, cable construction, cable lying, cable joint, cable ratting & size, cable tray, lug and lug crimping for connection to panel.",
+            "topics": [
+              "To apply knowledge of types of cable, cable construction, cable",
+              "lying, cable joint, cable ratting & size, cable tray, lug and lug",
+              "crimping for connection to panel."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Experiment 2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To apply knowledge of types of wire, wire connector, wire rating,",
+              "wire laying, ferrule, terminal blocks and din rails with control panel",
+              "and understand fundamental of color code of wire."
+            ],
+            "topics_text": "To apply knowledge of types of wire, wire connector, wire rating, wire laying, ferrule, terminal blocks and din rails with control panel and understand fundamental of color code of wire.",
+            "topics": [
+              "To apply knowledge of types of wire, wire connector, wire rating,",
+              "wire laying, ferrule, terminal blocks and din rails with control panel",
+              "and understand fundamental of color code of wire."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Experiment 3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To apply the appropriate connections for different types of switches",
+              "(such as push-button, selector, rocker, rotary cam, emergency",
+              "switches, etc.) in an electrical panel according to the design",
+              "specifications."
+            ],
+            "topics_text": "To apply the appropriate connections for different types of switches (such as push-button, selector, rocker, rotary cam, emergency switches, etc.) in an electrical panel according to the design specifications.",
+            "topics": [
+              "To apply the appropriate connections for different types of switches",
+              "(such as push-button, selector, rocker, rotary cam, emergency",
+              "switches, etc.) in an electrical panel according to the design",
+              "specifications."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Experiment 4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To apply knowledge of tools, safety equipment and testing",
+              "equipment during panel wiring."
+            ],
+            "topics_text": "To apply knowledge of tools, safety equipment and testing equipment during panel wiring.",
+            "topics": [
+              "To apply knowledge of tools, safety equipment and testing",
+              "equipment during panel wiring."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Experiment 5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To Identify importance of different type of panel indicator lamp",
+              "with its operation."
+            ],
+            "topics_text": "To Identify importance of different type of panel indicator lamp with its operation.",
+            "topics": [
+              "To Identify importance of different type of panel indicator lamp",
+              "with its operation."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Experiment 6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To understand connection of analog and digital instruments, also",
+              "perform connection of protective and control instruments- Fuse,",
+              "MCB, MCCB, RCCB and ELCB."
+            ],
+            "topics_text": "To understand connection of analog and digital instruments, also perform connection of protective and control instruments- Fuse, MCB, MCCB, RCCB and ELCB.",
+            "topics": [
+              "To understand connection of analog and digital instruments, also",
+              "perform connection of protective and control instruments- Fuse,",
+              "MCB, MCCB, RCCB and ELCB."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Experiment 7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To identify measuring instruments CT, PT, volt meter, ammeter,",
+              "frequency meter, energy meter, KW meter, PF meter, energy meter,",
+              "reactive power meter, multi-function meter for panel parameter",
+              "checking."
+            ],
+            "topics_text": "To identify measuring instruments CT, PT, volt meter, ammeter, frequency meter, energy meter, KW meter, PF meter, energy meter, reactive power meter, multi-function meter for panel parameter checking.",
+            "topics": [
+              "To identify measuring instruments CT, PT, volt meter, ammeter,",
+              "frequency meter, energy meter, KW meter, PF meter, energy meter,",
+              "reactive power meter, multi-function meter for panel parameter",
+              "checking."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Experiment 8",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To Identify different types of earthing and necessity of neutral and",
+              "grounding for an electric panel."
+            ],
+            "topics_text": "To Identify different types of earthing and necessity of neutral and grounding for an electric panel.",
+            "topics": [
+              "To Identify different types of earthing and necessity of neutral and",
+              "grounding for an electric panel."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Experiment 9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To prepare general arrangement diagram of bus bar for panel",
+              "application with dimension"
+            ],
+            "topics_text": "To prepare general arrangement diagram of bus bar for panel application with dimension",
+            "topics": [
+              "To prepare general arrangement diagram of bus bar for panel",
+              "application with dimension"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Experiment 10",
+            "contact_hours": 6,
+            "topic_lines": [
+              "To apply knowledge of relay and contactor as per application of",
+              "control panel."
+            ],
+            "topics_text": "To apply knowledge of relay and contactor as per application of control panel.",
+            "topics": [
+              "To apply knowledge of relay and contactor as per application of",
+              "control panel."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Experiment 11",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To select circuit breaker as per rating of control panel."
+            ],
+            "topics_text": "To select circuit breaker as per rating of control panel.",
+            "topics": [
+              "To select circuit breaker as per rating of control panel."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Experiment 12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To demonstrate interlocking in control panel."
+            ],
+            "topics_text": "To demonstrate interlocking in control panel.",
+            "topics": [
+              "To demonstrate interlocking in control panel."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Experiment 13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To use DC supply, inverter, UPS, battery and battery charger for",
+              "control and measuring purpose in an electrical control panel."
+            ],
+            "topics_text": "To use DC supply, inverter, UPS, battery and battery charger for control and measuring purpose in an electrical control panel.",
+            "topics": [
+              "To use DC supply, inverter, UPS, battery and battery charger for",
+              "control and measuring purpose in an electrical control panel."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Experiment 14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To select distribution box for LT, HT, domestic, commercial,",
+              "industrial, LDB, MLDB ASB, HDB, MDB, MCB, MCCB types of",
+              "control panel"
+            ],
+            "topics_text": "To select distribution box for LT, HT, domestic, commercial, industrial, LDB, MLDB ASB, HDB, MDB, MCB, MCCB types of control panel",
+            "topics": [
+              "To select distribution box for LT, HT, domestic, commercial,",
+              "industrial, LDB, MLDB ASB, HDB, MDB, MCB, MCCB types of",
+              "control panel"
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Experiment 15",
+            "contact_hours": 6,
+            "topic_lines": [
+              "To prepare layout and general arrangement drawing of internal",
+              "structure of panel."
+            ],
+            "topics_text": "To prepare layout and general arrangement drawing of internal structure of panel.",
+            "topics": [
+              "To prepare layout and general arrangement drawing of internal",
+              "structure of panel."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Experiment 16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To identify and use different symbols, abbreviations, color code,",
+              "electrical code and standards for panel wiring and prepare diagram",
+              "according to requirement."
+            ],
+            "topics_text": "To identify and use different symbols, abbreviations, color code, electrical code and standards for panel wiring and prepare diagram according to requirement.",
+            "topics": [
+              "To identify and use different symbols, abbreviations, color code,",
+              "electrical code and standards for panel wiring and prepare diagram",
+              "according to requirement."
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Experiment 17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To differentiate drawing of control circuit and power circuit of",
+              "control panel and prepare control and wiring diagram as per",
+              "requirement."
+            ],
+            "topics_text": "To differentiate drawing of control circuit and power circuit of control panel and prepare control and wiring diagram as per requirement.",
+            "topics": [
+              "To differentiate drawing of control circuit and power circuit of",
+              "control panel and prepare control and wiring diagram as per",
+              "requirement."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Experiment 18",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To understand types of loads, load distribution, load calculation and",
+              "power management of panel."
+            ],
+            "topics_text": "To understand types of loads, load distribution, load calculation and power management of panel.",
+            "topics": [
+              "To understand types of loads, load distribution, load calculation and",
+              "power management of panel."
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Experiment 19",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To identify specification of control panel as per requirement of",
+              "customer during visit."
+            ],
+            "topics_text": "To identify specification of control panel as per requirement of customer during visit.",
+            "topics": [
+              "To identify specification of control panel as per requirement of",
+              "customer during visit."
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Experiment 20",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To prepared design of control panel as per connected load by using",
+              "various electrical, electronics and instrumentation component."
+            ],
+            "topics_text": "To prepared design of control panel as per connected load by using various electrical, electronics and instrumentation component.",
+            "topics": [
+              "To prepared design of control panel as per connected load by using",
+              "various electrical, electronics and instrumentation component."
+            ]
+          },
+          {
+            "unit_number": 21,
+            "title": "Experiment 21",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To demonstrate procedure of installation, commissioning and",
+              "testing of control panel."
+            ],
+            "topics_text": "To demonstrate procedure of installation, commissioning and testing of control panel.",
+            "topics": [
+              "To demonstrate procedure of installation, commissioning and",
+              "testing of control panel."
+            ]
+          },
+          {
+            "unit_number": 22,
+            "title": "Experiment 22",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To identify enclosure material, name plate details, capacity and",
+              "arrangement of panel."
+            ],
+            "topics_text": "To identify enclosure material, name plate details, capacity and arrangement of panel.",
+            "topics": [
+              "To identify enclosure material, name plate details, capacity and",
+              "arrangement of panel."
+            ]
+          },
+          {
+            "unit_number": 23,
+            "title": "Experiment 23",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To identify faulty components, perform maintenance and",
+              "troubleshooting on the control panel, and analyze the protection",
+              "systems provided for the panel"
+            ],
+            "topics_text": "To identify faulty components, perform maintenance and troubleshooting on the control panel, and analyze the protection systems provided for the panel",
+            "topics": [
+              "To identify faulty components, perform maintenance and",
+              "troubleshooting on the control panel, and analyze the protection",
+              "systems provided for the panel"
+            ]
+          },
+          {
+            "unit_number": 24,
+            "title": "Experiment 24",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To understand, need, application, basic concept and essential",
+              "component of industrial automation."
+            ],
+            "topics_text": "To understand, need, application, basic concept and essential component of industrial automation.",
+            "topics": [
+              "To understand, need, application, basic concept and essential",
+              "component of industrial automation."
+            ]
+          },
+          {
+            "unit_number": 25,
+            "title": "Experiment 25",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To understand basic concept of PLC, SCADA, DCS, HMI and",
+              "necessity of control system."
+            ],
+            "topics_text": "To understand basic concept of PLC, SCADA, DCS, HMI and necessity of control system.",
+            "topics": [
+              "To understand basic concept of PLC, SCADA, DCS, HMI and",
+              "necessity of control system."
+            ]
+          },
+          {
+            "unit_number": 26,
+            "title": "Experiment 26",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To apply knowledge of PLC for design electrical control diagram of",
+              "suitable panel."
+            ],
+            "topics_text": "To apply knowledge of PLC for design electrical control diagram of suitable panel.",
+            "topics": [
+              "To apply knowledge of PLC for design electrical control diagram of",
+              "suitable panel."
+            ]
+          },
+          {
+            "unit_number": 27,
+            "title": "Experiment 27",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To understand construction, types, working details, protection,",
+              "starter and its control circuit of electric drives."
+            ],
+            "topics_text": "To understand construction, types, working details, protection, starter and its control circuit of electric drives.",
+            "topics": [
+              "To understand construction, types, working details, protection,",
+              "starter and its control circuit of electric drives."
+            ]
+          },
+          {
+            "unit_number": 28,
+            "title": "Experiment 28",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To demonstrate basic components, working details, protection,",
+              "application, soft starter and its control panel circuit of electrical",
+              "drives.",
+              "Total Hours 84"
+            ],
+            "topics_text": "To demonstrate basic components, working details, protection, application, soft starter and its control panel circuit of electrical drives. Total Hours 84",
+            "topics": [
+              "To demonstrate basic components, working details, protection,",
+              "application, soft starter and its control panel circuit of electrical",
+              "drives.",
+              "Total Hours 84"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Electrical Workshop, Electrical Workshop, R. P. Singh, I.K. International Publishing House Pvt. Ltd., 2013",
+          "Electrical Engineering Drawing I & II, Electrical Engineering Drawing I & II, Singh, S. K. Surjit, Kataria & Sons, 2012",
+          "Electrical Wiring, Estimating and Costing, Electrical Wiring, Estimating and Costing, S. L. Uppal & G. C. Garg, Khanna Publication, 2012",
+          "Handbook of Electrical Design Details, Handbook of Electrical Design Details, Neil Sclater & John E. Traister, The McGraw-HillCompanies, 1997",
+          "Electrical Wiring Industrial, Electrical Wiring Industrial, Electrical Wiring Industrial, Electrical Wiring Industrial, Stephen L. Herman, NA, 2014",
+          "Interpreting the National Electrical Code, Interpreting the National Electrical Code, Truman C. Surbrook , 9 editions , 2011",
+          "National Electrical Code 2017, National Electrical Code 2017, NA, NA, 2016"
+        ],
+        "textbooks": [
+          "Electrical Workshop, R. P. Singh, I.K. International Publishing House Pvt Lts, 2013",
+          "Database Design for Electrical Panels, Shalini Gupta, Monte DePouw & John Ventura, NA, 2012 References:",
+          "Electrical Workshop, Electrical Workshop, R. P. Singh, I.K. International Publishing House Pvt. Ltd., 2013",
+          "Electrical Engineering Drawing I & II, Electrical Engineering Drawing I & II, Singh, S. K. Surjit, Kataria & Sons, 2012",
+          "Electrical Wiring, Estimating and Costing, Electrical Wiring, Estimating and Costing, S. L. Uppal & G. C. Garg, Khanna Publication, 2012",
+          "Handbook of Electrical Design Details, Handbook of Electrical Design Details, Neil Sclater & John E. Traister, The McGraw-HillCompanies, 1997",
+          "Electrical Wiring Industrial, Electrical Wiring Industrial, Electrical Wiring Industrial, Electrical Wiring Industrial, Stephen L. Herman, NA, 2014",
+          "Interpreting the National Electrical Code, Interpreting the National Electrical Code, Truman C. Surbrook , 9 editions , 2011",
+          "National Electrical Code 2017, National Electrical Code 2017, NA, NA, 2016"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://electrical-engineering-portal.com/download-center/books-and- guides/automation- control/design-of-industrial-control-panels",
+          "http://electrical-engineering-portal.com/download-center/books-and- guides/schneider- electric/control-panel-design",
+          "http://electrical-engineering-portal.com/download-center/books-and- guides/automation- control/industrial-control-wiring-guide",
+          "http://electrical-engineering-portal.com/download-center/books-and- guides/automation- control/industrial-control-panels",
+          "http://electrical-engineering-portal.com/electrical-design-plc-panel-wiring-diagrams",
+          "http://electrical-engineering-portal.com/tips-wiring-industrial-control-panel",
+          "http://aptronnoida.in/best-dcs-and-panel-designing-training-in-noida.html",
+          "https://ipcsautomation.com/Electric+Control+Panel+Designing/Training/",
+          "https://www.siemens.com/nl/nl.html CHUDASAMA"
+        ]
+      },
+      "page_count": 5,
+      "extracted_character_count": 12930,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (ELECTRICAL\n                ENGINEERING)\nSEMESTER         2\nCOURSE TITLE    ELECTRICAL CONTROL PANEL DESIGN\nCOURSE CODE     09EE3105\nCOURSE CREDITS  3\n\nObjective:\n 1  The electrical control panel is the brain center for all process industry and represent\n     important element in the proper working and performance of the system. To prepare\n     students with the knowledge and practical skills required to design, interpret, and\n    implement electrical control panels used in industrial and commercial applications,\n     ensuring safety, functionality, and adherence to standards.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand & apply the use of appropriate tools and testing equipment for electrical\n     panels, and develop panel wiring diagrams using software tools in compliance with\n      electrical standards.\n 2  To understand & apply the concepts of switchgear, measuring equipment, earthing, busbar\n     arrangements, contactors, and interlocking in electrical panel.\n 3  To apply skills in the installation, operation, testing, and maintenance of electrical panels.\n 4  To understand concept of automation and electrical drive.\n\n\nPre-requisite of course:Basic knowledge of DC circuit, AC circuit and electrical practices.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            6         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH                    MR. MITTAL KIRITBHAI JOISER\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Experiment 1                                            4\n           To apply knowledge of types of cable, cable construction, cable\n                lying, cable joint, cable ratting & size, cable tray, lug and lug\n             crimping for connection to panel.\n     2      Experiment 2                                            4\n           To apply knowledge of types of wire, wire connector, wire rating,\n             wire laying, ferrule, terminal blocks and din rails with control panel\n            and understand fundamental of color code of wire.\n     3      Experiment 3                                            2\n           To apply the appropriate connections for different types of switches\n              (such as push-button, selector, rocker, rotary cam, emergency\n               switches, etc.) in an electrical panel according to the design\n                specifications.\n     4      Experiment 4                                            2\n           To apply knowledge of tools, safety equipment and testing\n             equipment during panel wiring.\n     5      Experiment 5                                            2\n           To Identify importance of different type of panel indicator lamp\n             with its operation.\n     6      Experiment 6                                            4\n           To understand connection of analog and digital instruments, also\n             perform connection of protective and control instruments- Fuse,\n          MCB, MCCB, RCCB and ELCB.\n     7      Experiment 7                                            2\n           To identify measuring instruments CT, PT, volt meter, ammeter,\n             frequency meter, energy meter, KW meter, PF meter, energy meter,\n               reactive power meter, multi-function meter for panel parameter\n              checking.\n     8      Experiment 8                                            4\n           To Identify different types of earthing and necessity of neutral and\n             grounding for an electric panel.\n     9      Experiment 9                                            2\n           To prepare general arrangement diagram of bus bar for panel\n               application with dimension\n     10     Experiment 10                                           6\n           To apply knowledge of relay and contactor as per application of\n               control panel.\n     11     Experiment 11                                           4\n           To select circuit breaker as per rating of control panel.\n     12     Experiment 12                                           2\n           To demonstrate interlocking in control panel.\n     13     Experiment 13                                           2\n           To use DC supply, inverter, UPS, battery and battery charger for\n               control and measuring purpose in an electrical control panel.\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH                    MR. MITTAL KIRITBHAI JOISER\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     14     Experiment 14                                           2\n           To select distribution box for LT, HT, domestic, commercial,\n                industrial, LDB, MLDB ASB, HDB, MDB, MCB, MCCB types of\n               control panel\n     15     Experiment 15                                           6\n           To prepare layout and general arrangement drawing of internal\n               structure of panel.\n     16     Experiment 16                                           2\n           To identify and use different symbols, abbreviations, color code,\n                electrical code and standards for panel wiring and prepare diagram\n              according to requirement.\n     17     Experiment 17                                           2\n           To differentiate drawing of control circuit and power circuit of\n               control panel and prepare control and wiring diagram as per\n              requirement.\n     18     Experiment 18                                           2\n           To understand types of loads, load distribution, load calculation and\n            power management of panel.\n     19     Experiment 19                                           2\n           To identify specification of control panel as per requirement of\n             customer during visit.\n     20     Experiment 20                                           4\n           To prepared design of control panel as per connected load by using\n              various electrical, electronics and instrumentation component.\n     21     Experiment 21                                           2\n           To demonstrate procedure of installation, commissioning and\n                testing of control panel.\n     22     Experiment 22                                           2\n           To identify enclosure material, name plate details, capacity and\n             arrangement of panel.\n     23     Experiment 23                                           4\n           To identify faulty components, perform maintenance and\n              troubleshooting on the control panel, and analyze the protection\n             systems provided for the panel\n     24     Experiment 24                                           4\n           To understand, need, application, basic concept and essential\n            component of industrial automation.\n     25     Experiment 25                                           2\n           To understand basic concept of PLC, SCADA, DCS, HMI and\n               necessity of control system.\n     26     Experiment 26                                           2\n           To apply knowledge of PLC for design electrical control diagram of\n               suitable panel.\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH                    MR. MITTAL KIRITBHAI JOISER\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     27     Experiment 27                                           4\n           To understand construction, types, working details, protection,\n                 starter and its control circuit of electric drives.\n     28     Experiment 28                                           4\n           To demonstrate basic components, working details, protection,\n               application, soft starter and its control panel circuit of electrical\n                drives.\n                               Total Hours                       84\n\nTextbook :\n 1  Electrical Workshop, R. P. Singh, I.K. International Publishing House Pvt Lts, 2013\n 2  Database Design for Electrical Panels, Shalini Gupta, Monte DePouw & John Ventura, NA,\n    2012\n\nReferences:\n 1  Electrical Workshop, Electrical Workshop, R. P. Singh, I.K. International Publishing\n    House Pvt. Ltd., 2013\n 2  Electrical Engineering Drawing I & II, Electrical Engineering Drawing I & II, Singh, S. K.\n      Surjit, Kataria & Sons, 2012\n 3  Electrical Wiring, Estimating and Costing, Electrical Wiring, Estimating and Costing, S. L.\n    Uppal & G. C. Garg, Khanna Publication, 2012\n 4  Handbook of Electrical Design Details, Handbook of Electrical Design Details, Neil Sclater\n   & John E. Traister, The McGraw-HillCompanies, 1997\n 5  Electrical Wiring Industrial, Electrical Wiring Industrial, Electrical Wiring Industrial,\n     Electrical Wiring Industrial, Stephen L. Herman, NA, 2014\n 6  Interpreting the National Electrical Code, Interpreting the National Electrical Code,\n    Truman C. Surbrook , 9 editions , 2011\n 7  National Electrical Code 2017, National Electrical Code 2017, NA, NA, 2016\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH                    MR. MITTAL KIRITBHAI JOISER\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 5,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOC setc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  http://electrical-engineering-portal.com/download-center/books-and- guides/automation-\n     control/design-of-industrial-control-panels\n 2  http://electrical-engineering-portal.com/download-center/books-and- guides/schneider-\n     electric/control-panel-design\n 3  http://electrical-engineering-portal.com/download-center/books-and- guides/automation-\n     control/industrial-control-wiring-guide\n 4  http://electrical-engineering-portal.com/download-center/books-and- guides/automation-\n     control/industrial-control-panels\n 5  http://electrical-engineering-portal.com/electrical-design-plc-panel-wiring-diagrams\n 6  http://electrical-engineering-portal.com/tips-wiring-industrial-control-panel\n 7  http://aptronnoida.in/best-dcs-and-panel-designing-training-in-noida.html\n 8  https://ipcsautomation.com/Electric+Control+Panel+Designing/Training/\n 9  https://www.siemens.com/nl/nl.html\n\n\n\n\n\nMR. MRUDURAJSINH JAYENDRASINH                    MR. MITTAL KIRITBHAI JOISER\nCHUDASAMADigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09EE3105 - ELECTRICAL CONTROL PANEL DESIGN (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "22c25e22ff362b69e0c1edf214a48a0f0e0844792f0bd57a26ca328827be24ff"
+    },
+    {
+      "subject_id": "47009121010201",
+      "subject_name": "Environment Conservation & Disaster Management",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 2,
+      "subject_code": "09AU0102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0102-ECDM.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09AU0102 - ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT (.pdf",
+      "expected_pdf_sha256": "23ad017365ac031f4c04b6930f6753157dd1c56b040a83896092508b0071ac35",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09AU0102",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [
+        "Objectives of introducing this subject at 1st year level in the above branches are:  To solve various engineering problems to produce eco-friendly products  To familiarize the students with strategies for addressing various environmental issues  To familiarize the students with various renewable energy sources and their applications  Be better prepared to recover from natural and manmade disasters Credits Earned: 0 Credits"
+      ],
+      "course_outcomes": [
+        "On the completion of the course student will be able to:  Understand the ecosystem and its terminology and solve various engineering problems by applying ecosystem knowledge to produce eco– friendly products  Understand the various types of pollutions and their remedial measures  Understand different renewable energy resources and their applications  Understand the role of an engineer concerning climate change and disaster management"
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Teaching Scheme (Hours) Theory Marks Practical Marks Total Term Credits Marks Theory Tutorial Practical ESE IA CSE Viva work 2 0 0 0 00 00 00 00 00 00 [PAGE 2] Syllabus for Diploma Engineering Civil Engineering",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction of Environmental Science",
+            "contact_hours": null,
+            "topic_lines": [
+              " Definition of environment, ecosystem, food chain,",
+              "and food web 4 15",
+              " The necessity of environmental science",
+              " Importance of environment and scope"
+            ],
+            "topics_text": " Definition of environment, ecosystem, food chain, and food web 4 15  The necessity of environmental science  Importance of environment and scope",
+            "topics": [
+              " Definition of environment, ecosystem, food chain,",
+              "and food web 4 15",
+              " The necessity of environmental science",
+              " Importance of environment and scope"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Types of pollution with their causes, effects and",
+            "contact_hours": null,
+            "topic_lines": [
+              "remedial measures:",
+              " Air pollution, water pollution, noise pollution, and",
+              "8 25",
+              "soil pollution",
+              " Global environment problems with their causes,",
+              "effects & remedies: climate change"
+            ],
+            "topics_text": "remedial measures:  Air pollution, water pollution, noise pollution, and 8 25 soil pollution  Global environment problems with their causes, effects & remedies: climate change",
+            "topics": [
+              "remedial measures:",
+              " Air pollution, water pollution, noise pollution, and",
+              "8 25",
+              "soil pollution",
+              " Global environment problems with their causes,",
+              "effects & remedies: climate change"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Renewable Sources of Energy",
+            "contact_hours": null,
+            "topic_lines": [
+              " Solar energy: basics of solar energy and its",
+              "importance 6 20",
+              " Wind energy: need, limitations and future scope",
+              " Recent trends of renewable sources of energy"
+            ],
+            "topics_text": " Solar energy: basics of solar energy and its importance 6 20  Wind energy: need, limitations and future scope  Recent trends of renewable sources of energy",
+            "topics": [
+              " Solar energy: basics of solar energy and its",
+              "importance 6 20",
+              " Wind energy: need, limitations and future scope",
+              " Recent trends of renewable sources of energy"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Disaster Management",
+            "contact_hours": null,
+            "topic_lines": [
+              "4.1 Introduction of disaster management",
+              " Concepts and definition of disaster",
+              " Disaster management cycle",
+              " Role of an engineer in disaster management",
+              " Rescue techniques during a disaster 10 40",
+              "4.2 Natural Disasters & Manmade Disasters",
+              " Natural disasters: earthquake, cyclone, flood,",
+              "tsunami, drought, and landslides",
+              " Manmade disaster: fire, civil war, technological",
+              "disasters"
+            ],
+            "topics_text": "4.1 Introduction of disaster management  Concepts and definition of disaster  Disaster management cycle  Role of an engineer in disaster management  Rescue techniques during a disaster 10 40 4.2 Natural Disasters & Manmade Disasters  Natural disasters: earthquake, cyclone, flood, tsunami, drought, and landslides  Manmade disaster: fire, civil war, technological disasters",
+            "topics": [
+              "4.1 Introduction of disaster management",
+              " Concepts and definition of disaster",
+              " Disaster management cycle",
+              " Role of an engineer in disaster management",
+              " Rescue techniques during a disaster 10 40",
+              "4.2 Natural Disasters & Manmade Disasters",
+              " Natural disasters: earthquake, cyclone, flood,",
+              "tsunami, drought, and landslides",
+              " Manmade disaster: fire, civil war, technological",
+              "disasters"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6161,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                            Civil Engineering\n                                 Semester – II\n\n             Subject Name: Environment Conservation & Disaster\n\n                           Management\n\n                           Subject Code: 09AU0102\n\n     Diploma Branches in which this subject is offered: Computer, ICT,\n      Chemical and Electrical Engineering\n\n\nObjective: Objectives of introducing this subject at 1st year level in the above branches are:\n\n           To solve various engineering problems to produce eco-friendly products\n           To  familiarize  the  students  with  strategies  for  addressing  various\n             environmental issues\n           To familiarize the students with various renewable energy sources and their\n              applications\n           Be better prepared to recover from natural and manmade disasters\n\n\n      Credits Earned: 0 Credits\n\n     Course Outcomes:\n\n  On the completion of the course student will be able to:\n\n           Understand  the  ecosystem  and  its  terminology  and  solve  various\n             engineering problems by applying ecosystem knowledge to produce eco–\n               friendly products\n\n           Understand the various types of pollutions and their remedial measures\n\n           Understand different renewable energy resources and their applications\n\n           Understand the role of an engineer concerning climate change and disaster\n           management\n\n                 Teaching and Examination Scheme\n\n                                                                                 Tutorial/\n       Teaching Scheme (Hours)              Theory Marks                                                                             Practical Marks\n                                                                                          Total\n                                                                Term                                    Credits                                                                           Marks    Theory   Tutorial   Practical        ESE   IA    CSE     Viva                                                                    work\n\n      2       0        0        0     00    00      00       00       00      00"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                     Civil Engineering\nContents:\n\n Unit                     Topics                    Contact   Weightage e\n                                                    hours       (%)\n\n   1    Introduction of Environmental Science\n         Definition of environment, ecosystem, food chain,\n         and food web                                  4        15\n         The necessity of environmental science\n         Importance of environment and scope\n   2    Types of pollution with their causes, effects and\n        remedial measures:\n         Air pollution, water pollution, noise pollution, and\n                                                     8       25\n            soil pollution\n         Global environment problems with their causes,\n           effects & remedies: climate change\n   3   Renewable Sources of Energy\n         Solar energy: basics of solar energy and its\n         importance                                    6       20\n         Wind energy: need, limitations and future scope\n         Recent trends of renewable sources of energy\n   4    Disaster Management\n        4.1 Introduction of disaster management\n         Concepts and definition of disaster\n         Disaster management cycle\n         Role of an engineer in disaster management\n         Rescue techniques during a disaster                                                     10       40\n       4.2 Natural Disasters & Manmade Disasters\n         Natural disasters: earthquake, cyclone, flood,\n          tsunami, drought, and landslides\n         Manmade disaster: fire, civil war, technological\n           disasters\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy  is as per\nfollows. This distribution serves as guidelines for teachers and students to\nachieve effective teaching-learning process\n\n              Distribution of Theory for course delivery and evaluation\n\n  Remember  Understand     Apply      Analyze     Evaluate      Create\n\n   30%      40%       30%      0%       0%      0%"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                     Civil Engineering\nInstructional Method:\na.  The course delivery method will depend upon the requirement of\n    content and need of students. The teacher in addition to conventional\n    teaching method by black board, may also use any of tools such as\n    demonstration, role play, Quiz, brainstorming, MOOCs etc.\n\nb.  The  internal evaluation  will be done on the basis of continuous\n    evaluation of students in the class-room.\nc.  Department level examination will be conducted at the end of semester\n     for evaluation of performance of students.\nd.  Students will use supplementary resources such as online videos,\n    videos, e- courses etc.\n\n\nReference Books:\n\n    1.  Environment Engineering and Disaster Management Sharma, Sanjay K. Luxmi\n        Publications, New Delhi\n    2.  Rao, C. S., Environmental Pollution Control and Engineering, New Age\n        International Publication, 2007, ISBN: 81-224-1835-X\n    3.  Environmental Science, Singh, Y. K., New Age International (P) Ltd.\n    4.  Environmental Sciences, Pawar, Kishor R. | Narkhede, Sachin B., Nirali\n       Prakashan\n    5.  Indian Geography and Disaster Management, Made Easy Publications\n    6.  Renewable Energy Resources, Twidell, John | Weir, Tony, Taylor and Francis\n      Group\n\n\n Useful website links:\n\n    1.  https://www.eco-prayer.org/\n    2.  https://www.teriin.org/\n    3.  https://cpcb.nic.in/\n    4.  http://www.indiaenvironmentportal.org.in/\n    5.  https://sdgs.un.org/goals\n    6.  https://ndma.gov.in/en/\n    7.  http://www.emri.in/\n    8.  https://www.isro.gov.in/\n    9.  https://bhuvan.nrsc.gov.in/bhuvan_links.php\n    10. IMD | Home\n    11. http://goidirectory.nic.in/index.php"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "23ad017365ac031f4c04b6930f6753157dd1c56b040a83896092508b0071ac35"
+    },
+    {
+      "subject_id": "47009164010101",
+      "subject_name": "Integrated Personality Development Course (I.P.D.C.) - I",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 2,
+      "subject_code": "09PD0101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09PD0101_IPDC-I.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09PD0101 - INTEGRATED PERSONALITY DEVELOPMENT COURSE-I (.pdf",
+      "expected_pdf_sha256": "797ee9b66945fa7fca0bc8a668c5a054014b6748a0ceb10b96873cd2872b531d",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09PD0101",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        " To provide students with a holistic education – focused on increasing their intelligence quotient, spiritual quotient, emotional quotient and physical quotient.  To provide students with hard and soft skills, making them more marketable when entering the workforce.  To educate students on their social responsibilities as citizens of India and have a greater sense of social responsibility.  To provide students with a value-based education which will enable them to be successful in their family, professional, and social relationships by improving their moral and ethical values.  To teach self-analysis and self-improvement exercises to enhance the potential of the participants.  To have a broader sense of self-conﬁdence and a deﬁned identity. [PAGE 2] Syllabus for Diploma Engineering"
+      ],
+      "teaching_and_examination_scheme_text": "Teaching Scheme Theory Marks Practical Marks (Hours) Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 0 0 2 50 30 20 00 00 100",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "learn 6 powerful thought-processes that can develop 2 Restructuring",
+            "contact_hours": null,
+            "topic_lines": [
+              "their intelligent, physical, emotional, and spiritual Yourself",
+              "quotients.",
+              "Remaking Students will undergo a study of how habits work, the",
+              "Yourself habits of successful professionals, and the practical",
+              "2 2",
+              "Power of techniques that can be used to develop good habits in",
+              "Habit their life.",
+              "Students will learn from the inspirational lives Learning from",
+              "of India's two legends, Sachin Tendulkar and 3 Legends- 2",
+              "Tendulkar & Ratan Tata. They will implement these lessons",
+              "Tata through relatable case studies.",
+              "Learn the secrets of project management Mass",
+              "through the Akshardham case study. They will 4 Management 2",
+              "Project then practice these skills through an activity",
+              "Management relevant to student life.",
+              "Understand the importance of strong family From House to",
+              "relationships. They will learn an easy method 5 Home 2",
+              "Affectionate to overcome the generation gap and to connect",
+              "Relationships with their family more.",
+              "From House to Understand the importance and beneﬁts that",
+              "Home forgiveness plays in their personal and 6 2",
+              "professional life. They will learn to apply this Forgive &",
+              "knowledge in realistic situations. Forget",
+              "Failure can be seen as a daily source of fear,",
+              "negativity and depression. Through the study Facing Failures",
+              "7 Failures are not of successful ﬁgures such as Disney, Lincoln 2",
+              "Always Bad and Bachchan; students will learn to see",
+              "failures through a positive perspective.",
+              "Syllabus for Diploma Engineering",
+              "Facing Failures",
+              "Learn to treat failures as stepping stones to Factors"
+            ],
+            "topics_text": "their intelligent, physical, emotional, and spiritual Yourself quotients. Remaking Students will undergo a study of how habits work, the Yourself habits of successful professionals, and the practical 2 2 Power of techniques that can be used to develop good habits in Habit their life. Students will learn from the inspirational lives Learning from of India's two legends, Sachin Tendulkar and 3 Legends- 2 Tendulkar & Ratan Tata. They will implement these lessons Tata through relatable case studies. Learn the secrets of project management Mass through the Akshardham case study. They will 4 Management 2 Project then practice these skills through an activity Management relevant to student life. Understand the importance of strong family From House to relationships. They will learn an easy method 5 Home 2 Affectionate to overcome the generation gap and to connect Relationships with their family more. From House to Understand the importance and beneﬁts that Home forgiveness plays in their personal and 6 2 professional life. They will learn to apply this Forgive & knowledge in realistic situations. Forget Failure can be seen as a daily source of fear, negativity and depression. Through the study Facing Failures 7 Failures are not of successful ﬁgures such as Disney, Lincoln 2 Always Bad and Bachchan; students will learn to see failures through a positive perspective. Syllabus for Diploma Engineering Facing Failures Learn to treat failures as stepping stones to Factors",
+            "topics": [
+              "their intelligent, physical, emotional, and spiritual Yourself",
+              "quotients.",
+              "Remaking Students will undergo a study of how habits work, the",
+              "Yourself habits of successful professionals, and the practical",
+              "2 2",
+              "Power of techniques that can be used to develop good habits in",
+              "Habit their life.",
+              "Students will learn from the inspirational lives Learning from",
+              "of India's two legends, Sachin Tendulkar and 3 Legends- 2",
+              "Tendulkar & Ratan Tata. They will implement these lessons",
+              "Tata through relatable case studies.",
+              "Learn the secrets of project management Mass",
+              "through the Akshardham case study. They will 4 Management 2",
+              "Project then practice these skills through an activity",
+              "Management relevant to student life.",
+              "Understand the importance of strong family From House to",
+              "relationships. They will learn an easy method 5 Home 2",
+              "Affectionate to overcome the generation gap and to connect",
+              "Relationships with their family more.",
+              "From House to Understand the importance and beneﬁts that",
+              "Home forgiveness plays in their personal and 6 2",
+              "professional life. They will learn to apply this Forgive &",
+              "knowledge in realistic situations. Forget",
+              "Failure can be seen as a daily source of fear,",
+              "negativity and depression. Through the study Facing Failures",
+              "7 Failures are not of successful ﬁgures such as Disney, Lincoln 2",
+              "Always Bad and Bachchan",
+              "students will learn to see",
+              "failures through a positive perspective.",
+              "Syllabus for Diploma Engineering",
+              "Facing Failures",
+              "Learn to treat failures as stepping stones to Factors"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "success, by focusing on what they can change and 2 Affecting",
+            "contact_hours": null,
+            "topic_lines": [
+              "not by blaming their circumstances. Failures",
+              "Remaking Explore the detrimental effects of addictions on one's",
+              "Yourself health, personal life, and family life. They will learn 9 2",
+              "Being how to take control of their life by becoming",
+              "Addiction-Free addiction free.",
+              "Soft Skills",
+              "Learn the six steps of teamwork and harmony that are 10 Teamwork & 2",
+              "essential for students professional and daily life. Harmony",
+              "Soft Skills",
+              "Learn how social media is addictive and they will 11 Handling the 2 imbibe simple methods to take back control.",
+              "Devil - Social",
+              "Media",
+              "From House to",
+              "Active listening is an essential part for academic Home"
+            ],
+            "topics_text": "not by blaming their circumstances. Failures Remaking Explore the detrimental effects of addictions on one's Yourself health, personal life, and family life. They will learn 9 2 Being how to take control of their life by becoming Addiction-Free addiction free. Soft Skills Learn the six steps of teamwork and harmony that are 10 Teamwork & 2 essential for students professional and daily life. Harmony Soft Skills Learn how social media is addictive and they will 11 Handling the 2 imbibe simple methods to take back control. Devil - Social Media From House to Active listening is an essential part for academic Home",
+            "topics": [
+              "not by blaming their circumstances. Failures",
+              "Remaking Explore the detrimental effects of addictions on one's",
+              "Yourself health, personal life, and family life. They will learn 9 2",
+              "Being how to take control of their life by becoming",
+              "Addiction-Free addiction free.",
+              "Soft Skills",
+              "Learn the six steps of teamwork and harmony that are 10 Teamwork & 2",
+              "essential for students professional and daily life. Harmony",
+              "Soft Skills",
+              "Learn how social media is addictive and they will 11 Handling the 2 imbibe simple methods to take back control.",
+              "Devil - Social",
+              "Media",
+              "From House to",
+              "Active listening is an essential part for academic Home"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "progress and communications. Students will learn to",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Listening & listen with their eyes, ears, mind, and heart.",
+              "Understanding",
+              "Financial",
+              "Wisdom Develop a variety of ﬁnancial planning skills that",
+              "13 prepare them to become ﬁnancially stable throughout 2 Basics of",
+              "their future careers. Financial",
+              "Planning",
+              "Soft Skills",
+              "Networking - Important soft-skills - networking, decision making,"
+            ],
+            "topics_text": "Listening & listen with their eyes, ears, mind, and heart. Understanding Financial Wisdom Develop a variety of ﬁnancial planning skills that 13 prepare them to become ﬁnancially stable throughout 2 Basics of their future careers. Financial Planning Soft Skills Networking - Important soft-skills - networking, decision making,",
+            "topics": [
+              "Listening & listen with their eyes, ears, mind, and heart.",
+              "Understanding",
+              "Financial",
+              "Wisdom Develop a variety of ﬁnancial planning skills that",
+              "13 prepare them to become ﬁnancially stable throughout 2 Basics of",
+              "their future careers. Financial",
+              "Planning",
+              "Soft Skills",
+              "Networking - Important soft-skills - networking, decision making,"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Decision and leadership - that are essential in professional",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Making - environment.",
+              "Leadership",
+              "Review Lecture Students will review the semester by sharing their 15 2",
+              "Student Voice experiences through classroom interaction.",
+              "Basic Study Material:",
+              "1. IPDC Workbook",
+              "Syllabus for Diploma Engineering"
+            ],
+            "topics_text": "Making - environment. Leadership Review Lecture Students will review the semester by sharing their 15 2 Student Voice experiences through classroom interaction. Basic Study Material: 1. IPDC Workbook Syllabus for Diploma Engineering",
+            "topics": [
+              "Making - environment.",
+              "Leadership",
+              "Review Lecture Students will review the semester by sharing their 15 2",
+              "Student Voice experiences through classroom interaction.",
+              "Basic Study Material:",
+              "1. IPDC Workbook",
+              "Syllabus for Diploma Engineering"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 9011,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n\n\n                              Semester – II\n\n    Subject Name: Integrated Personality Development Course (I.P.D.C.) - I\n\n                          Subject Code: 09PD0101\n\n      Diploma Branches in which this subject is offered: All Engineering\n\n\nRationale:\n     This course aims to help a person understand and know his / her purpose in\n          life, get a positive thought pattern, gain conﬁdence, improve behaviour, learn\n        better communication and develop a healthy physique with morality and ethics\n        in its core.\n     Today’s youth lack the guidance to face insecurity about their health and\n        career,  premature  relationships  and  family  breakdown,  addictions  and\n       substance abuse, negative impact of internet and social media etc. This course\n       includes such topics that will cover all aspects and provide solution to the\n        current challenges through creative and interactive activities.\n     This course will allow students to enjoy, understand and practice invaluable\n       lessons preparing them for a successful future.\n\n\nCredits Earned: 2\n\nCourse Outcomes:\n\n     To provide students with a holistic education – focused on increasing their\n        intelligence  quotient,  spiritual  quotient,  emotional  quotient and  physical\n        quotient.\n     To provide students with hard and soft skills, making them more marketable\n      when entering the workforce.\n     To educate students on their social responsibilities as citizens of India and\n       have a greater sense of social responsibility.\n     To provide students with a value-based education which will enable them to be\n       successful in their family, professional, and social relationships by improving\n        their moral and ethical values.\n     To teach self-analysis and self-improvement exercises to enhance the potential\n       of the participants.\n     To have a broader sense of self-conﬁdence and a deﬁned identity."
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n\n\n                    Teaching and Examination Scheme\n\n      Teaching Scheme\n                                      Theory Marks      Practical Marks\n          (Hours)                                                              Total\n                                Credits\n                                                        Term   Marks\nTheory   Tutorial   Practical         ESE   IA   CSE   Viva\n                                                           work\n\n   2       0        0        2      50    30    20     00      00     100\n\n\n\nContents:\n\n  Lecture     Module -\n                                       Lecture Description              Hours    No.        Lecture\n                          Learn how  self-improvement  enables  them  to            Remaking\n                             secure a bright future for themselves. They will               Yourself\n      1                       learn 6 powerful thought-processes that can develop     2              Restructuring\n                                  their intelligent, physical, emotional, and spiritual                Yourself\n                               quotients.\n           Remaking     Students will undergo a study of how habits work, the\n              Yourself      habits of successful professionals, and the practical\n      2                                                                    2\n            Power of      techniques that can be used to develop good habits in\n                Habit        their life.\n                            Students will learn from the inspirational lives           Learning from\n                             of India's two legends, Sachin Tendulkar and      3       Legends-                                                     2\n             Tendulkar &  Ratan Tata. They will implement these lessons\n                 Tata      through relatable case studies.\n                          Learn  the  secrets  of  project  management             Mass\n                           through the Akshardham case study. They will      4     Management                                                   2\n                  Project     then practice these skills through an activity\n            Management   relevant to student life.\n                           Understand the importance of strong family         From House to\n                                relationships. They will learn an easy method      5       Home                                                      2\n               Affectionate   to overcome the generation gap and to connect\n              Relationships  with their family more.\n         From House to Understand the importance and beneﬁts that\n            Home      forgiveness  plays   in   their  personal  and      6                                                                    2\n                              professional life. They will learn to apply this               Forgive &\n                         knowledge in realistic situations.                 Forget\n                              Failure can be seen as a daily source of fear,\n                               negativity and depression. Through the study           Facing Failures\n      7              Failures are not of successful ﬁgures such as Disney, Lincoln         2\n            Always Bad   and  Bachchan;  students  will  learn  to  see\n                                 failures through a positive perspective."
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n\n\n           Facing Failures\n                          Learn  to  treat  failures  as  stepping  stones  to                 Factors\n      8                       success, by focusing on what they can change and      2                Affecting\n                             not by blaming their circumstances.                  Failures\n            Remaking                           Explore the detrimental effects of addictions on one's\n               Yourself     health, personal life, and family life. They will learn     9                                                                    2\n                Being    how  to  take  control  of  their  life by becoming\n             Addiction-Free addiction free.\n               Soft Skills\n                          Learn the six steps of teamwork and harmony that are     10     Teamwork &                                                   2\n                                essential for students professional and daily life.             Harmony\n\n               Soft Skills\n                          Learn how social media is addictive and they will     11      Handling the                                                   2                           imbibe simple methods to take back control.\n             Devil - Social\n               Media\n\n         From House to\n                            Active  listening  is an essential part  for academic            Home\n     12                     progress and communications. Students will learn to    2\n               Listening &    listen with their eyes, ears, mind, and heart.\n             Understanding\n\n               Financial\n            Wisdom                          Develop a variety of ﬁnancial planning skills that\n     13                     prepare them to become ﬁnancially stable throughout    2                Basics of\n                                  their future careers.                 Financial\n                Planning\n               Soft Skills\n             Networking -                            Important soft-skills - networking, decision making,\n     14        Decision    and leadership  - that are essential in professional    2\n             Making -    environment.\n               Leadership\n\n          Review Lecture Students will review the semester by sharing their     15                                                                    2\n             Student Voice  experiences through classroom interaction.\n\n\n\n\n\nBasic Study Material:\n1. IPDC Workbook"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n\n\n\n\nInstructional Method:\n\nFollowing four activities happen during each lecture.\n1)  Introductory Film: Each lecture begins with a short film that introduces the\n     topic which captivate learner’s attention and stimulates their curiosity to learn\n    more.\n\n2)  Lecture Video: Learners watch a lecture video presented by a dynamic speaker.\n    The lecture reinforces the significance and necessity of fundamental principles\n    and skills.\n\n3)  Student Interactions: Interactive sessions promote stimulating discussion and\n    conversation and help create safe spaces for healthy exchange of ideas. Each\n    session provides a forum in which students are able to openly express their\n    emotions and thoughts.\n\n4)  Workbook Activities: Workbooks  assist learners to begin implementing the\n    values taught in the lecture into their personal lives.\n\n\nReferences:\n1. https://www.baps.org/IPDC/IPDC.aspx\n\n2. https://www.youtube.com/c/IPDCbaps/videos"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "797ee9b66945fa7fca0bc8a668c5a054014b6748a0ceb10b96873cd2872b531d"
+    },
+    {
+      "subject_id": "47009131210201",
+      "subject_name": "Mathematics II",
+      "course_id": 47,
+      "course_name": "Diploma Electrical Engineering",
+      "semester": 2,
+      "subject_code": "09MA2102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2102-Mathematics-II.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Electrical Engineering/Semester_Unspecified/09MA2102 - MATHEMATICS-II (.pdf",
+      "expected_pdf_sha256": "91b782a8fa8968920ad7cef67b3e36859144c5dd9d3001d67a8f734724e262aa",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "09MA2102",
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "Students are intended to understand the basic concepts and principles of Mathematics such as Determinant and matrix, Equations, Function, limit of functions and arithmetic and geometric progression. This knowledge is required to understand and solve Engineering problems. The course will empower students to use proper Mathematical tool to understand Engineering principles and concepts. Main objective of the course is to apply concepts of Determinant and matrix, Equations, Function and limit and arithmetic and geometric progression or suitable Mathematical tool to solve given engineering problems. Credits Earned: 4 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to ➢ learn concept of Matrix and Determinant and solve the system of linear equations by using matrix. ➢ solve equations of algebraic expressions using algebraic skills. ➢ solve the problems using functions. ➢ solve the problem of function using the concept of Limit. ➢ find the nth term and Sum of arithmetic and geometric progression."
+      ],
+      "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 2 0 4 50 30 20 25 25 150 [PAGE 2] Syllabus for Diploma Engineering All Branches",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Determinants and Matrices 8",
+            "contact_hours": 8,
+            "topic_lines": [
+              "1. Introduction",
+              "2. Algebra of Matrices",
+              "3. Determinant of Matrix",
+              "4. Inverse of Matrix up to 3×3 matrix",
+              "5. Solution of Simultaneous Equation (up to 3 variable)"
+            ],
+            "topics_text": "1. Introduction 2. Algebra of Matrices 3. Determinant of Matrix 4. Inverse of Matrix up to 3×3 matrix 5. Solution of Simultaneous Equation (up to 3 variable)",
+            "topics": [
+              "1. Introduction",
+              "2. Algebra of Matrices",
+              "3. Determinant of Matrix",
+              "4. Inverse of Matrix up to 3×3 matrix",
+              "5. Solution of Simultaneous Equation (up to 3 variable)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Equations 6",
+            "contact_hours": 6,
+            "topic_lines": [
+              "1. System of Linear Equation",
+              "2. Solution of Quadratic Equation",
+              "3. Solution of Cubic Equation"
+            ],
+            "topics_text": "1. System of Linear Equation 2. Solution of Quadratic Equation 3. Solution of Cubic Equation",
+            "topics": [
+              "1. System of Linear Equation",
+              "2. Solution of Quadratic Equation",
+              "3. Solution of Cubic Equation"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Function 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "1. Introduction of Function",
+              "2. Algebra of Function",
+              "3. Example of Function"
+            ],
+            "topics_text": "1. Introduction of Function 2. Algebra of Function 3. Example of Function",
+            "topics": [
+              "1. Introduction of Function",
+              "2. Algebra of Function",
+              "3. Example of Function"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Limit of functions 6",
+            "contact_hours": 6,
+            "topic_lines": [
+              "1. Definition and some properties of limits",
+              "2. Limit of polynomial and rational functions",
+              "3. Limit of trigonometric function",
+              "4. Limit of exponential function",
+              "5. Limit at infinity"
+            ],
+            "topics_text": "1. Definition and some properties of limits 2. Limit of polynomial and rational functions 3. Limit of trigonometric function 4. Limit of exponential function 5. Limit at infinity",
+            "topics": [
+              "1. Definition and some properties of limits",
+              "2. Limit of polynomial and rational functions",
+              "3. Limit of trigonometric function",
+              "4. Limit of exponential function",
+              "5. Limit at infinity"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Arithmetic and Geometric Progression 4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "1. Introduction",
+              "2. Nth term of A.P",
+              "3. Sum of first N terms of A.P",
+              "4. Nth term of G.P",
+              "5. Sum of first N terms of G.P",
+              "Total 28 28",
+              "Syllabus for Diploma Engineering",
+              "All Branches",
+              "List of Tutorials:",
+              "Lab",
+              "Topics",
+              "Hours",
+              "Unit 1: Determinants and Matrices",
+              "1. Algebra of Matrices 2",
+              "2. Determinant of Matrix 2",
+              "3. Inverse of Matrix up to 3×3 matrix 2",
+              "4. Solution of Simultaneous Equation (up to 3 variable) 2",
+              "Unit 2: Equations",
+              "1. System of Linear Equation 2",
+              "2. Solution of Quadratic Equation 2",
+              "3. Solution of Cubic Equation 2",
+              "Unit 3: Function",
+              "1. Algebra of Function 2",
+              "2. Example of Function 2",
+              "Unit 4: Limit of functions",
+              "1. Limit of polynomial and rational functions 2",
+              "2. Limit of trigonometric function 2",
+              "3. Limit of exponential function and Limit at infinity 2",
+              "Unit 5: Arithmetic Progression",
+              "1. Nth term of A. P 2",
+              "2. Sum of first N terms of A. P 2",
+              "Total 28"
+            ],
+            "topics_text": "1. Introduction 2. Nth term of A.P 3. Sum of first N terms of A.P 4. Nth term of G.P 5. Sum of first N terms of G.P Total 28 28 Syllabus for Diploma Engineering All Branches List of Tutorials: Lab Topics Hours Unit 1: Determinants and Matrices 1. Algebra of Matrices 2 2. Determinant of Matrix 2 3. Inverse of Matrix up to 3×3 matrix 2 4. Solution of Simultaneous Equation (up to 3 variable) 2 Unit 2: Equations 1. System of Linear Equation 2 2. Solution of Quadratic Equation 2 3. Solution of Cubic Equation 2 Unit 3: Function 1. Algebra of Function 2 2. Example of Function 2 Unit 4: Limit of functions 1. Limit of polynomial and rational functions 2 2. Limit of trigonometric function 2 3. Limit of exponential function and Limit at infinity 2 Unit 5: Arithmetic Progression 1. Nth term of A. P 2 2. Sum of first N terms of A. P 2 Total 28",
+            "topics": [
+              "1. Introduction",
+              "2. Nth term of A.P",
+              "3. Sum of first N terms of A.P",
+              "4. Nth term of G.P",
+              "5. Sum of first N terms of G.P",
+              "Total 28 28",
+              "Syllabus for Diploma Engineering",
+              "All Branches",
+              "List of Tutorials:",
+              "Lab",
+              "Topics",
+              "Hours",
+              "Unit 1: Determinants and Matrices",
+              "1. Algebra of Matrices 2",
+              "2. Determinant of Matrix 2",
+              "3. Inverse of Matrix up to 3×3 matrix 2",
+              "4. Solution of Simultaneous Equation (up to 3 variable) 2",
+              "Unit 2: Equations",
+              "1. System of Linear Equation 2",
+              "2. Solution of Quadratic Equation 2",
+              "3. Solution of Cubic Equation 2",
+              "Unit 3: Function",
+              "1. Algebra of Function 2",
+              "2. Example of Function 2",
+              "Unit 4: Limit of functions",
+              "1. Limit of polynomial and rational functions 2",
+              "2. Limit of trigonometric function 2",
+              "3. Limit of exponential function and Limit at infinity 2",
+              "Unit 5: Arithmetic Progression",
+              "1. Nth term of A. P 2",
+              "2. Sum of first N terms of A. P 2",
+              "Total 28"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 7497,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Diploma Engineering\n\n                                         All Branches\n\n                                   Semester – II\n\n                             Subject Name: Mathematics II\n\n                                Subject Code:09MA2102\n\n     Diploma Branches in which this subject is offered: All Branches\n\n      Objective: Students are intended to understand the basic concepts and principles of\n     Mathematics such as Determinant and matrix, Equations, Function, limit of functions\n     and arithmetic and geometric progression. This knowledge is required to understand\n     and solve Engineering problems. The course will empower students to use proper\n      Mathematical tool to understand Engineering principles and concepts. Main objective\n      of the course is to apply concepts of Determinant and matrix, Equations, Function and\n       limit and arithmetic and geometric progression or suitable Mathematical tool to solve\n      given engineering problems.\n\n\n      Credits Earned: 4 Credits\n     Course Outcomes: After completion of this course, student will be able to\n\n     ➢  learn concept of Matrix and Determinant and solve the system of linear\n             equations by using matrix.\n\n     ➢  solve equations of algebraic expressions using algebraic skills.\n\n     ➢  solve the problems using functions.\n\n     ➢  solve the problem of function using the concept of Limit.\n\n     ➢  find the nth term and Sum of arithmetic and geometric progression.\n\n      Pre-requisite of course: NA.\n\n                         Teaching and Examination Scheme\n\n                                                                         Tutorial/ Practical\n  Teaching Scheme (Hours)                Theory Marks\n                                                            Marks          Total\n                                Credits\n                                                             Term    Marks\nTheory   Tutorial   Practical         ESE   IA    CSE     Viva\n                                                                 work\n\n  2       2        0        4     50    30      20       25       25      150"
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Diploma Engineering\n\n                                         All Branches\n\n     Contents\n\nUnit                 Topics                               Lab       Lecture\n                                                          Hours    Hours\n    1   Determinants and Matrices                                 8         8\n               1.  Introduction\n               2.  Algebra of Matrices\n               3.  Determinant of Matrix\n               4.  Inverse of Matrix up to 3×3 matrix\n               5.  Solution of Simultaneous Equation (up to 3 variable)\n    2    Equations                                                6         6\n               1.  System of Linear Equation\n               2.  Solution of Quadratic Equation\n               3.  Solution of Cubic Equation\n    3   Function                                                 4         4\n               1.  Introduction of Function\n               2.  Algebra of Function\n               3. Example of Function\n    4   Limit of functions                                         6         6\n               1.  Definition and some properties of limits\n               2.  Limit of polynomial and rational functions\n               3.  Limit of trigonometric function\n               4.  Limit of exponential function\n               5.  Limit at infinity\n    5   Arithmetic and Geometric Progression                        4         4\n               1.  Introduction\n               2.  Nth term of A.P\n               3. Sum of first N terms of A.P\n               4.  Nth term of G.P\n               5. Sum of first N terms of G.P\n\n  Total                                                           28        28"
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Diploma Engineering\n\n                                        All Branches\n\nList of Tutorials:\n\n                                                  Lab\n                        Topics\n                                                     Hours\nUnit 1: Determinants and Matrices\n    1.  Algebra of Matrices                                                    2\n    2.  Determinant of Matrix                                                  2\n    3.  Inverse of Matrix up to 3×3 matrix                                        2\n    4.  Solution of Simultaneous Equation (up to 3 variable)                          2\n\n\nUnit 2: Equations\n    1.  System of Linear Equation                                              2\n    2.  Solution of Quadratic Equation                                           2\n    3.  Solution of Cubic Equation                                              2\n\nUnit 3: Function\n    1.  Algebra of Function                                                    2\n    2. Example of Function                                                   2\n\nUnit 4: Limit of functions\n    1.  Limit of polynomial and rational functions                                  2\n    2.  Limit of trigonometric function                                           2\n    3.  Limit of exponential function and Limit at infinity                            2\n\n Unit 5: Arithmetic Progression\n    1.  Nth term of A. P                                                       2\n    2. Sum of first N terms of A. P                                             2\n\nTotal                                                      28\n\n\n     References Books:\n\n Sr      Title of books           Book Link                              Publication\n no.\n 1    NCERT Class-XI science   https://ncert.nic.in/textbook.php?kemh1 NCERT\n       Mathematics              =0-16\n 2    NCERT Class-XII science   https://ncert.nic.in/textbook.php?lemh1  NCERT\n       Mathematics Part=I        =0-6\n 3    NCERT Class-X            https://ncert.nic.in/textbook.php?jemh1  NCERT\n       Mathematics              =0-15\n 4      B.S. Grewal, Higher       _                                Khanna\n       Engineering Mathematics,                                             Publishers, New\n                                                                             Delhi, 40th\n                                                                                Edition, 2007."
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Diploma Engineering\n\n                                   All Branches\n\n References Links:\n\n   1.  https://en.wikipedia.org/wiki/Determinant\n\n   2.  https://en.wikipedia.org/wiki/Equation\n\n   3.  https://en.wikipedia.org/wiki/Function_(mathematics)\n\n   4.  https://en.wikipedia.org/wiki/Limit_of_a_function\n\n   5.  https://en.wikipedia.org/wiki/Arithmetic_progression\n\n\nSuggested Theory distribution:\n\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This\n distribution serves as  guidelines  for  teachers and  students  to achieve  effective\n teaching-learning process\n\n\n              Distribution of Theory for course delivery and evaluation\n\nRemember       Understand     Apply      Analyse     Evaluate        Create\n\n  30%          30%       30%      10%             ---                 ---\n\n\n\n\n    Instructional Method:\n\na.  The course delivery method will depend upon the requirement of content and need\n    of students. The teacher in addition to conventional teaching method by black\n    board, may also use any of tools such as demonstration, Quiz, brainstorming.\n\nb.  The internal evaluation will be done on the basis of continuous evaluation of\n    students in the class-rooms"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09MA2102 - MATHEMATICS-II (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "91b782a8fa8968920ad7cef67b3e36859144c5dd9d3001d67a8f734724e262aa"
+    }
+  ],
+  "build_summary": {
+    "extracted": 5,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

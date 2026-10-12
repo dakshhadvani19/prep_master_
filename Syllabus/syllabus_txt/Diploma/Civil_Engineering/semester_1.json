@@ -1,0 +1,1609 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 48,
+    "course_name": "Diploma Civil Engineering",
+    "output_slug": "Civil_Engineering"
+  },
+  "semester": 1,
+  "subject_count": 7,
+  "subjects": [
+    {
+      "subject_id": "48009719210101",
+      "subject_name": "APPLIED PHYSICS",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 1,
+      "subject_code": "09GS2101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/2.-SEMESTER-1_09GS2101-APPLIED-PHYSICS.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09GS2101 - APPLIED PHYSICS (.pdf",
+      "expected_pdf_sha256": "dd9423a2b4177691fc89cc569511038cdb5d3536b45d35d21dd4f656a18682b1",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "APPLIED PHYSICS",
+        "course_code": "09GS2101",
+        "semester_label": "1",
+        "credits": 3,
+        "prerequisite": "Basic knowledge of science."
+      },
+      "objectives": [
+        "To prepare the students to have a basic knowledge of fundamental quantities, their units and measurement. To study various cases under laws of motion. To have knowledge of various properties of maters also to have knowledge of fundamentals of electricity and magnetism and to have knowledge about Light and Sound Waves."
+      ],
+      "course_outcomes": [
+        "To measure dimensions of various materials and compare units.",
+        "To understand and relate phenomena with the help of laws of motion.",
+        "To identify various states of materials and their relevance.",
+        "To understand the concept of Electricity and Magnetism and its application in daily life.",
+        "To get Knowledge about Light and Sound Waves and their applications."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Units, Dimensions and Measurements",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition of unit, Fundamental and Derived units, systems of units-",
+              "CGS, MKS and SI, introduction to accuracy, precision and errors,",
+              "types of errors, error analysis, Numerical on Error"
+            ],
+            "topics_text": "Definition of unit, Fundamental and Derived units, systems of units- CGS, MKS and SI, introduction to accuracy, precision and errors, types of errors, error analysis, Numerical on Error",
+            "topics": [
+              "Definition of unit, Fundamental and Derived units, systems of units",
+              "CGS, MKS and SI, introduction to accuracy, precision and errors,",
+              "types of errors, error analysis, Numerical on Error"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Laws of Motion",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Inertia, Newton's first law of motion, momentum, Newton’s second",
+              "law of motion, conservation of momentum, Newton's third law of",
+              "motion, Numerical on above topics"
+            ],
+            "topics_text": "Inertia, Newton's first law of motion, momentum, Newton’s second law of motion, conservation of momentum, Newton's third law of motion, Numerical on above topics",
+            "topics": [
+              "Inertia, Newton's first law of motion, momentum, Newton’s second",
+              "law of motion, conservation of momentum, Newton's third law of",
+              "motion, Numerical on above topics"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Properties of Matter",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Stress & strain along with their types, Hooke's law and modulus of",
+              "elasticity-Young, bulk and modulus of rigidity, Viscosity, newton's",
+              "law of viscosity, types of flows, Reynold's number, surface tension",
+              "and capillary action"
+            ],
+            "topics_text": "Stress & strain along with their types, Hooke's law and modulus of elasticity-Young, bulk and modulus of rigidity, Viscosity, newton's law of viscosity, types of flows, Reynold's number, surface tension and capillary action",
+            "topics": [
+              "Stress & strain along with their types, Hooke's law and modulus of",
+              "elasticity-Young, bulk and modulus of rigidity, Viscosity, newton's",
+              "law of viscosity, types of flows, Reynold's number, surface tension",
+              "and capillary action"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Electro-Magnetism",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Current electricity: current, EMF and Ohm's law, resistance, series",
+              "and parallel, Numerical on above topics, Magnetism: Magnetic field",
+              "and properties, electro-magnetic induction-self-inductance and",
+              "mutual inductance, faraday’s law, applications-transformer"
+            ],
+            "topics_text": "Current electricity: current, EMF and Ohm's law, resistance, series and parallel, Numerical on above topics, Magnetism: Magnetic field and properties, electro-magnetic induction-self-inductance and mutual inductance, faraday’s law, applications-transformer",
+            "topics": [
+              "Current electricity: current, EMF and Ohm's law, resistance, series",
+              "and parallel, Numerical on above topics, Magnetism: Magnetic field",
+              "and properties, electro-magnetic induction-self-inductance and",
+              "mutual inductance, faraday’s law, applications-transformer"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Waves: Light & Sound",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Light: Properties, Reflection, Refraction, Snell’s law, Dispersion of",
+              "light, Sound: Characteristics – (Amplitude, Wavelength, Crest,",
+              "Trough, Frequency, Time Period), Definition of Resonance with",
+              "Examples, Formula for Velocity of Sound and factors affecting it,",
+              "Ultrasonic Sound Waves – Uses, properties, Applications,",
+              "Radioactive rays - Properties and uses of Alpha, Beta and Gamma",
+              "particles.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Light: Properties, Reflection, Refraction, Snell’s law, Dispersion of light, Sound: Characteristics – (Amplitude, Wavelength, Crest, Trough, Frequency, Time Period), Definition of Resonance with Examples, Formula for Velocity of Sound and factors affecting it, Ultrasonic Sound Waves – Uses, properties, Applications, Radioactive rays - Properties and uses of Alpha, Beta and Gamma particles. Total Hours 28",
+            "topics": [
+              "Light: Properties, Reflection, Refraction, Snell’s law, Dispersion of",
+              "light, Sound: Characteristics – (Amplitude, Wavelength, Crest,",
+              "Trough, Frequency, Time Period), Definition of Resonance with",
+              "Examples, Formula for Velocity of Sound and factors affecting it,",
+              "Ultrasonic Sound Waves – Uses, properties, Applications,",
+              "Radioactive rays - Properties and uses of Alpha, Beta and Gamma",
+              "particles.",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Vernier Calipers To know the use of the Vernier Calipers and",
+            "contact_hours": 2,
+            "topic_lines": [
+              "to measure the length, width and height of the given rectangular",
+              "block.",
+              "Vernier Calipers To know the use of the Vernier Calipers and to",
+              "measure the length, width and height of the given rectangular block."
+            ],
+            "topics_text": "to measure the length, width and height of the given rectangular block. Vernier Calipers To know the use of the Vernier Calipers and to measure the length, width and height of the given rectangular block.",
+            "topics": [
+              "to measure the length, width and height of the given rectangular",
+              "block.",
+              "Vernier Calipers To know the use of the Vernier Calipers and to",
+              "measure the length, width and height of the given rectangular block."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Micrometer Screw gauge To measure the diameter of the small",
+            "contact_hours": 2,
+            "topic_lines": [
+              "sphere using micrometer screw gauge.",
+              "Micrometer Screw gauge To measure the diameter of the small",
+              "sphere using micrometer screw gauge."
+            ],
+            "topics_text": "sphere using micrometer screw gauge. Micrometer Screw gauge To measure the diameter of the small sphere using micrometer screw gauge.",
+            "topics": [
+              "sphere using micrometer screw gauge.",
+              "Micrometer Screw gauge To measure the diameter of the small",
+              "sphere using micrometer screw gauge."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "To determine the value of acceleration due to gravity by using",
+            "contact_hours": 2,
+            "topic_lines": [
+              "simple pendulum",
+              "To determine the value of acceleration due to gravity by using",
+              "simple pendulum"
+            ],
+            "topics_text": "simple pendulum To determine the value of acceleration due to gravity by using simple pendulum",
+            "topics": [
+              "simple pendulum",
+              "To determine the value of acceleration due to gravity by using",
+              "simple pendulum"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "To measure co- efficient of Static Friction of a given Surface",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To measure co- efficient of Static Friction of a given Surface"
+            ],
+            "topics_text": "To measure co- efficient of Static Friction of a given Surface",
+            "topics": [
+              "To measure co- efficient of Static Friction of a given Surface"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "To determine Young’s Modulus of elasticity of a given wire",
+            "contact_hours": 2,
+            "topic_lines": [
+              "using Searle’s Apparatus",
+              "To determine Young’s Modulus of elasticity of a given wire using",
+              "Searle’s Apparatus"
+            ],
+            "topics_text": "using Searle’s Apparatus To determine Young’s Modulus of elasticity of a given wire using Searle’s Apparatus",
+            "topics": [
+              "using Searle’s Apparatus",
+              "To determine Young’s Modulus of elasticity of a given wire using",
+              "Searle’s Apparatus"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "To determine surface tension of a liquid by capillary tube using",
+            "contact_hours": 2,
+            "topic_lines": [
+              "travelling microscope",
+              "To determine surface tension of a liquid by capillary tube using",
+              "travelling microscope"
+            ],
+            "topics_text": "travelling microscope To determine surface tension of a liquid by capillary tube using travelling microscope",
+            "topics": [
+              "travelling microscope",
+              "To determine surface tension of a liquid by capillary tube using",
+              "travelling microscope"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "To calculate refractive index of material of prism using",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Spectrometer Device",
+              "To calculate refractive index of material of prism using",
+              "Spectrometer Device"
+            ],
+            "topics_text": "Spectrometer Device To calculate refractive index of material of prism using Spectrometer Device",
+            "topics": [
+              "Spectrometer Device",
+              "To calculate refractive index of material of prism using",
+              "Spectrometer Device"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Demonstrate sound waves creating vibrations and observing",
+            "contact_hours": 2,
+            "topic_lines": [
+              "their effect",
+              "Demonstrate sound waves creating vibrations and observing their",
+              "effect"
+            ],
+            "topics_text": "their effect Demonstrate sound waves creating vibrations and observing their effect",
+            "topics": [
+              "their effect",
+              "Demonstrate sound waves creating vibrations and observing their",
+              "effect"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "To verify Ohm’s Law",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To verify Ohm’s Law"
+            ],
+            "topics_text": "To verify Ohm’s Law",
+            "topics": [
+              "To verify Ohm’s Law"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "To study Resistors in series",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study Resistors in series"
+            ],
+            "topics_text": "To study Resistors in series",
+            "topics": [
+              "To study Resistors in series"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "To study Resistors in parallel",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study Resistors in parallel"
+            ],
+            "topics_text": "To study Resistors in parallel",
+            "topics": [
+              "To study Resistors in parallel"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "To verify Faraday’s Law",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To verify Faraday’s Law",
+              "Total Hours 24"
+            ],
+            "topics_text": "To verify Faraday’s Law Total Hours 24",
+            "topics": [
+              "To verify Faraday’s Law",
+              "Total Hours 24"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Fundamentals of Physics, Fundamentals of Physics, Halliday, Jearl Walker, and Robert Resnick, New York and London: John Wiley & Sons, 1962",
+          "Applied physics, Applied physics, P.G. Bhandarkar, Nirali Publication, -",
+          "Engg. Physics, Engg. Physics, 4. R.K. Gaur and S.I. Gupta, Dhanpat Rai & Sons, -"
+        ],
+        "textbooks": [
+          "Fundamentals of Physics, Halliday, Jearl Walker, and Robert Resnick, New York and London: John Wiley & Sons, 1962",
+          "Physics textbooks NCERT, -, -, -",
+          "Applied physics, P.G. Bhandarkar, Nirali Publication, -",
+          "Engg. Physics, R.K. Gaur and S.I. Gupta, Dhanpat Rai & Sons, - References:",
+          "Fundamentals of Physics, Fundamentals of Physics, Halliday, Jearl Walker, and Robert Resnick, New York and London: John Wiley & Sons, 1962",
+          "Applied physics, Applied physics, P.G. Bhandarkar, Nirali Publication, -",
+          "Engg. Physics, Engg. Physics, 4. R.K. Gaur and S.I. Gupta, Dhanpat Rai & Sons, -"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://nptel.ac.in/courses/115106090/15",
+          "http://nptel.ac.in/courses/115104088/",
+          "http://hyperphysics.phy-astr.gsu.edu/hbase/index.html",
+          "http://vlab.amrita.edu/index.php"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9267,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    APPLIED PHYSICS\nCOURSE CODE     09GS2101\nCOURSE CREDITS  3\n\nObjective:\n 1  To prepare the students to have a basic knowledge of fundamental quantities, their units\n    and measurement. To study various cases under laws of motion. To have knowledge of\n     various properties of maters also to have knowledge of fundamentals of electricity and\n    magnetism and to have knowledge about Light and Sound Waves.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To measure dimensions of various materials and compare units.\n 2  To understand and relate phenomena with the help of laws of motion.\n 3  To identify various states of materials and their relevance.\n 4  To understand the concept of Electricity and Magnetism and its application in daily life.\n 5  To get Knowledge about Light and Sound Waves and their applications.\n\n\nPre-requisite of course:Basic knowledge of science.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Units, Dimensions and Measurements                       4\n               Definition of unit, Fundamental and Derived units, systems of units-\n           CGS, MKS and SI, introduction to accuracy, precision and errors,\n              types of errors, error analysis, Numerical on Error\n     2     Laws of Motion                                          4\n                 Inertia, Newton's first law of motion, momentum, Newton’s second\n            law of motion, conservation of momentum, Newton's third law of\n              motion, Numerical on above topics\n     3       Properties of Matter                                      6\n               Stress & strain along with their types, Hooke's law and modulus of\n               elasticity-Young, bulk and modulus of rigidity, Viscosity, newton's\n            law of viscosity, types of flows, Reynold's number, surface tension\n            and capillary action\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL               MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Electro-Magnetism                                       6\n              Current electricity: current, EMF and Ohm's law, resistance, series\n            and parallel, Numerical on above topics, Magnetism: Magnetic field\n            and properties, electro-magnetic induction-self-inductance and\n             mutual inductance, faraday’s law, applications-transformer\n     5      Waves: Light & Sound                                    8\n               Light: Properties, Reflection, Refraction, Snell’s law, Dispersion of\n                 light, Sound: Characteristics – (Amplitude, Wavelength, Crest,\n             Trough, Frequency, Time Period), Definition of Resonance with\n             Examples, Formula for Velocity of Sound and factors affecting it,\n              Ultrasonic Sound Waves – Uses, properties, Applications,\n              Radioactive rays - Properties and uses of Alpha, Beta and Gamma\n                particles.\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Vernier Calipers To know the use of the Vernier Calipers and   2\n              to measure the length, width and height of the given rectangular\n              block.\n              Vernier Calipers To know the use of the Vernier Calipers and to\n             measure the length, width and height of the given rectangular block.\n     2      Micrometer Screw gauge To measure the diameter of the small  2\n             sphere using micrometer screw gauge.\n             Micrometer Screw gauge To measure the diameter of the small\n              sphere using micrometer screw gauge.\n     3     To determine the value of acceleration due to gravity by using   2\n             simple pendulum\n           To determine the value of acceleration due to gravity by using\n             simple pendulum\n     4     To measure co- efficient of Static Friction of a given Surface    2\n           To measure co- efficient of Static Friction of a given Surface\n     5     To determine Young’s Modulus of elasticity of a given wire     2\n             using Searle’s Apparatus\n           To determine Young’s Modulus of elasticity of a given wire using\n               Searle’s Apparatus\n     6     To determine surface tension of a liquid by capillary tube using  2\n               travelling microscope\n           To determine surface tension of a liquid by capillary tube using\n                travelling microscope\n     7     To calculate refractive index of material of prism using         2\n            Spectrometer Device\n           To calculate refractive index of material of prism using\n             Spectrometer Device\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL               MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     8      Demonstrate sound waves creating vibrations and observing    2\n               their effect\n             Demonstrate sound waves creating vibrations and observing their\n                effect\n     9     To verify Ohm’s Law                                     2\n           To verify Ohm’s Law\n     10     To study Resistors in series                                2\n           To study Resistors in series\n     11     To study Resistors in parallel                               2\n           To study Resistors in parallel\n     12     To verify Faraday’s Law                                  2\n           To verify Faraday’s Law\n                               Total Hours                       24\n\nTextbook :\n 1  Fundamentals of Physics, Halliday, Jearl Walker, and Robert Resnick, New York and\n    London: John Wiley & Sons, 1962\n 2  Physics textbooks NCERT, -, -, -\n 3  Applied physics, P.G. Bhandarkar, Nirali Publication, -\n 4  Engg. Physics, R.K. Gaur and S.I. Gupta, Dhanpat Rai & Sons, -\n\nReferences:\n 1  Fundamentals of Physics, Fundamentals of Physics, Halliday, Jearl Walker, and Robert\n     Resnick, New York and London: John Wiley & Sons, 1962\n 2  Applied physics, Applied physics, P.G. Bhandarkar, Nirali Publication, -\n 3  Engg. Physics, Engg. Physics, 4. R.K. Gaur and S.I. Gupta, Dhanpat Rai & Sons, -\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    30.00         30.00         40.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL               MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  http://nptel.ac.in/courses/115106090/15\n 2  http://nptel.ac.in/courses/115104088/\n 3  http://hyperphysics.phy-astr.gsu.edu/hbase/index.html\n 4  http://vlab.amrita.edu/index.php\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL               MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "dd9423a2b4177691fc89cc569511038cdb5d3536b45d35d21dd4f656a18682b1"
+    },
+    {
+      "subject_id": "48009911010101",
+      "subject_name": "BHARATIYA KNOWLEDGE SYSTEM",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 1,
+      "subject_code": "09IK0101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/5.-SEMESTER-1_09IK0101-BHARATIYA-KNOWLEDGE-SYSTEM.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09IK0101 - BHARATIYA KNOWLEDGE SYSTEM (.pdf",
+      "expected_pdf_sha256": "4e1a0935df6e0e814511cdc59bef4a2875f73e8e63091a1388a5259c59ee677a",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BHARATIYA KNOWLEDGE SYSTEM",
+        "course_code": "09IK0101",
+        "semester_label": "1",
+        "credits": 2,
+        "prerequisite": "Not required"
+      },
+      "objectives": [
+        "Educate students with the foundational texts and classifications of Bharatiya Knowledge Systems and their historical evolution",
+        "Explore India’s ancient contributions to mathematics, language sciences and astronomy",
+        "Highlight technological and architectural advancements in ancient Bharat",
+        "Introduce philosophical concepts such as life stages, life goals, karma, rebirth, and the quest for Moksha in Indian tradition"
+      ],
+      "course_outcomes": [
+        "Describe the structure of Bharatiya Knowledge Systems and recognize key philosophical and literary traditions",
+        "Explain ancient Indian developments in mathematics, astronomy, and their relevance to modern science",
+        "Identify technological and architectural innovations rooted in ancient Indian practices",
+        "Express core Indian philosophies related to the purpose of life, spiritual evolution, and ethical living."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Bharatiya Knowledge Systems (BKS)",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition and classification of BKS, Caturdasa-Vidyasthana, The",
+              "Vedic Corps & Philosophical Systems (Introduction to the Four",
+              "Vedas , Vedangas ,Vedic School of Philosophy), Wisdom through",
+              "the Ages ( Puranas – An Encyclopaedical Work, Itihasa as a Source",
+              "of Wisdom)"
+            ],
+            "topics_text": "Definition and classification of BKS, Caturdasa-Vidyasthana, The Vedic Corps & Philosophical Systems (Introduction to the Four Vedas , Vedangas ,Vedic School of Philosophy), Wisdom through the Ages ( Puranas – An Encyclopaedical Work, Itihasa as a Source of Wisdom)",
+            "topics": [
+              "Definition and classification of BKS, Caturdasa-Vidyasthana, The",
+              "Vedic Corps & Philosophical Systems (Introduction to the Four",
+              "Vedas , Vedangas ,Vedic School of Philosophy), Wisdom through",
+              "the Ages ( Puranas – An Encyclopaedical Work, Itihasa as a Source",
+              "of Wisdom)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Science and Mathematics in Ancient Bharat",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Indian Language Sciences (Components of a Language , Sanskrit",
+              "and Role of Sanskrit in Natural Language Processing), Number",
+              "System and Units of Measurement (Number System in India –",
+              "Historical Evidence , Measurement for Time, Distance and Weight),",
+              "Mathematics (An overview of the Development of Mathematics in",
+              "India , Arithmetic, Geometry, Trigonometry and Algebra in Ancient",
+              "texts), Astronomy ( Vedanga Jyotish , Measuring Time & Calendar)"
+            ],
+            "topics_text": "Indian Language Sciences (Components of a Language , Sanskrit and Role of Sanskrit in Natural Language Processing), Number System and Units of Measurement (Number System in India – Historical Evidence , Measurement for Time, Distance and Weight), Mathematics (An overview of the Development of Mathematics in India , Arithmetic, Geometry, Trigonometry and Algebra in Ancient texts), Astronomy ( Vedanga Jyotish , Measuring Time & Calendar)",
+            "topics": [
+              "Indian Language Sciences (Components of a Language , Sanskrit",
+              "and Role of Sanskrit in Natural Language Processing), Number",
+              "System and Units of Measurement (Number System in India –",
+              "Historical Evidence , Measurement for Time, Distance and Weight),",
+              "Mathematics (An overview of the Development of Mathematics in",
+              "India , Arithmetic, Geometry, Trigonometry and Algebra in Ancient",
+              "texts), Astronomy ( Vedanga Jyotish , Measuring Time & Calendar)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Engineering, Technology and Architecture in Ancient Bharat",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Metallurgy and Textile Technology (Metals and Metalworking",
+              "Technology ,Iron and Steel Technology ,Textile and Dyeing –",
+              "Indian Specialities), Irrigation and Water Management (Harappan",
+              "and Traditional Water Management System of Gujarat , Historical",
+              "Sites – Sringeverpur, South Indian Water Management System,",
+              "Rain Water Harvesting System), Sacred Ecology and Environment",
+              "(Sacred Hills, Mountains and Forest ,Nakshatrara Gyaan and",
+              "Agriculture,Forest Management and Urban Planning),",
+              "Transportation ( Modes of Transportations and Reforms,",
+              "Development of Trading Techniques), Vastu sastra – The Science of",
+              "Architecture (Town Planning, Civil Architecture ,Temple",
+              "Architecture)"
+            ],
+            "topics_text": "Metallurgy and Textile Technology (Metals and Metalworking Technology ,Iron and Steel Technology ,Textile and Dyeing – Indian Specialities), Irrigation and Water Management (Harappan and Traditional Water Management System of Gujarat , Historical Sites – Sringeverpur, South Indian Water Management System, Rain Water Harvesting System), Sacred Ecology and Environment (Sacred Hills, Mountains and Forest ,Nakshatrara Gyaan and Agriculture,Forest Management and Urban Planning), Transportation ( Modes of Transportations and Reforms, Development of Trading Techniques), Vastu sastra – The Science of Architecture (Town Planning, Civil Architecture ,Temple Architecture)",
+            "topics": [
+              "Metallurgy and Textile Technology (Metals and Metalworking",
+              "Technology ,Iron and Steel Technology ,Textile and Dyeing –",
+              "Indian Specialities), Irrigation and Water Management (Harappan",
+              "and Traditional Water Management System of Gujarat , Historical",
+              "Sites – Sringeverpur, South Indian Water Management System,",
+              "Rain Water Harvesting System), Sacred Ecology and Environment",
+              "(Sacred Hills, Mountains and Forest ,Nakshatrara Gyaan and",
+              "Agriculture,Forest Management and Urban Planning),",
+              "Transportation ( Modes of Transportations and Reforms,",
+              "Development of Trading Techniques), Vastu sastra – The Science of",
+              "Architecture (Town Planning, Civil Architecture ,Temple",
+              "Architecture)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Concepts of Life in Ancient Bharat",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Four Stages of Life , Four Goals of Human Life , Karma & Rebirth,",
+              "Striving for Moksha",
+              "Total Hours 28"
+            ],
+            "topics_text": "Four Stages of Life , Four Goals of Human Life , Karma & Rebirth, Striving for Moksha Total Hours 28",
+            "topics": [
+              "Four Stages of Life , Four Goals of Human Life , Karma & Rebirth,",
+              "Striving for Moksha",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "India’s Glorious Scientific Tradition, India’s Glorious Scientific Tradition, Suresh Soni, Ocean Books Pvt. Ltd., 2025",
+          "Traditional Knowledge System in India, Traditional Knowledge System in India, Amit Jha, Atlantic, 2023",
+          "Pride of India: A Glimpse into India’s Scientific Heritage, Pride of India: A Glimpse into India’s Scientific Heritage, -, Samskrita Bharati, -",
+          "IKS: The Knowledge system of Bharata, IKS: The Knowledge system of Bharata, Prof. Bhag Chand Chauhan, Garuda Prakashan, 2023",
+          "Indian Knowledge Systems: Volume I and II, Indian Knowledge Systems: Volume I and II, Kapil Kapoor and Avadhesh Kumar Singh, D. K. Print World Ltd., 2005",
+          "Ancient India, Ancient India, R. C. Majumdar, Motilal Banarsidass , 1952"
+        ],
+        "textbooks": [
+          "Introduction to Indian Knowledge System: Concepts and Applications, B. Mahadevan, Vinayak Rajat Bhat, Nagendra Pavana, PHI Learning Pvt. Ltd., 2022 References:",
+          "India’s Glorious Scientific Tradition, India’s Glorious Scientific Tradition, Suresh Soni, Ocean Books Pvt. Ltd., 2025",
+          "Traditional Knowledge System in India, Traditional Knowledge System in India, Amit Jha, Atlantic, 2023",
+          "Pride of India: A Glimpse into India’s Scientific Heritage, Pride of India: A Glimpse into India’s Scientific Heritage, -, Samskrita Bharati, -",
+          "IKS: The Knowledge system of Bharata, IKS: The Knowledge system of Bharata, Prof. Bhag Chand Chauhan, Garuda Prakashan, 2023",
+          "Indian Knowledge Systems: Volume I and II, Indian Knowledge Systems: Volume I and II, Kapil Kapoor and Avadhesh Kumar Singh, D. K. Print World Ltd., 2005",
+          "Ancient India, Ancient India, R. C. Majumdar, Motilal Banarsidass , 1952"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://iksindia.org/",
+          "https://www.youtube.com/@IKS_Media_MoE",
+          "https://onlinecourses.swayam2.ac.in/imb23_mg53/preview",
+          "https://onlinecourses.swayam2.ac.in/ntr25_ed18/preview"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6860,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    BHARATIYA KNOWLEDGE SYSTEM\nCOURSE CODE     09IK0101\nCOURSE CREDITS  2\n\nObjective:\n 1  Educate students with the foundational texts and classifications of Bharatiya Knowledge\n    Systems and their historical evolution\n 2  Explore India’s ancient contributions to mathematics, language sciences and astronomy\n 3  Highlight technological and architectural advancements in ancient Bharat\n 4  Introduce philosophical concepts such as life stages, life goals, karma, rebirth, and the\n     quest for Moksha in Indian tradition\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Describe the structure of Bharatiya Knowledge Systems and recognize key philosophical\n    and literary traditions\n 2  Explain ancient Indian developments in mathematics, astronomy, and their relevance to\n    modern science\n 3  Identify technological and architectural innovations rooted in ancient Indian practices\n 4  Express core Indian philosophies related to the purpose of life, spiritual evolution, and\n     ethical living.\n\n\nPre-requisite of course:Not required\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Bharatiya Knowledge Systems (BKS)          6\n               Definition and classification of BKS, Caturdasa-Vidyasthana, The\n             Vedic Corps & Philosophical Systems (Introduction to the Four\n            Vedas , Vedangas ,Vedic School of Philosophy), Wisdom through\n               the Ages ( Puranas – An Encyclopaedical Work, Itihasa as a Source\n              of Wisdom)\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Science and Mathematics in Ancient Bharat                  8\n              Indian Language Sciences (Components of a Language , Sanskrit\n            and Role of Sanskrit in Natural Language Processing), Number\n            System and Units of Measurement (Number System in India –\n               Historical Evidence , Measurement for Time, Distance and Weight),\n             Mathematics (An overview of the Development of Mathematics in\n               India , Arithmetic, Geometry, Trigonometry and Algebra in Ancient\n                 texts), Astronomy ( Vedanga Jyotish , Measuring Time & Calendar)\n     3      Engineering, Technology and Architecture in Ancient Bharat   12\n             Metallurgy and Textile Technology (Metals and Metalworking\n             Technology ,Iron and Steel Technology ,Textile and Dyeing –\n              Indian Specialities), Irrigation and Water Management (Harappan\n            and Traditional Water Management System of Gujarat , Historical\n               Sites – Sringeverpur, South Indian Water Management System,\n             Rain Water Harvesting System), Sacred Ecology and Environment\n              (Sacred Hills, Mountains and Forest ,Nakshatrara Gyaan and\n               Agriculture,Forest Management and Urban Planning),\n              Transportation ( Modes of Transportations and Reforms,\n            Development of Trading Techniques), Vastu sastra – The Science of\n              Architecture (Town Planning, Civil Architecture ,Temple\n               Architecture)\n     4      Concepts of Life in Ancient Bharat                          2\n             Four Stages of Life , Four Goals of Human Life , Karma & Rebirth,\n               Striving for Moksha\n                               Total Hours                       28\n\n\nTextbook :\n 1  Introduction to Indian Knowledge System: Concepts and Applications, B. Mahadevan,\n    Vinayak Rajat Bhat, Nagendra Pavana, PHI Learning Pvt. Ltd., 2022\n\nReferences:\n 1  India’s Glorious Scientific Tradition, India’s Glorious Scientific Tradition, Suresh Soni,\n    Ocean Books Pvt. Ltd., 2025\n 2  Traditional Knowledge System in India, Traditional Knowledge System in India, Amit Jha,\n     Atlantic, 2023\n 3  Pride of India: A Glimpse into India’s Scientific Heritage, Pride of India: A Glimpse into\n     India’s Scientific Heritage, -, Samskrita Bharati, -\n 4  IKS: The Knowledge system of Bharata, IKS: The Knowledge system of Bharata, Prof.\n    Bhag Chand Chauhan, Garuda Prakashan, 2023\n 5  Indian Knowledge Systems: Volume I and II, Indian Knowledge Systems: Volume I and II,\n     Kapil Kapoor and Avadhesh Kumar Singh, D. K. Print World Ltd., 2005\n 6  Ancient India, Ancient India, R. C. Majumdar, Motilal Banarsidass , 1952\n\nSuggested Theory Distribution:\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         20.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method, may also use any of\n     tools such as demonstration, role play, Quiz, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room\n 3  Students will use supplementary resources such as online videos, videos and e-courses\n\nSupplementary Resources:\n 1   https://iksindia.org/\n 2  https://www.youtube.com/@IKS_Media_MoE\n 3  https://onlinecourses.swayam2.ac.in/imb23_mg53/preview\n 4  https://onlinecourses.swayam2.ac.in/ntr25_ed18/preview\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA                     MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "4e1a0935df6e0e814511cdc59bef4a2875f73e8e63091a1388a5259c59ee677a"
+    },
+    {
+      "subject_id": "48091912010301",
+      "subject_name": "COMMUNICATION SKILLS",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 1,
+      "subject_code": "09SL0103",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/4.-SEMESTER-1_09SL0103-COMMUNICATION-SKILLS.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09SL0103 - COMMUNICATION SKILLS (.pdf",
+      "expected_pdf_sha256": "c20951e9e0154b6fb73700764bec98bcec6704311c7fb399c86fd2a9a870d030",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMMUNICATION SKILLS",
+        "course_code": "09SL0103",
+        "semester_label": "1",
+        "credits": 3,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "The course will enable students to share information on familiar matters/issues in English;",
+        "The course will enable students to make effective presentation in English;",
+        "The course will enable students to gain confidence in speaking English.",
+        "The course will enable students to enhance their understanding of language in the context",
+        "To share information on familiar matters / issues in English.",
+        "To make effective presentation in English .",
+        "To gain confidence in speaking English",
+        "To enhance their understanding of language in the context.",
+        "The course will enable students • to share information on familiar matters/issues in English; • to make effective presentation in English; • to gain confidence in speaking English. • to enhance their understanding of language in the context"
+      ],
+      "course_outcomes": [
+        "Students will acquire basic knowledge of decoding written content",
+        "Students will be able to develop comprehension skills, improve vocabulary, use proper grammar, and acquire writing skills and speaking skills in English",
+        "Students will gain effective presentation skills"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Reading Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "1. Reading & Structure (Tenses, Parts of Speech, Types of",
+              "Sentences, Subject-Verb Agreement, Modals , Active-Passive),",
+              "Techniques of Reading, Reading Different Types of Texts (Essays,",
+              "Articles, Stories, Reports, Surveys, Reference Books), Reading",
+              "Comprehension Passages (8passages)"
+            ],
+            "topics_text": "1. Reading & Structure (Tenses, Parts of Speech, Types of Sentences, Subject-Verb Agreement, Modals , Active-Passive), Techniques of Reading, Reading Different Types of Texts (Essays, Articles, Stories, Reports, Surveys, Reference Books), Reading Comprehension Passages (8passages)",
+            "topics": [
+              "1. Reading & Structure (Tenses, Parts of Speech, Types of",
+              "Sentences, Subject-Verb Agreement, Modals , Active-Passive),",
+              "Techniques of Reading, Reading Different Types of Texts (Essays,",
+              "Articles, Stories, Reports, Surveys, Reference Books), Reading",
+              "Comprehension Passages (8passages)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Introduction to Writing Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Writing for Different Purposes, Applications &Emails,",
+              "Assignments, Event Reports (Industrial Visits, In-House Events,",
+              "Participation in External Events)",
+              "Total Hours 28"
+            ],
+            "topics_text": "Writing for Different Purposes, Applications &Emails, Assignments, Event Reports (Industrial Visits, In-House Events, Participation in External Events) Total Hours 28",
+            "topics": [
+              "Writing for Different Purposes, Applications &Emails,",
+              "Assignments, Event Reports (Industrial Visits, In-House Events,",
+              "Participation in External Events)",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Speaking Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Greetings, Introducing Self & Peers, Asking and Sharing",
+              "Information, Sharing/talking about likes and dislikes/preferences,",
+              "Describing Events/Experiences/Objects, Discussions, Expressing",
+              "Views, Facing Viva Voce"
+            ],
+            "topics_text": "Greetings, Introducing Self & Peers, Asking and Sharing Information, Sharing/talking about likes and dislikes/preferences, Describing Events/Experiences/Objects, Discussions, Expressing Views, Facing Viva Voce",
+            "topics": [
+              "Greetings, Introducing Self & Peers, Asking and Sharing",
+              "Information, Sharing/talking about likes and dislikes/preferences,",
+              "Describing Events/Experiences/Objects, Discussions, Expressing",
+              "Views, Facing Viva Voce"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Effective Presentation Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Introduction to Effective Presentation Skills, Preparing the",
+              "Presentation (Collection of Data/Information, exploring the topic),",
+              "Using ICT in the Presentation, Getting Ready for the Presentation,",
+              "Effective Body Language, Effective Pronunciation, Interacting with",
+              "Audience (Q & A), Practice (presentation with video recording),",
+              "Feedback and Suggestions",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction to Effective Presentation Skills, Preparing the Presentation (Collection of Data/Information, exploring the topic), Using ICT in the Presentation, Getting Ready for the Presentation, Effective Body Language, Effective Pronunciation, Interacting with Audience (Q & A), Practice (presentation with video recording), Feedback and Suggestions Total Hours 28",
+            "topics": [
+              "Introduction to Effective Presentation Skills, Preparing the",
+              "Presentation (Collection of Data/Information, exploring the topic),",
+              "Using ICT in the Presentation, Getting Ready for the Presentation,",
+              "Effective Body Language, Effective Pronunciation, Interacting with",
+              "Audience (Q & A), Practice (presentation with video recording),",
+              "Feedback and Suggestions",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Communication Skills, Communication Skills, Lata and Kumar, OUP, New Delhi, 2018",
+          "The Ace of Soft Skills, The Ace of Soft Skills, Mahadevan Ramesh, Pearson, UP, 2019"
+        ],
+        "textbooks": [
+          "NA, NA, NA, NA References:",
+          "Communication Skills, Communication Skills, Lata and Kumar, OUP, New Delhi, 2018",
+          "The Ace of Soft Skills, The Ace of Soft Skills, Mahadevan Ramesh, Pearson, UP, 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://youtu.be/UOceysteIjo",
+          "https://youtu.be/hE6I9apUvrk",
+          "https://youtu.be/X3Fz_Gu5WUE"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5941,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE   COMMUNICATION SKILLS\nCOURSE CODE     09SL0103\nCOURSE CREDITS  3\n\nObjective:\n 1  The course will enable students to share information on familiar matters/issues in English;\n 2  The course will enable students to make effective presentation in English;\n 3  The course will enable students to gain confidence in speaking English.\n 4  The course will enable students to enhance their understanding of language in the context\n 5  To share information on familiar matters / issues in English.\n 6  To make effective presentation in English .\n 7  To gain confidence in speaking English\n 8  To enhance their understanding of language in the context.\n 9  The course will enable students • to share information on familiar matters/issues in English;\n      • to make effective presentation in English; • to gain confidence in speaking English. • to\n    enhance their understanding of language in the context\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Students will acquire basic knowledge of decoding written content\n 2  Students will be able to develop comprehension skills, improve vocabulary, use proper\n    grammar, and acquire writing skills and speaking skills in English\n 3  Students will gain effective presentation skills\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Reading Skills                              14\n                1. Reading & Structure (Tenses, Parts of Speech, Types of\n              Sentences, Subject-Verb Agreement, Modals , Active-Passive),\n             Techniques of Reading, Reading Different Types of Texts (Essays,\n                Articles, Stories, Reports, Surveys, Reference Books), Reading\n            Comprehension Passages (8passages)\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Introduction to Writing Skills                              14\n             Writing for Different Purposes, Applications &Emails,\n             Assignments, Event Reports (Industrial Visits, In-House Events,\n               Participation in External Events)\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Speaking Skills                             14\n              Greetings, Introducing Self & Peers, Asking and Sharing\n              Information, Sharing/talking about likes and dislikes/preferences,\n              Describing Events/Experiences/Objects, Discussions, Expressing\n             Views, Facing Viva Voce\n     2       Effective Presentation Skills                                14\n               Introduction to Effective Presentation Skills, Preparing the\n               Presentation (Collection of Data/Information, exploring the topic),\n             Using ICT in the Presentation, Getting Ready for the Presentation,\n               Effective Body Language, Effective Pronunciation, Interacting with\n            Audience (Q & A), Practice (presentation with video recording),\n            Feedback and Suggestions\n                               Total Hours                       28\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  Communication Skills, Communication Skills, Lata and Kumar, OUP, New Delhi, 2018\n 2  The Ace of Soft Skills, The Ace of Soft Skills, Mahadevan Ramesh, Pearson, UP, 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    35.00         35.00         30.00\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as Lecture method combined with discussion ,use of ICT Tools\n    ,Assignments ,,Presentations ,and self study\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n\nSupplementary Resources:\n 1  https://youtu.be/UOceysteIjo\n 2  https://youtu.be/hE6I9apUvrk\n 3  https://youtu.be/X3Fz_Gu5WUE\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "c20951e9e0154b6fb73700764bec98bcec6704311c7fb399c86fd2a9a870d030"
+    },
+    {
+      "subject_id": "48009135110101",
+      "subject_name": "ENGINEERING DRAWING",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 1,
+      "subject_code": "09ME1101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/3.-SEMESTER-1_09ME1101-ENGINEERING-DRAWING.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09ME1101 - ENGINEERING DRAWING (.pdf",
+      "expected_pdf_sha256": "da36a5eeb645dc689a823a0e325b8deeb59fea738906957470e08a4829df5435",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENGINEERING DRAWING",
+        "course_code": "09ME1101",
+        "semester_label": "1",
+        "credits": 4,
+        "prerequisite": "NA MR. NAVNITKUMAR JAGJIVANBHAI PATEL DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+      },
+      "objectives": [
+        "Engineering Drawing is language of Engineer through which they can communicate with other person and transfer their ideas. Engineers are able to read and understand the drawing and able to use of drawing instruments. The curriculum aim is to develop the skill to draw and read several drawing, curves and projections.",
+        "Engineering Drawing is language of Engineer through which they can communicate with other person and transfer their ideas. Engineers are able to read and understand the drawing and able to use of drawing instruments. The curriculum aim is to develop the skill to draw and read several drawing, curves and projections. Main goal of this subject is to develop thoughts& explaining concepts. Developing of diagram order & practice of drawing apparatus well.",
+        "Engineering Drawing is language of Engineer through which they can communicate with other person and transfer their ideas. Engineers are able to read and understand the drawing and able to use of drawing instruments. The curriculum aim is to develop the skill to draw and read several drawing, curves and projections. Main goal of this subject is to develop thoughts & explaining concepts. Developing of diagram order & practice of drawing apparatus well.",
+        "Engineering Drawing is language of Engineer through which they can communicate with other person and transfer their ideas. Engineers are able to read and understand the drawing and able to use of drawing instruments. The curriculum aim is to develop the skill to draw and read several drawing, curves and projections. Main goal of this subject is to develop thoughts & explaining concepts. Developing of diagram order & practice of drawing apparatus well."
+      ],
+      "course_outcomes": [
+        "To understand the fundamental of engineering drawing incuding standards",
+        "To apply geometric construction techniques",
+        "To enhanced dimensioning and annotation skills",
+        "To interpret the method of projection for better understanding",
+        "To advance their visualization skills so that they can apply these skills in emerging new products.",
+        "Understand the theory of projection."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Engineering Curves",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Overview to Engineering Graphics and Introduction of engineering",
+              "curves, Classification & application of Engineering Curves,",
+              "Construction of Conics-Construction of Ellipse by arc of circle",
+              "method, Concentric Circle Method, Rectangle Method, Oblong",
+              "Method, PARABOLA-Rectangle Method,Method of Tangents (",
+              "Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix",
+              "– focus Method for Ellipse, Parabola and Hyperbola with tangent",
+              "and normal, Cycloidal Curves- Cycloid with tangent and normal,",
+              "Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes",
+              "& Spirals along with normal and tangent"
+            ],
+            "topics_text": "Overview to Engineering Graphics and Introduction of engineering curves, Classification & application of Engineering Curves, Construction of Conics-Construction of Ellipse by arc of circle method, Concentric Circle Method, Rectangle Method, Oblong Method, PARABOLA-Rectangle Method,Method of Tangents ( Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix – focus Method for Ellipse, Parabola and Hyperbola with tangent and normal, Cycloidal Curves- Cycloid with tangent and normal, Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes & Spirals along with normal and tangent",
+            "topics": [
+              "Overview to Engineering Graphics and Introduction of engineering",
+              "curves, Classification & application of Engineering Curves,",
+              "Construction of Conics-Construction of Ellipse by arc of circle",
+              "method, Concentric Circle Method, Rectangle Method, Oblong",
+              "Method, PARABOLA-Rectangle Method,Method of Tangents (",
+              "Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix",
+              "– focus Method for Ellipse, Parabola and Hyperbola with tangent",
+              "and normal, Cycloidal Curves- Cycloid with tangent and normal,",
+              "Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes",
+              "& Spirals along with normal and tangent"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Projection of Points and Lines",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to principal planes of projections & Projections of the",
+              "points located in same quadrant and different quadrants, Projections",
+              "of line with its inclination to one reference plane, Projections of line",
+              "with its inclination to two reference planes, Problems of line",
+              "inclined to two reference planes, True length and inclination with",
+              "the reference planes, True length and inclination with the reference",
+              "planes - Problems, True length and inclination with the reference",
+              "planes - Problems"
+            ],
+            "topics_text": "Introduction to principal planes of projections & Projections of the points located in same quadrant and different quadrants, Projections of line with its inclination to one reference plane, Projections of line with its inclination to two reference planes, Problems of line inclined to two reference planes, True length and inclination with the reference planes, True length and inclination with the reference planes - Problems, True length and inclination with the reference planes - Problems",
+            "topics": [
+              "Introduction to principal planes of projections & Projections of the",
+              "points located in same quadrant and different quadrants, Projections",
+              "of line with its inclination to one reference plane, Projections of line",
+              "with its inclination to two reference planes, Problems of line",
+              "inclined to two reference planes, True length and inclination with",
+              "the reference planes, True length and inclination with the reference",
+              "planes - Problems, True length and inclination with the reference",
+              "planes - Problems"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Projection of planes",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction of different types of plane and overview of projection",
+              "of plane, Projections of planes (polygons, circle and ellipse) with its",
+              "inclination to one reference plane, Problems of projection of planes",
+              "inclined to one reference plane, Projections of planes (polygons,",
+              "circle and ellipse) with its inclination to one reference plane,",
+              "Problems, Concept of auxiliary plane method for projections of the",
+              "plane, Problems"
+            ],
+            "topics_text": "Introduction of different types of plane and overview of projection of plane, Projections of planes (polygons, circle and ellipse) with its inclination to one reference plane, Problems of projection of planes inclined to one reference plane, Projections of planes (polygons, circle and ellipse) with its inclination to one reference plane, Problems, Concept of auxiliary plane method for projections of the plane, Problems",
+            "topics": [
+              "Introduction of different types of plane and overview of projection",
+              "of plane, Projections of planes (polygons, circle and ellipse) with its",
+              "inclination to one reference plane, Problems of projection of planes",
+              "inclined to one reference plane, Projections of planes (polygons,",
+              "circle and ellipse) with its inclination to one reference plane,",
+              "Problems, Concept of auxiliary plane method for projections of the",
+              "plane, Problems"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Orthographic Projections",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Fundamental of projection with classification, Principal planes of",
+              "projection,, Projections from the pictorial view of the object on the",
+              "principal planes for view from front, top and sides using first angle",
+              "projection method and third angle projection method, Problems of",
+              "orthographic projections, Problems of orthographic projections, Full",
+              "sectional view., Problems of sectional view"
+            ],
+            "topics_text": "Fundamental of projection with classification, Principal planes of projection,, Projections from the pictorial view of the object on the principal planes for view from front, top and sides using first angle projection method and third angle projection method, Problems of orthographic projections, Problems of orthographic projections, Full sectional view., Problems of sectional view",
+            "topics": [
+              "Fundamental of projection with classification, Principal planes of",
+              "projection,, Projections from the pictorial view of the object on the",
+              "principal planes for view from front, top and sides using first angle",
+              "projection method and third angle projection method, Problems of",
+              "orthographic projections, Problems of orthographic projections, Full",
+              "sectional view., Problems of sectional view"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Overview to Engineering Graphics",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Drawing instruments and accessories, Use drawing instruments and",
+              "materials effectively, Follow and apply standard practice as per",
+              "B.I.S. for planning and layout, choose appropriate scale factor for",
+              "the drawing as per given situation, Write annotations on a drawing",
+              "where ever necessary. Choose appropriate line and dimensioning",
+              "style for a given geometrical entity, Develop the skill to draw",
+              "polygons, circles and lines with different geometric situations. Use",
+              "of plane scales and R. F."
+            ],
+            "topics_text": "Drawing instruments and accessories, Use drawing instruments and materials effectively, Follow and apply standard practice as per B.I.S. for planning and layout, choose appropriate scale factor for the drawing as per given situation, Write annotations on a drawing where ever necessary. Choose appropriate line and dimensioning style for a given geometrical entity, Develop the skill to draw polygons, circles and lines with different geometric situations. Use of plane scales and R. F.",
+            "topics": [
+              "Drawing instruments and accessories, Use drawing instruments and",
+              "materials effectively, Follow and apply standard practice as per",
+              "B.I.S. for planning and layout, choose appropriate scale factor for",
+              "the drawing as per given situation, Write annotations on a drawing",
+              "where ever necessary. Choose appropriate line and dimensioning",
+              "style for a given geometrical entity, Develop the skill to draw",
+              "polygons, circles and lines with different geometric situations. Use",
+              "of plane scales and R. F."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Isometric Projections and Isometric View or Drawing",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Isometric Scale, Conversion of orthographic views into isometric",
+              "projection, isometric view or drawing",
+              "Total Hours 28"
+            ],
+            "topics_text": "Isometric Scale, Conversion of orthographic views into isometric projection, isometric view or drawing Total Hours 28",
+            "topics": [
+              "Isometric Scale, Conversion of orthographic views into isometric",
+              "projection, isometric view or drawing",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practice Sheet",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Use of Drawing Instruments, Practice of drawing instruments,",
+              "Planning and layout as per IS., Scaling method. Draw Following: a.",
+              "Different Types of line. b. Draw equilateral triangle and square c.",
+              "Types of dimensioning. d. Alphabets and numerical (Vertical &",
+              "inclined as Per IS). e. Draw Polygon using universal method f.",
+              "Dimensioning methods. g. Draw Title Block using stencil. h. Draw",
+              "plain scale and diagonal scale",
+              "2 Engineering Curves[L] 8"
+            ],
+            "topics_text": "Use of Drawing Instruments, Practice of drawing instruments, Planning and layout as per IS., Scaling method. Draw Following: a. Different Types of line. b. Draw equilateral triangle and square c. Types of dimensioning. d. Alphabets and numerical (Vertical & inclined as Per IS). e. Draw Polygon using universal method f. Dimensioning methods. g. Draw Title Block using stencil. h. Draw plain scale and diagonal scale 2 Engineering Curves[L] 8",
+            "topics": [
+              "Use of Drawing Instruments, Practice of drawing instruments,",
+              "Planning and layout as per IS., Scaling method. Draw Following: a.",
+              "Different Types of line. b. Draw equilateral triangle and square c.",
+              "Types of dimensioning. d. Alphabets and numerical (Vertical &",
+              "inclined as Per IS). e. Draw Polygon using universal method f.",
+              "Dimensioning methods. g. Draw Title Block using stencil. h. Draw",
+              "plain scale and diagonal scale",
+              "2 Engineering Curves[L] 8"
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "Problems of Conical Curves, 2 Problem of Cycloid, 3 Problem of",
+            "contact_hours": null,
+            "topic_lines": [
+              "Involute, 4 Problem of spiral.",
+              "3 Projections of Points & line[L] 10",
+              "To draw a projection of points for 10 different conditions. To draw",
+              "projections of lines with different conditions. (4 Problems)",
+              "4 Projections of Planes[L] 10",
+              "To draw projections of different plane with different conditions(4",
+              "Problems)",
+              "5 Orthographic Projections[L] 16",
+              "To draw orthographic projections of different objects (2 Problems)",
+              "6 Isometric Projections[L] 6",
+              "To draw isometric projections for given orthographic views. (2",
+              "Problems)",
+              "Total Hours 56"
+            ],
+            "topics_text": "Involute, 4 Problem of spiral. 3 Projections of Points & line[L] 10 To draw a projection of points for 10 different conditions. To draw projections of lines with different conditions. (4 Problems) 4 Projections of Planes[L] 10 To draw projections of different plane with different conditions(4 Problems) 5 Orthographic Projections[L] 16 To draw orthographic projections of different objects (2 Problems) 6 Isometric Projections[L] 6 To draw isometric projections for given orthographic views. (2 Problems) Total Hours 56",
+            "topics": [
+              "Involute, 4 Problem of spiral.",
+              "3 Projections of Points & line[L] 10",
+              "To draw a projection of points for 10 different conditions. To draw",
+              "projections of lines with different conditions. (4 Problems)",
+              "4 Projections of Planes[L] 10",
+              "To draw projections of different plane with different conditions(4",
+              "Problems)",
+              "5 Orthographic Projections[L] 16",
+              "To draw orthographic projections of different objects (2 Problems)",
+              "6 Isometric Projections[L] 6",
+              "To draw isometric projections for given orthographic views. (2",
+              "Problems)",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Engineering Graphics, Engineering Graphics, Ramdevsinh Jhala, Mc Graw Hill Education, 2018",
+          "Engineering Graphics, Engineering Graphics, P. J. Shah, S. Chand Publishing, 2008"
+        ],
+        "textbooks": [
+          "Basic Engineering Drawing & Graphics, P. J. Shah, Atul Prakashan, 2022 References:",
+          "Engineering Graphics, Engineering Graphics, Ramdevsinh Jhala, Mc Graw Hill Education, 2018",
+          "Engineering Graphics, Engineering Graphics, P. J. Shah, S. Chand Publishing, 2008"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://nptel.ac.in/courses/112/103/112103019/",
+          "https://youtu.be/140VmaL6oDM?list=PLDN15nk5uLiC4gNyVLuQkJgEfzqFh0CBZ",
+          "https://www.youtube.com/results?search_query=engineering+drawing+iit"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 11014,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    ENGINEERING DRAWING\nCOURSE CODE     09ME1101\nCOURSE CREDITS  4\n\nObjective:\n 1  Engineering Drawing is language of Engineer through which they can communicate with\n     other person and transfer their ideas. Engineers are able to read and understand the drawing\n    and able to use of drawing instruments. The curriculum aim is to develop the skill to draw\n    and read several drawing, curves and projections.\n 2  Engineering Drawing is language of Engineer through which they can communicate with\n     other person and transfer their ideas. Engineers are able to read and understand the drawing\n    and able to use of drawing instruments. The curriculum aim is to develop the skill to draw\n    and read several drawing, curves and projections.\n    Main goal of this subject is to develop thoughts& explaining concepts. Developing of\n    diagram order & practice of drawing apparatus well.\n 3  Engineering Drawing is language of Engineer through which they can communicate with\n     other person and transfer their ideas. Engineers are able to read and understand the drawing\n    and able to use of drawing instruments. The curriculum aim is to develop the skill to draw\n    and read several drawing, curves and projections.\n    Main goal of this subject is to develop thoughts & explaining concepts. Developing of\n    diagram order & practice of drawing apparatus well.\n 4  Engineering Drawing is language of Engineer through which they can communicate with\n     other person and transfer their ideas. Engineers are able to read and understand the drawing\n    and able to use of drawing instruments. The curriculum aim is to develop the skill to draw\n    and read several drawing, curves and projections. Main goal of this subject is to develop\n     thoughts & explaining concepts. Developing of diagram order & practice of drawing\n     apparatus well.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand the fundamental of engineering drawing incuding standards\n 2  To apply geometric construction techniques\n 3  To enhanced dimensioning and annotation skills\n 4  To interpret the method of projection for better understanding\n 5  To advance their visualization skills so that they can apply these skills in emerging new\n     products.\n 6  Understand the theory of projection.\n\n\nPre-requisite of course:NA\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Engineering Curves                                       8\n            Overview to Engineering Graphics and Introduction of engineering\n               curves, Classification & application of Engineering Curves,\n              Construction of Conics-Construction of Ellipse by arc of circle\n             method, Concentric Circle Method, Rectangle Method, Oblong\n            Method, PARABOLA-Rectangle Method,Method of Tangents (\n              Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix\n            – focus Method for Ellipse, Parabola and Hyperbola with tangent\n            and normal, Cycloidal Curves- Cycloid with tangent and normal,\n             Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes\n        & Spirals along with normal and tangent\n     2       Projection of Points and Lines                              7\n               Introduction to principal planes of projections & Projections of the\n               points located in same quadrant and different quadrants, Projections\n              of line with its inclination to one reference plane, Projections of line\n             with its inclination to two reference planes, Problems of line\n               inclined to two reference planes, True length and inclination with\n               the reference planes, True length and inclination with the reference\n              planes - Problems, True length and inclination with the reference\n              planes - Problems\n     3       Projection of planes                                       7\n               Introduction of different types of plane and overview of projection\n              of plane, Projections of planes (polygons, circle and ellipse) with its\n               inclination to one reference plane, Problems of projection of planes\n               inclined to one reference plane, Projections of planes (polygons,\n                circle and ellipse) with its inclination to one reference plane,\n             Problems, Concept of auxiliary plane method for projections of the\n               plane, Problems\n     4      Orthographic Projections                                  6\n             Fundamental of projection with classification, Principal planes of\n                projection,, Projections from the pictorial view of the object on the\n               principal planes for view from front, top and sides using first angle\n               projection method and third angle projection method, Problems of\n              orthographic projections, Problems of orthographic projections, Full\n               sectional view., Problems of sectional view\n     5      Overview to Engineering Graphics                          0\n            Drawing instruments and accessories, Use drawing instruments and\n               materials effectively, Follow and apply standard practice as per\n                B.I.S. for planning and layout, choose appropriate scale factor for\n               the drawing as per given situation, Write annotations on a drawing\n            where ever necessary. Choose appropriate line and dimensioning\n                style for a given geometrical entity, Develop the skill to draw\n              polygons, circles and lines with different geometric situations. Use\n              of plane scales and R. F.\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6      Isometric Projections and Isometric View or Drawing          0\n              Isometric Scale, Conversion of orthographic views into isometric\n               projection, isometric view or drawing\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practice Sheet                                           6\n            Use of Drawing Instruments, Practice of drawing instruments,\n             Planning and layout as per IS., Scaling method. Draw Following: a.\n               Different Types of line. b. Draw equilateral triangle and square c.\n            Types of dimensioning. d. Alphabets and numerical (Vertical &\n               inclined as Per IS). e. Draw Polygon using universal method f.\n             Dimensioning methods. g. Draw Title Block using stencil. h. Draw\n               plain scale and diagonal scale\n     2      Engineering Curves[L]                                    8\n            1 Problems of Conical Curves, 2 Problem of Cycloid, 3 Problem of\n               Involute, 4 Problem of spiral.\n     3       Projections of Points & line[L]                              10\n           To draw a projection of points for 10 different conditions. To draw\n               projections of lines with different conditions. (4 Problems)\n     4       Projections of Planes[L]                                   10\n           To draw projections of different plane with different conditions(4\n             Problems)\n     5      Orthographic Projections[L]                               16\n           To draw orthographic projections of different objects (2 Problems)\n     6      Isometric Projections[L]                                   6\n           To draw isometric projections for given orthographic views. (2\n             Problems)\n                               Total Hours                       56\n\nTextbook :\n 1  Basic Engineering Drawing & Graphics, P. J. Shah, Atul Prakashan, 2022\n\nReferences:\n 1  Engineering Graphics, Engineering Graphics, Ramdevsinh Jhala, Mc Graw Hill Education,\n    2018\n 2  Engineering Graphics, Engineering Graphics, P. J. Shah, S. Chand Publishing, 2008\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    28.00         32.00         40.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/112/103/112103019/\n 2  https://youtu.be/140VmaL6oDM?list=PLDN15nk5uLiC4gNyVLuQkJgEfzqFh0CBZ\n 3  https://www.youtube.com/results?search_query=engineering+drawing+iit\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "da36a5eeb645dc689a823a0e325b8deeb59fea738906957470e08a4829df5435"
+    },
+    {
+      "subject_id": "48009121010201",
+      "subject_name": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 1,
+      "subject_code": "09AU0102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/6.-SEMESTER-1_09AU0102-ENVIRONMENT-CONSERVATION-DISASTER-MANAGEMENT.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09AU0102 - ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT (.pdf",
+      "expected_pdf_sha256": "949af921d2a256b36e741d5759df5af917b651a3ef537810487b9417b4e4bccd",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENVIRONMENT CONSERVATION & DISASTER",
+        "course_code": "09AU0102",
+        "semester_label": "1",
+        "credits": 0,
+        "prerequisite": "BASIC LIFE SCIENCE"
+      },
+      "objectives": [
+        "To familiarize the students with various renewable energy sources and their applications",
+        "To solve various engineering problems to produce eco-friendly products",
+        "To familiarize the students with strategies for addressing various environmental issues",
+        "To familiarize the students with various renewable energy sources and their applications",
+        "Be better prepared to recover from natural and manmade disasters"
+      ],
+      "course_outcomes": [
+        "Understand the ecosystem and its terminology and solve various engineering problems by applying ecosystem knowledge to produce eco–friendly products",
+        "Understand the various types of pollutions and their remedial measures",
+        "Understand different renewable energy resources and their applications",
+        "Understand the role of an engineer concerning climate change and disaster management"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction of Environmental Science",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition of environment, ecosystem, food chain, and food web, he",
+              "necessity of environmental science, Importance of environment and",
+              "scope"
+            ],
+            "topics_text": "Definition of environment, ecosystem, food chain, and food web, he necessity of environmental science, Importance of environment and scope",
+            "topics": [
+              "Definition of environment, ecosystem, food chain, and food web, he",
+              "necessity of environmental science, Importance of environment and",
+              "scope"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Types of pollution with their causes, effects and remedial",
+            "contact_hours": 8,
+            "topic_lines": [
+              "measures",
+              "Air pollution, water pollution, noise pollution, and soil pollution,",
+              "Global environment problems with their causes, effects & remedies:",
+              "climate change"
+            ],
+            "topics_text": "measures Air pollution, water pollution, noise pollution, and soil pollution, Global environment problems with their causes, effects & remedies: climate change",
+            "topics": [
+              "measures",
+              "Air pollution, water pollution, noise pollution, and soil pollution,",
+              "Global environment problems with their causes, effects & remedies:",
+              "climate change"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Renewable Sources of Energy",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Solar energy: basics of solar energy and its importance, Wind",
+              "energy: need, limitations and future scope, Recent trends of",
+              "renewable sources of energy"
+            ],
+            "topics_text": "Solar energy: basics of solar energy and its importance, Wind energy: need, limitations and future scope, Recent trends of renewable sources of energy",
+            "topics": [
+              "Solar energy: basics of solar energy and its importance, Wind",
+              "energy: need, limitations and future scope, Recent trends of",
+              "renewable sources of energy"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Disaster Management",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Concepts and definition of disaster, Disaster management cycle, ole",
+              "of an engineer in disaster management Rescue techniques during a",
+              "disaster, Natural disasters: earthquake, cyclone, flood, tsunami,",
+              "drought, and landslides, Manmade disaster: fire, civil war,",
+              "technological disasters",
+              "Total Hours 28"
+            ],
+            "topics_text": "Concepts and definition of disaster, Disaster management cycle, ole of an engineer in disaster management Rescue techniques during a disaster, Natural disasters: earthquake, cyclone, flood, tsunami, drought, and landslides, Manmade disaster: fire, civil war, technological disasters Total Hours 28",
+            "topics": [
+              "Concepts and definition of disaster, Disaster management cycle, ole",
+              "of an engineer in disaster management Rescue techniques during a",
+              "disaster, Natural disasters: earthquake, cyclone, flood, tsunami,",
+              "drought, and landslides, Manmade disaster: fire, civil war,",
+              "technological disasters",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Environmental Science, Environmental Science, Y. K. Singh, New Age International (P) Ltd., 2006",
+          "Environmental Pollution Control and Engineering,, Environmental Pollution Control and Engineering,, Rao, C. S.,, New Age International Publication,, 2007",
+          "Environmental Sciences,, Environmental Sciences,, Pawar, Kishor R, Narkhede, Sachin, Nirali Prakashan, 2006",
+          "Renewable Energy Resources,, Renewable Energy Resources,, Twidell, John , Weir, Tony,, Taylor and Francis Group, 2004"
+        ],
+        "textbooks": [
+          "Environment Engineering and Disaster Management, Sanjay K., Laxmi Publications, 2018 References:",
+          "Environmental Science, Environmental Science, Y. K. Singh, New Age International (P) Ltd., 2006",
+          "Environmental Pollution Control and Engineering,, Environmental Pollution Control and Engineering,, Rao, C. S.,, New Age International Publication,, 2007",
+          "Environmental Sciences,, Environmental Sciences,, Pawar, Kishor R, Narkhede, Sachin, Nirali Prakashan, 2006",
+          "Renewable Energy Resources,, Renewable Energy Resources,, Twidell, John , Weir, Tony,, Taylor and Francis Group, 2004"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.eco-prayer.org/",
+          "https://www.teriin.org/",
+          "https://cpcb.nic.in/",
+          "http://www.indiaenvironmentportal.org.in/",
+          "https://sdgs.un.org/goals",
+          "https://ndma.gov.in/en/",
+          "http://www.emri.in/",
+          "https://www.isro.gov.in/",
+          "https://bhuvan.nrsc.gov.in/bhuvan_links.php",
+          "IMD | Home",
+          "http://goidirectory.nic.in/index.php"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5988,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    ENVIRONMENT CONSERVATION & DISASTER\n             MANAGEMENT\nCOURSE CODE     09AU0102\nCOURSE CREDITS  0\n\nObjective:\n 1  To familiarize the students with various renewable energy sources and their\n     applications\n 2  To solve various engineering problems to produce eco-friendly products\n 3  To familiarize the students with strategies for addressing various environmental issues\n 4  To familiarize the students with various renewable energy sources and their applications\n 5  Be better prepared to recover from natural and manmade disasters\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the ecosystem and its terminology and solve various engineering\n    problems by applying ecosystem knowledge to produce eco–friendly products\n 2  Understand the various types of pollutions and their remedial measures\n 3  Understand different renewable energy resources and their applications\n 4  Understand the role of an engineer concerning climate change and disaster\n    management\n\n\nPre-requisite of course:BASIC LIFE SCIENCE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0      0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction of Environmental Science                      4\n               Definition of environment, ecosystem, food chain, and food web, he\n               necessity of environmental science, Importance of environment and\n             scope\n     2      Types of pollution with their causes, effects and remedial       8\n            measures\n             Air pollution, water pollution, noise pollution, and soil pollution,\n             Global environment problems with their causes, effects & remedies:\n              climate change\n\n\nMR. SMIT MAHENDRABHAI KACHA               DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Renewable Sources of Energy                              6\n              Solar energy: basics of solar energy and its importance, Wind\n              energy: need, limitations and future scope, Recent trends of\n             renewable sources of energy\n     4       Disaster Management                                     10\n             Concepts and definition of disaster, Disaster management cycle, ole\n              of an engineer in disaster management Rescue techniques during a\n                disaster, Natural disasters: earthquake, cyclone, flood, tsunami,\n              drought, and landslides, Manmade disaster: fire, civil war,\n              technological disasters\n                               Total Hours                       28\n\n\nTextbook :\n 1  Environment Engineering and Disaster Management, Sanjay K., Laxmi Publications, 2018\n\nReferences:\n 1  Environmental Science, Environmental Science, Y. K. Singh, New Age International (P)\n     Ltd., 2006\n 2  Environmental Pollution Control and Engineering,, Environmental Pollution Control and\n     Engineering,, Rao, C. S.,, New Age International Publication,, 2007\n 3  Environmental Sciences,, Environmental Sciences,, Pawar, Kishor R, Narkhede, Sachin,\n     Nirali Prakashan, 2006\n 4  Renewable Energy Resources,, Renewable Energy Resources,, Twidell, John , Weir,\n     Tony,, Taylor and Francis Group, 2004\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    30.00         40.00         30.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n\n\n\nMR. SMIT MAHENDRABHAI KACHA               DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 3  Department level examination will be conducted at the end of semester for evaluation of\n    performance of students.\n 4  Students will use supplementary resources such as online videos, videos, e- courses etc.\n\nSupplementary Resources:\n 1  https://www.eco-prayer.org/\n 2  https://www.teriin.org/\n 3   https://cpcb.nic.in/\n 4  http://www.indiaenvironmentportal.org.in/\n 5  https://sdgs.un.org/goals\n 6  https://ndma.gov.in/en/\n 7  http://www.emri.in/\n 8  https://www.isro.gov.in/\n 9  https://bhuvan.nrsc.gov.in/bhuvan_links.php\n 10 IMD | Home\n 11  http://goidirectory.nic.in/index.php\n\n\n\n\n\nMR. SMIT MAHENDRABHAI KACHA               DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "949af921d2a256b36e741d5759df5af917b651a3ef537810487b9417b4e4bccd"
+    },
+    {
+      "subject_id": "48009131210101",
+      "subject_name": "MATHEMATICS-I",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 1,
+      "subject_code": "09MA2101",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/06/1.-SEMESTER-1_09MA2101-MATHS-I.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09MA2101 - MATHEMATICS-I (.pdf",
+      "expected_pdf_sha256": "dad6114934ecd34f2329474b39778367fef8715bb3067f1e41ba2b42e419aa77",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MATHEMATICS-I",
+        "course_code": "09MA2101",
+        "semester_label": "1",
+        "credits": 4,
+        "prerequisite": "Basic Mathematics"
+      },
+      "objectives": [
+        "Students are intended to understand the basic concepts and principles of Mathematics such as basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry. This knowledge is required to understand and solve Engineering problems. The course will empower students to use proper Mathematical tool to understand Engineering principles and concepts. Main objective of the course is to apply concepts of basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry or suitable Mathematical tool to solve given engineering problems."
+      ],
+      "course_outcomes": [
+        "Classify the different types of sets of numbers.",
+        "Understand the laws of power of numbers.",
+        "Find LCM and HCF of numbers.",
+        "Solve simple problems on algebraic expressions.",
+        "Compute the area and perimeter of 2D-shapes and volume and surface area of 3D-shapes.",
+        "Solve the applied problems using right triangle trigonometry."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic calculation",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Set of Numbers, Indices"
+            ],
+            "topics_text": "Set of Numbers, Indices",
+            "topics": [
+              "Set of Numbers, Indices"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "HCF and LCM of numbers",
+            "contact_hours": 4,
+            "topic_lines": [
+              "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF",
+              "and LCM of decimals"
+            ],
+            "topics_text": "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF and LCM of decimals",
+            "topics": [
+              "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF",
+              "and LCM of decimals"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Polynomials",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition, Arithmetic properties of polynomials, Algebraic",
+              "identities"
+            ],
+            "topics_text": "Definition, Arithmetic properties of polynomials, Algebraic identities",
+            "topics": [
+              "Definition, Arithmetic properties of polynomials, Algebraic",
+              "identities"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Mensuration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Area and perimeter of square, rectangle, triangle, trapezium,",
+              "parallelogram, rhombus, circle, Surface area and volume of cube,",
+              "cuboid, cone, cylinder, sphere"
+            ],
+            "topics_text": "Area and perimeter of square, rectangle, triangle, trapezium, parallelogram, rhombus, circle, Surface area and volume of cube, cuboid, cone, cylinder, sphere",
+            "topics": [
+              "Area and perimeter of square, rectangle, triangle, trapezium,",
+              "parallelogram, rhombus, circle, Surface area and volume of cube,",
+              "cuboid, cone, cylinder, sphere"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Trigonometry",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Trigonometry ratios, Concept of angles, Unit circle,",
+              "T- Ratios of multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction to Trigonometry ratios, Concept of angles, Unit circle, T- Ratios of multiple angles, sub-multiple angles Total Hours 28",
+            "topics": [
+              "Introduction to Trigonometry ratios, Concept of angles, Unit circle,",
+              "T- Ratios of multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic calculation",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Set of numbers and indices"
+            ],
+            "topics_text": "Set of numbers and indices",
+            "topics": [
+              "Set of numbers and indices"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "HCF and LCM of numbers",
+            "contact_hours": 4,
+            "topic_lines": [
+              "HCF and LCM of numbers, HCF and LCM of fractions and",
+              "decimals"
+            ],
+            "topics_text": "HCF and LCM of numbers, HCF and LCM of fractions and decimals",
+            "topics": [
+              "HCF and LCM of numbers, HCF and LCM of fractions and",
+              "decimals"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Polynomials",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Arithmetic properties of polynomials, Algebraic identities"
+            ],
+            "topics_text": "Arithmetic properties of polynomials, Algebraic identities",
+            "topics": [
+              "Arithmetic properties of polynomials, Algebraic identities"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Mensuration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Area and perimeter of square, rectangle, triangle, Area and",
+              "perimeter of trapezium, parallelogram, rhombus, circle, Surface area",
+              "and volume of cube, cuboid, cone, Surface area and volume of",
+              "cylinder, sphere"
+            ],
+            "topics_text": "Area and perimeter of square, rectangle, triangle, Area and perimeter of trapezium, parallelogram, rhombus, circle, Surface area and volume of cube, cuboid, cone, Surface area and volume of cylinder, sphere",
+            "topics": [
+              "Area and perimeter of square, rectangle, triangle, Area and",
+              "perimeter of trapezium, parallelogram, rhombus, circle, Surface area",
+              "and volume of cube, cuboid, cone, Surface area and volume of",
+              "cylinder, sphere"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Trigonometry",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of",
+              "multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ],
+            "topics_text": "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of multiple angles, sub-multiple angles Total Hours 28",
+            "topics": [
+              "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of",
+              "multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, NCERT, NCERT, 2022",
+          "NCERT MATHEMATICS for class-VI, NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022"
+        ],
+        "textbooks": [
+          "NCERT Class-XI science Mathematics , NCERT, NCERT, 2022",
+          "NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT, NCERT, 2022 References:",
+          "NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, NCERT, NCERT, 2022",
+          "NCERT MATHEMATICS for class-VI, NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022",
+          "NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://en.wikipedia.org/wiki/Set_(mathematics)",
+          "https://en.wikipedia.org/wiki/Least_common_multiple",
+          "https://en.wikipedia.org/wiki/Polynomial",
+          "https://en.wikipedia.org/wiki/Mensuration",
+          "https://en.wikipedia.org/wiki/Trigonometry"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6440,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CIVIL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE    MATHEMATICS-I\nCOURSE CODE     09MA2101\nCOURSE CREDITS  4\n\nObjective:\n 1  Students are intended to understand the basic concepts and principles of Mathematics such\n     as basic mathematics, HCF and LCM, polynomials, mensuration and trigonometry. This\n    knowledge is required to understand and solve Engineering problems. The course will\n    empower students to use proper Mathematical tool to understand Engineering principles\n    and concepts. Main objective of the course is to apply concepts of basic mathematics, HCF\n    and LCM, polynomials, mensuration and trigonometry or suitable Mathematical tool to\n     solve given engineering problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Classify the different types of sets of numbers.\n 2  Understand the laws of power of numbers.\n 3  Find LCM and HCF of numbers.\n 4  Solve simple problems on algebraic expressions.\n 5  Compute the area and perimeter of 2D-shapes and volume and surface area of 3D-shapes.\n 6  Solve the applied problems using right triangle trigonometry.\n\n\nPre-requisite of course:Basic Mathematics\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Basic calculation                                         2\n              Set of Numbers, Indices\n     2    HCF and LCM of numbers                                4\n         HCF of integer, LCM of integer, HCF and LCM of fractions, HCF\n            and LCM of decimals\n     3      Polynomials                                             4\n               Definition, Arithmetic properties of polynomials, Algebraic\n                identities\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Mensuration                                             8\n            Area and perimeter of square, rectangle, triangle, trapezium,\n              parallelogram, rhombus, circle, Surface area and volume of cube,\n              cuboid, cone, cylinder, sphere\n     5      Trigonometry                                            10\n               Introduction to Trigonometry ratios, Concept of angles, Unit circle,\n             T- Ratios of multiple angles, sub-multiple angles\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Basic calculation                                         2\n              Set of numbers and indices\n     2    HCF and LCM of numbers                                4\n         HCF and LCM of numbers, HCF and LCM of fractions and\n             decimals\n     3      Polynomials                                             4\n              Arithmetic properties of polynomials, Algebraic identities\n     4      Mensuration                                             8\n            Area and perimeter of square, rectangle, triangle, Area and\n              perimeter of trapezium, parallelogram, rhombus, circle, Surface area\n            and volume of cube, cuboid, cone, Surface area and volume of\n               cylinder, sphere\n     5      Trigonometry                                            10\n             Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of\n              multiple angles, sub-multiple angles\n                               Total Hours                       28\n\nTextbook :\n 1 NCERT Class-XI science Mathematics , NCERT, NCERT, 2022\n 2 NCERT MATHEMATICS for class-VI, NCERT, NCERT, 2022\n 3 NCERT Class-X Mathematics, NCERT, NCERT, 2022\n\nReferences:\n 1 NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, NCERT,\n   NCERT, 2022\n 2 NCERT MATHEMATICS for class-VI, NCERT MATHEMATICS for class-VI, NCERT,\n   NCERT, 2022\n 3 NCERT Class-X Mathematics, NCERT Class-X Mathematics, NCERT, NCERT, 2022\n\nSuggested Theory Distribution:\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    30.00         30.00         30.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms\n\nSupplementary Resources:\n 1  https://en.wikipedia.org/wiki/Set_(mathematics)\n 2  https://en.wikipedia.org/wiki/Least_common_multiple\n 3  https://en.wikipedia.org/wiki/Polynomial\n 4  https://en.wikipedia.org/wiki/Mensuration\n 5  https://en.wikipedia.org/wiki/Trigonometry\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09MA2101 - MATHEMATICS-I (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "dad6114934ecd34f2329474b39778367fef8715bb3067f1e41ba2b42e419aa77"
+    },
+    {
+      "subject_id": "48009135210201",
+      "subject_name": "MECHANICAL WORKSHOP",
+      "course_id": 48,
+      "course_name": "Diploma Civil Engineering",
+      "semester": 1,
+      "subject_code": "09ME2102",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "UPDATED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME2102.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Civil Engineering/Semester_Unspecified/09ME2102 - MECHANICAL WORKSHOP (.pdf",
+      "expected_pdf_sha256": "602ba0c96a82f152658300948693d54e46287fdd2563e66b3f5f1439a3976092",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MECHANICAL WORKSHOP",
+        "course_code": "09ME2102",
+        "semester_label": "1",
+        "credits": 2,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "Workshop training is a pillar of the real industrial situation which supports to grow and boost relevant technical hand skills required by the technician working in the various engineering trades and workshops. Irrespective of branch the use of workshop performs in day to day industrial as well domestic life helps to soften the problems."
+      ],
+      "course_outcomes": [
+        "Choice the appropriate tools essential for definite operation.",
+        "Know applications of hand tools and power tools.",
+        "Know the safety actions required to be taken while using the tools.",
+        "Understand the processes of machine tools"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
+      "contents": {
+        "theory_units": [],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "To know and gain worth of mechanical engineering in diverse",
+            "contact_hours": 2,
+            "topic_lines": [
+              "fields of engineering",
+              "To know and gain worth of mechanical engineering in diverse fields",
+              "of engineering"
+            ],
+            "topics_text": "fields of engineering To know and gain worth of mechanical engineering in diverse fields of engineering",
+            "topics": [
+              "fields of engineering",
+              "To know and gain worth of mechanical engineering in diverse fields",
+              "of engineering"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "To prepare plant layout for workshop.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To prepare plant layout for workshop."
+            ],
+            "topics_text": "To prepare plant layout for workshop.",
+            "topics": [
+              "To prepare plant layout for workshop."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "To prepare job a by using files and hacksaw.",
+            "contact_hours": 12,
+            "topic_lines": [
+              "To prepare job a by using files and hacksaw."
+            ],
+            "topics_text": "To prepare job a by using files and hacksaw.",
+            "topics": [
+              "To prepare job a by using files and hacksaw."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Hands on practice of punch and hammer.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Hands on practice of punch and hammer."
+            ],
+            "topics_text": "Hands on practice of punch and hammer.",
+            "topics": [
+              "Hands on practice of punch and hammer."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Demonstration of carpentry tools.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Demonstration of carpentry tools."
+            ],
+            "topics_text": "Demonstration of carpentry tools.",
+            "topics": [
+              "Demonstration of carpentry tools."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "To prepare carpentry job (wood material) as per given diagram.",
+            "contact_hours": 10,
+            "topic_lines": [
+              "To prepare carpentry job (wood material) as per given diagram."
+            ],
+            "topics_text": "To prepare carpentry job (wood material) as per given diagram.",
+            "topics": [
+              "To prepare carpentry job (wood material) as per given diagram."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "To. Perform experiment on spot welding.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To. Perform experiment on spot welding."
+            ],
+            "topics_text": "To. Perform experiment on spot welding.",
+            "topics": [
+              "To. Perform experiment on spot welding."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "To perform experiment on arc welding.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To perform experiment on arc welding."
+            ],
+            "topics_text": "To perform experiment on arc welding.",
+            "topics": [
+              "To perform experiment on arc welding."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "To perform experiment on tin smithy.",
+            "contact_hours": 6,
+            "topic_lines": [
+              "To perform experiment on tin smithy."
+            ],
+            "topics_text": "To perform experiment on tin smithy.",
+            "topics": [
+              "To perform experiment on tin smithy."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "To demonstration of plumbing tools.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To demonstration of plumbing tools."
+            ],
+            "topics_text": "To demonstration of plumbing tools.",
+            "topics": [
+              "To demonstration of plumbing tools."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Hands on the practice of power tools.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Hands on the practice of power tools."
+            ],
+            "topics_text": "Hands on the practice of power tools.",
+            "topics": [
+              "Hands on the practice of power tools."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "To interpret the use of drilling machine and to prepare job.",
+            "contact_hours": 4,
+            "topic_lines": [
+              "To interpret the use of drilling machine and to prepare job.",
+              "Total Hours 56"
+            ],
+            "topics_text": "To interpret the use of drilling machine and to prepare job. Total Hours 56",
+            "topics": [
+              "To interpret the use of drilling machine and to prepare job.",
+              "Total Hours 56"
+            ]
+          }
+        ]
+      },
+      "references": {
+        "references": [
+          "Workshop Practice, Workshop Practice, H.S. Bawa, McGraw Hill , 2009"
+        ],
+        "textbooks": [
+          "Workshop Technology, Kr Vinayaka, Sapna Book House, 2015 References:",
+          "Workshop Practice, Workshop Practice, H.S. Bawa, McGraw Hill , 2009"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.aboutmech.com/2020/09/workshop-technology.html"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5225,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (CHEMICAL ENGINEERING)\nSEMESTER         1\nCOURSE TITLE   MECHANICAL WORKSHOP\nCOURSE CODE     09ME2102\nCOURSE CREDITS  2\n\nObjective:\n 1  Workshop training is a pillar of the real industrial situation which supports to grow and\n     boost relevant technical hand skills required by the technician working in the various\n     engineering trades and workshops. Irrespective of branch the use of workshop performs in\n    day to day industrial as well domestic life helps to soften the problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Choice the appropriate tools essential for definite operation.\n 2  Know applications of hand tools and power tools.\n 3  Know the safety actions required to be taken while using the tools.\n 4  Understand the processes of machine tools\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            4         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     To know and gain worth of mechanical engineering in diverse   2\n                fields of engineering\n           To know and gain worth of mechanical engineering in diverse fields\n              of engineering\n     2     To prepare plant layout for workshop.                       4\n           To prepare plant layout for workshop.\n     3     To prepare job a by using files and hacksaw.                  12\n           To prepare job a by using files and hacksaw.\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4     Hands on practice of punch and hammer.                    4\n            Hands on practice of punch and hammer.\n     5      Demonstration of carpentry tools.                           2\n             Demonstration of carpentry tools.\n     6     To prepare carpentry job (wood material) as per given diagram. 10\n           To prepare carpentry job (wood material) as per given diagram.\n     7      To. Perform experiment on spot welding.                     4\n             To. Perform experiment on spot welding.\n     8     To perform experiment on arc welding.                      4\n           To perform experiment on arc welding.\n     9     To perform experiment on tin smithy.                       6\n           To perform experiment on tin smithy.\n     10     To demonstration of plumbing tools.                        2\n           To demonstration of plumbing tools.\n     11     Hands on the practice of power tools.                        2\n            Hands on the practice of power tools.\n     12     To interpret the use of drilling machine and to prepare job.     4\n           To interpret the use of drilling machine and to prepare job.\n                               Total Hours                       56\n\nTextbook :\n 1  Workshop Technology, Kr Vinayaka, Sapna Book House, 2015\n\nReferences:\n 1  Workshop Practice, Workshop Practice, H.S. Bawa, McGraw Hill , 2009\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    28.00         32.00         40.00\n\nInstructional Method:\n 1  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory.\n 2  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 1  https://www.aboutmech.com/2020/09/workshop-technology.html\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09ME2102 - MECHANICAL WORKSHOP (.pdf' from 2 candidates."
+      ],
+      "actual_pdf_sha256": "602ba0c96a82f152658300948693d54e46287fdd2563e66b3f5f1439a3976092"
+    }
+  ],
+  "build_summary": {
+    "extracted": 7,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}
