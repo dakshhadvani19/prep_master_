@@ -23,7 +23,7 @@ CATALOG = ROOT / "global-exam-prep/temp_removed_subjects/diploma_active_syllabus
 PDF_COLLECTION_ROOT = (
     ROOT
     / "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/"
-      "Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi"
+      "Marwadi_Diploma_Syllabus_Collection"
 )
 OUTPUT_ROOT = ROOT / "Syllabus/syllabus_txt/Diploma"
 COURSE_OUTPUT_SLUGS = {
@@ -238,21 +238,30 @@ def extract_scheme(text: str) -> str:
     return " ".join(clean_lines(section))
 
 
-def pick_pdf(pdf_root: Path, subject_code: str, subject_name: str, expected_sha256: str = "") -> tuple[Path | None, list[str]]:
+def pick_pdf(pdf_roots: list[Path], subject_code: str, subject_name: str, expected_sha256: str = "") -> tuple[Path | None, list[str]]:
     warnings: list[str] = []
-    if not pdf_root.exists():
-        return None, [f"PDF directory not found: {pdf_root.relative_to(ROOT)}"]
+    existing_roots = [root for root in pdf_roots if root.exists()]
+    if not existing_roots:
+        roots = ", ".join(root.relative_to(ROOT).as_posix() for root in pdf_roots)
+        return None, [f"PDF directories not found: {roots}"]
+
     matches = [
-        path for path in pdf_root.glob("*.pdf")
+        path
+        for root in existing_roots
+        for path in root.glob("*.pdf")
         if path.name.upper().startswith(subject_code.upper() + " ")
         or path.name.upper().startswith(subject_code.upper() + " -")
     ]
     if not matches:
-        # A small number of Windows-imported names omit the expected separator.
-        matches = [path for path in pdf_root.glob("*.pdf")
-                   if path.name.upper().startswith(subject_code.upper())]
+        # A small number of imported names omit the expected separator.
+        matches = [
+            path
+            for root in existing_roots
+            for path in root.glob("*.pdf")
+            if path.name.upper().startswith(subject_code.upper())
+        ]
     if not matches:
-        return None, [f"No checked-in PDF matched subject code {subject_code}."]
+        return None, [f"No checked-in PDF matched subject code {subject_code} in Verified_Syllabi or Needs_Review."]
 
     def rank(path: Path) -> tuple[int, int, int, str]:
         stem = path.stem.lower()
@@ -260,7 +269,7 @@ def pick_pdf(pdf_root: Path, subject_code: str, subject_name: str, expected_sha2
         title_match = 0 if name and name in stem else 1
         # The catalog hash is strongest evidence where duplicate course-code PDFs exist.
         hash_match = 0 if expected_sha256 and hashlib.sha256(path.read_bytes()).hexdigest().lower() == expected_sha256.lower() else 1
-        # Prefer a title-labelled file over duplicate course-outline exports otherwise.
+        # Prefer a title-labelled file over duplicate "course outline" files otherwise.
         outline_penalty = 1 if "course outline" in stem or "re course outline" in stem else 0
         return (hash_match, title_match + outline_penalty, len(path.name), path.name.lower())
 
@@ -270,6 +279,10 @@ def pick_pdf(pdf_root: Path, subject_code: str, subject_name: str, expected_sha2
             "Multiple PDFs share this subject-code prefix; selected "
             f"{matches[0].name!r} from {len(matches)} candidates."
         )
+    if "Needs_Review" in matches[0].parts:
+        warnings.append(
+            "Selected PDF is stored in Needs_Review; source metadata is flagged for review."
+        )
     return matches[0], warnings
 
 
@@ -277,8 +290,11 @@ def extract_subject(row: dict[str, str]) -> dict[str, Any]:
     subject_id = str(row["subject_id"])
     name = row["subject_name"]
     code = row["source_subject_code"]
-    course_pdf_root = PDF_COLLECTION_ROOT / row["course_name"] / "Semester_Unspecified"
-    pdf_path, warnings = pick_pdf(course_pdf_root, code, name, row.get("pdf_sha256", ""))
+    course_pdf_roots = [
+        PDF_COLLECTION_ROOT / "Verified_Syllabi" / row["course_name"] / "Semester_Unspecified",
+        PDF_COLLECTION_ROOT / "Needs_Review" / row["course_name"] / "Semester_Unspecified",
+    ]
+    pdf_path, warnings = pick_pdf(course_pdf_roots, code, name, row.get("pdf_sha256", ""))
 
     base: dict[str, Any] = {
         "subject_id": subject_id,
