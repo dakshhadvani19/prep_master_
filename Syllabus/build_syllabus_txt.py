@@ -104,9 +104,9 @@ def parse_unit_blocks(text: str) -> dict[str, list[dict[str, Any]]]:
     index rather than a lossy replacement for the source.
     """
     lines = clean_lines(text)
-    sections: dict[str, list[dict[str, Any]]] = {"theory": [], "practical": []}
+    sections: dict[str, list[dict[str, Any]]] = {"theory_units": [], "practical_units": []}
     active = False
-    block_type = "theory"
+    block_type = "theory_units"
     current: dict[str, Any] | None = None
     in_experiment_list = False
 
@@ -136,13 +136,13 @@ def parse_unit_blocks(text: str) -> dict[str, list[dict[str, Any]]]:
             flush()
             in_experiment_list = True
             active = False
-            block_type = "practical"
+            block_type = "practical_units"
             continue
 
         if re.match(r"^contents\s*:?\s*$", low):
             flush()
             active = True
-            block_type = "practical" if in_experiment_list else "theory"
+            block_type = "practical_units" if in_experiment_list else "theory_units"
             continue
 
         if active and any(low.startswith(stop) for stop in STOP_CONTENTS):
