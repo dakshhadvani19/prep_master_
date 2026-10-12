@@ -32,8 +32,8 @@ COURSE_NAME = "Diploma Computer Engineering"
 
 STOP_CONTENTS = (
     "suggested theory distribution",
-    "references:",
-    "recommended books:",
+    "references",
+    "recommended books",
     "textbook",
     "supplementary resources",
     "instructional method",
@@ -126,7 +126,7 @@ def parse_unit_blocks(text: str) -> dict[str, list[dict[str, Any]]]:
             current = None
 
     unit_heading = re.compile(
-        r"^(\d{1,2})\s+(?!\d+\.\d)([A-Za-z][A-Za-z0-9 \-/&()–—:,.+'’]*?)\s*$"
+        r"^(\d{1,2})\s+(?!\d+\.\d)([A-Za-z][A-Za-z0-9 \-/&()–—:,.+'’]*?)(?:\s+(\d{1,2}))?$"
     )
 
     for line in lines:
@@ -135,11 +135,13 @@ def parse_unit_blocks(text: str) -> dict[str, list[dict[str, Any]]]:
         if "suggested list of experiments" in low:
             flush()
             in_experiment_list = True
-            active = False
             block_type = "practical_units"
+            # Some PDF text layers merge "Suggested List..." and "Contents" into one line.
+            active = "contents" in low
             continue
 
-        if re.match(r"^contents\s*:?\s*$", low):
+        # PDF tables often place the column headings on the same line as "Contents :".
+        if "contents" in low and ("unit" in low or "topics" in low or low.strip().startswith("contents")):
             flush()
             active = True
             block_type = "practical_units" if in_experiment_list else "theory_units"
@@ -162,12 +164,17 @@ def parse_unit_blocks(text: str) -> dict[str, list[dict[str, Any]]]:
         if match:
             # Prevent common prose labels from becoming unit titles.
             title = match.group(2).strip(" :-")
+            trailing_hours = match.group(3)
+            # Rows such as "1 Unit 1" use the final digit as part of the title, not hours.
+            if title.lower() in {"unit", "module"} and trailing_hours:
+                title = f"{title} {trailing_hours}"
+                trailing_hours = None
             if title and title.lower() not in {"topics", "contact hours", "total hours"}:
                 flush()
                 current = {
                     "unit_number": int(match.group(1)),
                     "title": title,
-                    "contact_hours": None,
+                    "contact_hours": int(trailing_hours) if trailing_hours else None,
                     "_topic_lines": [],
                 }
                 continue
@@ -332,11 +339,11 @@ def extract_subject(row: dict[str, str]) -> dict[str, Any]:
 
         objectives = find_between(
             full_text, r"Objective\s*:\s*",
-            [r"Course Outcomes\s*:", r"Teaching and Examination Scheme", r"Contents\s*:?"],
+            [r"Course Outcomes\s*:", r"Teaching and Examination Scheme", r"Contents\s*:?", r"Pre-requisite of course"],
         )
         outcomes = find_between(
             full_text, r"Course Outcomes\s*:",
-            [r"Teaching and Examination Scheme", r"Contents\s*:?"],
+            [r"Teaching and Examination Scheme", r"Contents\s*:?", r"Pre-requisite of course"],
         )
         base["objectives"] = split_numbered_items(objectives) or (
             [" ".join(clean_lines(objectives))] if clean_lines(objectives) else []
