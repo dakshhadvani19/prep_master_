@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:02:56+00:00",
+  "generated_at_utc": "2026-10-12T12:03:50+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -23,7 +23,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09GS2101 - Applied Physics (.pdf",
       "expected_pdf_sha256": "ac1aff73b23b2e565cd60a326ea98a761aff811c7ad05ba45ba7d4bda884a6e4",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "APPLIED PHYSICS",
         "course_code": "09GS2101",
@@ -43,8 +43,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -90,7 +90,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "ac1aff73b23b2e565cd60a326ea98a761aff811c7ad05ba45ba7d4bda884a6e4"
     },
@@ -107,7 +107,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09EE2103 - Basic Electronics (.pdf",
       "expected_pdf_sha256": "b14ca48e74922e647981ed506ada35a71c03ad98b69725ae5853dccdef37811b",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "BASIC ELECTRONICS",
         "course_code": "09EE2103",
@@ -127,8 +127,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -167,7 +167,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "b14ca48e74922e647981ed506ada35a71c03ad98b69725ae5853dccdef37811b"
     },
@@ -184,7 +184,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2105 - Computer Network Skills (.pdf",
       "expected_pdf_sha256": "2f37028211f997bdb28c971f384e55096ad9f00d1562d5eda88ef0762a3d1a36",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "COMPUTER NETWORK SKILL",
         "course_code": "09CE2105",
@@ -203,8 +203,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -240,7 +240,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "2f37028211f997bdb28c971f384e55096ad9f00d1562d5eda88ef0762a3d1a36"
     },
@@ -257,7 +257,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2104 - Computer Programming (.pdf",
       "expected_pdf_sha256": "4a92b953b78d5457ab7ff9212398ae5fcec85339536f6e7558a70bbe3eff1a98",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "COMPUTER PROGRAMMING",
         "course_code": "09CE2104",
@@ -278,8 +278,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -328,7 +328,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "4a92b953b78d5457ab7ff9212398ae5fcec85339536f6e7558a70bbe3eff1a98"
     },
@@ -345,7 +345,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09AU0102 - Enviornment Conservation & Disater Management (.pdf",
       "expected_pdf_sha256": "9172960ed95092bf242dd7b127f93e9c7907ffd6b1b37743ed532918388f418b",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "ENVIRONMENT CONSERVATION & DISASTER",
         "course_code": "09AU0102",
@@ -364,8 +364,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 0 0",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -398,7 +398,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "9172960ed95092bf242dd7b127f93e9c7907ffd6b1b37743ed532918388f418b"
     },
@@ -415,7 +415,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09PD0101 - Integrated Personality Development Course-I (.pdf",
       "expected_pdf_sha256": "e514f18c82a7d796dcd3eabbcba143a55b3ca72fab9323fbaa5c00f3dfa0aa93",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-",
         "course_code": "09PD0101",
@@ -436,8 +436,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -476,7 +476,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "e514f18c82a7d796dcd3eabbcba143a55b3ca72fab9323fbaa5c00f3dfa0aa93"
     },
@@ -493,7 +493,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09MA2102 - Mathematics-II (.pdf",
       "expected_pdf_sha256": "1c1914f08e44bbd1033d65a31ee64b71f85b7ece4386da4a56eea98e34d30042",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "MATHEMATICS-II",
         "course_code": "09MA2102",
@@ -513,8 +513,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -553,16 +553,16 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "1c1914f08e44bbd1033d65a31ee64b71f85b7ece4386da4a56eea98e34d30042"
     }
   ],
   "build_summary": {
     "extracted": 0,
-    "manual_review": 0,
+    "manual_review": 7,
     "ocr_review": 0,
     "missing_pdf": 0,
-    "extraction_errors": 7
+    "extraction_errors": 0
   }
 }

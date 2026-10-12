@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:02:56+00:00",
+  "generated_at_utc": "2026-10-12T12:03:50+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -23,7 +23,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3102 - Basics of Web Designing (.pdf",
       "expected_pdf_sha256": "bce5d6cd7444b2d0ad54f11358d8f0f8ee93c9034605c0a067b6043f06ade884",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "BASICS OF WEB DESIGNING",
         "course_code": "09CE3102",
@@ -43,8 +43,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -90,7 +90,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "bce5d6cd7444b2d0ad54f11358d8f0f8ee93c9034605c0a067b6043f06ade884"
     },
@@ -107,7 +107,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09IK0101 - Bharatiya Knowledge System (.pdf",
       "expected_pdf_sha256": "ab25cf6633ddf84ceaddc9a8dec59b013d5cf9462d6ec12c21bb997236fc56b6",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": null,
         "course_code": null,
@@ -123,7 +123,7 @@
       ],
       "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 0 0 2 50 30 20 - - 100 [PAGE 2] Syllabus for Diploma Engineering All Branches",
       "contents": {
-        "theory": [
+        "theory_units": [
           {
             "unit_number": 1,
             "title": "Introduction to Bharatiya Knowledge Systems (BKS) 6",
@@ -261,7 +261,7 @@
             ]
           }
         ],
-        "practical": []
+        "practical_units": []
       },
       "references": {
         "references": [],
@@ -297,9 +297,7 @@
           "text": "Syllabus for Diploma Engineering\n\n                                    All Branches\n\n\nRecommended Books:\n\n  Sr.           Title of Books              Author             Publication\n No.\n  1     Introduction    to    Indian  B. Mahadevan, Vinayak  PHI Learning  Pvt.\n       Knowledge        System:  Rajat  Bhat,  Nagendra  Ltd.\n        Concepts and Applications    Pavana\n  2     Indian Knowledge Systems:  Kapil   Kapoor   and  D. K. Print World\n       Volume I and II            Avadhesh Kumar Singh  Ltd.\n  3    Ancient India               R. C. Majumdar          Motilal Banarsidass\n  4    IKS: The Knowledge system  Prof.   Bhag   Chand  Garuda Prakashan\n        of Bharata                Chauhan\n  5     India’s  Glorious  Scientific  Suresh Soni           Ocean Books  Pvt.\n         Tradition                                               Ltd.\n  6     Traditional     Knowledge  Amit Jha                 Atlantic\n       System in India\n  7     Pride of India: A Glimpse   -                       Samskrita Bharati\n         into    India’s    Scientific\n        Heritage\n\n\nSupplementary Resources:\n\n    1.  https://iksindia.org/\n    2.  https://www.youtube.com/@IKS_Media_MoE\n    3.  https://onlinecourses.swayam2.ac.in/imb23_mg53/preview\n    4.  https://onlinecourses.swayam2.ac.in/ntr25_ed18/preview"
         }
       ],
-      "warnings": [
-        "KeyError: 'theory_units'"
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "ab25cf6633ddf84ceaddc9a8dec59b013d5cf9462d6ec12c21bb997236fc56b6"
     },
     {
@@ -315,7 +313,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09SL0103 - Communication Skills-I (.pdf",
       "expected_pdf_sha256": "e998e51fc33481911508ec009f9bf79849a67650df7088f3165431bd731821b1",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "COMMUNICATION SKILLS",
         "course_code": "09SL0103",
@@ -333,8 +331,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -366,7 +364,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "e998e51fc33481911508ec009f9bf79849a67650df7088f3165431bd731821b1"
     },
@@ -383,7 +381,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2101 - Computer Fundamental Skill (.pdf",
       "expected_pdf_sha256": "e96cf2d2128531fcf6c0e5e22733df91078748ef1cc719005f9a0bc42fec610c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "COMPUTER FUNDAMENTAL SKILL",
         "course_code": "09CE2101",
@@ -404,8 +402,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -449,7 +447,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "e96cf2d2128531fcf6c0e5e22733df91078748ef1cc719005f9a0bc42fec610c"
     },
@@ -466,7 +464,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2103 - Computer Hardware Skill (.pdf",
       "expected_pdf_sha256": "428c4b00824ac81cda023abd9c402fccaa276737394d40b40af1d1cc00486d6a",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "COMPUTER HARDWARE SKILL",
         "course_code": "09CE2103",
@@ -485,8 +483,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -530,7 +528,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "428c4b00824ac81cda023abd9c402fccaa276737394d40b40af1d1cc00486d6a"
     },
@@ -547,7 +545,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09ME1101 - Engineering Drawing (.pdf",
       "expected_pdf_sha256": "ab517398187e23254a13ac0aa5a0905721731db8c64083ee36d7ecc305eeecad",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "ENGINEERING DRAWING",
         "course_code": "09ME1101",
@@ -568,8 +566,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25 MR. NAVNITKUMAR JAGJIVANBHAI PATEL DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -607,7 +605,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "ab517398187e23254a13ac0aa5a0905721731db8c64083ee36d7ecc305eeecad"
     },
@@ -624,7 +622,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09AU0101 - Indian Constitution (.pdf",
       "expected_pdf_sha256": "7ab0d0d3187955d9386e0d3a8e84e85d3ffcaa3e2c911f8b55054e48b7a01a64",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "INDIAN CONSTITUTION",
         "course_code": "09AU0101",
@@ -647,8 +645,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 0 0 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -685,7 +683,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "7ab0d0d3187955d9386e0d3a8e84e85d3ffcaa3e2c911f8b55054e48b7a01a64"
     },
@@ -702,7 +700,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09MA2101 - Mathematics-I (.pdf",
       "expected_pdf_sha256": "c76e536dec2e74d561fab75d587c7bbf6154d5e9884a78185f3267518b5bcf4c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "MATHEMATICS-I",
         "course_code": "09MA2101",
@@ -723,8 +721,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -767,16 +765,16 @@
       ],
       "warnings": [
         "Multiple PDFs share this subject-code prefix; selected '09MA2101 - Mathematics-I (.pdf' from 2 candidates.",
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "c76e536dec2e74d561fab75d587c7bbf6154d5e9884a78185f3267518b5bcf4c"
     }
   ],
   "build_summary": {
-    "extracted": 0,
-    "manual_review": 0,
+    "extracted": 1,
+    "manual_review": 7,
     "ocr_review": 0,
     "missing_pdf": 0,
-    "extraction_errors": 8
+    "extraction_errors": 0
   }
 }

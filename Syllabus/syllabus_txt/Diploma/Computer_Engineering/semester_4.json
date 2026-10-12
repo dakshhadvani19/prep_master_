@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:02:56+00:00",
+  "generated_at_utc": "2026-10-12T12:03:50+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -23,7 +23,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2401 - Computer Organization (.pdf",
       "expected_pdf_sha256": "52bd346922ce49af9951c6f094bb634d2445737c7a7dc2d238423b4655ec9d47",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "COMPUTER ORGANIZATION",
         "course_code": "09CE2401",
@@ -43,8 +43,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -77,7 +77,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "52bd346922ce49af9951c6f094bb634d2445737c7a7dc2d238423b4655ec9d47"
     },
@@ -94,7 +94,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1403 - Java Programming (.pdf",
       "expected_pdf_sha256": "b0c746a3991873cd6aece9061c48c6f2af7a0cd7844269d1d56f6b4c77b45a3a",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "JAVA PROGRAMMING",
         "course_code": "09CE1403",
@@ -115,8 +115,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 6 0 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -155,7 +155,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "b0c746a3991873cd6aece9061c48c6f2af7a0cd7844269d1d56f6b4c77b45a3a"
     },
@@ -172,7 +172,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09MA0402 - Mathematics-IV (.pdf",
       "expected_pdf_sha256": "8e4450b7111273b2f9ec4082f6f485c41078ed2c5ed6d5b0518f0b03a2b1a313",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "MATHEMATICS-IV",
         "course_code": "09MA0402",
@@ -193,8 +193,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -233,7 +233,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "8e4450b7111273b2f9ec4082f6f485c41078ed2c5ed6d5b0518f0b03a2b1a313"
     },
@@ -250,7 +250,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3405 - Operating System (.pdf",
       "expected_pdf_sha256": "3d06347ba6b21f1e8f465c85308695c62e1de3b519920f24af94f9bc3b61ac16",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "OPERATING SYSTEM",
         "course_code": "09CE3405",
@@ -269,8 +269,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 4 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -311,7 +311,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "3d06347ba6b21f1e8f465c85308695c62e1de3b519920f24af94f9bc3b61ac16"
     },
@@ -328,7 +328,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3402 - Software Engineering (.pdf",
       "expected_pdf_sha256": "f08a36fd35f07f57be3b6c08814773a2a2ea913c2726599a4153dcabbc8d502f",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "SOFTWARE ENGINEERING",
         "course_code": "09CE3402",
@@ -348,8 +348,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -394,7 +394,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "f08a36fd35f07f57be3b6c08814773a2a2ea913c2726599a4153dcabbc8d502f"
     },
@@ -411,7 +411,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3404 - Web Technology (.pdf",
       "expected_pdf_sha256": "4f9abe815caacbef33a55e47d3156f92c8f006231108ded54989a7b3ceef7332",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "WEB TECHNOLOGY",
         "course_code": "09CE3404",
@@ -432,8 +432,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 6 0 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -480,16 +480,16 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "4f9abe815caacbef33a55e47d3156f92c8f006231108ded54989a7b3ceef7332"
     }
   ],
   "build_summary": {
     "extracted": 0,
-    "manual_review": 0,
+    "manual_review": 6,
     "ocr_review": 0,
     "missing_pdf": 0,
-    "extraction_errors": 6
+    "extraction_errors": 0
   }
 }

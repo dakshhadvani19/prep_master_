@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:02:56+00:00",
+  "generated_at_utc": "2026-10-12T12:03:50+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -23,7 +23,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1502 - Advance Database Management System (.pdf",
       "expected_pdf_sha256": "a31e9d465345b169cf956df90dadbe54294ab92416f0f3d45d9884b60318a251",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "ADVANCE DATABASE MANAGEMENT SYSTEM",
         "course_code": "09CE1502",
@@ -44,8 +44,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -85,7 +85,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "a31e9d465345b169cf956df90dadbe54294ab92416f0f3d45d9884b60318a251"
     },
@@ -102,7 +102,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1504 - Advance Java Programming (.pdf",
       "expected_pdf_sha256": "8a747cab648db0f746974d37d903b722eac54e24f82781661d415d99b7ae5cc7",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "ADVANCE JAVA PROGRAMMING",
         "course_code": "09CE1504",
@@ -123,8 +123,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -179,7 +179,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "8a747cab648db0f746974d37d903b722eac54e24f82781661d415d99b7ae5cc7"
     },
@@ -196,7 +196,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1503 - Advance Web Technology (.pdf",
       "expected_pdf_sha256": "8962a943bd79a466e21506c436c74b1685c21bc46143dab94f7c9a89fff4f726",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "ADVANCED WEB TECHNOLOGY",
         "course_code": "09CE1503",
@@ -217,8 +217,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -265,7 +265,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "8962a943bd79a466e21506c436c74b1685c21bc46143dab94f7c9a89fff4f726"
     },
@@ -282,7 +282,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1506 - Fundamentals Of IOT With Python (.pdf",
       "expected_pdf_sha256": "c461939466565450438ed8945473d8858ba2f5eab3ebe525bcb05654531afbb0",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "FUNDAMENTAL OF IOT WITH PYTHON",
         "course_code": "09CE1506",
@@ -304,8 +304,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -354,7 +354,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "c461939466565450438ed8945473d8858ba2f5eab3ebe525bcb05654531afbb0"
     },
@@ -371,7 +371,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1501 - Mobile Computing (.pdf",
       "expected_pdf_sha256": "5f3fc9275b49362404914f758945546c6dee08c0047dcf3af4be3e31f1b368d1",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "MOBILE COMPUTING",
         "course_code": "09CE1501",
@@ -391,8 +391,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -436,7 +436,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "5f3fc9275b49362404914f758945546c6dee08c0047dcf3af4be3e31f1b368d1"
     },
@@ -453,7 +453,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1505 - Project-I (.pdf",
       "expected_pdf_sha256": "aabaf570c40605f5d6fc756b6b926663c887dd0cb47f2d3cde26f748ed924945",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "PROJECT-I",
         "course_code": "09CE1505",
@@ -474,8 +474,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 6 0 0 0 50 50",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -509,7 +509,7 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "aabaf570c40605f5d6fc756b6b926663c887dd0cb47f2d3cde26f748ed924945"
     },
@@ -526,7 +526,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE0509 - Summer Internship (.pdf",
       "expected_pdf_sha256": "138c08b1645f31af3bca47d75037e8be4b550b71e72440cedddce2819663a5d7",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "EXTRACTION_ERROR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": "SUMMER INTERNSHIP",
         "course_code": "09CE0509",
@@ -546,8 +546,8 @@
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 0 0 0 0 50 50",
       "contents": {
-        "theory": [],
-        "practical": []
+        "theory_units": [],
+        "practical_units": []
       },
       "references": {
         "references": [
@@ -575,16 +575,16 @@
         }
       ],
       "warnings": [
-        "KeyError: 'theory_units'"
+        "PDF text was extracted, but its Contents tables could not be confidently parsed."
       ],
       "actual_pdf_sha256": "138c08b1645f31af3bca47d75037e8be4b550b71e72440cedddce2819663a5d7"
     }
   ],
   "build_summary": {
     "extracted": 0,
-    "manual_review": 0,
+    "manual_review": 7,
     "ocr_review": 0,
     "missing_pdf": 0,
-    "extraction_errors": 7
+    "extraction_errors": 0
   }
 }
