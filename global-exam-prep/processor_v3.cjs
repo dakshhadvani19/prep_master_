@@ -28,7 +28,6 @@ const degreeHeaders = [
     'BBA Aviation',
     'MBA',
     'MBA Business Analytics',
-    'Master In Global Business Management',
     'B.Sc in Chemistry',
     'B.Sc in Microbiology',
     'B.Sc in Agricultural Honors',
