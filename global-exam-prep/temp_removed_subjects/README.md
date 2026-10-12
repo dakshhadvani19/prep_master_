@@ -38,3 +38,9 @@ This is an internal recovery archive, not a public website data source. Do not i
 - The same 122 IDs are removed from `src/data/subjectIdBridge.json`, `src/data/subjectSemesterMap.json`, and the legacy subject arrays in `src/data/mockData.js` to prevent stale numeric exam routes from resolving them.
 - Restore only after a directly accessible syllabus is validated against the applicable course/program, subject code/title, and semester. Retry sources in priority order: official Marwadi University, GTU, then another credible official university for clearly-labelled comparable references.
 
+## Diploma official-syllabus sync — 2026-10-12
+
+- The exact previous Diploma rows that will be removed are archived in `diploma_removed_subjects_2026-10-12.csv` before the Supabase change.
+- The reconciled active list is `diploma_catalog_sync_2026-10-12.csv`; it records the current `SubjectId`, source code, semester, official syllabus URL and action for all six Diploma programs.
+- The current official Marwadi inventory contains 245 distinct code-level subject rows for Diploma CourseIds 44–49. Duplicate page-code aliases were canonicalized from the linked PDF's own subject title where available.
+- An archived row means the current official PDF-backed inventory did not retain its old catalog ID; it does not prove a historical syllabus never existed.
