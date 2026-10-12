@@ -2,6 +2,7 @@
 """Refresh official B.Tech PDF collection, merge verified PDFs, then build JSON."""
 from __future__ import annotations
 
+import argparse
 import csv
 import hashlib
 import json
@@ -21,6 +22,7 @@ PDF_ROOT = COLLECTION / "_PDF_Library"
 PROGRAMS_ROOT = COLLECTION / "Programs"
 TOOLS = COLLECTION / "_Tools/Batch_2_Official_Collector"
 COLLECTOR = TOOLS / "build_syllabus_archive.py"
+PROGRAMS_CSV = TOOLS / "programs.csv"
 RUN_OUTPUT = TOOLS / "run_output/B.Tech programs"
 MANIFEST_DIR = RUN_OUTPUT / "00_Manifests"
 MANIFEST = MANIFEST_DIR / "collection_manifest.csv"
@@ -282,6 +284,15 @@ def merge_collection() -> dict:
     missing_rows = read_csv(MANIFEST_DIR / "missing_marwadi_pdfs.csv")
     links = read_csv(MANIFEST_DIR / "discovered_course_links.csv")
     status_by_program = {r.get("program_name", ""): r for r in source_status_rows}
+for program in programs:
+        program_name = program.get("program_name", "")
+        if program_name not in status_by_program:
+            status_by_program[program_name] = {
+                "status": "not_scanned_missing_only",
+                "pdf_link_count": "",
+                "course_code_link_count": "",
+                "note": "This run targeted only programs with zero or one mapped PDF association.",
+            }
     missing_by_program: dict[str, list[dict[str, str]]] = defaultdict(list)
     links_by_program: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in missing_rows:
@@ -386,10 +397,44 @@ def merge_collection() -> dict:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Refresh B.Tech PDF sources and generate syllabus JSON.")
+    parser.add_argument(
+        "--missing-only",
+        action="store_true",
+        help="Collect only programs currently having zero or one mapped source PDF association.",
+    )
+    args = parser.parse_args()
     if not COLLECTOR.is_file():
         raise FileNotFoundError(f"Official PDF collector is missing: {COLLECTOR}")
-    print("Step 1/3: collecting PDFs from configured official course pages.")
-    subprocess.run([sys.executable, str(COLLECTOR)], cwd=ROOT, check=True)
+
+    if args.missing_only:
+        catalog = read_csv(PROGRAM_CATALOG)
+        current_program_rows = read_csv(PROGRAMS_CSV)
+        counts = {}
+        for row in catalog:
+            try:
+                counts[row.get("program_name", "")] = int(row.get("source_pdf_occurrences") or 0)
+            except ValueError:
+                counts[row.get("program_name", "")] = 0
+        selected_names = {name for name, count in counts.items() if count <= 1}
+        selected_rows = [row for row in current_program_rows if row.get("program_name", "") in selected_names]
+        if not selected_rows:
+            print("No empty or incomplete source mappings were found; rebuilding the existing JSON only.")
+            subprocess.run([sys.executable, str(BUILDER)], cwd=ROOT, check=True)
+            return 0
+        original_program_config = PROGRAMS_CSV.read_bytes()
+        write_csv(PROGRAMS_CSV, selected_rows, list(current_program_rows[0].keys()))
+        print("Step 1/3: collecting only the empty/incomplete program set:")
+        for row in selected_rows:
+            print(" - " + row.get("program_name", ""))
+        try:
+            subprocess.run([sys.executable, str(COLLECTOR)], cwd=ROOT, check=True)
+        finally:
+            PROGRAMS_CSV.write_bytes(original_program_config)
+    else:
+        print("Step 1/3: collecting PDFs from all configured official course pages.")
+        subprocess.run([sys.executable, str(COLLECTOR)], cwd=ROOT, check=True)
+
     print("Step 2/3: verifying hashes, deduplicating PDFs, updating catalogs and reports.")
     print(json.dumps(merge_collection(), indent=2))
     print("Step 3/3: extracting the collected PDFs into B.Tech semester JSON.")
