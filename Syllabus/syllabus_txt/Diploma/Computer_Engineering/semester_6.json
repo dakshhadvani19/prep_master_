@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:03:50+00:00",
+  "generated_at_utc": "2026-10-12T12:05:35+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -23,7 +23,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1603 - .NET (.pdf",
       "expected_pdf_sha256": "a73071228ddc777aca8dead8f91fc2083bb5ff656bdd4f449b2e5539ba7868d3",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": ".NET",
         "course_code": "09CE1603",
@@ -39,12 +39,210 @@
         "Describe C# concepts with OOP elements",
         "Implement the concepts of class, object, constructor and inheritance concepts in C#.",
         "Understand different windows tool to implement windows application",
-        "Develop web application and describe advance features of C#. Pre-requisite of course:Syllabus of .NET for Diploma Computer Engineering"
+        "Develop web application and describe advance features of C#."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit 1",
+            "contact_hours": null,
+            "topic_lines": [
+              "Basics of .NET Framework, Common Language Runtime,",
+              "Microsoft Intermediate Language, Common Language",
+              "Specification, Managed and Unmanaged Code, Metadata,",
+              "Assemblies, Namespaces, Garbage Collection, creating different",
+              "types of indexers and properties"
+            ],
+            "topics_text": "Basics of .NET Framework, Common Language Runtime, Microsoft Intermediate Language, Common Language Specification, Managed and Unmanaged Code, Metadata, Assemblies, Namespaces, Garbage Collection, creating different types of indexers and properties",
+            "topics": [
+              "Basics of .NET Framework, Common Language Runtime,",
+              "Microsoft Intermediate Language, Common Language",
+              "Specification, Managed and Unmanaged Code, Metadata,",
+              "Assemblies, Namespaces, Garbage Collection, creating different",
+              "types of indexers and properties"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit 2",
+            "contact_hours": null,
+            "topic_lines": [
+              "Evaluation of C#, data types, variables, literals, Operators, Program",
+              "Control Statements: if, switch, Loop: Entry Control, Exit Control",
+              "loop, goto statement.",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Evaluation of C#, data types, variables, literals, Operators, Program Control Statements: if, switch, Loop: Entry Control, Exit Control loop, goto statement. MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Evaluation of C#, data types, variables, literals, Operators, Program",
+              "Control Statements: if, switch, Loop: Entry Control, Exit Control",
+              "loop, goto statement.",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit 3",
+            "contact_hours": null,
+            "topic_lines": [
+              "Basics of Class and objects, Reference variable, Constructors and",
+              "types of constructors, Destructor calling in class, Overloading",
+              "concept, Function and Operator Overloading, Inheritance and types",
+              "of Inheritance, Attributes and API reflection, Declaring and",
+              "Dereferencing pointers"
+            ],
+            "topics_text": "Basics of Class and objects, Reference variable, Constructors and types of constructors, Destructor calling in class, Overloading concept, Function and Operator Overloading, Inheritance and types of Inheritance, Attributes and API reflection, Declaring and Dereferencing pointers",
+            "topics": [
+              "Basics of Class and objects, Reference variable, Constructors and",
+              "types of constructors, Destructor calling in class, Overloading",
+              "concept, Function and Operator Overloading, Inheritance and types",
+              "of Inheritance, Attributes and API reflection, Declaring and",
+              "Dereferencing pointers"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit 4",
+            "contact_hours": null,
+            "topic_lines": [
+              "Exception Handling: Introduction, try, catch, exception, multiple",
+              "catch blocks, nested try block., I/O: Byte stream and character",
+              "stream, Console I/O, File Stream and Byte- Oriented File I/O,",
+              "Events and Delegates"
+            ],
+            "topics_text": "Exception Handling: Introduction, try, catch, exception, multiple catch blocks, nested try block., I/O: Byte stream and character stream, Console I/O, File Stream and Byte- Oriented File I/O, Events and Delegates",
+            "topics": [
+              "Exception Handling: Introduction, try, catch, exception, multiple",
+              "catch blocks, nested try block., I/O: Byte stream and character",
+              "stream, Console I/O, File Stream and Byte- Oriented File I/O,",
+              "Events and Delegates"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Unit 5",
+            "contact_hours": null,
+            "topic_lines": [
+              "Application of ASP.NET, Web Controls : Basic Web Controls, Web",
+              "control Classes, Simple web page applet, Validation and Rich",
+              "Controls: Simple validation example, understand regular expression,",
+              "validate customer form"
+            ],
+            "topics_text": "Application of ASP.NET, Web Controls : Basic Web Controls, Web control Classes, Simple web page applet, Validation and Rich Controls: Simple validation example, understand regular expression, validate customer form",
+            "topics": [
+              "Application of ASP.NET, Web Controls : Basic Web Controls, Web",
+              "control Classes, Simple web page applet, Validation and Rich",
+              "Controls: Simple validation example, understand regular expression,",
+              "validate customer form"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Unit 6",
+            "contact_hours": null,
+            "topic_lines": [
+              "Introduction of ADO and ADO.NET, characteristics of ADO.NET,",
+              "Dataset, Different types of Data Binding: Single Value, Repeated",
+              "Value, Data Binding with Database, Data List, Data Grid and",
+              "Repeater, Advance .NET Concept: Introduction of Windows",
+              "Presentation and Communication Foundation and use",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Introduction of ADO and ADO.NET, characteristics of ADO.NET, Dataset, Different types of Data Binding: Single Value, Repeated Value, Data Binding with Database, Data List, Data Grid and Repeater, Advance .NET Concept: Introduction of Windows Presentation and Communication Foundation and use MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Introduction of ADO and ADO.NET, characteristics of ADO.NET,",
+              "Dataset, Different types of Data Binding: Single Value, Repeated",
+              "Value, Data Binding with Database, Data List, Data Grid and",
+              "Repeater, Advance .NET Concept: Introduction of Windows",
+              "Presentation and Communication Foundation and use",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "List of Experiments",
+            "contact_hours": null,
+            "topic_lines": [
+              "Install .NET framework and packages also trouble shoot., Write a",
+              "C# code to print Hello World and elaborate each statement., Write a",
+              "C# code to convert temperature from Fahrenheit to Centigrade.,",
+              "Write a C# code to check given number is Prime or not., Write a C#",
+              "code to check given string is Palindrome or not., Write a C# code to",
+              "find out Vowels and Consonant of string., Write a C# code to",
+              "demonstrate the concept of if else ladder and switch statement.,",
+              "Write a C# code to generate Fibonacci series of N numbers., Write a",
+              "C# code to find out factorial of given number., Write a C# code to",
+              "generate following pattern:, Write a C# code to convert prefix",
+              "notation to postfix notation., Write a C# code to convert infix",
+              "notation to prefix notation., Write a Menu Driven C# code to",
+              "perform following operations., Write a C# code to generate",
+              "PASCAL Pyramid., Write a C# code to multiply two values by",
+              "using the concept of parametised constructor., Write a C# code to",
+              "demonstrate the concept of operator overloading., Write a C# code",
+              "to add two values by using the concept of function overloading.,",
+              "Write a C# code to demonstrate the concept of Multiple",
+              "inheritances., Write a C# code to demonstrate the concept of",
+              "multilevel inheritance., Write a C# code to demonstrate the concept",
+              "of hybrid inheritance., Write a C# code to demonstrate the concept",
+              "of exception handling., Write a C# code to demonstrate the concept",
+              "of multiple catch blocks., Write a C# code to demonstrate the",
+              "concept of nested catch block., Write a C# code to perform file",
+              "operations., Write a C# code to create Form Base Windows",
+              "Application., Write a C# code to create Form Base Windows",
+              "Application., Write a ASP.NET code to test check box and radio",
+              "button and click event., Write a ASP.NET code to provide Required",
+              "Field Validation and Control Field Validation., Write a ASP.NET",
+              "code to provide Range Validation and Custom Field Validation.,",
+              "Write a program to provide connectivity with ADO.NET for adding,",
+              "searching, editing, deleting as bound mode., Write a program to",
+              "provide connectivity with ADO.NET for adding, searching, editing,",
+              "deleting as unbound mode., Develop one mini application by using",
+              "C# and ADO.NET."
+            ],
+            "topics_text": "Install .NET framework and packages also trouble shoot., Write a C# code to print Hello World and elaborate each statement., Write a C# code to convert temperature from Fahrenheit to Centigrade., Write a C# code to check given number is Prime or not., Write a C# code to check given string is Palindrome or not., Write a C# code to find out Vowels and Consonant of string., Write a C# code to demonstrate the concept of if else ladder and switch statement., Write a C# code to generate Fibonacci series of N numbers., Write a C# code to find out factorial of given number., Write a C# code to generate following pattern:, Write a C# code to convert prefix notation to postfix notation., Write a C# code to convert infix notation to prefix notation., Write a Menu Driven C# code to perform following operations., Write a C# code to generate PASCAL Pyramid., Write a C# code to multiply two values by using the concept of parametised constructor., Write a C# code to demonstrate the concept of operator overloading., Write a C# code to add two values by using the concept of function overloading., Write a C# code to demonstrate the concept of Multiple inheritances., Write a C# code to demonstrate the concept of multilevel inheritance., Write a C# code to demonstrate the concept of hybrid inheritance., Write a C# code to demonstrate the concept of exception handling., Write a C# code to demonstrate the concept of multiple catch blocks., Write a C# code to demonstrate the concept of nested catch block., Write a C# code to perform file operations., Write a C# code to create Form Base Windows Application., Write a C# code to create Form Base Windows Application., Write a ASP.NET code to test check box and radio button and click event., Write a ASP.NET code to provide Required Field Validation and Control Field Validation., Write a ASP.NET code to provide Range Validation and Custom Field Validation., Write a program to provide connectivity with ADO.NET for adding, searching, editing, deleting as bound mode., Write a program to provide connectivity with ADO.NET for adding, searching, editing, deleting as unbound mode., Develop one mini application by using C# and ADO.NET.",
+            "topics": [
+              "Install .NET framework and packages also trouble shoot., Write a",
+              "C# code to print Hello World and elaborate each statement., Write a",
+              "C# code to convert temperature from Fahrenheit to Centigrade.,",
+              "Write a C# code to check given number is Prime or not., Write a C#",
+              "code to check given string is Palindrome or not., Write a C# code to",
+              "find out Vowels and Consonant of string., Write a C# code to",
+              "demonstrate the concept of if else ladder and switch statement.,",
+              "Write a C# code to generate Fibonacci series of N numbers., Write a",
+              "C# code to find out factorial of given number., Write a C# code to",
+              "generate following pattern:, Write a C# code to convert prefix",
+              "notation to postfix notation., Write a C# code to convert infix",
+              "notation to prefix notation., Write a Menu Driven C# code to",
+              "perform following operations., Write a C# code to generate",
+              "PASCAL Pyramid., Write a C# code to multiply two values by",
+              "using the concept of parametised constructor., Write a C# code to",
+              "demonstrate the concept of operator overloading., Write a C# code",
+              "to add two values by using the concept of function overloading.,",
+              "Write a C# code to demonstrate the concept of Multiple",
+              "inheritances., Write a C# code to demonstrate the concept of",
+              "multilevel inheritance., Write a C# code to demonstrate the concept",
+              "of hybrid inheritance., Write a C# code to demonstrate the concept",
+              "of exception handling., Write a C# code to demonstrate the concept",
+              "of multiple catch blocks., Write a C# code to demonstrate the",
+              "concept of nested catch block., Write a C# code to perform file",
+              "operations., Write a C# code to create Form Base Windows",
+              "Application., Write a C# code to create Form Base Windows",
+              "Application., Write a ASP.NET code to test check box and radio",
+              "button and click event., Write a ASP.NET code to provide Required",
+              "Field Validation and Control Field Validation., Write a ASP.NET",
+              "code to provide Range Validation and Custom Field Validation.,",
+              "Write a program to provide connectivity with ADO.NET for adding,",
+              "searching, editing, deleting as bound mode., Write a program to",
+              "provide connectivity with ADO.NET for adding, searching, editing,",
+              "deleting as unbound mode., Develop one mini application by using",
+              "C# and ADO.NET."
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -84,9 +282,7 @@
           "text": "References:\n 4  ASP.NET: THE COMPLETE REFERENCE, ASP.NET: THE COMPLETE\n   REFERENCE, Matthew Macdonald , McGraw Hill Education, 2017\n 5  Advance .NET Technology, Advance .NET Technology, Chirag patel, Kogent Learning\n     Solutions Inc., Dreamtech Press, 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    35.00         35.00         30.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://www.tutorialspoint.com/csharp/\n 2  https://www.w3schools.com/asp/webpages_examples.asp\n 3  https://www.codeproject.com/\n 4  http://c-sharpcorner.org\n 5  https://msdn.microsoft.com/\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "a73071228ddc777aca8dead8f91fc2083bb5ff656bdd4f449b2e5539ba7868d3"
     },
     {
@@ -102,7 +298,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1607 - Entrepreneurship Development (.pdf",
       "expected_pdf_sha256": "28f74f5925ad598e34aba99d1f93c8eb3dfa524a5b54e510a6c39c9f9d8fb772",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "ENTREPRENEURSHIP DEVELOPMENT",
         "course_code": "09CE1607",
@@ -120,11 +316,100 @@
         "Identify the elements of success of entrepreneurial ventures.",
         "Understand the parameters to assess different opportunities and constrains for new business ideas.",
         "Understand importunes of management and marketing in small business ventures.",
-        "Apply different strategies for successful implementation of ideas. Pre-requisite of course:Syllabus of ENTREPRENEURSHIP DEVELOPMENT"
+        "Apply different strategies for successful implementation of ideas."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
       "contents": {
-        "theory_units": [],
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit 1",
+            "contact_hours": null,
+            "topic_lines": [
+              "What is Entrepreneurship?, Classification & Characteristics of",
+              "Entrepreneur, benefits and drawbacks of entreprenrship, Creativity",
+              "and Risk taking., Business Reforms, Business Idea Methods and",
+              "techniques to generate business idea, How to do SWOT Analysis",
+              "and advantages of SWOT analysis, Mistakes of entrepreneurship",
+              "and how to avoid them.",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "What is Entrepreneurship?, Classification & Characteristics of Entrepreneur, benefits and drawbacks of entreprenrship, Creativity and Risk taking., Business Reforms, Business Idea Methods and techniques to generate business idea, How to do SWOT Analysis and advantages of SWOT analysis, Mistakes of entrepreneurship and how to avoid them. MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "What is Entrepreneurship?, Classification & Characteristics of",
+              "Entrepreneur, benefits and drawbacks of entreprenrship, Creativity",
+              "and Risk taking., Business Reforms, Business Idea Methods and",
+              "techniques to generate business idea, How to do SWOT Analysis",
+              "and advantages of SWOT analysis, Mistakes of entrepreneurship",
+              "and how to avoid them.",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit 2",
+            "contact_hours": null,
+            "topic_lines": [
+              "Support system, information related to project and support system.,",
+              "Small Scale Business planning and requirements, Different",
+              "Govt&Institutional Agencies and what are the different Formalities.,",
+              "Statutory Requirements and Agencies., Basic concept of marketing",
+              "and their importance, )Market identification and survey key",
+              "components, Market assessment"
+            ],
+            "topics_text": "Support system, information related to project and support system., Small Scale Business planning and requirements, Different Govt&Institutional Agencies and what are the different Formalities., Statutory Requirements and Agencies., Basic concept of marketing and their importance, )Market identification and survey key components, Market assessment",
+            "topics": [
+              "Support system, information related to project and support system.,",
+              "Small Scale Business planning and requirements, Different",
+              "Govt&Institutional Agencies and what are the different Formalities.,",
+              "Statutory Requirements and Agencies., Basic concept of marketing",
+              "and their importance, )Market identification and survey key",
+              "components, Market assessment"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit 3",
+            "contact_hours": null,
+            "topic_lines": [
+              "How to measure cost of project, Sources of Finance, Assessment of",
+              "working capital, Profitability and Product costing, Break Even",
+              "Analysis and Financial Ratios and Significance, Accounting",
+              "Methodology and principles, Book Keeping, Financial Statements &",
+              "what is audit, Business plan steps for commissioning",
+              "(resource,cost,time), Project report and appraisal, Meaning,",
+              "Importance and components of project report"
+            ],
+            "topics_text": "How to measure cost of project, Sources of Finance, Assessment of working capital, Profitability and Product costing, Break Even Analysis and Financial Ratios and Significance, Accounting Methodology and principles, Book Keeping, Financial Statements & what is audit, Business plan steps for commissioning (resource,cost,time), Project report and appraisal, Meaning, Importance and components of project report",
+            "topics": [
+              "How to measure cost of project, Sources of Finance, Assessment of",
+              "working capital, Profitability and Product costing, Break Even",
+              "Analysis and Financial Ratios and Significance, Accounting",
+              "Methodology and principles, Book Keeping, Financial Statements &",
+              "what is audit, Business plan steps for commissioning",
+              "(resource,cost,time), Project report and appraisal, Meaning,",
+              "Importance and components of project report"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit 4",
+            "contact_hours": null,
+            "topic_lines": [
+              "Concept and overview of enterprise., Essential roles entrepreneur in",
+              "managing enterprise., Product cycle: concept and importance,",
+              "Quality assurance, Importance of quality, Importance of testing,",
+              "concept of E-commerce and global entrepreneur"
+            ],
+            "topics_text": "Concept and overview of enterprise., Essential roles entrepreneur in managing enterprise., Product cycle: concept and importance, Quality assurance, Importance of quality, Importance of testing, concept of E-commerce and global entrepreneur",
+            "topics": [
+              "Concept and overview of enterprise., Essential roles entrepreneur in",
+              "managing enterprise., Product cycle: concept and importance,",
+              "Quality assurance, Importance of quality, Importance of testing,",
+              "concept of E-commerce and global entrepreneur"
+            ]
+          }
+        ],
         "practical_units": []
       },
       "references": {
@@ -163,9 +448,7 @@
           "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3    . Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, ecourses.\n\nSupplementary Resources:\n 1  http://www.ediindia.org/\n 2  http://niesbud.nic.in/docs/SelfEmploymentBook.pdf\n 3  http://www.msme.gov.in/\n 4  http://www.nsic.co.in/\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "28f74f5925ad598e34aba99d1f93c8eb3dfa524a5b54e510a6c39c9f9d8fb772"
     },
     {
@@ -181,7 +464,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1606 - Fundametals of Machine Learning (.pdf",
       "expected_pdf_sha256": "b6830af01482a081ca27ae252641400bbde24cb447fb9c017719328e5b171dc9",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "FUNDAMENTALS OF MACHINE LEARNING",
         "course_code": "09CE1606",
@@ -199,12 +482,154 @@
         "Understand Optimization theory and concepts",
         "Understand and analyze different method and Techniques.",
         "Use of Different datasets analyze the data",
-        "Apply different algorithms and predict the output Pre-requisite of course:Syllabus of FUNDAMENTALS OF MACHINE LEARNING"
+        "Apply different algorithms and predict the output"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit 1",
+            "contact_hours": null,
+            "topic_lines": [
+              "Basic introduction to linear algebra, Mathematics equations for",
+              "Machine learning, Matrices, vectors in linear algebra"
+            ],
+            "topics_text": "Basic introduction to linear algebra, Mathematics equations for Machine learning, Matrices, vectors in linear algebra",
+            "topics": [
+              "Basic introduction to linear algebra, Mathematics equations for",
+              "Machine learning, Matrices, vectors in linear algebra"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit 2",
+            "contact_hours": null,
+            "topic_lines": [
+              "What is machine learning, classification, Machine learning",
+              "lifecycle,, Different applications of ML, Difference between AI and",
+              "machine learning Machine Learning and deep learning?, Data",
+              "Processing in machine learning.",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "What is machine learning, classification, Machine learning lifecycle,, Different applications of ML, Difference between AI and machine learning Machine Learning and deep learning?, Data Processing in machine learning. MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "What is machine learning, classification, Machine learning",
+              "lifecycle,, Different applications of ML, Difference between AI and",
+              "machine learning Machine Learning and deep learning?, Data",
+              "Processing in machine learning.",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit 3",
+            "contact_hours": null,
+            "topic_lines": [
+              "How supervised learning works. Types of Supervised learning,",
+              "Advantage and disadvantage of supervised learning, Regressions-",
+              "Linear regression, regression trees, on-linear regression and",
+              "polynomial regression, Classification –random forest, Decision tree,",
+              "Logistic regression, support vector machine"
+            ],
+            "topics_text": "How supervised learning works. Types of Supervised learning, Advantage and disadvantage of supervised learning, Regressions- Linear regression, regression trees, on-linear regression and polynomial regression, Classification –random forest, Decision tree, Logistic regression, support vector machine",
+            "topics": [
+              "How supervised learning works. Types of Supervised learning,",
+              "Advantage and disadvantage of supervised learning, Regressions",
+              "Linear regression, regression trees, on-linear regression and",
+              "polynomial regression, Classification –random forest, Decision tree,",
+              "Logistic regression, support vector machine"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit 4",
+            "contact_hours": null,
+            "topic_lines": [
+              "what is unsupervised learning and working of unsupervised",
+              "learning, Types of unsupervised learning, Clustering algorithm k-",
+              "means and KNN(k-nearest neighbors), Hierarchical clustering,",
+              "anomaly’s detection, neural network, component analysis and",
+              "Apriori algorithm, Basics of reinforcement learning"
+            ],
+            "topics_text": "what is unsupervised learning and working of unsupervised learning, Types of unsupervised learning, Clustering algorithm k- means and KNN(k-nearest neighbors), Hierarchical clustering, anomaly’s detection, neural network, component analysis and Apriori algorithm, Basics of reinforcement learning",
+            "topics": [
+              "what is unsupervised learning and working of unsupervised",
+              "learning, Types of unsupervised learning, Clustering algorithm k",
+              "means and KNN(k-nearest neighbors), Hierarchical clustering,",
+              "anomaly’s detection, neural network, component analysis and",
+              "Apriori algorithm, Basics of reinforcement learning"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Unit 5",
+            "contact_hours": null,
+            "topic_lines": [
+              "Basics of decision tree, regression tree and classification tree, Trees",
+              "vs linear models, Advantages and disadvantages of tree, random",
+              "forests bagging, boosting"
+            ],
+            "topics_text": "Basics of decision tree, regression tree and classification tree, Trees vs linear models, Advantages and disadvantages of tree, random forests bagging, boosting",
+            "topics": [
+              "Basics of decision tree, regression tree and classification tree, Trees",
+              "vs linear models, Advantages and disadvantages of tree, random",
+              "forests bagging, boosting"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "List of Experiments",
+            "contact_hours": null,
+            "topic_lines": [
+              "Study most useful packages for machine learning and How to install",
+              "packages in python., Study how to download and load any datasets.,",
+              "Study how to divide dataset into training set and testing set., Create",
+              "your own linear regression model in python., Develop a cost",
+              "function of linear regression using sample data., Develop a Gradient",
+              "descent of linear regression using sample data, Build your own",
+              "logistic regression model in python and check the accuracy,",
+              "Develop regularization in already developed logistic regression",
+              "algorithm, Study regression using forecasting and predicting, Create",
+              "your own random forest model and predict the data., Design an",
+              "SVM model with use of python., Study clustering algorithms using",
+              "simple data., Implement k-means algorithm using sample data.,",
+              "Implement KNN algorithms using sample data, Implement",
+              "wholesale problem using hierarchical clustering., Study anomaly",
+              "detection techniques in python., How to create simple neural",
+              "network in python., Study how does the apriori algorithm works,",
+              "Study reinforcement learning algorithm step by step., Implement",
+              "Decision tree method in python., Implement random forests and",
+              "decision tree from scratch in python., Study different bagging and",
+              "boosting algorithms."
+            ],
+            "topics_text": "Study most useful packages for machine learning and How to install packages in python., Study how to download and load any datasets., Study how to divide dataset into training set and testing set., Create your own linear regression model in python., Develop a cost function of linear regression using sample data., Develop a Gradient descent of linear regression using sample data, Build your own logistic regression model in python and check the accuracy, Develop regularization in already developed logistic regression algorithm, Study regression using forecasting and predicting, Create your own random forest model and predict the data., Design an SVM model with use of python., Study clustering algorithms using simple data., Implement k-means algorithm using sample data., Implement KNN algorithms using sample data, Implement wholesale problem using hierarchical clustering., Study anomaly detection techniques in python., How to create simple neural network in python., Study how does the apriori algorithm works, Study reinforcement learning algorithm step by step., Implement Decision tree method in python., Implement random forests and decision tree from scratch in python., Study different bagging and boosting algorithms.",
+            "topics": [
+              "Study most useful packages for machine learning and How to install",
+              "packages in python., Study how to download and load any datasets.,",
+              "Study how to divide dataset into training set and testing set., Create",
+              "your own linear regression model in python., Develop a cost",
+              "function of linear regression using sample data., Develop a Gradient",
+              "descent of linear regression using sample data, Build your own",
+              "logistic regression model in python and check the accuracy,",
+              "Develop regularization in already developed logistic regression",
+              "algorithm, Study regression using forecasting and predicting, Create",
+              "your own random forest model and predict the data., Design an",
+              "SVM model with use of python., Study clustering algorithms using",
+              "simple data., Implement k-means algorithm using sample data.,",
+              "Implement KNN algorithms using sample data, Implement",
+              "wholesale problem using hierarchical clustering., Study anomaly",
+              "detection techniques in python., How to create simple neural",
+              "network in python., Study how does the apriori algorithm works,",
+              "Study reinforcement learning algorithm step by step., Implement",
+              "Decision tree method in python., Implement random forests and",
+              "decision tree from scratch in python., Study different bagging and",
+              "boosting algorithms."
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -240,9 +665,7 @@
           "text": "References:\n 1  An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani, Springer, 6th\n     Edition, 2015\n 2  The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second\n     Edition (Springer Series in Statistics) 2nd Edition\n 3  Introduction to Machine Learning, Second Edition, by Ethem Alpaydin, The MIT Press\n 4  Machine learning an algorithmic perspective by Sthephen Marsland, CRC Press\n 5  Machine Learning in Action by Peter Harrington, Manning Shelter Island\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00          40.00         40.00         20.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory Supplementary Resources: 1. Machine Learning by Andrew\n   NG on Coursera\n\nSupplementary Resources:\n 1  www.analyticsvidhya.com\n 2  www.geeksforgeeks.org\n 3  www.Javatpoint.com\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "b6830af01482a081ca27ae252641400bbde24cb447fb9c017719328e5b171dc9"
     },
     {
@@ -258,7 +681,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1601 - Multimedia and Animation Tools (.pdf",
       "expected_pdf_sha256": "cb4301ae7f24f6c118a3d606ebde22f3c8d6b5ed10fd1079a64a3dd8e919ca81",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "MULTIMEDIA AND ANIMATION TOOL",
         "course_code": "09CE1601",
@@ -275,12 +698,298 @@
         "Demonstrate proficiency with layers (naming, organizing, adjustment layers)",
         "Use animation tools and techniques to develop different animation.",
         "Produce animation using action script.",
-        "Construct, edit, and manipulate animation using several animation tools and techniques. Pre-requisite of course:NA"
+        "Construct, edit, and manipulate animation using several animation tools and techniques."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit 1",
+            "contact_hours": null,
+            "topic_lines": [
+              "Introduction to multimedia, concept of graphics-bitmap images,",
+              "vector graphics, Color channels, Bit depth, Image size and",
+              "resolution, graphic file format, vector based format, optimizing web",
+              "graphics, aliased text vs. anti-aliased text, tolerance and opacity in",
+              "image, floating, selection (move, rotate, scale), set tolerance and",
+              "opacity in image with different tools Different color mode-RGB",
+              "mode (millions of colors),CMYK mode (four-printed colors), Index",
+              "mode (256 colors), Grayscale mode (256 grays), Bitmap mode (2",
+              "colors),LAB color mode, Adjust color hue, saturation, and",
+              "brightness, browser safe colors, Shadows, highlights and midtones",
+              "of an image photoshop interface, tools and options",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Introduction to multimedia, concept of graphics-bitmap images, vector graphics, Color channels, Bit depth, Image size and resolution, graphic file format, vector based format, optimizing web graphics, aliased text vs. anti-aliased text, tolerance and opacity in image, floating, selection (move, rotate, scale), set tolerance and opacity in image with different tools Different color mode-RGB mode (millions of colors),CMYK mode (four-printed colors), Index mode (256 colors), Grayscale mode (256 grays), Bitmap mode (2 colors),LAB color mode, Adjust color hue, saturation, and brightness, browser safe colors, Shadows, highlights and midtones of an image photoshop interface, tools and options MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Introduction to multimedia, concept of graphics-bitmap images,",
+              "vector graphics, Color channels, Bit depth, Image size and",
+              "resolution, graphic file format, vector based format, optimizing web",
+              "graphics, aliased text vs. anti-aliased text, tolerance and opacity in",
+              "image, floating, selection (move, rotate, scale), set tolerance and",
+              "opacity in image with different tools Different color mode-RGB",
+              "mode (millions of colors),CMYK mode (four-printed colors), Index",
+              "mode (256 colors), Grayscale mode (256 grays), Bitmap mode (2",
+              "colors),LAB color mode, Adjust color hue, saturation, and",
+              "brightness, browser safe colors, Shadows, highlights and midtones",
+              "of an image photoshop interface, tools and options",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit 2",
+            "contact_hours": null,
+            "topic_lines": [
+              "Basics of Image editing, the Image editing interface, need of image",
+              "editing, create documents(new, save different format, modify,",
+              "search), Image editing palettes, The Image editing Toolbox and",
+              "Options bar, Using Guides and Ruler, Different file formats for file",
+              "importing and exporting, modes of image in image editing (open",
+              "image, create image, save file, modify file), modes of image editing",
+              "(open, copy, rotate, brightness, contrast, color balance, crop,",
+              "resize),, color in image editing with numeric values and",
+              "hexadecimal values, different transformation tools(free, rotate,",
+              "skew, distort and perspective, move, flip horizontal and flip vertical)"
+            ],
+            "topics_text": "Basics of Image editing, the Image editing interface, need of image editing, create documents(new, save different format, modify, search), Image editing palettes, The Image editing Toolbox and Options bar, Using Guides and Ruler, Different file formats for file importing and exporting, modes of image in image editing (open image, create image, save file, modify file), modes of image editing (open, copy, rotate, brightness, contrast, color balance, crop, resize),, color in image editing with numeric values and hexadecimal values, different transformation tools(free, rotate, skew, distort and perspective, move, flip horizontal and flip vertical)",
+            "topics": [
+              "Basics of Image editing, the Image editing interface, need of image",
+              "editing, create documents(new, save different format, modify,",
+              "search), Image editing palettes, The Image editing Toolbox and",
+              "Options bar, Using Guides and Ruler, Different file formats for file",
+              "importing and exporting, modes of image in image editing (open",
+              "image, create image, save file, modify file), modes of image editing",
+              "(open, copy, rotate, brightness, contrast, color balance, crop,",
+              "resize),, color in image editing with numeric values and",
+              "hexadecimal values, different transformation tools(free, rotate,",
+              "skew, distort and perspective, move, flip horizontal and flip vertical)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit 3",
+            "contact_hours": null,
+            "topic_lines": [
+              "Different Image editing tools-Selection tools, Crop and slice tools,",
+              "Measuring tools ,retouching tool, painting tools, Drawing and type",
+              "tools, Introduction to layer, different types of layers-background",
+              "layer, image layer, adjustment layer, text/line layer, fill layer, shape",
+              "layer, Empty layer, duplicate layers, Neutral Layers, Layer Pallets",
+              "and actions, layer features, Image composting using layers,",
+              "Restoration and enhancement of images - Color balance with image,",
+              "adjust/change brightness and contrast, Changing hue saturation and",
+              "brightness Histogram, Gradient map, Desaturate, Invert, color",
+              "replace, selection of different color , Equalize, Threshold, Channel",
+              "mixer, Posterize, Editing and special effects of Text- Text Tool-",
+              "vertical and horizontal text tool, point and paragraph text creation,",
+              "Using horizontal and vertical type mask tools, Using character",
+              "palette for text editing, choosing a font, changing the type color,",
+              "choosing a type size- Specifying kerning and tracking, using",
+              "fractional character widths, specifying baseline shift, Applying",
+              "underline and strikethrough, Text alignment and justification,",
+              "Specifying anti-aliasing, creating text wrap or adding effects to text,",
+              "Rasterizing type"
+            ],
+            "topics_text": "Different Image editing tools-Selection tools, Crop and slice tools, Measuring tools ,retouching tool, painting tools, Drawing and type tools, Introduction to layer, different types of layers-background layer, image layer, adjustment layer, text/line layer, fill layer, shape layer, Empty layer, duplicate layers, Neutral Layers, Layer Pallets and actions, layer features, Image composting using layers, Restoration and enhancement of images - Color balance with image, adjust/change brightness and contrast, Changing hue saturation and brightness Histogram, Gradient map, Desaturate, Invert, color replace, selection of different color , Equalize, Threshold, Channel mixer, Posterize, Editing and special effects of Text- Text Tool- vertical and horizontal text tool, point and paragraph text creation, Using horizontal and vertical type mask tools, Using character palette for text editing, choosing a font, changing the type color, choosing a type size- Specifying kerning and tracking, using fractional character widths, specifying baseline shift, Applying underline and strikethrough, Text alignment and justification, Specifying anti-aliasing, creating text wrap or adding effects to text, Rasterizing type",
+            "topics": [
+              "Different Image editing tools-Selection tools, Crop and slice tools,",
+              "Measuring tools ,retouching tool, painting tools, Drawing and type",
+              "tools, Introduction to layer, different types of layers-background",
+              "layer, image layer, adjustment layer, text/line layer, fill layer, shape",
+              "layer, Empty layer, duplicate layers, Neutral Layers, Layer Pallets",
+              "and actions, layer features, Image composting using layers,",
+              "Restoration and enhancement of images - Color balance with image,",
+              "adjust/change brightness and contrast, Changing hue saturation and",
+              "brightness Histogram, Gradient map, Desaturate, Invert, color",
+              "replace, selection of different color , Equalize, Threshold, Channel",
+              "mixer, Posterize, Editing and special effects of Text- Text Tool",
+              "vertical and horizontal text tool, point and paragraph text creation,",
+              "Using horizontal and vertical type mask tools, Using character",
+              "palette for text editing, choosing a font, changing the type color,",
+              "choosing a type size- Specifying kerning and tracking, using",
+              "fractional character widths, specifying baseline shift, Applying",
+              "underline and strikethrough, Text alignment and justification,",
+              "Specifying anti-aliasing, creating text wrap or adding effects to text,",
+              "Rasterizing type"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit 4",
+            "contact_hours": null,
+            "topic_lines": [
+              "Introduction to Animations, software Interface- Start page, Creating",
+              "custom workspace layouts, import formats, keyboard shortcuts,",
+              "Timeline, frames, Tools Panel, library, property inspector, rulers,",
+              "grids, guides, Layers, color-swatches, color-mixer, movie explorer,",
+              "Drawing in software-Using shape tools- oval tool, polystar tool,",
+              "Using drawing tools- pencil tool, eraser tool, brush tool, drawing",
+              "lines and curves using Pen tool, selection tools – lasso tool,",
+              "selection tool, subselection tool, design and align element",
+              "–snapping, design panel, navigation tools, free transform tool,",
+              "Commands- copy, move, delete, Working with colors- color",
+              "swatches panel, creating custom palettes, using gradient fill, using",
+              "dropper, ink bottles and paint bucket, Working with text- using text",
+              "tool and property panel, text field types, creating font symbol, using",
+              "font symbols in runtime shared libraries, modifying text manually",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Introduction to Animations, software Interface- Start page, Creating custom workspace layouts, import formats, keyboard shortcuts, Timeline, frames, Tools Panel, library, property inspector, rulers, grids, guides, Layers, color-swatches, color-mixer, movie explorer, Drawing in software-Using shape tools- oval tool, polystar tool, Using drawing tools- pencil tool, eraser tool, brush tool, drawing lines and curves using Pen tool, selection tools – lasso tool, selection tool, subselection tool, design and align element –snapping, design panel, navigation tools, free transform tool, Commands- copy, move, delete, Working with colors- color swatches panel, creating custom palettes, using gradient fill, using dropper, ink bottles and paint bucket, Working with text- using text tool and property panel, text field types, creating font symbol, using font symbols in runtime shared libraries, modifying text manually MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Introduction to Animations, software Interface- Start page, Creating",
+              "custom workspace layouts, import formats, keyboard shortcuts,",
+              "Timeline, frames, Tools Panel, library, property inspector, rulers,",
+              "grids, guides, Layers, color-swatches, color-mixer, movie explorer,",
+              "Drawing in software-Using shape tools- oval tool, polystar tool,",
+              "Using drawing tools- pencil tool, eraser tool, brush tool, drawing",
+              "lines and curves using Pen tool, selection tools – lasso tool,",
+              "selection tool, subselection tool, design and align element",
+              "–snapping, design panel, navigation tools, free transform tool,",
+              "Commands- copy, move, delete, Working with colors- color",
+              "swatches panel, creating custom palettes, using gradient fill, using",
+              "dropper, ink bottles and paint bucket, Working with text- using text",
+              "tool and property panel, text field types, creating font symbol, using",
+              "font symbols in runtime shared libraries, modifying text manually",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Unit 5",
+            "contact_hours": null,
+            "topic_lines": [
+              "Working with layers, properties of layers, renaming layers, grouping",
+              "of layers, guide layer, motion guide layer, masking layer, instances,",
+              "symbol library, types of symbol- graphic symbols, button symbols,",
+              "movieclip symbols, editing symbols, modifying instances",
+              "properties, 9-slice scaling for movie clip, Animation – Introduction",
+              "to frame-by-frame animations- adding keyframes, creating frame-",
+              "by-frame animation, onion skinning to modify multiframe sequence,",
+              "using shape tweening ,adding shape hints, motion tweening ,",
+              "working with sound and videos"
+            ],
+            "topics_text": "Working with layers, properties of layers, renaming layers, grouping of layers, guide layer, motion guide layer, masking layer, instances, symbol library, types of symbol- graphic symbols, button symbols, movieclip symbols, editing symbols, modifying instances properties, 9-slice scaling for movie clip, Animation – Introduction to frame-by-frame animations- adding keyframes, creating frame- by-frame animation, onion skinning to modify multiframe sequence, using shape tweening ,adding shape hints, motion tweening , working with sound and videos",
+            "topics": [
+              "Working with layers, properties of layers, renaming layers, grouping",
+              "of layers, guide layer, motion guide layer, masking layer, instances,",
+              "symbol library, types of symbol- graphic symbols, button symbols,",
+              "movieclip symbols, editing symbols, modifying instances",
+              "properties, 9-slice scaling for movie clip, Animation – Introduction",
+              "to frame-by-frame animations- adding keyframes, creating frame",
+              "by-frame animation, onion skinning to modify multiframe sequence,",
+              "using shape tweening ,adding shape hints, motion tweening ,",
+              "working with sound and videos"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Unit 6",
+            "contact_hours": null,
+            "topic_lines": [
+              "Introduction to actionscript, navigating actionpanel, different",
+              "actions – stop(), play(), navigating between frames , navigating",
+              "between scenes, navigating to URLs, Loadmovie and Unloadmovie",
+              "action, working with variables, naming conventions, working with",
+              "operators, string operators, working with statements- if, switch, for,",
+              "while , do while , object properties, creating movie clip, working",
+              "with movie clip objects",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Introduction to actionscript, navigating actionpanel, different actions – stop(), play(), navigating between frames , navigating between scenes, navigating to URLs, Loadmovie and Unloadmovie action, working with variables, naming conventions, working with operators, string operators, working with statements- if, switch, for, while , do while , object properties, creating movie clip, working with movie clip objects MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Introduction to actionscript, navigating actionpanel, different",
+              "actions – stop(), play(), navigating between frames , navigating",
+              "between scenes, navigating to URLs, Loadmovie and Unloadmovie",
+              "action, working with variables, naming conventions, working with",
+              "operators, string operators, working with statements- if, switch, for,",
+              "while , do while , object properties, creating movie clip, working",
+              "with movie clip objects",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "List of Experiments",
+            "contact_hours": null,
+            "topic_lines": [
+              "Construct an image using various shape tools and fill color using",
+              "color palate., Construct an image to make frame with photos of",
+              "various persons (Use move, cut, copy, paste, transform etc",
+              "functionality of image editing)., Produce a scene using various tools",
+              "available and demonstrate the use of layers., Remove various",
+              "objects in photo using various tools like clone stamp tool, healing",
+              "tool, patch tool, etc., Capture 10 photos and improve them using",
+              "various tools available in image editing which helps to learn about",
+              "white balance, sharpness, noise reduction, basic levels black, white,",
+              "shadow, highlight, contrast, curve adjustments, HSL etc., Use",
+              "transformation tools to straighten and adjust for lens correction the",
+              "architectural photo., Change the photo of sky to learn morph, merge",
+              "and overlapping of images., Cut your photo using various selection",
+              "tools available in image editing and put it in some other image.,",
+              "Apply various filters to turn your photo into sketch/drawing.,",
+              "Construct an image to demonstrate the use of Liquify, Construct a",
+              "banner of recent event/festival of your institute., Construct an action",
+              "that resize any photo for PC wallpaper and add your name as a",
+              "watermark., Draw a scene using various tools available in animation",
+              "software, Draw a person using various tools available in animation",
+              "software, draw each part of body on separate layer., Produce an",
+              "animation to blink an object., Produce an animation that",
+              "demonstrate motion tween., Produce an animation of car going on",
+              "the road., Produce an animation to change the shape of objects (e.g.",
+              "circle to square to star to rectangle etc)., Construct an animation of",
+              "natural scene (clouds moving, sun rising, moon rising etc)., Produce",
+              "an animation using keyframe., Produce an animation by merging",
+              "multiple frame one by one. (Draw each frame on paper and merge",
+              "them into animation), Produce an animation bird flying over a scene",
+              "(going close to far)., Construct an animation which starts when user",
+              "click on the start button and should stop when user click on stop",
+              "button., Construct a quiz type animation with question and four",
+              "buttons with answer when user click on answer, he/she should see",
+              "message he/she correct or not."
+            ],
+            "topics_text": "Construct an image using various shape tools and fill color using color palate., Construct an image to make frame with photos of various persons (Use move, cut, copy, paste, transform etc functionality of image editing)., Produce a scene using various tools available and demonstrate the use of layers., Remove various objects in photo using various tools like clone stamp tool, healing tool, patch tool, etc., Capture 10 photos and improve them using various tools available in image editing which helps to learn about white balance, sharpness, noise reduction, basic levels black, white, shadow, highlight, contrast, curve adjustments, HSL etc., Use transformation tools to straighten and adjust for lens correction the architectural photo., Change the photo of sky to learn morph, merge and overlapping of images., Cut your photo using various selection tools available in image editing and put it in some other image., Apply various filters to turn your photo into sketch/drawing., Construct an image to demonstrate the use of Liquify, Construct a banner of recent event/festival of your institute., Construct an action that resize any photo for PC wallpaper and add your name as a watermark., Draw a scene using various tools available in animation software, Draw a person using various tools available in animation software, draw each part of body on separate layer., Produce an animation to blink an object., Produce an animation that demonstrate motion tween., Produce an animation of car going on the road., Produce an animation to change the shape of objects (e.g. circle to square to star to rectangle etc)., Construct an animation of natural scene (clouds moving, sun rising, moon rising etc)., Produce an animation using keyframe., Produce an animation by merging multiple frame one by one. (Draw each frame on paper and merge them into animation), Produce an animation bird flying over a scene (going close to far)., Construct an animation which starts when user click on the start button and should stop when user click on stop button., Construct a quiz type animation with question and four buttons with answer when user click on answer, he/she should see message he/she correct or not.",
+            "topics": [
+              "Construct an image using various shape tools and fill color using",
+              "color palate., Construct an image to make frame with photos of",
+              "various persons (Use move, cut, copy, paste, transform etc",
+              "functionality of image editing)., Produce a scene using various tools",
+              "available and demonstrate the use of layers., Remove various",
+              "objects in photo using various tools like clone stamp tool, healing",
+              "tool, patch tool, etc., Capture 10 photos and improve them using",
+              "various tools available in image editing which helps to learn about",
+              "white balance, sharpness, noise reduction, basic levels black, white,",
+              "shadow, highlight, contrast, curve adjustments, HSL etc., Use",
+              "transformation tools to straighten and adjust for lens correction the",
+              "architectural photo., Change the photo of sky to learn morph, merge",
+              "and overlapping of images., Cut your photo using various selection",
+              "tools available in image editing and put it in some other image.,",
+              "Apply various filters to turn your photo into sketch/drawing.,",
+              "Construct an image to demonstrate the use of Liquify, Construct a",
+              "banner of recent event/festival of your institute., Construct an action",
+              "that resize any photo for PC wallpaper and add your name as a",
+              "watermark., Draw a scene using various tools available in animation",
+              "software, Draw a person using various tools available in animation",
+              "software, draw each part of body on separate layer., Produce an",
+              "animation to blink an object., Produce an animation that",
+              "demonstrate motion tween., Produce an animation of car going on",
+              "the road., Produce an animation to change the shape of objects (e.g.",
+              "circle to square to star to rectangle etc)., Construct an animation of",
+              "natural scene (clouds moving, sun rising, moon rising etc)., Produce",
+              "an animation using keyframe., Produce an animation by merging",
+              "multiple frame one by one. (Draw each frame on paper and merge",
+              "them into animation), Produce an animation bird flying over a scene",
+              "(going close to far)., Construct an animation which starts when user",
+              "click on the start button and should stop when user click on stop",
+              "button., Construct a quiz type animation with question and four",
+              "buttons with answer when user click on answer, he/she should see",
+              "message he/she correct or not."
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -333,9 +1042,7 @@
           "text": "References:\n 5  Adobe Flash Professional CC Help\n 6 Tom Green and David Stiller, Flash CS3 for Designers, Green Stiller Foundation\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         10.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in may be using following teaching approaches: black board, or use\n     of any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination/Viva will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://www.adobe.com/support/documentation/archived_content/en/flash/cs3/flash_cs3_he\n     lp.pdf\n 2  https://helpx.adobe.com/in/image editing/user-guide.html\n 3   https://www.udemy.com › Design › Graphic Design › Image editing\n 4  https://www.it.iitb.ac.in/lakshya/workshopContent.html?\n    workshopid=Z7PLmVRto9HRdFsg5ld8Rw\n 5  http://www.nptelvideos.com/adobe/adobe_image editing_tutorials.php\n 6  http://www.nptelvideos.com/video.php?id=1778&c=22\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "cb4301ae7f24f6c118a3d606ebde22f3c8d6b5ed10fd1079a64a3dd8e919ca81"
     },
     {
@@ -351,7 +1058,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1602 - Project-II (.pdf",
       "expected_pdf_sha256": "126614dc28150990577cd10e02c7d48fa4959bc6f7de0ee4de87bbdfb0abb3f2",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "PROJECT – II",
         "course_code": "09CE1602",
@@ -367,12 +1074,89 @@
         "To identify practical aspect of studied technologies",
         "To communicate in the way industry demands in oral and documented way.",
         "To demonstrate teamwork and leader ship quality",
-        "To present and document implemented work effectively Pre-requisite of course:Syllabus of PROJECT – II"
+        "To present and document implemented work effectively"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 12 0 0 0 100 100",
       "contents": {
         "theory_units": [],
-        "practical_units": []
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Project/Problem Identification",
+            "contact_hours": 18,
+            "topic_lines": [
+              "Project/Problem Identification"
+            ],
+            "topics_text": "Project/Problem Identification",
+            "topics": [
+              "Project/Problem Identification"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Project Analysis, Requirement Gathering",
+            "contact_hours": 20,
+            "topic_lines": [
+              "Project Analysis, Requirement Gathering"
+            ],
+            "topics_text": "Project Analysis, Requirement Gathering",
+            "topics": [
+              "Project Analysis, Requirement Gathering"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Project Design / Prototype Development",
+            "contact_hours": 20,
+            "topic_lines": [
+              "Project Design / Prototype Development"
+            ],
+            "topics_text": "Project Design / Prototype Development",
+            "topics": [
+              "Project Design / Prototype Development"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Implementation of Project/Solution",
+            "contact_hours": 56,
+            "topic_lines": [
+              "Implementation of Project/Solution",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Implementation of Project/Solution MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Implementation of Project/Solution",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Testing and Verification",
+            "contact_hours": 18,
+            "topic_lines": [
+              "Testing and Verification"
+            ],
+            "topics_text": "Testing and Verification",
+            "topics": [
+              "Testing and Verification"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Presentation and execution's",
+            "contact_hours": 36,
+            "topic_lines": [
+              "Presentation and Report Writing",
+              "Total Hours 168"
+            ],
+            "topics_text": "Presentation and Report Writing Total Hours 168",
+            "topics": [
+              "Presentation and Report Writing",
+              "Total Hours 168"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -403,15 +1187,13 @@
           "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5      Testing and Verification                                   18\n              Testing and Verification\n     6       Presentation and execution's                               36\n               Presentation and Report Writing\n                               Total Hours                       168\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  Computer project manuals\n 2  All technical journal and manual related to computer engineering project\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         40.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  Prepare and submit complete project/training work with implementation and report\n 2  Report regarding stage wise progress to institute guide regularly.\n 3  Practicing of latest software and tool used for project/training work.\n\nSupplementary Resources:\n 1   https://cse.final-year-projects.in/\n 2  https://www.geeksforgeeks.org/\n 3  https://nevonprojects.com/\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "126614dc28150990577cd10e02c7d48fa4959bc6f7de0ee4de87bbdfb0abb3f2"
     }
   ],
   "build_summary": {
-    "extracted": 0,
-    "manual_review": 5,
+    "extracted": 5,
+    "manual_review": 0,
     "ocr_review": 0,
     "missing_pdf": 0,
     "extraction_errors": 0

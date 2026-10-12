@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:03:50+00:00",
+  "generated_at_utc": "2026-10-12T12:05:35+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -23,7 +23,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1502 - Advance Database Management System (.pdf",
       "expected_pdf_sha256": "a31e9d465345b169cf956df90dadbe54294ab92416f0f3d45d9884b60318a251",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "ADVANCE DATABASE MANAGEMENT SYSTEM",
         "course_code": "09CE1502",
@@ -40,12 +40,154 @@
         "Execute different advance SQL queries link with Transaction Processing and Locking using approach of Concurrency control",
         "Perform PL/SQL programming utilizing idea of Database Object, Cursor Management, Package and Triggers",
         "Determine usage of Privileges, Indexes",
-        "Apply Functional Dependency and Decomposition for database design Pre-requisite of course:Database Management system"
+        "Apply Functional Dependency and Decomposition for database design"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Functional Dependency and Decomposition",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction to functional dependency, key terms for functional",
+              "dependency, rules of functional dependency, types of functional",
+              "dependency: Multivalued dependency, trivial functional",
+              "dependency,, nontrivial functional dependency, transitive",
+              "dependency, Decomposition, types of decomposition: Lossy",
+              "decomposition, Lossless decomposition, Dependency-Preserving",
+              "decomposition"
+            ],
+            "topics_text": "Introduction to functional dependency, key terms for functional dependency, rules of functional dependency, types of functional dependency: Multivalued dependency, trivial functional dependency,, nontrivial functional dependency, transitive dependency, Decomposition, types of decomposition: Lossy decomposition, Lossless decomposition, Dependency-Preserving decomposition",
+            "topics": [
+              "Introduction to functional dependency, key terms for functional",
+              "dependency, rules of functional dependency, types of functional",
+              "dependency: Multivalued dependency, trivial functional",
+              "dependency,, nontrivial functional dependency, transitive",
+              "dependency, Decomposition, types of decomposition: Lossy",
+              "decomposition, Lossless decomposition, Dependency-Preserving",
+              "decomposition"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Normalization",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction to normalization, Normal Form: First Normal Form",
+              "(1NF), Second Normal Form(2NF),, Third Normal Form(3NF),",
+              "Boyce Codd Normal Form(BCNF)"
+            ],
+            "topics_text": "Introduction to normalization, Normal Form: First Normal Form (1NF), Second Normal Form(2NF),, Third Normal Form(3NF), Boyce Codd Normal Form(BCNF)",
+            "topics": [
+              "Introduction to normalization, Normal Form: First Normal Form",
+              "(1NF), Second Normal Form(2NF),, Third Normal Form(3NF),",
+              "Boyce Codd Normal Form(BCNF)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Transaction and Concurrency",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Transaction concept, ACID property, basics of Concurrency,",
+              "method of Concurrency control: Locking method, Timestamp",
+              "method, Optimistic method"
+            ],
+            "topics_text": "Transaction concept, ACID property, basics of Concurrency, method of Concurrency control: Locking method, Timestamp method, Optimistic method",
+            "topics": [
+              "Transaction concept, ACID property, basics of Concurrency,",
+              "method of Concurrency control: Locking method, Timestamp",
+              "method, Optimistic method"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Advanced SQL",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Index: types of Index, creation of Index, View: Creating view,",
+              "update view, Sequence: Creating sequence, Altering sequence,",
+              "Dropping sequence, Privileges: Grant and Revoke"
+            ],
+            "topics_text": "Index: types of Index, creation of Index, View: Creating view, update view, Sequence: Creating sequence, Altering sequence, Dropping sequence, Privileges: Grant and Revoke",
+            "topics": [
+              "Index: types of Index, creation of Index, View: Creating view,",
+              "update view, Sequence: Creating sequence, Altering sequence,",
+              "Dropping sequence, Privileges: Grant and Revoke"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "PL/SQL",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Advantages of PL/SQL, datatypes, variables, control structure:",
+              "condition control, iterative control, sequential control, PL/SQL",
+              "Transactions: Commit, Rollback, Savepoint,, Cursor: basics of",
+              "cursor, type of cursor, PL/SQL Security: Locks, types of locks,",
+              "levels of lock, PL/SQL Database Objects: Procedures and",
+              "Functions, Package: Components of Package, need of Package,",
+              "Package Specification, Introduction to database Trigger, usage,",
+              "types of Trigger",
+              "Total Hours 28",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Advantages of PL/SQL, datatypes, variables, control structure: condition control, iterative control, sequential control, PL/SQL Transactions: Commit, Rollback, Savepoint,, Cursor: basics of cursor, type of cursor, PL/SQL Security: Locks, types of locks, levels of lock, PL/SQL Database Objects: Procedures and Functions, Package: Components of Package, need of Package, Package Specification, Introduction to database Trigger, usage, types of Trigger Total Hours 28 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Advantages of PL/SQL, datatypes, variables, control structure:",
+              "condition control, iterative control, sequential control, PL/SQL",
+              "Transactions: Commit, Rollback, Savepoint,, Cursor: basics of",
+              "cursor, type of cursor, PL/SQL Security: Locks, types of locks,",
+              "levels of lock, PL/SQL Database Objects: Procedures and",
+              "Functions, Package: Components of Package, need of Package,",
+              "Package Specification, Introduction to database Trigger, usage,",
+              "types of Trigger",
+              "Total Hours 28",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical List",
+            "contact_hours": 28,
+            "topic_lines": [
+              "Practice on Normalization – utilizing following table perform",
+              "different types of normalization form., Perform transaction process",
+              "on databases., Practice on functional dependencies., Perform queries",
+              "for Grant and Revoke privileges., Perform queries for creating,",
+              "altering sequence., Perform queries for creating index., Perform",
+              "queries for views, Perform PL/SQL programme to check whether",
+              "given number is prime or not., Perform PL/SQL programme to swap",
+              "two numbers., Perform PL/SQL programmes on procedures and",
+              "functions., Perform PL/SQL programmes using cursors., Create",
+              "triggers for insertion and updation., Create a trigger that does not",
+              "allow insert, update and delete operation on table., Perform and",
+              "implement the programmes on database packages., Implement",
+              "concurrency control using lock operation.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Practice on Normalization – utilizing following table perform different types of normalization form., Perform transaction process on databases., Practice on functional dependencies., Perform queries for Grant and Revoke privileges., Perform queries for creating, altering sequence., Perform queries for creating index., Perform queries for views, Perform PL/SQL programme to check whether given number is prime or not., Perform PL/SQL programme to swap two numbers., Perform PL/SQL programmes on procedures and functions., Perform PL/SQL programmes using cursors., Create triggers for insertion and updation., Create a trigger that does not allow insert, update and delete operation on table., Perform and implement the programmes on database packages., Implement concurrency control using lock operation. Total Hours 28",
+            "topics": [
+              "Practice on Normalization – utilizing following table perform",
+              "different types of normalization form., Perform transaction process",
+              "on databases., Practice on functional dependencies., Perform queries",
+              "for Grant and Revoke privileges., Perform queries for creating,",
+              "altering sequence., Perform queries for creating index., Perform",
+              "queries for views, Perform PL/SQL programme to check whether",
+              "given number is prime or not., Perform PL/SQL programme to swap",
+              "two numbers., Perform PL/SQL programmes on procedures and",
+              "functions., Perform PL/SQL programmes using cursors., Create",
+              "triggers for insertion and updation., Create a trigger that does not",
+              "allow insert, update and delete operation on table., Perform and",
+              "implement the programmes on database packages., Implement",
+              "concurrency control using lock operation.",
+              "Total Hours 28"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -84,9 +226,7 @@
           "text": "Supplementary Resources:\n 1  https://onlinecourses.nptel.ac.in/noc18_cs15/preview\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "a31e9d465345b169cf956df90dadbe54294ab92416f0f3d45d9884b60318a251"
     },
     {
@@ -102,7 +242,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1504 - Advance Java Programming (.pdf",
       "expected_pdf_sha256": "8a747cab648db0f746974d37d903b722eac54e24f82781661d415d99b7ae5cc7",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "ADVANCE JAVA PROGRAMMING",
         "course_code": "09CE1504",
@@ -119,12 +259,166 @@
         "Use AWT components to develop interactive desktop-based Java applications",
         "Apply servlet technology to build and deploy basic server-side web applications",
         "Execute data retrieval and update operations from a database using JDBC-ODBC connectivity",
-        "Develop web applications using different types of JSP tags to implement dynamic content Pre-requisite of course:Syllabus of ADVANCE JAVA PROGRAMMING for diploma Computer Engineering"
+        "Develop web applications using different types of JSP tags to implement dynamic content"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "JAVA Applets",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Applet life cycle,Difference between applet and",
+              "application,Different applet tags, parameter and methods,local and",
+              "Remote applets, Developing executable applet code,web page-",
+              "adding applet to HTML file,Various component classes and",
+              "methods",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Applet life cycle,Difference between applet and application,Different applet tags, parameter and methods,local and Remote applets, Developing executable applet code,web page- adding applet to HTML file,Various component classes and methods MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Applet life cycle,Difference between applet and",
+              "application,Different applet tags, parameter and methods,local and",
+              "Remote applets, Developing executable applet code,web page",
+              "adding applet to HTML file,Various component classes and",
+              "methods",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "AWT(Abstract Window Toolkit)",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Java AWT Hierarchy,Different classes in AWT package that relate",
+              "to applet class, Frame window, AWT graphics controls and layout",
+              "Managers, Developing GUI using Swing, Difference between Event",
+              "class and Event Listener interface"
+            ],
+            "topics_text": "Java AWT Hierarchy,Different classes in AWT package that relate to applet class, Frame window, AWT graphics controls and layout Managers, Developing GUI using Swing, Difference between Event class and Event Listener interface",
+            "topics": [
+              "Java AWT Hierarchy,Different classes in AWT package that relate",
+              "to applet class, Frame window, AWT graphics controls and layout",
+              "Managers, Developing GUI using Swing, Difference between Event",
+              "class and Event Listener interface"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "JDBC Programming",
+            "contact_hours": 4,
+            "topic_lines": [
+              "JDBC Architecture, Types of JDBC Drivers, JDBC Classes and",
+              "Interface, Creating simple JDBC Application, Types of Statement",
+              "(Statement Interface, Prepared-Statement, Callable-Statement),",
+              "Exploring ResultSet Operations, Batch Updates in JDBC, JDBC",
+              "API and Creating CRUD Application, Using Rowsets Objects,",
+              "Managing, Database Transaction.Resultset Scrollable resultset and",
+              "upadatableresultset"
+            ],
+            "topics_text": "JDBC Architecture, Types of JDBC Drivers, JDBC Classes and Interface, Creating simple JDBC Application, Types of Statement (Statement Interface, Prepared-Statement, Callable-Statement), Exploring ResultSet Operations, Batch Updates in JDBC, JDBC API and Creating CRUD Application, Using Rowsets Objects, Managing, Database Transaction.Resultset Scrollable resultset and upadatableresultset",
+            "topics": [
+              "JDBC Architecture, Types of JDBC Drivers, JDBC Classes and",
+              "Interface, Creating simple JDBC Application, Types of Statement",
+              "(Statement Interface, Prepared-Statement, Callable-Statement),",
+              "Exploring ResultSet Operations, Batch Updates in JDBC, JDBC",
+              "API and Creating CRUD Application, Using Rowsets Objects,",
+              "Managing, Database Transaction.Resultset Scrollable resultset and",
+              "upadatableresultset"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Servlet API and Overview",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Basic knowledge of Servlet , Servlet Life Cycle, Types of Servlet,",
+              "Servlet Configuration with Deployment Descriptor, Working with",
+              "ServletContext and ServletConfig Object, Attributes in Servlet,",
+              "Response and Redirection using Request Dispacher and using",
+              "sendRedirect Method, java servlet packages, reading database and",
+              "table records"
+            ],
+            "topics_text": "Basic knowledge of Servlet , Servlet Life Cycle, Types of Servlet, Servlet Configuration with Deployment Descriptor, Working with ServletContext and ServletConfig Object, Attributes in Servlet, Response and Redirection using Request Dispacher and using sendRedirect Method, java servlet packages, reading database and table records",
+            "topics": [
+              "Basic knowledge of Servlet , Servlet Life Cycle, Types of Servlet,",
+              "Servlet Configuration with Deployment Descriptor, Working with",
+              "ServletContext and ServletConfig Object, Attributes in Servlet,",
+              "Response and Redirection using Request Dispacher and using",
+              "sendRedirect Method, java servlet packages, reading database and",
+              "table records"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Java Server Pages",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to JSP ,JSP Architecture, SP Life Cycle, Relation with",
+              "servlet, JSP Scripting Elements, JSP Directives, JSP Expression",
+              "Language, JSP Standard Tag Libraries, JSP CRUD",
+              "Application.Difference between JSP and Servlet, JSP program fetch",
+              "database records.",
+              "Total Hours 26"
+            ],
+            "topics_text": "Introduction to JSP ,JSP Architecture, SP Life Cycle, Relation with servlet, JSP Scripting Elements, JSP Directives, JSP Expression Language, JSP Standard Tag Libraries, JSP CRUD Application.Difference between JSP and Servlet, JSP program fetch database records. Total Hours 26",
+            "topics": [
+              "Introduction to JSP ,JSP Architecture, SP Life Cycle, Relation with",
+              "servlet, JSP Scripting Elements, JSP Directives, JSP Expression",
+              "Language, JSP Standard Tag Libraries, JSP CRUD",
+              "Application.Difference between JSP and Servlet, JSP program fetch",
+              "database records.",
+              "Total Hours 26"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical List",
+            "contact_hours": 56,
+            "topic_lines": [
+              "Write a Basic java applet program, Write applet program that draws",
+              "a circle. The dimension of the applet should be 500 x 300 pixels.",
+              "The circle should be centered in the applet and have a radius of 100",
+              "pixels. Display your name centered in a circle.( using drawOval()",
+              "method), Draw ten red circles in a vertical column in the center of",
+              "the applet., Built an applet that displays a horizontal rectangle in its",
+              "center. Let the rectangle fill with color from left to right., Develop",
+              "an applet that display the position of the mouse at the upper left",
+              "corner of the applet when it is dragged or moved. Draw a 10x10",
+              "pixel rectangle filed with black at the current mouse position.,",
+              "Develop an applet that contains one button. Initialize the label on",
+              "the button to “start”, when the user presses the button, which",
+              "changes the label between these two values each time the button is",
+              "pressed., Develop an applet that uses the mouse listener, which",
+              "overrides only two methods which are mousePressed and",
+              "mouseReleased., Write a program that has only one button in the",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Write a Basic java applet program, Write applet program that draws a circle. The dimension of the applet should be 500 x 300 pixels. The circle should be centered in the applet and have a radius of 100 pixels. Display your name centered in a circle.( using drawOval() method), Draw ten red circles in a vertical column in the center of the applet., Built an applet that displays a horizontal rectangle in its center. Let the rectangle fill with color from left to right., Develop an applet that display the position of the mouse at the upper left corner of the applet when it is dragged or moved. Draw a 10x10 pixel rectangle filed with black at the current mouse position., Develop an applet that contains one button. Initialize the label on the button to “start”, when the user presses the button, which changes the label between these two values each time the button is pressed., Develop an applet that uses the mouse listener, which overrides only two methods which are mousePressed and mouseReleased., Write a program that has only one button in the MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Write a Basic java applet program, Write applet program that draws",
+              "a circle. The dimension of the applet should be 500 x 300 pixels.",
+              "The circle should be centered in the applet and have a radius of 100",
+              "pixels. Display your name centered in a circle.( using drawOval()",
+              "method), Draw ten red circles in a vertical column in the center of",
+              "the applet., Built an applet that displays a horizontal rectangle in its",
+              "center. Let the rectangle fill with color from left to right., Develop",
+              "an applet that display the position of the mouse at the upper left",
+              "corner of the applet when it is dragged or moved. Draw a 10x10",
+              "pixel rectangle filed with black at the current mouse position.,",
+              "Develop an applet that contains one button. Initialize the label on",
+              "the button to “start”, when the user presses the button, which",
+              "changes the label between these two values each time the button is",
+              "pressed., Develop an applet that uses the mouse listener, which",
+              "overrides only two methods which are mousePressed and",
+              "mouseReleased., Write a program that has only one button in the",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -178,9 +472,7 @@
           "text": "Supplementary Resources:\n 3   https://javaee.github.io/tutorial/\n 4  http://docs.oracle.com/javase/tutorial/java/index.html\n 5  https://spring.io/guides\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "8a747cab648db0f746974d37d903b722eac54e24f82781661d415d99b7ae5cc7"
     },
     {
@@ -196,7 +488,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1503 - Advance Web Technology (.pdf",
       "expected_pdf_sha256": "8962a943bd79a466e21506c436c74b1685c21bc46143dab94f7c9a89fff4f726",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "ADVANCED WEB TECHNOLOGY",
         "course_code": "09CE1503",
@@ -213,12 +505,182 @@
         "Implement modern web design techniques to develop visually appealing and user- friendly interfaces",
         "Apply responsive design principles using various tools and frameworks to ensure compatibility across devices",
         "Utilize server-side scripting with PHP and integrate MySQL to perform data storage and retrieval operations",
-        "Develop a fully functional and responsive web application using HTML, CSS, PHP, and MySQL Pre-requisite of course:Basic knowledge of HTML, CSS and basic programming knowledge"
+        "Develop a fully functional and responsive web application using HTML, CSS, PHP, and MySQL"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Web Design",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Concept of effective web design, Web design issues related to",
+              "browsers, Effect of resolution on web design, Layout and Linking of",
+              "pages"
+            ],
+            "topics_text": "Concept of effective web design, Web design issues related to browsers, Effect of resolution on web design, Layout and Linking of pages",
+            "topics": [
+              "Concept of effective web design, Web design issues related to",
+              "browsers, Effect of resolution on web design, Layout and Linking of",
+              "pages"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Advance CSS & HTML",
+            "contact_hours": 3,
+            "topic_lines": [
+              "HTML: Div and Span tag, HTML 5 tags, Form tags and data input",
+              "tags, CSS: CSS selectors, margin & padding, collapsing margin,",
+              "resets and CSS box-sizing, Shadow & Gradients, Types of fonts,",
+              "transition and animation, tool tip, CSS variables, CSS Media Query"
+            ],
+            "topics_text": "HTML: Div and Span tag, HTML 5 tags, Form tags and data input tags, CSS: CSS selectors, margin & padding, collapsing margin, resets and CSS box-sizing, Shadow & Gradients, Types of fonts, transition and animation, tool tip, CSS variables, CSS Media Query",
+            "topics": [
+              "HTML: Div and Span tag, HTML 5 tags, Form tags and data input",
+              "tags, CSS: CSS selectors, margin & padding, collapsing margin,",
+              "resets and CSS box-sizing, Shadow & Gradients, Types of fonts,",
+              "transition and animation, tool tip, CSS variables, CSS Media Query"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Responsive Web Design",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Concept of Responsive web design, Viewport, CSS Position and",
+              "float properties, CSS flex-box and CSS Grid layouts"
+            ],
+            "topics_text": "Concept of Responsive web design, Viewport, CSS Position and float properties, CSS flex-box and CSS Grid layouts",
+            "topics": [
+              "Concept of Responsive web design, Viewport, CSS Position and",
+              "float properties, CSS flex-box and CSS Grid layouts"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Responsive Web Design using Bootstrap",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Introduction to Bootstrap framework, Bootstrap Grid Layout,",
+              "Bootstrap Component like navbar, forms, carousel, tooltips, buttons,",
+              "images"
+            ],
+            "topics_text": "Introduction to Bootstrap framework, Bootstrap Grid Layout, Bootstrap Component like navbar, forms, carousel, tooltips, buttons, images",
+            "topics": [
+              "Introduction to Bootstrap framework, Bootstrap Grid Layout,",
+              "Bootstrap Component like navbar, forms, carousel, tooltips, buttons,",
+              "images"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "JavaScript & JQuery",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Ajax Introduction, AJAX request and response, Event Handling,",
+              "Manipulate HTML/CSS using JavaScript/JQuery"
+            ],
+            "topics_text": "Ajax Introduction, AJAX request and response, Event Handling, Manipulate HTML/CSS using JavaScript/JQuery",
+            "topics": [
+              "Ajax Introduction, AJAX request and response, Event Handling,",
+              "Manipulate HTML/CSS using JavaScript/JQuery"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Object Oriented Programming in PHP",
+            "contact_hours": 3,
+            "topic_lines": [
+              "looping structures, conditional structures, arrays, functions,",
+              "retrieving data from HTML forms, Class & Objects in PHP,",
+              "Inheritance and Polymorphism"
+            ],
+            "topics_text": "looping structures, conditional structures, arrays, functions, retrieving data from HTML forms, Class & Objects in PHP, Inheritance and Polymorphism",
+            "topics": [
+              "looping structures, conditional structures, arrays, functions,",
+              "retrieving data from HTML forms, Class & Objects in PHP,",
+              "Inheritance and Polymorphism"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Database Connectivity and Session Handling",
+            "contact_hours": 3,
+            "topic_lines": [
+              "PHP – MySQL database connectivity, using MySQLi and PDO,",
+              "Concept of Session, Usage of Session, Different ways to handle",
+              "session data, using URL, Session and Cookies.",
+              "Total Hours 17",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "PHP – MySQL database connectivity, using MySQLi and PDO, Concept of Session, Usage of Session, Different ways to handle session data, using URL, Session and Cookies. Total Hours 17 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "PHP – MySQL database connectivity, using MySQLi and PDO,",
+              "Concept of Session, Usage of Session, Different ways to handle",
+              "session data, using URL, Session and Cookies.",
+              "Total Hours 17",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical List",
+            "contact_hours": 40,
+            "topic_lines": [
+              "Write an HTML code to design static webpage using various HTML",
+              "tags. Format page using tables, lists and other tags. Create a page for",
+              "your resume and time table page., Write an HTML pages to",
+              "demonstrate the use of various ways to insert CSS in web page and",
+              "use of different selectors., Write an HTML page that contains",
+              "various images and text which will be shown/hidden based on",
+              "screen size using CSS media query, Develop a page to learn the use",
+              "of CSS flexbox, CSS Grid., Develop a responsive page to learn",
+              "Bootstrap grid system and various component of bootstrap., Create",
+              "an HTML form and use Java Script / JQuery event handling to",
+              "validate the form., Create an Page to hide/show HTML elements",
+              "using JavaScript/JQuery and change the style of HTML elements",
+              "using JavaScript/JQuery, Creates an web page to demonstrate AJAX",
+              "concepts., Programs to demonstrate the use of PHP OOPs",
+              "programming concepts., Create an HTML form and use PHP to put",
+              "server-side validation., Create HTML pages to demonstrate and",
+              "learn database connectivity operation like connection to database,",
+              "insert, delete and update of data. Use classes and object to",
+              "implement database operation., Implement login and registration",
+              "functionality to demonstrate the use of various session handling",
+              "techniques., Develop a mini project which covers entire syllabus.",
+              "Total Hours 40"
+            ],
+            "topics_text": "Write an HTML code to design static webpage using various HTML tags. Format page using tables, lists and other tags. Create a page for your resume and time table page., Write an HTML pages to demonstrate the use of various ways to insert CSS in web page and use of different selectors., Write an HTML page that contains various images and text which will be shown/hidden based on screen size using CSS media query, Develop a page to learn the use of CSS flexbox, CSS Grid., Develop a responsive page to learn Bootstrap grid system and various component of bootstrap., Create an HTML form and use Java Script / JQuery event handling to validate the form., Create an Page to hide/show HTML elements using JavaScript/JQuery and change the style of HTML elements using JavaScript/JQuery, Creates an web page to demonstrate AJAX concepts., Programs to demonstrate the use of PHP OOPs programming concepts., Create an HTML form and use PHP to put server-side validation., Create HTML pages to demonstrate and learn database connectivity operation like connection to database, insert, delete and update of data. Use classes and object to implement database operation., Implement login and registration functionality to demonstrate the use of various session handling techniques., Develop a mini project which covers entire syllabus. Total Hours 40",
+            "topics": [
+              "Write an HTML code to design static webpage using various HTML",
+              "tags. Format page using tables, lists and other tags. Create a page for",
+              "your resume and time table page., Write an HTML pages to",
+              "demonstrate the use of various ways to insert CSS in web page and",
+              "use of different selectors., Write an HTML page that contains",
+              "various images and text which will be shown/hidden based on",
+              "screen size using CSS media query, Develop a page to learn the use",
+              "of CSS flexbox, CSS Grid., Develop a responsive page to learn",
+              "Bootstrap grid system and various component of bootstrap., Create",
+              "an HTML form and use Java Script / JQuery event handling to",
+              "validate the form., Create an Page to hide/show HTML elements",
+              "using JavaScript/JQuery and change the style of HTML elements",
+              "using JavaScript/JQuery, Creates an web page to demonstrate AJAX",
+              "concepts., Programs to demonstrate the use of PHP OOPs",
+              "programming concepts., Create an HTML form and use PHP to put",
+              "server-side validation., Create HTML pages to demonstrate and",
+              "learn database connectivity operation like connection to database,",
+              "insert, delete and update of data. Use classes and object to",
+              "implement database operation., Implement login and registration",
+              "functionality to demonstrate the use of various session handling",
+              "techniques., Develop a mini project which covers entire syllabus.",
+              "Total Hours 40"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -264,9 +726,7 @@
           "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, also\n    need to use ICT tools and facilities.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nSupplementary Resources:\n 1   http://nptel.ac.in\n 2  https://www.w3schools.com/html/default.asp\n 3  https://www.w3schools.com/css/default.asp\n 4  https://getbootstrap.com/docs/4.1/getting-started/introduction/\n 5  https://www.w3schools.com/js/default.asp\n 6  https://www.htmldog.com\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "8962a943bd79a466e21506c436c74b1685c21bc46143dab94f7c9a89fff4f726"
     },
     {
@@ -282,7 +742,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1506 - Fundamentals Of IOT With Python (.pdf",
       "expected_pdf_sha256": "c461939466565450438ed8945473d8858ba2f5eab3ebe525bcb05654531afbb0",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "FUNDAMENTAL OF IOT WITH PYTHON",
         "course_code": "09CE1506",
@@ -300,11 +760,116 @@
         "Apply IoT concepts to propose a suitable solution for a specific domain such as home automation or environmental monitoring",
         "Develop basic Python programs involving variables, data types, input/output, and simple data structures",
         "Construct Python programs using conditional and looping constructs to solve decision- based problems",
-        "Apply array, string, and function concepts in Python to develop efficient programs that perform data processing and modular code execution for practical computing problems Pre-requisite of course:Syllabus of FUNDAMENTAL OF IOT WITH PYTHON for diploma Computer Engineering"
+        "Apply array, string, and function concepts in Python to develop efficient programs that perform data processing and modular code execution for practical computing problems"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory_units": [],
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to IoT",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Defining IoT, Characteristics of IoT, Physical design of Iot, Logical",
+              "design of IoT, Functional blocks of IoT"
+            ],
+            "topics_text": "Defining IoT, Characteristics of IoT, Physical design of Iot, Logical design of IoT, Functional blocks of IoT",
+            "topics": [
+              "Defining IoT, Characteristics of IoT, Physical design of Iot, Logical",
+              "design of IoT, Functional blocks of IoT"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "IoT & M2M",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Machine to Machine, Difference between IoT and M2M, Software",
+              "define Network"
+            ],
+            "topics_text": "Machine to Machine, Difference between IoT and M2M, Software define Network",
+            "topics": [
+              "Machine to Machine, Difference between IoT and M2M, Software",
+              "define Network"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Domain and Challenges in IoT",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Home automation, Industry applications, Environment applications,",
+              "Other IoT applications, Challenges in IoT"
+            ],
+            "topics_text": "Home automation, Industry applications, Environment applications, Other IoT applications, Challenges in IoT",
+            "topics": [
+              "Home automation, Industry applications, Environment applications,",
+              "Other IoT applications, Challenges in IoT"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Basic of Python language",
+            "contact_hours": 4,
+            "topic_lines": [
+              "History of Python, Structure of Python program, compilation and",
+              "execution, python syntax, declaring and assigning value to variable,",
+              "operators, Input and output function, python numbers , python list,",
+              "python set, python tuple, python casting, python dictionaries"
+            ],
+            "topics_text": "History of Python, Structure of Python program, compilation and execution, python syntax, declaring and assigning value to variable, operators, Input and output function, python numbers , python list, python set, python tuple, python casting, python dictionaries",
+            "topics": [
+              "History of Python, Structure of Python program, compilation and",
+              "execution, python syntax, declaring and assigning value to variable,",
+              "operators, Input and output function, python numbers , python list,",
+              "python set, python tuple, python casting, python dictionaries"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Control flow and looping",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Decision making statements, simple If statement, If-else, nested If,",
+              "else-if ladder, Looping statements, simple for loop, while loop"
+            ],
+            "topics_text": "Decision making statements, simple If statement, If-else, nested If, else-if ladder, Looping statements, simple for loop, while loop",
+            "topics": [
+              "Decision making statements, simple If statement, If-else, nested If,",
+              "else-if ladder, Looping statements, simple for loop, while loop"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Array and String",
+            "contact_hours": 3,
+            "topic_lines": [
+              "array declaration & initialization, operation with array, String-",
+              "declaration & initialization, string functions"
+            ],
+            "topics_text": "array declaration & initialization, operation with array, String- declaration & initialization, string functions",
+            "topics": [
+              "array declaration & initialization, operation with array, String",
+              "declaration & initialization, string functions"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Function",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Definition of function, Built-in-function, console & standard i/o",
+              "function, user defined function, recursion",
+              "Total Hours 28"
+            ],
+            "topics_text": "Definition of function, Built-in-function, console & standard i/o function, user defined function, recursion Total Hours 28",
+            "topics": [
+              "Definition of function, Built-in-function, console & standard i/o",
+              "function, user defined function, recursion",
+              "Total Hours 28"
+            ]
+          }
+        ],
         "practical_units": []
       },
       "references": {
@@ -353,9 +918,7 @@
           "text": "Supplementary Resources:\n 4  http://playground.arduino.cc/Projects/Ideas\n 5  https://runtimeprojects.com/\n 6  https://www.megunolink.com/articles/arduino-garage-door-opener/\n 7  http://homeautomationserver.com/\n 8  https://www.w3schools.com/\n 9  https://docs.python.org/3/\n 10  https://www.tutorialspoint.com/index.htm\n 11  https://www.learnpython.org/\n 12 https://youtu.be/k8yFGj5qQNk?si=yrBtN0J2UvLC-pCE\n 13 https://youtu.be/bSup09QJenM?si=EqAAUGC9OUfz2Wqb\n 14 https://www.youtube.com/watch?v=fz7AUMvIZAs6\n 15  https://www.youtube.com/watch?\n    v=ngJ00GTsNg&pp=ygUZdWx0cmFzb25pYyBzZW5zb3IgYXJkdWlubw%3D%3D\n 16  https://alison.com/course/a-guide-to-arduino-motion-detection-through-sms-using-\n     python#google_vignette\n 17  https://alison.com/course/build-esp32-iot-smart-garden-with-blynk-app\n 18  https://alison.com/course/internet-of-things-a-theoretical-approach\n 19  https://alison.com/course/diploma-in-python-programming-revised\n 20  https://alison.com/course/starting-python-programming\n 21  https://alison.com/course/starting-python-programming\n 22  https://www.coursera.org/specializations/python\n 23  https://youtu.be/rfscVS0vtbw\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "c461939466565450438ed8945473d8858ba2f5eab3ebe525bcb05654531afbb0"
     },
     {
@@ -371,7 +934,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1501 - Mobile Computing (.pdf",
       "expected_pdf_sha256": "5f3fc9275b49362404914f758945546c6dee08c0047dcf3af4be3e31f1b368d1",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "MOBILE COMPUTING",
         "course_code": "09CE1501",
@@ -387,12 +950,168 @@
         "Configure wireless networks in accordance with standard wireless communication protocols and operations",
         "Design and configure components and processes involved in wireless network systems",
         "To configure and demonstrate mobile network operations using GSM and GPRS technologies",
-        "Develop mobile applications using Android Studio Pre-requisite of course:Syllabus of Mobile Computing for Diploma Computer Engineering"
+        "Develop mobile applications using Android Studio"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "What is Mobile Computing",
+            "contact_hours": 6,
+            "topic_lines": [
+              "History, Types, Benefits, Application, Evolution, Security Concern",
+              "regarding Mobile Computing, Different Propagation Modes,",
+              "Wireless Architecture and its types, needs of mobile user"
+            ],
+            "topics_text": "History, Types, Benefits, Application, Evolution, Security Concern regarding Mobile Computing, Different Propagation Modes, Wireless Architecture and its types, needs of mobile user",
+            "topics": [
+              "History, Types, Benefits, Application, Evolution, Security Concern",
+              "regarding Mobile Computing, Different Propagation Modes,",
+              "Wireless Architecture and its types, needs of mobile user"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Wireless Transmission Fundamentals",
+            "contact_hours": 6,
+            "topic_lines": [
+              "TCP/IP Protocol suit, OSI Reference Model, Modulation,",
+              "Modulation Techniques FDMA/TDMA/CDMA, WAP Architecture,",
+              "VoIP, VoIP applications, Mobile IP",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "TCP/IP Protocol suit, OSI Reference Model, Modulation, Modulation Techniques FDMA/TDMA/CDMA, WAP Architecture, VoIP, VoIP applications, Mobile IP MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "TCP/IP Protocol suit, OSI Reference Model, Modulation,",
+              "Modulation Techniques FDMA/TDMA/CDMA, WAP Architecture,",
+              "VoIP, VoIP applications, Mobile IP",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "GSM / GPRS Communication",
+            "contact_hours": 8,
+            "topic_lines": [
+              "GSM :- call routing Architecture, PLMN interface, addresses and",
+              "identifiers, network aspects, frequency allocation,, authentication",
+              "and security, Handoff v/s Handover, GPRS:- network operation,",
+              "data services, Applications, Billing and charging"
+            ],
+            "topics_text": "GSM :- call routing Architecture, PLMN interface, addresses and identifiers, network aspects, frequency allocation,, authentication and security, Handoff v/s Handover, GPRS:- network operation, data services, Applications, Billing and charging",
+            "topics": [
+              "GSM :- call routing Architecture, PLMN interface, addresses and",
+              "identifiers, network aspects, frequency allocation,, authentication",
+              "and security, Handoff v/s Handover, GPRS:- network operation,",
+              "data services, Applications, Billing and charging"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Wireless Operations and its Standards",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Wireless LAN:- IEEE 802 and IEEE 802.11 Protocol Architecture,",
+              "Services, Cellular Networks:- Channel allocation, multiple access,",
+              "location management, Handoffs Technique"
+            ],
+            "topics_text": "Wireless LAN:- IEEE 802 and IEEE 802.11 Protocol Architecture, Services, Cellular Networks:- Channel allocation, multiple access, location management, Handoffs Technique",
+            "topics": [
+              "Wireless LAN:- IEEE 802 and IEEE 802.11 Protocol Architecture,",
+              "Services, Cellular Networks:- Channel allocation, multiple access,",
+              "location management, Handoffs Technique"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Introduction to Android",
+            "contact_hours": 4,
+            "topic_lines": [
+              "APIs, Architecture, Framework Application, Application",
+              "components, manifest file, Android source and installation,",
+              "Development Environment exploration, first Android application,",
+              "Working with Activities, Layouts:- Linear Layout, Relative Layout,",
+              "Scroll view Layout, Table Layout, Frame Layout, Views, Buttons",
+              "and Menu:- Text View, Edit Text View, Button View, Radio",
+              "Button, Check Box, Image Button, Rating Bar, options Menu,",
+              "Context Menu",
+              "Total Hours 28"
+            ],
+            "topics_text": "APIs, Architecture, Framework Application, Application components, manifest file, Android source and installation, Development Environment exploration, first Android application, Working with Activities, Layouts:- Linear Layout, Relative Layout, Scroll view Layout, Table Layout, Frame Layout, Views, Buttons and Menu:- Text View, Edit Text View, Button View, Radio Button, Check Box, Image Button, Rating Bar, options Menu, Context Menu Total Hours 28",
+            "topics": [
+              "APIs, Architecture, Framework Application, Application",
+              "components, manifest file, Android source and installation,",
+              "Development Environment exploration, first Android application,",
+              "Working with Activities, Layouts:- Linear Layout, Relative Layout,",
+              "Scroll view Layout, Table Layout, Frame Layout, Views, Buttons",
+              "and Menu:- Text View, Edit Text View, Button View, Radio",
+              "Button, Check Box, Image Button, Rating Bar, options Menu,",
+              "Context Menu",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical List",
+            "contact_hours": 56,
+            "topic_lines": [
+              "Installation of Android Studio and understanding of android SDK,",
+              "Android API Levels and configuring emulators., Create a Hello",
+              "World Application, Create an application to display image and its",
+              "description using TextView and ImageView, Create an application",
+              "with TextView and Buttons to understand the event handling in",
+              "android., Create applications with different controls to understand",
+              "various android layout like Linear Layout, Relative Layout,",
+              "Constraint Layout, Create Pizza Ordering App, add buttons increase",
+              "the quantity of pizzas, calculate and display total amount , Extends",
+              "Pizza Ordering app to add multiple types of pizza and display",
+              "calculated amount on different activity, Create calculator app with",
+              "two textboxes and 4 buttons which calculates the basic",
+              "mathematical functions, Creates a menu/navigation and put event",
+              "handler to navigate to various activity using menu/navigation.,",
+              "Develop an android app which displays a form to get following",
+              "Info. 1.Username 2.password 3.Email 4.phone number 5.state",
+              "6.country Form should be followed by a “Submit” button. when",
+              "clicked shows the entered information (List of states should be",
+              "displayed in spinner automatically), Using android, Create a login",
+              "Activity. It asks for “username” and “password”. If username and",
+              "pass word is valid, Display Welcome message, Making app’s APK",
+              "file and deploy it on user’s mobile phone or play store.",
+              "Total Hours 56",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Installation of Android Studio and understanding of android SDK, Android API Levels and configuring emulators., Create a Hello World Application, Create an application to display image and its description using TextView and ImageView, Create an application with TextView and Buttons to understand the event handling in android., Create applications with different controls to understand various android layout like Linear Layout, Relative Layout, Constraint Layout, Create Pizza Ordering App, add buttons increase the quantity of pizzas, calculate and display total amount , Extends Pizza Ordering app to add multiple types of pizza and display calculated amount on different activity, Create calculator app with two textboxes and 4 buttons which calculates the basic mathematical functions, Creates a menu/navigation and put event handler to navigate to various activity using menu/navigation., Develop an android app which displays a form to get following Info. 1.Username 2.password 3.Email 4.phone number 5.state 6.country Form should be followed by a “Submit” button. when clicked shows the entered information (List of states should be displayed in spinner automatically), Using android, Create a login Activity. It asks for “username” and “password”. If username and pass word is valid, Display Welcome message, Making app’s APK file and deploy it on user’s mobile phone or play store. Total Hours 56 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Installation of Android Studio and understanding of android SDK,",
+              "Android API Levels and configuring emulators., Create a Hello",
+              "World Application, Create an application to display image and its",
+              "description using TextView and ImageView, Create an application",
+              "with TextView and Buttons to understand the event handling in",
+              "android., Create applications with different controls to understand",
+              "various android layout like Linear Layout, Relative Layout,",
+              "Constraint Layout, Create Pizza Ordering App, add buttons increase",
+              "the quantity of pizzas, calculate and display total amount , Extends",
+              "Pizza Ordering app to add multiple types of pizza and display",
+              "calculated amount on different activity, Create calculator app with",
+              "two textboxes and 4 buttons which calculates the basic",
+              "mathematical functions, Creates a menu/navigation and put event",
+              "handler to navigate to various activity using menu/navigation.,",
+              "Develop an android app which displays a form to get following",
+              "Info. 1.Username 2.password 3.Email 4.phone number 5.state",
+              "6.country Form should be followed by a “Submit” button. when",
+              "clicked shows the entered information (List of states should be",
+              "displayed in spinner automatically), Using android, Create a login",
+              "Activity. It asks for “username” and “password”. If username and",
+              "pass word is valid, Display Welcome message, Making app’s APK",
+              "file and deploy it on user’s mobile phone or play store.",
+              "Total Hours 56",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -435,9 +1154,7 @@
           "text": "Textbook :\n 1  Mobile ComputingTechnology,Applications and service creation, Asoke K Telukder,\n    Roopa R Yavagal, TMH, NA\n\nReferences:\n 1  Mobile ComputingTechnology,Applications and service creation ,Asoke K Telukder,\n    Roopa R Yavagal by TMH.\n 2  Mobile Computing,Raj Kamal by Oxford\n 3  Wireless Communications & Networks, Second Edition,William Stallings by Pearson\n 4  Mobile Computing Theory and Practice-Kumkum Garg-Pearson\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    35.00         35.00         30.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://developer.android.com/index.html\n 2  www.tutorialspoint.com/mobilecomputing\n 3  http://www.wirelessdevnet.com/\n 4  http://www.protocols.com/\n 5  https://developer.apple.com/\n 6  https://www.udemy.com\n 7   http://nptel.ac.in\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "5f3fc9275b49362404914f758945546c6dee08c0047dcf3af4be3e31f1b368d1"
     },
     {
@@ -453,7 +1170,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1505 - Project-I (.pdf",
       "expected_pdf_sha256": "aabaf570c40605f5d6fc756b6b926663c887dd0cb47f2d3cde26f748ed924945",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "PROJECT-I",
         "course_code": "09CE1505",
@@ -470,11 +1187,88 @@
         "To identify practical aspect of studied technologies",
         "To use latest software / hardware as per requirement",
         "To use different testing methodologies to test the implemented work",
-        "To present and document implemented work effectively Pre-requisite of course:Syllabus of PROJECT-I for diploma Computer Engineering"
+        "To present and document implemented work effectively"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 6 0 0 0 50 50",
       "contents": {
-        "theory_units": [],
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Project/Problem Identification",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Project/Problem Identification"
+            ],
+            "topics_text": "Project/Problem Identification",
+            "topics": [
+              "Project/Problem Identification"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Project Analysis, Requirement Gathering",
+            "contact_hours": 18,
+            "topic_lines": [
+              "Project Analysis, Requirement Gathering"
+            ],
+            "topics_text": "Project Analysis, Requirement Gathering",
+            "topics": [
+              "Project Analysis, Requirement Gathering"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Project Design / Prototype Development",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Project Design / Prototype Development"
+            ],
+            "topics_text": "Project Design / Prototype Development",
+            "topics": [
+              "Project Design / Prototype Development"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Implementation of Project/Solution",
+            "contact_hours": 30,
+            "topic_lines": [
+              "Implementation of Project/Solution"
+            ],
+            "topics_text": "Implementation of Project/Solution",
+            "topics": [
+              "Implementation of Project/Solution"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Testing and Verification",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Testing and Verification",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Testing and Verification MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Testing and Verification",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Presentation and Report Writing",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Presentation and Report Writing",
+              "Total Hours 84"
+            ],
+            "topics_text": "Presentation and Report Writing Total Hours 84",
+            "topics": [
+              "Presentation and Report Writing",
+              "Total Hours 84"
+            ]
+          }
+        ],
         "practical_units": []
       },
       "references": {
@@ -508,9 +1302,7 @@
           "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6       Presentation and Report Writing                           6\n               Presentation and Report Writing\n                               Total Hours                       84\n\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  Computer project manuals\n 2 A manual of how to prepare project repot by J.B. Patel\n 3  All technical journal and manual related to computer engineering project\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         40.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  Course-work reports: i.e. reports for communication with your tutor or guide\n 2  Effort should be made to identify actual field problems to be given as project work to the\n     students. Project selected should not be too complex which is beyond the comprehension\n     level of the students.\n\nSupplementary Resources:\n 1  https://www.projectwale.com/\n 2  https://www.upgrad.com/\n 3  https://www.geeksforgeeks.org/\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "aabaf570c40605f5d6fc756b6b926663c887dd0cb47f2d3cde26f748ed924945"
     },
     {
@@ -526,7 +1318,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE0509 - Summer Internship (.pdf",
       "expected_pdf_sha256": "138c08b1645f31af3bca47d75037e8be4b550b71e72440cedddce2819663a5d7",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "SUMMER INTERNSHIP",
         "course_code": "09CE0509",
@@ -542,11 +1334,50 @@
         "Get possible opportunities to learn, understand and sharpen the real time technical / managerial skills required at the job(s).",
         "Gain experience in writing Technical reports / projects and presentation of it.",
         "Learn and gain exposure to the engineer’s responsibilities and ethics.",
-        "Understand the social, economic and administrative considerations that influence the working environment of industrial organizations. Pre-requisite of course:NA"
+        "Understand the social, economic and administrative considerations that influence the working environment of industrial organizations."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 0 0 0 0 50 50",
       "contents": {
-        "theory_units": [],
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Offline Internship in Industry",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Student is supposed to produce Internship letter and report once the",
+              "internship is over in case of offline internship in any industry.",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Student is supposed to produce Internship letter and report once the internship is over in case of offline internship in any industry. MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Student is supposed to produce Internship letter and report once the",
+              "internship is over in case of offline internship in any industry.",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "A Mini Project",
+            "contact_hours": 0,
+            "topic_lines": [
+              "A Mini Project- to be carried out on some suitable topic related to",
+              "respective branch. It can be small fabrication / experimental results/",
+              "simulations/ application development / Design and / or Analysis of",
+              "System(s) etc. depending on the branch of the student. Preferably a",
+              "single student should carry out a mini-project.",
+              "Total Hours 0"
+            ],
+            "topics_text": "A Mini Project- to be carried out on some suitable topic related to respective branch. It can be small fabrication / experimental results/ simulations/ application development / Design and / or Analysis of System(s) etc. depending on the branch of the student. Preferably a single student should carry out a mini-project. Total Hours 0",
+            "topics": [
+              "A Mini Project- to be carried out on some suitable topic related to",
+              "respective branch. It can be small fabrication / experimental results/",
+              "simulations/ application development / Design and / or Analysis of",
+              "System(s) etc. depending on the branch of the student. Preferably a",
+              "single student should carry out a mini-project.",
+              "Total Hours 0"
+            ]
+          }
+        ],
         "practical_units": []
       },
       "references": {
@@ -574,15 +1405,13 @@
           "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2    A Mini Project                                           0\n        A Mini Project- to be carried out on some suitable topic related to\n               respective branch. It can be small fabrication / experimental results/\n               simulations/ application development / Design and / or Analysis of\n             System(s) etc. depending on the branch of the student. Preferably a\n               single student should carry out a mini-project.\n                               Total Hours                       0\n\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  NA, NA, NA, NA, NA\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00           0.00           0.00           0.00\n\nInstructional Method:\n 1 NA\n\nSupplementary Resources:\n 1 NA\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "138c08b1645f31af3bca47d75037e8be4b550b71e72440cedddce2819663a5d7"
     }
   ],
   "build_summary": {
-    "extracted": 0,
-    "manual_review": 7,
+    "extracted": 7,
+    "manual_review": 0,
     "ocr_review": 0,
     "missing_pdf": 0,
     "extraction_errors": 0

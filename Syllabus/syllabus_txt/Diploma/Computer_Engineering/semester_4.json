@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:03:50+00:00",
+  "generated_at_utc": "2026-10-12T12:05:35+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -23,7 +23,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2401 - Computer Organization (.pdf",
       "expected_pdf_sha256": "52bd346922ce49af9951c6f094bb634d2445737c7a7dc2d238423b4655ec9d47",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "COMPUTER ORGANIZATION",
         "course_code": "09CE2401",
@@ -39,11 +39,118 @@
         "Apply the knowledge of combinational and sequential logical circuits to mimic a simple computer architecture",
         "Recognize the importance of parallelism in computer architecture",
         "Ability to understand the concept of cache mapping techniques",
-        "To eliminate or remove stall by altering order of instructions Pre-requisite of course:NA"
+        "To eliminate or remove stall by altering order of instructions"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Computer Data Representation & Register Transfer and Micro",
+            "contact_hours": 8,
+            "topic_lines": [
+              "operations",
+              "Basic computer data types, Number representation, Complements,",
+              "Register Transfer language, Register Transfer, Bus and Memory",
+              "Transfers (Tree-State Bus Buffers, Memory Transfer), Arithmetic",
+              "Micro-Operations, Logic Micro-Operations, Shift Micro-",
+              "Operations, Arithmetic logical shift unit"
+            ],
+            "topics_text": "operations Basic computer data types, Number representation, Complements, Register Transfer language, Register Transfer, Bus and Memory Transfers (Tree-State Bus Buffers, Memory Transfer), Arithmetic Micro-Operations, Logic Micro-Operations, Shift Micro- Operations, Arithmetic logical shift unit",
+            "topics": [
+              "operations",
+              "Basic computer data types, Number representation, Complements,",
+              "Register Transfer language, Register Transfer, Bus and Memory",
+              "Transfers (Tree-State Bus Buffers, Memory Transfer), Arithmetic",
+              "Micro-Operations, Logic Micro-Operations, Shift Micro",
+              "Operations, Arithmetic logical shift unit"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Basic Computer Organization and Design",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Instruction codes, Computer registers, Computer instructions,",
+              "Timing and Control, Instruction cycle, Memory-Reference",
+              "Instructions, Input-output and interrupt, Complete computer",
+              "description",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Instruction codes, Computer registers, Computer instructions, Timing and Control, Instruction cycle, Memory-Reference Instructions, Input-output and interrupt, Complete computer description MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Instruction codes, Computer registers, Computer instructions,",
+              "Timing and Control, Instruction cycle, Memory-Reference",
+              "Instructions, Input-output and interrupt, Complete computer",
+              "description",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Programming Basic Computer",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction, Machine Language, Assembly Language, Assembler,",
+              "Program Loops, Arithmetic and Logic operations, subroutines"
+            ],
+            "topics_text": "Introduction, Machine Language, Assembly Language, Assembler, Program Loops, Arithmetic and Logic operations, subroutines",
+            "topics": [
+              "Introduction, Machine Language, Assembly Language, Assembler,",
+              "Program Loops, Arithmetic and Logic operations, subroutines"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Central Processing Unit and Pipeline Processing",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction, General Register Organization, Stack Organization,",
+              "Instruction format, Addressing Modes, data transfer and",
+              "manipulation, Program Control, Reduced Instruction Set Computer",
+              "(RISC), CISC, parallel processing"
+            ],
+            "topics_text": "Introduction, General Register Organization, Stack Organization, Instruction format, Addressing Modes, data transfer and manipulation, Program Control, Reduced Instruction Set Computer (RISC), CISC, parallel processing",
+            "topics": [
+              "Introduction, General Register Organization, Stack Organization,",
+              "Instruction format, Addressing Modes, data transfer and",
+              "manipulation, Program Control, Reduced Instruction Set Computer",
+              "(RISC), CISC, parallel processing"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Input-Output Organization",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Input-Output Interface, Asynchronous Data Transfer, Modes Of",
+              "Transfer, Priority Interrupt, DMA, Input-Output Processor (IOP),",
+              "CPUIOP Communication, Serial communication"
+            ],
+            "topics_text": "Input-Output Interface, Asynchronous Data Transfer, Modes Of Transfer, Priority Interrupt, DMA, Input-Output Processor (IOP), CPUIOP Communication, Serial communication",
+            "topics": [
+              "Input-Output Interface, Asynchronous Data Transfer, Modes Of",
+              "Transfer, Priority Interrupt, DMA, Input-Output Processor (IOP),",
+              "CPUIOP Communication, Serial communication"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Memory Organization",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Memory Hierarchy, Main Memory, Auxiliary Memory, Associative",
+              "Memory, Cache Memory, Virtual Memory",
+              "Total Hours 42"
+            ],
+            "topics_text": "Memory Hierarchy, Main Memory, Auxiliary Memory, Associative Memory, Cache Memory, Virtual Memory Total Hours 42",
+            "topics": [
+              "Memory Hierarchy, Main Memory, Auxiliary Memory, Associative",
+              "Memory, Cache Memory, Virtual Memory",
+              "Total Hours 42"
+            ]
+          }
+        ],
         "practical_units": []
       },
       "references": {
@@ -76,9 +183,7 @@
           "text": "Supplementary Resources:\n 1  http://www.intel.com/pressroom/kits/quickreffam.htm\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "52bd346922ce49af9951c6f094bb634d2445737c7a7dc2d238423b4655ec9d47"
     },
     {
@@ -94,7 +199,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1403 - Java Programming (.pdf",
       "expected_pdf_sha256": "b0c746a3991873cd6aece9061c48c6f2af7a0cd7844269d1d56f6b4c77b45a3a",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "JAVA PROGRAMMING",
         "course_code": "09CE1403",
@@ -111,12 +216,170 @@
         "Collections",
         "To study exception handling methods.",
         "Understand Multithreading",
-        "Students can solve real world problems through programs Pre-requisite of course:Syllabus for computer engineering"
+        "Students can solve real world problems through programs"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 6 0 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit 1",
+            "contact_hours": null,
+            "topic_lines": [
+              "Basic Java Introduction ,Java Features, Java Virtual Machine",
+              "(JVM),, Byte code, Java Development Kit(JDK),Java Operator,",
+              "Data Types, Control Statements-Whie,do-while, Switch condition,",
+              "for loops and continue statement"
+            ],
+            "topics_text": "Basic Java Introduction ,Java Features, Java Virtual Machine (JVM),, Byte code, Java Development Kit(JDK),Java Operator, Data Types, Control Statements-Whie,do-while, Switch condition, for loops and continue statement",
+            "topics": [
+              "Basic Java Introduction ,Java Features, Java Virtual Machine",
+              "(JVM),, Byte code, Java Development Kit(JDK),Java Operator,",
+              "Data Types, Control Statements-Whie,do-while, Switch condition,",
+              "for loops and continue statement"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit 2",
+            "contact_hours": null,
+            "topic_lines": [
+              "Single array and Multidimensional Array, Different classes - String",
+              "and String Buffer class, Command line argument, Scanner Class,",
+              "Various String operations, Wrapper class",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Single array and Multidimensional Array, Different classes - String and String Buffer class, Command line argument, Scanner Class, Various String operations, Wrapper class MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Single array and Multidimensional Array, Different classes - String",
+              "and String Buffer class, Command line argument, Scanner Class,",
+              "Various String operations, Wrapper class",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Unit 3",
+            "contact_hours": null,
+            "topic_lines": [
+              "Class ,Object, Object reference, Constructor,, Method Overriding",
+              "and Overloading, Constructor Overloading, Passing and Returning",
+              "object form Method, new, this and static keyword, finalize()",
+              "method, operator Access control, modifiers, Nested class, Inner",
+              "class, Anonymous inner class, Abstract class"
+            ],
+            "topics_text": "Class ,Object, Object reference, Constructor,, Method Overriding and Overloading, Constructor Overloading, Passing and Returning object form Method, new, this and static keyword, finalize() method, operator Access control, modifiers, Nested class, Inner class, Anonymous inner class, Abstract class",
+            "topics": [
+              "Class ,Object, Object reference, Constructor,, Method Overriding",
+              "and Overloading, Constructor Overloading, Passing and Returning",
+              "object form Method, new, this and static keyword, finalize()",
+              "method, operator Access control, modifiers, Nested class, Inner",
+              "class, Anonymous inner class, Abstract class"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Unit 4",
+            "contact_hours": null,
+            "topic_lines": [
+              "Overview of Inheritance, constructor in inheritance, Data members",
+              "and Method, Different types of inheritance, Multilevel Inheritance ±",
+              "method overriding, explain Final keywords, Implementation of an",
+              "interface, instanceof operator, Interface reference, Interface",
+              "inheritanc,difference between Abstract Class and interface,",
+              "Introduction of Multithread programming,, Different interface and",
+              "Thread classes"
+            ],
+            "topics_text": "Overview of Inheritance, constructor in inheritance, Data members and Method, Different types of inheritance, Multilevel Inheritance ± method overriding, explain Final keywords, Implementation of an interface, instanceof operator, Interface reference, Interface inheritanc,difference between Abstract Class and interface, Introduction of Multithread programming,, Different interface and Thread classes",
+            "topics": [
+              "Overview of Inheritance, constructor in inheritance, Data members",
+              "and Method, Different types of inheritance, Multilevel Inheritance ±",
+              "method overriding, explain Final keywords, Implementation of an",
+              "interface, instanceof operator, Interface reference, Interface",
+              "inheritanc,difference between Abstract Class and interface,",
+              "Introduction of Multithread programming,, Different interface and",
+              "Thread classes"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Unit 5",
+            "contact_hours": null,
+            "topic_lines": [
+              "Overview of different Stream(Byte Stream, Character stream)",
+              "Readers and Writers class, File Class, File InputStream and File",
+              "Output Stream .InputStreamReader and OutputStreamWriter,",
+              "FileReader and Writer, Buffered Reader clas, Exception Handling,",
+              "Collection Classes"
+            ],
+            "topics_text": "Overview of different Stream(Byte Stream, Character stream) Readers and Writers class, File Class, File InputStream and File Output Stream .InputStreamReader and OutputStreamWriter, FileReader and Writer, Buffered Reader clas, Exception Handling, Collection Classes",
+            "topics": [
+              "Overview of different Stream(Byte Stream, Character stream)",
+              "Readers and Writers class, File Class, File InputStream and File",
+              "Output Stream .InputStreamReader and OutputStreamWriter,",
+              "FileReader and Writer, Buffered Reader clas, Exception Handling,",
+              "Collection Classes"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "List of Experiments",
+            "contact_hours": null,
+            "topic_lines": [
+              "1. Write a java program to Print HelloWorld with Single and",
+              "Multiple Main in a java program., 2. Write a program to print the",
+              "ascii value of a given character., 3. Write a Java programs to swap",
+              "two numbers without using a temporary variable and with using",
+              "temporary variable., 4. Write a java program to give the examples of",
+              "operators a. Logical operators b. Bitwise operators c. Conditional",
+              "operators d. Relational operators e. Increment and decrement",
+              "operator, 5. Write a java program to convert rupees to dollar.",
+              "60Rupees=1 dollar., 6. Write a Java Program to check prime",
+              "numbers, 7. Write a program to define and initialize a variable of",
+              "type byte to 1, and then successively multiply it by 2 and display its",
+              "value 8 times. Explain the reason for the last result, 8. Write a java",
+              "program to calculate percentage marks of the students if marks of 6",
+              "subjects are given, 9. Write a program to display a random choice",
+              "from a set of six choices for Breakfast(You could use example like",
+              "scrambled,eggswaffles,fruit,cereal,toast,or yogurt)., 10. Program to",
+              "generate a randomly sequence of capital letters that does not include",
+              "vowels., 11. Write a java pattern, 12. Write a java program to accept",
+              "a line and check how many vowels and constant are there in line.,",
+              "13. Write program How to convert a char array to a string in Java?,",
+              "14. Write a java program to count all words in a string., 15. Write a",
+              "java program to find total length of string and print second half of",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "1. Write a java program to Print HelloWorld with Single and Multiple Main in a java program., 2. Write a program to print the ascii value of a given character., 3. Write a Java programs to swap two numbers without using a temporary variable and with using temporary variable., 4. Write a java program to give the examples of operators a. Logical operators b. Bitwise operators c. Conditional operators d. Relational operators e. Increment and decrement operator, 5. Write a java program to convert rupees to dollar. 60Rupees=1 dollar., 6. Write a Java Program to check prime numbers, 7. Write a program to define and initialize a variable of type byte to 1, and then successively multiply it by 2 and display its value 8 times. Explain the reason for the last result, 8. Write a java program to calculate percentage marks of the students if marks of 6 subjects are given, 9. Write a program to display a random choice from a set of six choices for Breakfast(You could use example like scrambled,eggswaffles,fruit,cereal,toast,or yogurt)., 10. Program to generate a randomly sequence of capital letters that does not include vowels., 11. Write a java pattern, 12. Write a java program to accept a line and check how many vowels and constant are there in line., 13. Write program How to convert a char array to a string in Java?, 14. Write a java program to count all words in a string., 15. Write a java program to find total length of string and print second half of MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "1. Write a java program to Print HelloWorld with Single and",
+              "Multiple Main in a java program., 2. Write a program to print the",
+              "ascii value of a given character., 3. Write a Java programs to swap",
+              "two numbers without using a temporary variable and with using",
+              "temporary variable., 4. Write a java program to give the examples of",
+              "operators a. Logical operators b. Bitwise operators c. Conditional",
+              "operators d. Relational operators e. Increment and decrement",
+              "operator, 5. Write a java program to convert rupees to dollar.",
+              "60Rupees=1 dollar., 6. Write a Java Program to check prime",
+              "numbers, 7. Write a program to define and initialize a variable of",
+              "type byte to 1, and then successively multiply it by 2 and display its",
+              "value 8 times. Explain the reason for the last result, 8. Write a java",
+              "program to calculate percentage marks of the students if marks of 6",
+              "subjects are given, 9. Write a program to display a random choice",
+              "from a set of six choices for Breakfast(You could use example like",
+              "scrambled,eggswaffles,fruit,cereal,toast,or yogurt)., 10. Program to",
+              "generate a randomly sequence of capital letters that does not include",
+              "vowels., 11. Write a java pattern, 12. Write a java program to accept",
+              "a line and check how many vowels and constant are there in line.,",
+              "13. Write program How to convert a char array to a string in Java?,",
+              "14. Write a java program to count all words in a string., 15. Write a",
+              "java program to find total length of string and print second half of",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -154,9 +417,7 @@
           "text": "The suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    40.00         40.00         20.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  http://docs.oracle.com/javase/tutorial/java/index.html\n 2  http://www.tutorialspoint.com/java/\n 3  http://www.oracle.com/technetwork/java/javase/downloads/index.html\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "b0c746a3991873cd6aece9061c48c6f2af7a0cd7844269d1d56f6b4c77b45a3a"
     },
     {
@@ -172,7 +433,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09MA0402 - Mathematics-IV (.pdf",
       "expected_pdf_sha256": "8e4450b7111273b2f9ec4082f6f485c41078ed2c5ed6d5b0518f0b03a2b1a313",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "MATHEMATICS-IV",
         "course_code": "09MA0402",
@@ -189,12 +450,152 @@
         "Understand the relation between parallel and perpendicular lines, find the equations of different kind of lines.",
         "Learn about the centre point and radius of the circle and find its equation from them.",
         "Find the integration of different kind of functions by different methods.",
-        "Classify the degree and order of differential equation and solve the differential equation with first order and first degree. Pre-requisite of course:NA."
+        "Classify the degree and order of differential equation and solve the differential equation with first order and first degree."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Complex Number",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Concept, Geometric meaning of complex number , Modulus,",
+              "Amplitude, Square root of complex numbers, Polar form complex",
+              "numbers",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Concept, Geometric meaning of complex number , Modulus, Amplitude, Square root of complex numbers, Polar form complex numbers MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Concept, Geometric meaning of complex number , Modulus,",
+              "Amplitude, Square root of complex numbers, Polar form complex",
+              "numbers",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Co-ordinate Geometry",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Point : Distance formula, Mid-point formula, Straight Line : Forms",
+              "of equations of straight lines : Slope-Point form, Two points form,",
+              "Intercept form, Parallel and perpendicular lines, Circle : Equation of",
+              "a circle, Centre and radius form"
+            ],
+            "topics_text": "Point : Distance formula, Mid-point formula, Straight Line : Forms of equations of straight lines : Slope-Point form, Two points form, Intercept form, Parallel and perpendicular lines, Circle : Equation of a circle, Centre and radius form",
+            "topics": [
+              "Point : Distance formula, Mid-point formula, Straight Line : Forms",
+              "of equations of straight lines : Slope-Point form, Two points form,",
+              "Intercept form, Parallel and perpendicular lines, Circle : Equation of",
+              "a circle, Centre and radius form"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Integration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Definition and concept, Some particular integrals, Integration by",
+              "substitution method, Integration by parts, Integration by partial",
+              "fraction (for linear factors), Integration of some special types of",
+              "functions"
+            ],
+            "topics_text": "Definition and concept, Some particular integrals, Integration by substitution method, Integration by parts, Integration by partial fraction (for linear factors), Integration of some special types of functions",
+            "topics": [
+              "Definition and concept, Some particular integrals, Integration by",
+              "substitution method, Integration by parts, Integration by partial",
+              "fraction (for linear factors), Integration of some special types of",
+              "functions"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differential Equations (First Order First degree)",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition, Order and degree of a differential equation, Solution of",
+              "first order differential equation by Separable, Homogeneous and",
+              "Integrating factor methods",
+              "Total Hours 28"
+            ],
+            "topics_text": "Definition, Order and degree of a differential equation, Solution of first order differential equation by Separable, Homogeneous and Integrating factor methods Total Hours 28",
+            "topics": [
+              "Definition, Order and degree of a differential equation, Solution of",
+              "first order differential equation by Separable, Homogeneous and",
+              "Integrating factor methods",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Complex Number",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Concept, Modulus, Amplitude, Square root of complex numbers,",
+              "Polar form of complex numbers"
+            ],
+            "topics_text": "Concept, Modulus, Amplitude, Square root of complex numbers, Polar form of complex numbers",
+            "topics": [
+              "Concept, Modulus, Amplitude, Square root of complex numbers,",
+              "Polar form of complex numbers"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Co-ordinate Geometry",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Point : Distance formula, Mid-point formula, Straight Line : Forms",
+              "of equations of straight lines : Slope-Point form, Two points form,",
+              "Intercept form, Parallel and perpendicular lines, Circle : Equation of",
+              "a circle, Centre and radius form"
+            ],
+            "topics_text": "Point : Distance formula, Mid-point formula, Straight Line : Forms of equations of straight lines : Slope-Point form, Two points form, Intercept form, Parallel and perpendicular lines, Circle : Equation of a circle, Centre and radius form",
+            "topics": [
+              "Point : Distance formula, Mid-point formula, Straight Line : Forms",
+              "of equations of straight lines : Slope-Point form, Two points form,",
+              "Intercept form, Parallel and perpendicular lines, Circle : Equation of",
+              "a circle, Centre and radius form"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Integration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Some particular integrals, Integration by substitution method ,",
+              "Integration by parts, Integration by partial fraction and integration",
+              "of some special types of functions"
+            ],
+            "topics_text": "Some particular integrals, Integration by substitution method , Integration by parts, Integration by partial fraction and integration of some special types of functions",
+            "topics": [
+              "Some particular integrals, Integration by substitution method ,",
+              "Integration by parts, Integration by partial fraction and integration",
+              "of some special types of functions"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differential Equations (First Order First degree)",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition, Order and degree of a differential equation, Solution of",
+              "first order differential equation by Separable, Homogeneous and",
+              "Integrating factor methods",
+              "Total Hours 28"
+            ],
+            "topics_text": "Definition, Order and degree of a differential equation, Solution of first order differential equation by Separable, Homogeneous and Integrating factor methods Total Hours 28",
+            "topics": [
+              "Definition, Order and degree of a differential equation, Solution of",
+              "first order differential equation by Separable, Homogeneous and",
+              "Integrating factor methods",
+              "Total Hours 28"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -232,9 +633,7 @@
           "text": "References:\n 1  B.S. Grewal, Higher Engineering Mathematics, B.S. Grewal, Higher Engineering\n    Mathematics, -, Khanna Publishers, New Delhi, 40th Edition, 2007\n 2 NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, -, NCERT,\n    2022\n 3 NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics\n     Part=I , -, NCERT, 2022\n 4 NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics\n     Part=II, -, NCERT, 2022\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         30.00         30.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms\n\nSupplementary Resources:\n 1  https://ncert.nic.in/textbook.php?kemh1=0-16\n 2  https://ncert.nic.in/textbook.php?lemh1=0-6\n 3  https://ncert.nic.in/textbook.php?lemh2=0-7\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "8e4450b7111273b2f9ec4082f6f485c41078ed2c5ed6d5b0518f0b03a2b1a313"
     },
     {
@@ -250,7 +649,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3405 - Operating System (.pdf",
       "expected_pdf_sha256": "3d06347ba6b21f1e8f465c85308695c62e1de3b519920f24af94f9bc3b61ac16",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "OPERATING SYSTEM",
         "course_code": "09CE3405",
@@ -265,12 +664,460 @@
         "Apply Linux commands and shell scripting to perform file operations and basic system tasks",
         "Analyze operating system concepts, architecture, process management, and inter-process communication.",
         "Evaluate CPU scheduling algorithms and deadlock handling techniques for system performance",
-        "Apply memory management and file system techniques to manage system resources efficiently Pre-requisite of course:Students should be able to recall and understand basic concepts of C programming, apply fundamental data structures (arrays, stacks, queues), and comprehend basic computer organization concepts such as CPU and memory."
+        "Apply memory management and file system techniques to manage system resources efficiently"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 4 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Linux",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to Linux, Linux installation, Editing files with vi, vim,",
+              "gcc, Shell and commands-touch, pwd, cd, mkdir, rmdir, ls, cat, cmp,",
+              "cp, rm, mv,echo, wc, comm, head, tail, grep, sort and related shell",
+              "script programs"
+            ],
+            "topics_text": "Introduction to Linux, Linux installation, Editing files with vi, vim, gcc, Shell and commands-touch, pwd, cd, mkdir, rmdir, ls, cat, cmp, cp, rm, mv,echo, wc, comm, head, tail, grep, sort and related shell script programs",
+            "topics": [
+              "Introduction to Linux, Linux installation, Editing files with vi, vim,",
+              "gcc, Shell and commands-touch, pwd, cd, mkdir, rmdir, ls, cat, cmp,",
+              "cp, rm, mv,echo, wc, comm, head, tail, grep, sort and related shell",
+              "script programs"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Operating System",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Operating System overview, Operating System concepts, Functions",
+              "of OS,Services of OS ,System call, Types of operating system:",
+              "Batch Operating System, Multiprogramming Operating System,",
+              "Multiprocessing Operating System, Real Time Operating System,",
+              "Multitasking/Time Sharing OS, Distributed OS, Network OS,",
+              "kernel, Architecture of operating system",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Operating System overview, Operating System concepts, Functions of OS,Services of OS ,System call, Types of operating system: Batch Operating System, Multiprogramming Operating System, Multiprocessing Operating System, Real Time Operating System, Multitasking/Time Sharing OS, Distributed OS, Network OS, kernel, Architecture of operating system MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Operating System overview, Operating System concepts, Functions",
+              "of OS,Services of OS ,System call, Types of operating system:",
+              "Batch Operating System, Multiprogramming Operating System,",
+              "Multiprocessing Operating System, Real Time Operating System,",
+              "Multitasking/Time Sharing OS, Distributed OS, Network OS,",
+              "kernel, Architecture of operating system",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Process Management",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Process, Process States, Process Control Block, Threads, User Level",
+              "and Kernel level thread, Multithreading-Many to one, One to One ,",
+              "Many to Many, Process Synchronization, race conditions, critical",
+              "region problem, Mutual exclusion, classical problems of IPC,",
+              "Concepts of Semaphore – Mutex – Monitor –Event Counters,",
+              "Message Passing"
+            ],
+            "topics_text": "Process, Process States, Process Control Block, Threads, User Level and Kernel level thread, Multithreading-Many to one, One to One , Many to Many, Process Synchronization, race conditions, critical region problem, Mutual exclusion, classical problems of IPC, Concepts of Semaphore – Mutex – Monitor –Event Counters, Message Passing",
+            "topics": [
+              "Process, Process States, Process Control Block, Threads, User Level",
+              "and Kernel level thread, Multithreading-Many to one, One to One ,",
+              "Many to Many, Process Synchronization, race conditions, critical",
+              "region problem, Mutual exclusion, classical problems of IPC,",
+              "Concepts of Semaphore – Mutex – Monitor –Event Counters,",
+              "Message Passing"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "CPU Scheduling and Deadlocks",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Scheduling -Basic Concept, Preemptive and Non-Preemptive",
+              "scheduling, scheduling criteria, Types of Scheduling algorithm:",
+              "Non-Preemptive-First Come First Served (FCFS), Non-Preemptive-",
+              "Shortest Job First (SJF), Priority Preemptive-Shortest Remaining",
+              "Time Next(SRTN) , Round Robin(RR), Deadlock concepts and its",
+              "characterization, deadlock detection, prevention techniques of",
+              "deadlock, techniques to get recovery from deadlock, deadlock",
+              "avoidance-Bankers Algorithm"
+            ],
+            "topics_text": "Scheduling -Basic Concept, Preemptive and Non-Preemptive scheduling, scheduling criteria, Types of Scheduling algorithm: Non-Preemptive-First Come First Served (FCFS), Non-Preemptive- Shortest Job First (SJF), Priority Preemptive-Shortest Remaining Time Next(SRTN) , Round Robin(RR), Deadlock concepts and its characterization, deadlock detection, prevention techniques of deadlock, techniques to get recovery from deadlock, deadlock avoidance-Bankers Algorithm",
+            "topics": [
+              "Scheduling -Basic Concept, Preemptive and Non-Preemptive",
+              "scheduling, scheduling criteria, Types of Scheduling algorithm:",
+              "Non-Preemptive-First Come First Served (FCFS), Non-Preemptive",
+              "Shortest Job First (SJF), Priority Preemptive-Shortest Remaining",
+              "Time Next(SRTN) , Round Robin(RR), Deadlock concepts and its",
+              "characterization, deadlock detection, prevention techniques of",
+              "deadlock, techniques to get recovery from deadlock, deadlock",
+              "avoidance-Bankers Algorithm"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Memory Management",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Contiguous Memory Allocation, Swapping, Compaction,",
+              "Partitioning Algorithm-First fit, Best fit, Worst fit, Fragmentation,",
+              "paging concepts, segmentation, virtual memory, demand paging,",
+              "page fault, page replacement policies- First In First Out (FIFO),",
+              "Least Recently Used (LRU), Optimal(OPT)"
+            ],
+            "topics_text": "Contiguous Memory Allocation, Swapping, Compaction, Partitioning Algorithm-First fit, Best fit, Worst fit, Fragmentation, paging concepts, segmentation, virtual memory, demand paging, page fault, page replacement policies- First In First Out (FIFO), Least Recently Used (LRU), Optimal(OPT)",
+            "topics": [
+              "Contiguous Memory Allocation, Swapping, Compaction,",
+              "Partitioning Algorithm-First fit, Best fit, Worst fit, Fragmentation,",
+              "paging concepts, segmentation, virtual memory, demand paging,",
+              "page fault, page replacement policies- First In First Out (FIFO),",
+              "Least Recently Used (LRU), Optimal(OPT)"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "File Management and Disk Structure",
+            "contact_hours": 5,
+            "topic_lines": [
+              "File-Concept of file, attributes and operations of file, file accessing",
+              "methods, directories, file sharing and protection, Disk-Disk",
+              "structure- physical and logical structure, Disk Hardware, Disk",
+              "Scheduling",
+              "Total Hours 42"
+            ],
+            "topics_text": "File-Concept of file, attributes and operations of file, file accessing methods, directories, file sharing and protection, Disk-Disk structure- physical and logical structure, Disk Hardware, Disk Scheduling Total Hours 42",
+            "topics": [
+              "File-Concept of file, attributes and operations of file, file accessing",
+              "methods, directories, file sharing and protection, Disk-Disk",
+              "structure- physical and logical structure, Disk Hardware, Disk",
+              "Scheduling",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Case study to installation of Linux."
+            ],
+            "topics_text": "Case study to installation of Linux.",
+            "topics": [
+              "Case study to installation of Linux."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Case study to compare any two operating system"
+            ],
+            "topics_text": "Case study to compare any two operating system",
+            "topics": [
+              "Case study to compare any two operating system"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study of Basic commands of Linux"
+            ],
+            "topics_text": "Study of Basic commands of Linux",
+            "topics": [
+              "Study of Basic commands of Linux"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Study of Advance commands and filters of Linux"
+            ],
+            "topics_text": "Study of Advance commands and filters of Linux",
+            "topics": [
+              "Study of Advance commands and filters of Linux"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to print “Hello world”."
+            ],
+            "topics_text": "Write a shell script to print “Hello world”.",
+            "topics": [
+              "Write a shell script to print “Hello world”."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script that accepts a name string from user and print it",
+              "with proper title.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Write a shell script that accepts a name string from user and print it with proper title. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Write a shell script that accepts a name string from user and print it",
+              "with proper title.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script that performs simple arithmetic operation on",
+              "given input."
+            ],
+            "topics_text": "Write a shell script that performs simple arithmetic operation on given input.",
+            "topics": [
+              "Write a shell script that performs simple arithmetic operation on",
+              "given input."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to generate grade sheet of a student which",
+              "accepts marks of five subjects, calculate and display total marks,",
+              "percentage and grade obtained by the student."
+            ],
+            "topics_text": "Write a shell script to generate grade sheet of a student which accepts marks of five subjects, calculate and display total marks, percentage and grade obtained by the student.",
+            "topics": [
+              "Write a shell script to generate grade sheet of a student which",
+              "accepts marks of five subjects, calculate and display total marks,",
+              "percentage and grade obtained by the student."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to add and print all even numbers between given",
+              "range."
+            ],
+            "topics_text": "Write a shell script to add and print all even numbers between given range.",
+            "topics": [
+              "Write a shell script to add and print all even numbers between given",
+              "range."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to generate Fibonacci number from 1 to n."
+            ],
+            "topics_text": "Write a shell script to generate Fibonacci number from 1 to n.",
+            "topics": [
+              "Write a shell script to generate Fibonacci number from 1 to n."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to find factorial of given number n."
+            ],
+            "topics_text": "Write a shell script to find factorial of given number n.",
+            "topics": [
+              "Write a shell script to find factorial of given number n."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to generate prime numbers from 1 to n"
+            ],
+            "topics_text": "Write a shell script to generate prime numbers from 1 to n",
+            "topics": [
+              "Write a shell script to generate prime numbers from 1 to n"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script that reverses the number."
+            ],
+            "topics_text": "Write a shell script that reverses the number.",
+            "topics": [
+              "Write a shell script that reverses the number."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical-14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to check whether the entered number is",
+              "Armstrong number or not using the command line argument."
+            ],
+            "topics_text": "Write a shell script to check whether the entered number is Armstrong number or not using the command line argument.",
+            "topics": [
+              "Write a shell script to check whether the entered number is",
+              "Armstrong number or not using the command line argument."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Practical-15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to check whether the string is palindrome."
+            ],
+            "topics_text": "Write a shell script to check whether the string is palindrome.",
+            "topics": [
+              "Write a shell script to check whether the string is palindrome."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Practical-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script that reverses the string."
+            ],
+            "topics_text": "Write a shell script that reverses the string.",
+            "topics": [
+              "Write a shell script that reverses the string."
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Practical-17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script that evaluates the following series",
+              "1+1/1+1/2+1/3+…+1/n."
+            ],
+            "topics_text": "Write a shell script that evaluates the following series 1+1/1+1/2+1/3+…+1/n.",
+            "topics": [
+              "Write a shell script that evaluates the following series",
+              "1+1/1+1/2+1/3+…+1/n."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Practical-18",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to read n numbers as command arguments and",
+              "sort them in ascending order."
+            ],
+            "topics_text": "Write a shell script to read n numbers as command arguments and sort them in ascending order.",
+            "topics": [
+              "Write a shell script to read n numbers as command arguments and",
+              "sort them in ascending order."
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Practical-19",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to wish Good morning, Good afternoon and",
+              "Good night as per current system time."
+            ],
+            "topics_text": "Write a shell script to wish Good morning, Good afternoon and Good night as per current system time.",
+            "topics": [
+              "Write a shell script to wish Good morning, Good afternoon and",
+              "Good night as per current system time."
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Practical-20",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to count number of characters, words & lines."
+            ],
+            "topics_text": "Write a shell script to count number of characters, words & lines.",
+            "topics": [
+              "Write a shell script to count number of characters, words & lines."
+            ]
+          },
+          {
+            "unit_number": 21,
+            "title": "Practical-21",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script for calendar for current month & year also for",
+              "range of months."
+            ],
+            "topics_text": "Write a shell script for calendar for current month & year also for range of months.",
+            "topics": [
+              "Write a shell script for calendar for current month & year also for",
+              "range of months."
+            ]
+          },
+          {
+            "unit_number": 22,
+            "title": "Practical-22",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to convert lowercase to uppercase letter for a",
+              "given file.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Write a shell script to convert lowercase to uppercase letter for a given file. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Write a shell script to convert lowercase to uppercase letter for a",
+              "given file.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 23,
+            "title": "Practical-23",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script for comparison between two strings whether",
+              "both the strings are equal or not."
+            ],
+            "topics_text": "Write a shell script for comparison between two strings whether both the strings are equal or not.",
+            "topics": [
+              "Write a shell script for comparison between two strings whether",
+              "both the strings are equal or not."
+            ]
+          },
+          {
+            "unit_number": 24,
+            "title": "Practical-24",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a shell script to accept two filenames, if both files exist then"
+            ],
+            "topics_text": "Write a shell script to accept two filenames, if both files exist then",
+            "topics": [
+              "Write a shell script to accept two filenames, if both files exist then"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -310,9 +1157,7 @@
           "text": "Supplementary Resources:\n 3  http://nptel.ac.in/courses/106108101/\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "3d06347ba6b21f1e8f465c85308695c62e1de3b519920f24af94f9bc3b61ac16"
     },
     {
@@ -328,7 +1173,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3402 - Software Engineering (.pdf",
       "expected_pdf_sha256": "f08a36fd35f07f57be3b6c08814773a2a2ea913c2726599a4153dcabbc8d502f",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "SOFTWARE ENGINEERING",
         "course_code": "09CE3402",
@@ -344,12 +1189,302 @@
         "Apply project planning, scheduling, and tracking techniques to manage software development activities effectively",
         "Apply risk identification, analysis, and mitigation strategies to manage uncertainties in software projects",
         "Apply UML-based design and modeling techniques to represent system structure and behavior",
-        "Apply coding standards, testing techniques, and quality assurance practices to ensure reliable and maintainable software systems Pre-requisite of course:Object Oriented Programming Fundamentals"
+        "Apply coding standards, testing techniques, and quality assurance practices to ensure reliable and maintainable software systems"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Software Engineering",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Software engineering, Dual role of software, Various Myths",
+              "Associated with Software, Different Software Process Models, The",
+              "Linear Sequential Model, The Prototyping Model, The RAD Model,",
+              "Evolutionary Process Models, Component-Based Development"
+            ],
+            "topics_text": "Software engineering, Dual role of software, Various Myths Associated with Software, Different Software Process Models, The Linear Sequential Model, The Prototyping Model, The RAD Model, Evolutionary Process Models, Component-Based Development",
+            "topics": [
+              "Software engineering, Dual role of software, Various Myths",
+              "Associated with Software, Different Software Process Models, The",
+              "Linear Sequential Model, The Prototyping Model, The RAD Model,",
+              "Evolutionary Process Models, Component-Based Development"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Project Management Concepts, Requirement Engineering &",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Metrics:",
+              "The Management Spectrum 4P’s (People, Project, Product and",
+              "Process), The W5HH Principle, Basic concept of Requirement",
+              "(Functional & Non Functional), Metrics in the Process and Project",
+              "Domains, Software Measurement"
+            ],
+            "topics_text": "Metrics: The Management Spectrum 4P’s (People, Project, Product and Process), The W5HH Principle, Basic concept of Requirement (Functional & Non Functional), Metrics in the Process and Project Domains, Software Measurement",
+            "topics": [
+              "Metrics:",
+              "The Management Spectrum 4P’s (People, Project, Product and",
+              "Process), The W5HH Principle, Basic concept of Requirement",
+              "(Functional & Non Functional), Metrics in the Process and Project",
+              "Domains, Software Measurement"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Project Planning Scheduling & Tracking",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Software Scope, Feasibility Analysis, Empirical Estimation Models,",
+              "Gantt Charts and Tools used",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Software Scope, Feasibility Analysis, Empirical Estimation Models, Gantt Charts and Tools used MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Software Scope, Feasibility Analysis, Empirical Estimation Models,",
+              "Gantt Charts and Tools used",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Risk Analysis And Management",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Reactive versus Proactive Risk Strategies, Risk Management",
+              "Process, Risk Identification, Risk Projection, Risk Refinement,",
+              "RMMM Plans"
+            ],
+            "topics_text": "Reactive versus Proactive Risk Strategies, Risk Management Process, Risk Identification, Risk Projection, Risk Refinement, RMMM Plans",
+            "topics": [
+              "Reactive versus Proactive Risk Strategies, Risk Management",
+              "Process, Risk Identification, Risk Projection, Risk Refinement,",
+              "RMMM Plans"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Design and Modelling using UML",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Outcome of Design Process, Effective Modular Design(Functional",
+              "& Non-Functional), Cohesion, Coupling"
+            ],
+            "topics_text": "Outcome of Design Process, Effective Modular Design(Functional & Non-Functional), Cohesion, Coupling",
+            "topics": [
+              "Outcome of Design Process, Effective Modular Design(Functional",
+              "& Non-Functional), Cohesion, Coupling"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Software Coding & Testing",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Coding standards & Coding Guidelines, Code Review, Software",
+              "Documentation: Internal and External Documentation, Software",
+              "Testing Fundamentals, Software Testing Techniques, White Box",
+              "Testing Techniques, Black Box Testing Techniques",
+              "Total Hours 28"
+            ],
+            "topics_text": "Coding standards & Coding Guidelines, Code Review, Software Documentation: Internal and External Documentation, Software Testing Fundamentals, Software Testing Techniques, White Box Testing Techniques, Black Box Testing Techniques Total Hours 28",
+            "topics": [
+              "Coding standards & Coding Guidelines, Code Review, Software",
+              "Documentation: Internal and External Documentation, Software",
+              "Testing Fundamentals, Software Testing Techniques, White Box",
+              "Testing Techniques, Black Box Testing Techniques",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Identify Project (System), Identify basic requirements and users.",
+              "Based on the information Write Introduction, Abstract, Scope and",
+              "prepare Use Case Description Document"
+            ],
+            "topics_text": "Identify Project (System), Identify basic requirements and users. Based on the information Write Introduction, Abstract, Scope and prepare Use Case Description Document",
+            "topics": [
+              "Identify Project (System), Identify basic requirements and users.",
+              "Based on the information Write Introduction, Abstract, Scope and",
+              "prepare Use Case Description Document"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Use Case Diagram: Design a UML Use Case Diagram to represent",
+              "the functional requirements of the selected system. Identify actors,",
+              "use cases, and relationships such as include, extend, and",
+              "generalization"
+            ],
+            "topics_text": "Use Case Diagram: Design a UML Use Case Diagram to represent the functional requirements of the selected system. Identify actors, use cases, and relationships such as include, extend, and generalization",
+            "topics": [
+              "Use Case Diagram: Design a UML Use Case Diagram to represent",
+              "the functional requirements of the selected system. Identify actors,",
+              "use cases, and relationships such as include, extend, and",
+              "generalization"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Activity Diagram: Develop an Activity Diagram to model the",
+              "workflow of the overall system. Represent decision points, parallel",
+              "activities, and process flow logically."
+            ],
+            "topics_text": "Activity Diagram: Develop an Activity Diagram to model the workflow of the overall system. Represent decision points, parallel activities, and process flow logically.",
+            "topics": [
+              "Activity Diagram: Develop an Activity Diagram to model the",
+              "workflow of the overall system. Represent decision points, parallel",
+              "activities, and process flow logically."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Flowchart: Create a system-level and module-level flowchart",
+              "showing procedural logic. Use standard flowchart symbols to",
+              "represent process, input/output, and control flow"
+            ],
+            "topics_text": "Flowchart: Create a system-level and module-level flowchart showing procedural logic. Use standard flowchart symbols to represent process, input/output, and control flow",
+            "topics": [
+              "Flowchart: Create a system-level and module-level flowchart",
+              "showing procedural logic. Use standard flowchart symbols to",
+              "represent process, input/output, and control flow"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Sequence Diagram: Design a Sequence Diagram to illustrate",
+              "interaction between objects over time. Show lifelines, activation",
+              "bars, and message passing for a core transaction."
+            ],
+            "topics_text": "Sequence Diagram: Design a Sequence Diagram to illustrate interaction between objects over time. Show lifelines, activation bars, and message passing for a core transaction.",
+            "topics": [
+              "Sequence Diagram: Design a Sequence Diagram to illustrate",
+              "interaction between objects over time. Show lifelines, activation",
+              "bars, and message passing for a core transaction."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Context-Level DFD (Level 0): Prepare a Context Diagram",
+              "representing the system as a single process. Identify external entities",
+              "and major data flows entering and leaving the system."
+            ],
+            "topics_text": "Context-Level DFD (Level 0): Prepare a Context Diagram representing the system as a single process. Identify external entities and major data flows entering and leaving the system.",
+            "topics": [
+              "Context-Level DFD (Level 0): Prepare a Context Diagram",
+              "representing the system as a single process. Identify external entities",
+              "and major data flows entering and leaving the system."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "DFD Level 1: Develop a Level 1 Data Flow Diagram by",
+              "decomposing the main system process. Ensure proper balancing of",
+              "data flows with the Context Diagram.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "DFD Level 1: Develop a Level 1 Data Flow Diagram by decomposing the main system process. Ensure proper balancing of data flows with the Context Diagram. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "DFD Level 1: Develop a Level 1 Data Flow Diagram by",
+              "decomposing the main system process. Ensure proper balancing of",
+              "data flows with the Context Diagram.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "DFD Level 2: Create a Level 2 DFD for one major subsystem of the",
+              "project. Provide detailed decomposition while maintaining logical",
+              "data consistency."
+            ],
+            "topics_text": "DFD Level 2: Create a Level 2 DFD for one major subsystem of the project. Provide detailed decomposition while maintaining logical data consistency.",
+            "topics": [
+              "DFD Level 2: Create a Level 2 DFD for one major subsystem of the",
+              "project. Provide detailed decomposition while maintaining logical",
+              "data consistency."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Entity Relationship (ER) Diagram: Design an ER Diagram to model",
+              "database entities, attributes, and relationships. Specify primary keys,",
+              "foreign keys, and cardinality constraints."
+            ],
+            "topics_text": "Entity Relationship (ER) Diagram: Design an ER Diagram to model database entities, attributes, and relationships. Specify primary keys, foreign keys, and cardinality constraints.",
+            "topics": [
+              "Entity Relationship (ER) Diagram: Design an ER Diagram to model",
+              "database entities, attributes, and relationships. Specify primary keys,",
+              "foreign keys, and cardinality constraints."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Class Diagram: Develop a UML Class Diagram representing system",
+              "structure in object-oriented form. Define classes, attributes,",
+              "methods, and relationships such as inheritance and aggregation."
+            ],
+            "topics_text": "Class Diagram: Develop a UML Class Diagram representing system structure in object-oriented form. Define classes, attributes, methods, and relationships such as inheritance and aggregation.",
+            "topics": [
+              "Class Diagram: Develop a UML Class Diagram representing system",
+              "structure in object-oriented form. Define classes, attributes,",
+              "methods, and relationships such as inheritance and aggregation."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Mini Software Requirement Specification (Mini SRS): Prepare a",
+              "concise SRS document following IEEE standards for the selected",
+              "project. Integrate all diagrams and clearly define functional and",
+              "non-functional requirements.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Mini Software Requirement Specification (Mini SRS): Prepare a concise SRS document following IEEE standards for the selected project. Integrate all diagrams and clearly define functional and non-functional requirements. Total Hours 28",
+            "topics": [
+              "Mini Software Requirement Specification (Mini SRS): Prepare a",
+              "concise SRS document following IEEE standards for the selected",
+              "project. Integrate all diagrams and clearly define functional and",
+              "non-functional requirements.",
+              "Total Hours 28"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -393,9 +1528,7 @@
           "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in may be using following teaching approaches: black board, or use\n     of any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examinations/Viva will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e courses,\n     Virtual Laboratory.\n\nSupplementary Resources:\n 1  http://nptel.ac.in/courses/106101061/\n 2  https://www.joelonsoftware.com/\n 3  http://www.codesimplicity.com/\n 4  http://www.sparxsystems.com/products/ea/index.html\n 5  http://www.smartdraw.com/\n 6  http://www.win.tue.nl/\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "f08a36fd35f07f57be3b6c08814773a2a2ea913c2726599a4153dcabbc8d502f"
     },
     {
@@ -411,7 +1544,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3404 - Web Technology (.pdf",
       "expected_pdf_sha256": "4f9abe815caacbef33a55e47d3156f92c8f006231108ded54989a7b3ceef7332",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "WEB TECHNOLOGY",
         "course_code": "09CE3404",
@@ -428,12 +1561,444 @@
         "Develop interactive web pages using JavaScript and jQuery with event handling, objects, and form validation.",
         "Apply PHP programming constructs such as variables, operators, arrays, loops, and conditional statements to develop server-side logic",
         "Implement reusable PHP functions and process user data through form inputs using built-in string, date, and math functions",
-        "Develop database-driven web applications using PHP and MySQL by performing CRUD operations and establishing database connectivity Pre-requisite of course:Programming Fundamentals"
+        "Develop database-driven web applications using PHP and MySQL by performing CRUD operations and establishing database connectivity"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 6 0 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Modern Web Architecture & Hosting",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Client-Server Architecture, Frontend, Backend and Full Stack",
+              "overview, Web Hosting types (Shared, VPS, Cloud – overview),",
+              "Domain Name System (DNS) working, Introduction to Version",
+              "Control (Git – basic concept), Website deployment using GitHub",
+              "Pages / similar platform",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Client-Server Architecture, Frontend, Backend and Full Stack overview, Web Hosting types (Shared, VPS, Cloud – overview), Domain Name System (DNS) working, Introduction to Version Control (Git – basic concept), Website deployment using GitHub Pages / similar platform MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Client-Server Architecture, Frontend, Backend and Full Stack",
+              "overview, Web Hosting types (Shared, VPS, Cloud – overview),",
+              "Domain Name System (DNS) working, Introduction to Version",
+              "Control (Git – basic concept), Website deployment using GitHub",
+              "Pages / similar platform",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Advanced HTML & Responsive CSS",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Semantic HTML5 elements, Forms (advanced attributes &",
+              "validation), Responsive Web Design principles Screen reader",
+              "friendly structure, Media Queries, Introduction to Bootstrap5,",
+              "Custom validation messages, Responsive Navbar, Cards, Forms,",
+              "video and audio tags with controls source element, Embedding",
+              "YouTube/Google Maps iframe security basics."
+            ],
+            "topics_text": "Semantic HTML5 elements, Forms (advanced attributes & validation), Responsive Web Design principles Screen reader friendly structure, Media Queries, Introduction to Bootstrap5, Custom validation messages, Responsive Navbar, Cards, Forms, video and audio tags with controls source element, Embedding YouTube/Google Maps iframe security basics.",
+            "topics": [
+              "Semantic HTML5 elements, Forms (advanced attributes &",
+              "validation), Responsive Web Design principles Screen reader",
+              "friendly structure, Media Queries, Introduction to Bootstrap5,",
+              "Custom validation messages, Responsive Navbar, Cards, Forms,",
+              "video and audio tags with controls source element, Embedding",
+              "YouTube/Google Maps iframe security basics."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "JavaScript And jQuery",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Basics of JavaScript, JavaScript syntaxes for variables, functions,",
+              "branches and repetitions, JavaScript alert, prompt and confirm,",
+              "Objects in JavaScript, forms and validations, JavaScript events,",
+              "Basics of jQuery, jQuery syntaxes, jQuery selectors, events, effects"
+            ],
+            "topics_text": "Basics of JavaScript, JavaScript syntaxes for variables, functions, branches and repetitions, JavaScript alert, prompt and confirm, Objects in JavaScript, forms and validations, JavaScript events, Basics of jQuery, jQuery syntaxes, jQuery selectors, events, effects",
+            "topics": [
+              "Basics of JavaScript, JavaScript syntaxes for variables, functions,",
+              "branches and repetitions, JavaScript alert, prompt and confirm,",
+              "Objects in JavaScript, forms and validations, JavaScript events,",
+              "Basics of jQuery, jQuery syntaxes, jQuery selectors, events, effects"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "PHP",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Introduction to PHP, Variable, Constant, Data types, Operators:",
+              "arithmetic, logical, assignment, bitwise, Loop: while, do…while,",
+              "for, break statements, Flow control statements: simple if, if-else,",
+              "else-if clause, switch statements, PHP Array: Indexed Array,",
+              "Associative Array"
+            ],
+            "topics_text": "Introduction to PHP, Variable, Constant, Data types, Operators: arithmetic, logical, assignment, bitwise, Loop: while, do…while, for, break statements, Flow control statements: simple if, if-else, else-if clause, switch statements, PHP Array: Indexed Array, Associative Array",
+            "topics": [
+              "Introduction to PHP, Variable, Constant, Data types, Operators:",
+              "arithmetic, logical, assignment, bitwise, Loop: while, do…while,",
+              "for, break statements, Flow control statements: simple if, if-else,",
+              "else-if clause, switch statements, PHP Array: Indexed Array,",
+              "Associative Array"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Function and Data Inputs",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Defining function, calling function, retrieving value from function,",
+              "date and time function, math function, string function, data inputs",
+              "through form controls"
+            ],
+            "topics_text": "Defining function, calling function, retrieving value from function, date and time function, math function, string function, data inputs through form controls",
+            "topics": [
+              "Defining function, calling function, retrieving value from function,",
+              "date and time function, math function, string function, data inputs",
+              "through form controls"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "PHP & Database",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Basics of MySQL, database connectivity, insertion of data,",
+              "retrieving data, updating of data, deletion of data",
+              "Total Hours 28"
+            ],
+            "topics_text": "Basics of MySQL, database connectivity, insertion of data, retrieving data, updating of data, deletion of data Total Hours 28",
+            "topics": [
+              "Basics of MySQL, database connectivity, insertion of data,",
+              "retrieving data, updating of data, deletion of data",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a GitHub account and create a new repository for managing",
+              "project files online."
+            ],
+            "topics_text": "Create a GitHub account and create a new repository for managing project files online.",
+            "topics": [
+              "Create a GitHub account and create a new repository for managing",
+              "project files online."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Implement multimedia elements using video and audio tags with",
+              "multiple source formats and embed external content using secure",
+              "iframe implementation."
+            ],
+            "topics_text": "Implement multimedia elements using video and audio tags with multiple source formats and embed external content using secure iframe implementation.",
+            "topics": [
+              "Implement multimedia elements using video and audio tags with",
+              "multiple source formats and embed external content using secure",
+              "iframe implementation."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design a screen reader friendly webpage using proper semantic",
+              "structure, alternative text and labels."
+            ],
+            "topics_text": "Design a screen reader friendly webpage using proper semantic structure, alternative text and labels.",
+            "topics": [
+              "Design a screen reader friendly webpage using proper semantic",
+              "structure, alternative text and labels."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 3,
+            "topic_lines": [
+              "To develop a responsive user interface using Bootstrap 5",
+              "components such as Navbar, Cards, and Forms."
+            ],
+            "topics_text": "To develop a responsive user interface using Bootstrap 5 components such as Navbar, Cards, and Forms.",
+            "topics": [
+              "To develop a responsive user interface using Bootstrap 5",
+              "components such as Navbar, Cards, and Forms."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write JavaScript Program to Add Two Numbers.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Write JavaScript Program to Add Two Numbers. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Write JavaScript Program to Add Two Numbers.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write JavaScript Program to check if a number is Positive, Negative",
+              "or Zero."
+            ],
+            "topics_text": "Write JavaScript Program to check if a number is Positive, Negative or Zero.",
+            "topics": [
+              "Write JavaScript Program to check if a number is Positive, Negative",
+              "or Zero."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a JavaScript Code to learn about different events of",
+              "JavaScript."
+            ],
+            "topics_text": "Write a JavaScript Code to learn about different events of JavaScript.",
+            "topics": [
+              "Write a JavaScript Code to learn about different events of",
+              "JavaScript."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a JavaScript code to change the HTML content."
+            ],
+            "topics_text": "Write a JavaScript code to change the HTML content.",
+            "topics": [
+              "Write a JavaScript code to change the HTML content."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a JavaScript code to change the HTML Attribute."
+            ],
+            "topics_text": "Write a JavaScript code to change the HTML Attribute.",
+            "topics": [
+              "Write a JavaScript code to change the HTML Attribute."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a JavaScript code to change the CSS style."
+            ],
+            "topics_text": "Write a JavaScript code to change the CSS style.",
+            "topics": [
+              "Write a JavaScript code to change the CSS style."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a JavaScript code to hide/show HTML elements."
+            ],
+            "topics_text": "Write a JavaScript code to hide/show HTML elements.",
+            "topics": [
+              "Write a JavaScript code to hide/show HTML elements."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "JavaScript Code to understand various types of alerts in JavaScript."
+            ],
+            "topics_text": "JavaScript Code to understand various types of alerts in JavaScript.",
+            "topics": [
+              "JavaScript Code to understand various types of alerts in JavaScript."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a JavaScript program to display the current date and time on a",
+              "webpage using Date object."
+            ],
+            "topics_text": "Write a JavaScript program to display the current date and time on a webpage using Date object.",
+            "topics": [
+              "Write a JavaScript program to display the current date and time on a",
+              "webpage using Date object."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical-14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a PHP script to find maximum number from given number."
+            ],
+            "topics_text": "Create a PHP script to find maximum number from given number.",
+            "topics": [
+              "Create a PHP script to find maximum number from given number."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Practical-15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a PHP script to get the client IP address."
+            ],
+            "topics_text": "Write a PHP script to get the client IP address.",
+            "topics": [
+              "Write a PHP script to get the client IP address."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Practical-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a PHP code to display formatted output using PHP and",
+              "HTML to create dynamic pages."
+            ],
+            "topics_text": "Write a PHP code to display formatted output using PHP and HTML to create dynamic pages.",
+            "topics": [
+              "Write a PHP code to display formatted output using PHP and",
+              "HTML to create dynamic pages."
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Practical-17",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a PHP code to understand concept of GET and POST method."
+            ],
+            "topics_text": "Write a PHP code to understand concept of GET and POST method.",
+            "topics": [
+              "Write a PHP code to understand concept of GET and POST method."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Practical-18",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a PHP code to design basic calculator."
+            ],
+            "topics_text": "Write a PHP code to design basic calculator.",
+            "topics": [
+              "Write a PHP code to design basic calculator."
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Practical-19",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a PHP code to understand the concept of Session."
+            ],
+            "topics_text": "Write a PHP code to understand the concept of Session.",
+            "topics": [
+              "Write a PHP code to understand the concept of Session."
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Practical-20",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a PHP code to connect with the database."
+            ],
+            "topics_text": "Write a PHP code to connect with the database.",
+            "topics": [
+              "Write a PHP code to connect with the database."
+            ]
+          },
+          {
+            "unit_number": 21,
+            "title": "Practical-21",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a PHP code to insert the data into a database when user",
+              "submits a form."
+            ],
+            "topics_text": "Write a PHP code to insert the data into a database when user submits a form.",
+            "topics": [
+              "Write a PHP code to insert the data into a database when user",
+              "submits a form."
+            ]
+          },
+          {
+            "unit_number": 22,
+            "title": "Practical-22",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a PHP code to delete the data from database."
+            ],
+            "topics_text": "Write a PHP code to delete the data from database.",
+            "topics": [
+              "Write a PHP code to delete the data from database."
+            ]
+          },
+          {
+            "unit_number": 23,
+            "title": "Practical-23",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a PHP code to update the data of a row in a table.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Write a PHP code to update the data of a row in a table. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Write a PHP code to update the data of a row in a table.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 24,
+            "title": "Practical-24",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Develop a mini project with the help of HTML, CSS, JavaScript,",
+              "PHP and Database.",
+              "Total Hours 56"
+            ],
+            "topics_text": "Develop a mini project with the help of HTML, CSS, JavaScript, PHP and Database. Total Hours 56",
+            "topics": [
+              "Develop a mini project with the help of HTML, CSS, JavaScript,",
+              "PHP and Database.",
+              "Total Hours 56"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -479,15 +2044,13 @@
           "text": "Supplementary Resources:\n 7  https://www.sololearn.com/en/learn/courses/web-development\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "4f9abe815caacbef33a55e47d3156f92c8f006231108ded54989a7b3ceef7332"
     }
   ],
   "build_summary": {
-    "extracted": 0,
-    "manual_review": 6,
+    "extracted": 6,
+    "manual_review": 0,
     "ocr_review": 0,
     "missing_pdf": 0,
     "extraction_errors": 0

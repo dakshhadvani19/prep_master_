@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:03:50+00:00",
+  "generated_at_utc": "2026-10-12T12:05:35+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -23,7 +23,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3303 - Data Structure (.pdf",
       "expected_pdf_sha256": "7cd4652821d7c258853f34f47906b34e47fc792554fe3a941746813c2782f74c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "DATA STRUCTURE",
         "course_code": "09CE3303",
@@ -38,12 +38,446 @@
         "Apply different data structures to solve real-life computational problems.",
         "Demonstrate the need for data structures in efficient algorithm development.",
         "Implement various sorting algorithms using appropriate data structures",
-        "Select and apply suitable data structures for given applications or scenarios Pre-requisite of course:Students have basic knowledge about the C Programming,"
+        "Select and apply suitable data structures for given applications or scenarios"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 4 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Basics of Data Structure",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Data Structure , Data Representation, Data Types: Primitive and",
+              "Non-Primitive, Algorithm, Time Complexity, Space complexity-",
+              "Best case, Average case, Worst case"
+            ],
+            "topics_text": "Data Structure , Data Representation, Data Types: Primitive and Non-Primitive, Algorithm, Time Complexity, Space complexity- Best case, Average case, Worst case",
+            "topics": [
+              "Data Structure , Data Representation, Data Types: Primitive and",
+              "Non-Primitive, Algorithm, Time Complexity, Space complexity",
+              "Best case, Average case, Worst case"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Array & Stack",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Study of Linear Data Structure, Representation of Array, Two-",
+              "Dimensional Array, Multidimensional Array, Sparse Matrices ,",
+              "Application of Array, Introduction to Stack, Stack Operations: Push,",
+              "Pop, Peep, Stack using Array, Applications of Stack , Polish",
+              "Expression & Reverse Polish Expression"
+            ],
+            "topics_text": "Study of Linear Data Structure, Representation of Array, Two- Dimensional Array, Multidimensional Array, Sparse Matrices , Application of Array, Introduction to Stack, Stack Operations: Push, Pop, Peep, Stack using Array, Applications of Stack , Polish Expression & Reverse Polish Expression",
+            "topics": [
+              "Study of Linear Data Structure, Representation of Array, Two",
+              "Dimensional Array, Multidimensional Array, Sparse Matrices ,",
+              "Application of Array, Introduction to Stack, Stack Operations: Push,",
+              "Pop, Peep, Stack using Array, Applications of Stack , Polish",
+              "Expression & Reverse Polish Expression"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Queue & Link List",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction to Queue, Queue Operations: Insertion, Deletion,",
+              "Types of Queue: Simple, Circular, Double ended queue(Deque) &",
+              "Priority Queue, Applications of Queue, Introduction to Linked List ,",
+              "Memory Allocation, Operations: Creation, Insertion, Deletion,",
+              "Types of Linked List & Applications",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Introduction to Queue, Queue Operations: Insertion, Deletion, Types of Queue: Simple, Circular, Double ended queue(Deque) & Priority Queue, Applications of Queue, Introduction to Linked List , Memory Allocation, Operations: Creation, Insertion, Deletion, Types of Linked List & Applications MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Introduction to Queue, Queue Operations: Insertion, Deletion,",
+              "Types of Queue: Simple, Circular, Double ended queue(Deque) &",
+              "Priority Queue, Applications of Queue, Introduction to Linked List ,",
+              "Memory Allocation, Operations: Creation, Insertion, Deletion,",
+              "Types of Linked List & Applications",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Tree And Graph",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Non-linear Data Structure , Introduction to Binary Tree, Tree",
+              "Terminologies: Tree, Degree of a Node, Degree of a Tree, Level of",
+              "a node, Leaf Node, Depth / Height of a Tree, In-Degree and Out-",
+              "Degree, Path, Operations on Tree: Insert, Delete, Search, Height of",
+              "Tree & Number of Nodes, Binary Tree Traversal: In-order, Pre-",
+              "order, Post-order, Representation of Graphs, Graph Traversal: BFS",
+              "(Breadth First Search), DFS(Depth First Search), Spanning Tree,",
+              "Shortest Path, Minimum Spanning Tree"
+            ],
+            "topics_text": "Non-linear Data Structure , Introduction to Binary Tree, Tree Terminologies: Tree, Degree of a Node, Degree of a Tree, Level of a node, Leaf Node, Depth / Height of a Tree, In-Degree and Out- Degree, Path, Operations on Tree: Insert, Delete, Search, Height of Tree & Number of Nodes, Binary Tree Traversal: In-order, Pre- order, Post-order, Representation of Graphs, Graph Traversal: BFS (Breadth First Search), DFS(Depth First Search), Spanning Tree, Shortest Path, Minimum Spanning Tree",
+            "topics": [
+              "Non-linear Data Structure , Introduction to Binary Tree, Tree",
+              "Terminologies: Tree, Degree of a Node, Degree of a Tree, Level of",
+              "a node, Leaf Node, Depth / Height of a Tree, In-Degree and Out",
+              "Degree, Path, Operations on Tree: Insert, Delete, Search, Height of",
+              "Tree & Number of Nodes, Binary Tree Traversal: In-order, Pre",
+              "order, Post-order, Representation of Graphs, Graph Traversal: BFS",
+              "(Breadth First Search), DFS(Depth First Search), Spanning Tree,",
+              "Shortest Path, Minimum Spanning Tree"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Sorting & Searching Techniques",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to Sorting, Types of Sorting : Bubble Sort, Insertion",
+              "Sort , Selection Sort, Merge Sort , Quick Sort, Introduction to",
+              "Searching, Tyeps of Searching: Sequential Search, Binary Search"
+            ],
+            "topics_text": "Introduction to Sorting, Types of Sorting : Bubble Sort, Insertion Sort , Selection Sort, Merge Sort , Quick Sort, Introduction to Searching, Tyeps of Searching: Sequential Search, Binary Search",
+            "topics": [
+              "Introduction to Sorting, Types of Sorting : Bubble Sort, Insertion",
+              "Sort , Selection Sort, Merge Sort , Quick Sort, Introduction to",
+              "Searching, Tyeps of Searching: Sequential Search, Binary Search"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Hashing",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Introduction to Hashing, Hash Table, Various Hash function :",
+              "Division Method, Multiplication & Mid-square Method,",
+              "Applications of Hashing",
+              "Total Hours 42"
+            ],
+            "topics_text": "Introduction to Hashing, Hash Table, Various Hash function : Division Method, Multiplication & Mid-square Method, Applications of Hashing Total Hours 42",
+            "topics": [
+              "Introduction to Hashing, Hash Table, Various Hash function :",
+              "Division Method, Multiplication & Mid-square Method,",
+              "Applications of Hashing",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Perform dynamic memory allocation using malloc(), calloc(), and",
+              "free() functions."
+            ],
+            "topics_text": "Perform dynamic memory allocation using malloc(), calloc(), and free() functions.",
+            "topics": [
+              "Perform dynamic memory allocation using malloc(), calloc(), and",
+              "free() functions."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to demonstrate the concept of Call by Value and",
+              "Call by Reference."
+            ],
+            "topics_text": "Write a program to demonstrate the concept of Call by Value and Call by Reference.",
+            "topics": [
+              "Write a program to demonstrate the concept of Call by Value and",
+              "Call by Reference."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Perform the following operations of Stack using Array: 1. Push, 2.",
+              "Pop, 3. Peep"
+            ],
+            "topics_text": "Perform the following operations of Stack using Array: 1. Push, 2. Pop, 3. Peep",
+            "topics": [
+              "Perform the following operations of Stack using Array: 1. Push, 2.",
+              "Pop, 3. Peep"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a program to convert Postfix expression into Infix expression",
+              "using Stack."
+            ],
+            "topics_text": "Write a program to convert Postfix expression into Infix expression using Stack.",
+            "topics": [
+              "Write a program to convert Postfix expression into Infix expression",
+              "using Stack."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Perform the following operations of Simple Queue using Array: 1.",
+              "Insert, 2. Delete, 3. Display"
+            ],
+            "topics_text": "Perform the following operations of Simple Queue using Array: 1. Insert, 2. Delete, 3. Display",
+            "topics": [
+              "Perform the following operations of Simple Queue using Array: 1.",
+              "Insert, 2. Delete, 3. Display"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Perform the following operations of Circular Queue using Array: 1.",
+              "Insert, 2. Delete, 3. Display"
+            ],
+            "topics_text": "Perform the following operations of Circular Queue using Array: 1. Insert, 2. Delete, 3. Display",
+            "topics": [
+              "Perform the following operations of Circular Queue using Array: 1.",
+              "Insert, 2. Delete, 3. Display"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Implement Stack using Linked List."
+            ],
+            "topics_text": "Implement Stack using Linked List.",
+            "topics": [
+              "Implement Stack using Linked List."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Implement Queue using Linked List.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Implement Queue using Linked List. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Implement Queue using Linked List.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program Insert a node at the front of the singly linked list."
+            ],
+            "topics_text": "Write a program Insert a node at the front of the singly linked list.",
+            "topics": [
+              "Write a program Insert a node at the front of the singly linked list."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program Insert a node at the end of the singly linked list."
+            ],
+            "topics_text": "Write a program Insert a node at the end of the singly linked list.",
+            "topics": [
+              "Write a program Insert a node at the end of the singly linked list."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program Delete a node at the front of the singly linked list."
+            ],
+            "topics_text": "Write a program Delete a node at the front of the singly linked list.",
+            "topics": [
+              "Write a program Delete a node at the front of the singly linked list."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program Delete a node at the end of the singly linked list."
+            ],
+            "topics_text": "Write a program Delete a node at the end of the singly linked list.",
+            "topics": [
+              "Write a program Delete a node at the end of the singly linked list."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical-13",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a program to count the number of nodes and search a specific",
+              "node in a Singly Linked List."
+            ],
+            "topics_text": "Write a program to count the number of nodes and search a specific node in a Singly Linked List.",
+            "topics": [
+              "Write a program to count the number of nodes and search a specific",
+              "node in a Singly Linked List."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical-14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program Insert a node at the beginning of the doubly linked",
+              "list."
+            ],
+            "topics_text": "Write a program Insert a node at the beginning of the doubly linked list.",
+            "topics": [
+              "Write a program Insert a node at the beginning of the doubly linked",
+              "list."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Practical-15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program Insert a node at the end of the doubly linked list."
+            ],
+            "topics_text": "Write a program Insert a node at the end of the doubly linked list.",
+            "topics": [
+              "Write a program Insert a node at the end of the doubly linked list."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Practical-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program Delete a node at the beginning of the doubly linked",
+              "list."
+            ],
+            "topics_text": "Write a program Delete a node at the beginning of the doubly linked list.",
+            "topics": [
+              "Write a program Delete a node at the beginning of the doubly linked",
+              "list."
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Practical-17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program Delete a node at the end of the doubly linked list."
+            ],
+            "topics_text": "Write a program Delete a node at the end of the doubly linked list.",
+            "topics": [
+              "Write a program Delete a node at the end of the doubly linked list."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Practical-18",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a program to insert an element at any position in a Doubly",
+              "Linked List."
+            ],
+            "topics_text": "Write a program to insert an element at any position in a Doubly Linked List.",
+            "topics": [
+              "Write a program to insert an element at any position in a Doubly",
+              "Linked List."
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Practical-19",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a program to create a Binary Search Tree (BST)."
+            ],
+            "topics_text": "Write a program to create a Binary Search Tree (BST).",
+            "topics": [
+              "Write a program to create a Binary Search Tree (BST)."
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Practical-20",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a program for Binary Tree Traversal: 1. In-order 2. Pre-order",
+              "3. Post-order"
+            ],
+            "topics_text": "Write a program for Binary Tree Traversal: 1. In-order 2. Pre-order 3. Post-order",
+            "topics": [
+              "Write a program for Binary Tree Traversal: 1. In-order 2. Pre-order",
+              "3. Post-order"
+            ]
+          },
+          {
+            "unit_number": 21,
+            "title": "Practical-21",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program for Bubble Sort."
+            ],
+            "topics_text": "Write a program for Bubble Sort.",
+            "topics": [
+              "Write a program for Bubble Sort."
+            ]
+          },
+          {
+            "unit_number": 22,
+            "title": "Practical-22",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program for Insertion Sort."
+            ],
+            "topics_text": "Write a program for Insertion Sort.",
+            "topics": [
+              "Write a program for Insertion Sort."
+            ]
+          },
+          {
+            "unit_number": 23,
+            "title": "Practical-23",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program for Merge Sort."
+            ],
+            "topics_text": "Write a program for Merge Sort.",
+            "topics": [
+              "Write a program for Merge Sort."
+            ]
+          },
+          {
+            "unit_number": 24,
+            "title": "Practical-24",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program for Quick Sort.",
+              "Total Hours 56"
+            ],
+            "topics_text": "Write a program for Quick Sort. Total Hours 56",
+            "topics": [
+              "Write a program for Quick Sort.",
+              "Total Hours 56"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -78,9 +512,7 @@
           "text": "References:\n 1  Data Structures with C, Data Structures with C, Seymour Lipschutz, McGraw Hill\n     Education, 2017\n 2  5th Edition, 5th Edition, Yashavant Kanetkar, BPB Publication, 2023\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1   1. https://visualgo.net/en\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "7cd4652821d7c258853f34f47906b34e47fc792554fe3a941746813c2782f74c"
     },
     {
@@ -96,7 +528,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2302 - Database Management System (.pdf",
       "expected_pdf_sha256": "edb9d672bb169acdfa8ed589ba88b9fb1e0d01897e2339ae402a341e57b82b06",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "DATABASE MANAGEMENT SYSTEM",
         "course_code": "09CE2302",
@@ -112,12 +544,278 @@
         "Use appropriate methods to design and develop database systems that meet structural and performance requirements.",
         "Apply data manipulation language (DML) commands to retrieve, modify, and manage data in a database.",
         "Implement suitable physical storage and access methods to ensure efficient data retrieval and storage in database systems.",
-        "Apply normalization techniques to analyze and refine database schemas for improved data integrity and reduced redundancy. Pre-requisite of course:NA"
+        "Apply normalization techniques to analyze and refine database schemas for improved data integrity and reduced redundancy."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Database Systems Data Models",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introducing the database and DBMS, Files and File Systems,",
+              "Problems with File System and advantages of Database",
+              "Management systems, The importance of Data models, Data Model",
+              "Basic Building Blocks, Business Rules, Degree of Data Abstraction"
+            ],
+            "topics_text": "Introducing the database and DBMS, Files and File Systems, Problems with File System and advantages of Database Management systems, The importance of Data models, Data Model Basic Building Blocks, Business Rules, Degree of Data Abstraction",
+            "topics": [
+              "Introducing the database and DBMS, Files and File Systems,",
+              "Problems with File System and advantages of Database",
+              "Management systems, The importance of Data models, Data Model",
+              "Basic Building Blocks, Business Rules, Degree of Data Abstraction"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Relational Data Model",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Structure of relational databases, Domains, Relations, Relational",
+              "algebra, Relational algebra-Primary Operators, Relational algebra-",
+              "syntax, Rrelational algebra queries",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Structure of relational databases, Domains, Relations, Relational algebra, Relational algebra-Primary Operators, Relational algebra- syntax, Rrelational algebra queries MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Structure of relational databases, Domains, Relations, Relational",
+              "algebra, Relational algebra-Primary Operators, Relational algebra",
+              "syntax, Rrelational algebra queries",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Entity Relationship Model",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Basic Entity ± Relationship Concepts: Entities, Relationship,",
+              "Attributes, E ± R Diagram symbols, Conversion of Entity ±",
+              "Relationship Model into Relations, Problems with Entity ±",
+              "Relationship Models, Concepts: Specialisation and Generalisation"
+            ],
+            "topics_text": "Basic Entity ± Relationship Concepts: Entities, Relationship, Attributes, E ± R Diagram symbols, Conversion of Entity ± Relationship Model into Relations, Problems with Entity ± Relationship Models, Concepts: Specialisation and Generalisation",
+            "topics": [
+              "Basic Entity ± Relationship Concepts: Entities, Relationship,",
+              "Attributes, E ± R Diagram symbols, Conversion of Entity ±",
+              "Relationship Model into Relations, Problems with Entity ±",
+              "Relationship Models, Concepts: Specialisation and Generalisation"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Relational Database Design",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Normalization of database tables: Database Tables and",
+              "Normalization, The need for Normalization, The Normal forms:1NF",
+              ", 2NF, The Normal form: 3NF , The Normal forms: BCNF ,",
+              "Denormalization"
+            ],
+            "topics_text": "Normalization of database tables: Database Tables and Normalization, The need for Normalization, The Normal forms:1NF , 2NF, The Normal form: 3NF , The Normal forms: BCNF , Denormalization",
+            "topics": [
+              "Normalization of database tables: Database Tables and",
+              "Normalization, The need for Normalization, The Normal forms:1NF",
+              ", 2NF, The Normal form: 3NF , The Normal forms: BCNF ,",
+              "Denormalization"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "SQL Concepts",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to SQL : Data Definition Commands, Data",
+              "Manipulation Commands, Select queries, Advanced Data Definition",
+              "Commands, Advanced Select queries, Virtual Tables, Joining",
+              "Database Tables",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction to SQL : Data Definition Commands, Data Manipulation Commands, Select queries, Advanced Data Definition Commands, Advanced Select queries, Virtual Tables, Joining Database Tables Total Hours 28",
+            "topics": [
+              "Introduction to SQL : Data Definition Commands, Data",
+              "Manipulation Commands, Select queries, Advanced Data Definition",
+              "Commands, Advanced Select queries, Virtual Tables, Joining",
+              "Database Tables",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Create database tables using CREATE statement (define fields, data",
+              "types, and constraints)."
+            ],
+            "topics_text": "Create database tables using CREATE statement (define fields, data types, and constraints).",
+            "topics": [
+              "Create database tables using CREATE statement (define fields, data",
+              "types, and constraints)."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Insert records into the tables created in Practical 1 using INSERT",
+              "statement."
+            ],
+            "topics_text": "Insert records into the tables created in Practical 1 using INSERT statement.",
+            "topics": [
+              "Insert records into the tables created in Practical 1 using INSERT",
+              "statement."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Retrieve all records and specific columns using basic SELECT",
+              "statement."
+            ],
+            "topics_text": "Retrieve all records and specific columns using basic SELECT statement.",
+            "topics": [
+              "Retrieve all records and specific columns using basic SELECT",
+              "statement."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Delete specific records from the tables using DELETE statement",
+              "with condition."
+            ],
+            "topics_text": "Delete specific records from the tables using DELETE statement with condition.",
+            "topics": [
+              "Delete specific records from the tables using DELETE statement",
+              "with condition."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Modify existing records in the tables using UPDATE statement with",
+              "condition."
+            ],
+            "topics_text": "Modify existing records in the tables using UPDATE statement with condition.",
+            "topics": [
+              "Modify existing records in the tables using UPDATE statement with",
+              "condition."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Retrieve filtered rows using WHERE clause and select specific",
+              "columns."
+            ],
+            "topics_text": "Retrieve filtered rows using WHERE clause and select specific columns.",
+            "topics": [
+              "Retrieve filtered rows using WHERE clause and select specific",
+              "columns."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Display records using ORDER BY clause and remove duplicate",
+              "values using DISTINCT.(Sorting and Distinct Values)"
+            ],
+            "topics_text": "Display records using ORDER BY clause and remove duplicate values using DISTINCT.(Sorting and Distinct Values)",
+            "topics": [
+              "Display records using ORDER BY clause and remove duplicate",
+              "values using DISTINCT.(Sorting and Distinct Values)"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Apply aggregate functions such as COUNT, SUM, AVG, MIN, and",
+              "MAX on table data.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Apply aggregate functions such as COUNT, SUM, AVG, MIN, and MAX on table data. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Apply aggregate functions such as COUNT, SUM, AVG, MIN, and",
+              "MAX on table data.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Group records using GROUP BY clause and filter grouped data",
+              "using HAVING clause."
+            ],
+            "topics_text": "Group records using GROUP BY clause and filter grouped data using HAVING clause.",
+            "topics": [
+              "Group records using GROUP BY clause and filter grouped data",
+              "using HAVING clause."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Retrieve data from multiple tables using different types of JOIN",
+              "operations."
+            ],
+            "topics_text": "Retrieve data from multiple tables using different types of JOIN operations.",
+            "topics": [
+              "Retrieve data from multiple tables using different types of JOIN",
+              "operations."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Retrieve data using nested SELECT statements (subqueries)."
+            ],
+            "topics_text": "Retrieve data using nested SELECT statements (subqueries).",
+            "topics": [
+              "Retrieve data using nested SELECT statements (subqueries)."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Modify table structure using ALTER statement and apply",
+              "constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and",
+              "NOT NULL.",
+              "Total Hours 56"
+            ],
+            "topics_text": "Modify table structure using ALTER statement and apply constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and NOT NULL. Total Hours 56",
+            "topics": [
+              "Modify table structure using ALTER statement and apply",
+              "constraints like PRIMARY KEY, FOREIGN KEY, UNIQUE, and",
+              "NOT NULL.",
+              "Total Hours 56"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -158,9 +856,7 @@
           "text": "Instructional Method:\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://ilearning.oracle.com/\n 2  https://apex.oracle.com/en/\n 3  https://lagunita.stanford.edu/courses/DB/2014/SelfPaced/about\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "edb9d672bb169acdfa8ed589ba88b9fb1e0d01897e2339ae402a341e57b82b06"
     },
     {
@@ -176,7 +872,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CT1301 - Digital Electronics (.pdf",
       "expected_pdf_sha256": "7fafef7cd8d2b5aa94bd65eaa6743ddf8373882a60db94df9a6947bb2dae80ad",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "DIGITAL ELECTRONICS",
         "course_code": "09CT1301",
@@ -193,12 +889,418 @@
         "Identify, formulate and solve a problem based on combinational and sequential circuits",
         "Design various counters",
         "Verify the functions of various digital integrated circuits.",
-        "Evaluate the specifications of logic families. Pre-requisite of course:Digital Electronics syllabus for diploma Computer students"
+        "Evaluate the specifications of logic families."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Module-1 Introduction",
+            "contact_hours": null,
+            "topic_lines": [
+              "Digital and Analog systems, logic level and pulse waveforms,",
+              "elements of digital logic, Functions of digital logic"
+            ],
+            "topics_text": "Digital and Analog systems, logic level and pulse waveforms, elements of digital logic, Functions of digital logic",
+            "topics": [
+              "Digital and Analog systems, logic level and pulse waveforms,",
+              "elements of digital logic, Functions of digital logic"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Module-2 Number systems and binary codes",
+            "contact_hours": null,
+            "topic_lines": [
+              "Number System: Binary number system, (addition, subtraction,",
+              "multiplication, Division),, Octal and Hexadecimal Number system,",
+              "Conversion from binary to decimal, octal and hexadecimal and vice",
+              "versa,, Representation of Signed Numbers., Codes : BCD, XS-3,",
+              "Gray Code ( with Conversion), Alphanumerical Code"
+            ],
+            "topics_text": "Number System: Binary number system, (addition, subtraction, multiplication, Division),, Octal and Hexadecimal Number system, Conversion from binary to decimal, octal and hexadecimal and vice versa,, Representation of Signed Numbers., Codes : BCD, XS-3, Gray Code ( with Conversion), Alphanumerical Code",
+            "topics": [
+              "Number System: Binary number system, (addition, subtraction,",
+              "multiplication, Division),, Octal and Hexadecimal Number system,",
+              "Conversion from binary to decimal, octal and hexadecimal and vice",
+              "versa,, Representation of Signed Numbers., Codes : BCD, XS-3,",
+              "Gray Code ( with Conversion), Alphanumerical Code"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Module-3 Logic Gates & Boolean Algebra",
+            "contact_hours": null,
+            "topic_lines": [
+              "Logic Gates: Positive and Negative logic, AND, OR , NOT, NAND,",
+              "NOR, X-OR Gate, X-NOR Gate, Conversion from Universal Gate",
+              "to all other Gates,, Boolean Algebra & Mapping Methods for",
+              "Simplification:, Boolean Algebra, Karnaugh Maps, Realizing Logic",
+              "Function with Gates."
+            ],
+            "topics_text": "Logic Gates: Positive and Negative logic, AND, OR , NOT, NAND, NOR, X-OR Gate, X-NOR Gate, Conversion from Universal Gate to all other Gates,, Boolean Algebra & Mapping Methods for Simplification:, Boolean Algebra, Karnaugh Maps, Realizing Logic Function with Gates.",
+            "topics": [
+              "Logic Gates: Positive and Negative logic, AND, OR , NOT, NAND,",
+              "NOR, X-OR Gate, X-NOR Gate, Conversion from Universal Gate",
+              "to all other Gates,, Boolean Algebra & Mapping Methods for",
+              "Simplification:, Boolean Algebra, Karnaugh Maps, Realizing Logic",
+              "Function with Gates."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Module-4 Combinational logic design",
+            "contact_hours": null,
+            "topic_lines": [
+              "Combinational Circuits and its implementations, Arithmetic Circuits",
+              "- Adders and Subtractor,, BCD Adder, Look-Ahead Carry",
+              "Generator, Multiplier, Magnitude comparator., Multiplexer and it¶s",
+              "application, Encoders, Demultiplexers and Decoders and it¶s",
+              "application, Generation and Checking, Code Conversion."
+            ],
+            "topics_text": "Combinational Circuits and its implementations, Arithmetic Circuits - Adders and Subtractor,, BCD Adder, Look-Ahead Carry Generator, Multiplier, Magnitude comparator., Multiplexer and it¶s application, Encoders, Demultiplexers and Decoders and it¶s application, Generation and Checking, Code Conversion.",
+            "topics": [
+              "Combinational Circuits and its implementations, Arithmetic Circuits",
+              "Adders and Subtractor,, BCD Adder, Look-Ahead Carry",
+              "Generator, Multiplier, Magnitude comparator., Multiplexer and it¶s",
+              "application, Encoders, Demultiplexers and Decoders and it¶s",
+              "application, Generation and Checking, Code Conversion."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Module-5 Sequential circuits",
+            "contact_hours": null,
+            "topic_lines": [
+              "Flip-flops: Latch and Flip-flop, S-R flip-flops, D flip flop,, J-K flip",
+              "flop, Application of flip flops, Registers: Classification , Serial in",
+              "serial-out, serial-in parallel-out parallel- in serial-out and parallel- in",
+              "parallel out shift register, Counters: Asynchronous (ripple) 4-bit",
+              "binary counter, BCD Counter, Synchronous counters, UP/DOWN",
+              "counter, Ring counters."
+            ],
+            "topics_text": "Flip-flops: Latch and Flip-flop, S-R flip-flops, D flip flop,, J-K flip flop, Application of flip flops, Registers: Classification , Serial in serial-out, serial-in parallel-out parallel- in serial-out and parallel- in parallel out shift register, Counters: Asynchronous (ripple) 4-bit binary counter, BCD Counter, Synchronous counters, UP/DOWN counter, Ring counters.",
+            "topics": [
+              "Flip-flops: Latch and Flip-flop, S-R flip-flops, D flip flop,, J-K flip",
+              "flop, Application of flip flops, Registers: Classification , Serial in",
+              "serial-out, serial-in parallel-out parallel- in serial-out and parallel- in",
+              "parallel out shift register, Counters: Asynchronous (ripple) 4-bit",
+              "binary counter, BCD Counter, Synchronous counters, UP/DOWN",
+              "counter, Ring counters."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Module-6 Programmable Devices",
+            "contact_hours": null,
+            "topic_lines": [
+              "Introduction to Programmable Logic Devices, Programmable Logic",
+              "Arrays (PLA),, Programmable Array Logic (PAL)."
+            ],
+            "topics_text": "Introduction to Programmable Logic Devices, Programmable Logic Arrays (PLA),, Programmable Array Logic (PAL).",
+            "topics": [
+              "Introduction to Programmable Logic Devices, Programmable Logic",
+              "Arrays (PLA),, Programmable Array Logic (PAL)."
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Module-1 Introduction",
+            "contact_hours": null,
+            "topic_lines": [
+              "Digital and Analog systems, logic level and pulse waveforms,",
+              "elements of digital logic, Functions of digital logic"
+            ],
+            "topics_text": "Digital and Analog systems, logic level and pulse waveforms, elements of digital logic, Functions of digital logic",
+            "topics": [
+              "Digital and Analog systems, logic level and pulse waveforms,",
+              "elements of digital logic, Functions of digital logic"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Module-2 Number systems and binary codes",
+            "contact_hours": null,
+            "topic_lines": [
+              "Number System: Binary number system, (addition, subtraction,",
+              "multiplication, Division),, Octal and Hexadecimal Number system,",
+              "Conversion from binary to decimal, octal and hexadecimal and vice",
+              "versa,, Representation of Signed Numbers., Codes : BCD, XS-3,",
+              "Gray Code ( with Conversion), Alphanumerical Code"
+            ],
+            "topics_text": "Number System: Binary number system, (addition, subtraction, multiplication, Division),, Octal and Hexadecimal Number system, Conversion from binary to decimal, octal and hexadecimal and vice versa,, Representation of Signed Numbers., Codes : BCD, XS-3, Gray Code ( with Conversion), Alphanumerical Code",
+            "topics": [
+              "Number System: Binary number system, (addition, subtraction,",
+              "multiplication, Division),, Octal and Hexadecimal Number system,",
+              "Conversion from binary to decimal, octal and hexadecimal and vice",
+              "versa,, Representation of Signed Numbers., Codes : BCD, XS-3,",
+              "Gray Code ( with Conversion), Alphanumerical Code"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Module-3 Logic Gates & Boolean Algebra",
+            "contact_hours": null,
+            "topic_lines": [
+              "Logic Gates: Positive and Negative logic, AND, OR , NOT, NAND,",
+              "NOR, X-OR Gate, X-NOR Gate, Conversion from Universal Gate",
+              "to all other Gates,, Boolean Algebra & Mapping Methods for",
+              "Simplification:, Boolean Algebra, Karnaugh Maps, Realizing Logic",
+              "Function with Gates."
+            ],
+            "topics_text": "Logic Gates: Positive and Negative logic, AND, OR , NOT, NAND, NOR, X-OR Gate, X-NOR Gate, Conversion from Universal Gate to all other Gates,, Boolean Algebra & Mapping Methods for Simplification:, Boolean Algebra, Karnaugh Maps, Realizing Logic Function with Gates.",
+            "topics": [
+              "Logic Gates: Positive and Negative logic, AND, OR , NOT, NAND,",
+              "NOR, X-OR Gate, X-NOR Gate, Conversion from Universal Gate",
+              "to all other Gates,, Boolean Algebra & Mapping Methods for",
+              "Simplification:, Boolean Algebra, Karnaugh Maps, Realizing Logic",
+              "Function with Gates."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Module-4 Combinational logic design",
+            "contact_hours": null,
+            "topic_lines": [
+              "Combinational Circuits and its implementations, Arithmetic Circuits",
+              "- Adders and Subtractor,, BCD Adder, Look-Ahead Carry",
+              "Generator, Multiplier, Magnitude comparator., Multiplexer and it¶s",
+              "application,, Encoders, Demultiplexers and Decoders and it¶s",
+              "application,, Generation and Checking, Code Conversion."
+            ],
+            "topics_text": "Combinational Circuits and its implementations, Arithmetic Circuits - Adders and Subtractor,, BCD Adder, Look-Ahead Carry Generator, Multiplier, Magnitude comparator., Multiplexer and it¶s application,, Encoders, Demultiplexers and Decoders and it¶s application,, Generation and Checking, Code Conversion.",
+            "topics": [
+              "Combinational Circuits and its implementations, Arithmetic Circuits",
+              "Adders and Subtractor,, BCD Adder, Look-Ahead Carry",
+              "Generator, Multiplier, Magnitude comparator., Multiplexer and it¶s",
+              "application,, Encoders, Demultiplexers and Decoders and it¶s",
+              "application,, Generation and Checking, Code Conversion."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Module-5 Sequential circuits",
+            "contact_hours": null,
+            "topic_lines": [
+              "Flip-flops: Latch and Flip-flop, S-R flip-flops, D flip flop,, J-K flip",
+              "flop, Application of flip flops, Registers: Classification , Serial in",
+              "serial-out, serial-in parallel-out parallel- in serial-out and parallel- in",
+              "parallel out shift register, Counters: Asynchronous (ripple) 4-bit",
+              "binary counter, BCD Counter, Synchronous counters, UP/DOWN",
+              "counter, Ring counters."
+            ],
+            "topics_text": "Flip-flops: Latch and Flip-flop, S-R flip-flops, D flip flop,, J-K flip flop, Application of flip flops, Registers: Classification , Serial in serial-out, serial-in parallel-out parallel- in serial-out and parallel- in parallel out shift register, Counters: Asynchronous (ripple) 4-bit binary counter, BCD Counter, Synchronous counters, UP/DOWN counter, Ring counters.",
+            "topics": [
+              "Flip-flops: Latch and Flip-flop, S-R flip-flops, D flip flop,, J-K flip",
+              "flop, Application of flip flops, Registers: Classification , Serial in",
+              "serial-out, serial-in parallel-out parallel- in serial-out and parallel- in",
+              "parallel out shift register, Counters: Asynchronous (ripple) 4-bit",
+              "binary counter, BCD Counter, Synchronous counters, UP/DOWN",
+              "counter, Ring counters."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Module-6 Programmable Devices",
+            "contact_hours": null,
+            "topic_lines": [
+              "Introduction to Programmable Logic Devices, Programmable Logic",
+              "Arrays (PLA),, Programmable Array Logic (PAL)."
+            ],
+            "topics_text": "Introduction to Programmable Logic Devices, Programmable Logic Arrays (PLA),, Programmable Array Logic (PAL).",
+            "topics": [
+              "Introduction to Programmable Logic Devices, Programmable Logic",
+              "Arrays (PLA),, Programmable Array Logic (PAL)."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Implement and verify the functionality of Basic and Advance",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Logic Gates.",
+              "mplement and verify the functionality of Basic and Advance Logic",
+              "Gates"
+            ],
+            "topics_text": "Logic Gates. mplement and verify the functionality of Basic and Advance Logic Gates",
+            "topics": [
+              "Logic Gates.",
+              "mplement and verify the functionality of Basic and Advance Logic",
+              "Gates"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Implement and verify 2 input basic logic gates using NAND",
+            "contact_hours": 2,
+            "topic_lines": [
+              "gate.",
+              "Implement and verify 2 input basic logic gates using NAND gate"
+            ],
+            "topics_text": "gate. Implement and verify 2 input basic logic gates using NAND gate",
+            "topics": [
+              "gate.",
+              "Implement and verify 2 input basic logic gates using NAND gate"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Implement and verify 2 input basic logic gates using NOR gate",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Implement and verify 2 input basic logic gates using NOR gate"
+            ],
+            "topics_text": "Implement and verify 2 input basic logic gates using NOR gate",
+            "topics": [
+              "Implement and verify 2 input basic logic gates using NOR gate"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Implement and verify a circuit to Convert 4 bit Binary to Gray",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Code using logic gates and vice versa",
+              "Implement and verify a circuit to Convert 4 bit Binary to Gray Code",
+              "using logic gates and vice versa"
+            ],
+            "topics_text": "Code using logic gates and vice versa Implement and verify a circuit to Convert 4 bit Binary to Gray Code using logic gates and vice versa",
+            "topics": [
+              "Code using logic gates and vice versa",
+              "Implement and verify a circuit to Convert 4 bit Binary to Gray Code",
+              "using logic gates and vice versa"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Implement and verify half and full Adder Circuit",
+            "contact_hours": 2,
+            "topic_lines": [
+              "implementation verify half and full adder circuit"
+            ],
+            "topics_text": "implementation verify half and full adder circuit",
+            "topics": [
+              "implementation verify half and full adder circuit"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Implement and verify half and full Subtractor Circuit",
+            "contact_hours": 2,
+            "topic_lines": [
+              "implement and verify half and full subtractor circuit"
+            ],
+            "topics_text": "implement and verify half and full subtractor circuit",
+            "topics": [
+              "implement and verify half and full subtractor circuit"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Implement and verify 4 bit Parallel Adder circuit.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "implement and verify 4 bit parallel adder circuit"
+            ],
+            "topics_text": "implement and verify 4 bit parallel adder circuit",
+            "topics": [
+              "implement and verify 4 bit parallel adder circuit"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Implement and verify the 3X8 Decoder circuit.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "implement and verify the 3*8 decoder cicuit"
+            ],
+            "topics_text": "implement and verify the 3*8 decoder cicuit",
+            "topics": [
+              "implement and verify the 3*8 decoder cicuit"
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Implement and verify the 8X1Multiplexer circuit.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "implement and verify the 8*1 multiplexer circuit"
+            ],
+            "topics_text": "implement and verify the 8*1 multiplexer circuit",
+            "topics": [
+              "implement and verify the 8*1 multiplexer circuit"
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Implement and verify the functionality of the SR & JK flip flop",
+            "contact_hours": 2,
+            "topic_lines": [
+              "implement and verify the functionality of the SR&JK flip flop"
+            ],
+            "topics_text": "implement and verify the functionality of the SR&JK flip flop",
+            "topics": [
+              "implement and verify the functionality of the SR&JK flip flop"
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Implement and verify BCD to Seven segment LED Display",
+            "contact_hours": 2,
+            "topic_lines": [
+              "circuit.",
+              "implement and verify BCD to Seven segment led display circuit"
+            ],
+            "topics_text": "circuit. implement and verify BCD to Seven segment led display circuit",
+            "topics": [
+              "circuit.",
+              "implement and verify BCD to Seven segment led display circuit"
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Implement and verify the working of the Shift Register.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "implement and verify the working of the shift register"
+            ],
+            "topics_text": "implement and verify the working of the shift register",
+            "topics": [
+              "implement and verify the working of the shift register"
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Implement and verify the working of the 4 bit Ripple Counter.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "implement and verify the working of the 4 bit ripple counter"
+            ],
+            "topics_text": "implement and verify the working of the 4 bit ripple counter",
+            "topics": [
+              "implement and verify the working of the 4 bit ripple counter"
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Implement and verify the working of 4 bit UP - DOWN",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Counter.",
+              "implement and verify the working of 4 bit up- down counter",
+              "Total Hours 28"
+            ],
+            "topics_text": "Counter. implement and verify the working of 4 bit up- down counter Total Hours 28",
+            "topics": [
+              "Counter.",
+              "implement and verify the working of 4 bit up- down counter",
+              "Total Hours 28"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -236,9 +1338,7 @@
           "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     18     Implement and verify the working of the Shift Register.        2\n             implement and verify the working of the shift register\n     19     Implement and verify the working of the 4 bit Ripple Counter.  2\n             implement and verify the working of the 4 bit ripple counter\n     20     Implement and verify the working of 4 bit UP - DOWN         2\n             Counter.\n             implement and verify the working of 4 bit up- down counter\n                               Total Hours                       28\n\nTextbook :\n 1  Digital Electronics , Kharate G.K. , OXFORD University Press, 2010\n\nReferences:\n 1  Fundamentals of Digital Circuits, Fundamentals of Digital Circuits, A. Anand Kumar , PHI\n     Learning, New Delhi, 2nd Edition or latest , .\n 2  Digital Logic and Computer Design , Digital Logic and Computer Design , M. Morris\n   Mano , Pearson Education, New Delhi, 2011 or latest , 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    15.00         20.00         30.00         20.00         10.00          5.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  PSpices and NGSpice\n 2  NPTEL website and IITs virtual laboratory\n\n\n\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "7fafef7cd8d2b5aa94bd65eaa6743ddf8373882a60db94df9a6947bb2dae80ad"
     },
     {
@@ -254,7 +1354,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09MA0302 - Mathematics-III (.pdf",
       "expected_pdf_sha256": "0cbed999bb61cf9aa28003cddb581c99231f8d3ce240fdc011d4ad5c1028513c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "MATHEMATICS-III",
         "course_code": "09MA0302",
@@ -268,12 +1368,164 @@
         "Understand and apply the basic concept of probability.",
         "Expand the terms with higher degree using binomial theorem.",
         "Differentiate the various function.",
-        "Learn the difference between scalar and vector, the properties of vectors and find the angle between them. Pre-requisite of course:NA."
+        "Learn the difference between scalar and vector, the properties of vectors and find the angle between them."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Permutation and Combination",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Basic permutation, Basic combination"
+            ],
+            "topics_text": "Introduction, Basic permutation, Basic combination",
+            "topics": [
+              "Introduction, Basic permutation, Basic combination"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Probability",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Classical probability, Compliment of event"
+            ],
+            "topics_text": "Introduction, Classical probability, Compliment of event",
+            "topics": [
+              "Introduction, Classical probability, Compliment of event"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Binomial Theorem",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Binomial theorem (without proof) for positive integral index",
+              "(expansion and general form), Binomial theorem for any index",
+              "(expansion without proof) first and second binomial approximation",
+              "with applications to engineering problems"
+            ],
+            "topics_text": "Binomial theorem (without proof) for positive integral index (expansion and general form), Binomial theorem for any index (expansion without proof) first and second binomial approximation with applications to engineering problems",
+            "topics": [
+              "Binomial theorem (without proof) for positive integral index",
+              "(expansion and general form), Binomial theorem for any index",
+              "(expansion without proof) first and second binomial approximation",
+              "with applications to engineering problems"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differentiation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Definition, Some properties, Derivative of some important",
+              "functions, Chain rule, Derivative of implicit function, Derivative of",
+              "parametric function, Logarithmic differentiation, Second order",
+              "Derivative"
+            ],
+            "topics_text": "Definition, Some properties, Derivative of some important functions, Chain rule, Derivative of implicit function, Derivative of parametric function, Logarithmic differentiation, Second order Derivative",
+            "topics": [
+              "Definition, Some properties, Derivative of some important",
+              "functions, Chain rule, Derivative of implicit function, Derivative of",
+              "parametric function, Logarithmic differentiation, Second order",
+              "Derivative"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Vectors",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Basic concept of Vector and Scalar, addition & subtraction, Product",
+              "of Vectors, Geometric meaning of Scalar and Vector Product,",
+              "Applications of Dot (scalar) and Cross (vector) product, Angle",
+              "between two vectors",
+              "Total Hours 28"
+            ],
+            "topics_text": "Basic concept of Vector and Scalar, addition & subtraction, Product of Vectors, Geometric meaning of Scalar and Vector Product, Applications of Dot (scalar) and Cross (vector) product, Angle between two vectors Total Hours 28",
+            "topics": [
+              "Basic concept of Vector and Scalar, addition & subtraction, Product",
+              "of Vectors, Geometric meaning of Scalar and Vector Product,",
+              "Applications of Dot (scalar) and Cross (vector) product, Angle",
+              "between two vectors",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Permutation and Combination",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Combination, Permutation"
+            ],
+            "topics_text": "Combination, Permutation",
+            "topics": [
+              "Combination, Permutation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Probability",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Classical probability , Compliment of event"
+            ],
+            "topics_text": "Classical probability , Compliment of event",
+            "topics": [
+              "Classical probability , Compliment of event"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Binomial Theorem",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Binomial theorem for positive integral index , Binomial theorem for",
+              "any index"
+            ],
+            "topics_text": "Binomial theorem for positive integral index , Binomial theorem for any index",
+            "topics": [
+              "Binomial theorem for positive integral index , Binomial theorem for",
+              "any index"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Differentiation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Some properties and Derivative of some important function, Chain",
+              "rule, Derivative of implicit function and parametric function,",
+              "Logarithmic differentiation, Second order Derivative"
+            ],
+            "topics_text": "Some properties and Derivative of some important function, Chain rule, Derivative of implicit function and parametric function, Logarithmic differentiation, Second order Derivative",
+            "topics": [
+              "Some properties and Derivative of some important function, Chain",
+              "rule, Derivative of implicit function and parametric function,",
+              "Logarithmic differentiation, Second order Derivative"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Vectors",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Algebraic properties of vectors, Basic concept and Geometric",
+              "meaning of Scalar and Vector product, Angle between two vectors",
+              "Total Hours 28"
+            ],
+            "topics_text": "Algebraic properties of vectors, Basic concept and Geometric meaning of Scalar and Vector product, Angle between two vectors Total Hours 28",
+            "topics": [
+              "Algebraic properties of vectors, Basic concept and Geometric",
+              "meaning of Scalar and Vector product, Angle between two vectors",
+              "Total Hours 28"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -320,9 +1572,7 @@
           "text": "Suggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         30.00         30.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms.\n\nSupplementary Resources:\n 1  https://www.mathsisfun.com/combinatorics/combinations-permutations.html\n 2  https://en.wikipedia.org/wiki/Binomial_theorem\n 3  https://en.wikipedia.org/wiki/Derivative\n 4  https://en.wikipedia.org/wiki/Integral\n 5  https://www.mathsisfun.com/calculus/integration-introduction.html\n\n\n\n\n\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "0cbed999bb61cf9aa28003cddb581c99231f8d3ce240fdc011d4ad5c1028513c"
     },
     {
@@ -338,7 +1588,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3301 - Object Oriented Programming With C++ (.pdf",
       "expected_pdf_sha256": "aaedfa53591239bebe47db7d7b12a7ea82bc0fe396f3a052ace325abd9e800fa",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "OBJECT ORIENTED PROGRAMMING WITH C++",
         "course_code": "09CE3301",
@@ -355,12 +1605,504 @@
         "Implement functions, classes and objects in C++ programs using concepts like function overloading, inline functions and friend functions.",
         "Apply constructors and destructors to initialize and manage objects in C++ applications.",
         "Use inheritance concepts to design derived classes and demonstrate different types of inheritance.",
-        "Implement polymorphism, virtual functions and file handling techniques to develop object- oriented C++ applications. Pre-requisite of course:Basic of C Language."
+        "Implement polymorphism, virtual functions and file handling techniques to develop object- oriented C++ applications."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 4 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Object Oriented Concepts",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Concept of Object-Oriented Programming, Applications of Object-",
+              "Oriented Programming, Characteristics of Object-Oriented",
+              "Programming, Object-Oriented Programming vs Procedure",
+              "Programming , Pros of OOP"
+            ],
+            "topics_text": "Concept of Object-Oriented Programming, Applications of Object- Oriented Programming, Characteristics of Object-Oriented Programming, Object-Oriented Programming vs Procedure Programming , Pros of OOP",
+            "topics": [
+              "Concept of Object-Oriented Programming, Applications of Object",
+              "Oriented Programming, Characteristics of Object-Oriented",
+              "Programming, Object-Oriented Programming vs Procedure",
+              "Programming , Pros of OOP"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Programming Basics",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to C++ programming, Basic structure of C++,",
+              "Namespace , Directives, Using I/O Operators , Manipulators,",
+              "Variables, Control Structure",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Introduction to C++ programming, Basic structure of C++, Namespace , Directives, Using I/O Operators , Manipulators, Variables, Control Structure MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Introduction to C++ programming, Basic structure of C++,",
+              "Namespace , Directives, Using I/O Operators , Manipulators,",
+              "Variables, Control Structure",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Classes, Objects and Functions",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Class, Scope of class and accessing members of",
+              "class, Class Object, Function Prototype , Function Calling, Call and",
+              "return by reference, Inline functions , Default and const function",
+              "arguments, Function overloading, Function overriding, Virtual",
+              "Function, Friend Function"
+            ],
+            "topics_text": "Introduction to Class, Scope of class and accessing members of class, Class Object, Function Prototype , Function Calling, Call and return by reference, Inline functions , Default and const function arguments, Function overloading, Function overriding, Virtual Function, Friend Function",
+            "topics": [
+              "Introduction to Class, Scope of class and accessing members of",
+              "class, Class Object, Function Prototype , Function Calling, Call and",
+              "return by reference, Inline functions , Default and const function",
+              "arguments, Function overloading, Function overriding, Virtual",
+              "Function, Friend Function"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Constructor and Destructor",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Define Constructor, Types of Constructors: Default constructor,",
+              "Parameterized constructor, Copy constructor, Dynamic Constructor",
+              "Destructor"
+            ],
+            "topics_text": "Define Constructor, Types of Constructors: Default constructor, Parameterized constructor, Copy constructor, Dynamic Constructor Destructor",
+            "topics": [
+              "Define Constructor, Types of Constructors: Default constructor,",
+              "Parameterized constructor, Copy constructor, Dynamic Constructor",
+              "Destructor"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Inheritance",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to Inheritance, Derived Class, Types of Inheritance:",
+              "Single, Multi-level, Multiple, Hierarchical, Hybrid Inheritance,",
+              "Abstract class and Virtual base class"
+            ],
+            "topics_text": "Introduction to Inheritance, Derived Class, Types of Inheritance: Single, Multi-level, Multiple, Hierarchical, Hybrid Inheritance, Abstract class and Virtual base class",
+            "topics": [
+              "Introduction to Inheritance, Derived Class, Types of Inheritance:",
+              "Single, Multi-level, Multiple, Hierarchical, Hybrid Inheritance,",
+              "Abstract class and Virtual base class"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Virtual Functions and polymorphism",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Concept of objects and pointers, this pointer, Virtual Functions,",
+              "Pure Virtual Functions, Types of Polymorphism , Advantages of",
+              "Polymorphism, Implementing polymorphism"
+            ],
+            "topics_text": "Concept of objects and pointers, this pointer, Virtual Functions, Pure Virtual Functions, Types of Polymorphism , Advantages of Polymorphism, Implementing polymorphism",
+            "topics": [
+              "Concept of objects and pointers, this pointer, Virtual Functions,",
+              "Pure Virtual Functions, Types of Polymorphism , Advantages of",
+              "Polymorphism, Implementing polymorphism"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Streams and File Management",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Concept of Stream, C++ Stream Classes, Formatted and",
+              "unformatted I/O operations, File stream , C++ File stream classes,",
+              "File management functions , File modes, Binary and random files ,",
+              "Exception handling",
+              "Total Hours 42"
+            ],
+            "topics_text": "Concept of Stream, C++ Stream Classes, Formatted and unformatted I/O operations, File stream , C++ File stream classes, File management functions , File modes, Binary and random files , Exception handling Total Hours 42",
+            "topics": [
+              "Concept of Stream, C++ Stream Classes, Formatted and",
+              "unformatted I/O operations, File stream , C++ File stream classes,",
+              "File management functions , File modes, Binary and random files ,",
+              "Exception handling",
+              "Total Hours 42"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to print numbers, alphabets and special characters",
+              "on the output screen."
+            ],
+            "topics_text": "Write a program to print numbers, alphabets and special characters on the output screen.",
+            "topics": [
+              "Write a program to print numbers, alphabets and special characters",
+              "on the output screen."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practica-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to check whether a number is even or odd."
+            ],
+            "topics_text": "Write a program to check whether a number is even or odd.",
+            "topics": [
+              "Write a program to check whether a number is even or odd."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program that accept age in years from user and display age",
+              "in months and days."
+            ],
+            "topics_text": "Write a program that accept age in years from user and display age in months and days.",
+            "topics": [
+              "Write a program that accept age in years from user and display age",
+              "in months and days."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to check whether a number is palindrome or not."
+            ],
+            "topics_text": "Write a program to check whether a number is palindrome or not.",
+            "topics": [
+              "Write a program to check whether a number is palindrome or not."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program that demonstrate the use of arithmetic and",
+              "assignment operators by getting two numbers from user."
+            ],
+            "topics_text": "Write a program that demonstrate the use of arithmetic and assignment operators by getting two numbers from user.",
+            "topics": [
+              "Write a program that demonstrate the use of arithmetic and",
+              "assignment operators by getting two numbers from user."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to calculate area of circle, square, rectangle and",
+              "triangle using switch-case statements.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Write a program to calculate area of circle, square, rectangle and triangle using switch-case statements. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Write a program to calculate area of circle, square, rectangle and",
+              "triangle using switch-case statements.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program that accept number from user and display all",
+              "factors of that number."
+            ],
+            "topics_text": "Write a program that accept number from user and display all factors of that number.",
+            "topics": [
+              "Write a program that accept number from user and display all",
+              "factors of that number."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program that accept number and find factorial."
+            ],
+            "topics_text": "Write a program that accept number and find factorial.",
+            "topics": [
+              "Write a program that accept number and find factorial."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program that accept 9 numbers in matrix and display",
+              "transpose of matrix."
+            ],
+            "topics_text": "Write a program that accept 9 numbers in matrix and display transpose of matrix.",
+            "topics": [
+              "Write a program that accept 9 numbers in matrix and display",
+              "transpose of matrix."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to count number of words in a sentence."
+            ],
+            "topics_text": "Write a program to count number of words in a sentence.",
+            "topics": [
+              "Write a program to count number of words in a sentence."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to create structure of book (Title, Author,",
+              "Publication, Price) and display records for N books."
+            ],
+            "topics_text": "Write a program to create structure of book (Title, Author, Publication, Price) and display records for N books.",
+            "topics": [
+              "Write a program to create structure of book (Title, Author,",
+              "Publication, Price) and display records for N books."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program for doing arithmetic operations using function that",
+              "program includes the following functions – Addition, Subtraction,",
+              "Multiplication, Division and Modulus."
+            ],
+            "topics_text": "Write a program for doing arithmetic operations using function that program includes the following functions – Addition, Subtraction, Multiplication, Division and Modulus.",
+            "topics": [
+              "Write a program for doing arithmetic operations using function that",
+              "program includes the following functions – Addition, Subtraction,",
+              "Multiplication, Division and Modulus."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to find GCD of two numbers using function."
+            ],
+            "topics_text": "Write a program to find GCD of two numbers using function.",
+            "topics": [
+              "Write a program to find GCD of two numbers using function."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical-14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to convert Fahrenheit to centigrade and centigrade",
+              "to Fahrenheit using function."
+            ],
+            "topics_text": "Write a program to convert Fahrenheit to centigrade and centigrade to Fahrenheit using function.",
+            "topics": [
+              "Write a program to convert Fahrenheit to centigrade and centigrade",
+              "to Fahrenheit using function."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Practical-15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to create a class `Bank_Account` with data",
+              "members Depositor_Name, Acc_No, Acc_Type, and Balance, and",
+              "implement member functions for account creation, deposit,",
+              "withdrawal, and balance inquiry."
+            ],
+            "topics_text": "Write a program to create a class `Bank_Account` with data members Depositor_Name, Acc_No, Acc_Type, and Balance, and implement member functions for account creation, deposit, withdrawal, and balance inquiry.",
+            "topics": [
+              "Write a program to create a class `Bank_Account` with data",
+              "members Depositor_Name, Acc_No, Acc_Type, and Balance, and",
+              "implement member functions for account creation, deposit,",
+              "withdrawal, and balance inquiry."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Practical-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to create a class Sales that stores salesman name",
+              "and sales amount, and calculates commission as Rs. 10 per thousand",
+              "for sales = 25000 and Rs. 5 per thousand otherwise, then displays",
+              "the result"
+            ],
+            "topics_text": "Write a program to create a class Sales that stores salesman name and sales amount, and calculates commission as Rs. 10 per thousand for sales = 25000 and Rs. 5 per thousand otherwise, then displays the result",
+            "topics": [
+              "Write a program to create a class Sales that stores salesman name",
+              "and sales amount, and calculates commission as Rs. 10 per thousand",
+              "for sales = 25000 and Rs. 5 per thousand otherwise, then displays",
+              "the result"
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Practical-17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Define class Time containing following: 1. Data Members like:",
+              "Hours, Minutes and Seconds. 2. Member Functions like: Get time,",
+              "Display time and perform Sum of two time objects."
+            ],
+            "topics_text": "Define class Time containing following: 1. Data Members like: Hours, Minutes and Seconds. 2. Member Functions like: Get time, Display time and perform Sum of two time objects.",
+            "topics": [
+              "Define class Time containing following: 1. Data Members like:",
+              "Hours, Minutes and Seconds. 2. Member Functions like: Get time,",
+              "Display time and perform Sum of two time objects."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Practical-18",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to calculate Volume of Box using Constructor."
+            ],
+            "topics_text": "Write a program to calculate Volume of Box using Constructor.",
+            "topics": [
+              "Write a program to calculate Volume of Box using Constructor."
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Practical-19",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create class Person having: 1.Name 2.Nationality and also create a",
+              "Constructors like : 1. One constructor with two arguments 2. One",
+              "constructor with one argument"
+            ],
+            "topics_text": "Create class Person having: 1.Name 2.Nationality and also create a Constructors like : 1. One constructor with two arguments 2. One constructor with one argument",
+            "topics": [
+              "Create class Person having: 1.Name 2.Nationality and also create a",
+              "Constructors like : 1. One constructor with two arguments 2. One",
+              "constructor with one argument"
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Practical-20",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to demonstrate the concept of Destructor.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Write a program to demonstrate the concept of Destructor. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Write a program to demonstrate the concept of Destructor.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 21,
+            "title": "Practical-21",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a program for Enter Patient details using Inheritance."
+            ],
+            "topics_text": "Write a program for Enter Patient details using Inheritance.",
+            "topics": [
+              "Write a program for Enter Patient details using Inheritance."
+            ]
+          },
+          {
+            "unit_number": 22,
+            "title": "Practical-22",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a program to show access to Private Public and Protected",
+              "using Inheritance."
+            ],
+            "topics_text": "Write a program to show access to Private Public and Protected using Inheritance.",
+            "topics": [
+              "Write a program to show access to Private Public and Protected",
+              "using Inheritance."
+            ]
+          },
+          {
+            "unit_number": 23,
+            "title": "Practical-23",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to declare two classes each having one integer data",
+              "member and find sum using friend function."
+            ],
+            "topics_text": "Write a program to declare two classes each having one integer data member and find sum using friend function.",
+            "topics": [
+              "Write a program to declare two classes each having one integer data",
+              "member and find sum using friend function."
+            ]
+          },
+          {
+            "unit_number": 24,
+            "title": "Practical-24",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Define two classes 12 HH and 24 HH to represent time and convert",
+              "one format to another using type conversion concept."
+            ],
+            "topics_text": "Define two classes 12 HH and 24 HH to represent time and convert one format to another using type conversion concept.",
+            "topics": [
+              "Define two classes 12 HH and 24 HH to represent time and convert",
+              "one format to another using type conversion concept."
+            ]
+          },
+          {
+            "unit_number": 25,
+            "title": "Practical-25",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a C++ Program to Demonstrate try, catch block using",
+              "exception handling."
+            ],
+            "topics_text": "Write a C++ Program to Demonstrate try, catch block using exception handling.",
+            "topics": [
+              "Write a C++ Program to Demonstrate try, catch block using",
+              "exception handling."
+            ]
+          },
+          {
+            "unit_number": 26,
+            "title": "Practical-26",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a program to Read and Write File Operation in File Handling.",
+              "Total Hours 56"
+            ],
+            "topics_text": "Write a program to Read and Write File Operation in File Handling. Total Hours 56",
+            "topics": [
+              "Write a program to Read and Write File Operation in File Handling.",
+              "Total Hours 56"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -401,9 +2143,7 @@
           "text": "Instructional Method:\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://www.learncpp.com/\n 2  https://cplusplus.com/doc/tutorial/polymorphism/\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "aaedfa53591239bebe47db7d7b12a7ea82bc0fe396f3a052ace325abd9e800fa"
     },
     {
@@ -419,7 +2159,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE0304 - Python Programming and Prompt Engineering (.pdf",
       "expected_pdf_sha256": "3d967bc536f9b07c049700eea0ecaf2eeabcf63d81593351ea822d9aab74925f",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "PYTHON PROGRAMMING AND PROMPT",
         "course_code": "09CE0304",
@@ -435,12 +2175,504 @@
         "Apply control structures and data structures in Python to develop logical programs.",
         "Apply functions, modules, and file handling techniques to build structured Python applications.",
         "Apply prompt engineering techniques to generate, refine, and debug Python code using AI tools.",
-        "Apply AI-assisted development methods and evaluation techniques to create reliable and ethical Python-based solutions. Pre-requisite of course:Basic Programming Knowledge"
+        "Apply AI-assisted development methods and evaluation techniques to create reliable and ethical Python-based solutions."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION TO PYTHON & AI FUNDAMENTALS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Introduction to Programming, History and Features of Python,",
+              "Structure of Python Program, Variables and Data Types, Operators,",
+              "Input and Output Functions, Introduction to Artificial Intelligence,",
+              "Machine Learning, Generative AI and Large Language Models",
+              "(Concepts only), Overview of AI Tools for Programming Assistance"
+            ],
+            "topics_text": "Introduction to Programming, History and Features of Python, Structure of Python Program, Variables and Data Types, Operators, Input and Output Functions, Introduction to Artificial Intelligence, Machine Learning, Generative AI and Large Language Models (Concepts only), Overview of AI Tools for Programming Assistance",
+            "topics": [
+              "Introduction to Programming, History and Features of Python,",
+              "Structure of Python Program, Variables and Data Types, Operators,",
+              "Input and Output Functions, Introduction to Artificial Intelligence,",
+              "Machine Learning, Generative AI and Large Language Models",
+              "(Concepts only), Overview of AI Tools for Programming Assistance"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "CONTROL FLOW AND DATA STRUCTURES IN PYTHON",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Decision Making Statements – if, if-else, elif ladder, Looping",
+              "Statements – for loop, while loop, Nested loops, Lists – creation and",
+              "operations, Tuples, Sets, Dictionaries – creation and access, String",
+              "handling and built-in string functions.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Decision Making Statements – if, if-else, elif ladder, Looping Statements – for loop, while loop, Nested loops, Lists – creation and operations, Tuples, Sets, Dictionaries – creation and access, String handling and built-in string functions. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Decision Making Statements – if, if-else, elif ladder, Looping",
+              "Statements – for loop, while loop, Nested loops, Lists – creation and",
+              "operations, Tuples, Sets, Dictionaries – creation and access, String",
+              "handling and built-in string functions.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "FUNCTIONS, MODULES AND FILE HANDLING",
+            "contact_hours": 0,
+            "topic_lines": [
+              "User-defined Functions, Function Arguments and Return Values,",
+              "Recursion, Built-in Functions, Modules and Libraries, File Handling",
+              "– Read and Write operations, Exception Handling – try, except,",
+              "finally."
+            ],
+            "topics_text": "User-defined Functions, Function Arguments and Return Values, Recursion, Built-in Functions, Modules and Libraries, File Handling – Read and Write operations, Exception Handling – try, except, finally.",
+            "topics": [
+              "User-defined Functions, Function Arguments and Return Values,",
+              "Recursion, Built-in Functions, Modules and Libraries, File Handling",
+              "– Read and Write operations, Exception Handling – try, except,",
+              "finally."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "PROMPT ENGINEERING FUNDAMENTALS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Introduction to Prompt Engineering, Structure of a Prompt –",
+              "Instruction, Context, Constraints, Output Format, Role-based",
+              "Prompts, Instruction Prompts, Few-shot Prompting, Prompt",
+              "Templates for Code Generation and Debugging, Evaluating AI-",
+              "generated Code – Accuracy, Clarity and Correctness"
+            ],
+            "topics_text": "Introduction to Prompt Engineering, Structure of a Prompt – Instruction, Context, Constraints, Output Format, Role-based Prompts, Instruction Prompts, Few-shot Prompting, Prompt Templates for Code Generation and Debugging, Evaluating AI- generated Code – Accuracy, Clarity and Correctness",
+            "topics": [
+              "Introduction to Prompt Engineering, Structure of a Prompt –",
+              "Instruction, Context, Constraints, Output Format, Role-based",
+              "Prompts, Instruction Prompts, Few-shot Prompting, Prompt",
+              "Templates for Code Generation and Debugging, Evaluating AI",
+              "generated Code – Accuracy, Clarity and Correctness"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "AI-ASSISTED PYTHON DEVELOPMENT & ETHICS",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Using AI Tools for Code Generation, Code Debugging and",
+              "Optimization, Prompt Chaining for Step-by-step Development,",
+              "Detecting Hallucinations in AI-generated Code, Responsible AI",
+              "Usage, Data Privacy and Security Considerations, Mini Project",
+              "using Python and Prompt Engineering.",
+              "Total Hours 0"
+            ],
+            "topics_text": "Using AI Tools for Code Generation, Code Debugging and Optimization, Prompt Chaining for Step-by-step Development, Detecting Hallucinations in AI-generated Code, Responsible AI Usage, Data Privacy and Security Considerations, Mini Project using Python and Prompt Engineering. Total Hours 0",
+            "topics": [
+              "Using AI Tools for Code Generation, Code Debugging and",
+              "Optimization, Prompt Chaining for Step-by-step Development,",
+              "Detecting Hallucinations in AI-generated Code, Responsible AI",
+              "Usage, Data Privacy and Security Considerations, Mini Project",
+              "using Python and Prompt Engineering.",
+              "Total Hours 0"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a Python program that accepts student name, roll number and",
+              "marks, and displays formatted output."
+            ],
+            "topics_text": "Write a Python program that accepts student name, roll number and marks, and displays formatted output.",
+            "topics": [
+              "Write a Python program that accepts student name, roll number and",
+              "marks, and displays formatted output."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to perform addition, subtraction, multiplication and",
+              "division using user input."
+            ],
+            "topics_text": "Write a program to perform addition, subtraction, multiplication and division using user input.",
+            "topics": [
+              "Write a program to perform addition, subtraction, multiplication and",
+              "division using user input."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Accept different data types from user, perform type conversion and",
+              "display results."
+            ],
+            "topics_text": "Accept different data types from user, perform type conversion and display results.",
+            "topics": [
+              "Accept different data types from user, perform type conversion and",
+              "display results."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Use an AI tool to generate a basic Python program, refine the",
+              "prompt, and compare output with manual code."
+            ],
+            "topics_text": "Use an AI tool to generate a basic Python program, refine the prompt, and compare output with manual code.",
+            "topics": [
+              "Use an AI tool to generate a basic Python program, refine the",
+              "prompt, and compare output with manual code."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a Python program using if-else ladder to find the largest",
+              "number among three inputs."
+            ],
+            "topics_text": "Write a Python program using if-else ladder to find the largest number among three inputs.",
+            "topics": [
+              "Write a Python program using if-else ladder to find the largest",
+              "number among three inputs."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Develop a program that calculates student grade based on",
+              "percentage using conditional statements."
+            ],
+            "topics_text": "Develop a program that calculates student grade based on percentage using conditional statements.",
+            "topics": [
+              "Develop a program that calculates student grade based on",
+              "percentage using conditional statements."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to generate Fibonacci series up to N terms using",
+              "loop."
+            ],
+            "topics_text": "Write a program to generate Fibonacci series up to N terms using loop.",
+            "topics": [
+              "Write a program to generate Fibonacci series up to N terms using",
+              "loop."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to print prime numbers between 1 and N using",
+              "loop logic.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Write a program to print prime numbers between 1 and N using loop logic. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Write a program to print prime numbers between 1 and N using",
+              "loop logic.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a list and perform append, remove, reverse and display",
+              "operations."
+            ],
+            "topics_text": "Create a list and perform append, remove, reverse and display operations.",
+            "topics": [
+              "Create a list and perform append, remove, reverse and display",
+              "operations."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to count occurrence of specific element in a list."
+            ],
+            "topics_text": "Write a program to count occurrence of specific element in a list.",
+            "topics": [
+              "Write a program to count occurrence of specific element in a list."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a dictionary, access values, update and delete elements."
+            ],
+            "topics_text": "Create a dictionary, access values, update and delete elements.",
+            "topics": [
+              "Create a dictionary, access values, update and delete elements."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Generate a looping-based program using AI, intentionally insert",
+              "error, debug using improved prompt."
+            ],
+            "topics_text": "Generate a looping-based program using AI, intentionally insert error, debug using improved prompt.",
+            "topics": [
+              "Generate a looping-based program using AI, intentionally insert",
+              "error, debug using improved prompt."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical-13",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program using user-defined function to perform arithmetic",
+              "operation."
+            ],
+            "topics_text": "Write a program using user-defined function to perform arithmetic operation.",
+            "topics": [
+              "Write a program using user-defined function to perform arithmetic",
+              "operation."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical-14",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Develop a recursive function to calculate factorial of a number."
+            ],
+            "topics_text": "Develop a recursive function to calculate factorial of a number.",
+            "topics": [
+              "Develop a recursive function to calculate factorial of a number."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Practical-15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a function to check whether given string is palindrome or not."
+            ],
+            "topics_text": "Write a function to check whether given string is palindrome or not.",
+            "topics": [
+              "Write a function to check whether given string is palindrome or not."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Practical-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a text file, write data into it and read content from file using",
+              "Python."
+            ],
+            "topics_text": "Create a text file, write data into it and read content from file using Python.",
+            "topics": [
+              "Create a text file, write data into it and read content from file using",
+              "Python."
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Practical-17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Demonstrate use of try, except and finally block with division-by-",
+              "zero example."
+            ],
+            "topics_text": "Demonstrate use of try, except and finally block with division-by- zero example.",
+            "topics": [
+              "Demonstrate use of try, except and finally block with division-by",
+              "zero example."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Practical-18",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Use AI to generate modular Python code and prepare brief",
+              "documentation using structured prompt."
+            ],
+            "topics_text": "Use AI to generate modular Python code and prepare brief documentation using structured prompt.",
+            "topics": [
+              "Use AI to generate modular Python code and prepare brief",
+              "documentation using structured prompt."
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Practical-19",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Design a structured prompt template for generating Python",
+              "programs."
+            ],
+            "topics_text": "Design a structured prompt template for generating Python programs.",
+            "topics": [
+              "Design a structured prompt template for generating Python",
+              "programs."
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Practical-20",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a prompt format specifically for debugging incorrect Python",
+              "code."
+            ],
+            "topics_text": "Create a prompt format specifically for debugging incorrect Python code.",
+            "topics": [
+              "Create a prompt format specifically for debugging incorrect Python",
+              "code."
+            ]
+          },
+          {
+            "unit_number": 21,
+            "title": "Practical-21",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Provide example input-output pairs and generate optimized Python",
+              "solution using AI."
+            ],
+            "topics_text": "Provide example input-output pairs and generate optimized Python solution using AI.",
+            "topics": [
+              "Provide example input-output pairs and generate optimized Python",
+              "solution using AI."
+            ]
+          },
+          {
+            "unit_number": 22,
+            "title": "Practical-22",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Generate same program using different prompting strategies and",
+              "compare outputs."
+            ],
+            "topics_text": "Generate same program using different prompting strategies and compare outputs.",
+            "topics": [
+              "Generate same program using different prompting strategies and",
+              "compare outputs."
+            ]
+          },
+          {
+            "unit_number": 23,
+            "title": "Practical-23",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Identify incorrect AI-generated code, verify manually and correct",
+              "logic."
+            ],
+            "topics_text": "Identify incorrect AI-generated code, verify manually and correct logic.",
+            "topics": [
+              "Identify incorrect AI-generated code, verify manually and correct",
+              "logic."
+            ]
+          },
+          {
+            "unit_number": 24,
+            "title": "Practical-24",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Develop a small console-based Python application using AI",
+              "guidance.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Develop a small console-based Python application using AI guidance. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Develop a small console-based Python application using AI",
+              "guidance.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 25,
+            "title": "Practical-25",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Break a problem into steps and generate code step-by-step using",
+              "prompt chaining."
+            ],
+            "topics_text": "Break a problem into steps and generate code step-by-step using prompt chaining.",
+            "topics": [
+              "Break a problem into steps and generate code step-by-step using",
+              "prompt chaining."
+            ]
+          },
+          {
+            "unit_number": 26,
+            "title": "Practical-26",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Improve an existing Python program using AI suggestions and test",
+              "efficiency."
+            ],
+            "topics_text": "Improve an existing Python program using AI suggestions and test efficiency.",
+            "topics": [
+              "Improve an existing Python program using AI suggestions and test",
+              "efficiency."
+            ]
+          },
+          {
+            "unit_number": 27,
+            "title": "Practical-27",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Mini Project Development like Result Analyzer / Expense Tracker /",
+              "Quiz Generator."
+            ],
+            "topics_text": "Mini Project Development like Result Analyzer / Expense Tracker / Quiz Generator.",
+            "topics": [
+              "Mini Project Development like Result Analyzer / Expense Tracker /",
+              "Quiz Generator."
+            ]
+          },
+          {
+            "unit_number": 28,
+            "title": "Practical-28",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Prepare short report explaining AI usage, limitations, improvements",
+              "and ethical considerations like Case Study.",
+              "Total Hours 56"
+            ],
+            "topics_text": "Prepare short report explaining AI usage, limitations, improvements and ethical considerations like Case Study. Total Hours 56",
+            "topics": [
+              "Prepare short report explaining AI usage, limitations, improvements",
+              "and ethical considerations like Case Study.",
+              "Total Hours 56"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -488,15 +2720,13 @@
           "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of the content and need of\n     students. The teacher, in addition to conventional teaching method by blackboard, may also\n     use tools such as demonstration, coding practice, brainstorming sessions, case studies, AI-\n     assisted learning activities and MOOCs.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and classroom through assignments, prompt design activities, coding exercises\n    and mini projects.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory based on programming skills and prompt engineering\n     applications.\n 4  Students will use supplementary resources such as online videos, NPTEL lectures, e-\n     courses, official Python documentation, AI tool user guides and virtual laboratory\n     platforms.\n\nSupplementary Resources:\n 1  https://docs.python.org\n 2  https://www.w3schools.com\n 3  https://www.learnpython.org\n 4  https://www.tutorialspoint.com\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "3d967bc536f9b07c049700eea0ecaf2eeabcf63d81593351ea822d9aab74925f"
     }
   ],
   "build_summary": {
-    "extracted": 0,
-    "manual_review": 6,
+    "extracted": 6,
+    "manual_review": 0,
     "ocr_review": 0,
     "missing_pdf": 0,
     "extraction_errors": 0

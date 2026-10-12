@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:03:50+00:00",
+  "generated_at_utc": "2026-10-12T12:05:35+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -23,7 +23,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09GS2101 - Applied Physics (.pdf",
       "expected_pdf_sha256": "ac1aff73b23b2e565cd60a326ea98a761aff811c7ad05ba45ba7d4bda884a6e4",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "APPLIED PHYSICS",
         "course_code": "09GS2101",
@@ -39,12 +39,288 @@
         "To understand and relate phenomena with the help of laws of motion.",
         "To identify various states of materials and their relevance.",
         "To understand the concept of Electricity and Magnetism and its application in daily life.",
-        "To get Knowledge about Light and Sound Waves and their applications. Pre-requisite of course:Basic knowledge of science."
+        "To get Knowledge about Light and Sound Waves and their applications."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Units, Dimensions and Measurements",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition of unit, Fundamental and Derived units, systems of units-",
+              "CGS, MKS and SI, introduction to accuracy, precision and errors,",
+              "types of errors, error analysis, Numerical on Error"
+            ],
+            "topics_text": "Definition of unit, Fundamental and Derived units, systems of units- CGS, MKS and SI, introduction to accuracy, precision and errors, types of errors, error analysis, Numerical on Error",
+            "topics": [
+              "Definition of unit, Fundamental and Derived units, systems of units",
+              "CGS, MKS and SI, introduction to accuracy, precision and errors,",
+              "types of errors, error analysis, Numerical on Error"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Laws of Motion",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Inertia, Newton's first law of motion, momentum, Newton’s second",
+              "law of motion, conservation of momentum, Newton's third law of",
+              "motion, Numerical on above topics"
+            ],
+            "topics_text": "Inertia, Newton's first law of motion, momentum, Newton’s second law of motion, conservation of momentum, Newton's third law of motion, Numerical on above topics",
+            "topics": [
+              "Inertia, Newton's first law of motion, momentum, Newton’s second",
+              "law of motion, conservation of momentum, Newton's third law of",
+              "motion, Numerical on above topics"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Properties of Matter",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Stress & strain along with their types, Hooke's law and modulus of",
+              "elasticity-Young, bulk and modulus of rigidity, Viscosity, newton's",
+              "law of viscosity, types of flows, Reynold's number, surface tension",
+              "and capillary action",
+              "MR. NAVNITKUMAR JAGJIVANBHAI PATEL MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Stress & strain along with their types, Hooke's law and modulus of elasticity-Young, bulk and modulus of rigidity, Viscosity, newton's law of viscosity, types of flows, Reynold's number, surface tension and capillary action MR. NAVNITKUMAR JAGJIVANBHAI PATEL MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Stress & strain along with their types, Hooke's law and modulus of",
+              "elasticity-Young, bulk and modulus of rigidity, Viscosity, newton's",
+              "law of viscosity, types of flows, Reynold's number, surface tension",
+              "and capillary action",
+              "MR. NAVNITKUMAR JAGJIVANBHAI PATEL MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Electro-Magnetism",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Current electricity: current, EMF and Ohm's law, resistance, series",
+              "and parallel, Numerical on above topics, Magnetism: Magnetic field",
+              "and properties, electro-magnetic induction-self-inductance and",
+              "mutual inductance, faraday’s law, applications-transformer"
+            ],
+            "topics_text": "Current electricity: current, EMF and Ohm's law, resistance, series and parallel, Numerical on above topics, Magnetism: Magnetic field and properties, electro-magnetic induction-self-inductance and mutual inductance, faraday’s law, applications-transformer",
+            "topics": [
+              "Current electricity: current, EMF and Ohm's law, resistance, series",
+              "and parallel, Numerical on above topics, Magnetism: Magnetic field",
+              "and properties, electro-magnetic induction-self-inductance and",
+              "mutual inductance, faraday’s law, applications-transformer"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Waves: Light & Sound",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Light: Properties, Reflection, Refraction, Snell’s law, Dispersion of",
+              "light, Sound: Characteristics – (Amplitude, Wavelength, Crest,",
+              "Trough, Frequency, Time Period), Definition of Resonance with",
+              "Examples, Formula for Velocity of Sound and factors affecting it,",
+              "Ultrasonic Sound Waves – Uses, properties, Applications,",
+              "Radioactive rays - Properties and uses of Alpha, Beta and Gamma",
+              "particles.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Light: Properties, Reflection, Refraction, Snell’s law, Dispersion of light, Sound: Characteristics – (Amplitude, Wavelength, Crest, Trough, Frequency, Time Period), Definition of Resonance with Examples, Formula for Velocity of Sound and factors affecting it, Ultrasonic Sound Waves – Uses, properties, Applications, Radioactive rays - Properties and uses of Alpha, Beta and Gamma particles. Total Hours 28",
+            "topics": [
+              "Light: Properties, Reflection, Refraction, Snell’s law, Dispersion of",
+              "light, Sound: Characteristics – (Amplitude, Wavelength, Crest,",
+              "Trough, Frequency, Time Period), Definition of Resonance with",
+              "Examples, Formula for Velocity of Sound and factors affecting it,",
+              "Ultrasonic Sound Waves – Uses, properties, Applications,",
+              "Radioactive rays - Properties and uses of Alpha, Beta and Gamma",
+              "particles.",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Vernier Calipers To know the use of the Vernier Calipers and",
+            "contact_hours": 2,
+            "topic_lines": [
+              "to measure the length, width and height of the given rectangular",
+              "block.",
+              "Vernier Calipers To know the use of the Vernier Calipers and to",
+              "measure the length, width and height of the given rectangular block."
+            ],
+            "topics_text": "to measure the length, width and height of the given rectangular block. Vernier Calipers To know the use of the Vernier Calipers and to measure the length, width and height of the given rectangular block.",
+            "topics": [
+              "to measure the length, width and height of the given rectangular",
+              "block.",
+              "Vernier Calipers To know the use of the Vernier Calipers and to",
+              "measure the length, width and height of the given rectangular block."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Micrometer Screw gauge To measure the diameter of the small",
+            "contact_hours": 2,
+            "topic_lines": [
+              "sphere using micrometer screw gauge.",
+              "Micrometer Screw gauge To measure the diameter of the small",
+              "sphere using micrometer screw gauge."
+            ],
+            "topics_text": "sphere using micrometer screw gauge. Micrometer Screw gauge To measure the diameter of the small sphere using micrometer screw gauge.",
+            "topics": [
+              "sphere using micrometer screw gauge.",
+              "Micrometer Screw gauge To measure the diameter of the small",
+              "sphere using micrometer screw gauge."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "To determine the value of acceleration due to gravity by using",
+            "contact_hours": 2,
+            "topic_lines": [
+              "simple pendulum",
+              "To determine the value of acceleration due to gravity by using",
+              "simple pendulum"
+            ],
+            "topics_text": "simple pendulum To determine the value of acceleration due to gravity by using simple pendulum",
+            "topics": [
+              "simple pendulum",
+              "To determine the value of acceleration due to gravity by using",
+              "simple pendulum"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "To measure co- efficient of Static Friction of a given Surface",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To measure co- efficient of Static Friction of a given Surface"
+            ],
+            "topics_text": "To measure co- efficient of Static Friction of a given Surface",
+            "topics": [
+              "To measure co- efficient of Static Friction of a given Surface"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "To determine Young’s Modulus of elasticity of a given wire",
+            "contact_hours": 2,
+            "topic_lines": [
+              "using Searle’s Apparatus",
+              "To determine Young’s Modulus of elasticity of a given wire using",
+              "Searle’s Apparatus"
+            ],
+            "topics_text": "using Searle’s Apparatus To determine Young’s Modulus of elasticity of a given wire using Searle’s Apparatus",
+            "topics": [
+              "using Searle’s Apparatus",
+              "To determine Young’s Modulus of elasticity of a given wire using",
+              "Searle’s Apparatus"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "To determine surface tension of a liquid by capillary tube using",
+            "contact_hours": 2,
+            "topic_lines": [
+              "travelling microscope",
+              "To determine surface tension of a liquid by capillary tube using",
+              "travelling microscope"
+            ],
+            "topics_text": "travelling microscope To determine surface tension of a liquid by capillary tube using travelling microscope",
+            "topics": [
+              "travelling microscope",
+              "To determine surface tension of a liquid by capillary tube using",
+              "travelling microscope"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "To calculate refractive index of material of prism using",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Spectrometer Device",
+              "To calculate refractive index of material of prism using",
+              "Spectrometer Device",
+              "MR. NAVNITKUMAR JAGJIVANBHAI PATEL MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Spectrometer Device To calculate refractive index of material of prism using Spectrometer Device MR. NAVNITKUMAR JAGJIVANBHAI PATEL MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Spectrometer Device",
+              "To calculate refractive index of material of prism using",
+              "Spectrometer Device",
+              "MR. NAVNITKUMAR JAGJIVANBHAI PATEL MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Demonstrate sound waves creating vibrations and observing",
+            "contact_hours": 2,
+            "topic_lines": [
+              "their effect",
+              "Demonstrate sound waves creating vibrations and observing their",
+              "effect"
+            ],
+            "topics_text": "their effect Demonstrate sound waves creating vibrations and observing their effect",
+            "topics": [
+              "their effect",
+              "Demonstrate sound waves creating vibrations and observing their",
+              "effect"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "To verify Ohm’s Law",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To verify Ohm’s Law"
+            ],
+            "topics_text": "To verify Ohm’s Law",
+            "topics": [
+              "To verify Ohm’s Law"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "To study Resistors in series",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study Resistors in series"
+            ],
+            "topics_text": "To study Resistors in series",
+            "topics": [
+              "To study Resistors in series"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "To study Resistors in parallel",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To study Resistors in parallel"
+            ],
+            "topics_text": "To study Resistors in parallel",
+            "topics": [
+              "To study Resistors in parallel"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "To verify Faraday’s Law",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To verify Faraday’s Law",
+              "Total Hours 24"
+            ],
+            "topics_text": "To verify Faraday’s Law Total Hours 24",
+            "topics": [
+              "To verify Faraday’s Law",
+              "Total Hours 24"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -89,9 +365,7 @@
           "text": "Instructional Method:\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  http://nptel.ac.in/courses/115106090/15\n 2  http://nptel.ac.in/courses/115104088/\n 3  http://hyperphysics.phy-astr.gsu.edu/hbase/index.html\n 4  http://vlab.amrita.edu/index.php\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL               MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "ac1aff73b23b2e565cd60a326ea98a761aff811c7ad05ba45ba7d4bda884a6e4"
     },
     {
@@ -107,7 +381,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09EE2103 - Basic Electronics (.pdf",
       "expected_pdf_sha256": "b14ca48e74922e647981ed506ada35a71c03ad98b69725ae5853dccdef37811b",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "BASIC ELECTRONICS",
         "course_code": "09EE2103",
@@ -123,12 +397,342 @@
         "Identify limitation of diode and learning fundaments of transistor structure, types and behavioral characteristics and comparison of various transistor configurations.",
         "Exploring the DC load line, biasing methods, and applications of transistor.",
         "To build basic circuits using liner IC¶s.",
-        "To troubleshoot electronic circuits. Pre-requisite of course:Basic knowledge of physics"
+        "To troubleshoot electronic circuits."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Diode characteristics and its applications",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Types of semiconductors., P-N junction diode formation and",
+              "characteristics., Applications - Diode as rectifier, half wave, full",
+              "wave and bridge rectifier, clipping and clamping circuit., Need of",
+              "filters., Need of filters., Zener diode & it's application, Photo diode,",
+              "LDR, Photovoltaic Cell, Light Emitting Diode, Varactor Diode,",
+              "Digital display"
+            ],
+            "topics_text": "Types of semiconductors., P-N junction diode formation and characteristics., Applications - Diode as rectifier, half wave, full wave and bridge rectifier, clipping and clamping circuit., Need of filters., Need of filters., Zener diode & it's application, Photo diode, LDR, Photovoltaic Cell, Light Emitting Diode, Varactor Diode, Digital display",
+            "topics": [
+              "Types of semiconductors., P-N junction diode formation and",
+              "characteristics., Applications - Diode as rectifier, half wave, full",
+              "wave and bridge rectifier, clipping and clamping circuit., Need of",
+              "filters., Need of filters., Zener diode & it's application, Photo diode,",
+              "LDR, Photovoltaic Cell, Light Emitting Diode, Varactor Diode,",
+              "Digital display"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Transistor characteristics and applications",
+            "contact_hours": 8,
+            "topic_lines": [
+              "PNP and NPN transistors, conduction through transistor leakage",
+              "current, relationship between a and ß., Transistor configuration &",
+              "characteristics for CB, CE, CC. Load line and biasing methods of",
+              "transistor., Common emitter amplifier. Common collector amplifier.",
+              "Multistage amplifier, Construction of JFET, Characteristics of JFET"
+            ],
+            "topics_text": "PNP and NPN transistors, conduction through transistor leakage current, relationship between a and ß., Transistor configuration & characteristics for CB, CE, CC. Load line and biasing methods of transistor., Common emitter amplifier. Common collector amplifier. Multistage amplifier, Construction of JFET, Characteristics of JFET",
+            "topics": [
+              "PNP and NPN transistors, conduction through transistor leakage",
+              "current, relationship between a and ß., Transistor configuration &",
+              "characteristics for CB, CE, CC. Load line and biasing methods of",
+              "transistor., Common emitter amplifier. Common collector amplifier.",
+              "Multistage amplifier, Construction of JFET, Characteristics of JFET"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Integrated circuits, Cables and Connectors",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Need of IC¶s. Block diagram of operation amplifier. Characteristics",
+              "and specification of op amp , Applications of op amp, Block",
+              "diagram of IC555, Working of IC555, Applications of IC 555,",
+              "Mono stable, bi stable, astable Multivibrator and timer circuit,",
+              "Cables: coaxial cable, twisted pair cable and fiber optic cable,",
+              "Connectors: coaxial cable connectors, RJ-45, RS-232, HDMI",
+              "connectors.",
+              "Total Hours 28"
+            ],
+            "topics_text": "Need of IC¶s. Block diagram of operation amplifier. Characteristics and specification of op amp , Applications of op amp, Block diagram of IC555, Working of IC555, Applications of IC 555, Mono stable, bi stable, astable Multivibrator and timer circuit, Cables: coaxial cable, twisted pair cable and fiber optic cable, Connectors: coaxial cable connectors, RJ-45, RS-232, HDMI connectors. Total Hours 28",
+            "topics": [
+              "Need of IC¶s. Block diagram of operation amplifier. Characteristics",
+              "and specification of op amp , Applications of op amp, Block",
+              "diagram of IC555, Working of IC555, Applications of IC 555,",
+              "Mono stable, bi stable, astable Multivibrator and timer circuit,",
+              "Cables: coaxial cable, twisted pair cable and fiber optic cable,",
+              "Connectors: coaxial cable connectors, RJ-45, RS-232, HDMI",
+              "connectors.",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "To use oscilloscope for measuring pick voltage, frequency and",
+            "contact_hours": 2,
+            "topic_lines": [
+              "observing AC electrical quantities.",
+              "To use oscilloscope for measuring pick voltage, frequency and",
+              "observing AC electrical quantities"
+            ],
+            "topics_text": "observing AC electrical quantities. To use oscilloscope for measuring pick voltage, frequency and observing AC electrical quantities",
+            "topics": [
+              "observing AC electrical quantities.",
+              "To use oscilloscope for measuring pick voltage, frequency and",
+              "observing AC electrical quantities"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "To use function generator for producing square and sine wave.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To use function generator for producing square and sine wave."
+            ],
+            "topics_text": "To use function generator for producing square and sine wave.",
+            "topics": [
+              "To use function generator for producing square and sine wave."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "To Plot the V-I characteristics of PN junction diode under",
+            "contact_hours": 2,
+            "topic_lines": [
+              "forward and reverse bias conditions and find the cut- in voltage,",
+              "and Dynamic resistance of PN junction diode in forward bias",
+              "using simulation.",
+              "To Plot the V-I characteristics of PN junction diode under forward",
+              "and reverse bias conditions and find the cut- in voltage, and",
+              "Dynamic resistance of PN junction diode in forward bias using",
+              "simulation."
+            ],
+            "topics_text": "forward and reverse bias conditions and find the cut- in voltage, and Dynamic resistance of PN junction diode in forward bias using simulation. To Plot the V-I characteristics of PN junction diode under forward and reverse bias conditions and find the cut- in voltage, and Dynamic resistance of PN junction diode in forward bias using simulation.",
+            "topics": [
+              "forward and reverse bias conditions and find the cut- in voltage,",
+              "and Dynamic resistance of PN junction diode in forward bias",
+              "using simulation.",
+              "To Plot the V-I characteristics of PN junction diode under forward",
+              "and reverse bias conditions and find the cut- in voltage, and",
+              "Dynamic resistance of PN junction diode in forward bias using",
+              "simulation."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "To Obtain the forward bias and reverse bias characteristics of a",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Zener diode and find out the Zener break down voltage from",
+              "characteristics using simulation.",
+              "To Obtain the forward bias and reverse bias characteristics of a",
+              "Zener diode and find out the Zener break down voltage from",
+              "characteristics using simulation."
+            ],
+            "topics_text": "Zener diode and find out the Zener break down voltage from characteristics using simulation. To Obtain the forward bias and reverse bias characteristics of a Zener diode and find out the Zener break down voltage from characteristics using simulation.",
+            "topics": [
+              "Zener diode and find out the Zener break down voltage from",
+              "characteristics using simulation.",
+              "To Obtain the forward bias and reverse bias characteristics of a",
+              "Zener diode and find out the Zener break down voltage from",
+              "characteristics using simulation."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "To prepare Half-wave rectifier and observe the output.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To prepare Half-wave rectifier and observe the output."
+            ],
+            "topics_text": "To prepare Half-wave rectifier and observe the output.",
+            "topics": [
+              "To prepare Half-wave rectifier and observe the output."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "To prepare full wave rectifier and observe the output.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To prepare Half-wave rectifier and observe the output."
+            ],
+            "topics_text": "To prepare Half-wave rectifier and observe the output.",
+            "topics": [
+              "To prepare Half-wave rectifier and observe the output."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "To design and implement clipper circuits and draw it output",
+            "contact_hours": 2,
+            "topic_lines": [
+              "voltage wave form.",
+              "To design and implement clipper circuits and draw it output voltage",
+              "wave form."
+            ],
+            "topics_text": "voltage wave form. To design and implement clipper circuits and draw it output voltage wave form.",
+            "topics": [
+              "voltage wave form.",
+              "To design and implement clipper circuits and draw it output voltage",
+              "wave form."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "To Plot the input and output VI-characteristics of NPN BJT in",
+            "contact_hours": 2,
+            "topic_lines": [
+              "common emitter configuration using simulation.",
+              "To Plot the input and output VI-characteristics of NPN BJT in",
+              "common emitter configuration using simulation."
+            ],
+            "topics_text": "common emitter configuration using simulation. To Plot the input and output VI-characteristics of NPN BJT in common emitter configuration using simulation.",
+            "topics": [
+              "common emitter configuration using simulation.",
+              "To Plot the input and output VI-characteristics of NPN BJT in",
+              "common emitter configuration using simulation."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "To Configure and test NPN BJT as a switch.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To Configure and test NPN BJT as a switch."
+            ],
+            "topics_text": "To Configure and test NPN BJT as a switch.",
+            "topics": [
+              "To Configure and test NPN BJT as a switch."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "To prepare fixed bias NPN BJT amplifier and observe its output",
+            "contact_hours": 2,
+            "topic_lines": [
+              "waveform using simulation.",
+              "To Configure and test NPN BJT as a switch."
+            ],
+            "topics_text": "waveform using simulation. To Configure and test NPN BJT as a switch.",
+            "topics": [
+              "waveform using simulation.",
+              "To Configure and test NPN BJT as a switch."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "To build and analyze timer circuit using liner ic using",
+            "contact_hours": 2,
+            "topic_lines": [
+              "simulation.",
+              "To build and analyze timer circuit using liner ic using simulation."
+            ],
+            "topics_text": "simulation. To build and analyze timer circuit using liner ic using simulation.",
+            "topics": [
+              "simulation.",
+              "To build and analyze timer circuit using liner ic using simulation."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "To operate IC555 in Bistable stable mode and observe output.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To operate IC555 in Bistable stable mode and observe output."
+            ],
+            "topics_text": "To operate IC555 in Bistable stable mode and observe output.",
+            "topics": [
+              "To operate IC555 in Bistable stable mode and observe output."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "To operate IC555 in mono stable mode and observe output.",
+            "contact_hours": 2,
+            "topic_lines": [
+              "To operate IC555 in mono stable mode and observe output."
+            ],
+            "topics_text": "To operate IC555 in mono stable mode and observe output.",
+            "topics": [
+              "To operate IC555 in mono stable mode and observe output."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Diode characteristics and its applications",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Types of semiconductors, P-N junction diode formation and",
+              "characteristics., Applications - Diode as rectifier, half wave, full",
+              "wave and bridge rectifier, clipping and clamping circuit., Need of",
+              "filters., C, L, LC, p filters., Zener diode & it's application,, Photo",
+              "diode, LDR, Photovoltaic Cell, Light Emitting Diode, Varactor",
+              "Diode, Digital display"
+            ],
+            "topics_text": "Types of semiconductors, P-N junction diode formation and characteristics., Applications - Diode as rectifier, half wave, full wave and bridge rectifier, clipping and clamping circuit., Need of filters., C, L, LC, p filters., Zener diode & it's application,, Photo diode, LDR, Photovoltaic Cell, Light Emitting Diode, Varactor Diode, Digital display",
+            "topics": [
+              "Types of semiconductors, P-N junction diode formation and",
+              "characteristics., Applications - Diode as rectifier, half wave, full",
+              "wave and bridge rectifier, clipping and clamping circuit., Need of",
+              "filters., C, L, LC, p filters., Zener diode & it's application,, Photo",
+              "diode, LDR, Photovoltaic Cell, Light Emitting Diode, Varactor",
+              "Diode, Digital display"
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Transistor characteristics and applications",
+            "contact_hours": 0,
+            "topic_lines": [
+              "PNP and NPN transistors, conduction through transistor leakage",
+              "current, relationship between a and ß., Transistor configuration &",
+              "characteristics for CB, CE, CC. Load line and biasing methods of",
+              "transistor., Common emitter amplifier. Common collector amplifier.",
+              "Multistage amplifier, Construction of JFET, Characteristics of JFET"
+            ],
+            "topics_text": "PNP and NPN transistors, conduction through transistor leakage current, relationship between a and ß., Transistor configuration & characteristics for CB, CE, CC. Load line and biasing methods of transistor., Common emitter amplifier. Common collector amplifier. Multistage amplifier, Construction of JFET, Characteristics of JFET",
+            "topics": [
+              "PNP and NPN transistors, conduction through transistor leakage",
+              "current, relationship between a and ß., Transistor configuration &",
+              "characteristics for CB, CE, CC. Load line and biasing methods of",
+              "transistor., Common emitter amplifier. Common collector amplifier.",
+              "Multistage amplifier, Construction of JFET, Characteristics of JFET"
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Integrated circuits, Cables and Connectors",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Need of IC¶s. Block diagram of operation amplifier. Characteristics",
+              "and specification of op amp , Applications of op amp, Block",
+              "diagram of IC555, Working of IC555, Applications of IC 555,",
+              "Mono stable, bi stable, astable Multivibrator and timer circuit,",
+              "Cables: coaxial cable, twisted pair cable and fiber optic cable,",
+              "Connectors: coaxial cable connectors, RJ-45, RS-232, HDMI",
+              "connectors.",
+              "Total Hours 26"
+            ],
+            "topics_text": "Need of IC¶s. Block diagram of operation amplifier. Characteristics and specification of op amp , Applications of op amp, Block diagram of IC555, Working of IC555, Applications of IC 555, Mono stable, bi stable, astable Multivibrator and timer circuit, Cables: coaxial cable, twisted pair cable and fiber optic cable, Connectors: coaxial cable connectors, RJ-45, RS-232, HDMI connectors. Total Hours 26",
+            "topics": [
+              "Need of IC¶s. Block diagram of operation amplifier. Characteristics",
+              "and specification of op amp , Applications of op amp, Block",
+              "diagram of IC555, Working of IC555, Applications of IC 555,",
+              "Mono stable, bi stable, astable Multivibrator and timer circuit,",
+              "Cables: coaxial cable, twisted pair cable and fiber optic cable,",
+              "Connectors: coaxial cable connectors, RJ-45, RS-232, HDMI",
+              "connectors.",
+              "Total Hours 26"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -166,9 +770,7 @@
           "text": "References:\n 1  Principle of Electronics, Principle of Electronics, V.K.Mehta, S.Chand & Co, NA\n 2  Electronics Principles, Electronics Principles, Albert Paul Malvino, McGraw Hill, NA\n 3  Electronics Devices and Circuit Theory, Electronics Devices and Circuit Theory, Robert L.\n     Boylestad, Pearson, NA\n 4  Cables and Connectors, Cables and Connectors, John Kadick, AVO International, NA\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    35.00         35.00         20.00         10.00\n\n\nSupplementary Resources:\n 1    . https://onlinecourses.nptel.ac.in/noc17_ee02/preview\n 2  https://electronicsforu.com/\n\n\n\n\n\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "b14ca48e74922e647981ed506ada35a71c03ad98b69725ae5853dccdef37811b"
     },
     {
@@ -184,7 +786,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2105 - Computer Network Skills (.pdf",
       "expected_pdf_sha256": "2f37028211f997bdb28c971f384e55096ad9f00d1562d5eda88ef0762a3d1a36",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "COMPUTER NETWORK SKILL",
         "course_code": "09CE2105",
@@ -199,12 +801,350 @@
         "Apply the fundamental concepts of data communication in practical networking scenarios",
         "Identify and select appropriate types of networking cables for specific communication needs",
         "Classify networks based on range, topology, and architecture to suit different use cases",
-        "Demonstrate the use of various networking devices in the setup and functioning of a network Pre-requisite of course:N/A"
+        "Demonstrate the use of various networking devices in the setup and functioning of a network"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Overview of computer network, usage of computer network, line",
+              "configuration- point-to-point, multi point, types of server, Data",
+              "flow-simplex, Half duplex, Full Duplex"
+            ],
+            "topics_text": "Overview of computer network, usage of computer network, line configuration- point-to-point, multi point, types of server, Data flow-simplex, Half duplex, Full Duplex",
+            "topics": [
+              "Overview of computer network, usage of computer network, line",
+              "configuration- point-to-point, multi point, types of server, Data",
+              "flow-simplex, Half duplex, Full Duplex"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Cabling",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Introduction to network cabling, Unshielded Twisted Pair (UTP)",
+              "Cable, Twisted Pair (STP) Cable, Coaxial Cable, Fiber Optic Cable"
+            ],
+            "topics_text": "Introduction to network cabling, Unshielded Twisted Pair (UTP) Cable, Twisted Pair (STP) Cable, Coaxial Cable, Fiber Optic Cable",
+            "topics": [
+              "Introduction to network cabling, Unshielded Twisted Pair (UTP)",
+              "Cable, Twisted Pair (STP) Cable, Coaxial Cable, Fiber Optic Cable"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Types of network & Topology",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Importance of computer network, Local Area Network (LAN),",
+              "virtual LAN (VLAN), Controller Area Network (CAN),",
+              "Metropolitan Area Network (MAN), Wide Area Network(WAN),",
+              "Internet and Intranet, Extranet, , Topology - Star, Bus, Mess, Ring,",
+              "Hybrid,, Pros and Cons of each topology",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Importance of computer network, Local Area Network (LAN), virtual LAN (VLAN), Controller Area Network (CAN), Metropolitan Area Network (MAN), Wide Area Network(WAN), Internet and Intranet, Extranet, , Topology - Star, Bus, Mess, Ring, Hybrid,, Pros and Cons of each topology MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Importance of computer network, Local Area Network (LAN),",
+              "virtual LAN (VLAN), Controller Area Network (CAN),",
+              "Metropolitan Area Network (MAN), Wide Area Network(WAN),",
+              "Internet and Intranet, Extranet, , Topology - Star, Bus, Mess, Ring,",
+              "Hybrid,, Pros and Cons of each topology",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Transmission media",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Types of transmission media, Guided transmission media-twisted",
+              "pair, coaxial cable, optical fiber, magnetic media, Unguided",
+              "transmission media-light transmission, microwave transmission,",
+              "radio transmission, infrared transmission"
+            ],
+            "topics_text": "Types of transmission media, Guided transmission media-twisted pair, coaxial cable, optical fiber, magnetic media, Unguided transmission media-light transmission, microwave transmission, radio transmission, infrared transmission",
+            "topics": [
+              "Types of transmission media, Guided transmission media-twisted",
+              "pair, coaxial cable, optical fiber, magnetic media, Unguided",
+              "transmission media-light transmission, microwave transmission,",
+              "radio transmission, infrared transmission"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Network devices",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Working of Networking Components – Hubs , Bridges, Switches",
+              "(Manageable and Non-Manageable), Switching and Forwarding",
+              "Routers, Gateways, Access Point, Modem, Wi-fi-Router",
+              "Total Hours 28"
+            ],
+            "topics_text": "Working of Networking Components – Hubs , Bridges, Switches (Manageable and Non-Manageable), Switching and Forwarding Routers, Gateways, Access Point, Modem, Wi-fi-Router Total Hours 28",
+            "topics": [
+              "Working of Networking Components – Hubs , Bridges, Switches",
+              "(Manageable and Non-Manageable), Switching and Forwarding",
+              "Routers, Gateways, Access Point, Modem, Wi-fi-Router",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Study different types of network and generate report."
+            ],
+            "topics_text": "Study different types of network and generate report.",
+            "topics": [
+              "Study different types of network and generate report."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Prepare a summary report about data communication using",
+              "examples."
+            ],
+            "topics_text": "Prepare a summary report about data communication using examples.",
+            "topics": [
+              "Prepare a summary report about data communication using",
+              "examples."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Study Different Network IP Classes."
+            ],
+            "topics_text": "Study Different Network IP Classes.",
+            "topics": [
+              "Study Different Network IP Classes."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Study basic network commands and Network configuration",
+              "commands."
+            ],
+            "topics_text": "Study basic network commands and Network configuration commands.",
+            "topics": [
+              "Study basic network commands and Network configuration",
+              "commands."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Study of different types of network cable and practically implement",
+              "the crossed-wired cable and straight through cable using clamping",
+              "tool."
+            ],
+            "topics_text": "Study of different types of network cable and practically implement the crossed-wired cable and straight through cable using clamping tool.",
+            "topics": [
+              "Study of different types of network cable and practically implement",
+              "the crossed-wired cable and straight through cable using clamping",
+              "tool."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Configure any two network topology in Cisco packet tracer",
+              "software."
+            ],
+            "topics_text": "Configure any two network topology in Cisco packet tracer software.",
+            "topics": [
+              "Configure any two network topology in Cisco packet tracer",
+              "software."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Study different network topologies and make summary report about",
+              "it."
+            ],
+            "topics_text": "Study different network topologies and make summary report about it.",
+            "topics": [
+              "Study different network topologies and make summary report about",
+              "it."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Implement WAN in Cisco Packet tracer."
+            ],
+            "topics_text": "Implement WAN in Cisco Packet tracer.",
+            "topics": [
+              "Implement WAN in Cisco Packet tracer."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Learn the concept of LAN, VLAN, WAN, CAN, MAN."
+            ],
+            "topics_text": "Learn the concept of LAN, VLAN, WAN, CAN, MAN.",
+            "topics": [
+              "Learn the concept of LAN, VLAN, WAN, CAN, MAN."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Setup Wireless Network."
+            ],
+            "topics_text": "Setup Wireless Network.",
+            "topics": [
+              "Setup Wireless Network."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Setup LAN Connection in Cisco packet tracer software."
+            ],
+            "topics_text": "Setup LAN Connection in Cisco packet tracer software.",
+            "topics": [
+              "Setup LAN Connection in Cisco packet tracer software."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Check performance of network using ping, trace route commands.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Check performance of network using ping, trace route commands. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Check performance of network using ping, trace route commands.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical-13",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Study different types of transmission mode."
+            ],
+            "topics_text": "Study different types of transmission mode.",
+            "topics": [
+              "Study different types of transmission mode."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical-14",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Simulate HTTP, DNS and Email on terminal n Cisco packet tracer",
+              "software."
+            ],
+            "topics_text": "Simulate HTTP, DNS and Email on terminal n Cisco packet tracer software.",
+            "topics": [
+              "Simulate HTTP, DNS and Email on terminal n Cisco packet tracer",
+              "software."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Practical-15",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Prepare report on e-mail service: contact list, group list, sorting,",
+              "searching, spam, inbox, sent mail, draft."
+            ],
+            "topics_text": "Prepare report on e-mail service: contact list, group list, sorting, searching, spam, inbox, sent mail, draft.",
+            "topics": [
+              "Prepare report on e-mail service: contact list, group list, sorting,",
+              "searching, spam, inbox, sent mail, draft."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Practical-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Study of networking devices."
+            ],
+            "topics_text": "Study of networking devices.",
+            "topics": [
+              "Study of networking devices."
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Practical-17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Setup Hub, switch, Router in Cisco packet tracer software."
+            ],
+            "topics_text": "Setup Hub, switch, Router in Cisco packet tracer software.",
+            "topics": [
+              "Setup Hub, switch, Router in Cisco packet tracer software."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Practical-18",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Install and Configure Proxy Server in Cisco Packet Tracer."
+            ],
+            "topics_text": "Install and Configure Proxy Server in Cisco Packet Tracer.",
+            "topics": [
+              "Install and Configure Proxy Server in Cisco Packet Tracer."
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Practical-19",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Setup DHCP server in Cisco packet tracer software",
+              "Total Hours 28"
+            ],
+            "topics_text": "Setup DHCP server in Cisco packet tracer software Total Hours 28",
+            "topics": [
+              "Setup DHCP server in Cisco packet tracer software",
+              "Total Hours 28"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -239,9 +1179,7 @@
           "text": "Instructional Method:\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "2f37028211f997bdb28c971f384e55096ad9f00d1562d5eda88ef0762a3d1a36"
     },
     {
@@ -257,7 +1195,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2104 - Computer Programming (.pdf",
       "expected_pdf_sha256": "4a92b953b78d5457ab7ff9212398ae5fcec85339536f6e7558a70bbe3eff1a98",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "COMPUTER PROGRAMMING",
         "course_code": "09CE2104",
@@ -274,12 +1212,644 @@
         "Implement appropriate C programming syntax to develop functional code",
         "Use suitable control structures, loops to address specific real-time application requirements",
         "Translate real-world problems into algorithms and develop corresponding C programs",
-        "Apply basic programming principles to design structured and modular C programs Pre-requisite of course:N/A"
+        "Apply basic programming principles to design structured and modular C programs"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Flowchart & Algorithm",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Problem solving using flowchart and algorithm, Flowchart-",
+              "Importance of flowchart, Symbols of flowchart, how to prepare",
+              "flowchart, Algorithm design, Pseudo code"
+            ],
+            "topics_text": "Problem solving using flowchart and algorithm, Flowchart- Importance of flowchart, Symbols of flowchart, how to prepare flowchart, Algorithm design, Pseudo code",
+            "topics": [
+              "Problem solving using flowchart and algorithm, Flowchart",
+              "Importance of flowchart, Symbols of flowchart, how to prepare",
+              "flowchart, Algorithm design, Pseudo code"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Fundamentals of C",
+            "contact_hours": 6,
+            "topic_lines": [
+              "History of C, Structure of C program, compilation and execution,",
+              "Compiler and Interpreter, C tokens, character set, Data Types,",
+              "Keywords, Identifiers, constants & variables, declaring and",
+              "assigning value to variable, operators, Input and output function,",
+              "Type conversion and type casting",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "History of C, Structure of C program, compilation and execution, Compiler and Interpreter, C tokens, character set, Data Types, Keywords, Identifiers, constants & variables, declaring and assigning value to variable, operators, Input and output function, Type conversion and type casting MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "History of C, Structure of C program, compilation and execution,",
+              "Compiler and Interpreter, C tokens, character set, Data Types,",
+              "Keywords, Identifiers, constants & variables, declaring and",
+              "assigning value to variable, operators, Input and output function,",
+              "Type conversion and type casting",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Decision statements & looping",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Decision making statements, simple If statement, If-else, nested If-",
+              "else, else-if ladder, switched statement, goto statement, Looping",
+              "statements, simple for loop, nested for loop, while & do-while loop"
+            ],
+            "topics_text": "Decision making statements, simple If statement, If-else, nested If- else, else-if ladder, switched statement, goto statement, Looping statements, simple for loop, nested for loop, while & do-while loop",
+            "topics": [
+              "Decision making statements, simple If statement, If-else, nested If",
+              "else, else-if ladder, switched statement, goto statement, Looping",
+              "statements, simple for loop, nested for loop, while & do-while loop"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Array, String & Pointer",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Types of arrays, declaration & initialization of 1-D array, operation",
+              "in array, String- declaration & initialization, string functions, string",
+              "arrays, Pointer-definition, importance of pointers, declaration &",
+              "initialization of pointer, accessing the address of a variable through",
+              "pointers, pointer & array, pointer & string"
+            ],
+            "topics_text": "Types of arrays, declaration & initialization of 1-D array, operation in array, String- declaration & initialization, string functions, string arrays, Pointer-definition, importance of pointers, declaration & initialization of pointer, accessing the address of a variable through pointers, pointer & array, pointer & string",
+            "topics": [
+              "Types of arrays, declaration & initialization of 1-D array, operation",
+              "in array, String- declaration & initialization, string functions, string",
+              "arrays, Pointer-definition, importance of pointers, declaration &",
+              "initialization of pointer, accessing the address of a variable through",
+              "pointers, pointer & array, pointer & string"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Function",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Definition of function, Built-in-function- Math function, console &",
+              "standard i/o function,, user defined function, recursion"
+            ],
+            "topics_text": "Definition of function, Built-in-function- Math function, console & standard i/o function,, user defined function, recursion",
+            "topics": [
+              "Definition of function, Built-in-function- Math function, console &",
+              "standard i/o function,, user defined function, recursion"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Structure & Union",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Definition of structure, need of structure, declaration of structure,",
+              "array within structure, structure within structure, structure and union",
+              "difference"
+            ],
+            "topics_text": "Definition of structure, need of structure, declaration of structure, array within structure, structure within structure, structure and union difference",
+            "topics": [
+              "Definition of structure, need of structure, declaration of structure,",
+              "array within structure, structure within structure, structure and union",
+              "difference"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "File management",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Introduction, file management functions, opening and closing a file,",
+              "Output operations on files,, error handling during I/O operations,",
+              "Random Access to file",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction, file management functions, opening and closing a file, Output operations on files,, error handling during I/O operations, Random Access to file Total Hours 28",
+            "topics": [
+              "Introduction, file management functions, opening and closing a file,",
+              "Output operations on files,, error handling during I/O operations,",
+              "Random Access to file",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Make a Flowchart and Algorithm for swap two numbers using",
+              "temporary variable and without using temporary variable."
+            ],
+            "topics_text": "Make a Flowchart and Algorithm for swap two numbers using temporary variable and without using temporary variable.",
+            "topics": [
+              "Make a Flowchart and Algorithm for swap two numbers using",
+              "temporary variable and without using temporary variable."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Make a Flowchart and Algorithm to represent a bank account",
+              "(Contains name of the depositor, account number, type of account",
+              "and balance amount in the account) for the process like to deposit an",
+              "amount, to withdraw an amount after checking the balance."
+            ],
+            "topics_text": "Make a Flowchart and Algorithm to represent a bank account (Contains name of the depositor, account number, type of account and balance amount in the account) for the process like to deposit an amount, to withdraw an amount after checking the balance.",
+            "topics": [
+              "Make a Flowchart and Algorithm to represent a bank account",
+              "(Contains name of the depositor, account number, type of account",
+              "and balance amount in the account) for the process like to deposit an",
+              "amount, to withdraw an amount after checking the balance."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a C program that accepts temperature in Celsius, Fahrenheit,",
+              "or Kelvin and converts it into the other two units."
+            ],
+            "topics_text": "Write a C program that accepts temperature in Celsius, Fahrenheit, or Kelvin and converts it into the other two units.",
+            "topics": [
+              "Write a C program that accepts temperature in Celsius, Fahrenheit,",
+              "or Kelvin and converts it into the other two units."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to demonstrate the use of Arithmetic and Bitwise",
+              "operators by getting two numbers from the user."
+            ],
+            "topics_text": "Write a program to demonstrate the use of Arithmetic and Bitwise operators by getting two numbers from the user.",
+            "topics": [
+              "Write a program to demonstrate the use of Arithmetic and Bitwise",
+              "operators by getting two numbers from the user."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to perform basic arithmetic operations/",
+              "mathematical operations like calculators on user inputted data."
+            ],
+            "topics_text": "Write a program to perform basic arithmetic operations/ mathematical operations like calculators on user inputted data.",
+            "topics": [
+              "Write a program to perform basic arithmetic operations/",
+              "mathematical operations like calculators on user inputted data."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program that accepts three numbers from the user and print",
+              "maximum of them.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Write a program that accepts three numbers from the user and print maximum of them. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Write a program that accepts three numbers from the user and print",
+              "maximum of them.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to input the Name and the Salary of an Employee.",
+              "Calculate and print the Name, Salary and Bonus of the Employee,",
+              "where bonus= 5.3% if salary is at least Rs. 10,000 and 6.5%",
+              "otherwise."
+            ],
+            "topics_text": "Write a program to input the Name and the Salary of an Employee. Calculate and print the Name, Salary and Bonus of the Employee, where bonus= 5.3% if salary is at least Rs. 10,000 and 6.5% otherwise.",
+            "topics": [
+              "Write a program to input the Name and the Salary of an Employee.",
+              "Calculate and print the Name, Salary and Bonus of the Employee,",
+              "where bonus= 5.3% if salary is at least Rs. 10,000 and 6.5%",
+              "otherwise."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Admission to professional course is subject to the following",
+              "conditions. Marks in Mathematics>=60 Marks in Physics>=50",
+              "Marks in Chemistry>=40 Total in all three subjects>=200 or total in",
+              "mathematics and physics>=150. Assign marks for the three subjects.",
+              "Write a program to process the application to list the eligible",
+              "candidates."
+            ],
+            "topics_text": "Admission to professional course is subject to the following conditions. Marks in Mathematics>=60 Marks in Physics>=50 Marks in Chemistry>=40 Total in all three subjects>=200 or total in mathematics and physics>=150. Assign marks for the three subjects. Write a program to process the application to list the eligible candidates.",
+            "topics": [
+              "Admission to professional course is subject to the following",
+              "conditions. Marks in Mathematics>=60 Marks in Physics>=50",
+              "Marks in Chemistry>=40 Total in all three subjects>=200 or total in",
+              "mathematics and physics>=150. Assign marks for the three subjects.",
+              "Write a program to process the application to list the eligible",
+              "candidates."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program that accepts two numbers and one code (1,2,3,4)",
+              "from the user. According to the code, the operations to be",
+              "performed, using switch case statements as follows: (Code: 1?",
+              "Addition, 2? Subtraction, 3? Multiplication, 4? Division)."
+            ],
+            "topics_text": "Write a program that accepts two numbers and one code (1,2,3,4) from the user. According to the code, the operations to be performed, using switch case statements as follows: (Code: 1? Addition, 2? Subtraction, 3? Multiplication, 4? Division).",
+            "topics": [
+              "Write a program that accepts two numbers and one code (1,2,3,4)",
+              "from the user. According to the code, the operations to be",
+              "performed, using switch case statements as follows: (Code: 1?",
+              "Addition, 2? Subtraction, 3? Multiplication, 4? Division)."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program that reads the marks for five subjects of a student.",
+              "Calculate and print the grade for the student [i.e. Grade A, B, C, D",
+              "and F] using Else-If ladder."
+            ],
+            "topics_text": "Write a program that reads the marks for five subjects of a student. Calculate and print the grade for the student [i.e. Grade A, B, C, D and F] using Else-If ladder.",
+            "topics": [
+              "Write a program that reads the marks for five subjects of a student.",
+              "Calculate and print the grade for the student [i.e. Grade A, B, C, D",
+              "and F] using Else-If ladder."
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program that do sum=1+3+5+……. N terms and",
+              "sum=2+4+6+…...... N terms Print value of Sum."
+            ],
+            "topics_text": "Write a program that do sum=1+3+5+……. N terms and sum=2+4+6+…...... N terms Print value of Sum.",
+            "topics": [
+              "Write a program that do sum=1+3+5+……. N terms and",
+              "sum=2+4+6+…...... N terms Print value of Sum."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to print the Fibonacci Series [i.e 1,1,2,3,5,8,13…N",
+              "terms]."
+            ],
+            "topics_text": "Write a program to print the Fibonacci Series [i.e 1,1,2,3,5,8,13…N terms].",
+            "topics": [
+              "Write a program to print the Fibonacci Series [i.e 1,1,2,3,5,8,13…N",
+              "terms]."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical-13",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to accept one number from the user. i) Display",
+              "reverse of that number. ii) Find if it is Armstrong or not."
+            ],
+            "topics_text": "Write a program to accept one number from the user. i) Display reverse of that number. ii) Find if it is Armstrong or not.",
+            "topics": [
+              "Write a program to accept one number from the user. i) Display",
+              "reverse of that number. ii) Find if it is Armstrong or not."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical-14",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Write a C program to display different Patterns."
+            ],
+            "topics_text": "Write a C program to display different Patterns.",
+            "topics": [
+              "Write a C program to display different Patterns."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Practical-15",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to accept 5 numbers in an array and display it."
+            ],
+            "topics_text": "Write a program to accept 5 numbers in an array and display it.",
+            "topics": [
+              "Write a program to accept 5 numbers in an array and display it."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Practical-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to accept 9 numbers twice in form of matrix to",
+              "display in matrix form and perform Addition of them."
+            ],
+            "topics_text": "Write a program to accept 9 numbers twice in form of matrix to display in matrix form and perform Addition of them.",
+            "topics": [
+              "Write a program to accept 9 numbers twice in form of matrix to",
+              "display in matrix form and perform Addition of them."
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Practical-17",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to accept 5 numbers in array and find maximum",
+              "and minimum value of it."
+            ],
+            "topics_text": "Write a program to accept 5 numbers in array and find maximum and minimum value of it.",
+            "topics": [
+              "Write a program to accept 5 numbers in array and find maximum",
+              "and minimum value of it."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Practical-18",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to sort all elements of 1D & 2D array in ascending",
+              "and descending order.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Write a program to sort all elements of 1D & 2D array in ascending and descending order. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Write a program to sort all elements of 1D & 2D array in ascending",
+              "and descending order.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Practical-19",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Calculate the average, geometric and harmonic mean of n elements",
+              "in an array."
+            ],
+            "topics_text": "Calculate the average, geometric and harmonic mean of n elements in an array.",
+            "topics": [
+              "Calculate the average, geometric and harmonic mean of n elements",
+              "in an array."
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Practical-20",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to calculate and display multiplication of two",
+              "matrixes"
+            ],
+            "topics_text": "Write a program to calculate and display multiplication of two matrixes",
+            "topics": [
+              "Write a program to calculate and display multiplication of two",
+              "matrixes"
+            ]
+          },
+          {
+            "unit_number": 21,
+            "title": "Practical-21",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to count number of vowels in a given string."
+            ],
+            "topics_text": "Write a program to count number of vowels in a given string.",
+            "topics": [
+              "Write a program to count number of vowels in a given string."
+            ]
+          },
+          {
+            "unit_number": 22,
+            "title": "Practical-22",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to check whether entered string is palindrome or",
+              "not"
+            ],
+            "topics_text": "Write a program to check whether entered string is palindrome or not",
+            "topics": [
+              "Write a program to check whether entered string is palindrome or",
+              "not"
+            ]
+          },
+          {
+            "unit_number": 23,
+            "title": "Practical-23",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to demonstrate the library function for string."
+            ],
+            "topics_text": "Write a program to demonstrate the library function for string.",
+            "topics": [
+              "Write a program to demonstrate the library function for string."
+            ]
+          },
+          {
+            "unit_number": 24,
+            "title": "Practical-24",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a function that converts amount into words. (i.e. 1234: One",
+              "Thousand Two Hundred Thirty-Four)."
+            ],
+            "topics_text": "Create a function that converts amount into words. (i.e. 1234: One Thousand Two Hundred Thirty-Four).",
+            "topics": [
+              "Create a function that converts amount into words. (i.e. 1234: One",
+              "Thousand Two Hundred Thirty-Four)."
+            ]
+          },
+          {
+            "unit_number": 25,
+            "title": "Practical-25",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program that calculates the factorial of number using both",
+              "iterative and recursive functions."
+            ],
+            "topics_text": "Write a program that calculates the factorial of number using both iterative and recursive functions.",
+            "topics": [
+              "Write a program that calculates the factorial of number using both",
+              "iterative and recursive functions."
+            ]
+          },
+          {
+            "unit_number": 26,
+            "title": "Practical-26",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a function which receives number as argument and return sum",
+              "of digit."
+            ],
+            "topics_text": "Write a function which receives number as argument and return sum of digit.",
+            "topics": [
+              "Write a function which receives number as argument and return sum",
+              "of digit."
+            ]
+          },
+          {
+            "unit_number": 27,
+            "title": "Practical-27",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to calculate Factorial using recursion in UDF."
+            ],
+            "topics_text": "Write a program to calculate Factorial using recursion in UDF.",
+            "topics": [
+              "Write a program to calculate Factorial using recursion in UDF."
+            ]
+          },
+          {
+            "unit_number": 28,
+            "title": "Practical-28",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to calculate total number of positive, negative and",
+              "zero value in array using UDF."
+            ],
+            "topics_text": "Write a program to calculate total number of positive, negative and zero value in array using UDF.",
+            "topics": [
+              "Write a program to calculate total number of positive, negative and",
+              "zero value in array using UDF."
+            ]
+          },
+          {
+            "unit_number": 29,
+            "title": "Practical-29",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to swap two numbers using UDF and pointer."
+            ],
+            "topics_text": "Write a program to swap two numbers using UDF and pointer.",
+            "topics": [
+              "Write a program to swap two numbers using UDF and pointer."
+            ]
+          },
+          {
+            "unit_number": 30,
+            "title": "Practical-30",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program using pointer to read in an array of integers and",
+              "print its elements in reverse order."
+            ],
+            "topics_text": "Write a program using pointer to read in an array of integers and print its elements in reverse order.",
+            "topics": [
+              "Write a program using pointer to read in an array of integers and",
+              "print its elements in reverse order."
+            ]
+          },
+          {
+            "unit_number": 31,
+            "title": "Practical-31",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a C program to create a structure of employees with Full",
+              "Name, Last Name, City and Salary. Display it for n employees."
+            ],
+            "topics_text": "Write a C program to create a structure of employees with Full Name, Last Name, City and Salary. Display it for n employees.",
+            "topics": [
+              "Write a C program to create a structure of employees with Full",
+              "Name, Last Name, City and Salary. Display it for n employees."
+            ]
+          },
+          {
+            "unit_number": 32,
+            "title": "Practical-32",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to demonstrate nested structure. (make structures",
+              "for circle and rectangle)"
+            ],
+            "topics_text": "Write a program to demonstrate nested structure. (make structures for circle and rectangle)",
+            "topics": [
+              "Write a program to demonstrate nested structure. (make structures",
+              "for circle and rectangle)"
+            ]
+          },
+          {
+            "unit_number": 33,
+            "title": "Practical-33",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to create array of structure. Make a structure for",
+              "student having student_no, student_name, student_marks and enter",
+              "details for 5 students.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Write a program to create array of structure. Make a structure for student having student_no, student_name, student_marks and enter details for 5 students. MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Write a program to create array of structure. Make a structure for",
+              "student having student_no, student_name, student_marks and enter",
+              "details for 5 students.",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 34,
+            "title": "Practical-34",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Write a program to Display contents of a file on screen. Use",
+              "functions (fopen, fclose, getc,putchar,eof)"
+            ],
+            "topics_text": "Write a program to Display contents of a file on screen. Use functions (fopen, fclose, getc,putchar,eof)",
+            "topics": [
+              "Write a program to Display contents of a file on screen. Use",
+              "functions (fopen, fclose, getc,putchar,eof)"
+            ]
+          },
+          {
+            "unit_number": 35,
+            "title": "Practical-35",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Write a program to count number of characters in a file.",
+              "Total Hours 56"
+            ],
+            "topics_text": "Write a program to count number of characters in a file. Total Hours 56",
+            "topics": [
+              "Write a program to count number of characters in a file.",
+              "Total Hours 56"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -327,9 +1897,7 @@
           "text": "Supplementary Resources:\n 3  http://vlab.amrita.edu/index.php\n 4  http://ocw.mit.edu/courses/electrical-engineering-and-computer- science/6-087-\n     practicalprogramming-in-c-january-iap-2010/\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "4a92b953b78d5457ab7ff9212398ae5fcec85339536f6e7558a70bbe3eff1a98"
     },
     {
@@ -345,7 +1913,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09AU0102 - Enviornment Conservation & Disater Management (.pdf",
       "expected_pdf_sha256": "9172960ed95092bf242dd7b127f93e9c7907ffd6b1b37743ed532918388f418b",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "ENVIRONMENT CONSERVATION & DISASTER",
         "course_code": "09AU0102",
@@ -360,11 +1928,84 @@
         "Understand the ecosystem and its terminology and solve various engineering problems by applying ecosystem knowledge to produce eco±friendly products",
         "Understand the various types of pollutions and their remedial measures",
         "Understand different renewable energy resources and their applications",
-        "Understand the role of an engineer concerning climate change and disaster management Pre-requisite of course:BASIC LIFE SCIENCE"
+        "Understand the role of an engineer concerning climate change and disaster management"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 0 0",
       "contents": {
-        "theory_units": [],
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction of Environmental Science",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition of environment, ecosystem, food chain, and food web, he",
+              "necessity of environmental science, Importance of environment and",
+              "scope"
+            ],
+            "topics_text": "Definition of environment, ecosystem, food chain, and food web, he necessity of environmental science, Importance of environment and scope",
+            "topics": [
+              "Definition of environment, ecosystem, food chain, and food web, he",
+              "necessity of environmental science, Importance of environment and",
+              "scope"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Types of pollution with their causes, effects and remedial",
+            "contact_hours": 8,
+            "topic_lines": [
+              "measures",
+              "Air pollution, water pollution, noise pollution, and soil pollution,",
+              "Global environment problems with their causes, effects & remedies:",
+              "climate change"
+            ],
+            "topics_text": "measures Air pollution, water pollution, noise pollution, and soil pollution, Global environment problems with their causes, effects & remedies: climate change",
+            "topics": [
+              "measures",
+              "Air pollution, water pollution, noise pollution, and soil pollution,",
+              "Global environment problems with their causes, effects & remedies:",
+              "climate change"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Renewable Sources of Energy",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Solar energy: basics of solar energy and its importance, Wind",
+              "energy: need, limitations and future scope, Recent trends of",
+              "renewable sources of energy"
+            ],
+            "topics_text": "Solar energy: basics of solar energy and its importance, Wind energy: need, limitations and future scope, Recent trends of renewable sources of energy",
+            "topics": [
+              "Solar energy: basics of solar energy and its importance, Wind",
+              "energy: need, limitations and future scope, Recent trends of",
+              "renewable sources of energy"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Disaster Management",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Concepts and definition of disaster, Disaster management cycle, ole",
+              "of an engineer in disaster management Rescue techniques during a",
+              "disaster, Natural disasters: earthquake, cyclone, flood, tsunami,",
+              "drought, and landslides, Manmade disaster: fire, civil war,",
+              "technological disasters",
+              "Total Hours 28"
+            ],
+            "topics_text": "Concepts and definition of disaster, Disaster management cycle, ole of an engineer in disaster management Rescue techniques during a disaster, Natural disasters: earthquake, cyclone, flood, tsunami, drought, and landslides, Manmade disaster: fire, civil war, technological disasters Total Hours 28",
+            "topics": [
+              "Concepts and definition of disaster, Disaster management cycle, ole",
+              "of an engineer in disaster management Rescue techniques during a",
+              "disaster, Natural disasters: earthquake, cyclone, flood, tsunami,",
+              "drought, and landslides, Manmade disaster: fire, civil war,",
+              "technological disasters",
+              "Total Hours 28"
+            ]
+          }
+        ],
         "practical_units": []
       },
       "references": {
@@ -397,9 +2038,7 @@
           "text": "Supplementary Resources:\n 3   https://cpcb.nic.in/\n 4  https://www.isro.gov.in/\n 5  https://ndma.gov.in/en/\n 6  http://www.indiaenvironmentportal.org.in/\n\n\n\n\n\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "9172960ed95092bf242dd7b127f93e9c7907ffd6b1b37743ed532918388f418b"
     },
     {
@@ -415,7 +2054,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09PD0101 - Integrated Personality Development Course-I (.pdf",
       "expected_pdf_sha256": "e514f18c82a7d796dcd3eabbcba143a55b3ca72fab9323fbaa5c00f3dfa0aa93",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-",
         "course_code": "09PD0101",
@@ -432,11 +2071,262 @@
         "3. To allow students to establish a stronger connection with their family through critical thinking and development of qualities such as unity, forgiveness, empathy, and effective communication.",
         "4. To provide students with soft skills that complement their hard skills, making them more marketable when entering the workforce.",
         "5. To enhance awareness of India¶s glory and global values, and to create considerate citizens who strive for the betterment of their family, college, workforce, and nation.",
-        "6. To inspire students to strive for a higher sense of character by learning from role models who have lived principled, disciplined, and value-based lives. Pre-requisite of course:NA"
+        "6. To inspire students to strive for a higher sense of character by learning from role models who have lived principled, disciplined, and value-based lives."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory_units": [],
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Remaking Yourself Restructuring Yourself",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students learn how self-improvement enables them to secure a",
+              "bright future for themselves. They will learn 6 powerful thought-",
+              "processes that can develop their intellectual, physical, emotional,",
+              "and spiritual quotients."
+            ],
+            "topics_text": "Students learn how self-improvement enables them to secure a bright future for themselves. They will learn 6 powerful thought- processes that can develop their intellectual, physical, emotional, and spiritual quotients.",
+            "topics": [
+              "Students learn how self-improvement enables them to secure a",
+              "bright future for themselves. They will learn 6 powerful thought",
+              "processes that can develop their intellectual, physical, emotional,",
+              "and spiritual quotients."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Remaking Yourself Power of Habit",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will undergo a study of how habits work, the habits of",
+              "successful professionals, and the practical techniques that can be",
+              "used to develop good habits in their life."
+            ],
+            "topics_text": "Students will undergo a study of how habits work, the habits of successful professionals, and the practical techniques that can be used to develop good habits in their life.",
+            "topics": [
+              "Students will undergo a study of how habits work, the habits of",
+              "successful professionals, and the practical techniques that can be",
+              "used to develop good habits in their life."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Learning from Legends- Tendulkar & Tata",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will learn from the inspirational lives of India's two",
+              "legends, Sachin Tendulkar and Ratan Tata. They will implement",
+              "these lessons through relatable case studies."
+            ],
+            "topics_text": "Students will learn from the inspirational lives of India's two legends, Sachin Tendulkar and Ratan Tata. They will implement these lessons through relatable case studies.",
+            "topics": [
+              "Students will learn from the inspirational lives of India's two",
+              "legends, Sachin Tendulkar and Ratan Tata. They will implement",
+              "these lessons through relatable case studies."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "From House to Home Listening & Understanding",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Active listening is an essential part of academic progress and",
+              "communications. Students will learn to listen with their eyes, ears,",
+              "mind, and heart."
+            ],
+            "topics_text": "Active listening is an essential part of academic progress and communications. Students will learn to listen with their eyes, ears, mind, and heart.",
+            "topics": [
+              "Active listening is an essential part of academic progress and",
+              "communications. Students will learn to listen with their eyes, ears,",
+              "mind, and heart."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Facing Failures Welcoming Challenges",
+            "contact_hours": 2,
+            "topic_lines": [
+              "This lecture enables students to revisit the way in which they",
+              "approach challenges. Through the study of successful figures such",
+              "as Disney, Lincoln and Bachchan, students will learn to face",
+              "difficulties through a positive perspective."
+            ],
+            "topics_text": "This lecture enables students to revisit the way in which they approach challenges. Through the study of successful figures such as Disney, Lincoln and Bachchan, students will learn to face difficulties through a positive perspective.",
+            "topics": [
+              "This lecture enables students to revisit the way in which they",
+              "approach challenges. Through the study of successful figures such",
+              "as Disney, Lincoln and Bachchan, students will learn to face",
+              "difficulties through a positive perspective."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Facing Failures Significance of Failures",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Failure is a student¶s daily source of fear, negativity, and",
+              "depression. Students will be given the constructive skills to",
+              "understand failure as formative learning experiences."
+            ],
+            "topics_text": "Failure is a student¶s daily source of fear, negativity, and depression. Students will be given the constructive skills to understand failure as formative learning experiences.",
+            "topics": [
+              "Failure is a student¶s daily source of fear, negativity, and",
+              "depression. Students will be given the constructive skills to",
+              "understand failure as formative learning experiences."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "My India My Pride Glorious Past Part-1",
+            "contact_hours": 2,
+            "topic_lines": [
+              "India¶s ancient Rishis, scholars, and intellectuals have made",
+              "tremendous contributions to the world, they developed an advanced,",
+              "sophisticated culture and civilization which began thousands of",
+              "years ago. Students will learn the importance of studying India¶s",
+              "glorious past so that they could develop a strong passion and pride",
+              "for our nation."
+            ],
+            "topics_text": "India¶s ancient Rishis, scholars, and intellectuals have made tremendous contributions to the world, they developed an advanced, sophisticated culture and civilization which began thousands of years ago. Students will learn the importance of studying India¶s glorious past so that they could develop a strong passion and pride for our nation.",
+            "topics": [
+              "India¶s ancient Rishis, scholars, and intellectuals have made",
+              "tremendous contributions to the world, they developed an advanced,",
+              "sophisticated culture and civilization which began thousands of",
+              "years ago. Students will learn the importance of studying India¶s",
+              "glorious past so that they could develop a strong passion and pride",
+              "for our nation."
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "My India My Pride Glorious Past Part-2",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Our ancient concepts can be used to seek revolutionary ideas and to",
+              "generate inspiration. Students will develop a deeper interest in",
+              "India¶s Glorious Past ± by appreciating the need to read about it,",
+              "research it, write about it, and share it."
+            ],
+            "topics_text": "Our ancient concepts can be used to seek revolutionary ideas and to generate inspiration. Students will develop a deeper interest in India¶s Glorious Past ± by appreciating the need to read about it, research it, write about it, and share it.",
+            "topics": [
+              "Our ancient concepts can be used to seek revolutionary ideas and to",
+              "generate inspiration. Students will develop a deeper interest in",
+              "India¶s Glorious Past ± by appreciating the need to read about it,",
+              "research it, write about it, and share it."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Learning from Legends A. P. J. Abdul Kalam",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Dr Kalam¶s inspirational life displayed legendary qualities which",
+              "apply to students (1) Dare to Dream (2) Work Hard (3) Get Good",
+              "Guidance (4) Humility (5) Use Your Talents for the Benefit of",
+              "Others"
+            ],
+            "topics_text": "Dr Kalam¶s inspirational life displayed legendary qualities which apply to students (1) Dare to Dream (2) Work Hard (3) Get Good Guidance (4) Humility (5) Use Your Talents for the Benefit of Others",
+            "topics": [
+              "Dr Kalam¶s inspirational life displayed legendary qualities which",
+              "apply to students (1) Dare to Dream (2) Work Hard (3) Get Good",
+              "Guidance (4) Humility (5) Use Your Talents for the Benefit of",
+              "Others"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Soft Skills Networking & Leadership",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students are taught the means of building a professional network",
+              "and developing a leadership attitude.",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Students are taught the means of building a professional network and developing a leadership attitude. MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Students are taught the means of building a professional network",
+              "and developing a leadership attitude.",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Soft Skills Project Management",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will learn the secrets of project management through the",
+              "Akshardham case study. They will then practice these skills through",
+              "an activity relevant to student life."
+            ],
+            "topics_text": "Students will learn the secrets of project management through the Akshardham case study. They will then practice these skills through an activity relevant to student life.",
+            "topics": [
+              "Students will learn the secrets of project management through the",
+              "Akshardham case study. They will then practice these skills through",
+              "an activity relevant to student life."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Remaking Yourself Handling Social Media",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will learn how social media can become addictive and they",
+              "will imbibe simple methods to take back control."
+            ],
+            "topics_text": "Students will learn how social media can become addictive and they will imbibe simple methods to take back control.",
+            "topics": [
+              "Students will learn how social media can become addictive and they",
+              "will imbibe simple methods to take back control."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Facing Failures Power of Faith",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will learn about the power and necessity of faith in our",
+              "daily lives."
+            ],
+            "topics_text": "Students will learn about the power and necessity of faith in our daily lives.",
+            "topics": [
+              "Students will learn about the power and necessity of faith in our",
+              "daily lives."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "From House to Home Bonding the Family",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will understand the importance of strong family",
+              "relationships. They will learn how to overcome the generation gap",
+              "and connect with their family more."
+            ],
+            "topics_text": "Students will understand the importance of strong family relationships. They will learn how to overcome the generation gap and connect with their family more.",
+            "topics": [
+              "Students will understand the importance of strong family",
+              "relationships. They will learn how to overcome the generation gap",
+              "and connect with their family more."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Selfless Service Seva",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Students will learn that performing seva is beneficial to one¶s",
+              "health, wellbeing, and happiness. It also benefits and inspires others.",
+              "Total Hours 30"
+            ],
+            "topics_text": "Students will learn that performing seva is beneficial to one¶s health, wellbeing, and happiness. It also benefits and inspires others. Total Hours 30",
+            "topics": [
+              "Students will learn that performing seva is beneficial to one¶s",
+              "health, wellbeing, and happiness. It also benefits and inspires others.",
+              "Total Hours 30"
+            ]
+          }
+        ],
         "practical_units": []
       },
       "references": {
@@ -475,9 +2365,7 @@
           "text": "Instructional Method:\n 3  Student Interactions: Interactive sessions promote stimulating discussion and conversation\n    and help create safe spaces for healthy exchange of ideas. Each session provides a forum in\n    which students are able to openly express their emotions and thoughts.\n 4  Workbook Activities: Workbooks assist learners to begin implementing the values taught\n     in the lecture into their personal lives.\n\nSupplementary Resources:\n 1  https://www.youtube.com/c/IPDCbaps/videos\n 2  https://www.baps.org/IPDC/IPDC.aspx\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "e514f18c82a7d796dcd3eabbcba143a55b3ca72fab9323fbaa5c00f3dfa0aa93"
     },
     {
@@ -493,7 +2381,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09MA2102 - Mathematics-II (.pdf",
       "expected_pdf_sha256": "1c1914f08e44bbd1033d65a31ee64b71f85b7ece4386da4a56eea98e34d30042",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "MATHEMATICS-II",
         "course_code": "09MA2102",
@@ -509,12 +2397,156 @@
         "Solve equations of algebraic expressions using algebraic skills.",
         "Solve the problems using functions.",
         "Solve the problem of function using the concept of Limit.",
-        "Find the nth term and Sum of arithmetic and geometric progression. Pre-requisite of course:NA"
+        "Find the nth term and Sum of arithmetic and geometric progression."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Determinants and Matrices",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction, Algebra of Matrices, Determinant of Matrix, Inverse",
+              "of Matrix up to 3×3 matrix, Solution of Simultaneous Equation (up",
+              "to 3 variable)"
+            ],
+            "topics_text": "Introduction, Algebra of Matrices, Determinant of Matrix, Inverse of Matrix up to 3×3 matrix, Solution of Simultaneous Equation (up to 3 variable)",
+            "topics": [
+              "Introduction, Algebra of Matrices, Determinant of Matrix, Inverse",
+              "of Matrix up to 3×3 matrix, Solution of Simultaneous Equation (up",
+              "to 3 variable)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Equations",
+            "contact_hours": 6,
+            "topic_lines": [
+              "System of Linear Equation, Solution of Quadratic Equation,",
+              "Solution of Cubic Equation"
+            ],
+            "topics_text": "System of Linear Equation, Solution of Quadratic Equation, Solution of Cubic Equation",
+            "topics": [
+              "System of Linear Equation, Solution of Quadratic Equation,",
+              "Solution of Cubic Equation"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Function",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction of Function, Algebra of Function, Example of Function"
+            ],
+            "topics_text": "Introduction of Function, Algebra of Function, Example of Function",
+            "topics": [
+              "Introduction of Function, Algebra of Function, Example of Function"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Limit of functions",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Definition and some properties of limits, Limit of polynomial and",
+              "rational functions, Limit of trigonometric function, Limit of",
+              "exponential function, Limit at infinity"
+            ],
+            "topics_text": "Definition and some properties of limits, Limit of polynomial and rational functions, Limit of trigonometric function, Limit of exponential function, Limit at infinity",
+            "topics": [
+              "Definition and some properties of limits, Limit of polynomial and",
+              "rational functions, Limit of trigonometric function, Limit of",
+              "exponential function, Limit at infinity"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Arithmetic and Geometric Progression",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction, Nth term of A.P, Sum of first N terms of A.P, Nth",
+              "term of G.P, Sum of first N terms of G.P",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction, Nth term of A.P, Sum of first N terms of A.P, Nth term of G.P, Sum of first N terms of G.P Total Hours 28",
+            "topics": [
+              "Introduction, Nth term of A.P, Sum of first N terms of A.P, Nth",
+              "term of G.P, Sum of first N terms of G.P",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Determinants and Matrices",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Algebra of Matrices, Determinant of Matrix, Inverse of Matrix up to",
+              "3×3 matrix, Solution of Simultaneous Equation"
+            ],
+            "topics_text": "Algebra of Matrices, Determinant of Matrix, Inverse of Matrix up to 3×3 matrix, Solution of Simultaneous Equation",
+            "topics": [
+              "Algebra of Matrices, Determinant of Matrix, Inverse of Matrix up to",
+              "3×3 matrix, Solution of Simultaneous Equation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Equations",
+            "contact_hours": 6,
+            "topic_lines": [
+              "System of Linear Equation, Solution of Quadratic Equation,",
+              "Solution of Cubic Equation"
+            ],
+            "topics_text": "System of Linear Equation, Solution of Quadratic Equation, Solution of Cubic Equation",
+            "topics": [
+              "System of Linear Equation, Solution of Quadratic Equation,",
+              "Solution of Cubic Equation"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Function",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Algebra of Function, Example of Function"
+            ],
+            "topics_text": "Algebra of Function, Example of Function",
+            "topics": [
+              "Algebra of Function, Example of Function"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Limit of functions",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Limit of polynomial and rational functions, Limit of trigonometric",
+              "function, Limit of exponential function and Limit at infinity"
+            ],
+            "topics_text": "Limit of polynomial and rational functions, Limit of trigonometric function, Limit of exponential function and Limit at infinity",
+            "topics": [
+              "Limit of polynomial and rational functions, Limit of trigonometric",
+              "function, Limit of exponential function and Limit at infinity"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Arithmetic Progression",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Nth term of A. P, Sum of first N terms of A. P",
+              "Total Hours 28"
+            ],
+            "topics_text": "Nth term of A. P, Sum of first N terms of A. P Total Hours 28",
+            "topics": [
+              "Nth term of A. P, Sum of first N terms of A. P",
+              "Total Hours 28"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -552,15 +2584,13 @@
           "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         30.00         30.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms\n\nSupplementary Resources:\n 1  https://en.wikipedia.org/wiki/Determinant\n 2  https://en.wikipedia.org/wiki/Equation\n 3  https://en.wikipedia.org/wiki/Function_(mathematics)\n 4  https://en.wikipedia.org/wiki/Limit_of_a_function\n 5  https://en.wikipedia.org/wiki/Arithmetic_progression\n\n\n\n\n\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "1c1914f08e44bbd1033d65a31ee64b71f85b7ece4386da4a56eea98e34d30042"
     }
   ],
   "build_summary": {
-    "extracted": 0,
-    "manual_review": 7,
+    "extracted": 7,
+    "manual_review": 0,
     "ocr_review": 0,
     "missing_pdf": 0,
     "extraction_errors": 0

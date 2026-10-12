@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:03:50+00:00",
+  "generated_at_utc": "2026-10-12T12:05:35+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -23,7 +23,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3102 - Basics of Web Designing (.pdf",
       "expected_pdf_sha256": "bce5d6cd7444b2d0ad54f11358d8f0f8ee93c9034605c0a067b6043f06ade884",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "BASICS OF WEB DESIGNING",
         "course_code": "09CE3102",
@@ -39,12 +39,408 @@
         "Use appropriate network protocols such as HTTP, FTP, and UDP in web-based tasks or configurations.",
         "Develop structured web pages by applying HTML5 tags to create content-rich and semantically correct layouts.",
         "Implement CSS3 styles using internal, external, and inline style sheets to enhance the appearance and layout of web pages.",
-        "Design and construct modern static web pages by integrating HTML5 and CSS3 features for varied layout and design requirements. Pre-requisite of course:NA"
+        "Design and construct modern static web pages by integrating HTML5 and CSS3 features for varied layout and design requirements."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTERNET AND WWW",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Introduction to Network and Internet, Working of internet, WWW,",
+              "Website and Web Pages, Internet tools, Web server, Domain name,",
+              "IP address and its Versions (concepts only, Internet Protocols ±",
+              "TCP/IP, FTP, HTTP, HTTPS, UDP",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Introduction to Network and Internet, Working of internet, WWW, Website and Web Pages, Internet tools, Web server, Domain name, IP address and its Versions (concepts only, Internet Protocols ± TCP/IP, FTP, HTTP, HTTPS, UDP MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Introduction to Network and Internet, Working of internet, WWW,",
+              "Website and Web Pages, Internet tools, Web server, Domain name,",
+              "IP address and its Versions (concepts only, Internet Protocols ±",
+              "TCP/IP, FTP, HTTP, HTTPS, UDP",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "HTML5 FUNDAMENTALS",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction to HTML and its versions, Structure of HTML5",
+              "Documents, HTML5 Elements and Attributes, HTML5 Block and",
+              "Inline Elements, Heading, Paragraphs, Tags - PRE-Tag, FONT Tag,",
+              "META Tag, Text Formatting Tags, Working with Images, Lists -",
+              "Unordered Lists - Ordered Lists ± Definition Lists"
+            ],
+            "topics_text": "Introduction to HTML and its versions, Structure of HTML5 Documents, HTML5 Elements and Attributes, HTML5 Block and Inline Elements, Heading, Paragraphs, Tags - PRE-Tag, FONT Tag, META Tag, Text Formatting Tags, Working with Images, Lists - Unordered Lists - Ordered Lists ± Definition Lists",
+            "topics": [
+              "Introduction to HTML and its versions, Structure of HTML5",
+              "Documents, HTML5 Elements and Attributes, HTML5 Block and",
+              "Inline Elements, Heading, Paragraphs, Tags - PRE-Tag, FONT Tag,",
+              "META Tag, Text Formatting Tags, Working with Images, Lists",
+              "Unordered Lists - Ordered Lists ± Definition Lists"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Hyperlink, Table and Forms of HTML5",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Hyperlinks-Anchor tag & it¶s attribute, Tables Tags- Colspan and",
+              "Rowspan, Thead, Tbody, Tfoot, Forms - FORM and INPUT Tag,",
+              "Textbox, Radio Button, Checkbox, SELECT Tag and Pull-Down",
+              "Lists - Hidden, Submit and Reset, Some Special Tags"
+            ],
+            "topics_text": "Hyperlinks-Anchor tag & it¶s attribute, Tables Tags- Colspan and Rowspan, Thead, Tbody, Tfoot, Forms - FORM and INPUT Tag, Textbox, Radio Button, Checkbox, SELECT Tag and Pull-Down Lists - Hidden, Submit and Reset, Some Special Tags",
+            "topics": [
+              "Hyperlinks-Anchor tag & it¶s attribute, Tables Tags- Colspan and",
+              "Rowspan, Thead, Tbody, Tfoot, Forms - FORM and INPUT Tag,",
+              "Textbox, Radio Button, Checkbox, SELECT Tag and Pull-Down",
+              "Lists - Hidden, Submit and Reset, Some Special Tags"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "CSS3",
+            "contact_hours": 7,
+            "topic_lines": [
+              "CSS Introduction and its version, CSS box model and Features,",
+              "Basics of Style Sheet and CSS selectors, Working with CSS files,",
+              "Syntax, Borders, Outlines, Backgrounds, Fonts, Text effects,",
+              "Colors, Positions, Types of Style Sheets- Inline Styles, Embedded",
+              "Styles, External or Linked Styles"
+            ],
+            "topics_text": "CSS Introduction and its version, CSS box model and Features, Basics of Style Sheet and CSS selectors, Working with CSS files, Syntax, Borders, Outlines, Backgrounds, Fonts, Text effects, Colors, Positions, Types of Style Sheets- Inline Styles, Embedded Styles, External or Linked Styles",
+            "topics": [
+              "CSS Introduction and its version, CSS box model and Features,",
+              "Basics of Style Sheet and CSS selectors, Working with CSS files,",
+              "Syntax, Borders, Outlines, Backgrounds, Fonts, Text effects,",
+              "Colors, Positions, Types of Style Sheets- Inline Styles, Embedded",
+              "Styles, External or Linked Styles"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Advance CSS3",
+            "contact_hours": 5,
+            "topic_lines": [
+              "CSS Gradients, Text effect, Web fonts, Shadow Effects, CSS",
+              "Tooltips, CSS Transformations- 2D/3D, Animations, Positioning",
+              "systems of CSS",
+              "Total Hours 28"
+            ],
+            "topics_text": "CSS Gradients, Text effect, Web fonts, Shadow Effects, CSS Tooltips, CSS Transformations- 2D/3D, Animations, Positioning systems of CSS Total Hours 28",
+            "topics": [
+              "CSS Gradients, Text effect, Web fonts, Shadow Effects, CSS",
+              "Tooltips, CSS Transformations- 2D/3D, Animations, Positioning",
+              "systems of CSS",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical-1",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Understanding basic tools for creating HTML pages along with",
+              "structure"
+            ],
+            "topics_text": "Understanding basic tools for creating HTML pages along with structure",
+            "topics": [
+              "Understanding basic tools for creating HTML pages along with",
+              "structure"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical-2",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create HTML page that contains basic HTML tags."
+            ],
+            "topics_text": "Create HTML page that contains basic HTML tags.",
+            "topics": [
+              "Create HTML page that contains basic HTML tags."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Practical-3",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create HTML page that contains your basic details for eg, 1) Name",
+              "2) Enrollment 3) Branch4) College name 5) Address"
+            ],
+            "topics_text": "Create HTML page that contains your basic details for eg, 1) Name 2) Enrollment 3) Branch4) College name 5) Address",
+            "topics": [
+              "Create HTML page that contains your basic details for eg, 1) Name",
+              "2) Enrollment 3) Branch4) College name 5) Address"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Practical-4",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create HTML page that includes image and its description with",
+              "different background color also include a paragraph in it."
+            ],
+            "topics_text": "Create HTML page that includes image and its description with different background color also include a paragraph in it.",
+            "topics": [
+              "Create HTML page that includes image and its description with",
+              "different background color also include a paragraph in it."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Practical-5",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a web page, which include different type of lists using",
+              "HTML List tags(includes nested list and types of attributes)."
+            ],
+            "topics_text": "Create a web page, which include different type of lists using HTML List tags(includes nested list and types of attributes).",
+            "topics": [
+              "Create a web page, which include different type of lists using",
+              "HTML List tags(includes nested list and types of attributes)."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Practical-6",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create HTML page to include hyperlinks (3-4) which redirects to",
+              "your subject syllabus webpage."
+            ],
+            "topics_text": "Create HTML page to include hyperlinks (3-4) which redirects to your subject syllabus webpage.",
+            "topics": [
+              "Create HTML page to include hyperlinks (3-4) which redirects to",
+              "your subject syllabus webpage."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Practical-7",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create a web page which includes definitions of any 10 technical",
+              "words using definition list",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Create a web page which includes definitions of any 10 technical words using definition list MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Create a web page which includes definitions of any 10 technical",
+              "words using definition list",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Practical-8",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create a table in a web page"
+            ],
+            "topics_text": "Create a table in a web page",
+            "topics": [
+              "Create a table in a web page"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Practical-9",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create a timetable of class in webpage using table tags."
+            ],
+            "topics_text": "Create a timetable of class in webpage using table tags.",
+            "topics": [
+              "Create a timetable of class in webpage using table tags."
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Practical-10",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a menu of a restaurant / hotel using list and tables on",
+              "webpage"
+            ],
+            "topics_text": "Create a menu of a restaurant / hotel using list and tables on webpage",
+            "topics": [
+              "Create a menu of a restaurant / hotel using list and tables on",
+              "webpage"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Practical-11",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create a basic form by using any two inputs and buttons (login",
+              "form)."
+            ],
+            "topics_text": "Create a basic form by using any two inputs and buttons (login form).",
+            "topics": [
+              "Create a basic form by using any two inputs and buttons (login",
+              "form)."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Practical-12",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create a registration form with different inputs, text box and",
+              "buttons."
+            ],
+            "topics_text": "Create a registration form with different inputs, text box and buttons.",
+            "topics": [
+              "Create a registration form with different inputs, text box and",
+              "buttons."
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Practical-13",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create a survey form with different inputs, textbox, dropdown menu",
+              "and multiple select option."
+            ],
+            "topics_text": "Create a survey form with different inputs, textbox, dropdown menu and multiple select option.",
+            "topics": [
+              "Create a survey form with different inputs, textbox, dropdown menu",
+              "and multiple select option."
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Practical-14",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create a web page which includes audio and embed a video of",
+              "YouTube tags of HTML."
+            ],
+            "topics_text": "Create a web page which includes audio and embed a video of YouTube tags of HTML.",
+            "topics": [
+              "Create a web page which includes audio and embed a video of",
+              "YouTube tags of HTML."
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Practical-15",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Create a web page with different CSS, which is Internal, Inline and",
+              "External."
+            ],
+            "topics_text": "Create a web page with different CSS, which is Internal, Inline and External.",
+            "topics": [
+              "Create a web page with different CSS, which is Internal, Inline and",
+              "External."
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Practical-16",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Create a web page using CSS, use google fonts in paragraphs and",
+              "also use external style sheet to style the content on web page."
+            ],
+            "topics_text": "Create a web page using CSS, use google fonts in paragraphs and also use external style sheet to style the content on web page.",
+            "topics": [
+              "Create a web page using CSS, use google fonts in paragraphs and",
+              "also use external style sheet to style the content on web page."
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Practical-17",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Develop a web page using CSS to create a timetable for the class",
+              "using different background, text, border style."
+            ],
+            "topics_text": "Develop a web page using CSS to create a timetable for the class using different background, text, border style.",
+            "topics": [
+              "Develop a web page using CSS to create a timetable for the class",
+              "using different background, text, border style."
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Practical-18",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Develop a webpage of an Image gallery using CSS (Height and",
+              "width of the images should be equal and margin should be set",
+              "properly.)"
+            ],
+            "topics_text": "Develop a webpage of an Image gallery using CSS (Height and width of the images should be equal and margin should be set properly.)",
+            "topics": [
+              "Develop a webpage of an Image gallery using CSS (Height and",
+              "width of the images should be equal and margin should be set",
+              "properly.)"
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Practical-19",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Develop a basic webpage to understand the concept of gradient, text",
+              "effect and animation using CSS."
+            ],
+            "topics_text": "Develop a basic webpage to understand the concept of gradient, text effect and animation using CSS.",
+            "topics": [
+              "Develop a basic webpage to understand the concept of gradient, text",
+              "effect and animation using CSS."
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Practical-20",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Develop a webpage with a navigation bar (horizontal or vertical)",
+              "using CSS."
+            ],
+            "topics_text": "Develop a webpage with a navigation bar (horizontal or vertical) using CSS.",
+            "topics": [
+              "Develop a webpage with a navigation bar (horizontal or vertical)",
+              "using CSS."
+            ]
+          },
+          {
+            "unit_number": 21,
+            "title": "Practical-21",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Design a website for Marwadi University containing a description",
+              "of all the courses offered. It should also contain general information",
+              "about the college such as its campus and facilities provided by it.",
+              "Total Hours 29",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ],
+            "topics_text": "Design a website for Marwadi University containing a description of all the courses offered. It should also contain general information about the college such as its campus and facilities provided by it. Total Hours 29 MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER",
+            "topics": [
+              "Design a website for Marwadi University containing a description",
+              "of all the courses offered. It should also contain general information",
+              "about the college such as its campus and facilities provided by it.",
+              "Total Hours 29",
+              "MR. SMIT MAHENDRABHAI THACKER MR. MITTAL KIRITBHAI JOISER"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -89,9 +485,7 @@
           "text": "Textbook :\n 1 \"HTML & CSS: The Complete Reference\", 5th Edition, Thomas Powell, McGraw-Hill,\n    2010\n\nReferences:\n 1  ³Web Development and Design Foundations with HTML5´ 8th edition, ³Web\n    Development and Design Foundations with HTML5´ 8th edition, Terry Felke-Morris,\n     Pearson, 2017\n 2  \"The Internet\", \"The Internet\", Douglas E.Comer, Prentice Hall, 2007\n 3 \"HTML 5 Black Book, 2nd Edition\", \"HTML 5 Black Book, 2nd Edition\", DT Editorial\n     Services, Dreamtech Press, 2016\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n                                 35.00         35.00         30.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  www.w3schools.com\n 2  www.tutorialspoints.com\n 3  www.csstutorial.net\n 4  https://www.w3schools.com/css/default.asp\n 5  https://edu.google.com/intl/ALL_in/teacherenter/products/forms/?modal_acti ve=none\n 6  https://support.microsoft.com/en-us/training\n 7  https://www.udemy.com\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "bce5d6cd7444b2d0ad54f11358d8f0f8ee93c9034605c0a067b6043f06ade884"
     },
     {
@@ -119,15 +513,15 @@
         "• Educate students with the foundational texts and classifications of Bharatiya Knowledge Systems and their historical evolution. • Explore India’s ancient contributions to mathematics, language sciences and astronomy. • Highlight technological and architectural advancements in ancient Bharat. • Introduce philosophical concepts such as life stages, life goals, karma, rebirth, and the quest for Moksha in Indian tradition. Credits Earned: 2"
       ],
       "course_outcomes": [
-        "Students will be able to • Describe the structure of Bharatiya Knowledge Systems and recognize key philosophical and literary traditions. • Explain ancient Indian developments in mathematics, astronomy, and their relevance to modern science. • Identify technological and architectural innovations rooted in ancient Indian practices. • Express core Indian philosophies related to the purpose of life, spiritual evolution, and ethical living. Pre-requisite of course: NA"
+        "Students will be able to • Describe the structure of Bharatiya Knowledge Systems and recognize key philosophical and literary traditions. • Explain ancient Indian developments in mathematics, astronomy, and their relevance to modern science. • Identify technological and architectural innovations rooted in ancient Indian practices. • Express core Indian philosophies related to the purpose of life, spiritual evolution, and ethical living."
       ],
       "teaching_and_examination_scheme_text": "Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term Marks Theory Tutorial Practical ESE IA CSE Viva work 2 0 0 2 50 30 20 - - 100 [PAGE 2] Syllabus for Diploma Engineering All Branches",
       "contents": {
         "theory_units": [
           {
             "unit_number": 1,
-            "title": "Introduction to Bharatiya Knowledge Systems (BKS) 6",
-            "contact_hours": null,
+            "title": "Introduction to Bharatiya Knowledge Systems (BKS)",
+            "contact_hours": 6,
             "topic_lines": [
               "1.1 Definition and classification of BKS",
               "1.2 Caturdaśa-Vidyāsthāna",
@@ -154,8 +548,8 @@
           },
           {
             "unit_number": 2,
-            "title": "Science and Mathematics in Ancient Bharat 8",
-            "contact_hours": null,
+            "title": "Science and Mathematics in Ancient Bharat",
+            "contact_hours": 8,
             "topic_lines": [
               "2.1 Indian Language Sciences",
               "2.1.1 Components of a Language",
@@ -190,8 +584,8 @@
           },
           {
             "unit_number": 3,
-            "title": "Engineering, Technology and Architecture in Ancient Bharat 12",
-            "contact_hours": null,
+            "title": "Engineering, Technology and Architecture in Ancient Bharat",
+            "contact_hours": 12,
             "topic_lines": [
               "3.1 Metallurgy and Textile Technology",
               "3.1.1 Metals and Metalworking Technology",
@@ -244,8 +638,8 @@
           },
           {
             "unit_number": 4,
-            "title": "Concepts of Life in Ancient Bharat 2",
-            "contact_hours": null,
+            "title": "Concepts of Life in Ancient Bharat",
+            "contact_hours": 2,
             "topic_lines": [
               "4.1 Four Stages of Life (Ashramas)",
               "4.2 Four Goals of Human Life (Purusharthas)",
@@ -313,7 +707,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09SL0103 - Communication Skills-I (.pdf",
       "expected_pdf_sha256": "e998e51fc33481911508ec009f9bf79849a67650df7088f3165431bd731821b1",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "COMMUNICATION SKILLS",
         "course_code": "09SL0103",
@@ -327,12 +721,96 @@
       "course_outcomes": [
         "Students will acquire basic knowledge of decoding written content",
         "Students will be able to develop comprehension skills, improve vocabulary, use proper grammar, and acquire writing skills and speaking skills in English",
-        "Students will gain effective presentation skills Pre-requisite of course:NA"
+        "Students will gain effective presentation skills"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Reading Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "1. Reading & Structure (Tenses, Parts of Speech, Types of",
+              "Sentences, Subject-Verb Agreement, Modals , Active-Passive),",
+              "Techniques of Reading, Reading Different Types of Texts (Essays,",
+              "Articles, Stories, Reports, Surveys, Reference Books), Reading",
+              "Comprehension Passages (8passages)"
+            ],
+            "topics_text": "1. Reading & Structure (Tenses, Parts of Speech, Types of Sentences, Subject-Verb Agreement, Modals , Active-Passive), Techniques of Reading, Reading Different Types of Texts (Essays, Articles, Stories, Reports, Surveys, Reference Books), Reading Comprehension Passages (8passages)",
+            "topics": [
+              "1. Reading & Structure (Tenses, Parts of Speech, Types of",
+              "Sentences, Subject-Verb Agreement, Modals , Active-Passive),",
+              "Techniques of Reading, Reading Different Types of Texts (Essays,",
+              "Articles, Stories, Reports, Surveys, Reference Books), Reading",
+              "Comprehension Passages (8passages)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Introduction to Writing Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Writing for Different Purposes, Applications &Emails,",
+              "Assignments, Event Reports (Industrial Visits, In-House Events,",
+              "Participation in External Events)",
+              "Total Hours 28",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Writing for Different Purposes, Applications &Emails, Assignments, Event Reports (Industrial Visits, In-House Events, Participation in External Events) Total Hours 28 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Writing for Different Purposes, Applications &Emails,",
+              "Assignments, Event Reports (Industrial Visits, In-House Events,",
+              "Participation in External Events)",
+              "Total Hours 28",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Speaking Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Greetings, Introducing Self & Peers, Asking and Sharing",
+              "Information, Sharing/talking about likes and dislikes/preferences,",
+              "Describing Events/Experiences/Objects, Discussions, Expressing",
+              "Views, Facing Viva Voce"
+            ],
+            "topics_text": "Greetings, Introducing Self & Peers, Asking and Sharing Information, Sharing/talking about likes and dislikes/preferences, Describing Events/Experiences/Objects, Discussions, Expressing Views, Facing Viva Voce",
+            "topics": [
+              "Greetings, Introducing Self & Peers, Asking and Sharing",
+              "Information, Sharing/talking about likes and dislikes/preferences,",
+              "Describing Events/Experiences/Objects, Discussions, Expressing",
+              "Views, Facing Viva Voce"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Effective Presentation Skills",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Introduction to Effective Presentation Skills, Preparing the",
+              "Presentation (Collection of Data/Information, exploring the topic),",
+              "Using ICT in the Presentation, Getting Ready for the Presentation,",
+              "Effective Body Language, Effective Pronunciation, Interacting with",
+              "Audience (Q & A), Practice (presentation with video recording),",
+              "Feedback and Suggestions",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction to Effective Presentation Skills, Preparing the Presentation (Collection of Data/Information, exploring the topic), Using ICT in the Presentation, Getting Ready for the Presentation, Effective Body Language, Effective Pronunciation, Interacting with Audience (Q & A), Practice (presentation with video recording), Feedback and Suggestions Total Hours 28",
+            "topics": [
+              "Introduction to Effective Presentation Skills, Preparing the",
+              "Presentation (Collection of Data/Information, exploring the topic),",
+              "Using ICT in the Presentation, Getting Ready for the Presentation,",
+              "Effective Body Language, Effective Pronunciation, Interacting with",
+              "Audience (Q & A), Practice (presentation with video recording),",
+              "Feedback and Suggestions",
+              "Total Hours 28"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -363,9 +841,7 @@
           "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Speaking Skills                             14\n              Greetings, Introducing Self & Peers, Asking and Sharing\n              Information, Sharing/talking about likes and dislikes/preferences,\n              Describing Events/Experiences/Objects, Discussions, Expressing\n             Views, Facing Viva Voce\n     2       Effective Presentation Skills                                14\n               Introduction to Effective Presentation Skills, Preparing the\n               Presentation (Collection of Data/Information, exploring the topic),\n             Using ICT in the Presentation, Getting Ready for the Presentation,\n               Effective Body Language, Effective Pronunciation, Interacting with\n            Audience (Q & A), Practice (presentation with video recording),\n            Feedback and Suggestions\n                               Total Hours                       28\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  Communication Skills, Communication Skills, Lata and Kumar, OUP, New Delhi, 2018\n 2  The Ace of Soft Skills, The Ace of Soft Skills, Mahadevan Ramesh, Pearson, UP, 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    35.00         35.00         30.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of the\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as Lecture method combined with discussion ,use of ICT Tools\n    ,Assignments ,,Presentations ,and self study\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n\nSupplementary Resources:\n 1  https://youtu.be/UOceysteIjo\n 2  https://youtu.be/hE6I9apUvrk\n 3  https://youtu.be/X3Fz_Gu5WUE\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "e998e51fc33481911508ec009f9bf79849a67650df7088f3165431bd731821b1"
     },
     {
@@ -381,7 +857,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2101 - Computer Fundamental Skill (.pdf",
       "expected_pdf_sha256": "e96cf2d2128531fcf6c0e5e22733df91078748ef1cc719005f9a0bc42fec610c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "COMPUTER FUNDAMENTAL SKILL",
         "course_code": "09CE2101",
@@ -398,12 +874,209 @@
         "Prepare Power Point presentation with different formats",
         "Create different types of charts",
         "Prepare PowerPoint presentation",
-        "Understand Internet concepts and usage of e-mail Pre-requisite of course:NA"
+        "Understand Internet concepts and usage of e-mail"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
       "contents": {
         "theory_units": [],
-        "practical_units": []
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "FUNDAMENTALS OF COMPUTER SYSTEM",
+            "contact_hours": 9,
+            "topic_lines": [
+              "General understanding of various computer hardware components ±",
+              "CPU, Memory, Display, Keyboard,Mouse, HDD and other",
+              "Peripheral Devices, Block diagram of computer system,",
+              "Introduction to OS,, General understanding of various computer",
+              "hardware components ± CPU, Memory, Display, Keyboard,Mouse,",
+              "HDD and other Peripheral Devices, Block diagram of computer",
+              "system, Introduction to OS,, OS Installation (Linux and MS",
+              "Windows), Unix Shell and Commands, vi editor."
+            ],
+            "topics_text": "General understanding of various computer hardware components ± CPU, Memory, Display, Keyboard,Mouse, HDD and other Peripheral Devices, Block diagram of computer system, Introduction to OS,, General understanding of various computer hardware components ± CPU, Memory, Display, Keyboard,Mouse, HDD and other Peripheral Devices, Block diagram of computer system, Introduction to OS,, OS Installation (Linux and MS Windows), Unix Shell and Commands, vi editor.",
+            "topics": [
+              "General understanding of various computer hardware components ±",
+              "CPU, Memory, Display, Keyboard,Mouse, HDD and other",
+              "Peripheral Devices, Block diagram of computer system,",
+              "Introduction to OS,, General understanding of various computer",
+              "hardware components ± CPU, Memory, Display, Keyboard,Mouse,",
+              "HDD and other Peripheral Devices, Block diagram of computer",
+              "system, Introduction to OS,, OS Installation (Linux and MS",
+              "Windows), Unix Shell and Commands, vi editor."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Practical list",
+            "contact_hours": 32,
+            "topic_lines": [
+              "Study of Basic steps of OS installation (Linux and windows)., Study",
+              "and Explore security features of Operating Systems., (i) Install",
+              "screen saver and change the monitor resolution by 1280X960 (ii)",
+              "Set a new wallpaper (iii) Create, move, delete and rename a folder",
+              "(iv) Copy, paste and cut a folder/file (v) Display the properties for a",
+              "file or folder, (i) Restore files and folders from Recycle bin (ii)",
+              "Create short cuts for folder/file (iii) Find a file or folder by name",
+              "(iv) Select and move two or more files/folders using mouse (v) Sort",
+              "folders/files., Visit five websites and prepare summary report about",
+              "it., Create HTML page contains single paragraph by using basic",
+              "HTML tags., Create a HTML page with an image in background",
+              "and different background color., Write a letter about your College",
+              "about 200 words with two paragraphs and apply following functions",
+              "(i) Set Arial font of size 12 (ii) Bold Title of College (iii) Make a",
+              "justify alignment for paragraph text (iv) Use format Painter to",
+              "format the second paragraph (v) Use 1.5 line spacing in paragraph,",
+              "Create a newsletter of three pages with two columns text. The first",
+              "page contains some formatting bullets and numbers. Set the",
+              "document background colour and add µconfidential¶ as the",
+              "watermark. Give the document a title which should be displayed in",
+              "the header. The header/ footer of the first page should be different",
+              "from other two pages. Also, add author name and date/ time in the",
+              "header. The footer should have the page number., Prepare a table",
+              "using MS word ± Sales Analysis for a period of five years for three",
+              "products and sort that data., Make out print of document by setting",
+              "page layout and margins., Create a document shown on the Left",
+              "Margin: 1mm ? Right Margin: 1mm ? Header Margin: 0.8mm from",
+              "the top edge of the paper ? Footer Margin: 0.7mm from the bottom",
+              "edge of the paper Define following header: ? Your investment: for",
+              "odd pages ? Small Savings: for even pages ? Show the page number",
+              "in footer. Save the document with name ³INVEST´ Preview the",
+              "document and Print only the first page of the document. Next, print",
+              "the entire document in the landscape mode. following page, Define",
+              "the following settings for the document. ? Page Length: 11mm ?",
+              "Top Margin: 1.5mm ? Bottom Margin: 1.3mm, Prepare a ORIENT",
+              "workbook using following function: ? Add heading as a Orient",
+              "Industries Ltd. in range B2:D2 ? Format the label in the range",
+              "E6:F7, Create border lines above and below this range. Also create a",
+              "border line below range E11:F11 ? Add label Item in cell A6,",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Study of Basic steps of OS installation (Linux and windows)., Study and Explore security features of Operating Systems., (i) Install screen saver and change the monitor resolution by 1280X960 (ii) Set a new wallpaper (iii) Create, move, delete and rename a folder (iv) Copy, paste and cut a folder/file (v) Display the properties for a file or folder, (i) Restore files and folders from Recycle bin (ii) Create short cuts for folder/file (iii) Find a file or folder by name (iv) Select and move two or more files/folders using mouse (v) Sort folders/files., Visit five websites and prepare summary report about it., Create HTML page contains single paragraph by using basic HTML tags., Create a HTML page with an image in background and different background color., Write a letter about your College about 200 words with two paragraphs and apply following functions (i) Set Arial font of size 12 (ii) Bold Title of College (iii) Make a justify alignment for paragraph text (iv) Use format Painter to format the second paragraph (v) Use 1.5 line spacing in paragraph, Create a newsletter of three pages with two columns text. The first page contains some formatting bullets and numbers. Set the document background colour and add µconfidential¶ as the watermark. Give the document a title which should be displayed in the header. The header/ footer of the first page should be different from other two pages. Also, add author name and date/ time in the header. The footer should have the page number., Prepare a table using MS word ± Sales Analysis for a period of five years for three products and sort that data., Make out print of document by setting page layout and margins., Create a document shown on the Left Margin: 1mm ? Right Margin: 1mm ? Header Margin: 0.8mm from the top edge of the paper ? Footer Margin: 0.7mm from the bottom edge of the paper Define following header: ? Your investment: for odd pages ? Small Savings: for even pages ? Show the page number in footer. Save the document with name ³INVEST´ Preview the document and Print only the first page of the document. Next, print the entire document in the landscape mode. following page, Define the following settings for the document. ? Page Length: 11mm ? Top Margin: 1.5mm ? Bottom Margin: 1.3mm, Prepare a ORIENT workbook using following function: ? Add heading as a Orient Industries Ltd. in range B2:D2 ? Format the label in the range E6:F7, Create border lines above and below this range. Also create a border line below range E11:F11 ? Add label Item in cell A6, MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Study of Basic steps of OS installation (Linux and windows)., Study",
+              "and Explore security features of Operating Systems., (i) Install",
+              "screen saver and change the monitor resolution by 1280X960 (ii)",
+              "Set a new wallpaper (iii) Create, move, delete and rename a folder",
+              "(iv) Copy, paste and cut a folder/file (v) Display the properties for a",
+              "file or folder, (i) Restore files and folders from Recycle bin (ii)",
+              "Create short cuts for folder/file (iii) Find a file or folder by name",
+              "(iv) Select and move two or more files/folders using mouse (v) Sort",
+              "folders/files., Visit five websites and prepare summary report about",
+              "it., Create HTML page contains single paragraph by using basic",
+              "HTML tags., Create a HTML page with an image in background",
+              "and different background color., Write a letter about your College",
+              "about 200 words with two paragraphs and apply following functions",
+              "(i) Set Arial font of size 12 (ii) Bold Title of College (iii) Make a",
+              "justify alignment for paragraph text (iv) Use format Painter to",
+              "format the second paragraph (v) Use 1.5 line spacing in paragraph,",
+              "Create a newsletter of three pages with two columns text. The first",
+              "page contains some formatting bullets and numbers. Set the",
+              "document background colour and add µconfidential¶ as the",
+              "watermark. Give the document a title which should be displayed in",
+              "the header. The header/ footer of the first page should be different",
+              "from other two pages. Also, add author name and date/ time in the",
+              "header. The footer should have the page number., Prepare a table",
+              "using MS word ± Sales Analysis for a period of five years for three",
+              "products and sort that data., Make out print of document by setting",
+              "page layout and margins., Create a document shown on the Left",
+              "Margin: 1mm ? Right Margin: 1mm ? Header Margin: 0.8mm from",
+              "the top edge of the paper ? Footer Margin: 0.7mm from the bottom",
+              "edge of the paper Define following header: ? Your investment: for",
+              "odd pages ? Small Savings: for even pages ? Show the page number",
+              "in footer. Save the document with name ³INVEST´ Preview the",
+              "document and Print only the first page of the document. Next, print",
+              "the entire document in the landscape mode. following page, Define",
+              "the following settings for the document. ? Page Length: 11mm ?",
+              "Top Margin: 1.5mm ? Bottom Margin: 1.3mm, Prepare a ORIENT",
+              "workbook using following function: ? Add heading as a Orient",
+              "Industries Ltd. in range B2:D2 ? Format the label in the range",
+              "E6:F7, Create border lines above and below this range. Also create a",
+              "border line below range E11:F11 ? Add label Item in cell A6,",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "OPEN OFFICE-SPREADSHEET",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction to Workbook & Worksheets; Various Data Types;",
+              "Using different features with Data, Cell and Texts; Inserting,",
+              "Removing & Resizing of Columns & Rows; Working with data;",
+              "Different Views of Worksheets, Column Freezing, Labels, Hiding,",
+              "Splitting, Use of Formulas, Calculations & Functions; Cell",
+              "Formatting including Borders & Shading; Working with Different",
+              "Chart Types; Printing of Workbook & Worksheets with various",
+              "options."
+            ],
+            "topics_text": "Introduction to Workbook & Worksheets; Various Data Types; Using different features with Data, Cell and Texts; Inserting, Removing & Resizing of Columns & Rows; Working with data; Different Views of Worksheets, Column Freezing, Labels, Hiding, Splitting, Use of Formulas, Calculations & Functions; Cell Formatting including Borders & Shading; Working with Different Chart Types; Printing of Workbook & Worksheets with various options.",
+            "topics": [
+              "Introduction to Workbook & Worksheets",
+              "Various Data Types",
+              "Using different features with Data, Cell and Texts",
+              "Inserting,",
+              "Removing & Resizing of Columns & Rows",
+              "Working with data",
+              "Different Views of Worksheets, Column Freezing, Labels, Hiding,",
+              "Splitting, Use of Formulas, Calculations & Functions",
+              "Cell",
+              "Formatting including Borders & Shading",
+              "Working with Different",
+              "Chart Types",
+              "Printing of Workbook & Worksheets with various",
+              "options."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "PRESENTATIONS",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction - Opening new presentation, Parts of PowerPoint",
+              "window, Features of PowerPoint, Background design, Word art,",
+              "Clip art, Drawings - Animations, Sound, Views, types of views,",
+              "inserting and deleting slides, arranging slides,, slides show,",
+              "rehearsal, setup show, custom show - creating custom presentations,",
+              "auto content wizard, working with auto content wizard"
+            ],
+            "topics_text": "Introduction - Opening new presentation, Parts of PowerPoint window, Features of PowerPoint, Background design, Word art, Clip art, Drawings - Animations, Sound, Views, types of views, inserting and deleting slides, arranging slides,, slides show, rehearsal, setup show, custom show - creating custom presentations, auto content wizard, working with auto content wizard",
+            "topics": [
+              "Introduction - Opening new presentation, Parts of PowerPoint",
+              "window, Features of PowerPoint, Background design, Word art,",
+              "Clip art, Drawings - Animations, Sound, Views, types of views,",
+              "inserting and deleting slides, arranging slides,, slides show,",
+              "rehearsal, setup show, custom show - creating custom presentations,",
+              "auto content wizard, working with auto content wizard"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "INTERNET",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Introduction ± Basic Internet skills: Understanding browser,",
+              "efficient use of search engines, awareness about Digital India",
+              "portals (state and national portals) and college portals, Getting",
+              "acquainted with Internet Connection, Browsers, Website URL,",
+              "Open a website, Net Browsing,Email: Creating E-mail id ± Sending,",
+              "receiving and deleting E-mail - Email with Attachments ± CC and",
+              "BCC, Chatting, Creating Group mail - Google docs.",
+              "Total Hours 74"
+            ],
+            "topics_text": "Introduction ± Basic Internet skills: Understanding browser, efficient use of search engines, awareness about Digital India portals (state and national portals) and college portals, Getting acquainted with Internet Connection, Browsers, Website URL, Open a website, Net Browsing,Email: Creating E-mail id ± Sending, receiving and deleting E-mail - Email with Attachments ± CC and BCC, Chatting, Creating Group mail - Google docs. Total Hours 74",
+            "topics": [
+              "Introduction ± Basic Internet skills: Understanding browser,",
+              "efficient use of search engines, awareness about Digital India",
+              "portals (state and national portals) and college portals, Getting",
+              "acquainted with Internet Connection, Browsers, Website URL,",
+              "Open a website, Net Browsing,Email: Creating E-mail id ± Sending,",
+              "receiving and deleting E-mail - Email with Attachments ± CC and",
+              "BCC, Chatting, Creating Group mail - Google docs.",
+              "Total Hours 74"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -446,9 +1119,7 @@
           "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board,\n    may also use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs\n      etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of\n     students in the laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc. b. The\n     internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room. c. Practical examination will be conducted at the end of\n     semester for evaluation of performance of students in laboratory. d. Students will use\n    supplementary resources such as online videos, NPTEL videos, e-courses, Virtual\n     Laboratory e. Online resources, Linux man pages, Wikipedia.\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "e96cf2d2128531fcf6c0e5e22733df91078748ef1cc719005f9a0bc42fec610c"
     },
     {
@@ -464,7 +1135,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2103 - Computer Hardware Skill (.pdf",
       "expected_pdf_sha256": "428c4b00824ac81cda023abd9c402fccaa276737394d40b40af1d1cc00486d6a",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "COMPUTER HARDWARE SKILL",
         "course_code": "09CE2103",
@@ -479,12 +1150,196 @@
         "Understand the basic organization and Structure of computer hardware",
         "Identify types of peripherals devices of computer",
         "Upgrading the hard drive and partition of it.",
-        "Apply their knowledge about computer devices to identify / rectify problems Pre-requisite of course:NA"
+        "Apply their knowledge about computer devices to identify / rectify problems"
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Computer Organization",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Computer Introduction and its Classification, Basic Computer",
+              "System-Input, Output Peripherals, Power System of Computing-",
+              "Power in Socket, Power Out socket, Male±Female Connectors,",
+              "Power Supply Fan Outlet, Motherboard-CPU, Memory, Expansion",
+              "Slots to Connect Peripherals, Bus System and BIOS, Configuring",
+              "OS: Installation of Single OS, Dual OS Installation",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Computer Introduction and its Classification, Basic Computer System-Input, Output Peripherals, Power System of Computing- Power in Socket, Power Out socket, Male±Female Connectors, Power Supply Fan Outlet, Motherboard-CPU, Memory, Expansion Slots to Connect Peripherals, Bus System and BIOS, Configuring OS: Installation of Single OS, Dual OS Installation MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Computer Introduction and its Classification, Basic Computer",
+              "System-Input, Output Peripherals, Power System of Computing",
+              "Power in Socket, Power Out socket, Male±Female Connectors,",
+              "Power Supply Fan Outlet, Motherboard-CPU, Memory, Expansion",
+              "Slots to Connect Peripherals, Bus System and BIOS, Configuring",
+              "OS: Installation of Single OS, Dual OS Installation",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Computer Peripherals",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Types of Computer Peripherals, Computer Ports to Connect",
+              "Peripherals- Serial Port, Parallel Port, Understanding Function of",
+              "Keyboard, Mouse, Monitor, Printer, Speakers and Mic, Working of",
+              "Keyboard: Types of Keyboard Switch (Membrane, Mechanical,",
+              "Rubber Dom), Types of Keyboard(PC-XT,PC-AT, Enhanced PC-",
+              "AT), Interfaces and Connectors, Disassembly-Cleaning-",
+              "Reassembly of Keyboard, Working of Monitor: Types of Monitor",
+              "(CRT,LED,LCD), Resolution, Size, Interfaces and Connectors,",
+              "Disassembly-Cleaning-Reassembly of Monitor, Working of Mouse:",
+              "Types of Mouse (Mechanical, Opto-Mechanical, Optical),",
+              "Swapping Mouse Buttons, Interface and Connectors (Serial, Bus,",
+              "PS/2 Port, USB, Wireless), Disassembly-Cleaning-Reassembly of",
+              "Mouse, Working of Printer: Types of Printing Mechanism (Impact",
+              ",Non-Impact), Types of Printer (Daisy-Wheel, Dot- Matrix, Inkjet),",
+              "Working of Speaker and Mic: Interface, Connectors, Disassembly-",
+              "Cleaning-Reassembly of Speaker"
+            ],
+            "topics_text": "Types of Computer Peripherals, Computer Ports to Connect Peripherals- Serial Port, Parallel Port, Understanding Function of Keyboard, Mouse, Monitor, Printer, Speakers and Mic, Working of Keyboard: Types of Keyboard Switch (Membrane, Mechanical, Rubber Dom), Types of Keyboard(PC-XT,PC-AT, Enhanced PC- AT), Interfaces and Connectors, Disassembly-Cleaning- Reassembly of Keyboard, Working of Monitor: Types of Monitor (CRT,LED,LCD), Resolution, Size, Interfaces and Connectors, Disassembly-Cleaning-Reassembly of Monitor, Working of Mouse: Types of Mouse (Mechanical, Opto-Mechanical, Optical), Swapping Mouse Buttons, Interface and Connectors (Serial, Bus, PS/2 Port, USB, Wireless), Disassembly-Cleaning-Reassembly of Mouse, Working of Printer: Types of Printing Mechanism (Impact ,Non-Impact), Types of Printer (Daisy-Wheel, Dot- Matrix, Inkjet), Working of Speaker and Mic: Interface, Connectors, Disassembly- Cleaning-Reassembly of Speaker",
+            "topics": [
+              "Types of Computer Peripherals, Computer Ports to Connect",
+              "Peripherals- Serial Port, Parallel Port, Understanding Function of",
+              "Keyboard, Mouse, Monitor, Printer, Speakers and Mic, Working of",
+              "Keyboard: Types of Keyboard Switch (Membrane, Mechanical,",
+              "Rubber Dom), Types of Keyboard(PC-XT,PC-AT, Enhanced PC",
+              "AT), Interfaces and Connectors, Disassembly-Cleaning",
+              "Reassembly of Keyboard, Working of Monitor: Types of Monitor",
+              "(CRT,LED,LCD), Resolution, Size, Interfaces and Connectors,",
+              "Disassembly-Cleaning-Reassembly of Monitor, Working of Mouse:",
+              "Types of Mouse (Mechanical, Opto-Mechanical, Optical),",
+              "Swapping Mouse Buttons, Interface and Connectors (Serial, Bus,",
+              "PS/2 Port, USB, Wireless), Disassembly-Cleaning-Reassembly of",
+              "Mouse, Working of Printer: Types of Printing Mechanism (Impact",
+              ",Non-Impact), Types of Printer (Daisy-Wheel, Dot- Matrix, Inkjet),",
+              "Working of Speaker and Mic: Interface, Connectors, Disassembly",
+              "Cleaning-Reassembly of Speaker"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Different Storage Components",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Types of Storage Devices: Magnetic Storage Devices, Optical",
+              "Storage Devices, Flash Memory Devices, Types of Magnetic",
+              "Storage Devices: Hard Disk Drive, Magnetic Card, Working of",
+              "Hard Disk Drive, Components of Hard Disk Drive: Disk Platter,",
+              "Head Arm, Logic Board, Air Filter, Features of Hard Disk Drive:",
+              "Storage Capacity, Access Time, Data Transfer Rate, Installing and",
+              "Upgrading of Hard Disk Drive, Remove Old Hard Disk Drive -",
+              "Installation of Hard Disk, Installation of Second Hard Disk Drive,",
+              "Partition and Format Hard Disk, Types of Optical Storage Devices:",
+              "CD-ROM Disc, CD-R Disc, CD-RW Disk, DVD-R, DVD+R,",
+              "DVD-RW, DVD+RW, its Connections and Drivers, Types of Flash",
+              "Memory Devices: USB Flash Drive, Memory Card (Compact Flash",
+              "Memory Card, SD(Secure Digital) Card, Memory Stick, Multimedia",
+              "Cards (MMC), Smart Media Flash Cards)"
+            ],
+            "topics_text": "Types of Storage Devices: Magnetic Storage Devices, Optical Storage Devices, Flash Memory Devices, Types of Magnetic Storage Devices: Hard Disk Drive, Magnetic Card, Working of Hard Disk Drive, Components of Hard Disk Drive: Disk Platter, Head Arm, Logic Board, Air Filter, Features of Hard Disk Drive: Storage Capacity, Access Time, Data Transfer Rate, Installing and Upgrading of Hard Disk Drive, Remove Old Hard Disk Drive - Installation of Hard Disk, Installation of Second Hard Disk Drive, Partition and Format Hard Disk, Types of Optical Storage Devices: CD-ROM Disc, CD-R Disc, CD-RW Disk, DVD-R, DVD+R, DVD-RW, DVD+RW, its Connections and Drivers, Types of Flash Memory Devices: USB Flash Drive, Memory Card (Compact Flash Memory Card, SD(Secure Digital) Card, Memory Stick, Multimedia Cards (MMC), Smart Media Flash Cards)",
+            "topics": [
+              "Types of Storage Devices: Magnetic Storage Devices, Optical",
+              "Storage Devices, Flash Memory Devices, Types of Magnetic",
+              "Storage Devices: Hard Disk Drive, Magnetic Card, Working of",
+              "Hard Disk Drive, Components of Hard Disk Drive: Disk Platter,",
+              "Head Arm, Logic Board, Air Filter, Features of Hard Disk Drive:",
+              "Storage Capacity, Access Time, Data Transfer Rate, Installing and",
+              "Upgrading of Hard Disk Drive, Remove Old Hard Disk Drive",
+              "Installation of Hard Disk, Installation of Second Hard Disk Drive,",
+              "Partition and Format Hard Disk, Types of Optical Storage Devices:",
+              "CD-ROM Disc, CD-R Disc, CD-RW Disk, DVD-R, DVD+R,",
+              "DVD-RW, DVD+RW, its Connections and Drivers, Types of Flash",
+              "Memory Devices: USB Flash Drive, Memory Card (Compact Flash",
+              "Memory Card, SD(Secure Digital) Card, Memory Stick, Multimedia",
+              "Cards (MMC), Smart Media Flash Cards)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Assembly of Laptop and Study its Organization",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction to Laptop, Input-Output Peripherals, Battery and Power",
+              "Supply, Power Supply Fan Outlet, Configuration of Laptop,",
+              "Processor, Different Ports, Graphics Card",
+              "Total Hours 41",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Introduction to Laptop, Input-Output Peripherals, Battery and Power Supply, Power Supply Fan Outlet, Configuration of Laptop, Processor, Different Ports, Graphics Card Total Hours 41 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Introduction to Laptop, Input-Output Peripherals, Battery and Power",
+              "Supply, Power Supply Fan Outlet, Configuration of Laptop,",
+              "Processor, Different Ports, Graphics Card",
+              "Total Hours 41",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practical List",
+            "contact_hours": 40,
+            "topic_lines": [
+              "To define the Front Panel Indicators, Switches and Rear Side",
+              "Connector in a CPU. (USB Hub, HDMI Port, CD/DVD Tray, COM",
+              "Port), Study the Short Conventions and Abbreviations of",
+              "Computer., To define Computer Internal Components.",
+              "(Motherboard, FDD, HDD, CD/DVD and Add-On Cards), Prepare a",
+              "summary report about Computer System, Power System of",
+              "Computing, Motherboard and BIOS., To configure BIOS Setup.",
+              "(POST, Bootstrap Loader)., Install Windows Operating System to",
+              "your PC., Install Dual OS (Windows and Linux) to your PC., Study",
+              "different Monitors, Keyboard Devices and prepare a short Report",
+              "about it., Study different Mouse, Printer and Speaker Devices and",
+              "prepare a short Report about it., To install and configure a Printer,",
+              "Scanner, Webcam, Biometric Devices and use its services., To study",
+              "how to Data can be Transferred between different devices.",
+              "(Bluetooth and PC), To study the use of 3-D Printer., Study",
+              "different Storage Components and prepare a short Report about it.,",
+              "Study how to install Hard Drive to your PC and partitioning of it.,",
+              "Demonstrate how to format Hard Drive., Study different format of",
+              "CD and copy data into it., To install and configure a DVD Writer",
+              "and demonstrate to write DVD., To create Cross Wires and Direct",
+              "Cables., Prepare a summary report about Laptop and its peripherals.,",
+              "To study some CMD Prompt¶s commands. (HDD Open, Folder",
+              "Creation etc.)",
+              "Total Hours 40"
+            ],
+            "topics_text": "To define the Front Panel Indicators, Switches and Rear Side Connector in a CPU. (USB Hub, HDMI Port, CD/DVD Tray, COM Port), Study the Short Conventions and Abbreviations of Computer., To define Computer Internal Components. (Motherboard, FDD, HDD, CD/DVD and Add-On Cards), Prepare a summary report about Computer System, Power System of Computing, Motherboard and BIOS., To configure BIOS Setup. (POST, Bootstrap Loader)., Install Windows Operating System to your PC., Install Dual OS (Windows and Linux) to your PC., Study different Monitors, Keyboard Devices and prepare a short Report about it., Study different Mouse, Printer and Speaker Devices and prepare a short Report about it., To install and configure a Printer, Scanner, Webcam, Biometric Devices and use its services., To study how to Data can be Transferred between different devices. (Bluetooth and PC), To study the use of 3-D Printer., Study different Storage Components and prepare a short Report about it., Study how to install Hard Drive to your PC and partitioning of it., Demonstrate how to format Hard Drive., Study different format of CD and copy data into it., To install and configure a DVD Writer and demonstrate to write DVD., To create Cross Wires and Direct Cables., Prepare a summary report about Laptop and its peripherals., To study some CMD Prompt¶s commands. (HDD Open, Folder Creation etc.) Total Hours 40",
+            "topics": [
+              "To define the Front Panel Indicators, Switches and Rear Side",
+              "Connector in a CPU. (USB Hub, HDMI Port, CD/DVD Tray, COM",
+              "Port), Study the Short Conventions and Abbreviations of",
+              "Computer., To define Computer Internal Components.",
+              "(Motherboard, FDD, HDD, CD/DVD and Add-On Cards), Prepare a",
+              "summary report about Computer System, Power System of",
+              "Computing, Motherboard and BIOS., To configure BIOS Setup.",
+              "(POST, Bootstrap Loader)., Install Windows Operating System to",
+              "your PC., Install Dual OS (Windows and Linux) to your PC., Study",
+              "different Monitors, Keyboard Devices and prepare a short Report",
+              "about it., Study different Mouse, Printer and Speaker Devices and",
+              "prepare a short Report about it., To install and configure a Printer,",
+              "Scanner, Webcam, Biometric Devices and use its services., To study",
+              "how to Data can be Transferred between different devices.",
+              "(Bluetooth and PC), To study the use of 3-D Printer., Study",
+              "different Storage Components and prepare a short Report about it.,",
+              "Study how to install Hard Drive to your PC and partitioning of it.,",
+              "Demonstrate how to format Hard Drive., Study different format of",
+              "CD and copy data into it., To install and configure a DVD Writer",
+              "and demonstrate to write DVD., To create Cross Wires and Direct",
+              "Cables., Prepare a summary report about Laptop and its peripherals.,",
+              "To study some CMD Prompt¶s commands. (HDD Open, Folder",
+              "Creation etc.)",
+              "Total Hours 40"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -527,9 +1382,7 @@
           "text": "Instructional Method:\n 1   a. The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc. b. The\n     internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room. c. Practical examination will be conducted at the end of\n     semester for evaluation of performance of students in laboratory. d. Students will use\n    supplementary resources such as online videos, NPTEL videos, e-courses, Virtual\n     Laboratory\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/106/105/106105084/\n 2  http://nptel.ac.in/courses/106105081/\n 3  https://www.coursera.org/learn/internet-history\n 4  https://support.microsoft.com/en-us/windows?ui=en-US&rs=en-US&ad=US\n 5  http://www.karbosguide.com/\n 6  https://www.youtube.com/watch?v=ZOKsmiLcSlo\n 7   https://www.youtube.com/playlist?list=PLA1DC661DCF743F70\n 8   http://study-ccna.com/\n 9  http://technet.microsoft.com/library/ee532075.aspx\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "428c4b00824ac81cda023abd9c402fccaa276737394d40b40af1d1cc00486d6a"
     },
     {
@@ -545,7 +1398,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09ME1101 - Engineering Drawing (.pdf",
       "expected_pdf_sha256": "ab517398187e23254a13ac0aa5a0905721731db8c64083ee36d7ecc305eeecad",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "ENGINEERING DRAWING",
         "course_code": "09ME1101",
@@ -562,12 +1415,222 @@
         "Interpret engineering drawings using fundamental technical mathematics.",
         "To recognize and know the resolutions and the methods of engineering drawing.",
         "To advance their visualization skills so that they can apply these skills in emerging new products.",
-        "Understand the theory of projection. Pre-requisite of course:NA"
+        "Understand the theory of projection."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25 MR. NAVNITKUMAR JAGJIVANBHAI PATEL DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Engineering Curves",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Overview to Engineering Graphics and Introduction of engineering",
+              "curves, Classification & application of Engineering Curves,",
+              "Construction of Conics-Construction of Ellipse by arc of circle",
+              "method, Concentric Circle Method, Rectangle Method, Oblong",
+              "Method, PARABOLA-Rectangle Method,Method of Tangents (",
+              "Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix",
+              "± focus Method for Ellipse, Parabola and Hyperbola with tangent",
+              "and normal, Cycloidal Curves- Cycloid with tangent and normal,",
+              "Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes",
+              "& Spirals along with normal and tangent"
+            ],
+            "topics_text": "Overview to Engineering Graphics and Introduction of engineering curves, Classification & application of Engineering Curves, Construction of Conics-Construction of Ellipse by arc of circle method, Concentric Circle Method, Rectangle Method, Oblong Method, PARABOLA-Rectangle Method,Method of Tangents ( Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix ± focus Method for Ellipse, Parabola and Hyperbola with tangent and normal, Cycloidal Curves- Cycloid with tangent and normal, Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes & Spirals along with normal and tangent",
+            "topics": [
+              "Overview to Engineering Graphics and Introduction of engineering",
+              "curves, Classification & application of Engineering Curves,",
+              "Construction of Conics-Construction of Ellipse by arc of circle",
+              "method, Concentric Circle Method, Rectangle Method, Oblong",
+              "Method, PARABOLA-Rectangle Method,Method of Tangents (",
+              "Triangle Method), HYPERBOLA-Rectangular Hyperbola, Directrix",
+              "± focus Method for Ellipse, Parabola and Hyperbola with tangent",
+              "and normal, Cycloidal Curves- Cycloid with tangent and normal,",
+              "Epi Cycloid and Hypo Cycloid with tangent and normal, Involutes",
+              "& Spirals along with normal and tangent"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Projection of Points and Lines",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to principal planes of projections & Projections of the",
+              "points located in same quadrant and different quadrants, Projections",
+              "of line with its inclination to one reference plane, Projections of line",
+              "with its inclination to two reference planes, Problems of line",
+              "inclined to two reference planes, True length and inclination with",
+              "the reference planes, True length and inclination with the reference",
+              "planes - Problems, True length and inclination with the reference",
+              "planes - Problems"
+            ],
+            "topics_text": "Introduction to principal planes of projections & Projections of the points located in same quadrant and different quadrants, Projections of line with its inclination to one reference plane, Projections of line with its inclination to two reference planes, Problems of line inclined to two reference planes, True length and inclination with the reference planes, True length and inclination with the reference planes - Problems, True length and inclination with the reference planes - Problems",
+            "topics": [
+              "Introduction to principal planes of projections & Projections of the",
+              "points located in same quadrant and different quadrants, Projections",
+              "of line with its inclination to one reference plane, Projections of line",
+              "with its inclination to two reference planes, Problems of line",
+              "inclined to two reference planes, True length and inclination with",
+              "the reference planes, True length and inclination with the reference",
+              "planes - Problems, True length and inclination with the reference",
+              "planes - Problems"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Projection of planes",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction of different types of plane and overview of projection",
+              "of plane, Projections of planes (polygons, circle and ellipse) with its",
+              "inclination to one reference plane, Problems of projection of planes",
+              "inclined to one reference plane, Projections of planes (polygons,",
+              "circle and ellipse) with its inclination to one reference plane,",
+              "Problems, Concept of auxiliary plane method for projections of the",
+              "plane, Problems"
+            ],
+            "topics_text": "Introduction of different types of plane and overview of projection of plane, Projections of planes (polygons, circle and ellipse) with its inclination to one reference plane, Problems of projection of planes inclined to one reference plane, Projections of planes (polygons, circle and ellipse) with its inclination to one reference plane, Problems, Concept of auxiliary plane method for projections of the plane, Problems",
+            "topics": [
+              "Introduction of different types of plane and overview of projection",
+              "of plane, Projections of planes (polygons, circle and ellipse) with its",
+              "inclination to one reference plane, Problems of projection of planes",
+              "inclined to one reference plane, Projections of planes (polygons,",
+              "circle and ellipse) with its inclination to one reference plane,",
+              "Problems, Concept of auxiliary plane method for projections of the",
+              "plane, Problems"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Orthographic Projections",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Fundamental of projection with classification, Principal planes of",
+              "projection,, Projections from the pictorial view of the object on the",
+              "principal planes for view from front, top and sides using first angle",
+              "projection method and third angle projection method, Problems of",
+              "orthographic projections, Problems of orthographic projections, Full",
+              "sectional view., Problems of sectional view"
+            ],
+            "topics_text": "Fundamental of projection with classification, Principal planes of projection,, Projections from the pictorial view of the object on the principal planes for view from front, top and sides using first angle projection method and third angle projection method, Problems of orthographic projections, Problems of orthographic projections, Full sectional view., Problems of sectional view",
+            "topics": [
+              "Fundamental of projection with classification, Principal planes of",
+              "projection,, Projections from the pictorial view of the object on the",
+              "principal planes for view from front, top and sides using first angle",
+              "projection method and third angle projection method, Problems of",
+              "orthographic projections, Problems of orthographic projections, Full",
+              "sectional view., Problems of sectional view"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Overview to Engineering Graphics",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Drawing instruments and accessories, Use drawing instruments and",
+              "materials effectively, Follow and apply standard practice as per",
+              "B.I.S. for planning and layout, choose appropriate scale factor for",
+              "the drawing as per given situation, Write annotations on a drawing",
+              "where ever necessary. Choose appropriate line and dimensioning",
+              "style for a given geometrical entity, Develop the skill to draw",
+              "polygons, circles and lines with different geometric situations. Use",
+              "of plane scales and R. F."
+            ],
+            "topics_text": "Drawing instruments and accessories, Use drawing instruments and materials effectively, Follow and apply standard practice as per B.I.S. for planning and layout, choose appropriate scale factor for the drawing as per given situation, Write annotations on a drawing where ever necessary. Choose appropriate line and dimensioning style for a given geometrical entity, Develop the skill to draw polygons, circles and lines with different geometric situations. Use of plane scales and R. F.",
+            "topics": [
+              "Drawing instruments and accessories, Use drawing instruments and",
+              "materials effectively, Follow and apply standard practice as per",
+              "B.I.S. for planning and layout, choose appropriate scale factor for",
+              "the drawing as per given situation, Write annotations on a drawing",
+              "where ever necessary. Choose appropriate line and dimensioning",
+              "style for a given geometrical entity, Develop the skill to draw",
+              "polygons, circles and lines with different geometric situations. Use",
+              "of plane scales and R. F."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Isometric Projections and Isometric View or Drawing",
+            "contact_hours": 0,
+            "topic_lines": [
+              "Isometric Scale, Conversion of orthographic views into isometric",
+              "projection, isometric view or drawing",
+              "Total Hours 28",
+              "MR. NAVNITKUMAR JAGJIVANBHAI PATEL DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Isometric Scale, Conversion of orthographic views into isometric projection, isometric view or drawing Total Hours 28 MR. NAVNITKUMAR JAGJIVANBHAI PATEL DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Isometric Scale, Conversion of orthographic views into isometric",
+              "projection, isometric view or drawing",
+              "Total Hours 28",
+              "MR. NAVNITKUMAR JAGJIVANBHAI PATEL DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Practice Sheet",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Use of Drawing Instruments, Practice of drawing instruments,",
+              "Planning and layout as per IS., Scaling method. Draw Following: a.",
+              "Different Types of line. b. Draw equilateral triangle and square c.",
+              "Types of dimensioning. d. Alphabets and numerical (Vertical &",
+              "inclined as Per IS). e. Draw Polygon using universal method f.",
+              "Dimensioning methods. g. Draw Title Block using stencil. h. Draw",
+              "plain scale and diagonal scale",
+              "2 Engineering Curves[L] 8"
+            ],
+            "topics_text": "Use of Drawing Instruments, Practice of drawing instruments, Planning and layout as per IS., Scaling method. Draw Following: a. Different Types of line. b. Draw equilateral triangle and square c. Types of dimensioning. d. Alphabets and numerical (Vertical & inclined as Per IS). e. Draw Polygon using universal method f. Dimensioning methods. g. Draw Title Block using stencil. h. Draw plain scale and diagonal scale 2 Engineering Curves[L] 8",
+            "topics": [
+              "Use of Drawing Instruments, Practice of drawing instruments,",
+              "Planning and layout as per IS., Scaling method. Draw Following: a.",
+              "Different Types of line. b. Draw equilateral triangle and square c.",
+              "Types of dimensioning. d. Alphabets and numerical (Vertical &",
+              "inclined as Per IS). e. Draw Polygon using universal method f.",
+              "Dimensioning methods. g. Draw Title Block using stencil. h. Draw",
+              "plain scale and diagonal scale",
+              "2 Engineering Curves[L] 8"
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "Problems of Conical Curves, 2 Problem of Cycloid, 3 Problem of",
+            "contact_hours": null,
+            "topic_lines": [
+              "Involute, 4 Problem of spiral.",
+              "3 Projections of Points & line[L] 10",
+              "To draw a projection of points for 10 different conditions. To draw",
+              "projections of lines with different conditions. (4 Problems)",
+              "4 Projections of Planes[L] 10",
+              "To draw projections of different plane with different conditions(4",
+              "Problems)",
+              "5 Orthographic Projections[L] 16",
+              "To draw orthographic projections of different objects (2 Problems)",
+              "6 Isometric Projections[L] 6",
+              "To draw isometric projections for given orthographic views. (2",
+              "Problems)",
+              "Total Hours 56"
+            ],
+            "topics_text": "Involute, 4 Problem of spiral. 3 Projections of Points & line[L] 10 To draw a projection of points for 10 different conditions. To draw projections of lines with different conditions. (4 Problems) 4 Projections of Planes[L] 10 To draw projections of different plane with different conditions(4 Problems) 5 Orthographic Projections[L] 16 To draw orthographic projections of different objects (2 Problems) 6 Isometric Projections[L] 6 To draw isometric projections for given orthographic views. (2 Problems) Total Hours 56",
+            "topics": [
+              "Involute, 4 Problem of spiral.",
+              "3 Projections of Points & line[L] 10",
+              "To draw a projection of points for 10 different conditions. To draw",
+              "projections of lines with different conditions. (4 Problems)",
+              "4 Projections of Planes[L] 10",
+              "To draw projections of different plane with different conditions(4",
+              "Problems)",
+              "5 Orthographic Projections[L] 16",
+              "To draw orthographic projections of different objects (2 Problems)",
+              "6 Isometric Projections[L] 6",
+              "To draw isometric projections for given orthographic views. (2",
+              "Problems)",
+              "Total Hours 56"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -604,9 +1667,7 @@
           "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://nptel.ac.in/courses/112/103/112103019/\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "ab517398187e23254a13ac0aa5a0905721731db8c64083ee36d7ecc305eeecad"
     },
     {
@@ -622,7 +1683,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09AU0101 - Indian Constitution (.pdf",
       "expected_pdf_sha256": "7ab0d0d3187955d9386e0d3a8e84e85d3ffcaa3e2c911f8b55054e48b7a01a64",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "INDIAN CONSTITUTION",
         "course_code": "09AU0101",
@@ -641,11 +1702,113 @@
         "2. To understand the fundamental rights and fundamental duties of the Indian citizen to instill morality, social values, honesty, dignity of life and their social responsibilities.",
         "3. To create awareness of their surroundings, society, social problems and their suitable solutions while keeping rights and duties of the citizen keeping in mind",
         "4. To understand powers and functionalities from union to local self-government.",
-        "5. To justify the need for protection of human rights and to know about concept of women empowerment. Pre-requisite of course:NA."
+        "5. To justify the need for protection of human rights and to know about concept of women empowerment."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 0 0 MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal) [PAGE 2]",
       "contents": {
-        "theory_units": [],
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "The Constitution – Introduction",
+            "contact_hours": 14,
+            "topic_lines": [
+              "• Meaning of the constitution law and constitutionalism, • The",
+              "History of the Making of the Indian Constitution, • Preamble and",
+              "the Basic Structure, and its Interpretation, • Salient features and",
+              "characteristics of the Constitution of India, • Fundamental Rights",
+              "and Duties and their Interpretation, Right to Equality under Article –",
+              "14, Right to certain Freedom under Article 19, Scope of the Right to",
+              "Life and Personal Liberty under Article 21, Fundamental Duties and",
+              "its legal status, • State Policy Principles- Its importance and",
+              "Implementation"
+            ],
+            "topics_text": "• Meaning of the constitution law and constitutionalism, • The History of the Making of the Indian Constitution, • Preamble and the Basic Structure, and its Interpretation, • Salient features and characteristics of the Constitution of India, • Fundamental Rights and Duties and their Interpretation, Right to Equality under Article – 14, Right to certain Freedom under Article 19, Scope of the Right to Life and Personal Liberty under Article 21, Fundamental Duties and its legal status, • State Policy Principles- Its importance and Implementation",
+            "topics": [
+              "Meaning of the constitution law and constitutionalism,",
+              "The",
+              "History of the Making of the Indian Constitution,",
+              "Preamble and",
+              "the Basic Structure, and its Interpretation,",
+              "Salient features and",
+              "characteristics of the Constitution of India,",
+              "Fundamental Rights",
+              "and Duties and their Interpretation, Right to Equality under Article –",
+              "14, Right to certain Freedom under Article 19, Scope of the Right to",
+              "Life and Personal Liberty under Article 21, Fundamental Duties and",
+              "its legal status,",
+              "State Policy Principles- Its importance and",
+              "Implementation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Union Government",
+            "contact_hours": 4,
+            "topic_lines": [
+              "• Structure of the Indian Union, • President – Role and Power , •",
+              "Prime Minister and Council of Ministers , • Lok Sabha and Rajya",
+              "Sabha"
+            ],
+            "topics_text": "• Structure of the Indian Union, • President – Role and Power , • Prime Minister and Council of Ministers , • Lok Sabha and Rajya Sabha",
+            "topics": [
+              "Structure of the Indian Union,",
+              "President – Role and Power ,",
+              "Prime Minister and Council of Ministers ,",
+              "Lok Sabha and Rajya",
+              "Sabha"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "State Government",
+            "contact_hours": 3,
+            "topic_lines": [
+              "• Governor – Role and Power , • Chief Minister and Council of",
+              "Ministers , • State Secretariat"
+            ],
+            "topics_text": "• Governor – Role and Power , • Chief Minister and Council of Ministers , • State Secretariat",
+            "topics": [
+              "Governor – Role and Power ,",
+              "Chief Minister and Council of",
+              "Ministers ,",
+              "State Secretariat"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Local Administration",
+            "contact_hours": 3,
+            "topic_lines": [
+              "• District Administration , • Municipal Corporation , • Zila",
+              "Panchayat"
+            ],
+            "topics_text": "• District Administration , • Municipal Corporation , • Zila Panchayat",
+            "topics": [
+              "District Administration ,",
+              "Municipal Corporation ,",
+              "Zila",
+              "Panchayat"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Election Commission",
+            "contact_hours": 4,
+            "topic_lines": [
+              "• Role and Functioning , • Chief Election Commissioner , • State",
+              "Election Commission",
+              "Total Hours 28"
+            ],
+            "topics_text": "• Role and Functioning , • Chief Election Commissioner , • State Election Commission Total Hours 28",
+            "topics": [
+              "Role and Functioning ,",
+              "Chief Election Commissioner ,",
+              "State",
+              "Election Commission",
+              "Total Hours 28"
+            ]
+          }
+        ],
         "practical_units": []
       },
       "references": {
@@ -682,9 +1845,7 @@
           "text": "Instructional Method:\n 1   a. The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room.\n 3  Students will use supplementary resources such as online videos.\n\nSupplementary Resources:\n 1  https://legislative.gov.in/constitution-of-india\n 2  https://www.india.gov.in/my-government/constitution-india\n 3  https://www.constitutionofindia.net/constitution_of_india\n 4  https://main.sci.gov.in/constitution\n 5  https://www.youtube.com/watch?\n    v=S_3i0Hf8KMI&list=PL4gSUwMBf0L0p8mciCow7pSMs0ZViBe1R\n 6  https://www.youtube.com/watch?\n    v=9MYY4SXEGCE&list=PLVOgwA_DiGzoFR3j1mSGn5Z_OQLxgodQi\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
-      ],
+      "warnings": [],
       "actual_pdf_sha256": "7ab0d0d3187955d9386e0d3a8e84e85d3ffcaa3e2c911f8b55054e48b7a01a64"
     },
     {
@@ -700,7 +1861,7 @@
       "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09MA2101 - Mathematics-I (.pdf",
       "expected_pdf_sha256": "c76e536dec2e74d561fab75d587c7bbf6154d5e9884a78185f3267518b5bcf4c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
         "course_title": "MATHEMATICS-I",
         "course_code": "09MA2101",
@@ -717,12 +1878,160 @@
         "Find LCM and HCF of numbers.",
         "Solve simple problems on algebraic expressions.",
         "Compute the area and perimeter of 2D-shapes and volume and surface area of 3D-shapes.",
-        "Solve the applied problems using right triangle trigonometry. Pre-requisite of course:Basic Mathematics"
+        "Solve the applied problems using right triangle trigonometry."
       ],
       "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
       "contents": {
-        "theory_units": [],
-        "practical_units": []
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic calculation",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Set of Numbers, Indices"
+            ],
+            "topics_text": "Set of Numbers, Indices",
+            "topics": [
+              "Set of Numbers, Indices"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "HCF and LCM of numbers",
+            "contact_hours": 4,
+            "topic_lines": [
+              "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF",
+              "and LCM of decimals"
+            ],
+            "topics_text": "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF and LCM of decimals",
+            "topics": [
+              "HCF of integer, LCM of integer, HCF and LCM of fractions, HCF",
+              "and LCM of decimals"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Polynomials",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Definition, Arithmetic properties of polynomials, Algebraic",
+              "identities",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ],
+            "topics_text": "Definition, Arithmetic properties of polynomials, Algebraic identities MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL",
+            "topics": [
+              "Definition, Arithmetic properties of polynomials, Algebraic",
+              "identities",
+              "MR. MITTAL KIRITBHAI JOISER DR. RAJESHKUMAR MEGHAJIBHAI PATEL"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Mensuration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Area and perimeter of square, rectangle, triangle, trapezium,",
+              "parallelogram, rhombus, circle, Surface area and volume of cube,",
+              "cuboid, cone, cylinder, sphere"
+            ],
+            "topics_text": "Area and perimeter of square, rectangle, triangle, trapezium, parallelogram, rhombus, circle, Surface area and volume of cube, cuboid, cone, cylinder, sphere",
+            "topics": [
+              "Area and perimeter of square, rectangle, triangle, trapezium,",
+              "parallelogram, rhombus, circle, Surface area and volume of cube,",
+              "cuboid, cone, cylinder, sphere"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Trigonometry",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Trigonometry ratios, Concept of angles, Unit circle,",
+              "T- Ratios of multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ],
+            "topics_text": "Introduction to Trigonometry ratios, Concept of angles, Unit circle, T- Ratios of multiple angles, sub-multiple angles Total Hours 28",
+            "topics": [
+              "Introduction to Trigonometry ratios, Concept of angles, Unit circle,",
+              "T- Ratios of multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ]
+          }
+        ],
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic calculation",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Set of numbers and indices"
+            ],
+            "topics_text": "Set of numbers and indices",
+            "topics": [
+              "Set of numbers and indices"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "HCF and LCM of numbers",
+            "contact_hours": 4,
+            "topic_lines": [
+              "HCF and LCM of numbers, HCF and LCM of fractions and",
+              "decimals"
+            ],
+            "topics_text": "HCF and LCM of numbers, HCF and LCM of fractions and decimals",
+            "topics": [
+              "HCF and LCM of numbers, HCF and LCM of fractions and",
+              "decimals"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Polynomials",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Arithmetic properties of polynomials, Algebraic identities"
+            ],
+            "topics_text": "Arithmetic properties of polynomials, Algebraic identities",
+            "topics": [
+              "Arithmetic properties of polynomials, Algebraic identities"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Mensuration",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Area and perimeter of square, rectangle, triangle, Area and",
+              "perimeter of trapezium, parallelogram, rhombus, circle, Surface area",
+              "and volume of cube, cuboid, cone, Surface area and volume of",
+              "cylinder, sphere"
+            ],
+            "topics_text": "Area and perimeter of square, rectangle, triangle, Area and perimeter of trapezium, parallelogram, rhombus, circle, Surface area and volume of cube, cuboid, cone, Surface area and volume of cylinder, sphere",
+            "topics": [
+              "Area and perimeter of square, rectangle, triangle, Area and",
+              "perimeter of trapezium, parallelogram, rhombus, circle, Surface area",
+              "and volume of cube, cuboid, cone, Surface area and volume of",
+              "cylinder, sphere"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Trigonometry",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of",
+              "multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ],
+            "topics_text": "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of multiple angles, sub-multiple angles Total Hours 28",
+            "topics": [
+              "Trigonometric Ratios, Concept of angles, Unit circle, T- Ratios of",
+              "multiple angles, sub-multiple angles",
+              "Total Hours 28"
+            ]
+          }
+        ]
       },
       "references": {
         "references": [
@@ -764,15 +2073,14 @@
         }
       ],
       "warnings": [
-        "Multiple PDFs share this subject-code prefix; selected '09MA2101 - Mathematics-I (.pdf' from 2 candidates.",
-        "PDF text was extracted, but its Contents tables could not be confidently parsed."
+        "Multiple PDFs share this subject-code prefix; selected '09MA2101 - Mathematics-I (.pdf' from 2 candidates."
       ],
       "actual_pdf_sha256": "c76e536dec2e74d561fab75d587c7bbf6154d5e9884a78185f3267518b5bcf4c"
     }
   ],
   "build_summary": {
-    "extracted": 1,
-    "manual_review": 7,
+    "extracted": 8,
+    "manual_review": 0,
     "ocr_review": 0,
     "missing_pdf": 0,
     "extraction_errors": 0
