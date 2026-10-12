@@ -35,3 +35,10 @@ FAILED_NO_MATCHING_OFFICIAL_PDF means no acceptable PDF was found in accessible 
 NETWORK_UNVERIFIED_RETRY and PROCESSING_ERROR_RETRY are not evidence that a subject should be removed.
 No database, GitHub, or production catalog writes were performed. Source IDs from mockData.js are not guaranteed to be live Supabase numeric IDs.
 Review these reports before any keep/remove decision: duplicate_subject_titles.csv, subject_occurrence_report.csv, failed_subjects.csv, pdf_validation_report.csv.
+
+
+CURRENT CURATION NOTE — 2026-10-12
+---------------------------------
+The 2026-10-11 run produced 154 PDFs. After the subject catalog cleanup, 24 PDFs tied to archived/removed or ambiguous titles were removed from this repository collection, leaving 130 PDFs for titles still present in the current Law & Arts catalog. Two fragment-named files were also exact byte-for-byte duplicates of canonical files and were removed.
+The current catalog snapshot has 229 subject occurrences. 33 occurrences across 19 unique title groups remain NETWORK_UNVERIFIED_RETRY; these subjects remain unresolved and have no local PDF asserted by this collection.
+Use Output/ACTIVE_PDF_MANIFEST.csv as the current mapping. The detailed CSV files above remain historical evidence from the pre-cleanup run and may reference files removed afterwards.
