@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Extract the Diploma Computer Engineering syllabus PDFs into semester JSON files.
+"""Extract all active Diploma syllabus PDFs into course/semester JSON files.
 
-Reads the already checked-in, PDF-verified syllabus collection and the active catalog.
-Does not read from Supabase, make network requests, or modify source PDFs.
+Reads the checked-in official syllabus collection and active catalog. Does not read
+from Supabase, make network requests, or modify source PDFs.
 """
 from __future__ import annotations
 
@@ -20,15 +20,20 @@ import fitz  # PyMuPDF
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv"
-PDF_ROOT = (
+PDF_COLLECTION_ROOT = (
     ROOT
     / "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/"
-      "Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/"
-      "Semester_Unspecified"
+      "Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi"
 )
-OUTPUT_ROOT = ROOT / "Syllabus/syllabus_txt/Diploma/Computer_Engineering"
-COURSE_ID = 44
-COURSE_NAME = "Diploma Computer Engineering"
+OUTPUT_ROOT = ROOT / "Syllabus/syllabus_txt/Diploma"
+COURSE_OUTPUT_SLUGS = {
+    44: "Computer_Engineering",
+    45: "Mechanical_Engineering",
+    46: "Chemical_Engineering",
+    47: "Electrical_Engineering",
+    48: "Civil_Engineering",
+    49: "Information_and_Communication_Technology",
+}
 
 STOP_CONTENTS = (
     "suggested theory distribution",
@@ -233,29 +238,31 @@ def extract_scheme(text: str) -> str:
     return " ".join(clean_lines(section))
 
 
-def pick_pdf(subject_code: str, subject_name: str) -> tuple[Path | None, list[str]]:
+def pick_pdf(pdf_root: Path, subject_code: str, subject_name: str, expected_sha256: str = "") -> tuple[Path | None, list[str]]:
     warnings: list[str] = []
-    if not PDF_ROOT.exists():
-        return None, [f"PDF directory not found: {PDF_ROOT.relative_to(ROOT)}"]
+    if not pdf_root.exists():
+        return None, [f"PDF directory not found: {pdf_root.relative_to(ROOT)}"]
     matches = [
-        path for path in PDF_ROOT.glob("*.pdf")
+        path for path in pdf_root.glob("*.pdf")
         if path.name.upper().startswith(subject_code.upper() + " ")
         or path.name.upper().startswith(subject_code.upper() + " -")
     ]
     if not matches:
         # A small number of Windows-imported names omit the expected separator.
-        matches = [path for path in PDF_ROOT.glob("*.pdf")
+        matches = [path for path in pdf_root.glob("*.pdf")
                    if path.name.upper().startswith(subject_code.upper())]
     if not matches:
         return None, [f"No checked-in PDF matched subject code {subject_code}."]
 
-    def rank(path: Path) -> tuple[int, int, str]:
+    def rank(path: Path) -> tuple[int, int, int, str]:
         stem = path.stem.lower()
         name = subject_name.lower().replace("/", " ")
         title_match = 0 if name and name in stem else 1
-        # Prefer the shortest title-labelled file over duplicate "course outline" files.
+        # The catalog hash is strongest evidence where duplicate course-code PDFs exist.
+        hash_match = 0 if expected_sha256 and hashlib.sha256(path.read_bytes()).hexdigest().lower() == expected_sha256.lower() else 1
+        # Prefer a title-labelled file over duplicate course-outline exports otherwise.
         outline_penalty = 1 if "course outline" in stem or "re course outline" in stem else 0
-        return (title_match + outline_penalty, len(path.name), path.name.lower())
+        return (hash_match, title_match + outline_penalty, len(path.name), path.name.lower())
 
     matches.sort(key=rank)
     if len(matches) > 1:
@@ -270,7 +277,8 @@ def extract_subject(row: dict[str, str]) -> dict[str, Any]:
     subject_id = str(row["subject_id"])
     name = row["subject_name"]
     code = row["source_subject_code"]
-    pdf_path, warnings = pick_pdf(code, name)
+    course_pdf_root = PDF_COLLECTION_ROOT / row["course_name"] / "Semester_Unspecified"
+    pdf_path, warnings = pick_pdf(course_pdf_root, code, name, row.get("pdf_sha256", ""))
 
     base: dict[str, Any] = {
         "subject_id": subject_id,
@@ -392,9 +400,25 @@ def extract_subject(row: dict[str, str]) -> dict[str, Any]:
     return base
 
 
+def course_output_slug(course_id: int, course_name: str) -> str:
+    """Use stable readable course-folder names, with a safe fallback for new courses."""
+    if course_id in COURSE_OUTPUT_SLUGS:
+        return COURSE_OUTPUT_SLUGS[course_id]
+    name = re.sub(r"^Diploma\s+", "", course_name, flags=re.IGNORECASE)
+    name = re.sub(r"[^A-Za-z0-9]+", "_", name).strip("_")
+    return name or f"Course_{course_id}"
+
+
 def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--course-id", type=int, default=COURSE_ID)
+    parser = argparse.ArgumentParser(
+        description="Build structured syllabus JSON files for active Diploma courses."
+    )
+    parser.add_argument(
+        "--course-id",
+        type=int,
+        default=None,
+        help="Build only this CourseId. Omit to build every Diploma course in the active catalog.",
+    )
     args = parser.parse_args()
 
     if not CATALOG.exists():
@@ -403,51 +427,107 @@ def main() -> int:
         catalog = list(csv.DictReader(handle))
     rows = [
         row for row in catalog
-        if int(row.get("course_id", 0) or 0) == args.course_id
+        if args.course_id is None or int(row.get("course_id", 0) or 0) == args.course_id
     ]
     if not rows:
-        raise RuntimeError(f"No active subjects for CourseId {args.course_id}")
-    rows.sort(key=lambda r: (int(r["semester"]), r["subject_name"].casefold(), r["subject_id"]))
+        target = f"CourseId {args.course_id}" if args.course_id is not None else "any course"
+        raise RuntimeError(f"No active subjects found for {target}")
 
-    OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
-    generated = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    grouped: dict[int, list[dict[str, Any]]] = {}
+    grouped_courses: dict[int, list[dict[str, str]]] = {}
     for row in rows:
-        grouped.setdefault(int(row["semester"]), []).append(extract_subject(row))
+        grouped_courses.setdefault(int(row["course_id"]), []).append(row)
 
-    for semester in range(1, 7):
-        subjects = grouped.get(semester, [])
-        payload = {
-            "schema_version": "1.0",
-            "generated_at_utc": generated,
-            "extraction_method": (
-                "PyMuPDF text-layer extraction from PDFs checked into this repository. "
-                "Unit/topic parsing is a readable index; source_text_by_page preserves "
-                "the extracted page text for auditing. Scanned PDFs are flagged for OCR review."
-            ),
-            "source_catalog": CATALOG.relative_to(ROOT).as_posix(),
-            "course": {"course_id": args.course_id, "course_name": COURSE_NAME},
-            "semester": semester,
-            "subject_count": len(subjects),
-            "subjects": subjects,
-            "build_summary": {
-                "extracted": sum(s["extraction_status"] == "TEXT_EXTRACTED_AND_STRUCTURED" for s in subjects),
-                "manual_review": sum(s["extraction_status"] == "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW" for s in subjects),
-                "ocr_review": sum(s["extraction_status"] == "LOW_TEXT_LAYER_OCR_REVIEW_NEEDED" for s in subjects),
-                "missing_pdf": sum(s["extraction_status"] == "PDF_NOT_FOUND" for s in subjects),
-                "extraction_errors": sum(s["extraction_status"] == "EXTRACTION_ERROR" for s in subjects),
+    generated = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    overall = {
+        "courses": len(grouped_courses),
+        "subjects": len(rows),
+        "extracted": 0,
+        "manual_review": 0,
+        "ocr_review": 0,
+        "missing_pdf": 0,
+        "extraction_errors": 0,
+    }
+
+    for course_id in sorted(grouped_courses):
+        course_rows = grouped_courses[course_id]
+        course_name = course_rows[0]["course_name"]
+        if any(row["course_name"] != course_name for row in course_rows):
+            raise RuntimeError(f"Inconsistent course names for CourseId {course_id}")
+        course_slug = course_output_slug(course_id, course_name)
+        course_output_dir = OUTPUT_ROOT / course_slug
+        course_output_dir.mkdir(parents=True, exist_ok=True)
+        by_semester: dict[int, list[dict[str, Any]]] = {}
+        course_subjects: list[dict[str, Any]] = []
+
+        course_rows.sort(
+            key=lambda r: (int(r["semester"]), r["subject_name"].casefold(), r["subject_id"])
+        )
+        for row in course_rows:
+            subject = extract_subject(row)
+            course_subjects.append(subject)
+            by_semester.setdefault(int(row["semester"]), []).append(subject)
+            status = subject["extraction_status"]
+            if status == "TEXT_EXTRACTED_AND_STRUCTURED":
+                overall["extracted"] += 1
+            elif status == "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW":
+                overall["manual_review"] += 1
+            elif status == "LOW_TEXT_LAYER_OCR_REVIEW_NEEDED":
+                overall["ocr_review"] += 1
+            elif status == "PDF_NOT_FOUND":
+                overall["missing_pdf"] += 1
+            elif status == "EXTRACTION_ERROR":
+                overall["extraction_errors"] += 1
+
+        for semester in range(1, 7):
+            subjects = by_semester.get(semester, [])
+            payload = {
+                "schema_version": "1.0",
+                "generated_at_utc": generated,
+                "extraction_method": (
+                    "PyMuPDF text-layer extraction from PDFs checked into this repository. "
+                    "Unit/topic parsing is a readable index; source_text_by_page preserves "
+                    "the extracted page text for auditing. Scanned PDFs are flagged for OCR review."
+                ),
+                "source_catalog": CATALOG.relative_to(ROOT).as_posix(),
+                "course": {
+                    "course_id": course_id,
+                    "course_name": course_name,
+                    "output_slug": course_slug,
+                },
+                "semester": semester,
+                "subject_count": len(subjects),
+                "subjects": subjects,
+                "build_summary": {
+                    "extracted": sum(s["extraction_status"] == "TEXT_EXTRACTED_AND_STRUCTURED" for s in subjects),
+                    "manual_review": sum(s["extraction_status"] == "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW" for s in subjects),
+                    "ocr_review": sum(s["extraction_status"] == "LOW_TEXT_LAYER_OCR_REVIEW_NEEDED" for s in subjects),
+                    "missing_pdf": sum(s["extraction_status"] == "PDF_NOT_FOUND" for s in subjects),
+                    "extraction_errors": sum(s["extraction_status"] == "EXTRACTION_ERROR" for s in subjects),
+                },
+            }
+            destination = course_output_dir / f"semester_{semester}.json"
+            destination.write_text(
+                json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8",
+            )
+            print(
+                f"{destination.relative_to(ROOT)}: {len(subjects)} subjects; "
+                f"{payload['build_summary']}"
+            )
+
+        course_summary = {
+            "course_id": course_id,
+            "course_name": course_name,
+            "subjects": len(course_subjects),
+            "output_dir": course_output_dir.relative_to(ROOT).as_posix(),
+            "statuses": {
+                status: sum(subject["extraction_status"] == status for subject in course_subjects)
+                for status in sorted({subject["extraction_status"] for subject in course_subjects})
             },
         }
-        destination = OUTPUT_ROOT / f"semester_{semester}.json"
-        destination.write_text(
-            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
-            encoding="utf-8",
-        )
-        print(
-            f"{destination.relative_to(ROOT)}: {len(subjects)} subjects; "
-            f"{payload['build_summary']}"
-        )
-    print(f"Generated 6 semester JSON files for {len(rows)} active Computer Engineering subjects.")
+        print(f"COURSE SUMMARY: {json.dumps(course_summary, ensure_ascii=False)}")
+
+    print(f"OVERALL SUMMARY: {json.dumps(overall, ensure_ascii=False)}")
     return 0
 
 
