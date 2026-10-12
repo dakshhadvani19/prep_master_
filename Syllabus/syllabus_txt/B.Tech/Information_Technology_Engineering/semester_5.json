@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:42:16+00:00",
+  "program": {
+    "program_name": "B.Tech Information Technology",
+    "program_folder": "Information Technology Engineering",
+    "official_program_url": "https://www.marwadiuniversity.ac.in/btech-in-information-technology-colleges/",
+    "listing_status": "current_official_page",
+    "catalog_notes": "Official program page",
+    "output_slug": "Information_Technology_Engineering"
+  },
+  "semester": 5,
+  "semester_label": "Semester 5",
+  "source_catalog": "Syllabus/B.Tech programs/_Catalogs/program_course_map.csv",
+  "extraction_method": "PyMuPDF native text-layer extraction from the consolidated shared PDF library. Explicit Unit/Module headings are indexed where detectable. The complete extracted page text is preserved in source_text_by_page. Unknown semesters are not inferred.",
+  "course_count": 1,
+  "courses": [
+    {
+      "course_code": "01IT0501",
+      "course_title": "LINUX ADMINISTRATION",
+      "program_name": "B.Tech Information Technology",
+      "program_folder": "Information Technology Engineering",
+      "semester": 5,
+      "semester_source_value": "Semester_05",
+      "semester_assignment_note": "Explicit semester from the source map.",
+      "source_pdf_url": "/home/user/Marwadi_BTech_Verified_Recovery/Output/B.Tech Information Technology/Semester_5/01IT0501 - LINUX ADMINISTRATION.pdf",
+      "source_pdf_repo_path": "_PDF_Library/01IT/01IT0501 - LINUX ADMINISTRATION.pdf",
+      "original_source_path": "Syllabus/Marwadi_BTech_Verified_Recovery_1/Marwadi_BTech_last_batch/Output/B.Tech Information Technology/Semester_5/01IT0501 - LINUX ADMINISTRATION.pdf",
+      "source_batch": "last_batch",
+      "source_status": "VERIFIED_MARWADI",
+      "expected_pdf_sha256": "51c8ace5d8b02792923561f8755ece294e42aca212c5f12b360a57147101248b",
+      "actual_pdf_sha256": "51c8ace5d8b02792923561f8755ece294e42aca212c5f12b360a57147101248b",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "page_count": 3,
+      "extracted_character_count": 6279,
+      "objective_text": "To impart knowledge and skills on various practical and theoretical aspects of Linux operating system (OS) basics and Linux OS based server configuration, management and administration. Credits Earned: 04",
+      "objectives": [
+        "To impart knowledge and skills on various practical and theoretical aspects of Linux operating",
+        "system (OS) basics and Linux OS based server configuration, management and administration.",
+        "Credits Earned: 04"
+      ],
+      "course_outcomes_text": "After completion of this course, student will be able to: 1. Understand Linux utilities to create and manage simple file processing operations and Linux boot processing. 2. Apply Command line in Linux to manage user, user groups, system management, volume management, and troubleshooting application, scheduling task and system level issue. 3. Illustrate client server applications with appropriate security. 4. Configure various services of Linux Apache web server. 5. Evaluate various shell Scripting. Pre-requisite of course: Basic knowledge of Operating System",
+      "course_outcomes": [
+        "After completion of this course, student will be able to:",
+        "Understand Linux utilities to create and manage simple file processing operations and Linux boot processing.",
+        "Apply Command line in Linux to manage user, user groups, system management, volume management, and",
+        "troubleshooting application, scheduling task and system level issue.",
+        "Illustrate client server applications with appropriate security.",
+        "Configure various services of Linux Apache web server.",
+        "Evaluate various shell Scripting.",
+        "Pre-requisite of course: Basic knowledge of Operating System"
+      ],
+      "units": [],
+      "references": {
+        "textbooks": [],
+        "references": [],
+        "suggested_reading": []
+      },
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n                              Subject Code: 09CT0512\n                         Subject Name: Linux Administrator\n                       Diploma Year – III (Semester V)\n\nObjective:\n     To impart knowledge and skills on various practical and theoretical aspects of Linux operating\n       system (OS) basics and Linux OS based server configuration, management and administration.\n\nCredits Earned: 04\n\nCourse Outcomes: After completion of this course, student will be able to:\n    1.  Understand Linux utilities to create and manage simple file processing operations and Linux boot processing.\n    2.  Apply Command line in Linux to manage user, user groups, system management, volume management, and\n        troubleshooting application, scheduling task and system level issue.\n    3.  Illustrate client server applications with appropriate security.\n    4.  Configure various services of Linux Apache web server.\n    5.  Evaluate various shell Scripting.\n\nPre-requisite of course: Basic knowledge of Operating System\n\n\n                                 Teaching and Examination Scheme\n\n\n                                                                                      Tutorial/Practical       Total      Teaching Scheme (Hours)            Credits     Theory Marks                                                                      Marks         Marks\n\n                                                                   Term Work     Theory       Tutorial     Practical          ESE   IA    CSE   Viva                                                                    (TW)\n\n     3           0          2         4      50    30    20      25        25         150"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n\nContents:\n\nS.NO                                TOPIC                                          Hours\n\n      Basics of Linux:\n                                                                                              03  1    History of Linux (GNU/LINUX), Download, installs, update, and manage software packages\n      from Red Hat and yum package repositories.\n      Linux Commands\n      Pwd/cd/ls/who/whoami/who am i/which/cp/mv/rm/mkdir/touch/ hostname/ cat/cal/eject/mount/\n       umount/login/logout /echo/wget/Halt/shutdown/poweroff/reboot/ll/dd/joe/emacs/ln/fdisk/mke2fs/   04  2\n       mtools/pico/sed/wc/whereis/convert/ifconfig/ncftp/scp/hdparm/dmesg/bc/sh/at/atq/trm/date/\n      uptime/su/switchdesk/uname\n\n     Management of File using Command Line\n                                                                                              05  3       Introduction to BASH, Command-line shortcuts, File Types, Ownership and Permissions, File      managementManaging Usersandandmanipulation,Groups   Moving users & its directories, Miscellaneous Tools, Editors\n                                                                                              06  4       Creating and managing user/s and group commands, User management Tools, Users and Access       Permissions,Creating, Viewing,UpdatingandusersEditingand groupText Filesattributes, PAM (Pluggable Authentication Modules)\n                                                                                              06  5    Redirecting Output to a File or Program, I/O Redirection and Pipelines, Editing Text Files from\n       the Shell Prompt, Editing Text Files with a Graphical Editor.\n      Booting and Shutting down\n  6   Boot Loaders, The init process,  rc scripts,  enabling  and disabling services, Booting in      04\n      recovery mode\n      Core System Services\n                                                                                              05  7   The init Daemon, xinetd and inetd, The Logging Daemon, Configuring, Logging Daemon, The\n    CRON program\n      Compiling the Linux Kernel                                                               04  8      Kernel concepts,  Finding Kernel Source Code, Building the Kernel, Patching the Kernel\n     Apache Web Server\n                                                                                              05  9  HTTP Protocol, Installing Apache HTTP Server, Starting up and shutting down apache, Testing\n      Apache Installation, Configuring Apache, Troubleshooting Apache\n                                                                                         Total Hours   42"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\nSuggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as guidelines for\nteachers and students to achieve effective teaching-learning process\n\n\n                                Distribution of Theory for course delivery and evaluation\n\n    Remember       Understand          Apply          Analyse          Evaluate           Create\n\n       40%          40%          10%          10%             0              0\n\n\nSuggested List of Experiment:\n             1.\n             2.                 File Handling Commands\n             3.              User Handling Commands\n             4.             Group Handling Commands\n             5.               Startup and Shutdown Commands\n             6.                 Installation and Configuration of Apache Server               Building and patching Linux Kernel\nSUGGESTED LEARNING RESOURCES\n List 1.of Books:Steve Shah and Wale Soyinka “ Linux Administration: A Begineer’s Guide”, 4th         Edition, Tata McGraw-Hill Publishing Company Limited, New Delhi, ISBN:       978-0072262599      2.  Susan Lauber, Philip Sweany, Rudolf Kastl and George Hacker,       “REDHAT System Administration-1 Student Work book”, REDHAT Inc. 2014\nSupplementary1. https://www.tutorialspoint.com/linux_admin/index.htmResources:               2. https://linode.com/docs/tools-reference/linux-system-administration- basics/               3. opensourceforu.com/2016/07/introduction-linux-system-administration/              4. https://www.linuxfoundation.org"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
+      ]
+    }
+  ],
+  "build_summary": {
+    "structured": 0,
+    "manual_review": 1,
+    "ocr_review": 0,
+    "hash_mismatch": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

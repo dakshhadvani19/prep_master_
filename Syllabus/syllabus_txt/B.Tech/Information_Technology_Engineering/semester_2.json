@@ -1,0 +1,159 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:42:16+00:00",
+  "program": {
+    "program_name": "B.Tech Information Technology",
+    "program_folder": "Information Technology Engineering",
+    "official_program_url": "https://www.marwadiuniversity.ac.in/btech-in-information-technology-colleges/",
+    "listing_status": "current_official_page",
+    "catalog_notes": "Official program page",
+    "output_slug": "Information_Technology_Engineering"
+  },
+  "semester": 2,
+  "semester_label": "Semester 2",
+  "source_catalog": "Syllabus/B.Tech programs/_Catalogs/program_course_map.csv",
+  "extraction_method": "PyMuPDF native text-layer extraction from the consolidated shared PDF library. Explicit Unit/Module headings are indexed where detectable. The complete extracted page text is preserved in source_text_by_page. Unknown semesters are not inferred.",
+  "course_count": 1,
+  "courses": [
+    {
+      "course_code": "01ME1103",
+      "course_title": "Engineering Drawings",
+      "program_name": "B.Tech Information Technology",
+      "program_folder": "Information Technology Engineering",
+      "semester": 2,
+      "semester_source_value": "Semester_02",
+      "semester_assignment_note": "Explicit semester from the source map.",
+      "source_pdf_url": "/home/user/Marwadi_BTech_Verified_Recovery/Output/B.Tech Information Technology/Semester_2/01ME1103 - Engineering Drawings.pdf",
+      "source_pdf_repo_path": "_PDF_Library/01ME/01ME1103 - Engineering Drawings.pdf",
+      "original_source_path": "Syllabus/Marwadi_BTech_Verified_Recovery_1/Marwadi_BTech_last_batch/Output/B.Tech Information Technology/Semester_2/01ME1103 - Engineering Drawings.pdf",
+      "source_batch": "last_batch",
+      "source_status": "VERIFIED_MARWADI",
+      "expected_pdf_sha256": "90c9013e784739b822e2a9c2f90f6e820579677bbf5b0e7cbcd966d1de9a945c",
+      "actual_pdf_sha256": "90c9013e784739b822e2a9c2f90f6e820579677bbf5b0e7cbcd966d1de9a945c",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "page_count": 4,
+      "extracted_character_count": 6301,
+      "objective_text": "Engineering Graphics is the language of engineering. It is the fundamental core skill enhances problem solving ability which improves the engineering knowledge. Moreover, it is creating link between imagination and realization.",
+      "objectives": [
+        "Engineering Graphics is the language of engineering. It is the fundamental core",
+        "skill enhances problem solving ability which improves the engineering knowledge. Moreover,",
+        "it is creating link between imagination and realization."
+      ],
+      "course_outcomes_text": "After completion of this course, student will be able to 1. Know, understand and able to define the methods of engineering drawing. 2. Learn basic sketching methods. 3. Understand engineering drawings using fundamental mathematics. 4. Construct Engineered Drawing. 5. Develop visualization skills so that they can create new product design. 6. Understand the theory of projection, Learn technical communication skill. Credits Earned: 4 Credits Pre-requisite of course: Zeal to learn the subject.",
+      "course_outcomes": [
+        "After completion of this course, student will be able to",
+        "Know, understand and able to define the methods of engineering drawing.",
+        "Learn basic sketching methods.",
+        "Understand engineering drawings using fundamental mathematics.",
+        "Construct Engineered Drawing.",
+        "Develop visualization skills so that they can create new product design.",
+        "Understand the theory of projection, Learn technical communication skill.",
+        "Credits Earned: 4",
+        "Credits",
+        "Pre-requisite of course: Zeal to learn the subject."
+      ],
+      "units": [
+        {
+          "unit_number": null,
+          "title": "Topics Hours",
+          "topic_lines": [
+            "Introduction:",
+            "Drawing instruments and accessories, Standards of Engineering Drawings. 2",
+            "1 Plain scales.",
+            "Engineering Curves:",
+            "Introduction to engineering curves with classification and application.2 7",
+            "Construction of Ellipse, Parabola and Hyperbola with normal and tangent to",
+            "the curve. Construction of Involutes, Spirals and Cycloidal curve with normal",
+            "and tangent to the curve.",
+            "Projection of Points and straight Lines:",
+            "Introduction to principal planes. Point projection located in same and",
+            "different quadrants. Line projection with inclination to one RP and two RP,3 7",
+            "True length of Line.",
+            "Syllabus for Bachelor of Technology",
+            "Mechanical Engineering",
+            "Projections of Plane Surfaces:",
+            "Projection of Polygons, circle and ellipse with inclination to one RP and two",
+            "4 6 RP. Method for projection of plane surfaces.",
+            "Orthographic Projections:",
+            "Introduction to Orthographic Projection, Plane of Projection. Projection of5 2",
+            "the object on the principal planes. Front view, Top view and sides view using",
+            "First and Third angle Projection methods. Sectional Orthographic.",
+            "Isometric Projections:",
+            "Isometric View, Conversion of Orthographic view to isometric view. Isometric6 2",
+            "Scale, Difference between Isometric View and Projection.",
+            "Computer Aided Drawing: (To be cover in Laboratory)",
+            "8 -",
+            "Introduction to CAD, Basic commands in 3D modelling software. Implementation",
+            "of 3D Printing.",
+            "Total Hours 26"
+          ],
+          "topics_text": "Introduction: Drawing instruments and accessories, Standards of Engineering Drawings. 2 1 Plain scales. Engineering Curves: Introduction to engineering curves with classification and application.2 7 Construction of Ellipse, Parabola and Hyperbola with normal and tangent to the curve. Construction of Involutes, Spirals and Cycloidal curve with normal and tangent to the curve. Projection of Points and straight Lines: Introduction to principal planes. Point projection located in same and different quadrants. Line projection with inclination to one RP and two RP,3 7 True length of Line. Syllabus for Bachelor of Technology Mechanical Engineering Projections of Plane Surfaces: Projection of Polygons, circle and ellipse with inclination to one RP and two 4 6 RP. Method for projection of plane surfaces. Orthographic Projections: Introduction to Orthographic Projection, Plane of Projection. Projection of5 2 the object on the principal planes. Front view, Top view and sides view using First and Third angle Projection methods. Sectional Orthographic. Isometric Projections: Isometric View, Conversion of Orthographic view to isometric view. Isometric6 2 Scale, Difference between Isometric View and Projection. Computer Aided Drawing: (To be cover in Laboratory) 8 - Introduction to CAD, Basic commands in 3D modelling software. Implementation of 3D Printing. Total Hours 26",
+          "topics": [
+            "Introduction:",
+            "Drawing instruments and accessories, Standards of Engineering Drawings. 2",
+            "1 Plain scales.",
+            "Engineering Curves:",
+            "Introduction to engineering curves with classification and application.2 7",
+            "Construction of Ellipse, Parabola and Hyperbola with normal and tangent to",
+            "the curve. Construction of Involutes, Spirals and Cycloidal curve with normal",
+            "and tangent to the curve.",
+            "Projection of Points and straight Lines:",
+            "Introduction to principal planes. Point projection located in same and",
+            "different quadrants. Line projection with inclination to one RP and two RP,3 7",
+            "True length of Line.",
+            "Syllabus for Bachelor of Technology",
+            "Mechanical Engineering",
+            "Projections of Plane Surfaces:",
+            "Projection of Polygons, circle and ellipse with inclination to one RP and two",
+            "4 6 RP. Method for projection of plane surfaces.",
+            "Orthographic Projections:",
+            "Introduction to Orthographic Projection, Plane of Projection. Projection of5 2",
+            "the object on the principal planes. Front view, Top view and sides view using",
+            "First and Third angle Projection methods. Sectional Orthographic.",
+            "Isometric Projections:",
+            "Isometric View, Conversion of Orthographic view to isometric view. Isometric6 2",
+            "Scale, Difference between Isometric View and Projection.",
+            "Computer Aided Drawing: (To be cover in Laboratory)",
+            "8 -",
+            "Introduction to CAD, Basic commands in 3D modelling software. Implementation",
+            "of 3D Printing.",
+            "Total Hours 26"
+          ]
+        }
+      ],
+      "references": {
+        "textbooks": [],
+        "references": [],
+        "suggested_reading": []
+      },
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Syllabus for Bachelor of Technology\n\n                          Mechanical Engineering\n\n\n                               Subject Code: 01ME1103\n\n                         Subject Name: Engineering Drawing\n\n                                  B.Tech. Sem- II\n\n   Objective: Engineering Graphics is the language of engineering. It is the fundamental core\n    skill enhances problem solving ability which improves the engineering knowledge. Moreover,\n     it is creating link between imagination and realization.\n   Course Outcomes: After completion of this course, student will be able to\n\n     1.  Know, understand and able to define the methods of engineering drawing.\n     2.  Learn basic sketching methods.\n     3.  Understand engineering drawings using fundamental mathematics.\n     4.  Construct Engineered Drawing.\n     5.  Develop visualization skills so that they can create new product design.\n     6.  Understand the theory of projection, Learn technical communication skill.\n\n   Credits  Earned: 4\n   Credits\n\n   Pre-requisite of course: Zeal to learn the subject.\n\n   Teaching  and  Examination\n   Scheme\n                                                                          Tutorial! Practical\n  Teaching Scheme (Hours)                 Theory Marks\n                                                             Marks\n                                                                                          Total\n                                Credits                                Term\n                             ESE                    Viva             Marks\nTheory   Tutorial   Practical                IA     CSE              work\n                                         (E)                       (V)\n                                                            (TW)\n  2       0        4        4     50     30      20       25       25      150\n\n\n   Contents:\n Unit                                    Topics                               Hours\n\n          Introduction:\n        Drawing  instruments and  accessories, Standards of Engineering Drawings.     2\n1          Plain scales.\n\n         Engineering Curves:\n          Introduction  to  engineering  curves  with  classification  and  application.2                                                                          7\n         Construction of Ellipse, Parabola and Hyperbola with normal and tangent to\n          the curve. Construction of Involutes, Spirals and Cycloidal curve with normal\n        and tangent to the curve.\n\n         Projection of Points and straight Lines:\n          Introduction  to principal planes. Point projection located in same and\n           different quadrants. Line projection with inclination to one RP and two RP,3                                                                          7\n         True length of Line."
+        },
+        {
+          "page": 2,
+          "text": "Syllabus for Bachelor of Technology\n\n                          Mechanical Engineering\n\n\n         Projections of Plane Surfaces:\n          Projection of Polygons, circle and ellipse with inclination to one RP and two\n4                                                                                 6        RP. Method for projection of plane surfaces.\n\n        Orthographic Projections:\n          Introduction to Orthographic Projection, Plane of Projection. Projection of5                                                                          2\n          the object on the principal planes. Front view, Top view and sides view using\n           First and Third angle Projection methods. Sectional Orthographic.\n\n         Isometric Projections:\n          Isometric View, Conversion of Orthographic view to isometric view. Isometric6                                                                                 2\n          Scale, Difference between Isometric View and Projection.\n\n        Computer Aided Drawing: (To be cover in Laboratory)\n8                                                                                                                    -\n          Introduction to CAD, Basic commands in 3D modelling software. Implementation\n          of 3D Printing.\n\n                                         Total Hours                                  26\n\n\n\n   References Book:\n\n     1.  Engineering Graphics by Ramdevsinh Jhala Tata McGraw Hill, New Delhi\n     2.  A Text Book of Engineering Graphics by P.J.Shah S.Chand & Company\n         Ltd., New Delhi\n     3.   Elementary Engineering Drawing by N.D.Bhatt, Charotar Publishing House,\n       Anand\n     4. A text book of Engineering Drawing by R.K.Dhawan, S.Chand & Company\n         Ltd., New Delhi\n     5. A text book of Engineering Drawing by P.S.Gill, S.K.Kataria & sons, Delhi."
+        },
+        {
+          "page": 3,
+          "text": "Syllabus for Bachelor of Technology\n\n                        Mechanical Engineering\n\n\n\nSuggested Theory distribution:\nThe suggested theory distribution  as per Bloom's taxonomy  is as per  follows.\nThis distribution  serves  as  guidelines  for  teachers  and  students  to  achieve\neffective teaching-learning process. The\n\n\n\n               Distribution of Theory for course delivery and evaluation\n\nRemember    Understand      Apply        Analyze       Evaluate        Create\n\n  14%        22%        22%        14%        14%        14%\n\n\n\n\n\nSuggested List of Drawing Sheet:\n\n 1 .  Practice sheet\n  2.  Scale (Plane and Diagonal Scale)\n  3.  Curves\n  4.  Projection of Straight line and Projection of plane surfaces.\n  5.  Orthographic projection and Sectional Orthographic projection. (Using CAD Software)\n  6.  Isometric projection and Isometric View. (Using CAD Software & 3D Printing)"
+        },
+        {
+          "page": 4,
+          "text": "Syllabus for Bachelor of Technology\n\n                       Mechanical Engineering\n\nInstructional Method:\n\na.   The course delivery method will depend upon the requirement of content and\nneed of students. The teacher in addition to conventional teaching method by black\nboard,  may  also  use  any  of  tools  such  as  demonstration,  role  play,  Quiz,\nbrainstorming\n\nb.   The internal evaluation will be done on the basis of continuous evaluation of\n     students in the laboratory and class-room.\n\nc.    Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nd.   Students will use supplementary resources such as online videos, NPTEL videos,\n    e-courses"
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "build_summary": {
+    "structured": 1,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "hash_mismatch": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:42:16+00:00",
+  "program": {
+    "program_name": "B.Tech CSE Cyber Security",
+    "program_folder": "Computer Science and Engineering - Cyber Security",
+    "official_program_url": "https://www.marwadiuniversity.ac.in/btech-computer-science-and-engineering-cyber-security/",
+    "listing_status": "current_official_page",
+    "catalog_notes": "Official specialization page",
+    "output_slug": "Computer_Science_and_Engineering_Cyber_Security"
+  },
+  "semester": 6,
+  "semester_label": "Semester 6",
+  "source_catalog": "Syllabus/B.Tech programs/_Catalogs/program_course_map.csv",
+  "extraction_method": "PyMuPDF native text-layer extraction from the consolidated shared PDF library. Explicit Unit/Module headings are indexed where detectable. The complete extracted page text is preserved in source_text_by_page. Unknown semesters are not inferred.",
+  "course_count": 3,
+  "courses": [
+    {
+      "course_code": "01CC0604",
+      "course_title": "Cyber Physical System",
+      "program_name": "B.Tech CSE Cyber Security",
+      "program_folder": "Computer Science and Engineering - Cyber Security",
+      "semester": 6,
+      "semester_source_value": "Semester_06",
+      "semester_assignment_note": "Explicit semester from the source map.",
+      "source_pdf_url": "/home/user/Marwadi_BTech_Verified_Recovery/Output/B.Tech CSE Cyber Security/Semester_6/01CC0604 - Cyber Physical System.pdf",
+      "source_pdf_repo_path": "_PDF_Library/01CC/01CC0604 - Cyber Physical System.pdf",
+      "original_source_path": "Syllabus/Marwadi_BTech_Verified_Recovery_1/Marwadi_BTech_last_batch/Output/B.Tech CSE Cyber Security/Semester_6/01CC0604 - Cyber Physical System.pdf",
+      "source_batch": "last_batch",
+      "source_status": "VERIFIED_MARWADI",
+      "expected_pdf_sha256": "6e8e7fab1342f000281ca294d200d808d55e81b5fad5e6cb43bb4365eceffd5d",
+      "actual_pdf_sha256": "6e8e7fab1342f000281ca294d200d808d55e81b5fad5e6cb43bb4365eceffd5d",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "page_count": 4,
+      "extracted_character_count": 12002,
+      "objective_text": "1 Students will be able to apply modeling and control techniques to represent and simulate cyber-physical systems using tools such as Simulink and Stateflow, analyze the interaction between sensing, computation, communication, and actuation in real-time systems to understand system behavior and dependencies, and evaluate design choices including communication protocols, timing constraints, and reliability trade-offs to develop efficient and robust cyber-physical system solutions.",
+      "objectives": [
+        "1 Students will be able to apply modeling and control techniques to represent and simulate",
+        "cyber-physical systems using tools such as Simulink and Stateflow, analyze the interaction",
+        "between sensing, computation, communication, and actuation in real-time systems to",
+        "understand system behavior and dependencies, and evaluate design choices including",
+        "communication protocols, timing constraints, and reliability trade-offs to develop efficient",
+        "and robust cyber-physical system solutions."
+      ],
+      "course_outcomes_text": "After completion of this course, student will be able to: 1 Apply modeling techniques and computational tools to represent and simulate the behavior of cyber-physical systems. 2 Implement control strategies and real-time system concepts to manage interactions between physical and computational components. 3 Analyze system interactions, communication dependencies, and vulnerabilities in CPS environments to identify potential risks. 4 Evaluate CPS design choices, including safety, reliability, and security measures, based on application requirements. 5 Design and develop secure, efficient, and reliable cyber-physical system solutions for real- world applications. Pre-requisite of course:Solid foundation in programming (e.g., C, C++, Python). Basic understanding of data structures and algorithms. Familiarity with fundamental concepts of control systems or dynamical systems (basic calculus and differential equations). Basic knowledge of computer networks.",
+      "course_outcomes": [
+        "After completion of this course, student will be able to:",
+        "1 Apply modeling techniques and computational tools to represent and simulate the behavior",
+        "of cyber-physical systems.",
+        "2 Implement control strategies and real-time system concepts to manage interactions between",
+        "physical and computational components.",
+        "3 Analyze system interactions, communication dependencies, and vulnerabilities in CPS",
+        "environments to identify potential risks.",
+        "4 Evaluate CPS design choices, including safety, reliability, and security measures, based on",
+        "application requirements.",
+        "5 Design and develop secure, efficient, and reliable cyber-physical system solutions for real-",
+        "world applications.",
+        "Pre-requisite of course:Solid foundation in programming (e.g., C, C++, Python). Basic",
+        "understanding of data structures and algorithms. Familiarity with fundamental concepts of",
+        "control systems or dynamical systems (basic calculus and differential equations). Basic",
+        "knowledge of computer networks."
+      ],
+      "units": [],
+      "references": {
+        "textbooks": [
+          "1 \"Introduction to Embedded Systems: A Cyber-Physical Systems Approach, Edward A. Lee",
+          "and Sanjit A. Seshia, LeeSeshia.org, 2011"
+        ],
+        "references": [
+          "1 Cyber-Physical Systems: From Theory to Practice, Cyber-Physical Systems: From Theory",
+          "to Practice, Raj Rajkumar, Insup Lee, Lui Sha, John Stankovic, CRC Press, 2016",
+          "2 Principles of Cyber-Physical Systems, Principles of Cyber-Physical Systems, Rajeev Alur,",
+          "MIT Press, 2015",
+          "Suggested Theory Distribution:",
+          "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution",
+          "serves as guidelines for teachers and students to achieve effective teaching-learning process",
+          "Distribution of Theory for course delivery",
+          "Remember / Understand Apply Analyze Evaluate Higher order",
+          "Knowledge Thinking /",
+          "Creative",
+          "00 0.00 30.00 30.00 20.00 20.00",
+          "Instructional Method:",
+          "1 The course delivery method will depend upon the requirement of content and need of",
+          "students. The teacher in addition to conventional teaching method by black board, may also",
+          "use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.",
+          "2 The internal evaluation will be done on the basis of continuous evaluation of students in the",
+          "laboratory and class-room",
+          "3 Practical examination will be conducted at the end of semester for evaluation of",
+          "performance of students in laboratory",
+          "4 Students will use supplementary resources such as online videos, NPTEL videos, e-",
+          "courses, Virtual Laboratory.",
+          "Supplementary Resources:",
+          "1 NPTEL Course: Foundations of Cyber Physical Systems",
+          "2 Coursera: Cyber-Physical Systems: Modeling and Simulation",
+          "3 Udacity: Cyber-Physical Systems Design & Analysis",
+          "DR. MUNINDRA HASMUKHBHAI LUNAGARIA DR. RAJENDRASINH BAHADURSINH JADEJA",
+          "Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)"
+        ],
+        "suggested_reading": []
+      },
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    CYBER PHYSICAL SYSTEM\nCOURSE CODE     01CC0604\nCOURSE CREDITS  3\n\nObjective:\n 1  Students will be able to apply modeling and control techniques to represent and simulate\n     cyber-physical systems using tools such as Simulink and Stateflow, analyze the interaction\n    between sensing, computation, communication, and actuation in real-time systems to\n     understand system behavior and dependencies, and evaluate design choices including\n    communication protocols, timing constraints, and reliability trade-offs to develop efficient\n    and robust cyber-physical system solutions.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply modeling techniques and computational tools to represent and simulate the behavior\n     of cyber-physical systems.\n 2  Implement control strategies and real-time system concepts to manage interactions between\n     physical and computational components.\n 3  Analyze system interactions, communication dependencies, and vulnerabilities in CPS\n    environments to identify potential risks.\n 4  Evaluate CPS design choices, including safety, reliability, and security measures, based on\n     application requirements.\n 5  Design and develop secure, efficient, and reliable cyber-physical system solutions for real-\n    world applications.\n\n\nPre-requisite of course:Solid foundation in programming (e.g., C, C++, Python). Basic\nunderstanding of data structures and algorithms. Familiarity with fundamental concepts of\ncontrol systems or dynamical systems (basic calculus and differential equations). Basic\nknowledge of computer networks.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Cyber Physical Systems                      6\n               Definition and Characteristics of CPS, Distinction from Embedded\n             Systems, IoT, and Sensor Networks, Key Concepts: Physical\n             dynamics, sensing, actuation, computation, communication,\n             feedback loops, Societal Impact and Challenges of CPS (Safety,\n               Security, Privacy, Reliability, Usability), Examples of CPS across\n             domains: Smart Grid, Autonomous Vehicles, Medical Devices,\n                Industrial Control Systems (SCADA), Smart Buildings\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Modeling Physical Dynamics for CPS                        6\n               Introduction to Modeling Physical Processes: State-space models,\n                differential equations (brief review), Hybrid Systems: Modeling\n             systems with interacting continuous and discrete dynamics,\n            Modeling Techniques: Bond graphs, Simulink/Stateflow\n               (introduction), Modeling Tools and Simulation Environments for\n            CPS, Abstraction and Hybridization of Physical Systems\n     3      Control and Real-Time Aspects in CPS                      6\n               Introduction to Control Theory for CPS: Feedback control, stability,\n              performance, Digital Control: Sampling, quantization, real-time\n                constraints, Digital Control: Sampling, quantization, real-time\n                constraints, CPS Control Design Considerations: Handling delays,\n                uncertainties, and packet loss in networked control systems, and\n              Validation of CPS Control Logic\n     4     CPS Networking and Communication                       8\n             Networking Requirements for CPS: Timeliness, reliability, safety-\n                 critical communication, Wireless Communication in CPS:\n             Challenges (interference, range), protocols (e.g., Zigbee, Bluetooth\n          Low Energy, WirelessHART), Wired Communication in CPS:\n                Industrial Ethernet, Fieldbuses (e.g., Modbus, Profibus - concepts),\n            Networked Control Systems (NCS): Architectures, challenges of\n            communication constraints on control performance, Time\n              Synchronization in Distributed CPS\n     5     CPS Security, Safety, and Applications                      8\n          CPS Security Threats: Attacks on sensors, actuators, control logic,\n            communication networks (e.g., Stuxnet overview), Vulnerabilities at\n               the Cyber-Physical Interface: Exploiting physical properties via\n             cyber means, cyber effects on physical systems, CPS Security\n            Mechanisms: Secure boot, secure communication protocols\n              (adapted for CPS constraints), intrusion detection for CPS, CPS\n               Safety: Hazard analysis, safety standards (overview), achieving\n               safety in the presence of cyber threats, Case Studies of CPS\n              Applications: Detailed look at the architecture, challenges, and\n               security of selected real-world CPS\n                               Total Hours                       34\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical 1                                              2\n              Simulating a Simple Physical System: Using a simulation tool (e.g.,\n             Python with SciPy, MATLAB/Simulink, OpenModelica) to model\n            and simulate the dynamics of a basic physical system (e.g., a simple\n             pendulum, a mass-spring-damper system).\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2       Practical 2                                              2\n             Implementing a Basic Digital Control Loop: Writing code on a\n              microcontroller or in a simulation environment to implement a\n             simple feedback control system (e.g., controlling an LED brightness\n             based on a sensor input).\n     3       Practical 3                                              2\n               Interfacing Sensors and Actuators: Connecting a sensor (e.g.,\n              temperature, light) and an actuator (e.g., LED, motor) to a\n              microcontroller or single-board computer and writing code to read\n              sensor data and control the actuator.\n     4       Practical 4                                              2\n             Analyzing Network Traffic in a Simulated CPS: Using a network\n              simulator (e.g., NS-3, Mininet) to set up a simple CPS network and\n              analyze the characteristics of control or sensor data packets.\n     5       Practical 5                                              2\n              Simulating a Denial-of-Service (DoS) Attack on a CPS Network:\n              Introducing network congestion or delay in a simulated CPS\n             environment and observing the impact on control performance (in a\n                safe, simulated environment).\n     6       Practical 6                                              2\n             Implementing Basic Authentication for a CPS Device: Adding a\n             simple authentication mechanism (e.g., password or key-based) for\n              accessing or sending commands to a simulated or real CPS\n             component.\n     7       Practical 7                                              2\n             Exploring a CPS Testbed (Virtual or Physical): Working with a pre-\n                built virtual lab environment or a physical testbed to interact with\n            and observe the behavior of a more complex CPS example (e.g., a\n              simulated smart grid component, a robotic arm).\n     8       Practical 8                                              2\n             Analyzing Data from a CPS: Processing and analyzing sensor data\n               collected from a simulated or real CPS to identify anomalies or\n                patterns.\n     9       Practical 9                                              2\n               Investigating Security Vulnerabilities in a Simple CPS Model:\n             Using a provided vulnerable CPS model (in a safe environment) to\n              explore how cyber inputs can affect physical outputs or vice versa.\n     10      Practical 10                                             2\n              Mini-Project: Designing a Basic Secure CPS Component: Designing\n            and potentially implementing (in simulation or on hardware) a small\n          CPS component that incorporates basic security considerations\n               (e.g.,authenticated sensor data transmission, input validation for\n               actuator commands).\n                               Total Hours                       20\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Textbook :\n 1  \"Introduction to Embedded Systems: A Cyber-Physical Systems Approach, Edward A. Lee\n    and Sanjit A. Seshia, LeeSeshia.org, 2011\n\nReferences:\n 1  Cyber-Physical Systems: From Theory to Practice, Cyber-Physical Systems: From Theory\n     to Practice, Raj Rajkumar, Insup Lee, Lui Sha, John Stankovic, CRC Press, 2016\n 2  Principles of Cyber-Physical Systems, Principles of Cyber-Physical Systems, Rajeev Alur,\n   MIT Press, 2015\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          30.00         30.00         20.00         20.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  NPTEL Course: Foundations of Cyber Physical Systems\n 2  Coursera: Cyber-Physical Systems: Modeling and Simulation\n 3  Udacity: Cyber-Physical Systems Design & Analysis\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
+      ]
+    },
+    {
+      "course_code": "01CC0605",
+      "course_title": "Metasploit Framework",
+      "program_name": "B.Tech CSE Cyber Security",
+      "program_folder": "Computer Science and Engineering - Cyber Security",
+      "semester": 6,
+      "semester_source_value": "Semester_06",
+      "semester_assignment_note": "Explicit semester from the source map.",
+      "source_pdf_url": "/home/user/Marwadi_BTech_Verified_Recovery/Output/B.Tech CSE Cyber Security/Semester_6/01CC0605 - Metasploit Framework.pdf",
+      "source_pdf_repo_path": "_PDF_Library/01CC/01CC0605 - Metasploit Framework.pdf",
+      "original_source_path": "Syllabus/Marwadi_BTech_Verified_Recovery_1/Marwadi_BTech_last_batch/Output/B.Tech CSE Cyber Security/Semester_6/01CC0605 - Metasploit Framework.pdf",
+      "source_batch": "last_batch",
+      "source_status": "VERIFIED_MARWADI",
+      "expected_pdf_sha256": "f7fcc7a0bf0405e7d8dcbc4259cceee3a031e306d363fbccbd6e5c40ef3f6949",
+      "actual_pdf_sha256": "f7fcc7a0bf0405e7d8dcbc4259cceee3a031e306d363fbccbd6e5c40ef3f6949",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "page_count": 4,
+      "extracted_character_count": 10045,
+      "objective_text": "1 Students can gain knowledge of the Metasploit Framework and explore different security aspects of Vulnerability Assessment and Penetration Testing (VAPT) and its relevant domains, understand different domains of red teaming, explore different attacking methods used in red teaming security, and gain knowledge of different security tools and techniques of penetration testing.",
+      "objectives": [
+        "1 Students can gain knowledge of the Metasploit Framework and explore different security",
+        "aspects of Vulnerability Assessment and Penetration Testing (VAPT) and its relevant",
+        "domains, understand different domains of red teaming, explore different attacking methods",
+        "used in red teaming security, and gain knowledge of different security tools and techniques",
+        "of penetration testing."
+      ],
+      "course_outcomes_text": "After completion of this course, student will be able to: 1 Apply Metasploit Framework tools and",
+      "course_outcomes": [
+        "After completion of this course, student will be able to:",
+        "1 Apply Metasploit Framework tools and"
+      ],
+      "units": [],
+      "references": {
+        "textbooks": [
+          "1 Metasploit Penetration Testing Cookbook, Abhinav singh, Packt Publishing, 2012"
+        ],
+        "references": [
+          "1 Metasploit Revealed _ Secrets of the Expert Pentester - Build your Defense against",
+          "Complex Attacks, Metasploit Revealed _ Secrets of the Expert Pentester - Build your",
+          "Defense against Complex Attacks, -, Packt Publishing, -",
+          "2 Introduction to Network Security, Introduction to Network Security, Neal Krawetz,",
+          "CENGAGE Learning, 2007",
+          "3 Metasploit: The Penetration Tester's Guide, Metasploit: The Penetration Tester's Guide,",
+          "David Kennedy, Jim O'Gorman, Devon Kearns, and Mati Aharoni., Kindle Store, 2011",
+          "Suggested Theory Distribution:",
+          "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution",
+          "serves as guidelines for teachers and students to achieve effective teaching-learning process",
+          "Distribution of Theory for course delivery",
+          "DR. MUNINDRA HASMUKHBHAI LUNAGARIA DR. RAJENDRASINH BAHADURSINH JADEJA",
+          "Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)",
+          "Remember / Understand Apply Analyze Evaluate Higher order",
+          "Knowledge Thinking /",
+          "Creative",
+          "00 5.00 25.00 30.00 20.00 20.00",
+          "Instructional Method:",
+          "1 The course delivery method will depend upon the requirement of content and need of",
+          "students. The teacher in addition to conventional teaching method by black board, may also",
+          "use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.",
+          "2 The internal evaluation will be done on the basis of continuous evaluation of students in the",
+          "laboratory and class-room.",
+          "3 Practical examination will be conducted at the end of semester for evaluation of",
+          "performance of students in laboratory.",
+          "4 Students will use supplementary resources such as online videos, NPTEL videos, e-",
+          "courses, Virtual Laboratory.",
+          "Supplementary Resources:",
+          "1 “Advanced Penetration Testing: Hacking the World's Most Secure Networks” by Wil",
+          "Allsopp",
+          "2 “Mastering Metasploit” by Nipun Jaswal",
+          "DR. MUNINDRA HASMUKHBHAI LUNAGARIA DR. RAJENDRASINH BAHADURSINH JADEJA",
+          "Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)"
+        ],
+        "suggested_reading": []
+      },
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    METASPLOIT FRAMEWORK\nCOURSE CODE     01CC0605\nCOURSE CREDITS  3\n\nObjective:\n 1  Students can gain knowledge of the Metasploit Framework and explore different security\n     aspects of Vulnerability Assessment and Penetration Testing (VAPT) and its relevant\n    domains, understand different domains of red teaming, explore different attacking methods\n    used in red teaming security, and gain knowledge of different security tools and techniques\n     of penetration testing.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply Metasploit Framework tools and modules for reconnaissance, scanning, and\n     vulnerability assessment.\n 2  Perform exploitation and post-exploitation activities using Meterpreter and other Metasploit\n    components.\n 3  Analyze system vulnerabilities, attack vectors, and penetration testing results in controlled\n     environments.\n 4  Evaluate exploitation techniques and defensive mechanisms to assess system security.\n 5  Design and develop customized exploits and penetration testing workflows using the\n     Metasploit Framework.\n\n\nPre-requisite of course:Cybersecurity Fundamentals. Basic Networking Knowledge. Ethical\nand Legal Awareness.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Metasploit                                 6\n             Importance of Penetration Testing, Vulnerability Assessment vs\n               Penetration, Testing, the need for a penetration testing framework,\n                Installing Metasploit on Windows & Linux\n     2      Metasploit Components                                   6\n           Anatomy and Structure of Metasploit, Graphical Structure of MSF,\n               Libraries, Interfaces, Metasploit Components, Auxiliaries, Exploits,\n              Encoders, Payloads, Post, Nops, Understanding the MSFconsole,\n              Variables in Metasploit (LHOST, LPORT, RHOST, RPORT)\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Information Gathering with Metasploit                      6\n             Enumerating protocols, Password sniffing, Advanced recon with\n             Shodan, Passive Info. gathering, Active info. gathering, 5 Port\n              scanning- The Nmap way, Host discovery with ARP Sweep, UDP\n              Service Sweeper, SMB scanning and enumeration, Detecting SSH\n               versions, FTP scanning, SMTP enumeration, SNMP Enumeration,\n          HTTP Scanning, WinRM scanning and brute forcing.\n     4      Meterpreter-1                                           7\n           What is Meterpreter?, Meterpreter core commands, Meterpreter file\n             system commands, Meterpreter networking commands, Meterpreter\n             system commands, Dumping the Hashes and cracking with JTR\n             (John the ripper), Shell command, Privilege escalation, MSF\n        VENOM\n     5       Post-Exploitation                                         7\n               Privilege escalation, Metasploit Macro Exploits, Exploiting a\n           Windows machine, Social engineering with Metasploit, Browser\n            Auto pwn\n                               Total Hours                       32\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical 1                                              2\n             Study the architecture and different modules of the Metasploit\n            Framework to understand its working mechanism in Kali Linux.\n            Gain familiarity with various module types such as exploits,\n              payloads, auxiliary, and post modules used in penetration testing.\n     2       Practical 2                                              2\n             Perform protocol enumeration using Metasploit integrated with\n           Nmap. Analyze the identified services and protocols to determine\n               potential vulnerabilities in the target system.\n     3       Practical 3                                              2\n             Perform network scanning using Metasploit with Nmap. Identify\n                live hosts and open ports within a network to understand the attack\n               surface.\n     4       Practical 4                                              2\n             Gather information about a target website using Metasploit modules\n            and Nmap. Analyze server details, technologies, and possible entry\n               points for further assessment.\n     5       Practical 5                                              2\n             Perform SMB scanning and enumeration using Metasploit. Identify\n              shared resources, system information, and possible\n              misconfigurations in SMB services.\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6       Practical 6                                              2\n             Perform privilege escalation using Metasploit modules. Analyze\n             system weaknesses that allow elevation of access rights after initial\n             compromise.\n     7       Practical 7                                              2\n             Demonstrate exploitation of a target system using a malicious PDF\n              generated through Metasploit. Understand how file-based payload\n               delivery can be used to gain access in a controlled environment.\n     8       Practical 8                                              2\n               Identify FTP-related vulnerabilities and exploit the target system\n              using Metasploit. Evaluate weak configurations and outdated\n               services that can be leveraged during exploitation.\n     9       Practical 9                                              2\n              Exploit a target system using msfvenom and Meterpreter to\n               establish a reverse TCP connection. Understand the process of\n             payload generation, delivery, and session handling for remote\n              access in a controlled environment.\n     10      Practical 10                                             2\n             Perform WinRM scanning and brute-force attacks using Metasploit.\n             Analyze authentication mechanisms and identify weaknesses such\n              as poor credential management in remote access services.\n                               Total Hours                       20\n\nTextbook :\n 1  Metasploit Penetration Testing Cookbook, Abhinav singh, Packt Publishing, 2012\n\nReferences:\n 1  Metasploit Revealed _ Secrets of the Expert Pentester - Build your Defense against\n    Complex Attacks, Metasploit Revealed _ Secrets of the Expert Pentester - Build your\n    Defense against Complex Attacks, -, Packt Publishing, -\n 2  Introduction to Network Security, Introduction to Network Security, Neal Krawetz,\n   CENGAGE Learning, 2007\n 3  Metasploit: The Penetration Tester's Guide, Metasploit: The Penetration Tester's Guide,\n    David Kennedy, Jim O'Gorman, Devon Kearns, and Mati Aharoni., Kindle Store, 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           5.00          25.00         30.00         20.00         20.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  “Advanced Penetration Testing: Hacking the World's Most Secure Networks” by Wil\n    Allsopp\n 2  “Mastering Metasploit” by Nipun Jaswal\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
+      ]
+    },
+    {
+      "course_code": "01CC0606",
+      "course_title": "Exploit Development and Shell Scripting",
+      "program_name": "B.Tech CSE Cyber Security",
+      "program_folder": "Computer Science and Engineering - Cyber Security",
+      "semester": 6,
+      "semester_source_value": "Semester_06",
+      "semester_assignment_note": "Explicit semester from the source map.",
+      "source_pdf_url": "/home/user/Marwadi_BTech_Verified_Recovery/Output/B.Tech CSE Cyber Security/Semester_6/01CC0606 - Exploit Development and Shell Scripting.pdf",
+      "source_pdf_repo_path": "_PDF_Library/01CC/01CC0606 - Exploit Development and Shell Scripting.pdf",
+      "original_source_path": "Syllabus/Marwadi_BTech_Verified_Recovery_1/Marwadi_BTech_last_batch/Output/B.Tech CSE Cyber Security/Semester_6/01CC0606 - Exploit Development and Shell Scripting.pdf",
+      "source_batch": "last_batch",
+      "source_status": "VERIFIED_MARWADI",
+      "expected_pdf_sha256": "a6296f9c154ef082695aeec8f453c0abfb62a84acf469720a180c7a6697db0c8",
+      "actual_pdf_sha256": "a6296f9c154ef082695aeec8f453c0abfb62a84acf469720a180c7a6697db0c8",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "page_count": 4,
+      "extracted_character_count": 11545,
+      "objective_text": "1 Students will be able to apply concepts of program execution, memory layout, and vulnerability exploitation to develop proof-of-concept exploits and shell scripts for security tasks, analyze software vulnerabilities including buffer overflows, heap issues, and format- string flaws using debugging and fuzzing techniques, and evaluate exploitation strategies along with modern mitigation mechanisms to understand their impact on exploit development and post-exploitation processes",
+      "objectives": [
+        "1 Students will be able to apply concepts of program execution, memory layout, and",
+        "vulnerability exploitation to develop proof-of-concept exploits and shell scripts for security",
+        "tasks, analyze software vulnerabilities including buffer overflows, heap issues, and format-",
+        "string flaws using debugging and fuzzing techniques, and evaluate exploitation strategies",
+        "along with modern mitigation mechanisms to understand their impact on exploit",
+        "development and post-exploitation processes"
+      ],
+      "course_outcomes_text": "After completion of this course, student will be able to: 1 Apply debugging tools and techniques to identify, analyze, and understand software vulnerabilities in different programs 2 Implement shell scripting techniques to automate system administration and security- related tasks effectively. 3 Analyze various types of vulnerabilities and exploit techniques to understand their behavior and impact on systems 4 Evaluate exploitation strategies and modern security mitigation techniques to determine their effectiveness. 5 Design and develop custom exploits and automated scripts for penetration testing and security operations. Pre-requisite of course:Solid understanding of C programming language, including pointers and memory management. Familiarity with a compiled language (like C) and basic compilation process. Basic understanding of computer architecture, including CPU registers and memory. Familiarity with a command-line interface (Linux is preferred). Basic understanding of networking concepts.",
+      "course_outcomes": [
+        "After completion of this course, student will be able to:",
+        "1 Apply debugging tools and techniques to identify, analyze, and understand software",
+        "vulnerabilities in different programs",
+        "2 Implement shell scripting techniques to automate system administration and security-",
+        "related tasks effectively.",
+        "3 Analyze various types of vulnerabilities and exploit techniques to understand their behavior",
+        "and impact on systems",
+        "4 Evaluate exploitation strategies and modern security mitigation techniques to determine",
+        "their effectiveness.",
+        "5 Design and develop custom exploits and automated scripts for penetration testing and",
+        "security operations.",
+        "Pre-requisite of course:Solid understanding of C programming language, including pointers",
+        "and memory management. Familiarity with a compiled language (like C) and basic compilation",
+        "process. Basic understanding of computer architecture, including CPU registers and memory.",
+        "Familiarity with a command-line interface (Linux is preferred). Basic understanding of",
+        "networking concepts."
+      ],
+      "units": [],
+      "references": {
+        "textbooks": [
+          "1 “Hacking: The Art of Exploitation, Jon Erickson, No Starch Press, 2008"
+        ],
+        "references": [
+          "1 Practical Binary Analysis: Build Your Own Linux Tools for Binary Instrumentation,",
+          "Analysis, and Disassembly, Practical Binary Analysis: Build Your Own Linux Tools for",
+          "Binary Instrumentation, Analysis, and Disassembly, Dennis Andriesse , No Starch Press,",
+          "2018",
+          "2 Shellcoder’s Handbook: Discovering and Exploiting Security Holes, Shellcoder’s",
+          "Handbook: Discovering and Exploiting Security Holes, Chris Anley et al. , Wiley",
+          "Publishing, Inc., 2007",
+          "Suggested Theory Distribution:",
+          "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution",
+          "serves as guidelines for teachers and students to achieve effective teaching-learning process",
+          "Distribution of Theory for course delivery",
+          "Remember / Understand Apply Analyze Evaluate Higher order",
+          "Knowledge Thinking /",
+          "Creative",
+          "00 4.00 28.00 28.00 20.00 20.00",
+          "Instructional Method:",
+          "1 The course delivery method will depend upon the requirement of content and need of",
+          "students. The teacher in addition to conventional teaching method by black board, may also",
+          "use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc",
+          "2 The internal evaluation will be done on the basis of continuous evaluation of students in the",
+          "laboratory and class-room",
+          "3 Practical examination will be conducted at the end of semester for evaluation of",
+          "performance of students in laboratory.",
+          "4 Students will use supplementary resources such as online videos, NPTEL videos, e-",
+          "courses, Virtual Laboratory",
+          "Supplementary Resources:",
+          "1 NPTEL Course: Foundations of Cyber Security (Exploitation & SE) – IIT Kanpur (Prof.",
+          "Manindra Agrawal)",
+          "2 “Software Security” – University of Maryland (Coursera)",
+          "3 Virtual lab / VM : Metasploitable 2 & 3",
+          "DR. MUNINDRA HASMUKHBHAI LUNAGARIA DR. RAJENDRASINH BAHADURSINH JADEJA",
+          "Digitally signed by (Name of HOD) Digitally signed by (Name of Dean/ Principal)"
+        ],
+        "suggested_reading": []
+      },
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    EXPLOIT DEVELOPMENT AND SHELL SCRIPTING\nCOURSE CODE     01CC0606\nCOURSE CREDITS  3\n\nObjective:\n 1  Students will be able to apply concepts of program execution, memory layout, and\n     vulnerability exploitation to develop proof-of-concept exploits and shell scripts for security\n     tasks, analyze software vulnerabilities including buffer overflows, heap issues, and format-\n     string flaws using debugging and fuzzing techniques, and evaluate exploitation strategies\n     along with modern mitigation mechanisms to understand their impact on exploit\n    development and post-exploitation processes\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply debugging tools and techniques to identify, analyze, and understand software\n     vulnerabilities in different programs\n 2  Implement shell scripting techniques to automate system administration and security-\n     related tasks effectively.\n 3  Analyze various types of vulnerabilities and exploit techniques to understand their behavior\n    and impact on systems\n 4  Evaluate exploitation strategies and modern security mitigation techniques to determine\n      their effectiveness.\n 5  Design and develop custom exploits and automated scripts for penetration testing and\n     security operations.\n\n\nPre-requisite of course:Solid understanding of C programming language, including pointers\nand memory management. Familiarity with a compiled language (like C) and basic compilation\nprocess. Basic understanding of computer architecture, including CPU registers and memory.\nFamiliarity with a command-line interface (Linux is preferred). Basic understanding of\nnetworking concepts.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Foundations of Program Execution and Vulnerabilities         7\n               Introduction to Exploit Development: Concepts, goals, ethical\n               considerations, Computer Architecture Review (relevant to\n                exploitation): CPU registers, memory organization (stack, heap,\n                data, text segments), Program Compilation and Execution Process,\n               Introduction to Assembly Language (basic x86/x64):,\n             Understanding function calls, stack operations, Debugging\n             Fundamentals: Using tools like GDB or WinDbg to inspect memory\n            and registers,, Introduction to Common Vulnerability Classes:\n              Buffer overflows, integer overflows, format string vulnerabilities,\n              race conditions (overview)\n     2      Stack Buffer Overflow Exploitation                         6\n           Deep Dive into Stack Buffer Overflows: How they occur,\n              overwriting return addresses, Controlling Program Execution Flow,\n               Introduction to Shellcode: Purpose, writing basic shellcode (e.g.,\n               execve(\"/bin/sh\"), Shellcode Encoding and Decoding Techniques\n                  (e.g., XOR, shikata ga nai - basic concepts), Developing Stack\n              Buffer Overflow Exploits (non-networked examples), Basic\n               Protections and Bypass (e.g., No-Execute bit/DEP - conceptual)\n     3      Introduction to Shell Scripting for Security                   6\n               Shell Scripting Fundamentals (Bash): Basic syntax, variables,\n               input/output, File Operations and Permissions in Scripts,\n              Conditional Statements and Loops, Command Substitution and\n               Piping, Essential Shell Commands for Security Tasks: grep, awk,\n               sed, find, User and Permission Management using Scripts\n     4     Advanced Vulnerability Classes and Exploitation Concepts     6\n           Heap Overflows: Understanding heap memory management and\n          common heap exploitation techniques (introduction), Format String\n               Vulnerabilities: How they occur, reading/writing memory using\n             format strings, Return-Oriented Programming (ROP): Concepts and\n               basic chain building (introduction), Integer Overflows and\n             Underflows: Detecting and exploiting integer vulnerabilities,\n               Introduction to Fuzzing for vulnerability discovery (basic concepts)\n     5       Integrating Shell Scripting and Exploit Development           7\n             Using Shell Scripts for Reconnaissance: Automating port scanning\n            (nmap scripting basics), service banner grabbing, Writing Scripts\n               for Vulnerability Scanning and Analysis (integrating command-line\n                 tools), Automating Exploit Delivery and Execution using Shell\n                Scripts, Creating Simple Security Tools using Shell Scripting, Post-\n               Exploitation, Scripting: Automating data exfiltration or privilege\n               escalation tasks (in a controlled lab), Defense and Mitigation:\n               Introduction to exploit mitigation techniques and how they affect\n               exploitation\n                               Total Hours                       32\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical 1                                              2\n               Setting up a Safe Exploit Development Lab: Installing and\n              configuring virtual machines (e.g., using VirtualBox or VMware)\n            and vulnerable application environments (e.g., Metasploitable,\n              purposefully vulnerable VMs)\n     2       Practical 2                                              2\n             Basic Shell Scripting Fundamentals: Writing and executing simple\n            Bash scripts for file manipulation, variable usage, and command\n              execution.\n     3       Practical 3                                              2\n             Writing Shell Scripts for Basic System Information Gathering:\n              Creating scripts to extract and format system information (OS\n               version, running processes, network configuration)\n     4       Practical 4                                              2\n            Debugging a Simple C Program: Using GDB to set breakpoints,\n               step through code, inspect variables, and examine memory layout.\n     5       Practical 5                                              2\n               Identifying a Stack Buffer Overflow: Analyzing a provided\n              vulnerable C program and using a debugger to confirm a buffer\n             overflow condition\n     6       Practical 6                                              2\n             Developing a Basic Stack Buffer Overflow Exploit (Return Address\n              Overwrite): Writing a Python or C program to exploit the vulnerable\n               application by overwriting the return address to redirect execution to\n             a specific location within the program.\n     7       Practical 7                                              2\n              Creating and Executing Simple Shellcode: Writing and testing basic\n              shellcode (e.g., /bin/sh execution) in a controlled environment and\n            embedding it in a simple program.\n     8       Practical 8                                              2\n             Using Shell Scripting for Automated Port Scanning: Writing a Bash\n                script that utilizes nmap or other tools to scan a range of IP\n              addresses for open ports and report the results\n     9       Practical 9                                              2\n             Automating Exploit Execution with a Shell Script: Creating a shell\n                script that compiles or runs a proof-of-concept exploit program and\n              handles its input/output (in a controlled environment).\n     10      Practical 10                                             2\n             Analyzing a Simple Exploit Script: Examining a provided script\n                  (e.g., a Python script for a simple web vulnerability or a Bash script\n               for a known OS vulnerability) to understand its functionality and\n          how it leverages scripting for exploitation or automation.\n                               Total Hours                       20\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Textbook :\n 1  “Hacking: The Art of Exploitation, Jon Erickson, No Starch Press, 2008\n\nReferences:\n 1  Practical Binary Analysis: Build Your Own Linux Tools for Binary Instrumentation,\n     Analysis, and Disassembly, Practical Binary Analysis: Build Your Own Linux Tools for\n    Binary Instrumentation, Analysis, and Disassembly, Dennis Andriesse , No Starch Press,\n    2018\n 2  Shellcoder’s Handbook: Discovering and Exploiting Security Holes, Shellcoder’s\n    Handbook: Discovering and Exploiting Security Holes, Chris Anley et al. , Wiley\n     Publishing, Inc., 2007\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           4.00          28.00         28.00         20.00         20.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  NPTEL Course: Foundations of Cyber Security (Exploitation & SE) – IIT Kanpur (Prof.\n    Manindra Agrawal)\n 2   “Software Security” – University of Maryland (Coursera)\n 3  Virtual lab / VM : Metasploitable 2 & 3\n\n\n\n\n\nDR. MUNINDRA HASMUKHBHAI LUNAGARIA    DR. RAJENDRASINH BAHADURSINH JADEJA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but explicit Unit/Module headings could not be parsed confidently."
+      ]
+    }
+  ],
+  "build_summary": {
+    "structured": 0,
+    "manual_review": 3,
+    "ocr_review": 0,
+    "hash_mismatch": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 0
+  }
+}
