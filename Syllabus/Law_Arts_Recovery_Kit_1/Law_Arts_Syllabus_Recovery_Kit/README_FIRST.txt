@@ -3,6 +3,13 @@ PREPMASTER — LAW & ARTS SYLLABUS RECOVERY KIT
 GOAL
 Download real, title-matched syllabus PDFs for the current `law-arts` domain of PrepMaster's GitHub catalog. Generate a PDF collection ZIP and detailed reports. The runner does not change Supabase, GitHub, or the live website.
 
+CURRENT CURATED COLLECTION (2026-10-12)
+- This repository copy has been curated to the current Law & Arts catalog: 130 PDF files are retained.
+- Use `Output/ACTIVE_PDF_MANIFEST.csv` for the current subject/course/semester-to-PDF mapping, including explicit rows for network-unverified subjects with no local PDF.
+- See `CLEANUP_NOTES.md` for deleted files and rationale. The original run reports remain historical and may refer to removed PDFs.
+- Network-unverified subjects are retained as unresolved; a failed network check is not proof that a syllabus does not exist.
+
+
 RUN
 1. Extract the ZIP into a new folder.
 2. Double-click RUN_LAW_ARTS_RECOVERY.bat.
