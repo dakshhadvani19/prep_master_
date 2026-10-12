@@ -104,7 +104,7 @@ def parse_unit_blocks(text: str) -> dict[str, list[dict[str, Any]]]:
         r"(?:\s*[-:.)]\s*|\s+)?(.*)$", re.IGNORECASE
     )
     table_unit_pattern = re.compile(
-        r"^(\d{1,2})[.)]?\s+([A-Za-z][A-Za-z0-9 /&()–—:,.+'’\-]{1,100}?)(?:\s{2,}|\s+)(\d{1,3})?$"
+        r"^(\d{1,2})[.)]?\s+([A-Za-z][A-Za-z0-9 /&()–—:,.+'’\-]{1,120}?)\s+(\d{1,3})$"
     )
     for line in clean_lines(text):
         low = line.lower()
@@ -143,7 +143,7 @@ def parse_unit_blocks(text: str) -> dict[str, list[dict[str, Any]]]:
             active = False
             continue
         numbered = table_unit_pattern.match(line)
-        if numbered and (not current or not current.get("_topic_lines")):
+        if numbered:
             flush()
             current = {"unit_number": int(numbered.group(1)),
                        "title": numbered.group(2).strip(),
