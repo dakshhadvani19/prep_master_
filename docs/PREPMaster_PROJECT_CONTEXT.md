@@ -106,7 +106,7 @@ Runtime database sources:
 
 Current verified facts:
 - Courses: 49 rows
-- Subjects: 2682 rows after 106 records were archived and removed during the 2026-10-11 syllabus availability cleanup
+- Subjects: 2492 rows after the 2026-10-11 catalog exclusions and the 96-row Diploma cleanup on 2026-10-12
 - All Subjects rows have non-null Semester
 - No blank subject names
 - No orphan CourseIds
@@ -285,11 +285,13 @@ The Law & Arts PDF content audit temporarily excluded 74 live `public.Subjects` 
 - The same 122 IDs are removed from `src/data/subjectIdBridge.json`, `src/data/subjectSemesterMap.json`, and the legacy subject arrays in `src/data/mockData.js` to prevent stale numeric exam routes from resolving them.
 - Restore only after a directly accessible syllabus is validated against the applicable course/program, subject code/title, and semester. Retry sources in priority order: official Marwadi University, GTU, then another credible official university for clearly-labelled comparable references.
 
-## Diploma syllabus-backed catalog rule (added 2026-10-12)
+## Diploma syllabus-backed catalog rule (updated 2026-10-12)
 
-For Diploma CourseIds 44–49, the active subject catalog is synchronized against the current official Marwadi course-page syllabus PDF inventory. The source manifest is `Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Reports/subject_inventory_from_marwadi_pages.csv`; the synchronized 245-row catalog snapshot is under `global-exam-prep/temp_removed_subjects/diploma_catalog_sync_2026-10-12.csv`.
+For Diploma CourseIds 44–49, synchronize against the current official Marwadi syllabus manifest at `Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Reports/subject_inventory_from_marwadi_pages.csv` and the 245-target planning manifest in `global-exam-prep/temp_removed_subjects/diploma_catalog_sync_2026-10-12.csv`.
 
-- Before removing any old subject row, archive its exact SubjectId, name, CourseId, course name, semester and legacy source mapping in `global-exam-prep/temp_removed_subjects/diploma_removed_subjects_2026-10-12.csv`.
-- Resolve duplicate course-code aliases by the actual linked PDF's title/code evidence where available. Do not create two active rows for the same CourseId+source code.
-- Current SubjectId convention verified from live Diploma records: convert letters in the official source code to alphabet positions (A=1…Z=26, no zero-padding per letter), append the existing `01` suffix, left-pad that encoded portion to 12 digits, and prefix CourseId. Example: CourseId 44 + `09CE3102` = `44000935310201`.
-- Whenever a current official code changes, synchronize `Subjects`, `mockData.js`, `subjectIdBridge.json`, and `subjectSemesterMap.json`. Archive old primary keys instead of silently dropping them; an archived record may be restored after its syllabus source is validated.
+- Verified ID format: convert alphabetic characters in the official subject code to 1-based alphabet positions (A=1…Z=26), preserve numeric digits, append `01`, left-pad the encoded code to 12 digits, then prefix CourseId. Example: CourseId 44 + `09CE3102` → `44000935310201`.
+- Completed sync state: 241 active Diploma Subject IDs in Supabase match the manifest by SubjectId, CourseId, semester, and subject name. Do not re-insert an existing SubjectId.
+- Four targets remain excluded until evidence is resolved: Computer Engineering and Electrical Engineering Applied Chemistry (`09GS3102`), because the PDFs specify Semester I/II without a program-specific semester; Mechanical Engineering Computer Fundamental Skill (`09CE2101`) and Civil Engineering Advance Design of Structures (`09CI0616`), because code/title validation is pending.
+- Ninety-six superseded/unverified previous rows were archived in `public.temp_subjects_removed` and the checked-in CSV archive before deletion. Keep RLS enabled; do not grant browser `anon` or `authenticated` read/write access to this internal archive.
+- Keep `subjectIdBridge.json`, `subjectSemesterMap.json`, and static Diploma subject arrays synchronized to the **241 active IDs**, excluding the four unresolved targets.
+- Active catalog and semester-coverage reports distinguish missing validated PDFs from proof that a subject does not exist. Network, source-code, or semester uncertainty is not evidence of absence.

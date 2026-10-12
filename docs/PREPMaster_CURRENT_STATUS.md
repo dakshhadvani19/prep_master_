@@ -168,7 +168,11 @@ Unless the requested task directly requires them, avoid opportunistic rewrites o
 
 ## 2026-10-12 — Diploma syllabus-backed catalog sync
 
-- Current source inventory: Marwadi official Diploma pages and their linked syllabus PDFs, not the prior Supabase subject list alone.
-- Target catalog: 245 unique subjects across Diploma CourseIds 44–49.
-- Planned hosted Supabase transaction: archive 96 previous IDs, add 106 current code-derived IDs, update 31 names/semesters, and retain other supported IDs. See the source manifest and removal archive in `global-exam-prep/temp_removed_subjects/`.
-- `subjectIdBridge.json`, `subjectSemesterMap.json`, and the Diploma arrays in `mockData.js` are synchronized to the same 245 active entries.
+- Source target: 245 intended Diploma subject records from the checked-in current Marwadi official-page syllabus manifest.
+- Live sync completed against Supabase `public."Subjects"` for CourseIds 44–49. 241 target IDs existed and now match the manifest's CourseId, semester, and subject name. No duplicate-ID inserts were attempted.
+- Four target records remain excluded pending evidence: two Applied Chemistry (`09GS3102`) rows whose PDF only specifies Semester I/II, and two rows whose source code/title validation remains flagged for review (`09CE2101` Computer Fundamental Skill for Mechanical and `09CI0616` Advance Design of Structures for Civil).
+- Ninety-six superseded/unverified old subject rows were copied to `public.temp_subjects_removed` with source metadata and removal reasons, and to `global-exam-prep/temp_removed_subjects/diploma_removed_subjects_2026-10-12.csv`, before deletion. Post-write verification confirmed 96 archived, 0 archived IDs still live, and 241 live Diploma rows.
+- `public.temp_subjects_removed` has RLS enabled and no privileges granted to `anon` or `authenticated`; it is an internal audit/recovery table, not student-facing content.
+- `diploma_active_syllabus_catalog_2026-10-12.csv` represents the 241 active rows. The semester coverage report is `Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Reports/diploma_syllabus_coverage_2026-10-12.csv`. The four unresolved targets remain in `diploma_semester_review_pending_2026-10-12.csv`.
+- Compatibility maps and the Diploma arrays in `mockData.js` now omit the four unresolved subject IDs and contain the same 241 active numeric Diploma IDs.
+- Coverage note: Diploma ICT semester 3 has no subject in the current active manifest with a validated current official syllabus PDF; six former semester-3 IDs are archived because no matching current official PDF was validated in the package. This is a syllabus-evidence gap, not proof that subjects do not exist.

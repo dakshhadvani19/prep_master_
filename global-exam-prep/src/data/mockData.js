@@ -26138,16 +26138,6 @@ export const domains =[
         "semesters": 6,
         "subjects": [
           {
-            "id": "44009719310201",
-            "title": "Applied Chemistry",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
             "id": "44000935310201",
             "title": "Basics of Web Designing",
             "sem": 1,
@@ -26617,16 +26607,6 @@ export const domains =[
           {
             "id": "45000939210301",
             "title": "Applied Mechanics",
-            "sem": 2,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "45000935210101",
-            "title": "COMPUTER FUNDAMENTAL SKILL",
             "sem": 2,
             "exams": [
               "mid-1",
@@ -27328,16 +27308,6 @@ export const domains =[
         "title": "Diploma Electrical Engineering",
         "semesters": 6,
         "subjects": [
-          {
-            "id": "47009719310201",
-            "title": "APPLIED CHEMISTRY",
-            "sem": 1,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
           {
             "id": "47009719210101",
             "title": "Applied Physics",
@@ -28119,16 +28089,6 @@ export const domains =[
             "id": "48000939050901",
             "title": "WATER RESOURCES ENGINEERING",
             "sem": 5,
-            "exams": [
-              "mid-1",
-              "mid-2",
-              "final"
-            ]
-          },
-          {
-            "id": "48000939061601",
-            "title": "ADVANCE DESIGN OF STRUCTURES",
-            "sem": 6,
             "exams": [
               "mid-1",
               "mid-2",
