@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "generated_at_utc": "2026-10-12T12:20:23+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -629,31 +629,60 @@
       "catalog_status": "REVIEW_TITLE_OR_CODE_MISMATCH",
       "catalog_action": "RETAINED",
       "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e2-game-development.pdf",
-      "source_pdf_repo_path": null,
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Needs_Review/Diploma Information and Communication Technology/Semester_Unspecified/09CT0514 - Game Development (.pdf",
       "expected_pdf_sha256": "f4c580f346930eac4215a005fe5717f77cbc3063f68a0e0fda95178d92166e2c",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "PDF_NOT_FOUND",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": null,
-        "course_code": null,
-        "semester_label": null,
+        "course_code": "Game",
+        "semester_label": "V",
         "credits": null,
-        "prerequisite": null
+        "prerequisite": "Basic programming and oops concept"
       },
-      "objectives": [],
-      "course_outcomes": [],
-      "teaching_and_examination_scheme_text": "",
+      "objectives": [
+        "After completion of this course, student will be able to understand the concepts ofGame design and development. They will learn the processes, mechanics and issues in GameDesign. They will be exposed to the Core architectures of Game Programming.they will Knowabout Game programming platforms, frame works and engines which requires to develop games. Credits Earned: 04 Credits"
+      ],
+      "course_outcomes": [
+        "After completion of this course, student will be able to:1. Discuss the concepts of Game design and development.2. Design the processes, and use mechanics for game development.3. Explain the Core architectures of Game Programming.4. Use Game programming platforms, frame works and engines.5. Create interactive Games."
+      ],
+      "teaching_and_examination_scheme_text": ": Tutorial / Theory Marks Teaching Scheme (Hours) Practical Marks Credits Total Marks E I V T Theory Tutorial Practical ESE IA CSE Viva Term Work 3 0 2 4 50 30 20 25 25 150 [PAGE 2] Marwadi University Faculty of Diploma Studies Information and Communication Technology",
       "contents": {
         "theory_units": [],
         "practical_units": []
       },
-      "references": {},
-      "page_count": 0,
-      "extracted_character_count": 0,
-      "source_text_by_page": [],
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 4,
+      "extracted_character_count": 7412,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                     Faculty of Diploma Studies\n                    Information and Communication Technology\n\n                     Subject Code: Game Development\n                     Subject Name: Game Development\n                   Diploma Year – III (Semester V)\n\nObjective:            After completion of this course, student will be able to understand the concepts ofGame design and development. They will learn the processes, mechanics and issues in GameDesign. They will be exposed to the Core architectures of Game Programming.they will Knowabout Game programming platforms, frame works and engines which requires to develop games.\nCredits Earned:             04 CreditsCourse Outcomes:                    After completion of this course, student will be able to:1.  Discuss the concepts of Game design and development.2.  Design the processes, and use mechanics for game development.3.  Explain the Core architectures of Game Programming.4.  Use Game programming platforms, frame works and engines.5.  Create interactive Games.Pre-requisite of course:                         Basic programming and oops concept\n\nTeaching and Examination Scheme:\n                                                                  Tutorial /                                     Theory Marks  Teaching Scheme (Hours)                                     Practical Marks                                Credits                                           Total Marks                                 E            I      V       T Theory  Tutorial   Practical          ESE   IA   CSE  Viva  Term Work  3       0        2       4     50   30   20   25       25         150"
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                     Faculty of Diploma Studies\n                    Information and Communication Technology\n\nContents:\nUni                                                                                  Contact    Introduction to Unity & Game Development:Topics  t                                                                           Hours                                                Engine Concepts,  Development 1   Tools,  Introducing Unity, Installing Unity Software, IDE Basics, Unity Concepts,     04    Introduction to Scripting:     Sprites                        C# Language Concepts, C# Coding Fundamentals, Game 2  Simple Movement & Input:                                                05    Loops and Functions                               Simple Movement, Simple Rotation and Scaling, Easy 3   Input Handling in Unity, 2D Physics Concepts, Rigidbody Components, Unity     05     Primitive Data and Math:     Colliders, Physics Materials, Scripting Collision Events                              Data Types and Variables, Mathematical Operations,    Decisions and Flow Control:     Variable Scope and Access, Displaying Data, 4                                                                         04                                    Logical Expressions, “if/else” Statements, \"switch\"    Organizing Game Objects:     Statements                               Parent-Child Objects, Sorting Layers, Tagging Game, 5   Objects,ExceptionsCollisionand Debugging:Layers, Object-Oriented Concepts, Class, functions, Constructor,        06     PropertyLoops andFunction,Array: Object Management, it’s lifespan with Invoke.   Game Design Strategies:   Runtime Exception, Errors, Debugger, 6                                                                         05                       Array, for() and foreach(), while loop()                      Game Requirements, Game Mechanics, Storytelling and     Progression,Virtual Worlds:Design Documents. 7                                                                         05     Scrolling Games:Moving Cameras, Setting Boundaries, Building a Tile World, Mini-    Maps    Animation:     Wrapping Background, Scrolling Game Mechanics, Parallax Effects               Simple Unity Animation, Animator States, Scripting Animations, 8                                                                         08    AnimationsSound Effects:and Colliders\n                                                                   Total Hours                Sound Files, Adding Sounds to Game Objects, Scripting Sounds                                                                          42"
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                      Faculty of Diploma Studies\n                    Information and Communication Technology\nSuggested Text books / Reference books:\n    1. Sams Teach Yourself Unity Game Development in 24 Hours\n    2.  Unity in Action: Multiplatform Game Development in C# with Unity 5 by Joseph Hocking\n    3.  Introduction to Game Design, Prototyping, and Development, Jeremy Gibson\n       Learning C# by Developing Games with Unity 5.x, Gerg Lukosek.\n       Unity 5.x By Example, Alan Thorn.    4.    5.Suggested Theory distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as per follows. This distributionserves as guidelines for teachers and students to achieve effective teaching-learning process.\n                      Distribution of Theory for course delivery and evaluation    Remember        Understand       Apply      Analyze       Evaluate       Create     40%           40%        10%      10%                 -                  -\nSuggested List of Experiments:\n    1.   Installation to Unity Software.\n    2.  Introduction to Operating of IDE and basic program.\n    3.  Create first Sprite using Scratch as following images.\n\n\n\n\n    4.  Write a C# Sharp program to accept two integers and check whether they are equal or not.\n    5.  Write a C# Sharp program to accept a coordinate point in an XY coordinate system and determine\n        in which quadrant the coordinate point lies.\n    6.  Write a C# Sharp program to check whether an alphabet is a vowel or consonant.\n    7.  Create a program to demonstrate Alien Dance Squad.\n    8.  Create Simple Pin Ball game.\n    9. Add Scoring feature in Practical-8.\n    10. Write a program to develop Thunder Road.\n    11. Write a program to develop Mower Dodgeball.\n    12. Write a program to develop Bug Hunt.\n    13. Write a program that will demonstrate sounds with movement of any Sprite.\n    14. Write a program to develop RoboDash with animation effects."
+        },
+        {
+          "page": 4,
+          "text": "Marwadi University\n                      Faculty of Diploma Studies\n                    Information and Communication Technology\n\n\nOpen Ended Projects:\n       Student will develop a game like Crossy Road, Super Mario Run etc, by using concepts of Unity\nand C#.\nStudentCompleteActivity:online course and get certificate of “Android development” under OnlineProgramming Certification.\nInstructionala) The courseMethod:delivery method will depend upon the requirement of content and need of           students. The teacher in addition to conventional teaching method by black board, also         need to use Digital media for programming.       b) The internal evaluation will be done on the basis of continuous evaluation of students           in the laboratory and class-room..       c)  Practical examination will be conducted at the end of semester for evaluation of         performance of students in laboratory.References\n       1.  https://learn.unity.com/\n       2. https://www.tutorialspoint.com/unity/index.htm\n       3. https://www.raywenderlich.com/unity/paths/learn"
+        }
+      ],
       "warnings": [
-        "No checked-in PDF matched subject code 09CT0514."
-      ]
+        "Selected PDF is stored in Needs_Review; source metadata is flagged for review.",
+        "PDF text was extracted, but its Contents tables could not be confidently parsed.",
+        "Official PDF course code differs from catalog code; inspect source mapping."
+      ],
+      "actual_pdf_sha256": "f4c580f346930eac4215a005fe5717f77cbc3063f68a0e0fda95178d92166e2c"
     },
     {
       "subject_id": "49009320051201",
@@ -1268,31 +1297,56 @@
       "catalog_status": "REVIEW_TITLE_OR_CODE_MISMATCH",
       "catalog_action": "RETAINED",
       "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e1-optical-and-satellite-communication.pdf",
-      "source_pdf_repo_path": null,
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Needs_Review/Diploma Information and Communication Technology/Semester_Unspecified/09CT0506 - Optical and Satellite Communication (.pdf",
       "expected_pdf_sha256": "07140e25394026b524a3a96509c3dddbc065e59bb67b2a0757c8fba26cb203e2",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "PDF_NOT_FOUND",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
       "official_document_metadata": {
         "course_title": null,
-        "course_code": null,
-        "semester_label": null,
+        "course_code": "Subject",
+        "semester_label": "V",
         "credits": null,
-        "prerequisite": null
+        "prerequisite": "TeachingAnalog andandDigitalExaminationCommunication.Scheme Tutorial/ Practical Teaching Scheme (Hours) Theory Marks Marks Total Credits Term ESE MarksTheory Tutorial Practical IA (M) CSE (I) Viva (V) work (E) (TW) 3 0 2 4 50 30 20 25 25 150"
       },
-      "objectives": [],
-      "course_outcomes": [],
+      "objectives": [
+        "The rationale behind this course is to understand working of optical and satelliteCredits Earned:communication systems."
+      ],
+      "course_outcomes": [
+        "Credits After learning this course, students should be able to, 1. Interpret the functions of the various blocks of optical fiber communication system. 2. Differentiate losses in optical fiber link and state transmission characteristics of optical fiber 3. Understand working of various optical source and detectors. 4. Understand the basics of satellite communication. 5. Understand different application of satellite communication."
+      ],
       "teaching_and_examination_scheme_text": "",
       "contents": {
         "theory_units": [],
         "practical_units": []
       },
-      "references": {},
-      "page_count": 0,
-      "extracted_character_count": 0,
-      "source_text_by_page": [],
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6004,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Marwadi University\n                        Faculty of Diploma Studies\n                       Information and Communication Technology\n\n                              Subject Code:\n            Subject Name: Optical and Satellite Communication\n                   Diploma Year – III (Semester V)\n\n    Objective:             The rationale behind this course is to understand working of optical and    satelliteCredits Earned:communication systems.   Course Outcomes:4 Credits                        After learning this course, students should be able to,     1.    Interpret the functions of the various blocks of optical fiber communication         system.     2.    Differentiate losses in optical fiber link and state transmission characteristics of          optical fiber     3.   Understand working of various optical source and detectors.     4.   Understand the basics of satellite communication.     5.   Understand different application of satellite communication.    Pre-requisite of course:                        TeachingAnalog andandDigitalExaminationCommunication.Scheme\n                                                               Tutorial/ Practical Teaching Scheme (Hours)              Theory Marks                                                         Marks                                                                                   Total                              Credits                             Term                               ESE                                 MarksTheory  Tutorial  Practical                IA (M)  CSE (I)   Viva (V)   work                                       (E)                                                          (TW)  3       0       2       4     50    30     20      25      25     150    Contents:\n\n Sr No  Course content                                                       Total Hrs.\n  1                                                               10         Optical  fiber  communications:  Advantages,  Disadvantages and         Applications, Construction of fiber optic cable, Classification based       on modes of propagation of light and index profile, Block diagram of         optical fiber communication, Optical sources: LEDs, Lasers, Optical  2                                                               07         Detectors: PIN Diodes and APDs          Reflection, Refraction, Total internal reflection,  Snell’s law,  Critical          angle, numerical aperture, acceptance angle and acceptance cone,          splicing techniques, losses in optical fiber."
+        },
+        {
+          "page": 2,
+          "text": "Marwadi University\n                      Faculty of Diploma Studies\n                     Information and Communication Technology\n3                                                               07      Optical transmitter circuit, Optical receiver circuit, Optical system4    design considerations: Component choice, Multiplexing, Analog and     10      Digital System Design     Working principle, concepts and basic components of satellite system,       Satellite   frequency  bands  and   frequency   allocations,   Basic      terminologies, communication satellite orbits and its types, Kepler’s5     law, Apogee and Perigee heights, Orbit perturbations, Effects of non-     08      spherical earth, atmospheric drag       Satellite Earth Station (Block diagram, Antenna subsystem, LNA, Power      subsystem, TTAC,  Attitude  control, Spinning  satellite  stabilization,    Momentum wheel  stabilization,  Station  Keeping, Thermal  control      transponder),Total         Space  Link  (EIRP,  transmission  losses),  Satellite   42 hrs.      Applications (GPS, VSAT)\n References:1.  Kieser, Gerd, Fiber Optic Communication, McGraw Hill     2.  Senior John M., Optical Fiber Communications Principles and Practices, Pearson     3. Roddy Dennis, Satellite Communications, TMH     4. Rao Raja, Satellite Communications concepts and applications, PHI     5. P Chakrabarti, Optical Fiber Communication, McGraw Hill Suggested6.  GerardTheoryMaral,distribution:Michel Bousquet, Satellite Communications Systems, Wiley\n The suggested theory distribution as per Bloom’s taxonomy is as per follows. This distribution serves as guidelines for teachers and students to achieve effective teaching- learning process Legends: R: Remembrance; U: Understanding; A: Application, N: Analyze and E: Evaluate\n C: Create andDistributionabove Levelsof (RevisedTheory forBloom’scourse deliveryTaxonomy)and evaluation Remember   Understand     Apply       Analyse      Evaluate       Create   40%       40%       10%       10%       0%       0%\n Suggested List of Experiments:\n     1.  Identify various layers and parts of an optical fiber cable.     2.  Calculate bandwidth of optical fiber cable for analog link.     3.  Calculate numerical aperture and acceptance angle for the given optical fiber        cable.     4. Connect the given optical cable with relevant optical connector and test the       performance of cable.     5. Measure attenuation losses for the given length of optical fiber cable."
+        },
+        {
+          "page": 3,
+          "text": "Marwadi University\n                     Faculty of Diploma Studies\n                    Information and Communication Technology\n    6. Measure bending losses for given optical fiber cable.    7.  Join optical fiber cable using splicing machines.    8. Demonstrate working of OTN.    9.  Test the performance of audio satellite link for the specified uplink and downlink       frequency.   10. Develop a program using a relevant simulation tool to calculate the time period       of a satellite for the given velocity and altitude based on Kepler’s third law.   11. Detect satellite link fail operations and re-establish the link.   12. Establish a link to transmit and receive three separate signals simultaneously\nReference Materials:      through satellite link.\n  ●\n  ●      https://nptel.ac.in/courses/117/104/117104127/\n  ●      https://nptel.ac.in/courses/117/105/117105131/      https://www.coursera.org/learn/satellite-communications"
+        }
+      ],
       "warnings": [
-        "No checked-in PDF matched subject code 09CT0506."
-      ]
+        "Selected PDF is stored in Needs_Review; source metadata is flagged for review.",
+        "PDF text was extracted, but its Contents tables could not be confidently parsed.",
+        "Official PDF course code differs from catalog code; inspect source mapping."
+      ],
+      "actual_pdf_sha256": "07140e25394026b524a3a96509c3dddbc065e59bb67b2a0757c8fba26cb203e2"
     },
     {
       "subject_id": "49009320050101",
@@ -1751,9 +1805,9 @@
   ],
   "build_summary": {
     "extracted": 11,
-    "manual_review": 1,
+    "manual_review": 3,
     "ocr_review": 0,
-    "missing_pdf": 2,
+    "missing_pdf": 0,
     "extraction_errors": 0
   }
 }

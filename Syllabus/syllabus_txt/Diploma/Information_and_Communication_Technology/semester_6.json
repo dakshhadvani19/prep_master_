@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "generated_at_utc": "2026-10-12T12:20:23+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -1101,31 +1101,141 @@
       "catalog_status": "REVIEW_TITLE_OR_CODE_MISMATCH",
       "catalog_action": "RETAINED",
       "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/PROJECT-2.pdf",
-      "source_pdf_repo_path": null,
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Needs_Review/Diploma Information and Communication Technology/Semester_Unspecified/09CT0602 - Project-II (.pdf",
       "expected_pdf_sha256": "9185d6cdbac30f8f96d5ffea265ec59ccba30131466a1dff20be91e538fe34cc",
       "extraction_method": "PyMuPDF native PDF text layer; no OCR",
-      "extraction_status": "PDF_NOT_FOUND",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
       "official_document_metadata": {
-        "course_title": null,
-        "course_code": null,
-        "semester_label": null,
-        "credits": null,
-        "prerequisite": null
+        "course_title": "PROJECT ± II",
+        "course_code": "09CE1602",
+        "semester_label": "6",
+        "credits": 6,
+        "prerequisite": "Syllabus of PROJECT ± II"
       },
-      "objectives": [],
-      "course_outcomes": [],
-      "teaching_and_examination_scheme_text": "",
+      "objectives": [
+        "Students will identify the need of industry, explore latest technologies, work on industry or social problems with team members."
+      ],
+      "course_outcomes": [
+        "To understand, analyse real problems of industry or society and provide solutions for those problems.",
+        "To identify practical aspect of studied technologies",
+        "To communicate in the way industry demands in oral and documented way.",
+        "To demonstrate teamwork and leader ship quality",
+        "To present and document implemented work effectively"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 12 0 0 0 100 100",
       "contents": {
         "theory_units": [],
-        "practical_units": []
+        "practical_units": [
+          {
+            "unit_number": 1,
+            "title": "Project/Problem Identification",
+            "contact_hours": 18,
+            "topic_lines": [
+              "Project/Problem Identification"
+            ],
+            "topics_text": "Project/Problem Identification",
+            "topics": [
+              "Project/Problem Identification"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Project Analysis, Requirement Gathering",
+            "contact_hours": 20,
+            "topic_lines": [
+              "Project Analysis, Requirement Gathering"
+            ],
+            "topics_text": "Project Analysis, Requirement Gathering",
+            "topics": [
+              "Project Analysis, Requirement Gathering"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Project Design / Prototype Development",
+            "contact_hours": 20,
+            "topic_lines": [
+              "Project Design / Prototype Development"
+            ],
+            "topics_text": "Project Design / Prototype Development",
+            "topics": [
+              "Project Design / Prototype Development"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Implementation of Project/Solution",
+            "contact_hours": 56,
+            "topic_lines": [
+              "Implementation of Project/Solution"
+            ],
+            "topics_text": "Implementation of Project/Solution",
+            "topics": [
+              "Implementation of Project/Solution"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Testing and Verification",
+            "contact_hours": 18,
+            "topic_lines": [
+              "Testing and Verification"
+            ],
+            "topics_text": "Testing and Verification",
+            "topics": [
+              "Testing and Verification"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Presentation and execution's",
+            "contact_hours": 36,
+            "topic_lines": [
+              "Presentation and Report Writing",
+              "Total Hours 168"
+            ],
+            "topics_text": "Presentation and Report Writing Total Hours 168",
+            "topics": [
+              "Presentation and Report Writing",
+              "Total Hours 168"
+            ]
+          }
+        ]
       },
-      "references": {},
-      "page_count": 0,
-      "extracted_character_count": 0,
-      "source_text_by_page": [],
+      "references": {
+        "references": [
+          "Computer project manuals",
+          "All technical journal and manual related to computer engineering project"
+        ],
+        "textbooks": [
+          "NA, NA, NA, NA References:",
+          "Computer project manuals",
+          "All technical journal and manual related to computer engineering project"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://cse.final-year-projects.in/",
+          "https://www.geeksforgeeks.org/",
+          "https://nevonprojects.com/"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4046,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (COMPUTER ENGINEERING)\nSEMESTER         6\nCOURSE TITLE    PROJECT ± II\nCOURSE CODE     09CE1602\nCOURSE CREDITS  6\n\nObjective:\n 1  Students will identify the need of industry, explore latest technologies, work on industry or\n     social problems with team members.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand, analyse real problems of industry or society and provide solutions for\n     those problems.\n 2  To identify practical aspect of studied technologies\n 3  To communicate in the way industry demands in oral and documented way.\n 4  To demonstrate teamwork and leader ship quality\n 5  To present and document implemented work effectively\n\n\nPre-requisite of course:Syllabus of PROJECT ± II\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            12        0      0       0        100        100\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Project/Problem Identification                             18\n              Project/Problem Identification\n     2       Project Analysis, Requirement Gathering                    20\n               Project Analysis, Requirement Gathering\n     3       Project Design / Prototype Development                     20\n               Project Design / Prototype Development\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Implementation of Project/Solution                         56\n             Implementation of Project/Solution\n     5      Testing and Verification                                   18\n              Testing and Verification\n     6       Presentation and execution's                               36\n               Presentation and Report Writing\n                               Total Hours                       168\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  Computer project manuals\n 2  All technical journal and manual related to computer engineering project\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         40.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  Prepare and submit complete project/training work with implementation and report\n 2  Report regarding stage wise progress to institute guide regularly.\n 3  Practicing of latest software and tool used for project/training work.\n\nSupplementary Resources:\n 1   https://cse.final-year-projects.in/\n 2  https://www.geeksforgeeks.org/\n 3  https://nevonprojects.com/\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
       "warnings": [
-        "No checked-in PDF matched subject code 09CT0602."
-      ]
+        "Selected PDF is stored in Needs_Review; source metadata is flagged for review.",
+        "Official PDF course code differs from catalog code; inspect source mapping."
+      ],
+      "actual_pdf_sha256": "9185d6cdbac30f8f96d5ffea265ec59ccba30131466a1dff20be91e538fe34cc"
     },
     {
       "subject_id": "49009320060401",
@@ -1585,10 +1695,10 @@
     }
   ],
   "build_summary": {
-    "extracted": 9,
+    "extracted": 10,
     "manual_review": 2,
     "ocr_review": 0,
-    "missing_pdf": 1,
+    "missing_pdf": 0,
     "extraction_errors": 0
   }
 }

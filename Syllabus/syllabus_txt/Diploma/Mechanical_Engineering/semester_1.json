@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:17:57+00:00",
+  "generated_at_utc": "2026-10-12T12:20:23+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
   "course": {
@@ -718,7 +718,9 @@
           "text": "Supplementary Resources:\n 3   https://cpcb.nic.in/\n 4  https://www.isro.gov.in/\n 5  https://ndma.gov.in/en/\n 6  http://www.indiaenvironmentportal.org.in/\n\n\n\n\n\nMR. NAVNITKUMAR JAGJIVANBHAI PATEL        DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
         }
       ],
-      "warnings": [],
+      "warnings": [
+        "Multiple PDFs share this subject-code prefix; selected '09AU0102 - ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT (.pdf' from 3 candidates."
+      ],
       "actual_pdf_sha256": "32d8dca6f6e03350cf4711d2e98b2de4ed9791b63204d7b591ebf7db184ba278"
     },
     {
