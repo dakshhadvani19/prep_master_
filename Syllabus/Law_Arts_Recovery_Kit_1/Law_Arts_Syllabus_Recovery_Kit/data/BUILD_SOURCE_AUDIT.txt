@@ -1,0 +1,15 @@
+BUILD SOURCE AUDIT — 2026-10-11
+Repository: https://github.com/dakshhadvani19/prep_master_
+Source: global-exam-prep/src/data/mockData.js
+Selected domain: law-arts / Law & Arts
+GitHub file/blob identifier read during build: a7732c4b66904fe86f260903eeb8a7ba159437d5
+Build-time snapshot: 3 course entries; 317 subject occurrences; 175 normalized title groups; 78 title groups occurring more than once. Two normalized titles are generic/unusable (`Course` and blank title) and are deliberately excluded from source search while retained in the reports. Runtime counts may differ because the runner fetches current main-branch data again.
+
+Course IDs/pages configured:
+- ba-llb-hons- -> https://www.marwadiuniversity.ac.in/ba-llb-hons/
+- b-com-llb-hons- -> https://www.marwadiuniversity.ac.in/b-com-llb-hons/
+- ba-in-socialogy-psychology-political-science -> https://www.marwadiuniversity.ac.in/ba-in-sociology-psychology-political-science/
+
+Source research verified these official Marwadi programme pages expose course outline sections: BA LLB (Hons), B.Com LLB (Hons), and BA in Sociology/Psychology/Political Science. Relevant fallbacks are Saurashtra University and Gujarat University for regional Law/Arts, then official DU/IGNOU/JMI/BHU sources. See source_catalog.csv and citations provided in the handoff response.
+
+No live syllabus-download run is performed during package generation. The run will take place on the user's Windows PC. Offline test covers parser, subject/scenario separation, duplicate grouping, invalid-title exclusion, official-domain restrictions and PDF acceptance/rejection logic.

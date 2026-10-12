@@ -1,0 +1,18 @@
+GTU fallback policy
+
+Only create a row here after checking all of the following:
+1. The specific Marwadi subject's direct PDF is genuinely absent/unavailable (not merely a transient fetch failure).
+2. The GTU file is hosted by GTU's official domain.
+3. Course topics and outcomes overlap enough for the intended use; exact subject title alone is not enough.
+4. You have recorded a match confidence and concise topic-matching notes.
+
+Columns in GTU_Fallback_Map.csv:
+- program_folder: folder name exactly as written in programs.csv
+- semester: Marwadi target semester (1-8)
+- marwadi_subject_code and marwadi_subject_name: target course
+- gtu_subject_code and gtu_pdf_url: verified GTU subject and direct official PDF URL
+- match_confidence: Strong / Partial
+- topic_match_notes: what matches and what differs
+- verification_date: date checked
+
+The collector will never automatically substitute another source just because a PDF request temporarily failed. Only complete mapping rows with a GTU PDF URL and topic-match notes are used.
