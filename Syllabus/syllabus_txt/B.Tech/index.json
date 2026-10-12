@@ -1,12 +1,83 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:44:16+00:00",
+  "generated_at_utc": "2026-10-12T13:24:14+00:00",
   "program_catalog": "Syllabus/B.Tech programs/_Catalogs/program_catalog.csv",
   "program_course_map": "Syllabus/B.Tech programs/_Catalogs/program_course_map.csv",
   "unique_pdf_index": "Syllabus/B.Tech programs/_Catalogs/pdf_library_index.csv",
   "output_root": "Syllabus/syllabus_txt/B.Tech",
   "semester_policy": "Only explicit source-map semester labels are used; otherwise semester_unknown.json.",
-  "program_count": 20,
+  "catalog_program_count": 20,
+  "program_count": 9,
+  "programs_without_verified_syllabus_json": 11,
+  "excluded_programs_without_verified_syllabus": [
+    {
+      "program_name": "B.Tech Electronics and Communication Engineering",
+      "program_folder": "Electronics and Communication Engineering",
+      "official_program_url": "https://www.marwadiuniversity.ac.in/electronics-and-communication-engineering-btech/",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    },
+    {
+      "program_name": "B.Tech ECE Artificial Intelligence and Machine Learning",
+      "program_folder": "Electronics and Communication Engineering - Artificial Intelligence and Machine Learning",
+      "official_program_url": "https://www.marwadiuniversity.ac.in/electronics-and-communication-engineering-ai-mlbtech/",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    },
+    {
+      "program_name": "B.Tech ECE Robotics",
+      "program_folder": "Electronics and Communication Engineering - Robotics",
+      "official_program_url": "",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    },
+    {
+      "program_name": "B.Tech ECE VLSI Design and Technology",
+      "program_folder": "Electronics and Communication Engineering - VLSI",
+      "official_program_url": "https://www.marwadiuniversity.ac.in/electronics-and-communication-engineering-vlsi-btech/",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    },
+    {
+      "program_name": "B.Tech ECE Internet of Things",
+      "program_folder": "Electronics and Communication Engineering - Internet of Things",
+      "official_program_url": "",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    },
+    {
+      "program_name": "B.Tech Bioinformatics Engineering",
+      "program_folder": "Bioinformatics Engineering",
+      "official_program_url": "https://www.marwadiuniversity.ac.in/btech-bioinformatics-colleges/",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    },
+    {
+      "program_name": "B.Tech Chemical Engineering",
+      "program_folder": "Chemical Engineering",
+      "official_program_url": "https://www.marwadiuniversity.ac.in/btech-chemical-engineering-colleges/",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    },
+    {
+      "program_name": "B.Tech Civil Engineering",
+      "program_folder": "Civil Engineering",
+      "official_program_url": "https://www.marwadiuniversity.ac.in/btech-civil-engineering-colleges/",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    },
+    {
+      "program_name": "B.Tech Electrical Engineering",
+      "program_folder": "Electrical Engineering",
+      "official_program_url": "https://www.marwadiuniversity.ac.in/b-tech-in-electrical-engineering-fees/",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    },
+    {
+      "program_name": "B.Tech Mechanical Engineering",
+      "program_folder": "Mechanical Engineering",
+      "official_program_url": "https://www.marwadiuniversity.ac.in/b-tech-mechanical-engineering-fees/",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    },
+    {
+      "program_name": "B.Tech Mechanical Engineering Robotics and Automation",
+      "program_folder": "Mechanical Engineering - Robotics and Automation",
+      "official_program_url": "https://www.marwadiuniversity.ac.in/mechanical-engineering-robotics-automation/",
+      "reason": "No verified source syllabus PDFs remain for this program; empty JSON placeholders removed."
+    }
+  ],
+  "removed_unverified_course_rows": 0,
   "course_association_count": 313,
   "extraction_status_counts": {
     "TEXT_EXTRACTED_AND_STRUCTURED": 303,
@@ -210,248 +281,6 @@
       "output_files": 9,
       "catalog_note": "Official program page",
       "coverage_note": "Only mapped, checked-in PDFs are represented. Uncollected subjects are not synthesized."
-    },
-    {
-      "program_name": "B.Tech Electronics and Communication Engineering",
-      "program_folder": "Electronics and Communication Engineering",
-      "output_slug": "Electronics_and_Communication_Engineering",
-      "official_program_url": "https://www.marwadiuniversity.ac.in/electronics-and-communication-engineering-btech/",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Official program page",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
-    },
-    {
-      "program_name": "B.Tech ECE Artificial Intelligence and Machine Learning",
-      "program_folder": "Electronics and Communication Engineering - Artificial Intelligence and Machine Learning",
-      "output_slug": "Electronics_and_Communication_Engineering_Artificial_Intelligence_and_Machine_Learning",
-      "official_program_url": "https://www.marwadiuniversity.ac.in/electronics-and-communication-engineering-ai-mlbtech/",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Official specialization page",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
-    },
-    {
-      "program_name": "B.Tech ECE Robotics",
-      "program_folder": "Electronics and Communication Engineering - Robotics",
-      "output_slug": "Electronics_and_Communication_Engineering_Robotics",
-      "official_program_url": "",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Listed in Marwadi University 2025 prospectus; no separate current course page confirmed in this research pass",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
-    },
-    {
-      "program_name": "B.Tech ECE VLSI Design and Technology",
-      "program_folder": "Electronics and Communication Engineering - VLSI",
-      "output_slug": "Electronics_and_Communication_Engineering_VLSI",
-      "official_program_url": "https://www.marwadiuniversity.ac.in/electronics-and-communication-engineering-vlsi-btech/",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Official specialization page",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
-    },
-    {
-      "program_name": "B.Tech ECE Internet of Things",
-      "program_folder": "Electronics and Communication Engineering - Internet of Things",
-      "output_slug": "Electronics_and_Communication_Engineering_Internet_of_Things",
-      "official_program_url": "",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Listed in Marwadi University 2025 prospectus; no separate current course page confirmed in this research pass",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
-    },
-    {
-      "program_name": "B.Tech Bioinformatics Engineering",
-      "program_folder": "Bioinformatics Engineering",
-      "output_slug": "Bioinformatics_Engineering",
-      "official_program_url": "https://www.marwadiuniversity.ac.in/btech-bioinformatics-colleges/",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Official program page",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
-    },
-    {
-      "program_name": "B.Tech Chemical Engineering",
-      "program_folder": "Chemical Engineering",
-      "output_slug": "Chemical_Engineering",
-      "official_program_url": "https://www.marwadiuniversity.ac.in/btech-chemical-engineering-colleges/",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Official program page",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
-    },
-    {
-      "program_name": "B.Tech Civil Engineering",
-      "program_folder": "Civil Engineering",
-      "output_slug": "Civil_Engineering",
-      "official_program_url": "https://www.marwadiuniversity.ac.in/btech-civil-engineering-colleges/",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Official program page",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
-    },
-    {
-      "program_name": "B.Tech Electrical Engineering",
-      "program_folder": "Electrical Engineering",
-      "output_slug": "Electrical_Engineering",
-      "official_program_url": "https://www.marwadiuniversity.ac.in/b-tech-in-electrical-engineering-fees/",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Official program page",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
-    },
-    {
-      "program_name": "B.Tech Mechanical Engineering",
-      "program_folder": "Mechanical Engineering",
-      "output_slug": "Mechanical_Engineering",
-      "official_program_url": "https://www.marwadiuniversity.ac.in/b-tech-mechanical-engineering-fees/",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Official program page",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
-    },
-    {
-      "program_name": "B.Tech Mechanical Engineering Robotics and Automation",
-      "program_folder": "Mechanical Engineering - Robotics and Automation",
-      "output_slug": "Mechanical_Engineering_Robotics_and_Automation",
-      "official_program_url": "https://www.marwadiuniversity.ac.in/mechanical-engineering-robotics-automation/",
-      "catalog_course_associations": 0,
-      "semester_counts": {
-        "semester_1": 0,
-        "semester_2": 0,
-        "semester_3": 0,
-        "semester_4": 0,
-        "semester_5": 0,
-        "semester_6": 0,
-        "semester_7": 0,
-        "semester_8": 0,
-        "semester_unknown": 0
-      },
-      "extraction_status_counts": {},
-      "output_files": 9,
-      "catalog_note": "Official specialization page",
-      "coverage_note": "No PDF associations were present in the consolidated map for this program; empty semester files record that collection gap without inventing syllabus content."
     },
     {
       "program_name": "B.Tech Mechanical Engineering Artificial Intelligence and Machine Learning",

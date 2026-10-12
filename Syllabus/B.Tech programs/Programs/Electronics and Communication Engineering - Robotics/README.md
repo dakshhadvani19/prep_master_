@@ -1,12 +1,8 @@
-# B.Tech ECE Robotics
+# B.Tech Electronics and Communication Engineering - Robotics
 
-- **Program folder:** `Electronics and Communication Engineering - Robotics`
-- **Unique PDF assets linked:** 0
-- **Source-list status:** 2025_prospectus_only_no_current_page_confirmed
-- **Source note:** Listed in Marwadi University 2025 prospectus; no separate current course page confirmed in this research pass
+- **Program name:** B.Tech ECE Robotics
+- **Official program page:** Not confirmed
 
-This is the program index. Each PDF is stored once in the shared `_PDF_Library`. When identical content applies to multiple programs, this page links to that single stored copy.
+## Syllabus availability
 
-## Collection status
-
-No syllabus PDF for this program was present in the three batches being merged. This means **not collected in these batches**, not that no official PDF exists. Use the collector tools in `../../_Tools/` and review their reports before concluding that a syllabus is unavailable.
+No verified source syllabus PDFs are currently available in the repository for this program. It has therefore been excluded from generated syllabus JSON rather than represented by empty files. The program remains in the program catalog for future source recovery.
