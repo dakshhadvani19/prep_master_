@@ -1,0 +1,80 @@
+# B.Tech Computer Science and Engineering
+
+- **Program folder:** `Computer Science and Engineering`
+- **Official program page:** https://www.marwadiuniversity.ac.in/btech-in-computer-science-engineering/
+- **Unique PDF assets linked:** 64
+- **Source-list status:** current_official_page
+- **Source note:** Official course outline lists semester-wise subjects and direct subject PDF links
+
+This is the program index. Each PDF is stored once in the shared `_PDF_Library`. When identical content applies to multiple programs, this page links to that single stored copy.
+
+## Semester unknown
+
+The first-batch collector did not reliably detect these semesters, so no semester has been inferred from course-code digits.
+
+- [01CE0104 — Object Oriented Programming](../../_PDF_Library/01CE/01CE0104%20-%20Object%20Oriented%20Programming.pdf)
+- [01CE0105 — Database Management System](../../_PDF_Library/01CE/01CE0105%20-%20Database%20Management%20System.pdf)
+- [01CE0106 — Prompt Engineering](../../_PDF_Library/01CE/01CE0106%20-%20Prompt%20Engineering.pdf)
+- [01CE0308 — Advance Java Technology](../../_PDF_Library/01CE/01CE0308%20-%20Advance%20Java%20Technology.pdf)
+- [01CE0309 — Probability and Statistics](../../_PDF_Library/01CE/01CE0309%20-%20Probability%20and%20Statistics.pdf)
+- [01CE0310 — Advance Database Management System](../../_PDF_Library/01CE/01CE0310%20-%20Advance%20Database%20Management%20System.pdf)
+- [01CE0409 — Discrete Mathematics](../../_PDF_Library/01CE/01CE0409%20-%20Discrete%20Mathematics.pdf)
+- [01CE0410 — Computer Network](../../_PDF_Library/01CE/01CE0410%20-%20Computer%20Network.pdf)
+- [01CE0413 — Python for Data Science and AI Applications](../../_PDF_Library/01CE/01CE0413%20-%20Python%20for%20Data%20Science%20and%20AI%20Applications.pdf)
+- [01CE0509 — Fundamentals of Microprocessors](../../_PDF_Library/01CE/01CE0509%20-%20Fundamentals%20of%20Microprocessors.pdf)
+- [01CE0513 — Programming for Android](../../_PDF_Library/01CE/01CE0513%20-%20Programming%20for%20Android.pdf)
+- [01CE0514 — Cloud Computing Essentials](../../_PDF_Library/01CE/01CE0514%20-%20Cloud%20Computing%20Essentials.pdf)
+- [01CE0517 — Data Science Essentials](../../_PDF_Library/01CE/01CE0517%20-%20Data%20Science%20Essentials.pdf)
+- [01CE0525 — Artificial Intelligence](../../_PDF_Library/01CE/01CE0525%20-%20Artificial%20Intelligence.pdf)
+- [01CE0526 — Open Source Technologies](../../_PDF_Library/01CE/01CE0526%20-%20Open%20Source%20Technologies.pdf)
+- [01CE0527 — Data Warehousing & Data Mining](../../_PDF_Library/01CE/01CE0527%20-%20Data%20Warehousing%20%26%20Data%20Mining.pdf)
+- [01CE0528 — Web Development with PHP](../../_PDF_Library/01CE/01CE0528%20-%20Web%20Development%20with%20PHP.pdf)
+- [01CE0607 — Software Engineering](../../_PDF_Library/01CE/01CE0607%20-%20Software%20Engineering.pdf)
+- [01CE0609 — Mini Project](../../_PDF_Library/01CE/01CE0609%20-%20Mini%20Project.pdf)
+- [01CE0610 — App Development using Flutter](../../_PDF_Library/01CE/01CE0610%20-%20App%20Development%20using%20Flutter.pdf)
+- [01CE0614 — Data Visualization](../../_PDF_Library/01CE/01CE0614%20-%20Data%20Visualization.pdf)
+- [01CE0615 — Computer Graphics](../../_PDF_Library/01CE/01CE0615%20-%20Computer%20Graphics.pdf)
+- [01CE0617 — Machine Learning](../../_PDF_Library/01CE/01CE0617%20-%20Machine%20Learning.pdf)
+- [01CE0619 — Information & Network Security](../../_PDF_Library/01CE/01CE0619%20-%20Information%20%26%20Network%20Security.pdf)
+- [01CE0620 — Internet of Things and Applications](../../_PDF_Library/01CE/01CE0620%20-%20Internet%20of%20Things%20and%20Applications.pdf)
+- [01CE0621 — Big Data Analytics](../../_PDF_Library/01CE/01CE0621%20-%20Big%20Data%20Analytics.pdf)
+- [01CE0622 — UI and UX design](../../_PDF_Library/01CE/01CE0622%20-%20UI%20and%20UX%20design.pdf)
+- [01CE0714 — Compiler Design](../../_PDF_Library/01CE/01CE0714%20-%20Compiler%20Design.pdf)
+- [01CE0716 — Major Project – 1](../../_PDF_Library/01CE/01CE0716%20-%20Major%20Project%20-%201.pdf)
+- [01CE0717 — DevOps Essentials](../../_PDF_Library/01CE/01CE0717%20-%20DevOps%20Essentials.pdf)
+- [01CE0720 — Blockchain Technology](../../_PDF_Library/01CE/01CE0720%20-%20Blockchain%20Technology.pdf)
+- [01CE0724 — Generative Artificial Intelligence](../../_PDF_Library/01CE/01CE0724%20-%20Generative%20Artificial%20Intelligence.pdf)
+- [01CE0725 — Software Project Management](../../_PDF_Library/01CE/01CE0725%20-%20Software%20Project%20Management.pdf)
+- [01CE0726 — Cyber Security](../../_PDF_Library/01CE/01CE0726%20-%20Cyber%20Security.pdf)
+- [01CE0727 — Generative Adversial Networks (GAN](../../_PDF_Library/01CE/01CE0727%20-%20Generative%20Adversial%20Networks%20(GAN.pdf)
+- [01CE0728 — Computer Vision](../../_PDF_Library/01CE/01CE0728%20-%20Computer%20Vision.pdf)
+- [01CE0729 — Deep Learning](../../_PDF_Library/01CE/01CE0729%20-%20Deep%20Learning.pdf)
+- [01CE0807 — Intenship / Major Project - 2](../../_PDF_Library/01CE/01CE0807%20-%20Internship%20_%20Major%20Project%20-%202.pdf)
+- [01CE1301 — Data Structure](../../_PDF_Library/01CE/01CE1301%20-%20Data%20Structure.pdf)
+- [01CE1306 — 01CE1306](../../_PDF_Library/01CE/01CE0306%20-%20Web%20Technology.pdf)
+- [01CE1401 — Operating System](../../_PDF_Library/01CE/01CE1401%20-%20Operating%20System.pdf)
+- [01CE1402 — Computer Organization and Architecture](../../_PDF_Library/01CE/01CE1402%20-%20Computer%20Organization%20and%20Architecture.pdf)
+- [01CE1412 — Advance Web Technology](../../_PDF_Library/01CE/01CE1412%20-%20Advance%20Web%20Technology.pdf)
+- [01CE1503 — Design and Analysis of Algorithm](../../_PDF_Library/01CE/01CE1503%20-%20Design%20and%20Analysis%20of%20Algorithm__38fabb22.pdf)
+- [01CE1523 — .NET Technologies](../../_PDF_Library/01CE/01CE1523%20-%20.NET%20Technologies.pdf)
+- [01CE1608 — Theory of Computation](../../_PDF_Library/01CE/01CE1608%20-%20Theory%20of%20Computation.pdf)
+- [01CE2101 — Computer Programming](../../_PDF_Library/01CE/01CE2101%20-%20Computer%20Programming.pdf)
+- [01CE2102 — Computer Workshop](../../_PDF_Library/01CE/01CE2102%20-%20Computer%20Workshop.pdf)
+- [01CE2306 — Web Technology](../../_PDF_Library/01CE/01CE0306%20-%20Web%20Technology.pdf)
+- [01CR0104 — Professional Ethics](../../_PDF_Library/01CR/01CR0104%20-%20Professional%20Ethics.pdf)
+- [01CR0105 — Verbal Ability – 1](../../_PDF_Library/01CR/01CR0105%20-%20Verbal%20Ability%20%E2%80%93%201.pdf)
+- [01CR0106 — Verbal Ability - 2](../../_PDF_Library/01CR/01CR0106%20-%20Verbal%20Ability%20-%202.pdf)
+- [01CR0303 — Quantitative & Logical Ability - 1](../../_PDF_Library/01CR/01CR0303%20-%20Quantitative%20%26%20Logical%20Ability%20-%201.pdf)
+- [01CR0402 — Quantitative & Logical Ability - 2](../../_PDF_Library/01CR/01CR0402%20-%20Quantitative%20%26%20Logical%20Ability%20-%202.pdf)
+- [01CR0503 — Quantitative & Logical Ability - 3](../../_PDF_Library/01CE/01CE1503%20-%20Design%20and%20Analysis%20of%20Algorithm.pdf)
+- [01CR0602 — Quantitative Aptitude and Verbal Ability](../../_PDF_Library/01CR/01CR0602%20-%20Quantitative%20Aptitude%20and%20Verbal%20Ability.pdf)
+- [01CR1103 — Value Education](../../_PDF_Library/01CR/01CR1103%20-%20Value%20Education.pdf)
+- [01EC1102 — Digital Electronics](../../_PDF_Library/01EC/01EC1102%20-%20Digital%20Electronics.pdf)
+- [01EE2101 — Basics of Electrical & Electronics Engineering](../../_PDF_Library/01EE/01EE2101%20-%20Basics%20of%20Electrical%20%26%20Electronics%20Engineering.pdf)
+- [01EN2101 — Basics of Environmental Studies](../../_PDF_Library/01EN/01EN2101%20-%20Basics%20of%20Environmental%20Studies.pdf)
+- [01GS0103 — Indian Constitution](../../_PDF_Library/01GS/01GS0103%20-%20Indian%20constitution.pdf)
+- [01MA0106 — Calculus](../../_PDF_Library/01MA/01MA0106%20-%20Calculus.pdf)
+- [01MA1104 — Linear Algebra](../../_PDF_Library/01MA/01MA1104%20-%20Linear%20Algebra.pdf)
+- [01ME0106 — 3D Modeling and Printing](../../_PDF_Library/01ME/01ME0106%20-%203D%20Modeling%20and%20Printing.pdf)
+- [01SL1104 — Professional Communication](../../_PDF_Library/01SL/01SL1104%20-%20Professional%20Communication.pdf)
+
