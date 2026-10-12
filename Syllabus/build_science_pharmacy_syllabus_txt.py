@@ -354,7 +354,7 @@ def main() -> int:
         all_rows = list(csv.DictReader(handle))
     rows = [r for r in all_rows if str(r.get("domain", "")).strip().casefold() == "science & pharmacy"]
     if not rows:
-        raise RuntimeError("No Law & Arts subject rows were found in the active manifest.")
+        raise RuntimeError("No Science & Pharmacy subject rows were found in the active manifest.")
     course_groups: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in rows:
         course_groups[str(row.get("course_id") or "")].append(row)
@@ -438,7 +438,7 @@ def main() -> int:
     index = {
         "schema_version": "1.0", "generated_at_utc": generated,
         "source_catalog": MANIFEST.relative_to(ROOT).as_posix(),
-        "domain": "Law & Arts", "course_count": len(index_courses),
+        "domain": "Science & Pharmacy", "course_count": len(index_courses),
         "subject_occurrence_count": len(rows), "courses": index_courses,
         "build_summary": dict(sorted(overall.items())),
     }
