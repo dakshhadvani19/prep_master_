@@ -1,0 +1,495 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:02:56+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 44,
+    "course_name": "Diploma Computer Engineering"
+  },
+  "semester": 4,
+  "subject_count": 6,
+  "subjects": [
+    {
+      "subject_id": "44000935240101",
+      "subject_name": "Computer Organization",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 4,
+      "subject_code": "09CE2401",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CO.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE2401 - Computer Organization (.pdf",
+      "expected_pdf_sha256": "52bd346922ce49af9951c6f094bb634d2445737c7a7dc2d238423b4655ec9d47",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": "COMPUTER ORGANIZATION",
+        "course_code": "09CE2401",
+        "semester_label": "4",
+        "credits": 3,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        ": To conceptualize the basics of organizational and architectural issues of a digital computer. Further, analyse performance issues in processor and memory design of a digital computer. Also, understanding various data transfer techniques in digital computer and to analyse processor performance improvement using instruction level parallelism."
+      ],
+      "course_outcomes": [
+        "Understand and describe the basics of various architectural units of the Computer System",
+        "Apply the knowledge of combinational and sequential logical circuits to mimic a simple computer architecture",
+        "Recognize the importance of parallelism in computer architecture",
+        "Ability to understand the concept of cache mapping techniques",
+        "To eliminate or remove stall by altering order of instructions Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 1 0 50 30 20 25 25",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "Computer Architecture and Organization, Computer Architecture and Organization, John Hayes, McGrawHill, 2017"
+        ],
+        "textbooks": [
+          "Computer System Architecture, Third Edition, M. Morris Mano, Pearson, 2017",
+          "Computer Architecture & Organization, M. Murdocca & V. Heuring, WILEY, 2007 References:",
+          "Computer Architecture and Organization, Computer Architecture and Organization, John Hayes, McGrawHill, 2017"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://www.intel.com/pressroom/kits/quickreffam.htm"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5634,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (COMPUTER ENGINEERING)\nSEMESTER         4\nCOURSE TITLE   COMPUTER ORGANIZATION\nCOURSE CODE     09CE2401\nCOURSE CREDITS  3\n\nObjective:\n 1   : To conceptualize the basics of organizational and architectural issues of a digital\n     computer. Further, analyse performance issues in processor and memory design of a digital\n     computer. Also, understanding various data transfer techniques in digital computer and to\n     analyse processor performance improvement using instruction level parallelism.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand and describe the basics of various architectural units of the Computer System\n 2  Apply the knowledge of combinational and sequential logical circuits to mimic a simple\n    computer architecture\n 3  Recognize the importance of parallelism in computer architecture\n 4  Ability to understand the concept of cache mapping techniques\n 5  To eliminate or remove stall by altering order of instructions\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            1            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Computer Data Representation & Register Transfer and Micro- 8\n             operations\n             Basic computer data types, Number representation, Complements,\n              Register Transfer language, Register Transfer, Bus and Memory\n              Transfers (Tree-State Bus Buffers, Memory Transfer), Arithmetic\n              Micro-Operations, Logic Micro-Operations, Shift Micro-\n              Operations, Arithmetic logical shift unit\n     2      Basic Computer Organization and Design                    8\n               Instruction codes, Computer registers, Computer instructions,\n            Timing and Control, Instruction cycle, Memory-Reference\n                Instructions, Input-output and interrupt, Complete computer\n               description\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3     Programming Basic Computer                             6\n               Introduction, Machine Language, Assembly Language, Assembler,\n            Program Loops, Arithmetic and Logic operations, subroutines\n     4      Central Processing Unit and Pipeline Processing              8\n               Introduction, General Register Organization, Stack Organization,\n               Instruction format, Addressing Modes, data transfer and\n              manipulation, Program Control, Reduced Instruction Set Computer\n             (RISC), CISC, parallel processing\n     5      Input-Output Organization                                6\n              Input-Output Interface, Asynchronous Data Transfer, Modes Of\n               Transfer, Priority Interrupt, DMA, Input-Output Processor (IOP),\n          CPUIOP Communication, Serial communication\n     6     Memory Organization                                    6\n          Memory Hierarchy, Main Memory, Auxiliary Memory, Associative\n           Memory, Cache Memory, Virtual Memory\n                               Total Hours                       42\n\n\nTextbook :\n 1  Computer System Architecture, Third Edition, M. Morris Mano, Pearson, 2017\n 2  Computer Architecture & Organization, M. Murdocca & V. Heuring, WILEY, 2007\n\nReferences:\n 1  Computer Architecture and Organization, Computer Architecture and Organization, John\n    Hayes, McGrawHill, 2017\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    35.00         35.00         30.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room\n 3  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses.\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 1  http://www.intel.com/pressroom/kits/quickreffam.htm\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "52bd346922ce49af9951c6f094bb634d2445737c7a7dc2d238423b4655ec9d47"
+    },
+    {
+      "subject_id": "44000935140301",
+      "subject_name": "Java Programming",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 4,
+      "subject_code": "09CE1403",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/JAVA.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1403 - Java Programming (.pdf",
+      "expected_pdf_sha256": "b0c746a3991873cd6aece9061c48c6f2af7a0cd7844269d1d56f6b4c77b45a3a",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": "JAVA PROGRAMMING",
+        "course_code": "09CE1403",
+        "semester_label": "4",
+        "credits": 3,
+        "prerequisite": "Syllabus for computer engineering"
+      },
+      "objectives": [
+        "Java is computer programming language. The main objective is to teach all the basic OOPs concepts, techniques, real world scenarios using top down approach and java programs that solve practical."
+      ],
+      "course_outcomes": [
+        "Understand OOP (Object-Oriented Programming) Concepts like defining classes, invoking methods, Objects, class libraries etc.",
+        "Understand all Fundamental features like interfaces, libraries,",
+        "Collections",
+        "To study exception handling methods.",
+        "Understand Multithreading",
+        "Students can solve real world problems through programs Pre-requisite of course:Syllabus for computer engineering"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 6 0 30 20 25 25",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "Java 7 Programming Black Book, Java 7 Programming Black Book, Kogent Learning Solutions Inc, DreamTech press, 2012"
+        ],
+        "textbooks": [
+          "Java Fundamentals A comprehensive introduction, Herbert Schildt, Dale Skrien, McGraw Hill Education, 2017",
+          "Head First Java, Kathy Sierra, Bert Bates, O¶Reilly publications, 2018 References:",
+          "Java 7 Programming Black Book, Java 7 Programming Black Book, Kogent Learning Solutions Inc, DreamTech press, 2012"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://docs.oracle.com/javase/tutorial/java/index.html",
+          "http://www.tutorialspoint.com/java/",
+          "http://www.oracle.com/technetwork/java/javase/downloads/index.html"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 10816,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (COMPUTER ENGINEERING)\nSEMESTER         4\nCOURSE TITLE    JAVA PROGRAMMING\nCOURSE CODE     09CE1403\nCOURSE CREDITS  3\n\nObjective:\n 1  Java is computer programming language. The main objective is to teach all the basic OOPs\n     concepts, techniques, real world scenarios using top down approach and java programs that\n     solve practical.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand OOP (Object-Oriented Programming) Concepts like defining classes,\n     invoking methods, Objects, class libraries etc.\n 2  Understand all Fundamental features like interfaces, libraries,\n 3  Collections\n 4  To study exception handling methods.\n 5  Understand Multithreading\n 6  Students can solve real world problems through programs\n\n\nPre-requisite of course:Syllabus for computer engineering\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            6         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Unit 1\n             Basic Java Introduction ,Java Features, Java Virtual Machine\n             (JVM),, Byte code, Java Development Kit(JDK),Java Operator,\n             Data Types, Control Statements-Whie,do-while, Switch condition,\n               for loops and continue statement\n     2      Unit 2\n              Single array and Multidimensional Array, Different classes - String\n            and String Buffer class, Command line argument, Scanner Class,\n             Various String operations, Wrapper class\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Unit 3\n              Class ,Object, Object reference, Constructor,, Method Overriding\n            and Overloading, Constructor Overloading, Passing and Returning\n               object form Method, new, this and static keyword, finalize()\n             method, operator Access control, modifiers, Nested class, Inner\n                class, Anonymous inner class, Abstract class\n     4      Unit 4\n            Overview of Inheritance, constructor in inheritance, Data members\n            and Method, Different types of inheritance, Multilevel Inheritance ±\n            method overriding, explain Final keywords, Implementation of an\n                interface, instanceof operator, Interface reference, Interface\n               inheritanc,difference between Abstract Class and interface,\n               Introduction of Multithread programming,, Different interface and\n             Thread classes\n     5      Unit 5\n            Overview of different Stream(Byte Stream, Character stream)\n             Readers and Writers class, File Class, File InputStream and File\n             Output Stream .InputStreamReader and OutputStreamWriter,\n              FileReader and Writer, Buffered Reader clas, Exception Handling,\n              Collection Classes\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       List of Experiments\n                1. Write a java program to Print HelloWorld with Single and\n              Multiple Main in a java program., 2. Write a program to print the\n                ascii value of a given character., 3. Write a Java programs to swap\n            two numbers without using a temporary variable and with using\n             temporary variable., 4. Write a java program to give the examples of\n              operators a. Logical operators b. Bitwise operators c. Conditional\n              operators d. Relational operators e. Increment and decrement\n               operator, 5. Write a java program to convert rupees to dollar.\n            60Rupees=1 dollar., 6. Write a Java Program to check prime\n             numbers, 7. Write a program to define and initialize a variable of\n              type byte to 1, and then successively multiply it by 2 and display its\n              value 8 times. Explain the reason for the last result, 8. Write a java\n            program to calculate percentage marks of the students if marks of 6\n               subjects are given, 9. Write a program to display a random choice\n            from a set of six choices for Breakfast(You could use example like\n               scrambled,eggswaffles,fruit,cereal,toast,or yogurt)., 10. Program to\n              generate a randomly sequence of capital letters that does not include\n              vowels., 11. Write a java pattern, 12. Write a java program to accept\n             a line and check how many vowels and constant are there in line.,\n              13. Write program How to convert a char array to a string in Java?,\n              14. Write a java program to count all words in a string., 15. Write a\n              java program to find total length of string and print second half of\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "the string., 16. Write a program to create a one class called student\n             having data members like student name,enr,spi,city,branch define\n               construct which can int data member define a method for following\n             func get() disp(), 17. Write a single level and Multilevel inheritance\n              java program., 18. Write a java program for method overloading\n              example., 19. Write a java program for method overriding example.,\n              20. Write a java Interface example, 21. Write a program to Create\n            one class named µx¶ and create a sub class µy¶ Which is extends\n            from class µx¶ And use these classes in µinherit¶ class., 22. Write a\n              java program example for method overriding concepts., 23. Write a\n              java program example for µsuper¶ keyword., 24. Write a java\n              Encapsulation example program, 25. Write a java program to create\n             a one class named shape. In this class we have three another sub\n               classes circle, triangle and square each class have two member\n              function named erase () and draw(). Create these using\n            polymorphism concepts., 26. Write a java Run time polymorphism\n            example program., 27. Write a java program to create one room\n                class, different attributes of this class is room no, room area, room\n              type and AC machine. In this class the member functions are set\n              data and display data., 28. Write a java program to demonstrate\n            methods and static variables., 29. Write a java program that\n                 illustrates interface inheritance. Interface P is extended by P1 and\n               P2.Interface P12 inherits from both P1 and P2. Each interface\n               declares one method and one constant. Class Q implements P12.\n                Instantiate Q and invoke each of its methods. Each method displays\n            one of the constants., 30. Write java Abstract class example, 31.\n             Write a java program using BufferedInputStream, FileInputStream,\n             BufferedOutputStream and FileOutputStream to copy all Content of\n            one file File1.txt to file File2.txt., 32. Create a class called Student.\n             Write a student manager program to manipulate the student\n              information from files by using FileOutputStream and\n               FileInputStream., 33. Refine the student manager program to use the\n              student information from files by using the BufferedReader and\n              BufferedWriter., 34. Refine the student manager program to use the\n              student information from files by using the DataInputStream and\n             DataOutputStream., 35. Write a program of swap two elements in a\n              linked list.\n                               Total Hours\n\nTextbook :\n 1  Java Fundamentals A comprehensive introduction, Herbert Schildt, Dale Skrien, McGraw\n     Hill Education, 2017\n 2  Head First Java, Kathy Sierra, Bert Bates, O¶Reilly publications, 2018\n\nReferences:\n 1  Java 7 Programming Black Book, Java 7 Programming Black Book, Kogent Learning\n     Solutions Inc, DreamTech press, 2012\n\nSuggested Theory Distribution:\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "The suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    40.00         40.00         20.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  http://docs.oracle.com/javase/tutorial/java/index.html\n 2  http://www.tutorialspoint.com/java/\n 3  http://www.oracle.com/technetwork/java/javase/downloads/index.html\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "b0c746a3991873cd6aece9061c48c6f2af7a0cd7844269d1d56f6b4c77b45a3a"
+    },
+    {
+      "subject_id": "44009131040201",
+      "subject_name": "Mathematics-IV",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 4,
+      "subject_code": "09MA0402",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-4.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09MA0402 - Mathematics-IV (.pdf",
+      "expected_pdf_sha256": "8e4450b7111273b2f9ec4082f6f485c41078ed2c5ed6d5b0518f0b03a2b1a313",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": "MATHEMATICS-IV",
+        "course_code": "09MA0402",
+        "semester_label": "4",
+        "credits": 4,
+        "prerequisite": "NA."
+      },
+      "objectives": [
+        "Students are intended to understand the basic engineering concepts of Algebra,Geometry such as Determinant and Matrices, co-ordinate Geometry, Differential Equation(First order and first degree), Logarithm, Complex Number and vector. The knowledge of Algebra,Geometrycan help to understand and solve problems related to Engineering fields. The course will help students to understand Engineering principles and concepts. Main objective of the course is to apply concepts of Determinant and Matrices, co-ordinate Geometry, Differential Equation (First order and first degree), Logarithm, Complex Number and Vector to solve given engineering problems."
+      ],
+      "course_outcomes": [
+        "Learn complex numbers and their properties and able to solve the quadratic equations with complex roots.",
+        "Find the distance between two points and mid-point of two points.",
+        "Understand the relation between parallel and perpendicular lines, find the equations of different kind of lines.",
+        "Learn about the centre point and radius of the circle and find its equation from them.",
+        "Find the integration of different kind of functions by different methods.",
+        "Classify the degree and order of differential equation and solve the differential equation with first order and first degree. Pre-requisite of course:NA."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 2 0 50 30 20 25 25",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "B.S. Grewal, Higher Engineering Mathematics, B.S. Grewal, Higher Engineering Mathematics, -, Khanna Publishers, New Delhi, 40th Edition, 2007",
+          "NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, -, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics Part=I , -, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics Part=II, -, NCERT, 2022"
+        ],
+        "textbooks": [
+          "NCERT Class-XI science Mathematics, -, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=I, -, NCERT, 2022",
+          "NCERT Class-XII science Mathematics Part=II, -, NCERT, 2022",
+          "B.S. Grewal, Higher Engineering Mathematics,, -, Khanna Publishers, New Delhi, 40th Edition, 2007"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://ncert.nic.in/textbook.php?kemh1=0-16",
+          "https://ncert.nic.in/textbook.php?lemh1=0-6",
+          "https://ncert.nic.in/textbook.php?lemh2=0-7"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7394,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (COMPUTER ENGINEERING)\nSEMESTER         4\nCOURSE TITLE    MATHEMATICS-IV\nCOURSE CODE     09MA0402\nCOURSE CREDITS  4\n\nObjective:\n 1  Students are intended to understand the basic engineering concepts of Algebra,Geometry\n    such as Determinant and Matrices, co-ordinate Geometry, Differential Equation(First order\n    and first degree), Logarithm, Complex Number and vector. The knowledge of\n    Algebra,Geometrycan help to understand and solve problems related to Engineering fields.\n    The course will help students to understand Engineering principles and concepts. Main\n     objective of the course is to apply concepts of Determinant and Matrices, co-ordinate\n    Geometry, Differential Equation (First order and first degree), Logarithm, Complex\n    Number and Vector to solve given engineering problems.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Learn complex numbers and their properties and able to solve the quadratic equations with\n    complex roots.\n 2  Find the distance between two points and mid-point of two points.\n 3  Understand the relation between parallel and perpendicular lines, find the equations of\n     different kind of lines.\n 4  Learn about the centre point and radius of the circle and find its equation from them.\n 5  Find the integration of different kind of functions by different methods.\n 6  Classify the degree and order of differential equation and solve the differential equation\n     with first order and first degree.\n\n\nPre-requisite of course:NA.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            2            0        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Complex Number                                        6\n             Concept, Geometric meaning of complex number , Modulus,\n             Amplitude, Square root of complex numbers, Polar form complex\n            numbers\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Co-ordinate Geometry                                    8\n              Point : Distance formula, Mid-point formula, Straight Line : Forms\n              of equations of straight lines : Slope-Point form, Two points form,\n               Intercept form, Parallel and perpendicular lines, Circle : Equation of\n             a circle, Centre and radius form\n     3       Integration                                              8\n               Definition and concept, Some particular integrals, Integration by\n               substitution method, Integration by parts, Integration by partial\n               fraction (for linear factors), Integration of some special types of\n              functions\n     4       Differential Equations (First Order First degree)              6\n               Definition, Order and degree of a differential equation, Solution of\n                   first order differential equation by Separable, Homogeneous and\n               Integrating factor methods\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Complex Number                                        6\n             Concept, Modulus, Amplitude, Square root of complex numbers,\n              Polar form of complex numbers\n     2      Co-ordinate Geometry                                    8\n              Point : Distance formula, Mid-point formula, Straight Line : Forms\n              of equations of straight lines : Slope-Point form, Two points form,\n               Intercept form, Parallel and perpendicular lines, Circle : Equation of\n             a circle, Centre and radius form\n     3       Integration                                              8\n          Some particular integrals, Integration by substitution method ,\n               Integration by parts, Integration by partial fraction and integration\n              of some special types of functions\n     4       Differential Equations (First Order First degree)              6\n               Definition, Order and degree of a differential equation, Solution of\n                   first order differential equation by Separable, Homogeneous and\n               Integrating factor methods\n                               Total Hours                       28\n\nTextbook :\n 1 NCERT Class-XI science Mathematics, -, NCERT, 2022\n 2 NCERT Class-XII science Mathematics Part=I, -, NCERT, 2022\n 3 NCERT Class-XII science Mathematics Part=II, -, NCERT, 2022\n 4  B.S. Grewal, Higher Engineering Mathematics,, -, Khanna Publishers, New Delhi, 40th\n     Edition, 2007\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 1  B.S. Grewal, Higher Engineering Mathematics, B.S. Grewal, Higher Engineering\n    Mathematics, -, Khanna Publishers, New Delhi, 40th Edition, 2007\n 2 NCERT Class-XI science Mathematics, NCERT Class-XI science Mathematics, -, NCERT,\n    2022\n 3 NCERT Class-XII science Mathematics Part=I , NCERT Class-XII science Mathematics\n     Part=I , -, NCERT, 2022\n 4 NCERT Class-XII science Mathematics Part=II, NCERT Class-XII science Mathematics\n     Part=II, -, NCERT, 2022\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    30.00         30.00         30.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, Quiz, brainstorming.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-rooms\n\nSupplementary Resources:\n 1  https://ncert.nic.in/textbook.php?kemh1=0-16\n 2  https://ncert.nic.in/textbook.php?lemh1=0-6\n 3  https://ncert.nic.in/textbook.php?lemh2=0-7\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "8e4450b7111273b2f9ec4082f6f485c41078ed2c5ed6d5b0518f0b03a2b1a313"
+    },
+    {
+      "subject_id": "44000935340501",
+      "subject_name": "Operating System",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 4,
+      "subject_code": "09CE3405",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3405_OS_Syllabus.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3405 - Operating System (.pdf",
+      "expected_pdf_sha256": "3d06347ba6b21f1e8f465c85308695c62e1de3b519920f24af94f9bc3b61ac16",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": "OPERATING SYSTEM",
+        "course_code": "09CE3405",
+        "semester_label": "for",
+        "credits": 5,
+        "prerequisite": "Students should be able to recall and understand basic concepts of C programming, apply fundamental data structures (arrays, stacks, queues), and comprehend basic computer organization concepts such as CPU and memory."
+      },
+      "objectives": [
+        "This course enables students to understand Operating System and their standards. Students will understand the concepts of CPU scheduling, memory management, file system, through scheduled lectures and labs. Also this course emphasis on Linux as open source operating system utilities and scripting."
+      ],
+      "course_outcomes": [
+        "Apply Linux commands and shell scripting to perform file operations and basic system tasks",
+        "Analyze operating system concepts, architecture, process management, and inter-process communication.",
+        "Evaluate CPU scheduling algorithms and deadlock handling techniques for system performance",
+        "Apply memory management and file system techniques to manage system resources efficiently Pre-requisite of course:Students should be able to recall and understand basic concepts of C programming, apply fundamental data structures (arrays, stacks, queues), and comprehend basic computer organization concepts such as CPU and memory."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 4 50 30 20 25 25",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "Operating Systems: Internals and Design Principles, Operating Systems: Internals and Design Principles, 1. W. Stallings, Pearson Education, 2018"
+        ],
+        "textbooks": [
+          "Operating System: A Concept-Based Approach, 3rd edition, D. M. Dhamdhere, McGraw Hill Education, 2017 References:",
+          "Operating Systems: Internals and Design Principles, Operating Systems: Internals and Design Principles, 1. W. Stallings, Pearson Education, 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://williamstallings.com/OS/Animation/Animations.html",
+          "http://nptel.ac.in/courses/106106144/"
+        ]
+      },
+      "page_count": 5,
+      "extracted_character_count": 12209,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    OPERATING SYSTEM\nCOURSE CODE     09CE3405\nCOURSE CREDITS  5\n\nObjective:\n 1  This course enables students to understand Operating System and their standards. Students\n     will understand the concepts of CPU scheduling, memory management, file system,\n     through scheduled lectures and labs. Also this course emphasis on Linux as open source\n     operating system utilities and scripting.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply Linux commands and shell scripting to perform file operations and basic system\n     tasks\n 2  Analyze operating system concepts, architecture, process management, and inter-process\n    communication.\n 3  Evaluate CPU scheduling algorithms and deadlock handling techniques for system\n    performance\n 4  Apply memory management and file system techniques to manage system resources\n     efficiently\n\n\nPre-requisite of course:Students should be able to recall and understand basic concepts of C\nprogramming, apply fundamental data structures (arrays, stacks, queues), and comprehend basic\ncomputer organization concepts such as CPU and memory.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            4        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Linux                                                   7\n               Introduction to Linux, Linux installation, Editing files with vi, vim,\n               gcc, Shell and commands-touch, pwd, cd, mkdir, rmdir, ls, cat, cmp,\n               cp, rm, mv,echo, wc, comm, head, tail, grep, sort and related shell\n                script programs\n     2      Operating System                                        6\n             Operating System overview, Operating System concepts, Functions\n              of OS,Services of OS ,System call, Types of operating system:\n             Batch Operating System, Multiprogramming Operating System,\n              Multiprocessing Operating System, Real Time Operating System,\n              Multitasking/Time Sharing OS, Distributed OS, Network OS,\n               kernel, Architecture of operating system\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Process Management                                     8\n              Process, Process States, Process Control Block, Threads, User Level\n            and Kernel level thread, Multithreading-Many to one, One to One ,\n          Many to Many, Process Synchronization, race conditions, critical\n              region problem, Mutual exclusion, classical problems of IPC,\n             Concepts of Semaphore – Mutex – Monitor –Event Counters,\n            Message Passing\n     4    CPU Scheduling and Deadlocks                             9\n             Scheduling -Basic Concept, Preemptive and Non-Preemptive\n              scheduling, scheduling criteria, Types of Scheduling algorithm:\n              Non-Preemptive-First Come First Served (FCFS), Non-Preemptive-\n               Shortest Job First (SJF), Priority Preemptive-Shortest Remaining\n           Time Next(SRTN) , Round Robin(RR), Deadlock concepts and its\n               characterization, deadlock detection, prevention techniques of\n              deadlock, techniques to get recovery from deadlock, deadlock\n             avoidance-Bankers Algorithm\n     5     Memory Management                                     7\n             Contiguous Memory Allocation, Swapping, Compaction,\n               Partitioning Algorithm-First fit, Best fit, Worst fit, Fragmentation,\n             paging concepts, segmentation, virtual memory, demand paging,\n             page fault, page replacement policies- First In First Out (FIFO),\n              Least Recently Used (LRU), Optimal(OPT)\n     6       File Management and Disk Structure                        5\n              File-Concept of file, attributes and operations of file, file accessing\n             methods, directories, file sharing and protection, Disk-Disk\n                structure- physical and logical structure, Disk Hardware, Disk\n             Scheduling\n                               Total Hours                       42\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical-1                                              4\n            Case study to installation of Linux.\n     2       Practical-2                                              4\n            Case study to compare any two operating system\n     3       Practical-3                                              4\n             Study of Basic commands of Linux\n     4       Practical-4                                              4\n             Study of Advance commands and filters of Linux\n     5       Practical-5                                              2\n             Write a shell script to print “Hello world”.\n     6       Practical-6                                              2\n             Write a shell script that accepts a name string from user and print it\n             with proper title.\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     7       Practical-7                                              2\n             Write a shell script that performs simple arithmetic operation on\n             given input.\n     8       Practical-8                                              2\n             Write a shell script to generate grade sheet of a student which\n              accepts marks of five subjects, calculate and display total marks,\n              percentage and grade obtained by the student.\n     9       Practical-9                                              2\n             Write a shell script to add and print all even numbers between given\n               range.\n     10      Practical-10                                             2\n             Write a shell script to generate Fibonacci number from 1 to n.\n     11      Practical-11                                             2\n             Write a shell script to find factorial of given number n.\n     12      Practical-12                                             2\n             Write a shell script to generate prime numbers from 1 to n\n     13      Practical-13                                             2\n             Write a shell script that reverses the number.\n     14      Practical-14                                             2\n             Write a shell script to check whether the entered number is\n            Armstrong number or not using the command line argument.\n     15      Practical-15                                             2\n             Write a shell script to check whether the string is palindrome.\n     16      Practical-16                                             2\n             Write a shell script that reverses the string.\n     17      Practical-17                                             2\n             Write a shell script that evaluates the following series\n            1+1/1+1/2+1/3+…+1/n.\n     18      Practical-18                                             2\n             Write a shell script to read n numbers as command arguments and\n                sort them in ascending order.\n     19      Practical-19                                             2\n             Write a shell script to wish Good morning, Good afternoon and\n           Good night as per current system time.\n     20      Practical-20                                             2\n             Write a shell script to count number of characters, words & lines.\n     21      Practical-21                                             2\n             Write a shell script for calendar for current month & year also for\n             range of months.\n     22      Practical-22                                             2\n             Write a shell script to convert lowercase to uppercase letter for a\n             given file.\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     23      Practical-23                                             2\n             Write a shell script for comparison between two strings whether\n             both the strings are equal or not.\n     24      Practical-24                                             2\n             Write a shell script to accept two filenames, if both files exist then\n              contents of first file should be appended to second. If second file\n             does not exist then create it with the contents of first file.\n                               Total Hours                       56\n\nTextbook :\n 1  Operating System: A Concept-Based Approach, 3rd edition, D. M. Dhamdhere, McGraw\n     Hill Education, 2017\n\nReferences:\n 1  Operating Systems: Internals and Design Principles, Operating Systems: Internals and\n    Design Principles, 1. W. Stallings, Pearson Education, 2018\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  http://williamstallings.com/OS/Animation/Animations.html\n 2  http://nptel.ac.in/courses/106106144/\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 5,
+          "text": "Supplementary Resources:\n 3  http://nptel.ac.in/courses/106108101/\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "3d06347ba6b21f1e8f465c85308695c62e1de3b519920f24af94f9bc3b61ac16"
+    },
+    {
+      "subject_id": "44000935340201",
+      "subject_name": "Software Engineering",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 4,
+      "subject_code": "09CE3402",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3402_SE_Syllabus.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3402 - Software Engineering (.pdf",
+      "expected_pdf_sha256": "f08a36fd35f07f57be3b6c08814773a2a2ea913c2726599a4153dcabbc8d502f",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": "SOFTWARE ENGINEERING",
+        "course_code": "09CE3402",
+        "semester_label": "for",
+        "credits": 3,
+        "prerequisite": "Object Oriented Programming Fundamentals"
+      },
+      "objectives": [
+        "To understand and apply various project management techniques based on Software Engineering guidelines and Principles."
+      ],
+      "course_outcomes": [
+        "Apply appropriate software process models and requirement engineering techniques to develop structured solutions for real-world software problems",
+        "Apply project planning, scheduling, and tracking techniques to manage software development activities effectively",
+        "Apply risk identification, analysis, and mitigation strategies to manage uncertainties in software projects",
+        "Apply UML-based design and modeling techniques to represent system structure and behavior",
+        "Apply coding standards, testing techniques, and quality assurance practices to ensure reliable and maintainable software systems Pre-requisite of course:Object Oriented Programming Fundamentals"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 2 50 30 20 25 25",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "Engineering Software as a Service and Agile Software Approach, Engineering Software as a Service and Agile Software Approach, Armando Fox and David Patterson, O’Reilly Media, 2017",
+          "Project Management for Business, Engineering and Technology, Project Management for Business, Engineering and Technology, John M. Nicholas, Elsevier, 2012"
+        ],
+        "textbooks": [
+          "Fundamentals of software Engineering, 5th Edition, Rajib Mall, Prentice Hall of India, 2018",
+          "Software engineering- A practitioner’s Approach, 9th Edition, Roger S.Pressman, McGraw-Hill International Editions, 2023",
+          "Software Engineering, 10th Edition, Ian Sommerville, Pearson education Asia, 2017 References:",
+          "Engineering Software as a Service and Agile Software Approach, Engineering Software as a Service and Agile Software Approach, Armando Fox and David Patterson, O’Reilly Media, 2017",
+          "Project Management for Business, Engineering and Technology, Project Management for Business, Engineering and Technology, John M. Nicholas, Elsevier, 2012"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://nptel.ac.in/courses/106101061/",
+          "https://www.joelonsoftware.com/",
+          "http://www.codesimplicity.com/",
+          "http://www.sparxsystems.com/products/ea/index.html",
+          "http://www.smartdraw.com/",
+          "http://www.win.tue.nl/"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 10189,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   SOFTWARE ENGINEERING\nCOURSE CODE     09CE3402\nCOURSE CREDITS  3\n\nObjective:\n 1  To understand and apply various project management techniques based on Software\n     Engineering guidelines and Principles.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply appropriate software process models and requirement engineering techniques to\n    develop structured solutions for real-world software problems\n 2  Apply project planning, scheduling, and tracking techniques to manage software\n    development activities effectively\n 3  Apply risk identification, analysis, and mitigation strategies to manage uncertainties in\n     software projects\n 4  Apply UML-based design and modeling techniques to represent system structure and\n     behavior\n 5  Apply coding standards, testing techniques, and quality assurance practices to ensure\n     reliable and maintainable software systems\n\n\nPre-requisite of course:Object Oriented Programming Fundamentals\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            2        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Software Engineering                       7\n             Software engineering, Dual role of software, Various Myths\n              Associated with Software, Different Software Process Models, The\n              Linear Sequential Model, The Prototyping Model, The RAD Model,\n              Evolutionary Process Models, Component-Based Development\n     2       Project Management Concepts, Requirement Engineering &    4\n             Metrics:\n            The Management Spectrum 4P’s (People, Project, Product and\n               Process), The W5HH Principle, Basic concept of Requirement\n              (Functional & Non Functional), Metrics in the Process and Project\n            Domains, Software Measurement\n     3       Project Planning Scheduling & Tracking                     4\n             Software Scope, Feasibility Analysis, Empirical Estimation Models,\n             Gantt Charts and Tools used\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Risk Analysis And Management                            4\n              Reactive versus Proactive Risk Strategies, Risk Management\n              Process, Risk Identification, Risk Projection, Risk Refinement,\n       RMMM Plans\n     5      Design and Modelling using UML                           4\n           Outcome of Design Process, Effective Modular Design(Functional\n        & Non-Functional), Cohesion, Coupling\n     6      Software Coding & Testing                                5\n            Coding standards & Coding Guidelines, Code Review, Software\n             Documentation: Internal and External Documentation, Software\n              Testing Fundamentals, Software Testing Techniques, White Box\n              Testing Techniques, Black Box Testing Techniques\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical-1                                              2\n               Identify Project (System), Identify basic requirements and users.\n            Based on the information Write Introduction, Abstract, Scope and\n              prepare Use Case Description Document\n     2       Practical-2                                              2\n            Use Case Diagram: Design a UML Use Case Diagram to represent\n               the functional requirements of the selected system. Identify actors,\n             use cases, and relationships such as include, extend, and\n               generalization\n     3       Practical-3                                              2\n               Activity Diagram: Develop an Activity Diagram to model the\n            workflow of the overall system. Represent decision points, parallel\n                 activities, and process flow logically.\n     4       Practical-4                                              2\n              Flowchart: Create a system-level and module-level flowchart\n            showing procedural logic. Use standard flowchart symbols to\n               represent process, input/output, and control flow\n     5       Practical-5                                              2\n            Sequence Diagram: Design a Sequence Diagram to illustrate\n               interaction between objects over time. Show lifelines, activation\n                bars, and message passing for a core transaction.\n     6       Practical-6                                              2\n             Context-Level DFD (Level 0): Prepare a Context Diagram\n               representing the system as a single process. Identify external entities\n            and major data flows entering and leaving the system.\n     7       Practical-7                                              2\n         DFD Level 1: Develop a Level 1 Data Flow Diagram by\n            decomposing the main system process. Ensure proper balancing of\n              data flows with the Context Diagram.\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     8       Practical-8                                              2\n         DFD Level 2: Create a Level 2 DFD for one major subsystem of the\n                project. Provide detailed decomposition while maintaining logical\n              data consistency.\n     9       Practical-9                                              4\n               Entity Relationship (ER) Diagram: Design an ER Diagram to model\n              database entities, attributes, and relationships. Specify primary keys,\n              foreign keys, and cardinality constraints.\n     10      Practical-10                                             2\n              Class Diagram: Develop a UML Class Diagram representing system\n               structure in object-oriented form. Define classes, attributes,\n             methods, and relationships such as inheritance and aggregation.\n     11      Practical-11                                             6\n            Mini Software Requirement Specification (Mini SRS): Prepare a\n              concise SRS document following IEEE standards for the selected\n                project. Integrate all diagrams and clearly define functional and\n              non-functional requirements.\n                               Total Hours                       28\n\nTextbook :\n 1  Fundamentals of software Engineering, 5th Edition, Rajib Mall, Prentice Hall of India,\n    2018\n 2  Software engineering- A practitioner’s Approach, 9th Edition, Roger S.Pressman,\n    McGraw-Hill International Editions, 2023\n 3  Software Engineering, 10th Edition, Ian Sommerville, Pearson education Asia, 2017\n\nReferences:\n 1  Engineering Software as a Service and Agile Software Approach, Engineering Software as\n     a Service and Agile Software Approach, Armando Fox and David Patterson, O’Reilly\n    Media, 2017\n 2  Project Management for Business, Engineering and Technology, Project Management for\n     Business, Engineering and Technology, John M. Nicholas, Elsevier, 2012\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in may be using following teaching approaches: black board, or use\n     of any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examinations/Viva will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e courses,\n     Virtual Laboratory.\n\nSupplementary Resources:\n 1  http://nptel.ac.in/courses/106101061/\n 2  https://www.joelonsoftware.com/\n 3  http://www.codesimplicity.com/\n 4  http://www.sparxsystems.com/products/ea/index.html\n 5  http://www.smartdraw.com/\n 6  http://www.win.tue.nl/\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "f08a36fd35f07f57be3b6c08814773a2a2ea913c2726599a4153dcabbc8d502f"
+    },
+    {
+      "subject_id": "44000935340401",
+      "subject_name": "Web Technology",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 4,
+      "subject_code": "09CE3404",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "ADDED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3404_WT_Syllabus.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE3404 - Web Technology (.pdf",
+      "expected_pdf_sha256": "4f9abe815caacbef33a55e47d3156f92c8f006231108ded54989a7b3ceef7332",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": "WEB TECHNOLOGY",
+        "course_code": "09CE3404",
+        "semester_label": "for",
+        "credits": 3,
+        "prerequisite": "Programming Fundamentals"
+      },
+      "objectives": [
+        "The main objective of this course is to provide students with comprehensive knowledge of modern web technologies and application development. The course introduces concepts of web architecture, client-server model, responsive web design, frontend and backend development. It enables students to design responsive user interfaces using HTML5, CSS3, Bootstrap and JavaScript, and to develop dynamic web applications using PHP and MySQL database connectivity. The course is skill-oriented and focuses on practical implementation of web-based applications."
+      ],
+      "course_outcomes": [
+        "Apply concepts of modern web architecture including client–server model, hosting types, DNS, version control, and deploy websites using GitHub Pages or similar platforms.",
+        "Design responsive and accessible web pages using Semantic HTML5, advanced forms, CSS3, media queries, and Bootstrap components",
+        "Develop interactive web pages using JavaScript and jQuery with event handling, objects, and form validation.",
+        "Apply PHP programming constructs such as variables, operators, arrays, loops, and conditional statements to develop server-side logic",
+        "Implement reusable PHP functions and process user data through form inputs using built-in string, date, and math functions",
+        "Develop database-driven web applications using PHP and MySQL by performing CRUD operations and establishing database connectivity Pre-requisite of course:Programming Fundamentals"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 6 0 30 20 25 25",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "HTML and CSS: Design and Build Websites, HTML and CSS: Design and Build Websites, Jon Duckett, John Wiley & Sons, 2011",
+          "Developing Web Applications, Developing Web Applications, Ralph Moseley and M. T. Savaliya, Wiley-India, 2013"
+        ],
+        "textbooks": [
+          "Responsive Web Design with HTML5 and CSS, 3rd Edition, Ben Frain, Packt Publishing, 2022 References:",
+          "HTML and CSS: Design and Build Websites, HTML and CSS: Design and Build Websites, Jon Duckett, John Wiley & Sons, 2011",
+          "Developing Web Applications, Developing Web Applications, Ralph Moseley and M. T. Savaliya, Wiley-India, 2013"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://nptel.ac.in",
+          "https://git-scm.com/docs",
+          "https://guides.github.com",
+          "http://www.w3schools.com/",
+          "http://getbootstrap.com/",
+          "https://alison.com"
+        ]
+      },
+      "page_count": 5,
+      "extracted_character_count": 11912,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   WEB TECHNOLOGY\nCOURSE CODE     09CE3404\nCOURSE CREDITS  3\n\nObjective:\n 1  The main objective of this course is to provide students with comprehensive knowledge of\n    modern web technologies and application development. The course introduces concepts of\n    web architecture, client-server model, responsive web design, frontend and backend\n    development. It enables students to design responsive user interfaces using HTML5, CSS3,\n     Bootstrap and JavaScript, and to develop dynamic web applications using PHP and\n   MySQL database connectivity. The course is skill-oriented and focuses on practical\n     implementation of web-based applications.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply concepts of modern web architecture including client–server model, hosting types,\n    DNS, version control, and deploy websites using GitHub Pages or similar platforms.\n 2  Design responsive and accessible web pages using Semantic HTML5, advanced forms,\n    CSS3, media queries, and Bootstrap components\n 3  Develop interactive web pages using JavaScript and jQuery with event handling, objects,\n    and form validation.\n 4  Apply PHP programming constructs such as variables, operators, arrays, loops, and\n     conditional statements to develop server-side logic\n 5  Implement reusable PHP functions and process user data through form inputs using built-in\n      string, date, and math functions\n 6  Develop database-driven web applications using PHP and MySQL by performing CRUD\n     operations and establishing database connectivity\n\n\nPre-requisite of course:Programming Fundamentals\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            6         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1     Modern Web Architecture & Hosting                        4\n              Client-Server Architecture, Frontend, Backend and Full Stack\n              overview, Web Hosting types (Shared, VPS, Cloud – overview),\n           Domain Name System (DNS) working, Introduction to Version\n              Control (Git – basic concept), Website deployment using GitHub\n             Pages / similar platform\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2     Advanced HTML & Responsive CSS                        5\n             Semantic HTML5 elements, Forms (advanced attributes &\n                validation), Responsive Web Design principles Screen reader\n               friendly structure, Media Queries, Introduction to Bootstrap5,\n            Custom validation messages, Responsive Navbar, Cards, Forms,\n             video and audio tags with controls source element, Embedding\n            YouTube/Google Maps iframe security basics.\n     3      JavaScript And jQuery                                    5\n              Basics of JavaScript, JavaScript syntaxes for variables, functions,\n             branches and repetitions, JavaScript alert, prompt and confirm,\n              Objects in JavaScript, forms and validations, JavaScript events,\n              Basics of jQuery, jQuery syntaxes, jQuery selectors, events, effects\n     4    PHP                                                    5\n               Introduction to PHP, Variable, Constant, Data types, Operators:\n               arithmetic, logical, assignment, bitwise, Loop: while, do…while,\n                 for, break statements, Flow control statements: simple if, if-else,\n                 else-if clause, switch statements, PHP Array: Indexed Array,\n              Associative Array\n     5      Function and Data Inputs                                  4\n             Defining function, calling function, retrieving value from function,\n              date and time function, math function, string function, data inputs\n             through form controls\n     6    PHP & Database                                         5\n              Basics of MySQL, database connectivity, insertion of data,\n               retrieving data, updating of data, deletion of data\n                               Total Hours                       28\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Practical-1                                              2\n              Create a GitHub account and create a new repository for managing\n               project files online.\n     2       Practical-2                                              2\n            Implement multimedia elements using video and audio tags with\n              multiple source formats and embed external content using secure\n              iframe implementation.\n     3       Practical-3                                              2\n             Design a screen reader friendly webpage using proper semantic\n                structure, alternative text and labels.\n     4       Practical-4                                              3\n           To develop a responsive user interface using Bootstrap 5\n            components such as Navbar, Cards, and Forms.\n     5       Practical-5                                              2\n             Write JavaScript Program to Add Two Numbers.\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6       Practical-6                                              2\n             Write JavaScript Program to check if a number is Positive, Negative\n              or Zero.\n     7       Practical-7                                              2\n             Write a JavaScript Code to learn about different events of\n               JavaScript.\n     8       Practical-8                                              2\n             Write a JavaScript code to change the HTML content.\n     9       Practical-9                                              2\n             Write a JavaScript code to change the HTML Attribute.\n     10      Practical-10                                             2\n             Write a JavaScript code to change the CSS style.\n     11      Practical-11                                             2\n             Write a JavaScript code to hide/show HTML elements.\n     12      Practical-12                                             2\n              JavaScript Code to understand various types of alerts in JavaScript.\n     13      Practical-13                                             2\n             Write a JavaScript program to display the current date and time on a\n            webpage using Date object.\n     14      Practical-14                                             2\n              Create a PHP script to find maximum number from given number.\n     15      Practical-15                                             2\n             Write a PHP script to get the client IP address.\n     16      Practical-16                                             2\n             Write a PHP code to display formatted output using PHP and\n        HTML to create dynamic pages.\n     17      Practical-17                                             3\n             Write a PHP code to understand concept of GET and POST method.\n     18      Practical-18                                             3\n             Write a PHP code to design basic calculator.\n     19      Practical-19                                             2\n             Write a PHP code to understand the concept of Session.\n     20      Practical-20                                             2\n             Write a PHP code to connect with the database.\n     21      Practical-21                                             2\n             Write a PHP code to insert the data into a database when user\n             submits a form.\n     22      Practical-22                                             3\n             Write a PHP code to delete the data from database.\n     23      Practical-23                                             2\n             Write a PHP code to update the data of a row in a table.\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     24      Practical-24                                             6\n            Develop a mini project with the help of HTML, CSS, JavaScript,\n          PHP and Database.\n                               Total Hours                       56\n\nTextbook :\n 1  Responsive Web Design with HTML5 and CSS, 3rd Edition, Ben Frain, Packt Publishing,\n    2022\n\nReferences:\n 1 HTML and CSS: Design and Build Websites, HTML and CSS: Design and Build Websites,\n    Jon Duckett, John Wiley & Sons, 2011\n 2  Developing Web Applications, Developing Web Applications, Ralph Moseley and M. T.\n     Savaliya, Wiley-India, 2013\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, also\n    need to use ICT tools and facilities.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n\nSupplementary Resources:\n 1   http://nptel.ac.in\n 2  https://git-scm.com/docs\n 3  https://guides.github.com\n 4  http://www.w3schools.com/\n 5  http://getbootstrap.com/\n 6  https://alison.com\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 5,
+          "text": "Supplementary Resources:\n 7  https://www.sololearn.com/en/learn/courses/web-development\n\n\n\n\n\nMR. SMIT MAHENDRABHAI THACKER                    MR. MITTAL KIRITBHAI JOISER\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "4f9abe815caacbef33a55e47d3156f92c8f006231108ded54989a7b3ceef7332"
+    }
+  ],
+  "build_summary": {
+    "extracted": 0,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 6
+  }
+}

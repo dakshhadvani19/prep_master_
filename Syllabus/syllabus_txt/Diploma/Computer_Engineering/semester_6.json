@@ -1,0 +1,419 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T12:02:56+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "global-exam-prep/temp_removed_subjects/diploma_active_syllabus_catalog_2026-10-12.csv",
+  "course": {
+    "course_id": 44,
+    "course_name": "Diploma Computer Engineering"
+  },
+  "semester": 6,
+  "subject_count": 5,
+  "subjects": [
+    {
+      "subject_id": "44000935160301",
+      "subject_name": ".NET",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 6,
+      "subject_code": "09CE1603",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1603_.NET_.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1603 - .NET (.pdf",
+      "expected_pdf_sha256": "a73071228ddc777aca8dead8f91fc2083bb5ff656bdd4f449b2e5539ba7868d3",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": ".NET",
+        "course_code": "09CE1603",
+        "semester_label": "6",
+        "credits": 2,
+        "prerequisite": "Syllabus of .NET for Diploma Computer Engineering"
+      },
+      "objectives": [
+        ".NET is programming language. Its main objective is to learn the .NET framework and its runtime environment as well as basic features of object oriented C# language and advance features. Also learning connectivity with ADO.Net and C#."
+      ],
+      "course_outcomes": [
+        "Understand the basic architecture of .NET framework.",
+        "Describe C# concepts with OOP elements",
+        "Implement the concepts of class, object, constructor and inheritance concepts in C#.",
+        "Understand different windows tool to implement windows application",
+        "Develop web application and describe advance features of C#. Pre-requisite of course:Syllabus of .NET for Diploma Computer Engineering"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 4 0 30 20 25 25",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "The Complete Reference C# 2.0, The Complete Reference C# 2.0, Herbert Schildt , Tata McGraw Hill, 2006",
+          "Beginning ASP.NET 2.0 with C#, Beginning ASP.NET 2.0 with C#, Chris Hart, John Kauffman, David Sussman, Chris Ullman, Wiley Publication, 2006",
+          "Pro C# 2010 and the .NET 4 Platform, Pro C# 2010 and the .NET 4 Platform, Andrew Troelsen, Apress Publication, 5th Edition., 2010 [PAGE 4] References:",
+          "ASP.NET: THE COMPLETE REFERENCE, ASP.NET: THE COMPLETE REFERENCE, Matthew Macdonald , McGraw Hill Education, 2017",
+          "Advance .NET Technology, Advance .NET Technology, Chirag patel, Kogent Learning Solutions Inc., Dreamtech Press, 2011"
+        ],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.tutorialspoint.com/csharp/",
+          "https://www.w3schools.com/asp/webpages_examples.asp",
+          "https://www.codeproject.com/",
+          "http://c-sharpcorner.org",
+          "https://msdn.microsoft.com/"
+        ]
+      },
+      "page_count": 4,
+      "extracted_character_count": 9438,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (COMPUTER ENGINEERING)\nSEMESTER         6\nCOURSE TITLE    .NET\nCOURSE CODE     09CE1603\nCOURSE CREDITS  2\n\nObjective:\n 1  .NET is programming language. Its main objective is to learn the .NET framework and its\n     runtime environment as well as basic features of object oriented C# language and advance\n     features. Also learning connectivity with ADO.Net and C#.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the basic architecture of .NET framework.\n 2  Describe C# concepts with OOP elements\n 3  Implement the concepts of class, object, constructor and inheritance concepts in C#.\n 4  Understand different windows tool to implement windows application\n 5  Develop web application and describe advance features of C#.\n\n\nPre-requisite of course:Syllabus of .NET for Diploma Computer Engineering\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            4         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Unit 1\n              Basics of .NET Framework, Common Language Runtime,\n              Microsoft Intermediate Language, Common Language\n               Specification, Managed and Unmanaged Code, Metadata,\n              Assemblies, Namespaces, Garbage Collection, creating different\n              types of indexers and properties\n     2      Unit 2\n              Evaluation of C#, data types, variables, literals, Operators, Program\n              Control Statements: if, switch, Loop: Entry Control, Exit Control\n               loop, goto statement.\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Unit 3\n              Basics of Class and objects, Reference variable, Constructors and\n              types of constructors, Destructor calling in class, Overloading\n              concept, Function and Operator Overloading, Inheritance and types\n              of Inheritance, Attributes and API reflection, Declaring and\n              Dereferencing pointers\n     4      Unit 4\n             Exception Handling: Introduction, try, catch, exception, multiple\n              catch blocks, nested try block., I/O: Byte stream and character\n              stream, Console I/O, File Stream and Byte- Oriented File I/O,\n             Events and Delegates\n     5      Unit 5\n              Application of ASP.NET, Web Controls : Basic Web Controls, Web\n               control Classes, Simple web page applet, Validation and Rich\n              Controls: Simple validation example, understand regular expression,\n               validate customer form\n     6      Unit 6\n               Introduction of ADO and ADO.NET, characteristics of ADO.NET,\n               Dataset, Different types of Data Binding: Single Value, Repeated\n              Value, Data Binding with Database, Data List, Data Grid and\n              Repeater, Advance .NET Concept: Introduction of Windows\n               Presentation and Communication Foundation and use\n                               Total Hours\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       List of Experiments\n                 Install .NET framework and packages also trouble shoot., Write a\n          C# code to print Hello World and elaborate each statement., Write a\n          C# code to convert temperature from Fahrenheit to Centigrade.,\n             Write a C# code to check given number is Prime or not., Write a C#\n             code to check given string is Palindrome or not., Write a C# code to\n               find out Vowels and Consonant of string., Write a C# code to\n             demonstrate the concept of if else ladder and switch statement.,\n             Write a C# code to generate Fibonacci series of N numbers., Write a\n          C# code to find out factorial of given number., Write a C# code to\n              generate following pattern:, Write a C# code to convert prefix\n               notation to postfix notation., Write a C# code to convert infix\n               notation to prefix notation., Write a Menu Driven C# code to\n             perform following operations., Write a C# code to generate\n         PASCAL Pyramid., Write a C# code to multiply two values by\n              using the concept of parametised constructor., Write a C# code to\n             demonstrate the concept of operator overloading., Write a C# code\n               to add two values by using the concept of function overloading.,\n             Write a C# code to demonstrate the concept of Multiple\n                inheritances., Write a C# code to demonstrate the concept of\n               multilevel inheritance., Write a C# code to demonstrate the concept\n              of hybrid inheritance., Write a C# code to demonstrate the concept\n              of exception handling., Write a C# code to demonstrate the concept\n              of multiple catch blocks., Write a C# code to demonstrate the\n             concept of nested catch block., Write a C# code to perform file\n               operations., Write a C# code to create Form Base Windows\n               Application., Write a C# code to create Form Base Windows\n               Application., Write a ASP.NET code to test check box and radio\n              button and click event., Write a ASP.NET code to provide Required\n               Field Validation and Control Field Validation., Write a ASP.NET\n             code to provide Range Validation and Custom Field Validation.,\n             Write a program to provide connectivity with ADO.NET for adding,\n               searching, editing, deleting as bound mode., Write a program to\n              provide connectivity with ADO.NET for adding, searching, editing,\n               deleting as unbound mode., Develop one mini application by using\n          C# and ADO.NET.\n                               Total Hours\n\n\nReferences:\n 1  The Complete Reference C# 2.0, The Complete Reference C# 2.0, Herbert Schildt , Tata\n   McGraw Hill, 2006\n 2  Beginning ASP.NET 2.0 with C#, Beginning ASP.NET 2.0 with C#, Chris Hart, John\n    Kauffman, David Sussman, Chris Ullman, Wiley Publication, 2006\n 3  Pro C# 2010 and the .NET 4 Platform, Pro C# 2010 and the .NET 4 Platform, Andrew\n     Troelsen, Apress Publication, 5th Edition., 2010\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "References:\n 4  ASP.NET: THE COMPLETE REFERENCE, ASP.NET: THE COMPLETE\n   REFERENCE, Matthew Macdonald , McGraw Hill Education, 2017\n 5  Advance .NET Technology, Advance .NET Technology, Chirag patel, Kogent Learning\n     Solutions Inc., Dreamtech Press, 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    35.00         35.00         30.00          0.00           0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\nSupplementary Resources:\n 1  https://www.tutorialspoint.com/csharp/\n 2  https://www.w3schools.com/asp/webpages_examples.asp\n 3  https://www.codeproject.com/\n 4  http://c-sharpcorner.org\n 5  https://msdn.microsoft.com/\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "a73071228ddc777aca8dead8f91fc2083bb5ff656bdd4f449b2e5539ba7868d3"
+    },
+    {
+      "subject_id": "44000935160701",
+      "subject_name": "Entrepreneurship Development",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 6,
+      "subject_code": "09CE1607",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1607_ED.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1607 - Entrepreneurship Development (.pdf",
+      "expected_pdf_sha256": "28f74f5925ad598e34aba99d1f93c8eb3dfa524a5b54e510a6c39c9f9d8fb772",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": "ENTREPRENEURSHIP DEVELOPMENT",
+        "course_code": "09CE1607",
+        "semester_label": "6",
+        "credits": 2,
+        "prerequisite": "Syllabus of ENTREPRENEURSHIP DEVELOPMENT"
+      },
+      "objectives": [
+        "The students can develop and apply an entrepreneurial way of thinking that will allow them to create different business opportunities. To learn different problem solving skills and improve communication skills.",
+        "The students can develop and apply an entrepreneurial way of thinking that will allow them to create different business opportunities. To learn and avail different support available by applying their problem solving skills and communication skills",
+        "The students can develop and apply an entrepreneurial way of thinking that will allow them to create different business opportunities. To learn different problem solving skills and improve communication skills."
+      ],
+      "course_outcomes": [
+        "Have the ability to understand the nature of entrepreneurship.",
+        "Identify the elements of success of entrepreneurial ventures.",
+        "Understand the parameters to assess different opportunities and constrains for new business ideas.",
+        "Understand importunes of management and marketing in small business ventures.",
+        "Apply different strategies for successful implementation of ideas. Pre-requisite of course:Syllabus of ENTREPRENEURSHIP DEVELOPMENT"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "Prateek & Co , “Developing Entrepreneurship”, learning systems, Delhi.",
+          "Clifford and Bombak, Joseph R. Momanso, “Entrepreneurship & Venture”",
+          ". Karmakar M.B., “Small Industries management”"
+        ],
+        "textbooks": [
+          "Entrepreneurship Theory and Practice, J.S. Saini B.S.Rathore, Wheeler Publishing, 2001 References:",
+          "Prateek & Co , “Developing Entrepreneurship”, learning systems, Delhi.",
+          "Clifford and Bombak, Joseph R. Momanso, “Entrepreneurship & Venture”",
+          ". Karmakar M.B., “Small Industries management”"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "http://www.ediindia.org/",
+          "http://niesbud.nic.in/docs/SelfEmploymentBook.pdf",
+          "http://www.msme.gov.in/",
+          "http://www.nsic.co.in/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6204,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (COMPUTER ENGINEERING)\nSEMESTER         6\nCOURSE TITLE    ENTREPRENEURSHIP DEVELOPMENT\nCOURSE CODE     09CE1607\nCOURSE CREDITS  2\n\nObjective:\n 1  The students can develop and apply an entrepreneurial way of thinking that will allow them\n     to create different business opportunities. To learn different problem solving skills and\n    improve communication skills.\n 2  The students can develop and apply an entrepreneurial way of thinking that will allow\n    them to create different business opportunities. To learn and avail different support\n     available by applying their problem solving skills and communication skills\n 3  The students can develop and apply an entrepreneurial way of thinking that will allow them\n     to create different business opportunities. To learn different problem solving skills and\n    improve communication skills.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Have the ability to understand the nature of entrepreneurship.\n 2  Identify the elements of success of entrepreneurial ventures.\n 3  Understand the parameters to assess different opportunities and constrains for new business\n     ideas.\n 4  Understand importunes of management and marketing in small business ventures.\n 5  Apply different strategies for successful implementation of ideas.\n\n\nPre-requisite of course:Syllabus of ENTREPRENEURSHIP DEVELOPMENT\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Unit 1\n           What is Entrepreneurship?, Classification & Characteristics of\n              Entrepreneur, benefits and drawbacks of entreprenrship, Creativity\n            and Risk taking., Business Reforms, Business Idea Methods and\n              techniques to generate business idea, How to do SWOT Analysis\n            and advantages of SWOT analysis, Mistakes of entrepreneurship\n            and how to avoid them.\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Unit 2\n             Support system, information related to project and support system.,\n             Small Scale Business planning and requirements, Different\n              Govt&Institutional Agencies and what are the different Formalities.,\n               Statutory Requirements and Agencies., Basic concept of marketing\n            and their importance, )Market identification and survey key\n             components, Market assessment\n     3      Unit 3\n         How to measure cost of project, Sources of Finance, Assessment of\n             working capital, Profitability and Product costing, Break Even\n              Analysis and Financial Ratios and Significance, Accounting\n            Methodology and principles, Book Keeping, Financial Statements &\n            what is audit, Business plan steps for commissioning\n               (resource,cost,time), Project report and appraisal, Meaning,\n             Importance and components of project report\n     4      Unit 4\n             Concept and overview of enterprise., Essential roles entrepreneur in\n            managing enterprise., Product cycle: concept and importance,\n              Quality assurance, Importance of quality, Importance of testing,\n             concept of E-commerce and global entrepreneur\n                               Total Hours\n\n\nTextbook :\n 1  Entrepreneurship Theory and Practice, J.S. Saini B.S.Rathore, Wheeler Publishing, 2001\n\nReferences:\n 1  Prateek & Co , “Developing Entrepreneurship”, learning systems, Delhi.\n 2  Clifford and Bombak, Joseph R. Momanso, “Entrepreneurship & Venture”\n 3    . Karmakar M.B., “Small Industries management”\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    45.00         45.00         10.00          0.00           0.00           0.00\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3    . Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, ecourses.\n\nSupplementary Resources:\n 1  http://www.ediindia.org/\n 2  http://niesbud.nic.in/docs/SelfEmploymentBook.pdf\n 3  http://www.msme.gov.in/\n 4  http://www.nsic.co.in/\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "28f74f5925ad598e34aba99d1f93c8eb3dfa524a5b54e510a6c39c9f9d8fb772"
+    },
+    {
+      "subject_id": "44000935160601",
+      "subject_name": "Fundametals of Machine Learning",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 6,
+      "subject_code": "09CE1606",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1606_FML.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1606 - Fundametals of Machine Learning (.pdf",
+      "expected_pdf_sha256": "b6830af01482a081ca27ae252641400bbde24cb447fb9c017719328e5b171dc9",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": "FUNDAMENTALS OF MACHINE LEARNING",
+        "course_code": "09CE1606",
+        "semester_label": "6",
+        "credits": 4,
+        "prerequisite": "Syllabus of FUNDAMENTALS OF MACHINE LEARNING"
+      },
+      "objectives": [
+        "This Course providing an introductory and overview of the field of ML with the focus of how to collect a data and and analyze data. To learn machine learning different methods and optimization techniques",
+        "This Course providing an introductory and overview of the field of ML with the focus of how to collect a data and analyze data. To learn machine learning different methods and optimization techniques.",
+        "This Course providing an introductory and overview of the field of ML with the focus of how to collect a data and and analyze data. To learn machine learning different methods and optimization techniques."
+      ],
+      "course_outcomes": [
+        "Understand machine-learning concepts",
+        "Understand Optimization theory and concepts",
+        "Understand and analyze different method and Techniques.",
+        "Use of Different datasets analyze the data",
+        "Apply different algorithms and predict the output Pre-requisite of course:Syllabus of FUNDAMENTALS OF MACHINE LEARNING"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani, Springer, 6th Edition, 2015",
+          "The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second Edition (Springer Series in Statistics) 2nd Edition",
+          "Introduction to Machine Learning, Second Edition, by Ethem Alpaydin, The MIT Press",
+          "Machine learning an algorithmic perspective by Sthephen Marsland, CRC Press",
+          "Machine Learning in Action by Peter Harrington, Manning Shelter Island"
+        ],
+        "textbooks": [
+          "An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani, Springer, 2015"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "www.analyticsvidhya.com",
+          "www.geeksforgeeks.org",
+          "www.Javatpoint.com"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 7872,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (COMPUTER ENGINEERING)\nSEMESTER         6\nCOURSE TITLE   FUNDAMENTALS OF MACHINE LEARNING\nCOURSE CODE     09CE1606\nCOURSE CREDITS  4\n\nObjective:\n 1  This Course providing an introductory and overview of the field of ML with\n     the focus of how to collect a data and and analyze data. To learn machine learning\n     different methods and optimization techniques\n 2  This Course providing an introductory and overview of the field of ML with the focus of\n    how to collect a data and analyze data. To learn machine learning different methods and\n     optimization techniques.\n 3  This Course providing an introductory and overview of the field of ML with the focus of\n    how to collect a data and and analyze data. To learn machine learning different methods\n    and optimization techniques.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand machine-learning concepts\n 2  Understand Optimization theory and concepts\n 3  Understand and analyze different method and Techniques.\n 4  Use of Different datasets analyze the data\n 5  Apply different algorithms and predict the output\n\n\nPre-requisite of course:Syllabus of FUNDAMENTALS OF MACHINE LEARNING\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Unit 1\n             Basic introduction to linear algebra, Mathematics equations for\n            Machine learning, Matrices, vectors in linear algebra\n     2      Unit 2\n           What is machine learning, classification, Machine learning\n                 lifecycle,, Different applications of ML, Difference between AI and\n            machine learning Machine Learning and deep learning?, Data\n              Processing in machine learning.\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Unit 3\n         How supervised learning works. Types of Supervised learning,\n            Advantage and disadvantage of supervised learning, Regressions-\n              Linear regression, regression trees, on-linear regression and\n             polynomial regression, Classification –random forest, Decision tree,\n               Logistic regression, support vector machine\n     4      Unit 4\n            what is unsupervised learning and working of unsupervised\n               learning, Types of unsupervised learning, Clustering algorithm k-\n            means and KNN(k-nearest neighbors), Hierarchical clustering,\n             anomaly’s detection, neural network, component analysis and\n              Apriori algorithm, Basics of reinforcement learning\n     5      Unit 5\n              Basics of decision tree, regression tree and classification tree, Trees\n             vs linear models, Advantages and disadvantages of tree, random\n                forests bagging, boosting\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       List of Experiments\n             Study most useful packages for machine learning and How to install\n             packages in python., Study how to download and load any datasets.,\n             Study how to divide dataset into training set and testing set., Create\n             your own linear regression model in python., Develop a cost\n              function of linear regression using sample data., Develop a Gradient\n              descent of linear regression using sample data, Build your own\n                logistic regression model in python and check the accuracy,\n            Develop regularization in already developed logistic regression\n              algorithm, Study regression using forecasting and predicting, Create\n             your own random forest model and predict the data., Design an\n        SVM model with use of python., Study clustering algorithms using\n             simple data., Implement k-means algorithm using sample data.,\n            Implement KNN algorithms using sample data, Implement\n             wholesale problem using hierarchical clustering., Study anomaly\n               detection techniques in python., How to create simple neural\n             network in python., Study how does the apriori algorithm works,\n             Study reinforcement learning algorithm step by step., Implement\n             Decision tree method in python., Implement random forests and\n              decision tree from scratch in python., Study different bagging and\n              boosting algorithms.\n                               Total Hours\n\nTextbook :\n 1  An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani, Springer, 2015\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "References:\n 1  An Introduction to Statistical Learning, James, Witten, Hastie, Tibshirani, Springer, 6th\n     Edition, 2015\n 2  The Elements of Statistical Learning: Data Mining, Inference, and Prediction, Second\n     Edition (Springer Series in Statistics) 2nd Edition\n 3  Introduction to Machine Learning, Second Edition, by Ethem Alpaydin, The MIT Press\n 4  Machine learning an algorithmic perspective by Sthephen Marsland, CRC Press\n 5  Machine Learning in Action by Peter Harrington, Manning Shelter Island\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00          40.00         40.00         20.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory Supplementary Resources: 1. Machine Learning by Andrew\n   NG on Coursera\n\nSupplementary Resources:\n 1  www.analyticsvidhya.com\n 2  www.geeksforgeeks.org\n 3  www.Javatpoint.com\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "b6830af01482a081ca27ae252641400bbde24cb447fb9c017719328e5b171dc9"
+    },
+    {
+      "subject_id": "44000935160101",
+      "subject_name": "Multimedia and Animation Tools",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 6,
+      "subject_code": "09CE1601",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1601_MAT.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1601 - Multimedia and Animation Tools (.pdf",
+      "expected_pdf_sha256": "cb4301ae7f24f6c118a3d606ebde22f3c8d6b5ed10fd1079a64a3dd8e919ca81",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": "MULTIMEDIA AND ANIMATION TOOL",
+        "course_code": "09CE1601",
+        "semester_label": "6",
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "Students will learn the basic concepts and skills required to develop effective graphics for the Web and various business publications. Students will learn the basic tools used in image editing and/or image creation software with specific attention to practical applications, including tools and techniques of photo correction, enhancement and editing. Students will learn how to apply animation and give effects using animating software."
+      ],
+      "course_outcomes": [
+        "Identify fundamentals of graphics and making use of various tools",
+        "Use basic Photo enhancing skills and concepts to develop effective graphics for web",
+        "Demonstrate proficiency with layers (naming, organizing, adjustment layers)",
+        "Use animation tools and techniques to develop different animation.",
+        "Produce animation using action script.",
+        "Construct, edit, and manipulate animation using several animation tools and techniques. Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 4 50 30 20 25 25",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "Lesa Snider, Image editing CC: The missing manual, O’Reilly Media",
+          "Fuller, Laurie Ulrich, Image editing CS3 Bible, Wiley",
+          "Todd Perkins, Adobe Flash Professional CS5/CS6 Bible, Wiley India Edition.",
+          "Robert Reinhardt and Joey Lott, Flash MX 2004 Actionscript Bible , Wiley [PAGE 5] References:",
+          "Adobe Flash Professional CC Help",
+          "Tom Green and David Stiller, Flash CS3 for Designers, Green Stiller Foundation"
+        ],
+        "textbooks": [
+          "Image editing CC: The missing manual, Lesa Snider, O’Reilly Media, .",
+          "Image editing CS3 Bible, Fuller, Laurie Ulrich, Wiley, . References:",
+          "Lesa Snider, Image editing CC: The missing manual, O’Reilly Media",
+          "Fuller, Laurie Ulrich, Image editing CS3 Bible, Wiley",
+          "Todd Perkins, Adobe Flash Professional CS5/CS6 Bible, Wiley India Edition.",
+          "Robert Reinhardt and Joey Lott, Flash MX 2004 Actionscript Bible , Wiley"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.adobe.com/support/documentation/archived_content/en/flash/cs3/flash_cs3_he lp.pdf",
+          "https://helpx.adobe.com/in/image editing/user-guide.html",
+          "https://www.udemy.com › Design › Graphic Design › Image editing",
+          "https://www.it.iitb.ac.in/lakshya/workshopContent.html? workshopid=Z7PLmVRto9HRdFsg5ld8Rw",
+          "http://www.nptelvideos.com/adobe/adobe_image editing_tutorials.php",
+          "http://www.nptelvideos.com/video.php?id=1778&c=22"
+        ]
+      },
+      "page_count": 5,
+      "extracted_character_count": 13978,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (COMPUTER ENGINEERING)\nSEMESTER         6\nCOURSE TITLE    MULTIMEDIA AND ANIMATION TOOL\nCOURSE CODE     09CE1601\nCOURSE CREDITS  4\n\nObjective:\n 1  Students will learn the basic concepts and skills required to develop effective graphics for\n     the Web and various business publications. Students will learn the basic tools used in\n    image editing and/or image creation software with specific attention to practical\n     applications, including tools and techniques of photo correction, enhancement and editing.\n     Students will learn how to apply animation and give effects using animating software.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Identify fundamentals of graphics and making use of various tools\n 2  Use basic Photo enhancing skills and concepts to develop effective graphics for web\n 3  Demonstrate proficiency with layers (naming, organizing, adjustment layers)\n 4  Use animation tools and techniques to develop different animation.\n 5  Produce animation using action script.\n 6  Construct, edit, and manipulate animation using several animation tools and techniques.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            4        50     30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Unit 1\n               Introduction to multimedia, concept of graphics-bitmap images,\n              vector graphics, Color channels, Bit depth, Image size and\n               resolution, graphic file format, vector based format, optimizing web\n               graphics, aliased text vs. anti-aliased text, tolerance and opacity in\n             image, floating, selection (move, rotate, scale), set tolerance and\n              opacity in image with different tools Different color mode-RGB\n           mode (millions of colors),CMYK mode (four-printed colors), Index\n           mode (256 colors), Grayscale mode (256 grays), Bitmap mode (2\n             colors),LAB color mode, Adjust color hue, saturation, and\n               brightness, browser safe colors, Shadows, highlights and midtones\n              of an image photoshop interface, tools and options\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Unit 2\n              Basics of Image editing, the Image editing interface, need of image\n                editing, create documents(new, save different format, modify,\n               search), Image editing palettes, The Image editing Toolbox and\n             Options bar, Using Guides and Ruler, Different file formats for file\n              importing and exporting, modes of image in image editing (open\n             image, create image, save file, modify file), modes of image editing\n              (open, copy, rotate, brightness, contrast, color balance, crop,\n                 resize),, color in image editing with numeric values and\n             hexadecimal values, different transformation tools(free, rotate,\n             skew, distort and perspective, move, flip horizontal and flip vertical)\n     3      Unit 3\n               Different Image editing tools-Selection tools, Crop and slice tools,\n             Measuring tools ,retouching tool, painting tools, Drawing and type\n                tools, Introduction to layer, different types of layers-background\n                layer, image layer, adjustment layer, text/line layer, fill layer, shape\n                layer, Empty layer, duplicate layers, Neutral Layers, Layer Pallets\n            and actions, layer features, Image composting using layers,\n              Restoration and enhancement of images - Color balance with image,\n              adjust/change brightness and contrast, Changing hue saturation and\n               brightness Histogram, Gradient map, Desaturate, Invert, color\n               replace, selection of different color , Equalize, Threshold, Channel\n              mixer, Posterize, Editing and special effects of Text- Text Tool-\n                vertical and horizontal text tool, point and paragraph text creation,\n             Using horizontal and vertical type mask tools, Using character\n                palette for text editing, choosing a font, changing the type color,\n             choosing a type size- Specifying kerning and tracking, using\n                fractional character widths, specifying baseline shift, Applying\n              underline and strikethrough, Text alignment and justification,\n              Specifying anti-aliasing, creating text wrap or adding effects to text,\n              Rasterizing type\n     4      Unit 4\n               Introduction to Animations, software Interface- Start page, Creating\n            custom workspace layouts, import formats, keyboard shortcuts,\n              Timeline, frames, Tools Panel, library, property inspector, rulers,\n                grids, guides, Layers, color-swatches, color-mixer, movie explorer,\n            Drawing in software-Using shape tools- oval tool, polystar tool,\n             Using drawing tools- pencil tool, eraser tool, brush tool, drawing\n                lines and curves using Pen tool, selection tools – lasso tool,\n               selection tool, subselection tool, design and align element\n              –snapping, design panel, navigation tools, free transform tool,\n           Commands- copy, move, delete, Working with colors- color\n             swatches panel, creating custom palettes, using gradient fill, using\n              dropper, ink bottles and paint bucket, Working with text- using text\n               tool and property panel, text field types, creating font symbol, using\n               font symbols in runtime shared libraries, modifying text manually\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5      Unit 5\n            Working with layers, properties of layers, renaming layers, grouping\n              of layers, guide layer, motion guide layer, masking layer, instances,\n            symbol library, types of symbol- graphic symbols, button symbols,\n             movieclip symbols, editing symbols, modifying instances\n               properties, 9-slice scaling for movie clip, Animation – Introduction\n               to frame-by-frame animations- adding keyframes, creating frame-\n             by-frame animation, onion skinning to modify multiframe sequence,\n              using shape tweening ,adding shape hints, motion tweening ,\n             working with sound and videos\n     6      Unit 6\n               Introduction to actionscript, navigating actionpanel, different\n               actions – stop(), play(), navigating between frames , navigating\n             between scenes, navigating to URLs, Loadmovie and Unloadmovie\n                action, working with variables, naming conventions, working with\n               operators, string operators, working with statements- if, switch, for,\n             while , do while , object properties, creating movie clip, working\n             with movie clip objects\n                               Total Hours\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       List of Experiments\n              Construct an image using various shape tools and fill color using\n               color palate., Construct an image to make frame with photos of\n              various persons (Use move, cut, copy, paste, transform etc\n               functionality of image editing)., Produce a scene using various tools\n               available and demonstrate the use of layers., Remove various\n               objects in photo using various tools like clone stamp tool, healing\n                 tool, patch tool, etc., Capture 10 photos and improve them using\n              various tools available in image editing which helps to learn about\n             white balance, sharpness, noise reduction, basic levels black, white,\n             shadow, highlight, contrast, curve adjustments, HSL etc., Use\n              transformation tools to straighten and adjust for lens correction the\n                architectural photo., Change the photo of sky to learn morph, merge\n            and overlapping of images., Cut your photo using various selection\n               tools available in image editing and put it in some other image.,\n            Apply various filters to turn your photo into sketch/drawing.,\n              Construct an image to demonstrate the use of Liquify, Construct a\n             banner of recent event/festival of your institute., Construct an action\n                that resize any photo for PC wallpaper and add your name as a\n              watermark., Draw a scene using various tools available in animation\n               software, Draw a person using various tools available in animation\n               software, draw each part of body on separate layer., Produce an\n             animation to blink an object., Produce an animation that\n             demonstrate motion tween., Produce an animation of car going on\n               the road., Produce an animation to change the shape of objects (e.g.\n                circle to square to star to rectangle etc)., Construct an animation of\n               natural scene (clouds moving, sun rising, moon rising etc)., Produce\n             an animation using keyframe., Produce an animation by merging\n              multiple frame one by one. (Draw each frame on paper and merge\n            them into animation), Produce an animation bird flying over a scene\n              (going close to far)., Construct an animation which starts when user\n               click on the start button and should stop when user click on stop\n                button., Construct a quiz type animation with question and four\n              buttons with answer when user click on answer, he/she should see\n            message he/she correct or not.\n                               Total Hours\n\nTextbook :\n 1  Image editing CC: The missing manual, Lesa Snider, O’Reilly Media, .\n 2  Image editing CS3 Bible, Fuller, Laurie Ulrich, Wiley, .\n\nReferences:\n 1  Lesa Snider, Image editing CC: The missing manual, O’Reilly Media\n 2  Fuller, Laurie Ulrich, Image editing CS3 Bible, Wiley\n 3  Todd Perkins, Adobe Flash Professional CS5/CS6 Bible, Wiley India Edition.\n 4  Robert Reinhardt and Joey Lott, Flash MX 2004 Actionscript Bible , Wiley\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 5,
+          "text": "References:\n 5  Adobe Flash Professional CC Help\n 6 Tom Green and David Stiller, Flash CS3 for Designers, Green Stiller Foundation\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    40.00         40.00         10.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in may be using following teaching approaches: black board, or use\n     of any of tools such as demonstration, role play, Quiz, brainstorming, MOOCs etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     laboratory and class-room.\n 3  Practical examination/Viva will be conducted at the end of semester for evaluation of\n    performance of students in laboratory.\n 4  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory\n\nSupplementary Resources:\n 1  https://www.adobe.com/support/documentation/archived_content/en/flash/cs3/flash_cs3_he\n     lp.pdf\n 2  https://helpx.adobe.com/in/image editing/user-guide.html\n 3   https://www.udemy.com › Design › Graphic Design › Image editing\n 4  https://www.it.iitb.ac.in/lakshya/workshopContent.html?\n    workshopid=Z7PLmVRto9HRdFsg5ld8Rw\n 5  http://www.nptelvideos.com/adobe/adobe_image editing_tutorials.php\n 6  http://www.nptelvideos.com/video.php?id=1778&c=22\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "cb4301ae7f24f6c118a3d606ebde22f3c8d6b5ed10fd1079a64a3dd8e919ca81"
+    },
+    {
+      "subject_id": "44000935160201",
+      "subject_name": "Project-II",
+      "course_id": 44,
+      "course_name": "Diploma Computer Engineering",
+      "semester": 6,
+      "subject_code": "09CE1602",
+      "catalog_status": "VERIFIED_CODE_AND_TITLE",
+      "catalog_action": "RETAINED",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1602_Project-II.pdf",
+      "source_pdf_repo_path": "Syllabus/Diploma_Full_Collection_1/Marwadi_Official_Diploma_Collector/Marwadi_Diploma_Syllabus_Collection/Verified_Syllabi/Diploma Computer Engineering/Semester_Unspecified/09CE1602 - Project-II (.pdf",
+      "expected_pdf_sha256": "126614dc28150990577cd10e02c7d48fa4959bc6f7de0ee4de87bbdfb0abb3f2",
+      "extraction_method": "PyMuPDF native PDF text layer; no OCR",
+      "extraction_status": "EXTRACTION_ERROR",
+      "official_document_metadata": {
+        "course_title": "PROJECT – II",
+        "course_code": "09CE1602",
+        "semester_label": "6",
+        "credits": 6,
+        "prerequisite": "Syllabus of PROJECT – II"
+      },
+      "objectives": [
+        "Students will identify the need of industry, explore latest technologies, work on industry or social problems with team members."
+      ],
+      "course_outcomes": [
+        "To understand, analyse real problems of industry or society and provide solutions for those problems.",
+        "To identify practical aspect of studied technologies",
+        "To communicate in the way industry demands in oral and documented way.",
+        "To demonstrate teamwork and leader ship quality",
+        "To present and document implemented work effectively Pre-requisite of course:Syllabus of PROJECT – II"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 0 12 0 0 0 100 100",
+      "contents": {
+        "theory": [],
+        "practical": []
+      },
+      "references": {
+        "references": [
+          "Computer project manuals",
+          "All technical journal and manual related to computer engineering project"
+        ],
+        "textbooks": [
+          "NA, NA, NA, NA References:",
+          "Computer project manuals",
+          "All technical journal and manual related to computer engineering project"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://cse.final-year-projects.in/",
+          "https://www.geeksforgeeks.org/",
+          "https://nevonprojects.com/"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4120,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       DIPLOMA STUDIES\nPROGRAM       DIPLOMA ENGINEERING (COMPUTER ENGINEERING)\nSEMESTER         6\nCOURSE TITLE    PROJECT – II\nCOURSE CODE     09CE1602\nCOURSE CREDITS  6\n\nObjective:\n 1  Students will identify the need of industry, explore latest technologies, work on industry or\n     social problems with team members.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand, analyse real problems of industry or society and provide solutions for\n     those problems.\n 2  To identify practical aspect of studied technologies\n 3  To communicate in the way industry demands in oral and documented way.\n 4  To demonstrate teamwork and leader ship quality\n 5  To present and document implemented work effectively\n\n\nPre-requisite of course:Syllabus of PROJECT – II\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     0            0            12        0      0       0        100        100\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Project/Problem Identification                             18\n              Project/Problem Identification\n     2       Project Analysis, Requirement Gathering                    20\n               Project Analysis, Requirement Gathering\n     3       Project Design / Prototype Development                     20\n               Project Design / Prototype Development\n     4      Implementation of Project/Solution                         56\n             Implementation of Project/Solution\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5      Testing and Verification                                   18\n              Testing and Verification\n     6       Presentation and execution's                               36\n               Presentation and Report Writing\n                               Total Hours                       168\n\nTextbook :\n 1  NA, NA, NA, NA\n\nReferences:\n 1  Computer project manuals\n 2  All technical journal and manual related to computer engineering project\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                           Distribution of Theory for course delivery\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         40.00         10.00          0.00           0.00\n\nInstructional Method:\n 1  Prepare and submit complete project/training work with implementation and report\n 2  Report regarding stage wise progress to institute guide regularly.\n 3  Practicing of latest software and tool used for project/training work.\n\nSupplementary Resources:\n 1   https://cse.final-year-projects.in/\n 2  https://www.geeksforgeeks.org/\n 3  https://nevonprojects.com/\n\n\n\n\n\nMR. MITTAL KIRITBHAI JOISER                  DR. RAJESHKUMAR MEGHAJIBHAI PATEL\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "KeyError: 'theory_units'"
+      ],
+      "actual_pdf_sha256": "126614dc28150990577cd10e02c7d48fa4959bc6f7de0ee4de87bbdfb0abb3f2"
+    }
+  ],
+  "build_summary": {
+    "extracted": 0,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 0,
+    "extraction_errors": 5
+  }
+}
