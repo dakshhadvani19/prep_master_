@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "generated_at_utc": "2026-10-12T12:47:27+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
   "course": {
@@ -60,29 +60,97 @@
               "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
               "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
               "Changing concept of crime, Relationship between Criminal Policy,",
-              "Criminal Law and Criminology",
-              "2 Theories of causation of crime 6",
+              "Criminal Law and Criminology"
+            ],
+            "topics_text": "1. Definitions: Crime, Criminology and Criminal Justice, 2. Historical Development of criminology - Nature and Scope- Criminology , 3. Perspective of Crime and Criminal, 4. Difference between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5. Changing concept of crime, Relationship between Criminal Policy, Criminal Law and Criminology",
+            "topics": [
+              "1. Definitions: Crime, Criminology and Criminal Justice, 2.",
+              "Historical Development of criminology - Nature and Scope",
+              "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
+              "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
+              "Changing concept of crime, Relationship between Criminal Policy,",
+              "Criminal Law and Criminology"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Theories of causation of crime",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Prominent criminological thought currents – Classicalism,",
               "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
               "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
-              "Sociological Theories",
-              "3 Criminal Typology 6",
+              "Sociological Theories"
+            ],
+            "topics_text": "1. Prominent criminological thought currents – Classicalism, Positivism and Radicalism, 2. Biological Theories, 3. Economic Theories, 4. Psychological Theories, 5. Political Theories, 6. Sociological Theories",
+            "topics": [
+              "1. Prominent criminological thought currents – Classicalism,",
+              "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
+              "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
+              "Sociological Theories"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Criminal Typology",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Crimes against Human body and Crimes against Property, 2.",
               "Crimes against vulnerable groups: Crimes against women and",
               "children, 3. Economic Crimes: white collar crimes and organized",
               "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
               "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
               "Typology: Adult offenders and Juveniles in conflict with law, 11.",
-              "Habitual offenders, 12. Professional offenders",
-              "4 Punishment and its Justification 6",
+              "Habitual offenders, 12. Professional offenders"
+            ],
+            "topics_text": "1. Crimes against Human body and Crimes against Property, 2. Crimes against vulnerable groups: Crimes against women and children, 3. Economic Crimes: white collar crimes and organized crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7. Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal Typology: Adult offenders and Juveniles in conflict with law, 11. Habitual offenders, 12. Professional offenders",
+            "topics": [
+              "1. Crimes against Human body and Crimes against Property, 2.",
+              "Crimes against vulnerable groups: Crimes against women and",
+              "children, 3. Economic Crimes: white collar crimes and organized",
+              "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
+              "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
+              "Typology: Adult offenders and Juveniles in conflict with law, 11.",
+              "Habitual offenders, 12. Professional offenders"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Punishment and its Justification",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Theories of Punishment – Retribution, Deterrence, Reform and",
               "Prevention, 2. Kinds of Punishment – with a special emphasis on",
               "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
-              "Juvenile offenders",
-              "5 Female Criminality and victimity 6",
+              "Juvenile offenders"
+            ],
+            "topics_text": "1. Theories of Punishment – Retribution, Deterrence, Reform and Prevention, 2. Kinds of Punishment – with a special emphasis on Capital Punishment, 3. Probation as a form of Punishment, 4. Parole Juvenile offenders",
+            "topics": [
+              "1. Theories of Punishment – Retribution, Deterrence, Reform and",
+              "Prevention, 2. Kinds of Punishment – with a special emphasis on",
+              "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
+              "Juvenile offenders"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Female Criminality and victimity",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Female Criminality as an aspect of Marginal Criminality, 2.",
-              "Female Victimity and Victimology",
-              "6 National Crime Statistics 6",
+              "Female Victimity and Victimology"
+            ],
+            "topics_text": "1. Female Criminality as an aspect of Marginal Criminality, 2. Female Victimity and Victimology",
+            "topics": [
+              "1. Female Criminality as an aspect of Marginal Criminality, 2.",
+              "Female Victimity and Victimology"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "National Crime Statistics",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4.",
               "International crime comparisons, 5. Changing crime patterns, 6.",
               "Unreported crime, 7. National Crime Record Bureau, 8. Uniform",
@@ -90,36 +158,8 @@
               "Surveys (NCVS)",
               "Total Hours 36"
             ],
-            "topics_text": "1. Definitions: Crime, Criminology and Criminal Justice, 2. Historical Development of criminology - Nature and Scope- Criminology , 3. Perspective of Crime and Criminal, 4. Difference between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5. Changing concept of crime, Relationship between Criminal Policy, Criminal Law and Criminology 2 Theories of causation of crime 6 1. Prominent criminological thought currents – Classicalism, Positivism and Radicalism, 2. Biological Theories, 3. Economic Theories, 4. Psychological Theories, 5. Political Theories, 6. Sociological Theories 3 Criminal Typology 6 1. Crimes against Human body and Crimes against Property, 2. Crimes against vulnerable groups: Crimes against women and children, 3. Economic Crimes: white collar crimes and organized crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7. Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal Typology: Adult offenders and Juveniles in conflict with law, 11. Habitual offenders, 12. Professional offenders 4 Punishment and its Justification 6 1. Theories of Punishment – Retribution, Deterrence, Reform and Prevention, 2. Kinds of Punishment – with a special emphasis on Capital Punishment, 3. Probation as a form of Punishment, 4. Parole Juvenile offenders 5 Female Criminality and victimity 6 1. Female Criminality as an aspect of Marginal Criminality, 2. Female Victimity and Victimology 6 National Crime Statistics 6 1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4. International crime comparisons, 5. Changing crime patterns, 6. Unreported crime, 7. National Crime Record Bureau, 8. Uniform Crime Reporting Statistics (UCR), 9. National Crime Victimization Surveys (NCVS) Total Hours 36",
+            "topics_text": "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4. International crime comparisons, 5. Changing crime patterns, 6. Unreported crime, 7. National Crime Record Bureau, 8. Uniform Crime Reporting Statistics (UCR), 9. National Crime Victimization Surveys (NCVS) Total Hours 36",
             "topics": [
-              "1. Definitions: Crime, Criminology and Criminal Justice, 2.",
-              "Historical Development of criminology - Nature and Scope",
-              "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
-              "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
-              "Changing concept of crime, Relationship between Criminal Policy,",
-              "Criminal Law and Criminology",
-              "2 Theories of causation of crime 6",
-              "1. Prominent criminological thought currents – Classicalism,",
-              "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
-              "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
-              "Sociological Theories",
-              "3 Criminal Typology 6",
-              "1. Crimes against Human body and Crimes against Property, 2.",
-              "Crimes against vulnerable groups: Crimes against women and",
-              "children, 3. Economic Crimes: white collar crimes and organized",
-              "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
-              "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
-              "Typology: Adult offenders and Juveniles in conflict with law, 11.",
-              "Habitual offenders, 12. Professional offenders",
-              "4 Punishment and its Justification 6",
-              "1. Theories of Punishment – Retribution, Deterrence, Reform and",
-              "Prevention, 2. Kinds of Punishment – with a special emphasis on",
-              "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
-              "Juvenile offenders",
-              "5 Female Criminality and victimity 6",
-              "1. Female Criminality as an aspect of Marginal Criminality, 2.",
-              "Female Victimity and Victimology",
-              "6 National Crime Statistics 6",
               "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4.",
               "International crime comparisons, 5. Changing crime patterns, 6.",
               "Unreported crime, 7. National Crime Record Bureau, 8. Uniform",
@@ -231,29 +271,97 @@
               "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
               "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
               "Changing concept of crime, Relationship between Criminal Policy,",
-              "Criminal Law and Criminology",
-              "2 Theories of causation of crime 6",
+              "Criminal Law and Criminology"
+            ],
+            "topics_text": "1. Definitions: Crime, Criminology and Criminal Justice, 2. Historical Development of criminology - Nature and Scope- Criminology , 3. Perspective of Crime and Criminal, 4. Difference between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5. Changing concept of crime, Relationship between Criminal Policy, Criminal Law and Criminology",
+            "topics": [
+              "1. Definitions: Crime, Criminology and Criminal Justice, 2.",
+              "Historical Development of criminology - Nature and Scope",
+              "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
+              "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
+              "Changing concept of crime, Relationship between Criminal Policy,",
+              "Criminal Law and Criminology"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Theories of causation of crime",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Prominent criminological thought currents – Classicalism,",
               "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
               "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
-              "Sociological Theories",
-              "3 Criminal Typology 6",
+              "Sociological Theories"
+            ],
+            "topics_text": "1. Prominent criminological thought currents – Classicalism, Positivism and Radicalism, 2. Biological Theories, 3. Economic Theories, 4. Psychological Theories, 5. Political Theories, 6. Sociological Theories",
+            "topics": [
+              "1. Prominent criminological thought currents – Classicalism,",
+              "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
+              "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
+              "Sociological Theories"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Criminal Typology",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Crimes against Human body and Crimes against Property, 2.",
               "Crimes against vulnerable groups: Crimes against women and",
               "children, 3. Economic Crimes: white collar crimes and organized",
               "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
               "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
               "Typology: Adult offenders and Juveniles in conflict with law, 11.",
-              "Habitual offenders, 12. Professional offenders",
-              "4 Punishment and its Justification 6",
+              "Habitual offenders, 12. Professional offenders"
+            ],
+            "topics_text": "1. Crimes against Human body and Crimes against Property, 2. Crimes against vulnerable groups: Crimes against women and children, 3. Economic Crimes: white collar crimes and organized crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7. Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal Typology: Adult offenders and Juveniles in conflict with law, 11. Habitual offenders, 12. Professional offenders",
+            "topics": [
+              "1. Crimes against Human body and Crimes against Property, 2.",
+              "Crimes against vulnerable groups: Crimes against women and",
+              "children, 3. Economic Crimes: white collar crimes and organized",
+              "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
+              "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
+              "Typology: Adult offenders and Juveniles in conflict with law, 11.",
+              "Habitual offenders, 12. Professional offenders"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Punishment and its Justification",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Theories of Punishment – Retribution, Deterrence, Reform and",
               "Prevention, 2. Kinds of Punishment – with a special emphasis on",
               "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
-              "Juvenile offenders",
-              "5 Female Criminality and victimity 6",
+              "Juvenile offenders"
+            ],
+            "topics_text": "1. Theories of Punishment – Retribution, Deterrence, Reform and Prevention, 2. Kinds of Punishment – with a special emphasis on Capital Punishment, 3. Probation as a form of Punishment, 4. Parole Juvenile offenders",
+            "topics": [
+              "1. Theories of Punishment – Retribution, Deterrence, Reform and",
+              "Prevention, 2. Kinds of Punishment – with a special emphasis on",
+              "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
+              "Juvenile offenders"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Female Criminality and victimity",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Female Criminality as an aspect of Marginal Criminality, 2.",
-              "Female Victimity and Victimology",
-              "6 National Crime Statistics 6",
+              "Female Victimity and Victimology"
+            ],
+            "topics_text": "1. Female Criminality as an aspect of Marginal Criminality, 2. Female Victimity and Victimology",
+            "topics": [
+              "1. Female Criminality as an aspect of Marginal Criminality, 2.",
+              "Female Victimity and Victimology"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "National Crime Statistics",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4.",
               "International crime comparisons, 5. Changing crime patterns, 6.",
               "Unreported crime, 7. National Crime Record Bureau, 8. Uniform",
@@ -261,36 +369,8 @@
               "Surveys (NCVS)",
               "Total Hours 36"
             ],
-            "topics_text": "1. Definitions: Crime, Criminology and Criminal Justice, 2. Historical Development of criminology - Nature and Scope- Criminology , 3. Perspective of Crime and Criminal, 4. Difference between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5. Changing concept of crime, Relationship between Criminal Policy, Criminal Law and Criminology 2 Theories of causation of crime 6 1. Prominent criminological thought currents – Classicalism, Positivism and Radicalism, 2. Biological Theories, 3. Economic Theories, 4. Psychological Theories, 5. Political Theories, 6. Sociological Theories 3 Criminal Typology 6 1. Crimes against Human body and Crimes against Property, 2. Crimes against vulnerable groups: Crimes against women and children, 3. Economic Crimes: white collar crimes and organized crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7. Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal Typology: Adult offenders and Juveniles in conflict with law, 11. Habitual offenders, 12. Professional offenders 4 Punishment and its Justification 6 1. Theories of Punishment – Retribution, Deterrence, Reform and Prevention, 2. Kinds of Punishment – with a special emphasis on Capital Punishment, 3. Probation as a form of Punishment, 4. Parole Juvenile offenders 5 Female Criminality and victimity 6 1. Female Criminality as an aspect of Marginal Criminality, 2. Female Victimity and Victimology 6 National Crime Statistics 6 1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4. International crime comparisons, 5. Changing crime patterns, 6. Unreported crime, 7. National Crime Record Bureau, 8. Uniform Crime Reporting Statistics (UCR), 9. National Crime Victimization Surveys (NCVS) Total Hours 36",
+            "topics_text": "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4. International crime comparisons, 5. Changing crime patterns, 6. Unreported crime, 7. National Crime Record Bureau, 8. Uniform Crime Reporting Statistics (UCR), 9. National Crime Victimization Surveys (NCVS) Total Hours 36",
             "topics": [
-              "1. Definitions: Crime, Criminology and Criminal Justice, 2.",
-              "Historical Development of criminology - Nature and Scope",
-              "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
-              "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
-              "Changing concept of crime, Relationship between Criminal Policy,",
-              "Criminal Law and Criminology",
-              "2 Theories of causation of crime 6",
-              "1. Prominent criminological thought currents – Classicalism,",
-              "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
-              "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
-              "Sociological Theories",
-              "3 Criminal Typology 6",
-              "1. Crimes against Human body and Crimes against Property, 2.",
-              "Crimes against vulnerable groups: Crimes against women and",
-              "children, 3. Economic Crimes: white collar crimes and organized",
-              "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
-              "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
-              "Typology: Adult offenders and Juveniles in conflict with law, 11.",
-              "Habitual offenders, 12. Professional offenders",
-              "4 Punishment and its Justification 6",
-              "1. Theories of Punishment – Retribution, Deterrence, Reform and",
-              "Prevention, 2. Kinds of Punishment – with a special emphasis on",
-              "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
-              "Juvenile offenders",
-              "5 Female Criminality and victimity 6",
-              "1. Female Criminality as an aspect of Marginal Criminality, 2.",
-              "Female Victimity and Victimology",
-              "6 National Crime Statistics 6",
               "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4.",
               "International crime comparisons, 5. Changing crime patterns, 6.",
               "Unreported crime, 7. National Crime Record Bureau, 8. Uniform",
@@ -400,78 +480,118 @@
               "impact, Copyright and its Infringement in Cyberspace, Trademark",
               "and its Infringement in Cyberspace, Domain Names, The Internet,",
               "and Trademarks, Intellectual Property, Cyberspace, and",
-              "International Law",
-              "2 Interface of IPR and Artificial Intelligence (AI) 8",
+              "International Law"
+            ],
+            "topics_text": "Intellectual Property Rights vis-à-vis Cyberspace: Meaning and its impact, Copyright and its Infringement in Cyberspace, Trademark and its Infringement in Cyberspace, Domain Names, The Internet, and Trademarks, Intellectual Property, Cyberspace, and International Law",
+            "topics": [
+              "Intellectual Property Rights vis-à-vis Cyberspace: Meaning and its",
+              "impact, Copyright and its Infringement in Cyberspace, Trademark",
+              "and its Infringement in Cyberspace, Domain Names, The Internet,",
+              "and Trademarks, Intellectual Property, Cyberspace, and",
+              "International Law"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Interface of IPR and Artificial Intelligence (AI)",
+            "contact_hours": 8,
+            "topic_lines": [
               "Introduction to Artificial Intelligence (AI) and its applications,",
               "Basics of Intellectual Property Rights (IPR) in the context of AI,",
               "Challenges and opportunities in protecting AI innovations through",
               "IPR, Patentability of AI inventions: Legal and ethical",
               "considerations, Copyright issues in AI-generated content, Emerging",
-              "trends and future directions in AI and IPR",
-              "3 Interface of IPR, Pharma Industry and Biotech 8",
+              "trends and future directions in AI and IPR"
+            ],
+            "topics_text": "Introduction to Artificial Intelligence (AI) and its applications, Basics of Intellectual Property Rights (IPR) in the context of AI, Challenges and opportunities in protecting AI innovations through IPR, Patentability of AI inventions: Legal and ethical considerations, Copyright issues in AI-generated content, Emerging trends and future directions in AI and IPR",
+            "topics": [
+              "Introduction to Artificial Intelligence (AI) and its applications,",
+              "Basics of Intellectual Property Rights (IPR) in the context of AI,",
+              "Challenges and opportunities in protecting AI innovations through",
+              "IPR, Patentability of AI inventions: Legal and ethical",
+              "considerations, Copyright issues in AI-generated content, Emerging",
+              "trends and future directions in AI and IPR"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Interface of IPR, Pharma Industry and Biotech",
+            "contact_hours": 8,
+            "topic_lines": [
               "Overview of Intellectual Property Rights (IPR) in the",
               "pharmaceutical sector, Understanding patents, trademarks, and trade",
               "secrets in the pharma industry, Patent linkage and regulatory",
               "framework in pharmaceuticals, Balancing IPR protection and access",
               "to medicines: Global perspectives, Challenges posed by generics",
-              "and compulsory licensing",
-              "4 Interface of IPR, Sports Law, and Entertainm ent Laws 9",
+              "and compulsory licensing"
+            ],
+            "topics_text": "Overview of Intellectual Property Rights (IPR) in the pharmaceutical sector, Understanding patents, trademarks, and trade secrets in the pharma industry, Patent linkage and regulatory framework in pharmaceuticals, Balancing IPR protection and access to medicines: Global perspectives, Challenges posed by generics and compulsory licensing",
+            "topics": [
+              "Overview of Intellectual Property Rights (IPR) in the",
+              "pharmaceutical sector, Understanding patents, trademarks, and trade",
+              "secrets in the pharma industry, Patent linkage and regulatory",
+              "framework in pharmaceuticals, Balancing IPR protection and access",
+              "to medicines: Global perspectives, Challenges posed by generics",
+              "and compulsory licensing"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Interface of IPR, Sports Law, and Entertainm ent Laws",
+            "contact_hours": 9,
+            "topic_lines": [
               "Introduction to Sports Law and its relevance to Intellectual Property",
               "Rights (IPR), Protection of sports brands and trademarks, Copyright",
               "issues in sports broadcasting and merchandising, Image rights,",
               "publicity rights, and personality rights of athletes and, IPR",
               "implications in sports sponsorships and endorsements, Ambush",
-              "Marketing and its regulation in India.",
-              "5 Interface of IPR in Fashion Industry 8",
+              "Marketing and its regulation in India."
+            ],
+            "topics_text": "Introduction to Sports Law and its relevance to Intellectual Property Rights (IPR), Protection of sports brands and trademarks, Copyright issues in sports broadcasting and merchandising, Image rights, publicity rights, and personality rights of athletes and, IPR implications in sports sponsorships and endorsements, Ambush Marketing and its regulation in India.",
+            "topics": [
+              "Introduction to Sports Law and its relevance to Intellectual Property",
+              "Rights (IPR), Protection of sports brands and trademarks, Copyright",
+              "issues in sports broadcasting and merchandising, Image rights,",
+              "publicity rights, and personality rights of athletes and, IPR",
+              "implications in sports sponsorships and endorsements, Ambush",
+              "Marketing and its regulation in India."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Interface of IPR in Fashion Industry",
+            "contact_hours": 8,
+            "topic_lines": [
               "Overview of the types of intellectual property applicable to fashion:",
               "trademarks, copyrights, designs, and patents, Importance of IPR in",
               "protecting fashion designs, brands, logos, and creative expressions.,",
               "Types of Intellectual Property in Fashion, Legal Framework for IPR",
               "Protection in India, Role of IPR in Promoting Innovation and Fair",
-              "Competition",
-              "6 Role of IPR in Academics 4",
+              "Competition"
+            ],
+            "topics_text": "Overview of the types of intellectual property applicable to fashion: trademarks, copyrights, designs, and patents, Importance of IPR in protecting fashion designs, brands, logos, and creative expressions., Types of Intellectual Property in Fashion, Legal Framework for IPR Protection in India, Role of IPR in Promoting Innovation and Fair Competition",
+            "topics": [
+              "Overview of the types of intellectual property applicable to fashion:",
+              "trademarks, copyrights, designs, and patents, Importance of IPR in",
+              "protecting fashion designs, brands, logos, and creative expressions.,",
+              "Types of Intellectual Property in Fashion, Legal Framework for IPR",
+              "Protection in India, Role of IPR in Promoting Innovation and Fair",
+              "Competition"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Role of IPR in Academics",
+            "contact_hours": 4,
+            "topic_lines": [
               "Importance of respecting IPR in academic and research endeavors,",
               "Forms of Academic Dishonesty, Common Types of IPR Violations",
               "in Academic Settings, Strategies for Upholding Academic Integrity",
               "and Preventing IPR Violations",
               "Total Hours 45"
             ],
-            "topics_text": "Intellectual Property Rights vis-à-vis Cyberspace: Meaning and its impact, Copyright and its Infringement in Cyberspace, Trademark and its Infringement in Cyberspace, Domain Names, The Internet, and Trademarks, Intellectual Property, Cyberspace, and International Law 2 Interface of IPR and Artificial Intelligence (AI) 8 Introduction to Artificial Intelligence (AI) and its applications, Basics of Intellectual Property Rights (IPR) in the context of AI, Challenges and opportunities in protecting AI innovations through IPR, Patentability of AI inventions: Legal and ethical considerations, Copyright issues in AI-generated content, Emerging trends and future directions in AI and IPR 3 Interface of IPR, Pharma Industry and Biotech 8 Overview of Intellectual Property Rights (IPR) in the pharmaceutical sector, Understanding patents, trademarks, and trade secrets in the pharma industry, Patent linkage and regulatory framework in pharmaceuticals, Balancing IPR protection and access to medicines: Global perspectives, Challenges posed by generics and compulsory licensing 4 Interface of IPR, Sports Law, and Entertainm ent Laws 9 Introduction to Sports Law and its relevance to Intellectual Property Rights (IPR), Protection of sports brands and trademarks, Copyright issues in sports broadcasting and merchandising, Image rights, publicity rights, and personality rights of athletes and, IPR implications in sports sponsorships and endorsements, Ambush Marketing and its regulation in India. 5 Interface of IPR in Fashion Industry 8 Overview of the types of intellectual property applicable to fashion: trademarks, copyrights, designs, and patents, Importance of IPR in protecting fashion designs, brands, logos, and creative expressions., Types of Intellectual Property in Fashion, Legal Framework for IPR Protection in India, Role of IPR in Promoting Innovation and Fair Competition 6 Role of IPR in Academics 4 Importance of respecting IPR in academic and research endeavors, Forms of Academic Dishonesty, Common Types of IPR Violations in Academic Settings, Strategies for Upholding Academic Integrity and Preventing IPR Violations Total Hours 45",
+            "topics_text": "Importance of respecting IPR in academic and research endeavors, Forms of Academic Dishonesty, Common Types of IPR Violations in Academic Settings, Strategies for Upholding Academic Integrity and Preventing IPR Violations Total Hours 45",
             "topics": [
-              "Intellectual Property Rights vis-à-vis Cyberspace: Meaning and its",
-              "impact, Copyright and its Infringement in Cyberspace, Trademark",
-              "and its Infringement in Cyberspace, Domain Names, The Internet,",
-              "and Trademarks, Intellectual Property, Cyberspace, and",
-              "International Law",
-              "2 Interface of IPR and Artificial Intelligence (AI) 8",
-              "Introduction to Artificial Intelligence (AI) and its applications,",
-              "Basics of Intellectual Property Rights (IPR) in the context of AI,",
-              "Challenges and opportunities in protecting AI innovations through",
-              "IPR, Patentability of AI inventions: Legal and ethical",
-              "considerations, Copyright issues in AI-generated content, Emerging",
-              "trends and future directions in AI and IPR",
-              "3 Interface of IPR, Pharma Industry and Biotech 8",
-              "Overview of Intellectual Property Rights (IPR) in the",
-              "pharmaceutical sector, Understanding patents, trademarks, and trade",
-              "secrets in the pharma industry, Patent linkage and regulatory",
-              "framework in pharmaceuticals, Balancing IPR protection and access",
-              "to medicines: Global perspectives, Challenges posed by generics",
-              "and compulsory licensing",
-              "4 Interface of IPR, Sports Law, and Entertainm ent Laws 9",
-              "Introduction to Sports Law and its relevance to Intellectual Property",
-              "Rights (IPR), Protection of sports brands and trademarks, Copyright",
-              "issues in sports broadcasting and merchandising, Image rights,",
-              "publicity rights, and personality rights of athletes and, IPR",
-              "implications in sports sponsorships and endorsements, Ambush",
-              "Marketing and its regulation in India.",
-              "5 Interface of IPR in Fashion Industry 8",
-              "Overview of the types of intellectual property applicable to fashion:",
-              "trademarks, copyrights, designs, and patents, Importance of IPR in",
-              "protecting fashion designs, brands, logos, and creative expressions.,",
-              "Types of Intellectual Property in Fashion, Legal Framework for IPR",
-              "Protection in India, Role of IPR in Promoting Innovation and Fair",
-              "Competition",
-              "6 Role of IPR in Academics 4",
               "Importance of respecting IPR in academic and research endeavors,",
               "Forms of Academic Dishonesty, Common Types of IPR Violations",
               "in Academic Settings, Strategies for Upholding Academic Integrity",
@@ -678,31 +798,9 @@
               "Broader Policy Framework, National AI Development Plans China",
               "European Union France United States, The Impact of AI On Work",
               "and Employment , Principles For Ethical Development and",
-              "Governance of AI",
-              "2 Forensic Science for Crime Investigators- I 10",
-              "General Principles of Crime Scene Investigation, General Principles",
-              "of Packaging of Exhibits, Forensic Biology, DNA Profiling,",
-              "Bloodstain Pattern, Poisoning",
-              "3 Forensic Science for Crime Investigators- II 12",
-              "Hooch Poisoning, Narcotics Drugs and Psychotrophic Substances,",
-              "Acid Attack Cases, Forged Documents, Security Documents,",
-              "Digital Evidence, Image Analysis",
-              "4 The Atomic Energy 13",
-              "The Atomic Energy Act, 1962, Atomic Energy (Arbitration",
-              "Procedure) Rules, 1983, Atomic Energy (Working of the mines,",
-              "minerals and handling of prescribed substances) Rules, 1984,",
-              "Atomic Energy (Safe disposal of radioactive wastes) Rules, 1987,",
-              "Atomic Energy (Factories) Rules, 1996, Atomic Energy (Radiation",
-              "Protection) Rules, 2004, Civil liability for Nuclear Damage Act",
-              "2010, Atomic Energy Radiation Processing of food and allied",
-              "products rules 2012, Treaty on the Non-Proliferation of nuclear",
-              "weapons (NPT) 1995, Nuclear third-party liability and",
-              "compensation for nuclear damage and insurance , Insurance of",
-              "nuclear risks, Nuclear project development: The lawyer’s",
-              "perspective",
-              "Total Hours 45"
+              "Governance of AI"
             ],
-            "topics_text": "The Inter-disciplinary approach, Science and Law-The points of similarity, The progress of science, The march of law, Classification of Sciences & Their Impact on Law, Science and law Points of contact, Past responses, Adjective law and Science, Pace of the modern developments, Recent Scientific Developments, Difficulty of framing laws, Science in the service of law and society, ARTIFICIAL INTELLIGENCE - A Sampling of The Legal and Ethical Issues Posed by AI, Product Liability, Health And Safety Regulation, Fraud, Intellectual Property , Professional Ethics and Liability in Law and Healthcare, Contracts, Substantive Criminal Law , Criminal Procedure and Due Process - Admissibility of Ai- Based Evidence , Policing , Anti-Discrimination Laws, Surveillance and Privacy (Including Consumer Rights or Data Protection), Welfare Law and Other Civil Governmental Implementations, The Broader Policy Framework, National AI Development Plans China European Union France United States, The Impact of AI On Work and Employment , Principles For Ethical Development and Governance of AI 2 Forensic Science for Crime Investigators- I 10 General Principles of Crime Scene Investigation, General Principles of Packaging of Exhibits, Forensic Biology, DNA Profiling, Bloodstain Pattern, Poisoning 3 Forensic Science for Crime Investigators- II 12 Hooch Poisoning, Narcotics Drugs and Psychotrophic Substances, Acid Attack Cases, Forged Documents, Security Documents, Digital Evidence, Image Analysis 4 The Atomic Energy 13 The Atomic Energy Act, 1962, Atomic Energy (Arbitration Procedure) Rules, 1983, Atomic Energy (Working of the mines, minerals and handling of prescribed substances) Rules, 1984, Atomic Energy (Safe disposal of radioactive wastes) Rules, 1987, Atomic Energy (Factories) Rules, 1996, Atomic Energy (Radiation Protection) Rules, 2004, Civil liability for Nuclear Damage Act 2010, Atomic Energy Radiation Processing of food and allied products rules 2012, Treaty on the Non-Proliferation of nuclear weapons (NPT) 1995, Nuclear third-party liability and compensation for nuclear damage and insurance , Insurance of nuclear risks, Nuclear project development: The lawyer’s perspective Total Hours 45",
+            "topics_text": "The Inter-disciplinary approach, Science and Law-The points of similarity, The progress of science, The march of law, Classification of Sciences & Their Impact on Law, Science and law Points of contact, Past responses, Adjective law and Science, Pace of the modern developments, Recent Scientific Developments, Difficulty of framing laws, Science in the service of law and society, ARTIFICIAL INTELLIGENCE - A Sampling of The Legal and Ethical Issues Posed by AI, Product Liability, Health And Safety Regulation, Fraud, Intellectual Property , Professional Ethics and Liability in Law and Healthcare, Contracts, Substantive Criminal Law , Criminal Procedure and Due Process - Admissibility of Ai- Based Evidence , Policing , Anti-Discrimination Laws, Surveillance and Privacy (Including Consumer Rights or Data Protection), Welfare Law and Other Civil Governmental Implementations, The Broader Policy Framework, National AI Development Plans China European Union France United States, The Impact of AI On Work and Employment , Principles For Ethical Development and Governance of AI",
             "topics": [
               "The Inter-disciplinary approach, Science and Law-The points of",
               "similarity, The progress of science, The march of law, Classification",
@@ -721,16 +819,62 @@
               "Broader Policy Framework, National AI Development Plans China",
               "European Union France United States, The Impact of AI On Work",
               "and Employment , Principles For Ethical Development and",
-              "Governance of AI",
-              "2 Forensic Science for Crime Investigators- I 10",
+              "Governance of AI"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Forensic Science for Crime Investigators- I",
+            "contact_hours": 10,
+            "topic_lines": [
               "General Principles of Crime Scene Investigation, General Principles",
               "of Packaging of Exhibits, Forensic Biology, DNA Profiling,",
-              "Bloodstain Pattern, Poisoning",
-              "3 Forensic Science for Crime Investigators- II 12",
+              "Bloodstain Pattern, Poisoning"
+            ],
+            "topics_text": "General Principles of Crime Scene Investigation, General Principles of Packaging of Exhibits, Forensic Biology, DNA Profiling, Bloodstain Pattern, Poisoning",
+            "topics": [
+              "General Principles of Crime Scene Investigation, General Principles",
+              "of Packaging of Exhibits, Forensic Biology, DNA Profiling,",
+              "Bloodstain Pattern, Poisoning"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Forensic Science for Crime Investigators- II",
+            "contact_hours": 12,
+            "topic_lines": [
               "Hooch Poisoning, Narcotics Drugs and Psychotrophic Substances,",
               "Acid Attack Cases, Forged Documents, Security Documents,",
-              "Digital Evidence, Image Analysis",
-              "4 The Atomic Energy 13",
+              "Digital Evidence, Image Analysis"
+            ],
+            "topics_text": "Hooch Poisoning, Narcotics Drugs and Psychotrophic Substances, Acid Attack Cases, Forged Documents, Security Documents, Digital Evidence, Image Analysis",
+            "topics": [
+              "Hooch Poisoning, Narcotics Drugs and Psychotrophic Substances,",
+              "Acid Attack Cases, Forged Documents, Security Documents,",
+              "Digital Evidence, Image Analysis"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "The Atomic Energy",
+            "contact_hours": 13,
+            "topic_lines": [
+              "The Atomic Energy Act, 1962, Atomic Energy (Arbitration",
+              "Procedure) Rules, 1983, Atomic Energy (Working of the mines,",
+              "minerals and handling of prescribed substances) Rules, 1984,",
+              "Atomic Energy (Safe disposal of radioactive wastes) Rules, 1987,",
+              "Atomic Energy (Factories) Rules, 1996, Atomic Energy (Radiation",
+              "Protection) Rules, 2004, Civil liability for Nuclear Damage Act",
+              "2010, Atomic Energy Radiation Processing of food and allied",
+              "products rules 2012, Treaty on the Non-Proliferation of nuclear",
+              "weapons (NPT) 1995, Nuclear third-party liability and",
+              "compensation for nuclear damage and insurance , Insurance of",
+              "nuclear risks, Nuclear project development: The lawyer’s",
+              "perspective",
+              "Total Hours 45"
+            ],
+            "topics_text": "The Atomic Energy Act, 1962, Atomic Energy (Arbitration Procedure) Rules, 1983, Atomic Energy (Working of the mines, minerals and handling of prescribed substances) Rules, 1984, Atomic Energy (Safe disposal of radioactive wastes) Rules, 1987, Atomic Energy (Factories) Rules, 1996, Atomic Energy (Radiation Protection) Rules, 2004, Civil liability for Nuclear Damage Act 2010, Atomic Energy Radiation Processing of food and allied products rules 2012, Treaty on the Non-Proliferation of nuclear weapons (NPT) 1995, Nuclear third-party liability and compensation for nuclear damage and insurance , Insurance of nuclear risks, Nuclear project development: The lawyer’s perspective Total Hours 45",
+            "topics": [
               "The Atomic Energy Act, 1962, Atomic Energy (Arbitration",
               "Procedure) Rules, 1983, Atomic Energy (Working of the mines,",
               "minerals and handling of prescribed substances) Rules, 1984,",
@@ -915,28 +1059,9 @@
               "Right to Know and Right to Press, Privilege to withhold disclosure",
               "of Documents/Information, Comparative Analysis of Laws in other",
               "Common Law – countries with special reference to (a) England (b)",
-              "the U.S.A.",
-              "2 Right to Information Law 12",
-              "Introduction to Right to Information Act, 2005, Objectives of the",
-              "Right to Information Act, Main features of the Right to Information",
-              "Act, 2005, RTI & Obligations of Public Authorities, The State",
-              "Information Commission: Constitution, Powers & Function, The",
-              "Central Information Commission: Constitution, Powers & Function",
-              "3 Right to Information and Judiciary 10",
-              "Electoral reforms, transparency in governance, privilege, and",
-              "immunities of journalists involved in legal reporting, The extent of",
-              "liability for Contempt of Court, the scope of defenses under the",
-              "Contempt of Court Act, 1971, and the Right to Information Act,",
-              "2005, Representation of People’s Act, 1951 relevant to RTI",
-              "4 Implementation of RTI 10",
-              "Procedure to Obtain Information, Exemption, limitation, and",
-              "Restrictions on Disclosure of Information, Appeal and penalties,",
-              "Third-Party Information and Procedure",
-              "5 Application of RTI in certain cases 5",
-              "Drafting of RTI application, Drafting of the Appeals under RTI",
-              "Total Hours 45"
+              "the U.S.A."
             ],
-            "topics_text": "Conceptual Background: Right to Know, Open Government, and Transparency in Governance, Genesis of the Right to Know with Constitutional Perspective: Freedom of speech and expression, Right to Know and Right to Press, Privilege to withhold disclosure of Documents/Information, Comparative Analysis of Laws in other Common Law – countries with special reference to (a) England (b) the U.S.A. 2 Right to Information Law 12 Introduction to Right to Information Act, 2005, Objectives of the Right to Information Act, Main features of the Right to Information Act, 2005, RTI & Obligations of Public Authorities, The State Information Commission: Constitution, Powers & Function, The Central Information Commission: Constitution, Powers & Function 3 Right to Information and Judiciary 10 Electoral reforms, transparency in governance, privilege, and immunities of journalists involved in legal reporting, The extent of liability for Contempt of Court, the scope of defenses under the Contempt of Court Act, 1971, and the Right to Information Act, 2005, Representation of People’s Act, 1951 relevant to RTI 4 Implementation of RTI 10 Procedure to Obtain Information, Exemption, limitation, and Restrictions on Disclosure of Information, Appeal and penalties, Third-Party Information and Procedure 5 Application of RTI in certain cases 5 Drafting of RTI application, Drafting of the Appeals under RTI Total Hours 45",
+            "topics_text": "Conceptual Background: Right to Know, Open Government, and Transparency in Governance, Genesis of the Right to Know with Constitutional Perspective: Freedom of speech and expression, Right to Know and Right to Press, Privilege to withhold disclosure of Documents/Information, Comparative Analysis of Laws in other Common Law – countries with special reference to (a) England (b) the U.S.A.",
             "topics": [
               "Conceptual Background: Right to Know, Open Government, and",
               "Transparency in Governance, Genesis of the Right to Know with",
@@ -944,24 +1069,75 @@
               "Right to Know and Right to Press, Privilege to withhold disclosure",
               "of Documents/Information, Comparative Analysis of Laws in other",
               "Common Law – countries with special reference to (a) England (b)",
-              "the U.S.A.",
-              "2 Right to Information Law 12",
+              "the U.S.A."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Right to Information Law",
+            "contact_hours": 12,
+            "topic_lines": [
               "Introduction to Right to Information Act, 2005, Objectives of the",
               "Right to Information Act, Main features of the Right to Information",
               "Act, 2005, RTI & Obligations of Public Authorities, The State",
               "Information Commission: Constitution, Powers & Function, The",
-              "Central Information Commission: Constitution, Powers & Function",
-              "3 Right to Information and Judiciary 10",
+              "Central Information Commission: Constitution, Powers & Function"
+            ],
+            "topics_text": "Introduction to Right to Information Act, 2005, Objectives of the Right to Information Act, Main features of the Right to Information Act, 2005, RTI & Obligations of Public Authorities, The State Information Commission: Constitution, Powers & Function, The Central Information Commission: Constitution, Powers & Function",
+            "topics": [
+              "Introduction to Right to Information Act, 2005, Objectives of the",
+              "Right to Information Act, Main features of the Right to Information",
+              "Act, 2005, RTI & Obligations of Public Authorities, The State",
+              "Information Commission: Constitution, Powers & Function, The",
+              "Central Information Commission: Constitution, Powers & Function"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Right to Information and Judiciary",
+            "contact_hours": 10,
+            "topic_lines": [
               "Electoral reforms, transparency in governance, privilege, and",
               "immunities of journalists involved in legal reporting, The extent of",
               "liability for Contempt of Court, the scope of defenses under the",
               "Contempt of Court Act, 1971, and the Right to Information Act,",
-              "2005, Representation of People’s Act, 1951 relevant to RTI",
-              "4 Implementation of RTI 10",
+              "2005, Representation of People’s Act, 1951 relevant to RTI"
+            ],
+            "topics_text": "Electoral reforms, transparency in governance, privilege, and immunities of journalists involved in legal reporting, The extent of liability for Contempt of Court, the scope of defenses under the Contempt of Court Act, 1971, and the Right to Information Act, 2005, Representation of People’s Act, 1951 relevant to RTI",
+            "topics": [
+              "Electoral reforms, transparency in governance, privilege, and",
+              "immunities of journalists involved in legal reporting, The extent of",
+              "liability for Contempt of Court, the scope of defenses under the",
+              "Contempt of Court Act, 1971, and the Right to Information Act,",
+              "2005, Representation of People’s Act, 1951 relevant to RTI"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Implementation of RTI",
+            "contact_hours": 10,
+            "topic_lines": [
               "Procedure to Obtain Information, Exemption, limitation, and",
               "Restrictions on Disclosure of Information, Appeal and penalties,",
-              "Third-Party Information and Procedure",
-              "5 Application of RTI in certain cases 5",
+              "Third-Party Information and Procedure"
+            ],
+            "topics_text": "Procedure to Obtain Information, Exemption, limitation, and Restrictions on Disclosure of Information, Appeal and penalties, Third-Party Information and Procedure",
+            "topics": [
+              "Procedure to Obtain Information, Exemption, limitation, and",
+              "Restrictions on Disclosure of Information, Appeal and penalties,",
+              "Third-Party Information and Procedure"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Application of RTI in certain cases",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Drafting of RTI application, Drafting of the Appeals under RTI",
+              "Total Hours 45"
+            ],
+            "topics_text": "Drafting of RTI application, Drafting of the Appeals under RTI Total Hours 45",
+            "topics": [
               "Drafting of RTI application, Drafting of the Appeals under RTI",
               "Total Hours 45"
             ]
@@ -1064,8 +1240,23 @@
               "of National scenario and institutions in Telecommunication sector. ,",
               "Introduction of international scenario and institutions in",
               "Telecommunication sector, Introduction of legal basis for",
-              "Telecommunication regulation in India",
-              "2 Regulatory Framework on Telecommunications 15",
+              "Telecommunication regulation in India"
+            ],
+            "topics_text": "Need for Telecommunication sector development, Historical Background of the Telecommunication Sector in India, Introduction of National scenario and institutions in Telecommunication sector. , Introduction of international scenario and institutions in Telecommunication sector, Introduction of legal basis for Telecommunication regulation in India",
+            "topics": [
+              "Need for Telecommunication sector development, Historical",
+              "Background of the Telecommunication Sector in India, Introduction",
+              "of National scenario and institutions in Telecommunication sector. ,",
+              "Introduction of international scenario and institutions in",
+              "Telecommunication sector, Introduction of legal basis for",
+              "Telecommunication regulation in India"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Regulatory Framework on Telecommunications",
+            "contact_hours": 15,
+            "topic_lines": [
               "Governing Legislation: Telegraph Act, 1885;, The Telecom",
               "Regulatory Authority of India Act, 1997, 2000 Amendments; ,",
               "Department of Telecommunications: Role and Functions, Licensing,",
@@ -1075,26 +1266,10 @@
               "Functions, Recommendatory and Regulatory Powers , Key TRAI",
               "Regulations: Interconnection, Tariffs, Quality of Service, Number",
               "Portability, Radiation and Safety Issues, Accessibility, Net",
-              "Neutrality",
-              "3 Consumer Protection and Competition Policy 10",
-              "Different types of disputes, Provisions under the Telegraph Act,",
-              "1885; , Role of TDSAT under TRAI Act; , Role of TRAI and the",
-              "regulations for Consumer Protection, Role of Consumer Courts",
-              "Competition Policy and Telecom sector.",
-              "4 Broadcasting and Cable Regulation 10",
-              "Legal issues relating to right to broadcast – powers of Ministry of",
-              "Information and Broadcasting, TRAI Self-regulation",
-              "Total Hours 45"
+              "Neutrality"
             ],
-            "topics_text": "Need for Telecommunication sector development, Historical Background of the Telecommunication Sector in India, Introduction of National scenario and institutions in Telecommunication sector. , Introduction of international scenario and institutions in Telecommunication sector, Introduction of legal basis for Telecommunication regulation in India 2 Regulatory Framework on Telecommunications 15 Governing Legislation: Telegraph Act, 1885;, The Telecom Regulatory Authority of India Act, 1997, 2000 Amendments; , Department of Telecommunications: Role and Functions, Licensing, Spectrum Allocation, Universal Service Obligation Fund; , Terms and Conditions for registration of Other Service Providers (OSPs);, Telecom Regulatory Authority of India: Composition, Role and Functions, Recommendatory and Regulatory Powers , Key TRAI Regulations: Interconnection, Tariffs, Quality of Service, Number Portability, Radiation and Safety Issues, Accessibility, Net Neutrality 3 Consumer Protection and Competition Policy 10 Different types of disputes, Provisions under the Telegraph Act, 1885; , Role of TDSAT under TRAI Act; , Role of TRAI and the regulations for Consumer Protection, Role of Consumer Courts Competition Policy and Telecom sector. 4 Broadcasting and Cable Regulation 10 Legal issues relating to right to broadcast – powers of Ministry of Information and Broadcasting, TRAI Self-regulation Total Hours 45",
+            "topics_text": "Governing Legislation: Telegraph Act, 1885;, The Telecom Regulatory Authority of India Act, 1997, 2000 Amendments; , Department of Telecommunications: Role and Functions, Licensing, Spectrum Allocation, Universal Service Obligation Fund; , Terms and Conditions for registration of Other Service Providers (OSPs);, Telecom Regulatory Authority of India: Composition, Role and Functions, Recommendatory and Regulatory Powers , Key TRAI Regulations: Interconnection, Tariffs, Quality of Service, Number Portability, Radiation and Safety Issues, Accessibility, Net Neutrality",
             "topics": [
-              "Need for Telecommunication sector development, Historical",
-              "Background of the Telecommunication Sector in India, Introduction",
-              "of National scenario and institutions in Telecommunication sector. ,",
-              "Introduction of international scenario and institutions in",
-              "Telecommunication sector, Introduction of legal basis for",
-              "Telecommunication regulation in India",
-              "2 Regulatory Framework on Telecommunications 15",
               "Governing Legislation: Telegraph Act, 1885",
               ", The Telecom",
               "Regulatory Authority of India Act, 1997, 2000 Amendments",
@@ -1108,15 +1283,40 @@
               "Functions, Recommendatory and Regulatory Powers , Key TRAI",
               "Regulations: Interconnection, Tariffs, Quality of Service, Number",
               "Portability, Radiation and Safety Issues, Accessibility, Net",
-              "Neutrality",
-              "3 Consumer Protection and Competition Policy 10",
+              "Neutrality"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Consumer Protection and Competition Policy",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Different types of disputes, Provisions under the Telegraph Act,",
+              "1885; , Role of TDSAT under TRAI Act; , Role of TRAI and the",
+              "regulations for Consumer Protection, Role of Consumer Courts",
+              "Competition Policy and Telecom sector."
+            ],
+            "topics_text": "Different types of disputes, Provisions under the Telegraph Act, 1885; , Role of TDSAT under TRAI Act; , Role of TRAI and the regulations for Consumer Protection, Role of Consumer Courts Competition Policy and Telecom sector.",
+            "topics": [
               "Different types of disputes, Provisions under the Telegraph Act,",
               "1885",
               ", Role of TDSAT under TRAI Act",
               ", Role of TRAI and the",
               "regulations for Consumer Protection, Role of Consumer Courts",
-              "Competition Policy and Telecom sector.",
-              "4 Broadcasting and Cable Regulation 10",
+              "Competition Policy and Telecom sector."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Broadcasting and Cable Regulation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Legal issues relating to right to broadcast – powers of Ministry of",
+              "Information and Broadcasting, TRAI Self-regulation",
+              "Total Hours 45"
+            ],
+            "topics_text": "Legal issues relating to right to broadcast – powers of Ministry of Information and Broadcasting, TRAI Self-regulation Total Hours 45",
+            "topics": [
               "Legal issues relating to right to broadcast – powers of Ministry of",
               "Information and Broadcasting, TRAI Self-regulation",
               "Total Hours 45"

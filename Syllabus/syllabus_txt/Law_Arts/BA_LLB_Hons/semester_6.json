@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "generated_at_utc": "2026-10-12T12:47:27+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
   "course": {
@@ -56,88 +56,144 @@
               "Definitions & Concepts of civil procedure code, Distinction",
               "between decree, judgment and order,Suit of civil nature- scope and",
               "limitations, Res sub-judice and Res-judicata, Place of suing",
-              "(Jurisdiction), Foreign Judgments, Transfer of Suit",
-              "2 Parties of suits, Institution and Trial of suit 4",
+              "(Jurisdiction), Foreign Judgments, Transfer of Suit"
+            ],
+            "topics_text": "Definitions & Concepts of civil procedure code, Distinction between decree, judgment and order,Suit of civil nature- scope and limitations, Res sub-judice and Res-judicata, Place of suing (Jurisdiction), Foreign Judgments, Transfer of Suit",
+            "topics": [
+              "Definitions & Concepts of civil procedure code, Distinction",
+              "between decree, judgment and order,Suit of civil nature- scope and",
+              "limitations, Res sub-judice and Res-judicata, Place of suing",
+              "(Jurisdiction), Foreign Judgments, Transfer of Suit"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Parties of suits, Institution and Trial of suit",
+            "contact_hours": 4,
+            "topic_lines": [
               "Parties to the suit, Joinder, mis- joinder or non-Joinder of parties &",
               "suit, Representative suit • Institution of suit: Importance of cause of",
-              "action, Summons and modes of service of summons",
-              "3 Pleading 6",
+              "action, Summons and modes of service of summons"
+            ],
+            "topics_text": "Parties to the suit, Joinder, mis- joinder or non-Joinder of parties & suit, Representative suit • Institution of suit: Importance of cause of action, Summons and modes of service of summons",
+            "topics": [
+              "Parties to the suit, Joinder, mis- joinder or non-Joinder of parties &",
+              "suit, Representative suit",
+              "Institution of suit: Importance of cause of",
+              "action, Summons and modes of service of summons"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Pleading",
+            "contact_hours": 6,
+            "topic_lines": [
               "Rules of pleading, signing and verification., Plaint: Rules and",
               "particulars, Admission of plaint, return and rejection of plaint,",
               "Written statement: particulars, rules of evidence, Set-off and",
               "counter-claim, Discovery & inspection and production of",
-              "documents, Interrogatories, Privileged documents, Affidavits",
-              "4 Appearance, Examination and Trial 6",
+              "documents, Interrogatories, Privileged documents, Affidavits"
+            ],
+            "topics_text": "Rules of pleading, signing and verification., Plaint: Rules and particulars, Admission of plaint, return and rejection of plaint, Written statement: particulars, rules of evidence, Set-off and counter-claim, Discovery & inspection and production of documents, Interrogatories, Privileged documents, Affidavits",
+            "topics": [
+              "Rules of pleading, signing and verification., Plaint: Rules and",
+              "particulars, Admission of plaint, return and rejection of plaint,",
+              "Written statement: particulars, rules of evidence, Set-off and",
+              "counter-claim, Discovery & inspection and production of",
+              "documents, Interrogatories, Privileged documents, Affidavits"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Appearance, Examination and Trial",
+            "contact_hours": 6,
+            "topic_lines": [
               "Appearance and non-appearance of parties, Ex-parte procedure,",
               "Summons and attendance of witnesses, Framing of Issues,",
               "Settlement of issues at First hearing, Settlement of disputes outside",
               "the Court (Alternate Dispute Resolution Mechanism), Trial,",
               "Adjournments, Interim orders: Commission, arrest or attachment",
               "before judgement, injunction and appointment of receiver, Interest",
-              "and costs, Judgment & Decree",
-              "5 Execution 7",
+              "and costs, Judgment & Decree"
+            ],
+            "topics_text": "Appearance and non-appearance of parties, Ex-parte procedure, Summons and attendance of witnesses, Framing of Issues, Settlement of issues at First hearing, Settlement of disputes outside the Court (Alternate Dispute Resolution Mechanism), Trial, Adjournments, Interim orders: Commission, arrest or attachment before judgement, injunction and appointment of receiver, Interest and costs, Judgment & Decree",
+            "topics": [
+              "Appearance and non-appearance of parties, Ex-parte procedure,",
+              "Summons and attendance of witnesses, Framing of Issues,",
+              "Settlement of issues at First hearing, Settlement of disputes outside",
+              "the Court (Alternate Dispute Resolution Mechanism), Trial,",
+              "Adjournments, Interim orders: Commission, arrest or attachment",
+              "before judgement, injunction and appointment of receiver, Interest",
+              "and costs, Judgment & Decree"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Execution",
+            "contact_hours": 7,
+            "topic_lines": [
               "Meaning of Execution, General principles, Power for execution of",
               "decrees, , Procedure for execution, Enforcement, arrest and",
               "detection, Attachment, Sale, Delivery of property, Garnishee Order,",
-              "Stay of execution",
-              "6 Suits, Appeals, Review, Revision and Reference 6",
+              "Stay of execution"
+            ],
+            "topics_text": "Meaning of Execution, General principles, Power for execution of decrees, , Procedure for execution, Enforcement, arrest and detection, Attachment, Sale, Delivery of property, Garnishee Order, Stay of execution",
+            "topics": [
+              "Meaning of Execution, General principles, Power for execution of",
+              "decrees, , Procedure for execution, Enforcement, arrest and",
+              "detection, Attachment, Sale, Delivery of property, Garnishee Order,",
+              "Stay of execution"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Suits, Appeals, Review, Revision and Reference",
+            "contact_hours": 6,
+            "topic_lines": [
               "First Appeal, Second Appeal, Appeal from Order, Powers of",
               "Appellate Court, Review, Reference, Revision, Caveat, Inherent",
-              "Power of the Court",
-              "7 Suits in particular cases 6",
+              "Power of the Court"
+            ],
+            "topics_text": "First Appeal, Second Appeal, Appeal from Order, Powers of Appellate Court, Review, Reference, Revision, Caveat, Inherent Power of the Court",
+            "topics": [
+              "First Appeal, Second Appeal, Appeal from Order, Powers of",
+              "Appellate Court, Review, Reference, Revision, Caveat, Inherent",
+              "Power of the Court"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Suits in particular cases",
+            "contact_hours": 6,
+            "topic_lines": [
               "By or against government, By aliens and by or against foreign rulers",
               "or ambassadors, Public nuisance, , Suits by or against a minor and",
               "person of unsound mind., Mortgages, Interpleader suits, Suits",
               "relating to public charities, Summary Suit, Temporary Injunction,",
-              "Salient features of Commercial Courts Act",
-              "8 Limitation Act 6",
+              "Salient features of Commercial Courts Act"
+            ],
+            "topics_text": "By or against government, By aliens and by or against foreign rulers or ambassadors, Public nuisance, , Suits by or against a minor and person of unsound mind., Mortgages, Interpleader suits, Suits relating to public charities, Summary Suit, Temporary Injunction, Salient features of Commercial Courts Act",
+            "topics": [
+              "By or against government, By aliens and by or against foreign rulers",
+              "or ambassadors, Public nuisance, , Suits by or against a minor and",
+              "person of unsound mind., Mortgages, Interpleader suits, Suits",
+              "relating to public charities, Summary Suit, Temporary Injunction,",
+              "Salient features of Commercial Courts Act"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Limitation Act",
+            "contact_hours": 6,
+            "topic_lines": [
               "Introduction to Limitation Laws, Definitions, Limitation of Suits,",
               "Appeals, and Applications, Computation of Period of Limitation,",
               "Acquisition of Ownership by Possession, Extinguishment of right to",
               "property",
               "Total Hours 45"
             ],
-            "topics_text": "Definitions & Concepts of civil procedure code, Distinction between decree, judgment and order,Suit of civil nature- scope and limitations, Res sub-judice and Res-judicata, Place of suing (Jurisdiction), Foreign Judgments, Transfer of Suit 2 Parties of suits, Institution and Trial of suit 4 Parties to the suit, Joinder, mis- joinder or non-Joinder of parties & suit, Representative suit • Institution of suit: Importance of cause of action, Summons and modes of service of summons 3 Pleading 6 Rules of pleading, signing and verification., Plaint: Rules and particulars, Admission of plaint, return and rejection of plaint, Written statement: particulars, rules of evidence, Set-off and counter-claim, Discovery & inspection and production of documents, Interrogatories, Privileged documents, Affidavits 4 Appearance, Examination and Trial 6 Appearance and non-appearance of parties, Ex-parte procedure, Summons and attendance of witnesses, Framing of Issues, Settlement of issues at First hearing, Settlement of disputes outside the Court (Alternate Dispute Resolution Mechanism), Trial, Adjournments, Interim orders: Commission, arrest or attachment before judgement, injunction and appointment of receiver, Interest and costs, Judgment & Decree 5 Execution 7 Meaning of Execution, General principles, Power for execution of decrees, , Procedure for execution, Enforcement, arrest and detection, Attachment, Sale, Delivery of property, Garnishee Order, Stay of execution 6 Suits, Appeals, Review, Revision and Reference 6 First Appeal, Second Appeal, Appeal from Order, Powers of Appellate Court, Review, Reference, Revision, Caveat, Inherent Power of the Court 7 Suits in particular cases 6 By or against government, By aliens and by or against foreign rulers or ambassadors, Public nuisance, , Suits by or against a minor and person of unsound mind., Mortgages, Interpleader suits, Suits relating to public charities, Summary Suit, Temporary Injunction, Salient features of Commercial Courts Act 8 Limitation Act 6 Introduction to Limitation Laws, Definitions, Limitation of Suits, Appeals, and Applications, Computation of Period of Limitation, Acquisition of Ownership by Possession, Extinguishment of right to property Total Hours 45",
+            "topics_text": "Introduction to Limitation Laws, Definitions, Limitation of Suits, Appeals, and Applications, Computation of Period of Limitation, Acquisition of Ownership by Possession, Extinguishment of right to property Total Hours 45",
             "topics": [
-              "Definitions & Concepts of civil procedure code, Distinction",
-              "between decree, judgment and order,Suit of civil nature- scope and",
-              "limitations, Res sub-judice and Res-judicata, Place of suing",
-              "(Jurisdiction), Foreign Judgments, Transfer of Suit",
-              "2 Parties of suits, Institution and Trial of suit 4",
-              "Parties to the suit, Joinder, mis- joinder or non-Joinder of parties &",
-              "suit, Representative suit",
-              "Institution of suit: Importance of cause of",
-              "action, Summons and modes of service of summons",
-              "3 Pleading 6",
-              "Rules of pleading, signing and verification., Plaint: Rules and",
-              "particulars, Admission of plaint, return and rejection of plaint,",
-              "Written statement: particulars, rules of evidence, Set-off and",
-              "counter-claim, Discovery & inspection and production of",
-              "documents, Interrogatories, Privileged documents, Affidavits",
-              "4 Appearance, Examination and Trial 6",
-              "Appearance and non-appearance of parties, Ex-parte procedure,",
-              "Summons and attendance of witnesses, Framing of Issues,",
-              "Settlement of issues at First hearing, Settlement of disputes outside",
-              "the Court (Alternate Dispute Resolution Mechanism), Trial,",
-              "Adjournments, Interim orders: Commission, arrest or attachment",
-              "before judgement, injunction and appointment of receiver, Interest",
-              "and costs, Judgment & Decree",
-              "5 Execution 7",
-              "Meaning of Execution, General principles, Power for execution of",
-              "decrees, , Procedure for execution, Enforcement, arrest and",
-              "detection, Attachment, Sale, Delivery of property, Garnishee Order,",
-              "Stay of execution",
-              "6 Suits, Appeals, Review, Revision and Reference 6",
-              "First Appeal, Second Appeal, Appeal from Order, Powers of",
-              "Appellate Court, Review, Reference, Revision, Caveat, Inherent",
-              "Power of the Court",
-              "7 Suits in particular cases 6",
-              "By or against government, By aliens and by or against foreign rulers",
-              "or ambassadors, Public nuisance, , Suits by or against a minor and",
-              "person of unsound mind., Mortgages, Interpleader suits, Suits",
-              "relating to public charities, Summary Suit, Temporary Injunction,",
-              "Salient features of Commercial Courts Act",
-              "8 Limitation Act 6",
               "Introduction to Limitation Laws, Definitions, Limitation of Suits,",
               "Appeals, and Applications, Computation of Period of Limitation,",
               "Acquisition of Ownership by Possession, Extinguishment of right to",
@@ -255,73 +311,9 @@
               "Resolution, etc.; Postal Ballot; Recording, Signing and Inspection of",
               "Minutes, Distribution of Powers of a Company – Division of",
               "Powers between Board and General Meetings; Acts by Directors in",
-              "Excess of Authority; Monitoring and Management",
-              "2 Inspection, Inquiry and Investigation 8",
-              "Inspection 1. Power to call for information, inspect books &",
-              "conduct inquiries, What books & papers can be inspected?, Place &",
-              "time of inspection, Duties of BoD, KMP & employee to assist in",
-              "inspection, Power of inspector, Supply of report, Investigation, who",
-              "can apply & scope of investigation, nvestigation into Affairs of the",
-              "Company by SFIO, Investigation into company’s affairs in other",
-              "cases, firm, body corporate / association not to be appointed as",
-              "inspector, investigation of ownership of a company, Power & report",
-              "of the Inspector/s, Follow up action of central government on",
-              "investigation report of the inspector, investigation etc. of foreign",
-              "companies S. 228, , Penalty, difference between inspection and",
-              "investigation",
-              "3 Compromises, Arrangements, and Amalgamations 9",
-              "Meaning of compromise, arrangement & amalgamation, Statutory",
-              "provision on compromise or arrangement, Exercise of the Tribunal’s",
-              "discretion, Information as to compromise or arrangement (s.230),",
-              "Reconstruction and amalgamation, Meaning of reconstruction,",
-              "Meaning of amalgamation and merger, Difference between",
-              "amalgamation & reconstruction, Takeover v. merger, Legal",
-              "provisions on reconstruction & amalgamation, Reconstruction/",
-              "amalgamation by sale of undertaking (S.232), Merger or",
-              "amalgamation of certain companies (s. 233), , Application of s. 233",
-              "to start up companies, Merger or amalgamation with foreign",
-              "company (S.234), Power to acquire shares of shareholders",
-              "dissenting from scheme or contract approved by majority (s.235),",
-              "Amalgamation of companies in public interest (S.237), Preservation",
-              "of books & Papers of Amalgamated company (S.239), Offences",
-              "committed prior to merger, amalgamation (S.240), Valuation by",
-              "registered valuers",
-              "4 Majority Rules and minority Protection & Prevention of 1",
-              "Oppression and Mismanagement",
-              "Meaning of Majority Rule and Minority Rights, Law relating to",
-              "Majority Powers and Minority Rights Shareholder Remedies –",
-              "Actions by Shareholders; Statutory Remedies; Personal Action,",
-              "Prevention of Oppression and Mis-Management 1. Mening of",
-              "oppression, pplication to Tribunal for relief in cases of oppression",
-              "etc.., Power of Tribunal, ,Oppression of Majority, Appeals against",
-              "the order of the Tribunal & variation of the order of Tribunal,",
-              "Composite/ simultaneous petition u/s. 242 & 271 Whether",
-              "maintainable, Power of the Tribunal S. 242, Class Action",
-              "5 Penalties, and Their Compounding 6",
-              "Regulatory Framework, Offences penalty and compounding-2013,",
-              "Establishment of a special court, Offences to be noncognizable,",
-              "Appointment of company prosecutors, Punishment for fraud,",
-              "Adjudication of penalties, List of offenses compoundable in nature,",
-              "Lesson Round-Up",
-              "6 Winding Up 9",
-              "Modes of Winding Up S.270, Powers of Tribunal, Who can make a",
-              "petition? S. 272, Commencement of winding up S. 357, Procedure",
-              "for winding up and Consequences of winding up order, Submission",
-              "of report by company liquidator S. 281, Promoters, directors etc. to",
-              "cooperate with the company liquidator S. 284, Advisory Committee",
-              "S. 287, Dissolution of company S.302, Summary procedure for",
-              "liquidation S.361, Debts of all descriptions to be admitted to proof",
-              "S. 324, Avoidance of voluntary transfer S. 329, Transfer for benefit",
-              "of all creditors S. 330, Effect of floating charge S. 332, Distribution",
-              "of property, Contributory, , Winding up of a foreign company,",
-              "Removal of name of company from Register of Companies,",
-              "Transfer of winding up procedure to Tribunal",
-              "7 National Company Law Tribunal, Appellate Tribunal 3",
-              "Orders of Tribunal, Appeal from Orders of Tribunal, Delegation of",
-              "Powers, Limitation, Transfer of Certain Pending Proceedings",
-              "Total Hours 45"
+              "Excess of Authority; Monitoring and Management"
             ],
-            "topics_text": "Board of Directors 1. Constitution, Powers & composition, Restriction and Powers of Board, Board Committees- Audit Committee, Nomination and Remuneration Committee, Stakeholder Relationship Committee and other Committees., Meetings: 1 Meetings of Board and Committees– Frequency, Convening, Proceedings, Video Conferencing of Board/Committee(s); Resolution by Circulation; Minutes and Evidence, General Meetings – Kinds of Meetings; Law, Practice and Procedure Relating to Convening and Proceedings at General and Other Meetings; Notice, Quorum, Chairman, Proxy, Voting including Voting through Electronic Means; Resolutions, Circulation of Members’ Resolution, etc.; Postal Ballot; Recording, Signing and Inspection of Minutes, Distribution of Powers of a Company – Division of Powers between Board and General Meetings; Acts by Directors in Excess of Authority; Monitoring and Management 2 Inspection, Inquiry and Investigation 8 Inspection 1. Power to call for information, inspect books & conduct inquiries, What books & papers can be inspected?, Place & time of inspection, Duties of BoD, KMP & employee to assist in inspection, Power of inspector, Supply of report, Investigation, who can apply & scope of investigation, nvestigation into Affairs of the Company by SFIO, Investigation into company’s affairs in other cases, firm, body corporate / association not to be appointed as inspector, investigation of ownership of a company, Power & report of the Inspector/s, Follow up action of central government on investigation report of the inspector, investigation etc. of foreign companies S. 228, , Penalty, difference between inspection and investigation 3 Compromises, Arrangements, and Amalgamations 9 Meaning of compromise, arrangement & amalgamation, Statutory provision on compromise or arrangement, Exercise of the Tribunal’s discretion, Information as to compromise or arrangement (s.230), Reconstruction and amalgamation, Meaning of reconstruction, Meaning of amalgamation and merger, Difference between amalgamation & reconstruction, Takeover v. merger, Legal provisions on reconstruction & amalgamation, Reconstruction/ amalgamation by sale of undertaking (S.232), Merger or amalgamation of certain companies (s. 233), , Application of s. 233 to start up companies, Merger or amalgamation with foreign company (S.234), Power to acquire shares of shareholders dissenting from scheme or contract approved by majority (s.235), Amalgamation of companies in public interest (S.237), Preservation of books & Papers of Amalgamated company (S.239), Offences committed prior to merger, amalgamation (S.240), Valuation by registered valuers 4 Majority Rules and minority Protection & Prevention of 1 Oppression and Mismanagement Meaning of Majority Rule and Minority Rights, Law relating to Majority Powers and Minority Rights Shareholder Remedies – Actions by Shareholders; Statutory Remedies; Personal Action, Prevention of Oppression and Mis-Management 1. Mening of oppression, pplication to Tribunal for relief in cases of oppression etc.., Power of Tribunal, ,Oppression of Majority, Appeals against the order of the Tribunal & variation of the order of Tribunal, Composite/ simultaneous petition u/s. 242 & 271 Whether maintainable, Power of the Tribunal S. 242, Class Action 5 Penalties, and Their Compounding 6 Regulatory Framework, Offences penalty and compounding-2013, Establishment of a special court, Offences to be noncognizable, Appointment of company prosecutors, Punishment for fraud, Adjudication of penalties, List of offenses compoundable in nature, Lesson Round-Up 6 Winding Up 9 Modes of Winding Up S.270, Powers of Tribunal, Who can make a petition? S. 272, Commencement of winding up S. 357, Procedure for winding up and Consequences of winding up order, Submission of report by company liquidator S. 281, Promoters, directors etc. to cooperate with the company liquidator S. 284, Advisory Committee S. 287, Dissolution of company S.302, Summary procedure for liquidation S.361, Debts of all descriptions to be admitted to proof S. 324, Avoidance of voluntary transfer S. 329, Transfer for benefit of all creditors S. 330, Effect of floating charge S. 332, Distribution of property, Contributory, , Winding up of a foreign company, Removal of name of company from Register of Companies, Transfer of winding up procedure to Tribunal 7 National Company Law Tribunal, Appellate Tribunal 3 Orders of Tribunal, Appeal from Orders of Tribunal, Delegation of Powers, Limitation, Transfer of Certain Pending Proceedings Total Hours 45",
+            "topics_text": "Board of Directors 1. Constitution, Powers & composition, Restriction and Powers of Board, Board Committees- Audit Committee, Nomination and Remuneration Committee, Stakeholder Relationship Committee and other Committees., Meetings: 1 Meetings of Board and Committees– Frequency, Convening, Proceedings, Video Conferencing of Board/Committee(s); Resolution by Circulation; Minutes and Evidence, General Meetings – Kinds of Meetings; Law, Practice and Procedure Relating to Convening and Proceedings at General and Other Meetings; Notice, Quorum, Chairman, Proxy, Voting including Voting through Electronic Means; Resolutions, Circulation of Members’ Resolution, etc.; Postal Ballot; Recording, Signing and Inspection of Minutes, Distribution of Powers of a Company – Division of Powers between Board and General Meetings; Acts by Directors in Excess of Authority; Monitoring and Management",
             "topics": [
               "Board of Directors 1. Constitution, Powers & composition,",
               "Restriction and Powers of Board, Board Committees- Audit",
@@ -345,8 +337,14 @@
               "Powers between Board and General Meetings",
               "Acts by Directors in",
               "Excess of Authority",
-              "Monitoring and Management",
-              "2 Inspection, Inquiry and Investigation 8",
+              "Monitoring and Management"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Inspection, Inquiry and Investigation",
+            "contact_hours": 8,
+            "topic_lines": [
               "Inspection 1. Power to call for information, inspect books &",
               "conduct inquiries, What books & papers can be inspected?, Place &",
               "time of inspection, Duties of BoD, KMP & employee to assist in",
@@ -358,8 +356,29 @@
               "of the Inspector/s, Follow up action of central government on",
               "investigation report of the inspector, investigation etc. of foreign",
               "companies S. 228, , Penalty, difference between inspection and",
-              "investigation",
-              "3 Compromises, Arrangements, and Amalgamations 9",
+              "investigation"
+            ],
+            "topics_text": "Inspection 1. Power to call for information, inspect books & conduct inquiries, What books & papers can be inspected?, Place & time of inspection, Duties of BoD, KMP & employee to assist in inspection, Power of inspector, Supply of report, Investigation, who can apply & scope of investigation, nvestigation into Affairs of the Company by SFIO, Investigation into company’s affairs in other cases, firm, body corporate / association not to be appointed as inspector, investigation of ownership of a company, Power & report of the Inspector/s, Follow up action of central government on investigation report of the inspector, investigation etc. of foreign companies S. 228, , Penalty, difference between inspection and investigation",
+            "topics": [
+              "Inspection 1. Power to call for information, inspect books &",
+              "conduct inquiries, What books & papers can be inspected?, Place &",
+              "time of inspection, Duties of BoD, KMP & employee to assist in",
+              "inspection, Power of inspector, Supply of report, Investigation, who",
+              "can apply & scope of investigation, nvestigation into Affairs of the",
+              "Company by SFIO, Investigation into company’s affairs in other",
+              "cases, firm, body corporate / association not to be appointed as",
+              "inspector, investigation of ownership of a company, Power & report",
+              "of the Inspector/s, Follow up action of central government on",
+              "investigation report of the inspector, investigation etc. of foreign",
+              "companies S. 228, , Penalty, difference between inspection and",
+              "investigation"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Compromises, Arrangements, and Amalgamations",
+            "contact_hours": 9,
+            "topic_lines": [
               "Meaning of compromise, arrangement & amalgamation, Statutory",
               "provision on compromise or arrangement, Exercise of the Tribunal’s",
               "discretion, Information as to compromise or arrangement (s.230),",
@@ -375,8 +394,46 @@
               "Amalgamation of companies in public interest (S.237), Preservation",
               "of books & Papers of Amalgamated company (S.239), Offences",
               "committed prior to merger, amalgamation (S.240), Valuation by",
-              "registered valuers",
-              "4 Majority Rules and minority Protection & Prevention of 1",
+              "registered valuers"
+            ],
+            "topics_text": "Meaning of compromise, arrangement & amalgamation, Statutory provision on compromise or arrangement, Exercise of the Tribunal’s discretion, Information as to compromise or arrangement (s.230), Reconstruction and amalgamation, Meaning of reconstruction, Meaning of amalgamation and merger, Difference between amalgamation & reconstruction, Takeover v. merger, Legal provisions on reconstruction & amalgamation, Reconstruction/ amalgamation by sale of undertaking (S.232), Merger or amalgamation of certain companies (s. 233), , Application of s. 233 to start up companies, Merger or amalgamation with foreign company (S.234), Power to acquire shares of shareholders dissenting from scheme or contract approved by majority (s.235), Amalgamation of companies in public interest (S.237), Preservation of books & Papers of Amalgamated company (S.239), Offences committed prior to merger, amalgamation (S.240), Valuation by registered valuers",
+            "topics": [
+              "Meaning of compromise, arrangement & amalgamation, Statutory",
+              "provision on compromise or arrangement, Exercise of the Tribunal’s",
+              "discretion, Information as to compromise or arrangement (s.230),",
+              "Reconstruction and amalgamation, Meaning of reconstruction,",
+              "Meaning of amalgamation and merger, Difference between",
+              "amalgamation & reconstruction, Takeover v. merger, Legal",
+              "provisions on reconstruction & amalgamation, Reconstruction/",
+              "amalgamation by sale of undertaking (S.232), Merger or",
+              "amalgamation of certain companies (s. 233), , Application of s. 233",
+              "to start up companies, Merger or amalgamation with foreign",
+              "company (S.234), Power to acquire shares of shareholders",
+              "dissenting from scheme or contract approved by majority (s.235),",
+              "Amalgamation of companies in public interest (S.237), Preservation",
+              "of books & Papers of Amalgamated company (S.239), Offences",
+              "committed prior to merger, amalgamation (S.240), Valuation by",
+              "registered valuers"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Majority Rules and minority Protection & Prevention of",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Oppression and Mismanagement",
+              "Meaning of Majority Rule and Minority Rights, Law relating to",
+              "Majority Powers and Minority Rights Shareholder Remedies –",
+              "Actions by Shareholders; Statutory Remedies; Personal Action,",
+              "Prevention of Oppression and Mis-Management 1. Mening of",
+              "oppression, pplication to Tribunal for relief in cases of oppression",
+              "etc.., Power of Tribunal, ,Oppression of Majority, Appeals against",
+              "the order of the Tribunal & variation of the order of Tribunal,",
+              "Composite/ simultaneous petition u/s. 242 & 271 Whether",
+              "maintainable, Power of the Tribunal S. 242, Class Action"
+            ],
+            "topics_text": "Oppression and Mismanagement Meaning of Majority Rule and Minority Rights, Law relating to Majority Powers and Minority Rights Shareholder Remedies – Actions by Shareholders; Statutory Remedies; Personal Action, Prevention of Oppression and Mis-Management 1. Mening of oppression, pplication to Tribunal for relief in cases of oppression etc.., Power of Tribunal, ,Oppression of Majority, Appeals against the order of the Tribunal & variation of the order of Tribunal, Composite/ simultaneous petition u/s. 242 & 271 Whether maintainable, Power of the Tribunal S. 242, Class Action",
+            "topics": [
               "Oppression and Mismanagement",
               "Meaning of Majority Rule and Minority Rights, Law relating to",
               "Majority Powers and Minority Rights Shareholder Remedies –",
@@ -388,14 +445,34 @@
               "etc.., Power of Tribunal, ,Oppression of Majority, Appeals against",
               "the order of the Tribunal & variation of the order of Tribunal,",
               "Composite/ simultaneous petition u/s. 242 & 271 Whether",
-              "maintainable, Power of the Tribunal S. 242, Class Action",
-              "5 Penalties, and Their Compounding 6",
+              "maintainable, Power of the Tribunal S. 242, Class Action"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Penalties, and Their Compounding",
+            "contact_hours": 6,
+            "topic_lines": [
               "Regulatory Framework, Offences penalty and compounding-2013,",
               "Establishment of a special court, Offences to be noncognizable,",
               "Appointment of company prosecutors, Punishment for fraud,",
               "Adjudication of penalties, List of offenses compoundable in nature,",
-              "Lesson Round-Up",
-              "6 Winding Up 9",
+              "Lesson Round-Up"
+            ],
+            "topics_text": "Regulatory Framework, Offences penalty and compounding-2013, Establishment of a special court, Offences to be noncognizable, Appointment of company prosecutors, Punishment for fraud, Adjudication of penalties, List of offenses compoundable in nature, Lesson Round-Up",
+            "topics": [
+              "Regulatory Framework, Offences penalty and compounding-2013,",
+              "Establishment of a special court, Offences to be noncognizable,",
+              "Appointment of company prosecutors, Punishment for fraud,",
+              "Adjudication of penalties, List of offenses compoundable in nature,",
+              "Lesson Round-Up"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Winding Up",
+            "contact_hours": 9,
+            "topic_lines": [
               "Modes of Winding Up S.270, Powers of Tribunal, Who can make a",
               "petition? S. 272, Commencement of winding up S. 357, Procedure",
               "for winding up and Consequences of winding up order, Submission",
@@ -407,8 +484,35 @@
               "of all creditors S. 330, Effect of floating charge S. 332, Distribution",
               "of property, Contributory, , Winding up of a foreign company,",
               "Removal of name of company from Register of Companies,",
-              "Transfer of winding up procedure to Tribunal",
-              "7 National Company Law Tribunal, Appellate Tribunal 3",
+              "Transfer of winding up procedure to Tribunal"
+            ],
+            "topics_text": "Modes of Winding Up S.270, Powers of Tribunal, Who can make a petition? S. 272, Commencement of winding up S. 357, Procedure for winding up and Consequences of winding up order, Submission of report by company liquidator S. 281, Promoters, directors etc. to cooperate with the company liquidator S. 284, Advisory Committee S. 287, Dissolution of company S.302, Summary procedure for liquidation S.361, Debts of all descriptions to be admitted to proof S. 324, Avoidance of voluntary transfer S. 329, Transfer for benefit of all creditors S. 330, Effect of floating charge S. 332, Distribution of property, Contributory, , Winding up of a foreign company, Removal of name of company from Register of Companies, Transfer of winding up procedure to Tribunal",
+            "topics": [
+              "Modes of Winding Up S.270, Powers of Tribunal, Who can make a",
+              "petition? S. 272, Commencement of winding up S. 357, Procedure",
+              "for winding up and Consequences of winding up order, Submission",
+              "of report by company liquidator S. 281, Promoters, directors etc. to",
+              "cooperate with the company liquidator S. 284, Advisory Committee",
+              "S. 287, Dissolution of company S.302, Summary procedure for",
+              "liquidation S.361, Debts of all descriptions to be admitted to proof",
+              "S. 324, Avoidance of voluntary transfer S. 329, Transfer for benefit",
+              "of all creditors S. 330, Effect of floating charge S. 332, Distribution",
+              "of property, Contributory, , Winding up of a foreign company,",
+              "Removal of name of company from Register of Companies,",
+              "Transfer of winding up procedure to Tribunal"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "National Company Law Tribunal, Appellate Tribunal",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Orders of Tribunal, Appeal from Orders of Tribunal, Delegation of",
+              "Powers, Limitation, Transfer of Certain Pending Proceedings",
+              "Total Hours 45"
+            ],
+            "topics_text": "Orders of Tribunal, Appeal from Orders of Tribunal, Delegation of Powers, Limitation, Transfer of Certain Pending Proceedings Total Hours 45",
+            "topics": [
               "Orders of Tribunal, Appeal from Orders of Tribunal, Delegation of",
               "Powers, Limitation, Transfer of Certain Pending Proceedings",
               "Total Hours 45"
@@ -525,23 +629,73 @@
               "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
               "Theories of IP (Jurisprudential aspects), International Conventions:",
               "Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989;",
-              "Berne Convention, 1886; PCT, 1970; TRIPS",
-              "2 PATENTS 9",
+              "Berne Convention, 1886; PCT, 1970; TRIPS"
+            ],
+            "topics_text": "Difference Between Intellectual Property, Intellectual Property Rights & Intellectual Property Law, Types of IP: Trademarks, Copyright, Patent, Industrial Design, Trade secrets & GI Traditional Knowledge, Plant Varieties, Integrated Circuit Layout Design, Theories of IP (Jurisprudential aspects), International Conventions: Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989; Berne Convention, 1886; PCT, 1970; TRIPS",
+            "topics": [
+              "Difference Between Intellectual Property, Intellectual Property",
+              "Rights & Intellectual Property Law, Types of IP: Trademarks,",
+              "Copyright, Patent, Industrial Design, Trade secrets & GI Traditional",
+              "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
+              "Theories of IP (Jurisprudential aspects), International Conventions:",
+              "Paris Convention 1883",
+              "Madrid Agreement, 1891 & Protocol, 1989",
+              "Berne Convention, 1886",
+              "PCT, 1970",
+              "TRIPS"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "PATENTS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Concept of Patent, Product/Process Patents & Terminology,",
               "Duration of Patents, Elements of Patentability, Non- Patentable",
               "Subject Matter, Procedure for Filing of Patent Application,",
               "Procedure for Opposition Revocation of Patents Assignment and",
               "licensing of Patents, Compulsory Licensing, Patent Rights and",
-              "Infringement, Covid Pandemic & Pharma Patenting",
-              "3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9",
+              "Infringement, Covid Pandemic & Pharma Patenting"
+            ],
+            "topics_text": "Concept of Patent, Product/Process Patents & Terminology, Duration of Patents, Elements of Patentability, Non- Patentable Subject Matter, Procedure for Filing of Patent Application, Procedure for Opposition Revocation of Patents Assignment and licensing of Patents, Compulsory Licensing, Patent Rights and Infringement, Covid Pandemic & Pharma Patenting",
+            "topics": [
+              "Concept of Patent, Product/Process Patents & Terminology,",
+              "Duration of Patents, Elements of Patentability, Non- Patentable",
+              "Subject Matter, Procedure for Filing of Patent Application,",
+              "Procedure for Opposition Revocation of Patents Assignment and",
+              "licensing of Patents, Compulsory Licensing, Patent Rights and",
+              "Infringement, Covid Pandemic & Pharma Patenting"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "TRADEMARKS & GEOGRAPHICAL INDICATIONS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Introduction & Historical Perspective, Definitions, Different Kinds",
               "of Marks, Registration of Trade Marks, Application for",
               "Registration, Objection & Opposition to Registration, Grounds for",
               "Refusal to Registration, Infringement of Trade Marks, Assignment&",
               "Transmission, Offences Penalties, Meaning and Nature of",
               "Geographical Indications, Application for Registration, Conditions",
-              "& Procedure for Registration, Offences and Penalties",
-              "4 COPYRIGHT 9",
+              "& Procedure for Registration, Offences and Penalties"
+            ],
+            "topics_text": "Introduction & Historical Perspective, Definitions, Different Kinds of Marks, Registration of Trade Marks, Application for Registration, Objection & Opposition to Registration, Grounds for Refusal to Registration, Infringement of Trade Marks, Assignment& Transmission, Offences Penalties, Meaning and Nature of Geographical Indications, Application for Registration, Conditions & Procedure for Registration, Offences and Penalties",
+            "topics": [
+              "Introduction & Historical Perspective, Definitions, Different Kinds",
+              "of Marks, Registration of Trade Marks, Application for",
+              "Registration, Objection & Opposition to Registration, Grounds for",
+              "Refusal to Registration, Infringement of Trade Marks, Assignment&",
+              "Transmission, Offences Penalties, Meaning and Nature of",
+              "Geographical Indications, Application for Registration, Conditions",
+              "& Procedure for Registration, Offences and Penalties"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "COPYRIGHT",
+            "contact_hours": 9,
+            "topic_lines": [
               "Introduction, Meaning of Copyright, Works in which Copyright",
               "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
               "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
@@ -550,13 +704,44 @@
               "of Copyright, Copyright Societies & Copyright Board, Assignment",
               "and Licensing of Copyright, Registration of Copyright, infringement",
               "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
-              "against Infringement of Copyright",
-              "5 INDUSTRIAL DESIGNS 9",
+              "against Infringement of Copyright"
+            ],
+            "topics_text": "Introduction, Meaning of Copyright, Works in which Copyright Subsists (Section 13), Idea-Expression Dichotomy, Test of Originality (Doctrine of Sweat of the Brow, Modicum of creativity & Indian perspective of Skill & Judgement Test), Author & Ownership of Copyright, Economic and Neighbouring rights, Term of Copyright, Copyright Societies & Copyright Board, Assignment and Licensing of Copyright, Registration of Copyright, infringement of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies against Infringement of Copyright",
+            "topics": [
+              "Introduction, Meaning of Copyright, Works in which Copyright",
+              "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
+              "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
+              "& Indian perspective of Skill & Judgement Test), Author &",
+              "Ownership of Copyright, Economic and Neighbouring rights, Term",
+              "of Copyright, Copyright Societies & Copyright Board, Assignment",
+              "and Licensing of Copyright, Registration of Copyright, infringement",
+              "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
+              "against Infringement of Copyright"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "INDUSTRIAL DESIGNS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Concept of Design, What is a Design, Registrable Design, Novelty",
               "& Originality, Registration of Design, Procedure for Registration,",
               "Term Duration of Protection, Copyright under Design, Piracy and",
-              "Penalties, Assignment of Designs",
-              "6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4",
+              "Penalties, Assignment of Designs"
+            ],
+            "topics_text": "Concept of Design, What is a Design, Registrable Design, Novelty & Originality, Registration of Design, Procedure for Registration, Term Duration of Protection, Copyright under Design, Piracy and Penalties, Assignment of Designs",
+            "topics": [
+              "Concept of Design, What is a Design, Registrable Design, Novelty",
+              "& Originality, Registration of Design, Procedure for Registration,",
+              "Term Duration of Protection, Copyright under Design, Piracy and",
+              "Penalties, Assignment of Designs"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "PROTECTION OF TRADE SECRETS & KEY BUSINESS",
+            "contact_hours": 4,
+            "topic_lines": [
               "CONCERNS IN COMMERCIALISING INTELLECTUAL",
               "PROPERTY",
               "Introduction, Legislation Governing Trade Secrets, Protection under",
@@ -569,49 +754,8 @@
               "of Intellectual Property Rights",
               "Total Hours 45"
             ],
-            "topics_text": "Difference Between Intellectual Property, Intellectual Property Rights & Intellectual Property Law, Types of IP: Trademarks, Copyright, Patent, Industrial Design, Trade secrets & GI Traditional Knowledge, Plant Varieties, Integrated Circuit Layout Design, Theories of IP (Jurisprudential aspects), International Conventions: Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989; Berne Convention, 1886; PCT, 1970; TRIPS 2 PATENTS 9 Concept of Patent, Product/Process Patents & Terminology, Duration of Patents, Elements of Patentability, Non- Patentable Subject Matter, Procedure for Filing of Patent Application, Procedure for Opposition Revocation of Patents Assignment and licensing of Patents, Compulsory Licensing, Patent Rights and Infringement, Covid Pandemic & Pharma Patenting 3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9 Introduction & Historical Perspective, Definitions, Different Kinds of Marks, Registration of Trade Marks, Application for Registration, Objection & Opposition to Registration, Grounds for Refusal to Registration, Infringement of Trade Marks, Assignment& Transmission, Offences Penalties, Meaning and Nature of Geographical Indications, Application for Registration, Conditions & Procedure for Registration, Offences and Penalties 4 COPYRIGHT 9 Introduction, Meaning of Copyright, Works in which Copyright Subsists (Section 13), Idea-Expression Dichotomy, Test of Originality (Doctrine of Sweat of the Brow, Modicum of creativity & Indian perspective of Skill & Judgement Test), Author & Ownership of Copyright, Economic and Neighbouring rights, Term of Copyright, Copyright Societies & Copyright Board, Assignment and Licensing of Copyright, Registration of Copyright, infringement of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies against Infringement of Copyright 5 INDUSTRIAL DESIGNS 9 Concept of Design, What is a Design, Registrable Design, Novelty & Originality, Registration of Design, Procedure for Registration, Term Duration of Protection, Copyright under Design, Piracy and Penalties, Assignment of Designs 6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4 CONCERNS IN COMMERCIALISING INTELLECTUAL PROPERTY Introduction, Legislation Governing Trade Secrets, Protection under TRIPS Agreement, What Causes a Business to Lose Trade Secret Protection, Competition and Confidentiality Issues, Care & Maintenance of Confidential Information, Employee Confidentiality, Intellectual Property Issues in the Sale of Business, , Assignment of Intellectual Property Rights, Technology Transfer Agreements, Legal Auditing of Intellectual Property, Due Diligence of Intellectual Property Rights Total Hours 45",
+            "topics_text": "CONCERNS IN COMMERCIALISING INTELLECTUAL PROPERTY Introduction, Legislation Governing Trade Secrets, Protection under TRIPS Agreement, What Causes a Business to Lose Trade Secret Protection, Competition and Confidentiality Issues, Care & Maintenance of Confidential Information, Employee Confidentiality, Intellectual Property Issues in the Sale of Business, , Assignment of Intellectual Property Rights, Technology Transfer Agreements, Legal Auditing of Intellectual Property, Due Diligence of Intellectual Property Rights Total Hours 45",
             "topics": [
-              "Difference Between Intellectual Property, Intellectual Property",
-              "Rights & Intellectual Property Law, Types of IP: Trademarks,",
-              "Copyright, Patent, Industrial Design, Trade secrets & GI Traditional",
-              "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
-              "Theories of IP (Jurisprudential aspects), International Conventions:",
-              "Paris Convention 1883",
-              "Madrid Agreement, 1891 & Protocol, 1989",
-              "Berne Convention, 1886",
-              "PCT, 1970",
-              "TRIPS",
-              "2 PATENTS 9",
-              "Concept of Patent, Product/Process Patents & Terminology,",
-              "Duration of Patents, Elements of Patentability, Non- Patentable",
-              "Subject Matter, Procedure for Filing of Patent Application,",
-              "Procedure for Opposition Revocation of Patents Assignment and",
-              "licensing of Patents, Compulsory Licensing, Patent Rights and",
-              "Infringement, Covid Pandemic & Pharma Patenting",
-              "3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9",
-              "Introduction & Historical Perspective, Definitions, Different Kinds",
-              "of Marks, Registration of Trade Marks, Application for",
-              "Registration, Objection & Opposition to Registration, Grounds for",
-              "Refusal to Registration, Infringement of Trade Marks, Assignment&",
-              "Transmission, Offences Penalties, Meaning and Nature of",
-              "Geographical Indications, Application for Registration, Conditions",
-              "& Procedure for Registration, Offences and Penalties",
-              "4 COPYRIGHT 9",
-              "Introduction, Meaning of Copyright, Works in which Copyright",
-              "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
-              "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
-              "& Indian perspective of Skill & Judgement Test), Author &",
-              "Ownership of Copyright, Economic and Neighbouring rights, Term",
-              "of Copyright, Copyright Societies & Copyright Board, Assignment",
-              "and Licensing of Copyright, Registration of Copyright, infringement",
-              "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
-              "against Infringement of Copyright",
-              "5 INDUSTRIAL DESIGNS 9",
-              "Concept of Design, What is a Design, Registrable Design, Novelty",
-              "& Originality, Registration of Design, Procedure for Registration,",
-              "Term Duration of Protection, Copyright under Design, Piracy and",
-              "Penalties, Assignment of Designs",
-              "6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4",
               "CONCERNS IN COMMERCIALISING INTELLECTUAL",
               "PROPERTY",
               "Introduction, Legislation Governing Trade Secrets, Protection under",
@@ -801,39 +945,9 @@
               "whole in its context (Ex Viceribus Actus), Statutes to be construed",
               "to make it effective and workable (Ut Res Magis Valeat Quam",
               "Pereat), If meaning plain, effect must be given to it irrespective of",
-              "consequences., Appraisal of the principle of plain meaning",
-              "2 Rules of Interpretation 7",
-              "Primary Rules a. Literal rule, b. Golden rule, c. Mischief rule (rule",
-              "in the Heydon’s case), d. Rule of harmonious construction, e.",
-              "Principles of liberal or beneficial construction, Subsidiary Rules a.",
-              "Noscitur a sociis, b. Ejusdem generis, c. Reddendo singula singulis,",
-              "d. Non-obstante clause, e. Mandatory and directory provisions, f.",
-              "Conjunctive and disjunctive words, , g. Construction of legal words,",
-              ", h. Contemporanea expositio est optima et fortissima lege, , i.",
-              "Dissimilum dissimilisest ratio",
-              "3 Internal Aids to Interpretation 8",
-              "Title including long title and short title, Preamble, Headings,",
-              "Marginal Notes, Punctuations, Explanations, Illustrations,",
-              "Definition and Interpretation Clauses, Proviso, Explanations,",
-              "Schedules, Transitional Provisions",
-              "4 External Aids to Interpretation 7",
-              "Parliamentary History, Travaux Preparatoires or surrounding",
-              "circumstances, Parliamentary proceeding, Later social, political,",
-              "economic and scientific developments, Dictionaries, Foreign",
-              "Judgments, Reference to other statutes, Effect of usage and practice,",
-              "International Conventions",
-              "5 Applied Principles of Interpretation 8",
-              "Fiscal Statutes, Interpretation of Contracts, Interpretation of",
-              "Treaties, Operation of Statutes: Prospective and Retrospective",
-              "Operation.",
-              "6 Principles of Constitutional Interpretation 7",
-              "Doctrine of Pith and Substance, Doctrine of Colourable legislation,",
-              "Doctrine of Ancillary powers, Doctrine of Residuary power,",
-              "Doctrine of Repugnancy ?, Doctrine of Presumption, Consequence",
-              "of Repeals.",
-              "Total Hours 45"
+              "consequences., Appraisal of the principle of plain meaning"
             ],
-            "topics_text": "Meaning of ‘Interpretation’ or ‘Construction’, Importance of Interpretation., Mimansa Principle of Interpretation- Indian Logic System, Difference between Interpretation and Construction, Kinds of Statutes, Intention of the Legislature, Statute must be read as a whole in its context (Ex Viceribus Actus), Statutes to be construed to make it effective and workable (Ut Res Magis Valeat Quam Pereat), If meaning plain, effect must be given to it irrespective of consequences., Appraisal of the principle of plain meaning 2 Rules of Interpretation 7 Primary Rules a. Literal rule, b. Golden rule, c. Mischief rule (rule in the Heydon’s case), d. Rule of harmonious construction, e. Principles of liberal or beneficial construction, Subsidiary Rules a. Noscitur a sociis, b. Ejusdem generis, c. Reddendo singula singulis, d. Non-obstante clause, e. Mandatory and directory provisions, f. Conjunctive and disjunctive words, , g. Construction of legal words, , h. Contemporanea expositio est optima et fortissima lege, , i. Dissimilum dissimilisest ratio 3 Internal Aids to Interpretation 8 Title including long title and short title, Preamble, Headings, Marginal Notes, Punctuations, Explanations, Illustrations, Definition and Interpretation Clauses, Proviso, Explanations, Schedules, Transitional Provisions 4 External Aids to Interpretation 7 Parliamentary History, Travaux Preparatoires or surrounding circumstances, Parliamentary proceeding, Later social, political, economic and scientific developments, Dictionaries, Foreign Judgments, Reference to other statutes, Effect of usage and practice, International Conventions 5 Applied Principles of Interpretation 8 Fiscal Statutes, Interpretation of Contracts, Interpretation of Treaties, Operation of Statutes: Prospective and Retrospective Operation. 6 Principles of Constitutional Interpretation 7 Doctrine of Pith and Substance, Doctrine of Colourable legislation, Doctrine of Ancillary powers, Doctrine of Residuary power, Doctrine of Repugnancy ?, Doctrine of Presumption, Consequence of Repeals. Total Hours 45",
+            "topics_text": "Meaning of ‘Interpretation’ or ‘Construction’, Importance of Interpretation., Mimansa Principle of Interpretation- Indian Logic System, Difference between Interpretation and Construction, Kinds of Statutes, Intention of the Legislature, Statute must be read as a whole in its context (Ex Viceribus Actus), Statutes to be construed to make it effective and workable (Ut Res Magis Valeat Quam Pereat), If meaning plain, effect must be given to it irrespective of consequences., Appraisal of the principle of plain meaning",
             "topics": [
               "Meaning of ‘Interpretation’ or ‘Construction’, Importance of",
               "Interpretation., Mimansa Principle of Interpretation- Indian Logic",
@@ -842,8 +956,14 @@
               "whole in its context (Ex Viceribus Actus), Statutes to be construed",
               "to make it effective and workable (Ut Res Magis Valeat Quam",
               "Pereat), If meaning plain, effect must be given to it irrespective of",
-              "consequences., Appraisal of the principle of plain meaning",
-              "2 Rules of Interpretation 7",
+              "consequences., Appraisal of the principle of plain meaning"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Rules of Interpretation",
+            "contact_hours": 7,
+            "topic_lines": [
               "Primary Rules a. Literal rule, b. Golden rule, c. Mischief rule (rule",
               "in the Heydon’s case), d. Rule of harmonious construction, e.",
               "Principles of liberal or beneficial construction, Subsidiary Rules a.",
@@ -851,23 +971,87 @@
               "d. Non-obstante clause, e. Mandatory and directory provisions, f.",
               "Conjunctive and disjunctive words, , g. Construction of legal words,",
               ", h. Contemporanea expositio est optima et fortissima lege, , i.",
-              "Dissimilum dissimilisest ratio",
-              "3 Internal Aids to Interpretation 8",
+              "Dissimilum dissimilisest ratio"
+            ],
+            "topics_text": "Primary Rules a. Literal rule, b. Golden rule, c. Mischief rule (rule in the Heydon’s case), d. Rule of harmonious construction, e. Principles of liberal or beneficial construction, Subsidiary Rules a. Noscitur a sociis, b. Ejusdem generis, c. Reddendo singula singulis, d. Non-obstante clause, e. Mandatory and directory provisions, f. Conjunctive and disjunctive words, , g. Construction of legal words, , h. Contemporanea expositio est optima et fortissima lege, , i. Dissimilum dissimilisest ratio",
+            "topics": [
+              "Primary Rules a. Literal rule, b. Golden rule, c. Mischief rule (rule",
+              "in the Heydon’s case), d. Rule of harmonious construction, e.",
+              "Principles of liberal or beneficial construction, Subsidiary Rules a.",
+              "Noscitur a sociis, b. Ejusdem generis, c. Reddendo singula singulis,",
+              "d. Non-obstante clause, e. Mandatory and directory provisions, f.",
+              "Conjunctive and disjunctive words, , g. Construction of legal words,",
+              ", h. Contemporanea expositio est optima et fortissima lege, , i.",
+              "Dissimilum dissimilisest ratio"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Internal Aids to Interpretation",
+            "contact_hours": 8,
+            "topic_lines": [
               "Title including long title and short title, Preamble, Headings,",
               "Marginal Notes, Punctuations, Explanations, Illustrations,",
               "Definition and Interpretation Clauses, Proviso, Explanations,",
-              "Schedules, Transitional Provisions",
-              "4 External Aids to Interpretation 7",
+              "Schedules, Transitional Provisions"
+            ],
+            "topics_text": "Title including long title and short title, Preamble, Headings, Marginal Notes, Punctuations, Explanations, Illustrations, Definition and Interpretation Clauses, Proviso, Explanations, Schedules, Transitional Provisions",
+            "topics": [
+              "Title including long title and short title, Preamble, Headings,",
+              "Marginal Notes, Punctuations, Explanations, Illustrations,",
+              "Definition and Interpretation Clauses, Proviso, Explanations,",
+              "Schedules, Transitional Provisions"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "External Aids to Interpretation",
+            "contact_hours": 7,
+            "topic_lines": [
               "Parliamentary History, Travaux Preparatoires or surrounding",
               "circumstances, Parliamentary proceeding, Later social, political,",
               "economic and scientific developments, Dictionaries, Foreign",
               "Judgments, Reference to other statutes, Effect of usage and practice,",
-              "International Conventions",
-              "5 Applied Principles of Interpretation 8",
+              "International Conventions"
+            ],
+            "topics_text": "Parliamentary History, Travaux Preparatoires or surrounding circumstances, Parliamentary proceeding, Later social, political, economic and scientific developments, Dictionaries, Foreign Judgments, Reference to other statutes, Effect of usage and practice, International Conventions",
+            "topics": [
+              "Parliamentary History, Travaux Preparatoires or surrounding",
+              "circumstances, Parliamentary proceeding, Later social, political,",
+              "economic and scientific developments, Dictionaries, Foreign",
+              "Judgments, Reference to other statutes, Effect of usage and practice,",
+              "International Conventions"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Applied Principles of Interpretation",
+            "contact_hours": 8,
+            "topic_lines": [
               "Fiscal Statutes, Interpretation of Contracts, Interpretation of",
               "Treaties, Operation of Statutes: Prospective and Retrospective",
-              "Operation.",
-              "6 Principles of Constitutional Interpretation 7",
+              "Operation."
+            ],
+            "topics_text": "Fiscal Statutes, Interpretation of Contracts, Interpretation of Treaties, Operation of Statutes: Prospective and Retrospective Operation.",
+            "topics": [
+              "Fiscal Statutes, Interpretation of Contracts, Interpretation of",
+              "Treaties, Operation of Statutes: Prospective and Retrospective",
+              "Operation."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Principles of Constitutional Interpretation",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Doctrine of Pith and Substance, Doctrine of Colourable legislation,",
+              "Doctrine of Ancillary powers, Doctrine of Residuary power,",
+              "Doctrine of Repugnancy ?, Doctrine of Presumption, Consequence",
+              "of Repeals.",
+              "Total Hours 45"
+            ],
+            "topics_text": "Doctrine of Pith and Substance, Doctrine of Colourable legislation, Doctrine of Ancillary powers, Doctrine of Residuary power, Doctrine of Repugnancy ?, Doctrine of Presumption, Consequence of Repeals. Total Hours 45",
+            "topics": [
               "Doctrine of Pith and Substance, Doctrine of Colourable legislation,",
               "Doctrine of Ancillary powers, Doctrine of Residuary power,",
               "Doctrine of Repugnancy ?, Doctrine of Presumption, Consequence",
@@ -976,8 +1160,27 @@
               "Indian Labour Legislation (International labour Standards),",
               "Constitutional Framework and Industrial Relations, Five-Year Plans",
               "and Labour Policy, Changing Dimensions of Industrial Relations",
-              "(post covid)",
-              "2 Occupational safety, health and working condition 12",
+              "(post covid)"
+            ],
+            "topics_text": "Development Labour Laws, Colonial labour law and policy, Labour capital conflicts: exploitation of labour, profit motive, poor bargaining power, poor working conditions, Labour Laws: Concept, Origin, Objectives & Classification, Critical Appraisal of First and Second National labour Commission, International Labour Organisation and Indian Labour Legislation (International labour Standards), Constitutional Framework and Industrial Relations, Five-Year Plans and Labour Policy, Changing Dimensions of Industrial Relations (post covid)",
+            "topics": [
+              "Development",
+              "Labour Laws, Colonial labour law and policy, Labour capital",
+              "conflicts: exploitation of labour, profit motive, poor bargaining",
+              "power, poor working conditions, Labour Laws: Concept, Origin,",
+              "Objectives & Classification, Critical Appraisal of First and Second",
+              "National labour Commission, International Labour Organisation and",
+              "Indian Labour Legislation (International labour Standards),",
+              "Constitutional Framework and Industrial Relations, Five-Year Plans",
+              "and Labour Policy, Changing Dimensions of Industrial Relations",
+              "(post covid)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Occupational safety, health and working condition",
+            "contact_hours": 12,
+            "topic_lines": [
               "Factories Act, 1948, Definitions - factory, manufacturing process,",
               "occupier' worker, hazardous process, etc., Provisions of the",
               "Factories Act relating to health, safety and welfare of workers -",
@@ -986,8 +1189,26 @@
               "Annual leave facility, Provisions relating to the regulation of",
               "employment of women, children and young persons., Obligations",
               "for the occupiers under the Factories Act, 1948, Comparison with",
-              "the Code on Occupational Safety, health and Working condition.",
-              "3 The Payment of Wages 7",
+              "the Code on Occupational Safety, health and Working condition."
+            ],
+            "topics_text": "Factories Act, 1948, Definitions - factory, manufacturing process, occupier' worker, hazardous process, etc., Provisions of the Factories Act relating to health, safety and welfare of workers - provisions relating to Hazardous process - provisions relating to working conditions of employment - Working hours, Weekly leave, Annual leave facility, Provisions relating to the regulation of employment of women, children and young persons., Obligations for the occupiers under the Factories Act, 1948, Comparison with the Code on Occupational Safety, health and Working condition.",
+            "topics": [
+              "Factories Act, 1948, Definitions - factory, manufacturing process,",
+              "occupier' worker, hazardous process, etc., Provisions of the",
+              "Factories Act relating to health, safety and welfare of workers",
+              "provisions relating to Hazardous process - provisions relating to",
+              "working conditions of employment - Working hours, Weekly leave,",
+              "Annual leave facility, Provisions relating to the regulation of",
+              "employment of women, children and young persons., Obligations",
+              "for the occupiers under the Factories Act, 1948, Comparison with",
+              "the Code on Occupational Safety, health and Working condition."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "The Payment of Wages",
+            "contact_hours": 7,
+            "topic_lines": [
               "Definitions - employed person, factory, industrial and other",
               "establishment, wages, etc., Authorized Deductions - Authorities -",
               "Inspectors and Payment of Wages Authority., Minimum Wages &",
@@ -999,8 +1220,29 @@
               "Adjudication - Payment of Dues, Claims and Audit, Enforcement of",
               "the Code (i) Inspector-Cum-Facilitator (ii) Offences and Penalties",
               "including Composition of offenses., Comparison with The Code on",
-              "Wages, 2019",
-              "4 Industrial Disputes 12",
+              "Wages, 2019"
+            ],
+            "topics_text": "Definitions - employed person, factory, industrial and other establishment, wages, etc., Authorized Deductions - Authorities - Inspectors and Payment of Wages Authority., Minimum Wages & Floor wage- components, Procedure for fixation and revision of minimum wage, fixation of floor wage, Payment of Wages, Payment of Bonus and Equal remuneration ( Concept of same work of similar nature), Concept of Living wages, Administration of the Code - Central Advisory Board and State Advisory Boards, Adjudication - Payment of Dues, Claims and Audit, Enforcement of the Code (i) Inspector-Cum-Facilitator (ii) Offences and Penalties including Composition of offenses., Comparison with The Code on Wages, 2019",
+            "topics": [
+              "Definitions - employed person, factory, industrial and other",
+              "establishment, wages, etc., Authorized Deductions - Authorities",
+              "Inspectors and Payment of Wages Authority., Minimum Wages &",
+              "Floor wage- components, Procedure for fixation and revision of",
+              "minimum wage, fixation of floor wage, Payment of Wages,",
+              "Payment of Bonus and Equal remuneration ( Concept of same work",
+              "of similar nature), Concept of Living wages, Administration of the",
+              "Code - Central Advisory Board and State Advisory Boards,",
+              "Adjudication - Payment of Dues, Claims and Audit, Enforcement of",
+              "the Code (i) Inspector-Cum-Facilitator (ii) Offences and Penalties",
+              "including Composition of offenses., Comparison with The Code on",
+              "Wages, 2019"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Industrial Disputes",
+            "contact_hours": 12,
+            "topic_lines": [
               "Definitions- Industry, Workman, Industrial Dispute, Appropriate",
               "Government etc., Definition of strike and lockout' Analysis of",
               "Judicial interpretations, Regulation U/Ss 22,23,10-A(4A), and 10",
@@ -1016,49 +1258,10 @@
               "Jurisdiction, powers of adjudication authorities - Award and",
               "Settlement - Definition, Period of operation, binding nature, and",
               "Juridical Review of the award., Comparison with the code on",
-              "Industrial Relation 2020.",
-              "5 Law relating to Trade Union 7",
-              "Trade Union, Collective Bargaining, Trade Unions Act, 1926, The",
-              "Industrial Employment (Standing Orders) Act, 1946, Comparison",
-              "with the Code on Industrial Relation Code 2020.",
-              "Total Hours 45"
+              "Industrial Relation 2020."
             ],
-            "topics_text": "Development Labour Laws, Colonial labour law and policy, Labour capital conflicts: exploitation of labour, profit motive, poor bargaining power, poor working conditions, Labour Laws: Concept, Origin, Objectives & Classification, Critical Appraisal of First and Second National labour Commission, International Labour Organisation and Indian Labour Legislation (International labour Standards), Constitutional Framework and Industrial Relations, Five-Year Plans and Labour Policy, Changing Dimensions of Industrial Relations (post covid) 2 Occupational safety, health and working condition 12 Factories Act, 1948, Definitions - factory, manufacturing process, occupier' worker, hazardous process, etc., Provisions of the Factories Act relating to health, safety and welfare of workers - provisions relating to Hazardous process - provisions relating to working conditions of employment - Working hours, Weekly leave, Annual leave facility, Provisions relating to the regulation of employment of women, children and young persons., Obligations for the occupiers under the Factories Act, 1948, Comparison with the Code on Occupational Safety, health and Working condition. 3 The Payment of Wages 7 Definitions - employed person, factory, industrial and other establishment, wages, etc., Authorized Deductions - Authorities - Inspectors and Payment of Wages Authority., Minimum Wages & Floor wage- components, Procedure for fixation and revision of minimum wage, fixation of floor wage, Payment of Wages, Payment of Bonus and Equal remuneration ( Concept of same work of similar nature), Concept of Living wages, Administration of the Code - Central Advisory Board and State Advisory Boards, Adjudication - Payment of Dues, Claims and Audit, Enforcement of the Code (i) Inspector-Cum-Facilitator (ii) Offences and Penalties including Composition of offenses., Comparison with The Code on Wages, 2019 4 Industrial Disputes 12 Definitions- Industry, Workman, Industrial Dispute, Appropriate Government etc., Definition of strike and lockout' Analysis of Judicial interpretations, Regulation U/Ss 22,23,10-A(4A), and 10 (3) Illegal strikes and lockouts, penalties., Regulation of job losses concerning the provisions of chapters V-A and VB of the ID Act, l947, Authorities/Industrial Dispute resolution machinery - Works Committee, Conciliation and Board of Conciliation - powers and Functions, court of Inquiry, Grievance settlement (redressal) Authority, Voluntary Arbitration, Compulsory Adjudication- Government's power of reference, Section l0 - Critical analysis concerning decided cases., Compulsory Adjudication- (Labour Court, Tribunal, and National Tribunal) Composition, Qualification, Jurisdiction, powers of adjudication authorities - Award and Settlement - Definition, Period of operation, binding nature, and Juridical Review of the award., Comparison with the code on Industrial Relation 2020. 5 Law relating to Trade Union 7 Trade Union, Collective Bargaining, Trade Unions Act, 1926, The Industrial Employment (Standing Orders) Act, 1946, Comparison with the Code on Industrial Relation Code 2020. Total Hours 45",
+            "topics_text": "Definitions- Industry, Workman, Industrial Dispute, Appropriate Government etc., Definition of strike and lockout' Analysis of Judicial interpretations, Regulation U/Ss 22,23,10-A(4A), and 10 (3) Illegal strikes and lockouts, penalties., Regulation of job losses concerning the provisions of chapters V-A and VB of the ID Act, l947, Authorities/Industrial Dispute resolution machinery - Works Committee, Conciliation and Board of Conciliation - powers and Functions, court of Inquiry, Grievance settlement (redressal) Authority, Voluntary Arbitration, Compulsory Adjudication- Government's power of reference, Section l0 - Critical analysis concerning decided cases., Compulsory Adjudication- (Labour Court, Tribunal, and National Tribunal) Composition, Qualification, Jurisdiction, powers of adjudication authorities - Award and Settlement - Definition, Period of operation, binding nature, and Juridical Review of the award., Comparison with the code on Industrial Relation 2020.",
             "topics": [
-              "Development",
-              "Labour Laws, Colonial labour law and policy, Labour capital",
-              "conflicts: exploitation of labour, profit motive, poor bargaining",
-              "power, poor working conditions, Labour Laws: Concept, Origin,",
-              "Objectives & Classification, Critical Appraisal of First and Second",
-              "National labour Commission, International Labour Organisation and",
-              "Indian Labour Legislation (International labour Standards),",
-              "Constitutional Framework and Industrial Relations, Five-Year Plans",
-              "and Labour Policy, Changing Dimensions of Industrial Relations",
-              "(post covid)",
-              "2 Occupational safety, health and working condition 12",
-              "Factories Act, 1948, Definitions - factory, manufacturing process,",
-              "occupier' worker, hazardous process, etc., Provisions of the",
-              "Factories Act relating to health, safety and welfare of workers",
-              "provisions relating to Hazardous process - provisions relating to",
-              "working conditions of employment - Working hours, Weekly leave,",
-              "Annual leave facility, Provisions relating to the regulation of",
-              "employment of women, children and young persons., Obligations",
-              "for the occupiers under the Factories Act, 1948, Comparison with",
-              "the Code on Occupational Safety, health and Working condition.",
-              "3 The Payment of Wages 7",
-              "Definitions - employed person, factory, industrial and other",
-              "establishment, wages, etc., Authorized Deductions - Authorities",
-              "Inspectors and Payment of Wages Authority., Minimum Wages &",
-              "Floor wage- components, Procedure for fixation and revision of",
-              "minimum wage, fixation of floor wage, Payment of Wages,",
-              "Payment of Bonus and Equal remuneration ( Concept of same work",
-              "of similar nature), Concept of Living wages, Administration of the",
-              "Code - Central Advisory Board and State Advisory Boards,",
-              "Adjudication - Payment of Dues, Claims and Audit, Enforcement of",
-              "the Code (i) Inspector-Cum-Facilitator (ii) Offences and Penalties",
-              "including Composition of offenses., Comparison with The Code on",
-              "Wages, 2019",
-              "4 Industrial Disputes 12",
               "Definitions- Industry, Workman, Industrial Dispute, Appropriate",
               "Government etc., Definition of strike and lockout' Analysis of",
               "Judicial interpretations, Regulation U/Ss 22,23,10-A(4A), and 10",
@@ -1074,8 +1277,21 @@
               "Jurisdiction, powers of adjudication authorities - Award and",
               "Settlement - Definition, Period of operation, binding nature, and",
               "Juridical Review of the award., Comparison with the code on",
-              "Industrial Relation 2020.",
-              "5 Law relating to Trade Union 7",
+              "Industrial Relation 2020."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Law relating to Trade Union",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Trade Union, Collective Bargaining, Trade Unions Act, 1926, The",
+              "Industrial Employment (Standing Orders) Act, 1946, Comparison",
+              "with the Code on Industrial Relation Code 2020.",
+              "Total Hours 45"
+            ],
+            "topics_text": "Trade Union, Collective Bargaining, Trade Unions Act, 1926, The Industrial Employment (Standing Orders) Act, 1946, Comparison with the Code on Industrial Relation Code 2020. Total Hours 45",
+            "topics": [
               "Trade Union, Collective Bargaining, Trade Unions Act, 1926, The",
               "Industrial Employment (Standing Orders) Act, 1946, Comparison",
               "with the Code on Industrial Relation Code 2020.",
@@ -1184,8 +1400,22 @@
               "Property: Moveable & Immoveable Property, Tangible/Intangible",
               "(like Intellectual Properties), Instrument, Attestation, Registration,",
               "Actionable claim, Notice, Differences between actionable claims",
-              "and Negotiable Instruments, Notice",
-              "2 General Principles and Modes of Transfer 12",
+              "and Negotiable Instruments, Notice"
+            ],
+            "topics_text": "Concept and meaning of property - new property., Classification of Property: Moveable & Immoveable Property, Tangible/Intangible (like Intellectual Properties), Instrument, Attestation, Registration, Actionable claim, Notice, Differences between actionable claims and Negotiable Instruments, Notice",
+            "topics": [
+              "Concept and meaning of property - new property., Classification of",
+              "Property: Moveable & Immoveable Property, Tangible/Intangible",
+              "(like Intellectual Properties), Instrument, Attestation, Registration,",
+              "Actionable claim, Notice, Differences between actionable claims",
+              "and Negotiable Instruments, Notice"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "General Principles and Modes of Transfer",
+            "contact_hours": 12,
+            "topic_lines": [
               "Transferability and nontransferability of Property, Modes of",
               "Transfer - Oral, Conditional, Conditional Transfer, Restrictions on",
               "Alienation of Property, Restrictions on Enjoyment of Property,",
@@ -1195,26 +1425,87 @@
               "Interests, Transfers with Conditions, Doctrine of Election,",
               "Apportionment of property, Transfer by Ostensible Owner, Feeding",
               "the Grant by Estoppel, Doctrine of Lis Pendens, Concept of",
-              "Fraudulent Transfer, Doctrine of Part Performance",
-              "3 Sale and Mortgage of Immovable Property 8",
+              "Fraudulent Transfer, Doctrine of Part Performance"
+            ],
+            "topics_text": "Transferability and nontransferability of Property, Modes of Transfer - Oral, Conditional, Conditional Transfer, Restrictions on Alienation of Property, Restrictions on Enjoyment of Property, Transfer to Unborn Person, Future Transfer, Transfer for the benefit of unborn persons Rule against perpetuity), Class gift Transfer in perpetuity for the benefit of the public, Vested and Contingent Interests, Transfers with Conditions, Doctrine of Election, Apportionment of property, Transfer by Ostensible Owner, Feeding the Grant by Estoppel, Doctrine of Lis Pendens, Concept of Fraudulent Transfer, Doctrine of Part Performance",
+            "topics": [
+              "Transferability and nontransferability of Property, Modes of",
+              "Transfer - Oral, Conditional, Conditional Transfer, Restrictions on",
+              "Alienation of Property, Restrictions on Enjoyment of Property,",
+              "Transfer to Unborn Person, Future Transfer, Transfer for the benefit",
+              "of unborn persons Rule against perpetuity), Class gift Transfer in",
+              "perpetuity for the benefit of the public, Vested and Contingent",
+              "Interests, Transfers with Conditions, Doctrine of Election,",
+              "Apportionment of property, Transfer by Ostensible Owner, Feeding",
+              "the Grant by Estoppel, Doctrine of Lis Pendens, Concept of",
+              "Fraudulent Transfer, Doctrine of Part Performance"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Sale and Mortgage of Immovable Property",
+            "contact_hours": 8,
+            "topic_lines": [
               "Sale of Immovable Property ð Meaning and Essentials, Rights and",
               "Liabilities of Buyer and Seller, Marshaling by Subsequent",
               "Purchaser, Mortgage ð Meaning, Essentials, and Kinds of Mortgage,",
               "Rights of Mortgagor, Rights of Mortgagee, Right of a Mortgagee",
               "against other Mortgagees, he Doctrine of Marshalling and",
               "Contribution, Redemption of Mortgage, Clog on redemption, Right",
-              "to Foreclosure, Doctrine of Subrogation",
-              "4 Charge and Lease 5",
+              "to Foreclosure, Doctrine of Subrogation"
+            ],
+            "topics_text": "Sale of Immovable Property ð Meaning and Essentials, Rights and Liabilities of Buyer and Seller, Marshaling by Subsequent Purchaser, Mortgage ð Meaning, Essentials, and Kinds of Mortgage, Rights of Mortgagor, Rights of Mortgagee, Right of a Mortgagee against other Mortgagees, he Doctrine of Marshalling and Contribution, Redemption of Mortgage, Clog on redemption, Right to Foreclosure, Doctrine of Subrogation",
+            "topics": [
+              "Sale of Immovable Property ð Meaning and Essentials, Rights and",
+              "Liabilities of Buyer and Seller, Marshaling by Subsequent",
+              "Purchaser, Mortgage ð Meaning, Essentials, and Kinds of Mortgage,",
+              "Rights of Mortgagor, Rights of Mortgagee, Right of a Mortgagee",
+              "against other Mortgagees, he Doctrine of Marshalling and",
+              "Contribution, Redemption of Mortgage, Clog on redemption, Right",
+              "to Foreclosure, Doctrine of Subrogation"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Charge and Lease",
+            "contact_hours": 5,
+            "topic_lines": [
               "Charge -Meaning and Essentials, Lease ð Lease & License,",
               "Duration of Lease, Tenancy at will, Tenancy by sufferance,",
               "Tenancy by holding over, Determination of lease, Waiver, Relief",
               "against forfeiture for nonpayment of rent and effect of Surrender,",
-              "Exemption for agricultural purposes",
-              "5 Gift and Actionable Claim 5",
+              "Exemption for agricultural purposes"
+            ],
+            "topics_text": "Charge -Meaning and Essentials, Lease ð Lease & License, Duration of Lease, Tenancy at will, Tenancy by sufferance, Tenancy by holding over, Determination of lease, Waiver, Relief against forfeiture for nonpayment of rent and effect of Surrender, Exemption for agricultural purposes",
+            "topics": [
+              "Charge -Meaning and Essentials, Lease ð Lease & License,",
+              "Duration of Lease, Tenancy at will, Tenancy by sufferance,",
+              "Tenancy by holding over, Determination of lease, Waiver, Relief",
+              "against forfeiture for nonpayment of rent and effect of Surrender,",
+              "Exemption for agricultural purposes"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Gift and Actionable Claim",
+            "contact_hours": 5,
+            "topic_lines": [
               "Gift ð Meaning and Essentials of Gift, Kinds & Modes of Making",
               "Gifts, Revocation of Gift, Donatio Mortis Causa, Exchange,",
-              "Actionable Claim ð Meaning, Transfer",
-              "6 Allied Laws 10",
+              "Actionable Claim ð Meaning, Transfer"
+            ],
+            "topics_text": "Gift ð Meaning and Essentials of Gift, Kinds & Modes of Making Gifts, Revocation of Gift, Donatio Mortis Causa, Exchange, Actionable Claim ð Meaning, Transfer",
+            "topics": [
+              "Gift ð Meaning and Essentials of Gift, Kinds & Modes of Making",
+              "Gifts, Revocation of Gift, Donatio Mortis Causa, Exchange,",
+              "Actionable Claim ð Meaning, Transfer"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Allied Laws",
+            "contact_hours": 10,
+            "topic_lines": [
               "Real Estate (Regulation and Development) Act, 2016, Imposition,",
               "Acquisition, and Transfer of Easement, The Incidents of Easement,",
               "The Disturbance of Easement, The Extinction, Suspension, and",
@@ -1224,43 +1515,8 @@
               "Premises in Disturbed Areas Act, 1991",
               "Total Hours 45"
             ],
-            "topics_text": "Concept and meaning of property - new property., Classification of Property: Moveable & Immoveable Property, Tangible/Intangible (like Intellectual Properties), Instrument, Attestation, Registration, Actionable claim, Notice, Differences between actionable claims and Negotiable Instruments, Notice 2 General Principles and Modes of Transfer 12 Transferability and nontransferability of Property, Modes of Transfer - Oral, Conditional, Conditional Transfer, Restrictions on Alienation of Property, Restrictions on Enjoyment of Property, Transfer to Unborn Person, Future Transfer, Transfer for the benefit of unborn persons Rule against perpetuity), Class gift Transfer in perpetuity for the benefit of the public, Vested and Contingent Interests, Transfers with Conditions, Doctrine of Election, Apportionment of property, Transfer by Ostensible Owner, Feeding the Grant by Estoppel, Doctrine of Lis Pendens, Concept of Fraudulent Transfer, Doctrine of Part Performance 3 Sale and Mortgage of Immovable Property 8 Sale of Immovable Property ð Meaning and Essentials, Rights and Liabilities of Buyer and Seller, Marshaling by Subsequent Purchaser, Mortgage ð Meaning, Essentials, and Kinds of Mortgage, Rights of Mortgagor, Rights of Mortgagee, Right of a Mortgagee against other Mortgagees, he Doctrine of Marshalling and Contribution, Redemption of Mortgage, Clog on redemption, Right to Foreclosure, Doctrine of Subrogation 4 Charge and Lease 5 Charge -Meaning and Essentials, Lease ð Lease & License, Duration of Lease, Tenancy at will, Tenancy by sufferance, Tenancy by holding over, Determination of lease, Waiver, Relief against forfeiture for nonpayment of rent and effect of Surrender, Exemption for agricultural purposes 5 Gift and Actionable Claim 5 Gift ð Meaning and Essentials of Gift, Kinds & Modes of Making Gifts, Revocation of Gift, Donatio Mortis Causa, Exchange, Actionable Claim ð Meaning, Transfer 6 Allied Laws 10 Real Estate (Regulation and Development) Act, 2016, Imposition, Acquisition, and Transfer of Easement, The Incidents of Easement, The Disturbance of Easement, The Extinction, Suspension, and Revival of Easement, Sections 17 and 49 of the Registration Act, 1908, An Overview of “Gujarat Prohibition of Transfer of Immovable Property and Provisions of Tenants from Eviction from Premises in Disturbed Areas Act, 1991 Total Hours 45",
+            "topics_text": "Real Estate (Regulation and Development) Act, 2016, Imposition, Acquisition, and Transfer of Easement, The Incidents of Easement, The Disturbance of Easement, The Extinction, Suspension, and Revival of Easement, Sections 17 and 49 of the Registration Act, 1908, An Overview of “Gujarat Prohibition of Transfer of Immovable Property and Provisions of Tenants from Eviction from Premises in Disturbed Areas Act, 1991 Total Hours 45",
             "topics": [
-              "Concept and meaning of property - new property., Classification of",
-              "Property: Moveable & Immoveable Property, Tangible/Intangible",
-              "(like Intellectual Properties), Instrument, Attestation, Registration,",
-              "Actionable claim, Notice, Differences between actionable claims",
-              "and Negotiable Instruments, Notice",
-              "2 General Principles and Modes of Transfer 12",
-              "Transferability and nontransferability of Property, Modes of",
-              "Transfer - Oral, Conditional, Conditional Transfer, Restrictions on",
-              "Alienation of Property, Restrictions on Enjoyment of Property,",
-              "Transfer to Unborn Person, Future Transfer, Transfer for the benefit",
-              "of unborn persons Rule against perpetuity), Class gift Transfer in",
-              "perpetuity for the benefit of the public, Vested and Contingent",
-              "Interests, Transfers with Conditions, Doctrine of Election,",
-              "Apportionment of property, Transfer by Ostensible Owner, Feeding",
-              "the Grant by Estoppel, Doctrine of Lis Pendens, Concept of",
-              "Fraudulent Transfer, Doctrine of Part Performance",
-              "3 Sale and Mortgage of Immovable Property 8",
-              "Sale of Immovable Property ð Meaning and Essentials, Rights and",
-              "Liabilities of Buyer and Seller, Marshaling by Subsequent",
-              "Purchaser, Mortgage ð Meaning, Essentials, and Kinds of Mortgage,",
-              "Rights of Mortgagor, Rights of Mortgagee, Right of a Mortgagee",
-              "against other Mortgagees, he Doctrine of Marshalling and",
-              "Contribution, Redemption of Mortgage, Clog on redemption, Right",
-              "to Foreclosure, Doctrine of Subrogation",
-              "4 Charge and Lease 5",
-              "Charge -Meaning and Essentials, Lease ð Lease & License,",
-              "Duration of Lease, Tenancy at will, Tenancy by sufferance,",
-              "Tenancy by holding over, Determination of lease, Waiver, Relief",
-              "against forfeiture for nonpayment of rent and effect of Surrender,",
-              "Exemption for agricultural purposes",
-              "5 Gift and Actionable Claim 5",
-              "Gift ð Meaning and Essentials of Gift, Kinds & Modes of Making",
-              "Gifts, Revocation of Gift, Donatio Mortis Causa, Exchange,",
-              "Actionable Claim ð Meaning, Transfer",
-              "6 Allied Laws 10",
               "Real Estate (Regulation and Development) Act, 2016, Imposition,",
               "Acquisition, and Transfer of Easement, The Incidents of Easement,",
               "The Disturbance of Easement, The Extinction, Suspension, and",

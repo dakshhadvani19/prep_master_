@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "generated_at_utc": "2026-10-12T12:47:27+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
   "course": {
@@ -61,29 +61,9 @@
               "Economic Enquiry (Inductive and Deductive) , Mathematical Tools",
               "used in the Understanding of Law and Economics , Economic",
               "Analysis of Law, Central Problems of Economics, Positive vs",
-              "Normative economics",
-              "2 Theory of Consumer Behavior 5",
-              "Concept of Utility, Cardinal and Ordinal Approaches, The Law of",
-              "Diminishing Marginal Utility by Marshall, The Concept of",
-              "Consumer Surplus and Consumer Equilibrium, The Equi-marginal",
-              "principle",
-              "3 The Theory of Demand and Supply 8",
-              "The Theory of Demand, The Theory of Supply, Determination of",
-              "Equilibrium between Demand and Supply, Elasticity of Demand",
-              "(Types), Elasticity of Supply (Types)",
-              "4 The Theory of Production and 8",
-              "Concept and Features of Production, Function (Output and Inputs),",
-              "Types of Productivity and Revenue, Types of Costs, Conditions of",
-              "Optimality of Operation",
-              "5 Different Market Structures 6",
-              "Perfect Competition , Monopolistic Competition, Monopoly,",
-              "Oligopoly",
-              "6 Applications of Economics to Law 10",
-              "The Theory of Bargaining, Game Theory (Prisoner’s Dilemma),",
-              "Public and Private Goods, Role of Institutions and Organizations",
-              "Total Hours 45"
+              "Normative economics"
             ],
-            "topics_text": "Concept and Definitions of Economics Definitions of Economics Macro Vs Micro Economics Microeconomics (Scope, Importance and Limitations), Principles of Micro Economics (a) How Do People Make Decisions? (Principles of Incentives, Rationality and Opportunity Cost) (b) How Do People Interact? (Principles of Maximization, Equilibrium and Efficiency), Methodology of Economic Enquiry (Inductive and Deductive) , Mathematical Tools used in the Understanding of Law and Economics , Economic Analysis of Law, Central Problems of Economics, Positive vs Normative economics 2 Theory of Consumer Behavior 5 Concept of Utility, Cardinal and Ordinal Approaches, The Law of Diminishing Marginal Utility by Marshall, The Concept of Consumer Surplus and Consumer Equilibrium, The Equi-marginal principle 3 The Theory of Demand and Supply 8 The Theory of Demand, The Theory of Supply, Determination of Equilibrium between Demand and Supply, Elasticity of Demand (Types), Elasticity of Supply (Types) 4 The Theory of Production and 8 Concept and Features of Production, Function (Output and Inputs), Types of Productivity and Revenue, Types of Costs, Conditions of Optimality of Operation 5 Different Market Structures 6 Perfect Competition , Monopolistic Competition, Monopoly, Oligopoly 6 Applications of Economics to Law 10 The Theory of Bargaining, Game Theory (Prisoner’s Dilemma), Public and Private Goods, Role of Institutions and Organizations Total Hours 45",
+            "topics_text": "Concept and Definitions of Economics Definitions of Economics Macro Vs Micro Economics Microeconomics (Scope, Importance and Limitations), Principles of Micro Economics (a) How Do People Make Decisions? (Principles of Incentives, Rationality and Opportunity Cost) (b) How Do People Interact? (Principles of Maximization, Equilibrium and Efficiency), Methodology of Economic Enquiry (Inductive and Deductive) , Mathematical Tools used in the Understanding of Law and Economics , Economic Analysis of Law, Central Problems of Economics, Positive vs Normative economics",
             "topics": [
               "Concept and Definitions of Economics Definitions of Economics",
               "Macro Vs Micro Economics Microeconomics (Scope, Importance",
@@ -94,24 +74,84 @@
               "Economic Enquiry (Inductive and Deductive) , Mathematical Tools",
               "used in the Understanding of Law and Economics , Economic",
               "Analysis of Law, Central Problems of Economics, Positive vs",
-              "Normative economics",
-              "2 Theory of Consumer Behavior 5",
+              "Normative economics"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Theory of Consumer Behavior",
+            "contact_hours": 5,
+            "topic_lines": [
               "Concept of Utility, Cardinal and Ordinal Approaches, The Law of",
               "Diminishing Marginal Utility by Marshall, The Concept of",
               "Consumer Surplus and Consumer Equilibrium, The Equi-marginal",
-              "principle",
-              "3 The Theory of Demand and Supply 8",
+              "principle"
+            ],
+            "topics_text": "Concept of Utility, Cardinal and Ordinal Approaches, The Law of Diminishing Marginal Utility by Marshall, The Concept of Consumer Surplus and Consumer Equilibrium, The Equi-marginal principle",
+            "topics": [
+              "Concept of Utility, Cardinal and Ordinal Approaches, The Law of",
+              "Diminishing Marginal Utility by Marshall, The Concept of",
+              "Consumer Surplus and Consumer Equilibrium, The Equi-marginal",
+              "principle"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "The Theory of Demand and Supply",
+            "contact_hours": 8,
+            "topic_lines": [
               "The Theory of Demand, The Theory of Supply, Determination of",
               "Equilibrium between Demand and Supply, Elasticity of Demand",
-              "(Types), Elasticity of Supply (Types)",
-              "4 The Theory of Production and 8",
+              "(Types), Elasticity of Supply (Types)"
+            ],
+            "topics_text": "The Theory of Demand, The Theory of Supply, Determination of Equilibrium between Demand and Supply, Elasticity of Demand (Types), Elasticity of Supply (Types)",
+            "topics": [
+              "The Theory of Demand, The Theory of Supply, Determination of",
+              "Equilibrium between Demand and Supply, Elasticity of Demand",
+              "(Types), Elasticity of Supply (Types)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "The Theory of Production and",
+            "contact_hours": 8,
+            "topic_lines": [
               "Concept and Features of Production, Function (Output and Inputs),",
               "Types of Productivity and Revenue, Types of Costs, Conditions of",
-              "Optimality of Operation",
-              "5 Different Market Structures 6",
+              "Optimality of Operation"
+            ],
+            "topics_text": "Concept and Features of Production, Function (Output and Inputs), Types of Productivity and Revenue, Types of Costs, Conditions of Optimality of Operation",
+            "topics": [
+              "Concept and Features of Production, Function (Output and Inputs),",
+              "Types of Productivity and Revenue, Types of Costs, Conditions of",
+              "Optimality of Operation"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Different Market Structures",
+            "contact_hours": 6,
+            "topic_lines": [
               "Perfect Competition , Monopolistic Competition, Monopoly,",
-              "Oligopoly",
-              "6 Applications of Economics to Law 10",
+              "Oligopoly"
+            ],
+            "topics_text": "Perfect Competition , Monopolistic Competition, Monopoly, Oligopoly",
+            "topics": [
+              "Perfect Competition , Monopolistic Competition, Monopoly,",
+              "Oligopoly"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Applications of Economics to Law",
+            "contact_hours": 10,
+            "topic_lines": [
+              "The Theory of Bargaining, Game Theory (Prisoner’s Dilemma),",
+              "Public and Private Goods, Role of Institutions and Organizations",
+              "Total Hours 45"
+            ],
+            "topics_text": "The Theory of Bargaining, Game Theory (Prisoner’s Dilemma), Public and Private Goods, Role of Institutions and Organizations Total Hours 45",
+            "topics": [
               "The Theory of Bargaining, Game Theory (Prisoner’s Dilemma),",
               "Public and Private Goods, Role of Institutions and Organizations",
               "Total Hours 45"
@@ -218,53 +258,9 @@
               "Revocation of offer and acceptance, Types of Contracts- Standard",
               "form of contract, Essentials of a Valid Contract, Formation of E-",
               "Contract, Smart-contracts-Meaning, relevance, AI-based contracts",
-              "and agreements, Government Contracts",
-              "2 Consideration, Capacity to Contract, Free Consent, Legal 8",
-              "Object",
-              "Consideration: Doctrine of consideration, Essential of valid",
-              "Consideration, The rule =no consideration no contract?- its",
-              "exception‘, the inadequacy of consideration, nudum pactum, Privity",
-              "of contract and of consideration, Unlawful consideration and its",
-              "effects,, Capacity to Contract: Natural Person Agreements by minor,",
-              "Unsoundness of mind, Legal Person, Company, State,",
-              "Disqualification under Law, Free Consent – Definition, Factors",
-              "vitiating free consent: Coercion, Undue Influence,",
-              "Misrepresentation, Fraud, Mistake, etc., Legal Object: Forbidden by",
-              "Law, Void and Illegal Contracts, Defeat the provisions of any law,",
-              "Fraudulent Purpose, Agreement injurious to the person or property",
-              "of another, Opposed to Public Policy.",
-              "3 Void Agreements, Contingent Contracts 7",
-              "Agreements in Restraint of Marriage, Agreements in Restraint of",
-              "Trade., Agreement in Restraint of Legal Proceedings, Ambiguous",
-              "and Uncertain Agreements, Agreement by Way of Wager.,",
-              "Contingent Contract, Enforcement of Contingent contract",
-              "4 Performance of Contract, Discharge of Contract 7",
-              "Offer of performance or tender, Essential of a Valid Tender, Effect",
-              "of failure to perform the Contract in time, Appropriation of",
-              "Payment, Discharge by Performance, Discharge by Breach of",
-              "Contract, Discharge by Impossibility of Performance,, Discharge by",
-              "Agreement and Novation, Rescission and Alteration, Force Majeure",
-              "5 Quasi -Contracts, Breach of Contract, Remedies for Breach of 8",
-              "Contract",
-              "Claim for necessaries supplied to incapable person, Reimbursement",
-              "of person paying money due by another, Obligation of person",
-              "enjoying the benefit of non-gratuitous act, Responsibility of finder",
-              "of goods, Liability of person to whom money is paid, or thing is",
-              "delivered by mistake or under coercion, Meaning, kinds of breach,",
-              "remedies for breach; Remedies generally, Damages: measure of",
-              "damages, remoteness of damages, Quantum Meruit, Contract",
-              "Drafting, Salient features of Registration Act & Stamp Act-",
-              "Meaning of Stamping, Registration and Franking.",
-              "6 Specific Relief Act, 1963 7",
-              "Specific performance of contract-Recovering possession of property",
-              "specific performance of contract, Contract that can be specifically",
-              "enforced, Persons for or against whom specific enforcement can be",
-              "ordered, Discretionary powers of Contract, Ratification or",
-              "instruments-Recession and cancellation, Injunction- Temporary,",
-              "Perpetual, Mandatory, Prohibitory, Declaratory Decree",
-              "Total Hours 45"
+              "and agreements, Government Contracts"
             ],
-            "topics_text": "The historical development of contract Law-Common Law & Indian Origin, Meaning & Purpose of Contract, Definitions & Formation of Contract – Agreement and Contract- Proposal, Offer, and invitation to offer, Communication of Proposal Communication when complete, Intention to enter into a Contract, Family & Social matters, Business matters, Acceptance, Agreement,Contract, Revocation of offer and acceptance, Types of Contracts- Standard form of contract, Essentials of a Valid Contract, Formation of E- Contract, Smart-contracts-Meaning, relevance, AI-based contracts and agreements, Government Contracts 2 Consideration, Capacity to Contract, Free Consent, Legal 8 Object Consideration: Doctrine of consideration, Essential of valid Consideration, The rule =no consideration no contract?- its exception‘, the inadequacy of consideration, nudum pactum, Privity of contract and of consideration, Unlawful consideration and its effects,, Capacity to Contract: Natural Person Agreements by minor, Unsoundness of mind, Legal Person, Company, State, Disqualification under Law, Free Consent – Definition, Factors vitiating free consent: Coercion, Undue Influence, Misrepresentation, Fraud, Mistake, etc., Legal Object: Forbidden by Law, Void and Illegal Contracts, Defeat the provisions of any law, Fraudulent Purpose, Agreement injurious to the person or property of another, Opposed to Public Policy. 3 Void Agreements, Contingent Contracts 7 Agreements in Restraint of Marriage, Agreements in Restraint of Trade., Agreement in Restraint of Legal Proceedings, Ambiguous and Uncertain Agreements, Agreement by Way of Wager., Contingent Contract, Enforcement of Contingent contract 4 Performance of Contract, Discharge of Contract 7 Offer of performance or tender, Essential of a Valid Tender, Effect of failure to perform the Contract in time, Appropriation of Payment, Discharge by Performance, Discharge by Breach of Contract, Discharge by Impossibility of Performance,, Discharge by Agreement and Novation, Rescission and Alteration, Force Majeure 5 Quasi -Contracts, Breach of Contract, Remedies for Breach of 8 Contract Claim for necessaries supplied to incapable person, Reimbursement of person paying money due by another, Obligation of person enjoying the benefit of non-gratuitous act, Responsibility of finder of goods, Liability of person to whom money is paid, or thing is delivered by mistake or under coercion, Meaning, kinds of breach, remedies for breach; Remedies generally, Damages: measure of damages, remoteness of damages, Quantum Meruit, Contract Drafting, Salient features of Registration Act & Stamp Act- Meaning of Stamping, Registration and Franking. 6 Specific Relief Act, 1963 7 Specific performance of contract-Recovering possession of property specific performance of contract, Contract that can be specifically enforced, Persons for or against whom specific enforcement can be ordered, Discretionary powers of Contract, Ratification or instruments-Recession and cancellation, Injunction- Temporary, Perpetual, Mandatory, Prohibitory, Declaratory Decree Total Hours 45",
+            "topics_text": "The historical development of contract Law-Common Law & Indian Origin, Meaning & Purpose of Contract, Definitions & Formation of Contract – Agreement and Contract- Proposal, Offer, and invitation to offer, Communication of Proposal Communication when complete, Intention to enter into a Contract, Family & Social matters, Business matters, Acceptance, Agreement,Contract, Revocation of offer and acceptance, Types of Contracts- Standard form of contract, Essentials of a Valid Contract, Formation of E- Contract, Smart-contracts-Meaning, relevance, AI-based contracts and agreements, Government Contracts",
             "topics": [
               "The historical development of contract Law-Common Law & Indian",
               "Origin, Meaning & Purpose of Contract, Definitions & Formation of",
@@ -275,8 +271,14 @@
               "Revocation of offer and acceptance, Types of Contracts- Standard",
               "form of contract, Essentials of a Valid Contract, Formation of E",
               "Contract, Smart-contracts-Meaning, relevance, AI-based contracts",
-              "and agreements, Government Contracts",
-              "2 Consideration, Capacity to Contract, Free Consent, Legal 8",
+              "and agreements, Government Contracts"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Consideration, Capacity to Contract, Free Consent, Legal",
+            "contact_hours": 8,
+            "topic_lines": [
               "Object",
               "Consideration: Doctrine of consideration, Essential of valid",
               "Consideration, The rule =no consideration no contract?- its",
@@ -289,19 +291,81 @@
               "Misrepresentation, Fraud, Mistake, etc., Legal Object: Forbidden by",
               "Law, Void and Illegal Contracts, Defeat the provisions of any law,",
               "Fraudulent Purpose, Agreement injurious to the person or property",
-              "of another, Opposed to Public Policy.",
-              "3 Void Agreements, Contingent Contracts 7",
+              "of another, Opposed to Public Policy."
+            ],
+            "topics_text": "Object Consideration: Doctrine of consideration, Essential of valid Consideration, The rule =no consideration no contract?- its exception‘, the inadequacy of consideration, nudum pactum, Privity of contract and of consideration, Unlawful consideration and its effects,, Capacity to Contract: Natural Person Agreements by minor, Unsoundness of mind, Legal Person, Company, State, Disqualification under Law, Free Consent – Definition, Factors vitiating free consent: Coercion, Undue Influence, Misrepresentation, Fraud, Mistake, etc., Legal Object: Forbidden by Law, Void and Illegal Contracts, Defeat the provisions of any law, Fraudulent Purpose, Agreement injurious to the person or property of another, Opposed to Public Policy.",
+            "topics": [
+              "Object",
+              "Consideration: Doctrine of consideration, Essential of valid",
+              "Consideration, The rule =no consideration no contract?- its",
+              "exception‘, the inadequacy of consideration, nudum pactum, Privity",
+              "of contract and of consideration, Unlawful consideration and its",
+              "effects,, Capacity to Contract: Natural Person Agreements by minor,",
+              "Unsoundness of mind, Legal Person, Company, State,",
+              "Disqualification under Law, Free Consent – Definition, Factors",
+              "vitiating free consent: Coercion, Undue Influence,",
+              "Misrepresentation, Fraud, Mistake, etc., Legal Object: Forbidden by",
+              "Law, Void and Illegal Contracts, Defeat the provisions of any law,",
+              "Fraudulent Purpose, Agreement injurious to the person or property",
+              "of another, Opposed to Public Policy."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Void Agreements, Contingent Contracts",
+            "contact_hours": 7,
+            "topic_lines": [
               "Agreements in Restraint of Marriage, Agreements in Restraint of",
               "Trade., Agreement in Restraint of Legal Proceedings, Ambiguous",
               "and Uncertain Agreements, Agreement by Way of Wager.,",
-              "Contingent Contract, Enforcement of Contingent contract",
-              "4 Performance of Contract, Discharge of Contract 7",
+              "Contingent Contract, Enforcement of Contingent contract"
+            ],
+            "topics_text": "Agreements in Restraint of Marriage, Agreements in Restraint of Trade., Agreement in Restraint of Legal Proceedings, Ambiguous and Uncertain Agreements, Agreement by Way of Wager., Contingent Contract, Enforcement of Contingent contract",
+            "topics": [
+              "Agreements in Restraint of Marriage, Agreements in Restraint of",
+              "Trade., Agreement in Restraint of Legal Proceedings, Ambiguous",
+              "and Uncertain Agreements, Agreement by Way of Wager.,",
+              "Contingent Contract, Enforcement of Contingent contract"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Performance of Contract, Discharge of Contract",
+            "contact_hours": 7,
+            "topic_lines": [
               "Offer of performance or tender, Essential of a Valid Tender, Effect",
               "of failure to perform the Contract in time, Appropriation of",
               "Payment, Discharge by Performance, Discharge by Breach of",
               "Contract, Discharge by Impossibility of Performance,, Discharge by",
-              "Agreement and Novation, Rescission and Alteration, Force Majeure",
-              "5 Quasi -Contracts, Breach of Contract, Remedies for Breach of 8",
+              "Agreement and Novation, Rescission and Alteration, Force Majeure"
+            ],
+            "topics_text": "Offer of performance or tender, Essential of a Valid Tender, Effect of failure to perform the Contract in time, Appropriation of Payment, Discharge by Performance, Discharge by Breach of Contract, Discharge by Impossibility of Performance,, Discharge by Agreement and Novation, Rescission and Alteration, Force Majeure",
+            "topics": [
+              "Offer of performance or tender, Essential of a Valid Tender, Effect",
+              "of failure to perform the Contract in time, Appropriation of",
+              "Payment, Discharge by Performance, Discharge by Breach of",
+              "Contract, Discharge by Impossibility of Performance,, Discharge by",
+              "Agreement and Novation, Rescission and Alteration, Force Majeure"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Quasi -Contracts, Breach of Contract, Remedies for Breach of",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Contract",
+              "Claim for necessaries supplied to incapable person, Reimbursement",
+              "of person paying money due by another, Obligation of person",
+              "enjoying the benefit of non-gratuitous act, Responsibility of finder",
+              "of goods, Liability of person to whom money is paid, or thing is",
+              "delivered by mistake or under coercion, Meaning, kinds of breach,",
+              "remedies for breach; Remedies generally, Damages: measure of",
+              "damages, remoteness of damages, Quantum Meruit, Contract",
+              "Drafting, Salient features of Registration Act & Stamp Act-",
+              "Meaning of Stamping, Registration and Franking."
+            ],
+            "topics_text": "Contract Claim for necessaries supplied to incapable person, Reimbursement of person paying money due by another, Obligation of person enjoying the benefit of non-gratuitous act, Responsibility of finder of goods, Liability of person to whom money is paid, or thing is delivered by mistake or under coercion, Meaning, kinds of breach, remedies for breach; Remedies generally, Damages: measure of damages, remoteness of damages, Quantum Meruit, Contract Drafting, Salient features of Registration Act & Stamp Act- Meaning of Stamping, Registration and Franking.",
+            "topics": [
               "Contract",
               "Claim for necessaries supplied to incapable person, Reimbursement",
               "of person paying money due by another, Obligation of person",
@@ -312,8 +376,24 @@
               "Remedies generally, Damages: measure of",
               "damages, remoteness of damages, Quantum Meruit, Contract",
               "Drafting, Salient features of Registration Act & Stamp Act",
-              "Meaning of Stamping, Registration and Franking.",
-              "6 Specific Relief Act, 1963 7",
+              "Meaning of Stamping, Registration and Franking."
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Specific Relief Act, 1963",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Specific performance of contract-Recovering possession of property",
+              "specific performance of contract, Contract that can be specifically",
+              "enforced, Persons for or against whom specific enforcement can be",
+              "ordered, Discretionary powers of Contract, Ratification or",
+              "instruments-Recession and cancellation, Injunction- Temporary,",
+              "Perpetual, Mandatory, Prohibitory, Declaratory Decree",
+              "Total Hours 45"
+            ],
+            "topics_text": "Specific performance of contract-Recovering possession of property specific performance of contract, Contract that can be specifically enforced, Persons for or against whom specific enforcement can be ordered, Discretionary powers of Contract, Ratification or instruments-Recession and cancellation, Injunction- Temporary, Perpetual, Mandatory, Prohibitory, Declaratory Decree Total Hours 45",
+            "topics": [
               "Specific performance of contract-Recovering possession of property",
               "specific performance of contract, Contract that can be specifically",
               "enforced, Persons for or against whom specific enforcement can be",
@@ -429,17 +509,60 @@
               "Common Legal Systems iii. Religious Legal Systems iv. Customary",
               "Legal Systems v. Hybrid Legal Systems, Difference between Bill,",
               "Act, Code, Statute, Ordinance, Order, Bye-Law, Rule, Regulation,",
-              "Department Circular, and Notification.",
-              "2 Sources of Law 12",
+              "Department Circular, and Notification."
+            ],
+            "topics_text": "Concept and Definition of law and legal system – Law, A Law, The Law, Function of Law, Classification of Law: i. Public and Private Law ii. Substantive and Procedural Law iii. Municipal and International Law, Kinds of Legal Systems i. Civil Legal Systems ii. Common Legal Systems iii. Religious Legal Systems iv. Customary Legal Systems v. Hybrid Legal Systems, Difference between Bill, Act, Code, Statute, Ordinance, Order, Bye-Law, Rule, Regulation, Department Circular, and Notification.",
+            "topics": [
+              "Concept and Definition of law and legal system – Law, A Law, The",
+              "Law, Function of Law, Classification of Law: i. Public and Private",
+              "Law ii. Substantive and Procedural Law iii. Municipal and",
+              "International Law, Kinds of Legal Systems i. Civil Legal Systems ii.",
+              "Common Legal Systems iii. Religious Legal Systems iv. Customary",
+              "Legal Systems v. Hybrid Legal Systems, Difference between Bill,",
+              "Act, Code, Statute, Ordinance, Order, Bye-Law, Rule, Regulation,",
+              "Department Circular, and Notification."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Sources of Law",
+            "contact_hours": 12,
+            "topic_lines": [
               "Custom , Precedent, Legislation, Statutory Interpretation,",
               "Legislative History, • Commentaries., Sources of International-",
               "Treaty law, international customary law, and general principles of",
-              "law recognized by civilized nations",
-              "3 Basic Concepts of the Indian Legal System 10",
+              "law recognized by civilized nations"
+            ],
+            "topics_text": "Custom , Precedent, Legislation, Statutory Interpretation, Legislative History, • Commentaries., Sources of International- Treaty law, international customary law, and general principles of law recognized by civilized nations",
+            "topics": [
+              "Custom , Precedent, Legislation, Statutory Interpretation,",
+              "Legislative History,",
+              "Commentaries., Sources of International",
+              "Treaty law, international customary law, and general principles of",
+              "law recognized by civilized nations"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Basic Concepts of the Indian Legal System",
+            "contact_hours": 10,
+            "topic_lines": [
               "Indian Constitution: Salient Features, Basic Structure Doctrine, The",
               "Rule of Law, Doctrine of Separation of Powers, Judicial system in",
-              "India i. Hierarchy of Courts ii. Jurisdiction of the Courts",
-              "4 Legal Writing and Research 12",
+              "India i. Hierarchy of Courts ii. Jurisdiction of the Courts"
+            ],
+            "topics_text": "Indian Constitution: Salient Features, Basic Structure Doctrine, The Rule of Law, Doctrine of Separation of Powers, Judicial system in India i. Hierarchy of Courts ii. Jurisdiction of the Courts",
+            "topics": [
+              "Indian Constitution: Salient Features, Basic Structure Doctrine, The",
+              "Rule of Law, Doctrine of Separation of Powers, Judicial system in",
+              "India i. Hierarchy of Courts ii. Jurisdiction of the Courts"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Legal Writing and Research",
+            "contact_hours": 12,
+            "topic_lines": [
               "Meaning & Importance of Legal Research., Kinds of Legal",
               "Research, Process of Legal Research, Sources of Legal Research-",
               "Primary & Secondary, Statutes, Reports, Journals, Manuals, Bill,",
@@ -449,27 +572,8 @@
               "the Cause List.",
               "Total Hours 45"
             ],
-            "topics_text": "Concept and Definition of law and legal system – Law, A Law, The Law, Function of Law, Classification of Law: i. Public and Private Law ii. Substantive and Procedural Law iii. Municipal and International Law, Kinds of Legal Systems i. Civil Legal Systems ii. Common Legal Systems iii. Religious Legal Systems iv. Customary Legal Systems v. Hybrid Legal Systems, Difference between Bill, Act, Code, Statute, Ordinance, Order, Bye-Law, Rule, Regulation, Department Circular, and Notification. 2 Sources of Law 12 Custom , Precedent, Legislation, Statutory Interpretation, Legislative History, • Commentaries., Sources of International- Treaty law, international customary law, and general principles of law recognized by civilized nations 3 Basic Concepts of the Indian Legal System 10 Indian Constitution: Salient Features, Basic Structure Doctrine, The Rule of Law, Doctrine of Separation of Powers, Judicial system in India i. Hierarchy of Courts ii. Jurisdiction of the Courts 4 Legal Writing and Research 12 Meaning & Importance of Legal Research., Kinds of Legal Research, Process of Legal Research, Sources of Legal Research- Primary & Secondary, Statutes, Reports, Journals, Manuals, Bill, Act., Case Analysis- FILAC and IRAC methods, Preparation of Briefs, Citations and Bibliography., New Dimensions in Legal Research- Use of Online Databases and e-resources, How to search the Cause List. Total Hours 45",
+            "topics_text": "Meaning & Importance of Legal Research., Kinds of Legal Research, Process of Legal Research, Sources of Legal Research- Primary & Secondary, Statutes, Reports, Journals, Manuals, Bill, Act., Case Analysis- FILAC and IRAC methods, Preparation of Briefs, Citations and Bibliography., New Dimensions in Legal Research- Use of Online Databases and e-resources, How to search the Cause List. Total Hours 45",
             "topics": [
-              "Concept and Definition of law and legal system – Law, A Law, The",
-              "Law, Function of Law, Classification of Law: i. Public and Private",
-              "Law ii. Substantive and Procedural Law iii. Municipal and",
-              "International Law, Kinds of Legal Systems i. Civil Legal Systems ii.",
-              "Common Legal Systems iii. Religious Legal Systems iv. Customary",
-              "Legal Systems v. Hybrid Legal Systems, Difference between Bill,",
-              "Act, Code, Statute, Ordinance, Order, Bye-Law, Rule, Regulation,",
-              "Department Circular, and Notification.",
-              "2 Sources of Law 12",
-              "Custom , Precedent, Legislation, Statutory Interpretation,",
-              "Legislative History,",
-              "Commentaries., Sources of International",
-              "Treaty law, international customary law, and general principles of",
-              "law recognized by civilized nations",
-              "3 Basic Concepts of the Indian Legal System 10",
-              "Indian Constitution: Salient Features, Basic Structure Doctrine, The",
-              "Rule of Law, Doctrine of Separation of Powers, Judicial system in",
-              "India i. Hierarchy of Courts ii. Jurisdiction of the Courts",
-              "4 Legal Writing and Research 12",
               "Meaning & Importance of Legal Research., Kinds of Legal",
               "Research, Process of Legal Research, Sources of Legal Research",
               "Primary & Secondary, Statutes, Reports, Journals, Manuals, Bill,",
@@ -611,54 +715,94 @@
             "topic_lines": [
               "Emergence and Institutionalizing Sociology , Nature, scope and",
               "subject matter of sociology , Relation with other social sciences",
-              "including Law, Understanding sociological perspectives",
-              "2 Fundamental concepts in sociology 5",
+              "including Law, Understanding sociological perspectives"
+            ],
+            "topics_text": "Emergence and Institutionalizing Sociology , Nature, scope and subject matter of sociology , Relation with other social sciences including Law, Understanding sociological perspectives",
+            "topics": [
+              "Emergence and Institutionalizing Sociology , Nature, scope and",
+              "subject matter of sociology , Relation with other social sciences",
+              "including Law, Understanding sociological perspectives"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Fundamental concepts in sociology",
+            "contact_hours": 5,
+            "topic_lines": [
               "Society, Community & Association, Social groups, Culture &",
-              "culture change, Status & role , Values & norms, Social institutions",
-              "3 Social processes 6",
+              "culture change, Status & role , Values & norms, Social institutions"
+            ],
+            "topics_text": "Society, Community & Association, Social groups, Culture & culture change, Status & role , Values & norms, Social institutions",
+            "topics": [
+              "Society, Community & Association, Social groups, Culture &",
+              "culture change, Status & role , Values & norms, Social institutions"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Social processes",
+            "contact_hours": 6,
+            "topic_lines": [
               "Socialization: Process, Stages, Agencies , Social Mobility: Meaning,",
-              "Forms, & factors , Social Control: Forms, Agencies",
-              "4 Sociological Theories 14",
+              "Forms, & factors , Social Control: Forms, Agencies"
+            ],
+            "topics_text": "Socialization: Process, Stages, Agencies , Social Mobility: Meaning, Forms, & factors , Social Control: Forms, Agencies",
+            "topics": [
+              "Socialization: Process, Stages, Agencies , Social Mobility: Meaning,",
+              "Forms, & factors , Social Control: Forms, Agencies"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Sociological Theories",
+            "contact_hours": 14,
+            "topic_lines": [
               "August Comte-Social Statics & Dynamics, Law of three stages ,",
               "Karl Marx-Class and Class struggle , Emile Durkheim-Social Facts",
               "and Social Solidarity, Max Weber –Class , Status ,Power, Talcott",
               "Parsons-Pattern Variables , Edmund Husserl-Phenomenology,",
               "George Herbert Mead-Symbolic interactionism, Anthony Giddens-",
-              "Structuration theory",
-              "5 Social Research Methods 5",
+              "Structuration theory"
+            ],
+            "topics_text": "August Comte-Social Statics & Dynamics, Law of three stages , Karl Marx-Class and Class struggle , Emile Durkheim-Social Facts and Social Solidarity, Max Weber –Class , Status ,Power, Talcott Parsons-Pattern Variables , Edmund Husserl-Phenomenology, George Herbert Mead-Symbolic interactionism, Anthony Giddens- Structuration theory",
+            "topics": [
+              "August Comte-Social Statics & Dynamics, Law of three stages ,",
+              "Karl Marx-Class and Class struggle , Emile Durkheim-Social Facts",
+              "and Social Solidarity, Max Weber –Class , Status ,Power, Talcott",
+              "Parsons-Pattern Variables , Edmund Husserl-Phenomenology,",
+              "George Herbert Mead-Symbolic interactionism, Anthony Giddens",
+              "Structuration theory"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Social Research Methods",
+            "contact_hours": 5,
+            "topic_lines": [
               "Meaning, scope & significance of research in sociology , Types &",
               "design of social research, Methods of social research, Steps",
-              "involved in social research",
-              "6 Social Problems 7",
+              "involved in social research"
+            ],
+            "topics_text": "Meaning, scope & significance of research in sociology , Types & design of social research, Methods of social research, Steps involved in social research",
+            "topics": [
+              "Meaning, scope & significance of research in sociology , Types &",
+              "design of social research, Methods of social research, Steps",
+              "involved in social research"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Social Problems",
+            "contact_hours": 7,
+            "topic_lines": [
               "Meaning and causes, Structural problems: Caste, Gender, inclusion",
               "and exclusions , Development –Slums, poverty, corruption, child",
               "labour displacement, Communalism: Race, religion, ethnicity,",
               "Region, culture, language, migrants, refugees",
               "Total Hours 45"
             ],
-            "topics_text": "Emergence and Institutionalizing Sociology , Nature, scope and subject matter of sociology , Relation with other social sciences including Law, Understanding sociological perspectives 2 Fundamental concepts in sociology 5 Society, Community & Association, Social groups, Culture & culture change, Status & role , Values & norms, Social institutions 3 Social processes 6 Socialization: Process, Stages, Agencies , Social Mobility: Meaning, Forms, & factors , Social Control: Forms, Agencies 4 Sociological Theories 14 August Comte-Social Statics & Dynamics, Law of three stages , Karl Marx-Class and Class struggle , Emile Durkheim-Social Facts and Social Solidarity, Max Weber –Class , Status ,Power, Talcott Parsons-Pattern Variables , Edmund Husserl-Phenomenology, George Herbert Mead-Symbolic interactionism, Anthony Giddens- Structuration theory 5 Social Research Methods 5 Meaning, scope & significance of research in sociology , Types & design of social research, Methods of social research, Steps involved in social research 6 Social Problems 7 Meaning and causes, Structural problems: Caste, Gender, inclusion and exclusions , Development –Slums, poverty, corruption, child labour displacement, Communalism: Race, religion, ethnicity, Region, culture, language, migrants, refugees Total Hours 45",
+            "topics_text": "Meaning and causes, Structural problems: Caste, Gender, inclusion and exclusions , Development –Slums, poverty, corruption, child labour displacement, Communalism: Race, religion, ethnicity, Region, culture, language, migrants, refugees Total Hours 45",
             "topics": [
-              "Emergence and Institutionalizing Sociology , Nature, scope and",
-              "subject matter of sociology , Relation with other social sciences",
-              "including Law, Understanding sociological perspectives",
-              "2 Fundamental concepts in sociology 5",
-              "Society, Community & Association, Social groups, Culture &",
-              "culture change, Status & role , Values & norms, Social institutions",
-              "3 Social processes 6",
-              "Socialization: Process, Stages, Agencies , Social Mobility: Meaning,",
-              "Forms, & factors , Social Control: Forms, Agencies",
-              "4 Sociological Theories 14",
-              "August Comte-Social Statics & Dynamics, Law of three stages ,",
-              "Karl Marx-Class and Class struggle , Emile Durkheim-Social Facts",
-              "and Social Solidarity, Max Weber –Class , Status ,Power, Talcott",
-              "Parsons-Pattern Variables , Edmund Husserl-Phenomenology,",
-              "George Herbert Mead-Symbolic interactionism, Anthony Giddens",
-              "Structuration theory",
-              "5 Social Research Methods 5",
-              "Meaning, scope & significance of research in sociology , Types &",
-              "design of social research, Methods of social research, Steps",
-              "involved in social research",
-              "6 Social Problems 7",
               "Meaning and causes, Structural problems: Caste, Gender, inclusion",
               "and exclusions , Development –Slums, poverty, corruption, child",
               "labour displacement, Communalism: Race, religion, ethnicity,",

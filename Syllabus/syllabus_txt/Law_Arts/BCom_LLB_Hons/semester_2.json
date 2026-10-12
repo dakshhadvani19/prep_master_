@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "generated_at_utc": "2026-10-12T12:47:27+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
   "course": {
@@ -55,44 +55,68 @@
               "newspapers/magazines: i. “Paytm: the wonder wallet” from Forbes",
               "India. , ii. “Millennials: How They Live and Work” from Gallup. ,",
               "iii. “The Right Culture: Not About Employees Happiness” from",
-              "Gallup.",
-              "2 Reading Case Studies 11",
-              "i. “Tripping Along” by Deep Kalra from Stay Hungry Stay Foolish,",
-              "ii. “Charisma Corporation” by Malini Varma, iii.“The Book of Job”",
-              "by Sanjeev Bikhchandani from Stay Hungry Stay Foolish",
-              "3 Writing for Business 12",
-              "E-mail (Features, Problems and Etiquettes), Writing business letters",
-              "(Format and types): a) Inquiry Letters, Writing business letters",
-              "(Format and types): b) Quotation Letters, Writing business letters",
-              "(Format and types): c) Order Letters, Writing business letters",
-              "(Format and types): d) Complaint Letters, Writing business letters",
-              "(Format and types): e) Adjustment (Claim) Letters, Writing business",
-              "letters (Format and types): f) Credit Letters",
-              "4 Writing for Business 12",
-              "Agenda for Meetings, Minutes of the Meeting, Writing short",
-              "business reports, Notice Writing",
-              "Total Hours 45"
+              "Gallup."
             ],
-            "topics_text": "Reading 3 business articles (general in nature) from the newspapers/magazines: i. “Paytm: the wonder wallet” from Forbes India. , ii. “Millennials: How They Live and Work” from Gallup. , iii. “The Right Culture: Not About Employees Happiness” from Gallup. 2 Reading Case Studies 11 i. “Tripping Along” by Deep Kalra from Stay Hungry Stay Foolish, ii. “Charisma Corporation” by Malini Varma, iii.“The Book of Job” by Sanjeev Bikhchandani from Stay Hungry Stay Foolish 3 Writing for Business 12 E-mail (Features, Problems and Etiquettes), Writing business letters (Format and types): a) Inquiry Letters, Writing business letters (Format and types): b) Quotation Letters, Writing business letters (Format and types): c) Order Letters, Writing business letters (Format and types): d) Complaint Letters, Writing business letters (Format and types): e) Adjustment (Claim) Letters, Writing business letters (Format and types): f) Credit Letters 4 Writing for Business 12 Agenda for Meetings, Minutes of the Meeting, Writing short business reports, Notice Writing Total Hours 45",
+            "topics_text": "Reading 3 business articles (general in nature) from the newspapers/magazines: i. “Paytm: the wonder wallet” from Forbes India. , ii. “Millennials: How They Live and Work” from Gallup. , iii. “The Right Culture: Not About Employees Happiness” from Gallup.",
             "topics": [
               "Reading 3 business articles (general in nature) from the",
               "newspapers/magazines: i. “Paytm: the wonder wallet” from Forbes",
               "India. , ii. “Millennials: How They Live and Work” from Gallup. ,",
               "iii. “The Right Culture: Not About Employees Happiness” from",
-              "Gallup.",
-              "2 Reading Case Studies 11",
+              "Gallup."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Reading Case Studies",
+            "contact_hours": 11,
+            "topic_lines": [
               "i. “Tripping Along” by Deep Kalra from Stay Hungry Stay Foolish,",
               "ii. “Charisma Corporation” by Malini Varma, iii.“The Book of Job”",
-              "by Sanjeev Bikhchandani from Stay Hungry Stay Foolish",
-              "3 Writing for Business 12",
+              "by Sanjeev Bikhchandani from Stay Hungry Stay Foolish"
+            ],
+            "topics_text": "i. “Tripping Along” by Deep Kalra from Stay Hungry Stay Foolish, ii. “Charisma Corporation” by Malini Varma, iii.“The Book of Job” by Sanjeev Bikhchandani from Stay Hungry Stay Foolish",
+            "topics": [
+              "i. “Tripping Along” by Deep Kalra from Stay Hungry Stay Foolish,",
+              "ii. “Charisma Corporation” by Malini Varma, iii.“The Book of Job”",
+              "by Sanjeev Bikhchandani from Stay Hungry Stay Foolish"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Writing for Business",
+            "contact_hours": 12,
+            "topic_lines": [
               "E-mail (Features, Problems and Etiquettes), Writing business letters",
               "(Format and types): a) Inquiry Letters, Writing business letters",
               "(Format and types): b) Quotation Letters, Writing business letters",
               "(Format and types): c) Order Letters, Writing business letters",
               "(Format and types): d) Complaint Letters, Writing business letters",
               "(Format and types): e) Adjustment (Claim) Letters, Writing business",
-              "letters (Format and types): f) Credit Letters",
-              "4 Writing for Business 12",
+              "letters (Format and types): f) Credit Letters"
+            ],
+            "topics_text": "E-mail (Features, Problems and Etiquettes), Writing business letters (Format and types): a) Inquiry Letters, Writing business letters (Format and types): b) Quotation Letters, Writing business letters (Format and types): c) Order Letters, Writing business letters (Format and types): d) Complaint Letters, Writing business letters (Format and types): e) Adjustment (Claim) Letters, Writing business letters (Format and types): f) Credit Letters",
+            "topics": [
+              "E-mail (Features, Problems and Etiquettes), Writing business letters",
+              "(Format and types): a) Inquiry Letters, Writing business letters",
+              "(Format and types): b) Quotation Letters, Writing business letters",
+              "(Format and types): c) Order Letters, Writing business letters",
+              "(Format and types): d) Complaint Letters, Writing business letters",
+              "(Format and types): e) Adjustment (Claim) Letters, Writing business",
+              "letters (Format and types): f) Credit Letters"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Writing for Business",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Agenda for Meetings, Minutes of the Meeting, Writing short",
+              "business reports, Notice Writing",
+              "Total Hours 45"
+            ],
+            "topics_text": "Agenda for Meetings, Minutes of the Meeting, Writing short business reports, Notice Writing Total Hours 45",
+            "topics": [
               "Agenda for Meetings, Minutes of the Meeting, Writing short",
               "business reports, Notice Writing",
               "Total Hours 45"
@@ -201,28 +225,86 @@
               "Opportunity Cost, Meaning and Definition of Microeconomics,",
               "Positive and Normative Economics, Nature and Scope of",
               "Microeconomics, Difference between Microeconomics and",
-              "Macroeconomics, Central Economic Problems of a Society",
-              "2 CONSUMER BEHAVIOUR 9",
+              "Macroeconomics, Central Economic Problems of a Society"
+            ],
+            "topics_text": "Introduction to Economics, Concept of Choice, Scarcity and Opportunity Cost, Meaning and Definition of Microeconomics, Positive and Normative Economics, Nature and Scope of Microeconomics, Difference between Microeconomics and Macroeconomics, Central Economic Problems of a Society",
+            "topics": [
+              "Introduction to Economics, Concept of Choice, Scarcity and",
+              "Opportunity Cost, Meaning and Definition of Microeconomics,",
+              "Positive and Normative Economics, Nature and Scope of",
+              "Microeconomics, Difference between Microeconomics and",
+              "Macroeconomics, Central Economic Problems of a Society"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "CONSUMER BEHAVIOUR",
+            "contact_hours": 9,
+            "topic_lines": [
               "Utility Analysis: Cardinal versus Ordinal Utility, Cardinal Utility:",
               "Law of Diminishing Marginal Utility Law of Equi-Marginal Utility,",
               "Ordinal Utility: Indifference Curve, Properties of Indifference",
               "Curve Analysis, Marginal Rate of Substitution, Budget Line and",
-              "Consumer‘s Equilibrium.",
-              "3 DEMAND AND SUPPLY ANALYSIS 9",
+              "Consumer‘s Equilibrium."
+            ],
+            "topics_text": "Utility Analysis: Cardinal versus Ordinal Utility, Cardinal Utility: Law of Diminishing Marginal Utility Law of Equi-Marginal Utility, Ordinal Utility: Indifference Curve, Properties of Indifference Curve Analysis, Marginal Rate of Substitution, Budget Line and Consumer‘s Equilibrium.",
+            "topics": [
+              "Utility Analysis: Cardinal versus Ordinal Utility, Cardinal Utility:",
+              "Law of Diminishing Marginal Utility Law of Equi-Marginal Utility,",
+              "Ordinal Utility: Indifference Curve, Properties of Indifference",
+              "Curve Analysis, Marginal Rate of Substitution, Budget Line and",
+              "Consumer‘s Equilibrium."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "DEMAND AND SUPPLY ANALYSIS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Concept of Demand and its determinants, Law of Demand,",
               "Exceptions to Law of Demand, Concepts of price and income",
               "elasticity and factors affecting elasticity, Elasticity of Demand and",
               "its applications, Concept of Supply and its determinants, Law of",
               "Supply, Exceptions to law of Supply., Market Equilibrium:",
-              "Interaction of Demand and Supply, Concept of Stability",
-              "4 PRODUCTION AND COST ANALYSIS 9",
+              "Interaction of Demand and Supply, Concept of Stability"
+            ],
+            "topics_text": "Concept of Demand and its determinants, Law of Demand, Exceptions to Law of Demand, Concepts of price and income elasticity and factors affecting elasticity, Elasticity of Demand and its applications, Concept of Supply and its determinants, Law of Supply, Exceptions to law of Supply., Market Equilibrium: Interaction of Demand and Supply, Concept of Stability",
+            "topics": [
+              "Concept of Demand and its determinants, Law of Demand,",
+              "Exceptions to Law of Demand, Concepts of price and income",
+              "elasticity and factors affecting elasticity, Elasticity of Demand and",
+              "its applications, Concept of Supply and its determinants, Law of",
+              "Supply, Exceptions to law of Supply., Market Equilibrium:",
+              "Interaction of Demand and Supply, Concept of Stability"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "PRODUCTION AND COST ANALYSIS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Production Function: Short Run and Long Run Production",
               "Functions, Total, Average, and Marginal Product and their",
               "relationship, Returns to Scale and Returns to Factors., Cost",
               "Function: Classification of Costs – Opportunity Costs, Explicit",
               "versus Implicit Costs, Sunk Costs, Fixed versus Variable Costs,",
-              "Short Run and Long Run Cost, Producer‘s Equilibrium",
-              "5 EQUILIBRIUM OF FIRM AND INDUSTRY 9",
+              "Short Run and Long Run Cost, Producer‘s Equilibrium"
+            ],
+            "topics_text": "Production Function: Short Run and Long Run Production Functions, Total, Average, and Marginal Product and their relationship, Returns to Scale and Returns to Factors., Cost Function: Classification of Costs – Opportunity Costs, Explicit versus Implicit Costs, Sunk Costs, Fixed versus Variable Costs, Short Run and Long Run Cost, Producer‘s Equilibrium",
+            "topics": [
+              "Production Function: Short Run and Long Run Production",
+              "Functions, Total, Average, and Marginal Product and their",
+              "relationship, Returns to Scale and Returns to Factors., Cost",
+              "Function: Classification of Costs – Opportunity Costs, Explicit",
+              "versus Implicit Costs, Sunk Costs, Fixed versus Variable Costs,",
+              "Short Run and Long Run Cost, Producer‘s Equilibrium"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "EQUILIBRIUM OF FIRM AND INDUSTRY",
+            "contact_hours": 9,
+            "topic_lines": [
               "Perfect Competition: Assumptions, Firm and Industry Demand",
               "Curves, Equilibrium in the market. Long run industry supply:",
               "producer and consumer surplus, Effects of Tax and Subsidies,",
@@ -234,34 +316,8 @@
               "Cournot Equilibrium, Kinked demand curve",
               "Total Hours 45"
             ],
-            "topics_text": "Introduction to Economics, Concept of Choice, Scarcity and Opportunity Cost, Meaning and Definition of Microeconomics, Positive and Normative Economics, Nature and Scope of Microeconomics, Difference between Microeconomics and Macroeconomics, Central Economic Problems of a Society 2 CONSUMER BEHAVIOUR 9 Utility Analysis: Cardinal versus Ordinal Utility, Cardinal Utility: Law of Diminishing Marginal Utility Law of Equi-Marginal Utility, Ordinal Utility: Indifference Curve, Properties of Indifference Curve Analysis, Marginal Rate of Substitution, Budget Line and Consumer‘s Equilibrium. 3 DEMAND AND SUPPLY ANALYSIS 9 Concept of Demand and its determinants, Law of Demand, Exceptions to Law of Demand, Concepts of price and income elasticity and factors affecting elasticity, Elasticity of Demand and its applications, Concept of Supply and its determinants, Law of Supply, Exceptions to law of Supply., Market Equilibrium: Interaction of Demand and Supply, Concept of Stability 4 PRODUCTION AND COST ANALYSIS 9 Production Function: Short Run and Long Run Production Functions, Total, Average, and Marginal Product and their relationship, Returns to Scale and Returns to Factors., Cost Function: Classification of Costs – Opportunity Costs, Explicit versus Implicit Costs, Sunk Costs, Fixed versus Variable Costs, Short Run and Long Run Cost, Producer‘s Equilibrium 5 EQUILIBRIUM OF FIRM AND INDUSTRY 9 Perfect Competition: Assumptions, Firm and Industry Demand Curves, Equilibrium in the market. Long run industry supply: producer and consumer surplus, Effects of Tax and Subsidies, Monopoly: Pricing with market power, Equilibrium, monopoly power, Anti-Trust laws, Government Policy on Competition Regulation Principles, Monopolistic Competition: Product Differentiation and Demand curve, Equilibrium, Aspects of Non- Price Competition, Oligopoly: Simultaneous Quantity Setting- Cournot Equilibrium, Kinked demand curve Total Hours 45",
+            "topics_text": "Perfect Competition: Assumptions, Firm and Industry Demand Curves, Equilibrium in the market. Long run industry supply: producer and consumer surplus, Effects of Tax and Subsidies, Monopoly: Pricing with market power, Equilibrium, monopoly power, Anti-Trust laws, Government Policy on Competition Regulation Principles, Monopolistic Competition: Product Differentiation and Demand curve, Equilibrium, Aspects of Non- Price Competition, Oligopoly: Simultaneous Quantity Setting- Cournot Equilibrium, Kinked demand curve Total Hours 45",
             "topics": [
-              "Introduction to Economics, Concept of Choice, Scarcity and",
-              "Opportunity Cost, Meaning and Definition of Microeconomics,",
-              "Positive and Normative Economics, Nature and Scope of",
-              "Microeconomics, Difference between Microeconomics and",
-              "Macroeconomics, Central Economic Problems of a Society",
-              "2 CONSUMER BEHAVIOUR 9",
-              "Utility Analysis: Cardinal versus Ordinal Utility, Cardinal Utility:",
-              "Law of Diminishing Marginal Utility Law of Equi-Marginal Utility,",
-              "Ordinal Utility: Indifference Curve, Properties of Indifference",
-              "Curve Analysis, Marginal Rate of Substitution, Budget Line and",
-              "Consumer‘s Equilibrium.",
-              "3 DEMAND AND SUPPLY ANALYSIS 9",
-              "Concept of Demand and its determinants, Law of Demand,",
-              "Exceptions to Law of Demand, Concepts of price and income",
-              "elasticity and factors affecting elasticity, Elasticity of Demand and",
-              "its applications, Concept of Supply and its determinants, Law of",
-              "Supply, Exceptions to law of Supply., Market Equilibrium:",
-              "Interaction of Demand and Supply, Concept of Stability",
-              "4 PRODUCTION AND COST ANALYSIS 9",
-              "Production Function: Short Run and Long Run Production",
-              "Functions, Total, Average, and Marginal Product and their",
-              "relationship, Returns to Scale and Returns to Factors., Cost",
-              "Function: Classification of Costs – Opportunity Costs, Explicit",
-              "versus Implicit Costs, Sunk Costs, Fixed versus Variable Costs,",
-              "Short Run and Long Run Cost, Producer‘s Equilibrium",
-              "5 EQUILIBRIUM OF FIRM AND INDUSTRY 9",
               "Perfect Competition: Assumptions, Firm and Industry Demand",
               "Curves, Equilibrium in the market. Long run industry supply:",
               "producer and consumer surplus, Effects of Tax and Subsidies,",
@@ -377,67 +433,99 @@
               "Finance Manager, Interface of the Finance Function with other",
               "Functional Areas., Sources of Long-Term Finance, Need for Long-",
               "term Finance, Importance of Long-term Finance, Other Sources of",
-              "Finance",
-              "2 Indian Financial System & Financial Institutions 9",
-              "Overview of the Financial System, Introduction to Financial",
-              "Markets, Understanding the Capital and Security Markets,",
-              "International Capital Markets, Functions and Powers of the Reserve",
-              "Bank of India (RBI), Commercial Banks: Its functions and structure,",
-              "Regulatory Reforms in the Financial Sector, Classification and",
-              "Regulation of Non-Banking Financial Institutions",
-              "3 Working Capital Management 9",
-              "Meaning and need of Working Capital, Objectives and Composition",
-              "of Working Capital, Various Components of Current Assets and",
-              "Current Liabilities, Factors Affecting Composition of Working",
-              "Capital, Liquidity vs. Profitability in the context of Working Capital",
-              "Management, Management of Inventories, Management of",
-              "Accounts Receivable and Accounts Payable, Estimation of Firm‘s",
-              "Working Capital needs using the Operating Cycle",
-              "4 Capital Expenditure and Capital Budgeting 9",
-              "Meaning of Capital Expenditure, Meaning and Significance of cost",
-              "of capital, The cost of capital and opportunity cost concept, Cost of",
-              "equity, Cost of preference shares , Cost of Debt Weighted Average",
-              "Cost of Capital (WACC), Cost of Capital and Investment Analysis,",
-              "Nature of Investment Decisions, Investment evaluation criteria –",
-              "Payback period, Accounting Rate of Return (ARR), Net Present",
-              "value, Internal rate of return, Comparison between NPV and IRR.",
-              "5 Dividend Policy, Bonus and Rights Issue: 9",
-              "Dividend Policy, Relevance and Irrelevance Concepts of Dividend,,",
-              "Bonus Shares, Right Issues, ESOP & Corporate Action Delivery,",
-              "Recent case studies on corporate dividend practices in India",
-              "Total Hours 45"
+              "Finance"
             ],
-            "topics_text": "Nature and Objectives of Financial Management, Role of the Finance Manager, Interface of the Finance Function with other Functional Areas., Sources of Long-Term Finance, Need for Long- term Finance, Importance of Long-term Finance, Other Sources of Finance 2 Indian Financial System & Financial Institutions 9 Overview of the Financial System, Introduction to Financial Markets, Understanding the Capital and Security Markets, International Capital Markets, Functions and Powers of the Reserve Bank of India (RBI), Commercial Banks: Its functions and structure, Regulatory Reforms in the Financial Sector, Classification and Regulation of Non-Banking Financial Institutions 3 Working Capital Management 9 Meaning and need of Working Capital, Objectives and Composition of Working Capital, Various Components of Current Assets and Current Liabilities, Factors Affecting Composition of Working Capital, Liquidity vs. Profitability in the context of Working Capital Management, Management of Inventories, Management of Accounts Receivable and Accounts Payable, Estimation of Firm‘s Working Capital needs using the Operating Cycle 4 Capital Expenditure and Capital Budgeting 9 Meaning of Capital Expenditure, Meaning and Significance of cost of capital, The cost of capital and opportunity cost concept, Cost of equity, Cost of preference shares , Cost of Debt Weighted Average Cost of Capital (WACC), Cost of Capital and Investment Analysis, Nature of Investment Decisions, Investment evaluation criteria – Payback period, Accounting Rate of Return (ARR), Net Present value, Internal rate of return, Comparison between NPV and IRR. 5 Dividend Policy, Bonus and Rights Issue: 9 Dividend Policy, Relevance and Irrelevance Concepts of Dividend,, Bonus Shares, Right Issues, ESOP & Corporate Action Delivery, Recent case studies on corporate dividend practices in India Total Hours 45",
+            "topics_text": "Nature and Objectives of Financial Management, Role of the Finance Manager, Interface of the Finance Function with other Functional Areas., Sources of Long-Term Finance, Need for Long- term Finance, Importance of Long-term Finance, Other Sources of Finance",
             "topics": [
               "Nature and Objectives of Financial Management, Role of the",
               "Finance Manager, Interface of the Finance Function with other",
               "Functional Areas., Sources of Long-Term Finance, Need for Long",
               "term Finance, Importance of Long-term Finance, Other Sources of",
-              "Finance",
-              "2 Indian Financial System & Financial Institutions 9",
+              "Finance"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Indian Financial System & Financial Institutions",
+            "contact_hours": 9,
+            "topic_lines": [
               "Overview of the Financial System, Introduction to Financial",
               "Markets, Understanding the Capital and Security Markets,",
               "International Capital Markets, Functions and Powers of the Reserve",
               "Bank of India (RBI), Commercial Banks: Its functions and structure,",
               "Regulatory Reforms in the Financial Sector, Classification and",
-              "Regulation of Non-Banking Financial Institutions",
-              "3 Working Capital Management 9",
+              "Regulation of Non-Banking Financial Institutions"
+            ],
+            "topics_text": "Overview of the Financial System, Introduction to Financial Markets, Understanding the Capital and Security Markets, International Capital Markets, Functions and Powers of the Reserve Bank of India (RBI), Commercial Banks: Its functions and structure, Regulatory Reforms in the Financial Sector, Classification and Regulation of Non-Banking Financial Institutions",
+            "topics": [
+              "Overview of the Financial System, Introduction to Financial",
+              "Markets, Understanding the Capital and Security Markets,",
+              "International Capital Markets, Functions and Powers of the Reserve",
+              "Bank of India (RBI), Commercial Banks: Its functions and structure,",
+              "Regulatory Reforms in the Financial Sector, Classification and",
+              "Regulation of Non-Banking Financial Institutions"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Working Capital Management",
+            "contact_hours": 9,
+            "topic_lines": [
               "Meaning and need of Working Capital, Objectives and Composition",
               "of Working Capital, Various Components of Current Assets and",
               "Current Liabilities, Factors Affecting Composition of Working",
               "Capital, Liquidity vs. Profitability in the context of Working Capital",
               "Management, Management of Inventories, Management of",
               "Accounts Receivable and Accounts Payable, Estimation of Firm‘s",
-              "Working Capital needs using the Operating Cycle",
-              "4 Capital Expenditure and Capital Budgeting 9",
+              "Working Capital needs using the Operating Cycle"
+            ],
+            "topics_text": "Meaning and need of Working Capital, Objectives and Composition of Working Capital, Various Components of Current Assets and Current Liabilities, Factors Affecting Composition of Working Capital, Liquidity vs. Profitability in the context of Working Capital Management, Management of Inventories, Management of Accounts Receivable and Accounts Payable, Estimation of Firm‘s Working Capital needs using the Operating Cycle",
+            "topics": [
+              "Meaning and need of Working Capital, Objectives and Composition",
+              "of Working Capital, Various Components of Current Assets and",
+              "Current Liabilities, Factors Affecting Composition of Working",
+              "Capital, Liquidity vs. Profitability in the context of Working Capital",
+              "Management, Management of Inventories, Management of",
+              "Accounts Receivable and Accounts Payable, Estimation of Firm‘s",
+              "Working Capital needs using the Operating Cycle"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Capital Expenditure and Capital Budgeting",
+            "contact_hours": 9,
+            "topic_lines": [
               "Meaning of Capital Expenditure, Meaning and Significance of cost",
               "of capital, The cost of capital and opportunity cost concept, Cost of",
               "equity, Cost of preference shares , Cost of Debt Weighted Average",
               "Cost of Capital (WACC), Cost of Capital and Investment Analysis,",
               "Nature of Investment Decisions, Investment evaluation criteria –",
               "Payback period, Accounting Rate of Return (ARR), Net Present",
-              "value, Internal rate of return, Comparison between NPV and IRR.",
-              "5 Dividend Policy, Bonus and Rights Issue: 9",
+              "value, Internal rate of return, Comparison between NPV and IRR."
+            ],
+            "topics_text": "Meaning of Capital Expenditure, Meaning and Significance of cost of capital, The cost of capital and opportunity cost concept, Cost of equity, Cost of preference shares , Cost of Debt Weighted Average Cost of Capital (WACC), Cost of Capital and Investment Analysis, Nature of Investment Decisions, Investment evaluation criteria – Payback period, Accounting Rate of Return (ARR), Net Present value, Internal rate of return, Comparison between NPV and IRR.",
+            "topics": [
+              "Meaning of Capital Expenditure, Meaning and Significance of cost",
+              "of capital, The cost of capital and opportunity cost concept, Cost of",
+              "equity, Cost of preference shares , Cost of Debt Weighted Average",
+              "Cost of Capital (WACC), Cost of Capital and Investment Analysis,",
+              "Nature of Investment Decisions, Investment evaluation criteria –",
+              "Payback period, Accounting Rate of Return (ARR), Net Present",
+              "value, Internal rate of return, Comparison between NPV and IRR."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Dividend Policy, Bonus and Rights Issue:",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Dividend Policy, Relevance and Irrelevance Concepts of Dividend,,",
+              "Bonus Shares, Right Issues, ESOP & Corporate Action Delivery,",
+              "Recent case studies on corporate dividend practices in India",
+              "Total Hours 45"
+            ],
+            "topics_text": "Dividend Policy, Relevance and Irrelevance Concepts of Dividend,, Bonus Shares, Right Issues, ESOP & Corporate Action Delivery, Recent case studies on corporate dividend practices in India Total Hours 45",
+            "topics": [
               "Dividend Policy, Relevance and Irrelevance Concepts of Dividend,,",
               "Bonus Shares, Right Issues, ESOP & Corporate Action Delivery,",
               "Recent case studies on corporate dividend practices in India",
@@ -623,33 +711,9 @@
               "surety, Rights of the surety, Fiduciary role of Surety, Principal",
               "Debtor and Creditor, Continuing Guarantee and Revocation of",
               "Continuing Guarantee, Drafting Indemnity Agreements, Drafting",
-              "Guarantee Agreements.",
-              "2 Bailment & Pledge 9",
-              "Nature and definition, Essential features, Rights and duties of bailor",
-              "and bailee, Pledge – Nature and definition., Rights of pawnor and",
-              "pawnee, Pledge by non-owners, Drafting Bailment Agreements.",
-              "3 Agency 9",
-              "Definition and kinds of agency, Essentials of agency, Modes of",
-              "creation of agency, Concept of Sub-Agency, Concept of Co-Agency",
-              ", Duties and rights of agents, Authority of agent – express, implied,",
-              "and ostensible authority., Liabilities- liability of principal & agent.,",
-              "Termination of agency, Drafting ?Contract of Agency?",
-              "4 Indian Partnership Act, 1932 & Limited Liability Partnership 10",
-              "Act, 2008",
-              "Nature and definition of Partnership, Types of Partners., Minor as a",
-              "partner., Concept of limited liability, Nature of Limited Liability",
-              "Partnership, Incorporation of Limited Liability Partnership, Partners",
-              "and their Relations, Registration of Partnership, Dissolution of",
-              "partnership., Drafting of Partnership Deed",
-              "5 The Sale of Goods Act 1930 8",
-              "Concept of Goods, Sale of Goods v. Agreement to Sale, Caveat",
-              "Emptor, Caveat Venditor, Nemo dat quod non habet;, Condition and",
-              "warranties;, Passing of property, rules relating to passing off",
-              "property;, Rights of the unpaid seller., Formation of a Contract of",
-              "Sale of Goods., Performance of a Contract of Sale of Goods",
-              "Total Hours 45"
+              "Guarantee Agreements."
             ],
-            "topics_text": "Nature and definition, Rights of indemnity holder , Commencement of liability, Contract of Guarantee – Nature and definition, Essential features of guarantee. , Extent of surety‘s liability, discharge of surety, Rights of the surety, Fiduciary role of Surety, Principal Debtor and Creditor, Continuing Guarantee and Revocation of Continuing Guarantee, Drafting Indemnity Agreements, Drafting Guarantee Agreements. 2 Bailment & Pledge 9 Nature and definition, Essential features, Rights and duties of bailor and bailee, Pledge – Nature and definition., Rights of pawnor and pawnee, Pledge by non-owners, Drafting Bailment Agreements. 3 Agency 9 Definition and kinds of agency, Essentials of agency, Modes of creation of agency, Concept of Sub-Agency, Concept of Co-Agency , Duties and rights of agents, Authority of agent – express, implied, and ostensible authority., Liabilities- liability of principal & agent., Termination of agency, Drafting ?Contract of Agency? 4 Indian Partnership Act, 1932 & Limited Liability Partnership 10 Act, 2008 Nature and definition of Partnership, Types of Partners., Minor as a partner., Concept of limited liability, Nature of Limited Liability Partnership, Incorporation of Limited Liability Partnership, Partners and their Relations, Registration of Partnership, Dissolution of partnership., Drafting of Partnership Deed 5 The Sale of Goods Act 1930 8 Concept of Goods, Sale of Goods v. Agreement to Sale, Caveat Emptor, Caveat Venditor, Nemo dat quod non habet;, Condition and warranties;, Passing of property, rules relating to passing off property;, Rights of the unpaid seller., Formation of a Contract of Sale of Goods., Performance of a Contract of Sale of Goods Total Hours 45",
+            "topics_text": "Nature and definition, Rights of indemnity holder , Commencement of liability, Contract of Guarantee – Nature and definition, Essential features of guarantee. , Extent of surety‘s liability, discharge of surety, Rights of the surety, Fiduciary role of Surety, Principal Debtor and Creditor, Continuing Guarantee and Revocation of Continuing Guarantee, Drafting Indemnity Agreements, Drafting Guarantee Agreements.",
             "topics": [
               "Nature and definition, Rights of indemnity holder , Commencement",
               "of liability, Contract of Guarantee – Nature and definition, Essential",
@@ -657,25 +721,81 @@
               "surety, Rights of the surety, Fiduciary role of Surety, Principal",
               "Debtor and Creditor, Continuing Guarantee and Revocation of",
               "Continuing Guarantee, Drafting Indemnity Agreements, Drafting",
-              "Guarantee Agreements.",
-              "2 Bailment & Pledge 9",
+              "Guarantee Agreements."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Bailment & Pledge",
+            "contact_hours": 9,
+            "topic_lines": [
               "Nature and definition, Essential features, Rights and duties of bailor",
               "and bailee, Pledge – Nature and definition., Rights of pawnor and",
-              "pawnee, Pledge by non-owners, Drafting Bailment Agreements.",
-              "3 Agency 9",
+              "pawnee, Pledge by non-owners, Drafting Bailment Agreements."
+            ],
+            "topics_text": "Nature and definition, Essential features, Rights and duties of bailor and bailee, Pledge – Nature and definition., Rights of pawnor and pawnee, Pledge by non-owners, Drafting Bailment Agreements.",
+            "topics": [
+              "Nature and definition, Essential features, Rights and duties of bailor",
+              "and bailee, Pledge – Nature and definition., Rights of pawnor and",
+              "pawnee, Pledge by non-owners, Drafting Bailment Agreements."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Agency",
+            "contact_hours": 9,
+            "topic_lines": [
               "Definition and kinds of agency, Essentials of agency, Modes of",
               "creation of agency, Concept of Sub-Agency, Concept of Co-Agency",
               ", Duties and rights of agents, Authority of agent – express, implied,",
               "and ostensible authority., Liabilities- liability of principal & agent.,",
-              "Termination of agency, Drafting ?Contract of Agency?",
-              "4 Indian Partnership Act, 1932 & Limited Liability Partnership 10",
+              "Termination of agency, Drafting ?Contract of Agency?"
+            ],
+            "topics_text": "Definition and kinds of agency, Essentials of agency, Modes of creation of agency, Concept of Sub-Agency, Concept of Co-Agency , Duties and rights of agents, Authority of agent – express, implied, and ostensible authority., Liabilities- liability of principal & agent., Termination of agency, Drafting ?Contract of Agency?",
+            "topics": [
+              "Definition and kinds of agency, Essentials of agency, Modes of",
+              "creation of agency, Concept of Sub-Agency, Concept of Co-Agency",
+              ", Duties and rights of agents, Authority of agent – express, implied,",
+              "and ostensible authority., Liabilities- liability of principal & agent.,",
+              "Termination of agency, Drafting ?Contract of Agency?"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Indian Partnership Act, 1932 & Limited Liability Partnership",
+            "contact_hours": 10,
+            "topic_lines": [
               "Act, 2008",
               "Nature and definition of Partnership, Types of Partners., Minor as a",
               "partner., Concept of limited liability, Nature of Limited Liability",
               "Partnership, Incorporation of Limited Liability Partnership, Partners",
               "and their Relations, Registration of Partnership, Dissolution of",
-              "partnership., Drafting of Partnership Deed",
-              "5 The Sale of Goods Act 1930 8",
+              "partnership., Drafting of Partnership Deed"
+            ],
+            "topics_text": "Act, 2008 Nature and definition of Partnership, Types of Partners., Minor as a partner., Concept of limited liability, Nature of Limited Liability Partnership, Incorporation of Limited Liability Partnership, Partners and their Relations, Registration of Partnership, Dissolution of partnership., Drafting of Partnership Deed",
+            "topics": [
+              "Act, 2008",
+              "Nature and definition of Partnership, Types of Partners., Minor as a",
+              "partner., Concept of limited liability, Nature of Limited Liability",
+              "Partnership, Incorporation of Limited Liability Partnership, Partners",
+              "and their Relations, Registration of Partnership, Dissolution of",
+              "partnership., Drafting of Partnership Deed"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "The Sale of Goods Act 1930",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Concept of Goods, Sale of Goods v. Agreement to Sale, Caveat",
+              "Emptor, Caveat Venditor, Nemo dat quod non habet;, Condition and",
+              "warranties;, Passing of property, rules relating to passing off",
+              "property;, Rights of the unpaid seller., Formation of a Contract of",
+              "Sale of Goods., Performance of a Contract of Sale of Goods",
+              "Total Hours 45"
+            ],
+            "topics_text": "Concept of Goods, Sale of Goods v. Agreement to Sale, Caveat Emptor, Caveat Venditor, Nemo dat quod non habet;, Condition and warranties;, Passing of property, rules relating to passing off property;, Rights of the unpaid seller., Formation of a Contract of Sale of Goods., Performance of a Contract of Sale of Goods Total Hours 45",
+            "topics": [
               "Concept of Goods, Sale of Goods v. Agreement to Sale, Caveat",
               "Emptor, Caveat Venditor, Nemo dat quod non habet",
               ", Condition and",
@@ -795,41 +915,9 @@
               "excerpts before the class, 3. Selected excerpts from Earl Stanley",
               "Gardner • Based on the reading, there will be a series suitable tasks",
               "(e.g. Group discussions, debates, quizzes, roleplays, worksheets, et",
-              "al)",
-              "2 Films 15",
-              "1) My Cousin Vinnie(1992) a. Screening of selected scenes, 1) My",
-              "Cousin Vinnie(1992) b. Based on the reading, there will be a series",
-              "suitable tasks (e.g. Group discussions, script-writing, debates,",
-              "quizzes, roleplays, worksheets, et al), 2) Kramer vs Kramer(1979) a.",
-              "Screening of selected scenes, 2) Kramer vs Kramer(1979) b. Based",
-              "on the reading, there will be a series suitable tasks (e.g. Group",
-              "discussions, script-writing, debates, quizzes, roleplays, worksheets,",
-              "et al), 3) A Few Good Men (1992) a. Screening of selected scenes,",
-              "3) A Few Good Men (1992) b. Based on the reading, there will be a",
-              "series suitable tasks (e.g. Group discussions, script-writing, debates,",
-              "quizzes, roleplays, worksheets, et al), 4) Amistad (1997) a.",
-              "Screening of selected scenes, 4) Amistad (1997) b. Based on the",
-              "reading, there will be a series suitable tasks (e.g. Group discussions,",
-              "script-writing, debates, quizzes, roleplays, worksheets, et al), 5) To",
-              "Kill A Mocking Bird (1962) a. Screening of selected scenes, 5) To",
-              "Kill A Mocking Bird (1962) b. Based on the reading, there will be a",
-              "series suitable tasks (e.g. Group discussions, script-writing, debates,",
-              "quizzes, roleplays, worksheets, et al)",
-              "3 Series 15",
-              "1) Boston Legal a. Screening of selected episodes, 1) Boston Legal",
-              "b. Based on the reading, there will be a series suitable tasks (e.g.",
-              "Group discussions, script-writing, debates, quizzes, roleplays,",
-              "worksheets, et al), 2) The Practice a. Screening of selected episodes,",
-              "2) The Practice b. Based on the reading, there will be a series",
-              "suitable tasks (e.g. Group discussions, script-writing, debates,",
-              "quizzes, roleplays, worksheets, et al), 3) People vs O. J. Simpson a.",
-              "Screening of selected episodes, 3) People vs O. J. Simpson b. Based",
-              "on the reading, there will be a series suitable tasks (e.g. Group",
-              "discussions, script-writing, debates, quizzes, roleplays, worksheets,",
-              "et al)",
-              "Total Hours 45"
+              "al)"
             ],
-            "topics_text": "1. Silence! The Court is in Session - by Vijay Tendulkar • Reading and roleplay of selected material from the text, 1. Silence! The Court is in Session - by Vijay Tendulkar • Based on the reading, there will be a series suitable tasks (e.g. Group discussions, debates, quizzes, roleplays, worksheets, et al), 2. The Apple Cart by George Bernard Shaw • Reading and roleplay of selected material from the text, 2. The Apple Cart by George Bernard Shaw • Based on the reading, there will be a series suitable tasks (e.g. Group discussions, debates, quizzes, roleplays, worksheets, et al), 3. Selected excerpts from Earl Stanley Gardner • Students will be asked to read the excerpts before the class, 3. Selected excerpts from Earl Stanley Gardner • Based on the reading, there will be a series suitable tasks (e.g. Group discussions, debates, quizzes, roleplays, worksheets, et al) 2 Films 15 1) My Cousin Vinnie(1992) a. Screening of selected scenes, 1) My Cousin Vinnie(1992) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 2) Kramer vs Kramer(1979) a. Screening of selected scenes, 2) Kramer vs Kramer(1979) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 3) A Few Good Men (1992) a. Screening of selected scenes, 3) A Few Good Men (1992) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 4) Amistad (1997) a. Screening of selected scenes, 4) Amistad (1997) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 5) To Kill A Mocking Bird (1962) a. Screening of selected scenes, 5) To Kill A Mocking Bird (1962) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al) 3 Series 15 1) Boston Legal a. Screening of selected episodes, 1) Boston Legal b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 2) The Practice a. Screening of selected episodes, 2) The Practice b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 3) People vs O. J. Simpson a. Screening of selected episodes, 3) People vs O. J. Simpson b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al) Total Hours 45",
+            "topics_text": "1. Silence! The Court is in Session - by Vijay Tendulkar • Reading and roleplay of selected material from the text, 1. Silence! The Court is in Session - by Vijay Tendulkar • Based on the reading, there will be a series suitable tasks (e.g. Group discussions, debates, quizzes, roleplays, worksheets, et al), 2. The Apple Cart by George Bernard Shaw • Reading and roleplay of selected material from the text, 2. The Apple Cart by George Bernard Shaw • Based on the reading, there will be a series suitable tasks (e.g. Group discussions, debates, quizzes, roleplays, worksheets, et al), 3. Selected excerpts from Earl Stanley Gardner • Students will be asked to read the excerpts before the class, 3. Selected excerpts from Earl Stanley Gardner • Based on the reading, there will be a series suitable tasks (e.g. Group discussions, debates, quizzes, roleplays, worksheets, et al)",
             "topics": [
               "1. Silence! The Court is in Session - by Vijay Tendulkar",
               "Reading",
@@ -850,8 +938,14 @@
               "Gardner",
               "Based on the reading, there will be a series suitable tasks",
               "(e.g. Group discussions, debates, quizzes, roleplays, worksheets, et",
-              "al)",
-              "2 Films 15",
+              "al)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Films",
+            "contact_hours": 15,
+            "topic_lines": [
               "1) My Cousin Vinnie(1992) a. Screening of selected scenes, 1) My",
               "Cousin Vinnie(1992) b. Based on the reading, there will be a series",
               "suitable tasks (e.g. Group discussions, script-writing, debates,",
@@ -869,8 +963,50 @@
               "Kill A Mocking Bird (1962) a. Screening of selected scenes, 5) To",
               "Kill A Mocking Bird (1962) b. Based on the reading, there will be a",
               "series suitable tasks (e.g. Group discussions, script-writing, debates,",
-              "quizzes, roleplays, worksheets, et al)",
-              "3 Series 15",
+              "quizzes, roleplays, worksheets, et al)"
+            ],
+            "topics_text": "1) My Cousin Vinnie(1992) a. Screening of selected scenes, 1) My Cousin Vinnie(1992) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 2) Kramer vs Kramer(1979) a. Screening of selected scenes, 2) Kramer vs Kramer(1979) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 3) A Few Good Men (1992) a. Screening of selected scenes, 3) A Few Good Men (1992) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 4) Amistad (1997) a. Screening of selected scenes, 4) Amistad (1997) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 5) To Kill A Mocking Bird (1962) a. Screening of selected scenes, 5) To Kill A Mocking Bird (1962) b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al)",
+            "topics": [
+              "1) My Cousin Vinnie(1992) a. Screening of selected scenes, 1) My",
+              "Cousin Vinnie(1992) b. Based on the reading, there will be a series",
+              "suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al), 2) Kramer vs Kramer(1979) a.",
+              "Screening of selected scenes, 2) Kramer vs Kramer(1979) b. Based",
+              "on the reading, there will be a series suitable tasks (e.g. Group",
+              "discussions, script-writing, debates, quizzes, roleplays, worksheets,",
+              "et al), 3) A Few Good Men (1992) a. Screening of selected scenes,",
+              "3) A Few Good Men (1992) b. Based on the reading, there will be a",
+              "series suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al), 4) Amistad (1997) a.",
+              "Screening of selected scenes, 4) Amistad (1997) b. Based on the",
+              "reading, there will be a series suitable tasks (e.g. Group discussions,",
+              "script-writing, debates, quizzes, roleplays, worksheets, et al), 5) To",
+              "Kill A Mocking Bird (1962) a. Screening of selected scenes, 5) To",
+              "Kill A Mocking Bird (1962) b. Based on the reading, there will be a",
+              "series suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Series",
+            "contact_hours": 15,
+            "topic_lines": [
+              "1) Boston Legal a. Screening of selected episodes, 1) Boston Legal",
+              "b. Based on the reading, there will be a series suitable tasks (e.g.",
+              "Group discussions, script-writing, debates, quizzes, roleplays,",
+              "worksheets, et al), 2) The Practice a. Screening of selected episodes,",
+              "2) The Practice b. Based on the reading, there will be a series",
+              "suitable tasks (e.g. Group discussions, script-writing, debates,",
+              "quizzes, roleplays, worksheets, et al), 3) People vs O. J. Simpson a.",
+              "Screening of selected episodes, 3) People vs O. J. Simpson b. Based",
+              "on the reading, there will be a series suitable tasks (e.g. Group",
+              "discussions, script-writing, debates, quizzes, roleplays, worksheets,",
+              "et al)",
+              "Total Hours 45"
+            ],
+            "topics_text": "1) Boston Legal a. Screening of selected episodes, 1) Boston Legal b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 2) The Practice a. Screening of selected episodes, 2) The Practice b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al), 3) People vs O. J. Simpson a. Screening of selected episodes, 3) People vs O. J. Simpson b. Based on the reading, there will be a series suitable tasks (e.g. Group discussions, script-writing, debates, quizzes, roleplays, worksheets, et al) Total Hours 45",
+            "topics": [
               "1) Boston Legal a. Screening of selected episodes, 1) Boston Legal",
               "b. Based on the reading, there will be a series suitable tasks (e.g.",
               "Group discussions, script-writing, debates, quizzes, roleplays,",
@@ -1012,28 +1148,9 @@
               "Action;, Locus Standi – 1) Facts giving rise to a cause of action; 2)",
               "Identify legal rights violated;, Identify the Jurisdiction of the court",
               "for filing the case, Identify relevant Legislations/regulations",
-              "applicable",
-              "3 Mode Of Citations 12",
-              "Identify & research for relevant cases, Art of reading case laws,",
-              "How to quote cases and other authorities in the memorial. (The Blue",
-              "Book Citation), Bibliography.",
-              "4 Memorial drafting & Pleading 12",
-              "Develop a theory of the case, Researching and developing an",
-              "outline of the legal points, Identifying and framing of the issues,",
-              "Principles of constructing arguments (IRAC- Issue, Rule,",
-              "Application, Conclusion method of drafting), How to plead",
-              "(Submission of arguments & Rebuttal)",
-              "5 Qualities of Good Mooter 12",
-              "Language, Court manners, Manner to address in the court (Judges,",
-              "Court officials & opponents), Appearance & Presentation., Time",
-              "management, Responses, Rebuttals and Sur-rebuttals, Importance of",
-              "Team work",
-              "Total Hours 60",
-              "Textbook :",
-              "1 ?Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand,, Universal",
-              "Law Publishing Co. Pvt. Ltd., ."
+              "applicable"
             ],
-            "topics_text": "How to approach a problem (relevant/irrelevant facts), Identify parties, party interest and possible claims, Kinds of legal disputes- Civil and Criminal, Legal terminologies- Claimant, Plaintiff, Applicant, Petitioner, Appellant; Respondent, Defendant; Plaint, Suit, Application, Appeal, Petition, Affidavit – Deponent;, Cause of Action;, Locus Standi – 1) Facts giving rise to a cause of action; 2) Identify legal rights violated;, Identify the Jurisdiction of the court for filing the case, Identify relevant Legislations/regulations applicable 3 Mode Of Citations 12 Identify & research for relevant cases, Art of reading case laws, How to quote cases and other authorities in the memorial. (The Blue Book Citation), Bibliography. 4 Memorial drafting & Pleading 12 Develop a theory of the case, Researching and developing an outline of the legal points, Identifying and framing of the issues, Principles of constructing arguments (IRAC- Issue, Rule, Application, Conclusion method of drafting), How to plead (Submission of arguments & Rebuttal) 5 Qualities of Good Mooter 12 Language, Court manners, Manner to address in the court (Judges, Court officials & opponents), Appearance & Presentation., Time management, Responses, Rebuttals and Sur-rebuttals, Importance of Team work Total Hours 60 Textbook : 1 ?Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand,, Universal Law Publishing Co. Pvt. Ltd., .",
+            "topics_text": "How to approach a problem (relevant/irrelevant facts), Identify parties, party interest and possible claims, Kinds of legal disputes- Civil and Criminal, Legal terminologies- Claimant, Plaintiff, Applicant, Petitioner, Appellant; Respondent, Defendant; Plaint, Suit, Application, Appeal, Petition, Affidavit – Deponent;, Cause of Action;, Locus Standi – 1) Facts giving rise to a cause of action; 2) Identify legal rights violated;, Identify the Jurisdiction of the court for filing the case, Identify relevant Legislations/regulations applicable",
             "topics": [
               "How to approach a problem (relevant/irrelevant facts), Identify",
               "parties, party interest and possible claims, Kinds of legal disputes",
@@ -1049,18 +1166,61 @@
               "Identify legal rights violated",
               ", Identify the Jurisdiction of the court",
               "for filing the case, Identify relevant Legislations/regulations",
-              "applicable",
-              "3 Mode Of Citations 12",
+              "applicable"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Mode Of Citations",
+            "contact_hours": 12,
+            "topic_lines": [
               "Identify & research for relevant cases, Art of reading case laws,",
               "How to quote cases and other authorities in the memorial. (The Blue",
-              "Book Citation), Bibliography.",
-              "4 Memorial drafting & Pleading 12",
+              "Book Citation), Bibliography."
+            ],
+            "topics_text": "Identify & research for relevant cases, Art of reading case laws, How to quote cases and other authorities in the memorial. (The Blue Book Citation), Bibliography.",
+            "topics": [
+              "Identify & research for relevant cases, Art of reading case laws,",
+              "How to quote cases and other authorities in the memorial. (The Blue",
+              "Book Citation), Bibliography."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Memorial drafting & Pleading",
+            "contact_hours": 12,
+            "topic_lines": [
               "Develop a theory of the case, Researching and developing an",
               "outline of the legal points, Identifying and framing of the issues,",
               "Principles of constructing arguments (IRAC- Issue, Rule,",
               "Application, Conclusion method of drafting), How to plead",
-              "(Submission of arguments & Rebuttal)",
-              "5 Qualities of Good Mooter 12",
+              "(Submission of arguments & Rebuttal)"
+            ],
+            "topics_text": "Develop a theory of the case, Researching and developing an outline of the legal points, Identifying and framing of the issues, Principles of constructing arguments (IRAC- Issue, Rule, Application, Conclusion method of drafting), How to plead (Submission of arguments & Rebuttal)",
+            "topics": [
+              "Develop a theory of the case, Researching and developing an",
+              "outline of the legal points, Identifying and framing of the issues,",
+              "Principles of constructing arguments (IRAC- Issue, Rule,",
+              "Application, Conclusion method of drafting), How to plead",
+              "(Submission of arguments & Rebuttal)"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Qualities of Good Mooter",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Language, Court manners, Manner to address in the court (Judges,",
+              "Court officials & opponents), Appearance & Presentation., Time",
+              "management, Responses, Rebuttals and Sur-rebuttals, Importance of",
+              "Team work",
+              "Total Hours 60",
+              "Textbook :",
+              "1 ?Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand,, Universal",
+              "Law Publishing Co. Pvt. Ltd., ."
+            ],
+            "topics_text": "Language, Court manners, Manner to address in the court (Judges, Court officials & opponents), Appearance & Presentation., Time management, Responses, Rebuttals and Sur-rebuttals, Importance of Team work Total Hours 60 Textbook : 1 ?Beginners Path To Moot Court, Aggarwal Prof. Nomita & Mukesh Anand,, Universal Law Publishing Co. Pvt. Ltd., .",
+            "topics": [
               "Language, Court manners, Manner to address in the court (Judges,",
               "Court officials & opponents), Appearance & Presentation., Time",
               "management, Responses, Rebuttals and Sur-rebuttals, Importance of",

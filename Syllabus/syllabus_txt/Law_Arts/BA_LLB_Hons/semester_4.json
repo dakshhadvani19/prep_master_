@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "generated_at_utc": "2026-10-12T12:47:27+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
   "course": {
@@ -53,32 +53,46 @@
               "articles du, dela, des, Verbconjugation",
               "(1st,2ndandafewof3rdgroupi.e.être,faire,alleretc, Interrogative",
               "sentences, Questionswith«Que-est-ce-que,Quand,Quoi,Quel,",
-              "Pourqoui, Où » , Asking/Responding politely , Negative sentences",
-              "2 UNIT 2 15",
-              "Past tense , Future proche , Recent Past , Translation from English",
-              "to French ( small paragraph of five to seven lines) , Translation from",
-              "French to English( small paragraph of five to seven lines) , Reading",
-              "Comprehension , Listening activities",
-              "Total Hours 30",
-              "Textbook :",
-              "1 A1 ECHO Methode de francaise, J. Girardet,, CLE International, 20"
+              "Pourqoui, Où » , Asking/Responding politely , Negative sentences"
             ],
-            "topics_text": "Numbers-Cardinals and Ordinals from 50 to 100 , Contracted articles du, dela, des, Verbconjugation (1st,2ndandafewof3rdgroupi.e.être,faire,alleretc, Interrogative sentences, Questionswith«Que-est-ce-que,Quand,Quoi,Quel, Pourqoui, Où » , Asking/Responding politely , Negative sentences 2 UNIT 2 15 Past tense , Future proche , Recent Past , Translation from English to French ( small paragraph of five to seven lines) , Translation from French to English( small paragraph of five to seven lines) , Reading Comprehension , Listening activities Total Hours 30 Textbook : 1 A1 ECHO Methode de francaise, J. Girardet,, CLE International, 20",
+            "topics_text": "Numbers-Cardinals and Ordinals from 50 to 100 , Contracted articles du, dela, des, Verbconjugation (1st,2ndandafewof3rdgroupi.e.être,faire,alleretc, Interrogative sentences, Questionswith«Que-est-ce-que,Quand,Quoi,Quel, Pourqoui, Où » , Asking/Responding politely , Negative sentences",
             "topics": [
               "Numbers-Cardinals and Ordinals from 50 to 100 , Contracted",
               "articles du, dela, des, Verbconjugation",
               "(1st,2ndandafewof3rdgroupi.e.être,faire,alleretc, Interrogative",
               "sentences, Questionswith«Que-est-ce-que,Quand,Quoi,Quel,",
-              "Pourqoui, Où » , Asking/Responding politely , Negative sentences",
-              "2 UNIT 2 15",
+              "Pourqoui, Où » , Asking/Responding politely , Negative sentences"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "UNIT 2",
+            "contact_hours": 15,
+            "topic_lines": [
               "Past tense , Future proche , Recent Past , Translation from English",
               "to French ( small paragraph of five to seven lines) , Translation from",
               "French to English( small paragraph of five to seven lines) , Reading",
               "Comprehension , Listening activities",
               "Total Hours 30",
-              "Textbook :",
-              "1 A1 ECHO Methode de francaise, J. Girardet,, CLE International, 20"
+              "Textbook :"
+            ],
+            "topics_text": "Past tense , Future proche , Recent Past , Translation from English to French ( small paragraph of five to seven lines) , Translation from French to English( small paragraph of five to seven lines) , Reading Comprehension , Listening activities Total Hours 30 Textbook :",
+            "topics": [
+              "Past tense , Future proche , Recent Past , Translation from English",
+              "to French ( small paragraph of five to seven lines) , Translation from",
+              "French to English( small paragraph of five to seven lines) , Reading",
+              "Comprehension , Listening activities",
+              "Total Hours 30",
+              "Textbook :"
             ]
+          },
+          {
+            "unit_number": 1,
+            "title": "A1 ECHO Methode de francaise, J. Girardet,, CLE International,",
+            "contact_hours": 20,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
           }
         ],
         "practical_units": []
@@ -156,12 +170,42 @@
               "Essential Features of Constitution Aims and Objectives., Theory of",
               "Basic Structure; Principles of Federalism; Nature of the Indian",
               "Constitution – Federal, Unitary, Quasi-federal, Cooperative and",
-              "Competitive Federalism; Scheduled and Tribal Areas",
-              "2 The Union and its Territory 4",
+              "Competitive Federalism; Scheduled and Tribal Areas"
+            ],
+            "topics_text": "Fundamental Law of the Land, Making of the Indian Constitution, Essential Features of Constitution Aims and Objectives., Theory of Basic Structure; Principles of Federalism; Nature of the Indian Constitution – Federal, Unitary, Quasi-federal, Cooperative and Competitive Federalism; Scheduled and Tribal Areas",
+            "topics": [
+              "Fundamental Law of the Land, Making of the Indian Constitution,",
+              "Essential Features of Constitution Aims and Objectives., Theory of",
+              "Basic Structure",
+              "Principles of Federalism",
+              "Nature of the Indian",
+              "Constitution – Federal, Unitary, Quasi-federal, Cooperative and",
+              "Competitive Federalism",
+              "Scheduled and Tribal Areas"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "The Union and its Territory",
+            "contact_hours": 4,
+            "topic_lines": [
               "Power to cede Indian territory to a Foreign Nation; Power to",
               "create/extinguish a state, Alteration of name, area and boundary of",
-              "existing states – Procedure (Articles 1 – 4)",
-              "3 The Union and the State Executives 5",
+              "existing states – Procedure (Articles 1 – 4)"
+            ],
+            "topics_text": "Power to cede Indian territory to a Foreign Nation; Power to create/extinguish a state, Alteration of name, area and boundary of existing states – Procedure (Articles 1 – 4)",
+            "topics": [
+              "Power to cede Indian territory to a Foreign Nation",
+              "Power to",
+              "create/extinguish a state, Alteration of name, area and boundary of",
+              "existing states – Procedure (Articles 1 – 4)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "The Union and the State Executives",
+            "contact_hours": 5,
+            "topic_lines": [
               "The President and Vice President – Qualifications, Election, Term",
               "of Office, Powers, Impeachment (Articles 52-72); Governor –",
               "Appointment - Term of Office – Removal and Powers (Articles 153",
@@ -171,16 +215,62 @@
               "(Articles 74-75); State Council of Ministers (Articles 163-164);",
               "Relationship of the President/Governor with the Council of",
               "Ministers; Scope and Extent of Judicial Review of Executive",
-              "Actions (Articles 74,",
-              "4 Parliament and State Legislatures 4",
+              "Actions (Articles 74,"
+            ],
+            "topics_text": "The President and Vice President – Qualifications, Election, Term of Office, Powers, Impeachment (Articles 52-72); Governor – Appointment - Term of Office – Removal and Powers (Articles 153 – 161), Nature, Scope and Extent of Executive Powers of the Union and States (Article 73, 162), Union Council of Ministers – Powers 75,77,78,111,102, 103(2), 217(3), 163)and Position of the President (Articles 74-75); State Council of Ministers (Articles 163-164); Relationship of the President/Governor with the Council of Ministers; Scope and Extent of Judicial Review of Executive Actions (Articles 74,",
+            "topics": [
+              "The President and Vice President – Qualifications, Election, Term",
+              "of Office, Powers, Impeachment (Articles 52-72)",
+              "Governor –",
+              "Appointment - Term of Office – Removal and Powers (Articles 153",
+              "– 161), Nature, Scope and Extent of Executive Powers of the Union",
+              "and States (Article 73, 162), Union Council of Ministers – Powers",
+              "75,77,78,111,102, 103(2), 217(3), 163)and Position of the President",
+              "(Articles 74-75)",
+              "State Council of Ministers (Articles 163-164)",
+              "Relationship of the President/Governor with the Council of",
+              "Ministers",
+              "Scope and Extent of Judicial Review of Executive",
+              "Actions (Articles 74,"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Parliament and State Legislatures",
+            "contact_hours": 4,
+            "topic_lines": [
               "Composition of Parliament and State legislatures,",
               "Qualification/Disqualification of Members, Legislative Procedure,",
-              "Legislative Privilege (Articles 79 – 122, 168 – 212)",
-              "5 Legislative Power of the Executive (Ordinances) 3",
+              "Legislative Privilege (Articles 79 – 122, 168 – 212)"
+            ],
+            "topics_text": "Composition of Parliament and State legislatures, Qualification/Disqualification of Members, Legislative Procedure, Legislative Privilege (Articles 79 – 122, 168 – 212)",
+            "topics": [
+              "Composition of Parliament and State legislatures,",
+              "Qualification/Disqualification of Members, Legislative Procedure,",
+              "Legislative Privilege (Articles 79 – 122, 168 – 212)"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Legislative Power of the Executive (Ordinances)",
+            "contact_hours": 3,
+            "topic_lines": [
               "Essential conditions for promulgation of an Ordinance: ‘Ordinance’",
               "under Article 13, Judicial Review, Validity of successive",
-              "promulgation of the same Ordinance (Articles 123, 213)",
-              "6 Union and State Judiciary 6",
+              "promulgation of the same Ordinance (Articles 123, 213)"
+            ],
+            "topics_text": "Essential conditions for promulgation of an Ordinance: ‘Ordinance’ under Article 13, Judicial Review, Validity of successive promulgation of the same Ordinance (Articles 123, 213)",
+            "topics": [
+              "Essential conditions for promulgation of an Ordinance: ‘Ordinance’",
+              "under Article 13, Judicial Review, Validity of successive",
+              "promulgation of the same Ordinance (Articles 123, 213)"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Union and State Judiciary",
+            "contact_hours": 6,
+            "topic_lines": [
               "The Union Judiciary: The Supreme High Courts in the States",
               "(Articles 214-231)Court of India (Articles 124-147); Composition,",
               "Appointment and Removal of Judges (Articles 124- 130); Procedure",
@@ -198,73 +288,10 @@
               "overreach/self-restraint, Locus Standi, Laches, Res Judicata,",
               "Exhaustion of Alternative Remedies and Public Interest Litigation –",
               "PIL (Concept of pro bono public), Power to issue appropriate orders",
-              "and directions; Power to award Compensation",
-              "7 Distribution of Legislative Powers 8",
-              "Articles 245 – 255, Schedule VII 1. Doctrine of Territorial Nexus",
-              "(Article 245), Subject matter of laws made by",
-              "Parliament/Legislatures of States; Position of Union Territories",
-              "(Article 246), Interpretation of legislative lists: Plenary and",
-              "Ancillary Power of Legislation, Effect of Non-Obstante Clause,",
-              "Doctrine of Harmonious Construction, Doctrine of Pith and",
-              "Substance, Colourable Exercise of Legislative Power, Residuary",
-              "Power of Legislation (Article 248), Parliament’s Power to Legislate",
-              "in List II (State List) – (Articles 246 (4), 247, 249-253, 352, 356),",
-              "Doctrine of Repugnancy (Article 254)",
-              "8 Freedom of Trade, Commerce and Intercourse 6",
-              "Concept of trade and commerce, Scope of freedom of trade,",
-              "Commerce and intercourse, Direct and immediate restrictions,",
-              "Regulatory measures; compensatory taxes, Restrictions on trade,",
-              "commerce and intercourse among states, power of Parliament and",
-              "state legislatures; state monopoly (Articles 301-307)",
-              "9 Emergency Provisions 5",
-              "Proclamation of Emergency on grounds of war, external aggression",
-              "and armed rebellion (Articles 352, 358, 359), Power of Union",
-              "Executive to issue eddirections (e.g. Articles 256, 257) and the",
-              "effect of non-compliance (Article 365); Duty of the Union to protect",
-              "the States against external aggression and internal disturbance",
-              "(Article 355), Imposition of President’s Rule in States – Grounds,",
-              "Limitations, Parliamentary Control, Judicial Review (Articles 356-",
-              "357), Financial Emergency (Article 360)",
-              "Total Hours 45"
+              "and directions; Power to award Compensation"
             ],
-            "topics_text": "Fundamental Law of the Land, Making of the Indian Constitution, Essential Features of Constitution Aims and Objectives., Theory of Basic Structure; Principles of Federalism; Nature of the Indian Constitution – Federal, Unitary, Quasi-federal, Cooperative and Competitive Federalism; Scheduled and Tribal Areas 2 The Union and its Territory 4 Power to cede Indian territory to a Foreign Nation; Power to create/extinguish a state, Alteration of name, area and boundary of existing states – Procedure (Articles 1 – 4) 3 The Union and the State Executives 5 The President and Vice President – Qualifications, Election, Term of Office, Powers, Impeachment (Articles 52-72); Governor – Appointment - Term of Office – Removal and Powers (Articles 153 – 161), Nature, Scope and Extent of Executive Powers of the Union and States (Article 73, 162), Union Council of Ministers – Powers 75,77,78,111,102, 103(2), 217(3), 163)and Position of the President (Articles 74-75); State Council of Ministers (Articles 163-164); Relationship of the President/Governor with the Council of Ministers; Scope and Extent of Judicial Review of Executive Actions (Articles 74, 4 Parliament and State Legislatures 4 Composition of Parliament and State legislatures, Qualification/Disqualification of Members, Legislative Procedure, Legislative Privilege (Articles 79 – 122, 168 – 212) 5 Legislative Power of the Executive (Ordinances) 3 Essential conditions for promulgation of an Ordinance: ‘Ordinance’ under Article 13, Judicial Review, Validity of successive promulgation of the same Ordinance (Articles 123, 213) 6 Union and State Judiciary 6 The Union Judiciary: The Supreme High Courts in the States (Articles 214-231)Court of India (Articles 124-147); Composition, Appointment and Removal of Judges (Articles 124- 130); Procedure (Article 145); the, Jurisdiction of Supreme Court: Original Exclusive (Articles 71, 131), Original Concurrent Jurisdiction of Supreme Court and High Courts (Articles 32, 226), Appellate Jurisdiction of Supreme Court: Civil, Criminal and in other matters (Articles.132-135); Enlargement of Jurisdiction (Article 138); Binding nature of the law declared by the Supreme Court, enforcement of decrees and orders, (Articles 141 and 142), Special Leave to Appeal (Article 136), Power of Review (Article 137), Advisory Jurisdiction (Article 143), Curative Petition, Writs – habeas corpus, mandamus, prohibition, quo warranto and certiorari, Procedural requirements and innovations ? Judicial Activism and overreach/self-restraint, Locus Standi, Laches, Res Judicata, Exhaustion of Alternative Remedies and Public Interest Litigation – PIL (Concept of pro bono public), Power to issue appropriate orders and directions; Power to award Compensation 7 Distribution of Legislative Powers 8 Articles 245 – 255, Schedule VII 1. Doctrine of Territorial Nexus (Article 245), Subject matter of laws made by Parliament/Legislatures of States; Position of Union Territories (Article 246), Interpretation of legislative lists: Plenary and Ancillary Power of Legislation, Effect of Non-Obstante Clause, Doctrine of Harmonious Construction, Doctrine of Pith and Substance, Colourable Exercise of Legislative Power, Residuary Power of Legislation (Article 248), Parliament’s Power to Legislate in List II (State List) – (Articles 246 (4), 247, 249-253, 352, 356), Doctrine of Repugnancy (Article 254) 8 Freedom of Trade, Commerce and Intercourse 6 Concept of trade and commerce, Scope of freedom of trade, Commerce and intercourse, Direct and immediate restrictions, Regulatory measures; compensatory taxes, Restrictions on trade, commerce and intercourse among states, power of Parliament and state legislatures; state monopoly (Articles 301-307) 9 Emergency Provisions 5 Proclamation of Emergency on grounds of war, external aggression and armed rebellion (Articles 352, 358, 359), Power of Union Executive to issue eddirections (e.g. Articles 256, 257) and the effect of non-compliance (Article 365); Duty of the Union to protect the States against external aggression and internal disturbance (Article 355), Imposition of President’s Rule in States – Grounds, Limitations, Parliamentary Control, Judicial Review (Articles 356- 357), Financial Emergency (Article 360) Total Hours 45",
+            "topics_text": "The Union Judiciary: The Supreme High Courts in the States (Articles 214-231)Court of India (Articles 124-147); Composition, Appointment and Removal of Judges (Articles 124- 130); Procedure (Article 145); the, Jurisdiction of Supreme Court: Original Exclusive (Articles 71, 131), Original Concurrent Jurisdiction of Supreme Court and High Courts (Articles 32, 226), Appellate Jurisdiction of Supreme Court: Civil, Criminal and in other matters (Articles.132-135); Enlargement of Jurisdiction (Article 138); Binding nature of the law declared by the Supreme Court, enforcement of decrees and orders, (Articles 141 and 142), Special Leave to Appeal (Article 136), Power of Review (Article 137), Advisory Jurisdiction (Article 143), Curative Petition, Writs – habeas corpus, mandamus, prohibition, quo warranto and certiorari, Procedural requirements and innovations ? Judicial Activism and overreach/self-restraint, Locus Standi, Laches, Res Judicata, Exhaustion of Alternative Remedies and Public Interest Litigation – PIL (Concept of pro bono public), Power to issue appropriate orders and directions; Power to award Compensation",
             "topics": [
-              "Fundamental Law of the Land, Making of the Indian Constitution,",
-              "Essential Features of Constitution Aims and Objectives., Theory of",
-              "Basic Structure",
-              "Principles of Federalism",
-              "Nature of the Indian",
-              "Constitution – Federal, Unitary, Quasi-federal, Cooperative and",
-              "Competitive Federalism",
-              "Scheduled and Tribal Areas",
-              "2 The Union and its Territory 4",
-              "Power to cede Indian territory to a Foreign Nation",
-              "Power to",
-              "create/extinguish a state, Alteration of name, area and boundary of",
-              "existing states – Procedure (Articles 1 – 4)",
-              "3 The Union and the State Executives 5",
-              "The President and Vice President – Qualifications, Election, Term",
-              "of Office, Powers, Impeachment (Articles 52-72)",
-              "Governor –",
-              "Appointment - Term of Office – Removal and Powers (Articles 153",
-              "– 161), Nature, Scope and Extent of Executive Powers of the Union",
-              "and States (Article 73, 162), Union Council of Ministers – Powers",
-              "75,77,78,111,102, 103(2), 217(3), 163)and Position of the President",
-              "(Articles 74-75)",
-              "State Council of Ministers (Articles 163-164)",
-              "Relationship of the President/Governor with the Council of",
-              "Ministers",
-              "Scope and Extent of Judicial Review of Executive",
-              "Actions (Articles 74,",
-              "4 Parliament and State Legislatures 4",
-              "Composition of Parliament and State legislatures,",
-              "Qualification/Disqualification of Members, Legislative Procedure,",
-              "Legislative Privilege (Articles 79 – 122, 168 – 212)",
-              "5 Legislative Power of the Executive (Ordinances) 3",
-              "Essential conditions for promulgation of an Ordinance: ‘Ordinance’",
-              "under Article 13, Judicial Review, Validity of successive",
-              "promulgation of the same Ordinance (Articles 123, 213)",
-              "6 Union and State Judiciary 6",
               "The Union Judiciary: The Supreme High Courts in the States",
               "(Articles 214-231)Court of India (Articles 124-147)",
               "Composition,",
@@ -287,8 +314,27 @@
               "Exhaustion of Alternative Remedies and Public Interest Litigation –",
               "PIL (Concept of pro bono public), Power to issue appropriate orders",
               "and directions",
-              "Power to award Compensation",
-              "7 Distribution of Legislative Powers 8",
+              "Power to award Compensation"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Distribution of Legislative Powers",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Articles 245 – 255, Schedule VII 1. Doctrine of Territorial Nexus",
+              "(Article 245), Subject matter of laws made by",
+              "Parliament/Legislatures of States; Position of Union Territories",
+              "(Article 246), Interpretation of legislative lists: Plenary and",
+              "Ancillary Power of Legislation, Effect of Non-Obstante Clause,",
+              "Doctrine of Harmonious Construction, Doctrine of Pith and",
+              "Substance, Colourable Exercise of Legislative Power, Residuary",
+              "Power of Legislation (Article 248), Parliament’s Power to Legislate",
+              "in List II (State List) – (Articles 246 (4), 247, 249-253, 352, 356),",
+              "Doctrine of Repugnancy (Article 254)"
+            ],
+            "topics_text": "Articles 245 – 255, Schedule VII 1. Doctrine of Territorial Nexus (Article 245), Subject matter of laws made by Parliament/Legislatures of States; Position of Union Territories (Article 246), Interpretation of legislative lists: Plenary and Ancillary Power of Legislation, Effect of Non-Obstante Clause, Doctrine of Harmonious Construction, Doctrine of Pith and Substance, Colourable Exercise of Legislative Power, Residuary Power of Legislation (Article 248), Parliament’s Power to Legislate in List II (State List) – (Articles 246 (4), 247, 249-253, 352, 356), Doctrine of Repugnancy (Article 254)",
+            "topics": [
               "Articles 245 – 255, Schedule VII 1. Doctrine of Territorial Nexus",
               "(Article 245), Subject matter of laws made by",
               "Parliament/Legislatures of States",
@@ -299,16 +345,48 @@
               "Substance, Colourable Exercise of Legislative Power, Residuary",
               "Power of Legislation (Article 248), Parliament’s Power to Legislate",
               "in List II (State List) – (Articles 246 (4), 247, 249-253, 352, 356),",
-              "Doctrine of Repugnancy (Article 254)",
-              "8 Freedom of Trade, Commerce and Intercourse 6",
+              "Doctrine of Repugnancy (Article 254)"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Freedom of Trade, Commerce and Intercourse",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Concept of trade and commerce, Scope of freedom of trade,",
+              "Commerce and intercourse, Direct and immediate restrictions,",
+              "Regulatory measures; compensatory taxes, Restrictions on trade,",
+              "commerce and intercourse among states, power of Parliament and",
+              "state legislatures; state monopoly (Articles 301-307)"
+            ],
+            "topics_text": "Concept of trade and commerce, Scope of freedom of trade, Commerce and intercourse, Direct and immediate restrictions, Regulatory measures; compensatory taxes, Restrictions on trade, commerce and intercourse among states, power of Parliament and state legislatures; state monopoly (Articles 301-307)",
+            "topics": [
               "Concept of trade and commerce, Scope of freedom of trade,",
               "Commerce and intercourse, Direct and immediate restrictions,",
               "Regulatory measures",
               "compensatory taxes, Restrictions on trade,",
               "commerce and intercourse among states, power of Parliament and",
               "state legislatures",
-              "state monopoly (Articles 301-307)",
-              "9 Emergency Provisions 5",
+              "state monopoly (Articles 301-307)"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Emergency Provisions",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Proclamation of Emergency on grounds of war, external aggression",
+              "and armed rebellion (Articles 352, 358, 359), Power of Union",
+              "Executive to issue eddirections (e.g. Articles 256, 257) and the",
+              "effect of non-compliance (Article 365); Duty of the Union to protect",
+              "the States against external aggression and internal disturbance",
+              "(Article 355), Imposition of President’s Rule in States – Grounds,",
+              "Limitations, Parliamentary Control, Judicial Review (Articles 356-",
+              "357), Financial Emergency (Article 360)",
+              "Total Hours 45"
+            ],
+            "topics_text": "Proclamation of Emergency on grounds of war, external aggression and armed rebellion (Articles 352, 358, 359), Power of Union Executive to issue eddirections (e.g. Articles 256, 257) and the effect of non-compliance (Article 365); Duty of the Union to protect the States against external aggression and internal disturbance (Article 355), Imposition of President’s Rule in States – Grounds, Limitations, Parliamentary Control, Judicial Review (Articles 356- 357), Financial Emergency (Article 360) Total Hours 45",
+            "topics": [
               "Proclamation of Emergency on grounds of war, external aggression",
               "and armed rebellion (Articles 352, 358, 359), Power of Union",
               "Executive to issue eddirections (e.g. Articles 256, 257) and the",
@@ -429,16 +507,44 @@
             "topic_lines": [
               "Environment, Nature and Ecosystem, Origin of Environmental Law,",
               "Environmental Protection in Ancient Indian Tradition and Culture,",
-              "Protection of Environment under the Indian Constitution",
-              "2 International Environmental Conventions 8",
+              "Protection of Environment under the Indian Constitution"
+            ],
+            "topics_text": "Environment, Nature and Ecosystem, Origin of Environmental Law, Environmental Protection in Ancient Indian Tradition and Culture, Protection of Environment under the Indian Constitution",
+            "topics": [
+              "Environment, Nature and Ecosystem, Origin of Environmental Law,",
+              "Environmental Protection in Ancient Indian Tradition and Culture,",
+              "Protection of Environment under the Indian Constitution"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "International Environmental Conventions",
+            "contact_hours": 8,
+            "topic_lines": [
               "Stockholm Declaration on Human Environment, 1972, The role of",
               "UNEP for the protection of environment, Biodiversity Convention",
               "(Earth Summit), 1992, Rio Declaration, 1992, Kyoto Protocol 1997,",
               "Johannesburg Convention 2002, UNFCCC (United Nations",
               "Framework convention on climate change), 1994, Introduction to",
               "COP (Conference of the Parties), COP 27 and COP 28 under",
-              "UNFCCC",
-              "3 Prevention and Control of Water and Air Pollution 8",
+              "UNFCCC"
+            ],
+            "topics_text": "Stockholm Declaration on Human Environment, 1972, The role of UNEP for the protection of environment, Biodiversity Convention (Earth Summit), 1992, Rio Declaration, 1992, Kyoto Protocol 1997, Johannesburg Convention 2002, UNFCCC (United Nations Framework convention on climate change), 1994, Introduction to COP (Conference of the Parties), COP 27 and COP 28 under UNFCCC",
+            "topics": [
+              "Stockholm Declaration on Human Environment, 1972, The role of",
+              "UNEP for the protection of environment, Biodiversity Convention",
+              "(Earth Summit), 1992, Rio Declaration, 1992, Kyoto Protocol 1997,",
+              "Johannesburg Convention 2002, UNFCCC (United Nations",
+              "Framework convention on climate change), 1994, Introduction to",
+              "COP (Conference of the Parties), COP 27 and COP 28 under",
+              "UNFCCC"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Prevention and Control of Water and Air Pollution",
+            "contact_hours": 8,
+            "topic_lines": [
               "Water Pollution - Definition, Central and State Pollution Control",
               "Boards – Constitution, Powers and Functions, Sample of effluents –",
               "Procedure; Restraint order vi. Citizen Suit Provision, Air",
@@ -447,48 +553,10 @@
               "Constitution, Powers and functions, Air Pollution Control Areas,",
               "Consent Requirement – Procedure, Grant/Refusal, Withdrawal,",
               "Sample of effluents – Procedure; Restraint order, The Water",
-              "(Prevention and Control of Pollution) Amendment Bill, 2024",
-              "4 Protection of Forests and WildLife 7",
-              "Indian Forest Act, 1927: Kinds of forest – Private, Reserved,",
-              "Protected and Village Forests, The Forest (Conservation) Act, 1980,",
-              "Forest Dwellers Act, 2006, The Wild Life (Protection) Act, 1972 :",
-              "Authorities to be appointed and constituted under the Act, Hunting",
-              "of Wild Animals, Protection of Specified Plants, Protected Area,",
-              "Trade or Commerce in wild animals, animal articles and trophies;",
-              "Its prohibition, Panchayats (Extension to Scheduled Areas) Act,",
-              "1996, National Afforestation Programme, 2000, Forest",
-              "(Conservation) Rules, 2022, The Forest (Conservation) Amendment",
-              "Bill, 2023, Compensatory Afforestation Fund Act, 2016 (CAF Act)",
-              "5 General Legislation for Environmental Protection 7",
-              "Environmental (Protection) Act, 1986, Hazardous Wastes",
-              "(Management, Handling and Transboundary Movement) Rules,",
-              "2008, Noise Pollution (Regulation and Control) Rules, 2000, Public",
-              "Liability Insurance Act, 1991, The National Green Tribunal Act,",
-              "2010",
-              "6 Current Status of Environment in India and World 7",
-              "Introduction, Air Quality in India, Air Pollution management",
-              "Policies in India, Water related Issue, Status of water distribution in",
-              "India, Rainfall, Groundwater, Groundwater contamination, River",
-              "Pollution in India, Policies for controlling River and water",
-              "Pollution, Climate Change: Mitigation and Adaptation, Causes of",
-              "Climate Change, Global Warming: Challenges Ahead, Global rise",
-              "in temperature: Causes and Consequences",
-              "Total Hours 45"
+              "(Prevention and Control of Pollution) Amendment Bill, 2024"
             ],
-            "topics_text": "Environment, Nature and Ecosystem, Origin of Environmental Law, Environmental Protection in Ancient Indian Tradition and Culture, Protection of Environment under the Indian Constitution 2 International Environmental Conventions 8 Stockholm Declaration on Human Environment, 1972, The role of UNEP for the protection of environment, Biodiversity Convention (Earth Summit), 1992, Rio Declaration, 1992, Kyoto Protocol 1997, Johannesburg Convention 2002, UNFCCC (United Nations Framework convention on climate change), 1994, Introduction to COP (Conference of the Parties), COP 27 and COP 28 under UNFCCC 3 Prevention and Control of Water and Air Pollution 8 Water Pollution - Definition, Central and State Pollution Control Boards – Constitution, Powers and Functions, Sample of effluents – Procedure; Restraint order vi. Citizen Suit Provision, Air (Prevention and Control of Pollution) Act, 1981: Air Pollution – Definition, Central and State Pollution Control Boards – Constitution, Powers and functions, Air Pollution Control Areas, Consent Requirement – Procedure, Grant/Refusal, Withdrawal, Sample of effluents – Procedure; Restraint order, The Water (Prevention and Control of Pollution) Amendment Bill, 2024 4 Protection of Forests and WildLife 7 Indian Forest Act, 1927: Kinds of forest – Private, Reserved, Protected and Village Forests, The Forest (Conservation) Act, 1980, Forest Dwellers Act, 2006, The Wild Life (Protection) Act, 1972 : Authorities to be appointed and constituted under the Act, Hunting of Wild Animals, Protection of Specified Plants, Protected Area, Trade or Commerce in wild animals, animal articles and trophies; Its prohibition, Panchayats (Extension to Scheduled Areas) Act, 1996, National Afforestation Programme, 2000, Forest (Conservation) Rules, 2022, The Forest (Conservation) Amendment Bill, 2023, Compensatory Afforestation Fund Act, 2016 (CAF Act) 5 General Legislation for Environmental Protection 7 Environmental (Protection) Act, 1986, Hazardous Wastes (Management, Handling and Transboundary Movement) Rules, 2008, Noise Pollution (Regulation and Control) Rules, 2000, Public Liability Insurance Act, 1991, The National Green Tribunal Act, 2010 6 Current Status of Environment in India and World 7 Introduction, Air Quality in India, Air Pollution management Policies in India, Water related Issue, Status of water distribution in India, Rainfall, Groundwater, Groundwater contamination, River Pollution in India, Policies for controlling River and water Pollution, Climate Change: Mitigation and Adaptation, Causes of Climate Change, Global Warming: Challenges Ahead, Global rise in temperature: Causes and Consequences Total Hours 45",
+            "topics_text": "Water Pollution - Definition, Central and State Pollution Control Boards – Constitution, Powers and Functions, Sample of effluents – Procedure; Restraint order vi. Citizen Suit Provision, Air (Prevention and Control of Pollution) Act, 1981: Air Pollution – Definition, Central and State Pollution Control Boards – Constitution, Powers and functions, Air Pollution Control Areas, Consent Requirement – Procedure, Grant/Refusal, Withdrawal, Sample of effluents – Procedure; Restraint order, The Water (Prevention and Control of Pollution) Amendment Bill, 2024",
             "topics": [
-              "Environment, Nature and Ecosystem, Origin of Environmental Law,",
-              "Environmental Protection in Ancient Indian Tradition and Culture,",
-              "Protection of Environment under the Indian Constitution",
-              "2 International Environmental Conventions 8",
-              "Stockholm Declaration on Human Environment, 1972, The role of",
-              "UNEP for the protection of environment, Biodiversity Convention",
-              "(Earth Summit), 1992, Rio Declaration, 1992, Kyoto Protocol 1997,",
-              "Johannesburg Convention 2002, UNFCCC (United Nations",
-              "Framework convention on climate change), 1994, Introduction to",
-              "COP (Conference of the Parties), COP 27 and COP 28 under",
-              "UNFCCC",
-              "3 Prevention and Control of Water and Air Pollution 8",
               "Water Pollution - Definition, Central and State Pollution Control",
               "Boards – Constitution, Powers and Functions, Sample of effluents –",
               "Procedure",
@@ -499,8 +567,27 @@
               "Consent Requirement – Procedure, Grant/Refusal, Withdrawal,",
               "Sample of effluents – Procedure",
               "Restraint order, The Water",
-              "(Prevention and Control of Pollution) Amendment Bill, 2024",
-              "4 Protection of Forests and WildLife 7",
+              "(Prevention and Control of Pollution) Amendment Bill, 2024"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Protection of Forests and WildLife",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Indian Forest Act, 1927: Kinds of forest – Private, Reserved,",
+              "Protected and Village Forests, The Forest (Conservation) Act, 1980,",
+              "Forest Dwellers Act, 2006, The Wild Life (Protection) Act, 1972 :",
+              "Authorities to be appointed and constituted under the Act, Hunting",
+              "of Wild Animals, Protection of Specified Plants, Protected Area,",
+              "Trade or Commerce in wild animals, animal articles and trophies;",
+              "Its prohibition, Panchayats (Extension to Scheduled Areas) Act,",
+              "1996, National Afforestation Programme, 2000, Forest",
+              "(Conservation) Rules, 2022, The Forest (Conservation) Amendment",
+              "Bill, 2023, Compensatory Afforestation Fund Act, 2016 (CAF Act)"
+            ],
+            "topics_text": "Indian Forest Act, 1927: Kinds of forest – Private, Reserved, Protected and Village Forests, The Forest (Conservation) Act, 1980, Forest Dwellers Act, 2006, The Wild Life (Protection) Act, 1972 : Authorities to be appointed and constituted under the Act, Hunting of Wild Animals, Protection of Specified Plants, Protected Area, Trade or Commerce in wild animals, animal articles and trophies; Its prohibition, Panchayats (Extension to Scheduled Areas) Act, 1996, National Afforestation Programme, 2000, Forest (Conservation) Rules, 2022, The Forest (Conservation) Amendment Bill, 2023, Compensatory Afforestation Fund Act, 2016 (CAF Act)",
+            "topics": [
               "Indian Forest Act, 1927: Kinds of forest – Private, Reserved,",
               "Protected and Village Forests, The Forest (Conservation) Act, 1980,",
               "Forest Dwellers Act, 2006, The Wild Life (Protection) Act, 1972 :",
@@ -510,14 +597,45 @@
               "Its prohibition, Panchayats (Extension to Scheduled Areas) Act,",
               "1996, National Afforestation Programme, 2000, Forest",
               "(Conservation) Rules, 2022, The Forest (Conservation) Amendment",
-              "Bill, 2023, Compensatory Afforestation Fund Act, 2016 (CAF Act)",
-              "5 General Legislation for Environmental Protection 7",
+              "Bill, 2023, Compensatory Afforestation Fund Act, 2016 (CAF Act)"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "General Legislation for Environmental Protection",
+            "contact_hours": 7,
+            "topic_lines": [
               "Environmental (Protection) Act, 1986, Hazardous Wastes",
               "(Management, Handling and Transboundary Movement) Rules,",
               "2008, Noise Pollution (Regulation and Control) Rules, 2000, Public",
               "Liability Insurance Act, 1991, The National Green Tribunal Act,",
-              "2010",
-              "6 Current Status of Environment in India and World 7",
+              "2010"
+            ],
+            "topics_text": "Environmental (Protection) Act, 1986, Hazardous Wastes (Management, Handling and Transboundary Movement) Rules, 2008, Noise Pollution (Regulation and Control) Rules, 2000, Public Liability Insurance Act, 1991, The National Green Tribunal Act, 2010",
+            "topics": [
+              "Environmental (Protection) Act, 1986, Hazardous Wastes",
+              "(Management, Handling and Transboundary Movement) Rules,",
+              "2008, Noise Pollution (Regulation and Control) Rules, 2000, Public",
+              "Liability Insurance Act, 1991, The National Green Tribunal Act,",
+              "2010"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Current Status of Environment in India and World",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction, Air Quality in India, Air Pollution management",
+              "Policies in India, Water related Issue, Status of water distribution in",
+              "India, Rainfall, Groundwater, Groundwater contamination, River",
+              "Pollution in India, Policies for controlling River and water",
+              "Pollution, Climate Change: Mitigation and Adaptation, Causes of",
+              "Climate Change, Global Warming: Challenges Ahead, Global rise",
+              "in temperature: Causes and Consequences",
+              "Total Hours 45"
+            ],
+            "topics_text": "Introduction, Air Quality in India, Air Pollution management Policies in India, Water related Issue, Status of water distribution in India, Rainfall, Groundwater, Groundwater contamination, River Pollution in India, Policies for controlling River and water Pollution, Climate Change: Mitigation and Adaptation, Causes of Climate Change, Global Warming: Challenges Ahead, Global rise in temperature: Causes and Consequences Total Hours 45",
+            "topics": [
               "Introduction, Air Quality in India, Air Pollution management",
               "Policies in India, Water related Issue, Status of water distribution in",
               "India, Rainfall, Groundwater, Groundwater contamination, River",
@@ -637,33 +755,115 @@
               "Coparcenary; Dyabhaga & Mitakshara Succession, Karta–power &",
               "function, Karta’s right of alienation of property, Women’s right to",
               "become Karta, Pious Obligation, Principle of Consanguinity and",
-              "Primogeniture, Principle of Survivorship and Succession",
-              "2 Intestate Succession 9",
+              "Primogeniture, Principle of Survivorship and Succession"
+            ],
+            "topics_text": "Institution of Joint Family and Joint Family Property and Business, Coparcenary; Dyabhaga & Mitakshara Succession, Karta–power & function, Karta’s right of alienation of property, Women’s right to become Karta, Pious Obligation, Principle of Consanguinity and Primogeniture, Principle of Survivorship and Succession",
+            "topics": [
+              "Institution of Joint Family and Joint Family Property and Business,",
+              "Coparcenary",
+              "Dyabhaga & Mitakshara Succession, Karta–power &",
+              "function, Karta’s right of alienation of property, Women’s right to",
+              "become Karta, Pious Obligation, Principle of Consanguinity and",
+              "Primogeniture, Principle of Survivorship and Succession"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Intestate Succession",
+            "contact_hours": 9,
+            "topic_lines": [
               "General Principles of Intestate Succession under o Hindu Law",
               "(Hindu Succession Act 1956), Islamic Law, (Sharers and",
               "Residuries) girl child as Residuries, Christian Law and others",
               "(Indian succession act), Statutory conditions of disinheritance and",
-              "disentitlement, Partition",
-              "3 Women’s Property 6",
+              "disentitlement, Partition"
+            ],
+            "topics_text": "General Principles of Intestate Succession under o Hindu Law (Hindu Succession Act 1956), Islamic Law, (Sharers and Residuries) girl child as Residuries, Christian Law and others (Indian succession act), Statutory conditions of disinheritance and disentitlement, Partition",
+            "topics": [
+              "General Principles of Intestate Succession under o Hindu Law",
+              "(Hindu Succession Act 1956), Islamic Law, (Sharers and",
+              "Residuries) girl child as Residuries, Christian Law and others",
+              "(Indian succession act), Statutory conditions of disinheritance and",
+              "disentitlement, Partition"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Women’s Property",
+            "contact_hours": 6,
+            "topic_lines": [
               "Position of Hindu women in joint Hindu family after 2005",
               "Amendment, Stridhan – concepts and characteristics, Comparative",
               "analysis of right to property of women under different Religious and",
-              "Statutory Law",
-              "4 Testamentary Succession 6",
+              "Statutory Law"
+            ],
+            "topics_text": "Position of Hindu women in joint Hindu family after 2005 Amendment, Stridhan – concepts and characteristics, Comparative analysis of right to property of women under different Religious and Statutory Law",
+            "topics": [
+              "Position of Hindu women in joint Hindu family after 2005",
+              "Amendment, Stridhan – concepts and characteristics, Comparative",
+              "analysis of right to property of women under different Religious and",
+              "Statutory Law"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Testamentary Succession",
+            "contact_hours": 6,
+            "topic_lines": [
               "Testamentary succession under various religious (Hindu and",
               "Islamic) and statutory Law, Kinds of Will, Execution of privileged",
               "and unprivileged Will, Will and Administration of will – Probate,",
-              "Codicil, attestation, alteration, revival and revocation of Will",
-              "5 Right of Preemption 6",
+              "Codicil, attestation, alteration, revival and revocation of Will"
+            ],
+            "topics_text": "Testamentary succession under various religious (Hindu and Islamic) and statutory Law, Kinds of Will, Execution of privileged and unprivileged Will, Will and Administration of will – Probate, Codicil, attestation, alteration, revival and revocation of Will",
+            "topics": [
+              "Testamentary succession under various religious (Hindu and",
+              "Islamic) and statutory Law, Kinds of Will, Execution of privileged",
+              "and unprivileged Will, Will and Administration of will – Probate,",
+              "Codicil, attestation, alteration, revival and revocation of Will"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Right of Preemption",
+            "contact_hours": 6,
+            "topic_lines": [
               "Pre-emption, meaning, nature, Constitutionality, classification; who",
               "can claim the right, Formalities and legal effect, Legal Formalities",
               "and legal effect, Legal devices of evading right of preemption; when",
-              "is the right lost",
-              "6 Gift 6",
+              "is the right lost"
+            ],
+            "topics_text": "Pre-emption, meaning, nature, Constitutionality, classification; who can claim the right, Formalities and legal effect, Legal Formalities and legal effect, Legal devices of evading right of preemption; when is the right lost",
+            "topics": [
+              "Pre-emption, meaning, nature, Constitutionality, classification",
+              "who",
+              "can claim the right, Formalities and legal effect, Legal Formalities",
+              "and legal effect, Legal devices of evading right of preemption",
+              "when",
+              "is the right lost"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Gift",
+            "contact_hours": 6,
+            "topic_lines": [
               "Hiba – nature and characteristics Kinds of Hiba, Provisions Of gift",
               "under Transfer of Property Act, Conditional and Future Gift, Death-",
-              "bed gift, Revocation of Hiba and Gift",
-              "7 Wakf and Hindu Religious Endowment 4",
+              "bed gift, Revocation of Hiba and Gift"
+            ],
+            "topics_text": "Hiba – nature and characteristics Kinds of Hiba, Provisions Of gift under Transfer of Property Act, Conditional and Future Gift, Death- bed gift, Revocation of Hiba and Gift",
+            "topics": [
+              "Hiba – nature and characteristics Kinds of Hiba, Provisions Of gift",
+              "under Transfer of Property Act, Conditional and Future Gift, Death",
+              "bed gift, Revocation of Hiba and Gift"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Wakf and Hindu Religious Endowment",
+            "contact_hours": 4,
+            "topic_lines": [
               "Meaning, character, Formalities for creation, Administration,",
               "Mutawalli: Power of Mutawalli; Muslim Religious Institutions and",
               "Offices, Traditional religious principles of creation of Hindu",
@@ -672,42 +872,8 @@
               "Trustees",
               "Total Hours 45"
             ],
-            "topics_text": "Institution of Joint Family and Joint Family Property and Business, Coparcenary; Dyabhaga & Mitakshara Succession, Karta–power & function, Karta’s right of alienation of property, Women’s right to become Karta, Pious Obligation, Principle of Consanguinity and Primogeniture, Principle of Survivorship and Succession 2 Intestate Succession 9 General Principles of Intestate Succession under o Hindu Law (Hindu Succession Act 1956), Islamic Law, (Sharers and Residuries) girl child as Residuries, Christian Law and others (Indian succession act), Statutory conditions of disinheritance and disentitlement, Partition 3 Women’s Property 6 Position of Hindu women in joint Hindu family after 2005 Amendment, Stridhan – concepts and characteristics, Comparative analysis of right to property of women under different Religious and Statutory Law 4 Testamentary Succession 6 Testamentary succession under various religious (Hindu and Islamic) and statutory Law, Kinds of Will, Execution of privileged and unprivileged Will, Will and Administration of will – Probate, Codicil, attestation, alteration, revival and revocation of Will 5 Right of Preemption 6 Pre-emption, meaning, nature, Constitutionality, classification; who can claim the right, Formalities and legal effect, Legal Formalities and legal effect, Legal devices of evading right of preemption; when is the right lost 6 Gift 6 Hiba – nature and characteristics Kinds of Hiba, Provisions Of gift under Transfer of Property Act, Conditional and Future Gift, Death- bed gift, Revocation of Hiba and Gift 7 Wakf and Hindu Religious Endowment 4 Meaning, character, Formalities for creation, Administration, Mutawalli: Power of Mutawalli; Muslim Religious Institutions and Offices, Traditional religious principles of creation of Hindu Religious Endowments, Administration and offices; Statutory methods of creation of Trust, Trustees: Powers and functions of the Trustees Total Hours 45",
+            "topics_text": "Meaning, character, Formalities for creation, Administration, Mutawalli: Power of Mutawalli; Muslim Religious Institutions and Offices, Traditional religious principles of creation of Hindu Religious Endowments, Administration and offices; Statutory methods of creation of Trust, Trustees: Powers and functions of the Trustees Total Hours 45",
             "topics": [
-              "Institution of Joint Family and Joint Family Property and Business,",
-              "Coparcenary",
-              "Dyabhaga & Mitakshara Succession, Karta–power &",
-              "function, Karta’s right of alienation of property, Women’s right to",
-              "become Karta, Pious Obligation, Principle of Consanguinity and",
-              "Primogeniture, Principle of Survivorship and Succession",
-              "2 Intestate Succession 9",
-              "General Principles of Intestate Succession under o Hindu Law",
-              "(Hindu Succession Act 1956), Islamic Law, (Sharers and",
-              "Residuries) girl child as Residuries, Christian Law and others",
-              "(Indian succession act), Statutory conditions of disinheritance and",
-              "disentitlement, Partition",
-              "3 Women’s Property 6",
-              "Position of Hindu women in joint Hindu family after 2005",
-              "Amendment, Stridhan – concepts and characteristics, Comparative",
-              "analysis of right to property of women under different Religious and",
-              "Statutory Law",
-              "4 Testamentary Succession 6",
-              "Testamentary succession under various religious (Hindu and",
-              "Islamic) and statutory Law, Kinds of Will, Execution of privileged",
-              "and unprivileged Will, Will and Administration of will – Probate,",
-              "Codicil, attestation, alteration, revival and revocation of Will",
-              "5 Right of Preemption 6",
-              "Pre-emption, meaning, nature, Constitutionality, classification",
-              "who",
-              "can claim the right, Formalities and legal effect, Legal Formalities",
-              "and legal effect, Legal devices of evading right of preemption",
-              "when",
-              "is the right lost",
-              "6 Gift 6",
-              "Hiba – nature and characteristics Kinds of Hiba, Provisions Of gift",
-              "under Transfer of Property Act, Conditional and Future Gift, Death",
-              "bed gift, Revocation of Hiba and Gift",
-              "7 Wakf and Hindu Religious Endowment 4",
               "Meaning, character, Formalities for creation, Administration,",
               "Mutawalli: Power of Mutawalli",
               "Muslim Religious Institutions and",
@@ -889,31 +1055,99 @@
               "Culpable Homicide, Murder, Death by Rash or Negligent Act,",
               "Dowry Death, Cruelty, Attempt to Murder or Culpable Homicide,",
               "Abetment of suicide, Organised crime, Petty organised crime,",
-              "Terrorist act",
-              "2 OFFENCES AFFECTING THE HUMAN BODY: PART II 9",
+              "Terrorist act"
+            ],
+            "topics_text": "Culpable Homicide, Murder, Death by Rash or Negligent Act, Dowry Death, Cruelty, Attempt to Murder or Culpable Homicide, Abetment of suicide, Organised crime, Petty organised crime, Terrorist act",
+            "topics": [
+              "Culpable Homicide, Murder, Death by Rash or Negligent Act,",
+              "Dowry Death, Cruelty, Attempt to Murder or Culpable Homicide,",
+              "Abetment of suicide, Organised crime, Petty organised crime,",
+              "Terrorist act"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "OFFENCES AFFECTING THE HUMAN BODY: PART II",
+            "contact_hours": 9,
+            "topic_lines": [
               "Hurt, Grievous Hurt, Criminal Force, Assault, Kidnapping,",
               "Abduction, Slavery, Trafficking of person, Forced labour,",
-              "Trafficking of person, Wrongful restraint, Wrongful confinement",
-              "3 SEXUAL OFFENCES 9",
+              "Trafficking of person, Wrongful restraint, Wrongful confinement"
+            ],
+            "topics_text": "Hurt, Grievous Hurt, Criminal Force, Assault, Kidnapping, Abduction, Slavery, Trafficking of person, Forced labour, Trafficking of person, Wrongful restraint, Wrongful confinement",
+            "topics": [
+              "Hurt, Grievous Hurt, Criminal Force, Assault, Kidnapping,",
+              "Abduction, Slavery, Trafficking of person, Forced labour,",
+              "Trafficking of person, Wrongful restraint, Wrongful confinement"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "SEXUAL OFFENCES",
+            "contact_hours": 9,
+            "topic_lines": [
               "Rape, Sexual intercourse by husband upon his wife during",
               "separation, Sexual intercourse by a person in authority, Sexual",
               "intercourse by employing deceitful means, etc, Gang Rape,",
               "Disclosure of identity of victim of certain offences, etc., Sexual",
               "Offences Against Children Under the Protection of Children from",
-              "Sexual Offences Act, 2012",
-              "4 CRIMINAL FORCE AND ASSAULT AGAINST WOMAN 6",
+              "Sexual Offences Act, 2012"
+            ],
+            "topics_text": "Rape, Sexual intercourse by husband upon his wife during separation, Sexual intercourse by a person in authority, Sexual intercourse by employing deceitful means, etc, Gang Rape, Disclosure of identity of victim of certain offences, etc., Sexual Offences Against Children Under the Protection of Children from Sexual Offences Act, 2012",
+            "topics": [
+              "Rape, Sexual intercourse by husband upon his wife during",
+              "separation, Sexual intercourse by a person in authority, Sexual",
+              "intercourse by employing deceitful means, etc, Gang Rape,",
+              "Disclosure of identity of victim of certain offences, etc., Sexual",
+              "Offences Against Children Under the Protection of Children from",
+              "Sexual Offences Act, 2012"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "CRIMINAL FORCE AND ASSAULT AGAINST WOMAN",
+            "contact_hours": 6,
+            "topic_lines": [
               "Assault or use of criminal force to woman with intent to outrage her",
               "modesty, Sexual harassment, Assault or use of criminal force to",
               "woman with intent to disrobe, Voyeurism, Stalking, Word, gesture",
               "or act intended to insult modesty of a woman, Definition of",
               "Domestic Violence, and Reliefs under the Protection of Women",
-              "from Domestic Violence Act, 2005",
-              "5 OFFENCES RELATING TO MARRIAGE 4",
+              "from Domestic Violence Act, 2005"
+            ],
+            "topics_text": "Assault or use of criminal force to woman with intent to outrage her modesty, Sexual harassment, Assault or use of criminal force to woman with intent to disrobe, Voyeurism, Stalking, Word, gesture or act intended to insult modesty of a woman, Definition of Domestic Violence, and Reliefs under the Protection of Women from Domestic Violence Act, 2005",
+            "topics": [
+              "Assault or use of criminal force to woman with intent to outrage her",
+              "modesty, Sexual harassment, Assault or use of criminal force to",
+              "woman with intent to disrobe, Voyeurism, Stalking, Word, gesture",
+              "or act intended to insult modesty of a woman, Definition of",
+              "Domestic Violence, and Reliefs under the Protection of Women",
+              "from Domestic Violence Act, 2005"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "OFFENCES RELATING TO MARRIAGE",
+            "contact_hours": 4,
+            "topic_lines": [
               "Cohabitation caused by man deceitfully inducing belief of lawful",
               "marriage, Marrying again during lifetime of husband or wife,",
               "Marriage ceremony fraudulently gone through without lawful",
-              "marriage, Cruelty",
-              "6 OFFENCE OF CAUSING MISCARRIAGE AND OFFENCES 6",
+              "marriage, Cruelty"
+            ],
+            "topics_text": "Cohabitation caused by man deceitfully inducing belief of lawful marriage, Marrying again during lifetime of husband or wife, Marriage ceremony fraudulently gone through without lawful marriage, Cruelty",
+            "topics": [
+              "Cohabitation caused by man deceitfully inducing belief of lawful",
+              "marriage, Marrying again during lifetime of husband or wife,",
+              "Marriage ceremony fraudulently gone through without lawful",
+              "marriage, Cruelty"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "OFFENCE OF CAUSING MISCARRIAGE AND OFFENCES",
+            "contact_hours": 6,
+            "topic_lines": [
               "AGAINST CHILD",
               "Miscarriage, Exposure and abandonment of child under twelve",
               "years of age, by parent or person having care of it, Concealment of",
@@ -924,36 +1158,8 @@
               "prostitution, etc.",
               "Total Hours 45"
             ],
-            "topics_text": "Culpable Homicide, Murder, Death by Rash or Negligent Act, Dowry Death, Cruelty, Attempt to Murder or Culpable Homicide, Abetment of suicide, Organised crime, Petty organised crime, Terrorist act 2 OFFENCES AFFECTING THE HUMAN BODY: PART II 9 Hurt, Grievous Hurt, Criminal Force, Assault, Kidnapping, Abduction, Slavery, Trafficking of person, Forced labour, Trafficking of person, Wrongful restraint, Wrongful confinement 3 SEXUAL OFFENCES 9 Rape, Sexual intercourse by husband upon his wife during separation, Sexual intercourse by a person in authority, Sexual intercourse by employing deceitful means, etc, Gang Rape, Disclosure of identity of victim of certain offences, etc., Sexual Offences Against Children Under the Protection of Children from Sexual Offences Act, 2012 4 CRIMINAL FORCE AND ASSAULT AGAINST WOMAN 6 Assault or use of criminal force to woman with intent to outrage her modesty, Sexual harassment, Assault or use of criminal force to woman with intent to disrobe, Voyeurism, Stalking, Word, gesture or act intended to insult modesty of a woman, Definition of Domestic Violence, and Reliefs under the Protection of Women from Domestic Violence Act, 2005 5 OFFENCES RELATING TO MARRIAGE 4 Cohabitation caused by man deceitfully inducing belief of lawful marriage, Marrying again during lifetime of husband or wife, Marriage ceremony fraudulently gone through without lawful marriage, Cruelty 6 OFFENCE OF CAUSING MISCARRIAGE AND OFFENCES 6 AGAINST CHILD Miscarriage, Exposure and abandonment of child under twelve years of age, by parent or person having care of it, Concealment of birth by secret disposal of dead body, Hiring, employing or engaging a child to commit an offence, Procuration of child, Kidnapping or abducting child under ten years of age with intent to steal from its person, Selling or buying child for purposes of prostitution, etc. Total Hours 45",
+            "topics_text": "AGAINST CHILD Miscarriage, Exposure and abandonment of child under twelve years of age, by parent or person having care of it, Concealment of birth by secret disposal of dead body, Hiring, employing or engaging a child to commit an offence, Procuration of child, Kidnapping or abducting child under ten years of age with intent to steal from its person, Selling or buying child for purposes of prostitution, etc. Total Hours 45",
             "topics": [
-              "Culpable Homicide, Murder, Death by Rash or Negligent Act,",
-              "Dowry Death, Cruelty, Attempt to Murder or Culpable Homicide,",
-              "Abetment of suicide, Organised crime, Petty organised crime,",
-              "Terrorist act",
-              "2 OFFENCES AFFECTING THE HUMAN BODY: PART II 9",
-              "Hurt, Grievous Hurt, Criminal Force, Assault, Kidnapping,",
-              "Abduction, Slavery, Trafficking of person, Forced labour,",
-              "Trafficking of person, Wrongful restraint, Wrongful confinement",
-              "3 SEXUAL OFFENCES 9",
-              "Rape, Sexual intercourse by husband upon his wife during",
-              "separation, Sexual intercourse by a person in authority, Sexual",
-              "intercourse by employing deceitful means, etc, Gang Rape,",
-              "Disclosure of identity of victim of certain offences, etc., Sexual",
-              "Offences Against Children Under the Protection of Children from",
-              "Sexual Offences Act, 2012",
-              "4 CRIMINAL FORCE AND ASSAULT AGAINST WOMAN 6",
-              "Assault or use of criminal force to woman with intent to outrage her",
-              "modesty, Sexual harassment, Assault or use of criminal force to",
-              "woman with intent to disrobe, Voyeurism, Stalking, Word, gesture",
-              "or act intended to insult modesty of a woman, Definition of",
-              "Domestic Violence, and Reliefs under the Protection of Women",
-              "from Domestic Violence Act, 2005",
-              "5 OFFENCES RELATING TO MARRIAGE 4",
-              "Cohabitation caused by man deceitfully inducing belief of lawful",
-              "marriage, Marrying again during lifetime of husband or wife,",
-              "Marriage ceremony fraudulently gone through without lawful",
-              "marriage, Cruelty",
-              "6 OFFENCE OF CAUSING MISCARRIAGE AND OFFENCES 6",
               "AGAINST CHILD",
               "Miscarriage, Exposure and abandonment of child under twelve",
               "years of age, by parent or person having care of it, Concealment of",
@@ -1067,36 +1273,119 @@
               "relationship, Historical Development of International Law, Monistic",
               "Theory, Dualist Theory , State Practice regarding relationship,",
               "Subjects of International Law, Theories, Realist, Fictional",
-              "Functional, Individuals, International Organizations",
-              "2 Sources of International Law 6",
+              "Functional, Individuals, International Organizations"
+            ],
+            "topics_text": "Nature of International Law, Basis of International Law, Historical Development of International Law, State Practice regarding relationship, Historical Development of International Law, Monistic Theory, Dualist Theory , State Practice regarding relationship, Subjects of International Law, Theories, Realist, Fictional Functional, Individuals, International Organizations",
+            "topics": [
+              "Nature of International Law, Basis of International Law, Historical",
+              "Development of International Law, State Practice regarding",
+              "relationship, Historical Development of International Law, Monistic",
+              "Theory, Dualist Theory , State Practice regarding relationship,",
+              "Subjects of International Law, Theories, Realist, Fictional",
+              "Functional, Individuals, International Organizations"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Sources of International Law",
+            "contact_hours": 6,
+            "topic_lines": [
               "General, Custom, Treaties, The General Principles of Law, Judicial",
               "Decisions, Juristic Work on International Law, General Assembly",
-              "Resolutions and Declarations",
-              "3 State hood and Recognition and Succession 9",
+              "Resolutions and Declarations"
+            ],
+            "topics_text": "General, Custom, Treaties, The General Principles of Law, Judicial Decisions, Juristic Work on International Law, General Assembly Resolutions and Declarations",
+            "topics": [
+              "General, Custom, Treaties, The General Principles of Law, Judicial",
+              "Decisions, Juristic Work on International Law, General Assembly",
+              "Resolutions and Declarations"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "State hood and Recognition and Succession",
+            "contact_hours": 9,
+            "topic_lines": [
               "Statehood, Conditions Of Statehood, Rights and Duties of the State,",
               "Recognition of States- Concept, Modes of Recognition, Theories of",
               "Recognition, Recognition of Belligerency, Insurgency, Legal",
               "Effects of recognition, Doctrines of recognition, Indian Practice",
               "Relating to Recognition, State Succession- Meaning, Kinds of",
               "Succession, Theories of State Succession, Consequences of State",
-              "Succession",
-              "4 International Organisation- Origin, Structure and Function 6",
+              "Succession"
+            ],
+            "topics_text": "Statehood, Conditions Of Statehood, Rights and Duties of the State, Recognition of States- Concept, Modes of Recognition, Theories of Recognition, Recognition of Belligerency, Insurgency, Legal Effects of recognition, Doctrines of recognition, Indian Practice Relating to Recognition, State Succession- Meaning, Kinds of Succession, Theories of State Succession, Consequences of State Succession",
+            "topics": [
+              "Statehood, Conditions Of Statehood, Rights and Duties of the State,",
+              "Recognition of States- Concept, Modes of Recognition, Theories of",
+              "Recognition, Recognition of Belligerency, Insurgency, Legal",
+              "Effects of recognition, Doctrines of recognition, Indian Practice",
+              "Relating to Recognition, State Succession- Meaning, Kinds of",
+              "Succession, Theories of State Succession, Consequences of State",
+              "Succession"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "International Organisation- Origin, Structure and Function",
+            "contact_hours": 6,
+            "topic_lines": [
               "Origin, Purpose and Principles of UN, General assembly",
               "composition, Function and Power, Security Council, Composition,",
               "Function and power, Ecosoc, Composition, Function and power,",
               "International Dispute Settlement system, International Court of",
-              "Justice",
-              "5 International Dispute Settlement 6",
+              "Justice"
+            ],
+            "topics_text": "Origin, Purpose and Principles of UN, General assembly composition, Function and Power, Security Council, Composition, Function and power, Ecosoc, Composition, Function and power, International Dispute Settlement system, International Court of Justice",
+            "topics": [
+              "Origin, Purpose and Principles of UN, General assembly",
+              "composition, Function and Power, Security Council, Composition,",
+              "Function and power, Ecosoc, Composition, Function and power,",
+              "International Dispute Settlement system, International Court of",
+              "Justice"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "International Dispute Settlement",
+            "contact_hours": 6,
+            "topic_lines": [
               "Diplomatic Means of Dispute Settlement, International Arbitration,",
               "Adjudication by International Courts and Tribunals, Compliance",
-              "and Enforcement of International Judgments",
-              "6 State Responsibility and Use of Force in International Law 6",
+              "and Enforcement of International Judgments"
+            ],
+            "topics_text": "Diplomatic Means of Dispute Settlement, International Arbitration, Adjudication by International Courts and Tribunals, Compliance and Enforcement of International Judgments",
+            "topics": [
+              "Diplomatic Means of Dispute Settlement, International Arbitration,",
+              "Adjudication by International Courts and Tribunals, Compliance",
+              "and Enforcement of International Judgments"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "State Responsibility and Use of Force in International Law",
+            "contact_hours": 6,
+            "topic_lines": [
               "Justice Law on State Responsibility, Kinds of state Responsibility,",
               "Calvo Clause, Consequences of other subjects of International Law,",
               "Concept of Intervention, Grounds of Intervention, Humanitarian",
               "Intervention, Global Practices Regarding Intervention, Intervention",
-              "under League of nation and UN",
-              "7 Contemporary Issues in Public International Law 6",
+              "under League of nation and UN"
+            ],
+            "topics_text": "Justice Law on State Responsibility, Kinds of state Responsibility, Calvo Clause, Consequences of other subjects of International Law, Concept of Intervention, Grounds of Intervention, Humanitarian Intervention, Global Practices Regarding Intervention, Intervention under League of nation and UN",
+            "topics": [
+              "Justice Law on State Responsibility, Kinds of state Responsibility,",
+              "Calvo Clause, Consequences of other subjects of International Law,",
+              "Concept of Intervention, Grounds of Intervention, Humanitarian",
+              "Intervention, Global Practices Regarding Intervention, Intervention",
+              "under League of nation and UN"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Contemporary Issues in Public International Law",
+            "contact_hours": 6,
+            "topic_lines": [
               "Technology impact and International Law, Global Health and",
               "Pandemics, Migration and Refugees, asylum seekers, Sovereignty",
               "and Global Governance, International Criminal Law and Public",
@@ -1104,43 +1393,8 @@
               "order",
               "Total Hours 45"
             ],
-            "topics_text": "Nature of International Law, Basis of International Law, Historical Development of International Law, State Practice regarding relationship, Historical Development of International Law, Monistic Theory, Dualist Theory , State Practice regarding relationship, Subjects of International Law, Theories, Realist, Fictional Functional, Individuals, International Organizations 2 Sources of International Law 6 General, Custom, Treaties, The General Principles of Law, Judicial Decisions, Juristic Work on International Law, General Assembly Resolutions and Declarations 3 State hood and Recognition and Succession 9 Statehood, Conditions Of Statehood, Rights and Duties of the State, Recognition of States- Concept, Modes of Recognition, Theories of Recognition, Recognition of Belligerency, Insurgency, Legal Effects of recognition, Doctrines of recognition, Indian Practice Relating to Recognition, State Succession- Meaning, Kinds of Succession, Theories of State Succession, Consequences of State Succession 4 International Organisation- Origin, Structure and Function 6 Origin, Purpose and Principles of UN, General assembly composition, Function and Power, Security Council, Composition, Function and power, Ecosoc, Composition, Function and power, International Dispute Settlement system, International Court of Justice 5 International Dispute Settlement 6 Diplomatic Means of Dispute Settlement, International Arbitration, Adjudication by International Courts and Tribunals, Compliance and Enforcement of International Judgments 6 State Responsibility and Use of Force in International Law 6 Justice Law on State Responsibility, Kinds of state Responsibility, Calvo Clause, Consequences of other subjects of International Law, Concept of Intervention, Grounds of Intervention, Humanitarian Intervention, Global Practices Regarding Intervention, Intervention under League of nation and UN 7 Contemporary Issues in Public International Law 6 Technology impact and International Law, Global Health and Pandemics, Migration and Refugees, asylum seekers, Sovereignty and Global Governance, International Criminal Law and Public International Law a brief introduction, Climate Change, New world order Total Hours 45",
+            "topics_text": "Technology impact and International Law, Global Health and Pandemics, Migration and Refugees, asylum seekers, Sovereignty and Global Governance, International Criminal Law and Public International Law a brief introduction, Climate Change, New world order Total Hours 45",
             "topics": [
-              "Nature of International Law, Basis of International Law, Historical",
-              "Development of International Law, State Practice regarding",
-              "relationship, Historical Development of International Law, Monistic",
-              "Theory, Dualist Theory , State Practice regarding relationship,",
-              "Subjects of International Law, Theories, Realist, Fictional",
-              "Functional, Individuals, International Organizations",
-              "2 Sources of International Law 6",
-              "General, Custom, Treaties, The General Principles of Law, Judicial",
-              "Decisions, Juristic Work on International Law, General Assembly",
-              "Resolutions and Declarations",
-              "3 State hood and Recognition and Succession 9",
-              "Statehood, Conditions Of Statehood, Rights and Duties of the State,",
-              "Recognition of States- Concept, Modes of Recognition, Theories of",
-              "Recognition, Recognition of Belligerency, Insurgency, Legal",
-              "Effects of recognition, Doctrines of recognition, Indian Practice",
-              "Relating to Recognition, State Succession- Meaning, Kinds of",
-              "Succession, Theories of State Succession, Consequences of State",
-              "Succession",
-              "4 International Organisation- Origin, Structure and Function 6",
-              "Origin, Purpose and Principles of UN, General assembly",
-              "composition, Function and Power, Security Council, Composition,",
-              "Function and power, Ecosoc, Composition, Function and power,",
-              "International Dispute Settlement system, International Court of",
-              "Justice",
-              "5 International Dispute Settlement 6",
-              "Diplomatic Means of Dispute Settlement, International Arbitration,",
-              "Adjudication by International Courts and Tribunals, Compliance",
-              "and Enforcement of International Judgments",
-              "6 State Responsibility and Use of Force in International Law 6",
-              "Justice Law on State Responsibility, Kinds of state Responsibility,",
-              "Calvo Clause, Consequences of other subjects of International Law,",
-              "Concept of Intervention, Grounds of Intervention, Humanitarian",
-              "Intervention, Global Practices Regarding Intervention, Intervention",
-              "under League of nation and UN",
-              "7 Contemporary Issues in Public International Law 6",
               "Technology impact and International Law, Global Health and",
               "Pandemics, Migration and Refugees, asylum seekers, Sovereignty",
               "and Global Governance, International Criminal Law and Public",

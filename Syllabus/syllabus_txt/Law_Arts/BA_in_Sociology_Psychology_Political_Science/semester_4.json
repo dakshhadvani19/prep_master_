@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "generated_at_utc": "2026-10-12T12:47:27+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
   "course": {
@@ -50,17 +50,25 @@
             "contact_hours": 7,
             "topic_lines": [
               "Possessive Pronouns , First verb group ‘er’, Second verb group ‘ir’,",
-              "Negative sentences, Prepositions",
-              "2 Unit II 8",
+              "Negative sentences, Prepositions"
+            ],
+            "topics_text": "Possessive Pronouns , First verb group ‘er’, Second verb group ‘ir’, Negative sentences, Prepositions",
+            "topics": [
+              "Possessive Pronouns , First verb group ‘er’, Second verb group ‘ir’,",
+              "Negative sentences, Prepositions"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Unit II",
+            "contact_hours": 8,
+            "topic_lines": [
               "Demonstratives ‘Ce – Cet – Cette – Ces, Passé Compose, Future",
               "Proche, Yes/No Questions , W/h Questions",
               "Total Hours 15"
             ],
-            "topics_text": "Possessive Pronouns , First verb group ‘er’, Second verb group ‘ir’, Negative sentences, Prepositions 2 Unit II 8 Demonstratives ‘Ce – Cet – Cette – Ces, Passé Compose, Future Proche, Yes/No Questions , W/h Questions Total Hours 15",
+            "topics_text": "Demonstratives ‘Ce – Cet – Cette – Ces, Passé Compose, Future Proche, Yes/No Questions , W/h Questions Total Hours 15",
             "topics": [
-              "Possessive Pronouns , First verb group ‘er’, Second verb group ‘ir’,",
-              "Negative sentences, Prepositions",
-              "2 Unit II 8",
               "Demonstratives ‘Ce – Cet – Cette – Ces, Passé Compose, Future",
               "Proche, Yes/No Questions , W/h Questions",
               "Total Hours 15"
@@ -152,33 +160,57 @@
             "topic_lines": [
               "Neo-Classicism,, Growth of the Novel, Precursors of Romanticism,",
               "French Revolution, Growth of Romantic Literature (Prose, Poetry,",
-              "Drama and Novel)",
-              "2 The Romantic Age & Nineteenth Century 10",
+              "Drama and Novel)"
+            ],
+            "topics_text": "Neo-Classicism,, Growth of the Novel, Precursors of Romanticism, French Revolution, Growth of Romantic Literature (Prose, Poetry, Drama and Novel)",
+            "topics": [
+              "Neo-Classicism,, Growth of the Novel, Precursors of Romanticism,",
+              "French Revolution, Growth of Romantic Literature (Prose, Poetry,",
+              "Drama and Novel)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "The Romantic Age & Nineteenth Century",
+            "contact_hours": 10,
+            "topic_lines": [
               "Growth of Victorian Literature (Prose, Poetry, Drama and Novel),",
-              "Pre-Raphaelite Poetry",
-              "3 The Twentieth Century 10",
+              "Pre-Raphaelite Poetry"
+            ],
+            "topics_text": "Growth of Victorian Literature (Prose, Poetry, Drama and Novel), Pre-Raphaelite Poetry",
+            "topics": [
+              "Growth of Victorian Literature (Prose, Poetry, Drama and Novel),",
+              "Pre-Raphaelite Poetry"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "The Twentieth Century",
+            "contact_hours": 10,
+            "topic_lines": [
               "Georgian Poetry, Imagism and Symbolism, Twentieth Century",
               "Novel, Psychological Novel, Stream of Consciousness Novel,",
-              "Twentieth Century Drama, Drama of Ideas, Epic Theatre;Feminism.",
-              "4 MISCELLANEOUS 5",
+              "Twentieth Century Drama, Drama of Ideas, Epic Theatre;Feminism."
+            ],
+            "topics_text": "Georgian Poetry, Imagism and Symbolism, Twentieth Century Novel, Psychological Novel, Stream of Consciousness Novel, Twentieth Century Drama, Drama of Ideas, Epic Theatre;Feminism.",
+            "topics": [
+              "Georgian Poetry, Imagism and Symbolism, Twentieth Century",
+              "Novel, Psychological Novel, Stream of Consciousness Novel,",
+              "Twentieth Century Drama, Drama of Ideas, Epic Theatre",
+              "Feminism."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "MISCELLANEOUS",
+            "contact_hours": 5,
+            "topic_lines": [
               "Gulliver's Travels by Jonathan Swift, Ode to the West Wind by",
               "Percy Bysshe Shelley",
               "Total Hours 30"
             ],
-            "topics_text": "Neo-Classicism,, Growth of the Novel, Precursors of Romanticism, French Revolution, Growth of Romantic Literature (Prose, Poetry, Drama and Novel) 2 The Romantic Age & Nineteenth Century 10 Growth of Victorian Literature (Prose, Poetry, Drama and Novel), Pre-Raphaelite Poetry 3 The Twentieth Century 10 Georgian Poetry, Imagism and Symbolism, Twentieth Century Novel, Psychological Novel, Stream of Consciousness Novel, Twentieth Century Drama, Drama of Ideas, Epic Theatre;Feminism. 4 MISCELLANEOUS 5 Gulliver's Travels by Jonathan Swift, Ode to the West Wind by Percy Bysshe Shelley Total Hours 30",
+            "topics_text": "Gulliver's Travels by Jonathan Swift, Ode to the West Wind by Percy Bysshe Shelley Total Hours 30",
             "topics": [
-              "Neo-Classicism,, Growth of the Novel, Precursors of Romanticism,",
-              "French Revolution, Growth of Romantic Literature (Prose, Poetry,",
-              "Drama and Novel)",
-              "2 The Romantic Age & Nineteenth Century 10",
-              "Growth of Victorian Literature (Prose, Poetry, Drama and Novel),",
-              "Pre-Raphaelite Poetry",
-              "3 The Twentieth Century 10",
-              "Georgian Poetry, Imagism and Symbolism, Twentieth Century",
-              "Novel, Psychological Novel, Stream of Consciousness Novel,",
-              "Twentieth Century Drama, Drama of Ideas, Epic Theatre",
-              "Feminism.",
-              "4 MISCELLANEOUS 5",
               "Gulliver's Travels by Jonathan Swift, Ode to the West Wind by",
               "Percy Bysshe Shelley",
               "Total Hours 30"
@@ -343,21 +375,9 @@
               "their Interpretation, Right to Equality under Article – 14, Right to",
               "certain Freedom under Article 19, Scope of the Right to Life and",
               "Personal Liberty under Article 21, Fundamental Duties and its legal",
-              "status , State Policy Principles- Its importance and Implementation",
-              "2 Union Government 3",
-              "Structure of the Indian Union, President – Role and Power , Prime",
-              "Minister and Council of Ministers, Lok Sabha and Rajya Sabha Edit",
-              "3 State Government 3",
-              "Governor – Role and Power , Chief Minister and Council of",
-              "Ministers, State Secretariat",
-              "4 Local Administration 3",
-              "District Administration, Municipal Corporation, Zila Panchayat",
-              "5 Election Commission 3",
-              "Role and Functioning , Chief Election Commissioner, State Election",
-              "Commission",
-              "Total Hours 15"
+              "status , State Policy Principles- Its importance and Implementation"
             ],
-            "topics_text": "Meaning of the constitution law and constitutionalism, The History of the Making of the Indian Constitution , Preamble and the Basic Structure, and its Interpretation, Salient features and characteristics of the Constitution of India , Fundamental Rights and Duties and their Interpretation, Right to Equality under Article – 14, Right to certain Freedom under Article 19, Scope of the Right to Life and Personal Liberty under Article 21, Fundamental Duties and its legal status , State Policy Principles- Its importance and Implementation 2 Union Government 3 Structure of the Indian Union, President – Role and Power , Prime Minister and Council of Ministers, Lok Sabha and Rajya Sabha Edit 3 State Government 3 Governor – Role and Power , Chief Minister and Council of Ministers, State Secretariat 4 Local Administration 3 District Administration, Municipal Corporation, Zila Panchayat 5 Election Commission 3 Role and Functioning , Chief Election Commissioner, State Election Commission Total Hours 15",
+            "topics_text": "Meaning of the constitution law and constitutionalism, The History of the Making of the Indian Constitution , Preamble and the Basic Structure, and its Interpretation, Salient features and characteristics of the Constitution of India , Fundamental Rights and Duties and their Interpretation, Right to Equality under Article – 14, Right to certain Freedom under Article 19, Scope of the Right to Life and Personal Liberty under Article 21, Fundamental Duties and its legal status , State Policy Principles- Its importance and Implementation",
             "topics": [
               "Meaning of the constitution law and constitutionalism, The History",
               "of the Making of the Indian Constitution , Preamble and the Basic",
@@ -366,16 +386,60 @@
               "their Interpretation, Right to Equality under Article – 14, Right to",
               "certain Freedom under Article 19, Scope of the Right to Life and",
               "Personal Liberty under Article 21, Fundamental Duties and its legal",
-              "status , State Policy Principles- Its importance and Implementation",
-              "2 Union Government 3",
+              "status , State Policy Principles- Its importance and Implementation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Union Government",
+            "contact_hours": 3,
+            "topic_lines": [
               "Structure of the Indian Union, President – Role and Power , Prime",
-              "Minister and Council of Ministers, Lok Sabha and Rajya Sabha Edit",
-              "3 State Government 3",
+              "Minister and Council of Ministers, Lok Sabha and Rajya Sabha Edit"
+            ],
+            "topics_text": "Structure of the Indian Union, President – Role and Power , Prime Minister and Council of Ministers, Lok Sabha and Rajya Sabha Edit",
+            "topics": [
+              "Structure of the Indian Union, President – Role and Power , Prime",
+              "Minister and Council of Ministers, Lok Sabha and Rajya Sabha Edit"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "State Government",
+            "contact_hours": 3,
+            "topic_lines": [
               "Governor – Role and Power , Chief Minister and Council of",
-              "Ministers, State Secretariat",
-              "4 Local Administration 3",
-              "District Administration, Municipal Corporation, Zila Panchayat",
-              "5 Election Commission 3",
+              "Ministers, State Secretariat"
+            ],
+            "topics_text": "Governor – Role and Power , Chief Minister and Council of Ministers, State Secretariat",
+            "topics": [
+              "Governor – Role and Power , Chief Minister and Council of",
+              "Ministers, State Secretariat"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Local Administration",
+            "contact_hours": 3,
+            "topic_lines": [
+              "District Administration, Municipal Corporation, Zila Panchayat"
+            ],
+            "topics_text": "District Administration, Municipal Corporation, Zila Panchayat",
+            "topics": [
+              "District Administration, Municipal Corporation, Zila Panchayat"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Election Commission",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Role and Functioning , Chief Election Commissioner, State Election",
+              "Commission",
+              "Total Hours 15"
+            ],
+            "topics_text": "Role and Functioning , Chief Election Commissioner, State Election Commission Total Hours 15",
+            "topics": [
               "Role and Functioning , Chief Election Commissioner, State Election",
               "Commission",
               "Total Hours 15"
@@ -476,38 +540,62 @@
             "topic_lines": [
               "Scope and Methods of economics,, The Economic Problem:",
               "Scarcity and Choice, Economic systems and their characteristics,,",
-              "Basic economic questions: what, how, and for whom to Produce",
-              "2 II Micro Economics 3",
+              "Basic economic questions: what, how, and for whom to Produce"
+            ],
+            "topics_text": "Scope and Methods of economics,, The Economic Problem: Scarcity and Choice, Economic systems and their characteristics,, Basic economic questions: what, how, and for whom to Produce",
+            "topics": [
+              "Scope and Methods of economics,, The Economic Problem:",
+              "Scarcity and Choice, Economic systems and their characteristics,,",
+              "Basic economic questions: what, how, and for whom to Produce"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "II Micro Economics",
+            "contact_hours": 3,
+            "topic_lines": [
               "Law of Demand; Law of Supply;, Elasticity and Its Applications,",
-              "Concept of Costs and Revenue",
-              "3 III Macro Economics 3",
+              "Concept of Costs and Revenue"
+            ],
+            "topics_text": "Law of Demand; Law of Supply;, Elasticity and Its Applications, Concept of Costs and Revenue",
+            "topics": [
+              "Law of Demand",
+              "Law of Supply",
+              ", Elasticity and Its Applications,",
+              "Concept of Costs and Revenue"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "III Macro Economics",
+            "contact_hours": 3,
+            "topic_lines": [
               "Meaning, difference between micro and macro, meaning of four",
               "major sectors of macroeconomics, Concepts of GDP, GNP and",
               "National income, Nominal and Real GDP, Limitations of the GDP",
               "concept, Circular Flow of Income in two, three, and four-sector",
-              "economy",
-              "4 IV Governmental Policies 5",
+              "economy"
+            ],
+            "topics_text": "Meaning, difference between micro and macro, meaning of four major sectors of macroeconomics, Concepts of GDP, GNP and National income, Nominal and Real GDP, Limitations of the GDP concept, Circular Flow of Income in two, three, and four-sector economy",
+            "topics": [
+              "Meaning, difference between micro and macro, meaning of four",
+              "major sectors of macroeconomics, Concepts of GDP, GNP and",
+              "National income, Nominal and Real GDP, Limitations of the GDP",
+              "concept, Circular Flow of Income in two, three, and four-sector",
+              "economy"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "IV Governmental Policies",
+            "contact_hours": 5,
+            "topic_lines": [
               "Government Policies: Monetary policy (meaning, objective, its",
               "instruments), Fiscal policy (meaning, objective and its instruments).",
               "Total Hours 15"
             ],
-            "topics_text": "Scope and Methods of economics,, The Economic Problem: Scarcity and Choice, Economic systems and their characteristics,, Basic economic questions: what, how, and for whom to Produce 2 II Micro Economics 3 Law of Demand; Law of Supply;, Elasticity and Its Applications, Concept of Costs and Revenue 3 III Macro Economics 3 Meaning, difference between micro and macro, meaning of four major sectors of macroeconomics, Concepts of GDP, GNP and National income, Nominal and Real GDP, Limitations of the GDP concept, Circular Flow of Income in two, three, and four-sector economy 4 IV Governmental Policies 5 Government Policies: Monetary policy (meaning, objective, its instruments), Fiscal policy (meaning, objective and its instruments). Total Hours 15",
+            "topics_text": "Government Policies: Monetary policy (meaning, objective, its instruments), Fiscal policy (meaning, objective and its instruments). Total Hours 15",
             "topics": [
-              "Scope and Methods of economics,, The Economic Problem:",
-              "Scarcity and Choice, Economic systems and their characteristics,,",
-              "Basic economic questions: what, how, and for whom to Produce",
-              "2 II Micro Economics 3",
-              "Law of Demand",
-              "Law of Supply",
-              ", Elasticity and Its Applications,",
-              "Concept of Costs and Revenue",
-              "3 III Macro Economics 3",
-              "Meaning, difference between micro and macro, meaning of four",
-              "major sectors of macroeconomics, Concepts of GDP, GNP and",
-              "National income, Nominal and Real GDP, Limitations of the GDP",
-              "concept, Circular Flow of Income in two, three, and four-sector",
-              "economy",
-              "4 IV Governmental Policies 5",
               "Government Policies: Monetary policy (meaning, objective, its",
               "instruments), Fiscal policy (meaning, objective and its instruments).",
               "Total Hours 15"
@@ -624,25 +712,9 @@
               "2 20th Century IR History 5",
               "World War I: causes & consequences, World War II: causes &",
               "consequences Emergence of the Third World Disintegration of",
-              "U.S.S.R. and End of Cold War End of Ideology",
-              "3 United Nations and the Globalized World: Role of India’s 10",
-              "Foreign Policy",
-              "A brief history of the UN System: Treaties & Negotiations",
-              "International Peace & Security International Political Economy in",
-              "the Age of Globalization Military Alliances: NATO, SEATO",
-              "4 India’s Foreign Policy 5",
-              "Evolution and Making of India’s Foreign Policy Determinants of",
-              "India’s Foreign Policy India and Non-Alignment Non-Traditional",
-              "Concept of Security",
-              "5 Post-Cold War Era: Emerging Centers of Power & 5",
-              "Contemporary Issues in Global Politics",
-              "European Union Japan BRICS: Brazil, Russia, India, China, South",
-              "Africa Global South and The Arab Spring Global Hunger, Poverty,",
-              "Sustainable Development and Environment International Terrorism",
-              "Pandemic Politics Disaster Management",
-              "Total Hours 30"
+              "U.S.S.R. and End of Cold War End of Ideology"
             ],
-            "topics_text": "Approaches to the study of IR: Structural, Dependency Theory, , Feminist Perspective Theories of IR: Classical & Neo-Realism, Liberalism & Neo-Liberalism , Feminist Perspective Theories of IR Social Constructivism,Post-Colonialism Critical Theories, Non- Western Approaches , Feminist Perspective Theories of IR: Growth of IR as a separate sub-discipline 2 20th Century IR History 5 World War I: causes & consequences, World War II: causes & consequences Emergence of the Third World Disintegration of U.S.S.R. and End of Cold War End of Ideology 3 United Nations and the Globalized World: Role of India’s 10 Foreign Policy A brief history of the UN System: Treaties & Negotiations International Peace & Security International Political Economy in the Age of Globalization Military Alliances: NATO, SEATO 4 India’s Foreign Policy 5 Evolution and Making of India’s Foreign Policy Determinants of India’s Foreign Policy India and Non-Alignment Non-Traditional Concept of Security 5 Post-Cold War Era: Emerging Centers of Power & 5 Contemporary Issues in Global Politics European Union Japan BRICS: Brazil, Russia, India, China, South Africa Global South and The Arab Spring Global Hunger, Poverty, Sustainable Development and Environment International Terrorism Pandemic Politics Disaster Management Total Hours 30",
+            "topics_text": "Approaches to the study of IR: Structural, Dependency Theory, , Feminist Perspective Theories of IR: Classical & Neo-Realism, Liberalism & Neo-Liberalism , Feminist Perspective Theories of IR Social Constructivism,Post-Colonialism Critical Theories, Non- Western Approaches , Feminist Perspective Theories of IR: Growth of IR as a separate sub-discipline 2 20th Century IR History 5 World War I: causes & consequences, World War II: causes & consequences Emergence of the Third World Disintegration of U.S.S.R. and End of Cold War End of Ideology",
             "topics": [
               "Approaches to the study of IR: Structural, Dependency Theory, ,",
               "Feminist Perspective Theories of IR: Classical & Neo-Realism,",
@@ -653,17 +725,57 @@
               "2 20th Century IR History 5",
               "World War I: causes & consequences, World War II: causes &",
               "consequences Emergence of the Third World Disintegration of",
-              "U.S.S.R. and End of Cold War End of Ideology",
-              "3 United Nations and the Globalized World: Role of India’s 10",
+              "U.S.S.R. and End of Cold War End of Ideology"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "United Nations and the Globalized World: Role of India’s",
+            "contact_hours": 10,
+            "topic_lines": [
               "Foreign Policy",
               "A brief history of the UN System: Treaties & Negotiations",
               "International Peace & Security International Political Economy in",
-              "the Age of Globalization Military Alliances: NATO, SEATO",
-              "4 India’s Foreign Policy 5",
+              "the Age of Globalization Military Alliances: NATO, SEATO"
+            ],
+            "topics_text": "Foreign Policy A brief history of the UN System: Treaties & Negotiations International Peace & Security International Political Economy in the Age of Globalization Military Alliances: NATO, SEATO",
+            "topics": [
+              "Foreign Policy",
+              "A brief history of the UN System: Treaties & Negotiations",
+              "International Peace & Security International Political Economy in",
+              "the Age of Globalization Military Alliances: NATO, SEATO"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "India’s Foreign Policy",
+            "contact_hours": 5,
+            "topic_lines": [
               "Evolution and Making of India’s Foreign Policy Determinants of",
               "India’s Foreign Policy India and Non-Alignment Non-Traditional",
-              "Concept of Security",
-              "5 Post-Cold War Era: Emerging Centers of Power & 5",
+              "Concept of Security"
+            ],
+            "topics_text": "Evolution and Making of India’s Foreign Policy Determinants of India’s Foreign Policy India and Non-Alignment Non-Traditional Concept of Security",
+            "topics": [
+              "Evolution and Making of India’s Foreign Policy Determinants of",
+              "India’s Foreign Policy India and Non-Alignment Non-Traditional",
+              "Concept of Security"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Post-Cold War Era: Emerging Centers of Power &",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Contemporary Issues in Global Politics",
+              "European Union Japan BRICS: Brazil, Russia, India, China, South",
+              "Africa Global South and The Arab Spring Global Hunger, Poverty,",
+              "Sustainable Development and Environment International Terrorism",
+              "Pandemic Politics Disaster Management",
+              "Total Hours 30"
+            ],
+            "topics_text": "Contemporary Issues in Global Politics European Union Japan BRICS: Brazil, Russia, India, China, South Africa Global South and The Arab Spring Global Hunger, Poverty, Sustainable Development and Environment International Terrorism Pandemic Politics Disaster Management Total Hours 30",
+            "topics": [
               "Contemporary Issues in Global Politics",
               "European Union Japan BRICS: Brazil, Russia, India, China, South",
               "Africa Global South and The Arab Spring Global Hunger, Poverty,",
@@ -772,43 +884,67 @@
             "topic_lines": [
               "SOCIAL MOVEMENT: Meaning, , SOCIAL MOVEMENT:",
               "Components, SOCIAL MOVEMENT: Characteristics, SOCIAL",
-              "MOVEMENT: Consequences,, SOCIAL MOVEMENT: Functions",
-              "2 TYPOLOGY OF SOCIAL MOVEMENT 7",
+              "MOVEMENT: Consequences,, SOCIAL MOVEMENT: Functions"
+            ],
+            "topics_text": "SOCIAL MOVEMENT: Meaning, , SOCIAL MOVEMENT: Components, SOCIAL MOVEMENT: Characteristics, SOCIAL MOVEMENT: Consequences,, SOCIAL MOVEMENT: Functions",
+            "topics": [
+              "SOCIAL MOVEMENT: Meaning, , SOCIAL MOVEMENT:",
+              "Components, SOCIAL MOVEMENT: Characteristics, SOCIAL",
+              "MOVEMENT: Consequences,, SOCIAL MOVEMENT: Functions"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "TYPOLOGY OF SOCIAL MOVEMENT",
+            "contact_hours": 7,
+            "topic_lines": [
               "TYPOLOGY OF SOCIAL MOVEMENT: Reformative,",
               "TYPOLOGY OF SOCIAL MOVEMENT: Redemptive,",
               "TYPOLOGY OF SOCIAL MOVEMENT: Alternative,",
               "TYPOLOGY OF SOCIAL MOVEMENT: Revolutionary,",
               "TYPOLOGY OF SOCIAL MOVEMENT: Expressive,,",
               "TYPOLOGY OF SOCIAL MOVEMENT: Regressive, or",
-              "Reactionary,",
-              "3 SOCIAL MOVEMENT AND SOCIAL CHANGE 8",
+              "Reactionary,"
+            ],
+            "topics_text": "TYPOLOGY OF SOCIAL MOVEMENT: Reformative, TYPOLOGY OF SOCIAL MOVEMENT: Redemptive, TYPOLOGY OF SOCIAL MOVEMENT: Alternative, TYPOLOGY OF SOCIAL MOVEMENT: Revolutionary, TYPOLOGY OF SOCIAL MOVEMENT: Expressive,, TYPOLOGY OF SOCIAL MOVEMENT: Regressive, or Reactionary,",
+            "topics": [
+              "TYPOLOGY OF SOCIAL MOVEMENT: Reformative,",
+              "TYPOLOGY OF SOCIAL MOVEMENT: Redemptive,",
+              "TYPOLOGY OF SOCIAL MOVEMENT: Alternative,",
+              "TYPOLOGY OF SOCIAL MOVEMENT: Revolutionary,",
+              "TYPOLOGY OF SOCIAL MOVEMENT: Expressive,,",
+              "TYPOLOGY OF SOCIAL MOVEMENT: Regressive, or",
+              "Reactionary,"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "SOCIAL MOVEMENT AND SOCIAL CHANGE",
+            "contact_hours": 8,
+            "topic_lines": [
               "Social changes and social movements , Theoretical framework of",
               "social change , Measurement of change: Methodological issues,",
-              "Theoretical perspective about social movement",
-              "4 SOCIAL REFORM MOVEMENTS IN INDIA 9",
+              "Theoretical perspective about social movement"
+            ],
+            "topics_text": "Social changes and social movements , Theoretical framework of social change , Measurement of change: Methodological issues, Theoretical perspective about social movement",
+            "topics": [
+              "Social changes and social movements , Theoretical framework of",
+              "social change , Measurement of change: Methodological issues,",
+              "Theoretical perspective about social movement"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "SOCIAL REFORM MOVEMENTS IN INDIA",
+            "contact_hours": 9,
+            "topic_lines": [
               "SOCIAL REFORM MOVEMENTS IN INDIA: Feature, SOCIAL",
               "REFORM MOVEMENTS IN INDIA: Contributors in socio-",
               "religious reform movements",
               "Total Hours 30"
             ],
-            "topics_text": "SOCIAL MOVEMENT: Meaning, , SOCIAL MOVEMENT: Components, SOCIAL MOVEMENT: Characteristics, SOCIAL MOVEMENT: Consequences,, SOCIAL MOVEMENT: Functions 2 TYPOLOGY OF SOCIAL MOVEMENT 7 TYPOLOGY OF SOCIAL MOVEMENT: Reformative, TYPOLOGY OF SOCIAL MOVEMENT: Redemptive, TYPOLOGY OF SOCIAL MOVEMENT: Alternative, TYPOLOGY OF SOCIAL MOVEMENT: Revolutionary, TYPOLOGY OF SOCIAL MOVEMENT: Expressive,, TYPOLOGY OF SOCIAL MOVEMENT: Regressive, or Reactionary, 3 SOCIAL MOVEMENT AND SOCIAL CHANGE 8 Social changes and social movements , Theoretical framework of social change , Measurement of change: Methodological issues, Theoretical perspective about social movement 4 SOCIAL REFORM MOVEMENTS IN INDIA 9 SOCIAL REFORM MOVEMENTS IN INDIA: Feature, SOCIAL REFORM MOVEMENTS IN INDIA: Contributors in socio- religious reform movements Total Hours 30",
+            "topics_text": "SOCIAL REFORM MOVEMENTS IN INDIA: Feature, SOCIAL REFORM MOVEMENTS IN INDIA: Contributors in socio- religious reform movements Total Hours 30",
             "topics": [
-              "SOCIAL MOVEMENT: Meaning, , SOCIAL MOVEMENT:",
-              "Components, SOCIAL MOVEMENT: Characteristics, SOCIAL",
-              "MOVEMENT: Consequences,, SOCIAL MOVEMENT: Functions",
-              "2 TYPOLOGY OF SOCIAL MOVEMENT 7",
-              "TYPOLOGY OF SOCIAL MOVEMENT: Reformative,",
-              "TYPOLOGY OF SOCIAL MOVEMENT: Redemptive,",
-              "TYPOLOGY OF SOCIAL MOVEMENT: Alternative,",
-              "TYPOLOGY OF SOCIAL MOVEMENT: Revolutionary,",
-              "TYPOLOGY OF SOCIAL MOVEMENT: Expressive,,",
-              "TYPOLOGY OF SOCIAL MOVEMENT: Regressive, or",
-              "Reactionary,",
-              "3 SOCIAL MOVEMENT AND SOCIAL CHANGE 8",
-              "Social changes and social movements , Theoretical framework of",
-              "social change , Measurement of change: Methodological issues,",
-              "Theoretical perspective about social movement",
-              "4 SOCIAL REFORM MOVEMENTS IN INDIA 9",
               "SOCIAL REFORM MOVEMENTS IN INDIA: Feature, SOCIAL",
               "REFORM MOVEMENTS IN INDIA: Contributors in socio",
               "religious reform movements",

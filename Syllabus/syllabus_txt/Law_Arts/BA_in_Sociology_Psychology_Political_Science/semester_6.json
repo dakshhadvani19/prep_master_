@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "generated_at_utc": "2026-10-12T12:47:27+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
   "course": {
@@ -60,24 +60,9 @@
               "TODAY, NOW, YEAR, MONTH, DAY, and DATEDIF.,",
               "Mathematical and Statistical Functions SUMIFS, COUNTIFS,",
               "AVERAGEIFS. SUMPRODUCT, RANK, LARGE, SMALL,",
-              "MEDIAN., Array Formulas",
-              "2 Data Analysis and Visualization 7",
-              "Data Sorting and Filtering, Pivot Tables and Pivot Charts , Chart",
-              "Customization, Dashboard Creation , Data Validation: Setting up",
-              "custom validation rules, input restrictions, and error messages for",
-              "data consistency., Conditional Formatting",
-              "3 Excel Automation using Macros 7",
-              "Introduction to Macros, Recording and Running Macros,",
-              "Introduction to VBA (Visual Basic for Applications), Debugging",
-              "and Error Handling",
-              "4 Advanced Data Management and Security 8",
-              "What-If Analysis Using Goal Seek, Scenario Manager, and Data",
-              "Tables for forecasting and simulations, Sensitivity analysis for",
-              "decision-making., Data Consolidation, Power Query and Power",
-              "Pivot, Excel Security and Protection",
-              "Total Hours 30"
+              "MEDIAN., Array Formulas"
             ],
-            "topics_text": "Introduction to Complex Formulas, Key Advanced Functions Logical Functions: IF, AND, OR, IFERROR, and nested IF statements., Lookup Functions: VLOOKUP, HLOOKUP, INDEX, MATCH, and XLOOKUP., Text Functions: CONCATENATE, TEXT, LEFT, RIGHT, MID, and TRIM., Date and Time Functions: TODAY, NOW, YEAR, MONTH, DAY, and DATEDIF., Mathematical and Statistical Functions SUMIFS, COUNTIFS, AVERAGEIFS. SUMPRODUCT, RANK, LARGE, SMALL, MEDIAN., Array Formulas 2 Data Analysis and Visualization 7 Data Sorting and Filtering, Pivot Tables and Pivot Charts , Chart Customization, Dashboard Creation , Data Validation: Setting up custom validation rules, input restrictions, and error messages for data consistency., Conditional Formatting 3 Excel Automation using Macros 7 Introduction to Macros, Recording and Running Macros, Introduction to VBA (Visual Basic for Applications), Debugging and Error Handling 4 Advanced Data Management and Security 8 What-If Analysis Using Goal Seek, Scenario Manager, and Data Tables for forecasting and simulations, Sensitivity analysis for decision-making., Data Consolidation, Power Query and Power Pivot, Excel Security and Protection Total Hours 30",
+            "topics_text": "Introduction to Complex Formulas, Key Advanced Functions Logical Functions: IF, AND, OR, IFERROR, and nested IF statements., Lookup Functions: VLOOKUP, HLOOKUP, INDEX, MATCH, and XLOOKUP., Text Functions: CONCATENATE, TEXT, LEFT, RIGHT, MID, and TRIM., Date and Time Functions: TODAY, NOW, YEAR, MONTH, DAY, and DATEDIF., Mathematical and Statistical Functions SUMIFS, COUNTIFS, AVERAGEIFS. SUMPRODUCT, RANK, LARGE, SMALL, MEDIAN., Array Formulas",
             "topics": [
               "Introduction to Complex Formulas, Key Advanced Functions",
               "Logical Functions: IF, AND, OR, IFERROR, and nested IF",
@@ -87,17 +72,56 @@
               "TODAY, NOW, YEAR, MONTH, DAY, and DATEDIF.,",
               "Mathematical and Statistical Functions SUMIFS, COUNTIFS,",
               "AVERAGEIFS. SUMPRODUCT, RANK, LARGE, SMALL,",
-              "MEDIAN., Array Formulas",
-              "2 Data Analysis and Visualization 7",
+              "MEDIAN., Array Formulas"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Data Analysis and Visualization",
+            "contact_hours": 7,
+            "topic_lines": [
               "Data Sorting and Filtering, Pivot Tables and Pivot Charts , Chart",
               "Customization, Dashboard Creation , Data Validation: Setting up",
               "custom validation rules, input restrictions, and error messages for",
-              "data consistency., Conditional Formatting",
-              "3 Excel Automation using Macros 7",
+              "data consistency., Conditional Formatting"
+            ],
+            "topics_text": "Data Sorting and Filtering, Pivot Tables and Pivot Charts , Chart Customization, Dashboard Creation , Data Validation: Setting up custom validation rules, input restrictions, and error messages for data consistency., Conditional Formatting",
+            "topics": [
+              "Data Sorting and Filtering, Pivot Tables and Pivot Charts , Chart",
+              "Customization, Dashboard Creation , Data Validation: Setting up",
+              "custom validation rules, input restrictions, and error messages for",
+              "data consistency., Conditional Formatting"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Excel Automation using Macros",
+            "contact_hours": 7,
+            "topic_lines": [
               "Introduction to Macros, Recording and Running Macros,",
               "Introduction to VBA (Visual Basic for Applications), Debugging",
-              "and Error Handling",
-              "4 Advanced Data Management and Security 8",
+              "and Error Handling"
+            ],
+            "topics_text": "Introduction to Macros, Recording and Running Macros, Introduction to VBA (Visual Basic for Applications), Debugging and Error Handling",
+            "topics": [
+              "Introduction to Macros, Recording and Running Macros,",
+              "Introduction to VBA (Visual Basic for Applications), Debugging",
+              "and Error Handling"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Advanced Data Management and Security",
+            "contact_hours": 8,
+            "topic_lines": [
+              "What-If Analysis Using Goal Seek, Scenario Manager, and Data",
+              "Tables for forecasting and simulations, Sensitivity analysis for",
+              "decision-making., Data Consolidation, Power Query and Power",
+              "Pivot, Excel Security and Protection",
+              "Total Hours 30"
+            ],
+            "topics_text": "What-If Analysis Using Goal Seek, Scenario Manager, and Data Tables for forecasting and simulations, Sensitivity analysis for decision-making., Data Consolidation, Power Query and Power Pivot, Excel Security and Protection Total Hours 30",
+            "topics": [
               "What-If Analysis Using Goal Seek, Scenario Manager, and Data",
               "Tables for forecasting and simulations, Sensitivity analysis for",
               "decision-making., Data Consolidation, Power Query and Power",
@@ -224,8 +248,28 @@
               "Blockchain Technology, Internet of Things (IoT), Metaverse",
               "Commerce, E-Commerce Operations & Management ? Digital",
               "Marketing and Social Commerce, Customer Relationship",
-              "Management, E-fulfillment and last-mile delivery innovations",
-              "2 E-COMMERCE OPERATIONS AND MANAGEMENT 15",
+              "Management, E-fulfillment and last-mile delivery innovations"
+            ],
+            "topics_text": "TECHNOLOGIES Introduction to E-Commerce: ? Definition, Scope and Evolution of E- Commerce, Key Drivers of E-Commerce Growth, Trends and Future of E-Commerce, Limitations of E-Commerce and Global Trends, E-Commerce Business Models ? B2B, B2C, C2C, C2B models, Omnichannel Commerce and direct-to- consumer (DTC) Model, Technology driving E-Commerce: Artificial Intelligence, Blockchain Technology, Internet of Things (IoT), Metaverse Commerce, E-Commerce Operations & Management ? Digital Marketing and Social Commerce, Customer Relationship Management, E-fulfillment and last-mile delivery innovations",
+            "topics": [
+              "TECHNOLOGIES",
+              "Introduction to E-Commerce: ? Definition, Scope and Evolution of",
+              "E- Commerce, Key Drivers of E-Commerce Growth, Trends and",
+              "Future of E-Commerce, Limitations of E-Commerce and Global",
+              "Trends, E-Commerce Business Models ? B2B, B2C, C2C, C2B",
+              "models, Omnichannel Commerce and direct-to- consumer (DTC)",
+              "Model, Technology driving E-Commerce: Artificial Intelligence,",
+              "Blockchain Technology, Internet of Things (IoT), Metaverse",
+              "Commerce, E-Commerce Operations & Management ? Digital",
+              "Marketing and Social Commerce, Customer Relationship",
+              "Management, E-fulfillment and last-mile delivery innovations"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "E-COMMERCE OPERATIONS AND MANAGEMENT",
+            "contact_hours": 15,
+            "topic_lines": [
               "Digital Payment Systems: Types of electronic payment methods,",
               "Payment gateways, digital wallets and buy- now-pay-later (BNPL)",
               "models, Role of blockchain in secure payments, Cybersecurity in E-",
@@ -240,20 +284,8 @@
               "Textbook :",
               "1 E-Business and E-Commerce Management (3rd ed.), Chaffey, D., Pearson., 2007"
             ],
-            "topics_text": "TECHNOLOGIES Introduction to E-Commerce: ? Definition, Scope and Evolution of E- Commerce, Key Drivers of E-Commerce Growth, Trends and Future of E-Commerce, Limitations of E-Commerce and Global Trends, E-Commerce Business Models ? B2B, B2C, C2C, C2B models, Omnichannel Commerce and direct-to- consumer (DTC) Model, Technology driving E-Commerce: Artificial Intelligence, Blockchain Technology, Internet of Things (IoT), Metaverse Commerce, E-Commerce Operations & Management ? Digital Marketing and Social Commerce, Customer Relationship Management, E-fulfillment and last-mile delivery innovations 2 E-COMMERCE OPERATIONS AND MANAGEMENT 15 Digital Payment Systems: Types of electronic payment methods, Payment gateways, digital wallets and buy- now-pay-later (BNPL) models, Role of blockchain in secure payments, Cybersecurity in E- Commerce: ? Threats: Phishing, Data breaches, e-commerce frauds, Security Measures, Privacy Laws, Legal and Ethical Issues in E- Commerce ? Consumer protection laws in digital commerce, Intellectual property and copyright in online marketplace, Ethical Concerns, Case study on E-Commerce Companies: ? Amazon’s AI- powered personalization and logistics innovation, Walmart’s use of IoT for supply chain optimization Total Hours 30 Textbook : 1 E-Business and E-Commerce Management (3rd ed.), Chaffey, D., Pearson., 2007",
+            "topics_text": "Digital Payment Systems: Types of electronic payment methods, Payment gateways, digital wallets and buy- now-pay-later (BNPL) models, Role of blockchain in secure payments, Cybersecurity in E- Commerce: ? Threats: Phishing, Data breaches, e-commerce frauds, Security Measures, Privacy Laws, Legal and Ethical Issues in E- Commerce ? Consumer protection laws in digital commerce, Intellectual property and copyright in online marketplace, Ethical Concerns, Case study on E-Commerce Companies: ? Amazon’s AI- powered personalization and logistics innovation, Walmart’s use of IoT for supply chain optimization Total Hours 30 Textbook : 1 E-Business and E-Commerce Management (3rd ed.), Chaffey, D., Pearson., 2007",
             "topics": [
-              "TECHNOLOGIES",
-              "Introduction to E-Commerce: ? Definition, Scope and Evolution of",
-              "E- Commerce, Key Drivers of E-Commerce Growth, Trends and",
-              "Future of E-Commerce, Limitations of E-Commerce and Global",
-              "Trends, E-Commerce Business Models ? B2B, B2C, C2C, C2B",
-              "models, Omnichannel Commerce and direct-to- consumer (DTC)",
-              "Model, Technology driving E-Commerce: Artificial Intelligence,",
-              "Blockchain Technology, Internet of Things (IoT), Metaverse",
-              "Commerce, E-Commerce Operations & Management ? Digital",
-              "Marketing and Social Commerce, Customer Relationship",
-              "Management, E-fulfillment and last-mile delivery innovations",
-              "2 E-COMMERCE OPERATIONS AND MANAGEMENT 15",
               "Digital Payment Systems: Types of electronic payment methods,",
               "Payment gateways, digital wallets and buy- now-pay-later (BNPL)",
               "models, Role of blockchain in secure payments, Cybersecurity in E",
@@ -346,12 +378,37 @@
               "Introduction: Introduction to Health Psychology, Components of",
               "health: social, emotional, cognitive and physical aspects, Mind-body",
               "relationship, Goals of health psychology, Bio-psycho-social model",
-              "of health.",
-              "2 Health Behaviour and its Theories 5",
+              "of health."
+            ],
+            "topics_text": "Introduction: Introduction to Health Psychology, Components of health: social, emotional, cognitive and physical aspects, Mind-body relationship, Goals of health psychology, Bio-psycho-social model of health.",
+            "topics": [
+              "Introduction: Introduction to Health Psychology, Components of",
+              "health: social, emotional, cognitive and physical aspects, Mind-body",
+              "relationship, Goals of health psychology, Bio-psycho-social model",
+              "of health."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Health Behaviour and its Theories",
+            "contact_hours": 5,
+            "topic_lines": [
               "Behaviour and health: Characteristics of health behaviour, Barriers",
               "to health behaviour, Theories of health behaviour and their",
-              "implications",
-              "3 Stress and its management techniques 10",
+              "implications"
+            ],
+            "topics_text": "Behaviour and health: Characteristics of health behaviour, Barriers to health behaviour, Theories of health behaviour and their implications",
+            "topics": [
+              "Behaviour and health: Characteristics of health behaviour, Barriers",
+              "to health behaviour, Theories of health behaviour and their",
+              "implications"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Stress and its management techniques",
+            "contact_hours": 10,
+            "topic_lines": [
               "Stress: Nature, Sources, Effects of stress on physical and mental",
               "health, Physiological response to stress: SAM pathway, HPA",
               "Pathway, Coping strategies and stress management,",
@@ -360,35 +417,34 @@
               "neurofeedback and diaphragmatic breathing Social support",
               "etcJPMR, Mindfulness-, Behavioural medicine, Consequences of",
               "health psychology techniques in management of chronic diseases,",
-              "Quality of Life and Quality of Life assessment given by WHO",
-              "4 Understanding health promoting behaviours 8",
+              "Quality of Life and Quality of Life assessment given by WHO"
+            ],
+            "topics_text": "Stress: Nature, Sources, Effects of stress on physical and mental health, Physiological response to stress: SAM pathway, HPA Pathway, Coping strategies and stress management, Psychoneuroimmunology, Chronic Health problems, Pain management, Stress Management techniques - based therapy, neurofeedback and diaphragmatic breathing Social support etcJPMR, Mindfulness-, Behavioural medicine, Consequences of health psychology techniques in management of chronic diseases, Quality of Life and Quality of Life assessment given by WHO",
+            "topics": [
+              "Stress: Nature, Sources, Effects of stress on physical and mental",
+              "health, Physiological response to stress: SAM pathway, HPA",
+              "Pathway, Coping strategies and stress management,",
+              "Psychoneuroimmunology, Chronic Health problems, Pain",
+              "management, Stress Management techniques - based therapy,",
+              "neurofeedback and diaphragmatic breathing Social support",
+              "etcJPMR, Mindfulness-, Behavioural medicine, Consequences of",
+              "health psychology techniques in management of chronic diseases,",
+              "Quality of Life and Quality of Life assessment given by WHO"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Understanding health promoting behaviours",
+            "contact_hours": 8,
+            "topic_lines": [
               "Matarazzo's Health Behaviours, Health Management: Health-",
               "enhancing behaviours: Exercise, Nutrition, safety, Assessment of",
               "Pain scales managing and controlling pain., Health Protective",
               "Behaviours, Illness Management.",
               "Total Hours 30"
             ],
-            "topics_text": "Introduction: Introduction to Health Psychology, Components of health: social, emotional, cognitive and physical aspects, Mind-body relationship, Goals of health psychology, Bio-psycho-social model of health. 2 Health Behaviour and its Theories 5 Behaviour and health: Characteristics of health behaviour, Barriers to health behaviour, Theories of health behaviour and their implications 3 Stress and its management techniques 10 Stress: Nature, Sources, Effects of stress on physical and mental health, Physiological response to stress: SAM pathway, HPA Pathway, Coping strategies and stress management, Psychoneuroimmunology, Chronic Health problems, Pain management, Stress Management techniques - based therapy, neurofeedback and diaphragmatic breathing Social support etcJPMR, Mindfulness-, Behavioural medicine, Consequences of health psychology techniques in management of chronic diseases, Quality of Life and Quality of Life assessment given by WHO 4 Understanding health promoting behaviours 8 Matarazzo's Health Behaviours, Health Management: Health- enhancing behaviours: Exercise, Nutrition, safety, Assessment of Pain scales managing and controlling pain., Health Protective Behaviours, Illness Management. Total Hours 30",
+            "topics_text": "Matarazzo's Health Behaviours, Health Management: Health- enhancing behaviours: Exercise, Nutrition, safety, Assessment of Pain scales managing and controlling pain., Health Protective Behaviours, Illness Management. Total Hours 30",
             "topics": [
-              "Introduction: Introduction to Health Psychology, Components of",
-              "health: social, emotional, cognitive and physical aspects, Mind-body",
-              "relationship, Goals of health psychology, Bio-psycho-social model",
-              "of health.",
-              "2 Health Behaviour and its Theories 5",
-              "Behaviour and health: Characteristics of health behaviour, Barriers",
-              "to health behaviour, Theories of health behaviour and their",
-              "implications",
-              "3 Stress and its management techniques 10",
-              "Stress: Nature, Sources, Effects of stress on physical and mental",
-              "health, Physiological response to stress: SAM pathway, HPA",
-              "Pathway, Coping strategies and stress management,",
-              "Psychoneuroimmunology, Chronic Health problems, Pain",
-              "management, Stress Management techniques - based therapy,",
-              "neurofeedback and diaphragmatic breathing Social support",
-              "etcJPMR, Mindfulness-, Behavioural medicine, Consequences of",
-              "health psychology techniques in management of chronic diseases,",
-              "Quality of Life and Quality of Life assessment given by WHO",
-              "4 Understanding health promoting behaviours 8",
               "Matarazzo's Health Behaviours, Health Management: Health",
               "enhancing behaviours: Exercise, Nutrition, safety, Assessment of",
               "Pain scales managing and controlling pain., Health Protective",
@@ -491,26 +547,42 @@
             "contact_hours": 10,
             "topic_lines": [
               "Role of English in India, Historical Background of Indian English",
-              "writing",
-              "2 Poetry 10",
+              "writing"
+            ],
+            "topics_text": "Role of English in India, Historical Background of Indian English writing",
+            "topics": [
+              "Role of English in India, Historical Background of Indian English",
+              "writing"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Poetry",
+            "contact_hours": 10,
+            "topic_lines": [
               "“An Introduction” by Kamala Das, “The Night of the Scorpion” by",
               "Nissim Ezekiel, “A Poem for Mother” by Robin S. Ngangom, “To",
-              "India – My Native Land” by H.L.V. Derozio",
-              "3 Fiction 10",
+              "India – My Native Land” by H.L.V. Derozio"
+            ],
+            "topics_text": "“An Introduction” by Kamala Das, “The Night of the Scorpion” by Nissim Ezekiel, “A Poem for Mother” by Robin S. Ngangom, “To India – My Native Land” by H.L.V. Derozio",
+            "topics": [
+              "“An Introduction” by Kamala Das, “The Night of the Scorpion” by",
+              "Nissim Ezekiel, “A Poem for Mother” by Robin S. Ngangom, “To",
+              "India – My Native Land” by H.L.V. Derozio"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Fiction",
+            "contact_hours": 10,
+            "topic_lines": [
               "“Dance Like a Man” by Mahesh Dattani, “The Intrusion” by Shashi",
               "Deshpande, “Kanthapura” by Raja Rao, “The Guide” by R.K.",
               "Narayan",
               "Total Hours 30"
             ],
-            "topics_text": "Role of English in India, Historical Background of Indian English writing 2 Poetry 10 “An Introduction” by Kamala Das, “The Night of the Scorpion” by Nissim Ezekiel, “A Poem for Mother” by Robin S. Ngangom, “To India – My Native Land” by H.L.V. Derozio 3 Fiction 10 “Dance Like a Man” by Mahesh Dattani, “The Intrusion” by Shashi Deshpande, “Kanthapura” by Raja Rao, “The Guide” by R.K. Narayan Total Hours 30",
+            "topics_text": "“Dance Like a Man” by Mahesh Dattani, “The Intrusion” by Shashi Deshpande, “Kanthapura” by Raja Rao, “The Guide” by R.K. Narayan Total Hours 30",
             "topics": [
-              "Role of English in India, Historical Background of Indian English",
-              "writing",
-              "2 Poetry 10",
-              "“An Introduction” by Kamala Das, “The Night of the Scorpion” by",
-              "Nissim Ezekiel, “A Poem for Mother” by Robin S. Ngangom, “To",
-              "India – My Native Land” by H.L.V. Derozio",
-              "3 Fiction 10",
               "“Dance Like a Man” by Mahesh Dattani, “The Intrusion” by Shashi",
               "Deshpande, “Kanthapura” by Raja Rao, “The Guide” by R.K.",
               "Narayan",
@@ -679,30 +751,96 @@
             "topic_lines": [
               "Meaning and scope of Business Law, Overview of the legal",
               "environment in business (private and public law)., Role of Business",
-              "Law in protecting businesses, employees, consumers, and society",
-              "2 The Legal System and Sources of Business Law 5",
+              "Law in protecting businesses, employees, consumers, and society"
+            ],
+            "topics_text": "Meaning and scope of Business Law, Overview of the legal environment in business (private and public law)., Role of Business Law in protecting businesses, employees, consumers, and society",
+            "topics": [
+              "Meaning and scope of Business Law, Overview of the legal",
+              "environment in business (private and public law)., Role of Business",
+              "Law in protecting businesses, employees, consumers, and society"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "The Legal System and Sources of Business Law",
+            "contact_hours": 5,
+            "topic_lines": [
               "Structure of the Indian legal system (courts, legislative bodies,",
               "executive agencies)., Sources of business law: statutory law, case",
               "law, administrative regulations, and common law., The role of",
               "judicial decisions in business law., Types of civil cases relevant to",
               "business (contracts, torts, property)., Overview of criminal liability",
-              "in business (fraud, embezzlement).",
-              "3 Contract Law 6",
+              "in business (fraud, embezzlement)."
+            ],
+            "topics_text": "Structure of the Indian legal system (courts, legislative bodies, executive agencies)., Sources of business law: statutory law, case law, administrative regulations, and common law., The role of judicial decisions in business law., Types of civil cases relevant to business (contracts, torts, property)., Overview of criminal liability in business (fraud, embezzlement).",
+            "topics": [
+              "Structure of the Indian legal system (courts, legislative bodies,",
+              "executive agencies)., Sources of business law: statutory law, case",
+              "law, administrative regulations, and common law., The role of",
+              "judicial decisions in business law., Types of civil cases relevant to",
+              "business (contracts, torts, property)., Overview of criminal liability",
+              "in business (fraud, embezzlement)."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Contract Law",
+            "contact_hours": 6,
+            "topic_lines": [
               "The elements and types of contract, Contract execution,",
               "performance and breach., Remedies for breach of contract:",
-              "damages, specific performance, and rescission",
-              "4 Business Organizations and Liability 5",
+              "damages, specific performance, and rescission"
+            ],
+            "topics_text": "The elements and types of contract, Contract execution, performance and breach., Remedies for breach of contract: damages, specific performance, and rescission",
+            "topics": [
+              "The elements and types of contract, Contract execution,",
+              "performance and breach., Remedies for breach of contract:",
+              "damages, specific performance, and rescission"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Business Organizations and Liability",
+            "contact_hours": 5,
+            "topic_lines": [
               "Types of business entities: sole proprietorship, partnership,",
               "corporation, and limited liability company (LLC)., Advantages and",
               "disadvantages of each business structure., Liability issues in",
               "different business entities., Legal requirements for forming a",
-              "business entity.",
-              "5 Intellectual Property (IP) and Its Importance to Business 5",
+              "business entity."
+            ],
+            "topics_text": "Types of business entities: sole proprietorship, partnership, corporation, and limited liability company (LLC)., Advantages and disadvantages of each business structure., Liability issues in different business entities., Legal requirements for forming a business entity.",
+            "topics": [
+              "Types of business entities: sole proprietorship, partnership,",
+              "corporation, and limited liability company (LLC)., Advantages and",
+              "disadvantages of each business structure., Liability issues in",
+              "different business entities., Legal requirements for forming a",
+              "business entity."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Intellectual Property (IP) and Its Importance to Business",
+            "contact_hours": 5,
+            "topic_lines": [
               "Overview of intellectual property: patents, trademarks, copyrights,",
               "and trade secrets., The legal framework for protecting business",
               "innovations and ideas., How businesses can leverage IP for",
-              "competitive advantage., Start-up and IP Laws",
-              "6 Business Ethics and Legal Compliance 5",
+              "competitive advantage., Start-up and IP Laws"
+            ],
+            "topics_text": "Overview of intellectual property: patents, trademarks, copyrights, and trade secrets., The legal framework for protecting business innovations and ideas., How businesses can leverage IP for competitive advantage., Start-up and IP Laws",
+            "topics": [
+              "Overview of intellectual property: patents, trademarks, copyrights,",
+              "and trade secrets., The legal framework for protecting business",
+              "innovations and ideas., How businesses can leverage IP for",
+              "competitive advantage., Start-up and IP Laws"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Business Ethics and Legal Compliance",
+            "contact_hours": 5,
+            "topic_lines": [
               "Understanding the concept of Business Ethics., Legal compliance:",
               "ensuring adherence to laws and regulations in business operations.,",
               "Corporate social responsibility (CSR) and its legal implications.,",
@@ -710,34 +848,8 @@
               "environmental laws, labor rights).",
               "Total Hours 30"
             ],
-            "topics_text": "Meaning and scope of Business Law, Overview of the legal environment in business (private and public law)., Role of Business Law in protecting businesses, employees, consumers, and society 2 The Legal System and Sources of Business Law 5 Structure of the Indian legal system (courts, legislative bodies, executive agencies)., Sources of business law: statutory law, case law, administrative regulations, and common law., The role of judicial decisions in business law., Types of civil cases relevant to business (contracts, torts, property)., Overview of criminal liability in business (fraud, embezzlement). 3 Contract Law 6 The elements and types of contract, Contract execution, performance and breach., Remedies for breach of contract: damages, specific performance, and rescission 4 Business Organizations and Liability 5 Types of business entities: sole proprietorship, partnership, corporation, and limited liability company (LLC)., Advantages and disadvantages of each business structure., Liability issues in different business entities., Legal requirements for forming a business entity. 5 Intellectual Property (IP) and Its Importance to Business 5 Overview of intellectual property: patents, trademarks, copyrights, and trade secrets., The legal framework for protecting business innovations and ideas., How businesses can leverage IP for competitive advantage., Start-up and IP Laws 6 Business Ethics and Legal Compliance 5 Understanding the concept of Business Ethics., Legal compliance: ensuring adherence to laws and regulations in business operations., Corporate social responsibility (CSR) and its legal implications., Ethical challenges in business law (e.g., insider trading, environmental laws, labor rights). Total Hours 30",
+            "topics_text": "Understanding the concept of Business Ethics., Legal compliance: ensuring adherence to laws and regulations in business operations., Corporate social responsibility (CSR) and its legal implications., Ethical challenges in business law (e.g., insider trading, environmental laws, labor rights). Total Hours 30",
             "topics": [
-              "Meaning and scope of Business Law, Overview of the legal",
-              "environment in business (private and public law)., Role of Business",
-              "Law in protecting businesses, employees, consumers, and society",
-              "2 The Legal System and Sources of Business Law 5",
-              "Structure of the Indian legal system (courts, legislative bodies,",
-              "executive agencies)., Sources of business law: statutory law, case",
-              "law, administrative regulations, and common law., The role of",
-              "judicial decisions in business law., Types of civil cases relevant to",
-              "business (contracts, torts, property)., Overview of criminal liability",
-              "in business (fraud, embezzlement).",
-              "3 Contract Law 6",
-              "The elements and types of contract, Contract execution,",
-              "performance and breach., Remedies for breach of contract:",
-              "damages, specific performance, and rescission",
-              "4 Business Organizations and Liability 5",
-              "Types of business entities: sole proprietorship, partnership,",
-              "corporation, and limited liability company (LLC)., Advantages and",
-              "disadvantages of each business structure., Liability issues in",
-              "different business entities., Legal requirements for forming a",
-              "business entity.",
-              "5 Intellectual Property (IP) and Its Importance to Business 5",
-              "Overview of intellectual property: patents, trademarks, copyrights,",
-              "and trade secrets., The legal framework for protecting business",
-              "innovations and ideas., How businesses can leverage IP for",
-              "competitive advantage., Start-up and IP Laws",
-              "6 Business Ethics and Legal Compliance 5",
               "Understanding the concept of Business Ethics., Legal compliance:",
               "ensuring adherence to laws and regulations in business operations.,",
               "Corporate social responsibility (CSR) and its legal implications.,",
@@ -843,23 +955,73 @@
             "contact_hours": 4,
             "topic_lines": [
               "What is Public Policy?, Nature and Scope of Public Policy,",
-              "Significance of Policy",
-              "2 Types, Models, and Stakeholder Participation 8",
+              "Significance of Policy"
+            ],
+            "topics_text": "What is Public Policy?, Nature and Scope of Public Policy, Significance of Policy",
+            "topics": [
+              "What is Public Policy?, Nature and Scope of Public Policy,",
+              "Significance of Policy"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Types, Models, and Stakeholder Participation",
+            "contact_hours": 8,
+            "topic_lines": [
               "Types of Public Policy – Regulatory, Distributive, Redistributive,",
               "Capitalization & Ethical., Models and Approaches to Public Policy",
               "– Institutional approach, Group theory, Elite Theory, Rational",
               "Model, Incremental Model, Game theory, Systems Approach,",
               "Critical theory, Stakeholders in Policy Making – Official and",
-              "Unofficial participants",
-              "3 Elements of Policy Making Process 6",
+              "Unofficial participants"
+            ],
+            "topics_text": "Types of Public Policy – Regulatory, Distributive, Redistributive, Capitalization & Ethical., Models and Approaches to Public Policy – Institutional approach, Group theory, Elite Theory, Rational Model, Incremental Model, Game theory, Systems Approach, Critical theory, Stakeholders in Policy Making – Official and Unofficial participants",
+            "topics": [
+              "Types of Public Policy – Regulatory, Distributive, Redistributive,",
+              "Capitalization & Ethical., Models and Approaches to Public Policy",
+              "– Institutional approach, Group theory, Elite Theory, Rational",
+              "Model, Incremental Model, Game theory, Systems Approach,",
+              "Critical theory, Stakeholders in Policy Making – Official and",
+              "Unofficial participants"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Elements of Policy Making Process",
+            "contact_hours": 6,
+            "topic_lines": [
               "Problem Formation, Policy Formulation, Policy Adoption, Policy",
-              "Implementation, Policy Evaluation",
-              "4 Policy Making in Diverse Contexts 6",
+              "Implementation, Policy Evaluation"
+            ],
+            "topics_text": "Problem Formation, Policy Formulation, Policy Adoption, Policy Implementation, Policy Evaluation",
+            "topics": [
+              "Problem Formation, Policy Formulation, Policy Adoption, Policy",
+              "Implementation, Policy Evaluation"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Policy Making in Diverse Contexts",
+            "contact_hours": 6,
+            "topic_lines": [
               "Public opinion and policy-making, Identity politics and policy-",
               "making, Gender-sensitive policy making, Policy making in the",
               "context of of a developed, developing and underdeveloped nation.,",
-              "Policy making in a multicultural nation.",
-              "5 New Perspectives in Policy Making 6",
+              "Policy making in a multicultural nation."
+            ],
+            "topics_text": "Public opinion and policy-making, Identity politics and policy- making, Gender-sensitive policy making, Policy making in the context of of a developed, developing and underdeveloped nation., Policy making in a multicultural nation.",
+            "topics": [
+              "Public opinion and policy-making, Identity politics and policy",
+              "making, Gender-sensitive policy making, Policy making in the",
+              "context of of a developed, developing and underdeveloped nation.,",
+              "Policy making in a multicultural nation."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "New Perspectives in Policy Making",
+            "contact_hours": 6,
+            "topic_lines": [
               "Politics of Policy Evaluation – The dilemma between policy impact",
               "and policy output (with a special emphasis on the kanyashree",
               "prakalpa), Constraints on Public Policy, Democratizing the Public",
@@ -867,26 +1029,8 @@
               "Agencies in the Contextual Setting of Public Policy Making",
               "Total Hours 30"
             ],
-            "topics_text": "What is Public Policy?, Nature and Scope of Public Policy, Significance of Policy 2 Types, Models, and Stakeholder Participation 8 Types of Public Policy – Regulatory, Distributive, Redistributive, Capitalization & Ethical., Models and Approaches to Public Policy – Institutional approach, Group theory, Elite Theory, Rational Model, Incremental Model, Game theory, Systems Approach, Critical theory, Stakeholders in Policy Making – Official and Unofficial participants 3 Elements of Policy Making Process 6 Problem Formation, Policy Formulation, Policy Adoption, Policy Implementation, Policy Evaluation 4 Policy Making in Diverse Contexts 6 Public opinion and policy-making, Identity politics and policy- making, Gender-sensitive policy making, Policy making in the context of of a developed, developing and underdeveloped nation., Policy making in a multicultural nation. 5 New Perspectives in Policy Making 6 Politics of Policy Evaluation – The dilemma between policy impact and policy output (with a special emphasis on the kanyashree prakalpa), Constraints on Public Policy, Democratizing the Public Policy Process, Role of Governmental and Non-Governmental Agencies in the Contextual Setting of Public Policy Making Total Hours 30",
+            "topics_text": "Politics of Policy Evaluation – The dilemma between policy impact and policy output (with a special emphasis on the kanyashree prakalpa), Constraints on Public Policy, Democratizing the Public Policy Process, Role of Governmental and Non-Governmental Agencies in the Contextual Setting of Public Policy Making Total Hours 30",
             "topics": [
-              "What is Public Policy?, Nature and Scope of Public Policy,",
-              "Significance of Policy",
-              "2 Types, Models, and Stakeholder Participation 8",
-              "Types of Public Policy – Regulatory, Distributive, Redistributive,",
-              "Capitalization & Ethical., Models and Approaches to Public Policy",
-              "– Institutional approach, Group theory, Elite Theory, Rational",
-              "Model, Incremental Model, Game theory, Systems Approach,",
-              "Critical theory, Stakeholders in Policy Making – Official and",
-              "Unofficial participants",
-              "3 Elements of Policy Making Process 6",
-              "Problem Formation, Policy Formulation, Policy Adoption, Policy",
-              "Implementation, Policy Evaluation",
-              "4 Policy Making in Diverse Contexts 6",
-              "Public opinion and policy-making, Identity politics and policy",
-              "making, Gender-sensitive policy making, Policy making in the",
-              "context of of a developed, developing and underdeveloped nation.,",
-              "Policy making in a multicultural nation.",
-              "5 New Perspectives in Policy Making 6",
               "Politics of Policy Evaluation – The dilemma between policy impact",
               "and policy output (with a special emphasis on the kanyashree",
               "prakalpa), Constraints on Public Policy, Democratizing the Public",
@@ -1006,35 +1150,59 @@
             "topic_lines": [
               "Historical background of Sociology, Sociology as a new discipline,",
               "Impact of revolutions:, Enlightenment, Renaissance, The French",
-              "Revolution, The Industrial Revolution., Comte and Positivism",
-              "2 Theory of Functionalism 5",
+              "Revolution, The Industrial Revolution., Comte and Positivism"
+            ],
+            "topics_text": "Historical background of Sociology, Sociology as a new discipline, Impact of revolutions:, Enlightenment, Renaissance, The French Revolution, The Industrial Revolution., Comte and Positivism",
+            "topics": [
+              "Historical background of Sociology, Sociology as a new discipline,",
+              "Impact of revolutions:, Enlightenment, Renaissance, The French",
+              "Revolution, The Industrial Revolution., Comte and Positivism"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Theory of Functionalism",
+            "contact_hours": 5,
+            "topic_lines": [
               "Functionalism: Emergence (Herbert spencer and Emile Durkheim),",
               "Functionalism of Malinowski, Brown, Talcott Parsons, R.K.",
-              "Merton.",
-              "3 Conflict Perspective 8",
+              "Merton."
+            ],
+            "topics_text": "Functionalism: Emergence (Herbert spencer and Emile Durkheim), Functionalism of Malinowski, Brown, Talcott Parsons, R.K. Merton.",
+            "topics": [
+              "Functionalism: Emergence (Herbert spencer and Emile Durkheim),",
+              "Functionalism of Malinowski, Brown, Talcott Parsons, R.K.",
+              "Merton."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Conflict Perspective",
+            "contact_hours": 8,
+            "topic_lines": [
               "Conflict School:, Origin of Conflict/ Critical Theorising,, Conflict",
               "theories of Karl Marx,, Ralf Dahrendorf, Lewis Coser., Critical",
-              "Theory",
-              "4 Interactionist Theory 7",
+              "Theory"
+            ],
+            "topics_text": "Conflict School:, Origin of Conflict/ Critical Theorising,, Conflict theories of Karl Marx,, Ralf Dahrendorf, Lewis Coser., Critical Theory",
+            "topics": [
+              "Conflict School:, Origin of Conflict/ Critical Theorising,, Conflict",
+              "theories of Karl Marx,, Ralf Dahrendorf, Lewis Coser., Critical",
+              "Theory"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Interactionist Theory",
+            "contact_hours": 7,
+            "topic_lines": [
               "Interactionist Theory:, Sociological Imagination., Early",
               "Interactionism;, Symbolic Interactionism of Blumer and Goffman,",
               "Role theory of Turner;, Ethnomethodology.",
               "Total Hours 30"
             ],
-            "topics_text": "Historical background of Sociology, Sociology as a new discipline, Impact of revolutions:, Enlightenment, Renaissance, The French Revolution, The Industrial Revolution., Comte and Positivism 2 Theory of Functionalism 5 Functionalism: Emergence (Herbert spencer and Emile Durkheim), Functionalism of Malinowski, Brown, Talcott Parsons, R.K. Merton. 3 Conflict Perspective 8 Conflict School:, Origin of Conflict/ Critical Theorising,, Conflict theories of Karl Marx,, Ralf Dahrendorf, Lewis Coser., Critical Theory 4 Interactionist Theory 7 Interactionist Theory:, Sociological Imagination., Early Interactionism;, Symbolic Interactionism of Blumer and Goffman, Role theory of Turner;, Ethnomethodology. Total Hours 30",
+            "topics_text": "Interactionist Theory:, Sociological Imagination., Early Interactionism;, Symbolic Interactionism of Blumer and Goffman, Role theory of Turner;, Ethnomethodology. Total Hours 30",
             "topics": [
-              "Historical background of Sociology, Sociology as a new discipline,",
-              "Impact of revolutions:, Enlightenment, Renaissance, The French",
-              "Revolution, The Industrial Revolution., Comte and Positivism",
-              "2 Theory of Functionalism 5",
-              "Functionalism: Emergence (Herbert spencer and Emile Durkheim),",
-              "Functionalism of Malinowski, Brown, Talcott Parsons, R.K.",
-              "Merton.",
-              "3 Conflict Perspective 8",
-              "Conflict School:, Origin of Conflict/ Critical Theorising,, Conflict",
-              "theories of Karl Marx,, Ralf Dahrendorf, Lewis Coser., Critical",
-              "Theory",
-              "4 Interactionist Theory 7",
               "Interactionist Theory:, Sociological Imagination., Early",
               "Interactionism",
               ", Symbolic Interactionism of Blumer and Goffman,",

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-12T12:46:04+00:00",
+  "generated_at_utc": "2026-10-12T12:47:27+00:00",
   "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
   "source_catalog": "Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/ACTIVE_PDF_MANIFEST.csv",
   "course": {
@@ -93,44 +93,68 @@
               "Public Law – Meaning, Nature and Scope, Study of Comparative",
               "Public Law, Relevance, Scope and Limitations, Constitution,",
               "Constitutional Law and Constitutionalism, Difference between",
-              "Administrative Law and Constitutional Law",
-              "2 Module 2 15",
-              "Systems of Governance and Public Law, Presidential Forms of",
-              "Government vs. parliamentary Form of Government, Federal and"
+              "Administrative Law and Constitutional Law"
             ],
-            "topics_text": "Public Law – Meaning, Nature and Scope, Study of Comparative Public Law, Relevance, Scope and Limitations, Constitution, Constitutional Law and Constitutionalism, Difference between Administrative Law and Constitutional Law 2 Module 2 15 Systems of Governance and Public Law, Presidential Forms of Government vs. parliamentary Form of Government, Federal and",
+            "topics_text": "Public Law – Meaning, Nature and Scope, Study of Comparative Public Law, Relevance, Scope and Limitations, Constitution, Constitutional Law and Constitutionalism, Difference between Administrative Law and Constitutional Law",
             "topics": [
               "Public Law – Meaning, Nature and Scope, Study of Comparative",
               "Public Law, Relevance, Scope and Limitations, Constitution,",
               "Constitutional Law and Constitutionalism, Difference between",
-              "Administrative Law and Constitutional Law",
-              "2 Module 2 15",
+              "Administrative Law and Constitutional Law"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Module 2",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Systems of Governance and Public Law, Presidential Forms of",
+              "Government vs. parliamentary Form of Government, Federal and"
+            ],
+            "topics_text": "Systems of Governance and Public Law, Presidential Forms of Government vs. parliamentary Form of Government, Federal and",
+            "topics": [
               "Systems of Governance and Public Law, Presidential Forms of",
               "Government vs. parliamentary Form of Government, Federal and"
             ]
           },
           {
-            "unit_number": 1,
+            "unit_number": 2,
             "title": "ary Forms, Other Forms of Governance, Good Governance,",
             "contact_hours": null,
             "topic_lines": [
-              "Role of Courts in Federal Countries",
-              "3 Module 3 10",
+              "Role of Courts in Federal Countries"
+            ],
+            "topics_text": "Role of Courts in Federal Countries",
+            "topics": [
+              "Role of Courts in Federal Countries"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Module 3",
+            "contact_hours": 10,
+            "topic_lines": [
               "Review of Public Law, Judicial and Political Review, Concept and",
-              "Origin of Judicial Review, Limitations on Judicial Review",
-              "4 Module 4 10",
+              "Origin of Judicial Review, Limitations on Judicial Review"
+            ],
+            "topics_text": "Review of Public Law, Judicial and Political Review, Concept and Origin of Judicial Review, Limitations on Judicial Review",
+            "topics": [
+              "Review of Public Law, Judicial and Political Review, Concept and",
+              "Origin of Judicial Review, Limitations on Judicial Review"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Module 4",
+            "contact_hours": 10,
+            "topic_lines": [
               "Amendment of Public Law, Various Methods of Amendment,",
               "Supremacy of Legislature in making Public Law, Limitations on",
               "Amending Power, Theory of Basic Structure",
               "Total Hours 45"
             ],
-            "topics_text": "Role of Courts in Federal Countries 3 Module 3 10 Review of Public Law, Judicial and Political Review, Concept and Origin of Judicial Review, Limitations on Judicial Review 4 Module 4 10 Amendment of Public Law, Various Methods of Amendment, Supremacy of Legislature in making Public Law, Limitations on Amending Power, Theory of Basic Structure Total Hours 45",
+            "topics_text": "Amendment of Public Law, Various Methods of Amendment, Supremacy of Legislature in making Public Law, Limitations on Amending Power, Theory of Basic Structure Total Hours 45",
             "topics": [
-              "Role of Courts in Federal Countries",
-              "3 Module 3 10",
-              "Review of Public Law, Judicial and Political Review, Concept and",
-              "Origin of Judicial Review, Limitations on Judicial Review",
-              "4 Module 4 10",
               "Amendment of Public Law, Various Methods of Amendment,",
               "Supremacy of Legislature in making Public Law, Limitations on",
               "Amending Power, Theory of Basic Structure",
@@ -236,29 +260,97 @@
               "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
               "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
               "Changing concept of crime, Relationship between Criminal Policy,",
-              "Criminal Law and Criminology",
-              "2 Theories of causation of crime 6",
+              "Criminal Law and Criminology"
+            ],
+            "topics_text": "1. Definitions: Crime, Criminology and Criminal Justice, 2. Historical Development of criminology - Nature and Scope- Criminology , 3. Perspective of Crime and Criminal, 4. Difference between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5. Changing concept of crime, Relationship between Criminal Policy, Criminal Law and Criminology",
+            "topics": [
+              "1. Definitions: Crime, Criminology and Criminal Justice, 2.",
+              "Historical Development of criminology - Nature and Scope",
+              "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
+              "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
+              "Changing concept of crime, Relationship between Criminal Policy,",
+              "Criminal Law and Criminology"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Theories of causation of crime",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Prominent criminological thought currents – Classicalism,",
               "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
               "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
-              "Sociological Theories",
-              "3 Criminal Typology 6",
+              "Sociological Theories"
+            ],
+            "topics_text": "1. Prominent criminological thought currents – Classicalism, Positivism and Radicalism, 2. Biological Theories, 3. Economic Theories, 4. Psychological Theories, 5. Political Theories, 6. Sociological Theories",
+            "topics": [
+              "1. Prominent criminological thought currents – Classicalism,",
+              "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
+              "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
+              "Sociological Theories"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Criminal Typology",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Crimes against Human body and Crimes against Property, 2.",
               "Crimes against vulnerable groups: Crimes against women and",
               "children, 3. Economic Crimes: white collar crimes and organized",
               "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
               "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
               "Typology: Adult offenders and Juveniles in conflict with law, 11.",
-              "Habitual offenders, 12. Professional offenders",
-              "4 Punishment and its Justification 6",
+              "Habitual offenders, 12. Professional offenders"
+            ],
+            "topics_text": "1. Crimes against Human body and Crimes against Property, 2. Crimes against vulnerable groups: Crimes against women and children, 3. Economic Crimes: white collar crimes and organized crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7. Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal Typology: Adult offenders and Juveniles in conflict with law, 11. Habitual offenders, 12. Professional offenders",
+            "topics": [
+              "1. Crimes against Human body and Crimes against Property, 2.",
+              "Crimes against vulnerable groups: Crimes against women and",
+              "children, 3. Economic Crimes: white collar crimes and organized",
+              "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
+              "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
+              "Typology: Adult offenders and Juveniles in conflict with law, 11.",
+              "Habitual offenders, 12. Professional offenders"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Punishment and its Justification",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Theories of Punishment – Retribution, Deterrence, Reform and",
               "Prevention, 2. Kinds of Punishment – with a special emphasis on",
               "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
-              "Juvenile offenders",
-              "5 Female Criminality and victimity 6",
+              "Juvenile offenders"
+            ],
+            "topics_text": "1. Theories of Punishment – Retribution, Deterrence, Reform and Prevention, 2. Kinds of Punishment – with a special emphasis on Capital Punishment, 3. Probation as a form of Punishment, 4. Parole Juvenile offenders",
+            "topics": [
+              "1. Theories of Punishment – Retribution, Deterrence, Reform and",
+              "Prevention, 2. Kinds of Punishment – with a special emphasis on",
+              "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
+              "Juvenile offenders"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Female Criminality and victimity",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Female Criminality as an aspect of Marginal Criminality, 2.",
-              "Female Victimity and Victimology",
-              "6 National Crime Statistics 6",
+              "Female Victimity and Victimology"
+            ],
+            "topics_text": "1. Female Criminality as an aspect of Marginal Criminality, 2. Female Victimity and Victimology",
+            "topics": [
+              "1. Female Criminality as an aspect of Marginal Criminality, 2.",
+              "Female Victimity and Victimology"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "National Crime Statistics",
+            "contact_hours": 6,
+            "topic_lines": [
               "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4.",
               "International crime comparisons, 5. Changing crime patterns, 6.",
               "Unreported crime, 7. National Crime Record Bureau, 8. Uniform",
@@ -266,36 +358,8 @@
               "Surveys (NCVS)",
               "Total Hours 36"
             ],
-            "topics_text": "1. Definitions: Crime, Criminology and Criminal Justice, 2. Historical Development of criminology - Nature and Scope- Criminology , 3. Perspective of Crime and Criminal, 4. Difference between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5. Changing concept of crime, Relationship between Criminal Policy, Criminal Law and Criminology 2 Theories of causation of crime 6 1. Prominent criminological thought currents – Classicalism, Positivism and Radicalism, 2. Biological Theories, 3. Economic Theories, 4. Psychological Theories, 5. Political Theories, 6. Sociological Theories 3 Criminal Typology 6 1. Crimes against Human body and Crimes against Property, 2. Crimes against vulnerable groups: Crimes against women and children, 3. Economic Crimes: white collar crimes and organized crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7. Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal Typology: Adult offenders and Juveniles in conflict with law, 11. Habitual offenders, 12. Professional offenders 4 Punishment and its Justification 6 1. Theories of Punishment – Retribution, Deterrence, Reform and Prevention, 2. Kinds of Punishment – with a special emphasis on Capital Punishment, 3. Probation as a form of Punishment, 4. Parole Juvenile offenders 5 Female Criminality and victimity 6 1. Female Criminality as an aspect of Marginal Criminality, 2. Female Victimity and Victimology 6 National Crime Statistics 6 1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4. International crime comparisons, 5. Changing crime patterns, 6. Unreported crime, 7. National Crime Record Bureau, 8. Uniform Crime Reporting Statistics (UCR), 9. National Crime Victimization Surveys (NCVS) Total Hours 36",
+            "topics_text": "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4. International crime comparisons, 5. Changing crime patterns, 6. Unreported crime, 7. National Crime Record Bureau, 8. Uniform Crime Reporting Statistics (UCR), 9. National Crime Victimization Surveys (NCVS) Total Hours 36",
             "topics": [
-              "1. Definitions: Crime, Criminology and Criminal Justice, 2.",
-              "Historical Development of criminology - Nature and Scope",
-              "Criminology , 3. Perspective of Crime and Criminal, 4. Difference",
-              "between Crime and (a) Sin, (b) Immorality, (c) Vice (d) Tort, 5.",
-              "Changing concept of crime, Relationship between Criminal Policy,",
-              "Criminal Law and Criminology",
-              "2 Theories of causation of crime 6",
-              "1. Prominent criminological thought currents – Classicalism,",
-              "Positivism and Radicalism, 2. Biological Theories, 3. Economic",
-              "Theories, 4. Psychological Theories, 5. Political Theories, 6.",
-              "Sociological Theories",
-              "3 Criminal Typology 6",
-              "1. Crimes against Human body and Crimes against Property, 2.",
-              "Crimes against vulnerable groups: Crimes against women and",
-              "children, 3. Economic Crimes: white collar crimes and organized",
-              "crimes, 4. Environmental Crimes, 5. Cyber Crimes, 6. Terrorism, 7.",
-              "Victimless Crimes, 8. Hate Crimes, 9. Honour Crimes, 10. Criminal",
-              "Typology: Adult offenders and Juveniles in conflict with law, 11.",
-              "Habitual offenders, 12. Professional offenders",
-              "4 Punishment and its Justification 6",
-              "1. Theories of Punishment – Retribution, Deterrence, Reform and",
-              "Prevention, 2. Kinds of Punishment – with a special emphasis on",
-              "Capital Punishment, 3. Probation as a form of Punishment, 4. Parole",
-              "Juvenile offenders",
-              "5 Female Criminality and victimity 6",
-              "1. Female Criminality as an aspect of Marginal Criminality, 2.",
-              "Female Victimity and Victimology",
-              "6 National Crime Statistics 6",
               "1. Reporting crime, 2. Recording crime, 3. Crime/victim surveys, 4.",
               "International crime comparisons, 5. Changing crime patterns, 6.",
               "Unreported crime, 7. National Crime Record Bureau, 8. Uniform",
@@ -490,23 +554,73 @@
               "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
               "Theories of IP (Jurisprudential aspects), International Conventions:",
               "Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989;",
-              "Berne Convention, 1886; PCT, 1970; TRIPS",
-              "2 PATENTS 9",
+              "Berne Convention, 1886; PCT, 1970; TRIPS"
+            ],
+            "topics_text": "Difference Between Intellectual Property, Intellectual Property Rights & Intellectual Property Law, Types of IP: Trademarks, Copyright, Patent, Industrial Design, Trade secrets & GI Traditional Knowledge, Plant Varieties, Integrated Circuit Layout Design, Theories of IP (Jurisprudential aspects), International Conventions: Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989; Berne Convention, 1886; PCT, 1970; TRIPS",
+            "topics": [
+              "Difference Between Intellectual Property, Intellectual Property",
+              "Rights & Intellectual Property Law, Types of IP: Trademarks,",
+              "Copyright, Patent, Industrial Design, Trade secrets & GI Traditional",
+              "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
+              "Theories of IP (Jurisprudential aspects), International Conventions:",
+              "Paris Convention 1883",
+              "Madrid Agreement, 1891 & Protocol, 1989",
+              "Berne Convention, 1886",
+              "PCT, 1970",
+              "TRIPS"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "PATENTS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Concept of Patent, Product/Process Patents & Terminology,",
               "Duration of Patents, Elements of Patentability, Non- Patentable",
               "Subject Matter, Procedure for Filing of Patent Application,",
               "Procedure for Opposition Revocation of Patents Assignment and",
               "licensing of Patents, Compulsory Licensing, Patent Rights and",
-              "Infringement, Covid Pandemic & Pharma Patenting",
-              "3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9",
+              "Infringement, Covid Pandemic & Pharma Patenting"
+            ],
+            "topics_text": "Concept of Patent, Product/Process Patents & Terminology, Duration of Patents, Elements of Patentability, Non- Patentable Subject Matter, Procedure for Filing of Patent Application, Procedure for Opposition Revocation of Patents Assignment and licensing of Patents, Compulsory Licensing, Patent Rights and Infringement, Covid Pandemic & Pharma Patenting",
+            "topics": [
+              "Concept of Patent, Product/Process Patents & Terminology,",
+              "Duration of Patents, Elements of Patentability, Non- Patentable",
+              "Subject Matter, Procedure for Filing of Patent Application,",
+              "Procedure for Opposition Revocation of Patents Assignment and",
+              "licensing of Patents, Compulsory Licensing, Patent Rights and",
+              "Infringement, Covid Pandemic & Pharma Patenting"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "TRADEMARKS & GEOGRAPHICAL INDICATIONS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Introduction & Historical Perspective, Definitions, Different Kinds",
               "of Marks, Registration of Trade Marks, Application for",
               "Registration, Objection & Opposition to Registration, Grounds for",
               "Refusal to Registration, Infringement of Trade Marks, Assignment&",
               "Transmission, Offences Penalties, Meaning and Nature of",
               "Geographical Indications, Application for Registration, Conditions",
-              "& Procedure for Registration, Offences and Penalties",
-              "4 COPYRIGHT 9",
+              "& Procedure for Registration, Offences and Penalties"
+            ],
+            "topics_text": "Introduction & Historical Perspective, Definitions, Different Kinds of Marks, Registration of Trade Marks, Application for Registration, Objection & Opposition to Registration, Grounds for Refusal to Registration, Infringement of Trade Marks, Assignment& Transmission, Offences Penalties, Meaning and Nature of Geographical Indications, Application for Registration, Conditions & Procedure for Registration, Offences and Penalties",
+            "topics": [
+              "Introduction & Historical Perspective, Definitions, Different Kinds",
+              "of Marks, Registration of Trade Marks, Application for",
+              "Registration, Objection & Opposition to Registration, Grounds for",
+              "Refusal to Registration, Infringement of Trade Marks, Assignment&",
+              "Transmission, Offences Penalties, Meaning and Nature of",
+              "Geographical Indications, Application for Registration, Conditions",
+              "& Procedure for Registration, Offences and Penalties"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "COPYRIGHT",
+            "contact_hours": 9,
+            "topic_lines": [
               "Introduction, Meaning of Copyright, Works in which Copyright",
               "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
               "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
@@ -515,13 +629,44 @@
               "of Copyright, Copyright Societies & Copyright Board, Assignment",
               "and Licensing of Copyright, Registration of Copyright, infringement",
               "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
-              "against Infringement of Copyright",
-              "5 INDUSTRIAL DESIGNS 9",
+              "against Infringement of Copyright"
+            ],
+            "topics_text": "Introduction, Meaning of Copyright, Works in which Copyright Subsists (Section 13), Idea-Expression Dichotomy, Test of Originality (Doctrine of Sweat of the Brow, Modicum of creativity & Indian perspective of Skill & Judgement Test), Author & Ownership of Copyright, Economic and Neighbouring rights, Term of Copyright, Copyright Societies & Copyright Board, Assignment and Licensing of Copyright, Registration of Copyright, infringement of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies against Infringement of Copyright",
+            "topics": [
+              "Introduction, Meaning of Copyright, Works in which Copyright",
+              "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
+              "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
+              "& Indian perspective of Skill & Judgement Test), Author &",
+              "Ownership of Copyright, Economic and Neighbouring rights, Term",
+              "of Copyright, Copyright Societies & Copyright Board, Assignment",
+              "and Licensing of Copyright, Registration of Copyright, infringement",
+              "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
+              "against Infringement of Copyright"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "INDUSTRIAL DESIGNS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Concept of Design, What is a Design, Registrable Design, Novelty",
               "& Originality, Registration of Design, Procedure for Registration,",
               "Term Duration of Protection, Copyright under Design, Piracy and",
-              "Penalties, Assignment of Designs",
-              "6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4",
+              "Penalties, Assignment of Designs"
+            ],
+            "topics_text": "Concept of Design, What is a Design, Registrable Design, Novelty & Originality, Registration of Design, Procedure for Registration, Term Duration of Protection, Copyright under Design, Piracy and Penalties, Assignment of Designs",
+            "topics": [
+              "Concept of Design, What is a Design, Registrable Design, Novelty",
+              "& Originality, Registration of Design, Procedure for Registration,",
+              "Term Duration of Protection, Copyright under Design, Piracy and",
+              "Penalties, Assignment of Designs"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "PROTECTION OF TRADE SECRETS & KEY BUSINESS",
+            "contact_hours": 4,
+            "topic_lines": [
               "CONCERNS IN COMMERCIALISING INTELLECTUAL",
               "PROPERTY",
               "Introduction, Legislation Governing Trade Secrets, Protection under",
@@ -534,49 +679,8 @@
               "of Intellectual Property Rights",
               "Total Hours 45"
             ],
-            "topics_text": "Difference Between Intellectual Property, Intellectual Property Rights & Intellectual Property Law, Types of IP: Trademarks, Copyright, Patent, Industrial Design, Trade secrets & GI Traditional Knowledge, Plant Varieties, Integrated Circuit Layout Design, Theories of IP (Jurisprudential aspects), International Conventions: Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989; Berne Convention, 1886; PCT, 1970; TRIPS 2 PATENTS 9 Concept of Patent, Product/Process Patents & Terminology, Duration of Patents, Elements of Patentability, Non- Patentable Subject Matter, Procedure for Filing of Patent Application, Procedure for Opposition Revocation of Patents Assignment and licensing of Patents, Compulsory Licensing, Patent Rights and Infringement, Covid Pandemic & Pharma Patenting 3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9 Introduction & Historical Perspective, Definitions, Different Kinds of Marks, Registration of Trade Marks, Application for Registration, Objection & Opposition to Registration, Grounds for Refusal to Registration, Infringement of Trade Marks, Assignment& Transmission, Offences Penalties, Meaning and Nature of Geographical Indications, Application for Registration, Conditions & Procedure for Registration, Offences and Penalties 4 COPYRIGHT 9 Introduction, Meaning of Copyright, Works in which Copyright Subsists (Section 13), Idea-Expression Dichotomy, Test of Originality (Doctrine of Sweat of the Brow, Modicum of creativity & Indian perspective of Skill & Judgement Test), Author & Ownership of Copyright, Economic and Neighbouring rights, Term of Copyright, Copyright Societies & Copyright Board, Assignment and Licensing of Copyright, Registration of Copyright, infringement of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies against Infringement of Copyright 5 INDUSTRIAL DESIGNS 9 Concept of Design, What is a Design, Registrable Design, Novelty & Originality, Registration of Design, Procedure for Registration, Term Duration of Protection, Copyright under Design, Piracy and Penalties, Assignment of Designs 6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4 CONCERNS IN COMMERCIALISING INTELLECTUAL PROPERTY Introduction, Legislation Governing Trade Secrets, Protection under TRIPS Agreement, What Causes a Business to Lose Trade Secret Protection, Competition and Confidentiality Issues, Care & Maintenance of Confidential Information, Employee Confidentiality, Intellectual Property Issues in the Sale of Business, , Assignment of Intellectual Property Rights, Technology Transfer Agreements, Legal Auditing of Intellectual Property, Due Diligence of Intellectual Property Rights Total Hours 45",
+            "topics_text": "CONCERNS IN COMMERCIALISING INTELLECTUAL PROPERTY Introduction, Legislation Governing Trade Secrets, Protection under TRIPS Agreement, What Causes a Business to Lose Trade Secret Protection, Competition and Confidentiality Issues, Care & Maintenance of Confidential Information, Employee Confidentiality, Intellectual Property Issues in the Sale of Business, , Assignment of Intellectual Property Rights, Technology Transfer Agreements, Legal Auditing of Intellectual Property, Due Diligence of Intellectual Property Rights Total Hours 45",
             "topics": [
-              "Difference Between Intellectual Property, Intellectual Property",
-              "Rights & Intellectual Property Law, Types of IP: Trademarks,",
-              "Copyright, Patent, Industrial Design, Trade secrets & GI Traditional",
-              "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
-              "Theories of IP (Jurisprudential aspects), International Conventions:",
-              "Paris Convention 1883",
-              "Madrid Agreement, 1891 & Protocol, 1989",
-              "Berne Convention, 1886",
-              "PCT, 1970",
-              "TRIPS",
-              "2 PATENTS 9",
-              "Concept of Patent, Product/Process Patents & Terminology,",
-              "Duration of Patents, Elements of Patentability, Non- Patentable",
-              "Subject Matter, Procedure for Filing of Patent Application,",
-              "Procedure for Opposition Revocation of Patents Assignment and",
-              "licensing of Patents, Compulsory Licensing, Patent Rights and",
-              "Infringement, Covid Pandemic & Pharma Patenting",
-              "3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9",
-              "Introduction & Historical Perspective, Definitions, Different Kinds",
-              "of Marks, Registration of Trade Marks, Application for",
-              "Registration, Objection & Opposition to Registration, Grounds for",
-              "Refusal to Registration, Infringement of Trade Marks, Assignment&",
-              "Transmission, Offences Penalties, Meaning and Nature of",
-              "Geographical Indications, Application for Registration, Conditions",
-              "& Procedure for Registration, Offences and Penalties",
-              "4 COPYRIGHT 9",
-              "Introduction, Meaning of Copyright, Works in which Copyright",
-              "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
-              "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
-              "& Indian perspective of Skill & Judgement Test), Author &",
-              "Ownership of Copyright, Economic and Neighbouring rights, Term",
-              "of Copyright, Copyright Societies & Copyright Board, Assignment",
-              "and Licensing of Copyright, Registration of Copyright, infringement",
-              "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
-              "against Infringement of Copyright",
-              "5 INDUSTRIAL DESIGNS 9",
-              "Concept of Design, What is a Design, Registrable Design, Novelty",
-              "& Originality, Registration of Design, Procedure for Registration,",
-              "Term Duration of Protection, Copyright under Design, Piracy and",
-              "Penalties, Assignment of Designs",
-              "6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4",
               "CONCERNS IN COMMERCIALISING INTELLECTUAL",
               "PROPERTY",
               "Introduction, Legislation Governing Trade Secrets, Protection under",
@@ -690,23 +794,73 @@
               "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
               "Theories of IP (Jurisprudential aspects), International Conventions:",
               "Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989;",
-              "Berne Convention, 1886; PCT, 1970; TRIPS",
-              "2 PATENTS 9",
+              "Berne Convention, 1886; PCT, 1970; TRIPS"
+            ],
+            "topics_text": "Difference Between Intellectual Property, Intellectual Property Rights & Intellectual Property Law, Types of IP: Trademarks, Copyright, Patent, Industrial Design, Trade secrets & GI Traditional Knowledge, Plant Varieties, Integrated Circuit Layout Design, Theories of IP (Jurisprudential aspects), International Conventions: Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989; Berne Convention, 1886; PCT, 1970; TRIPS",
+            "topics": [
+              "Difference Between Intellectual Property, Intellectual Property",
+              "Rights & Intellectual Property Law, Types of IP: Trademarks,",
+              "Copyright, Patent, Industrial Design, Trade secrets & GI Traditional",
+              "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
+              "Theories of IP (Jurisprudential aspects), International Conventions:",
+              "Paris Convention 1883",
+              "Madrid Agreement, 1891 & Protocol, 1989",
+              "Berne Convention, 1886",
+              "PCT, 1970",
+              "TRIPS"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "PATENTS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Concept of Patent, Product/Process Patents & Terminology,",
               "Duration of Patents, Elements of Patentability, Non- Patentable",
               "Subject Matter, Procedure for Filing of Patent Application,",
               "Procedure for Opposition Revocation of Patents Assignment and",
               "licensing of Patents, Compulsory Licensing, Patent Rights and",
-              "Infringement, Covid Pandemic & Pharma Patenting",
-              "3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9",
+              "Infringement, Covid Pandemic & Pharma Patenting"
+            ],
+            "topics_text": "Concept of Patent, Product/Process Patents & Terminology, Duration of Patents, Elements of Patentability, Non- Patentable Subject Matter, Procedure for Filing of Patent Application, Procedure for Opposition Revocation of Patents Assignment and licensing of Patents, Compulsory Licensing, Patent Rights and Infringement, Covid Pandemic & Pharma Patenting",
+            "topics": [
+              "Concept of Patent, Product/Process Patents & Terminology,",
+              "Duration of Patents, Elements of Patentability, Non- Patentable",
+              "Subject Matter, Procedure for Filing of Patent Application,",
+              "Procedure for Opposition Revocation of Patents Assignment and",
+              "licensing of Patents, Compulsory Licensing, Patent Rights and",
+              "Infringement, Covid Pandemic & Pharma Patenting"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "TRADEMARKS & GEOGRAPHICAL INDICATIONS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Introduction & Historical Perspective, Definitions, Different Kinds",
               "of Marks, Registration of Trade Marks, Application for",
               "Registration, Objection & Opposition to Registration, Grounds for",
               "Refusal to Registration, Infringement of Trade Marks, Assignment&",
               "Transmission, Offences Penalties, Meaning and Nature of",
               "Geographical Indications, Application for Registration, Conditions",
-              "& Procedure for Registration, Offences and Penalties",
-              "4 COPYRIGHT 9",
+              "& Procedure for Registration, Offences and Penalties"
+            ],
+            "topics_text": "Introduction & Historical Perspective, Definitions, Different Kinds of Marks, Registration of Trade Marks, Application for Registration, Objection & Opposition to Registration, Grounds for Refusal to Registration, Infringement of Trade Marks, Assignment& Transmission, Offences Penalties, Meaning and Nature of Geographical Indications, Application for Registration, Conditions & Procedure for Registration, Offences and Penalties",
+            "topics": [
+              "Introduction & Historical Perspective, Definitions, Different Kinds",
+              "of Marks, Registration of Trade Marks, Application for",
+              "Registration, Objection & Opposition to Registration, Grounds for",
+              "Refusal to Registration, Infringement of Trade Marks, Assignment&",
+              "Transmission, Offences Penalties, Meaning and Nature of",
+              "Geographical Indications, Application for Registration, Conditions",
+              "& Procedure for Registration, Offences and Penalties"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "COPYRIGHT",
+            "contact_hours": 9,
+            "topic_lines": [
               "Introduction, Meaning of Copyright, Works in which Copyright",
               "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
               "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
@@ -715,13 +869,44 @@
               "of Copyright, Copyright Societies & Copyright Board, Assignment",
               "and Licensing of Copyright, Registration of Copyright, infringement",
               "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
-              "against Infringement of Copyright",
-              "5 INDUSTRIAL DESIGNS 9",
+              "against Infringement of Copyright"
+            ],
+            "topics_text": "Introduction, Meaning of Copyright, Works in which Copyright Subsists (Section 13), Idea-Expression Dichotomy, Test of Originality (Doctrine of Sweat of the Brow, Modicum of creativity & Indian perspective of Skill & Judgement Test), Author & Ownership of Copyright, Economic and Neighbouring rights, Term of Copyright, Copyright Societies & Copyright Board, Assignment and Licensing of Copyright, Registration of Copyright, infringement of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies against Infringement of Copyright",
+            "topics": [
+              "Introduction, Meaning of Copyright, Works in which Copyright",
+              "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
+              "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
+              "& Indian perspective of Skill & Judgement Test), Author &",
+              "Ownership of Copyright, Economic and Neighbouring rights, Term",
+              "of Copyright, Copyright Societies & Copyright Board, Assignment",
+              "and Licensing of Copyright, Registration of Copyright, infringement",
+              "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
+              "against Infringement of Copyright"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "INDUSTRIAL DESIGNS",
+            "contact_hours": 9,
+            "topic_lines": [
               "Concept of Design, What is a Design, Registrable Design, Novelty",
               "& Originality, Registration of Design, Procedure for Registration,",
               "Term Duration of Protection, Copyright under Design, Piracy and",
-              "Penalties, Assignment of Designs",
-              "6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4",
+              "Penalties, Assignment of Designs"
+            ],
+            "topics_text": "Concept of Design, What is a Design, Registrable Design, Novelty & Originality, Registration of Design, Procedure for Registration, Term Duration of Protection, Copyright under Design, Piracy and Penalties, Assignment of Designs",
+            "topics": [
+              "Concept of Design, What is a Design, Registrable Design, Novelty",
+              "& Originality, Registration of Design, Procedure for Registration,",
+              "Term Duration of Protection, Copyright under Design, Piracy and",
+              "Penalties, Assignment of Designs"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "PROTECTION OF TRADE SECRETS & KEY BUSINESS",
+            "contact_hours": 4,
+            "topic_lines": [
               "CONCERNS IN COMMERCIALISING INTELLECTUAL",
               "PROPERTY",
               "Introduction, Legislation Governing Trade Secrets, Protection under",
@@ -734,49 +919,8 @@
               "of Intellectual Property Rights",
               "Total Hours 45"
             ],
-            "topics_text": "Difference Between Intellectual Property, Intellectual Property Rights & Intellectual Property Law, Types of IP: Trademarks, Copyright, Patent, Industrial Design, Trade secrets & GI Traditional Knowledge, Plant Varieties, Integrated Circuit Layout Design, Theories of IP (Jurisprudential aspects), International Conventions: Paris Convention 1883; Madrid Agreement, 1891 & Protocol, 1989; Berne Convention, 1886; PCT, 1970; TRIPS 2 PATENTS 9 Concept of Patent, Product/Process Patents & Terminology, Duration of Patents, Elements of Patentability, Non- Patentable Subject Matter, Procedure for Filing of Patent Application, Procedure for Opposition Revocation of Patents Assignment and licensing of Patents, Compulsory Licensing, Patent Rights and Infringement, Covid Pandemic & Pharma Patenting 3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9 Introduction & Historical Perspective, Definitions, Different Kinds of Marks, Registration of Trade Marks, Application for Registration, Objection & Opposition to Registration, Grounds for Refusal to Registration, Infringement of Trade Marks, Assignment& Transmission, Offences Penalties, Meaning and Nature of Geographical Indications, Application for Registration, Conditions & Procedure for Registration, Offences and Penalties 4 COPYRIGHT 9 Introduction, Meaning of Copyright, Works in which Copyright Subsists (Section 13), Idea-Expression Dichotomy, Test of Originality (Doctrine of Sweat of the Brow, Modicum of creativity & Indian perspective of Skill & Judgement Test), Author & Ownership of Copyright, Economic and Neighbouring rights, Term of Copyright, Copyright Societies & Copyright Board, Assignment and Licensing of Copyright, Registration of Copyright, infringement of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies against Infringement of Copyright 5 INDUSTRIAL DESIGNS 9 Concept of Design, What is a Design, Registrable Design, Novelty & Originality, Registration of Design, Procedure for Registration, Term Duration of Protection, Copyright under Design, Piracy and Penalties, Assignment of Designs 6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4 CONCERNS IN COMMERCIALISING INTELLECTUAL PROPERTY Introduction, Legislation Governing Trade Secrets, Protection under TRIPS Agreement, What Causes a Business to Lose Trade Secret Protection, Competition and Confidentiality Issues, Care & Maintenance of Confidential Information, Employee Confidentiality, Intellectual Property Issues in the Sale of Business, , Assignment of Intellectual Property Rights, Technology Transfer Agreements, Legal Auditing of Intellectual Property, Due Diligence of Intellectual Property Rights Total Hours 45",
+            "topics_text": "CONCERNS IN COMMERCIALISING INTELLECTUAL PROPERTY Introduction, Legislation Governing Trade Secrets, Protection under TRIPS Agreement, What Causes a Business to Lose Trade Secret Protection, Competition and Confidentiality Issues, Care & Maintenance of Confidential Information, Employee Confidentiality, Intellectual Property Issues in the Sale of Business, , Assignment of Intellectual Property Rights, Technology Transfer Agreements, Legal Auditing of Intellectual Property, Due Diligence of Intellectual Property Rights Total Hours 45",
             "topics": [
-              "Difference Between Intellectual Property, Intellectual Property",
-              "Rights & Intellectual Property Law, Types of IP: Trademarks,",
-              "Copyright, Patent, Industrial Design, Trade secrets & GI Traditional",
-              "Knowledge, Plant Varieties, Integrated Circuit Layout Design,",
-              "Theories of IP (Jurisprudential aspects), International Conventions:",
-              "Paris Convention 1883",
-              "Madrid Agreement, 1891 & Protocol, 1989",
-              "Berne Convention, 1886",
-              "PCT, 1970",
-              "TRIPS",
-              "2 PATENTS 9",
-              "Concept of Patent, Product/Process Patents & Terminology,",
-              "Duration of Patents, Elements of Patentability, Non- Patentable",
-              "Subject Matter, Procedure for Filing of Patent Application,",
-              "Procedure for Opposition Revocation of Patents Assignment and",
-              "licensing of Patents, Compulsory Licensing, Patent Rights and",
-              "Infringement, Covid Pandemic & Pharma Patenting",
-              "3 TRADEMARKS & GEOGRAPHICAL INDICATIONS 9",
-              "Introduction & Historical Perspective, Definitions, Different Kinds",
-              "of Marks, Registration of Trade Marks, Application for",
-              "Registration, Objection & Opposition to Registration, Grounds for",
-              "Refusal to Registration, Infringement of Trade Marks, Assignment&",
-              "Transmission, Offences Penalties, Meaning and Nature of",
-              "Geographical Indications, Application for Registration, Conditions",
-              "& Procedure for Registration, Offences and Penalties",
-              "4 COPYRIGHT 9",
-              "Introduction, Meaning of Copyright, Works in which Copyright",
-              "Subsists (Section 13), Idea-Expression Dichotomy, Test of",
-              "Originality (Doctrine of Sweat of the Brow, Modicum of creativity",
-              "& Indian perspective of Skill & Judgement Test), Author &",
-              "Ownership of Copyright, Economic and Neighbouring rights, Term",
-              "of Copyright, Copyright Societies & Copyright Board, Assignment",
-              "and Licensing of Copyright, Registration of Copyright, infringement",
-              "of Copyright, Fair-use Doctrine (Section 52- Exceptions), Remedies",
-              "against Infringement of Copyright",
-              "5 INDUSTRIAL DESIGNS 9",
-              "Concept of Design, What is a Design, Registrable Design, Novelty",
-              "& Originality, Registration of Design, Procedure for Registration,",
-              "Term Duration of Protection, Copyright under Design, Piracy and",
-              "Penalties, Assignment of Designs",
-              "6 PROTECTION OF TRADE SECRETS & KEY BUSINESS 4",
               "CONCERNS IN COMMERCIALISING INTELLECTUAL",
               "PROPERTY",
               "Introduction, Legislation Governing Trade Secrets, Protection under",
@@ -974,18 +1118,59 @@
               "Notions of Judicial Review: Constitutional Basis, Democratic",
               "Character, and Scope, Judicial Activism vs. Judicial Self-Restraint:",
               "Accountability Issues in Justice, Supreme Court's Jurisdiction:",
-              "Article 32 & Article 136, Judicial Appointments and Transfers",
-              "2 INSTITUTION AL STRUCTURIN G OF COURTS 8",
+              "Article 32 & Article 136, Judicial Appointments and Transfers"
+            ],
+            "topics_text": "Nature of the Judicial Process: Legislative Intention and Methods of Interpretation, Rule of Law and Independence of the Judiciary, Notions of Judicial Review: Constitutional Basis, Democratic Character, and Scope, Judicial Activism vs. Judicial Self-Restraint: Accountability Issues in Justice, Supreme Court's Jurisdiction: Article 32 & Article 136, Judicial Appointments and Transfers",
+            "topics": [
+              "Nature of the Judicial Process: Legislative Intention and Methods of",
+              "Interpretation, Rule of Law and Independence of the Judiciary,",
+              "Notions of Judicial Review: Constitutional Basis, Democratic",
+              "Character, and Scope, Judicial Activism vs. Judicial Self-Restraint:",
+              "Accountability Issues in Justice, Supreme Court's Jurisdiction:",
+              "Article 32 & Article 136, Judicial Appointments and Transfers"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "INSTITUTION AL STRUCTURIN G OF COURTS",
+            "contact_hours": 8,
+            "topic_lines": [
               "Judicial Structure and Strategic Planning, Comparative Analysis of",
               "Alternative Dispute Resolution Mechanisms, Challenges facing the",
-              "Indian Adjudicatory System",
-              "3 DOCTRINE OF PRECEDENT STARE DECISIS 10",
+              "Indian Adjudicatory System"
+            ],
+            "topics_text": "Judicial Structure and Strategic Planning, Comparative Analysis of Alternative Dispute Resolution Mechanisms, Challenges facing the Indian Adjudicatory System",
+            "topics": [
+              "Judicial Structure and Strategic Planning, Comparative Analysis of",
+              "Alternative Dispute Resolution Mechanisms, Challenges facing the",
+              "Indian Adjudicatory System"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "DOCTRINE OF PRECEDENT STARE DECISIS",
+            "contact_hours": 10,
+            "topic_lines": [
               "Distinguishing Ratio Decidendi and Obiter Dicta, Comparative",
               "Precedent Analysis, Innovative Constitutional Interpretations,",
               "Supreme Court's Overruling Authority, Advisory Jurisdiction and",
               "Precedent, Prospective Overruling Practice, Basic Structure",
-              "Doctrine and Limitations to Constitutional Amendments",
-              "4 INDIAN JUDICIAL PROCESS AND THE POLITICAL 12",
+              "Doctrine and Limitations to Constitutional Amendments"
+            ],
+            "topics_text": "Distinguishing Ratio Decidendi and Obiter Dicta, Comparative Precedent Analysis, Innovative Constitutional Interpretations, Supreme Court's Overruling Authority, Advisory Jurisdiction and Precedent, Prospective Overruling Practice, Basic Structure Doctrine and Limitations to Constitutional Amendments",
+            "topics": [
+              "Distinguishing Ratio Decidendi and Obiter Dicta, Comparative",
+              "Precedent Analysis, Innovative Constitutional Interpretations,",
+              "Supreme Court's Overruling Authority, Advisory Jurisdiction and",
+              "Precedent, Prospective Overruling Practice, Basic Structure",
+              "Doctrine and Limitations to Constitutional Amendments"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "INDIAN JUDICIAL PROCESS AND THE POLITICAL",
+            "contact_hours": 12,
+            "topic_lines": [
               "PROCESS",
               "Judicial Role Debates: Supersession, Commitment, and Transfer,",
               "Socio-Economic Background of the Indian Judiciary, Influence of",
@@ -994,25 +1179,8 @@
               "System: Evolution, Critiques, and Prospects",
               "Total Hours 45"
             ],
-            "topics_text": "Nature of the Judicial Process: Legislative Intention and Methods of Interpretation, Rule of Law and Independence of the Judiciary, Notions of Judicial Review: Constitutional Basis, Democratic Character, and Scope, Judicial Activism vs. Judicial Self-Restraint: Accountability Issues in Justice, Supreme Court's Jurisdiction: Article 32 & Article 136, Judicial Appointments and Transfers 2 INSTITUTION AL STRUCTURIN G OF COURTS 8 Judicial Structure and Strategic Planning, Comparative Analysis of Alternative Dispute Resolution Mechanisms, Challenges facing the Indian Adjudicatory System 3 DOCTRINE OF PRECEDENT STARE DECISIS 10 Distinguishing Ratio Decidendi and Obiter Dicta, Comparative Precedent Analysis, Innovative Constitutional Interpretations, Supreme Court's Overruling Authority, Advisory Jurisdiction and Precedent, Prospective Overruling Practice, Basic Structure Doctrine and Limitations to Constitutional Amendments 4 INDIAN JUDICIAL PROCESS AND THE POLITICAL 12 PROCESS Judicial Role Debates: Supersession, Commitment, and Transfer, Socio-Economic Background of the Indian Judiciary, Influence of Public Opinion on the Judicial Process, Appellate Court's Role in Constitutional Goal Development and Renovation, The Collegium System: Evolution, Critiques, and Prospects Total Hours 45",
+            "topics_text": "PROCESS Judicial Role Debates: Supersession, Commitment, and Transfer, Socio-Economic Background of the Indian Judiciary, Influence of Public Opinion on the Judicial Process, Appellate Court's Role in Constitutional Goal Development and Renovation, The Collegium System: Evolution, Critiques, and Prospects Total Hours 45",
             "topics": [
-              "Nature of the Judicial Process: Legislative Intention and Methods of",
-              "Interpretation, Rule of Law and Independence of the Judiciary,",
-              "Notions of Judicial Review: Constitutional Basis, Democratic",
-              "Character, and Scope, Judicial Activism vs. Judicial Self-Restraint:",
-              "Accountability Issues in Justice, Supreme Court's Jurisdiction:",
-              "Article 32 & Article 136, Judicial Appointments and Transfers",
-              "2 INSTITUTION AL STRUCTURIN G OF COURTS 8",
-              "Judicial Structure and Strategic Planning, Comparative Analysis of",
-              "Alternative Dispute Resolution Mechanisms, Challenges facing the",
-              "Indian Adjudicatory System",
-              "3 DOCTRINE OF PRECEDENT STARE DECISIS 10",
-              "Distinguishing Ratio Decidendi and Obiter Dicta, Comparative",
-              "Precedent Analysis, Innovative Constitutional Interpretations,",
-              "Supreme Court's Overruling Authority, Advisory Jurisdiction and",
-              "Precedent, Prospective Overruling Practice, Basic Structure",
-              "Doctrine and Limitations to Constitutional Amendments",
-              "4 INDIAN JUDICIAL PROCESS AND THE POLITICAL 12",
               "PROCESS",
               "Judicial Role Debates: Supersession, Commitment, and Transfer,",
               "Socio-Economic Background of the Indian Judiciary, Influence of",
