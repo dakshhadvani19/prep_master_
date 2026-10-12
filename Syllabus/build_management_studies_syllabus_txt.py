@@ -37,6 +37,11 @@ COURSE_SLUGS = {
     "bba-international-business-": "BBA_International_Business",
     "mba-business-analytics": "MBA_Business_Analytics",
 }
+# The recovery reports include this catalog programme, but it currently has no subject
+# occurrences. Keep it visible in the generated tree without inventing subjects/semesters.
+EMPTY_COURSES = {
+    "master-in-global-business-management": "Master In Global Business Management",
+}
 STOP_MARKERS = (
     "course outcomes", "learning outcomes", "course objectives",
     "teaching and examination scheme", "references:", "textbook:",
@@ -447,6 +452,37 @@ def main() -> int:
             "course_id": course_id, "course_name": name, "output_slug": slug,
             "subject_count": len(course_rows), "semester_files": semester_files,
             "statuses": dict(sorted(Counter(s["extraction_status"] for group in by_semester.values() for s in group).items())),
+        })
+
+    for empty_id, empty_name in EMPTY_COURSES.items():
+        if empty_id in course_groups:
+            continue
+        slug = course_slug(empty_id, empty_name)
+        course_dir = OUTPUT_ROOT / slug
+        course_dir.mkdir(parents=True, exist_ok=True)
+        empty_payload = {
+            "schema_version": "1.0",
+            "generated_at_utc": generated,
+            "extraction_method": "No subject rows were available for this course in the recovery occurrence report; no syllabus content or semester was inferred.",
+            "source_catalog": MANIFEST.relative_to(ROOT).as_posix(),
+            "course": {"course_id": empty_id, "course_name": empty_name, "output_slug": slug},
+            "semester": None,
+            "semester_label": "No subject/semester mapping available in source report",
+            "subject_count": 0,
+            "subjects": [],
+            "build_summary": {
+                "extracted": 0, "manual_review": 0, "ocr_review": 0,
+                "missing_pdf": 0, "extraction_errors": 0,
+                "course_status": "NO_SUBJECTS_IN_SOURCE_REPORT",
+            },
+        }
+        empty_path = course_dir / "semester_unknown.json"
+        empty_path.write_text(json.dumps(empty_payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        index_courses.append({
+            "course_id": empty_id, "course_name": empty_name, "output_slug": slug,
+            "subject_count": 0, "semester_files": [empty_path.relative_to(ROOT).as_posix()],
+            "statuses": {"NO_SUBJECTS_IN_SOURCE_REPORT": 0},
+            "note": "This course exists in the department catalog snapshot but has no subject entries in the recovery occurrence report.",
         })
 
     index = {
