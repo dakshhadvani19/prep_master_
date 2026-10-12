@@ -1,0 +1,695 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "b-com",
+    "course_name": "B.Com",
+    "output_slug": "BCom"
+  },
+  "semester": 6,
+  "subject_count": 9,
+  "subjects": [
+    {
+      "subject_id": "22016136001401",
+      "subject_name": "Advanced Auditing",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 6,
+      "subject_code": "04BC0621",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/S-Accounting-Auditing-04BC0621-Advanced-Auditing-1-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/S-Accounting-Auditing-04BC0621-Advanced-Auditing-1-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Advanced Auditing [dbde07cc8f72].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Advanced Auditing [dbde07cc8f72].pdf",
+      "expected_pdf_sha256": "7dd086b964217077f34e3c304aab697ba26575d4e81cf6ae0e36bf417f3138c7",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Advanced Auditing",
+        "course_code": "04BC0621",
+        "semester_label": "VI",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        " Audit Report and CARO,2016 with all the clauses;  Sampling Selection methods from population;  Understand audit in EDP environment;  To understand design and performance of Analytical procedures;  To conduct audit for different entities."
+      ],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 4 0 0 4 30 20 50 0 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "No Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "I Audit Report 08",
+              "Content of Auditor’s Report – Emphasis on Companies Auditor’s Report Order,",
+              "2016 (CARO – 2016) – Applicability – Companies not covered in CARO 2016 –",
+              "Summary of all 16 Clauses.",
+              "II Audit Sampling 08",
+              "Meaning of Audit Sampling – Designing an Audit Sample – Types of Audit Sampling",
+              "– Sampling size and selection of items for testing – Sample Selection Method.",
+              "III Audit in an automated Environment 08",
+              "Key features – Impact of IT related risks – Impact on Controls – Internal financial",
+              "Controls as per regulatory requirement – Types of Controls - Audit Approach –",
+              "Understanding and documenting automated environment – Testing Methods –",
+              "Data analytics for audit, assessing and reporting audit findings",
+              "IV Analytical Procedures 10",
+              "Meaning – Nature – Purpose and timings of analytical procedures – Substantive",
+              "Page 1 of 2",
+              "Analytical procedures – Designing and performing analytical procedures prior to",
+              "Audit – Investigating the results of analytical procedures",
+              "V Audit of Different Entities 14",
+              "Audit of Banks – Audit of Advances – Concurrent Audit – Special Consideration in",
+              "Bank Audit – Audit of NBFCs – Audit of Hospitals – Audit of Hotels – Audit of Co-",
+              "operative societies – Audit of educational Institutions – Relevant Standards on",
+              "Auditing",
+              "Text Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year of",
+              "Publication",
+              "T-01 CA. Surbhi Bansal Auditing and Assurance Bestword Latest",
+              "Publication",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition and Year of",
+              "Publication",
+              "R-01 CA. Pankaj Garg Auditing and Taxmann Eight Edition,",
+              "Assurance November 2017",
+              "R-02 CA. G. Sekar and CA. B. Standards on Padhuka Latest",
+              "Sarvana Prasath Auditing",
+              "Page 2 of 2"
+            ],
+            "topics_text": "I Audit Report 08 Content of Auditor’s Report – Emphasis on Companies Auditor’s Report Order, 2016 (CARO – 2016) – Applicability – Companies not covered in CARO 2016 – Summary of all 16 Clauses. II Audit Sampling 08 Meaning of Audit Sampling – Designing an Audit Sample – Types of Audit Sampling – Sampling size and selection of items for testing – Sample Selection Method. III Audit in an automated Environment 08 Key features – Impact of IT related risks – Impact on Controls – Internal financial Controls as per regulatory requirement – Types of Controls - Audit Approach – Understanding and documenting automated environment – Testing Methods – Data analytics for audit, assessing and reporting audit findings IV Analytical Procedures 10 Meaning – Nature – Purpose and timings of analytical procedures – Substantive Page 1 of 2 Analytical procedures – Designing and performing analytical procedures prior to Audit – Investigating the results of analytical procedures V Audit of Different Entities 14 Audit of Banks – Audit of Advances – Concurrent Audit – Special Consideration in Bank Audit – Audit of NBFCs – Audit of Hospitals – Audit of Hotels – Audit of Co- operative societies – Audit of educational Institutions – Relevant Standards on Auditing Text Books: Sr. No Author/s Name of the Book Publisher Edition & Year of Publication T-01 CA. Surbhi Bansal Auditing and Assurance Bestword Latest Publication Reference Books: Sr. No Author/s Name of the Book Publisher Edition and Year of Publication R-01 CA. Pankaj Garg Auditing and Taxmann Eight Edition, Assurance November 2017 R-02 CA. G. Sekar and CA. B. Standards on Padhuka Latest Sarvana Prasath Auditing Page 2 of 2",
+            "topics": [
+              "I Audit Report 08",
+              "Content of Auditor’s Report – Emphasis on Companies Auditor’s Report Order,",
+              "2016 (CARO – 2016) – Applicability – Companies not covered in CARO 2016 –",
+              "Summary of all 16 Clauses.",
+              "II Audit Sampling 08",
+              "Meaning of Audit Sampling – Designing an Audit Sample – Types of Audit Sampling",
+              "– Sampling size and selection of items for testing – Sample Selection Method.",
+              "III Audit in an automated Environment 08",
+              "Key features – Impact of IT related risks – Impact on Controls – Internal financial",
+              "Controls as per regulatory requirement – Types of Controls - Audit Approach –",
+              "Understanding and documenting automated environment – Testing Methods –",
+              "Data analytics for audit, assessing and reporting audit findings",
+              "IV Analytical Procedures 10",
+              "Meaning – Nature – Purpose and timings of analytical procedures – Substantive",
+              "Page 1 of 2",
+              "Analytical procedures – Designing and performing analytical procedures prior to",
+              "Audit – Investigating the results of analytical procedures",
+              "V Audit of Different Entities 14",
+              "Audit of Banks – Audit of Advances – Concurrent Audit – Special Consideration in",
+              "Bank Audit – Audit of NBFCs – Audit of Hospitals – Audit of Hotels – Audit of Co",
+              "operative societies – Audit of educational Institutions – Relevant Standards on",
+              "Auditing",
+              "Text Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year of",
+              "Publication",
+              "T-01 CA. Surbhi Bansal Auditing and Assurance Bestword Latest",
+              "Publication",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition and Year of",
+              "Publication",
+              "R-01 CA. Pankaj Garg Auditing and Taxmann Eight Edition,",
+              "Assurance November 2017",
+              "R-02 CA. G. Sekar and CA. B. Standards on Padhuka Latest",
+              "Sarvana Prasath Auditing",
+              "Page 2 of 2"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4114,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM            Bachelors of Commerce /Bachelors of Commerce (Hons)\n\n            SEMESTER             VI\n\n            COURSE TITLE        Advanced Auditing\n\n            COURSE CODE       04BC0621\n\n            COURSE CREDITS     04\n\n            COURSE DURATION   48 Hrs (48 sessions of 60 minutes each)\n\n\n  COURSE OUTCOMES:\n         Audit Report and CARO,2016 with all the clauses;\n         Sampling Selection methods from population;\n        Understand audit in EDP environment;\n        To understand design and performance of Analytical procedures;\n        To conduct audit for different entities.\n\n\n\n                               Teaching and Examination Scheme\n                                          Internal Marks\n  Teaching Scheme (Hours)                                 End-Semester Examination (50%)\n                                        (50%)                                                     Total\n                                 Credits\n                                                                          Term Work    Marks\nTheory   Tutorial    Practical                 IA        CSE      Theory   Practical/Viva\n                                                                                (TW)\n  4       0        0        4        30        20        50          0            0        100\n\n\n\n  Course Contents:\n\nUnit No                                  Unit / Sub Unit                                   Sessions\n       I     Audit Report                                                             08\n          Content of Auditor’s Report – Emphasis on Companies Auditor’s Report Order,\n         2016 (CARO – 2016) – Applicability – Companies not covered in CARO 2016 –\n        Summary of all 16 Clauses.\n\n      II     Audit Sampling                                                           08\n         Meaning of Audit Sampling – Designing an Audit Sample – Types of Audit Sampling\n         – Sampling size and selection of items for testing – Sample Selection Method.\n\n      III     Audit in an automated Environment                                          08\n         Key features – Impact of IT related risks – Impact on Controls – Internal financial\n           Controls as per regulatory requirement – Types of Controls - Audit Approach –\n          Understanding and documenting automated environment – Testing Methods –\n         Data analytics for audit, assessing and reporting audit findings\n\n   IV      Analytical Procedures                                                      10\n         Meaning – Nature – Purpose and timings of analytical procedures – Substantive\n\n  Page 1 of 2"
+        },
+        {
+          "page": 2,
+          "text": "Analytical procedures – Designing and performing analytical procedures prior to\n        Audit – Investigating the results of analytical procedures\n\n V     Audit of Different Entities                                                   14\n        Audit of Banks – Audit of Advances – Concurrent Audit – Special Consideration in\n       Bank Audit – Audit of NBFCs – Audit of Hospitals – Audit of Hotels – Audit of Co-\n        operative societies – Audit of educational Institutions – Relevant Standards on\n        Auditing\n\n\n\n\nText Books:\n\nSr. No   Author/s             Name  of  the  Book  Publisher             Edition  &\n                                                                             Year of\n                                                                                    Publication\nT-01     CA. Surbhi Bansal           Auditing and Assurance  Bestword             Latest\n                                                                Publication\n\n\n\nReference Books:\n\nSr. No   Author/s             Name of the Book  Publisher      Edition and Year of\n                                                                          Publication\nR-01     CA. Pankaj Garg            Auditing      and  Taxmann       Eight           Edition,\n                                  Assurance                     November 2017\nR-02     CA. G. Sekar and CA. B.  Standards      on  Padhuka       Latest\n         Sarvana Prasath            Auditing\n\n\n\n\n\nPage 2 of 2"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "7dd086b964217077f34e3c304aab697ba26575d4e81cf6ae0e36bf417f3138c7",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000423060701",
+      "subject_name": "Auditing",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 6,
+      "subject_code": "04BC0607",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC0607-Auditing-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC0607-Auditing-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Auditing [df0a995cb741].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Auditing [df0a995cb741].pdf",
+      "expected_pdf_sha256": "fc9906167f2b0143e962a54e9ddd6cb0637d46181836cff1fc99b002646f780f",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Auditing",
+        "course_code": "04BC0607",
+        "semester_label": "VI",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        " Trace the evolution, meaning, features, objectives, principal aspects, benefits and limitations of auditing.  Audit process, audit engagement terms, audit planning.  External confirmation, Verification of assets, Verification of liabilities.  Company audit and its provisions, Content and format of Audit Report.  To understand special audits."
+      ],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 4 0 0 4 30 20 50 0 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "No Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "I Introduction to Auditing: 06",
+              "Meaning – Definition – Objectives - Types – Nature – Scope – Importance of",
+              "Auditing – Limitations of Auditing – Difference between Accounting & Auditing",
+              "– Basic principles governing an audit",
+              "II Procedure for Auditing: 10",
+              "Audit Strategy – Audit Planning – Audit Program – Vouching – Points to be",
+              "considered in Vouching – Verification – Audit Evidence – Working Paper – Audit",
+              "File – Audit Documentation",
+              "III Internal Control & Internal Check: 08",
+              "Meaning – Essentials of Internal Control – Internal check - Essentials of an",
+              "Efficient system of Internal check - Internal Check system regarding cash sales",
+              "and credit sales, cash purchase and credit purchase",
+              "Page 1 of 2",
+              "IV Company Audit: 11",
+              "Company Auditor: Qualifications and disqualifications – Appointment –",
+              "Removal – Remuneration – Rights – Duties – Liabilities of an Auditor: Civil",
+              "Liability and Criminal Liability of Auditor – Audit Committee – Audit of Banking",
+              "Companies – Audit of Insurance companies",
+              "V Special Audit: 13",
+              "Cost Audit – Tax Audit – Management Audit – Audit of Computerized Accounts",
+              "– Consideration of Audit in EDP Environment – Relevant Auditing and Assurance",
+              "Standards",
+              "Text Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year of",
+              "Publication",
+              "T-01 CA. Surbhi Bansal Auditing and Assurance Bestword Latest",
+              "Publication",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition and Year of",
+              "Publication",
+              "R-01 CA. Pankaj Garg Auditing and Taxmann Eight Edition,",
+              "Assurance November 2017",
+              "R-02 CA. G. Sekar and CA. B. Standards on Padhuka Latest",
+              "Sarvana Prasath Auditing",
+              "Page 2 of 2"
+            ],
+            "topics_text": "I Introduction to Auditing: 06 Meaning – Definition – Objectives - Types – Nature – Scope – Importance of Auditing – Limitations of Auditing – Difference between Accounting & Auditing – Basic principles governing an audit II Procedure for Auditing: 10 Audit Strategy – Audit Planning – Audit Program – Vouching – Points to be considered in Vouching – Verification – Audit Evidence – Working Paper – Audit File – Audit Documentation III Internal Control & Internal Check: 08 Meaning – Essentials of Internal Control – Internal check - Essentials of an Efficient system of Internal check - Internal Check system regarding cash sales and credit sales, cash purchase and credit purchase Page 1 of 2 IV Company Audit: 11 Company Auditor: Qualifications and disqualifications – Appointment – Removal – Remuneration – Rights – Duties – Liabilities of an Auditor: Civil Liability and Criminal Liability of Auditor – Audit Committee – Audit of Banking Companies – Audit of Insurance companies V Special Audit: 13 Cost Audit – Tax Audit – Management Audit – Audit of Computerized Accounts – Consideration of Audit in EDP Environment – Relevant Auditing and Assurance Standards Text Books: Sr. No Author/s Name of the Book Publisher Edition & Year of Publication T-01 CA. Surbhi Bansal Auditing and Assurance Bestword Latest Publication Reference Books: Sr. No Author/s Name of the Book Publisher Edition and Year of Publication R-01 CA. Pankaj Garg Auditing and Taxmann Eight Edition, Assurance November 2017 R-02 CA. G. Sekar and CA. B. Standards on Padhuka Latest Sarvana Prasath Auditing Page 2 of 2",
+            "topics": [
+              "I Introduction to Auditing: 06",
+              "Meaning – Definition – Objectives - Types – Nature – Scope – Importance of",
+              "Auditing – Limitations of Auditing – Difference between Accounting & Auditing",
+              "– Basic principles governing an audit",
+              "II Procedure for Auditing: 10",
+              "Audit Strategy – Audit Planning – Audit Program – Vouching – Points to be",
+              "considered in Vouching – Verification – Audit Evidence – Working Paper – Audit",
+              "File – Audit Documentation",
+              "III Internal Control & Internal Check: 08",
+              "Meaning – Essentials of Internal Control – Internal check - Essentials of an",
+              "Efficient system of Internal check - Internal Check system regarding cash sales",
+              "and credit sales, cash purchase and credit purchase",
+              "Page 1 of 2",
+              "IV Company Audit: 11",
+              "Company Auditor: Qualifications and disqualifications – Appointment –",
+              "Removal – Remuneration – Rights – Duties – Liabilities of an Auditor: Civil",
+              "Liability and Criminal Liability of Auditor – Audit Committee – Audit of Banking",
+              "Companies – Audit of Insurance companies",
+              "V Special Audit: 13",
+              "Cost Audit – Tax Audit – Management Audit – Audit of Computerized Accounts",
+              "– Consideration of Audit in EDP Environment – Relevant Auditing and Assurance",
+              "Standards",
+              "Text Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year of",
+              "Publication",
+              "T-01 CA. Surbhi Bansal Auditing and Assurance Bestword Latest",
+              "Publication",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition and Year of",
+              "Publication",
+              "R-01 CA. Pankaj Garg Auditing and Taxmann Eight Edition,",
+              "Assurance November 2017",
+              "R-02 CA. G. Sekar and CA. B. Standards on Padhuka Latest",
+              "Sarvana Prasath Auditing",
+              "Page 2 of 2"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4192,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM            Bachelors of Commerce /Bachelors of Commerce (Hons)\n\n            SEMESTER             VI\n\n            COURSE TITLE         Auditing\n\n            COURSE CODE       04BC0607\n\n            COURSE CREDITS     04\n\n            COURSE DURATION   48 Hrs (48 sessions of 60 minutes each)\n\n\n  COURSE OUTCOMES:\n         Trace the evolution, meaning, features, objectives, principal aspects, benefits and limitations\n          of auditing.\n         Audit process, audit engagement terms, audit planning.\n         External confirmation, Verification of assets, Verification of liabilities.\n        Company audit and its provisions, Content and format of Audit Report.\n        To understand special audits.\n\n\n\n\n                               Teaching and Examination Scheme\n                                          Internal Marks\n  Teaching Scheme (Hours)                                 End-Semester Examination (50%)\n                                        (50%)                                                     Total\n                                 Credits\n                                                                          Term Work    Marks\nTheory   Tutorial    Practical                 IA        CSE      Theory   Practical/Viva\n                                                                                (TW)\n  4       0        0        4        30        20        50          0            0        100\n\n\n\n  Course Contents:\n\n   Unit No                                Unit / Sub Unit                                  Sessions\n           I      Introduction to Auditing:                                                 06\n           Meaning – Definition – Objectives - Types – Nature – Scope – Importance of\n             Auditing – Limitations of Auditing – Difference between Accounting & Auditing\n           – Basic principles governing an audit\n\n           II     Procedure for Auditing:                                                  10\n             Audit Strategy – Audit Planning – Audit Program – Vouching – Points to be\n             considered in Vouching – Verification – Audit Evidence – Working Paper – Audit\n                File – Audit Documentation\n\n           III      Internal Control & Internal Check:                                         08\n           Meaning – Essentials of Internal Control – Internal check - Essentials of an\n               Efficient system of Internal check - Internal Check system regarding cash sales\n           and credit sales, cash purchase and credit purchase\n\n\n  Page 1 of 2"
+        },
+        {
+          "page": 2,
+          "text": "IV    Company Audit:                                                        11\n        Company  Auditor:  Qualifications and  disqualifications  –  Appointment –\n         Removal – Remuneration – Rights – Duties – Liabilities of an Auditor: Civil\n             Liability and Criminal Liability of Auditor – Audit Committee – Audit of Banking\n         Companies – Audit of Insurance companies\n\n   V      Special Audit:                                                          13\n          Cost Audit – Tax Audit – Management Audit – Audit of Computerized Accounts\n         – Consideration of Audit in EDP Environment – Relevant Auditing and Assurance\n          Standards\n\n\n\n\n\nText Books:\n\nSr. No   Author/s             Name  of  the  Book  Publisher             Edition  &\n                                                                             Year of\n                                                                                    Publication\nT-01     CA. Surbhi Bansal           Auditing and Assurance  Bestword             Latest\n                                                                Publication\n\n\n\nReference Books:\n\nSr. No   Author/s             Name of the Book  Publisher      Edition and Year of\n                                                                          Publication\nR-01     CA. Pankaj Garg            Auditing      and  Taxmann       Eight           Edition,\n                                  Assurance                     November 2017\nR-02     CA. G. Sekar and CA. B.  Standards      on  Padhuka       Latest\n         Sarvana Prasath            Auditing\n\n\n\n\n\nPage 2 of 2"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "fc9906167f2b0143e962a54e9ddd6cb0637d46181836cff1fc99b002646f780f",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22004318060101",
+      "subject_name": "Career Readiness Programme",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 6,
+      "subject_code": "02CR0301",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/02CR0301_CAREER-READINESS-PROGRAMME.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/02CR0301_CAREER-READINESS-PROGRAMME.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Career Readiness Programme [29fd7e61d242].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Career Readiness Programme [29fd7e61d242].pdf",
+      "expected_pdf_sha256": "002304ee39a2b87ea13a6c6f208d814156a714644b392f4e33c7c11f83be47af",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CAREER READINESS PROGRAMME",
+        "course_code": "02CR0301",
+        "semester_label": "3",
+        "credits": 2,
+        "prerequisite": "Before studying Career Readiness Program, all students are expected to have basic understanding/knowledge of English language"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Express ideas and information effectively.",
+        "Deduce conclusions from various forms of data including text and speech.",
+        "Choose appropriate alternatives in personal and professional life.",
+        "Act in accordance with one’s own strength. Pre-requisite of course:Before studying Career Readiness Program, all students are expected to have basic understanding/knowledge of English language"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Linguistic of Interaction",
+            "contact_hours": 30,
+            "topic_lines": [
+              "Introduction of subject, Self Discipline, Self Mastery, Beating Self",
+              "Sabotage, Building Self Confidence, Golden Rules of Goal Setting,",
+              "Backward Goal Setting, Visualization, Half Time Review, Breaking",
+              "Bad Habits, Developing Resilience, The Betari Box, Managing",
+              "Yourself, Active Listening Skills, A Good Role Model, Group",
+              "Discussion, Word Class:- Noun , Determiners, Word Class :-",
+              "Adjectives, Collocation, Word Class :- Prepposition , Conjunction,",
+              "Phonology:- Study of Sounds, Phonetics & Pronunciation:-",
+              "Articulation of Sound, CCE-1, READ COMPREHENSION:-",
+              "PROCESSING STRATEGY, Syntax :- Tenses -1, Syntax :- Tenses",
+              "-2, Syntax :- Tenses -3, CCE-2, Syntax :- VOICES - forms &",
+              "Usage, SPOKEN DISCOURSE:- Conversation practice & Role play",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson",
+              "Education India, 2002"
+            ],
+            "topics_text": "Introduction of subject, Self Discipline, Self Mastery, Beating Self Sabotage, Building Self Confidence, Golden Rules of Goal Setting, Backward Goal Setting, Visualization, Half Time Review, Breaking Bad Habits, Developing Resilience, The Betari Box, Managing Yourself, Active Listening Skills, A Good Role Model, Group Discussion, Word Class:- Noun , Determiners, Word Class :- Adjectives, Collocation, Word Class :- Prepposition , Conjunction, Phonology:- Study of Sounds, Phonetics & Pronunciation:- Articulation of Sound, CCE-1, READ COMPREHENSION:- PROCESSING STRATEGY, Syntax :- Tenses -1, Syntax :- Tenses -2, Syntax :- Tenses -3, CCE-2, Syntax :- VOICES - forms & Usage, SPOKEN DISCOURSE:- Conversation practice & Role play Total Hours 30 Textbook : 1 Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson Education India, 2002",
+            "topics": [
+              "Introduction of subject, Self Discipline, Self Mastery, Beating Self",
+              "Sabotage, Building Self Confidence, Golden Rules of Goal Setting,",
+              "Backward Goal Setting, Visualization, Half Time Review, Breaking",
+              "Bad Habits, Developing Resilience, The Betari Box, Managing",
+              "Yourself, Active Listening Skills, A Good Role Model, Group",
+              "Discussion, Word Class:- Noun , Determiners, Word Class :",
+              "Adjectives, Collocation, Word Class :- Prepposition , Conjunction,",
+              "Phonology:- Study of Sounds, Phonetics & Pronunciation:",
+              "Articulation of Sound, CCE-1, READ COMPREHENSION:",
+              "PROCESSING STRATEGY, Syntax :- Tenses -1, Syntax :- Tenses",
+              "2, Syntax :- Tenses -3, CCE-2, Syntax :- VOICES - forms &",
+              "Usage, SPOKEN DISCOURSE:- Conversation practice & Role play",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson",
+              "Education India, 2002"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "High School English Grammar and Composition, High School English Grammar and Composition, P.C. WREN, and H. MARTIN, S Chand , 2019",
+          "Longman Student Grammar of Spoken and Written English, Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson Education India, 2002"
+        ],
+        "textbooks": [
+          "Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson Education India, 2002"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.grammarly.com/i",
+          "http://englishteststore.net/",
+          "http://learnenglish.britishcouncil.org/en/english-grammar",
+          "https://www.englishclub.com/grammar/",
+          "http://www.perfect-english-grammar.com/"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 3765,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF SCIENCE\nPROGRAM       BACHELOR OF SCIENCE (CHEMISTRY)\nSEMESTER         3\nCOURSE TITLE   CAREER READINESS PROGRAMME\nCOURSE CODE     02CR0301\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Express ideas and information effectively.\n 2  Deduce conclusions from various forms of data including text and speech.\n 3  Choose appropriate alternatives in personal and professional life.\n 4  Act in accordance with one’s own strength.\n\n\nPre-requisite of course:Before studying Career Readiness Program, all students are expected to\nhave basic understanding/knowledge of English language\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Linguistic of Interaction                                   30\n               Introduction of subject, Self Discipline, Self Mastery, Beating Self\n              Sabotage, Building Self Confidence, Golden Rules of Goal Setting,\n            Backward Goal Setting, Visualization, Half Time Review, Breaking\n           Bad Habits, Developing Resilience, The Betari Box, Managing\n              Yourself, Active Listening Skills, A Good Role Model, Group\n              Discussion, Word Class:- Noun , Determiners, Word Class :-\n               Adjectives, Collocation, Word Class :- Prepposition , Conjunction,\n             Phonology:- Study of Sounds, Phonetics & Pronunciation:-\n               Articulation of Sound, CCE-1, READ COMPREHENSION:-\n          PROCESSING STRATEGY, Syntax :- Tenses -1, Syntax :- Tenses\n                 -2, Syntax :- Tenses -3, CCE-2, Syntax :- VOICES - forms &\n             Usage, SPOKEN DISCOURSE:- Conversation practice & Role play\n                               Total Hours                       30"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 1  Longman Student Grammar of Spoken and Written English, Biber Douglas, Pearson\n    Education India, 2002\n\nReferences:\n 1  High School English Grammar and Composition, High School English Grammar and\n    Composition, P.C. WREN, and H. MARTIN, S Chand , 2019\n 2  Longman Student Grammar of Spoken and Written English, Longman Student Grammar of\n    Spoken and Written English, Biber Douglas, Pearson Education India, 2002\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         25.00         10.00          0.00\n\nInstructional Method:\n 1  The course delivery method will include interaction, class work, demonstration, role play,\n     quiz and brain storming.\n 2  The internal evaluation will be done based on continuous evaluation of students in the class\n     -room.\n 3  Practical/viva examination will be conducted at the end of semester for evaluation of\n    performance of students.\n\nSupplementary Resources:\n 1  https://www.grammarly.com/i\n 2   http://englishteststore.net/\n 3  http://learnenglish.britishcouncil.org/en/english-grammar\n 4  https://www.englishclub.com/grammar/\n 5  http://www.perfect-english-grammar.com/"
+        }
+      ],
+      "warnings": [
+        "Official PDF semester differs from the catalog semester."
+      ],
+      "actual_pdf_sha256": "002304ee39a2b87ea13a6c6f208d814156a714644b392f4e33c7c11f83be47af",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000423063101",
+      "subject_name": "Corporate Taxation",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 6,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/04MB0307-Corporate-Taxation.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Corporate Taxation [c2af4c745dea].pdf",
+      "expected_pdf_sha256": "7516c7e2eb57efb4d37bc08052c522b4147759a8c9fe7e08cd9ca28fe645d904",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04MB0307"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22000423060901",
+      "subject_name": "Fundamentals of Digital Marketing",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 6,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BC0228",
+        "04SL0152",
+        "04SL0153"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FDM.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FUNDAMENTALS OF DIGITAL MARKETING [4ec6d99757a1].pdf",
+      "expected_pdf_sha256": "45d399b45acad7768cd3b21e4e9f42183035756f7617386ede018ade73c81eda",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB1307"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "22000423160601",
+      "subject_name": "Research Project",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 6,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/RP.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/RESEARCH PROJECT [83322b4c23e3].pdf",
+      "expected_pdf_sha256": "4318ada659bb8c930612f549d4a0c0d864c02e5b392164257cf35e332b1fedd0",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0615"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22000423060801",
+      "subject_name": "Responsibility",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 6,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    },
+    {
+      "subject_id": "22000423064101",
+      "subject_name": "Retail Marketing",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 6,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/RET-MKTNG.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/RETAIL MARKETING [cb5281f1f40b].pdf",
+      "expected_pdf_sha256": "72637f7c061dab32d52f9cac701add3ce3a9ef09268ba8ff2d4a2efa05cd2926",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0510"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22016136001301",
+      "subject_name": "Specialization",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 6,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    }
+  ],
+  "build_summary": {
+    "extracted": 3,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 6,
+    "extraction_errors": 0
+  }
+}

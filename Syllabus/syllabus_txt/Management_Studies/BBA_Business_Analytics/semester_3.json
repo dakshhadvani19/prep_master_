@@ -1,0 +1,1122 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "bba-business-analytics-",
+    "course_name": "BBA ( Business Analytics )",
+    "output_slug": "BBA_Business_Analytics"
+  },
+  "semester": 3,
+  "subject_count": 9,
+  "subjects": [
+    {
+      "subject_id": "23000422130601",
+      "subject_name": "BUSINESS LAWS",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 3,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0310",
+        "04BB0311",
+        "04BB0312",
+        "04BB0313",
+        "04BB1306"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/BL.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS LAWS [e5c1aca783ac].pdf",
+      "expected_pdf_sha256": "3182ee7066cc3b46484a395329df3c1c7935d30cb93b30864a2442f21ffd21a0",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0105"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "23000422031301",
+      "subject_name": "CRITICAL AND LOGICAL THINKING",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 3,
+      "subject_code": "04BB0313",
+      "course_code_evidence": [
+        "04BB0313",
+        "04BB1404",
+        "04BB1419"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/CRITICAL-AND-LOGICAL-THINKING.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/CRITICAL-AND-LOGICAL-THINKING.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CRITICAL AND LOGICAL THINKING [7ca5ba35acb7].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CRITICAL AND LOGICAL THINKING [7ca5ba35acb7].pdf",
+      "expected_pdf_sha256": "9e17f42966b61f320a78e9dbfc57801334ead5dbd908bbcb8f4288786efb5c2b",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CRITICAL AND LOGICAL THINKING",
+        "course_code": "04BB0313",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply critical thinking techniques to evaluate arguments and distinguish between valid and fallacious reasoning.",
+        "Analyze decision-making models and employ creative thinking strategies to enhance corporate problem-solving.",
+        "Classify and interpret analogy, classification, and series completion patterns in logical reasoning contexts.",
+        "Solve complex logical puzzles using binary logic, Venn diagrams, and syllogism principles effectively.",
+        "Evaluate logical fallacies and demonstrate critical thinking skills in academic, professional, and personal scenarios. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Critical Thinking & Evaluating Arguments",
+            "contact_hours": 7,
+            "topic_lines": [
+              "What is Critical Thinking?, Intellectual Standards to Critical",
+              "Thinking, Benefits of Critical Thinking., Barrier to Critical",
+              "Thinking, Characteristics of critical thinkers, Arguments and Non",
+              "arguments, Inductive and Deductive Arguments, Refuting",
+              "Arguments, Premises and Conclusions"
+            ],
+            "topics_text": "What is Critical Thinking?, Intellectual Standards to Critical Thinking, Benefits of Critical Thinking., Barrier to Critical Thinking, Characteristics of critical thinkers, Arguments and Non arguments, Inductive and Deductive Arguments, Refuting Arguments, Premises and Conclusions",
+            "topics": [
+              "What is Critical Thinking?, Intellectual Standards to Critical",
+              "Thinking, Benefits of Critical Thinking., Barrier to Critical",
+              "Thinking, Characteristics of critical thinkers, Arguments and Non",
+              "arguments, Inductive and Deductive Arguments, Refuting",
+              "Arguments, Premises and Conclusions"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Creative thinking for corporate decision making",
+            "contact_hours": 5,
+            "topic_lines": [
+              "A model for good decision-making, Decision procedures and",
+              "making the right decisions, Common flaws in our thinking about",
+              "decisions, Six Thinking Hat approach, Lateral Thinking"
+            ],
+            "topics_text": "A model for good decision-making, Decision procedures and making the right decisions, Common flaws in our thinking about decisions, Six Thinking Hat approach, Lateral Thinking",
+            "topics": [
+              "A model for good decision-making, Decision procedures and",
+              "making the right decisions, Common flaws in our thinking about",
+              "decisions, Six Thinking Hat approach, Lateral Thinking"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Analogy, Classification & Series Completion",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Simple and Double Analogy, Number and Alphabet Analogy,",
+              "Completing and Choosing the Analogous Pair, Choosing the Odd",
+              "Word, Choosing the Odd Numeral and Letter Pair/Group, Number",
+              "and Letter Series, Pattern Series"
+            ],
+            "topics_text": "Simple and Double Analogy, Number and Alphabet Analogy, Completing and Choosing the Analogous Pair, Choosing the Odd Word, Choosing the Odd Numeral and Letter Pair/Group, Number and Letter Series, Pattern Series",
+            "topics": [
+              "Simple and Double Analogy, Number and Alphabet Analogy,",
+              "Completing and Choosing the Analogous Pair, Choosing the Odd",
+              "Word, Choosing the Odd Numeral and Letter Pair/Group, Number",
+              "and Letter Series, Pattern Series"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Logical Puzzles",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Fun Logic Puzzles, Cryptarithms, Binary Logic - Connectives and",
+              "Binary Logic, Venn Diagrams & Syllogism, Statements and",
+              "Conclusion, Assumptions and Course of Actions"
+            ],
+            "topics_text": "Fun Logic Puzzles, Cryptarithms, Binary Logic - Connectives and Binary Logic, Venn Diagrams & Syllogism, Statements and Conclusion, Assumptions and Course of Actions",
+            "topics": [
+              "Fun Logic Puzzles, Cryptarithms, Binary Logic - Connectives and",
+              "Binary Logic, Venn Diagrams & Syllogism, Statements and",
+              "Conclusion, Assumptions and Course of Actions"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Logical Fallacies & Practices in Critical thinking",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Fallacious Arguments, Fallacies of Relevance, Fallacies of",
+              "Insufficient Evidence, Critical & Logical Thinking for Students:",
+              "Solving & Creativity, Critical and Logical Thinking for working",
+              "professionals Decision-making, Creativity and Problem Solving,",
+              "Critical and Logical Thinking for everyone",
+              "Total Hours 30",
+              "Textbook :",
+              "1 An Introduction to Critical Thinking, M. Sen, Pearson., 2010"
+            ],
+            "topics_text": "Fallacious Arguments, Fallacies of Relevance, Fallacies of Insufficient Evidence, Critical & Logical Thinking for Students: Solving & Creativity, Critical and Logical Thinking for working professionals Decision-making, Creativity and Problem Solving, Critical and Logical Thinking for everyone Total Hours 30 Textbook : 1 An Introduction to Critical Thinking, M. Sen, Pearson., 2010",
+            "topics": [
+              "Fallacious Arguments, Fallacies of Relevance, Fallacies of",
+              "Insufficient Evidence, Critical & Logical Thinking for Students:",
+              "Solving & Creativity, Critical and Logical Thinking for working",
+              "professionals Decision-making, Creativity and Problem Solving,",
+              "Critical and Logical Thinking for everyone",
+              "Total Hours 30",
+              "Textbook :",
+              "1 An Introduction to Critical Thinking, M. Sen, Pearson., 2010"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Introduction to Logic, Introduction to Logic, Copi, I. M., Cohen, C., & McMahon, K, Pearson., 2016",
+          "Give Your Speech, Change the World: How to Move Your Audience to Action, Give Your Speech, Change the World: How to Move Your Audience to Action, Morgan, N, HBPS, 2003",
+          "Analytic Reasoning, Analytic Reasoning, Pandey, M.K., BSC Publishing Co. Pvt. Ltd, 2022",
+          "A Modern Approach to Logical Reasoning, A Modern Approach to Logical Reasoning, Aggarwal, R.S., S.Chand Publising Co., 2024"
+        ],
+        "textbooks": [
+          "An Introduction to Critical Thinking, M. Sen, Pearson., 2010"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "MIT OpenCourseWare - Introduction to Logic: https://ocw.mit.edu/courses/linguistics-and- philosophy/24-241-logic-i-fall-2005/ Supplementary Resources:",
+          "Stanford Encyclopedia of Philosophy - Logic:https://plato.stanford.edu/entries/logic/",
+          "Khan Academy - Logical Reasoning: https://www.khanacademy.org/test-prep/lsat/lsat- lessons/lsat-logical-reasoning"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5539,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    CRITICAL AND LOGICAL THINKING\nCOURSE CODE     04BB0313\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply critical thinking techniques to evaluate arguments and distinguish between valid and\n     fallacious reasoning.\n 2  Analyze decision-making models and employ creative thinking strategies to enhance\n     corporate problem-solving.\n 3  Classify and interpret analogy, classification, and series completion patterns in logical\n     reasoning contexts.\n 4  Solve complex logical puzzles using binary logic, Venn diagrams, and syllogism principles\n     effectively.\n 5  Evaluate logical fallacies and demonstrate critical thinking skills in academic, professional,\n    and personal scenarios.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Critical Thinking & Evaluating Arguments     7\n           What is Critical Thinking?, Intellectual Standards to Critical\n              Thinking, Benefits of Critical Thinking., Barrier to Critical\n              Thinking, Characteristics of critical thinkers, Arguments and Non\n              arguments, Inductive and Deductive Arguments, Refuting\n             Arguments, Premises and Conclusions\n     2      Creative thinking for corporate decision making              5\n        A model for good decision-making, Decision procedures and\n            making the right decisions, Common flaws in our thinking about\n               decisions, Six Thinking Hat approach, Lateral Thinking\n     3      Analogy, Classification & Series Completion                  7\n             Simple and Double Analogy, Number and Alphabet Analogy,\n             Completing and Choosing the Analogous Pair, Choosing the Odd\n            Word, Choosing the Odd Numeral and Letter Pair/Group, Number\n            and Letter Series, Pattern Series\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Logical Puzzles                                          6\n            Fun Logic Puzzles, Cryptarithms, Binary Logic - Connectives and\n             Binary Logic, Venn Diagrams & Syllogism, Statements and\n              Conclusion, Assumptions and Course of Actions\n     5      Logical Fallacies & Practices in Critical thinking              5\n               Fallacious Arguments, Fallacies of Relevance, Fallacies of\n                Insufficient Evidence, Critical & Logical Thinking for Students:\n             Solving & Creativity, Critical and Logical Thinking for working\n               professionals Decision-making, Creativity and Problem Solving,\n                Critical and Logical Thinking for everyone\n                               Total Hours                       30\n\n\nTextbook :\n 1  An Introduction to Critical Thinking, M. Sen, Pearson., 2010\n\nReferences:\n 1  Introduction to Logic, Introduction to Logic, Copi, I. M., Cohen, C., & McMahon, K,\n     Pearson., 2016\n 2  Give Your Speech, Change the World: How to Move Your Audience to Action, Give Your\n     Speech, Change the World: How to Move Your Audience to Action, Morgan, N, HBPS,\n    2003\n 3  Analytic Reasoning, Analytic Reasoning, Pandey, M.K., BSC Publishing Co. Pvt. Ltd,\n    2022\n 4 A Modern Approach to Logical Reasoning, A Modern Approach to Logical Reasoning,\n    Aggarwal, R.S., S.Chand Publising Co., 2024\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1 THEORY\n\nSupplementary Resources:\n 1  MIT OpenCourseWare - Introduction to Logic: https://ocw.mit.edu/courses/linguistics-and-\n     philosophy/24-241-logic-i-fall-2005/\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 2  Stanford Encyclopedia of Philosophy - Logic:https://plato.stanford.edu/entries/logic/\n 3  Khan Academy - Logical Reasoning: https://www.khanacademy.org/test-prep/lsat/lsat-\n     lessons/lsat-logical-reasoning\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "9e17f42966b61f320a78e9dbfc57801334ead5dbd908bbcb8f4288786efb5c2b",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000422130501",
+      "subject_name": "FINANCIAL MANAGEMENT",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 3,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BA0301",
+        "04BB0310",
+        "04BB1302",
+        "04BB1305",
+        "04BB1306"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FM.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FINANCIAL MANAGEMENT [c73370e858e4].pdf",
+      "expected_pdf_sha256": "163bca730b043bc17f5bf2e8d02accd56b85e1104379e4ee75440a27b9133f73",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0305"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "23000422031001",
+      "subject_name": "FOREIGN LANGUAGE",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 3,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0310",
+        "04BB0311",
+        "04BB0312",
+        "04BB0313"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/04MB0363-Foreign-Language.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FOREIGN LANGUAGE [f1b84cbd7419].pdf",
+      "expected_pdf_sha256": "977e0d1e2031d28dcb21a3c65371dd74a2dbab0611d02b7dc060c8d3a9b0726a",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04MB0363"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "23000422031201",
+      "subject_name": "GRAPHIC DESIGN",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 3,
+      "subject_code": "04BB0312",
+      "course_code_evidence": [
+        "04BB0312",
+        "04BB0313",
+        "04BB1404"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/GRAPHIC-DESIGN.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/GRAPHIC-DESIGN.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/GRAPHIC DESIGN [c79475d93b32].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/GRAPHIC DESIGN [c79475d93b32].pdf",
+      "expected_pdf_sha256": "1625eb7f8a92d0654c921dfcd864c679c48e6def8a27df1b8487fd4230d5e83a",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "GRAPHIC DESIGN",
+        "course_code": "04BB0312",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply the fundamental elements, principles, and colour theory of graphic design to develop visually coherent compositions.",
+        "Apply design principles and colour schemes to create visually balanced compositions.",
+        "Use typography and layout techniques effectively to enhance visual communication.",
+        "Analyse and integrate imagery, icons, and branding elements to support design objectives.",
+        "Demonstrate basic skills in using graphic design software to produce simple design outputs. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 100 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Foundations of Graphic Design: Elements, Principles, and",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Color Theory",
+              "Introduction to Graphic Design, understanding what graphic design",
+              "is and it¶s used, Elements of Design Line, shape, color, texture,",
+              "space, form, and value, Principles of Design, Balance, contrast,",
+              "alignment, repetition, proximity, hierarchy, and unity, Basics of",
+              "Color Theory, Primary, secondary, tertiary colors, warm vs. cool",
+              "colors, and color harmony"
+            ],
+            "topics_text": "Color Theory Introduction to Graphic Design, understanding what graphic design is and it¶s used, Elements of Design Line, shape, color, texture, space, form, and value, Principles of Design, Balance, contrast, alignment, repetition, proximity, hierarchy, and unity, Basics of Color Theory, Primary, secondary, tertiary colors, warm vs. cool colors, and color harmony",
+            "topics": [
+              "Color Theory",
+              "Introduction to Graphic Design, understanding what graphic design",
+              "is and it¶s used, Elements of Design Line, shape, color, texture,",
+              "space, form, and value, Principles of Design, Balance, contrast,",
+              "alignment, repetition, proximity, hierarchy, and unity, Basics of",
+              "Color Theory, Primary, secondary, tertiary colors, warm vs. cool",
+              "colors, and color harmony"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Core Design Skills: Typography, Layout, Branding",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction to Typography, Font types, anatomy of type, and how",
+              "to choose the right fonts,, Understanding Layout and Composition,",
+              "Grid systems, alignment, whitespace, and visual balance, Image and",
+              "Icon Use in Design, the role of imagery, icons, and illustrations in",
+              "communication,, Introduction to Branding and Logo Design, Basic",
+              "concepts of identity design and logo creation., Creating logos in",
+              "Canva"
+            ],
+            "topics_text": "Introduction to Typography, Font types, anatomy of type, and how to choose the right fonts,, Understanding Layout and Composition, Grid systems, alignment, whitespace, and visual balance, Image and Icon Use in Design, the role of imagery, icons, and illustrations in communication,, Introduction to Branding and Logo Design, Basic concepts of identity design and logo creation., Creating logos in Canva",
+            "topics": [
+              "Introduction to Typography, Font types, anatomy of type, and how",
+              "to choose the right fonts,, Understanding Layout and Composition,",
+              "Grid systems, alignment, whitespace, and visual balance, Image and",
+              "Icon Use in Design, the role of imagery, icons, and illustrations in",
+              "communication,, Introduction to Branding and Logo Design, Basic",
+              "concepts of identity design and logo creation., Creating logos in",
+              "Canva"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Visual Communication as a core design skill",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Visual Communication and Audience Understanding, how design",
+              "conveys messages and connects with different audiences., Design",
+              "Software Overview, A beginner¶s look at tools like Adobe",
+              "Photoshop, Illustrator, or Canva along with practical projects.",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Graphic design school: The principles and practice of graphic design (8th ed.)., Dabner, D.,",
+              "Stewart, S., & Vickress, A. , Thames & Hudson., 2023"
+            ],
+            "topics_text": "Visual Communication and Audience Understanding, how design conveys messages and connects with different audiences., Design Software Overview, A beginner¶s look at tools like Adobe Photoshop, Illustrator, or Canva along with practical projects. Total Hours 30 Textbook : 1 Graphic design school: The principles and practice of graphic design (8th ed.)., Dabner, D., Stewart, S., & Vickress, A. , Thames & Hudson., 2023",
+            "topics": [
+              "Visual Communication and Audience Understanding, how design",
+              "conveys messages and connects with different audiences., Design",
+              "Software Overview, A beginner¶s look at tools like Adobe",
+              "Photoshop, Illustrator, or Canva along with practical projects.",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Graphic design school: The principles and practice of graphic design (8th ed.)., Dabner, D.,",
+              "Stewart, S., & Vickress, A. , Thames & Hudson., 2023"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Thinking with type: A critical guide for designers, writers, editors, & students (2nd rev. ed.), Thinking with type: A critical guide for designers, writers, editors, & students (2nd rev. ed.), Lupton, E. (2014)., Princeton Architectural Press., 2014",
+          "Designing brand identity: An essential guide for the whole branding team (5th ed.), Designing brand identity: An essential guide for the whole branding team (5th ed.), Wheeler, A. , Wiley., 2017",
+          "Making and breaking the grid: A graphic design layout workshop (2nd ed.). , Making and breaking the grid: A graphic design layout workshop (2nd ed.). , Samara, T., Rockport Publishers, 2017"
+        ],
+        "textbooks": [
+          "Graphic design school: The principles and practice of graphic design (8th ed.)., Dabner, D., Stewart, S., & Vickress, A. , Thames & Hudson., 2023"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4606,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    GRAPHIC DESIGN\nCOURSE CODE     04BB0312\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply the fundamental elements, principles, and colour theory of graphic design to develop\n     visually coherent compositions.\n 2  Apply design principles and colour schemes to create visually balanced compositions.\n 3  Use typography and layout techniques effectively to enhance visual communication.\n 4  Analyse and integrate imagery, icons, and branding elements to support design objectives.\n 5  Demonstrate basic skills in using graphic design software to produce simple design outputs.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        100     0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Foundations of Graphic Design: Elements, Principles, and      10\n            Color Theory\n               Introduction to Graphic Design, understanding what graphic design\n                  is and it¶s used, Elements of Design Line, shape, color, texture,\n               space, form, and value, Principles of Design, Balance, contrast,\n              alignment, repetition, proximity, hierarchy, and unity, Basics of\n             Color Theory, Primary, secondary, tertiary colors, warm vs. cool\n                colors, and color harmony\n     2      Core Design Skills: Typography, Layout, Branding            12\n               Introduction to Typography, Font types, anatomy of type, and how\n               to choose the right fonts,, Understanding Layout and Composition,\n             Grid systems, alignment, whitespace, and visual balance, Image and\n             Icon Use in Design, the role of imagery, icons, and illustrations in\n             communication,, Introduction to Branding and Logo Design, Basic\n              concepts of identity design and logo creation., Creating logos in\n            Canva\n     3      Visual Communication as a core design skill                  8\n              Visual Communication and Audience Understanding, how design\n             conveys messages and connects with different audiences., Design\n             Software Overview, A beginner¶s look at tools like Adobe\n             Photoshop, Illustrator, or Canva along with practical projects.\n                               Total Hours                       30\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 1  Graphic design school: The principles and practice of graphic design (8th ed.)., Dabner, D.,\n     Stewart, S., & Vickress, A. , Thames & Hudson., 2023\n\nReferences:\n 1  Thinking with type: A critical guide for designers, writers, editors, & students (2nd rev.\n      ed.), Thinking with type: A critical guide for designers, writers, editors, & students (2nd\n     rev. ed.), Lupton, E. (2014)., Princeton Architectural Press., 2014\n 2  Designing brand identity: An essential guide for the whole branding team (5th ed.),\n    Designing brand identity: An essential guide for the whole branding team (5th ed.),\n    Wheeler, A. , Wiley., 2017\n 3  Making and breaking the grid: A graphic design layout workshop (2nd ed.). , Making and\n     breaking the grid: A graphic design layout workshop (2nd ed.). , Samara, T., Rockport\n     Publishers, 2017\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "1625eb7f8a92d0654c921dfcd864c679c48e6def8a27df1b8487fd4230d5e83a",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000422130201",
+      "subject_name": "HUMAN RESOURCES MANAGEMENT",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 3,
+      "subject_code": "04BB1302",
+      "course_code_evidence": [
+        "04BA0301",
+        "04BB0310",
+        "04BB0311",
+        "04BB1302",
+        "04BB1306"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/HUMAN-RESOURCE-MANAGEMENT.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/HUMAN-RESOURCE-MANAGEMENT.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/HUMAN RESOURCES MANAGEMENT [369a304a9d06].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/HUMAN RESOURCES MANAGEMENT [369a304a9d06].pdf",
+      "expected_pdf_sha256": "f2acb5fd3b90ac6080e041edbfdf1e8e2e470881baad3611e9b39cbc43f6cf1f",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "HUMAN RESOURCE MANAGEMENT",
+        "course_code": "04BB1302",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply the principles of human resource management to enhance organizational effectiveness and employee performance.",
+        "Analyze key HR functions such as recruitment, training, compensation, management development, and employment relations to address organizational challenges.",
+        "Evaluate the role and effectiveness of training and development programs in employee growth and organizational success.",
+        "Analyze the components of compensation systems and their impact on employee motivation and organizational goals.",
+        "Analyze the job analysis process to assess its strategic importance in human resource planning and decision-making. Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 12,
+            "topic_lines": [
+              "An Introduction to Human Resource Management, characteristics",
+              "and significance of HRM, objectives and functions, Skills and",
+              "Competencies of a Human Resource Manager, changing skill",
+              "requirement, changing employee expectations, Challenges faced by",
+              "HR managers"
+            ],
+            "topics_text": "An Introduction to Human Resource Management, characteristics and significance of HRM, objectives and functions, Skills and Competencies of a Human Resource Manager, changing skill requirement, changing employee expectations, Challenges faced by HR managers",
+            "topics": [
+              "An Introduction to Human Resource Management, characteristics",
+              "and significance of HRM, objectives and functions, Skills and",
+              "Competencies of a Human Resource Manager, changing skill",
+              "requirement, changing employee expectations, Challenges faced by",
+              "HR managers"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Procurement",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Human Resource Planning- Definition and objectives. Job analysis,",
+              "Job Description and Job Specification-Definitions and Objectives,",
+              "Recruitment- Meaning, sources, E-recruitment and Selection ±",
+              "Definitions and process, Placement ± An introduction to",
+              "competency mapping, career development, Induction,",
+              "Contemporary issues in HRM - IHRM, Green HRM, HR Audit,",
+              "SHRM. Open Forum: Impact of AI on Relevant Case studies"
+            ],
+            "topics_text": "Human Resource Planning- Definition and objectives. Job analysis, Job Description and Job Specification-Definitions and Objectives, Recruitment- Meaning, sources, E-recruitment and Selection ± Definitions and process, Placement ± An introduction to competency mapping, career development, Induction, Contemporary issues in HRM - IHRM, Green HRM, HR Audit, SHRM. Open Forum: Impact of AI on Relevant Case studies",
+            "topics": [
+              "Human Resource Planning- Definition and objectives. Job analysis,",
+              "Job Description and Job Specification-Definitions and Objectives,",
+              "Recruitment- Meaning, sources, E-recruitment and Selection ±",
+              "Definitions and process, Placement ± An introduction to",
+              "competency mapping, career development, Induction,",
+              "Contemporary issues in HRM - IHRM, Green HRM, HR Audit,",
+              "SHRM. Open Forum: Impact of AI on Relevant Case studies"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Training and Development",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Training & Development: Definition, objectives and advantages,",
+              "Training Design- Training need identification, Training need",
+              "assessment, Methods of training, Difference between Training &",
+              "Development. Succession Planning"
+            ],
+            "topics_text": "Training & Development: Definition, objectives and advantages, Training Design- Training need identification, Training need assessment, Methods of training, Difference between Training & Development. Succession Planning",
+            "topics": [
+              "Training & Development: Definition, objectives and advantages,",
+              "Training Design- Training need identification, Training need",
+              "assessment, Methods of training, Difference between Training &",
+              "Development. Succession Planning"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Compensation",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Job evaluation-Introduction and objectives, Compensation-",
+              "Definitions and objectives, Introduction to Legal Framework for",
+              "Compensation Management, Basic factors in determining pay rates,",
+              "Basic, Supplementary and Executive Remuneration, types of",
+              "employee benefits and services, Ethical issues in Compensation",
+              "Management: Discussion"
+            ],
+            "topics_text": "Job evaluation-Introduction and objectives, Compensation- Definitions and objectives, Introduction to Legal Framework for Compensation Management, Basic factors in determining pay rates, Basic, Supplementary and Executive Remuneration, types of employee benefits and services, Ethical issues in Compensation Management: Discussion",
+            "topics": [
+              "Job evaluation-Introduction and objectives, Compensation",
+              "Definitions and objectives, Introduction to Legal Framework for",
+              "Compensation Management, Basic factors in determining pay rates,",
+              "Basic, Supplementary and Executive Remuneration, types of",
+              "employee benefits and services, Ethical issues in Compensation",
+              "Management: Discussion"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Employment Relations",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Employee Relationship Management± Definitions and Main",
+              "Aspects, Industrial Disputes & Conflicts ± Collective Bargaining",
+              "Grievance Handling",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Human Resource, Pravin Durai, Pearson: Dorling Management, 2018",
+              "2 Personnel Management, C.B. Mamoria & S.V Gankar, Himalaya Publishing House, 2011"
+            ],
+            "topics_text": "Employee Relationship Management± Definitions and Main Aspects, Industrial Disputes & Conflicts ± Collective Bargaining Grievance Handling Total Hours 60 Textbook : 1 Human Resource, Pravin Durai, Pearson: Dorling Management, 2018 2 Personnel Management, C.B. Mamoria & S.V Gankar, Himalaya Publishing House, 2011",
+            "topics": [
+              "Employee Relationship Management± Definitions and Main",
+              "Aspects, Industrial Disputes & Conflicts ± Collective Bargaining",
+              "Grievance Handling",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Human Resource, Pravin Durai, Pearson: Dorling Management, 2018",
+              "2 Personnel Management, C.B. Mamoria & S.V Gankar, Himalaya Publishing House, 2011"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Human Resource and Personnel Management, Text and Cases, Human Resource and Personnel Management, Text and Cases, K. Aswathappa, MC Graw- Hill, 2010",
+          "Human Resource Management, Human Resource Management, Gary Dessler & BijuVarkkey, Pearson, 2016",
+          "Human Resource Management , Human Resource Management , V.S.P. Rao, Excel Books, 2006"
+        ],
+        "textbooks": [
+          "Human Resource, Pravin Durai, Pearson: Dorling Management, 2018",
+          "Personnel Management, C.B. Mamoria & S.V Gankar, Himalaya Publishing House, 2011"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.istd.in/",
+          "https://nipm.in/",
+          "https://www.shrm.org/",
+          "https://www.open.edu/openlearn/money-business/business/human-resources",
+          "https://www.researchgate.net"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5598,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   HUMAN RESOURCE MANAGEMENT\nCOURSE CODE     04BB1302\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply the principles of human resource management to enhance organizational\n     effectiveness and employee performance.\n 2  Analyze key HR functions such as recruitment, training, compensation, management\n    development, and employment relations to address organizational challenges.\n 3  Evaluate the role and effectiveness of training and development programs in employee\n    growth and organizational success.\n 4  Analyze the components of compensation systems and their impact on employee\n     motivation and organizational goals.\n 5  Analyze the job analysis process to assess its strategic importance in human resource\n     planning and decision-making.\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction                                             12\n          An Introduction to Human Resource Management, characteristics\n            and significance of HRM, objectives and functions, Skills and\n             Competencies of a Human Resource Manager, changing skill\n              requirement, changing employee expectations, Challenges faced by\n         HR managers\n     2      Procurement                                            14\n          Human Resource Planning- Definition and objectives. Job analysis,\n             Job Description and Job Specification-Definitions and Objectives,\n              Recruitment- Meaning, sources, E-recruitment and Selection ±\n               Definitions and process, Placement ± An introduction to\n            competency mapping, career development, Induction,\n            Contemporary issues in HRM - IHRM, Green HRM, HR Audit,\n          SHRM. Open Forum: Impact of AI on Relevant Case studies\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Training and Development                                 12\n              Training & Development: Definition, objectives and advantages,\n              Training Design- Training need identification, Training need\n              assessment, Methods of training, Difference between Training &\n             Development. Succession Planning\n     4      Compensation                                           12\n             Job evaluation-Introduction and objectives, Compensation-\n               Definitions and objectives, Introduction to Legal Framework for\n            Compensation Management, Basic factors in determining pay rates,\n               Basic, Supplementary and Executive Remuneration, types of\n            employee benefits and services, Ethical issues in Compensation\n            Management: Discussion\n     5     Employment Relations                                    10\n            Employee Relationship Management± Definitions and Main\n              Aspects, Industrial Disputes & Conflicts ± Collective Bargaining\n             Grievance Handling\n                               Total Hours                       60\n\n\nTextbook :\n 1  Human Resource, Pravin Durai, Pearson: Dorling Management, 2018\n 2  Personnel Management, C.B. Mamoria & S.V Gankar, Himalaya Publishing House, 2011\n\nReferences:\n 1  Human Resource and Personnel Management, Text and Cases, Human Resource and\n     Personnel Management, Text and Cases, K. Aswathappa, MC Graw- Hill, 2010\n 2  Human Resource Management, Human Resource Management, Gary Dessler &\n    BijuVarkkey, Pearson, 2016\n 3  Human Resource Management , Human Resource Management , V.S.P. Rao, Excel Books,\n    2006\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 1  https://www.istd.in/\n 2  https://nipm.in/\n 3  https://www.shrm.org/\n 4  https://www.open.edu/openlearn/money-business/business/human-resources\n 5  https://www.researchgate.net\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "f2acb5fd3b90ac6080e041edbfdf1e8e2e470881baad3611e9b39cbc43f6cf1f",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000422130101",
+      "subject_name": "MARKETING MANAGEMENT",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 3,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BA0301",
+        "04BB1301",
+        "04BB1302",
+        "04BB1305",
+        "04BB1306"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MM.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MARKETING MANAGEMENT [5bf5c78e2440].pdf",
+      "expected_pdf_sha256": "d56148ad0d19758223f7fdf2d8005dabd86e297650fe9c2e7ff99c5c17dd3968",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0301"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "23000421030101",
+      "subject_name": "STATISTICS & COMPUTATIONAL DATA ANALYTICS",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 3,
+      "subject_code": "04BA0301",
+      "course_code_evidence": [
+        "04BA0301",
+        "04BB0310",
+        "04BB0311",
+        "04BB0312",
+        "04BB1306"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/STATISTICS-COMPUTATIONAL-DATA-ANALYTICS.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/STATISTICS-COMPUTATIONAL-DATA-ANALYTICS.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/STATISTICS & COMPUTATIONAL DATA ANALYTICS [4ec37ab2148f].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/STATISTICS & COMPUTATIONAL DATA ANALYTICS [4ec37ab2148f].pdf",
+      "expected_pdf_sha256": "218c6d6505480dd72be1af8dd9edb8ac496f9b206c3c00afeb7e74076675773a",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "STATISTICS & COMPUTATIONAL DATA ANALYTICS",
+        "course_code": "04BA0301",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Describe and present data using appropriate graphical and numerical statistical tools to summarize key characteristics",
+        "Apply basic probability concepts to solve real-life problems under uncertainty.",
+        "Perform hypothesis tests for means, proportions, and variances, and interpret the statistical significance of the results.",
+        "Construct and interpret confidence intervals and conduct one-way ANOVA to compare group means.",
+        "Analyze relationships using correlation and regression and understand their practical applications. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Statistics and Data Representation",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Importance of statistics in business, Types of data: qualitative vs",
+              "quantitative, Sampling methods and survey types, Data",
+              "representation: tables, bar charts, pie charts, histograms, Measures",
+              "of central tendency: mean, median, mode, Measures of dispersion:",
+              "range, variance, standard deviation, Shape of distribution: skewness,",
+              "kurtosis, Introduction to Excel for statistical functions"
+            ],
+            "topics_text": "Importance of statistics in business, Types of data: qualitative vs quantitative, Sampling methods and survey types, Data representation: tables, bar charts, pie charts, histograms, Measures of central tendency: mean, median, mode, Measures of dispersion: range, variance, standard deviation, Shape of distribution: skewness, kurtosis, Introduction to Excel for statistical functions",
+            "topics": [
+              "Importance of statistics in business, Types of data: qualitative vs",
+              "quantitative, Sampling methods and survey types, Data",
+              "representation: tables, bar charts, pie charts, histograms, Measures",
+              "of central tendency: mean, median, mode, Measures of dispersion:",
+              "range, variance, standard deviation, Shape of distribution: skewness,",
+              "kurtosis, Introduction to Excel for statistical functions"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Fundamentals of Probability and Discrete Distributions",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to probability, Experiments, sample space, and events,",
+              "Laws of probability: addition and multiplicationConditional",
+              "probability and independence,, Bayes¶ Theorem (basic",
+              "understanding), Discrete distributions: Binomial and Poisson, Real-",
+              "life applications and Excel-based illustrations"
+            ],
+            "topics_text": "Introduction to probability, Experiments, sample space, and events, Laws of probability: addition and multiplicationConditional probability and independence,, Bayes¶ Theorem (basic understanding), Discrete distributions: Binomial and Poisson, Real- life applications and Excel-based illustrations",
+            "topics": [
+              "Introduction to probability, Experiments, sample space, and events,",
+              "Laws of probability: addition and multiplicationConditional",
+              "probability and independence,, Bayes¶ Theorem (basic",
+              "understanding), Discrete distributions: Binomial and Poisson, Real",
+              "life applications and Excel-based illustrations"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Basics of Hypothesis Testing",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Concept of hypothesis testing, Null and alternative hypotheses,",
+              "Type I and Type II errors, , z-test and t-test for single mean, p-",
+              "values and confidence levels, Step-by-step hypothesis testing in",
+              "Excel, Introduction to variance testing"
+            ],
+            "topics_text": "Concept of hypothesis testing, Null and alternative hypotheses, Type I and Type II errors, , z-test and t-test for single mean, p- values and confidence levels, Step-by-step hypothesis testing in Excel, Introduction to variance testing",
+            "topics": [
+              "Concept of hypothesis testing, Null and alternative hypotheses,",
+              "Type I and Type II errors, , z-test and t-test for single mean, p",
+              "values and confidence levels, Step-by-step hypothesis testing in",
+              "Excel, Introduction to variance testing"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Comparative Analysis using Two-Sample Tests and ANOVA",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Independent sample t-tests, Dependent sample t test, One-Way",
+              "ANOVA: application and procedure, Interpretation of results using",
+              "Excel outputs"
+            ],
+            "topics_text": "Independent sample t-tests, Dependent sample t test, One-Way ANOVA: application and procedure, Interpretation of results using Excel outputs",
+            "topics": [
+              "Independent sample t-tests, Dependent sample t test, One-Way",
+              "ANOVA: application and procedure, Interpretation of results using",
+              "Excel outputs"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Correlation and Regression Analysis",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Pearson¶s correlation coefficient, Simple linear regression: equation,",
+              "interpretation , and scatterplots, Regression line and coefficient of",
+              "determination (R²), Residual analysis and its significance, ,",
+              "Hypothesis testing for regression slope",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Business statistics: For contemporary decision making (11th ed.)., Black, K. . , Wiley.,",
+              "2023",
+              "2 Business Statistics, , Naval Bajpai, , Pearson, , 2020"
+            ],
+            "topics_text": "Pearson¶s correlation coefficient, Simple linear regression: equation, interpretation , and scatterplots, Regression line and coefficient of determination (R²), Residual analysis and its significance, , Hypothesis testing for regression slope Total Hours 45 Textbook : 1 Business statistics: For contemporary decision making (11th ed.)., Black, K. . , Wiley., 2023 2 Business Statistics, , Naval Bajpai, , Pearson, , 2020",
+            "topics": [
+              "Pearson¶s correlation coefficient, Simple linear regression: equation,",
+              "interpretation , and scatterplots, Regression line and coefficient of",
+              "determination (R²), Residual analysis and its significance, ,",
+              "Hypothesis testing for regression slope",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Business statistics: For contemporary decision making (11th ed.)., Black, K. . , Wiley.,",
+              "2023",
+              "2 Business Statistics, , Naval Bajpai, , Pearson, , 2020"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Business Statistics, , Business Statistics, , J K Sharma,, Vikas Publishing, 2020",
+          "Statistics for Management,, Statistics for Management,, T N Srivastava and Shailaja Rego, TMH, , 2020",
+          "M.S. Excel Tools for Managers,, M.S. Excel Tools for Managers,, D P Apte, , Excel, 2020",
+          "Mathematics and Statistics for Management,, Mathematics and Statistics for Management,, K. B. Akhilesh& S. B. Balasubrahmanyam,, Vikas, , 2020"
+        ],
+        "textbooks": [
+          "Business statistics: For contemporary decision making (11th ed.)., Black, K. . , Wiley., 2023",
+          "Business Statistics, , Naval Bajpai, , Pearson, , 2020"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.britannica.com/science/statistics/Random-variables-and-probability- distributions",
+          "https://machinelearningmastery.com/statistical-hypothesis-tests/ Supplementary Resources:",
+          "https://www.questionpro.com/features/correlation-analysis.html",
+          "https://www.sciencedirect.com/topics/medicine-and-dentistry/regression-analysis",
+          "https://www.aptech.com/blog/introduction-to-the-fundamentals-of-time-series-data-and- analysis/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5829,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    STATISTICS & COMPUTATIONAL DATA ANALYTICS\nCOURSE CODE     04BA0301\nCOURSE CREDITS  3\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Describe and present data using appropriate graphical and numerical statistical tools to\n    summarize key characteristics\n 2  Apply basic probability concepts to solve real-life problems under uncertainty.\n 3  Perform hypothesis tests for means, proportions, and variances, and interpret the statistical\n     significance of the results.\n 4  Construct and interpret confidence intervals and conduct one-way ANOVA to compare\n    group means.\n 5  Analyze relationships using correlation and regression and understand their practical\n     applications.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Statistics and Data Representation             8\n             Importance of statistics in business, Types of data: qualitative vs\n                quantitative, Sampling methods and survey types, Data\n               representation: tables, bar charts, pie charts, histograms, Measures\n              of central tendency: mean, median, mode, Measures of dispersion:\n               range, variance, standard deviation, Shape of distribution: skewness,\n                kurtosis, Introduction to Excel for statistical functions\n     2      Fundamentals of Probability and Discrete Distributions        10\n               Introduction to probability, Experiments, sample space, and events,\n           Laws of probability: addition and multiplicationConditional\n               probability and independence,, Bayes¶ Theorem (basic\n              understanding), Discrete distributions: Binomial and Poisson, Real-\n                  life applications and Excel-based illustrations\n     3       Basics of Hypothesis Testing                               9\n             Concept of hypothesis testing, Null and alternative hypotheses,\n            Type I and Type II errors, , z-test and t-test for single mean, p-\n              values and confidence levels, Step-by-step hypothesis testing in\n              Excel, Introduction to variance testing\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Comparative Analysis using Two-Sample Tests and ANOVA    9\n             Independent sample t-tests, Dependent sample t test, One-Way\n         ANOVA: application and procedure, Interpretation of results using\n             Excel outputs\n     5      Correlation and Regression Analysis                        9\n              Pearson¶s correlation coefficient, Simple linear regression: equation,\n                interpretation , and scatterplots, Regression line and coefficient of\n              determination (R²), Residual analysis and its significance, ,\n             Hypothesis testing for regression slope\n                               Total Hours                       45\n\n\nTextbook :\n 1  Business statistics: For contemporary decision making (11th ed.)., Black, K. . , Wiley.,\n    2023\n 2  Business Statistics, , Naval Bajpai, , Pearson, , 2020\n\nReferences:\n 1  Business Statistics, , Business Statistics, , J K Sharma,, Vikas Publishing, 2020\n 2   Statistics for Management,, Statistics for Management,, T N Srivastava and Shailaja Rego,\n   TMH, , 2020\n 3  M.S. Excel Tools for Managers,, M.S. Excel Tools for Managers,, D P Apte, , Excel, 2020\n 4  Mathematics and Statistics for Management,, Mathematics and Statistics for Management,,\n    K. B. Akhilesh& S. B. Balasubrahmanyam,, Vikas, , 2020\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  Classroom Teaching\n\nSupplementary Resources:\n 1  https://www.britannica.com/science/statistics/Random-variables-and-probability-\n     distributions\n 2  https://machinelearningmastery.com/statistical-hypothesis-tests/\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 3  https://www.questionpro.com/features/correlation-analysis.html\n 4  https://www.sciencedirect.com/topics/medicine-and-dentistry/regression-analysis\n 5  https://www.aptech.com/blog/introduction-to-the-fundamentals-of-time-series-data-and-\n     analysis/\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "218c6d6505480dd72be1af8dd9edb8ac496f9b206c3c00afeb7e74076675773a",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000422031101",
+      "subject_name": "TOURISM MANAGEMENT",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 3,
+      "subject_code": "04BB0311",
+      "course_code_evidence": [
+        "04BB0311",
+        "04BB0312",
+        "04BB0313",
+        "04BB1404"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/TOURISM-MANAGEMENT.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/TOURISM-MANAGEMENT.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/TOURISM MANAGEMENT [1b2142b075bb].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/TOURISM MANAGEMENT [1b2142b075bb].pdf",
+      "expected_pdf_sha256": "0fefe4c1d72e08576360f0846daf2a80c873abd9b07a69a97b22ba928583b7c2",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "TOURISM MANAGEMENT",
+        "course_code": "04BB0311",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply basic concepts of tourism to understand different types of tourists and travel trends.",
+        "Analyze different types of tour packages and the role of tour operators.",
+        "Apply steps to set up a travel agency and manage tour arrangements like travel, stay, and sightseeing.",
+        "Evaluate the process and importance of travel documents like passports, visas, and health checks.",
+        "Analyze the role of government in tourism and use tourism data to understand travel patterns. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 100 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Travel:",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Meaning and definitions of tourism, traveler, excursionist, tourists-",
+              "objectives, nature and classification of tourism and tourists, Growth",
+              "and Development of Tourism, Forms of Tourism: Inbound",
+              "Outbound, Domestic and International., Role of Ministry of",
+              "Tourism, Govt. of India, Analysis of domestic, inbound and",
+              "outbound tourism data."
+            ],
+            "topics_text": "Meaning and definitions of tourism, traveler, excursionist, tourists- objectives, nature and classification of tourism and tourists, Growth and Development of Tourism, Forms of Tourism: Inbound Outbound, Domestic and International., Role of Ministry of Tourism, Govt. of India, Analysis of domestic, inbound and outbound tourism data.",
+            "topics": [
+              "Meaning and definitions of tourism, traveler, excursionist, tourists",
+              "objectives, nature and classification of tourism and tourists, Growth",
+              "and Development of Tourism, Forms of Tourism: Inbound",
+              "Outbound, Domestic and International., Role of Ministry of",
+              "Tourism, Govt. of India, Analysis of domestic, inbound and",
+              "outbound tourism data."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "The Modern Tour Industry",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Package Tours, Custom Tours, Tour wholesalers, Types of Package",
+              "tours: Independent Package, Hosted Tour, Escorted Tour,",
+              "Sightseeing Tour Group, Incentive and Convention Tour- Man",
+              "Market Package Holidays, Types of Tour Operations: Specialist",
+              "Tour Operators: Specialist Tour Operators, Tour Operators reliance",
+              "on other organization. Major tourist destinations of the world."
+            ],
+            "topics_text": "Package Tours, Custom Tours, Tour wholesalers, Types of Package tours: Independent Package, Hosted Tour, Escorted Tour, Sightseeing Tour Group, Incentive and Convention Tour- Man Market Package Holidays, Types of Tour Operations: Specialist Tour Operators: Specialist Tour Operators, Tour Operators reliance on other organization. Major tourist destinations of the world.",
+            "topics": [
+              "Package Tours, Custom Tours, Tour wholesalers, Types of Package",
+              "tours: Independent Package, Hosted Tour, Escorted Tour,",
+              "Sightseeing Tour Group, Incentive and Convention Tour- Man",
+              "Market Package Holidays, Types of Tour Operations: Specialist",
+              "Tour Operators: Specialist Tour Operators, Tour Operators reliance",
+              "on other organization. Major tourist destinations of the world."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Tour Operations and Documentation",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Sources of Income, how to set up a Travel Agency: Procedures for",
+              "approval of a Travel Agency and Tour Operator, Tour package",
+              "operations, Air ticketing, Accommodation, transportation,",
+              "sightseeing, tour guides., Travel Documentation: Passports- various",
+              "types and requirements- Procedure to apply for Passports: VISA-",
+              "various types and requirements- Documents required for Foreigners",
+              "to visit India, Health Check Documents and Process for Encashment",
+              "of Foreign Currency."
+            ],
+            "topics_text": "Sources of Income, how to set up a Travel Agency: Procedures for approval of a Travel Agency and Tour Operator, Tour package operations, Air ticketing, Accommodation, transportation, sightseeing, tour guides., Travel Documentation: Passports- various types and requirements- Procedure to apply for Passports: VISA- various types and requirements- Documents required for Foreigners to visit India, Health Check Documents and Process for Encashment of Foreign Currency.",
+            "topics": [
+              "Sources of Income, how to set up a Travel Agency: Procedures for",
+              "approval of a Travel Agency and Tour Operator, Tour package",
+              "operations, Air ticketing, Accommodation, transportation,",
+              "sightseeing, tour guides., Travel Documentation: Passports- various",
+              "types and requirements- Procedure to apply for Passports: VISA",
+              "various types and requirements- Documents required for Foreigners",
+              "to visit India, Health Check Documents and Process for Encashment",
+              "of Foreign Currency."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Impact of Tourism",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Economic impact, Social Impact, Cultural Impact and",
+              "Environmental Impact, Strategies to overcome or reduce the",
+              "negative Impact of Tourism"
+            ],
+            "topics_text": "Economic impact, Social Impact, Cultural Impact and Environmental Impact, Strategies to overcome or reduce the negative Impact of Tourism",
+            "topics": [
+              "Economic impact, Social Impact, Cultural Impact and",
+              "Environmental Impact, Strategies to overcome or reduce the",
+              "negative Impact of Tourism"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Tourism Organizations",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Objectives, Functions of- United Nations World Tourism",
+              "Organization (UNWTO), World Travel and Tourism Council",
+              "(WTC), Pacific Asia Travel Association (PATA), International Air",
+              "Transport Association (IATA), Travel Agents Association of India",
+              "(TAAI), Indian Association of Tour Operators (IATO) and",
+              "Federation of Hotel and Restaurant Associations of India (FHRAI).",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Tourism & travel management (2nd rev. ed.). , Ghosh, B. (n.d.), Vikas Publishing House",
+              "Pvt Ltd., 2001"
+            ],
+            "topics_text": "Objectives, Functions of- United Nations World Tourism Organization (UNWTO), World Travel and Tourism Council (WTC), Pacific Asia Travel Association (PATA), International Air Transport Association (IATA), Travel Agents Association of India (TAAI), Indian Association of Tour Operators (IATO) and Federation of Hotel and Restaurant Associations of India (FHRAI). Total Hours 30 Textbook : 1 Tourism & travel management (2nd rev. ed.). , Ghosh, B. (n.d.), Vikas Publishing House Pvt Ltd., 2001",
+            "topics": [
+              "Objectives, Functions of- United Nations World Tourism",
+              "Organization (UNWTO), World Travel and Tourism Council",
+              "(WTC), Pacific Asia Travel Association (PATA), International Air",
+              "Transport Association (IATA), Travel Agents Association of India",
+              "(TAAI), Indian Association of Tour Operators (IATO) and",
+              "Federation of Hotel and Restaurant Associations of India (FHRAI).",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Tourism & travel management (2nd rev. ed.). , Ghosh, B. (n.d.), Vikas Publishing House",
+              "Pvt Ltd., 2001"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Successful tourism management. , Successful tourism management. , Seth, P. N. , Sterling Publishers Pvt Ltd., 1997",
+          "International tourism. , International tourism. , Bhatia, A. K., Sterling Publishers Pvt Ltd., 2003"
+        ],
+        "textbooks": [
+          "Tourism & travel management (2nd rev. ed.). , Ghosh, B. (n.d.), Vikas Publishing House Pvt Ltd., 2001"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5444,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    TOURISM MANAGEMENT\nCOURSE CODE     04BB0311\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply basic concepts of tourism to understand different types of tourists and travel trends.\n 2  Analyze different types of tour packages and the role of tour operators.\n 3  Apply steps to set up a travel agency and manage tour arrangements like travel, stay, and\n     sightseeing.\n 4  Evaluate the process and importance of travel documents like passports, visas, and health\n     checks.\n 5  Analyze the role of government in tourism and use tourism data to understand travel\n     patterns.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        100     0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Travel:                                    7\n            Meaning and definitions of tourism, traveler, excursionist, tourists-\n               objectives, nature and classification of tourism and tourists, Growth\n            and Development of Tourism, Forms of Tourism: Inbound\n             Outbound, Domestic and International., Role of Ministry of\n             Tourism, Govt. of India, Analysis of domestic, inbound and\n             outbound tourism data.\n     2     The Modern Tour Industry                                7\n             Package Tours, Custom Tours, Tour wholesalers, Types of Package\n                tours: Independent Package, Hosted Tour, Escorted Tour,\n              Sightseeing Tour Group, Incentive and Convention Tour- Man\n            Market Package Holidays, Types of Tour Operations: Specialist\n            Tour Operators: Specialist Tour Operators, Tour Operators reliance\n            on other organization. Major tourist destinations of the world.\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3     Tour Operations and Documentation                        8\n             Sources of Income, how to set up a Travel Agency: Procedures for\n              approval of a Travel Agency and Tour Operator, Tour package\n               operations, Air ticketing, Accommodation, transportation,\n               sightseeing, tour guides., Travel Documentation: Passports- various\n              types and requirements- Procedure to apply for Passports: VISA-\n              various types and requirements- Documents required for Foreigners\n               to visit India, Health Check Documents and Process for Encashment\n              of Foreign Currency.\n     4      Impact of Tourism                                        4\n            Economic impact, Social Impact, Cultural Impact and\n             Environmental Impact, Strategies to overcome or reduce the\n              negative Impact of Tourism\n     5      Tourism Organizations                                    4\n               Objectives, Functions of- United Nations World Tourism\n              Organization (UNWTO), World Travel and Tourism Council\n           (WTC), Pacific Asia Travel Association (PATA), International Air\n              Transport Association (IATA), Travel Agents Association of India\n             (TAAI), Indian Association of Tour Operators (IATO) and\n              Federation of Hotel and Restaurant Associations of India (FHRAI).\n                               Total Hours                       30\n\n\nTextbook :\n 1  Tourism & travel management (2nd rev. ed.). , Ghosh, B. (n.d.), Vikas Publishing House\n     Pvt Ltd., 2001\n\nReferences:\n 1  Successful tourism management. , Successful tourism management. , Seth, P. N. , Sterling\n     Publishers Pvt Ltd., 1997\n 2  International tourism. , International tourism. , Bhatia, A. K., Sterling Publishers Pvt Ltd.,\n    2003\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "0fefe4c1d72e08576360f0846daf2a80c873abd9b07a69a97b22ba928583b7c2",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 5,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 4,
+    "extraction_errors": 0
+  }
+}

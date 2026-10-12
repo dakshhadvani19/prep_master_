@@ -1,0 +1,1659 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "bba-hons-",
+    "course_name": "BBA (HONS)",
+    "output_slug": "BBA_Hons"
+  },
+  "semester": 3,
+  "subject_count": 9,
+  "subjects": [
+    {
+      "subject_id": "21004318030101",
+      "subject_name": "CAREER READINESS PROGRAM",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 3,
+      "subject_code": "04CR0301",
+      "course_code_evidence": [
+        "04BB0102",
+        "04CR0301"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CRP.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CRP.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CAREER READINESS PROGRAM [481224513f76].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CAREER READINESS PROGRAM [481224513f76].pdf",
+      "expected_pdf_sha256": "9cd09a7ba6e3ee645236ac5336a0beac746ab11c182ec36dd381747a6bcb4cfd",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CAREER READINESS PROGRAM",
+        "course_code": "04CR0301",
+        "semester_label": "3",
+        "credits": 2,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "After successful completion of this course, student will be able to inculcate smart approach in logical problem solving",
+        "After successful completion of this course, student will be able to improve their analytical skills",
+        "After successful completion of this course, student will be able to learn importance of soft skills, personality & people skills",
+        "After successful completion of this course, student will be able to apply right mindset to solve problems Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 0 0 50 50",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction & Direction Sense",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Purpose & Importance of Aptitude Training Topics to be covered in",
+              "this semester Self-Introduction in brief Sub-topics: Identifying",
+              "Distance / Direction Degree related questions Coded distance/",
+              "direction"
+            ],
+            "topics_text": "Purpose & Importance of Aptitude Training Topics to be covered in this semester Self-Introduction in brief Sub-topics: Identifying Distance / Direction Degree related questions Coded distance/ direction",
+            "topics": [
+              "Purpose & Importance of Aptitude Training Topics to be covered in",
+              "this semester Self-Introduction in brief Sub-topics: Identifying",
+              "Distance / Direction Degree related questions Coded distance/",
+              "direction"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Coding-Decoding",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Sub-topics: Word coding Numeric coding Symbolic coding",
+              "Sentence coding"
+            ],
+            "topics_text": "Sub-topics: Word coding Numeric coding Symbolic coding Sentence coding",
+            "topics": [
+              "Sub-topics: Word coding Numeric coding Symbolic coding",
+              "Sentence coding"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Number & Letter Series",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Number and Alphabet Series Miscellaneous Examples"
+            ],
+            "topics_text": "Number and Alphabet Series Miscellaneous Examples",
+            "topics": [
+              "Number and Alphabet Series Miscellaneous Examples"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Class Test 1 and doubt solving session",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Class Test 1 and doubt solving session"
+            ],
+            "topics_text": "Class Test 1 and doubt solving session",
+            "topics": [
+              "Class Test 1 and doubt solving session"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Calendar",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Calculation of day of week on a given date Calculate day of week",
+              "based on another date given"
+            ],
+            "topics_text": "Calculation of day of week on a given date Calculate day of week based on another date given",
+            "topics": [
+              "Calculation of day of week on a given date Calculate day of week",
+              "based on another date given"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Clock – 1",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Calculation of angle between minute hand and hour hand",
+              "Calculation of minute between a given time when a particular angle",
+              "is formed"
+            ],
+            "topics_text": "Calculation of angle between minute hand and hour hand Calculation of minute between a given time when a particular angle is formed",
+            "topics": [
+              "Calculation of angle between minute hand and hour hand",
+              "Calculation of minute between a given time when a particular angle",
+              "is formed"
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Clock – 2",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Gaining & Losing examples Mirror time"
+            ],
+            "topics_text": "Gaining & Losing examples Mirror time",
+            "topics": [
+              "Gaining & Losing examples Mirror time"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Non-Verbal Reasoning",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Mirror Images, Water Images, Spotting Out Embedded figures,",
+              "Completion of Incomplete Patterns, Figure Matrix, Figure formation",
+              "&amp; Analysis, Paper Folding, Paper Cutting, Rule Detection,",
+              "Grouping of Identical Figures, Dot Situation and Construction of",
+              "Square &amp; Triangle"
+            ],
+            "topics_text": "Mirror Images, Water Images, Spotting Out Embedded figures, Completion of Incomplete Patterns, Figure Matrix, Figure formation &amp; Analysis, Paper Folding, Paper Cutting, Rule Detection, Grouping of Identical Figures, Dot Situation and Construction of Square &amp; Triangle",
+            "topics": [
+              "Mirror Images, Water Images, Spotting Out Embedded figures,",
+              "Completion of Incomplete Patterns, Figure Matrix, Figure formation",
+              "&amp",
+              "Analysis, Paper Folding, Paper Cutting, Rule Detection,",
+              "Grouping of Identical Figures, Dot Situation and Construction of",
+              "Square &amp",
+              "Triangle"
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Class Test 2 and doubt solving session",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Class Test 2 and doubt solving session"
+            ],
+            "topics_text": "Class Test 2 and doubt solving session",
+            "topics": [
+              "Class Test 2 and doubt solving session"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Types pf Numbers and Divisibility Test",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Classification of numbers Divisibility rules for different numbers"
+            ],
+            "topics_text": "Classification of numbers Divisibility rules for different numbers",
+            "topics": [
+              "Classification of numbers Divisibility rules for different numbers"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "HCF & LCM – 1",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Sub topics: Calculation of HCF and LCM Find smallest & largest",
+              "numbers divisible by given numbers"
+            ],
+            "topics_text": "Sub topics: Calculation of HCF and LCM Find smallest & largest numbers divisible by given numbers",
+            "topics": [
+              "Sub topics: Calculation of HCF and LCM Find smallest & largest",
+              "numbers divisible by given numbers"
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "HCF & LCM – 2",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Common remainder & difference between number and remainder",
+              "type Calculation of LCM & HCF of Fraction Numbers"
+            ],
+            "topics_text": "Common remainder & difference between number and remainder type Calculation of LCM & HCF of Fraction Numbers",
+            "topics": [
+              "Common remainder & difference between number and remainder",
+              "type Calculation of LCM & HCF of Fraction Numbers"
+            ]
+          },
+          {
+            "unit_number": 13,
+            "title": "Class Test 3 and doubt solving session",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Class Test 3 and doubt solving session"
+            ],
+            "topics_text": "Class Test 3 and doubt solving session",
+            "topics": [
+              "Class Test 3 and doubt solving session"
+            ]
+          },
+          {
+            "unit_number": 14,
+            "title": "Post Assessment Test and Revision",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Post Assessment Test and Revision"
+            ],
+            "topics_text": "Post Assessment Test and Revision",
+            "topics": [
+              "Post Assessment Test and Revision"
+            ]
+          },
+          {
+            "unit_number": 15,
+            "title": "Creative Thinking : Logic, Power or reasoning & Power of",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Ideas",
+              "Creative Thinking : Logic, Power or reasoning & Power of Ideas"
+            ],
+            "topics_text": "Ideas Creative Thinking : Logic, Power or reasoning & Power of Ideas",
+            "topics": [
+              "Ideas",
+              "Creative Thinking : Logic, Power or reasoning & Power of Ideas"
+            ]
+          },
+          {
+            "unit_number": 16,
+            "title": "Critical Thinking : Decision Making, Questioning & Evaluation",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Critical Thinking : Decision Making, Questioning & Evaluation"
+            ],
+            "topics_text": "Critical Thinking : Decision Making, Questioning & Evaluation",
+            "topics": [
+              "Critical Thinking : Decision Making, Questioning & Evaluation"
+            ]
+          },
+          {
+            "unit_number": 17,
+            "title": "Power of Listening: Listening as a Skills, How to Listen, Types",
+            "contact_hours": 2,
+            "topic_lines": [
+              "of non-listening",
+              "Power of Listening: Listening as a Skills, How to Listen, Types of",
+              "non-listening"
+            ],
+            "topics_text": "of non-listening Power of Listening: Listening as a Skills, How to Listen, Types of non-listening",
+            "topics": [
+              "of non-listening",
+              "Power of Listening: Listening as a Skills, How to Listen, Types of",
+              "non-listening"
+            ]
+          },
+          {
+            "unit_number": 18,
+            "title": "Problem Solving : Lateral Thinking",
+            "contact_hours": 2,
+            "topic_lines": [
+              "Problem Solving : Lateral Thinking"
+            ],
+            "topics_text": "Problem Solving : Lateral Thinking",
+            "topics": [
+              "Problem Solving : Lateral Thinking"
+            ]
+          },
+          {
+            "unit_number": 19,
+            "title": "Group Discussion : Abstract, Socio Economical, SPELT",
+            "contact_hours": 3,
+            "topic_lines": [
+              "Technique",
+              "Group Discussion : Abstract, Socio Economical, SPELT Technique"
+            ],
+            "topics_text": "Technique Group Discussion : Abstract, Socio Economical, SPELT Technique",
+            "topics": [
+              "Technique",
+              "Group Discussion : Abstract, Socio Economical, SPELT Technique"
+            ]
+          },
+          {
+            "unit_number": 20,
+            "title": "Exam Preparation",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Exam Preparation",
+              "Total Hours 28",
+              "Textbook :",
+              "1 Analytic Reasoning, M K Pandey,, BSC Publishing Co. Pvt. Ltd, 2018"
+            ],
+            "topics_text": "Exam Preparation Total Hours 28 Textbook : 1 Analytic Reasoning, M K Pandey,, BSC Publishing Co. Pvt. Ltd, 2018",
+            "topics": [
+              "Exam Preparation",
+              "Total Hours 28",
+              "Textbook :",
+              "1 Analytic Reasoning, M K Pandey,, BSC Publishing Co. Pvt. Ltd, 2018"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "Analytic Reasoning, M K Pandey,, BSC Publishing Co. Pvt. Ltd, 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6361,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         3\nCOURSE TITLE   CAREER READINESS PROGRAM\nCOURSE CODE     04CR0301\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  After successful completion of this course, student will be able to inculcate smart approach\n     in logical problem solving\n 2  After successful completion of this course, student will be able to improve their analytical\n      skills\n 3  After successful completion of this course, student will be able to learn importance of soft\n      skills, personality & people skills\n 4  After successful completion of this course, student will be able to apply right mindset to\n     solve problems\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0      0       0        50         50\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction & Direction Sense                             1\n             Purpose & Importance of Aptitude Training Topics to be covered in\n                 this semester Self-Introduction in brief Sub-topics: Identifying\n              Distance / Direction Degree related questions Coded distance/\n               direction\n     2      Coding-Decoding                                         1\n              Sub-topics: Word coding Numeric coding Symbolic coding\n             Sentence coding\n     3     Number & Letter Series                                   1\n           Number and Alphabet Series Miscellaneous Examples\n     4      Class Test 1 and doubt solving session                       1\n              Class Test 1 and doubt solving session\n     5      Calendar                                                1\n              Calculation of day of week on a given date Calculate day of week\n             based on another date given\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     6      Clock – 1                                                1\n              Calculation of angle between minute hand and hour hand\n              Calculation of minute between a given time when a particular angle\n                  is formed\n     7      Clock – 2                                                1\n             Gaining & Losing examples Mirror time\n     8      Non-Verbal Reasoning                                    1\n             Mirror Images, Water Images, Spotting Out Embedded figures,\n             Completion of Incomplete Patterns, Figure Matrix, Figure formation\n           &amp; Analysis, Paper Folding, Paper Cutting, Rule Detection,\n            Grouping of Identical Figures, Dot Situation and Construction of\n             Square &amp; Triangle\n     9      Class Test 2 and doubt solving session                       1\n              Class Test 2 and doubt solving session\n     10     Types pf Numbers and Divisibility Test                      1\n               Classification of numbers Divisibility rules for different numbers\n     11    HCF & LCM – 1                                         1\n            Sub topics: Calculation of HCF and LCM Find smallest & largest\n            numbers divisible by given numbers\n     12    HCF & LCM – 2                                         1\n          Common remainder & difference between number and remainder\n              type Calculation of LCM & HCF of Fraction Numbers\n     13      Class Test 3 and doubt solving session                       1\n              Class Test 3 and doubt solving session\n     14      Post Assessment Test and Revision                          1\n              Post Assessment Test and Revision\n     15      Creative Thinking : Logic, Power or reasoning & Power of      3\n             Ideas\n              Creative Thinking : Logic, Power or reasoning & Power of Ideas\n     16       Critical Thinking : Decision Making, Questioning & Evaluation 3\n                Critical Thinking : Decision Making, Questioning & Evaluation\n     17     Power of Listening: Listening as a Skills, How to Listen, Types  2\n              of non-listening\n            Power of Listening: Listening as a Skills, How to Listen, Types of\n               non-listening\n     18     Problem Solving : Lateral Thinking                         2\n            Problem Solving : Lateral Thinking\n     19     Group Discussion : Abstract, Socio Economical, SPELT        3\n            Technique\n            Group Discussion : Abstract, Socio Economical, SPELT Technique\n     20    Exam Preparation                                        1\n          Exam Preparation\n                               Total Hours                       28\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Textbook :\n 1  Analytic Reasoning, M K Pandey,, BSC Publishing Co. Pvt. Ltd, 2018\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "9cd09a7ba6e3ee645236ac5336a0beac746ab11c182ec36dd381747a6bcb4cfd",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000422030901",
+      "subject_name": "COST ACCOUNTING",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 3,
+      "subject_code": "04BB0309",
+      "course_code_evidence": [
+        "04BB0309",
+        "04BB1304",
+        "04BB1307",
+        "04BH0302",
+        "04CR0301"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CA.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CA.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/COST ACCOUNTING [b2e354d6d278].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/COST ACCOUNTING [b2e354d6d278].pdf",
+      "expected_pdf_sha256": "e55725b1ab431b330e559e1244051af84c3ed4b655be8f2a8008f6d0c9b5d540",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COST ACCOUNTING",
+        "course_code": "04BB0309",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand fundamentals of cost accounting",
+        "Analyse the cost concepts associated with material and labour",
+        "Evaluate and apply overheads apportionment and distribution",
+        "Learn to apply job and process costing methods",
+        "Understand operating costing and its application Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamentals of Cost accounting",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Objectives and functions of cost accounting, Meaning of",
+              "Cost,Methods of costing,Techniques of costing,Cost ascertainment",
+              "and cost estimation, Classifications of cost,Special costs for",
+              "management decision making,Elements of cost, Steps of installation",
+              "of a costing system,Advantages of cost accounting,Limitations or",
+              "objections against cost accounting,Essentials of a good cost",
+              "accounting system"
+            ],
+            "topics_text": "Objectives and functions of cost accounting, Meaning of Cost,Methods of costing,Techniques of costing,Cost ascertainment and cost estimation, Classifications of cost,Special costs for management decision making,Elements of cost, Steps of installation of a costing system,Advantages of cost accounting,Limitations or objections against cost accounting,Essentials of a good cost accounting system",
+            "topics": [
+              "Objectives and functions of cost accounting, Meaning of",
+              "Cost,Methods of costing,Techniques of costing,Cost ascertainment",
+              "and cost estimation, Classifications of cost,Special costs for",
+              "management decision making,Elements of cost, Steps of installation",
+              "of a costing system,Advantages of cost accounting,Limitations or",
+              "objections against cost accounting,Essentials of a good cost",
+              "accounting system"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Direct Expense",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Material Cost: Material Control, Techniques of inventory control;",
+              "ABC, Stock Levels and Economic order Quantity. Proper storage of",
+              "Materials, Labour Cost: Meaning, Labour Remuneration: Methods",
+              "of Remuneration: Time rate system, Piece rate system, Incentive",
+              "plans, Group bonus plans"
+            ],
+            "topics_text": "Material Cost: Material Control, Techniques of inventory control; ABC, Stock Levels and Economic order Quantity. Proper storage of Materials, Labour Cost: Meaning, Labour Remuneration: Methods of Remuneration: Time rate system, Piece rate system, Incentive plans, Group bonus plans",
+            "topics": [
+              "Material Cost: Material Control, Techniques of inventory control",
+              "ABC, Stock Levels and Economic order Quantity. Proper storage of",
+              "Materials, Labour Cost: Meaning, Labour Remuneration: Methods",
+              "of Remuneration: Time rate system, Piece rate system, Incentive",
+              "plans, Group bonus plans"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Overheads",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Meaning of overhead cost, Classification of overhead cost,",
+              "Segregation of semi-variable cost, overheads distribution,",
+              "Allocation and apportionment of overheads (primary distribution),",
+              "Re-apportionment of service department cost (secondary",
+              "distribution), Unit Costing: output costing, Costing procedure,",
+              "Treatment of Stocks, Items Excluded from Cost, Treatment of Scrap"
+            ],
+            "topics_text": "Meaning of overhead cost, Classification of overhead cost, Segregation of semi-variable cost, overheads distribution, Allocation and apportionment of overheads (primary distribution), Re-apportionment of service department cost (secondary distribution), Unit Costing: output costing, Costing procedure, Treatment of Stocks, Items Excluded from Cost, Treatment of Scrap",
+            "topics": [
+              "Meaning of overhead cost, Classification of overhead cost,",
+              "Segregation of semi-variable cost, overheads distribution,",
+              "Allocation and apportionment of overheads (primary distribution),",
+              "Re-apportionment of service department cost (secondary",
+              "distribution), Unit Costing: output costing, Costing procedure,",
+              "Treatment of Stocks, Items Excluded from Cost, Treatment of Scrap"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Methods of costing",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Job and Batch Costing: Job Costing Procedure, Batch costing,",
+              "Economic Batch Quantity, Process Costing: Introduction, Essential",
+              "Characteristics of Process Costing, Process Costing and Job",
+              "Costing— A Comparison, Costing Procedure, Normal Loss and",
+              "abnormal loss, Normal Gain and abnormal Gain"
+            ],
+            "topics_text": "Job and Batch Costing: Job Costing Procedure, Batch costing, Economic Batch Quantity, Process Costing: Introduction, Essential Characteristics of Process Costing, Process Costing and Job Costing— A Comparison, Costing Procedure, Normal Loss and abnormal loss, Normal Gain and abnormal Gain",
+            "topics": [
+              "Job and Batch Costing: Job Costing Procedure, Batch costing,",
+              "Economic Batch Quantity, Process Costing: Introduction, Essential",
+              "Characteristics of Process Costing, Process Costing and Job",
+              "Costing— A Comparison, Costing Procedure, Normal Loss and",
+              "abnormal loss, Normal Gain and abnormal Gain"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Methods of Costing - II",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Operating Costing: Operating costing, Cost unit, Transport costing,",
+              "Transport costing procedure, Boiler house and power house costing,",
+              "Canteen costing",
+              "Total Hours 48",
+              "Textbook :",
+              "1 A Textbook on Cost and Management, M. N. Arora , Vikas Publication, 2021",
+              "2 Cost and Management Accounting, Paresh Shah , Oxford Publication, 2015"
+            ],
+            "topics_text": "Operating Costing: Operating costing, Cost unit, Transport costing, Transport costing procedure, Boiler house and power house costing, Canteen costing Total Hours 48 Textbook : 1 A Textbook on Cost and Management, M. N. Arora , Vikas Publication, 2021 2 Cost and Management Accounting, Paresh Shah , Oxford Publication, 2015",
+            "topics": [
+              "Operating Costing: Operating costing, Cost unit, Transport costing,",
+              "Transport costing procedure, Boiler house and power house costing,",
+              "Canteen costing",
+              "Total Hours 48",
+              "Textbook :",
+              "1 A Textbook on Cost and Management, M. N. Arora , Vikas Publication, 2021",
+              "2 Cost and Management Accounting, Paresh Shah , Oxford Publication, 2015"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Cost and Management Accounting, Cost and Management Accounting, Ravi M kishore , Taxmann, 2020",
+          "Cost Accounting , Cost Accounting , V Rajshekharn&Lalitha, Pearson, 2011",
+          "Cost Accounting, Cost Accounting, CharlesT, Horngren, S M, Pearson , 2005",
+          "Cost Accounting , Cost Accounting , P C Tulsian , S Chand , 2016",
+          "Management Accounting , Management Accounting , Khan and Jain, TMH, 2021"
+        ],
+        "textbooks": [
+          "A Textbook on Cost and Management, M. N. Arora , Vikas Publication, 2021",
+          "Cost and Management Accounting, Paresh Shah , Oxford Publication, 2015"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "www.icmai.in",
+          "www.icai.org/post/intermediate-course",
+          "www.icsi.org"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5345,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         3\nCOURSE TITLE    COST ACCOUNTING\nCOURSE CODE     04BB0309\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand fundamentals of cost accounting\n 2  Analyse the cost concepts associated with material and labour\n 3  Evaluate and apply overheads apportionment and distribution\n 4  Learn to apply job and process costing methods\n 5  Understand operating costing and its application\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fundamentals of Cost accounting                           8\n              Objectives and functions of cost accounting, Meaning of\n             Cost,Methods of costing,Techniques of costing,Cost ascertainment\n            and cost estimation, Classifications of cost,Special costs for\n            management decision making,Elements of cost, Steps of installation\n              of a costing system,Advantages of cost accounting,Limitations or\n               objections against cost accounting,Essentials of a good cost\n              accounting system\n     2       Direct Expense                                           9\n              Material Cost: Material Control, Techniques of inventory control;\n          ABC, Stock Levels and Economic order Quantity. Proper storage of\n               Materials, Labour Cost: Meaning, Labour Remuneration: Methods\n              of Remuneration: Time rate system, Piece rate system, Incentive\n               plans, Group bonus plans\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Overheads                                              11\n            Meaning of overhead cost, Classification of overhead cost,\n              Segregation of semi-variable cost, overheads distribution,\n              Allocation and apportionment of overheads (primary distribution),\n             Re-apportionment of service department cost (secondary\n                distribution), Unit Costing: output costing, Costing procedure,\n             Treatment of Stocks, Items Excluded from Cost, Treatment of Scrap\n     4     Methods of costing                                        11\n             Job and Batch Costing: Job Costing Procedure, Batch costing,\n            Economic Batch Quantity, Process Costing: Introduction, Essential\n               Characteristics of Process Costing, Process Costing and Job\n            Costing— A Comparison, Costing Procedure, Normal Loss and\n             abnormal loss, Normal Gain and abnormal Gain\n     5     Methods of Costing - II                                    9\n             Operating Costing: Operating costing, Cost unit, Transport costing,\n              Transport costing procedure, Boiler house and power house costing,\n             Canteen costing\n                               Total Hours                       48\n\n\nTextbook :\n 1 A Textbook on Cost and Management, M. N. Arora , Vikas Publication, 2021\n 2  Cost and Management Accounting, Paresh Shah , Oxford Publication, 2015\n\nReferences:\n 1  Cost and Management Accounting, Cost and Management Accounting, Ravi M kishore ,\n    Taxmann, 2020\n 2  Cost Accounting , Cost Accounting , V Rajshekharn&Lalitha, Pearson, 2011\n 3  Cost Accounting, Cost Accounting, CharlesT, Horngren, S M, Pearson , 2005\n 4  Cost Accounting , Cost Accounting , P C Tulsian , S Chand , 2016\n 5  Management Accounting , Management Accounting , Khan and Jain, TMH, 2021\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 1  www.icmai.in\n 2  www.icai.org/post/intermediate-course\n 3  www.icsi.org\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "e55725b1ab431b330e559e1244051af84c3ed4b655be8f2a8008f6d0c9b5d540",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000422030501",
+      "subject_name": "FINANCIAL MANAGEMENT",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 3,
+      "subject_code": "04BB0305",
+      "course_code_evidence": [
+        "04BB0305",
+        "04BB0308",
+        "04BB0309",
+        "04BB1304",
+        "04BB1307"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FM.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FM.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FINANCIAL MANAGEMENT [c73370e858e4].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FINANCIAL MANAGEMENT [c73370e858e4].pdf",
+      "expected_pdf_sha256": "163bca730b043bc17f5bf2e8d02accd56b85e1104379e4ee75440a27b9133f73",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "FINANCIAL MANAGEMENT",
+        "course_code": "04BB0305",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand how to maximize shareholders value by applying various financial decision.",
+        "Compute cost of capital, capital budgeting, dividend decision and working capital.",
+        "Learn various sources of finance.",
+        "Understand capital structure theories and its importance. Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Financial management",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Meaning, Nature and Scope, Functions and objectives. Wealth Vs.",
+              "Profit Maximization, Role of Finance Manager in 21st Century,",
+              "Time Value of Money: Concept, covering Compounding,",
+              "Discounting and annuity (Numerical)."
+            ],
+            "topics_text": "Meaning, Nature and Scope, Functions and objectives. Wealth Vs. Profit Maximization, Role of Finance Manager in 21st Century, Time Value of Money: Concept, covering Compounding, Discounting and annuity (Numerical).",
+            "topics": [
+              "Meaning, Nature and Scope, Functions and objectives. Wealth Vs.",
+              "Profit Maximization, Role of Finance Manager in 21st Century,",
+              "Time Value of Money: Concept, covering Compounding,",
+              "Discounting and annuity (Numerical)."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Financing Decision",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Sources of Financing – Equity, preferred and debt capital., Cost of",
+              "Capital: Cost of equity, preferred and debt capital, weighted average",
+              "cost of Capital (WACC), Capital Structure – determinants, theories",
+              "– NI, NOI & MM Hypothesis, Leverage – Operating, financial &",
+              "combined"
+            ],
+            "topics_text": "Sources of Financing – Equity, preferred and debt capital., Cost of Capital: Cost of equity, preferred and debt capital, weighted average cost of Capital (WACC), Capital Structure – determinants, theories – NI, NOI & MM Hypothesis, Leverage – Operating, financial & combined",
+            "topics": [
+              "Sources of Financing – Equity, preferred and debt capital., Cost of",
+              "Capital: Cost of equity, preferred and debt capital, weighted average",
+              "cost of Capital (WACC), Capital Structure – determinants, theories",
+              "– NI, NOI & MM Hypothesis, Leverage – Operating, financial &",
+              "combined"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Capital budgeting",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Nature of investment decisions, different source of investment,",
+              "investment appraisal methods – Non discounting cash flow methods",
+              "(Payback period, ARR) and discounting cash flow methods (NPV,",
+              "IRR & PI)."
+            ],
+            "topics_text": "Nature of investment decisions, different source of investment, investment appraisal methods – Non discounting cash flow methods (Payback period, ARR) and discounting cash flow methods (NPV, IRR & PI).",
+            "topics": [
+              "Nature of investment decisions, different source of investment,",
+              "investment appraisal methods – Non discounting cash flow methods",
+              "(Payback period, ARR) and discounting cash flow methods (NPV,",
+              "IRR & PI)."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Dividend decisions",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Types, dividend distribution practices, Walter’s, Gordon’s & MM",
+              "dividend models, principles of dividend policy, Dividend payment",
+              "practices in corporate India."
+            ],
+            "topics_text": "Types, dividend distribution practices, Walter’s, Gordon’s & MM dividend models, principles of dividend policy, Dividend payment practices in corporate India.",
+            "topics": [
+              "Types, dividend distribution practices, Walter’s, Gordon’s & MM",
+              "dividend models, principles of dividend policy, Dividend payment",
+              "practices in corporate India."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Working capital",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Meaning, significance and classification, Financing & sources of",
+              "working capital, estimation of working capital requirement,",
+              "operating cycle period. Basic concepts of cash, receivables, &",
+              "inventory management, New dimensions in management of working",
+              "capital in modern era",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Financial Management, Prasanna Chandra, McGraw-Hill, 2019"
+            ],
+            "topics_text": "Meaning, significance and classification, Financing & sources of working capital, estimation of working capital requirement, operating cycle period. Basic concepts of cash, receivables, & inventory management, New dimensions in management of working capital in modern era Total Hours 48 Textbook : 1 Financial Management, Prasanna Chandra, McGraw-Hill, 2019",
+            "topics": [
+              "Meaning, significance and classification, Financing & sources of",
+              "working capital, estimation of working capital requirement,",
+              "operating cycle period. Basic concepts of cash, receivables, &",
+              "inventory management, New dimensions in management of working",
+              "capital in modern era",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Financial Management, Prasanna Chandra, McGraw-Hill, 2019"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Financial Management, Financial Management, I.M. Pandey, Vikas Publication, 2019",
+          "Financial Management, Financial Management, M.Y. Khan and P.K. Jain, McGraw-Hill, 2018"
+        ],
+        "textbooks": [
+          "Financial Management, Prasanna Chandra, McGraw-Hill, 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.managementstudyguide.com/financial-management.htm",
+          "https://www.netsuite.com/portal/resource/articles/financial-management/financial- management.shtml"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4504,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         3\nCOURSE TITLE    FINANCIAL MANAGEMENT\nCOURSE CODE     04BB0305\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand how to maximize shareholders value by applying various financial decision.\n 2  Compute cost of capital, capital budgeting, dividend decision and working capital.\n 3  Learn various sources of finance.\n 4  Understand capital structure theories and its importance.\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Financial management                                    8\n             Meaning, Nature and Scope, Functions and objectives. Wealth Vs.\n                Profit Maximization, Role of Finance Manager in 21st Century,\n           Time Value of Money: Concept, covering Compounding,\n             Discounting and annuity (Numerical).\n     2      Financing Decision                                       12\n             Sources of Financing – Equity, preferred and debt capital., Cost of\n               Capital: Cost of equity, preferred and debt capital, weighted average\n               cost of Capital (WACC), Capital Structure – determinants, theories\n            – NI, NOI & MM Hypothesis, Leverage – Operating, financial &\n            combined\n     3      Capital budgeting                                        12\n             Nature of investment decisions, different source of investment,\n              investment appraisal methods – Non discounting cash flow methods\n             (Payback period, ARR) and discounting cash flow methods (NPV,\n           IRR & PI).\n     4      Dividend decisions                                        6\n             Types, dividend distribution practices, Walter’s, Gordon’s & MM\n              dividend models, principles of dividend policy, Dividend payment\n               practices in corporate India.\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5     Working capital                                          10\n             Meaning, significance and classification, Financing & sources of\n             working capital, estimation of working capital requirement,\n              operating cycle period. Basic concepts of cash, receivables, &\n              inventory management, New dimensions in management of working\n                capital in modern era\n                               Total Hours                       48\n\n\nTextbook :\n 1  Financial Management, Prasanna Chandra, McGraw-Hill, 2019\n\nReferences:\n 1  Financial Management, Financial Management, I.M. Pandey, Vikas Publication, 2019\n 2  Financial Management, Financial Management, M.Y. Khan and P.K. Jain, McGraw-Hill,\n    2018\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1  https://www.managementstudyguide.com/financial-management.htm\n 2  https://www.netsuite.com/portal/resource/articles/financial-management/financial-\n    management.shtml\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "163bca730b043bc17f5bf2e8d02accd56b85e1104379e4ee75440a27b9133f73",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000422130701",
+      "subject_name": "FUNDAMENTALS OF DIGITAL MARKETING",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 3,
+      "subject_code": "04BB1307",
+      "course_code_evidence": [
+        "04BB1307",
+        "04BH0302",
+        "04CR0301"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FDM.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FDM.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FUNDAMENTALS OF DIGITAL MARKETING [4ec6d99757a1].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FUNDAMENTALS OF DIGITAL MARKETING [4ec6d99757a1].pdf",
+      "expected_pdf_sha256": "45d399b45acad7768cd3b21e4e9f42183035756f7617386ede018ade73c81eda",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "FUNDAMENTALS OF DIGITAL MARKETING",
+        "course_code": "04BB1307",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand the Digital Marketing Environment for business",
+        "Understand Various Digital Marketing Platforms and its applications",
+        "Compare and Analyze various tools of Digital Marketing",
+        "Comprehend the idea SEO & Digital Display Ads",
+        "Evaluate Web-Analytics reports and Developing Appropriate Strategies Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Digital Marketing",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Evolution of Digital Marketing - Role of Internet in Modern Day",
+              "Business – Understanding the new marketing environment -",
+              "Traditional V/s Digital Marketing, POEM Framework – Defining",
+              "Visibility, Engagement, Traffic, Leads, Conversion; Role of",
+              "Websites for Business - Digital Marketing Plan"
+            ],
+            "topics_text": "Evolution of Digital Marketing - Role of Internet in Modern Day Business – Understanding the new marketing environment - Traditional V/s Digital Marketing, POEM Framework – Defining Visibility, Engagement, Traffic, Leads, Conversion; Role of Websites for Business - Digital Marketing Plan",
+            "topics": [
+              "Evolution of Digital Marketing - Role of Internet in Modern Day",
+              "Business – Understanding the new marketing environment",
+              "Traditional V/s Digital Marketing, POEM Framework – Defining",
+              "Visibility, Engagement, Traffic, Leads, Conversion",
+              "Role of",
+              "Websites for Business - Digital Marketing Plan"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Digital Marketing Platform",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to platforms for digital advertising - Websites – Blogs",
+              "– Social Media Platforms – Mobile Apps – Audio Based Platforms",
+              "– Video Based Platforms"
+            ],
+            "topics_text": "Introduction to platforms for digital advertising - Websites – Blogs – Social Media Platforms – Mobile Apps – Audio Based Platforms – Video Based Platforms",
+            "topics": [
+              "Introduction to platforms for digital advertising - Websites – Blogs",
+              "– Social Media Platforms – Mobile Apps – Audio Based Platforms",
+              "– Video Based Platforms"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Digital Marketing Tools",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Display Marketing - Types of Display Ads – Ad Buying – Ad",
+              "Evaluation (CPC, CPM, CTR) – Programmable DM, Search Engine",
+              "Advertising - Types of Search Ads – Payment Mechanism – Ad",
+              "Ranks – Creating Ad Campaigns"
+            ],
+            "topics_text": "Display Marketing - Types of Display Ads – Ad Buying – Ad Evaluation (CPC, CPM, CTR) – Programmable DM, Search Engine Advertising - Types of Search Ads – Payment Mechanism – Ad Ranks – Creating Ad Campaigns",
+            "topics": [
+              "Display Marketing - Types of Display Ads – Ad Buying – Ad",
+              "Evaluation (CPC, CPM, CTR) – Programmable DM, Search Engine",
+              "Advertising - Types of Search Ads – Payment Mechanism – Ad",
+              "Ranks – Creating Ad Campaigns"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "SEO & SEM",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction to SEO – How it Works - On Page & Off Page",
+              "optimization – Keywords – Page Naming – Robots.txt - Crawlers –",
+              "Backlinks - Page Rank – RSS Feeds – Alexa Integration,",
+              "Introduction to SEM – PPC – CPA – Platforms for Paid Search;",
+              "Generating SEO Reports"
+            ],
+            "topics_text": "Introduction to SEO – How it Works - On Page & Off Page optimization – Keywords – Page Naming – Robots.txt - Crawlers – Backlinks - Page Rank – RSS Feeds – Alexa Integration, Introduction to SEM – PPC – CPA – Platforms for Paid Search; Generating SEO Reports",
+            "topics": [
+              "Introduction to SEO – How it Works - On Page & Off Page",
+              "optimization – Keywords – Page Naming – Robots.txt - Crawlers –",
+              "Backlinks - Page Rank – RSS Feeds – Alexa Integration,",
+              "Introduction to SEM – PPC – CPA – Platforms for Paid Search",
+              "Generating SEO Reports"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Analytics",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Web Analytics Options – Google Analytics - Mechanism of GA –",
+              "Cookie Tracking – Understanding Bounce Rate & Exit Rates –",
+              "Monitoring Traffic Sources and Behaviors",
+              "Total Hours 50",
+              "Textbook :",
+              "1 Digital Marketing, Seema Gupta , TMH , 2020",
+              "2 Fundamentals of Digital Marketing, Punit Bhatia , Pearson , 2019",
+              "3 Digital Marketing - Strategy & Tactics, Jeremy Kagan, Siddharth Shekhar Singh, Wiley ,",
+              "2020"
+            ],
+            "topics_text": "Web Analytics Options – Google Analytics - Mechanism of GA – Cookie Tracking – Understanding Bounce Rate & Exit Rates – Monitoring Traffic Sources and Behaviors Total Hours 50 Textbook : 1 Digital Marketing, Seema Gupta , TMH , 2020 2 Fundamentals of Digital Marketing, Punit Bhatia , Pearson , 2019 3 Digital Marketing - Strategy & Tactics, Jeremy Kagan, Siddharth Shekhar Singh, Wiley , 2020",
+            "topics": [
+              "Web Analytics Options – Google Analytics - Mechanism of GA –",
+              "Cookie Tracking – Understanding Bounce Rate & Exit Rates –",
+              "Monitoring Traffic Sources and Behaviors",
+              "Total Hours 50",
+              "Textbook :",
+              "1 Digital Marketing, Seema Gupta , TMH , 2020",
+              "2 Fundamentals of Digital Marketing, Punit Bhatia , Pearson , 2019",
+              "3 Digital Marketing - Strategy & Tactics, Jeremy Kagan, Siddharth Shekhar Singh, Wiley ,",
+              "2020"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Digital Marketing for Dummies, Digital Marketing for Dummies, Ryan Deiss, Russ Henneberry, Wiley , 2020",
+          "The Art of Social Media , The Art of Social Media , Guy Kawasaki, Peg Fitzpatrick, Portfolio , 2015",
+          "Social Media and Mobile Marketing, Social Media and Mobile Marketing, Punit Bhatia , Wiley , 2019"
+        ],
+        "textbooks": [
+          "Digital Marketing, Seema Gupta , TMH , 2020",
+          "Fundamentals of Digital Marketing, Punit Bhatia , Pearson , 2019",
+          "Digital Marketing - Strategy & Tactics, Jeremy Kagan, Siddharth Shekhar Singh, Wiley , 2020"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4601,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         3\nCOURSE TITLE   FUNDAMENTALS OF DIGITAL MARKETING\nCOURSE CODE     04BB1307\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the Digital Marketing Environment for business\n 2  Understand Various Digital Marketing Platforms and its applications\n 3  Compare and Analyze various tools of Digital Marketing\n 4  Comprehend the idea SEO & Digital Display Ads\n 5  Evaluate Web-Analytics reports and Developing Appropriate Strategies\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Digital Marketing                           8\n              Evolution of Digital Marketing - Role of Internet in Modern Day\n             Business – Understanding the new marketing environment -\n               Traditional V/s Digital Marketing, POEM Framework – Defining\n                Visibility, Engagement, Traffic, Leads, Conversion; Role of\n             Websites for Business - Digital Marketing Plan\n     2       Digital Marketing Platform                                10\n               Introduction to platforms for digital advertising - Websites – Blogs\n            – Social Media Platforms – Mobile Apps – Audio Based Platforms\n            – Video Based Platforms\n     3       Digital Marketing Tools                                   12\n             Display Marketing - Types of Display Ads – Ad Buying – Ad\n              Evaluation (CPC, CPM, CTR) – Programmable DM, Search Engine\n              Advertising - Types of Search Ads – Payment Mechanism – Ad\n            Ranks – Creating Ad Campaigns\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4    SEO & SEM                                             12\n               Introduction to SEO – How it Works - On Page & Off Page\n              optimization – Keywords – Page Naming – Robots.txt - Crawlers –\n             Backlinks - Page Rank – RSS Feeds – Alexa Integration,\n               Introduction to SEM – PPC – CPA – Platforms for Paid Search;\n             Generating SEO Reports\n     5       Analytics                                                8\n          Web Analytics Options – Google Analytics - Mechanism of GA –\n            Cookie Tracking – Understanding Bounce Rate & Exit Rates –\n             Monitoring Traffic Sources and Behaviors\n                               Total Hours                       50\n\n\nTextbook :\n 1  Digital Marketing, Seema Gupta , TMH , 2020\n 2  Fundamentals of Digital Marketing, Punit Bhatia , Pearson , 2019\n 3  Digital Marketing - Strategy & Tactics, Jeremy Kagan, Siddharth Shekhar Singh, Wiley ,\n    2020\n\nReferences:\n 1  Digital Marketing for Dummies, Digital Marketing for Dummies, Ryan Deiss, Russ\n    Henneberry, Wiley , 2020\n 2  The Art of Social Media , The Art of Social Media , Guy Kawasaki, Peg Fitzpatrick,\n     Portfolio , 2015\n 3  Social Media and Mobile Marketing, Social Media and Mobile Marketing, Punit Bhatia ,\n    Wiley , 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Thoery\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "45d399b45acad7768cd3b21e4e9f42183035756f7617386ede018ade73c81eda",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000422030801",
+      "subject_name": "INDIAN FINANCIAL SYSTEM",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 3,
+      "subject_code": "04BB0308",
+      "course_code_evidence": [
+        "04BB0308",
+        "04BB0309",
+        "04BB1304",
+        "04BB1307",
+        "04BH0302"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/IFS.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/IFS.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INDIAN FINANCIAL SYSTEM [1805fe117fae].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INDIAN FINANCIAL SYSTEM [1805fe117fae].pdf",
+      "expected_pdf_sha256": "ccb3afc946089696ce1c0679703a9a594865e1a710a8099ffbc6d1748fafb3f4",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INDIAN FINANCIAL SYSTEM",
+        "course_code": "04BB0308",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "To understand the fundamentals of Indian financial system.",
+        "To examine impact factors of Money Market and Capital Market and financial instruments.",
+        "To appreciate the Need and Working of Financial Intermediaries.",
+        "To recognize the importance and various functions of Market Regulation",
+        "To Analyze and choose the financial service as per requirements Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Indian Financial System",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Structure of Financial System, Instruments of Financial System,",
+              "organised and unorganised Financial System, Components:",
+              "Financial Assets, Financial Intermediaries, Financial Markets",
+              "(money and capital markets in India) Relevance of various",
+              "interest/return rates, Regulatory framework"
+            ],
+            "topics_text": "Structure of Financial System, Instruments of Financial System, organised and unorganised Financial System, Components: Financial Assets, Financial Intermediaries, Financial Markets (money and capital markets in India) Relevance of various interest/return rates, Regulatory framework",
+            "topics": [
+              "Structure of Financial System, Instruments of Financial System,",
+              "organised and unorganised Financial System, Components:",
+              "Financial Assets, Financial Intermediaries, Financial Markets",
+              "(money and capital markets in India) Relevance of various",
+              "interest/return rates, Regulatory framework"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Role of Financial Institutions in Indian Financial System",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Financial Institutions and its meaning, Functions and Role of",
+              "Financial Institutions; Money market institutions: Meaning, Role of",
+              "the Central Bank(RBI) in money markets, Commercial banks:",
+              "Meaning and Functions; Indigenous Financial Agencies: Bankers,",
+              "Money lenders, Discount houses, Accepting houses (only meaning",
+              "and features), Capital Market institutions: (Meaning and functions)",
+              "Merchant Banks, Investment Companies, Development banks,",
+              "Mutual Funds; Special Financial Institutions: Factors for their",
+              "growth (need), Objectives and functions of: (1) IDBI (2) IFCI (3)",
+              "SFCs (4) ICICI (5) EXIM Bank of India; Non-Banking Finance",
+              "Companies: Meaning, Role, Types of NBFC services; Functions",
+              "SEBI"
+            ],
+            "topics_text": "Financial Institutions and its meaning, Functions and Role of Financial Institutions; Money market institutions: Meaning, Role of the Central Bank(RBI) in money markets, Commercial banks: Meaning and Functions; Indigenous Financial Agencies: Bankers, Money lenders, Discount houses, Accepting houses (only meaning and features), Capital Market institutions: (Meaning and functions) Merchant Banks, Investment Companies, Development banks, Mutual Funds; Special Financial Institutions: Factors for their growth (need), Objectives and functions of: (1) IDBI (2) IFCI (3) SFCs (4) ICICI (5) EXIM Bank of India; Non-Banking Finance Companies: Meaning, Role, Types of NBFC services; Functions SEBI",
+            "topics": [
+              "Financial Institutions and its meaning, Functions and Role of",
+              "Financial Institutions",
+              "Money market institutions: Meaning, Role of",
+              "the Central Bank(RBI) in money markets, Commercial banks:",
+              "Meaning and Functions",
+              "Indigenous Financial Agencies: Bankers,",
+              "Money lenders, Discount houses, Accepting houses (only meaning",
+              "and features), Capital Market institutions: (Meaning and functions)",
+              "Merchant Banks, Investment Companies, Development banks,",
+              "Mutual Funds",
+              "Special Financial Institutions: Factors for their",
+              "growth (need), Objectives and functions of: (1) IDBI (2) IFCI (3)",
+              "SFCs (4) ICICI (5) EXIM Bank of India",
+              "Non-Banking Finance",
+              "Companies: Meaning, Role, Types of NBFC services",
+              "Functions",
+              "SEBI"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Financial Instruments",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Financial Instruments Meaning, importance and classification of",
+              "Financial instruments; Short-term, Medium-term and Long Term",
+              "Instruments, Primary and Secondary Securities; Innovative",
+              "Instruments"
+            ],
+            "topics_text": "Financial Instruments Meaning, importance and classification of Financial instruments; Short-term, Medium-term and Long Term Instruments, Primary and Secondary Securities; Innovative Instruments",
+            "topics": [
+              "Financial Instruments Meaning, importance and classification of",
+              "Financial instruments",
+              "Short-term, Medium-term and Long Term",
+              "Instruments, Primary and Secondary Securities",
+              "Innovative",
+              "Instruments"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Functions of Financial Markets in India",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Financial Market in India: Capital Market, Money Market: meaning,",
+              "function, types"
+            ],
+            "topics_text": "Financial Market in India: Capital Market, Money Market: meaning, function, types",
+            "topics": [
+              "Financial Market in India: Capital Market, Money Market: meaning,",
+              "function, types"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Meaning and Importance of Financial services in India",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Meaning, importance and types of Financial Services; 1.Factoring:",
+              "Meaning, Types, costs and benefits of factoring, 2. Leasing:",
+              "Meaning, Definition, advantages to lessor and lessee, types of leases",
+              "(operating, finance, leveraged, sales and lease-back, leveraged and",
+              "cross-border.), 3. Underwriting: Meaning and benefits, 4. Credit",
+              "Rating Agencies: Meaning and role of such agencies. A brief idea",
+              "about: CRISIL, CARE ICRA. 5. Others: A brief idea about: NSDL,",
+              "STCI",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Indian Financial System , Khan M. Y, Tata McGraw Hill, 2014",
+              "2 The Indian financial system and Development, Vasant Desai , Himalaya Publishing",
+              "House, 2017",
+              "3 Indian Financial System , Pathak B. V. , Pearson , 2014"
+            ],
+            "topics_text": "Meaning, importance and types of Financial Services; 1.Factoring: Meaning, Types, costs and benefits of factoring, 2. Leasing: Meaning, Definition, advantages to lessor and lessee, types of leases (operating, finance, leveraged, sales and lease-back, leveraged and cross-border.), 3. Underwriting: Meaning and benefits, 4. Credit Rating Agencies: Meaning and role of such agencies. A brief idea about: CRISIL, CARE ICRA. 5. Others: A brief idea about: NSDL, STCI Total Hours 48 Textbook : 1 Indian Financial System , Khan M. Y, Tata McGraw Hill, 2014 2 The Indian financial system and Development, Vasant Desai , Himalaya Publishing House, 2017 3 Indian Financial System , Pathak B. V. , Pearson , 2014",
+            "topics": [
+              "Meaning, importance and types of Financial Services",
+              "1.Factoring:",
+              "Meaning, Types, costs and benefits of factoring, 2. Leasing:",
+              "Meaning, Definition, advantages to lessor and lessee, types of leases",
+              "(operating, finance, leveraged, sales and lease-back, leveraged and",
+              "cross-border.), 3. Underwriting: Meaning and benefits, 4. Credit",
+              "Rating Agencies: Meaning and role of such agencies. A brief idea",
+              "about: CRISIL, CARE ICRA. 5. Others: A brief idea about: NSDL,",
+              "STCI",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Indian Financial System , Khan M. Y, Tata McGraw Hill, 2014",
+              "2 The Indian financial system and Development, Vasant Desai , Himalaya Publishing",
+              "House, 2017",
+              "3 Indian Financial System , Pathak B. V. , Pearson , 2014"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Financial Institutions and Markets: Structure, Growth & Innovations, Financial Institutions and Markets: Structure, Growth & Innovations, Bhole L. M. & Mahakud J, Tata-McGraw Hill, 2012",
+          "Financial Markets and Institutions, Financial Markets and Institutions, Khan M. Y, Tata McGraw Hill, 2010",
+          "Financial Services,, Financial Services,, Khan M. Y, Tata McGraw Hill, 2011",
+          "Financial Management Principles and Practice, Financial Management Principles and Practice, C.Sudarsana Reddy, Himalaya Publishing House, 2010"
+        ],
+        "textbooks": [
+          "Indian Financial System , Khan M. Y, Tata McGraw Hill, 2014",
+          "The Indian financial system and Development, Vasant Desai , Himalaya Publishing House, 2017",
+          "Indian Financial System , Pathak B. V. , Pearson , 2014"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5864,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         3\nCOURSE TITLE    INDIAN FINANCIAL SYSTEM\nCOURSE CODE     04BB0308\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand the fundamentals of Indian financial system.\n 2  To examine impact factors of Money Market and Capital Market and financial instruments.\n 3  To appreciate the Need and Working of Financial Intermediaries.\n 4  To recognize the importance and various functions of Market Regulation\n 5  To Analyze and choose the financial service as per requirements\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Indian Financial System                     10\n               Structure of Financial System, Instruments of Financial System,\n              organised and unorganised Financial System, Components:\n              Financial Assets, Financial Intermediaries, Financial Markets\n            (money and capital markets in India) Relevance of various\n                interest/return rates, Regulatory framework\n     2      Role of Financial Institutions in Indian Financial System       10\n              Financial Institutions and its meaning, Functions and Role of\n              Financial Institutions; Money market institutions: Meaning, Role of\n               the Central Bank(RBI) in money markets, Commercial banks:\n            Meaning and Functions; Indigenous Financial Agencies: Bankers,\n           Money lenders, Discount houses, Accepting houses (only meaning\n            and features), Capital Market institutions: (Meaning and functions)\n            Merchant Banks, Investment Companies, Development banks,\n            Mutual Funds; Special Financial Institutions: Factors for their\n             growth (need), Objectives and functions of: (1) IDBI (2) IFCI (3)\n           SFCs (4) ICICI (5) EXIM Bank of India; Non-Banking Finance\n             Companies: Meaning, Role, Types of NBFC services; Functions\n           SEBI\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3       Financial Instruments                                     10\n              Financial Instruments Meaning, importance and classification of\n              Financial instruments; Short-term, Medium-term and Long Term\n              Instruments, Primary and Secondary Securities; Innovative\n              Instruments\n     4      Functions of Financial Markets in India                      8\n              Financial Market in India: Capital Market, Money Market: meaning,\n               function, types\n     5     Meaning and Importance of Financial services in India         10\n             Meaning, importance and types of Financial Services; 1.Factoring:\n             Meaning, Types, costs and benefits of factoring, 2. Leasing:\n             Meaning, Definition, advantages to lessor and lessee, types of leases\n               (operating, finance, leveraged, sales and lease-back, leveraged and\n               cross-border.), 3. Underwriting: Meaning and benefits, 4. Credit\n             Rating Agencies: Meaning and role of such agencies. A brief idea\n              about: CRISIL, CARE ICRA. 5. Others: A brief idea about: NSDL,\n           STCI\n                               Total Hours                       48\n\n\nTextbook :\n 1  Indian Financial System , Khan M. Y, Tata McGraw Hill, 2014\n 2  The Indian financial system and Development, Vasant Desai , Himalaya Publishing\n    House, 2017\n 3  Indian Financial System , Pathak B. V. , Pearson , 2014\n\nReferences:\n 1  Financial Institutions and Markets: Structure, Growth & Innovations, Financial Institutions\n    and Markets: Structure, Growth & Innovations, Bhole L. M. & Mahakud J, Tata-McGraw\n      Hill, 2012\n 2  Financial Markets and Institutions, Financial Markets and Institutions, Khan M. Y, Tata\n   McGraw Hill, 2010\n 3  Financial Services,, Financial Services,, Khan M. Y, Tata McGraw Hill, 2011\n 4  Financial Management  Principles and Practice, Financial Management  Principles and\n     Practice, C.Sudarsana Reddy, Himalaya Publishing House, 2010\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "ccb3afc946089696ce1c0679703a9a594865e1a710a8099ffbc6d1748fafb3f4",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000428030201",
+      "subject_name": "LOGISTICS MANAGEMENT",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 3,
+      "subject_code": "04BH0302",
+      "course_code_evidence": [
+        "04BH0302",
+        "04CR0301"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/LM.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/LM.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/LOGISTICS MANAGEMENT [e539e5b55e00].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/LOGISTICS MANAGEMENT [e539e5b55e00].pdf",
+      "expected_pdf_sha256": "51b5ef924154922cfad7ce9c1deb11751f1af55328d76a27511d7de5fae8b1c5",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "LOGISTICS MANAGEMENT",
+        "course_code": "04BH0302",
+        "semester_label": "3",
+        "credits": 3,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand the basics of logistics management",
+        "Appreciate the concepts of vendor management, Procurement processes and Inventory management",
+        "Understand the basic of Six Sigma and Just in Time Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 0 50 50 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Supply Chain Management",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction – Importance – Objectives –Principles – Methodology",
+              "– Applications of SCM in an organization"
+            ],
+            "topics_text": "Introduction – Importance – Objectives –Principles – Methodology – Applications of SCM in an organization",
+            "topics": [
+              "Introduction – Importance – Objectives –Principles – Methodology",
+              "– Applications of SCM in an organization"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Inventory Management",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction – Vendor Management - – Procurement Process –",
+              "Kaizen 5S - JIT"
+            ],
+            "topics_text": "Introduction – Vendor Management - – Procurement Process – Kaizen 5S - JIT",
+            "topics": [
+              "Introduction – Vendor Management - – Procurement Process –",
+              "Kaizen 5S - JIT"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Warehousing and Distribution",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Logistics –Basics of Warehousing – Approaches to",
+              "Warehousing & Distribution – Basics of 6 Sigma",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Logistics Management - The Supply Chain Imperative, Vinod Sople, Pearson, 2007"
+            ],
+            "topics_text": "Introduction to Logistics –Basics of Warehousing – Approaches to Warehousing & Distribution – Basics of 6 Sigma Total Hours 30 Textbook : 1 Logistics Management - The Supply Chain Imperative, Vinod Sople, Pearson, 2007",
+            "topics": [
+              "Introduction to Logistics –Basics of Warehousing – Approaches to",
+              "Warehousing & Distribution – Basics of 6 Sigma",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Logistics Management - The Supply Chain Imperative, Vinod Sople, Pearson, 2007"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "Logistics Management - The Supply Chain Imperative, Vinod Sople, Pearson, 2007"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 2694,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         3\nCOURSE TITLE    LOGISTICS MANAGEMENT\nCOURSE CODE     04BH0302\nCOURSE CREDITS  3\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the basics of logistics management\n 2  Appreciate the concepts of vendor management, Procurement processes and Inventory\n    management\n 3  Understand the basic of Six Sigma and Just in Time\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            0        50     50       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Supply Chain Management                                8\n               Introduction – Importance – Objectives –Principles – Methodology\n            – Applications of SCM in an organization\n     2      Inventory Management                                   12\n               Introduction – Vendor Management - – Procurement Process –\n             Kaizen 5S - JIT\n     3      Warehousing and Distribution                              10\n               Introduction to Logistics –Basics of Warehousing – Approaches to\n            Warehousing & Distribution – Basics of 6 Sigma\n                               Total Hours                       30\n\n\nTextbook :\n 1  Logistics Management - The Supply Chain Imperative, Vinod Sople, Pearson, 2007\n\n\nSuggested Theory Distribution:\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "51b5ef924154922cfad7ce9c1deb11751f1af55328d76a27511d7de5fae8b1c5",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000422030101",
+      "subject_name": "MARKETING MANAGEMENT",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 3,
+      "subject_code": "04BB0301",
+      "course_code_evidence": [
+        "04BB0301",
+        "04BB0305",
+        "04BB0308",
+        "04BB0309",
+        "04BB1304"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MM.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MM.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MARKETING MANAGEMENT [5bf5c78e2440].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MARKETING MANAGEMENT [5bf5c78e2440].pdf",
+      "expected_pdf_sha256": "d56148ad0d19758223f7fdf2d8005dabd86e297650fe9c2e7ff99c5c17dd3968",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MARKETING MANAGEMENT",
+        "course_code": "04BB0301",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Comprehend Fundamental Marketing Concepts and marketing environment",
+        "Apprehend the concepts of Basic 4Ps of Marketing.",
+        "Understand and apply the concepts of Segmenting and Targeting Customers.",
+        "Comprehend various channels of distribution and various means of promotion",
+        "Understand and apply concept of product development and pricing strategies Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION TO MARKETING MANAGEMENT",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to marketing management – Why Marketing",
+              "management ?, Definition, Scope, Core Marketing concepts,",
+              "Understanding – Needs, Wants and Demand, Customer Value &",
+              "Satisfaction, Functions of marketing, Eras in marketing, Marketing",
+              "environment, Marketing mix, Role of marketing manager"
+            ],
+            "topics_text": "Introduction to marketing management – Why Marketing management ?, Definition, Scope, Core Marketing concepts, Understanding – Needs, Wants and Demand, Customer Value & Satisfaction, Functions of marketing, Eras in marketing, Marketing environment, Marketing mix, Role of marketing manager",
+            "topics": [
+              "Introduction to marketing management – Why Marketing",
+              "management ?, Definition, Scope, Core Marketing concepts,",
+              "Understanding – Needs, Wants and Demand, Customer Value &",
+              "Satisfaction, Functions of marketing, Eras in marketing, Marketing",
+              "environment, Marketing mix, Role of marketing manager"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "CONSUMER BEHAVIOUR & SEGMENTATION",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Understanding Consumer behaviour, Factors affecting Consumer",
+              "Buying Decisions, Consumer Buying Process, difference between",
+              "Consumer buying and Industrial buying, Introduction to",
+              "Segmenting, Concept, Importance and Bases of segmentation,",
+              "Targeting & Positioning, Product differentiation"
+            ],
+            "topics_text": "Understanding Consumer behaviour, Factors affecting Consumer Buying Decisions, Consumer Buying Process, difference between Consumer buying and Industrial buying, Introduction to Segmenting, Concept, Importance and Bases of segmentation, Targeting & Positioning, Product differentiation",
+            "topics": [
+              "Understanding Consumer behaviour, Factors affecting Consumer",
+              "Buying Decisions, Consumer Buying Process, difference between",
+              "Consumer buying and Industrial buying, Introduction to",
+              "Segmenting, Concept, Importance and Bases of segmentation,",
+              "Targeting & Positioning, Product differentiation"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "PRODUCT & PRICE",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Understanding Product and its importance, Product Levels, Product",
+              "mix, Branding, Product Life Cycle & Strategies at various levels,",
+              "New Product Development, Overview of Packaging, Introduction to",
+              "Service marketing, SERVQUAL, Introduction to Pricing, Factors",
+              "affecting Pricing, Strategies for Pricing"
+            ],
+            "topics_text": "Understanding Product and its importance, Product Levels, Product mix, Branding, Product Life Cycle & Strategies at various levels, New Product Development, Overview of Packaging, Introduction to Service marketing, SERVQUAL, Introduction to Pricing, Factors affecting Pricing, Strategies for Pricing",
+            "topics": [
+              "Understanding Product and its importance, Product Levels, Product",
+              "mix, Branding, Product Life Cycle & Strategies at various levels,",
+              "New Product Development, Overview of Packaging, Introduction to",
+              "Service marketing, SERVQUAL, Introduction to Pricing, Factors",
+              "affecting Pricing, Strategies for Pricing"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "DISTRIBUTION",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction to Distribution, Meaning and Importance, Channels of",
+              "Distribution, Channel members, Wholesaling and Retailing,",
+              "Introduction to Logistics"
+            ],
+            "topics_text": "Introduction to Distribution, Meaning and Importance, Channels of Distribution, Channel members, Wholesaling and Retailing, Introduction to Logistics",
+            "topics": [
+              "Introduction to Distribution, Meaning and Importance, Channels of",
+              "Distribution, Channel members, Wholesaling and Retailing,",
+              "Introduction to Logistics"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "PROMOTION",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Promotion – Types, Scope, Tools, Advertising –",
+              "Roles, 5MS, Personal selling, Public relations, Direct Marketing,",
+              "sales promotion – concept and characteristics, Brief introduction to",
+              "Latest trends in marketing (Online Marketing - Green marketing and",
+              "Rural Marketing)",
+              "Total Hours 48",
+              "Textbook :",
+              "1 A Framework for Marketing Management, Philip Kotler & Kevin Lane Keller, Pearson",
+              "Education. , 2016"
+            ],
+            "topics_text": "Introduction to Promotion – Types, Scope, Tools, Advertising – Roles, 5MS, Personal selling, Public relations, Direct Marketing, sales promotion – concept and characteristics, Brief introduction to Latest trends in marketing (Online Marketing - Green marketing and Rural Marketing) Total Hours 48 Textbook : 1 A Framework for Marketing Management, Philip Kotler & Kevin Lane Keller, Pearson Education. , 2016",
+            "topics": [
+              "Introduction to Promotion – Types, Scope, Tools, Advertising –",
+              "Roles, 5MS, Personal selling, Public relations, Direct Marketing,",
+              "sales promotion – concept and characteristics, Brief introduction to",
+              "Latest trends in marketing (Online Marketing - Green marketing and",
+              "Rural Marketing)",
+              "Total Hours 48",
+              "Textbook :",
+              "1 A Framework for Marketing Management, Philip Kotler & Kevin Lane Keller, Pearson",
+              "Education. , 2016"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Marketing Management: A South Asian Perspective, Marketing Management: A South Asian Perspective, Philip Kotler; Kevin Lane Keller; Abraham Koshy; MithileshwarJha, Pearson Education, 2013",
+          "Marketing Management, Marketing Management, Tapan Panda, Excel Books , 2010",
+          "Marketing Management, Marketing Management, Rajan Saxena , TMGH, 2020"
+        ],
+        "textbooks": [
+          "A Framework for Marketing Management, Philip Kotler & Kevin Lane Keller, Pearson Education. , 2016"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.managementstudyguide.com/marketing-management",
+          "https://www.coursera.org/articles/4-ps-of-marketing",
+          "https://sendpulse.com/support/glossary/promotion-mix",
+          "https://www.smartinsights.com/digital-marketing-strategy/customer-segmentation- targeting/segmentation-targeting-and-positioning/"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 5115,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         3\nCOURSE TITLE   MARKETING MANAGEMENT\nCOURSE CODE     04BB0301\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Comprehend Fundamental Marketing Concepts and marketing environment\n 2  Apprehend the concepts of Basic 4Ps of Marketing.\n 3  Understand and apply the concepts of Segmenting and Targeting Customers.\n 4  Comprehend various channels of distribution and various means of promotion\n 5  Understand and apply concept of product development and pricing strategies\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    INTRODUCTION TO MARKETING MANAGEMENT       10\n               Introduction to marketing management – Why Marketing\n            management ?, Definition, Scope, Core Marketing concepts,\n             Understanding – Needs, Wants and Demand, Customer Value &\n                Satisfaction, Functions of marketing, Eras in marketing, Marketing\n              environment, Marketing mix, Role of marketing manager\n     2    CONSUMER BEHAVIOUR & SEGMENTATION            10\n             Understanding Consumer behaviour, Factors affecting Consumer\n            Buying Decisions, Consumer Buying Process, difference between\n            Consumer buying and Industrial buying, Introduction to\n             Segmenting, Concept, Importance and Bases of segmentation,\n              Targeting & Positioning, Product differentiation\n     3    PRODUCT & PRICE                                     10\n             Understanding Product and its importance, Product Levels, Product\n             mix, Branding, Product Life Cycle & Strategies at various levels,\n          New Product Development, Overview of Packaging, Introduction to\n              Service marketing, SERVQUAL, Introduction to Pricing, Factors\n               affecting Pricing, Strategies for Pricing\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4     DISTRIBUTION                                         8\n               Introduction to Distribution, Meaning and Importance, Channels of\n               Distribution, Channel members, Wholesaling and Retailing,\n               Introduction to Logistics\n     5    PROMOTION                                           10\n               Introduction to Promotion – Types, Scope, Tools, Advertising –\n              Roles, 5MS, Personal selling, Public relations, Direct Marketing,\n               sales promotion – concept and characteristics, Brief introduction to\n               Latest trends in marketing (Online Marketing - Green marketing and\n             Rural Marketing)\n                               Total Hours                       48\n\n\nTextbook :\n 1 A Framework for Marketing Management, Philip Kotler & Kevin Lane Keller, Pearson\n     Education. , 2016\n\nReferences:\n 1  Marketing Management: A South Asian Perspective, Marketing Management: A South\n    Asian Perspective, Philip Kotler; Kevin Lane Keller; Abraham Koshy; MithileshwarJha,\n    Pearson Education, 2013\n 2  Marketing Management, Marketing Management, Tapan Panda, Excel Books , 2010\n 3  Marketing Management, Marketing Management, Rajan Saxena , TMGH, 2020\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1  https://www.managementstudyguide.com/marketing-management\n 2  https://www.coursera.org/articles/4-ps-of-marketing\n 3  https://sendpulse.com/support/glossary/promotion-mix\n 4  https://www.smartinsights.com/digital-marketing-strategy/customer-segmentation-\n     targeting/segmentation-targeting-and-positioning/\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "d56148ad0d19758223f7fdf2d8005dabd86e297650fe9c2e7ff99c5c17dd3968",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000121000301",
+      "subject_name": "NATIONAL CADET CORPS-3",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 3,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0102",
+        "04BB0105"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-9.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/NATIONAL CADET CORPS-3 [940c0d8c31b7].pdf",
+      "expected_pdf_sha256": "19238dded6579ce3854cfe09443342ce052951703c64f6c617d8d8a9efcce7bf",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: page codes not visible in first 8 pages"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "21000422130401",
+      "subject_name": "RESEARCH METHODOLOGY",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 3,
+      "subject_code": "04BB1304",
+      "course_code_evidence": [
+        "04BB1304",
+        "04BB1307",
+        "04BH0302",
+        "04CR0301"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/RM.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/RM.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/RESEARCH METHODOLOGY [ed6c06c9e2ec].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/RESEARCH METHODOLOGY [ed6c06c9e2ec].pdf",
+      "expected_pdf_sha256": "51f76473fd006a1fb339519de4e41539671e70ed2599113a4e8eb1479c86c9e0",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "RESEARCH METHODOLOGY",
+        "course_code": "04BB1304",
+        "semester_label": "3",
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand the basics of research, types of research, research process and its ethical dimensions.",
+        "Design the basic framework of research process, research designs, its techniques as well as sampling methods.",
+        "Integrate and Apply knowledge on measurement & scaling techniques associated with framing of questionnaire.",
+        "Formulate different hypothesis and practice its testing methods in business decision making process.",
+        "Appraise various sources of information for literature review and writing reports. Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Business Research",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Business Research Methods : Introduction, Basic Research, Applied",
+              "Research, Scope of Business Research , Managerial value of",
+              "Business Research, Business Research in a Global context , Ethics",
+              "and Business Research, Business Research Process Design, Formal",
+              "Research Proposal and Introducing the Dimensions to the Problem,",
+              "Identifying and Defining the Key Research Variables, Exploratory",
+              "Research(Projective Techniques), Descriptive Research (Cross",
+              "Sectional & Longitudinal Studies) , Causal Research"
+            ],
+            "topics_text": "Business Research Methods : Introduction, Basic Research, Applied Research, Scope of Business Research , Managerial value of Business Research, Business Research in a Global context , Ethics and Business Research, Business Research Process Design, Formal Research Proposal and Introducing the Dimensions to the Problem, Identifying and Defining the Key Research Variables, Exploratory Research(Projective Techniques), Descriptive Research (Cross Sectional & Longitudinal Studies) , Causal Research",
+            "topics": [
+              "Business Research Methods : Introduction, Basic Research, Applied",
+              "Research, Scope of Business Research , Managerial value of",
+              "Business Research, Business Research in a Global context , Ethics",
+              "and Business Research, Business Research Process Design, Formal",
+              "Research Proposal and Introducing the Dimensions to the Problem,",
+              "Identifying and Defining the Key Research Variables, Exploratory",
+              "Research(Projective Techniques), Descriptive Research (Cross",
+              "Sectional & Longitudinal Studies) , Causal Research"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Research Process",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction to Qualitative and Quantitative Research, Sampling",
+              "Design – Census and Sample survey, Characteristics of good sample",
+              "design, Sampling Methods – Random sampling (Simple Random",
+              "Sampling, Stratified Random Sampling, Systematic Sampling ,",
+              "Cluster Sampling )and non-random Sampling(Convenience,",
+              "Judgmental, Quota Sampling, Snowball), Sampling and non-",
+              "sampling Errors"
+            ],
+            "topics_text": "Introduction to Qualitative and Quantitative Research, Sampling Design – Census and Sample survey, Characteristics of good sample design, Sampling Methods – Random sampling (Simple Random Sampling, Stratified Random Sampling, Systematic Sampling , Cluster Sampling )and non-random Sampling(Convenience, Judgmental, Quota Sampling, Snowball), Sampling and non- sampling Errors",
+            "topics": [
+              "Introduction to Qualitative and Quantitative Research, Sampling",
+              "Design – Census and Sample survey, Characteristics of good sample",
+              "design, Sampling Methods – Random sampling (Simple Random",
+              "Sampling, Stratified Random Sampling, Systematic Sampling ,",
+              "Cluster Sampling )and non-random Sampling(Convenience,",
+              "Judgmental, Quota Sampling, Snowball), Sampling and non",
+              "sampling Errors"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Data Collection, Measurement and Scaling",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Data collection methods – Primary and Secondary Data ,",
+              "Measurement in Research, Measurement Scale, Meaning of Scaling,",
+              "Scaling Techniques and their construction , Questionnaire Design"
+            ],
+            "topics_text": "Data collection methods – Primary and Secondary Data , Measurement in Research, Measurement Scale, Meaning of Scaling, Scaling Techniques and their construction , Questionnaire Design",
+            "topics": [
+              "Data collection methods – Primary and Secondary Data ,",
+              "Measurement in Research, Measurement Scale, Meaning of Scaling,",
+              "Scaling Techniques and their construction , Questionnaire Design"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Testing of Hypothesis",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Formulation and statement of hypothesis, confidence interval, Type-",
+              "I error, Type-II error, one-tailed & two tailed tests, Testing of",
+              "hypothesis(z-test & t-test for single population ) Chi-square test for",
+              "independence of attributes"
+            ],
+            "topics_text": "Formulation and statement of hypothesis, confidence interval, Type- I error, Type-II error, one-tailed & two tailed tests, Testing of hypothesis(z-test & t-test for single population ) Chi-square test for independence of attributes",
+            "topics": [
+              "Formulation and statement of hypothesis, confidence interval, Type",
+              "I error, Type-II error, one-tailed & two tailed tests, Testing of",
+              "hypothesis(z-test & t-test for single population ) Chi-square test for",
+              "independence of attributes"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Preparing Reports",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Technical and Academic Report Writing, Significance of Report",
+              "writing, Layout of Research Report, Precaution for writing Research",
+              "Report and Conclusion",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Business Research Methods , Naval Bajpai, Pearson, 2017",
+              "2 Research Methodology: Methods And Techniques, C.R.Kothari And Gaurav Garg, New",
+              "Age International, 2014"
+            ],
+            "topics_text": "Technical and Academic Report Writing, Significance of Report writing, Layout of Research Report, Precaution for writing Research Report and Conclusion Total Hours 48 Textbook : 1 Business Research Methods , Naval Bajpai, Pearson, 2017 2 Research Methodology: Methods And Techniques, C.R.Kothari And Gaurav Garg, New Age International, 2014",
+            "topics": [
+              "Technical and Academic Report Writing, Significance of Report",
+              "writing, Layout of Research Report, Precaution for writing Research",
+              "Report and Conclusion",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Business Research Methods , Naval Bajpai, Pearson, 2017",
+              "2 Research Methodology: Methods And Techniques, C.R.Kothari And Gaurav Garg, New",
+              "Age International, 2014"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Research Methodology, Concepts And Cases, Research Methodology, Concepts And Cases, Deepak Chawla & Neena Sodhi, Vikas Publication, 2016",
+          "Business Research Methods, Business Research Methods, Cooper And Schindler, Mcgraw- Hill Publication, 2014",
+          "Research Methodology, Research Methodology, D.K. Bhattacharya , Excel Books, 2006",
+          "Business Research Methodology, Business Research Methodology, J K Sachdeva, HPH , 2011",
+          "Research Methods For Business – A Skill Building Approach, Research Methods For Business – A Skill Building Approach, Uma Sekaran & Roger Bougie, Wiley, 2013"
+        ],
+        "textbooks": [
+          "Business Research Methods , Naval Bajpai, Pearson, 2017",
+          "Research Methodology: Methods And Techniques, C.R.Kothari And Gaurav Garg, New Age International, 2014"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5686,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         3\nCOURSE TITLE    RESEARCH METHODOLOGY\nCOURSE CODE     04BB1304\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the basics of research, types of research, research process and its ethical\n     dimensions.\n 2  Design the basic framework of research process, research designs, its techniques as well as\n    sampling methods.\n 3  Integrate and Apply knowledge on measurement & scaling techniques associated with\n    framing of questionnaire.\n 4  Formulate different hypothesis and practice its testing methods in business decision making\n     process.\n 5  Appraise various sources of information for literature review and writing reports.\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Business Research                          12\n             Business Research Methods : Introduction, Basic Research, Applied\n              Research, Scope of Business Research , Managerial value of\n             Business Research, Business Research in a Global context , Ethics\n            and Business Research, Business Research Process Design, Formal\n             Research Proposal and Introducing the Dimensions to the Problem,\n               Identifying and Defining the Key Research Variables, Exploratory\n              Research(Projective Techniques), Descriptive Research (Cross\n              Sectional & Longitudinal Studies) , Causal Research\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Research Process                                         8\n               Introduction to Qualitative and Quantitative Research, Sampling\n             Design – Census and Sample survey, Characteristics of good sample\n               design, Sampling Methods – Random sampling (Simple Random\n             Sampling, Stratified Random Sampling, Systematic Sampling ,\n              Cluster Sampling )and non-random Sampling(Convenience,\n              Judgmental, Quota Sampling, Snowball), Sampling and non-\n             sampling Errors\n     3      Data Collection, Measurement and Scaling                   10\n             Data collection methods – Primary and Secondary Data ,\n            Measurement in Research, Measurement Scale, Meaning of Scaling,\n              Scaling Techniques and their construction , Questionnaire Design\n     4      Testing of Hypothesis                                     12\n             Formulation and statement of hypothesis, confidence interval, Type-\n                  I error, Type-II error, one-tailed & two tailed tests, Testing of\n               hypothesis(z-test & t-test for single population ) Chi-square test for\n             independence of attributes\n     5      Preparing Reports                                        6\n              Technical and Academic Report Writing, Significance of Report\n               writing, Layout of Research Report, Precaution for writing Research\n             Report and Conclusion\n                               Total Hours                       48\n\n\nTextbook :\n 1  Business Research Methods , Naval Bajpai, Pearson, 2017\n 2  Research Methodology: Methods And Techniques, C.R.Kothari And Gaurav Garg, New\n    Age International, 2014\n\nReferences:\n 1  Research Methodology, Concepts And Cases, Research Methodology, Concepts And\n     Cases, Deepak Chawla & Neena Sodhi, Vikas Publication, 2016\n 2  Business Research Methods, Business Research Methods, Cooper And Schindler, Mcgraw-\n     Hill Publication, 2014\n 3  Research Methodology, Research Methodology, D.K. Bhattacharya , Excel Books, 2006\n 4  Business Research Methodology, Business Research Methodology, J K Sachdeva, HPH ,\n    2011\n 5  Research Methods For Business – A Skill Building Approach, Research Methods For\n     Business – A Skill Building Approach, Uma Sekaran & Roger Bougie, Wiley, 2013\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "51f76473fd006a1fb339519de4e41539671e70ed2599113a4e8eb1479c86c9e0",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 8,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 1,
+    "extraction_errors": 0
+  }
+}

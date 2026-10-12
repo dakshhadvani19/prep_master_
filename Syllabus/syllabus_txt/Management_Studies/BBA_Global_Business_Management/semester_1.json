@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "bba-in-global-business-management",
+    "course_name": "BBA in Global Business Management",
+    "output_slug": "BBA_Global_Business_Management"
+  },
+  "semester": 1,
+  "subject_count": 8,
+  "subjects": [
+    {
+      "subject_id": "26000422010501",
+      "subject_name": "BUSINESS LAWS",
+      "course_id": "bba-in-global-business-management",
+      "course_name": "BBA in Global Business Management",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/BL.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS LAWS [e5c1aca783ac].pdf",
+      "expected_pdf_sha256": "3182ee7066cc3b46484a395329df3c1c7935d30cb93b30864a2442f21ffd21a0",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0105"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "26000422010401",
+      "subject_name": "COMPUTER ESSENTIALS & OFFICE APPLICATIONS",
+      "course_id": "bba-in-global-business-management",
+      "course_name": "BBA in Global Business Management",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CEOA.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/COMPUTER ESSENTIALS & OFFICE APPLICATIONS [bca6d1ad36ec].pdf",
+      "expected_pdf_sha256": "e6d8cd1ebbd9e41ddbc78f454bc948c1081e0eb5c1006966714665653592ed4c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0104"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "26000422010301",
+      "subject_name": "FUNDAMENTALS OF ACCOUNTING",
+      "course_id": "bba-in-global-business-management",
+      "course_name": "BBA in Global Business Management",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FA.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FUNDAMENTALS OF ACCOUNTING [6a21a798f6b3].pdf",
+      "expected_pdf_sha256": "ec4aedc1568c4f4e2bdff7a620797b2d5d006fb3d947567d95ce7d2ef127a06b",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0103"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "26000422010201",
+      "subject_name": "MICRO ECONOMICS",
+      "course_id": "bba-in-global-business-management",
+      "course_name": "BBA in Global Business Management",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/Micro-Eco.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MICRO ECONOMICS [e27f9ddfb836].pdf",
+      "expected_pdf_sha256": "6bf41531c25abe9c821556563bfd5c53a3d4a409b53b641770b0496e73e5e6c4",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0102"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "26000121000101",
+      "subject_name": "NATIONAL CADET CORPS-1",
+      "course_id": "bba-in-global-business-management",
+      "course_name": "BBA in Global Business Management",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/AU0001_NATIONAL-CADET-CORPS-1.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/NATIONAL CADET CORPS-1 [fbdecd7774bb].pdf",
+      "expected_pdf_sha256": "ca9e97310f10ece73171e7edd62b43c1d40d29c5e0e55860166690463bd98ab0",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: page codes not visible in first 8 pages"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "26000422010101",
+      "subject_name": "PRINCIPLES OF MANAGEMENT",
+      "course_id": "bba-in-global-business-management",
+      "course_name": "BBA in Global Business Management",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/POM.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/PRINCIPLES OF MANAGEMENT [98a3d54a9272].pdf",
+      "expected_pdf_sha256": "b717530bd8466a6bc0b4a7aca1b1896fc61e6191c17ea28951598d3f6028821a",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0101"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "26041912010201",
+      "subject_name": "READING & WRITING FOR BUSINESS",
+      "course_id": "bba-in-global-business-management",
+      "course_name": "BBA in Global Business Management",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/RWB.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/READING & WRITING FOR BUSINESS [f6b7c506c151].pdf",
+      "expected_pdf_sha256": "0d267862bb9b8cd140faf1cb1603c1a7ac735db53edae99d07f9438f9edd58e0",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04SL0102"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "26041912010301",
+      "subject_name": "SPEAKING & PRESENTATION SKILLS",
+      "course_id": "bba-in-global-business-management",
+      "course_name": "BBA in Global Business Management",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SPS.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/SPEAKING & PRESENTATION SKILLS [13a6de42f95d].pdf",
+      "expected_pdf_sha256": "a612b05c9906523d851b4100ecb6a99126bd99ddea999dbc15a301f98bdec287",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04SL0103"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 0,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 8,
+    "extraction_errors": 0
+  }
+}

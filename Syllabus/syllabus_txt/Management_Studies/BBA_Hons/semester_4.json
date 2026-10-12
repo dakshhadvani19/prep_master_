@@ -1,0 +1,2200 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "bba-hons-",
+    "course_name": "BBA (HONS)",
+    "output_slug": "BBA_Hons"
+  },
+  "semester": 4,
+  "subject_count": 17,
+  "subjects": [
+    {
+      "subject_id": "21004193000102",
+      "subject_name": "ACCOUNTS EXECUTIVE",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04SC0001",
+      "course_code_evidence": [
+        "04SC0001",
+        "04SC0002",
+        "04SC0003",
+        "04SC0004",
+        "04SC0005"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-2-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-2-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ACCOUNTS EXECUTIVE [6e7a00ff5b83].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ACCOUNTS EXECUTIVE [6e7a00ff5b83].pdf",
+      "expected_pdf_sha256": "c54c52d7342e4e8f2bc800dc769a9133a36f18a2e36518c6e96f1dd2e020474b",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ACCOUNTS EXECUTIVE",
+        "course_code": "04SC0001",
+        "semester_label": "4",
+        "credits": 0,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Ascertain different types of tax liabilities, evaluate tax compliance documents and prepare tax challans and make tax payments.",
+        "Seek and receiver income tax declarations from employees, calculate net salaries after deductions, prepare salary statements giving details of earnings and deductions.",
+        "Verify the receipt / payments related documents and record the receipt / payment transactions in the book of accounts, prepare reconciliation statements and execute cash and inventory management.",
+        "Obtain and verify documents related to purchases / sales and pass accounting entries in journals.",
+        "Make provisions under various heads, prepare statement of depreciation, and prepare reports on profit and loss account and balance sheet and other financial statements.",
+        "Communicate effectively with customers, superiors and colleagues, maintain service orientation and achieve customer satisfaction. Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 50 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Taxation related concepts",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Basic concepts like due date, previous year, assessment year, rates",
+              "of taxes, TDS and TCS rates, time of deduction/collection • Comply",
+              "with TDS/TCS provisions, advance tax and filing of return of",
+              "income • E-filing tax returns."
+            ],
+            "topics_text": "Basic concepts like due date, previous year, assessment year, rates of taxes, TDS and TCS rates, time of deduction/collection • Comply with TDS/TCS provisions, advance tax and filing of return of income • E-filing tax returns.",
+            "topics": [
+              "Basic concepts like due date, previous year, assessment year, rates",
+              "of taxes, TDS and TCS rates, time of deduction/collection",
+              "Comply",
+              "with TDS/TCS provisions, advance tax and filing of return of",
+              "income",
+              "E-filing tax returns."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Understanding GST Concepts",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Understanding GST Concepts: Comprehend the fundamental",
+              "concept of GST • The concept of supply • Differentiate between",
+              "taxable and non-taxable supply • The applicability of SGST, CGST",
+              "and IGST • Charge of GST including composition levy • Explain",
+              "how IGST is levied • Adjustment against Tax Payable and input tax",
+              "credit set-off • Exemptions of GST • Value of supply • The process",
+              "of making tax payment to the Government • Demonstrate E-Filing",
+              "Returns • Tax related concepts like • Time of supply of",
+              "goods/services • Place of supply • Location of supplier of goods •",
+              "Tax terminologies such as input tax credit, output tax, TDS, tax",
+              "collected at source (TCS) and rates of TDS, output tax, and/or",
+              "Goods and Services Tax (GST), etc. • Tax invoice"
+            ],
+            "topics_text": "Understanding GST Concepts: Comprehend the fundamental concept of GST • The concept of supply • Differentiate between taxable and non-taxable supply • The applicability of SGST, CGST and IGST • Charge of GST including composition levy • Explain how IGST is levied • Adjustment against Tax Payable and input tax credit set-off • Exemptions of GST • Value of supply • The process of making tax payment to the Government • Demonstrate E-Filing Returns • Tax related concepts like • Time of supply of goods/services • Place of supply • Location of supplier of goods • Tax terminologies such as input tax credit, output tax, TDS, tax collected at source (TCS) and rates of TDS, output tax, and/or Goods and Services Tax (GST), etc. • Tax invoice",
+            "topics": [
+              "Understanding GST Concepts: Comprehend the fundamental",
+              "concept of GST",
+              "The concept of supply",
+              "Differentiate between",
+              "taxable and non-taxable supply",
+              "The applicability of SGST, CGST",
+              "and IGST",
+              "Charge of GST including composition levy",
+              "Explain",
+              "how IGST is levied",
+              "Adjustment against Tax Payable and input tax",
+              "credit set-off",
+              "Exemptions of GST",
+              "Value of supply",
+              "The process",
+              "of making tax payment to the Government",
+              "Demonstrate E-Filing",
+              "Returns",
+              "Tax related concepts like",
+              "Time of supply of",
+              "goods/services",
+              "Place of supply",
+              "Location of supplier of goods",
+              "Tax terminologies such as input tax credit, output tax, TDS, tax",
+              "collected at source (TCS) and rates of TDS, output tax, and/or",
+              "Goods and Services Tax (GST), etc.",
+              "Tax invoice"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Incidence of Taxation",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Incidence of Taxation: The incidences of taxation • Time of supply",
+              "of goods and services • The purpose of place of supply • Define",
+              "location of supplier of goods • Define the recipient with respect to",
+              "supplies involving payment and supplies not involving payment."
+            ],
+            "topics_text": "Incidence of Taxation: The incidences of taxation • Time of supply of goods and services • The purpose of place of supply • Define location of supplier of goods • Define the recipient with respect to supplies involving payment and supplies not involving payment.",
+            "topics": [
+              "Incidence of Taxation: The incidences of taxation",
+              "Time of supply",
+              "of goods and services",
+              "The purpose of place of supply",
+              "Define",
+              "location of supplier of goods",
+              "Define the recipient with respect to",
+              "supplies involving payment and supplies not involving payment."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Registration under GST the optimum size",
+            "contact_hours": 4,
+            "topic_lines": [
+              "• Evaluate the PAN based Registration Process, its rules, and the",
+              "Purpose of registration • Differentiate between single registration",
+              "and multiple registrations for different business vertical •",
+              "Registration- centrally or selectively in each state • The details that",
+              "are to be furnished during registration • Common mistakes made",
+              "during registration • Differentiate between Taxable Person vs",
+              "Registered Person • The Registration Timelines – Migrations •",
+              "Record the benefits of registration • Form filling with case studies."
+            ],
+            "topics_text": "• Evaluate the PAN based Registration Process, its rules, and the Purpose of registration • Differentiate between single registration and multiple registrations for different business vertical • Registration- centrally or selectively in each state • The details that are to be furnished during registration • Common mistakes made during registration • Differentiate between Taxable Person vs Registered Person • The Registration Timelines – Migrations • Record the benefits of registration • Form filling with case studies.",
+            "topics": [
+              "Evaluate the PAN based Registration Process, its rules, and the",
+              "Purpose of registration",
+              "Differentiate between single registration",
+              "and multiple registrations for different business vertical",
+              "Registration- centrally or selectively in each state",
+              "The details that",
+              "are to be furnished during registration",
+              "Common mistakes made",
+              "during registration",
+              "Differentiate between Taxable Person vs",
+              "Registered Person",
+              "The Registration Timelines – Migrations",
+              "Record the benefits of registration",
+              "Form filling with case studies."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Calculation of Tax Liability",
+            "contact_hours": 7,
+            "topic_lines": [
+              "The concept of input credit • Input Tax Credit eligibility using case",
+              "studies • Set-offs under GST wherever applicable • Differentiate",
+              "between consideration and valuation"
+            ],
+            "topics_text": "The concept of input credit • Input Tax Credit eligibility using case studies • Set-offs under GST wherever applicable • Differentiate between consideration and valuation",
+            "topics": [
+              "The concept of input credit",
+              "Input Tax Credit eligibility using case",
+              "studies",
+              "Set-offs under GST wherever applicable",
+              "Differentiate",
+              "between consideration and valuation"
+            ]
+          },
+          {
+            "unit_number": 6,
+            "title": "Payment under GST and Return filing",
+            "contact_hours": 3,
+            "topic_lines": [
+              "The types of payment, modes of payment, rules of collection of",
+              "taxes • Preparing different Challans, CPIN & CIN • Compare TDS",
+              "and TCS • Cases for reversal of credit • Calculate the tax liability",
+              "based on various case studies • The penalties for late payments •",
+              "Practice on the process of online payment • Return filing under",
+              "GST."
+            ],
+            "topics_text": "The types of payment, modes of payment, rules of collection of taxes • Preparing different Challans, CPIN & CIN • Compare TDS and TCS • Cases for reversal of credit • Calculate the tax liability based on various case studies • The penalties for late payments • Practice on the process of online payment • Return filing under GST.",
+            "topics": [
+              "The types of payment, modes of payment, rules of collection of",
+              "taxes",
+              "Preparing different Challans, CPIN & CIN",
+              "Compare TDS",
+              "and TCS",
+              "Cases for reversal of credit",
+              "Calculate the tax liability",
+              "based on various case studies",
+              "The penalties for late payments",
+              "Practice on the process of online payment",
+              "Return filing under",
+              "GST."
+            ]
+          },
+          {
+            "unit_number": 7,
+            "title": "Prepare and perform payroll function",
+            "contact_hours": 3,
+            "topic_lines": [
+              "The components of salary and their details • The process of",
+              "maintaining records of employees’ details • The deductions and",
+              "exemptions allowable in respect of allowances and perquisites • The",
+              "meaning and components of salary for the purpose of exemption,",
+              "valuation of perquisites etc. • Income Tax declarations submitted by",
+              "employee • Compute the deductions available under Chapter VI-A",
+              "Prepare tax computation sheet of employees • Prepare advice",
+              "statement relating to Income Tax and provident fund • Prepare net",
+              "salary Statement • Complete the joining formalities and record",
+              "maintenance of employee details • Prepare the exit formalities of",
+              "employees Prepare the full and final settlement- salary, incentives,",
+              "provident fund (employee’s contribution & employer’s",
+              "contribution), Gratuity, Superannuation, arrears, etc • Prepare the",
+              "full and final settlement- salary, incentives, provident fund",
+              "(employee’s contribution & employer’s contribution), Gratuity,",
+              "Superannuation, arrears, etc • Assess how incentives, bonus,",
+              "variable pay and incentives are calculated • Design and prepare",
+              "appraisal letters"
+            ],
+            "topics_text": "The components of salary and their details • The process of maintaining records of employees’ details • The deductions and exemptions allowable in respect of allowances and perquisites • The meaning and components of salary for the purpose of exemption, valuation of perquisites etc. • Income Tax declarations submitted by employee • Compute the deductions available under Chapter VI-A Prepare tax computation sheet of employees • Prepare advice statement relating to Income Tax and provident fund • Prepare net salary Statement • Complete the joining formalities and record maintenance of employee details • Prepare the exit formalities of employees Prepare the full and final settlement- salary, incentives, provident fund (employee’s contribution & employer’s contribution), Gratuity, Superannuation, arrears, etc • Prepare the full and final settlement- salary, incentives, provident fund (employee’s contribution & employer’s contribution), Gratuity, Superannuation, arrears, etc • Assess how incentives, bonus, variable pay and incentives are calculated • Design and prepare appraisal letters",
+            "topics": [
+              "The components of salary and their details",
+              "The process of",
+              "maintaining records of employees’ details",
+              "The deductions and",
+              "exemptions allowable in respect of allowances and perquisites",
+              "The",
+              "meaning and components of salary for the purpose of exemption,",
+              "valuation of perquisites etc.",
+              "Income Tax declarations submitted by",
+              "employee",
+              "Compute the deductions available under Chapter VI-A",
+              "Prepare tax computation sheet of employees",
+              "Prepare advice",
+              "statement relating to Income Tax and provident fund",
+              "Prepare net",
+              "salary Statement",
+              "Complete the joining formalities and record",
+              "maintenance of employee details",
+              "Prepare the exit formalities of",
+              "employees Prepare the full and final settlement- salary, incentives,",
+              "provident fund (employee’s contribution & employer’s",
+              "contribution), Gratuity, Superannuation, arrears, etc",
+              "Prepare the",
+              "full and final settlement- salary, incentives, provident fund",
+              "(employee’s contribution & employer’s contribution), Gratuity,",
+              "Superannuation, arrears, etc",
+              "Assess how incentives, bonus,",
+              "variable pay and incentives are calculated",
+              "Design and prepare",
+              "appraisal letters"
+            ]
+          },
+          {
+            "unit_number": 8,
+            "title": "Basics of accounting Prepare receipt and payment voucher",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Basics of accounting Prepare receipt and payment voucher: •",
+              "Understand the basic concepts in accounting • Interpret the",
+              "objectives of financial accounting • The advantages and limitations",
+              "of financial accounting • Familiarize with the important accounting",
+              "terms and concepts • The double entry system • The different types",
+              "of accounts • Recognize business transactions and their source",
+              "documents • The method of recording business transactions •",
+              "Methods of recording business transactions • Pass different types of",
+              "journal entries • Prepare various ledger accounts • Compare",
+              "different types of receipts and payments in a business • Inspect",
+              "purchase orders, purchase journal, supplier and payment details •",
+              "Examine the documentation submitted along with purchase",
+              "order/invoice • Prepare delivery challans and vouchers • Create a",
+              "sales invoice • Recognize the concept and application of subsidiary",
+              "books • Record purchase/sales in respective journals • Operate the",
+              "Tally system and learn to pass entries in Tally • Analyze the process",
+              "of cash payments • Analyze the process of payments through",
+              "electronic channels (cheques, DD, PO, RTGS, NEFT, IMPS, ECS,",
+              "etc.) • The concept of reconciliation • Prepare reconciliation",
+              "statements • Determine opening and closing cash • The nuances of",
+              "handling cash Prepare cash-flow statements and reports."
+            ],
+            "topics_text": "Basics of accounting Prepare receipt and payment voucher: • Understand the basic concepts in accounting • Interpret the objectives of financial accounting • The advantages and limitations of financial accounting • Familiarize with the important accounting terms and concepts • The double entry system • The different types of accounts • Recognize business transactions and their source documents • The method of recording business transactions • Methods of recording business transactions • Pass different types of journal entries • Prepare various ledger accounts • Compare different types of receipts and payments in a business • Inspect purchase orders, purchase journal, supplier and payment details • Examine the documentation submitted along with purchase order/invoice • Prepare delivery challans and vouchers • Create a sales invoice • Recognize the concept and application of subsidiary books • Record purchase/sales in respective journals • Operate the Tally system and learn to pass entries in Tally • Analyze the process of cash payments • Analyze the process of payments through electronic channels (cheques, DD, PO, RTGS, NEFT, IMPS, ECS, etc.) • The concept of reconciliation • Prepare reconciliation statements • Determine opening and closing cash • The nuances of handling cash Prepare cash-flow statements and reports.",
+            "topics": [
+              "Basics of accounting Prepare receipt and payment voucher:",
+              "Understand the basic concepts in accounting",
+              "Interpret the",
+              "objectives of financial accounting",
+              "The advantages and limitations",
+              "of financial accounting",
+              "Familiarize with the important accounting",
+              "terms and concepts",
+              "The double entry system",
+              "The different types",
+              "of accounts",
+              "Recognize business transactions and their source",
+              "documents",
+              "The method of recording business transactions",
+              "Methods of recording business transactions",
+              "Pass different types of",
+              "journal entries",
+              "Prepare various ledger accounts",
+              "Compare",
+              "different types of receipts and payments in a business",
+              "Inspect",
+              "purchase orders, purchase journal, supplier and payment details",
+              "Examine the documentation submitted along with purchase",
+              "order/invoice",
+              "Prepare delivery challans and vouchers",
+              "Create a",
+              "sales invoice",
+              "Recognize the concept and application of subsidiary",
+              "books",
+              "Record purchase/sales in respective journals",
+              "Operate the",
+              "Tally system and learn to pass entries in Tally",
+              "Analyze the process",
+              "of cash payments",
+              "Analyze the process of payments through",
+              "electronic channels (cheques, DD, PO, RTGS, NEFT, IMPS, ECS,",
+              "etc.)",
+              "The concept of reconciliation",
+              "Prepare reconciliation",
+              "statements",
+              "Determine opening and closing cash",
+              "The nuances of",
+              "handling cash Prepare cash-flow statements and reports."
+            ]
+          },
+          {
+            "unit_number": 9,
+            "title": "Prepare financial statements",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Prepare financial statements: • The concept of trial balance and",
+              "reason • The process of maintaining stock ledgers, rejection in and",
+              "rejection out, delivery note, etc. • The process of physical",
+              "verification of stocks • The 5S model of filing records for easy",
+              "retrieval of the same • The concept of creating provisions for certain",
+              "expenses / doubtful debts • Prepare documentation required for",
+              "provisioning • The process of provisioning • Depreciation and the",
+              "methods to calculate depreciation • The cost capitalization concept •",
+              "The concept of block of assets • Prepare a statement of assets with",
+              "details such as purchase date, applicable rate of depreciation and",
+              "book value • Estimate the depreciation for each of the asset",
+              "contained in the list • Prepare a report/depreciation journal/or by any",
+              "other term referred to as, showing the details of depreciation",
+              "calculation • Verify the entries made in the Tally software • Identify",
+              "the nature of expenses and income covered in the profit and loss",
+              "account • Interpret in detail profit and loss account • Prepare profit",
+              "and loss statement using Tally software • The process of preparation",
+              "of final accounts/financial statements • Distinguish between trading,",
+              "manufacturing and profit & loss account • Understand balance sheet",
+              "and its formats as per Schedule III to the Companies Act, 2013 •",
+              "The classifications of items/elements of the balance sheet • Interpret",
+              "in detail about the major headings in the balance sheet • Prepare",
+              "various reports in Tally based on the financial data"
+            ],
+            "topics_text": "Prepare financial statements: • The concept of trial balance and reason • The process of maintaining stock ledgers, rejection in and rejection out, delivery note, etc. • The process of physical verification of stocks • The 5S model of filing records for easy retrieval of the same • The concept of creating provisions for certain expenses / doubtful debts • Prepare documentation required for provisioning • The process of provisioning • Depreciation and the methods to calculate depreciation • The cost capitalization concept • The concept of block of assets • Prepare a statement of assets with details such as purchase date, applicable rate of depreciation and book value • Estimate the depreciation for each of the asset contained in the list • Prepare a report/depreciation journal/or by any other term referred to as, showing the details of depreciation calculation • Verify the entries made in the Tally software • Identify the nature of expenses and income covered in the profit and loss account • Interpret in detail profit and loss account • Prepare profit and loss statement using Tally software • The process of preparation of final accounts/financial statements • Distinguish between trading, manufacturing and profit & loss account • Understand balance sheet and its formats as per Schedule III to the Companies Act, 2013 • The classifications of items/elements of the balance sheet • Interpret in detail about the major headings in the balance sheet • Prepare various reports in Tally based on the financial data",
+            "topics": [
+              "Prepare financial statements:",
+              "The concept of trial balance and",
+              "reason",
+              "The process of maintaining stock ledgers, rejection in and",
+              "rejection out, delivery note, etc.",
+              "The process of physical",
+              "verification of stocks",
+              "The 5S model of filing records for easy",
+              "retrieval of the same",
+              "The concept of creating provisions for certain",
+              "expenses / doubtful debts",
+              "Prepare documentation required for",
+              "provisioning",
+              "The process of provisioning",
+              "Depreciation and the",
+              "methods to calculate depreciation",
+              "The cost capitalization concept",
+              "The concept of block of assets",
+              "Prepare a statement of assets with",
+              "details such as purchase date, applicable rate of depreciation and",
+              "book value",
+              "Estimate the depreciation for each of the asset",
+              "contained in the list",
+              "Prepare a report/depreciation journal/or by any",
+              "other term referred to as, showing the details of depreciation",
+              "calculation",
+              "Verify the entries made in the Tally software",
+              "Identify",
+              "the nature of expenses and income covered in the profit and loss",
+              "account",
+              "Interpret in detail profit and loss account",
+              "Prepare profit",
+              "and loss statement using Tally software",
+              "The process of preparation",
+              "of final accounts/financial statements",
+              "Distinguish between trading,",
+              "manufacturing and profit & loss account",
+              "Understand balance sheet",
+              "and its formats as per Schedule III to the Companies Act, 2013",
+              "The classifications of items/elements of the balance sheet",
+              "Interpret",
+              "in detail about the major headings in the balance sheet",
+              "Prepare",
+              "various reports in Tally based on the financial data"
+            ]
+          },
+          {
+            "unit_number": 10,
+            "title": "Communicate effectively and achieve customer satisfaction",
+            "contact_hours": 1,
+            "topic_lines": [
+              "The art of active listening and paraphrase effectively in order to",
+              "understand the customers, superiors and colleagues • Sensitivity to:",
+              "language, gender, cultural and social differences in addressing",
+              "customers, superiors and colleagues • Positive attitude, correct body",
+              "language, dress code, gestures and etiquette • Value customer",
+              "satisfaction and aim to gain customer loyalty"
+            ],
+            "topics_text": "The art of active listening and paraphrase effectively in order to understand the customers, superiors and colleagues • Sensitivity to: language, gender, cultural and social differences in addressing customers, superiors and colleagues • Positive attitude, correct body language, dress code, gestures and etiquette • Value customer satisfaction and aim to gain customer loyalty",
+            "topics": [
+              "The art of active listening and paraphrase effectively in order to",
+              "understand the customers, superiors and colleagues",
+              "Sensitivity to:",
+              "language, gender, cultural and social differences in addressing",
+              "customers, superiors and colleagues",
+              "Positive attitude, correct body",
+              "language, dress code, gestures and etiquette",
+              "Value customer",
+              "satisfaction and aim to gain customer loyalty"
+            ]
+          },
+          {
+            "unit_number": 11,
+            "title": "Maintain Integrity and Ethics",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Fair practices and unfair trade and/or corrupt practices • Maintain",
+              "records meticulously • Protect customer’s information • Protect data",
+              "and information related to business or commercial decisions • Avoid",
+              "misrepresentation or misinformation • Practice ethics in day-to-day",
+              "processes • Avoid defaming products and services of competition."
+            ],
+            "topics_text": "Fair practices and unfair trade and/or corrupt practices • Maintain records meticulously • Protect customer’s information • Protect data and information related to business or commercial decisions • Avoid misrepresentation or misinformation • Practice ethics in day-to-day processes • Avoid defaming products and services of competition.",
+            "topics": [
+              "Fair practices and unfair trade and/or corrupt practices",
+              "Maintain",
+              "records meticulously",
+              "Protect customer’s information",
+              "Protect data",
+              "and information related to business or commercial decisions",
+              "Avoid",
+              "misrepresentation or misinformation",
+              "Practice ethics in day-to-day",
+              "processes",
+              "Avoid defaming products and services of competition."
+            ]
+          },
+          {
+            "unit_number": 12,
+            "title": "Focus on Teamwork",
+            "contact_hours": 1,
+            "topic_lines": [
+              "Share relevant inputs, feedback and insights to build mutual trust •",
+              "Exchange, defend and rethink ideas • Support team members to",
+              "accomplish goals • Facilitate group decision making and deal",
+              "productively with conflict.",
+              "Total Hours 50",
+              "Textbook :",
+              "1 BSFI- Study Material, BFSI, BFSI, 2022"
+            ],
+            "topics_text": "Share relevant inputs, feedback and insights to build mutual trust • Exchange, defend and rethink ideas • Support team members to accomplish goals • Facilitate group decision making and deal productively with conflict. Total Hours 50 Textbook : 1 BSFI- Study Material, BFSI, BFSI, 2022",
+            "topics": [
+              "Share relevant inputs, feedback and insights to build mutual trust",
+              "Exchange, defend and rethink ideas",
+              "Support team members to",
+              "accomplish goals",
+              "Facilitate group decision making and deal",
+              "productively with conflict.",
+              "Total Hours 50",
+              "Textbook :",
+              "1 BSFI- Study Material, BFSI, BFSI, 2022"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "BFSI, BFSI, BFSI, BFSI, 2022"
+        ],
+        "textbooks": [
+          "BSFI- Study Material, BFSI, BFSI, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://nsdcindia.org/accounts-executive-accounts-payable-receivable"
+        ]
+      },
+      "page_count": 5,
+      "extracted_character_count": 13711,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION\nSEMESTER         4\nCOURSE TITLE    ACCOUNTS EXECUTIVE\nCOURSE CODE     04SC0001\nCOURSE CREDITS  0\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Ascertain different types of tax liabilities, evaluate tax compliance documents and prepare\n     tax challans and make tax payments.\n 2  Seek and receiver income tax declarations from employees, calculate net salaries after\n     deductions, prepare salary statements giving details of earnings and deductions.\n 3  Verify the receipt / payments related documents and record the receipt / payment\n     transactions in the book of accounts, prepare reconciliation statements and execute cash\n    and inventory management.\n 4  Obtain and verify documents related to purchases / sales and pass accounting entries in\n     journals.\n 5  Make provisions under various heads, prepare statement of depreciation, and prepare\n     reports on profit and loss account and balance sheet and other financial statements.\n 6  Communicate effectively with customers, superiors and colleagues, maintain service\n     orientation and achieve customer satisfaction.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     50       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Taxation related concepts                                  5\n             Basic concepts like due date, previous year, assessment year, rates\n              of taxes, TDS and TCS rates, time of deduction/collection • Comply\n             with TDS/TCS provisions, advance tax and filing of return of\n            income • E-filing tax returns.\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Understanding GST Concepts                              5\n             Understanding GST Concepts: Comprehend the fundamental\n             concept of GST • The concept of supply • Differentiate between\n              taxable and non-taxable supply • The applicability of SGST, CGST\n            and IGST • Charge of GST including composition levy • Explain\n          how IGST is levied • Adjustment against Tax Payable and input tax\n                credit set-off • Exemptions of GST • Value of supply • The process\n              of making tax payment to the Government • Demonstrate E-Filing\n             Returns • Tax related concepts like • Time of supply of\n              goods/services • Place of supply • Location of supplier of goods •\n            Tax terminologies such as input tax credit, output tax, TDS, tax\n               collected at source (TCS) and rates of TDS, output tax, and/or\n           Goods and Services Tax (GST), etc. • Tax invoice\n     3      Incidence of Taxation                                     1\n              Incidence of Taxation: The incidences of taxation • Time of supply\n              of goods and services • The purpose of place of supply • Define\n               location of supplier of goods • Define the recipient with respect to\n               supplies involving payment and supplies not involving payment.\n     4       Registration under GST the optimum size                    4\n                 • Evaluate the PAN based Registration Process, its rules, and the\n             Purpose of registration • Differentiate between single registration\n            and multiple registrations for different business vertical •\n               Registration- centrally or selectively in each state • The details that\n               are to be furnished during registration • Common mistakes made\n              during registration • Differentiate between Taxable Person vs\n              Registered Person • The Registration Timelines – Migrations •\n            Record the benefits of registration • Form filling with case studies.\n     5      Calculation of Tax Liability                                7\n            The concept of input credit • Input Tax Credit eligibility using case\n               studies • Set-offs under GST wherever applicable • Differentiate\n             between consideration and valuation\n     6     Payment under GST and Return filing                       3\n            The types of payment, modes of payment, rules of collection of\n               taxes • Preparing different Challans, CPIN & CIN • Compare TDS\n            and TCS • Cases for reversal of credit • Calculate the tax liability\n             based on various case studies • The penalties for late payments •\n               Practice on the process of online payment • Return filing under\n           GST.\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     7      Prepare and perform payroll function                       3\n            The components of salary and their details • The process of\n              maintaining records of employees’ details • The deductions and\n             exemptions allowable in respect of allowances and perquisites • The\n            meaning and components of salary for the purpose of exemption,\n              valuation of perquisites etc. • Income Tax declarations submitted by\n            employee • Compute the deductions available under Chapter VI-A\n              Prepare tax computation sheet of employees • Prepare advice\n              statement relating to Income Tax and provident fund • Prepare net\n               salary Statement • Complete the joining formalities and record\n             maintenance of employee details • Prepare the exit formalities of\n             employees Prepare the full and final settlement- salary, incentives,\n              provident fund (employee’s contribution & employer’s\n               contribution), Gratuity, Superannuation, arrears, etc • Prepare the\n                 full and final settlement- salary, incentives, provident fund\n             (employee’s contribution & employer’s contribution), Gratuity,\n              Superannuation, arrears, etc • Assess how incentives, bonus,\n               variable pay and incentives are calculated • Design and prepare\n               appraisal letters\n     8       Basics of accounting Prepare receipt and payment voucher     9\n              Basics of accounting Prepare receipt and payment voucher: •\n             Understand the basic concepts in accounting • Interpret the\n               objectives of financial accounting • The advantages and limitations\n              of financial accounting • Familiarize with the important accounting\n             terms and concepts • The double entry system • The different types\n              of accounts • Recognize business transactions and their source\n            documents • The method of recording business transactions •\n            Methods of recording business transactions • Pass different types of\n               journal entries • Prepare various ledger accounts • Compare\n                different types of receipts and payments in a business • Inspect\n             purchase orders, purchase journal, supplier and payment details •\n            Examine the documentation submitted along with purchase\n               order/invoice • Prepare delivery challans and vouchers • Create a\n               sales invoice • Recognize the concept and application of subsidiary\n             books • Record purchase/sales in respective journals • Operate the\n              Tally system and learn to pass entries in Tally • Analyze the process\n              of cash payments • Analyze the process of payments through\n               electronic channels (cheques, DD, PO, RTGS, NEFT, IMPS, ECS,\n                 etc.) • The concept of reconciliation • Prepare reconciliation\n              statements • Determine opening and closing cash • The nuances of\n              handling cash Prepare cash-flow statements and reports.\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 4,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     9      Prepare financial statements                               10\n              Prepare financial statements: • The concept of trial balance and\n              reason • The process of maintaining stock ledgers, rejection in and\n               rejection out, delivery note, etc. • The process of physical\n                verification of stocks • The 5S model of filing records for easy\n                retrieval of the same • The concept of creating provisions for certain\n             expenses / doubtful debts • Prepare documentation required for\n              provisioning • The process of provisioning • Depreciation and the\n            methods to calculate depreciation • The cost capitalization concept •\n            The concept of block of assets • Prepare a statement of assets with\n                details such as purchase date, applicable rate of depreciation and\n            book value • Estimate the depreciation for each of the asset\n              contained in the list • Prepare a report/depreciation journal/or by any\n               other term referred to as, showing the details of depreciation\n               calculation • Verify the entries made in the Tally software • Identify\n               the nature of expenses and income covered in the profit and loss\n             account • Interpret in detail profit and loss account • Prepare profit\n            and loss statement using Tally software • The process of preparation\n              of final accounts/financial statements • Distinguish between trading,\n             manufacturing and profit & loss account • Understand balance sheet\n            and its formats as per Schedule III to the Companies Act, 2013 •\n            The classifications of items/elements of the balance sheet • Interpret\n               in detail about the major headings in the balance sheet • Prepare\n              various reports in Tally based on the financial data\n     10     Communicate effectively and achieve customer satisfaction     1\n            The art of active listening and paraphrase effectively in order to\n              understand the customers, superiors and colleagues • Sensitivity to:\n              language, gender, cultural and social differences in addressing\n              customers, superiors and colleagues • Positive attitude, correct body\n              language, dress code, gestures and etiquette • Value customer\n                satisfaction and aim to gain customer loyalty\n     11     Maintain Integrity and Ethics                              1\n               Fair practices and unfair trade and/or corrupt practices • Maintain\n              records meticulously • Protect customer’s information • Protect data\n            and information related to business or commercial decisions • Avoid\n              misrepresentation or misinformation • Practice ethics in day-to-day\n              processes • Avoid defaming products and services of competition.\n     12     Focus on Teamwork                                      1\n             Share relevant inputs, feedback and insights to build mutual trust •\n             Exchange, defend and rethink ideas • Support team members to\n             accomplish goals • Facilitate group decision making and deal\n              productively with conflict.\n                               Total Hours                       50\n\n\nTextbook :\n 1  BSFI- Study Material, BFSI, BFSI, 2022\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 5,
+          "text": "References:\n 1  BFSI, BFSI, BFSI, BFSI, 2022\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Lecture\n\nSupplementary Resources:\n 1  https://nsdcindia.org/accounts-executive-accounts-payable-receivable\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "c54c52d7342e4e8f2bc800dc769a9133a36f18a2e36518c6e96f1dd2e020474b",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21004193000802",
+      "subject_name": "BUSINESS CORRESPONDENT / FACILITATOR",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04SC0008",
+      "course_code_evidence": [
+        "04BB0301",
+        "04BB0305",
+        "04SC0008",
+        "04SL0152",
+        "04SL0153"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-8.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-8.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS CORRESPONDENT FACILITATOR [03cd1b965b90].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS CORRESPONDENT FACILITATOR [03cd1b965b90].pdf",
+      "expected_pdf_sha256": "6e908619ab017732e379b48da9165c039a5aa2597a721eae324e8dde52d7fcc7",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "BUSINESS CORRESPONDENT / FACILITATOR",
+        "course_code": "04SC0008",
+        "semester_label": "4",
+        "credits": 0,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply proper methods to source customers for Banking Services Employ proper practices to assist customers with bank application process",
+        "Apply proper procedure for providing services to customers",
+        "Prepare a sample periodic report on status of the sourced customers",
+        "Employ suitable practices to maintain data integrity and data privacy",
+        "Dramatize how to communicate effectively with guests, colleagues, and superiors to achieve a smooth workflow Apply health, hygiene, and safety practices at the workplace",
+        "Use resources at the workplace optimally Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 50 0 0 0",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "BFSI, BFSI, BFSI, BFSI, 2022"
+        ],
+        "textbooks": [
+          "BFSI, BFSI, BFSI, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "| National Skill Development Corporation (NSDC) (nsdcindia.org)"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 2818,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION\nSEMESTER         4\nCOURSE TITLE    BUSINESS CORRESPONDENT / FACILITATOR\nCOURSE CODE     04SC0008\nCOURSE CREDITS  0\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply proper methods to source customers for Banking Services Employ proper practices\n     to assist customers with bank application process\n 2  Apply proper procedure for providing services to customers\n 3  Prepare a sample periodic report on status of the sourced customers\n 4  Employ suitable practices to maintain data integrity and data privacy\n 5  Dramatize how to communicate effectively with guests, colleagues, and superiors to\n     achieve a smooth workflow Apply health, hygiene, and safety practices at the workplace\n 6  Use resources at the workplace optimally\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     50       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nTextbook :\n 1  BFSI, BFSI, BFSI, 2022\n\nReferences:\n 1  BFSI, BFSI, BFSI, BFSI, 2022\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Lecture\n\nSupplementary Resources:\n 1     | National Skill Development Corporation (NSDC) (nsdcindia.org)\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "6e908619ab017732e379b48da9165c039a5aa2597a721eae324e8dde52d7fcc7",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21004193000402",
+      "subject_name": "CREDIT PROCESSING OFFICER",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04SC0004",
+      "course_code_evidence": [
+        "04SC0004",
+        "04SC0005",
+        "04SC0006",
+        "04SC0007"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-4.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-4.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CREDIT PROCESSING OFFICER [e4b0c5697190].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CREDIT PROCESSING OFFICER [e4b0c5697190].pdf",
+      "expected_pdf_sha256": "e70702ab69b14734e93fa10d4747739ce25b9ee2611af433168f70c68930201c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "CREDIT PROCESSING OFFICER",
+        "course_code": "04SC0004",
+        "semester_label": "4",
+        "credits": 0,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Employ appropriate methods to verify and check eligibility of the loan application",
+        "Apply proper procedure to prepare the credit appraisal memorandum",
+        "Prepare a sample credit appraisal memorandum based on inputs/data from the application form and supporting documents",
+        "Apply proper procedure for providing services to customers",
+        "Prepare a sample periodic report on status of the sourced customers",
+        "Employ suitable practices to maintain data integrity and data privacy Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 50 0 0 0",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "BFSI , BFSI , BFSI, BFSI, 2022"
+        ],
+        "textbooks": [
+          "BFSI Study Material, BFSI, BFSI, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "| National Skill Development Corporation (NSDC) (nsdcindia.org)"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 2738,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION\nSEMESTER         4\nCOURSE TITLE    CREDIT PROCESSING OFFICER\nCOURSE CODE     04SC0004\nCOURSE CREDITS  0\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Employ appropriate methods to verify and check eligibility of the loan application\n 2  Apply proper procedure to prepare the credit appraisal memorandum\n 3  Prepare a sample credit appraisal memorandum based on inputs/data from the application\n    form and supporting documents\n 4  Apply proper procedure for providing services to customers\n 5  Prepare a sample periodic report on status of the sourced customers\n 6  Employ suitable practices to maintain data integrity and data privacy\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     50       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nTextbook :\n 1  BFSI Study Material, BFSI, BFSI, 2022\n\nReferences:\n 1  BFSI , BFSI , BFSI, BFSI, 2022\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Lecture\n\nSupplementary Resources:\n 1     | National Skill Development Corporation (NSDC) (nsdcindia.org)\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "e70702ab69b14734e93fa10d4747739ce25b9ee2611af433168f70c68930201c",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21004193000702",
+      "subject_name": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04SC0007",
+      "course_code_evidence": [
+        "04SC0007",
+        "04SC0008",
+        "04SL0152",
+        "04SL0153"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-7.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-7.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE [85a575727541].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE [85a575727541].pdf",
+      "expected_pdf_sha256": "e28366642d21d01c4f4d32ebde47f1604f3e68e1c194ef70c5455fc7c3d90755",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "CUSTOMER CARE EXECUTIVE DOMESTIC-VOICE",
+        "course_code": "04SC0007",
+        "semester_label": "4",
+        "credits": 0,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Explain the role of a Customer Care Executive-Voice",
+        "Attending Customer Queries",
+        "Process of Query Management",
+        "Make Outbound Calls to Customers",
+        "Documentation Process for Customer Queries",
+        "Manage Query Resolution Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 50 0 0 0",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "BFSI, BFSI, BFSI, BFSI, 2022"
+        ],
+        "textbooks": [
+          "BFSI- Material, BFSI, BFSI, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "| National Skill Development Corporation (NSDC) (nsdcindia.org)"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 2482,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION\nSEMESTER         4\nCOURSE TITLE   CUSTOMER CARE EXECUTIVE DOMESTIC-VOICE\nCOURSE CODE     04SC0007\nCOURSE CREDITS  0\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Explain the role of a Customer Care Executive-Voice\n 2  Attending Customer Queries\n 3  Process of Query Management\n 4  Make Outbound Calls to Customers\n 5  Documentation Process for Customer Queries\n 6  Manage Query Resolution\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     50       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nTextbook :\n 1  BFSI- Material, BFSI, BFSI, 2022\n\nReferences:\n 1  BFSI, BFSI, BFSI, BFSI, 2022\n\nSuggested Theory Distribution:\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Lecture\n\nSupplementary Resources:\n 1     | National Skill Development Corporation (NSDC) (nsdcindia.org)\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "e28366642d21d01c4f4d32ebde47f1604f3e68e1c194ef70c5455fc7c3d90755",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000422240501",
+      "subject_name": "ENTREPRENEURSHIP",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04OE0008",
+      "course_code_evidence": [
+        "04OE0008",
+        "04OE0010",
+        "04OE0011",
+        "04OE0012",
+        "04OE0013"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-21.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-21.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ENTREPRENEURSHIP [edb305cc9536].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ENTREPRENEURSHIP [edb305cc9536].pdf",
+      "expected_pdf_sha256": "3be1090636c528b43b7f590bdda28c7a56165808072ca0549b1d74354861d1fa",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENTREPRENEURSHIP",
+        "course_code": "04OE0008",
+        "semester_label": "4",
+        "credits": 3,
+        "prerequisite": "NONE"
+      },
+      "objectives": [
+        "To understand the concept of entrepreneurship and to develop an understanding of business circumstances in which entrepreneurs operate.",
+        "To prepare students for analyzing different aspects, scope, and challenges of entrepreneurship.",
+        "To provide a clear explanation of the classification and various types of entrepreneurs, in addition to outlining the steps involved in developing an entrepreneurial project.",
+        "To provide understanding of the process of starting a new business and staying informed on current entrepreneurial trends as well as ecosystems in the economy for entrepreneurs."
+      ],
+      "course_outcomes": [
+        "Understanding the concept, types, competencies of entrepreneur, problems of SSI, the policies, management of small business and schemes of SSI in India",
+        "Explain problems faced by entrepreneurs and Capacity Building for Entrepreneurs",
+        "Identify business opportunities and understand the procedure for setting up of small-scale business unit",
+        "Understand the importance and use of a Business Plan Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Entrepreneurship - An Introduction",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Evolution, Concept of Entrepreneurship; Types of Entrepreneurs;",
+              "Entrepreneurial Competencies, problems faced by entrepreneur and",
+              "Capacity Building for Entrepreneurs; Entrepreneurial Development",
+              "and Training; Family Business"
+            ],
+            "topics_text": "Evolution, Concept of Entrepreneurship; Types of Entrepreneurs; Entrepreneurial Competencies, problems faced by entrepreneur and Capacity Building for Entrepreneurs; Entrepreneurial Development and Training; Family Business",
+            "topics": [
+              "Evolution, Concept of Entrepreneurship",
+              "Types of Entrepreneurs",
+              "Entrepreneurial Competencies, problems faced by entrepreneur and",
+              "Capacity Building for Entrepreneurs",
+              "Entrepreneurial Development",
+              "and Training",
+              "Family Business"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "New Venture Creation",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Identification of Business Opportunities- Sources of Business Idea,",
+              "Understanding External Environmental Factors affecting business,",
+              "Feasibility Study Analysis; Business plans – Purpose, Contents,",
+              "Presenting Business Plan; Institutions Supporting Business",
+              "Enterprises: Central Level & State level- Institutions Supporting",
+              "Women Entrepreneurs"
+            ],
+            "topics_text": "Identification of Business Opportunities- Sources of Business Idea, Understanding External Environmental Factors affecting business, Feasibility Study Analysis; Business plans – Purpose, Contents, Presenting Business Plan; Institutions Supporting Business Enterprises: Central Level & State level- Institutions Supporting Women Entrepreneurs",
+            "topics": [
+              "Identification of Business Opportunities- Sources of Business Idea,",
+              "Understanding External Environmental Factors affecting business,",
+              "Feasibility Study Analysis",
+              "Business plans – Purpose, Contents,",
+              "Presenting Business Plan",
+              "Institutions Supporting Business",
+              "Enterprises: Central Level & State level- Institutions Supporting",
+              "Women Entrepreneurs"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Modern Small Business Enterprises",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Role of small-scale industries-Concepts and definition of SSI,",
+              "Government policies and development of small-scale sector in",
+              "India; Current Schemes for SSI, Problems for small scale industries;",
+              "Government initiatives for growth of MSME"
+            ],
+            "topics_text": "Role of small-scale industries-Concepts and definition of SSI, Government policies and development of small-scale sector in India; Current Schemes for SSI, Problems for small scale industries; Government initiatives for growth of MSME",
+            "topics": [
+              "Role of small-scale industries-Concepts and definition of SSI,",
+              "Government policies and development of small-scale sector in",
+              "India",
+              "Current Schemes for SSI, Problems for small scale industries",
+              "Government initiatives for growth of MSME"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Managing Small Business",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Understanding various functional domains of the business –",
+              "Challenges faced by Small Businesses, Fund Raising Options for",
+              "Small Businesses – Marketing of Products for Small Business, Role",
+              "of Digital Technological Aids in growth of Small Businesses",
+              "Total Hours 36",
+              "Textbook :",
+              "1 Entrepreneurship Development and Small Business Enterprises, Poornima M Charatimath,",
+              "Pearson, 2018",
+              "2 Entrepreneurship- A South-Asian Perspective, D F Kuratko and T V Rao, Cengage",
+              "Learning, 2012",
+              "3 The Dynamics of Entrepreneurial Development and Management, Vasant Desai, Himalaya",
+              "Publishing House, 2018"
+            ],
+            "topics_text": "Understanding various functional domains of the business – Challenges faced by Small Businesses, Fund Raising Options for Small Businesses – Marketing of Products for Small Business, Role of Digital Technological Aids in growth of Small Businesses Total Hours 36 Textbook : 1 Entrepreneurship Development and Small Business Enterprises, Poornima M Charatimath, Pearson, 2018 2 Entrepreneurship- A South-Asian Perspective, D F Kuratko and T V Rao, Cengage Learning, 2012 3 The Dynamics of Entrepreneurial Development and Management, Vasant Desai, Himalaya Publishing House, 2018",
+            "topics": [
+              "Understanding various functional domains of the business –",
+              "Challenges faced by Small Businesses, Fund Raising Options for",
+              "Small Businesses – Marketing of Products for Small Business, Role",
+              "of Digital Technological Aids in growth of Small Businesses",
+              "Total Hours 36",
+              "Textbook :",
+              "1 Entrepreneurship Development and Small Business Enterprises, Poornima M Charatimath,",
+              "Pearson, 2018",
+              "2 Entrepreneurship- A South-Asian Perspective, D F Kuratko and T V Rao, Cengage",
+              "Learning, 2012",
+              "3 The Dynamics of Entrepreneurial Development and Management, Vasant Desai, Himalaya",
+              "Publishing House, 2018"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Entrepreneurship, Entrepreneurship, Robert D. Hisrich, Michael P. Peters, Dean A. Shepherd, McGraw Hill, 2016",
+          "Entrepreneurship, Entrepreneurship, Rajeev Roy, Oxford, 2012",
+          "Entrepreneurship and New Venture Creation, Entrepreneurship and New Venture Creation, Arun Sahay & V. Sharma, Excel Books, 2008",
+          "New Venture Creation : Entrepreneurship for the 21st Century, New Venture Creation : Entrepreneurship for the 21st Century, Robert J Adams Jr. and Stephen Spinelli Jr., McGraw Hill, 2015",
+          "Entrepreneurship Successfully launching new ventures, Entrepreneurship Successfully launching new ventures, Bruce R. Barringer, R. Duane Ireland,, Pearson, 2015"
+        ],
+        "textbooks": [
+          "Entrepreneurship Development and Small Business Enterprises, Poornima M Charatimath, Pearson, 2018",
+          "Entrepreneurship- A South-Asian Perspective, D F Kuratko and T V Rao, Cengage Learning, 2012",
+          "The Dynamics of Entrepreneurial Development and Management, Vasant Desai, Himalaya Publishing House, 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5837,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION\nSEMESTER         4\nCOURSE TITLE    ENTREPRENEURSHIP\nCOURSE CODE     04OE0008\nCOURSE CREDITS  3\n\nObjective:\n 1  To understand the concept of entrepreneurship and to develop an understanding of business\n     circumstances in which entrepreneurs operate.\n 2  To prepare students for analyzing different aspects, scope, and challenges of\n     entrepreneurship.\n 3  To provide a clear explanation of the classification and various types of entrepreneurs, in\n     addition to outlining the steps involved in developing an entrepreneurial project.\n 4  To provide understanding of the process of starting a new business and staying informed on\n     current entrepreneurial trends as well as ecosystems in the economy for entrepreneurs.\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understanding the concept, types, competencies of entrepreneur, problems of SSI, the\n     policies, management of small business and schemes of SSI in India\n 2  Explain problems faced by entrepreneurs and Capacity Building for Entrepreneurs\n 3  Identify business opportunities and understand the procedure for setting up of small-scale\n     business unit\n 4  Understand the importance and use of a Business Plan\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Entrepreneurship - An Introduction                         8\n              Evolution, Concept of Entrepreneurship; Types of Entrepreneurs;\n              Entrepreneurial Competencies, problems faced by entrepreneur and\n             Capacity Building for Entrepreneurs; Entrepreneurial Development\n            and Training; Family Business\n\n\n\n\n\nDR. KIRAN KUMAR AGRAWAL                            DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2     New Venture Creation                                    12\n                Identification of Business Opportunities- Sources of Business Idea,\n             Understanding External Environmental Factors affecting business,\n                Feasibility Study Analysis; Business plans – Purpose, Contents,\n              Presenting Business Plan; Institutions Supporting Business\n               Enterprises: Central Level & State level- Institutions Supporting\n         Women Entrepreneurs\n     3     Modern Small Business Enterprises                         8\n             Role of small-scale industries-Concepts and definition of SSI,\n            Government policies and development of small-scale sector in\n               India; Current Schemes for SSI, Problems for small scale industries;\n            Government initiatives for growth of MSME\n     4     Managing Small Business                                  8\n             Understanding various functional domains of the business –\n             Challenges faced by Small Businesses, Fund Raising Options for\n             Small Businesses – Marketing of Products for Small Business, Role\n              of Digital Technological Aids in growth of Small Businesses\n                               Total Hours                       36\n\n\nTextbook :\n 1  Entrepreneurship Development and Small Business Enterprises, Poornima M Charatimath,\n     Pearson, 2018\n 2  Entrepreneurship- A South-Asian Perspective, D F Kuratko and T V Rao, Cengage\n     Learning, 2012\n 3  The Dynamics of Entrepreneurial Development and Management, Vasant Desai, Himalaya\n     Publishing House, 2018\n\nReferences:\n 1  Entrepreneurship, Entrepreneurship, Robert D. Hisrich, Michael P. Peters, Dean A.\n     Shepherd, McGraw Hill, 2016\n 2  Entrepreneurship, Entrepreneurship, Rajeev Roy, Oxford, 2012\n 3  Entrepreneurship and New Venture Creation, Entrepreneurship and New Venture Creation,\n    Arun Sahay & V. Sharma, Excel Books, 2008\n 4 New Venture Creation : Entrepreneurship for the 21st Century, New Venture Creation :\n     Entrepreneurship for the 21st Century, Robert J Adams Jr. and Stephen Spinelli Jr.,\n   McGraw Hill, 2015\n 5  Entrepreneurship Successfully launching new ventures, Entrepreneurship Successfully\n     launching new ventures, Bruce R. Barringer, R. Duane Ireland,, Pearson, 2015\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\nDR. KIRAN KUMAR AGRAWAL                            DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nDR. KIRAN KUMAR AGRAWAL                            DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "3be1090636c528b43b7f590bdda28c7a56165808072ca0549b1d74354861d1fa",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000422040901",
+      "subject_name": "ENVIRONMENTAL STUDIES",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0409",
+        "04BB0411",
+        "04BB2405",
+        "04BH0402",
+        "04SC0002"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC0206-Environmental-Studies-1.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ENVIRONMENTAL STUDIES [4f42a0ea8e3f].pdf",
+      "expected_pdf_sha256": "15c24a17762fcf6279589a01bd2010911cf2d15af94bcb2aa17d1a3c5e362e56",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BC0206"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "21000422040301",
+      "subject_name": "INCOME TAX – LAW AND PRACTICE",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04BB0403",
+      "course_code_evidence": [
+        "04BB0403",
+        "04BB0406",
+        "04BB0408",
+        "04BB0409",
+        "04BB0411"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/ITLP.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/ITLP.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INCOME TAX – LAW AND PRACTICE [05b66b8b499c].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INCOME TAX – LAW AND PRACTICE [05b66b8b499c].pdf",
+      "expected_pdf_sha256": "2151e1eb56ed0c1c8b5156e11c8afdcb86dfb6dfd5ad1969fc7832341ea1a447",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INCOME TAX – LAW AND PRACTICE",
+        "course_code": "04BB0403",
+        "semester_label": "4",
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand the residential status and tax incidence based on it",
+        "Calculate income under all the five heads of Income",
+        "Gain knowledge regarding the exempt income",
+        "Gain knowledge regarding the deductions from total income",
+        "Calculate tax payable on taxable income",
+        "Understand the concept of tax deduction and tax collected at source Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 5,
+            "topic_lines": [
+              "Levy of income tax, Rates of tax & slab, Important Definitions,",
+              "Relevance and significance of residential status, Types of residential",
+              "status and its Determination, Incidence of tax based on residential",
+              "status, Income which do not form part of total income, Conditions to",
+              "be satisfied for availing exemptions"
+            ],
+            "topics_text": "Levy of income tax, Rates of tax & slab, Important Definitions, Relevance and significance of residential status, Types of residential status and its Determination, Incidence of tax based on residential status, Income which do not form part of total income, Conditions to be satisfied for availing exemptions",
+            "topics": [
+              "Levy of income tax, Rates of tax & slab, Important Definitions,",
+              "Relevance and significance of residential status, Types of residential",
+              "status and its Determination, Incidence of tax based on residential",
+              "status, Income which do not form part of total income, Conditions to",
+              "be satisfied for availing exemptions"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Income under Salary and House Property",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Definition, Chargeability, Treatment of various allowances under",
+              "salary, Perquisites and their valuation, Deductions from gross",
+              "salary, retirement benefits, provisions regarding provident fund,",
+              "Computation of taxable salary (sums), Chargeability, composite",
+              "rent, annual value and its determination under house property,",
+              "Deductions from annual value, Deemed ownership, Computation of",
+              "income taxable under house property (sums)"
+            ],
+            "topics_text": "Definition, Chargeability, Treatment of various allowances under salary, Perquisites and their valuation, Deductions from gross salary, retirement benefits, provisions regarding provident fund, Computation of taxable salary (sums), Chargeability, composite rent, annual value and its determination under house property, Deductions from annual value, Deemed ownership, Computation of income taxable under house property (sums)",
+            "topics": [
+              "Definition, Chargeability, Treatment of various allowances under",
+              "salary, Perquisites and their valuation, Deductions from gross",
+              "salary, retirement benefits, provisions regarding provident fund,",
+              "Computation of taxable salary (sums), Chargeability, composite",
+              "rent, annual value and its determination under house property,",
+              "Deductions from annual value, Deemed ownership, Computation of",
+              "income taxable under house property (sums)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Income under Business and Profession and Capital Gains",
+            "contact_hours": 16,
+            "topic_lines": [
+              "Meaning, chargeability, Allowable expenses, expressly disallowed",
+              "expenses, Deemed profits and income, Computations of income",
+              "taxable from business and profession (sums), Chargeability, Capital",
+              "asset, Transfer, Short term and long term capital asset, Short term",
+              "and Long term capital gain, Exemptions from long term capital",
+              "gain, Computation of capital gain (sums)"
+            ],
+            "topics_text": "Meaning, chargeability, Allowable expenses, expressly disallowed expenses, Deemed profits and income, Computations of income taxable from business and profession (sums), Chargeability, Capital asset, Transfer, Short term and long term capital asset, Short term and Long term capital gain, Exemptions from long term capital gain, Computation of capital gain (sums)",
+            "topics": [
+              "Meaning, chargeability, Allowable expenses, expressly disallowed",
+              "expenses, Deemed profits and income, Computations of income",
+              "taxable from business and profession (sums), Chargeability, Capital",
+              "asset, Transfer, Short term and long term capital asset, Short term",
+              "and Long term capital gain, Exemptions from long term capital",
+              "gain, Computation of capital gain (sums)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Income from other sources and Deductions",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Incomes taxable under other source, Deductions allowed,",
+              "inadmissible deductions from other source, Computation of income",
+              "taxable under other sources (sums), Chapter VI-A deductions from",
+              "gross total income [Section 80C to 80U]"
+            ],
+            "topics_text": "Incomes taxable under other source, Deductions allowed, inadmissible deductions from other source, Computation of income taxable under other sources (sums), Chapter VI-A deductions from gross total income [Section 80C to 80U]",
+            "topics": [
+              "Incomes taxable under other source, Deductions allowed,",
+              "inadmissible deductions from other source, Computation of income",
+              "taxable under other sources (sums), Chapter VI-A deductions from",
+              "gross total income [Section 80C to 80U]"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Tax Payable, TDS and Advance Tax",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Calculation of taxable income and tax payable, Deduction of tax at",
+              "source [sections applicable to individual], Concept of tax collected",
+              "at source, Liability for payment of advance tax and due dates",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Students’ guide to Income Tax (University Edition), Dr. V. K. Singhania and Dr. Monica",
+              "Singhania, Taxmann, 2022",
+              "2 Direct Tax Law and Practice, Dr. Girish Ahuja and Dr. Ravi Gupta, Bharat Publication,",
+              "2022",
+              "3 Direct Tax Laws, CA. T. N. Manoharan, Snow White Publication, 2022"
+            ],
+            "topics_text": "Calculation of taxable income and tax payable, Deduction of tax at source [sections applicable to individual], Concept of tax collected at source, Liability for payment of advance tax and due dates Total Hours 48 Textbook : 1 Students’ guide to Income Tax (University Edition), Dr. V. K. Singhania and Dr. Monica Singhania, Taxmann, 2022 2 Direct Tax Law and Practice, Dr. Girish Ahuja and Dr. Ravi Gupta, Bharat Publication, 2022 3 Direct Tax Laws, CA. T. N. Manoharan, Snow White Publication, 2022",
+            "topics": [
+              "Calculation of taxable income and tax payable, Deduction of tax at",
+              "source [sections applicable to individual], Concept of tax collected",
+              "at source, Liability for payment of advance tax and due dates",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Students’ guide to Income Tax (University Edition), Dr. V. K. Singhania and Dr. Monica",
+              "Singhania, Taxmann, 2022",
+              "2 Direct Tax Law and Practice, Dr. Girish Ahuja and Dr. Ravi Gupta, Bharat Publication,",
+              "2022",
+              "3 Direct Tax Laws, CA. T. N. Manoharan, Snow White Publication, 2022"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Practical Approach to Tax Laws and Practice, Practical Approach to Tax Laws and Practice, Dr. Girish Ahuja and Dr. Ravi Gupta, Bharat Publication, 2022",
+          "Students’ guide to Income Tax, Students’ guide to Income Tax, Dr. V. K. Singhania and",
+          "Income tax Law and practice, Income tax Law and practice, Gaur, V. P. & Narang, B. K., Kalyani Publishers, New Delhi, 2022",
+          "Income tax Law and practice, Income tax Law and practice, Prasad, B., New Age Publications, 2022",
+          "Direct tax, Direct tax, B.B. Lal and N. Vashisht, I. K. International Publishing House, 2022"
+        ],
+        "textbooks": [
+          "Students’ guide to Income Tax (University Edition), Dr. V. K. Singhania and Dr. Monica Singhania, Taxmann, 2022",
+          "Direct Tax Law and Practice, Dr. Girish Ahuja and Dr. Ravi Gupta, Bharat Publication, 2022",
+          "Direct Tax Laws, CA. T. N. Manoharan, Snow White Publication, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://resource.cdn.icai.org/61996bos50392cp1.pdf",
+          "https://resource.cdn.icai.org/61997bos50392cp2.pdf",
+          "https://resource.cdn.icai.org/62000bos50392cp4u2.pdf",
+          "https://resource.cdn.icai.org/61999bos50392cp4u1.pdf",
+          "https://www.taxmann.com/TaxCalc/taxcalc.aspx",
+          "https://www.taxmann.com/compliance-etds"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6078,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         4\nCOURSE TITLE   INCOME TAX – LAW AND PRACTICE\nCOURSE CODE     04BB0403\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the residential status and tax incidence based on it\n 2  Calculate income under all the five heads of Income\n 3  Gain knowledge regarding the exempt income\n 4  Gain knowledge regarding the deductions from total income\n 5  Calculate tax payable on taxable income\n 6  Understand the concept of tax deduction and tax collected at source\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4                                  50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction                                             5\n            Levy of income tax, Rates of tax & slab, Important Definitions,\n             Relevance and significance of residential status, Types of residential\n                status and its Determination, Incidence of tax based on residential\n                 status, Income which do not form part of total income, Conditions to\n             be satisfied for availing exemptions\n     2      Income under Salary and House Property                    15\n               Definition, Chargeability, Treatment of various allowances under\n                salary, Perquisites and their valuation, Deductions from gross\n                salary, retirement benefits, provisions regarding provident fund,\n             Computation of taxable salary (sums), Chargeability, composite\n                 rent, annual value and its determination under house property,\n             Deductions from annual value, Deemed ownership, Computation of\n            income taxable under house property (sums)\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Income under Business and Profession and Capital Gains       16\n             Meaning, chargeability, Allowable expenses, expressly disallowed\n              expenses, Deemed profits and income, Computations of income\n              taxable from business and profession (sums), Chargeability, Capital\n                asset, Transfer, Short term and long term capital asset, Short term\n            and Long term capital gain, Exemptions from long term capital\n               gain, Computation of capital gain (sums)\n     4      Income from other sources and Deductions                   8\n            Incomes taxable under other source, Deductions allowed,\n              inadmissible deductions from other source, Computation of income\n              taxable under other sources (sums), Chapter VI-A deductions from\n              gross total income [Section 80C to 80U]\n     5     Tax Payable, TDS and Advance Tax                         4\n              Calculation of taxable income and tax payable, Deduction of tax at\n              source [sections applicable to individual], Concept of tax collected\n                 at source, Liability for payment of advance tax and due dates\n                               Total Hours                       48\n\n\nTextbook :\n 1  Students’ guide to Income Tax (University Edition), Dr. V. K. Singhania and Dr. Monica\n     Singhania, Taxmann, 2022\n 2  Direct Tax Law and Practice, Dr. Girish Ahuja and Dr. Ravi Gupta, Bharat Publication,\n    2022\n 3  Direct Tax Laws, CA. T. N. Manoharan, Snow White Publication, 2022\n\nReferences:\n 1  Practical Approach to Tax Laws and Practice, Practical Approach to Tax Laws and\n     Practice, Dr. Girish Ahuja and Dr. Ravi Gupta, Bharat Publication, 2022\n 2  Students’ guide to Income Tax, Students’ guide to Income Tax, Dr. V. K. Singhania and\n     Dr. Monica Singhania, Taxmann, 2022\n 3  Income tax Law and practice, Income tax Law and practice, Gaur, V. P. & Narang, B. K.,\n    Kalyani Publishers, New Delhi, 2022\n 4  Income tax Law and practice, Income tax Law and practice, Prasad, B., New Age\n     Publications, 2022\n 5  Direct tax, Direct tax, B.B. Lal and N. Vashisht, I. K. International Publishing House, 2022\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1  https://resource.cdn.icai.org/61996bos50392cp1.pdf\n 2  https://resource.cdn.icai.org/61997bos50392cp2.pdf\n 3  https://resource.cdn.icai.org/62000bos50392cp4u2.pdf\n 4  https://resource.cdn.icai.org/61999bos50392cp4u1.pdf\n 5  https://www.taxmann.com/TaxCalc/taxcalc.aspx\n 6  https://www.taxmann.com/compliance-etds\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "2151e1eb56ed0c1c8b5156e11c8afdcb86dfb6dfd5ad1969fc7832341ea1a447",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21004193000202",
+      "subject_name": "INSURANCE AGENT",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04SC0002",
+      "course_code_evidence": [
+        "04SC0002",
+        "04SC0003",
+        "04SC0004",
+        "04SC0005",
+        "04SC0006"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-3.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-3.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INSURANCE AGENT [275ba500ce05].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INSURANCE AGENT [275ba500ce05].pdf",
+      "expected_pdf_sha256": "adb91d40df97b0383427ce84c6c0df1d5b28162a9fd345b4e19b8a8ed468d7c2",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "INSURANCE AGENT",
+        "course_code": "04SC0002",
+        "semester_label": "4",
+        "credits": 0,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply proper techniques to source insurance customers",
+        "Draft a sample daily report on lead conversion for the sales of insurance policies",
+        "Role play on how to assist customers in filling application form and providing pre-issuance services",
+        "Employ appropriate practices to assist customers with post-sale services",
+        "Dramatize how to communicate effectively with guests, colleagues, and superiors to achieve a smooth workflow",
+        "Apply health, hygiene, and safety practices at the workplace Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 50 0 0 0",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "BFSI, BFSI, BFSI, BFSI, 2022"
+        ],
+        "textbooks": [
+          "BFSI, BFSI, BFSI, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://nsdcindia.org/nos-listing/13"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 2704,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION\nSEMESTER         4\nCOURSE TITLE    INSURANCE AGENT\nCOURSE CODE     04SC0002\nCOURSE CREDITS  0\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply proper techniques to source insurance customers\n 2  Draft a sample daily report on lead conversion for the sales of insurance policies\n 3  Role play on how to assist customers in filling application form and providing pre-issuance\n     services\n 4  Employ appropriate practices to assist customers with post-sale services\n 5  Dramatize how to communicate effectively with guests, colleagues, and superiors to\n     achieve a smooth workflow\n 6  Apply health, hygiene, and safety practices at the workplace\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     50       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nTextbook :\n 1  BFSI, BFSI, BFSI, 2022\n\nReferences:\n 1  BFSI, BFSI, BFSI, BFSI, 2022\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Suggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Lecture\n\nSupplementary Resources:\n 1  https://nsdcindia.org/nos-listing/13\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "adb91d40df97b0383427ce84c6c0df1d5b28162a9fd345b4e19b8a8ed468d7c2",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000422041101",
+      "subject_name": "INTERNATIONAL BUSINESS",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0411",
+        "04BB2405",
+        "04BH0402",
+        "04SC0002",
+        "04SC0003"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/04MB0303-International-Business.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTERNATIONAL BUSINESS [d4631c9162b6].pdf",
+      "expected_pdf_sha256": "804910604c30fe63facb426849105e02b0db3637f8cd87e98ba1fdc40a36558b",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04MB0303"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "21000422040801",
+      "subject_name": "MANAGEMENT ACCOUNTING",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04BB0408",
+      "course_code_evidence": [
+        "04BB0408",
+        "04BB0409",
+        "04BB0411",
+        "04BB2405",
+        "04BH0402"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MA.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MA.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MANAGEMENT ACCOUNTING [56000e25850a].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MANAGEMENT ACCOUNTING [56000e25850a].pdf",
+      "expected_pdf_sha256": "4342347e18fbc38f5ee0d337eb902df0da3d23059b8c19ce350d9f5223a5efd1",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MANAGEMENT ACCOUNTING",
+        "course_code": "04BB0408",
+        "semester_label": "4",
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand the scope of management accounting",
+        "Understand the importance of marginal costing in decision making.",
+        "Understand the control mechanism on all the element of cost that affect production.",
+        "Understand the changes in operational and financial position of company.",
+        "Understand the role of Budgetary control in framing financial plan. Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Management Accounting",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Meaning, Definition, Nature, Scope, Functions and Limitations of",
+              "Management Accounting, Relationship and difference between",
+              "Management Accounting to Cost Accounting and Financial",
+              "Accounting, Description of Tools and Techniques in Management",
+              "Accounting"
+            ],
+            "topics_text": "Meaning, Definition, Nature, Scope, Functions and Limitations of Management Accounting, Relationship and difference between Management Accounting to Cost Accounting and Financial Accounting, Description of Tools and Techniques in Management Accounting",
+            "topics": [
+              "Meaning, Definition, Nature, Scope, Functions and Limitations of",
+              "Management Accounting, Relationship and difference between",
+              "Management Accounting to Cost Accounting and Financial",
+              "Accounting, Description of Tools and Techniques in Management",
+              "Accounting"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Analysis of Fund Flow and Cash Flow Statement",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Fund Flow Statement: Meaning and usage of Fund Flow Statement;",
+              "preparation of fund flow statement (Basic level), Cash Flow",
+              "Statement (AS-3); Distinction between Fund Flow Statement and",
+              "Cash Flow Statement, Classification of Cash Flows, Objective and",
+              "Usage of Cash Flow Statement, Preparation of Cash Flow statement"
+            ],
+            "topics_text": "Fund Flow Statement: Meaning and usage of Fund Flow Statement; preparation of fund flow statement (Basic level), Cash Flow Statement (AS-3); Distinction between Fund Flow Statement and Cash Flow Statement, Classification of Cash Flows, Objective and Usage of Cash Flow Statement, Preparation of Cash Flow statement",
+            "topics": [
+              "Fund Flow Statement: Meaning and usage of Fund Flow Statement",
+              "preparation of fund flow statement (Basic level), Cash Flow",
+              "Statement (AS-3)",
+              "Distinction between Fund Flow Statement and",
+              "Cash Flow Statement, Classification of Cash Flows, Objective and",
+              "Usage of Cash Flow Statement, Preparation of Cash Flow statement"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Marginal and Absorption Costing",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Marginal Costing- Meaning, Characteristics, Advantages and",
+              "Limitations. Difference between Marginal Costing and Absorption",
+              "Costing, Income determination under Marginal Costing and",
+              "Absorption Costing; CVP/BEP Analysis, Safety Margin and Key",
+              "factors that involves decision making"
+            ],
+            "topics_text": "Marginal Costing- Meaning, Characteristics, Advantages and Limitations. Difference between Marginal Costing and Absorption Costing, Income determination under Marginal Costing and Absorption Costing; CVP/BEP Analysis, Safety Margin and Key factors that involves decision making",
+            "topics": [
+              "Marginal Costing- Meaning, Characteristics, Advantages and",
+              "Limitations. Difference between Marginal Costing and Absorption",
+              "Costing, Income determination under Marginal Costing and",
+              "Absorption Costing",
+              "CVP/BEP Analysis, Safety Margin and Key",
+              "factors that involves decision making"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Budgeting and Budgetary Control",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Meaning, Objectives, Advantages and Limitations. Essentials of",
+              "effective budgeting in management process; Installation of Budget",
+              "System, Budgetary Control: Types of budgets preparation, Zero",
+              "Base Budgeting; Performance Budgeting"
+            ],
+            "topics_text": "Meaning, Objectives, Advantages and Limitations. Essentials of effective budgeting in management process; Installation of Budget System, Budgetary Control: Types of budgets preparation, Zero Base Budgeting; Performance Budgeting",
+            "topics": [
+              "Meaning, Objectives, Advantages and Limitations. Essentials of",
+              "effective budgeting in management process",
+              "Installation of Budget",
+              "System, Budgetary Control: Types of budgets preparation, Zero",
+              "Base Budgeting",
+              "Performance Budgeting"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Standard Costing",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Meaning, Difference between Standard Costing and Budgetary",
+              "Control, Merits and Demerits of Standard costing, Prerequisite for",
+              "establishment of standard costing, Efficiency and Activity Ratios,",
+              "Material, Labor and Overhead Variance",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Cost and Management Accounting, M. N. Arora, Vikas Publishing House, 2020",
+              "2 Cost and Management Accounting, P.C. Tulsian, S Chand, 2018"
+            ],
+            "topics_text": "Meaning, Difference between Standard Costing and Budgetary Control, Merits and Demerits of Standard costing, Prerequisite for establishment of standard costing, Efficiency and Activity Ratios, Material, Labor and Overhead Variance Total Hours 48 Textbook : 1 Cost and Management Accounting, M. N. Arora, Vikas Publishing House, 2020 2 Cost and Management Accounting, P.C. Tulsian, S Chand, 2018",
+            "topics": [
+              "Meaning, Difference between Standard Costing and Budgetary",
+              "Control, Merits and Demerits of Standard costing, Prerequisite for",
+              "establishment of standard costing, Efficiency and Activity Ratios,",
+              "Material, Labor and Overhead Variance",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Cost and Management Accounting, M. N. Arora, Vikas Publishing House, 2020",
+              "2 Cost and Management Accounting, P.C. Tulsian, S Chand, 2018"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Cost Accounting, Cost Accounting, Jawahar Lal, Tata McGraw Hill Publication, 2020",
+          "Management Accounting, Management Accounting, Paresh Shah, Oxford Publication, 2018",
+          "Cost Management Accounting, Cost Management Accounting, Ravi Kishor, Taxman, 2020",
+          "Management Accounting, Management Accounting, Bhattacharya, Pearson Publication, 2018",
+          "Cost Management: Strategies for Business Decision, Cost Management: Strategies for Business Decision, Hilton, Maher and Selto, TMH, 2020"
+        ],
+        "textbooks": [
+          "Cost and Management Accounting, M. N. Arora, Vikas Publishing House, 2020",
+          "Cost and Management Accounting, P.C. Tulsian, S Chand, 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4996,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         4\nCOURSE TITLE   MANAGEMENT ACCOUNTING\nCOURSE CODE     04BB0408\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the scope of management accounting\n 2  Understand the importance of marginal costing in decision making.\n 3  Understand the control mechanism on all the element of cost that affect production.\n 4  Understand the changes in operational and financial position of company.\n 5  Understand the role of Budgetary control in framing financial plan.\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Management Accounting                     7\n             Meaning, Definition, Nature, Scope, Functions and Limitations of\n           Management Accounting, Relationship and difference between\n           Management Accounting to Cost Accounting and Financial\n             Accounting, Description of Tools and Techniques in Management\n             Accounting\n     2      Analysis of Fund Flow and Cash Flow Statement              12\n            Fund Flow Statement: Meaning and usage of Fund Flow Statement;\n              preparation of fund flow statement (Basic level), Cash Flow\n             Statement (AS-3); Distinction between Fund Flow Statement and\n            Cash Flow Statement, Classification of Cash Flows, Objective and\n            Usage of Cash Flow Statement, Preparation of Cash Flow statement\n     3      Marginal and Absorption Costing                           11\n             Marginal Costing- Meaning, Characteristics, Advantages and\n               Limitations. Difference between Marginal Costing and Absorption\n              Costing, Income determination under Marginal Costing and\n             Absorption Costing; CVP/BEP Analysis, Safety Margin and Key\n               factors that involves decision making\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Budgeting and Budgetary Control                          8\n             Meaning, Objectives, Advantages and Limitations. Essentials of\n               effective budgeting in management process; Installation of Budget\n             System, Budgetary Control: Types of budgets preparation, Zero\n            Base Budgeting; Performance Budgeting\n     5      Standard Costing                                         10\n             Meaning, Difference between Standard Costing and Budgetary\n              Control, Merits and Demerits of Standard costing, Prerequisite for\n              establishment of standard costing, Efficiency and Activity Ratios,\n               Material, Labor and Overhead Variance\n                               Total Hours                       48\n\n\nTextbook :\n 1  Cost and Management Accounting, M. N. Arora, Vikas Publishing House, 2020\n 2  Cost and Management Accounting, P.C. Tulsian, S Chand, 2018\n\nReferences:\n 1  Cost Accounting, Cost Accounting, Jawahar Lal, Tata McGraw Hill Publication, 2020\n 2  Management Accounting, Management Accounting, Paresh Shah, Oxford Publication,\n    2018\n 3  Cost Management Accounting, Cost Management Accounting, Ravi Kishor, Taxman, 2020\n 4  Management Accounting, Management Accounting, Bhattacharya, Pearson Publication,\n    2018\n 5  Cost Management: Strategies for Business Decision, Cost Management: Strategies for\n     Business Decision, Hilton, Maher and Selto, TMH, 2020\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "4342347e18fbc38f5ee0d337eb902df0da3d23059b8c19ce350d9f5223a5efd1",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000422040601",
+      "subject_name": "MANAGEMENT OF SERVICES",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04BB0406",
+      "course_code_evidence": [
+        "04BB0406",
+        "04BB0408",
+        "04BB0409",
+        "04BB0411",
+        "04BB2405",
+        "04BH0402"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MOS.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MOS.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MANAGEMENT OF SERVICES [57c9ae4778c5].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MANAGEMENT OF SERVICES [57c9ae4778c5].pdf",
+      "expected_pdf_sha256": "93a4fd4e8456d6f74ed52fb4ad911a2161b38808d2eead0f5621660e06746965",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MANAGEMENT OF SERVICES",
+        "course_code": "04BB0406",
+        "semester_label": "4",
+        "credits": 4,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand service marketing and utilize them effectively in managing products and people to achieve organizational objectives.",
+        "Apply knowledge of models and theories to promote the effectiveness in workplace",
+        "Provide a framework for analysing consumer behaviour, for offering co-creating value and delivering services.",
+        "Understand and apply the most common quality analysis tools and techniques.",
+        "Understand the opportunities that information technology can have for enhancing service firms competitiveness. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Services",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Introduction to services, Nature & Characteristics of Services,",
+              "Classification of services, Consumer Versus Industrial Services"
+            ],
+            "topics_text": "Introduction to services, Nature & Characteristics of Services, Classification of services, Consumer Versus Industrial Services",
+            "topics": [
+              "Introduction to services, Nature & Characteristics of Services,",
+              "Classification of services, Consumer Versus Industrial Services"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "SERVICES MARKETING MIX",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to the 7P’s of Service Marketing, Product-Service",
+              "Continuum, Standalone service Products, Service Products bundled",
+              "with tangible Products"
+            ],
+            "topics_text": "Introduction to the 7P’s of Service Marketing, Product-Service Continuum, Standalone service Products, Service Products bundled with tangible Products",
+            "topics": [
+              "Introduction to the 7P’s of Service Marketing, Product-Service",
+              "Continuum, Standalone service Products, Service Products bundled",
+              "with tangible Products"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "CUSTOMER SATISFACTION & SERVICE QUALITY",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Monitoring and measuring customer satisfaction, Order taking and",
+              "Fulfillment, Service Guarantee – Handling complaints effectively,",
+              "Defects, failures & Recovery, Service Quality Models – GAPS",
+              "Model, SERQUAL"
+            ],
+            "topics_text": "Monitoring and measuring customer satisfaction, Order taking and Fulfillment, Service Guarantee – Handling complaints effectively, Defects, failures & Recovery, Service Quality Models – GAPS Model, SERQUAL",
+            "topics": [
+              "Monitoring and measuring customer satisfaction, Order taking and",
+              "Fulfillment, Service Guarantee – Handling complaints effectively,",
+              "Defects, failures & Recovery, Service Quality Models – GAPS",
+              "Model, SERQUAL"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "TECHNOLOGY & SERVICE STRATEGY",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Applying Technology to service sittings, e- services, Global and",
+              "Indian Scenario in service sector, Importance of Service marketing,",
+              "Every business is a service business, Service as a key differentiator"
+            ],
+            "topics_text": "Applying Technology to service sittings, e- services, Global and Indian Scenario in service sector, Importance of Service marketing, Every business is a service business, Service as a key differentiator",
+            "topics": [
+              "Applying Technology to service sittings, e- services, Global and",
+              "Indian Scenario in service sector, Importance of Service marketing,",
+              "Every business is a service business, Service as a key differentiator"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "TYPES OF SERVICES",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Various Service Sectors : Hospitality,",
+              "Transportation; Tourism, Information Technology, Banking &",
+              "Insurance, Telecom, Entertainment",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Services Marketing, Rajendra Nargundkar, McGraw-Hill, 2010",
+              "2 Services Marketing, Zeithaml, Bitner, Gremler & Pandit, McGraw-Hill, 2018",
+              "3 Services Marketing, R. Srinivasan, Prentice-Hall of India, 2010"
+            ],
+            "topics_text": "Introduction to Various Service Sectors : Hospitality, Transportation; Tourism, Information Technology, Banking & Insurance, Telecom, Entertainment Total Hours 48 Textbook : 1 Services Marketing, Rajendra Nargundkar, McGraw-Hill, 2010 2 Services Marketing, Zeithaml, Bitner, Gremler & Pandit, McGraw-Hill, 2018 3 Services Marketing, R. Srinivasan, Prentice-Hall of India, 2010",
+            "topics": [
+              "Introduction to Various Service Sectors : Hospitality,",
+              "Transportation",
+              "Tourism, Information Technology, Banking &",
+              "Insurance, Telecom, Entertainment",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Services Marketing, Rajendra Nargundkar, McGraw-Hill, 2010",
+              "2 Services Marketing, Zeithaml, Bitner, Gremler & Pandit, McGraw-Hill, 2018",
+              "3 Services Marketing, R. Srinivasan, Prentice-Hall of India, 2010"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Services Marketing, Services Marketing, Christopher Lovelock, Pearson, 2007",
+          "Services Marketing, Services Marketing, Rampal & Gupta, Galgotia, 2005"
+        ],
+        "textbooks": [
+          "Services Marketing, Rajendra Nargundkar, McGraw-Hill, 2010",
+          "Services Marketing, Zeithaml, Bitner, Gremler & Pandit, McGraw-Hill, 2018",
+          "Services Marketing, R. Srinivasan, Prentice-Hall of India, 2010"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://blog.hubspot.com/marketing/case-study-examples",
+          "https://www.icmrindia.org/short%20case%20studies/Short%20Case%20Studies.asp? cat=Services%20Marketing",
+          "https://www.marketingsherpa.com/article/case-study/understanding-what-customers-want- 5-mini-case-studies",
+          "https://www.marketingmind.in/",
+          "https://www.ibef.org/"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4668,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         4\nCOURSE TITLE   MANAGEMENT OF SERVICES\nCOURSE CODE     04BB0406\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand service marketing and utilize them effectively in managing products and people\n     to achieve organizational objectives.\n 2  Apply knowledge of models and theories to promote the effectiveness in workplace\n 3  Provide a framework for analysing consumer behaviour, for offering co-creating value and\n     delivering services.\n 4  Understand and apply the most common quality analysis tools and techniques.\n 5  Understand the opportunities that information technology can have for enhancing service\n     firms competitiveness.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4                                  50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Services                                   8\n               Introduction to services, Nature & Characteristics of Services,\n               Classification of services, Consumer Versus Industrial Services\n     2     SERVICES MARKETING MIX                            10\n               Introduction to the 7P’s of Service Marketing, Product-Service\n             Continuum, Standalone service Products, Service Products bundled\n             with tangible Products\n     3    CUSTOMER SATISFACTION & SERVICE QUALITY       12\n             Monitoring and measuring customer satisfaction, Order taking and\n               Fulfillment, Service Guarantee – Handling complaints effectively,\n              Defects, failures & Recovery, Service Quality Models – GAPS\n             Model, SERQUAL\n     4    TECHNOLOGY & SERVICE STRATEGY                  8\n             Applying Technology to service sittings, e- services, Global and\n              Indian Scenario in service sector, Importance of Service marketing,\n             Every business is a service business, Service as a key differentiator\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5     TYPES OF SERVICES                                   10\n               Introduction to Various Service Sectors : Hospitality,\n               Transportation; Tourism, Information Technology, Banking &\n              Insurance, Telecom, Entertainment\n                               Total Hours                       48\n\n\nTextbook :\n 1  Services Marketing, Rajendra Nargundkar, McGraw-Hill, 2010\n 2  Services Marketing, Zeithaml, Bitner, Gremler & Pandit, McGraw-Hill, 2018\n 3  Services Marketing, R. Srinivasan, Prentice-Hall of India, 2010\n\nReferences:\n 1  Services Marketing, Services Marketing, Christopher Lovelock, Pearson, 2007\n 2  Services Marketing, Services Marketing, Rampal & Gupta, Galgotia, 2005\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1  https://blog.hubspot.com/marketing/case-study-examples\n 2   https://www.icmrindia.org/short%20case%20studies/Short%20Case%20Studies.asp?\n    cat=Services%20Marketing\n 3   https://www.marketingsherpa.com/article/case-study/understanding-what-customers-want-\n     5-mini-case-studies\n 4   https://www.marketingmind.in/\n 5  https://www.ibef.org/\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "93a4fd4e8456d6f74ed52fb4ad911a2161b38808d2eead0f5621660e06746965",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21004193000502",
+      "subject_name": "MICROFINANCE EXECUTIVE",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04SC0005",
+      "course_code_evidence": [
+        "04SC0005",
+        "04SC0006",
+        "04SC0007",
+        "04SC0008"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-5.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-5.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MICROFINANCE EXECUTIVE [c2dbee810124].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MICROFINANCE EXECUTIVE [c2dbee810124].pdf",
+      "expected_pdf_sha256": "4311b52ec52ca3f2cd22fdf4fd6af109c23f44fcaf3524633e91a041f3397a59",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "MICROFINANCE EXECUTIVE",
+        "course_code": "04SC0005",
+        "semester_label": "4",
+        "credits": 0,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply appropriate practices to source the customers",
+        "Explain the cross-selling methods",
+        "Prepare sample target and customer status report",
+        "Employ suitable practices to assist the customers with the microfinance application process",
+        "Describe the procedure of collecting the receivables",
+        "Employ suitable practices to maintain data integrity and data privacy Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 50 0 0 0",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "BFSI, BFSI, BFSI, BFSI, 2022"
+        ],
+        "textbooks": [
+          "BFSI-Study Material, BFSI, BFSI, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "| National Skill Development Corporation (NSDC) (nsdcindia.org)"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 2615,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION\nSEMESTER         4\nCOURSE TITLE    MICROFINANCE EXECUTIVE\nCOURSE CODE     04SC0005\nCOURSE CREDITS  0\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply appropriate practices to source the customers\n 2  Explain the cross-selling methods\n 3  Prepare sample target and customer status report\n 4  Employ suitable practices to assist the customers with the microfinance application process\n 5  Describe the procedure of collecting the receivables\n 6  Employ suitable practices to maintain data integrity and data privacy\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     50       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nTextbook :\n 1  BFSI-Study Material, BFSI, BFSI, 2022\n\nReferences:\n 1  BFSI, BFSI, BFSI, BFSI, 2022\n\nSuggested Theory Distribution:\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Lecture\n\nSupplementary Resources:\n 1     | National Skill Development Corporation (NSDC) (nsdcindia.org)\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "4311b52ec52ca3f2cd22fdf4fd6af109c23f44fcaf3524633e91a041f3397a59",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21004193000302",
+      "subject_name": "MUTUAL FUND DISTRIBUTOR",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04SC0003",
+      "course_code_evidence": [
+        "04SC0003",
+        "04SC0004",
+        "04SC0005",
+        "04SC0006"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MUTUAL FUND DISTRIBUTOR [19ad77719679].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MUTUAL FUND DISTRIBUTOR [19ad77719679].pdf",
+      "expected_pdf_sha256": "67dd63232008a4a516900d9991560b2aaa087e952bef9fb6081cafad27141238",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "MUTUAL FUND DISTRIBUTOR",
+        "course_code": "04SC0003",
+        "semester_label": "4",
+        "credits": 0,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply proper techniques to conduct market research on mutual funds and sell the products",
+        "Employ proper procedure to perform after-sales activities",
+        "Employ suitable practices to maintain data integrity and data privacy",
+        "Dramatize how to communicate effectively with guests, colleagues, and superiors to achieve a smooth workflow",
+        "Apply health, hygiene, and safety practices at the workplace",
+        "Use resources at the workplace optimally Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 50 0 0 0",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "Common Sense on Mutual Funds, Jhon C Bagle, AAA Network, 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.moneycontrol.com/mutualfundindia/",
+          "https://www.financestrategists.com/wealth-management/investments/mutual-fund/"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 2706,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION\nSEMESTER         4\nCOURSE TITLE   MUTUAL FUND DISTRIBUTOR\nCOURSE CODE     04SC0003\nCOURSE CREDITS  0\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply proper techniques to conduct market research on mutual funds and sell the products\n 2  Employ proper procedure to perform after-sales activities\n 3  Employ suitable practices to maintain data integrity and data privacy\n 4  Dramatize how to communicate effectively with guests, colleagues, and superiors to\n     achieve a smooth workflow\n 5  Apply health, hygiene, and safety practices at the workplace\n 6  Use resources at the workplace optimally\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     50       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nTextbook :\n 1  Common Sense on Mutual Funds, Jhon C Bagle, AAA Network, 2019\n\n\nSuggested Theory Distribution:\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\n\nSupplementary Resources:\n 1  https://www.moneycontrol.com/mutualfundindia/\n 2  https://www.financestrategists.com/wealth-management/investments/mutual-fund/\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "67dd63232008a4a516900d9991560b2aaa087e952bef9fb6081cafad27141238",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000121000401",
+      "subject_name": "NATIONAL CADET CORPS-4",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0103",
+        "04BB0105"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-9.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/NATIONAL CADET CORPS-4 [6ef8265f2c73].pdf",
+      "expected_pdf_sha256": "19238dded6579ce3854cfe09443342ce052951703c64f6c617d8d8a9efcce7bf",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: page codes not visible in first 8 pages"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "21000422040101",
+      "subject_name": "PRODUCTION & OPERATIONS MANAGEMENT",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04BB0401",
+      "course_code_evidence": [
+        "04BB0401",
+        "04BB0403",
+        "04BB0406",
+        "04BB0408",
+        "04BB0409"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/POM-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/POM-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/PRODUCTION & OPERATIONS MANAGEMENT [47ce3f8cd086].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/PRODUCTION & OPERATIONS MANAGEMENT [47ce3f8cd086].pdf",
+      "expected_pdf_sha256": "9c4cc66b2e00451ac18a40f8d2e4f91c2019943274bd95e7b85d1315e26c6ea3",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PRODUCTION & OPERATIONS MANAGEMENT",
+        "course_code": "04BB0401",
+        "semester_label": "4",
+        "credits": 4,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand the relevance of production and operations management in industry.",
+        "Enable the students to manage the productive resources for the growth and competitiveness of any organization.",
+        "To recognize the production management and planning problems.",
+        "Apply principles and techniques in the design, planning and control of these systems to optimize /make best use of resources in achieving their objectives.",
+        "To recognize the production management and planning problems.",
+        "Apply the techniques of inventory management and quality management and To analyse and select the most appropriate methods and tools for the solution of problems related to production planning, shop floor scheduling and inventory control Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Meaning, Nature and Scope of Production and Operation",
+              "Management, Types of production processes"
+            ],
+            "topics_text": "Meaning, Nature and Scope of Production and Operation Management, Types of production processes",
+            "topics": [
+              "Meaning, Nature and Scope of Production and Operation",
+              "Management, Types of production processes"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Plant location and Lay out",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Factors considered in location, Types of Layout, PPC (Only",
+              "concept)"
+            ],
+            "topics_text": "Factors considered in location, Types of Layout, PPC (Only concept)",
+            "topics": [
+              "Factors considered in location, Types of Layout, PPC (Only",
+              "concept)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Materials Management",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Importance of Materials Management, Concept of purchasing,",
+              "principles of purchasing and process of purchasing., Types of",
+              "purchasing, Inventory management, its prime importance, Inventory",
+              "Control Techniques, GOLF, VED, SOS ( only concepts)."
+            ],
+            "topics_text": "Importance of Materials Management, Concept of purchasing, principles of purchasing and process of purchasing., Types of purchasing, Inventory management, its prime importance, Inventory Control Techniques, GOLF, VED, SOS ( only concepts).",
+            "topics": [
+              "Importance of Materials Management, Concept of purchasing,",
+              "principles of purchasing and process of purchasing., Types of",
+              "purchasing, Inventory management, its prime importance, Inventory",
+              "Control Techniques, GOLF, VED, SOS ( only concepts)."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Methods Study & Maintenance Management",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Methods Study, Work Study and Time Study: (only Concept),,",
+              "Maintenance Management, Need of maintenance management,",
+              "Types of maintenance management"
+            ],
+            "topics_text": "Methods Study, Work Study and Time Study: (only Concept),, Maintenance Management, Need of maintenance management, Types of maintenance management",
+            "topics": [
+              "Methods Study, Work Study and Time Study: (only Concept),,",
+              "Maintenance Management, Need of maintenance management,",
+              "Types of maintenance management"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Quality Management",
+            "contact_hours": 8,
+            "topic_lines": [
+              "lean manufacturing, JIT, Kaizen, ISO series, TQM",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Production and Operation Management, K. Aswathappa and K. Shridhara Bhat, Himalaya",
+              "Publishing House, 2018"
+            ],
+            "topics_text": "lean manufacturing, JIT, Kaizen, ISO series, TQM Total Hours 48 Textbook : 1 Production and Operation Management, K. Aswathappa and K. Shridhara Bhat, Himalaya Publishing House, 2018",
+            "topics": [
+              "lean manufacturing, JIT, Kaizen, ISO series, TQM",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Production and Operation Management, K. Aswathappa and K. Shridhara Bhat, Himalaya",
+              "Publishing House, 2018"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Production and Operation Management, Production and Operation Management, S.A.Chunawalla and D.R. Patel, Himalaya Publishing House, 2018",
+          "Production and Operation management, Production and Operation management, Kanishka Bedi, Oxford higher education, 2020",
+          "Operations Management, Operations Management, Mahadevan B, Pearson Education, 2018"
+        ],
+        "textbooks": [
+          "Production and Operation Management, K. Aswathappa and K. Shridhara Bhat, Himalaya Publishing House, 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "1. https://www.vssut.ac.in/lecture_notes/lecture1429900757.pdf 2. https://www.ddegjust.ac.in/studymaterial/bba/bba-303.pdf 3. https://ebooks.lpude.in/management/mba/term_3/DMGT501_OPERATIONS_MANAGE MENT.pdf",
+          "1. https://www.vssut.ac.in/lecture_notes/lecture1429900757.pdf",
+          "2. https://www.ddegjust.ac.in/studymaterial/bba/bba-303.pdf",
+          "https://www.vssut.ac.in/lecture_notes/lecture1429900757.pdf",
+          "https://www.ddegjust.ac.in/studymaterial/bba/bba-303.pdf Supplementary Resources:",
+          "https://ebooks.lpude.in/management/mba/term_3/DMGT501_OPERATIONS_MANAGE MENT.pdf",
+          "https://en.wikipedia.org/wiki/Production_and_Operations_Management",
+          "https://www.icmrindia.org/case%20volumes/Case%20Studies%20in%20Operations% 20Management%20-%20Vol.%20I.htm"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5385,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         4\nCOURSE TITLE    PRODUCTION & OPERATIONS MANAGEMENT\nCOURSE CODE     04BB0401\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the relevance of production and operations management in industry.\n 2  Enable the students to manage the productive resources for the growth and\n     competitiveness of any organization.\n 3  To recognize the production management and planning problems.\n 4  Apply principles and techniques in the design, planning and control of these systems to\n     optimize /make best use of resources in achieving their objectives.\n 5  To recognize the production management and planning problems.\n 6  Apply the techniques of inventory management and quality management and To analyse\n    and select the most appropriate methods and tools for the solution of problems\n     related to production planning, shop floor scheduling and inventory control\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4                                  50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction                                             8\n             Meaning, Nature and Scope of Production and Operation\n            Management, Types of production processes\n     2      Plant location and Lay out                                 10\n              Factors considered in location, Types of Layout, PPC (Only\n              concept)\n     3      Materials Management                                    12\n             Importance of Materials Management, Concept of purchasing,\n               principles of purchasing and process of purchasing., Types of\n              purchasing, Inventory management, its prime importance, Inventory\n              Control Techniques, GOLF, VED, SOS ( only concepts).\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4     Methods Study & Maintenance Management                 10\n            Methods Study, Work Study and Time Study: (only Concept),,\n             Maintenance Management, Need of maintenance management,\n            Types of maintenance management\n     5      Quality Management                                     8\n              lean manufacturing, JIT, Kaizen, ISO series, TQM\n                               Total Hours                       48\n\n\nTextbook :\n 1  Production and Operation Management, K. Aswathappa and K. Shridhara Bhat, Himalaya\n     Publishing House, 2018\n\nReferences:\n 1  Production and Operation Management, Production and Operation Management,\n    S.A.Chunawalla and D.R. Patel, Himalaya Publishing House, 2018\n 2  Production and Operation management, Production and Operation management, Kanishka\n     Bedi, Oxford higher education, 2020\n 3  Operations Management, Operations Management, Mahadevan B, Pearson Education,\n    2018\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1   1. https://www.vssut.ac.in/lecture_notes/lecture1429900757.pdf 2.\n     https://www.ddegjust.ac.in/studymaterial/bba/bba-303.pdf  3.\n    https://ebooks.lpude.in/management/mba/term_3/DMGT501_OPERATIONS_MANAGE\n    MENT.pdf\n 2   1. https://www.vssut.ac.in/lecture_notes/lecture1429900757.pdf\n 3   2. https://www.ddegjust.ac.in/studymaterial/bba/bba-303.pdf\n 4  https://www.vssut.ac.in/lecture_notes/lecture1429900757.pdf\n 5  https://www.ddegjust.ac.in/studymaterial/bba/bba-303.pdf\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 6  https://ebooks.lpude.in/management/mba/term_3/DMGT501_OPERATIONS_MANAGE\n    MENT.pdf\n 7  https://en.wikipedia.org/wiki/Production_and_Operations_Management\n 8  https://www.icmrindia.org/case%20volumes/Case%20Studies%20in%20Operations%\n    20Management%20-%20Vol.%20I.htm\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "9c4cc66b2e00451ac18a40f8d2e4f91c2019943274bd95e7b85d1315e26c6ea3",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "21000428040201",
+      "subject_name": "PROJECT MANAGEMENT",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BH0402",
+        "04SC0002",
+        "04SC0003",
+        "04SC0004",
+        "04SC0005"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/04MB0337-Software-Project-Management.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/PROJECT MANAGEMENT [aea1647009a4].pdf",
+      "expected_pdf_sha256": "772ef963df58904f13d1c6e41d47da4d767f53aa3165bb277dbe214f3f4f2e08",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04MB0337"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "21004193000602",
+      "subject_name": "VOICE",
+      "course_id": "bba-hons-",
+      "course_name": "BBA (HONS)",
+      "semester": 4,
+      "subject_code": "04SC0006",
+      "course_code_evidence": [
+        "04SC0006",
+        "04SC0007",
+        "04SC0008",
+        "04SL0152",
+        "04SL0153"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-6.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-6.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/VOICE [47ef65890ddb].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/VOICE [47ef65890ddb].pdf",
+      "expected_pdf_sha256": "ad0f0d7e1dba7768a14d32b18b1af54c9c11b835b6a49b2b17e7a31658224671",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "CUSTOMER CARE EXECUTIVE DOMESTIC-NON-VOICE",
+        "course_code": "04SC0006",
+        "semester_label": "4",
+        "credits": 0,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Explain the Role of a Customer Care Executive-Non-Voice",
+        "Attending Customer Queries",
+        "Process of Query Management",
+        "Deal with Customer Queries",
+        "Documentation Process for Customer Queries",
+        "Managing Query resolution Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 50 0 0 0",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "BFSI, BFSI, BFSI, BFSI, 2022"
+        ],
+        "textbooks": [
+          "BFSI-Material, BFSI, BFSI, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "| National Skill Development Corporation (NSDC) (nsdcindia.org)"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 2485,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION\nSEMESTER         4\nCOURSE TITLE   CUSTOMER CARE EXECUTIVE DOMESTIC-NON-VOICE\nCOURSE CODE     04SC0006\nCOURSE CREDITS  0\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Explain the Role of a Customer Care Executive-Non-Voice\n 2  Attending Customer Queries\n 3  Process of Query Management\n 4  Deal with Customer Queries\n 5  Documentation Process for Customer Queries\n 6  Managing Query resolution\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     50       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nTextbook :\n 1  BFSI-Material, BFSI, BFSI, 2022\n\nReferences:\n 1  BFSI, BFSI, BFSI, BFSI, 2022\n\nSuggested Theory Distribution:\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "The suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Lecture\n\nSupplementary Resources:\n 1     | National Skill Development Corporation (NSDC) (nsdcindia.org)\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "ad0f0d7e1dba7768a14d32b18b1af54c9c11b835b6a49b2b17e7a31658224671",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 6,
+    "manual_review": 7,
+    "ocr_review": 0,
+    "missing_pdf": 4,
+    "extraction_errors": 0
+  }
+}

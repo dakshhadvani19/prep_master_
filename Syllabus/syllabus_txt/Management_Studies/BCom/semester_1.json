@@ -1,0 +1,1493 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "b-com",
+    "course_name": "B.Com",
+    "output_slug": "BCom"
+  },
+  "semester": 1,
+  "subject_count": 10,
+  "subjects": [
+    {
+      "subject_id": "22000423010601",
+      "subject_name": "Business Environment",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BC0311",
+        "04BC0326",
+        "04BC1321",
+        "04BC1323"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/BE-1.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS ENVIRONMENT [3c698d046dbb].pdf",
+      "expected_pdf_sha256": "2fd0fb79d26a0cc389fe5941b36f78a7f4896de968125f5ba4e191f1f4aef505",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0205"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "22000423010501",
+      "subject_name": "Business Organisation & Management",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 1,
+      "subject_code": "04BC0105",
+      "course_code_evidence": [
+        "04BC0105",
+        "04BC0121",
+        "04BC0122"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/04BC0105-BOM_.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/04BC0105-BOM_.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Business Organisation & Management [d92283b69aa1].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Business Organisation & Management [d92283b69aa1].pdf",
+      "expected_pdf_sha256": "fa5a0749c552271bf655edcb38359599c1c0df7b991e8878f76232f3c459b090",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BUSINESS ORGANIZATION & MANAGEMENT",
+        "course_code": "04BC0105",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "Understand the concepts of business organizations, management, leadership, motivation and HRM Identify business problems and develop suitable plans and strategies for the organization development ? Develop and evaluate alternative courses of action and select a course suitable to the organizational problems ? Explain various leadership styles and their suitability in the organizations ? Apply various control techniques to enhance the attainment of organizational goals"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand the concepts of business organizations, management, leadership, motivation and HRM",
+        "Identify business problems and develop suitable plans and strategies for the organization development",
+        "Develop and evaluate alternative courses of action and select a course suitable to the organizational problems",
+        "Explain various leadership styles and their suitability in the organizations",
+        "Apply various control techniques to enhance the attainment of organizational goals Pre-requisite of course:Understand the concepts of business organizations, management, leadership, motivation and HRM Identify business problems and develop suitable plans and strategies for the organization development ? Develop and evaluate alternative courses of action and select a course suitable to the organizational problems ? Explain various leadership styles and their suitability in the organizations ? Apply various control techniques to enhance the attainment of organizational goals"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Foundation of Business",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Nature of Business, Profession and Employment – Objectives of",
+              "Business – Spectrum of Business Activities, Business Organisation -",
+              "Meaning, Definition, features of business organisations, objective/",
+              "need for formation of business organization. Types of Business",
+              "Organizations & their main characteristics, Define stakeholders.",
+              "Agency relationship in business and how it varies in different types",
+              "of business organization, types of stakeholder- internal, connected",
+              "and external stakeholders and their impact on the organization,",
+              "Mendelow framework, Defining organisational culture, basic",
+              "elements of culture. i) Schein – determinants of organisational",
+              "culture ii) Handy – four cultural stereotypes iii) Hofstede –",
+              "international perspectives on culture the factors that shape the",
+              "culture of the organization"
+            ],
+            "topics_text": "Nature of Business, Profession and Employment – Objectives of Business – Spectrum of Business Activities, Business Organisation - Meaning, Definition, features of business organisations, objective/ need for formation of business organization. Types of Business Organizations & their main characteristics, Define stakeholders. Agency relationship in business and how it varies in different types of business organization, types of stakeholder- internal, connected and external stakeholders and their impact on the organization, Mendelow framework, Defining organisational culture, basic elements of culture. i) Schein – determinants of organisational culture ii) Handy – four cultural stereotypes iii) Hofstede – international perspectives on culture the factors that shape the culture of the organization",
+            "topics": [
+              "Nature of Business, Profession and Employment – Objectives of",
+              "Business – Spectrum of Business Activities, Business Organisation",
+              "Meaning, Definition, features of business organisations, objective/",
+              "need for formation of business organization. Types of Business",
+              "Organizations & their main characteristics, Define stakeholders.",
+              "Agency relationship in business and how it varies in different types",
+              "of business organization, types of stakeholder- internal, connected",
+              "and external stakeholders and their impact on the organization,",
+              "Mendelow framework, Defining organisational culture, basic",
+              "elements of culture. i) Schein – determinants of organisational",
+              "culture ii) Handy – four cultural stereotypes iii) Hofstede –",
+              "international perspectives on culture the factors that shape the",
+              "culture of the organization"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "The Process of Management",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Meaning, Nature and Characteristics of Management – Scope of",
+              "Management - Functions - Management as a Science and an Art -",
+              "Management & Administration, Levels of management &",
+              "Managerial Skills – Overview of evolution of Management",
+              "Thoughts, Planning: meaning - basic purpose of planning - Planning",
+              "process, Types of plans - Management By Objectives, Decision-",
+              "making: Nature and importance- types of decisions – process;",
+              "Strategy Formulation"
+            ],
+            "topics_text": "Meaning, Nature and Characteristics of Management – Scope of Management - Functions - Management as a Science and an Art - Management & Administration, Levels of management & Managerial Skills – Overview of evolution of Management Thoughts, Planning: meaning - basic purpose of planning - Planning process, Types of plans - Management By Objectives, Decision- making: Nature and importance- types of decisions – process; Strategy Formulation",
+            "topics": [
+              "Meaning, Nature and Characteristics of Management – Scope of",
+              "Management - Functions - Management as a Science and an Art",
+              "Management & Administration, Levels of management &",
+              "Managerial Skills – Overview of evolution of Management",
+              "Thoughts, Planning: meaning - basic purpose of planning - Planning",
+              "process, Types of plans - Management By Objectives, Decision",
+              "making: Nature and importance- types of decisions – process",
+              "Strategy Formulation"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Organizing and Coordination",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Organizational Design & Organizational structure; Building blocks",
+              "of organizing- division of work, Departmentalization, hierarchy and",
+              "coordination, Committees: Committees- meaning, purpose, types",
+              "and advantages and disadvantages. The roles of the Chair and",
+              "Secretary of a committee, Organizational design- The Classical",
+              "Approach, The Task-Technology Approach, Environmental",
+              "Approach, Downsizing, Organizational structure- concepts: Formal",
+              "& informal organizational structures; Types of formal",
+              "organizational structures, Coordination- meaning, Differentiation &",
+              "integration. Approaches to achieve effective coordination, Power &",
+              "distribution of authority: Power- meaning & sources, Authority-",
+              "meaning, basis of formal authority, types of authority. Delegation –",
+              "meaning, advantages & disadvantages of delegation, barriers to",
+              "delegation, guidelines for effective delegation. Decentralization &",
+              "Centralization- advantages & disadvantages, challenges of",
+              "Decentralization, factors influencing Decentralization"
+            ],
+            "topics_text": "Organizational Design & Organizational structure; Building blocks of organizing- division of work, Departmentalization, hierarchy and coordination, Committees: Committees- meaning, purpose, types and advantages and disadvantages. The roles of the Chair and Secretary of a committee, Organizational design- The Classical Approach, The Task-Technology Approach, Environmental Approach, Downsizing, Organizational structure- concepts: Formal & informal organizational structures; Types of formal organizational structures, Coordination- meaning, Differentiation & integration. Approaches to achieve effective coordination, Power & distribution of authority: Power- meaning & sources, Authority- meaning, basis of formal authority, types of authority. Delegation – meaning, advantages & disadvantages of delegation, barriers to delegation, guidelines for effective delegation. Decentralization & Centralization- advantages & disadvantages, challenges of Decentralization, factors influencing Decentralization",
+            "topics": [
+              "Organizational Design & Organizational structure",
+              "Building blocks",
+              "of organizing- division of work, Departmentalization, hierarchy and",
+              "coordination, Committees: Committees- meaning, purpose, types",
+              "and advantages and disadvantages. The roles of the Chair and",
+              "Secretary of a committee, Organizational design- The Classical",
+              "Approach, The Task-Technology Approach, Environmental",
+              "Approach, Downsizing, Organizational structure- concepts: Formal",
+              "& informal organizational structures",
+              "Types of formal",
+              "organizational structures, Coordination- meaning, Differentiation &",
+              "integration. Approaches to achieve effective coordination, Power &",
+              "distribution of authority: Power- meaning & sources, Authority",
+              "meaning, basis of formal authority, types of authority. Delegation –",
+              "meaning, advantages & disadvantages of delegation, barriers to",
+              "delegation, guidelines for effective delegation. Decentralization &",
+              "Centralization- advantages & disadvantages, challenges of",
+              "Decentralization, factors influencing Decentralization"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Leading",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Leadership: Concept and Styles; Trait and Situational Theory of",
+              "Leadership. Motivation: Concept and Importance; Maslow Need",
+              "Hierarchy Theory; Herzberg Two Factors Theory, McGregor,",
+              "Vroom and Ouchi theory. Reward- types of intrinsic and extrinsic",
+              "reward, Group & Teamwork: Dynamics of group behavior, Team:",
+              "meaning, types, characteristics, making team effective,",
+              "Consequences of ineffectiveness at work, Communication &",
+              "negotiation: importance of effective communication, Process and",
+              "Barriers. Transactional Analysis (TA), Johari Window,",
+              "Communicating in business, Change Management: Resistance to",
+              "change and strategies to manage change, conflict levels, causes and",
+              "resolution. Functional and Dysfunctional aspects of conflict"
+            ],
+            "topics_text": "Leadership: Concept and Styles; Trait and Situational Theory of Leadership. Motivation: Concept and Importance; Maslow Need Hierarchy Theory; Herzberg Two Factors Theory, McGregor, Vroom and Ouchi theory. Reward- types of intrinsic and extrinsic reward, Group & Teamwork: Dynamics of group behavior, Team: meaning, types, characteristics, making team effective, Consequences of ineffectiveness at work, Communication & negotiation: importance of effective communication, Process and Barriers. Transactional Analysis (TA), Johari Window, Communicating in business, Change Management: Resistance to change and strategies to manage change, conflict levels, causes and resolution. Functional and Dysfunctional aspects of conflict",
+            "topics": [
+              "Leadership: Concept and Styles",
+              "Trait and Situational Theory of",
+              "Leadership. Motivation: Concept and Importance",
+              "Maslow Need",
+              "Hierarchy Theory",
+              "Herzberg Two Factors Theory, McGregor,",
+              "Vroom and Ouchi theory. Reward- types of intrinsic and extrinsic",
+              "reward, Group & Teamwork: Dynamics of group behavior, Team:",
+              "meaning, types, characteristics, making team effective,",
+              "Consequences of ineffectiveness at work, Communication &",
+              "negotiation: importance of effective communication, Process and",
+              "Barriers. Transactional Analysis (TA), Johari Window,",
+              "Communicating in business, Change Management: Resistance to",
+              "change and strategies to manage change, conflict levels, causes and",
+              "resolution. Functional and Dysfunctional aspects of conflict"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Human Resource Management & Controlling",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Recruitment and selection of employees, Learning and training at",
+              "work, Review and appraisal of individual performance, Competence",
+              "frameworks and personal development, Meaning and steps in",
+              "controlling – Pre-requisites of a strong control system -Methods of",
+              "establishing control",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Principles of Management , L. M. Prasad , Sultan Chand and Sons, 2015",
+              "2 Management, James A.F Stoner, R. Edward Freeman & Daniel R. Gilbert, Pearson , 2009"
+            ],
+            "topics_text": "Recruitment and selection of employees, Learning and training at work, Review and appraisal of individual performance, Competence frameworks and personal development, Meaning and steps in controlling – Pre-requisites of a strong control system -Methods of establishing control Total Hours 48 Textbook : 1 Principles of Management , L. M. Prasad , Sultan Chand and Sons, 2015 2 Management, James A.F Stoner, R. Edward Freeman & Daniel R. Gilbert, Pearson , 2009",
+            "topics": [
+              "Recruitment and selection of employees, Learning and training at",
+              "work, Review and appraisal of individual performance, Competence",
+              "frameworks and personal development, Meaning and steps in",
+              "controlling – Pre-requisites of a strong control system -Methods of",
+              "establishing control",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Principles of Management , L. M. Prasad , Sultan Chand and Sons, 2015",
+              "2 Management, James A.F Stoner, R. Edward Freeman & Daniel R. Gilbert, Pearson , 2009"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Management: Text and Cases, Management: Text and Cases, V.S.P. Rao, Excel Books India , -",
+          "Principles of Management , Principles of Management , Koontz & O’Donnell, MCGraw Hill, -"
+        ],
+        "textbooks": [
+          "Principles of Management , L. M. Prasad , Sultan Chand and Sons, 2015",
+          "Management, James A.F Stoner, R. Edward Freeman & Daniel R. Gilbert, Pearson , 2009"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://byjus.com/commerce/nature-and-significance-of-principles-of-management/ https://study.com/academy/lesson/henri-fayols-management-principles-managing- departmental-task-organization.html https://www.uagc.edu/blog/5-principles-of-great- management https://www.managementstudyguide.com/management_principles.htm https://www.simplilearn.com/principles-of-management-by-henri-fayol-article"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 8291,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    BUSINESS ORGANIZATION & MANAGEMENT\nCOURSE CODE     04BC0105\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the concepts of business organizations, management, leadership, motivation\n    and HRM\n 2  Identify business problems and develop suitable plans and strategies for the organization\n    development\n 3  Develop and evaluate alternative courses of action and select a course suitable to the\n     organizational problems\n 4  Explain various leadership styles and their suitability in the organizations\n 5  Apply various control techniques to enhance the attainment of organizational goals\n\n\nPre-requisite of course:Understand the concepts of business organizations, management,\nleadership, motivation and HRM Identify business problems and develop suitable plans and\nstrategies for the organization development ? Develop and evaluate alternative courses of action\nand select a course suitable to the organizational problems ? Explain various leadership styles\nand their suitability in the organizations ? Apply various control techniques to enhance the\nattainment of organizational goals\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Foundation of Business                                    10\n             Nature of Business, Profession and Employment – Objectives of\n             Business – Spectrum of Business Activities, Business Organisation -\n             Meaning, Definition, features of business organisations, objective/\n             need for formation of business organization. Types of Business\n              Organizations & their main characteristics, Define stakeholders.\n            Agency relationship in business and how it varies in different types\n              of business organization, types of stakeholder- internal, connected\n            and external stakeholders and their impact on the organization,\n           Mendelow framework, Defining organisational culture, basic\n             elements of culture. i) Schein – determinants of organisational\n               culture ii) Handy – four cultural stereotypes iii) Hofstede –\n               international perspectives on culture the factors that shape the\n               culture of the organization\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2     The Process of Management                               10\n             Meaning, Nature and Characteristics of Management – Scope of\n           Management - Functions - Management as a Science and an Art -\n           Management & Administration, Levels of management &\n             Managerial Skills – Overview of evolution of Management\n             Thoughts, Planning: meaning - basic purpose of planning - Planning\n               process, Types of plans - Management By Objectives, Decision-\n             making: Nature and importance- types of decisions – process;\n              Strategy Formulation\n     3      Organizing and Coordination                              10\n              Organizational Design & Organizational structure; Building blocks\n              of organizing- division of work, Departmentalization, hierarchy and\n               coordination, Committees: Committees- meaning, purpose, types\n            and advantages and disadvantages. The roles of the Chair and\n              Secretary of a committee, Organizational design- The Classical\n             Approach, The Task-Technology Approach, Environmental\n             Approach, Downsizing, Organizational structure- concepts: Formal\n        & informal organizational structures; Types of formal\n               organizational structures, Coordination- meaning, Differentiation &\n                integration. Approaches to achieve effective coordination, Power &\n                distribution of authority: Power- meaning & sources, Authority-\n             meaning, basis of formal authority, types of authority. Delegation –\n             meaning, advantages & disadvantages of delegation, barriers to\n               delegation, guidelines for effective delegation. Decentralization &\n               Centralization- advantages & disadvantages, challenges of\n               Decentralization, factors influencing Decentralization\n     4      Leading                                                 10\n              Leadership: Concept and Styles; Trait and Situational Theory of\n              Leadership. Motivation: Concept and Importance; Maslow Need\n             Hierarchy Theory; Herzberg Two Factors Theory, McGregor,\n           Vroom and Ouchi theory. Reward- types of intrinsic and extrinsic\n              reward, Group & Teamwork: Dynamics of group behavior, Team:\n             meaning, types, characteristics, making team effective,\n             Consequences of ineffectiveness at work, Communication &\n               negotiation: importance of effective communication, Process and\n                Barriers. Transactional Analysis (TA), Johari Window,\n            Communicating in business, Change Management: Resistance to\n             change and strategies to manage change, conflict levels, causes and\n               resolution. Functional and Dysfunctional aspects of conflict\n     5     Human Resource Management & Controlling                 8\n             Recruitment and selection of employees, Learning and training at\n             work, Review and appraisal of individual performance, Competence\n             frameworks and personal development, Meaning and steps in\n               controlling – Pre-requisites of a strong control system -Methods of\n               establishing control\n                               Total Hours                       48\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Textbook :\n 1  Principles of Management , L. M. Prasad , Sultan Chand and Sons, 2015\n 2  Management, James A.F Stoner, R. Edward Freeman & Daniel R. Gilbert, Pearson , 2009\n\nReferences:\n 1  Management: Text and Cases, Management: Text and Cases, V.S.P. Rao, Excel Books\n     India , -\n 2  Principles of Management , Principles of Management , Koontz & O’Donnell, MCGraw\n      Hill, -\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         25.00         15.00         10.00\n\nInstructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1  https://byjus.com/commerce/nature-and-significance-of-principles-of-management/\n     https://study.com/academy/lesson/henri-fayols-management-principles-managing-\n     departmental-task-organization.html https://www.uagc.edu/blog/5-principles-of-great-\n    management https://www.managementstudyguide.com/management_principles.htm\n     https://www.simplilearn.com/principles-of-management-by-henri-fayol-article\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "fa5a0749c552271bf655edcb38359599c1c0df7b991e8878f76232f3c459b090",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000423012101",
+      "subject_name": "Currency, Banking and Exchange",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 1,
+      "subject_code": "04BC0121",
+      "course_code_evidence": [
+        "04BC0121",
+        "04BC0122",
+        "04BC0125",
+        "04BC0126"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/GE-04BC0121-Currency-Banking-and-Exchange-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/GE-04BC0121-Currency-Banking-and-Exchange-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Currency, Banking and Exchange [7203488a8e5c].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Currency, Banking and Exchange [7203488a8e5c].pdf",
+      "expected_pdf_sha256": "4daa703b5fe49f29bc735b752858982b12c5194c3e5bbddb5128624d7e4bc8f4",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Currency, Banking and Exchange",
+        "course_code": "04BC0121",
+        "semester_label": "I",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        " Learn the important concepts in money, banking and exchange and their significance in day to day life.  Ability to apply concepts in decision making and solve problems  To familiarize the students with basic methods of credit creation and their applications in the field.  To acquaint the students with the latest concepts"
+      ],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 4 0 0 4 30 20 50 0 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "No",
+              "I Money And It’s Principles – Evaluation, Various Forms of Money, Functions, 12",
+              "Significance. Fisher’s Quantity Theory of Money: Assumptions and Criticism, Monetary",
+              "Standard: Gold Standard, Bi-metallism and Managed Currency Standard. Principles &",
+              "Methods of Note issues.",
+              "II Credit Creation and Inflation: Meaning and Significance of Credit, Credit Creation by 10",
+              "Bank, Factors Influencing the Volume of Credit in Indian context, Credit Control by RBI.",
+              "Inflation: Types, Causes & Remedies.",
+              "Page 1 of 3",
+              "III Indian Banking System: Pre –Independence Banking and Post – Independence 10",
+              "Banking: Banking Regulation Act, 1949. Types of Banks, new model of banks in India;",
+              "Types of banking; Indian Banking Reforms: Changing Profile Of Indian Banking, Postal",
+              "Banking, and E- Banking.",
+              "IV Central Bank and Commercial Banks in India: RBI-Role and Functions. Bank rate: Repo 8",
+              "rate, Reverse repo rate, CRR, SLR. Commercial Banks : Objectives & Functions.",
+              "V Foreign Exchange: Concept and Exchange Rate, Factors Causing Fluctuations in 8",
+              "Exchange Rate, Exchange Control: Meaning, Objective and Methods.",
+              "Text Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year of",
+              "Publication",
+              "T-01 Seth.M.L Money Banking International Lakshmi Narain 2017",
+              "Trade & Public Finance Agarwal Educational",
+              "Publishers",
+              "T-02 K. Natarajan. E. Gordon Banking Theory, Laws And Himalaya Publishing 2017",
+              "Practice House",
+              "T-03 O. P. Agarwal Modern Banking Of India. Himalaya Publishing 2017",
+              "House",
+              "T-04 Jaiswal Bimal Vikas Publishing 2015",
+              "Currency, Banking and Exchange",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition and",
+              "Year of",
+              "Publication",
+              "R-01 Khemraj Tarron Money, Banking and the Foreign Edward Elgar 2014",
+              "Exchange Market in Emerging Economies Publishing Ltd",
+              "R-02 Jhinagn M.L. Money, Banking, International Trade and Vrinda Publications (P) Kindle edition",
+              "Public Finance Ltd.",
+              "Page 2 of 3",
+              "R-03 Mithani.D.M Money, Banking, International Trade and Himalaya Publishing 17e/2016",
+              "Public Finance House",
+              "R-04 Timothy W. Koch, Bank Management Cengage 2014",
+              "S. Scott",
+              "MacDonald",
+              "R-05 Peter Rose and Bank Management & Financial Services Mc Graw Hill 9th Edition",
+              "Sylvia Hudgins",
+              "Page 3 of 3"
+            ],
+            "topics_text": "No I Money And It’s Principles – Evaluation, Various Forms of Money, Functions, 12 Significance. Fisher’s Quantity Theory of Money: Assumptions and Criticism, Monetary Standard: Gold Standard, Bi-metallism and Managed Currency Standard. Principles & Methods of Note issues. II Credit Creation and Inflation: Meaning and Significance of Credit, Credit Creation by 10 Bank, Factors Influencing the Volume of Credit in Indian context, Credit Control by RBI. Inflation: Types, Causes & Remedies. Page 1 of 3 III Indian Banking System: Pre –Independence Banking and Post – Independence 10 Banking: Banking Regulation Act, 1949. Types of Banks, new model of banks in India; Types of banking; Indian Banking Reforms: Changing Profile Of Indian Banking, Postal Banking, and E- Banking. IV Central Bank and Commercial Banks in India: RBI-Role and Functions. Bank rate: Repo 8 rate, Reverse repo rate, CRR, SLR. Commercial Banks : Objectives & Functions. V Foreign Exchange: Concept and Exchange Rate, Factors Causing Fluctuations in 8 Exchange Rate, Exchange Control: Meaning, Objective and Methods. Text Books: Sr. No Author/s Name of the Book Publisher Edition & Year of Publication T-01 Seth.M.L Money Banking International Lakshmi Narain 2017 Trade & Public Finance Agarwal Educational Publishers T-02 K. Natarajan. E. Gordon Banking Theory, Laws And Himalaya Publishing 2017 Practice House T-03 O. P. Agarwal Modern Banking Of India. Himalaya Publishing 2017 House T-04 Jaiswal Bimal Vikas Publishing 2015 Currency, Banking and Exchange Reference Books: Sr. No Author/s Name of the Book Publisher Edition and Year of Publication R-01 Khemraj Tarron Money, Banking and the Foreign Edward Elgar 2014 Exchange Market in Emerging Economies Publishing Ltd R-02 Jhinagn M.L. Money, Banking, International Trade and Vrinda Publications (P) Kindle edition Public Finance Ltd. Page 2 of 3 R-03 Mithani.D.M Money, Banking, International Trade and Himalaya Publishing 17e/2016 Public Finance House R-04 Timothy W. Koch, Bank Management Cengage 2014 S. Scott MacDonald R-05 Peter Rose and Bank Management & Financial Services Mc Graw Hill 9th Edition Sylvia Hudgins Page 3 of 3",
+            "topics": [
+              "No",
+              "I Money And It’s Principles – Evaluation, Various Forms of Money, Functions, 12",
+              "Significance. Fisher’s Quantity Theory of Money: Assumptions and Criticism, Monetary",
+              "Standard: Gold Standard, Bi-metallism and Managed Currency Standard. Principles &",
+              "Methods of Note issues.",
+              "II Credit Creation and Inflation: Meaning and Significance of Credit, Credit Creation by 10",
+              "Bank, Factors Influencing the Volume of Credit in Indian context, Credit Control by RBI.",
+              "Inflation: Types, Causes & Remedies.",
+              "Page 1 of 3",
+              "III Indian Banking System: Pre –Independence Banking and Post – Independence 10",
+              "Banking: Banking Regulation Act, 1949. Types of Banks, new model of banks in India",
+              "Types of banking",
+              "Indian Banking Reforms: Changing Profile Of Indian Banking, Postal",
+              "Banking, and E- Banking.",
+              "IV Central Bank and Commercial Banks in India: RBI-Role and Functions. Bank rate: Repo 8",
+              "rate, Reverse repo rate, CRR, SLR. Commercial Banks : Objectives & Functions.",
+              "V Foreign Exchange: Concept and Exchange Rate, Factors Causing Fluctuations in 8",
+              "Exchange Rate, Exchange Control: Meaning, Objective and Methods.",
+              "Text Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year of",
+              "Publication",
+              "T-01 Seth.M.L Money Banking International Lakshmi Narain 2017",
+              "Trade & Public Finance Agarwal Educational",
+              "Publishers",
+              "T-02 K. Natarajan. E. Gordon Banking Theory, Laws And Himalaya Publishing 2017",
+              "Practice House",
+              "T-03 O. P. Agarwal Modern Banking Of India. Himalaya Publishing 2017",
+              "House",
+              "T-04 Jaiswal Bimal Vikas Publishing 2015",
+              "Currency, Banking and Exchange",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition and",
+              "Year of",
+              "Publication",
+              "R-01 Khemraj Tarron Money, Banking and the Foreign Edward Elgar 2014",
+              "Exchange Market in Emerging Economies Publishing Ltd",
+              "R-02 Jhinagn M.L. Money, Banking, International Trade and Vrinda Publications (P) Kindle edition",
+              "Public Finance Ltd.",
+              "Page 2 of 3",
+              "R-03 Mithani.D.M Money, Banking, International Trade and Himalaya Publishing 17e/2016",
+              "Public Finance House",
+              "R-04 Timothy W. Koch, Bank Management Cengage 2014",
+              "S. Scott",
+              "MacDonald",
+              "R-05 Peter Rose and Bank Management & Financial Services Mc Graw Hill 9th Edition",
+              "Sylvia Hudgins",
+              "Page 3 of 3"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5147,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM            Bachelors Of Commerce/ Bachelors Of Commerce(Hons)\n\n              SEMESTER                    I\n             COURSE TITLE         Currency, Banking and Exchange\n             COURSE CODE      04BC0121\n\n             COURSE CREDITS     04\n\n             COURSE DURATION   48 Hrs (48 sessions of 60 minutes each)\n\n\n   COURSE OUTCOMES:\n           Learn the important concepts in money, banking and exchange and their significance in day to\n           day life.\n           Ability to apply concepts in decision making and solve problems\n          To familiarize the students with basic methods of credit creation and their applications in the\n               field.\n          To acquaint the students with the latest concepts\n\n\n\n\n                                Teaching and Examination Scheme\n                                        Internal Marks\n  Teaching Scheme (Hours)                               End-Semester Examination (50%)\n                                     (50%)                                                  Total\n                               Credits\n                                                                          Term Work    Marks\n Theory    Tutorial    Practical             IA      CSE     Theory   Practical/Viva\n                                                                        (TW)\n   4        0         0        4        30        20        50          0            0         100\n\n\n       Course Contents:\n\n\n\n\nUnit                                        Unit / Sub Unit                                     Sessions\nNo\n  I       Money And  It’s  Principles –  Evaluation,  Various Forms  of Money,  Functions,     12\n             Significance. Fisher’s Quantity Theory of Money: Assumptions and Criticism, Monetary\n           Standard: Gold Standard, Bi-metallism and Managed Currency Standard. Principles &\n         Methods of Note issues.\n\n II          Credit Creation and Inflation: Meaning and Significance of Credit, Credit Creation by     10\n           Bank, Factors Influencing the Volume of Credit in Indian context, Credit Control by RBI.\n             Inflation: Types, Causes & Remedies.\n\n\n\n\n    Page 1 of 3"
+        },
+        {
+          "page": 2,
+          "text": "III        Indian Banking System: Pre –Independence Banking and Post – Independence     10\n           Banking: Banking Regulation Act, 1949. Types of Banks, new model of banks in India;\n          Types of banking; Indian Banking Reforms: Changing Profile Of Indian Banking, Postal\n           Banking, and E- Banking.\n\n\n  IV        Central Bank and Commercial Banks in India: RBI-Role and Functions. Bank rate: Repo      8\n             rate, Reverse repo rate, CRR, SLR. Commercial Banks : Objectives & Functions.\n\n\nV         Foreign Exchange: Concept and Exchange Rate, Factors Causing Fluctuations  in      8\n          Exchange Rate, Exchange Control: Meaning, Objective and Methods.\n\n\n\n\n       Text Books:\n\n\nSr. No    Author/s           Name of the Book                Publisher             Edition     &\n                                                                                   Year          of\n                                                                                           Publication\nT-01         Seth.M.L            Money   Banking    International Lakshmi Narain           2017\n                               Trade & Public Finance           Agarwal Educational\n                                                                     Publishers\n\nT-02       K. Natarajan. E. Gordon  Banking Theory, Laws And        Himalaya Publishing        2017\n                                     Practice                      House\nT-03      O. P. Agarwal          Modern Banking Of India.        Himalaya Publishing        2017\n                                                         House\nT-04          Jaiswal Bimal                                              Vikas Publishing           2015\n                                  Currency, Banking and Exchange\n\n\n\n       Reference Books:\n\n\nSr. No     Author/s      Name of the Book                     Publisher             Edition     and\n                                                                                  Year           of\n                                                                                           Publication\nR-01     Khemraj Tarron  Money, Banking and the Foreign       Edward           Elgar      2014\n                        Exchange Market in Emerging Economies Publishing Ltd\n\n\nR-02      Jhinagn M.L.    Money, Banking, International Trade and Vrinda Publications (P)   Kindle edition\n                             Public Finance                            Ltd.\n\n\n\n\n    Page 2 of 3"
+        },
+        {
+          "page": 3,
+          "text": "R-03     Mithani.D.M    Money, Banking, International Trade and Himalaya    Publishing    17e/2016\n                             Public Finance                     House\n\nR-04     Timothy W. Koch, Bank Management                  Cengage                  2014\n            S.           Scott\n         MacDonald\nR-05      Peter  Rose  and Bank Management & Financial Services Mc Graw Hill             9th Edition\n           Sylvia Hudgins\n\n\n\n\n\n    Page 3 of 3"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "4daa703b5fe49f29bc735b752858982b12c5194c3e5bbddb5128624d7e4bc8f4",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000423110101",
+      "subject_name": "Financial Accounting-I",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 1,
+      "subject_code": "04BC2101",
+      "course_code_evidence": [
+        "04BC0105",
+        "04BC0121",
+        "04BC2101"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/04BC2101-FA-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/04BC2101-FA-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Financial Accounting-I [1488d8ceff4a].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Financial Accounting-I [1488d8ceff4a].pdf",
+      "expected_pdf_sha256": "653fa99421fb7efd77dd0ddf167ca14994f08a3f83004025c7a8c56fcd918602",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "FINANCIAL ACCOUNTING-I",
+        "course_code": "04BC2101",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "1 NA"
+      ],
+      "course_outcomes": [
+        "Describe and explain fundamental and advanced concepts underlying accounting of partnership firms.",
+        "Prepare accounts from single entry systems or incomplete records.",
+        "Apply knowledge to create financial statements for not-for-profit organizations",
+        "Examine various types of branches and their accounting procedures.",
+        "Evaluate and compare different investments, demonstrating understanding of the concepts of Ex-interest and Cum-interest. Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 1 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "PARTNERSHIP ACCOUNTS",
+            "contact_hours": 18,
+            "topic_lines": [
+              "Introduction – Treatment of Goodwill – Calculation of Goodwill:",
+              "Average profit method, Super profit method, Annuity method,",
+              "Capitalisation method, Accounting issues related to Admission,",
+              "Retirement and Death of a Partner , Preparation of Revaluation",
+              "account Dissolution - Preparation of Realisation account, Settlement",
+              "of accounts – Piecemeal distribution: Maximum loss method and",
+              "Proportionate capital method , – Insolvency of partner during",
+              "piecemeal distribution (Garner vs. Murray rule)"
+            ],
+            "topics_text": "Introduction – Treatment of Goodwill – Calculation of Goodwill: Average profit method, Super profit method, Annuity method, Capitalisation method, Accounting issues related to Admission, Retirement and Death of a Partner , Preparation of Revaluation account Dissolution - Preparation of Realisation account, Settlement of accounts – Piecemeal distribution: Maximum loss method and Proportionate capital method , – Insolvency of partner during piecemeal distribution (Garner vs. Murray rule)",
+            "topics": [
+              "Introduction – Treatment of Goodwill – Calculation of Goodwill:",
+              "Average profit method, Super profit method, Annuity method,",
+              "Capitalisation method, Accounting issues related to Admission,",
+              "Retirement and Death of a Partner , Preparation of Revaluation",
+              "account Dissolution - Preparation of Realisation account, Settlement",
+              "of accounts – Piecemeal distribution: Maximum loss method and",
+              "Proportionate capital method , – Insolvency of partner during",
+              "piecemeal distribution (Garner vs. Murray rule)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "ACCOUNTS FROM INCOMPLETE RECORDS",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction, Features, Types of single-entry system, Ascertainment",
+              "of profit by capital comparison, Statement of affairs, preparation",
+              "and distinction with balance sheet, Techniques for obtaining",
+              "complete accounting information, Practical sums"
+            ],
+            "topics_text": "Introduction, Features, Types of single-entry system, Ascertainment of profit by capital comparison, Statement of affairs, preparation and distinction with balance sheet, Techniques for obtaining complete accounting information, Practical sums",
+            "topics": [
+              "Introduction, Features, Types of single-entry system, Ascertainment",
+              "of profit by capital comparison, Statement of affairs, preparation",
+              "and distinction with balance sheet, Techniques for obtaining",
+              "complete accounting information, Practical sums"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "FINANCIAL STATEMENTS OF NOT-FOR-PROFIT",
+            "contact_hours": 12,
+            "topic_lines": [
+              "ORGANISATIONS",
+              "Introduction, Receipts and Payments account, Income and",
+              "Expenditure account, Balance sheet"
+            ],
+            "topics_text": "ORGANISATIONS Introduction, Receipts and Payments account, Income and Expenditure account, Balance sheet",
+            "topics": [
+              "ORGANISATIONS",
+              "Introduction, Receipts and Payments account, Income and",
+              "Expenditure account, Balance sheet"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "ACCOUNTING FOR BRANCHES",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction, Meaning, Classification, Methods of charging goods",
+              "to branches, Accounting for dependant branches , Accounting for",
+              "independent branches"
+            ],
+            "topics_text": "Introduction, Meaning, Classification, Methods of charging goods to branches, Accounting for dependant branches , Accounting for independent branches",
+            "topics": [
+              "Introduction, Meaning, Classification, Methods of charging goods",
+              "to branches, Accounting for dependant branches , Accounting for",
+              "independent branches"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "INVESTMENT ACCOUNTS",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Meaning – Classification of investments - Cost of Investment –",
+              "Calculation of purchase price – Disposal of investments –",
+              "Preparation of Investments account – Calculation of ex-interest and",
+              "cum-interest",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Financial Accounting, P.C. Tulsian, Pearson, 2023",
+              "2 Financial Accounting, S.N. Maheshwari, and. S. K. Maheshwari, Vikas Publishing House,",
+              "New Delhi, 2023",
+              "3 Advanced Accounts. Vol.-I, M.C.Shukla, T.S.Grewal and S.C.Gupta, S. Chand & Co.,",
+              "New Delhi, 2023"
+            ],
+            "topics_text": "Meaning – Classification of investments - Cost of Investment – Calculation of purchase price – Disposal of investments – Preparation of Investments account – Calculation of ex-interest and cum-interest Total Hours 60 Textbook : 1 Financial Accounting, P.C. Tulsian, Pearson, 2023 2 Financial Accounting, S.N. Maheshwari, and. S. K. Maheshwari, Vikas Publishing House, New Delhi, 2023 3 Advanced Accounts. Vol.-I, M.C.Shukla, T.S.Grewal and S.C.Gupta, S. Chand & Co., New Delhi, 2023",
+            "topics": [
+              "Meaning – Classification of investments - Cost of Investment –",
+              "Calculation of purchase price – Disposal of investments –",
+              "Preparation of Investments account – Calculation of ex-interest and",
+              "cum-interest",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Financial Accounting, P.C. Tulsian, Pearson, 2023",
+              "2 Financial Accounting, S.N. Maheshwari, and. S. K. Maheshwari, Vikas Publishing House,",
+              "New Delhi, 2023",
+              "3 Advanced Accounts. Vol.-I, M.C.Shukla, T.S.Grewal and S.C.Gupta, S. Chand & Co.,",
+              "New Delhi, 2023"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Advanced Accounts. Vol.-I& II, Advanced Accounts. Vol.-I& II, R. L. Gupta and M. Radhaswamy, S. Chand & Co., New Delhi, 2023",
+          "Financial Accounting, Financial Accounting, A.Mukharji and M. Hanif, Tata McGraw, Hill Publishing Co. Ltd. New Delhi, 2023",
+          "Advanced Accountancy, Advanced Accountancy, S. P. Jain and K. N. Narang, Kalyani Publishers, New Delhi, 2023",
+          "Introduction to Accountancy, Introduction to Accountancy, T. S. Grewal, S. Chand & Co. Pvt. Ltd., New , 2023"
+        ],
+        "textbooks": [
+          "Financial Accounting, P.C. Tulsian, Pearson, 2023",
+          "Financial Accounting, S.N. Maheshwari, and. S. K. Maheshwari, Vikas Publishing House, New Delhi, 2023",
+          "Advanced Accounts. Vol.-I, M.C.Shukla, T.S.Grewal and S.C.Gupta, S. Chand & Co., New Delhi, 2023"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "NA"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5257,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    FINANCIAL ACCOUNTING-I\nCOURSE CODE     04BC2101\nCOURSE CREDITS  4\n\nObjective:\n 1 NA\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Describe and explain fundamental and advanced concepts underlying accounting of\n     partnership firms.\n 2  Prepare accounts from single entry systems or incomplete records.\n 3  Apply knowledge to create financial statements for not-for-profit organizations\n 4  Examine various types of branches and their accounting procedures.\n 5  Evaluate and compare different investments, demonstrating understanding of the concepts\n     of Ex-interest and Cum-interest.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            1            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    PARTNERSHIP ACCOUNTS                              18\n               Introduction – Treatment of Goodwill – Calculation of Goodwill:\n            Average profit method, Super profit method, Annuity method,\n               Capitalisation method, Accounting issues related to Admission,\n             Retirement and Death of a Partner , Preparation of Revaluation\n             account Dissolution - Preparation of Realisation account, Settlement\n              of accounts – Piecemeal distribution: Maximum loss method and\n              Proportionate capital method , – Insolvency of partner during\n             piecemeal distribution (Garner vs. Murray rule)\n     2    ACCOUNTS FROM INCOMPLETE RECORDS             12\n               Introduction, Features, Types of single-entry system, Ascertainment\n              of profit by capital comparison, Statement of affairs, preparation\n            and distinction with balance sheet, Techniques for obtaining\n             complete accounting information, Practical sums\n     3     FINANCIAL STATEMENTS OF NOT-FOR-PROFIT         12\n         ORGANISATIONS\n               Introduction, Receipts and Payments account, Income and\n             Expenditure account, Balance sheet\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4    ACCOUNTING FOR BRANCHES                         10\n               Introduction, Meaning, Classification, Methods of charging goods\n               to branches, Accounting for dependant branches , Accounting for\n             independent branches\n     5    INVESTMENT ACCOUNTS                              8\n            Meaning – Classification of investments - Cost of Investment –\n              Calculation of purchase price – Disposal of investments –\n              Preparation of Investments account – Calculation of ex-interest and\n              cum-interest\n                               Total Hours                       60\n\n\nTextbook :\n 1  Financial Accounting, P.C. Tulsian, Pearson, 2023\n 2  Financial Accounting, S.N. Maheshwari, and. S. K. Maheshwari, Vikas Publishing House,\n   New Delhi, 2023\n 3  Advanced Accounts. Vol.-I, M.C.Shukla, T.S.Grewal and S.C.Gupta, S. Chand & Co.,\n   New Delhi, 2023\n\nReferences:\n 1  Advanced Accounts. Vol.-I& II, Advanced Accounts. Vol.-I& II, R. L. Gupta and M.\n    Radhaswamy, S. Chand & Co., New Delhi, 2023\n 2  Financial Accounting, Financial Accounting, A.Mukharji and M. Hanif, Tata McGraw, Hill\n     Publishing Co. Ltd. New Delhi, 2023\n 3  Advanced Accountancy, Advanced Accountancy, S. P. Jain and K. N. Narang, Kalyani\n     Publishers, New Delhi, 2023\n 4  Introduction to Accountancy, Introduction to Accountancy, T. S. Grewal, S. Chand & Co.\n     Pvt. Ltd., New , 2023\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Lectures\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 1 NA\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "653fa99421fb7efd77dd0ddf167ca14994f08a3f83004025c7a8c56fcd918602",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22016131000601",
+      "subject_name": "General Electives",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    },
+    {
+      "subject_id": "22000423012201",
+      "subject_name": "Human Resource Management",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 1,
+      "subject_code": "04BC0122",
+      "course_code_evidence": [
+        "04BC0122",
+        "04BC0125",
+        "04BC0126",
+        "04BC1102"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/GE-04BC0122-Human-Resource-Management-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/GE-04BC0122-Human-Resource-Management-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/HUMAN RESOURCE MANAGEMENT [6ec73d917ad9].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/HUMAN RESOURCE MANAGEMENT [6ec73d917ad9].pdf",
+      "expected_pdf_sha256": "c39626231048ef4c0c5d6fd9ca3be0433d69b35cdc7928cad16d6f88a6f3bf24",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Human Resource Management",
+        "course_code": "04BC0122",
+        "semester_label": "I",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        " Explain the importance of human resources and their effective management in organizations.  Analyze the key issues related to administering the human elements such as recruitment, training, compensation, management development and employment relations.  Understand fundamentals and importance of Training and Development.  Analysis various components of Compensation  Understand the process of job analysis and appreciate its importance as a foundation for human resource management practice."
+      ],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 4 0 0 4 30 20 50 0 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit / Sub Unit Sessio",
+            "contact_hours": null,
+            "topic_lines": [
+              "No ns",
+              "I Introduction: 08",
+              "An Introduction to Human Resource Management, characteristics and significance of",
+              "HRM, objectives and functions, Skills and Competencies of a Human Resource Manager,",
+              "changing skill requirement, changing employee expectations, Challenges faced by HR",
+              "managers.",
+              "Page 1 of 3",
+              "II Procurement: 12",
+              "Job analysis, Job Description and Job Specification-Definitions and Objectives Human",
+              "Resource Planning- Definition and objectives. Recruitment and Selection – Definitions",
+              "and objectives Placement and Induction.",
+              "III Training and Development: 10",
+              "Training: Definition, objectives and advantages, Identification of training needs,",
+              "Methods of training, Difference between Training & Development. Succession Planning.",
+              "IV Compensation: 10",
+              "Job evaluation-Introduction and objectives, Compensation- Definitions and objectives –",
+              "Introduction to Regulatory Framework for Compensation Management(Codes,",
+              "PF/Gratuity/Basic DA) Basic factors in determining pay rates, Basic, Supplementary and",
+              "Executive Remuneration, types of employee benefits and services, Ethical issues in",
+              "Compensation Management: Discussion.",
+              "V Employment Relations and Contemporary issues in HRM 08",
+              "Employee Relationship Management– Definitions and Main Aspects, Industrial Disputes",
+              "& Conflicts – Collective Bargaining Grievance Handling, Contemporary issues in Human",
+              "Resource Management.",
+              "Text Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year of",
+              "Publication",
+              "T-01 Pravin Durai Human Resource Management Pearson: Dorling Kindersley (India) 4th",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition and",
+              "Year of",
+              "Publication",
+              "R-01 K. Aswathappa Human Resource and Personnel Tata MC Graw- Hill 6th, 2010",
+              "Management,",
+              "Text and Cases",
+              "Page 2 of 3",
+              "R-02 Gary Dessler & Human Resource Management Pearson 15th, 2016",
+              "BijuVarkkey",
+              "R-03 V.S.P. Rao Human Resource Excel Books 2006",
+              "Management - Text and Cases",
+              "Page 3 of 3"
+            ],
+            "topics_text": "No ns I Introduction: 08 An Introduction to Human Resource Management, characteristics and significance of HRM, objectives and functions, Skills and Competencies of a Human Resource Manager, changing skill requirement, changing employee expectations, Challenges faced by HR managers. Page 1 of 3 II Procurement: 12 Job analysis, Job Description and Job Specification-Definitions and Objectives Human Resource Planning- Definition and objectives. Recruitment and Selection – Definitions and objectives Placement and Induction. III Training and Development: 10 Training: Definition, objectives and advantages, Identification of training needs, Methods of training, Difference between Training & Development. Succession Planning. IV Compensation: 10 Job evaluation-Introduction and objectives, Compensation- Definitions and objectives – Introduction to Regulatory Framework for Compensation Management(Codes, PF/Gratuity/Basic DA) Basic factors in determining pay rates, Basic, Supplementary and Executive Remuneration, types of employee benefits and services, Ethical issues in Compensation Management: Discussion. V Employment Relations and Contemporary issues in HRM 08 Employee Relationship Management– Definitions and Main Aspects, Industrial Disputes & Conflicts – Collective Bargaining Grievance Handling, Contemporary issues in Human Resource Management. Text Books: Sr. No Author/s Name of the Book Publisher Edition & Year of Publication T-01 Pravin Durai Human Resource Management Pearson: Dorling Kindersley (India) 4th Reference Books: Sr. No Author/s Name of the Book Publisher Edition and Year of Publication R-01 K. Aswathappa Human Resource and Personnel Tata MC Graw- Hill 6th, 2010 Management, Text and Cases Page 2 of 3 R-02 Gary Dessler & Human Resource Management Pearson 15th, 2016 BijuVarkkey R-03 V.S.P. Rao Human Resource Excel Books 2006 Management - Text and Cases Page 3 of 3",
+            "topics": [
+              "No ns",
+              "I Introduction: 08",
+              "An Introduction to Human Resource Management, characteristics and significance of",
+              "HRM, objectives and functions, Skills and Competencies of a Human Resource Manager,",
+              "changing skill requirement, changing employee expectations, Challenges faced by HR",
+              "managers.",
+              "Page 1 of 3",
+              "II Procurement: 12",
+              "Job analysis, Job Description and Job Specification-Definitions and Objectives Human",
+              "Resource Planning- Definition and objectives. Recruitment and Selection – Definitions",
+              "and objectives Placement and Induction.",
+              "III Training and Development: 10",
+              "Training: Definition, objectives and advantages, Identification of training needs,",
+              "Methods of training, Difference between Training & Development. Succession Planning.",
+              "IV Compensation: 10",
+              "Job evaluation-Introduction and objectives, Compensation- Definitions and objectives –",
+              "Introduction to Regulatory Framework for Compensation Management(Codes,",
+              "PF/Gratuity/Basic DA) Basic factors in determining pay rates, Basic, Supplementary and",
+              "Executive Remuneration, types of employee benefits and services, Ethical issues in",
+              "Compensation Management: Discussion.",
+              "V Employment Relations and Contemporary issues in HRM 08",
+              "Employee Relationship Management– Definitions and Main Aspects, Industrial Disputes",
+              "& Conflicts – Collective Bargaining Grievance Handling, Contemporary issues in Human",
+              "Resource Management.",
+              "Text Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year of",
+              "Publication",
+              "T-01 Pravin Durai Human Resource Management Pearson: Dorling Kindersley (India) 4th",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition and",
+              "Year of",
+              "Publication",
+              "R-01 K. Aswathappa Human Resource and Personnel Tata MC Graw- Hill 6th, 2010",
+              "Management,",
+              "Text and Cases",
+              "Page 2 of 3",
+              "R-02 Gary Dessler & Human Resource Management Pearson 15th, 2016",
+              "BijuVarkkey",
+              "R-03 V.S.P. Rao Human Resource Excel Books 2006",
+              "Management - Text and Cases",
+              "Page 3 of 3"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5010,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM             Bachelors Of Commerce/ Bachelors Of\n                                  Commerce(Hons)\n\n              SEMESTER                     I\n             COURSE TITLE       Human Resource Management\n             COURSE CODE        04BC0122\n\n             COURSE CREDITS      04\n\n             COURSE DURATION    48 Hrs (48 sessions of 60 minutes each)\n\n\n   COURSE OUTCOMES:\n\n          Explain the importance of human resources and their effective management in organizations.\n          Analyze the key issues related to administering the human elements such as recruitment,\n\n             training, compensation, management development and employment relations.\n         Understand fundamentals and importance of Training and Development.\n          Analysis various components of Compensation\n         Understand the process of job analysis and appreciate its importance as a foundation for\n\n         human resource management practice.\n\n\n                                Teaching and Examination Scheme\n                                        Internal Marks\n  Teaching Scheme (Hours)                               End-Semester Examination (50%)\n                                     (50%)                                                  Total\n                               Credits\n                                                                          Term Work    Marks\n Theory    Tutorial    Practical             IA      CSE     Theory   Practical/Viva\n                                                                        (TW)\n   4        0         0        4        30        20        50          0            0         100\n\n\n       Course Contents:\n\n\nUnit                                         Unit / Sub Unit                                       Sessio\nNo                                                                                           ns\n  I          Introduction:                                                                 08\n\n         An Introduction to Human Resource Management, characteristics and significance of\n         HRM, objectives and functions, Skills and Competencies of a Human Resource Manager,\n           changing skill requirement, changing employee expectations, Challenges faced by HR\n          managers.\n\n\n    Page 1 of 3"
+        },
+        {
+          "page": 2,
+          "text": "II         Procurement:                                                                12\n\n           Job analysis, Job Description and Job Specification-Definitions and Objectives Human\n          Resource Planning- Definition and objectives. Recruitment and Selection – Definitions\n          and objectives Placement and Induction.\n\n\n   III        Training and Development:                                                     10\n\n            Training:  Definition,  objectives and advantages,  Identification  of  training needs,\n         Methods of training, Difference between Training & Development. Succession Planning.\n\n\n  IV       Compensation:                                                               10\n\n           Job evaluation-Introduction and objectives, Compensation- Definitions and objectives –\n            Introduction  to  Regulatory  Framework  for  Compensation  Management(Codes,\n            PF/Gratuity/Basic DA) Basic factors in determining pay rates, Basic, Supplementary and\n           Executive Remuneration, types of employee benefits and services, Ethical issues in\n          Compensation Management: Discussion.\nV        Employment Relations and Contemporary issues in HRM                              08\n\n          Employee Relationship Management– Definitions and Main Aspects, Industrial Disputes\n       & Conflicts – Collective Bargaining Grievance Handling, Contemporary issues in Human\n          Resource Management.\n\n\n\n\n       Text Books:\n\n\nSr. No  Author/s    Name of the Book                Publisher                           Edition     &\n                                                                                   Year          of\n                                                                                           Publication\nT-01   Pravin Durai  Human Resource Management    Pearson: Dorling Kindersley (India)  4th\n\n\n\n       Reference Books:\n\n\nSr. No    Author/s      Name of the Book                       Publisher            Edition     and\n                                                                                  Year           of\n                                                                                           Publication\nR-01       K. Aswathappa   Human   Resource   and Personnel     Tata MC Graw- Hill    6th, 2010\n                                 Management,\n                            Text and Cases\n\n\n\n\n    Page 2 of 3"
+        },
+        {
+          "page": 3,
+          "text": "R-02     Gary Dessler &   Human Resource Management          Pearson               15th, 2016\n          BijuVarkkey\n\n\nR-03       V.S.P. Rao      Human Resource                         Excel Books        2006\n                      Management - Text and Cases\n\n\n\n\n\n    Page 3 of 3"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "c39626231048ef4c0c5d6fd9ca3be0433d69b35cdc7928cad16d6f88a6f3bf24",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000423010401",
+      "subject_name": "Micro Economics",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/Micro-Eco.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MICRO ECONOMICS [e27f9ddfb836].pdf",
+      "expected_pdf_sha256": "6bf41531c25abe9c821556563bfd5c53a3d4a409b53b641770b0496e73e5e6c4",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0102"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22041912010201",
+      "subject_name": "Reading and Writing for Business",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 1,
+      "subject_code": "04SL0102",
+      "course_code_evidence": [
+        "04BC0129",
+        "04SL0102",
+        "04SL0103"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEC-04SL0102-Reading-and-Writing-for-Business-Elective-I.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEC-04SL0102-Reading-and-Writing-for-Business-Elective-I.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Reading and Writing for Business [314f26c4e168].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Reading and Writing for Business [314f26c4e168].pdf",
+      "expected_pdf_sha256": "c02cdcc60ee3f8ea8968c3ca12e023df2a38402d5e759f87d90068114bd7864a",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "04SL0102",
+        "semester_label": "1",
+        "credits": 2,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "1: Introduction to business world",
+            "contact_hours": null,
+            "topic_lines": [
+              "1. Reading a businesscase-study – “Tripping Along”by Deep Kalra fromStay Hungry",
+              "Stay Foolish",
+              "2. Reading 3 business articles (general in nature) from the newspapers/magazines",
+              "Page 1 of 3",
+              "I. “Paytm: the wonder wallet” from Forbes India.",
+              "II. “Millennials: How They Live and Work”from Gallup.",
+              "III. “The Right Culture: Not About Employees Happiness” from Gallup.",
+              "Recommended Reading",
+              "Arakali, Harichandan. “Paytm: The wonder wallet.” Forbes India, 16 Nov. 2016,",
+              "http://www.forbesindia.com/printcontent/44825",
+              "Clifton, Jim. Millennials: How They Live and Work.” Gallup, 11 May 2016,",
+              "http://www.gallup.com/opinion/chairman/191426/millennials-live-work.aspx",
+              "Harter, Jim. “The Right Culture: Not About Employee Happiness.” Gallup, 12 April 2017,",
+              "http://www.gallup.com/businessjournal/208487/right-culture-not-",
+              "employeehappiness.aspx?g_source=WORKPLACE&g_medium=topic&g_campaig",
+              "n=tiles",
+              "Kalra, Deep. “Tripping Along.” Stay Hungry Stay Foolish, edited by Rashmi Bansal,",
+              "IIM Ahmedabad, 2008, pp. 130-143."
+            ],
+            "topics_text": "1. Reading a businesscase-study – “Tripping Along”by Deep Kalra fromStay Hungry Stay Foolish 2. Reading 3 business articles (general in nature) from the newspapers/magazines Page 1 of 3 I. “Paytm: the wonder wallet” from Forbes India. II. “Millennials: How They Live and Work”from Gallup. III. “The Right Culture: Not About Employees Happiness” from Gallup. Recommended Reading Arakali, Harichandan. “Paytm: The wonder wallet.” Forbes India, 16 Nov. 2016, http://www.forbesindia.com/printcontent/44825 Clifton, Jim. Millennials: How They Live and Work.” Gallup, 11 May 2016, http://www.gallup.com/opinion/chairman/191426/millennials-live-work.aspx Harter, Jim. “The Right Culture: Not About Employee Happiness.” Gallup, 12 April 2017, http://www.gallup.com/businessjournal/208487/right-culture-not- employeehappiness.aspx?g_source=WORKPLACE&g_medium=topic&g_campaig n=tiles Kalra, Deep. “Tripping Along.” Stay Hungry Stay Foolish, edited by Rashmi Bansal, IIM Ahmedabad, 2008, pp. 130-143.",
+            "topics": [
+              "1. Reading a businesscase-study – “Tripping Along”by Deep Kalra fromStay Hungry",
+              "Stay Foolish",
+              "2. Reading 3 business articles (general in nature) from the newspapers/magazines",
+              "Page 1 of 3",
+              "I. “Paytm: the wonder wallet” from Forbes India.",
+              "II. “Millennials: How They Live and Work”from Gallup.",
+              "III. “The Right Culture: Not About Employees Happiness” from Gallup.",
+              "Recommended Reading",
+              "Arakali, Harichandan. “Paytm: The wonder wallet.” Forbes India, 16 Nov. 2016,",
+              "http://www.forbesindia.com/printcontent/44825",
+              "Clifton, Jim. Millennials: How They Live and Work.” Gallup, 11 May 2016,",
+              "http://www.gallup.com/opinion/chairman/191426/millennials-live-work.aspx",
+              "Harter, Jim. “The Right Culture: Not About Employee Happiness.” Gallup, 12 April 2017,",
+              "http://www.gallup.com/businessjournal/208487/right-culture-not",
+              "employeehappiness.aspx?g_source=WORKPLACE&g_medium=topic&g_campaig",
+              "n=tiles",
+              "Kalra, Deep. “Tripping Along.” Stay Hungry Stay Foolish, edited by Rashmi Bansal,",
+              "IIM Ahmedabad, 2008, pp. 130-143."
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "2: Reading and writing for business",
+            "contact_hours": null,
+            "topic_lines": [
+              "1. Reading business letters (of sales, inquiry, order, complaint, and adjustment)",
+              "2. Writing business letters (Any two types)",
+              "3. Reading a few short business reports",
+              "4. Writing a short business report",
+              "Teaching Scheme",
+              "Teaching",
+              "Scheme",
+              "(Hours Evaluation Scheme",
+              "Total per",
+              "Marks week)",
+              "Viva",
+              "Practical ESE IA CSE Term Work"
+            ],
+            "topics_text": "1. Reading business letters (of sales, inquiry, order, complaint, and adjustment) 2. Writing business letters (Any two types) 3. Reading a few short business reports 4. Writing a short business report Teaching Scheme Teaching Scheme (Hours Evaluation Scheme Total per Marks week) Viva Practical ESE IA CSE Term Work",
+            "topics": [
+              "1. Reading business letters (of sales, inquiry, order, complaint, and adjustment)",
+              "2. Writing business letters (Any two types)",
+              "3. Reading a few short business reports",
+              "4. Writing a short business report",
+              "Teaching Scheme",
+              "Teaching",
+              "Scheme",
+              "(Hours Evaluation Scheme",
+              "Total per",
+              "Marks week)",
+              "Viva",
+              "Practical ESE IA CSE Term Work"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Hours 00 30 20 25 25",
+            "contact_hours": 100,
+            "topic_lines": [
+              "1. IA will consist of the following components (30 marks):",
+              "a. Assignments (20 Marks): Students will prepare three assignments as",
+              "following.",
+              "1) Letter: Write three letters on the given subjects (10 Marks)",
+              "2) Article: Write a business article on the given theme (05 Marks)",
+              "Page 2 of 3",
+              "3) Report: Write a report on the given subject(05 Marks)",
+              "b. In-Class Participation (10 Marks)",
+              "2. CSE (20 marks):",
+              "a. (Term Paper): Students will write a paper on the given topic.",
+              "3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be",
+              "based on the CSE, Term Work, Assignments and topics covered in the syllabus.",
+              "4. Term Work (25 Marks):",
+              "a. (Term-End Presentation): Students will make a presentation based on",
+              "topics provided by the faculty, at the end of the semester.",
+              "Further Suggested Readings",
+              "1. Raman M. and Singh P., Business Communication.20th ed., Oxford University Press,",
+              "2011.",
+              "2. Kumar S. and Lata P., Communication Skills.6th ed., Oxford University Press, 2013.",
+              "3. Murphy H., Hildebrandt H. and Thomas J., Effective Business Communication. Tata",
+              "MacGraw-Hill, 2008.",
+              "4. Sharma R. and Mohan K., Business Correspondence and Report Writing. 4th",
+              "ed.,Tata MacGraw-Hill, 1998.",
+              "5. Lesikar R., Flatley M., Rentz K., Pande N., Business Communication.11th ed., Tata",
+              "MacGraw-Hill, 2009.",
+              "Page 3 of 3"
+            ],
+            "topics_text": "1. IA will consist of the following components (30 marks): a. Assignments (20 Marks): Students will prepare three assignments as following. 1) Letter: Write three letters on the given subjects (10 Marks) 2) Article: Write a business article on the given theme (05 Marks) Page 2 of 3 3) Report: Write a report on the given subject(05 Marks) b. In-Class Participation (10 Marks) 2. CSE (20 marks): a. (Term Paper): Students will write a paper on the given topic. 3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be based on the CSE, Term Work, Assignments and topics covered in the syllabus. 4. Term Work (25 Marks): a. (Term-End Presentation): Students will make a presentation based on topics provided by the faculty, at the end of the semester. Further Suggested Readings 1. Raman M. and Singh P., Business Communication.20th ed., Oxford University Press, 2011. 2. Kumar S. and Lata P., Communication Skills.6th ed., Oxford University Press, 2013. 3. Murphy H., Hildebrandt H. and Thomas J., Effective Business Communication. Tata MacGraw-Hill, 2008. 4. Sharma R. and Mohan K., Business Correspondence and Report Writing. 4th ed.,Tata MacGraw-Hill, 1998. 5. Lesikar R., Flatley M., Rentz K., Pande N., Business Communication.11th ed., Tata MacGraw-Hill, 2009. Page 3 of 3",
+            "topics": [
+              "1. IA will consist of the following components (30 marks):",
+              "a. Assignments (20 Marks): Students will prepare three assignments as",
+              "following.",
+              "1) Letter: Write three letters on the given subjects (10 Marks)",
+              "2) Article: Write a business article on the given theme (05 Marks)",
+              "Page 2 of 3",
+              "3) Report: Write a report on the given subject(05 Marks)",
+              "b. In-Class Participation (10 Marks)",
+              "2. CSE (20 marks):",
+              "a. (Term Paper): Students will write a paper on the given topic.",
+              "3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be",
+              "based on the CSE, Term Work, Assignments and topics covered in the syllabus.",
+              "4. Term Work (25 Marks):",
+              "a. (Term-End Presentation): Students will make a presentation based on",
+              "topics provided by the faculty, at the end of the semester.",
+              "Further Suggested Readings",
+              "1. Raman M. and Singh P., Business Communication.20th ed., Oxford University Press,",
+              "2011.",
+              "2. Kumar S. and Lata P., Communication Skills.6th ed., Oxford University Press, 2013.",
+              "3. Murphy H., Hildebrandt H. and Thomas J., Effective Business Communication. Tata",
+              "MacGraw-Hill, 2008.",
+              "4. Sharma R. and Mohan K., Business Correspondence and Report Writing. 4th",
+              "ed.,Tata MacGraw-Hill, 1998.",
+              "5. Lesikar R., Flatley M., Rentz K., Pande N., Business Communication.11th ed., Tata",
+              "MacGraw-Hill, 2009.",
+              "Page 3 of 3"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 4770,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Elective I: BBA, BBA (Hon.) BBA\n            (FM), B. Com. & B.Com(Hons)\n         Reading and Writing for Business\n                      Subject Code:04SL0102\n                                Credit: 2\n                          Semester: 1\n\n\nCourse Description\n\nThe course will inculcate skills of formal reading and writing for business among the\n\nstudents. Good reading skills play a vital role in decision making in response to a\nproposal or a report. Formal writing, on the other hand, enables one to express one’s\n\nideas, plans, aims and objectives on paper. The course will offer a number of classroom\n\nactivities, assignments and tasks to ensure the inculcation of the aforesaid skills among\n\nthe students.\n\nCourse Objectives\n\nThe course will enable the students:\n\n    1.  to read and interpret formal business writings such as reports, articles and\n       reviews;\n\n    2.  to knowstructures of formal business letters and reports;\n\n    3.  to write formal business letters and reports;\n\n    4.  to inculcate a taste for reading and writing habits pertaining to the world of\n       business.\n\nUnit 1: Introduction to business world\n\n    1.  Reading a businesscase-study – “Tripping Along”by Deep Kalra fromStay Hungry\n\n       Stay Foolish\n\n    2.  Reading 3 business articles (general in nature) from the newspapers/magazines\n\n\n                                                                          Page 1 of 3"
+        },
+        {
+          "page": 2,
+          "text": "I.   “Paytm: the wonder wallet” from Forbes India.\n             II.    “Millennials: How They Live and Work”from Gallup.\n\n            III.   “The Right Culture: Not About Employees Happiness” from Gallup.\n\nRecommended Reading\n\n       Arakali, Harichandan. “Paytm: The wonder wallet.” Forbes India, 16 Nov. 2016,\n\n             http://www.forbesindia.com/printcontent/44825\n\n         Clifton, Jim. Millennials: How They Live and Work.” Gallup, 11 May 2016,\n\n              http://www.gallup.com/opinion/chairman/191426/millennials-live-work.aspx\n\n        Harter, Jim. “The Right Culture: Not About Employee Happiness.” Gallup, 12 April 2017,\n              http://www.gallup.com/businessjournal/208487/right-culture-not-\n             employeehappiness.aspx?g_source=WORKPLACE&g_medium=topic&g_campaig\n                n=tiles\n       Kalra, Deep. “Tripping Along.” Stay Hungry Stay Foolish, edited by Rashmi Bansal,\n            IIM Ahmedabad, 2008, pp. 130-143.\n\nUnit 2: Reading and writing for business\n\n    1.  Reading business letters (of sales, inquiry, order, complaint, and adjustment)\n    2.  Writing business letters (Any two types)\n    3.  Reading a few short business reports\n\n    4.  Writing a short business report\n\nTeaching Scheme\n\nTeaching\n Scheme\n (Hours                         Evaluation Scheme\n                                                                              Total   per\n                                                                 Marks  week)\n                                                    Viva\n Practical      ESE         IA        CSE               Term Work\n\n 2 Hours       00        30        20        25        25       100\n\n    1. IA will consist of the following components (30 marks):\n\n            a. Assignments (20 Marks): Students will prepare three assignments as\n              following.\n                  1) Letter: Write three letters on the given subjects (10 Marks)\n\n                  2) Article: Write a business article on the given theme (05 Marks)\n\n\n\n\n                                                                          Page 2 of 3"
+        },
+        {
+          "page": 3,
+          "text": "3) Report: Write a report on the given subject(05 Marks)\n           b.  In-Class Participation (10 Marks)\n\n    2. CSE (20 marks):\n\n            a. (Term Paper): Students will write a paper on the given topic.\n    3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be\n\n      based on the CSE, Term Work, Assignments and topics covered in the syllabus.\n\n    4. Term Work (25 Marks):\n\n            a. (Term-End Presentation): Students will make a presentation based on\n              topics provided by the faculty, at the end of the semester.\n\nFurther Suggested Readings\n\n    1. Raman M. and Singh P., Business Communication.20th ed., Oxford University Press,\n\n      2011.\n\n    2. Kumar S. and Lata P., Communication Skills.6th ed., Oxford University Press, 2013.\n    3. Murphy H., Hildebrandt H. and Thomas J., Effective Business Communication. Tata\n      MacGraw-Hill, 2008.\n\n    4. Sharma R. and Mohan K., Business Correspondence and Report Writing. 4th\n\n       ed.,Tata MacGraw-Hill, 1998.\n\n    5.  Lesikar R., Flatley M., Rentz K., Pande N., Business Communication.11th ed., Tata\n\n      MacGraw-Hill, 2009.\n\n\n\n\n\n                                                                          Page 3 of 3"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "c02cdcc60ee3f8ea8968c3ca12e023df2a38402d5e759f87d90068114bd7864a",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22041912010301",
+      "subject_name": "Speaking and Presentation Skills",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 1,
+      "subject_code": "04SL0103",
+      "course_code_evidence": [
+        "04BC0127",
+        "04BC0129",
+        "04SL0103"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEC-04SL0103-Speaking-and-Presentation-Skills-Elec-II.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEC-04SL0103-Speaking-and-Presentation-Skills-Elec-II.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Speaking and Presentation Skills [6c10f2763d78].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Speaking and Presentation Skills [6c10f2763d78].pdf",
+      "expected_pdf_sha256": "21f656c85230747b56c2441052e232b323fcbd62b608605aa6977377fce483d1",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": "04SL0103",
+        "semester_label": "1",
+        "credits": 2,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "1: Speaking/Interacting in an Academic Context",
+            "contact_hours": null,
+            "topic_lines": [
+              "1. Greetings",
+              "2. Introducing self and peers",
+              "3. Asking and sharing information",
+              "4. Expressing points of view",
+              "5. Discussions",
+              "6. Facing viva voce",
+              "7. Group discussions",
+              "8. Facing an interview (interview skills)"
+            ],
+            "topics_text": "1. Greetings 2. Introducing self and peers 3. Asking and sharing information 4. Expressing points of view 5. Discussions 6. Facing viva voce 7. Group discussions 8. Facing an interview (interview skills)",
+            "topics": [
+              "1. Greetings",
+              "2. Introducing self and peers",
+              "3. Asking and sharing information",
+              "4. Expressing points of view",
+              "5. Discussions",
+              "6. Facing viva voce",
+              "7. Group discussions",
+              "8. Facing an interview (interview skills)"
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "2: Effective Presentation Skills",
+            "contact_hours": null,
+            "topic_lines": [
+              "1. Introduction to effective presentation skills",
+              "2. Preparing the presentation (Collection of Data/Information, exploring the topic",
+              "etc.)",
+              "Page 1 of 3",
+              "3. Using ICT for the presentation",
+              "4. Getting ready for the presentation",
+              "5. Effective body language",
+              "6. Effective pronunciation",
+              "7. Interacting with theaudience (Q & A)",
+              "8. Practice (with video recording)",
+              "9. Feedback and Suggestions",
+              "Recommended Readings/ Viewings",
+              " Select TED Talks",
+              " Select INK Talks",
+              " Select Toastmasters Videos",
+              " Select Courtroom Dramas",
+              " Select Videos of speakers like Steve Jobs, Sundar Pichai etc.",
+              "Teaching Scheme",
+              "Teaching",
+              "Scheme",
+              "(Hours Evaluation Scheme",
+              "Total per",
+              "Marks week)",
+              "Viva",
+              "Practical ESE IA CSE Term Work"
+            ],
+            "topics_text": "1. Introduction to effective presentation skills 2. Preparing the presentation (Collection of Data/Information, exploring the topic etc.) Page 1 of 3 3. Using ICT for the presentation 4. Getting ready for the presentation 5. Effective body language 6. Effective pronunciation 7. Interacting with theaudience (Q & A) 8. Practice (with video recording) 9. Feedback and Suggestions Recommended Readings/ Viewings  Select TED Talks  Select INK Talks  Select Toastmasters Videos  Select Courtroom Dramas  Select Videos of speakers like Steve Jobs, Sundar Pichai etc. Teaching Scheme Teaching Scheme (Hours Evaluation Scheme Total per Marks week) Viva Practical ESE IA CSE Term Work",
+            "topics": [
+              "1. Introduction to effective presentation skills",
+              "2. Preparing the presentation (Collection of Data/Information, exploring the topic",
+              "etc.)",
+              "Page 1 of 3",
+              "3. Using ICT for the presentation",
+              "4. Getting ready for the presentation",
+              "5. Effective body language",
+              "6. Effective pronunciation",
+              "7. Interacting with theaudience (Q & A)",
+              "8. Practice (with video recording)",
+              "9. Feedback and Suggestions",
+              "Recommended Readings/ Viewings",
+              " Select TED Talks",
+              " Select INK Talks",
+              " Select Toastmasters Videos",
+              " Select Courtroom Dramas",
+              " Select Videos of speakers like Steve Jobs, Sundar Pichai etc.",
+              "Teaching Scheme",
+              "Teaching",
+              "Scheme",
+              "(Hours Evaluation Scheme",
+              "Total per",
+              "Marks week)",
+              "Viva",
+              "Practical ESE IA CSE Term Work"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Hours 00 30 20 25 25",
+            "contact_hours": 100,
+            "topic_lines": [
+              "1. IA will consist of the following components (30 marks):",
+              "a. Assignments (20 Marks): Students will prepare three oral assignments.",
+              "b. In-Class Participation (10 Marks)",
+              "2. CSE (20 marks):",
+              "a. (Term End Simulation): Students will carry out simulated tasks at the",
+              "end of the semester. It would comprise individual and group tasks.",
+              "3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be",
+              "based on the CSE, Term Work, Assignments and topics covered in the syllabus.",
+              "4. Term Work (25 Marks):",
+              "a. (Term-End Presentation): Students will make a presentation based on",
+              "topics provided by the faculty, at the end of the semester.",
+              "Page 2 of 3",
+              "Recommended Readings",
+              "“Communication.” themuse. 2017. https://www.themuse.com/tags/communication.",
+              "Accessed 4 July 2017.",
+              "Presentation Magazine. 2017. https://www.presentationmagazine.com/. Accessed 4",
+              "July 2017.",
+              "“Presentation Skills.” SKIlIS YOU NEED. 2017.",
+              "https://www.skillsyouneed.com/presentation-skills.html. Accessed 4 July 2017.",
+              "Siddons Suzy. The Complete Presentation Skills Handbook. Kogan Page, 2008.",
+              "Sprague Jo, and Douglas Stuart. The Speaker’s Handbook. 8th ed., Thomson Wadsworth,",
+              "2008.",
+              "Page 3 of 3"
+            ],
+            "topics_text": "1. IA will consist of the following components (30 marks): a. Assignments (20 Marks): Students will prepare three oral assignments. b. In-Class Participation (10 Marks) 2. CSE (20 marks): a. (Term End Simulation): Students will carry out simulated tasks at the end of the semester. It would comprise individual and group tasks. 3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be based on the CSE, Term Work, Assignments and topics covered in the syllabus. 4. Term Work (25 Marks): a. (Term-End Presentation): Students will make a presentation based on topics provided by the faculty, at the end of the semester. Page 2 of 3 Recommended Readings “Communication.” themuse. 2017. https://www.themuse.com/tags/communication. Accessed 4 July 2017. Presentation Magazine. 2017. https://www.presentationmagazine.com/. Accessed 4 July 2017. “Presentation Skills.” SKIlIS YOU NEED. 2017. https://www.skillsyouneed.com/presentation-skills.html. Accessed 4 July 2017. Siddons Suzy. The Complete Presentation Skills Handbook. Kogan Page, 2008. Sprague Jo, and Douglas Stuart. The Speaker’s Handbook. 8th ed., Thomson Wadsworth, 2008. Page 3 of 3",
+            "topics": [
+              "1. IA will consist of the following components (30 marks):",
+              "a. Assignments (20 Marks): Students will prepare three oral assignments.",
+              "b. In-Class Participation (10 Marks)",
+              "2. CSE (20 marks):",
+              "a. (Term End Simulation): Students will carry out simulated tasks at the",
+              "end of the semester. It would comprise individual and group tasks.",
+              "3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be",
+              "based on the CSE, Term Work, Assignments and topics covered in the syllabus.",
+              "4. Term Work (25 Marks):",
+              "a. (Term-End Presentation): Students will make a presentation based on",
+              "topics provided by the faculty, at the end of the semester.",
+              "Page 2 of 3",
+              "Recommended Readings",
+              "“Communication.” themuse. 2017. https://www.themuse.com/tags/communication.",
+              "Accessed 4 July 2017.",
+              "Presentation Magazine. 2017. https://www.presentationmagazine.com/. Accessed 4",
+              "July 2017.",
+              "“Presentation Skills.” SKIlIS YOU NEED. 2017.",
+              "https://www.skillsyouneed.com/presentation-skills.html. Accessed 4 July 2017.",
+              "Siddons Suzy. The Complete Presentation Skills Handbook. Kogan Page, 2008.",
+              "Sprague Jo, and Douglas Stuart. The Speaker’s Handbook. 8th ed., Thomson Wadsworth,",
+              "2008.",
+              "Page 3 of 3"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 3707,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "Elective II: BBA, BBA (Hon.) BBA\n               (FM), B. Com. & B.Com(Hons)\n             Speaking and Presentation Skills\n                      Subject Code: 04SL0103\n                              Credits: 02\n                          Semester: 1\n\n\nCourse Description\n\nThe course intends to make students confident in speaking in English with the help of\n\nvarious language functions. It also focuses on developing students’ presentation skills.\n\nCourse Objectives\n\nThe course will enable students\n\n    1.  to share information on familiar matters/issues in English;\n\n    2.  to make effective presentations in English;\n\n    3.  to gain confidence in speaking in English.\n\nUnit 1: Speaking/Interacting in an Academic Context\n\n    1.  Greetings\n\n    2.  Introducing self and peers\n\n    3.  Asking and sharing information\n\n    4.  Expressing points of view\n    5.  Discussions\n\n    6.  Facing viva voce\n\n    7. Group discussions\n\n    8.  Facing an interview (interview skills)\n\nUnit 2: Effective Presentation Skills\n\n    1.  Introduction to effective presentation skills\n\n    2.  Preparing the presentation (Collection of Data/Information, exploring the topic\n\n        etc.)\n                                                                          Page 1 of 3"
+        },
+        {
+          "page": 2,
+          "text": "3.  Using ICT for the presentation\n    4.  Getting ready for the presentation\n\n    5.  Effective body language\n\n    6.  Effective pronunciation\n\n    7.  Interacting with theaudience (Q & A)\n\n    8.  Practice (with video recording)\n\n    9. Feedback and Suggestions\n\nRecommended Readings/ Viewings\n\n     Select TED Talks\n     Select INK Talks\n     Select Toastmasters Videos\n     Select Courtroom Dramas\n     Select Videos of speakers like Steve Jobs, Sundar Pichai etc.\n\nTeaching Scheme\n\nTeaching\n Scheme\n (Hours                         Evaluation Scheme\n                                                                              Total   per\n                                                                 Marks  week)\n                                                    Viva\n Practical      ESE         IA        CSE               Term Work\n\n 2 Hours       00        30        20        25        25       100\n\n    1. IA will consist of the following components (30 marks):\n\n             a.  Assignments (20 Marks): Students will prepare three oral assignments.\n           b.  In-Class Participation (10 Marks)\n\n    2. CSE (20 marks):\n\n             a. (Term End Simulation): Students will carry out simulated tasks at the\n\n           end of the semester. It would comprise individual and group tasks.\n\n    3. Viva (25 Marks): Viva will be conducted at the end of the semester. It will be\n      based on the CSE, Term Work, Assignments and topics covered in the syllabus.\n\n    4. Term Work (25 Marks):\n\n             a. (Term-End Presentation): Students will make a presentation based on\n              topics provided by the faculty, at the end of the semester.\n\n\n\n\n                                                                          Page 2 of 3"
+        },
+        {
+          "page": 3,
+          "text": "Recommended Readings\n\n“Communication.” themuse.  2017.  https://www.themuse.com/tags/communication.\n\n      Accessed 4 July 2017.\n\nPresentation Magazine. 2017. https://www.presentationmagazine.com/. Accessed 4\n\n       July 2017.\n\n“Presentation           Skills.”          SKIlIS      YOU       NEED.        2017.\n       https://www.skillsyouneed.com/presentation-skills.html. Accessed 4 July 2017.\n\nSiddons Suzy. The Complete Presentation Skills Handbook. Kogan Page, 2008.\n\nSprague Jo, and Douglas Stuart. The Speaker’s Handbook. 8th ed., Thomson Wadsworth,\n\n      2008.\n\n\n\n\n\n                                                                          Page 3 of 3"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "21f656c85230747b56c2441052e232b323fcbd62b608605aa6977377fce483d1",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000423012301",
+      "subject_name": "Tourism and Travel Management",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 1,
+      "subject_code": "04BC0123",
+      "course_code_evidence": [
+        "04BC0123",
+        "04SL0102",
+        "04SL0103"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/GE-04BC0123-Tourism-and-Travel-Management-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/GE-04BC0123-Tourism-and-Travel-Management-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Tourism and Travel Management [dba93e245954].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Tourism and Travel Management [dba93e245954].pdf",
+      "expected_pdf_sha256": "3cdea7c81274d168b09eb1e9133c4a967743c4b6f55e4ae00bcba43ab1165b18",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Tourism and Travel Management",
+        "course_code": "04BC0123",
+        "semester_label": "I",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 4 0 0 4 30 20 0 50 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "No",
+              "I Introduction to Travel: Meaning and definitions of tourism, traveler, excursionist, 08",
+              "tourists- objectives, nature and classification of tourism and tourists, Growth and",
+              "Development of Tourism, Forms of Tourism: Inbound Outbound, Domestic and",
+              "International.",
+              "II The Modern Tour Industry: Package Tours- Custom Tours- Tour wholesalers- Types of 08",
+              "Package tours: Independent Package, Hosted Tour, Escorted Tour, Sightseeing Tour",
+              "Group, Incentive and Convention Tour- Man Market Package Holidays- Types of Tour",
+              "Operations: Specialist Tour Operators: Specialist Tour Operators, Tour Operators",
+              "reliance on other organization.",
+              "III Tour Operations and Documentation: Functions- Sources of Income, How to set up a 12",
+              "Travel Agency: Procedures for approval of a Travel Agency and Tour Operator, Travel",
+              "Documentation: Passports- various types and requirements- Procedure to apply for",
+              "Passports: VISA- various types and requirements- Documents required for Foreigners to",
+              "visit India, Health Check Documents and Process for Encashment of Foreign Currency.",
+              "Page 1 of 3",
+              "IV Impact of Tourism: Tourism Impacts: Economic impact, Social Impact, Cultural Impact 08",
+              "and Environmental Impact- Strategies to overcome or reduce the negative Impact of",
+              "Tourism.",
+              "V Tourism Organizations: Objectives, Functions of- United Nations World Tourism 12",
+              "Organization (UNWTO), World Travel and Tourism Council (WTC), Pacific Asia",
+              "Travel Association (PATA), International Air Transport Association (IATA), Travel",
+              "Agents Association of India (TAAI), Indian Association of Tour Operators (IATO) and",
+              "Federation of Hotel and Restaurant Associations of India (FHRAI).",
+              "Text Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year of",
+              "Publication",
+              "T-01 Ghosh Bishwanth, Tourism & Travel Vikas Publishing Second Revised",
+              "Management, House Pvt Ltd, New Edition",
+              "Delhi.",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition and",
+              "Year of",
+              "Publication",
+              "R-01 Pran Nath Seth Successful Tourism Sterling Publishers (1997),",
+              "Management, Pvt Ltd, New Delhi,",
+              "R-02 Bhatia A.K International Tourism,. Sterling Publishers (2003)",
+              "Pvt Ltd, New Delhi",
+              "Page 2 of 3"
+            ],
+            "topics_text": "No I Introduction to Travel: Meaning and definitions of tourism, traveler, excursionist, 08 tourists- objectives, nature and classification of tourism and tourists, Growth and Development of Tourism, Forms of Tourism: Inbound Outbound, Domestic and International. II The Modern Tour Industry: Package Tours- Custom Tours- Tour wholesalers- Types of 08 Package tours: Independent Package, Hosted Tour, Escorted Tour, Sightseeing Tour Group, Incentive and Convention Tour- Man Market Package Holidays- Types of Tour Operations: Specialist Tour Operators: Specialist Tour Operators, Tour Operators reliance on other organization. III Tour Operations and Documentation: Functions- Sources of Income, How to set up a 12 Travel Agency: Procedures for approval of a Travel Agency and Tour Operator, Travel Documentation: Passports- various types and requirements- Procedure to apply for Passports: VISA- various types and requirements- Documents required for Foreigners to visit India, Health Check Documents and Process for Encashment of Foreign Currency. Page 1 of 3 IV Impact of Tourism: Tourism Impacts: Economic impact, Social Impact, Cultural Impact 08 and Environmental Impact- Strategies to overcome or reduce the negative Impact of Tourism. V Tourism Organizations: Objectives, Functions of- United Nations World Tourism 12 Organization (UNWTO), World Travel and Tourism Council (WTC), Pacific Asia Travel Association (PATA), International Air Transport Association (IATA), Travel Agents Association of India (TAAI), Indian Association of Tour Operators (IATO) and Federation of Hotel and Restaurant Associations of India (FHRAI). Text Books: Sr. No Author/s Name of the Book Publisher Edition & Year of Publication T-01 Ghosh Bishwanth, Tourism & Travel Vikas Publishing Second Revised Management, House Pvt Ltd, New Edition Delhi. Reference Books: Sr. No Author/s Name of the Book Publisher Edition and Year of Publication R-01 Pran Nath Seth Successful Tourism Sterling Publishers (1997), Management, Pvt Ltd, New Delhi, R-02 Bhatia A.K International Tourism,. Sterling Publishers (2003) Pvt Ltd, New Delhi Page 2 of 3",
+            "topics": [
+              "No",
+              "I Introduction to Travel: Meaning and definitions of tourism, traveler, excursionist, 08",
+              "tourists- objectives, nature and classification of tourism and tourists, Growth and",
+              "Development of Tourism, Forms of Tourism: Inbound Outbound, Domestic and",
+              "International.",
+              "II The Modern Tour Industry: Package Tours- Custom Tours- Tour wholesalers- Types of 08",
+              "Package tours: Independent Package, Hosted Tour, Escorted Tour, Sightseeing Tour",
+              "Group, Incentive and Convention Tour- Man Market Package Holidays- Types of Tour",
+              "Operations: Specialist Tour Operators: Specialist Tour Operators, Tour Operators",
+              "reliance on other organization.",
+              "III Tour Operations and Documentation: Functions- Sources of Income, How to set up a 12",
+              "Travel Agency: Procedures for approval of a Travel Agency and Tour Operator, Travel",
+              "Documentation: Passports- various types and requirements- Procedure to apply for",
+              "Passports: VISA- various types and requirements- Documents required for Foreigners to",
+              "visit India, Health Check Documents and Process for Encashment of Foreign Currency.",
+              "Page 1 of 3",
+              "IV Impact of Tourism: Tourism Impacts: Economic impact, Social Impact, Cultural Impact 08",
+              "and Environmental Impact- Strategies to overcome or reduce the negative Impact of",
+              "Tourism.",
+              "V Tourism Organizations: Objectives, Functions of- United Nations World Tourism 12",
+              "Organization (UNWTO), World Travel and Tourism Council (WTC), Pacific Asia",
+              "Travel Association (PATA), International Air Transport Association (IATA), Travel",
+              "Agents Association of India (TAAI), Indian Association of Tour Operators (IATO) and",
+              "Federation of Hotel and Restaurant Associations of India (FHRAI).",
+              "Text Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year of",
+              "Publication",
+              "T-01 Ghosh Bishwanth, Tourism & Travel Vikas Publishing Second Revised",
+              "Management, House Pvt Ltd, New Edition",
+              "Delhi.",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition and",
+              "Year of",
+              "Publication",
+              "R-01 Pran Nath Seth Successful Tourism Sterling Publishers (1997),",
+              "Management, Pvt Ltd, New Delhi,",
+              "R-02 Bhatia A.K International Tourism,. Sterling Publishers (2003)",
+              "Pvt Ltd, New Delhi",
+              "Page 2 of 3"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4409,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM            Bachelors Of Commerce/ Bachelors Of Commerce(Hons)\n\n              SEMESTER                    I\n             COURSE TITLE        Tourism and Travel Management\n             COURSE CODE       04BC0123\n\n             COURSE CREDITS     04\n\n             COURSE DURATION   48 Hrs (48 sessions of 60 minutes each)\n\n\n   COURSE OUTCOMES:\n\n\n\n                                Teaching and Examination Scheme\n                                        Internal Marks\n  Teaching Scheme (Hours)                               End-Semester Examination (50%)\n                                     (50%)                                                  Total\n                               Credits\n                                                                          Term Work    Marks\n Theory    Tutorial    Practical             IA      CSE     Theory   Practical/Viva\n                                                                        (TW)\n   4        0         0        4        30        20        0          50            0         100\n\n\n       Course Contents:\n\n\nUnit                                        Unit / Sub Unit                                     Sessions\nNo\n  I          Introduction to Travel: Meaning and definitions of tourism,  traveler, excursionist,     08\n             tourists- objectives, nature and classification of tourism and  tourists, Growth and\n          Development of Tourism, Forms of Tourism: Inbound Outbound, Domestic and\n             International.\n\n II        The Modern Tour Industry: Package Tours- Custom Tours- Tour wholesalers- Types of     08\n          Package tours: Independent Package, Hosted Tour, Escorted Tour, Sightseeing Tour\n          Group, Incentive and Convention Tour- Man Market Package Holidays- Types of Tour\n            Operations:  Specialist Tour Operators:  Specialist Tour Operators, Tour Operators\n            reliance on other organization.\n\n\n   III       Tour Operations and Documentation: Functions- Sources of Income, How to set up a     12\n           Travel Agency: Procedures for approval of a Travel Agency and Tour Operator, Travel\n           Documentation: Passports- various types and requirements- Procedure to apply for\n            Passports: VISA- various types and requirements- Documents required for Foreigners to\n              visit India, Health Check Documents and Process for Encashment of Foreign Currency.\n\n\n\n\n    Page 1 of 3"
+        },
+        {
+          "page": 2,
+          "text": "IV       Impact of Tourism: Tourism Impacts: Economic impact, Social Impact, Cultural Impact     08\n          and Environmental Impact- Strategies to overcome or reduce the negative Impact of\n           Tourism.\n\nV         Tourism Organizations: Objectives, Functions of- United Nations World Tourism     12\n           Organization (UNWTO), World Travel and Tourism Council (WTC), Pacific Asia\n           Travel Association (PATA), International Air Transport Association (IATA), Travel\n          Agents Association of India (TAAI), Indian Association of Tour Operators (IATO) and\n           Federation of Hotel and Restaurant Associations of India (FHRAI).\n\n\n\n\n       Text Books:\n\n\nSr. No      Author/s             Name of the Book           Publisher             Edition     &\n                                                                                   Year          of\n                                                                                           Publication\nT-01       Ghosh Bishwanth,         Tourism & Travel           Vikas Publishing     Second Revised\n                                   Management,             House Pvt Ltd, New   Edition\n                                                                       Delhi.\n\n\n\n       Reference Books:\n\n\nSr. No      Author/s              Name of the Book           Publisher            Edition     and\n                                                                                  Year           of\n                                                                                           Publication\nR-01         Pran Nath Seth             Successful Tourism           Sterling Publishers   (1997),\n                                   Management,               Pvt Ltd, New Delhi,\n\nR-02        Bhatia A.K                   International Tourism,.       Sterling Publishers   (2003)\n                                                                   Pvt Ltd, New Delhi\n\n\n\n\n\n    Page 2 of 3"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "3cdea7c81274d168b09eb1e9133c4a967743c4b6f55e4ae00bcba43ab1165b18",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 7,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 3,
+    "extraction_errors": 0
+  }
+}

@@ -1,0 +1,2255 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "b-com",
+    "course_name": "B.Com",
+    "output_slug": "BCom"
+  },
+  "semester": 4,
+  "subject_count": 26,
+  "subjects": [
+    {
+      "subject_id": "22004193000101",
+      "subject_name": "ACCOUNTS EXECUTIVE",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-2-1.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ACCOUNTS EXECUTIVE [6e7a00ff5b83].pdf",
+      "expected_pdf_sha256": "c54c52d7342e4e8f2bc800dc769a9133a36f18a2e36518c6e96f1dd2e020474b",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0001"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22004193000801",
+      "subject_name": "BUSINESS CORRESPONDENT / FACILITATOR",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BC0431",
+        "04BC0432"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-8.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS CORRESPONDENT FACILITATOR [03cd1b965b90].pdf",
+      "expected_pdf_sha256": "6e908619ab017732e379b48da9165c039a5aa2597a721eae324e8dde52d7fcc7",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0008"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "22000423040901",
+      "subject_name": "Company Law",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "04BC0409",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC0409-Company-Law-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC0409-Company-Law-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Company Law [0cda923b25ef].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Company Law [0cda923b25ef].pdf",
+      "expected_pdf_sha256": "7a687c9ac6bdd44659c1442543cd12c57e00747ff7aae3307279d9003ba81e2c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Company Law",
+        "course_code": "04BC0409",
+        "semester_label": "IV",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        " Demonstrate knowledge of the theories, concepts and principles related to the structure and regulation of company organizations.  Analyze the likely impact of these trends and developments on the major topics in Company Law.  To understand the Management and Administration of the Company.  To understand the basic requirements of the Documentations for the forming of the company.  To comprehend the process of winding up of the company."
+      ],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 4 0 0 4 30 20 50 0 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "No Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "I Introduction: 10",
+              "Joint stock Company –Meaning- definition - Nature and characteristics of a",
+              "company- kinds of a company including one-person company, small",
+              "company and dormant company; association not for profit; illegal",
+              "association -lifting of corporate veil – formation of company, on-line filing of",
+              "documents, - promoters, their legal position,, duties and liabilities of",
+              "promoters , pre-incorporation contract; on-line registration of a company.",
+              "Administration of Company Law [including National Company Law Tribunal",
+              "Page 1 of 3",
+              "(NCLT), National Company Law Appellate Tribunal (NCLAT), Special Courts];",
+              "II Company’s Constitutional Documents 10",
+              "Memorandum of Association(MOA): meaning and importance - Registration",
+              "and Its Effect; Binding Nature; Clauses in Memorandum of Association -",
+              "doctrine of ultra-virus - Rule of Constructive Notice -doctrine of indoor",
+              "management- alteration in memorandum of association –",
+              "Article of Association (AOA)- meaning - Importance,- content -difference",
+              "between MOA & AOA - Alteration of Articles of Association.",
+              "Prospectus- definition- object- conditions for the issue of the prospectus-",
+              "statement in lieu of prospectus –Types of Prospectus (Abridged prospectus,",
+              "Shelf Prospectus, Red Herring Prospectus and Deemed prospectus) -",
+              "misrepresentation and penalties in case of misrepresentation in prospectus.",
+              "III Shares Capital 10",
+              "Shares: Definition- share Vs stock- kinds of share capital - guidelines for issue",
+              "of fresh capital- public issue- private placement- underwriting of shares",
+              "capital- bonus issues-right issues- employees stock option plans- public share",
+              "at par, premium and discount- forfeiture, rules for valid forfeiture- transfer&",
+              "transmission- buy back.",
+              "Share allotment & share certificate",
+              "Share allotment- meaning- statutory provisions- irregular allotment-",
+              "consequences of irregular allotment- rules regarding issue of share",
+              "certificates- distinction between share certificate and share warrants",
+              "IV Management and Meetings 10",
+              "Directors",
+              "Directors: meaning- position- classification, additional, alternate and adhoc",
+              "director; women directors, independent director, small shareholders’",
+              "director; director identity number (DIN) - who can appoint a director,",
+              "qualification & disqualification- appointment of directors- rights, powers,",
+              "duties and liabilities of a director- number of director & directorship-",
+              "vacation of office of directors- removal of a director- resignation of a",
+              "director- interested directors- managing directors",
+              "Meetings",
+              "Meetings of shareholders and board; types of meeting, convening and",
+              "conduct of meetings, requisites of a valid meeting; postal",
+              "ballot, meeting through video conferencing, e-voting; —Statutory, Annual",
+              "general meeting and Extra-ordinary General meeting.",
+              "Company Meetings (Directors) : —Requisites of valid Board Meeting-notice,",
+              "quorum, Chairman, resolutions, minutes. —Procedure of convening &",
+              "conducting a Board meeting.",
+              "Page 2 of 3",
+              "V Winding up of companies 8",
+              "Concept - modes of winding up – who can apply for winding-up - effects of",
+              "winding upon antecedent and other transactions-appointment of liquidators",
+              "- winding up of unregistered companies"
+            ],
+            "topics_text": "I Introduction: 10 Joint stock Company –Meaning- definition - Nature and characteristics of a company- kinds of a company including one-person company, small company and dormant company; association not for profit; illegal association -lifting of corporate veil – formation of company, on-line filing of documents, - promoters, their legal position,, duties and liabilities of promoters , pre-incorporation contract; on-line registration of a company. Administration of Company Law [including National Company Law Tribunal Page 1 of 3 (NCLT), National Company Law Appellate Tribunal (NCLAT), Special Courts]; II Company’s Constitutional Documents 10 Memorandum of Association(MOA): meaning and importance - Registration and Its Effect; Binding Nature; Clauses in Memorandum of Association - doctrine of ultra-virus - Rule of Constructive Notice -doctrine of indoor management- alteration in memorandum of association – Article of Association (AOA)- meaning - Importance,- content -difference between MOA & AOA - Alteration of Articles of Association. Prospectus- definition- object- conditions for the issue of the prospectus- statement in lieu of prospectus –Types of Prospectus (Abridged prospectus, Shelf Prospectus, Red Herring Prospectus and Deemed prospectus) - misrepresentation and penalties in case of misrepresentation in prospectus. III Shares Capital 10 Shares: Definition- share Vs stock- kinds of share capital - guidelines for issue of fresh capital- public issue- private placement- underwriting of shares capital- bonus issues-right issues- employees stock option plans- public share at par, premium and discount- forfeiture, rules for valid forfeiture- transfer& transmission- buy back. Share allotment & share certificate Share allotment- meaning- statutory provisions- irregular allotment- consequences of irregular allotment- rules regarding issue of share certificates- distinction between share certificate and share warrants IV Management and Meetings 10 Directors Directors: meaning- position- classification, additional, alternate and adhoc director; women directors, independent director, small shareholders’ director; director identity number (DIN) - who can appoint a director, qualification & disqualification- appointment of directors- rights, powers, duties and liabilities of a director- number of director & directorship- vacation of office of directors- removal of a director- resignation of a director- interested directors- managing directors Meetings Meetings of shareholders and board; types of meeting, convening and conduct of meetings, requisites of a valid meeting; postal ballot, meeting through video conferencing, e-voting; —Statutory, Annual general meeting and Extra-ordinary General meeting. Company Meetings (Directors) : —Requisites of valid Board Meeting-notice, quorum, Chairman, resolutions, minutes. —Procedure of convening & conducting a Board meeting. Page 2 of 3 V Winding up of companies 8 Concept - modes of winding up – who can apply for winding-up - effects of winding upon antecedent and other transactions-appointment of liquidators - winding up of unregistered companies",
+            "topics": [
+              "I Introduction: 10",
+              "Joint stock Company –Meaning- definition - Nature and characteristics of a",
+              "company- kinds of a company including one-person company, small",
+              "company and dormant company",
+              "association not for profit",
+              "illegal",
+              "association -lifting of corporate veil – formation of company, on-line filing of",
+              "documents, - promoters, their legal position,, duties and liabilities of",
+              "promoters , pre-incorporation contract",
+              "on-line registration of a company.",
+              "Administration of Company Law [including National Company Law Tribunal",
+              "Page 1 of 3",
+              "(NCLT), National Company Law Appellate Tribunal (NCLAT), Special Courts]",
+              "II Company’s Constitutional Documents 10",
+              "Memorandum of Association(MOA): meaning and importance - Registration",
+              "and Its Effect",
+              "Binding Nature",
+              "Clauses in Memorandum of Association",
+              "doctrine of ultra-virus - Rule of Constructive Notice -doctrine of indoor",
+              "management- alteration in memorandum of association –",
+              "Article of Association (AOA)- meaning - Importance,- content -difference",
+              "between MOA & AOA - Alteration of Articles of Association.",
+              "Prospectus- definition- object- conditions for the issue of the prospectus",
+              "statement in lieu of prospectus –Types of Prospectus (Abridged prospectus,",
+              "Shelf Prospectus, Red Herring Prospectus and Deemed prospectus)",
+              "misrepresentation and penalties in case of misrepresentation in prospectus.",
+              "III Shares Capital 10",
+              "Shares: Definition- share Vs stock- kinds of share capital - guidelines for issue",
+              "of fresh capital- public issue- private placement- underwriting of shares",
+              "capital- bonus issues-right issues- employees stock option plans- public share",
+              "at par, premium and discount- forfeiture, rules for valid forfeiture- transfer&",
+              "transmission- buy back.",
+              "Share allotment & share certificate",
+              "Share allotment- meaning- statutory provisions- irregular allotment",
+              "consequences of irregular allotment- rules regarding issue of share",
+              "certificates- distinction between share certificate and share warrants",
+              "IV Management and Meetings 10",
+              "Directors",
+              "Directors: meaning- position- classification, additional, alternate and adhoc",
+              "director",
+              "women directors, independent director, small shareholders’",
+              "director",
+              "director identity number (DIN) - who can appoint a director,",
+              "qualification & disqualification- appointment of directors- rights, powers,",
+              "duties and liabilities of a director- number of director & directorship",
+              "vacation of office of directors- removal of a director- resignation of a",
+              "director- interested directors- managing directors",
+              "Meetings",
+              "Meetings of shareholders and board",
+              "types of meeting, convening and",
+              "conduct of meetings, requisites of a valid meeting",
+              "postal",
+              "ballot, meeting through video conferencing, e-voting",
+              "—Statutory, Annual",
+              "general meeting and Extra-ordinary General meeting.",
+              "Company Meetings (Directors) : —Requisites of valid Board Meeting-notice,",
+              "quorum, Chairman, resolutions, minutes. —Procedure of convening &",
+              "conducting a Board meeting.",
+              "Page 2 of 3",
+              "V Winding up of companies 8",
+              "Concept - modes of winding up – who can apply for winding-up - effects of",
+              "winding upon antecedent and other transactions-appointment of liquidators",
+              "winding up of unregistered companies"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 6828,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM           Bachelor of Commerce/ Bachelor of Commerce (Hons)\n\n              SEMESTER            IV\n\n             COURSE TITLE      Company Law\n\n             COURSE CODE       04BC0409\n\n             COURSE CREDITS     04\n\n             COURSE DURATION  48 Hrs (48 sessions of 60 minutes each)\n\n\n\n  COURSE OUTCOMES:\n\n         Demonstrate knowledge of the theories, concepts and principles related to the structure\n        and regulation of company organizations.\n         Analyze the likely impact of these trends and developments on the major topics in Company\n         Law.\n        To understand the Management and Administration of the Company.\n        To understand the basic requirements of the Documentations for the forming of the\n        company.\n        To comprehend the process of winding up of the company.\n\n\n\n\n\n                               Teaching and Examination Scheme\n                                         Internal Marks\n Teaching Scheme (Hours)                                 End-Semester Examination (50%)\n                                        (50%)                                                     Total\n                                Credits\n                                                                         Term Work    Marks\nTheory    Tutorial   Practical                 IA        CSE      Theory   Practical/Viva\n                                                                               (TW)\n  4        0        0        4        30        20        50          0            0        100\n\n\n\n  Course Contents:\n\n  Unit No                               Unit / Sub Unit                                Sessions\n          I      Introduction:                                                        10\n\n              Joint stock Company –Meaning- definition - Nature and characteristics of a\n           company-  kinds  of a company  including  one-person company,  small\n          company  and  dormant  company;  association  not  for  profit;  illegal\n             association -lifting of corporate veil – formation of company, on-line filing of\n           documents,  - promoters,  their  legal  position,, duties and  liabilities of\n           promoters , pre-incorporation contract; on-line registration of a company.\n\n             Administration of Company Law [including National Company Law Tribunal\n\n  Page 1 of 3"
+        },
+        {
+          "page": 2,
+          "text": "(NCLT), National Company Law Appellate Tribunal (NCLAT), Special Courts];\n\n\n\n      II     Company’s Constitutional Documents                                    10\n\n        Memorandum of Association(MOA): meaning and importance - Registration\n         and Its Effect; Binding Nature; Clauses in Memorandum of Association  -\n           doctrine of ultra-virus - Rule of Constructive Notice  -doctrine of indoor\n         management- alteration in memorandum of association –\n            Article of Association (AOA)- meaning  - Importance,- content -difference\n         between MOA & AOA - Alteration of Articles of Association.\n\n          Prospectus- definition- object- conditions for the issue of the prospectus-\n          statement in lieu of prospectus –Types of Prospectus (Abridged prospectus,\n           Shelf  Prospectus, Red  Herring  Prospectus and Deemed  prospectus)  -\n          misrepresentation and penalties in case of misrepresentation in prospectus.\n\n      III     Shares Capital                                                       10\n\n           Shares: Definition- share Vs stock- kinds of share capital - guidelines for issue\n           of fresh capital- public issue- private placement- underwriting of shares\n            capital- bonus issues-right issues- employees stock option plans- public share\n           at par, premium and discount- forfeiture, rules for valid forfeiture- transfer&\n           transmission- buy back.\n\n          Share allotment & share certificate\n          Share  allotment-  meaning-  statutory  provisions-  irregular  allotment-\n          consequences  of  irregular  allotment-  rules  regarding  issue  of  share\n            certificates- distinction between share certificate and share warrants\n\n   IV    Management and Meetings                                            10\n\n           Directors\n           Directors: meaning- position- classification, additional, alternate and adhoc\n            director; women  directors,  independent  director,  small  shareholders’\n            director; director identity number (DIN)  -  who can appoint a director,\n            qualification & disqualification- appointment of directors- rights, powers,\n           duties and  liabilities of a director- number of director & directorship-\n           vacation of office of directors- removal of a director- resignation of a\n            director- interested directors- managing directors\n\n         Meetings\n          Meetings of shareholders and board; types of meeting, convening and\n          conduct of meetings, requisites of a valid meeting; postal\n            ballot, meeting through video conferencing, e-voting; —Statutory, Annual\n          general meeting and Extra-ordinary General meeting.\n        Company Meetings (Directors) : —Requisites of valid Board Meeting-notice,\n         quorum, Chairman,  resolutions, minutes. —Procedure  of convening &\n          conducting a Board meeting.\nPage 2 of 3"
+        },
+        {
+          "page": 3,
+          "text": "V     Winding up of companies                                              8\n\n         Concept - modes of winding up – who can apply for winding-up - effects of\n          winding upon antecedent and other transactions-appointment of liquidators\n               - winding up of unregistered companies\n\n\n\n\nSUGGESTED READINGS:\n\n\n\n\nText Books:\n\nSr. No  Author/s           Name of the Book  Publisher                     Edition  &\n                                                                            Year of\n                                                                                    Publication\nT-01    G.K. Kapoor &  Sanjay  Company Law      Taxmann’s        University  20th Edition\n        Dhamija                                         Edition.                   2017\n\n\n\n\nReference Books:\n\nSr. No  Author/s        Name of the Book            Publisher           Edition and  Year\n                                                                              of\n                                                                               Publication\nR-01    Bare Act          Companies Act 2013          Bharat Law House   26th Edition\n                                                                Pvt. Ltd.\n\n\nR-02     G.K.            Company Law and Practice   Taxman          22nd Edition 2017\n        Kapoor Sanjay      (Paperback): A\n        Dhamija           Comprehensive Text Book\n                       on Companies Act 2013\n\n\n\n\n\nPage 3 of 3"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "7a687c9ac6bdd44659c1442543cd12c57e00747ff7aae3307279d9003ba81e2c",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000423140101",
+      "subject_name": "Cost Accounting- II",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "04BC1401",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC1401-Cost-Accounting-II-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC1401-Cost-Accounting-II-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Cost Accounting- II [f21e1e06aa75].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Cost Accounting- II [f21e1e06aa75].pdf",
+      "expected_pdf_sha256": "5fdc928041397e344d4b99913624e059d6046ef01fe22b4eb9c187230e78c552",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Cost Accounting – II",
+        "course_code": "04BC1401",
+        "semester_label": "IV",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        " To prepare cost sheet and contract Account  To interpret the use of Process Costing  To apply the technique of Operating  To apply suitable absorption, allocation and apportionment technique based on Activity Based Costing.  To apply the rules of Cost Audit for statutory and control purpose."
+      ],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 3 1 0 4 30 20 50 0 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "No Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "I Methods of Costing: Job and Batch Costing: Job Costing Procedure, Batch costing 10",
+              ",Economic Batch Quantity",
+              "Contract Costing: Basics of Contract Costing, Procedure, Special Points in Contract",
+              "Costing, Cost plus Contract.",
+              "II Methods of costing 11",
+              "Process Costing: Introduction, Essential Characteristics of Process Costing, Process",
+              "Costing and Job Costing— A Comparison, Costing Procedure, Normal Loss and",
+              "abnormal loss, Normal Gain and abnormal Gain, When Output is Partly Sold and",
+              "Partly Transferred to the Next Process, equivalent production, Inter-process profits.",
+              "Page 1 of 3",
+              "III Methods of costing 9",
+              "Operating Costing: Cost unit, Transport costing, Transport costing procedure,",
+              "Boiler house and power house costing ,Canteen costing"
+            ],
+            "topics_text": "I Methods of Costing: Job and Batch Costing: Job Costing Procedure, Batch costing 10 ,Economic Batch Quantity Contract Costing: Basics of Contract Costing, Procedure, Special Points in Contract Costing, Cost plus Contract. II Methods of costing 11 Process Costing: Introduction, Essential Characteristics of Process Costing, Process Costing and Job Costing— A Comparison, Costing Procedure, Normal Loss and abnormal loss, Normal Gain and abnormal Gain, When Output is Partly Sold and Partly Transferred to the Next Process, equivalent production, Inter-process profits. Page 1 of 3 III Methods of costing 9 Operating Costing: Cost unit, Transport costing, Transport costing procedure, Boiler house and power house costing ,Canteen costing",
+            "topics": [
+              "I Methods of Costing: Job and Batch Costing: Job Costing Procedure, Batch costing 10",
+              ",Economic Batch Quantity",
+              "Contract Costing: Basics of Contract Costing, Procedure, Special Points in Contract",
+              "Costing, Cost plus Contract.",
+              "II Methods of costing 11",
+              "Process Costing: Introduction, Essential Characteristics of Process Costing, Process",
+              "Costing and Job Costing— A Comparison, Costing Procedure, Normal Loss and",
+              "abnormal loss, Normal Gain and abnormal Gain, When Output is Partly Sold and",
+              "Partly Transferred to the Next Process, equivalent production, Inter-process profits.",
+              "Page 1 of 3",
+              "III Methods of costing 9",
+              "Operating Costing: Cost unit, Transport costing, Transport costing procedure,",
+              "Boiler house and power house costing ,Canteen costing"
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "Costing",
+            "contact_hours": null,
+            "topic_lines": [
+              "Meaning of Unit Costing – Preparation of Cost Sheet - Estimated Cost Sheet –",
+              "Treatment of Raw- Material, Work in Progress and Closing Stock in Cost Sheet –",
+              "Treatment of scrap",
+              "IV Methods of costing",
+              "Activity Based Costing: Basis Of ABC, Benefits Of ABC Over Absorption Costing, Other",
+              "Concepts Related To ABC",
+              "Joint and By-Product Costing:, Accounting for joint products ,By- products 11",
+              ",Accounting for by-products, Limitations of joint cost analysis.",
+              "V Cost Audit and Cost Accounting Standard 7",
+              "Cost Audit, Features, Functional Cost Audits, Cost Accounting Standards in India."
+            ],
+            "topics_text": "Meaning of Unit Costing – Preparation of Cost Sheet - Estimated Cost Sheet – Treatment of Raw- Material, Work in Progress and Closing Stock in Cost Sheet – Treatment of scrap IV Methods of costing Activity Based Costing: Basis Of ABC, Benefits Of ABC Over Absorption Costing, Other Concepts Related To ABC Joint and By-Product Costing:, Accounting for joint products ,By- products 11 ,Accounting for by-products, Limitations of joint cost analysis. V Cost Audit and Cost Accounting Standard 7 Cost Audit, Features, Functional Cost Audits, Cost Accounting Standards in India.",
+            "topics": [
+              "Meaning of Unit Costing – Preparation of Cost Sheet - Estimated Cost Sheet –",
+              "Treatment of Raw- Material, Work in Progress and Closing Stock in Cost Sheet –",
+              "Treatment of scrap",
+              "IV Methods of costing",
+              "Activity Based Costing: Basis Of ABC, Benefits Of ABC Over Absorption Costing, Other",
+              "Concepts Related To ABC",
+              "Joint and By-Product Costing:, Accounting for joint products ,By- products 11",
+              ",Accounting for by-products, Limitations of joint cost analysis.",
+              "V Cost Audit and Cost Accounting Standard 7",
+              "Cost Audit, Features, Functional Cost Audits, Cost Accounting Standards in India."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4634,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM            Bachelors Of Commerce / Bachelors Of Commerce(Hons)\n\n            SEMESTER             IV\n\n            COURSE TITLE         Cost Accounting – II\n\n            COURSE CODE        04BC1401\n\n            COURSE CREDITS      04\n\n            COURSE DURATION    48 Hrs (48 sessions of 60 minutes each)\n\n\n\n     COURSE OUTCOMES:\n            To prepare cost sheet and contract Account\n            To interpret the use of Process Costing\n            To apply the technique of Operating\n            To apply suitable absorption, allocation and apportionment technique based on Activity Based\n               Costing.\n            To apply the rules of Cost Audit for statutory and control purpose.\n\n\n                                     Teaching and Examination Scheme\n                                            Internal Marks\n   Teaching Scheme (Hours)                                 End-Semester Examination (50%)\n                                          (50%)                                                      Total\n                                  Credits\n                                                                           Term Work     Marks\n Theory    Tutorial    Practical                 IA        CSE      Theory   Practical/Viva\n                                                                                 (TW)\n   3        1        0        4        30        20        50          0            0         100\n\n\n      Course Contents:\n\nUnit No                                    Unit / Sub Unit                                    Sessions\n        I      Methods of Costing: Job and Batch Costing: Job Costing Procedure, Batch costing        10\n           ,Economic Batch Quantity\n            Contract Costing: Basics of Contract Costing, Procedure, Special Points in Contract\n             Costing, Cost plus Contract.\n\n        II     Methods of costing                                                          11\n            Process Costing: Introduction, Essential Characteristics of Process Costing, Process\n            Costing and Job Costing— A Comparison, Costing Procedure, Normal Loss and\n           abnormal loss, Normal Gain and abnormal Gain, When Output is Partly Sold and\n              Partly Transferred to the Next Process, equivalent production, Inter-process profits.\n\n\n      Page 1 of 3"
+        },
+        {
+          "page": 2,
+          "text": "III     Methods of costing                                                          9\n       Operating  Costing:   Cost unit, Transport costing, Transport costing procedure,\n         Boiler house and power house costing ,Canteen costing\n        Unit Costing\n       Meaning of Unit Costing – Preparation of Cost Sheet - Estimated Cost Sheet –\n       Treatment of Raw- Material, Work in Progress and Closing Stock in Cost Sheet –\n       Treatment of scrap\n\nIV     Methods of costing\n         Activity Based Costing: Basis Of ABC, Benefits Of ABC Over Absorption Costing, Other\n       Concepts Related To ABC\n         Joint and By-Product Costing:, Accounting for joint products ,By- products              11\n        ,Accounting for by-products, Limitations of joint cost analysis.\n\nV      Cost Audit and Cost Accounting Standard                                         7\n        Cost Audit, Features, Functional Cost Audits, Cost Accounting Standards in India.\n\n\n\n\n SUGGESTED READINGS:\n\n\n\n  Text Books:\n\n   Sr. No  Author/s      Name of the Book             Publisher              Edition & Year of\n                                                                                    Publication\n\n   T-01   M. N. Arora     A Textbook on Cost and        Vikas Publication       Latest Edition\n                       Management\n   T-02    Paresh Shah      Cost   and   Management  Oxford Publication     Latest Edition\n                            Accounting\n\n\n  Reference Books:\n\n   Sr. No  Author/s        Name of the Book                 Publisher       Edition and Year\n                                                                                    of\n                                                                                    Publication\n   R-01    Ravi M kishore       Cost     and     Management  Taxmann        Latest\n                              Accounting\n   R-02   V Rajshekharn &     Cost Accounting                 Pearson         Latest\n             Lalitha\n   R-03    CharlesT,            Cost Accounting                 Pearson         Latest\n           Horngren, S M\n   R-04   P C Tulsian          Cost Accounting                  S Chand         Latest\n\n   R-05   Khan and Jain      Management Accounting       TMH            Latest\n\n\n  Page 2 of 3"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "5fdc928041397e344d4b99913624e059d6046ef01fe22b4eb9c187230e78c552",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22004193000401",
+      "subject_name": "CREDIT PROCESSING OFFICER",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-4.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CREDIT PROCESSING OFFICER [e4b0c5697190].pdf",
+      "expected_pdf_sha256": "e70702ab69b14734e93fa10d4747739ce25b9ee2611af433168f70c68930201c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0004"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22004193000701",
+      "subject_name": "CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-7.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CUSTOMER CARE EXECUTIVE DOMESTIC -VOICE [85a575727541].pdf",
+      "expected_pdf_sha256": "e28366642d21d01c4f4d32ebde47f1604f3e68e1c194ef70c5455fc7c3d90755",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0007"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22000423042401",
+      "subject_name": "E-Commerce",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "04BC0424",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/GE-04BC0424-E-Commerce-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/GE-04BC0424-E-Commerce-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/E-Commerce [09e917ee1e9f].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/E-Commerce [09e917ee1e9f].pdf",
+      "expected_pdf_sha256": "8a4240ddba72adcc00f3dcc8e483f27376fd8856924dffa0535ed07ab4037ee3",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "E-Commerce",
+        "course_code": "04BC0424",
+        "semester_label": "IV",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 4 0 0 4 30 20 0 50 0 100 . Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "No Unit/Sub-unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "I INTRODUCTION TO E COMMERCE 10",
+              "Introduction to E-Commerce – History of E-commerce, types of E-Commerce -",
+              "Comparison of traditional commerce and e-commerce. Business models under E-",
+              "Commerce – Business to Business (B2B) - Business to Customer model (B2C),",
+              "Consumer-to-Consumer (C2C) - Consumer-to-Business(C2B) model - Peer to-Peer",
+              "(P2P) model – emerging trends - Advantages and Disadvantages of e-commerce -",
+              "web auctions, - e-business revenue generation models."
+            ],
+            "topics_text": "I INTRODUCTION TO E COMMERCE 10 Introduction to E-Commerce – History of E-commerce, types of E-Commerce - Comparison of traditional commerce and e-commerce. Business models under E- Commerce – Business to Business (B2B) - Business to Customer model (B2C), Consumer-to-Consumer (C2C) - Consumer-to-Business(C2B) model - Peer to-Peer (P2P) model – emerging trends - Advantages and Disadvantages of e-commerce - web auctions, - e-business revenue generation models.",
+            "topics": [
+              "I INTRODUCTION TO E COMMERCE 10",
+              "Introduction to E-Commerce – History of E-commerce, types of E-Commerce",
+              "Comparison of traditional commerce and e-commerce. Business models under E",
+              "Commerce – Business to Business (B2B) - Business to Customer model (B2C),",
+              "Consumer-to-Consumer (C2C) - Consumer-to-Business(C2B) model - Peer to-Peer",
+              "(P2P) model – emerging trends - Advantages and Disadvantages of e-commerce",
+              "web auctions, - e-business revenue generation models."
+            ]
+          },
+          {
+            "unit_number": 1,
+            "title": "of",
+            "contact_hours": 2,
+            "topic_lines": [
+              "II E-COMMERCE INFRASTRUCTURE 10",
+              "Internet technology- past, current and future-internet and the web- mobile apps-",
+              "imagine your e-commerce presence, building e-commerce presence systematic",
+              "approach- choosing hardware, software and other tools- developing mobile website",
+              "and app.",
+              "III PAYMENTS IN E – BUSINESS 10",
+              "E-payment systems – An introduction - B to C payments - B to B payments -Types of",
+              "E- payment system – Credit card - debit cards - accumulating balance - online",
+              "stored value payment systems - Secure Electronic Transaction (SET) protocol -",
+              "payment gateways - digital cash - digital wallets - - smart cards and digital cheques.",
+              "IV SECURITY OPERATIONS FOR E-BUSINESS 10",
+              "Possible Security threats – implementation of E-commerce security – encryption –",
+              "Decryption - Cryptography methods - SSL protocol – Firewalls – VPNs - protecting",
+              "networks - policies and procedures.",
+              "V MARKETING OF E-BUSINESS 08",
+              "E-Commerce and marketing - B to B and B to C marketing and branding strategies -",
+              "Web transaction logs – cookies - shopping cart database – DBMS – SQL - data",
+              "mining - CRM (customer relationship Management) system – permission marketing",
+              "- affiliate marketing - viral marketing.",
+              "Text Books:",
+              "Sr. Author/s Name of the Book Publisher Edition & Year of",
+              "No Publication",
+              "T-01 K. Bajaj & D. Nag E-Commerce: TMGH 2nd edition 2017",
+              "The cutting edge of business",
+              "T-02 Carol Guercio Traver E-commerce: Business, Technology, Pearson 14th edition 2018",
+              "and Kenneth C. Society",
+              "Laudon",
+              "Reference Books:",
+              "Sr. Author/s Name of the Book Publisher Edition and Year of",
+              "No Publication",
+              "R-01 Becker, S. Ann Electronic Commerce: Concepts, IGI Global 2007",
+              "Methodologies, Tools and",
+              "Applications"
+            ],
+            "topics_text": "II E-COMMERCE INFRASTRUCTURE 10 Internet technology- past, current and future-internet and the web- mobile apps- imagine your e-commerce presence, building e-commerce presence systematic approach- choosing hardware, software and other tools- developing mobile website and app. III PAYMENTS IN E – BUSINESS 10 E-payment systems – An introduction - B to C payments - B to B payments -Types of E- payment system – Credit card - debit cards - accumulating balance - online stored value payment systems - Secure Electronic Transaction (SET) protocol - payment gateways - digital cash - digital wallets - - smart cards and digital cheques. IV SECURITY OPERATIONS FOR E-BUSINESS 10 Possible Security threats – implementation of E-commerce security – encryption – Decryption - Cryptography methods - SSL protocol – Firewalls – VPNs - protecting networks - policies and procedures. V MARKETING OF E-BUSINESS 08 E-Commerce and marketing - B to B and B to C marketing and branding strategies - Web transaction logs – cookies - shopping cart database – DBMS – SQL - data mining - CRM (customer relationship Management) system – permission marketing - affiliate marketing - viral marketing. Text Books: Sr. Author/s Name of the Book Publisher Edition & Year of No Publication T-01 K. Bajaj & D. Nag E-Commerce: TMGH 2nd edition 2017 The cutting edge of business T-02 Carol Guercio Traver E-commerce: Business, Technology, Pearson 14th edition 2018 and Kenneth C. Society Laudon Reference Books: Sr. Author/s Name of the Book Publisher Edition and Year of No Publication R-01 Becker, S. Ann Electronic Commerce: Concepts, IGI Global 2007 Methodologies, Tools and Applications",
+            "topics": [
+              "II E-COMMERCE INFRASTRUCTURE 10",
+              "Internet technology- past, current and future-internet and the web- mobile apps",
+              "imagine your e-commerce presence, building e-commerce presence systematic",
+              "approach- choosing hardware, software and other tools- developing mobile website",
+              "and app.",
+              "III PAYMENTS IN E – BUSINESS 10",
+              "E-payment systems – An introduction - B to C payments - B to B payments -Types of",
+              "E- payment system – Credit card - debit cards - accumulating balance - online",
+              "stored value payment systems - Secure Electronic Transaction (SET) protocol",
+              "payment gateways - digital cash - digital wallets - - smart cards and digital cheques.",
+              "IV SECURITY OPERATIONS FOR E-BUSINESS 10",
+              "Possible Security threats – implementation of E-commerce security – encryption –",
+              "Decryption - Cryptography methods - SSL protocol – Firewalls – VPNs - protecting",
+              "networks - policies and procedures.",
+              "V MARKETING OF E-BUSINESS 08",
+              "E-Commerce and marketing - B to B and B to C marketing and branding strategies",
+              "Web transaction logs – cookies - shopping cart database – DBMS – SQL - data",
+              "mining - CRM (customer relationship Management) system – permission marketing",
+              "affiliate marketing - viral marketing.",
+              "Text Books:",
+              "Sr. Author/s Name of the Book Publisher Edition & Year of",
+              "No Publication",
+              "T-01 K. Bajaj & D. Nag E-Commerce: TMGH 2nd edition 2017",
+              "The cutting edge of business",
+              "T-02 Carol Guercio Traver E-commerce: Business, Technology, Pearson 14th edition 2018",
+              "and Kenneth C. Society",
+              "Laudon",
+              "Reference Books:",
+              "Sr. Author/s Name of the Book Publisher Edition and Year of",
+              "No Publication",
+              "R-01 Becker, S. Ann Electronic Commerce: Concepts, IGI Global 2007",
+              "Methodologies, Tools and",
+              "Applications"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "of",
+            "contact_hours": 2,
+            "topic_lines": [],
+            "topics_text": "",
+            "topics": []
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "of 2"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4549,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM             Bachelor of Commerce/ Bachelor of Commerce (Hons)\n\n              SEMESTER               IV\n\n              COURSE TITLE         E-Commerce\n\n              COURSE CODE         04BC0424\n\n              COURSE CREDITS       04\n\n              COURSE DURATION     48 Hrs (48 sessions of 60 minutes each)\n\n\n  Course Outcomes\n\n        Comprehend why household,  business, government and  global behavior determine the\n          aggregate demand for goods and services.\n        Have a basic concept of E-Commerce.\n        Have a knowledge of different e-payment system.\n         Should be able to apply security systems in E- business.\n         Different marketing system for e-commerce/e-business.\n\n\n\n                             Teaching and Examination Scheme\n                                          Internal Marks\n  Teaching Scheme (Hours)                                 End-Semester Examination (50%)\n                                        (50%)                                                     Total\n                                Credits\n                                                                         Term Work    Marks\nTheory   Tutorial   Practical                 IA        CSE      Theory   Practical/Viva\n                                                                               (TW)\n  4       0        0        4        30        20        0          50           0        100\n\n\n     .\n\n\n  Course Contents:\n\n\nUnit No                                   Unit/Sub-unit                                   Sessions\n\n      I     INTRODUCTION TO E COMMERCE                                            10\n           Introduction to E-Commerce – History of E-commerce, types of E-Commerce  -\n         Comparison of traditional commerce and e-commerce. Business models under E-\n        Commerce – Business to Business (B2B)  - Business to Customer model (B2C),\n         Consumer-to-Consumer (C2C) - Consumer-to-Business(C2B) model - Peer to-Peer\n          (P2P) model – emerging trends - Advantages and Disadvantages of e-commerce -\n        web auctions, - e-business revenue generation models.\n\n\n\n\n  1 of 2"
+        },
+        {
+          "page": 2,
+          "text": "II    E-COMMERCE INFRASTRUCTURE                                             10\n        Internet technology- past, current and future-internet and the web- mobile apps-\n       imagine your e-commerce presence, building e-commerce presence systematic\n       approach- choosing hardware, software and other tools- developing mobile website\n       and app.\n\n\n III    PAYMENTS IN E – BUSINESS                                                 10\n       E-payment systems – An introduction - B to C payments - B to B payments -Types of\n        E- payment system – Credit card   - debit cards - accumulating balance - online\n        stored value payment systems  - Secure Electronic Transaction (SET) protocol  -\n      payment gateways - digital cash - digital wallets - - smart cards and digital cheques.\n\n\n IV     SECURITY OPERATIONS FOR E-BUSINESS                                       10\n        Possible Security threats – implementation of E-commerce security – encryption –\n       Decryption - Cryptography methods  - SSL protocol – Firewalls – VPNs - protecting\n       networks - policies and procedures.\n\n\n V    MARKETING OF E-BUSINESS                                                 08\n      E-Commerce and marketing - B to B and B to C marketing and branding strategies -\n     Web transaction logs – cookies - shopping cart database – DBMS – SQL - data\n       mining - CRM (customer relationship Management) system – permission marketing\n           - affiliate marketing - viral marketing.\n\n\n\nText Books:\n\nSr.    Author/s          Name of the Book                  Publisher     Edition & Year of\nNo                                                                                Publication\nT-01   K. Bajaj & D. Nag       E-Commerce:               TMGH      2nd edition 2017\n                          The cutting edge of business\nT-02   Carol Guercio Traver  E-commerce: Business, Technology,  Pearson      14th edition 2018\n      and   Kenneth    C.  Society\n      Laudon\n\n\nReference Books:\n\n\nSr.    Author/s          Name of the Book                   Publisher     Edition and Year of\nNo                                                                                 Publication\nR-01   Becker, S. Ann          Electronic  Commerce:  Concepts,   IGI Global    2007\n                             Methodologies,     Tools    and\n                               Applications\n\n\n\n\n\n2 of 2"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8a4240ddba72adcc00f3dcc8e483f27376fd8856924dffa0535ed07ab4037ee3",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000422240501",
+      "subject_name": "ENTREPRENEURSHIP",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BC0327",
+        "04BC0328",
+        "04BC0331"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-21.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ENTREPRENEURSHIP [edb305cc9536].pdf",
+      "expected_pdf_sha256": "3be1090636c528b43b7f590bdda28c7a56165808072ca0549b1d74354861d1fa",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04OE0008"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "22000422040901",
+      "subject_name": "ENVIRONMENTAL STUDIES",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "04BC0206",
+      "course_code_evidence": [
+        "04BC0206",
+        "04BC0232",
+        "04BC0310",
+        "04BC2305"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC0206-Environmental-Studies-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC0206-Environmental-Studies-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ENVIRONMENTAL STUDIES [4f42a0ea8e3f].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ENVIRONMENTAL STUDIES [4f42a0ea8e3f].pdf",
+      "expected_pdf_sha256": "15c24a17762fcf6279589a01bd2010911cf2d15af94bcb2aa17d1a3c5e362e56",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Environmental Studies",
+        "course_code": "04BC0206",
+        "semester_label": "II",
+        "credits": 2,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        " Understand and realize the multidisciplinary nature of Environment & its components.  Know the importance of natural resources for the sustainable development of life.  Understand the effect of growing population on the Environment.  Classify the different types of pollution and measure to control pollution  Learn about the Environmental issues faced globally and various steps taken globally to solve such Environmental issues."
+      ],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 2 0 0 2 30 20 50 0 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "No",
+              "I Introduction and Ecology 08",
+              "Introduction to Environment, Ecology, Ecosystem",
+              "Population and Environment",
+              "Factors Affecting Human Settlement, Define Over Population & Explain the Cause,",
+              "Effect on Environment & Control of it, Methods of Population forecasting",
+              "Governmental bodies for Environmental protection",
+              "II Environmental Resources 12",
+              "Forest resources, Energy resources, Water Resources and Land Resources",
+              "Environmental Pollution Water pollution, Air & Noise Pollution, Environmental sinks,",
+              "Page 1 of 2",
+              "solid and hazardous waste, E-waste & Biomedical waste, Introduction to Green",
+              "chemistry.",
+              "III Global Environmental Issues 04",
+              "Green house Effect, Global warming, ozone layer depletion, Climate change, Acid",
+              "Rain, Global Efforts to control issues"
+            ],
+            "topics_text": "No I Introduction and Ecology 08 Introduction to Environment, Ecology, Ecosystem Population and Environment Factors Affecting Human Settlement, Define Over Population & Explain the Cause, Effect on Environment & Control of it, Methods of Population forecasting Governmental bodies for Environmental protection II Environmental Resources 12 Forest resources, Energy resources, Water Resources and Land Resources Environmental Pollution Water pollution, Air & Noise Pollution, Environmental sinks, Page 1 of 2 solid and hazardous waste, E-waste & Biomedical waste, Introduction to Green chemistry. III Global Environmental Issues 04 Green house Effect, Global warming, ozone layer depletion, Climate change, Acid Rain, Global Efforts to control issues",
+            "topics": [
+              "No",
+              "I Introduction and Ecology 08",
+              "Introduction to Environment, Ecology, Ecosystem",
+              "Population and Environment",
+              "Factors Affecting Human Settlement, Define Over Population & Explain the Cause,",
+              "Effect on Environment & Control of it, Methods of Population forecasting",
+              "Governmental bodies for Environmental protection",
+              "II Environmental Resources 12",
+              "Forest resources, Energy resources, Water Resources and Land Resources",
+              "Environmental Pollution Water pollution, Air & Noise Pollution, Environmental sinks,",
+              "Page 1 of 2",
+              "solid and hazardous waste, E-waste & Biomedical waste, Introduction to Green",
+              "chemistry.",
+              "III Global Environmental Issues 04",
+              "Green house Effect, Global warming, ozone layer depletion, Climate change, Acid",
+              "Rain, Global Efforts to control issues"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4801,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM               Bachelors Of Commerce / Bachelors Of Commerce(Hons)\n\n        SEMESTER                         II\n\n       COURSE TITLE           Environmental Studies\n\n       COURSE CODE          04BC0206\n\n       COURSE CREDITS        02\n\n       COURSE DURATION      24 Hrs (24 sessions of 60 minutes each)\n\n\n   COURSE OUTCOMES:\n          Understand and realize the multidisciplinary nature of Environment & its components.\n          Know the importance of natural resources for the sustainable development of life.\n          Understand the effect of growing population on the Environment.\n           Classify the different types of pollution and measure to control pollution\n           Learn about the Environmental issues faced globally and various steps taken globally to solve\n           such Environmental issues.\n\n\n\n                                 Teaching and Examination Scheme\n\n\n                                            Internal Marks\n   Teaching Scheme (Hours)                                  End-Semester Examination (50%)\n                                          (50%)                                                     Total\n                                  Credits\n                                                                           Term Work    Marks\n Theory    Tutorial    Practical                 IA        CSE      Theory   Practical/Viva\n                                                                                 (TW)\n   2        0        0        2        30        20        50          0            0        100\n\n\n\n    Course Contents:\n\nUnit                                     Unit / Sub Unit                                     Sessions\nNo\n\n      I      Introduction and Ecology                                                     08\n\n          Introduction to Environment, Ecology, Ecosystem\n\n         Population and Environment\n          Factors Affecting Human Settlement, Define Over Population & Explain the Cause,\n          Effect on Environment & Control of it, Methods of Population forecasting\n\n        Governmental bodies for Environmental protection\n      II     Environmental Resources                                                     12\n\n          Forest resources, Energy resources, Water Resources and Land Resources\n\n         Environmental Pollution Water pollution, Air & Noise Pollution, Environmental sinks,\n\n    Page 1 of 2"
+        },
+        {
+          "page": 2,
+          "text": "solid and hazardous waste, E-waste & Biomedical waste, Introduction to Green\n       chemistry.\n\nIII     Global Environmental Issues                                                   04\n\n      Green house Effect, Global warming, ozone layer depletion, Climate change, Acid\n       Rain, Global Efforts to control issues\n\n\n\n\n\n SUGGESTED READINGS:\n\n\n Text Books:\n\n  Sr. No    Author/s            Name of the Book        Publisher            Edition  &\n                                                                              Year of\n                                                                                      Publication\n  T-01      Erach Bharucha           Environmental Studies    Universities   Press   2nd\n                                                                         (India) Private Ltd,  Edition,2013\n                                                       Hyderabad\n  T-02      Prof Dr N S Varandani      Basics of Environmental  LAP      -Lambert  2013\n                                       Studies                 AcademicPublishing\n                                                                                                             , Germany\n  T-03     Deeksha  Dave &  S  S  Environmental Studies   Cengage Publishers\n           Kateva\n\n\n\n Reference Books:\n\n  Sr. No    Author/s             Name of the Book  Publisher              Edition  and\n                                                                              Year of\n                                                                                     Publication\n  R-01      Anindita Basak            Environmental         Drling               2009\n                                        Studies                 Kindersley(India)Pvt.\n                                                              Ltd Pearson\n  R-02      Daniel B Botkin & Edward  Environmental        John Wiley & Sons\n         A Keller                   Sciences\n  R-03       R. Rajagopalan,            Environmental        Oxford     University\n                                        Studies               Press\n  R-04     Benny Joseph,             Environmental      TMH publishers\n                                        Studies\n  R-05      Dr. Suresh K Dhameja,     Environmental        S K  Kataria & Sons  2007\n                                        Studies           New Delhi\n\n\n\n\n\n  Page 2 of 2"
+        }
+      ],
+      "warnings": [
+        "Official PDF semester differs from the catalog semester."
+      ],
+      "actual_pdf_sha256": "15c24a17762fcf6279589a01bd2010911cf2d15af94bcb2aa17d1a3c5e362e56",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000423140301",
+      "subject_name": "Financial Management- II",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "04BC1403",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC1403-Financial-Management-II-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC1403-Financial-Management-II-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Financial Management- II [b766e11f2a84].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Financial Management- II [b766e11f2a84].pdf",
+      "expected_pdf_sha256": "8cb0d73acede2d638a2475be591981d024b8e11053fa890fe58db7ab44cd3c73",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Financial Management – II",
+        "course_code": "04BC1403",
+        "semester_label": "IV",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "● Understand the concept of capital budgeting and leverage ● Apply capital budgeting techniques in decision making ● Estimate and analyze project cash flow ● Evaluate dividend decision in relation to value of the firm ● Formulation of appropriate cash & liquidity management policy"
+      ],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 3 1 0 4 30 20 50 0 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "No Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "I Capital Structure & Leverage 9",
+              "Capital Structure Introduction, Factors affecting Capital Structure Decision,",
+              "Relevance Capital Structure Theories - Net Income Approach, Traditional View,",
+              "Irrelevance Capital Structure Theories - Net Operating Approach, MM Propositions,",
+              "Leverage Introduction, Operating leverage, Financial leverage & Combined leverage.",
+              "II Capital Budgeting 12",
+              "Capital Budgeting Introduction, Capital Budgeting Process , Discounting Capital",
+              "Budgeting Techniques, Advantages and disadvantages of discounting capital",
+              "budgeting techniques, Net Present Value, Internal Rate of Return, Profitability Index,",
+              "Non-discounting Capital Budgeting Techniques, Advantages and disadvantages of",
+              "non-discounting capital budgeting techniques, Payback period, Discounting payback",
+              "period, Accounting rate of return.",
+              "III Estimation of Project Cash flow 8",
+              "Introduction to Estimation of Project Cash flow, Elements of Cash flow Stream, Time",
+              "Horizon for Analysis, Basic principles of cash flow estimation, Cash flow for a",
+              "replacement project, Biases in cash flow estimation.",
+              "Page 1 of 2",
+              "IV Dividend Decision 9",
+              "Dividend Decision Introduction, Factors affecting to Dividend Decision, Relevance",
+              "Dividend Decision Theories - Walter Model, Gordon Model, Irrelevance Dividend",
+              "Decision Theories - MM Theory.",
+              "V Cash & Liquidity Management 10",
+              "Cash Management Introduction , Motives of holding cash , Objectives of cash",
+              "management , Cash budget, Cash Management Model, Baumol Model, Miller & Orr",
+              "Model."
+            ],
+            "topics_text": "I Capital Structure & Leverage 9 Capital Structure Introduction, Factors affecting Capital Structure Decision, Relevance Capital Structure Theories - Net Income Approach, Traditional View, Irrelevance Capital Structure Theories - Net Operating Approach, MM Propositions, Leverage Introduction, Operating leverage, Financial leverage & Combined leverage. II Capital Budgeting 12 Capital Budgeting Introduction, Capital Budgeting Process , Discounting Capital Budgeting Techniques, Advantages and disadvantages of discounting capital budgeting techniques, Net Present Value, Internal Rate of Return, Profitability Index, Non-discounting Capital Budgeting Techniques, Advantages and disadvantages of non-discounting capital budgeting techniques, Payback period, Discounting payback period, Accounting rate of return. III Estimation of Project Cash flow 8 Introduction to Estimation of Project Cash flow, Elements of Cash flow Stream, Time Horizon for Analysis, Basic principles of cash flow estimation, Cash flow for a replacement project, Biases in cash flow estimation. Page 1 of 2 IV Dividend Decision 9 Dividend Decision Introduction, Factors affecting to Dividend Decision, Relevance Dividend Decision Theories - Walter Model, Gordon Model, Irrelevance Dividend Decision Theories - MM Theory. V Cash & Liquidity Management 10 Cash Management Introduction , Motives of holding cash , Objectives of cash management , Cash budget, Cash Management Model, Baumol Model, Miller & Orr Model.",
+            "topics": [
+              "I Capital Structure & Leverage 9",
+              "Capital Structure Introduction, Factors affecting Capital Structure Decision,",
+              "Relevance Capital Structure Theories - Net Income Approach, Traditional View,",
+              "Irrelevance Capital Structure Theories - Net Operating Approach, MM Propositions,",
+              "Leverage Introduction, Operating leverage, Financial leverage & Combined leverage.",
+              "II Capital Budgeting 12",
+              "Capital Budgeting Introduction, Capital Budgeting Process , Discounting Capital",
+              "Budgeting Techniques, Advantages and disadvantages of discounting capital",
+              "budgeting techniques, Net Present Value, Internal Rate of Return, Profitability Index,",
+              "Non-discounting Capital Budgeting Techniques, Advantages and disadvantages of",
+              "non-discounting capital budgeting techniques, Payback period, Discounting payback",
+              "period, Accounting rate of return.",
+              "III Estimation of Project Cash flow 8",
+              "Introduction to Estimation of Project Cash flow, Elements of Cash flow Stream, Time",
+              "Horizon for Analysis, Basic principles of cash flow estimation, Cash flow for a",
+              "replacement project, Biases in cash flow estimation.",
+              "Page 1 of 2",
+              "IV Dividend Decision 9",
+              "Dividend Decision Introduction, Factors affecting to Dividend Decision, Relevance",
+              "Dividend Decision Theories - Walter Model, Gordon Model, Irrelevance Dividend",
+              "Decision Theories - MM Theory.",
+              "V Cash & Liquidity Management 10",
+              "Cash Management Introduction , Motives of holding cash , Objectives of cash",
+              "management , Cash budget, Cash Management Model, Baumol Model, Miller & Orr",
+              "Model."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4420,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM           Bachelors of Commerce /Bachelors of Commerce (Hons)\n\n         SEMESTER            IV\n\n         COURSE TITLE         Financial Management – II\n\n         COURSE CODE       04BC1403\n\n         COURSE CREDITS     04\n\n         COURSE DURATION  48 Hrs (48 sessions of 60 minutes each)\n\n\n\n   COURSE OUTCOMES:\n     ●  Understand the concept of capital budgeting and leverage\n     ●  Apply capital budgeting techniques in decision making\n     ●  Estimate and analyze project cash flow\n     ●  Evaluate dividend decision in relation to value of the firm\n     ●  Formulation of appropriate cash & liquidity management policy\n\n\n                                Teaching and Examination Scheme\n                                          Internal Marks\n  Teaching Scheme (Hours)                                End-Semester Examination (50%)\n                                        (50%)                                                      Total\n                                 Credits\n                                                                          Term Work    Marks\nTheory   Tutorial    Practical                 IA       CSE      Theory     Practical/Viva\n                                                                                (TW)\n   3       1        0        4        30       20        50          0            0        100\n\n\n\n\n   Course Contents:\nUnit No                                   Unit / Sub Unit                                    Sessions\n      I      Capital Structure & Leverage                                                  9\n           Capital  Structure  Introduction,  Factors  affecting  Capital  Structure  Decision,\n          Relevance Capital Structure Theories  - Net Income Approach, Traditional View,\n           Irrelevance Capital Structure Theories - Net Operating Approach, MM Propositions,\n          Leverage Introduction, Operating leverage, Financial leverage & Combined leverage.\n\n     II      Capital Budgeting                                                           12\n           Capital Budgeting Introduction, Capital Budgeting Process  , Discounting Capital\n          Budgeting  Techniques,  Advantages and  disadvantages  of  discounting  capital\n          budgeting techniques, Net Present Value, Internal Rate of Return, Profitability Index,\n          Non-discounting Capital Budgeting Techniques, Advantages and disadvantages of\n          non-discounting capital budgeting techniques, Payback period, Discounting payback\n           period, Accounting rate of return.\n\n     III     Estimation of Project Cash flow                                                8\n           Introduction to Estimation of Project Cash flow, Elements of Cash flow Stream, Time\n          Horizon for Analysis, Basic principles of cash flow estimation, Cash flow for a\n          replacement project, Biases in cash flow estimation.\n\n         Page 1 of 2"
+        },
+        {
+          "page": 2,
+          "text": "IV     Dividend Decision                                                           9\n       Dividend Decision Introduction, Factors affecting to Dividend Decision, Relevance\n       Dividend Decision Theories - Walter Model, Gordon Model, Irrelevance Dividend\n       Decision Theories - MM Theory.\n\nV     Cash & Liquidity Management                                                10\n       Cash Management Introduction  , Motives of holding cash  , Objectives of cash\n      management , Cash budget, Cash Management Model, Baumol Model, Miller & Orr\n       Model.\n\n\n\n\n\nSUGGESTED READINGS:\n\n\n Text Books:\n\n   Sr. No   Author/s     Name of the Book        Publisher             Edition & Year of\n                                                                             Publication\n  T-01     Prasanna        Financial Management    McGraw-Hill            8th Edition, 2011\n           Chandra\n\n\n\n Reference Books:\n\n   Sr. No  Author/s            Name of the Book  Publisher           Edition and  Year\n                                                                               of\n                                                                               Publication\n  R-01       I M Pandey                 Financial             Vikas   Publishing   9th Edition, 2005\n                              Management       House Pvt Ltd\n  R-02  M Y Khan & P K Jain        Financial            McGraw-Hill          5th Edition, 2007\n                              Management\n\n\n\n\n\n       Page 2 of 2"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8cb0d73acede2d638a2475be591981d024b8e11053fa890fe58db7ab44cd3c73",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22016134000701",
+      "subject_name": "General Electives",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    },
+    {
+      "subject_id": "22000422040301",
+      "subject_name": "INCOME TAX – LAW AND PRACTICE",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BC0413",
+        "04BC0426",
+        "04BC0427"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/ITLP.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INCOME TAX – LAW AND PRACTICE [05b66b8b499c].pdf",
+      "expected_pdf_sha256": "2151e1eb56ed0c1c8b5156e11c8afdcb86dfb6dfd5ad1969fc7832341ea1a447",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0403"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "22004193000201",
+      "subject_name": "INSURANCE AGENT",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-3.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INSURANCE AGENT [275ba500ce05].pdf",
+      "expected_pdf_sha256": "adb91d40df97b0383427ce84c6c0df1d5b28162a9fd345b4e19b8a8ed468d7c2",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0002"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22000423042101",
+      "subject_name": "Insurance and Risk Management",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "04BC0421",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/GE-04BC0421-Insurance-and-Risk-Management-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/GE-04BC0421-Insurance-and-Risk-Management-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Insurance and Risk Management [b60d3e210c9f].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Insurance and Risk Management [b60d3e210c9f].pdf",
+      "expected_pdf_sha256": "8282fa62325a2f137d2ca0e2d916624fe13f9033eca6de4f77e8166770fe92ec",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Insurance and Risk Management",
+        "course_code": "04BC0421",
+        "semester_label": "IV",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        " Understand the basic concept of insurance and its type.  To evaluate and analyze the principle and practices of life insurances.  Understand and evaluate the principles and practices of general insurance.  Able to acquire license to become insurance agent  To understand the concept of risk and its mitigation"
+      ],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 4 0 0 4 30 20 50 0 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "No Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "I Risk Management: Meaning, Definition, Objectives, Risk Vs Uncertainty types of Risk 8",
+              "Management, Risk Management Process, Fraud and Abuse, Risks and Solvency, Risk",
+              "pooling and insurance",
+              "II Introduction to Insurance: 9",
+              "Meaning, Definition, Purpose and Types of Insurance, The Evolution of Insurance,",
+              "Principles of Insurance, Insurance contract,",
+              "Insurance as a social security tool; Insurance and economic development.",
+              "Regulatory Framework of Insurance: IRDA- its roles, powers, and functions, Reforms",
+              "in Insurance Sector in India.",
+              "III Life Insurance: 12",
+              "Principles and practice of life insurance, life assurance contract, their nature and",
+              "characteristics, Importance and advantages of life insurance. Parties to the contract",
+              "and there rights and duties. Types of life insurance (Term plan, Endowment plan,",
+              "Money back plans, Child plan, Retirement plan, ULIP).",
+              "Condition and terms of policy and effects of non-compliance thereof. Nomination",
+              "and assignment; practices in connection with collection of premium, revivals, loans,",
+              "surrender, bonuses and annuity payment. Mortality table",
+              "Page 1 of 2",
+              "IV Marine, Fire and Motor Insurance: 11",
+              "Marine Insurance: General Principles-insurable interest and value disclosure, marine",
+              "policy and their conditions, premium, double insurance; assignment of policy,",
+              "warranties the voyage, loss and abandonment; partial loss and particular charges;",
+              "salvage; total loss and measure of indemnity, subrogation",
+              "Fire Insurance: The basic principles of fire insurance contract, fire policy, conditions,",
+              "assignment of the policy and claims,",
+              "Automobile Insurance: Need and types of automobile insurance; factors considered",
+              "for premium rating; claims.",
+              "V Insurance Intermediaries: Agents, procedure for becoming an agent, Pre-requisite 8",
+              "for obtaining a license, duration of license, cancellation of license, Revocation of",
+              "suspension/termination of agent appointment; code of conduct, unfair practices,",
+              "procedure regarding settlement of policy claims"
+            ],
+            "topics_text": "I Risk Management: Meaning, Definition, Objectives, Risk Vs Uncertainty types of Risk 8 Management, Risk Management Process, Fraud and Abuse, Risks and Solvency, Risk pooling and insurance II Introduction to Insurance: 9 Meaning, Definition, Purpose and Types of Insurance, The Evolution of Insurance, Principles of Insurance, Insurance contract, Insurance as a social security tool; Insurance and economic development. Regulatory Framework of Insurance: IRDA- its roles, powers, and functions, Reforms in Insurance Sector in India. III Life Insurance: 12 Principles and practice of life insurance, life assurance contract, their nature and characteristics, Importance and advantages of life insurance. Parties to the contract and there rights and duties. Types of life insurance (Term plan, Endowment plan, Money back plans, Child plan, Retirement plan, ULIP). Condition and terms of policy and effects of non-compliance thereof. Nomination and assignment; practices in connection with collection of premium, revivals, loans, surrender, bonuses and annuity payment. Mortality table Page 1 of 2 IV Marine, Fire and Motor Insurance: 11 Marine Insurance: General Principles-insurable interest and value disclosure, marine policy and their conditions, premium, double insurance; assignment of policy, warranties the voyage, loss and abandonment; partial loss and particular charges; salvage; total loss and measure of indemnity, subrogation Fire Insurance: The basic principles of fire insurance contract, fire policy, conditions, assignment of the policy and claims, Automobile Insurance: Need and types of automobile insurance; factors considered for premium rating; claims. V Insurance Intermediaries: Agents, procedure for becoming an agent, Pre-requisite 8 for obtaining a license, duration of license, cancellation of license, Revocation of suspension/termination of agent appointment; code of conduct, unfair practices, procedure regarding settlement of policy claims",
+            "topics": [
+              "I Risk Management: Meaning, Definition, Objectives, Risk Vs Uncertainty types of Risk 8",
+              "Management, Risk Management Process, Fraud and Abuse, Risks and Solvency, Risk",
+              "pooling and insurance",
+              "II Introduction to Insurance: 9",
+              "Meaning, Definition, Purpose and Types of Insurance, The Evolution of Insurance,",
+              "Principles of Insurance, Insurance contract,",
+              "Insurance as a social security tool",
+              "Insurance and economic development.",
+              "Regulatory Framework of Insurance: IRDA- its roles, powers, and functions, Reforms",
+              "in Insurance Sector in India.",
+              "III Life Insurance: 12",
+              "Principles and practice of life insurance, life assurance contract, their nature and",
+              "characteristics, Importance and advantages of life insurance. Parties to the contract",
+              "and there rights and duties. Types of life insurance (Term plan, Endowment plan,",
+              "Money back plans, Child plan, Retirement plan, ULIP).",
+              "Condition and terms of policy and effects of non-compliance thereof. Nomination",
+              "and assignment",
+              "practices in connection with collection of premium, revivals, loans,",
+              "surrender, bonuses and annuity payment. Mortality table",
+              "Page 1 of 2",
+              "IV Marine, Fire and Motor Insurance: 11",
+              "Marine Insurance: General Principles-insurable interest and value disclosure, marine",
+              "policy and their conditions, premium, double insurance",
+              "assignment of policy,",
+              "warranties the voyage, loss and abandonment",
+              "partial loss and particular charges",
+              "salvage",
+              "total loss and measure of indemnity, subrogation",
+              "Fire Insurance: The basic principles of fire insurance contract, fire policy, conditions,",
+              "assignment of the policy and claims,",
+              "Automobile Insurance: Need and types of automobile insurance",
+              "factors considered",
+              "for premium rating",
+              "claims.",
+              "V Insurance Intermediaries: Agents, procedure for becoming an agent, Pre-requisite 8",
+              "for obtaining a license, duration of license, cancellation of license, Revocation of",
+              "suspension/termination of agent appointment",
+              "code of conduct, unfair practices,",
+              "procedure regarding settlement of policy claims"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5544,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM              Bachelors Of Commerce / Bachelors Of Commerce(Hons)\n\n          SEMESTER               IV\n\n         COURSE TITLE           Insurance and Risk Management\n\n         COURSE CODE         04BC0421\n\n         COURSE CREDITS       04\n\n         COURSE DURATION     48 Hrs (48 sessions of 60 minutes each)\n\n\n\n   COURSE OUTCOMES:\n         Understand the basic concept of insurance and its type.\n         To evaluate and analyze the principle and practices of life insurances.\n         Understand and evaluate the principles and practices of general insurance.\n          Able to acquire license to become insurance agent\n         To understand the concept of risk and its mitigation\n\n                                Teaching and Examination Scheme\n                                           Internal Marks\n  Teaching Scheme (Hours)                                 End-Semester Examination (50%)\n                                         (50%)                                                     Total\n                                 Credits\n                                                                          Term Work    Marks\nTheory   Tutorial    Practical                 IA        CSE      Theory   Practical/Viva\n                                                                                (TW)\n   4       0        0        4        30        20        50          0            0        100\n\n\n   Course Contents:\n\nUnit No                                   Unit / Sub Unit                                    Sessions\n       I      Risk Management: Meaning, Definition, Objectives, Risk Vs Uncertainty types of Risk      8\n         Management, Risk Management Process, Fraud and Abuse, Risks and Solvency, Risk\n          pooling and insurance\n\n      II      Introduction to Insurance:                                                    9\n         Meaning, Definition, Purpose and Types of Insurance, The Evolution of Insurance,\n           Principles of Insurance, Insurance contract,\n          Insurance as a social security tool; Insurance and economic development.\n          Regulatory Framework of Insurance: IRDA- its roles, powers, and functions, Reforms\n            in Insurance Sector in India.\n\n     III      Life Insurance:                                                             12\n           Principles and practice of life insurance, life assurance contract, their nature and\n            characteristics, Importance and advantages of life insurance. Parties to the contract\n         and there rights and duties. Types of life insurance (Term plan, Endowment plan,\n        Money back plans, Child plan, Retirement plan, ULIP).\n          Condition and terms of policy and effects of non-compliance thereof. Nomination\n         and assignment; practices in connection with collection of premium, revivals, loans,\n           surrender, bonuses and annuity payment. Mortality table\n\n\n         Page 1 of 2"
+        },
+        {
+          "page": 2,
+          "text": "IV     Marine, Fire and Motor Insurance:                                             11\n      Marine Insurance: General Principles-insurable interest and value disclosure, marine\n        policy and their conditions, premium, double insurance; assignment of  policy,\n       warranties the voyage, loss and abandonment; partial loss and particular charges;\n        salvage; total loss and measure of indemnity, subrogation\n\n        Fire Insurance: The basic principles of fire insurance contract, fire policy, conditions,\n       assignment of the policy and claims,\n\n      Automobile Insurance: Need and types of automobile insurance; factors considered\n        for premium rating; claims.\n\nV     Insurance Intermediaries: Agents, procedure for becoming an agent, Pre-requisite      8\n        for obtaining a license, duration of license, cancellation of license, Revocation of\n       suspension/termination of agent appointment; code of conduct, unfair practices,\n       procedure regarding settlement of policy claims\n\n\n\nSUGGESTED READINGS:\nText Books:\n\n Sr. No  Author/s           Name of the Book           Publisher             Edition  &\n                                                                             Year of\n                                                                                     Publication\n T-01    O.P. Agrawal            Banking & Insurance        Himalaya Publishing  2012\n                                                    House\n T-02     P. K. Gupta              Insurance and Risk          Himalaya Publishing  2017\n                           Management             House\n T-03   M. N. Mishra              Principles and Practices of    S. Chand and Sons    2016\n                                 Insurance\n\nReference Books:\n\n Sr. No  Author/s           Name of the Book        Publisher          Edition and  Year\n                                                                               of\n                                                                               Publication\n R-01   Neelam C Gulati,          Principles of               Excel            2012\n                                 Insurance\n                           Management\n R-02   Emmett J.              Fundamentals of         Wiley           2013\n        Vaughan and             Risk and Insurance\n         Therese Vaughan\n          D.C.        Shrivastava  Indian        Insurance  New    Century  2013\n        Shashank                Industry  Transition &  Publications,\n                                 Prospects                 Delhi\n\n\n\n\n\n       Page 2 of 2"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8282fa62325a2f137d2ca0e2d916624fe13f9033eca6de4f77e8166770fe92ec",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000422041101",
+      "subject_name": "INTERNATIONAL BUSINESS",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BC0326",
+        "04BC1321",
+        "04BC1323"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/04MB0303-International-Business.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTERNATIONAL BUSINESS [d4631c9162b6].pdf",
+      "expected_pdf_sha256": "804910604c30fe63facb426849105e02b0db3637f8cd87e98ba1fdc40a36558b",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04MB0303"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "22000422040801",
+      "subject_name": "MANAGEMENT ACCOUNTING",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BC0310",
+        "04BC0311",
+        "04BC1321",
+        "04BC2305"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MA.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MANAGEMENT ACCOUNTING [56000e25850a].pdf",
+      "expected_pdf_sha256": "4342347e18fbc38f5ee0d337eb902df0da3d23059b8c19ce350d9f5223a5efd1",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0408"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "22000422040601",
+      "subject_name": "MANAGEMENT OF SERVICES",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MOS.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MANAGEMENT OF SERVICES [57c9ae4778c5].pdf",
+      "expected_pdf_sha256": "93a4fd4e8456d6f74ed52fb4ad911a2161b38808d2eead0f5621660e06746965",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0406"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22004193000501",
+      "subject_name": "MICROFINANCE EXECUTIVE",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-5.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MICROFINANCE EXECUTIVE [c2dbee810124].pdf",
+      "expected_pdf_sha256": "4311b52ec52ca3f2cd22fdf4fd6af109c23f44fcaf3524633e91a041f3397a59",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0005"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22004193000301",
+      "subject_name": "MUTUAL FUND DISTRIBUTOR",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BC0128",
+        "04BC0130",
+        "04BC0131"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-1.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MUTUAL FUND DISTRIBUTOR [19ad77719679].pdf",
+      "expected_pdf_sha256": "67dd63232008a4a516900d9991560b2aaa087e952bef9fb6081cafad27141238",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0003"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "22000121000401",
+      "subject_name": "NATIONAL CADET CORPS-4",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-9.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/NATIONAL CADET CORPS-4 [6ef8265f2c73].pdf",
+      "expected_pdf_sha256": "19238dded6579ce3854cfe09443342ce052951703c64f6c617d8d8a9efcce7bf",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: page codes not visible in first 8 pages"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    },
+    {
+      "subject_id": "22000423041001",
+      "subject_name": "Principles of Marketing",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "04BC0226",
+      "course_code_evidence": [
+        "04BC0226",
+        "04BC0227",
+        "04BC1205"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/04BC0226-POM_.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/04BC0226-POM_.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Principles of Marketing [a88ddc633b2c].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Principles of Marketing [a88ddc633b2c].pdf",
+      "expected_pdf_sha256": "1814dc14bcf56259be2ab420482b7376e8afb3f7ddf8238c212b78dff4da1de0",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PRINCIPLES OF MARKETING",
+        "course_code": "04BC0226",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand Fundamental Marketing Concepts.",
+        "Analyze the marketing environment",
+        "Apply the concepts of Segmenting and Targeting Customers and positioning of offerings to customers with an understanding of consumer behaviour.",
+        "Comprehend intricacies of pricing and its impact on revenue",
+        "Comprehend various channels of distribution and various means of promotion. ? Analyze contemporary issues of marketing for making effective marketing strategies. Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION TO MARKETING MANAGEMENT",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Nature, Scope &amp; Importance of Marketing, Concepts of",
+              "Marketing-Need, Wants,, Demands, Customer Value &amp;",
+              "Satisfaction, Marketing Mix, Environmental Factors Affecting",
+              "Marketing,, Marketing post LPG"
+            ],
+            "topics_text": "Nature, Scope &amp; Importance of Marketing, Concepts of Marketing-Need, Wants,, Demands, Customer Value &amp; Satisfaction, Marketing Mix, Environmental Factors Affecting Marketing,, Marketing post LPG",
+            "topics": [
+              "Nature, Scope &amp",
+              "Importance of Marketing, Concepts of",
+              "Marketing-Need, Wants,, Demands, Customer Value &amp",
+              "Satisfaction, Marketing Mix, Environmental Factors Affecting",
+              "Marketing,, Marketing post LPG"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "CONSUMER BEHAVIOUR & SEGMENTATION",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Overview of Consumer Behavior, Factors affecting Consumer",
+              "Buying Decisions, Consumer Buying Process, Market",
+              "segmentation: Concept, Importance and Bases; Target market",
+              "selection;, Positioning concept, importance and bases;",
+              "differentiation strategies - an"
+            ],
+            "topics_text": "Overview of Consumer Behavior, Factors affecting Consumer Buying Decisions, Consumer Buying Process, Market segmentation: Concept, Importance and Bases; Target market selection;, Positioning concept, importance and bases; differentiation strategies - an",
+            "topics": [
+              "Overview of Consumer Behavior, Factors affecting Consumer",
+              "Buying Decisions, Consumer Buying Process, Market",
+              "segmentation: Concept, Importance and Bases",
+              "Target market",
+              "selection",
+              ", Positioning concept, importance and bases",
+              "differentiation strategies - an"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "PRODUCT AND PRICING",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Product: Product Mix, Product Life Cycle, New Product",
+              "Development, Overview of Brand, Pricing: Significance, Factors",
+              "affecting price of a product, Pricing policies and strategies."
+            ],
+            "topics_text": "Product: Product Mix, Product Life Cycle, New Product Development, Overview of Brand, Pricing: Significance, Factors affecting price of a product, Pricing policies and strategies.",
+            "topics": [
+              "Product: Product Mix, Product Life Cycle, New Product",
+              "Development, Overview of Brand, Pricing: Significance, Factors",
+              "affecting price of a product, Pricing policies and strategies."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "PLACE AND PROMOTION",
+            "contact_hours": 15,
+            "topic_lines": [
+              "Distribution: meaning and importance, Types of distribution",
+              "channels; Wholesaling and retailing (Only Overview),, Factors",
+              "affecting choice of distribution channel, Logistics-Overview &amp;",
+              "Importance, Promotion: Nature and importance, Promotion Tools:",
+              "advertising, 5 M’s of Advertising, personal selling, public relations,,",
+              "Direct Marketing &amp; sales promotion – concept and",
+              "characteristics, Communication process, Promotion mix."
+            ],
+            "topics_text": "Distribution: meaning and importance, Types of distribution channels; Wholesaling and retailing (Only Overview),, Factors affecting choice of distribution channel, Logistics-Overview &amp; Importance, Promotion: Nature and importance, Promotion Tools: advertising, 5 M’s of Advertising, personal selling, public relations,, Direct Marketing &amp; sales promotion – concept and characteristics, Communication process, Promotion mix.",
+            "topics": [
+              "Distribution: meaning and importance, Types of distribution",
+              "channels",
+              "Wholesaling and retailing (Only Overview),, Factors",
+              "affecting choice of distribution channel, Logistics-Overview &amp",
+              "Importance, Promotion: Nature and importance, Promotion Tools:",
+              "advertising, 5 M’s of Advertising, personal selling, public relations,,",
+              "Direct Marketing &amp",
+              "sales promotion – concept and",
+              "characteristics, Communication process, Promotion mix."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "CONTEMPORARY ISSUES IN MARKETING",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Overview of Social Media Marketing; Online Marketing, Services",
+              "Marketing and Additional Ps of Marketing,, Green Marketing, Rural",
+              "Marketing. Application of technology and artificial intelligence in",
+              "marketing-, Understanding of AR/VR and MR",
+              "Total Hours 60",
+              "Textbook :",
+              "1 A Framework for Marketing Management, Philip Kotler & Kevin Lane Keller, Pearson",
+              "Education, 2016"
+            ],
+            "topics_text": "Overview of Social Media Marketing; Online Marketing, Services Marketing and Additional Ps of Marketing,, Green Marketing, Rural Marketing. Application of technology and artificial intelligence in marketing-, Understanding of AR/VR and MR Total Hours 60 Textbook : 1 A Framework for Marketing Management, Philip Kotler & Kevin Lane Keller, Pearson Education, 2016",
+            "topics": [
+              "Overview of Social Media Marketing",
+              "Online Marketing, Services",
+              "Marketing and Additional Ps of Marketing,, Green Marketing, Rural",
+              "Marketing. Application of technology and artificial intelligence in",
+              "marketing-, Understanding of AR/VR and MR",
+              "Total Hours 60",
+              "Textbook :",
+              "1 A Framework for Marketing Management, Philip Kotler & Kevin Lane Keller, Pearson",
+              "Education, 2016"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Marketing Management: A South Asian Perspective, Marketing Management: A South Asian Perspective, Philip Kotler; Kevin Lane Keller; Abraham Koshy; MithileshwarJha, Pearson Education, 2023",
+          "Marketing Management (Text and Cases in Indian Context), Marketing Management (Text and Cases in Indian Context), Karunakaran, Himalaya Publishing House, 2023"
+        ],
+        "textbooks": [
+          "A Framework for Marketing Management, Philip Kotler & Kevin Lane Keller, Pearson Education, 2016"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "NA"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4891,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    PRINCIPLES OF MARKETING\nCOURSE CODE     04BC0226\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand Fundamental Marketing Concepts.\n 2  Analyze the marketing environment\n 3  Apply the concepts of Segmenting and Targeting Customers and positioning of offerings to\n    customers with an understanding of consumer behaviour.\n 4  Comprehend intricacies of pricing and its impact on revenue\n 5  Comprehend various channels of distribution and various means of promotion. ? Analyze\n    contemporary issues of marketing for making effective marketing strategies.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    INTRODUCTION TO MARKETING MANAGEMENT       10\n              Nature, Scope &amp; Importance of Marketing, Concepts of\n             Marketing-Need, Wants,, Demands, Customer Value &amp;\n                Satisfaction, Marketing Mix, Environmental Factors Affecting\n              Marketing,, Marketing post LPG\n     2    CONSUMER BEHAVIOUR & SEGMENTATION            12\n            Overview of Consumer Behavior, Factors affecting Consumer\n            Buying Decisions, Consumer Buying Process, Market\n              segmentation: Concept, Importance and Bases; Target market\n                selection;, Positioning concept, importance and bases;\n                differentiation strategies - an\n     3    PRODUCT AND PRICING                                12\n              Product: Product Mix, Product Life Cycle, New Product\n             Development, Overview of Brand, Pricing: Significance, Factors\n               affecting price of a product, Pricing policies and strategies.\n\n\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4    PLACE AND PROMOTION                               15\n               Distribution: meaning and importance, Types of distribution\n              channels; Wholesaling and retailing (Only Overview),, Factors\n               affecting choice of distribution channel, Logistics-Overview &amp;\n              Importance, Promotion: Nature and importance, Promotion Tools:\n               advertising, 5 M’s of Advertising, personal selling, public relations,,\n              Direct Marketing &amp; sales promotion – concept and\n                characteristics, Communication process, Promotion mix.\n     5    CONTEMPORARY ISSUES IN MARKETING               11\n            Overview of Social Media Marketing; Online Marketing, Services\n             Marketing and Additional Ps of Marketing,, Green Marketing, Rural\n              Marketing. Application of technology and artificial intelligence in\n              marketing-, Understanding of AR/VR and MR\n                               Total Hours                       60\n\n\nTextbook :\n 1 A Framework for Marketing Management, Philip Kotler & Kevin Lane Keller, Pearson\n     Education, 2016\n\nReferences:\n 1  Marketing Management: A South Asian Perspective, Marketing Management: A South\n    Asian Perspective, Philip Kotler; Kevin Lane Keller; Abraham Koshy; MithileshwarJha,\n    Pearson Education, 2023\n 2  Marketing Management (Text and Cases in Indian Context), Marketing Management (Text\n    and Cases in Indian Context), Karunakaran, Himalaya Publishing House, 2023\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1 NA\n\nSupplementary Resources:\n 1 NA\n\n\n\nDR. MONICA VERMA                                     DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "1814dc14bcf56259be2ab420482b7376e8afb3f7ddf8238c212b78dff4da1de0",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000423042301",
+      "subject_name": "Procedures & Practices in EXIM Mgmt",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "04BC0430",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/PDM-04BC0430.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/04/PDM-04BC0430.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Procedures & Practices in EXIM Mgmt [1776e20d34f1].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Procedures & Practices in EXIM Mgmt [1776e20d34f1].pdf",
+      "expected_pdf_sha256": "4568cd2e9c7b87bb10a7dfa28d4d9d720b27993ba431be0f08c01d2171b30407",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "PROCEDURES & DOCUMENTATION IN EXIM MGMT",
+        "course_code": "04BC0430",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "NA"
+      },
+      "objectives": [
+        "1 Na"
+      ],
+      "course_outcomes": [
+        "Explain the fundamental concepts and regulatory framework of export-import management, including its role in economic development",
+        "Apply legal and procedural knowledge to establish an EXIM business, including registrations such as IEC, RCMC, and licensing",
+        "Prepare and manage key export and import documents in alignment with pre-shipment and post-shipment requirements and compliance standards",
+        "Execute the end-to-end export process, including customs clearance, negotiation of documents, and realization of export proceeds using digital systems.",
+        "Identify international buyers using online tools and manage associated EXIM risks through documentation, insurance, and regulatory compliance. Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamentals of Export-Import and Regulatory Framework",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Meaning and definition of export and import, Role of EXIM in",
+              "economic development, Overview of export marketing",
+              "organizations, Formation of EXIM firm: Registration, IEC, RCMC",
+              "and Export licensing, ITC(HS) classification, categories of",
+              "importers"
+            ],
+            "topics_text": "Meaning and definition of export and import, Role of EXIM in economic development, Overview of export marketing organizations, Formation of EXIM firm: Registration, IEC, RCMC and Export licensing, ITC(HS) classification, categories of importers",
+            "topics": [
+              "Meaning and definition of export and import, Role of EXIM in",
+              "economic development, Overview of export marketing",
+              "organizations, Formation of EXIM firm: Registration, IEC, RCMC",
+              "and Export licensing, ITC(HS) classification, categories of",
+              "importers"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Export & Import Documentation: Types, Preparation, and",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Compliance",
+              "Aligned documentation system and flow of export documents, Pre-",
+              "shipment documents: sales contract, pro-forma invoice, commercial",
+              "invoice, consular invoice, packing list, certificate of origin,",
+              "fumigation, insurance documents, post-shipment documents: bill of",
+              "lading, shipping bill, mate’s receipt, SDF, GSP, FTAs certificate,",
+              "Import-related documents: bill of entry, certificate of inspection,",
+              "freight declaration, Preparation and practical aspects: step-by-step",
+              "creation of key export documents, Regulatory compliance: customs",
+              "requirements, EDI system, common errors and best practices"
+            ],
+            "topics_text": "Compliance Aligned documentation system and flow of export documents, Pre- shipment documents: sales contract, pro-forma invoice, commercial invoice, consular invoice, packing list, certificate of origin, fumigation, insurance documents, post-shipment documents: bill of lading, shipping bill, mate’s receipt, SDF, GSP, FTAs certificate, Import-related documents: bill of entry, certificate of inspection, freight declaration, Preparation and practical aspects: step-by-step creation of key export documents, Regulatory compliance: customs requirements, EDI system, common errors and best practices",
+            "topics": [
+              "Compliance",
+              "Aligned documentation system and flow of export documents, Pre",
+              "shipment documents: sales contract, pro-forma invoice, commercial",
+              "invoice, consular invoice, packing list, certificate of origin,",
+              "fumigation, insurance documents, post-shipment documents: bill of",
+              "lading, shipping bill, mate’s receipt, SDF, GSP, FTAs certificate,",
+              "Import-related documents: bill of entry, certificate of inspection,",
+              "freight declaration, Preparation and practical aspects: step-by-step",
+              "creation of key export documents, Regulatory compliance: customs",
+              "requirements, EDI system, common errors and best practices"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Export Procedures, Customs Clearance & Risk Mitigation",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Steps in export procedure: from inquiry to realization of proceeds,",
+              "Customs clearance process for exports: role of clearing agents,",
+              "documentation, EDI system, Negotiation of documents and",
+              "realization of export proceeds, Basic risk management in export",
+              "documentation: insurance, compliance risks, mitigation, Brief",
+              "overview of export incentives and institutional support., Role of",
+              "Rajkot Chambers of Commerce and Industries in Export Assistance.",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Export Import Procedures, Documentation and Logistics, Rama Gopal, New Age",
+              "International Publishers, New Delhi, 2019",
+              "2 Export Procedures and Documentation, M. D. Jitendra,, Rajat Publications, 2015"
+            ],
+            "topics_text": "Steps in export procedure: from inquiry to realization of proceeds, Customs clearance process for exports: role of clearing agents, documentation, EDI system, Negotiation of documents and realization of export proceeds, Basic risk management in export documentation: insurance, compliance risks, mitigation, Brief overview of export incentives and institutional support., Role of Rajkot Chambers of Commerce and Industries in Export Assistance. Total Hours 30 Textbook : 1 Export Import Procedures, Documentation and Logistics, Rama Gopal, New Age International Publishers, New Delhi, 2019 2 Export Procedures and Documentation, M. D. Jitendra,, Rajat Publications, 2015",
+            "topics": [
+              "Steps in export procedure: from inquiry to realization of proceeds,",
+              "Customs clearance process for exports: role of clearing agents,",
+              "documentation, EDI system, Negotiation of documents and",
+              "realization of export proceeds, Basic risk management in export",
+              "documentation: insurance, compliance risks, mitigation, Brief",
+              "overview of export incentives and institutional support., Role of",
+              "Rajkot Chambers of Commerce and Industries in Export Assistance.",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Export Import Procedures, Documentation and Logistics, Rama Gopal, New Age",
+              "International Publishers, New Delhi, 2019",
+              "2 Export Procedures and Documentation, M. D. Jitendra,, Rajat Publications, 2015"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Export Markets and Foreign Trade Management, Export Markets and Foreign Trade Management, Pervin Wadia, Kanishka Publications, 1998",
+          "Export: What, Where and How, Export: What, Where and How, Paras Ram, Anupam, Publications, 2017",
+          "Handbook of Import- Export Procedures, Handbook of Import- Export Procedures, Government of India, Ministry of Commerce and Industry, Government of India, 2018",
+          "Nabhi's How to Export 2020, Nabhi's How to Export 2020, Ajay Kumar Garg, NABHI Publications, 2020",
+          "NABHI's Exporters Manual and Documentation-, NABHI's Exporters Manual and Documentation-, Nabhi's, NABHI Publications, 2001"
+        ],
+        "textbooks": [
+          "Export Import Procedures, Documentation and Logistics, Rama Gopal, New Age International Publishers, New Delhi, 2019",
+          "Export Procedures and Documentation, M. D. Jitendra,, Rajat Publications, 2015"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.nimsme.gov.in/programme/37ff8fa806a638d2e04c14d1f65c67ba"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5690,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    PROCEDURES & DOCUMENTATION IN EXIM MGMT\nCOURSE CODE     04BC0430\nCOURSE CREDITS  2\n\nObjective:\n 1 Na\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Explain the fundamental concepts and regulatory framework of export-import management,\n     including its role in economic development\n 2  Apply legal and procedural knowledge to establish an EXIM business, including\n     registrations such as IEC, RCMC, and licensing\n 3  Prepare and manage key export and import documents in alignment with pre-shipment and\n     post-shipment requirements and compliance standards\n 4  Execute the end-to-end export process, including customs clearance, negotiation of\n    documents, and realization of export proceeds using digital systems.\n 5  Identify international buyers using online tools and manage associated EXIM risks through\n     documentation, insurance, and regulatory compliance.\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fundamentals of Export-Import and Regulatory Framework    7\n            Meaning and definition of export and import, Role of EXIM in\n            economic development, Overview of export marketing\n               organizations, Formation of EXIM firm: Registration, IEC, RCMC\n            and Export licensing, ITC(HS) classification, categories of\n              importers\n\n\n\n\n\nDR. MONICA VERMA                                               DR. KIRTI DUTTA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2      Export & Import Documentation: Types, Preparation, and     14\n            Compliance\n             Aligned documentation system and flow of export documents, Pre-\n             shipment documents: sales contract, pro-forma invoice, commercial\n               invoice, consular invoice, packing list, certificate of origin,\n              fumigation, insurance documents, post-shipment documents: bill of\n               lading, shipping bill, mate’s receipt, SDF, GSP, FTAs certificate,\n              Import-related documents: bill of entry, certificate of inspection,\n                freight declaration, Preparation and practical aspects: step-by-step\n               creation of key export documents, Regulatory compliance: customs\n              requirements, EDI system, common errors and best practices\n     3      Export Procedures, Customs Clearance & Risk Mitigation      9\n              Steps in export procedure: from inquiry to realization of proceeds,\n            Customs clearance process for exports: role of clearing agents,\n              documentation, EDI system, Negotiation of documents and\n                realization of export proceeds, Basic risk management in export\n             documentation: insurance, compliance risks, mitigation, Brief\n             overview of export incentives and institutional support., Role of\n             Rajkot Chambers of Commerce and Industries in Export Assistance.\n                               Total Hours                       30\n\n\nTextbook :\n 1  Export Import Procedures, Documentation and Logistics, Rama Gopal, New Age\n     International Publishers, New Delhi, 2019\n 2  Export Procedures and Documentation, M. D. Jitendra,, Rajat Publications, 2015\n\nReferences:\n 1  Export Markets and Foreign Trade Management, Export Markets and Foreign Trade\n    Management, Pervin Wadia, Kanishka Publications, 1998\n 2  Export: What, Where and How, Export: What, Where and How, Paras Ram, Anupam,\n     Publications, 2017\n 3  Handbook of Import- Export Procedures, Handbook of Import- Export Procedures,\n    Government of India, Ministry of Commerce and Industry, Government  of India, 2018\n 4  Nabhi's How to Export 2020, Nabhi's How to Export 2020, Ajay Kumar Garg, NABHI\n     Publications, 2020\n 5  NABHI's Exporters Manual and Documentation-, NABHI's Exporters Manual and\n    Documentation-, Nabhi's, NABHI Publications, 2001\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\nDR. MONICA VERMA                                               DR. KIRTI DUTTA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00          30.00         25.00         25.00         10.00         10.00\n\n\nSupplementary Resources:\n 1  https://www.nimsme.gov.in/programme/37ff8fa806a638d2e04c14d1f65c67ba\n\n\n\n\n\nDR. MONICA VERMA                                               DR. KIRTI DUTTA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "4568cd2e9c7b87bb10a7dfa28d4d9d720b27993ba431be0f08c01d2171b30407",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000422040101",
+      "subject_name": "PRODUCTION & OPERATIONS MANAGEMENT",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BC0326",
+        "04BC0329",
+        "04CR0303"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/POM-1.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/PRODUCTION & OPERATIONS MANAGEMENT [47ce3f8cd086].pdf",
+      "expected_pdf_sha256": "9c4cc66b2e00451ac18a40f8d2e4f91c2019943274bd95e7b85d1315e26c6ea3",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0401"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "22000423042201",
+      "subject_name": "Production and Operations Management",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "04MB1204",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/04MB1204-Production-and-Operations-Management.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/04MB1204-Production-and-Operations-Management.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Production and Operations Management [fa64d6cc4216].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Production and Operations Management [fa64d6cc4216].pdf",
+      "expected_pdf_sha256": "17fc6a4e01d16912b470dfb5bafeb73995df4ec26e0397ec9f30e4627a1fec42",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Production and Operations Management",
+        "course_code": "04MB1204",
+        "semester_label": "2",
+        "credits": 3,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "❖ Identify a broad survey of the concepts and tools used in operations Management ❖ Understand the role of the operations management (OM) function in the performance of an organization ❖ Apply the latest concepts and techniques of materials, stores, and purchase management. ❖ Classify and analyze various inventory control methods and their applications in the industry. ❖ Construct appropriate strategies for sustainable development of organization by applying green practices and Waste management techniques. COURSE"
+      ],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "No Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "I Introduction: Nature and Scope of Production and Operations Management. 10",
+              "Importance of the OM. Differentiating between Goods and Services. Operations",
+              "Strategy. Classifying the Process (Process Design). Facility Location and Facility",
+              "Layout. Supply chain Management: Concept, significance in OM, Bullwhip effect.",
+              "II Materials Management: Inventory, Types of Inventory Systems, Costs of Inventory, 8",
+              "Economic Order Quantity (EOQ) Models – Basic EOQ, Periodic Inventory Systems,",
+              "Quantity Discount Model, Inventory Classification Systems. ABC, VED, FNS Analysis.",
+              "III Production Planning and Control: Introduction to aggregate planning, capacity 12",
+              "planning, MRP, ERP, BPR. Functions of PPC, Operations scheduling,",
+              "Project management: PERT Model, Determination of Critical Path, Distribution of",
+              "Project Completion time, CPM Model, Time/Cost Relation, Crashing of a Project.",
+              "IV Quality Control: Basics of Quality Control, Statistical Quality Control, ISO-9000. 06",
+              "Introduction to JIT, Lean Manufacturing, Six Sigma, Kaizen. Total Quality",
+              "Management, Quality circle and quality control methods.",
+              "V Impact of Global Competition, Technological Change, Ethical and Environmental 06",
+              "Issues on Operations. Greening the Environment, Waste Management, SOFTWARE",
+              "related to OM.",
+              "Page 1 of 2 Faculty of Management Studies: Master of Business Administration",
+              "EVALUATION:",
+              "The students will be evaluated on a continuous basis and broadly follow the scheme given below:",
+              "Component Weightage",
+              "A Continuous Evaluation Component (Assignments / Quizzes / Class 20% (C.E.C.)",
+              "Participation etc.)",
+              "B Internal Assessment 30% (I.A.)",
+              "C End-Semester Examination 50% (External Assessment)",
+              "SUGGESTED BOOKS",
+              "Text Books:",
+              "Sr. Author/s Name of the Book Publisher Edition &",
+              "No Year",
+              "T-01 Chase Richard B, et al Production and Operations Tata McGraw-Hill 12th Edition",
+              "Management: Manufacturing and Pub. Co., New Delhi",
+              "Services",
+              "T-02 Buffa Elwood S & Sarin Modern Production / Operations John Wiley & Sons, 8th Edition",
+              "Rakesh K Management Singapore",
+              "T-03 Kanishka Bedi Production and operations Oxford Press 3rd Edition",
+              "Management",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year",
+              "R-01 Russel & Taylor Operations Management John Wiley & Sons 6th edition",
+              "R-02 Chary S N Production & Operations Tata MacGraw-Hill, 4th edition",
+              "Management New Delhi",
+              "R-03 Kachru Upendra Production and Operations Excel Books 1st edition",
+              "Management",
+              "R-04 K. Aswathappa and K. Production and Operations Himalaya 2nd edition",
+              "Shridhara Bhat Management Publications",
+              "R-05 S. A. Chunawala, Dr. Production and Operation Himalaya 7th edition",
+              "Patel Management Publications",
+              "Page 2 of 2 Faculty of Management Studies: Master of Business Administration"
+            ],
+            "topics_text": "I Introduction: Nature and Scope of Production and Operations Management. 10 Importance of the OM. Differentiating between Goods and Services. Operations Strategy. Classifying the Process (Process Design). Facility Location and Facility Layout. Supply chain Management: Concept, significance in OM, Bullwhip effect. II Materials Management: Inventory, Types of Inventory Systems, Costs of Inventory, 8 Economic Order Quantity (EOQ) Models – Basic EOQ, Periodic Inventory Systems, Quantity Discount Model, Inventory Classification Systems. ABC, VED, FNS Analysis. III Production Planning and Control: Introduction to aggregate planning, capacity 12 planning, MRP, ERP, BPR. Functions of PPC, Operations scheduling, Project management: PERT Model, Determination of Critical Path, Distribution of Project Completion time, CPM Model, Time/Cost Relation, Crashing of a Project. IV Quality Control: Basics of Quality Control, Statistical Quality Control, ISO-9000. 06 Introduction to JIT, Lean Manufacturing, Six Sigma, Kaizen. Total Quality Management, Quality circle and quality control methods. V Impact of Global Competition, Technological Change, Ethical and Environmental 06 Issues on Operations. Greening the Environment, Waste Management, SOFTWARE related to OM. Page 1 of 2 Faculty of Management Studies: Master of Business Administration EVALUATION: The students will be evaluated on a continuous basis and broadly follow the scheme given below: Component Weightage A Continuous Evaluation Component (Assignments / Quizzes / Class 20% (C.E.C.) Participation etc.) B Internal Assessment 30% (I.A.) C End-Semester Examination 50% (External Assessment) SUGGESTED BOOKS Text Books: Sr. Author/s Name of the Book Publisher Edition & No Year T-01 Chase Richard B, et al Production and Operations Tata McGraw-Hill 12th Edition Management: Manufacturing and Pub. Co., New Delhi Services T-02 Buffa Elwood S & Sarin Modern Production / Operations John Wiley & Sons, 8th Edition Rakesh K Management Singapore T-03 Kanishka Bedi Production and operations Oxford Press 3rd Edition Management Reference Books: Sr. No Author/s Name of the Book Publisher Edition & Year R-01 Russel & Taylor Operations Management John Wiley & Sons 6th edition R-02 Chary S N Production & Operations Tata MacGraw-Hill, 4th edition Management New Delhi R-03 Kachru Upendra Production and Operations Excel Books 1st edition Management R-04 K. Aswathappa and K. Production and Operations Himalaya 2nd edition Shridhara Bhat Management Publications R-05 S. A. Chunawala, Dr. Production and Operation Himalaya 7th edition Patel Management Publications Page 2 of 2 Faculty of Management Studies: Master of Business Administration",
+            "topics": [
+              "I Introduction: Nature and Scope of Production and Operations Management. 10",
+              "Importance of the OM. Differentiating between Goods and Services. Operations",
+              "Strategy. Classifying the Process (Process Design). Facility Location and Facility",
+              "Layout. Supply chain Management: Concept, significance in OM, Bullwhip effect.",
+              "II Materials Management: Inventory, Types of Inventory Systems, Costs of Inventory, 8",
+              "Economic Order Quantity (EOQ) Models – Basic EOQ, Periodic Inventory Systems,",
+              "Quantity Discount Model, Inventory Classification Systems. ABC, VED, FNS Analysis.",
+              "III Production Planning and Control: Introduction to aggregate planning, capacity 12",
+              "planning, MRP, ERP, BPR. Functions of PPC, Operations scheduling,",
+              "Project management: PERT Model, Determination of Critical Path, Distribution of",
+              "Project Completion time, CPM Model, Time/Cost Relation, Crashing of a Project.",
+              "IV Quality Control: Basics of Quality Control, Statistical Quality Control, ISO-9000. 06",
+              "Introduction to JIT, Lean Manufacturing, Six Sigma, Kaizen. Total Quality",
+              "Management, Quality circle and quality control methods.",
+              "V Impact of Global Competition, Technological Change, Ethical and Environmental 06",
+              "Issues on Operations. Greening the Environment, Waste Management, SOFTWARE",
+              "related to OM.",
+              "Page 1 of 2 Faculty of Management Studies: Master of Business Administration",
+              "EVALUATION:",
+              "The students will be evaluated on a continuous basis and broadly follow the scheme given below:",
+              "Component Weightage",
+              "A Continuous Evaluation Component (Assignments / Quizzes / Class 20% (C.E.C.)",
+              "Participation etc.)",
+              "B Internal Assessment 30% (I.A.)",
+              "C End-Semester Examination 50% (External Assessment)",
+              "SUGGESTED BOOKS",
+              "Text Books:",
+              "Sr. Author/s Name of the Book Publisher Edition &",
+              "No Year",
+              "T-01 Chase Richard B, et al Production and Operations Tata McGraw-Hill 12th Edition",
+              "Management: Manufacturing and Pub. Co., New Delhi",
+              "Services",
+              "T-02 Buffa Elwood S & Sarin Modern Production / Operations John Wiley & Sons, 8th Edition",
+              "Rakesh K Management Singapore",
+              "T-03 Kanishka Bedi Production and operations Oxford Press 3rd Edition",
+              "Management",
+              "Reference Books:",
+              "Sr. No Author/s Name of the Book Publisher Edition &",
+              "Year",
+              "R-01 Russel & Taylor Operations Management John Wiley & Sons 6th edition",
+              "R-02 Chary S N Production & Operations Tata MacGraw-Hill, 4th edition",
+              "Management New Delhi",
+              "R-03 Kachru Upendra Production and Operations Excel Books 1st edition",
+              "Management",
+              "R-04 K. Aswathappa and K. Production and Operations Himalaya 2nd edition",
+              "Shridhara Bhat Management Publications",
+              "R-05 S. A. Chunawala, Dr. Production and Operation Himalaya 7th edition",
+              "Patel Management Publications",
+              "Page 2 of 2 Faculty of Management Studies: Master of Business Administration"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5018,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM                  Master of Business Administration\n\n         SEMESTER                  2\n\n        COURSE TITLE                 Production and Operations Management\n\n        COURSE CODE              04MB1204\n\n        COURSE CREDITS             3\n\n        COURSE DURATION           42 hours (42 Sessions of 60 Minutes each)\n\n\nCOURSE OUTCOMES:\n\n  ❖  Identify a broad survey of the concepts and tools used in operations Management\n  ❖  Understand the role of the operations management (OM) function in the performance of an organization\n  ❖  Apply the latest concepts and techniques of materials, stores, and purchase management.\n  ❖  Classify and analyze various inventory control methods and their applications in the industry.\n  ❖  Construct appropriate strategies for sustainable development of organization by applying green practices\n       and Waste management techniques.\n\nCOURSE CONTENTS:\n\n   Unit No                                   Unit / Sub Unit                                    Sessions\n          I         Introduction: Nature and Scope of Production and Operations Management.      10\n              Importance of the OM. Differentiating between Goods and Services. Operations\n                Strategy. Classifying the Process (Process Design). Facility Location and Facility\n               Layout. Supply chain Management: Concept, significance in OM, Bullwhip effect.\n\n         II       Materials Management: Inventory, Types of Inventory Systems, Costs of Inventory,       8\n            Economic Order Quantity (EOQ) Models – Basic EOQ, Periodic Inventory Systems,\n              Quantity Discount Model, Inventory Classification Systems. ABC, VED, FNS Analysis.\n\n         III       Production Planning and Control: Introduction to aggregate planning, capacity      12\n              planning, MRP, ERP, BPR. Functions of PPC, Operations scheduling,\n               Project management: PERT Model, Determination of Critical Path, Distribution of\n               Project Completion time, CPM Model, Time/Cost Relation, Crashing of a Project.\n     IV       Quality Control: Basics of Quality Control, Statistical Quality Control, ISO-9000.     06\n              Introduction  to  JIT,  Lean  Manufacturing,  Six  Sigma,  Kaizen.  Total  Quality\n            Management, Quality circle and quality control methods.\n\n    V      Impact of Global Competition, Technological Change, Ethical and Environmental      06\n               Issues on Operations. Greening the Environment, Waste Management, SOFTWARE\n               related to OM.\n\n\n\n\n\nPage 1 of 2                    Faculty of Management Studies: Master of Business Administration"
+        },
+        {
+          "page": 2,
+          "text": "EVALUATION:\nThe students will be evaluated on a continuous basis and broadly follow the scheme given below:\n                              Component                                  Weightage\n A      Continuous Evaluation Component (Assignments / Quizzes / Class     20% (C.E.C.)\n          Participation etc.)\n B       Internal Assessment                                      30% (I.A.)\n C      End-Semester Examination                                 50% (External Assessment)\n\n\nSUGGESTED BOOKS\nText Books:\n\n\n   Sr.          Author/s            Name of the Book                Publisher           Edition &\n  No                                                                                      Year\n T-01    Chase Richard B, et al     Production    and    Operations  Tata    McGraw-Hill   12th Edition\n                             Management: Manufacturing and  Pub. Co., New Delhi\n                                     Services\n\n T-02    Buffa Elwood S & Sarin  Modern Production / Operations    John Wiley & Sons,     8th Edition\n         Rakesh K             Management                      Singapore\n\n T-03    Kanishka Bedi            Production    and     operations  Oxford Press             3rd Edition\n                            Management\n\n\nReference Books:\n\n\n\n   Sr. No         Author/s            Name of the Book                Publisher           Edition &\n                                                                                           Year\n\n R-01      Russel & Taylor         Operations Management           John Wiley & Sons       6th edition\n R-02     Chary S N              Production   &     Operations   Tata   MacGraw-Hill,   4th edition\n                            Management                New Delhi\n R-03     Kachru Upendra        Production and Operations           Excel Books                1st edition\n                            Management\n R-04      K. Aswathappa and K.   Production    and    Operations  Himalaya            2nd edition\n           Shridhara Bhat        Management                        Publications\n R-05       S. A. Chunawala, Dr.    Production and Operation          Himalaya                 7th edition\n            Patel               Management                        Publications\n\n\n\n\n\nPage 2 of 2                    Faculty of Management Studies: Master of Business Administration"
+        }
+      ],
+      "warnings": [
+        "Official PDF semester differs from the catalog semester."
+      ],
+      "actual_pdf_sha256": "17fc6a4e01d16912b470dfb5bafeb73995df4ec26e0397ec9f30e4627a1fec42",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22000423040801",
+      "subject_name": "Taxation- II",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "04BC0408",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC0408-Taxation-II-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC0408-Taxation-II-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Taxation- II [a06ee94b6521].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Taxation- II [a06ee94b6521].pdf",
+      "expected_pdf_sha256": "65a592e5b86fd2a754d926bb18cba33e56d473583e66ac29c67a17f3716c2072",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "Taxation – II",
+        "course_code": "04BC0408",
+        "semester_label": "IV",
+        "credits": 4,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [
+        " Understand the provisions of the Act for Computation of income under the head  Capital Gains  Analyse various provisions of the Act concerning computation of income under the  head Income From Other Sources  Calculate deductions available to Individuals and HUFs from Gross Total Income and Total Income and Tax Liability  Understand applicability of TDS and Advance tax  Understand and Evaluate various provisions relating to Filing of Return of Income"
+      ],
+      "teaching_and_examination_scheme_text": "Internal Marks Teaching Scheme (Hours) End-Semester Examination (50%) (50%) Total Credits Term Work Marks Theory Tutorial Practical IA CSE Theory Practical/Viva (TW) 3 1 0 4 30 20 50 0 0 100 Course",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "No Unit / Sub Unit Sessions",
+            "contact_hours": null,
+            "topic_lines": [
+              "I INCOME UNDER THE HEAD CAPITAL GAIN 14",
+              "Chargeability- Types of Capital Assets- Transfer – Transactions not regarded as",
+              "Transfer- Rates of Capital Gain Tax- Computation of Capital Gain in various",
+              "situations- Exemptions available from Capital Gain.",
+              "II INCOME FROM OTHER SOURCES, SET-OFF CARRY FORWARD AND CLUBBING OF 10",
+              "INCOME",
+              "Chargeability- Incomes covered under other sources- Taxability of Gifts-",
+              "Taxability of Dividend- Principal of Grossing Up-Deductions available under the",
+              "head Income From Other Sources- Computation of Income",
+              "from other sources.",
+              "III DEDUCTIONS AVAILABLE FROM GROSS TOTAL INCOME AND COMPUTATION OF 10",
+              "TOTAL INCOME AND TAX LIABILITY",
+              "Basics of Deductions- Difference between deductions and exemptions-",
+              "Page 1 of 2",
+              "Deductions available u/s 80C to 80U – Computation of Total Income and Tax",
+              "Liability of Individual and HUF",
+              "IV TAX DEDUCTION AT SOURCE AND ADVANCE TAX 8",
+              "Basics of TDS- Working knowledge of TDS provisions as applicable while making",
+              "payment to Resident – Returns of TDS- Due date for payment of TDS - Persons",
+              "liable to pay Advance Tax- Due dates of various installments of advance tax-",
+              "Computation of Advance Tax Installments.",
+              "V FILING OF RETURN OF INCOME 6",
+              "Persons required to file return of income- Due dates of Filing Return of",
+              "Income- Overview of Revised Return and Belated Return- Signing of Return",
+              "and Self- Assessment- Tax Return Preparer.",
+              "Note: Any change in the provisions of Income Tax Act, 1961 as per budget or otherwise, shall be",
+              "respectively made applicable to the syllabus. The syllabus of an academic year shall be the provisions",
+              "of the relevant Assessment Year."
+            ],
+            "topics_text": "I INCOME UNDER THE HEAD CAPITAL GAIN 14 Chargeability- Types of Capital Assets- Transfer – Transactions not regarded as Transfer- Rates of Capital Gain Tax- Computation of Capital Gain in various situations- Exemptions available from Capital Gain. II INCOME FROM OTHER SOURCES, SET-OFF CARRY FORWARD AND CLUBBING OF 10 INCOME Chargeability- Incomes covered under other sources- Taxability of Gifts- Taxability of Dividend- Principal of Grossing Up-Deductions available under the head Income From Other Sources- Computation of Income from other sources. III DEDUCTIONS AVAILABLE FROM GROSS TOTAL INCOME AND COMPUTATION OF 10 TOTAL INCOME AND TAX LIABILITY Basics of Deductions- Difference between deductions and exemptions- Page 1 of 2 Deductions available u/s 80C to 80U – Computation of Total Income and Tax Liability of Individual and HUF IV TAX DEDUCTION AT SOURCE AND ADVANCE TAX 8 Basics of TDS- Working knowledge of TDS provisions as applicable while making payment to Resident – Returns of TDS- Due date for payment of TDS - Persons liable to pay Advance Tax- Due dates of various installments of advance tax- Computation of Advance Tax Installments. V FILING OF RETURN OF INCOME 6 Persons required to file return of income- Due dates of Filing Return of Income- Overview of Revised Return and Belated Return- Signing of Return and Self- Assessment- Tax Return Preparer. Note: Any change in the provisions of Income Tax Act, 1961 as per budget or otherwise, shall be respectively made applicable to the syllabus. The syllabus of an academic year shall be the provisions of the relevant Assessment Year.",
+            "topics": [
+              "I INCOME UNDER THE HEAD CAPITAL GAIN 14",
+              "Chargeability- Types of Capital Assets- Transfer – Transactions not regarded as",
+              "Transfer- Rates of Capital Gain Tax- Computation of Capital Gain in various",
+              "situations- Exemptions available from Capital Gain.",
+              "II INCOME FROM OTHER SOURCES, SET-OFF CARRY FORWARD AND CLUBBING OF 10",
+              "INCOME",
+              "Chargeability- Incomes covered under other sources- Taxability of Gifts",
+              "Taxability of Dividend- Principal of Grossing Up-Deductions available under the",
+              "head Income From Other Sources- Computation of Income",
+              "from other sources.",
+              "III DEDUCTIONS AVAILABLE FROM GROSS TOTAL INCOME AND COMPUTATION OF 10",
+              "TOTAL INCOME AND TAX LIABILITY",
+              "Basics of Deductions- Difference between deductions and exemptions",
+              "Page 1 of 2",
+              "Deductions available u/s 80C to 80U – Computation of Total Income and Tax",
+              "Liability of Individual and HUF",
+              "IV TAX DEDUCTION AT SOURCE AND ADVANCE TAX 8",
+              "Basics of TDS- Working knowledge of TDS provisions as applicable while making",
+              "payment to Resident – Returns of TDS- Due date for payment of TDS - Persons",
+              "liable to pay Advance Tax- Due dates of various installments of advance tax",
+              "Computation of Advance Tax Installments.",
+              "V FILING OF RETURN OF INCOME 6",
+              "Persons required to file return of income- Due dates of Filing Return of",
+              "Income- Overview of Revised Return and Belated Return- Signing of Return",
+              "and Self- Assessment- Tax Return Preparer.",
+              "Note: Any change in the provisions of Income Tax Act, 1961 as per budget or otherwise, shall be",
+              "respectively made applicable to the syllabus. The syllabus of an academic year shall be the provisions",
+              "of the relevant Assessment Year."
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5134,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "PROGRAM              Bachelors Of Commerce /Bachelors Of\n                                Commerce (Hons)\n\n             SEMESTER              IV\n\n             COURSE TITLE           Taxation – II\n\n             COURSE CODE         04BC0408\n\n             COURSE CREDITS       04\n\n             COURSE DURATION     48 Hrs (48 sessions of 60 minutes each)\n\n\n   COURSE OUTCOMES:\n         Understand the provisions of the Act for Computation of income under the head\n          Capital Gains\n          Analyse various provisions of the Act concerning computation of income under the\n         head Income From Other Sources\n          Calculate deductions available to Individuals and HUFs from Gross Total Income and Total\n          Income and Tax Liability\n         Understand applicability of TDS and Advance tax\n         Understand and Evaluate various provisions relating to Filing of Return of Income\n\n\n\n                                Teaching and Examination Scheme\n                                          Internal Marks\n   Teaching Scheme (Hours)                               End-Semester Examination (50%)\n                                        (50%)                                                   Total\n                                  Credits\n                                                                         Term Work    Marks\nTheory   Tutorial    Practical                 IA       CSE      Theory   Practical/Viva\n                                                                              (TW)\n  3       1         0         4       30       20        50          0            0        100\n\n    Course Contents:\n\nUnit No                                  Unit / Sub Unit                                  Sessions\n        I     INCOME UNDER THE HEAD CAPITAL GAIN                                    14\n            Chargeability- Types of Capital Assets- Transfer – Transactions not regarded as\n            Transfer- Rates of Capital Gain Tax- Computation of Capital Gain in various\n             situations- Exemptions available from Capital Gain.\n\n       II    INCOME FROM OTHER SOURCES, SET-OFF CARRY FORWARD AND CLUBBING OF      10\n        INCOME\n            Chargeability- Incomes  covered under  other  sources-  Taxability  of  Gifts-\n             Taxability of Dividend- Principal of Grossing Up-Deductions available under the\n          head Income From Other Sources- Computation of Income\n          from other sources.\n\n       III    DEDUCTIONS AVAILABLE FROM GROSS TOTAL INCOME AND COMPUTATION OF      10\n         TOTAL INCOME AND TAX LIABILITY\n            Basics of Deductions- Difference between deductions and exemptions-\n\n         Page 1 of 2"
+        },
+        {
+          "page": 2,
+          "text": "Deductions available u/s 80C to 80U – Computation of Total Income and Tax\n         Liability of Individual and HUF\n\nIV    TAX DEDUCTION AT SOURCE AND ADVANCE TAX                               8\n        Basics of TDS- Working knowledge of TDS provisions as applicable while making\n      payment to Resident – Returns of TDS- Due date for payment of TDS - Persons\n         liable to pay Advance Tax- Due dates of various installments of advance tax-\n       Computation of Advance Tax Installments.\n\nV      FILING OF RETURN OF INCOME                                              6\n       Persons required to file return of income- Due dates of Filing Return of\n       Income- Overview of Revised Return and Belated Return- Signing of Return\n      and Self- Assessment- Tax Return Preparer.\n\n\n\nNote: Any change in the provisions of Income Tax Act, 1961 as per budget or otherwise, shall be\nrespectively made applicable to the syllabus. The syllabus of an academic year shall be the provisions\nof the relevant Assessment Year.\n\n\n\nSUGGESTED READINGS\n\nText Books:\n\nSr.No   Author/s        Name of  the  Book   Publisher                    Edition   &\n                                                                            Year of\n                                                                                   Publication\nT-01     T. N. Manoharan    Income Tax Law       Snow White Publications     Latest\n\nT-02     Dr.    Vinod    K  Income Tax Law and  Taxman                      Latest\n         Singhania            Practice\nT-03     Dr.Girish Ahuja      Systematic  Approach  Bharat Prakashan             Latest\n                              to Income Tax\n\n\n\nReference Books:\nSr. No    Author/s            Name of the Book  Publisher           Edition and Year\n                                                                               of\n                                                                               Publication\nR-01      Gaur, V. P. & Narang, B.  Income tax Law and  Kalyani Publishers,  Latest\n            K.                         practice         New Delhi\nR-02      Prasad, B.              Income tax Law and  New        Age  Latest\n                                       practice              Publications\nR-03       B.B. Lal and N. Vashisht    Direct tax                I.K.   International  Latest\n                                                            Publishing House\n\n\n\n\n\n      Page 2 of 2"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "65a592e5b86fd2a754d926bb18cba33e56d473583e66ac29c67a17f3716c2072",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "22004193000601",
+      "subject_name": "VOICE",
+      "course_id": "b-com",
+      "course_name": "B.Com",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SEM-IV-6.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/VOICE [47ef65890ddb].pdf",
+      "expected_pdf_sha256": "ad0f0d7e1dba7768a14d32b18b1af54c9c11b835b6a49b2b17e7a31658224671",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04SC0006"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_MATCHED_A_VARIANT_REVIEW_THIS_COURSE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 10,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 16,
+    "extraction_errors": 0
+  }
+}

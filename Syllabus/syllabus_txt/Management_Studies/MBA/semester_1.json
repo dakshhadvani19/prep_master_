@@ -1,0 +1,1037 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "mba",
+    "course_name": "MBA",
+    "output_slug": "MBA"
+  },
+  "semester": 1,
+  "subject_count": 8,
+  "subjects": [
+    {
+      "subject_id": "28004132110101",
+      "subject_name": "Accounting for Managers",
+      "course_id": "mba",
+      "course_name": "MBA",
+      "semester": 1,
+      "subject_code": "04MB1101",
+      "course_code_evidence": [
+        "04MB0147",
+        "04MB1101",
+        "04MB1106",
+        "04MB1111"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/01/AFM-04MB1101.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/01/AFM-04MB1101.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Accounting for Managers [fa13e4759437].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Accounting for Managers [fa13e4759437].pdf",
+      "expected_pdf_sha256": "10586a12486a527c58921f46184282f01666bb2e364f37322b3603698bfc8e71",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ACCOUNTING FOR MANAGERS",
+        "course_code": "04MB1101",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "Basic terms like assets, liabilities, income, and expenses & Understanding the difference between cash and accrual accounting."
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Explain core concepts of financial accounting and outline the steps involved in the preparation of financial statements.",
+        "Apply theoretical knowledge and practical skills to the preparation and presentation of financial accounting statements.",
+        "Utilize various tools and techniques for the analysis and interpretation of financial statements.",
+        "Assess contemporary developments in accounting and their relevance to managerial functions and decision-making.",
+        "Implement financial accounting principles in business scenarios to support effective financial planning and control. Pre-requisite of course:Basic terms like assets, liabilities, income, and expenses & Understanding the difference between cash and accrual accounting."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Financial Accounting –I:",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Introduction to Financial Accounting –I: Meaning, Definition,",
+              "Accounting Principles: Concepts and Conventions, Classification of",
+              "Accounts, Double Entry Book, Keeping rules; Accounting cycle,",
+              "Overview of Accounting Standards, IFRS & Indian Standards:",
+              "Meaning, Applicability, Difference between AS, IFRS & IND AS"
+            ],
+            "topics_text": "Introduction to Financial Accounting –I: Meaning, Definition, Accounting Principles: Concepts and Conventions, Classification of Accounts, Double Entry Book, Keeping rules; Accounting cycle, Overview of Accounting Standards, IFRS & Indian Standards: Meaning, Applicability, Difference between AS, IFRS & IND AS",
+            "topics": [
+              "Introduction to Financial Accounting –I: Meaning, Definition,",
+              "Accounting Principles: Concepts and Conventions, Classification of",
+              "Accounts, Double Entry Book, Keeping rules",
+              "Accounting cycle,",
+              "Overview of Accounting Standards, IFRS & Indian Standards:",
+              "Meaning, Applicability, Difference between AS, IFRS & IND AS"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Introduction to Financial Accounting –II",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Journal Entries, Ledger posting and preparation of trial balance"
+            ],
+            "topics_text": "Journal Entries, Ledger posting and preparation of trial balance",
+            "topics": [
+              "Journal Entries, Ledger posting and preparation of trial balance"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Understanding & Preparation Corporate Financial Statements",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Corporate Profit & Loss Account,, Corporate Balance Sheet (Only",
+              "Vertical Balance Sheet), Basic Examples of Corporate Balance",
+              "Sheet"
+            ],
+            "topics_text": "Corporate Profit & Loss Account,, Corporate Balance Sheet (Only Vertical Balance Sheet), Basic Examples of Corporate Balance Sheet",
+            "topics": [
+              "Corporate Profit & Loss Account,, Corporate Balance Sheet (Only",
+              "Vertical Balance Sheet), Basic Examples of Corporate Balance",
+              "Sheet"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Preparation of Financial statements",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Income Statement and Balance Sheet (with adjustments), Cash Flow",
+              "statement, Cash from Operating, investing & financial statements,",
+              "Preparation of Cash Flow Statement as per AS-3, Uses and",
+              "Limitations, Depreciation Methods: Overview of Depreciation as",
+              "per Straight Line Method and Written Down Value Method."
+            ],
+            "topics_text": "Income Statement and Balance Sheet (with adjustments), Cash Flow statement, Cash from Operating, investing & financial statements, Preparation of Cash Flow Statement as per AS-3, Uses and Limitations, Depreciation Methods: Overview of Depreciation as per Straight Line Method and Written Down Value Method.",
+            "topics": [
+              "Income Statement and Balance Sheet (with adjustments), Cash Flow",
+              "statement, Cash from Operating, investing & financial statements,",
+              "Preparation of Cash Flow Statement as per AS-3, Uses and",
+              "Limitations, Depreciation Methods: Overview of Depreciation as",
+              "per Straight Line Method and Written Down Value Method."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Financial Statement Analysis",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Financial Statement Analysis: Meaning, Definition and Purpose,",
+              "Understanding of Financial Statements and their Components,",
+              "Tools, Common Size, Comparative and Trend Analysis, Cross",
+              "Section and Inter Firm Analysis, Ratio Analysis: Meaning, purpose",
+              "and classification, A Case study on Financial Statement Analysis of",
+              "Select Company.",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Accounting for Management: Text and Cases,, , S K Bhattacharyya, John Dearden& S",
+              "Venkatesh, Vikas Publishing House, 2021"
+            ],
+            "topics_text": "Financial Statement Analysis: Meaning, Definition and Purpose, Understanding of Financial Statements and their Components, Tools, Common Size, Comparative and Trend Analysis, Cross Section and Inter Firm Analysis, Ratio Analysis: Meaning, purpose and classification, A Case study on Financial Statement Analysis of Select Company. Total Hours 45 Textbook : 1 Accounting for Management: Text and Cases,, , S K Bhattacharyya, John Dearden& S Venkatesh, Vikas Publishing House, 2021",
+            "topics": [
+              "Financial Statement Analysis: Meaning, Definition and Purpose,",
+              "Understanding of Financial Statements and their Components,",
+              "Tools, Common Size, Comparative and Trend Analysis, Cross",
+              "Section and Inter Firm Analysis, Ratio Analysis: Meaning, purpose",
+              "and classification, A Case study on Financial Statement Analysis of",
+              "Select Company.",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Accounting for Management: Text and Cases,, , S K Bhattacharyya, John Dearden& S",
+              "Venkatesh, Vikas Publishing House, 2021"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Introduction to Management Accounting, Introduction to Management Accounting, Horngreen and Sundlem, Pearson, 2019",
+          "Financial Accounting for Management, Financial Accounting for Management, Paresh Shah, Oxford University, 2019"
+        ],
+        "textbooks": [
+          "Accounting for Management: Text and Cases,, , S K Bhattacharyya, John Dearden& S Venkatesh, Vikas Publishing House, 2021"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.accounting.com/resources/basic-accounting-terms/",
+          "https://corporatefinanceinstitute.com/resources/knowledge/finance/financial-ratios/",
+          "https://www.icsi.edu/studymaterialnewsyllabusfnd2017/"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 5182,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    ACCOUNTING FOR MANAGERS\nCOURSE CODE     04MB1101\nCOURSE CREDITS  3\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Explain core concepts of financial accounting and outline the steps involved in the\n     preparation of financial statements.\n 2  Apply theoretical knowledge and practical skills to the preparation and presentation of\n     financial accounting statements.\n 3  Utilize various tools and techniques for the analysis and interpretation of financial\n     statements.\n 4  Assess contemporary developments in accounting and their relevance to managerial\n     functions and decision-making.\n 5  Implement financial accounting principles in business scenarios to support effective\n     financial planning and control.\n\n\nPre-requisite of course:Basic terms like assets, liabilities, income, and expenses &\nUnderstanding the difference between cash and accrual accounting.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Financial Accounting –I:                     9\n               Introduction to Financial Accounting –I: Meaning, Definition,\n             Accounting Principles: Concepts and Conventions, Classification of\n             Accounts, Double Entry Book, Keeping rules; Accounting cycle,\n            Overview of Accounting Standards, IFRS & Indian Standards:\n             Meaning, Applicability, Difference between AS, IFRS & IND AS\n     2      Introduction to Financial Accounting –II                     8\n              Journal Entries, Ledger posting and preparation of trial balance\n     3      Understanding & Preparation Corporate Financial Statements  8\n             Corporate Profit & Loss Account,, Corporate Balance Sheet (Only\n               Vertical Balance Sheet), Basic Examples of Corporate Balance\n             Sheet\n\n\n\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Preparation of Financial statements                         10\n            Income Statement and Balance Sheet (with adjustments), Cash Flow\n               statement, Cash from Operating, investing & financial statements,\n              Preparation of Cash Flow Statement as per AS-3, Uses and\n               Limitations, Depreciation Methods: Overview of Depreciation as\n              per Straight Line Method and Written Down Value Method.\n     5       Financial Statement Analysis                               10\n              Financial Statement Analysis: Meaning, Definition and Purpose,\n             Understanding of Financial Statements and their Components,\n              Tools, Common Size, Comparative and Trend Analysis, Cross\n              Section and Inter Firm Analysis, Ratio Analysis: Meaning, purpose\n            and classification, A Case study on Financial Statement Analysis of\n               Select Company.\n                               Total Hours                       45\n\n\nTextbook :\n 1  Accounting for Management: Text and Cases,, , S K Bhattacharyya, John Dearden& S\n     Venkatesh, Vikas Publishing House, 2021\n\nReferences:\n 1  Introduction to Management Accounting, Introduction to Management Accounting,\n    Horngreen and Sundlem, Pearson, 2019\n 2  Financial Accounting for Management, Financial Accounting for Management, Paresh\n    Shah, Oxford University, 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         20.00         20.00         20.00         20.00         10.00\n\nInstructional Method:\n 1  Theory Hands-on Practice Sessions Assignments and Quizzes\n\nSupplementary Resources:\n 1  https://www.accounting.com/resources/basic-accounting-terms/\n 2  https://corporatefinanceinstitute.com/resources/knowledge/finance/financial-ratios/\n 3  https://www.icsi.edu/studymaterialnewsyllabusfnd2017/\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "10586a12486a527c58921f46184282f01666bb2e364f37322b3603698bfc8e71",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "28004132210901",
+      "subject_name": "Advanced Excel",
+      "course_id": "mba",
+      "course_name": "MBA",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04MB0150",
+        "04MB1201",
+        "04MB1202",
+        "04MB2109",
+        "04MB2203"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/AE.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ADVANCED EXCEL [36339994016a].pdf",
+      "expected_pdf_sha256": "11589d20a477e5830713022585b5ee58302729ee233d7242462fab4138d01dc2",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BH0202"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "28004132014901",
+      "subject_name": "Artificial Intelligence for Managers",
+      "course_id": "mba",
+      "course_name": "MBA",
+      "semester": 1,
+      "subject_code": "04MB0149",
+      "course_code_evidence": [
+        "04MB0149",
+        "04MB0150",
+        "04MB1201",
+        "04MB1202",
+        "04MB2109"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/01/AIFM-04MB0149.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/01/AIFM-04MB0149.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Artificial Intelligence for Managers [bd8f4f57299b].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Artificial Intelligence for Managers [bd8f4f57299b].pdf",
+      "expected_pdf_sha256": "3704762c73190148b070e3cf7f471a91c9960faba73387f747c67f1674f7df3d",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ARTIFICIAL INTELLIGENCE FOR MANAGERS",
+        "course_code": "04MB0149",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "Basic understanding of business processes and fundamental knowledge of data analysis or statistics."
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Explain core concepts of artificial intelligence and identify its strategic applications in various business domains.",
+        "Analyse the impact of AI technologies such as machine learning, natural language processing, and robotics on managerial decision-making.",
+        "Apply AI tools and techniques to enhance efficiency and innovation in functions like marketing, finance, human resources, and operations.",
+        "Evaluate AI-enabled business models, including potential risks, ethical implications, and regulatory concerns.",
+        "Formulate strategic plans for integrating AI into business processes to drive digital transformation and sustainable competitive advantage. Pre-requisite of course:Basic understanding of business processes and fundamental knowledge of data analysis or statistics."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to AI in Business:",
+            "contact_hours": 10,
+            "topic_lines": [
+              "History and evolution of AI, AI vs. Automation, Applications of AI",
+              "in business functions (Marketing, Finance, HR, Operations), AI-",
+              "powered business models, Case Studies: Netflix, Amazon, Google,",
+              "Tesla"
+            ],
+            "topics_text": "History and evolution of AI, AI vs. Automation, Applications of AI in business functions (Marketing, Finance, HR, Operations), AI- powered business models, Case Studies: Netflix, Amazon, Google, Tesla",
+            "topics": [
+              "History and evolution of AI, AI vs. Automation, Applications of AI",
+              "in business functions (Marketing, Finance, HR, Operations), AI",
+              "powered business models, Case Studies: Netflix, Amazon, Google,",
+              "Tesla"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "AI Technologies for Business",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Machine Learning (Supervised, Unsupervised, Reinforcement",
+              "Learning),, Natural Language Processing (Chatbots, Sentiment",
+              "Analysis, Voice Assistants), Computer Vision (Image Recognition,",
+              "Facial Recognition in Marketing), Robotics and Automation in",
+              "Business, AI and Big Data Analytics for Decision Making"
+            ],
+            "topics_text": "Machine Learning (Supervised, Unsupervised, Reinforcement Learning),, Natural Language Processing (Chatbots, Sentiment Analysis, Voice Assistants), Computer Vision (Image Recognition, Facial Recognition in Marketing), Robotics and Automation in Business, AI and Big Data Analytics for Decision Making",
+            "topics": [
+              "Machine Learning (Supervised, Unsupervised, Reinforcement",
+              "Learning),, Natural Language Processing (Chatbots, Sentiment",
+              "Analysis, Voice Assistants), Computer Vision (Image Recognition,",
+              "Facial Recognition in Marketing), Robotics and Automation in",
+              "Business, AI and Big Data Analytics for Decision Making"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "AI Strategy, Ethics, and Future Trends",
+            "contact_hours": 10,
+            "topic_lines": [
+              "AI-driven Decision Making & Predictive Analytics, AI in Customer",
+              "Relationship Management (CRM),, AI in Finance: Fraud Detection",
+              "& Algorithmic Trading, Ethical Considerations: Bias, Privacy,",
+              "Security, and Regulations, Future Trends: Generative AI, AI in",
+              "Leadership, Sustainable AI, Case Studies: AI failures and lessons",
+              "for business leaders",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Artificial Intelligence in Business Management, Teik Toe?Teoh & Yu Jin?Goh, Springer,",
+              "2023",
+              "2 Artificial Intelligence for Business: A Roadmap for Getting Started with AI, Rajendra?",
+              "Akerkar, Springer Nature (SpringerBriefs in Business), 2018"
+            ],
+            "topics_text": "AI-driven Decision Making & Predictive Analytics, AI in Customer Relationship Management (CRM),, AI in Finance: Fraud Detection & Algorithmic Trading, Ethical Considerations: Bias, Privacy, Security, and Regulations, Future Trends: Generative AI, AI in Leadership, Sustainable AI, Case Studies: AI failures and lessons for business leaders Total Hours 30 Textbook : 1 Artificial Intelligence in Business Management, Teik Toe?Teoh & Yu Jin?Goh, Springer, 2023 2 Artificial Intelligence for Business: A Roadmap for Getting Started with AI, Rajendra? Akerkar, Springer Nature (SpringerBriefs in Business), 2018",
+            "topics": [
+              "AI-driven Decision Making & Predictive Analytics, AI in Customer",
+              "Relationship Management (CRM),, AI in Finance: Fraud Detection",
+              "& Algorithmic Trading, Ethical Considerations: Bias, Privacy,",
+              "Security, and Regulations, Future Trends: Generative AI, AI in",
+              "Leadership, Sustainable AI, Case Studies: AI failures and lessons",
+              "for business leaders",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Artificial Intelligence in Business Management, Teik Toe?Teoh & Yu Jin?Goh, Springer,",
+              "2023",
+              "2 Artificial Intelligence for Business: A Roadmap for Getting Started with AI, Rajendra?",
+              "Akerkar, Springer Nature (SpringerBriefs in Business), 2018"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "AI for Managers, AI for Managers, Maria?Parysz, Packt Publishing, 2024"
+        ],
+        "textbooks": [
+          "Artificial Intelligence in Business Management, Teik Toe?Teoh & Yu Jin?Goh, Springer, 2023",
+          "Artificial Intelligence for Business: A Roadmap for Getting Started with AI, Rajendra? Akerkar, Springer Nature (SpringerBriefs in Business), 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4475,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    ARTIFICIAL INTELLIGENCE FOR MANAGERS\nCOURSE CODE     04MB0149\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Explain core concepts of artificial intelligence and identify its strategic applications in\n     various business domains.\n 2  Analyse the impact of AI technologies such as machine learning, natural language\n     processing, and robotics on managerial decision-making.\n 3  Apply AI tools and techniques to enhance efficiency and innovation in functions like\n     marketing, finance, human resources, and operations.\n 4  Evaluate AI-enabled business models, including potential risks, ethical implications, and\n     regulatory concerns.\n 5  Formulate strategic plans for integrating AI into business processes to drive digital\n     transformation and sustainable competitive advantage.\n\n\nPre-requisite of course:Basic understanding of business processes and fundamental knowledge\nof data analysis or statistics.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to AI in Business:                             10\n              History and evolution of AI, AI vs. Automation, Applications of AI\n               in business functions (Marketing, Finance, HR, Operations), AI-\n            powered business models, Case Studies: Netflix, Amazon, Google,\n              Tesla\n     2     AI Technologies for Business                               10\n            Machine Learning (Supervised, Unsupervised, Reinforcement\n               Learning),, Natural Language Processing (Chatbots, Sentiment\n              Analysis, Voice Assistants), Computer Vision (Image Recognition,\n               Facial Recognition in Marketing), Robotics and Automation in\n              Business, AI and Big Data Analytics for Decision Making\n\n\n\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3     AI Strategy, Ethics, and Future Trends                      10\n              AI-driven Decision Making & Predictive Analytics, AI in Customer\n              Relationship Management (CRM),, AI in Finance: Fraud Detection\n        & Algorithmic Trading, Ethical Considerations: Bias, Privacy,\n               Security, and Regulations, Future Trends: Generative AI, AI in\n              Leadership, Sustainable AI, Case Studies: AI failures and lessons\n               for business leaders\n                               Total Hours                       30\n\n\nTextbook :\n 1   Artificial Intelligence in Business Management, Teik Toe?Teoh & Yu Jin?Goh, Springer,\n    2023\n 2   Artificial Intelligence for Business: A Roadmap for Getting Started with AI, Rajendra?\n     Akerkar, Springer Nature (SpringerBriefs in Business), 2018\n\nReferences:\n 1  AI for Managers, AI for Managers, Maria?Parysz, Packt Publishing, 2024\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           5.00          25.00         25.00         25.00         20.00\n\nInstructional Method:\n 1  Lectures, real-world case studies, hands-on tool demonstrations, and group projects.\n\n\n\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "3704762c73190148b070e3cf7f471a91c9960faba73387f747c67f1674f7df3d",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "28004132014701",
+      "subject_name": "Behaviour",
+      "course_id": "mba",
+      "course_name": "MBA",
+      "semester": 1,
+      "subject_code": "04MB0147",
+      "course_code_evidence": [
+        "04MB0147",
+        "04MB0148",
+        "04MB0149",
+        "04MB0150",
+        "04MB2109"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/01/MPOB-04MB0147.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/01/MPOB-04MB0147.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Behaviour [bf78d7a8e015].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Behaviour [bf78d7a8e015].pdf",
+      "expected_pdf_sha256": "42f99d8f2167f8d62eaa96fb1907bbc1ce5a511dbd3b7bb249ba86bb55706f15",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MANAGEMENT PRACTICES AND ORGANISATIONAL",
+        "course_code": "04MB0147",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "Basic understanding of business functions and human behavior in workplace settings."
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Analyze the evolution and relevance of various management theories in contemporary organizations",
+        "Evaluate individual and group behaviors and their influence on organizational effectiveness",
+        "Design organizational structures and cultures that foster innovation and adaptability.",
+        "Apply leadership and decision-making models to real-world business scenarios.",
+        "Assess the impact of globalization, diversity, and ethical considerations on organizational practices. Pre-requisite of course:Basic understanding of business functions and human behavior in workplace settings."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Foundations of Management Practices",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Evolution of Management Thought: Classical, Behavioral,",
+              "Quantitative, Contemporary, Management Functions: Planning,",
+              "Organizing, Leading, Controlling, Global, Asian, and Indian",
+              "perspectives in management styles, Core competencies of managers",
+              "in a globalized business environment"
+            ],
+            "topics_text": "Evolution of Management Thought: Classical, Behavioral, Quantitative, Contemporary, Management Functions: Planning, Organizing, Leading, Controlling, Global, Asian, and Indian perspectives in management styles, Core competencies of managers in a globalized business environment",
+            "topics": [
+              "Evolution of Management Thought: Classical, Behavioral,",
+              "Quantitative, Contemporary, Management Functions: Planning,",
+              "Organizing, Leading, Controlling, Global, Asian, and Indian",
+              "perspectives in management styles, Core competencies of managers",
+              "in a globalized business environment"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Managerial Functions and Processes",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Planning: Types, Process, MBO, Organizing: Structures, Authority",
+              "& Responsibility, Reengineering, Staffing: Recruitment and",
+              "Selection, Directing and Controlling: Tools and Techniques,",
+              "Decision-Making: Styles, Process, and Application in VUCA",
+              "environments"
+            ],
+            "topics_text": "Planning: Types, Process, MBO, Organizing: Structures, Authority & Responsibility, Reengineering, Staffing: Recruitment and Selection, Directing and Controlling: Tools and Techniques, Decision-Making: Styles, Process, and Application in VUCA environments",
+            "topics": [
+              "Planning: Types, Process, MBO, Organizing: Structures, Authority",
+              "& Responsibility, Reengineering, Staffing: Recruitment and",
+              "Selection, Directing and Controlling: Tools and Techniques,",
+              "Decision-Making: Styles, Process, and Application in VUCA",
+              "environments"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Understanding Individual Behaviour in Organizations",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Introduction to OB: Nature, Scope, Models (Autocratic to System",
+              "Model), Personality, Attitudes, Perception, Attribution, Values and",
+              "Emotional Intelligence, Johari Window and Transactional Analysis,",
+              "Motivation: Content and Process Theories (Maslow, Herzberg,",
+              "Vroom, Equity)"
+            ],
+            "topics_text": "Introduction to OB: Nature, Scope, Models (Autocratic to System Model), Personality, Attitudes, Perception, Attribution, Values and Emotional Intelligence, Johari Window and Transactional Analysis, Motivation: Content and Process Theories (Maslow, Herzberg, Vroom, Equity)",
+            "topics": [
+              "Introduction to OB: Nature, Scope, Models (Autocratic to System",
+              "Model), Personality, Attitudes, Perception, Attribution, Values and",
+              "Emotional Intelligence, Johari Window and Transactional Analysis,",
+              "Motivation: Content and Process Theories (Maslow, Herzberg,",
+              "Vroom, Equity)"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Group Behaviour and Leadership",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Groups: Formal vs Informal, Stages of Group Development, Team",
+              "Building: Types of Teams, Creating Effective Team Players,",
+              "Leadership: Trait, Behavioral, Contingency, Transformational, and",
+              "Transactional Leadership, Conflict: Types, Sources, and Negotiation",
+              "Process"
+            ],
+            "topics_text": "Groups: Formal vs Informal, Stages of Group Development, Team Building: Types of Teams, Creating Effective Team Players, Leadership: Trait, Behavioral, Contingency, Transformational, and Transactional Leadership, Conflict: Types, Sources, and Negotiation Process",
+            "topics": [
+              "Groups: Formal vs Informal, Stages of Group Development, Team",
+              "Building: Types of Teams, Creating Effective Team Players,",
+              "Leadership: Trait, Behavioral, Contingency, Transformational, and",
+              "Transactional Leadership, Conflict: Types, Sources, and Negotiation",
+              "Process"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Organizational Dynamics and Contemporary Issues",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Organizational Change: Resistance and Strategies for Managing",
+              "Change,, Organizational Culture: Elements, Creation, and",
+              "Maintenance, Workplace Diversity: Types, Challenges, and",
+              "Initiatives (India, Asia, Global), thics and CSR in Organizational",
+              "Settings",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Management,, Stephen P. Robbins & Mary Coulter, Pearson Education, 2023",
+              "2 Organizational Behavior, Stephen P. Robbins, Timothy A. Judge, & Neharika Vohra,",
+              "Pearson Education, 2023"
+            ],
+            "topics_text": "Organizational Change: Resistance and Strategies for Managing Change,, Organizational Culture: Elements, Creation, and Maintenance, Workplace Diversity: Types, Challenges, and Initiatives (India, Asia, Global), thics and CSR in Organizational Settings Total Hours 45 Textbook : 1 Management,, Stephen P. Robbins & Mary Coulter, Pearson Education, 2023 2 Organizational Behavior, Stephen P. Robbins, Timothy A. Judge, & Neharika Vohra, Pearson Education, 2023",
+            "topics": [
+              "Organizational Change: Resistance and Strategies for Managing",
+              "Change,, Organizational Culture: Elements, Creation, and",
+              "Maintenance, Workplace Diversity: Types, Challenges, and",
+              "Initiatives (India, Asia, Global), thics and CSR in Organizational",
+              "Settings",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Management,, Stephen P. Robbins & Mary Coulter, Pearson Education, 2023",
+              "2 Organizational Behavior, Stephen P. Robbins, Timothy A. Judge, & Neharika Vohra,",
+              "Pearson Education, 2023"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Essentials of Management: An International, Innovation and Leadership Perspective, Essentials of Management: An International, Innovation and Leadership Perspective, Harold Koontz & Heinz Weihrich, McGraw Hill, ISBN: 9789339205180, 2020",
+          "Organizational Behaviour, Organizational Behaviour, Fred Luthans, McGraw Hill Education, 2021",
+          "Introduction to Organisational Behaviour, Introduction to Organisational Behaviour, Michael Butler,, Macmillan International, 2018"
+        ],
+        "textbooks": [
+          "Management,, Stephen P. Robbins & Mary Coulter, Pearson Education, 2023",
+          "Organizational Behavior, Stephen P. Robbins, Timothy A. Judge, & Neharika Vohra, Pearson Education, 2023"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5392,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   MANAGEMENT PRACTICES AND ORGANISATIONAL\n               BEHAVIOUR\nCOURSE CODE     04MB0147\nCOURSE CREDITS  3\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Analyze the evolution and relevance of various management theories in contemporary\n     organizations\n 2  Evaluate individual and group behaviors and their influence on organizational effectiveness\n 3  Design organizational structures and cultures that foster innovation and adaptability.\n 4  Apply leadership and decision-making models to real-world business scenarios.\n 5  Assess the impact of globalization, diversity, and ethical considerations on organizational\n     practices.\n\n\nPre-requisite of course:Basic understanding of business functions and human behavior in\nworkplace settings.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Foundations of Management Practices                       9\n              Evolution of Management Thought: Classical, Behavioral,\n               Quantitative, Contemporary, Management Functions: Planning,\n              Organizing, Leading, Controlling, Global, Asian, and Indian\n               perspectives in management styles, Core competencies of managers\n               in a globalized business environment\n     2      Managerial Functions and Processes                        9\n              Planning: Types, Process, MBO, Organizing: Structures, Authority\n        & Responsibility, Reengineering, Staffing: Recruitment and\n               Selection, Directing and Controlling: Tools and Techniques,\n             Decision-Making: Styles, Process, and Application in VUCA\n             environments\n     3      Understanding Individual Behaviour in Organizations         9\n               Introduction to OB: Nature, Scope, Models (Autocratic to System\n             Model), Personality, Attitudes, Perception, Attribution, Values and\n             Emotional Intelligence, Johari Window and Transactional Analysis,\n              Motivation: Content and Process Theories (Maslow, Herzberg,\n            Vroom, Equity)\n\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4     Group Behaviour and Leadership                           9\n             Groups: Formal vs Informal, Stages of Group Development, Team\n              Building: Types of Teams, Creating Effective Team Players,\n              Leadership: Trait, Behavioral, Contingency, Transformational, and\n              Transactional Leadership, Conflict: Types, Sources, and Negotiation\n              Process\n     5      Organizational Dynamics and Contemporary Issues           9\n              Organizational Change: Resistance and Strategies for Managing\n             Change,, Organizational Culture: Elements, Creation, and\n             Maintenance, Workplace Diversity: Types, Challenges, and\n                Initiatives (India, Asia, Global), thics and CSR in Organizational\n               Settings\n                               Total Hours                       45\n\n\nTextbook :\n 1  Management,, Stephen P. Robbins & Mary Coulter, Pearson Education, 2023\n 2  Organizational Behavior, Stephen P. Robbins, Timothy A. Judge, & Neharika Vohra,\n    Pearson Education, 2023\n\nReferences:\n 1  Essentials of Management: An International, Innovation and Leadership Perspective,\n     Essentials of Management: An International, Innovation and Leadership Perspective,\n    Harold Koontz & Heinz Weihrich, McGraw Hill, ISBN: 9789339205180, 2020\n 2  Organizational Behaviour, Organizational Behaviour, Fred Luthans, McGraw Hill\n     Education, 2021\n 3  Introduction to Organisational Behaviour, Introduction to Organisational Behaviour,\n    Michael Butler,, Macmillan International, 2018\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         20.00         20.00         20.00         20.00\n\nInstructional Method:\n 1  Interactive lectures, case studies, group discussions, and experiential learning activities.\n\n\n\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "42f99d8f2167f8d62eaa96fb1907bbc1ce5a511dbd3b7bb249ba86bb55706f15",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "28004132110601",
+      "subject_name": "Business Communication",
+      "course_id": "mba",
+      "course_name": "MBA",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04MB0147",
+        "04MB0148",
+        "04MB0149",
+        "04MB1106"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/BC-04BB0209.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS COMMUNICATION [45b0343ca03b].pdf",
+      "expected_pdf_sha256": "8bec1bd5c7897d4efdb5e2f8b8e201aae5c4f6a48979fd3ee8cc621a437200e8",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0209"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "28004132014801",
+      "subject_name": "Business Statistics",
+      "course_id": "mba",
+      "course_name": "MBA",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04MB0148",
+        "04MB0149",
+        "04MB0150",
+        "04MB1201",
+        "04MB2109"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CC-04BC1205-Business-Statistics-1.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Business Statistics [73622f56baef].pdf",
+      "expected_pdf_sha256": "d0688d6fca334e33ce1b131d9e8ac1a21f61931f2bc2b227cfb13d25e833b0c1",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BC1205"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "28004132111101",
+      "subject_name": "Economics for Decision Making",
+      "course_id": "mba",
+      "course_name": "MBA",
+      "semester": 1,
+      "subject_code": "04MB1111",
+      "course_code_evidence": [
+        "04MB0147",
+        "04MB0148",
+        "04MB1106",
+        "04MB1111"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/01/EFDM-04MB1111.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/01/EFDM-04MB1111.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Economics for Decision Making [2ddf445ae7a7].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Economics for Decision Making [2ddf445ae7a7].pdf",
+      "expected_pdf_sha256": "9aa8af7ffd1b0579e11b33940a0ee4835080f7977d561666d4df509751206912",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ECONOMICS FOR DECISION MAKING",
+        "course_code": "04MB1111",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "Awareness of basic terms like demand, supply, inflation, GDP, etc."
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Explain and apply fundamental economic principles to analyze real-world business and policy scenarios.",
+        "Compare various market structures and evaluate their implications for pricing strategies, output levels, and consumer welfare.",
+        "Interpret key macroeconomic indicators and assess their relevance in evaluating overall economic performance.",
+        "Analyze the impact of fiscal and monetary policies on economic activity, growth, and stability.",
+        "Critically evaluate contemporary economic challenges and formulate strategic recommendations for business managers and policymakers. Pre-requisite of course:Awareness of basic terms like demand, supply, inflation, GDP, etc."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Economics",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Definition and scope of economics, Microeconomics vs.",
+              "Macroeconomics, Basic Economic Concepts: Scarcity and choice,",
+              "Opportunity cost, Production possibilities frontier, Supply and",
+              "Demand: Market forces, Determinants of demand and supply,",
+              "Market equilibrium;, Elasticity: Price elasticity of demand, Income",
+              "elasticity and cross-price elasticity; Consumer and Producer",
+              "Surplus: Concepts and calculations, Efficiency and equity"
+            ],
+            "topics_text": "Definition and scope of economics, Microeconomics vs. Macroeconomics, Basic Economic Concepts: Scarcity and choice, Opportunity cost, Production possibilities frontier, Supply and Demand: Market forces, Determinants of demand and supply, Market equilibrium;, Elasticity: Price elasticity of demand, Income elasticity and cross-price elasticity; Consumer and Producer Surplus: Concepts and calculations, Efficiency and equity",
+            "topics": [
+              "Definition and scope of economics, Microeconomics vs.",
+              "Macroeconomics, Basic Economic Concepts: Scarcity and choice,",
+              "Opportunity cost, Production possibilities frontier, Supply and",
+              "Demand: Market forces, Determinants of demand and supply,",
+              "Market equilibrium",
+              ", Elasticity: Price elasticity of demand, Income",
+              "elasticity and cross-price elasticity",
+              "Consumer and Producer",
+              "Surplus: Concepts and calculations, Efficiency and equity"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Production and Market Structures",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Short-run, long run determinants of production, scale and scope",
+              "economies, Perfect Competition: Characteristics, Short-run and",
+              "long-run equilibrium, Monopoly, Sources of monopoly power, Price",
+              "discrimination; Monopolistic Competition and Oligopoly: Market",
+              "characteristics and behaviour: , Game theory basics; Labour market",
+              "and wage determination: efficiency wage theory, Monopsony and",
+              "Oligopsony; Market Failures: Externalities, Public goods,",
+              "Asymmetric information"
+            ],
+            "topics_text": "Short-run, long run determinants of production, scale and scope economies, Perfect Competition: Characteristics, Short-run and long-run equilibrium, Monopoly, Sources of monopoly power, Price discrimination; Monopolistic Competition and Oligopoly: Market characteristics and behaviour: , Game theory basics; Labour market and wage determination: efficiency wage theory, Monopsony and Oligopsony; Market Failures: Externalities, Public goods, Asymmetric information",
+            "topics": [
+              "Short-run, long run determinants of production, scale and scope",
+              "economies, Perfect Competition: Characteristics, Short-run and",
+              "long-run equilibrium, Monopoly, Sources of monopoly power, Price",
+              "discrimination",
+              "Monopolistic Competition and Oligopoly: Market",
+              "characteristics and behaviour: , Game theory basics",
+              "Labour market",
+              "and wage determination: efficiency wage theory, Monopsony and",
+              "Oligopsony",
+              "Market Failures: Externalities, Public goods,",
+              "Asymmetric information"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Macroeconomic Principles",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Introduction to Macroeconomics: Key concepts and indicators, GDP",
+              "and its components; Economic Growth:, Factors influencing growth,",
+              "Long-run growth theory; Business Cycles: Phases and",
+              "characteristics, Economic indicators; Unemployment and Inflation:",
+              "Types of unemployment, Measuring inflation (CPI and PPI); Fiscal",
+              "Policy: Government spending and taxation, Budget deficits and",
+              "public debt"
+            ],
+            "topics_text": "Introduction to Macroeconomics: Key concepts and indicators, GDP and its components; Economic Growth:, Factors influencing growth, Long-run growth theory; Business Cycles: Phases and characteristics, Economic indicators; Unemployment and Inflation: Types of unemployment, Measuring inflation (CPI and PPI); Fiscal Policy: Government spending and taxation, Budget deficits and public debt",
+            "topics": [
+              "Introduction to Macroeconomics: Key concepts and indicators, GDP",
+              "and its components",
+              "Economic Growth:, Factors influencing growth,",
+              "Long-run growth theory",
+              "Business Cycles: Phases and",
+              "characteristics, Economic indicators",
+              "Unemployment and Inflation:",
+              "Types of unemployment, Measuring inflation (CPI and PPI)",
+              "Fiscal",
+              "Policy: Government spending and taxation, Budget deficits and",
+              "public debt"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Monetary System and Policy",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Money and Banking: Functions of money, Types of financial",
+              "institutions; Tools of monetary policy, Monetary Policy: Objectives",
+              "and effectiveness, Interest rates and money supply; Inflation and",
+              "Monetary Policy: Causes of inflation,, Strategies for controlling",
+              "inflation; International Trade and Finance: Balance of payments,",
+              "Exchange rates and trade policies"
+            ],
+            "topics_text": "Money and Banking: Functions of money, Types of financial institutions; Tools of monetary policy, Monetary Policy: Objectives and effectiveness, Interest rates and money supply; Inflation and Monetary Policy: Causes of inflation,, Strategies for controlling inflation; International Trade and Finance: Balance of payments, Exchange rates and trade policies",
+            "topics": [
+              "Money and Banking: Functions of money, Types of financial",
+              "institutions",
+              "Tools of monetary policy, Monetary Policy: Objectives",
+              "and effectiveness, Interest rates and money supply",
+              "Inflation and",
+              "Monetary Policy: Causes of inflation,, Strategies for controlling",
+              "inflation",
+              "International Trade and Finance: Balance of payments,",
+              "Exchange rates and trade policies"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Contemporary Economic Issues",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Globalization and Trade: Benefits and challenges, Trade agreements",
+              "and tariffs, Economic Development: Measuring development,",
+              "Growth strategies in developing countries, Environmental",
+              "Economics, Economic impact of environmental policies,",
+              "Sustainability and resource management.",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Principle of Economics, N. Gregory Mankiw, Cengage Learning Custom Publishing, 2018",
+              "2 Microeconomics, Pindyck, Robert S., and Rubinfeld, Daniel L, Pearson, 8th Edition, ,",
+              "2017",
+              "3 Macroeconomics, Gordon, Robert J., Pearson, 14th Edition,, 2018"
+            ],
+            "topics_text": "Globalization and Trade: Benefits and challenges, Trade agreements and tariffs, Economic Development: Measuring development, Growth strategies in developing countries, Environmental Economics, Economic impact of environmental policies, Sustainability and resource management. Total Hours 45 Textbook : 1 Principle of Economics, N. Gregory Mankiw, Cengage Learning Custom Publishing, 2018 2 Microeconomics, Pindyck, Robert S., and Rubinfeld, Daniel L, Pearson, 8th Edition, , 2017 3 Macroeconomics, Gordon, Robert J., Pearson, 14th Edition,, 2018",
+            "topics": [
+              "Globalization and Trade: Benefits and challenges, Trade agreements",
+              "and tariffs, Economic Development: Measuring development,",
+              "Growth strategies in developing countries, Environmental",
+              "Economics, Economic impact of environmental policies,",
+              "Sustainability and resource management.",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Principle of Economics, N. Gregory Mankiw, Cengage Learning Custom Publishing, 2018",
+              "2 Microeconomics, Pindyck, Robert S., and Rubinfeld, Daniel L, Pearson, 8th Edition, ,",
+              "2017",
+              "3 Macroeconomics, Gordon, Robert J., Pearson, 14th Edition,, 2018"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Microeconomics Theory and Policy,, Microeconomics Theory and Policy,, D N Dwivedi, , Tata McGraw-Hill, , 2015"
+        ],
+        "textbooks": [
+          "Principle of Economics, N. Gregory Mankiw, Cengage Learning Custom Publishing, 2018",
+          "Microeconomics, Pindyck, Robert S., and Rubinfeld, Daniel L, Pearson, 8th Edition, , 2017",
+          "Macroeconomics, Gordon, Robert J., Pearson, 14th Edition,, 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.coursera.org/learn/illinois-tech-business-economics-and-game-theory-for- decision-making?utm_source=chatgpt.com",
+          "https://www.federalreserveeducation.org/teaching-resources/economics/decision- making/the-art-of-decisionmaking",
+          "https://econedlink.org/resources/decision-making/",
+          "https://www.open.edu/openlearn/money-business/leadership-management/making- decisions/content-section-0/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6463,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    ECONOMICS FOR DECISION MAKING\nCOURSE CODE     04MB1111\nCOURSE CREDITS  3\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Explain and apply fundamental economic principles to analyze real-world business and\n     policy scenarios.\n 2  Compare various market structures and evaluate their implications for pricing strategies,\n     output levels, and consumer welfare.\n 3  Interpret key macroeconomic indicators and assess their relevance in evaluating overall\n    economic performance.\n 4  Analyze the impact of fiscal and monetary policies on economic activity, growth, and\n      stability.\n 5   Critically evaluate contemporary economic challenges and formulate strategic\n    recommendations for business managers and policymakers.\n\n\nPre-requisite of course:Awareness of basic terms like demand, supply, inflation, GDP, etc.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Economics                                 9\n               Definition and scope of economics, Microeconomics vs.\n             Macroeconomics, Basic Economic Concepts: Scarcity and choice,\n             Opportunity cost, Production possibilities frontier, Supply and\n           Demand: Market forces, Determinants of demand and supply,\n            Market equilibrium;, Elasticity: Price elasticity of demand, Income\n                 elasticity and cross-price elasticity; Consumer and Producer\n              Surplus: Concepts and calculations, Efficiency and equity\n     2      Production and Market Structures                          9\n               Short-run, long run determinants of production, scale and scope\n             economies, Perfect Competition: Characteristics, Short-run and\n              long-run equilibrium, Monopoly, Sources of monopoly power, Price\n               discrimination; Monopolistic Competition and Oligopoly: Market\n                characteristics and behaviour: , Game theory basics; Labour market\n            and wage determination: efficiency wage theory, Monopsony and\n             Oligopsony; Market Failures: Externalities, Public goods,\n            Asymmetric information\n\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Macroeconomic Principles                                 9\n               Introduction to Macroeconomics: Key concepts and indicators, GDP\n            and its components; Economic Growth:, Factors influencing growth,\n             Long-run growth theory; Business Cycles: Phases and\n                characteristics, Economic indicators; Unemployment and Inflation:\n            Types of unemployment, Measuring inflation (CPI and PPI); Fiscal\n               Policy: Government spending and taxation, Budget deficits and\n              public debt\n     4      Monetary System and Policy                               9\n           Money and Banking: Functions of money, Types of financial\n                institutions; Tools of monetary policy, Monetary Policy: Objectives\n            and effectiveness, Interest rates and money supply; Inflation and\n            Monetary Policy: Causes of inflation,, Strategies for controlling\n                inflation; International Trade and Finance: Balance of payments,\n            Exchange rates and trade policies\n     5      Contemporary Economic Issues                            9\n              Globalization and Trade: Benefits and challenges, Trade agreements\n            and tariffs, Economic Development: Measuring development,\n            Growth strategies in developing countries, Environmental\n             Economics, Economic impact of environmental policies,\n               Sustainability and resource management.\n                               Total Hours                       45\n\n\nTextbook :\n 1  Principle of Economics, N. Gregory Mankiw, Cengage Learning Custom Publishing, 2018\n 2  Microeconomics, Pindyck, Robert S., and Rubinfeld, Daniel L, Pearson, 8th Edition, ,\n    2017\n 3  Macroeconomics, Gordon, Robert J., Pearson, 14th Edition,, 2018\n\nReferences:\n 1  Microeconomics Theory and Policy,, Microeconomics Theory and Policy,, D N Dwivedi, ,\n     Tata McGraw-Hill, , 2015\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    10.00         10.00         20.00         20.00         30.00         10.00\n\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 1  Case studies , Simulation and role playing , Group Discussion\n\nSupplementary Resources:\n 1  https://www.coursera.org/learn/illinois-tech-business-economics-and-game-theory-for-\n    decision-making?utm_source=chatgpt.com\n 2  https://www.federalreserveeducation.org/teaching-resources/economics/decision-\n     making/the-art-of-decisionmaking\n 3  https://econedlink.org/resources/decision-making/\n 4  https://www.open.edu/openlearn/money-business/leadership-management/making-\n     decisions/content-section-0/\n\n\n\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "9aa8af7ffd1b0579e11b33940a0ee4835080f7977d561666d4df509751206912",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "28004132015001",
+      "subject_name": "Sustainability and Environment",
+      "course_id": "mba",
+      "course_name": "MBA",
+      "semester": 1,
+      "subject_code": "04MB0150",
+      "course_code_evidence": [
+        "04MB0150",
+        "04MB1201",
+        "04MB1202",
+        "04MB1205",
+        "04MB2203"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/01/SE-04MB0150.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/01/SE-04MB0150.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Sustainability and Environment [9647580f8477].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/Sustainability and Environment [9647580f8477].pdf",
+      "expected_pdf_sha256": "d82be9e45933ab1e2d246a3f5b623d5ccd5eac320ddec032f2e7972c2b3090b6",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "SUSTAINABILITY AND ENVIRONMENT",
+        "course_code": "04MB0150",
+        "semester_label": null,
+        "credits": 1,
+        "prerequisite": "Basic awareness of environmental issues and interest in sustainable development."
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Analyze the key principles of sustainability and assess their relevance to contemporary business practices in a global context.",
+        "Evaluate the environmental challenges faced by businesses, including the economic, social, and environmental implications of climate change, resource depletion, and pollution",
+        "Design strategies for integrating sustainability into business operations, with a focus on environmental risk management, circular economy, and sustainable innovation. Pre-requisite of course:Basic awareness of environmental issues and interest in sustainable development."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 1 0 0 0 50 0 50 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Foundations of Sustainability",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Definition, pillars of sustainability: Economic, Environmental, and",
+              "Social, Historical evolution and frameworks: Brundtland Report,",
+              "SDGs, Triple bottom line approach and its relevance to global",
+              "business,, Global Environmental Challenges: Climate change,",
+              "resource depletion, biodiversity loss, pollution, Role of international",
+              "environmental organizations, Corporate Responsibility and",
+              "Environmental Impact: Corporate Social Responsibility (CSR) and",
+              "Environmental, Social, and Governance (ESG) frameworks,",
+              "Business implications of environmental regulations and compliance,",
+              "Greenwashing: Risks and challenges for businesses"
+            ],
+            "topics_text": "Definition, pillars of sustainability: Economic, Environmental, and Social, Historical evolution and frameworks: Brundtland Report, SDGs, Triple bottom line approach and its relevance to global business,, Global Environmental Challenges: Climate change, resource depletion, biodiversity loss, pollution, Role of international environmental organizations, Corporate Responsibility and Environmental Impact: Corporate Social Responsibility (CSR) and Environmental, Social, and Governance (ESG) frameworks, Business implications of environmental regulations and compliance, Greenwashing: Risks and challenges for businesses",
+            "topics": [
+              "Definition, pillars of sustainability: Economic, Environmental, and",
+              "Social, Historical evolution and frameworks: Brundtland Report,",
+              "SDGs, Triple bottom line approach and its relevance to global",
+              "business,, Global Environmental Challenges: Climate change,",
+              "resource depletion, biodiversity loss, pollution, Role of international",
+              "environmental organizations, Corporate Responsibility and",
+              "Environmental Impact: Corporate Social Responsibility (CSR) and",
+              "Environmental, Social, and Governance (ESG) frameworks,",
+              "Business implications of environmental regulations and compliance,",
+              "Greenwashing: Risks and challenges for businesses"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Environmental Risk Management",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Identifying and assessing environmental risks in business, Tools for",
+              "environmental risk assessment: Environmental Impact Assessment",
+              "(EIA), Life Cycle Assessment (LCA),, Sustainable Business",
+              "Strategies: Green marketing, sustainable product design, and eco-",
+              "friendly innovations, Renewable energy adoption and the",
+              "development of sustainable supply chains, Case Study",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Sustainability: A Comprehensive Foundation, , Tom Theis & Jonathan Tomkin, OpenStax,",
+              "2021",
+              "2 The Business Guide to Sustainability: Practical Strategies and Tools for Organizations,",
+              "Darcy E. Hitchcock & Marsha Willard, Earthscan, 2022"
+            ],
+            "topics_text": "Identifying and assessing environmental risks in business, Tools for environmental risk assessment: Environmental Impact Assessment (EIA), Life Cycle Assessment (LCA),, Sustainable Business Strategies: Green marketing, sustainable product design, and eco- friendly innovations, Renewable energy adoption and the development of sustainable supply chains, Case Study Total Hours 15 Textbook : 1 Sustainability: A Comprehensive Foundation, , Tom Theis & Jonathan Tomkin, OpenStax, 2021 2 The Business Guide to Sustainability: Practical Strategies and Tools for Organizations, Darcy E. Hitchcock & Marsha Willard, Earthscan, 2022",
+            "topics": [
+              "Identifying and assessing environmental risks in business, Tools for",
+              "environmental risk assessment: Environmental Impact Assessment",
+              "(EIA), Life Cycle Assessment (LCA),, Sustainable Business",
+              "Strategies: Green marketing, sustainable product design, and eco",
+              "friendly innovations, Renewable energy adoption and the",
+              "development of sustainable supply chains, Case Study",
+              "Total Hours 15",
+              "Textbook :",
+              "1 Sustainability: A Comprehensive Foundation, , Tom Theis & Jonathan Tomkin, OpenStax,",
+              "2021",
+              "2 The Business Guide to Sustainability: Practical Strategies and Tools for Organizations,",
+              "Darcy E. Hitchcock & Marsha Willard, Earthscan, 2022"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Environmental Economics and Policy, Environmental Economics and Policy, James K. Boyce, Routledge, 2022"
+        ],
+        "textbooks": [
+          "Sustainability: A Comprehensive Foundation, , Tom Theis & Jonathan Tomkin, OpenStax, 2021",
+          "The Business Guide to Sustainability: Practical Strategies and Tools for Organizations, Darcy E. Hitchcock & Marsha Willard, Earthscan, 2022"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.unep.org/explore-topics/education-environment/what-we-do/massive-open- online-courses?utm_source=chatgpt.com",
+          "https://ocw.mit.edu/collections/environment/?utm_source=chatgpt.com"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4400,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    SUSTAINABILITY AND ENVIRONMENT\nCOURSE CODE     04MB0150\nCOURSE CREDITS  1\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Analyze the key principles of sustainability and assess their relevance to contemporary\n     business practices in a global context.\n 2  Evaluate the environmental challenges faced by businesses, including the economic, social,\n    and environmental implications of climate change, resource depletion, and pollution\n 3  Design strategies for integrating sustainability into business operations, with a focus on\n     environmental risk management, circular economy, and sustainable innovation.\n\n\nPre-requisite of course:Basic awareness of environmental issues and interest in sustainable\ndevelopment.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     1            0            0         0      50       0        50         0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Foundations of Sustainability                               8\n               Definition, pillars of sustainability: Economic, Environmental, and\n               Social, Historical evolution and frameworks: Brundtland Report,\n           SDGs, Triple bottom line approach and its relevance to global\n               business,, Global Environmental Challenges: Climate change,\n              resource depletion, biodiversity loss, pollution, Role of international\n             environmental organizations, Corporate Responsibility and\n             Environmental Impact: Corporate Social Responsibility (CSR) and\n              Environmental, Social, and Governance (ESG) frameworks,\n             Business implications of environmental regulations and compliance,\n             Greenwashing: Risks and challenges for businesses\n     2      Environmental Risk Management                           7\n               Identifying and assessing environmental risks in business, Tools for\n             environmental risk assessment: Environmental Impact Assessment\n              (EIA), Life Cycle Assessment (LCA),, Sustainable Business\n                Strategies: Green marketing, sustainable product design, and eco-\n               friendly innovations, Renewable energy adoption and the\n             development of sustainable supply chains, Case Study\n                               Total Hours                       15\n\n\n\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 1  Sustainability: A Comprehensive Foundation, , Tom Theis & Jonathan Tomkin, OpenStax,\n    2021\n 2  The Business Guide to Sustainability: Practical Strategies and Tools for Organizations,\n    Darcy E. Hitchcock & Marsha Willard, Earthscan, 2022\n\nReferences:\n 1  Environmental Economics and Policy, Environmental Economics and Policy, James K.\n    Boyce, Routledge, 2022\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          30.00         25.00         25.00         20.00\n\nInstructional Method:\n 1  Lectures, case studies, group discussions, field visits, and project-based learning.\n\nSupplementary Resources:\n 1  https://www.unep.org/explore-topics/education-environment/what-we-do/massive-open-\n     online-courses?utm_source=chatgpt.com\n 2  https://ocw.mit.edu/collections/environment/?utm_source=chatgpt.com\n\n\n\n\n\nDR. MEETA JOSHI                                                DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "d82be9e45933ab1e2d246a3f5b623d5ccd5eac320ddec032f2e7972c2b3090b6",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 5,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 3,
+    "extraction_errors": 0
+  }
+}

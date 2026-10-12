@@ -1,0 +1,1391 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "bba-digital-marketing-",
+    "course_name": "BBA ( Digital Marketing )",
+    "output_slug": "BBA_Digital_Marketing"
+  },
+  "semester": 1,
+  "subject_count": 10,
+  "subjects": [
+    {
+      "subject_id": "24000422011001",
+      "subject_name": "COMMUNICATIVE ENGLISH",
+      "course_id": "bba-digital-marketing-",
+      "course_name": "BBA ( Digital Marketing )",
+      "semester": 1,
+      "subject_code": "04BB0110",
+      "course_code_evidence": [
+        "04BB0107",
+        "04BB0109",
+        "04BB0110"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/CE-04BB0110.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/CE-04BB0110.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/COMMUNICATIVE ENGLISH [a4d997ffb51c].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/COMMUNICATIVE ENGLISH [a4d997ffb51c].pdf",
+      "expected_pdf_sha256": "b7c1f59255c5a07393fc22db4bce9d545e56f357f4a31677082c7afcf5cc370a",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMMUNICATIVE ENGLISH",
+        "course_code": "04BB0110",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Communicate with the peers and colleagues in English Language.",
+        "Learn basics structure of spoken and written English language.",
+        "Expand their vocabulary in English.",
+        "Learn the basics of grammar in English through text.",
+        "Learn LSRW skills through text. Audio-visual aids. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basics of Grammar:",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Kinds of Sentences: (As per the nature of sentences), Kind of",
+              "Sentences: (As per the nature of sentences), Transformation of",
+              "Sentences (Affirmative/Negative/Interrogative/Interrogative-",
+              "Negative) (Simple, Compound and Complex and Complex –",
+              "Compound), Primary Auxiliaries; Present/Past/Future (with",
+              "Expression of Future) Tense, Modal Auxiliaries, Subject Verb",
+              "Agreement"
+            ],
+            "topics_text": "Kinds of Sentences: (As per the nature of sentences), Kind of Sentences: (As per the nature of sentences), Transformation of Sentences (Affirmative/Negative/Interrogative/Interrogative- Negative) (Simple, Compound and Complex and Complex – Compound), Primary Auxiliaries; Present/Past/Future (with Expression of Future) Tense, Modal Auxiliaries, Subject Verb Agreement",
+            "topics": [
+              "Kinds of Sentences: (As per the nature of sentences), Kind of",
+              "Sentences: (As per the nature of sentences), Transformation of",
+              "Sentences (Affirmative/Negative/Interrogative/Interrogative",
+              "Negative) (Simple, Compound and Complex and Complex –",
+              "Compound), Primary Auxiliaries",
+              "Present/Past/Future (with",
+              "Expression of Future) Tense, Modal Auxiliaries, Subject Verb",
+              "Agreement"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "LSRW Skills:",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Writing Skills:, Paragraph Writing, Leave Application, Speaking",
+              "Skills:, Introducing your self, Body language, Conversation at",
+              "different places, Foreign words"
+            ],
+            "topics_text": "Writing Skills:, Paragraph Writing, Leave Application, Speaking Skills:, Introducing your self, Body language, Conversation at different places, Foreign words",
+            "topics": [
+              "Writing Skills:, Paragraph Writing, Leave Application, Speaking",
+              "Skills:, Introducing your self, Body language, Conversation at",
+              "different places, Foreign words"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Learning Language through Literature:",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Prose:, A Letter to a Son’s Teacher: Abraham Lincoln, The Bet:",
+              "Anton Chekhov, Poems:, The Road Not Taken: Robert Frost,",
+              "Because I Could Not Stop Death: Emily Dickenson, The Gift of",
+              "India: Sarojini Naidu",
+              "Total Hours 30",
+              "Textbook :",
+              "1 English Conversation Practice., Taylor, Grant., English Conversation Practice. McGraw",
+              "Hill Publication., 2001"
+            ],
+            "topics_text": "Prose:, A Letter to a Son’s Teacher: Abraham Lincoln, The Bet: Anton Chekhov, Poems:, The Road Not Taken: Robert Frost, Because I Could Not Stop Death: Emily Dickenson, The Gift of India: Sarojini Naidu Total Hours 30 Textbook : 1 English Conversation Practice., Taylor, Grant., English Conversation Practice. McGraw Hill Publication., 2001",
+            "topics": [
+              "Prose:, A Letter to a Son’s Teacher: Abraham Lincoln, The Bet:",
+              "Anton Chekhov, Poems:, The Road Not Taken: Robert Frost,",
+              "Because I Could Not Stop Death: Emily Dickenson, The Gift of",
+              "India: Sarojini Naidu",
+              "Total Hours 30",
+              "Textbook :",
+              "1 English Conversation Practice., Taylor, Grant., English Conversation Practice. McGraw",
+              "Hill Publication., 2001"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Essential English Grammar., Essential English Grammar., Murphy, Raymond., Cambridge University Press. (CUP), 2024",
+          "English Vocabulary in Use., English Vocabulary in Use., Cambridge University Press. India, Cambridge University Press. India, 2017"
+        ],
+        "textbooks": [
+          "English Conversation Practice., Taylor, Grant., English Conversation Practice. McGraw Hill Publication., 2001"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4050,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    COMMUNICATIVE ENGLISH\nCOURSE CODE     04BB0110\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Communicate with the peers and colleagues in English Language.\n 2  Learn basics structure of spoken and written English language.\n 3  Expand their vocabulary in English.\n 4  Learn the basics of grammar in English through text.\n 5  Learn LSRW skills through text. Audio-visual aids.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Basics of Grammar:                                      12\n             Kinds of Sentences: (As per the nature of sentences), Kind of\n              Sentences: (As per the nature of sentences), Transformation of\n             Sentences (Affirmative/Negative/Interrogative/Interrogative-\n              Negative) (Simple, Compound and Complex and Complex –\n            Compound), Primary Auxiliaries; Present/Past/Future (with\n             Expression of Future) Tense, Modal Auxiliaries, Subject Verb\n            Agreement\n     2    LSRW Skills:                                            10\n             Writing Skills:, Paragraph Writing, Leave Application, Speaking\n                 Skills:, Introducing your self, Body language, Conversation at\n                different places, Foreign words\n     3      Learning Language through Literature:                     8\n               Prose:, A Letter to a Son’s Teacher: Abraham Lincoln, The Bet:\n            Anton Chekhov, Poems:, The Road Not Taken: Robert Frost,\n             Because I Could Not Stop Death: Emily Dickenson, The Gift of\n               India: Sarojini Naidu\n                               Total Hours                       30\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 1  English Conversation Practice., Taylor, Grant., English Conversation Practice. McGraw\n     Hill Publication., 2001\n\nReferences:\n 1  Essential English Grammar., Essential English Grammar., Murphy, Raymond., Cambridge\n     University Press. (CUP), 2024\n 2  English Vocabulary in Use., English Vocabulary in Use., Cambridge University Press.\n     India, Cambridge University Press. India, 2017\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room in the form of attendance, assignments, verbal interactions etc.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "b7c1f59255c5a07393fc22db4bce9d545e56f357f4a31677082c7afcf5cc370a",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "24000422010401",
+      "subject_name": "COMPUTER ESSENTIALS & OFFICE APPLICATIONS",
+      "course_id": "bba-digital-marketing-",
+      "course_name": "BBA ( Digital Marketing )",
+      "semester": 1,
+      "subject_code": "04BB0104",
+      "course_code_evidence": [
+        "04BB0104",
+        "04BB0106",
+        "04BB0107",
+        "04BB0109",
+        "04BB0110"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CEOA.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CEOA.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/COMPUTER ESSENTIALS & OFFICE APPLICATIONS [bca6d1ad36ec].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/COMPUTER ESSENTIALS & OFFICE APPLICATIONS [bca6d1ad36ec].pdf",
+      "expected_pdf_sha256": "e6d8cd1ebbd9e41ddbc78f454bc948c1081e0eb5c1006966714665653592ed4c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "COMPUTER ESSENTIALS & OFFICE APPLICATIONS",
+        "course_code": "04BB0104",
+        "semester_label": "1",
+        "credits": 4,
+        "prerequisite": "NA"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand Fundamental Structure of a Computer System",
+        "Understand & Use Word Processor Utilities for Business using MS Word",
+        "Understand & Use Spreadsheet Utilities for Business using MS Excel",
+        "Understand & Design Presentations using MS Powerpoint",
+        "Use Google Workspace Utilities Pre-requisite of course:NA"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 0 30 20 25 25",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "COMPUTER ESSENTIALS",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Structure of a Computer System – Input / Output Devices –",
+              "Hardware & Software – Operating System – Files – Folders",
+              "(Directories) – Copying / Removing / Renaming Files & Folders –",
+              "Using Basic Applications like Calculators, Notepad, Paintbrush –",
+              "Changing Settings for Display & Themes – Using Various Browsers",
+              "for Surfing Internet"
+            ],
+            "topics_text": "Structure of a Computer System – Input / Output Devices – Hardware & Software – Operating System – Files – Folders (Directories) – Copying / Removing / Renaming Files & Folders – Using Basic Applications like Calculators, Notepad, Paintbrush – Changing Settings for Display & Themes – Using Various Browsers for Surfing Internet",
+            "topics": [
+              "Structure of a Computer System – Input / Output Devices –",
+              "Hardware & Software – Operating System – Files – Folders",
+              "(Directories) – Copying / Removing / Renaming Files & Folders –",
+              "Using Basic Applications like Calculators, Notepad, Paintbrush –",
+              "Changing Settings for Display & Themes – Using Various Browsers",
+              "for Surfing Internet"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "MICROSOFT WORD ESSENTIALS",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Word Screen Elements – Quick Access Toolbar – Basic Formatting",
+              "(Fonts, Format Painter, Bullet & Numbering, Alignment, Line",
+              "Spacing) – Inserting Page Breaks & Blank Pages – Adding Cover",
+              "Page – Creating Table – Inserting Picture, Shapes, Symbols &",
+              "Icons, watermark, Headers & Footers – Page Numbering – Setting",
+              "Margins – Paper Orientation & Size – Table of Content – Footnotes",
+              "& Endnotes – Citations & Bibliography – Mail Merge – Proof",
+              "reading – Page Setup & Printing"
+            ],
+            "topics_text": "Word Screen Elements – Quick Access Toolbar – Basic Formatting (Fonts, Format Painter, Bullet & Numbering, Alignment, Line Spacing) – Inserting Page Breaks & Blank Pages – Adding Cover Page – Creating Table – Inserting Picture, Shapes, Symbols & Icons, watermark, Headers & Footers – Page Numbering – Setting Margins – Paper Orientation & Size – Table of Content – Footnotes & Endnotes – Citations & Bibliography – Mail Merge – Proof reading – Page Setup & Printing",
+            "topics": [
+              "Word Screen Elements – Quick Access Toolbar – Basic Formatting",
+              "(Fonts, Format Painter, Bullet & Numbering, Alignment, Line",
+              "Spacing) – Inserting Page Breaks & Blank Pages – Adding Cover",
+              "Page – Creating Table – Inserting Picture, Shapes, Symbols &",
+              "Icons, watermark, Headers & Footers – Page Numbering – Setting",
+              "Margins – Paper Orientation & Size – Table of Content – Footnotes",
+              "& Endnotes – Citations & Bibliography – Mail Merge – Proof",
+              "reading – Page Setup & Printing"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "MICROSOFT EXCEL ESSENTIALS",
+            "contact_hours": 18,
+            "topic_lines": [
+              "Excel Interface, Copying, Moving & Hiding Worksheets – Insert,",
+              "Hide & Unhide Columns & Rows – All about Formatting",
+              "(Alignment, Borders, Text Size & Font, Text Wrap, Merge &",
+              "Centre, Number Formatting), Creating Table – Basic Excel",
+              "Formulas – Order of Precedence – Absolute & Relative Cell",
+              "Referencing – Freeze Panes – Paste Special – Protecting Worksheet",
+              "& Specific Ranges – Find & Replace Values - Math Functions",
+              "(SUM, ROUND, SUBTOTAL), Statistics Functions (COUNT,",
+              "COUNTA, COUNTBLANK, AVERAGE, MAX, MIN, MEAN,",
+              "MEDIAN, MODE) – Text Functions (LEFT, RIGHT, MID,",
+              "PROPER, UPPER, LOWER, TRIM, CONCATENATE) – Logical",
+              "Functions (IF, OR, AND) - Sort & Filter Data – Conditional",
+              "Formatting – Data Validation – Text to Column - Creating Basic",
+              "Charts – Page setup & Printing"
+            ],
+            "topics_text": "Excel Interface, Copying, Moving & Hiding Worksheets – Insert, Hide & Unhide Columns & Rows – All about Formatting (Alignment, Borders, Text Size & Font, Text Wrap, Merge & Centre, Number Formatting), Creating Table – Basic Excel Formulas – Order of Precedence – Absolute & Relative Cell Referencing – Freeze Panes – Paste Special – Protecting Worksheet & Specific Ranges – Find & Replace Values - Math Functions (SUM, ROUND, SUBTOTAL), Statistics Functions (COUNT, COUNTA, COUNTBLANK, AVERAGE, MAX, MIN, MEAN, MEDIAN, MODE) – Text Functions (LEFT, RIGHT, MID, PROPER, UPPER, LOWER, TRIM, CONCATENATE) – Logical Functions (IF, OR, AND) - Sort & Filter Data – Conditional Formatting – Data Validation – Text to Column - Creating Basic Charts – Page setup & Printing",
+            "topics": [
+              "Excel Interface, Copying, Moving & Hiding Worksheets – Insert,",
+              "Hide & Unhide Columns & Rows – All about Formatting",
+              "(Alignment, Borders, Text Size & Font, Text Wrap, Merge &",
+              "Centre, Number Formatting), Creating Table – Basic Excel",
+              "Formulas – Order of Precedence – Absolute & Relative Cell",
+              "Referencing – Freeze Panes – Paste Special – Protecting Worksheet",
+              "& Specific Ranges – Find & Replace Values - Math Functions",
+              "(SUM, ROUND, SUBTOTAL), Statistics Functions (COUNT,",
+              "COUNTA, COUNTBLANK, AVERAGE, MAX, MIN, MEAN,",
+              "MEDIAN, MODE) – Text Functions (LEFT, RIGHT, MID,",
+              "PROPER, UPPER, LOWER, TRIM, CONCATENATE) – Logical",
+              "Functions (IF, OR, AND) - Sort & Filter Data – Conditional",
+              "Formatting – Data Validation – Text to Column - Creating Basic",
+              "Charts – Page setup & Printing"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "MICROSOFT POWER POINT ESSENTIALS",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Power Point Interface – Quick Access Toolbar – Ribbons –",
+              "Inserting different types of Slides & Duplicating Slides – Inserting",
+              "Images, Shapes, Smart Art & Icons, Inserting Table & Charts –",
+              "Formatting Table & Charts – Inserting Hyperlinks - Animation –",
+              "Timeline Creation - Slide Transitions – Proofing tools"
+            ],
+            "topics_text": "Power Point Interface – Quick Access Toolbar – Ribbons – Inserting different types of Slides & Duplicating Slides – Inserting Images, Shapes, Smart Art & Icons, Inserting Table & Charts – Formatting Table & Charts – Inserting Hyperlinks - Animation – Timeline Creation - Slide Transitions – Proofing tools",
+            "topics": [
+              "Power Point Interface – Quick Access Toolbar – Ribbons –",
+              "Inserting different types of Slides & Duplicating Slides – Inserting",
+              "Images, Shapes, Smart Art & Icons, Inserting Table & Charts –",
+              "Formatting Table & Charts – Inserting Hyperlinks - Animation –",
+              "Timeline Creation - Slide Transitions – Proofing tools"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "GOOGLE WORKSPACE ESSENTIALS FOR BUSINESS",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Google Applications – Doc – Sheet – Slides – Meet – Groups –",
+              "Calendar – Creating Forms with multiple sections & Creating Quiz",
+              "through Google Forms, Using Google Drive -Collaborating through",
+              "Google Applications",
+              "Total Hours 50",
+              "Textbook :",
+              "1 Fundamental of Computers , P.K.Sinha , B.P.B. Publications , 2020",
+              "2 Microsoft Office 2019 Inside Out , Joe Habraken , Pearson, 2018",
+              "3 Microsoft Excel 2019 Formulas and Functions, Paul McFedries, Pearson , 2019"
+            ],
+            "topics_text": "Google Applications – Doc – Sheet – Slides – Meet – Groups – Calendar – Creating Forms with multiple sections & Creating Quiz through Google Forms, Using Google Drive -Collaborating through Google Applications Total Hours 50 Textbook : 1 Fundamental of Computers , P.K.Sinha , B.P.B. Publications , 2020 2 Microsoft Office 2019 Inside Out , Joe Habraken , Pearson, 2018 3 Microsoft Excel 2019 Formulas and Functions, Paul McFedries, Pearson , 2019",
+            "topics": [
+              "Google Applications – Doc – Sheet – Slides – Meet – Groups –",
+              "Calendar – Creating Forms with multiple sections & Creating Quiz",
+              "through Google Forms, Using Google Drive -Collaborating through",
+              "Google Applications",
+              "Total Hours 50",
+              "Textbook :",
+              "1 Fundamental of Computers , P.K.Sinha , B.P.B. Publications , 2020",
+              "2 Microsoft Office 2019 Inside Out , Joe Habraken , Pearson, 2018",
+              "3 Microsoft Excel 2019 Formulas and Functions, Paul McFedries, Pearson , 2019"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Excel 2019 Bible , Excel 2019 Bible , Michael Alexander , Wiley , 2019",
+          "Information Technology, Information Technology, Curtin, Foley, Sen, Martin,, Information Technology, Tata MC Graw Hill, 2007"
+        ],
+        "textbooks": [
+          "Fundamental of Computers , P.K.Sinha , B.P.B. Publications , 2020",
+          "Microsoft Office 2019 Inside Out , Joe Habraken , Pearson, 2018",
+          "Microsoft Excel 2019 Formulas and Functions, Paul McFedries, Pearson , 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://edu.gcfglobal.org/en/",
+          "YOUTUBE.COM",
+          "https://www.tutorialspoint.com/",
+          "https://www.youtube.com/watch? v=HC13M8FGlNc&list=PLmkaw6oRnRv8UYcRLpxon4rPQm_pud8nd",
+          "https://www.vmaker.com/tutorial-video-hub/microsoft-tutorial-videos/microsoft-office- tutorial/",
+          "https://www.electricteacher.com/",
+          "https://www.tutorialspoint.com/",
+          "https://edu.gcfglobal.org/en/",
+          "https://www.youtube.com/watch? v=HC13M8FGlNc&list=PLmkaw6oRnRv8UYcRLpxon4rPQm_pud8nd"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6302,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         1\nCOURSE TITLE   COMPUTER ESSENTIALS & OFFICE APPLICATIONS\nCOURSE CODE     04BB0104\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand Fundamental Structure of a Computer System\n 2  Understand & Use Word Processor Utilities for Business using MS Word\n 3  Understand & Use Spreadsheet Utilities for Business using MS Excel\n 4  Understand & Design Presentations using MS Powerpoint\n 5  Use Google Workspace Utilities\n\n\nPre-requisite of course:NA\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0         0      30      20        25         25\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    COMPUTER ESSENTIALS                               4\n               Structure of a Computer System – Input / Output Devices –\n            Hardware & Software – Operating System – Files – Folders\n               (Directories) – Copying / Removing / Renaming Files & Folders –\n             Using Basic Applications like Calculators, Notepad, Paintbrush –\n            Changing Settings for Display & Themes – Using Various Browsers\n               for Surfing Internet\n     2    MICROSOFT WORD ESSENTIALS                        12\n           Word Screen Elements – Quick Access Toolbar – Basic Formatting\n               (Fonts, Format Painter, Bullet & Numbering, Alignment, Line\n             Spacing) – Inserting Page Breaks & Blank Pages – Adding Cover\n            Page – Creating Table – Inserting Picture, Shapes, Symbols &\n               Icons, watermark, Headers & Footers – Page Numbering – Setting\n             Margins – Paper Orientation & Size – Table of Content – Footnotes\n        & Endnotes – Citations & Bibliography – Mail Merge – Proof\n              reading – Page Setup & Printing\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3    MICROSOFT EXCEL ESSENTIALS                       18\n             Excel Interface, Copying, Moving & Hiding Worksheets – Insert,\n            Hide & Unhide Columns & Rows – All about Formatting\n              (Alignment, Borders, Text Size & Font, Text Wrap, Merge &\n              Centre, Number Formatting), Creating Table – Basic Excel\n             Formulas – Order of Precedence – Absolute & Relative Cell\n             Referencing – Freeze Panes – Paste Special – Protecting Worksheet\n        & Specific Ranges – Find & Replace Values - Math Functions\n           (SUM, ROUND, SUBTOTAL), Statistics Functions (COUNT,\n         COUNTA, COUNTBLANK, AVERAGE, MAX, MIN, MEAN,\n          MEDIAN, MODE) – Text Functions (LEFT, RIGHT, MID,\n          PROPER, UPPER, LOWER, TRIM, CONCATENATE) – Logical\n              Functions (IF, OR, AND) - Sort & Filter Data – Conditional\n             Formatting – Data Validation – Text to Column - Creating Basic\n              Charts – Page setup & Printing\n     4    MICROSOFT POWER POINT ESSENTIALS                12\n            Power Point Interface – Quick Access Toolbar – Ribbons –\n               Inserting different types of Slides & Duplicating Slides – Inserting\n             Images, Shapes, Smart Art & Icons, Inserting Table & Charts –\n             Formatting Table & Charts – Inserting Hyperlinks - Animation –\n             Timeline Creation - Slide Transitions – Proofing tools\n     5    GOOGLE WORKSPACE ESSENTIALS FOR BUSINESS     4\n            Google Applications – Doc – Sheet – Slides – Meet – Groups –\n             Calendar – Creating Forms with multiple sections & Creating Quiz\n             through Google Forms, Using Google Drive -Collaborating through\n            Google Applications\n                               Total Hours                       50\n\n\nTextbook :\n 1  Fundamental of Computers , P.K.Sinha , B.P.B. Publications , 2020\n 2  Microsoft Office 2019 Inside Out , Joe Habraken , Pearson, 2018\n 3  Microsoft Excel 2019 Formulas and Functions, Paul McFedries, Pearson , 2019\n\nReferences:\n 1  Excel 2019 Bible , Excel 2019 Bible , Michael Alexander , Wiley , 2019\n 2  Information Technology, Information Technology, Curtin, Foley, Sen, Martin,, Information\n    Technology, Tata MC Graw Hill, 2007\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00\n\nInstructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1  https://edu.gcfglobal.org/en/\n 2 YOUTUBE.COM\n 3  https://www.tutorialspoint.com/\n 4  https://www.youtube.com/watch?\n    v=HC13M8FGlNc&list=PLmkaw6oRnRv8UYcRLpxon4rPQm_pud8nd\n 5  https://www.vmaker.com/tutorial-video-hub/microsoft-tutorial-videos/microsoft-office-\n      tutorial/\n 6  https://www.electricteacher.com/\n 7  https://www.tutorialspoint.com/\n 8  https://edu.gcfglobal.org/en/\n 9  https://www.youtube.com/watch?\n    v=HC13M8FGlNc&list=PLmkaw6oRnRv8UYcRLpxon4rPQm_pud8nd\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "e6d8cd1ebbd9e41ddbc78f454bc948c1081e0eb5c1006966714665653592ed4c",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "24000422010901",
+      "subject_name": "ENVIRONMENTAL SCIENCE",
+      "course_id": "bba-digital-marketing-",
+      "course_name": "BBA ( Digital Marketing )",
+      "semester": 1,
+      "subject_code": "04BB0109",
+      "course_code_evidence": [
+        "04BB0109",
+        "04BB0205"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/ES-04BB0109.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/ES-04BB0109.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ENVIRONMENTAL SCIENCE [4a8b46048642].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ENVIRONMENTAL SCIENCE [4a8b46048642].pdf",
+      "expected_pdf_sha256": "f3525ee62826d01b4c0d23f5443bc4faaa28fbb0e494a2bba16467d0eaecfb48",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ENVIRONMENTAL SCIENCE",
+        "course_code": "04BB0109",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "N/ A"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Create the awareness about environmental problems among learners.",
+        "Impart basic knowledge about the environment and its allied problems.",
+        "Develop an attitude of concern for the environment.",
+        "Motivate learner to participate in environment protection and environment improvement.",
+        "Acquire skills to help the concerned individuals in identifying and solving environmental problems",
+        "Strive to attain harmony with Nature Pre-requisite of course:N/ A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction and Ecology and Population and Environment",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Environment, Ecology, Ecosystem, Population and",
+              "environment, , Factors Affecting Human Settlement, Define Over",
+              "Population & Explain the Cause,, Effect on Environment & Control",
+              "of it, Methods of Population forecasting, Governmental bodies for",
+              "Environmental protection"
+            ],
+            "topics_text": "Introduction to Environment, Ecology, Ecosystem, Population and environment, , Factors Affecting Human Settlement, Define Over Population & Explain the Cause,, Effect on Environment & Control of it, Methods of Population forecasting, Governmental bodies for Environmental protection",
+            "topics": [
+              "Introduction to Environment, Ecology, Ecosystem, Population and",
+              "environment, , Factors Affecting Human Settlement, Define Over",
+              "Population & Explain the Cause,, Effect on Environment & Control",
+              "of it, Methods of Population forecasting, Governmental bodies for",
+              "Environmental protection"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Environmental Resources",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Forest resources, Energy resources, Land Resources, Water",
+              "Resources, Environmental Pollution,, Water pollution, Air",
+              "Pollution, Noise pollution, Environmental sinks, Solid Waste,",
+              "Hazardous waste, E-waste, Bio medical waste, Introduction to",
+              "Green chemistry"
+            ],
+            "topics_text": "Forest resources, Energy resources, Land Resources, Water Resources, Environmental Pollution,, Water pollution, Air Pollution, Noise pollution, Environmental sinks, Solid Waste, Hazardous waste, E-waste, Bio medical waste, Introduction to Green chemistry",
+            "topics": [
+              "Forest resources, Energy resources, Land Resources, Water",
+              "Resources, Environmental Pollution,, Water pollution, Air",
+              "Pollution, Noise pollution, Environmental sinks, Solid Waste,",
+              "Hazardous waste, E-waste, Bio medical waste, Introduction to",
+              "Green chemistry"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Global Environmental Issues",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Greenhouse effect, Global warming, Ozone layer depletion, Climate",
+              "change, Acid Rain, Global Efforts to control Environmental issue,",
+              "Green Building",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Marine Pollution, Clark R.S, Clanderson Press Oxford , 1997"
+            ],
+            "topics_text": "Greenhouse effect, Global warming, Ozone layer depletion, Climate change, Acid Rain, Global Efforts to control Environmental issue, Green Building Total Hours 30 Textbook : 1 Marine Pollution, Clark R.S, Clanderson Press Oxford , 1997",
+            "topics": [
+              "Greenhouse effect, Global warming, Ozone layer depletion, Climate",
+              "change, Acid Rain, Global Efforts to control Environmental issue,",
+              "Green Building",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Marine Pollution, Clark R.S, Clanderson Press Oxford , 1997"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Environmental Science, Environmental Science, Y.K. Sing, New Age International Pvt, Publishers, Bangalore, 2006",
+          "Environmental Biology, Environmental Biology, Agarwal, K.C, Nidi Publ. Ltd. Bikaner, 2001",
+          "The Biodiversity of India, The Biodiversity of India, Bharucha Erach, Mapin Publishing Pvt. Ltd., Ahmedabad:380 013, India, , 2002",
+          "Hazardous Waste Incineration, Hazardous Waste Incineration, Brunner R.C, McGraw Hill Inc, 1989"
+        ],
+        "textbooks": [
+          "Marine Pollution, Clark R.S, Clanderson Press Oxford , 1997"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 3757,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    ENVIRONMENTAL SCIENCE\nCOURSE CODE     04BB0109\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Create the awareness about environmental problems among learners.\n 2  Impart basic knowledge about the environment and its allied problems.\n 3  Develop an attitude of concern for the environment.\n 4  Motivate learner to participate in environment protection and environment improvement.\n 5  Acquire skills to help the concerned individuals in identifying and solving environmental\n    problems\n 6  Strive to attain harmony with Nature\n\n\nPre-requisite of course:N/ A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction and Ecology and Population and Environment     10\n               Introduction to Environment, Ecology, Ecosystem, Population and\n              environment, , Factors Affecting Human Settlement, Define Over\n              Population & Explain the Cause,, Effect on Environment & Control\n              of it, Methods of Population forecasting, Governmental bodies for\n             Environmental protection\n     2      Environmental Resources                                  10\n              Forest resources, Energy resources, Land Resources, Water\n              Resources, Environmental Pollution,, Water pollution, Air\n               Pollution, Noise pollution, Environmental sinks, Solid Waste,\n             Hazardous waste, E-waste, Bio medical waste, Introduction to\n            Green chemistry\n     3      Global Environmental Issues                               10\n             Greenhouse effect, Global warming, Ozone layer depletion, Climate\n              change, Acid Rain, Global Efforts to control Environmental issue,\n            Green Building\n                               Total Hours                       30\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 1  Marine Pollution, Clark R.S,  Clanderson Press Oxford , 1997\n\nReferences:\n 1  Environmental Science, Environmental Science, Y.K. Sing, New Age International Pvt,\n     Publishers, Bangalore, 2006\n 2   Environmental Biology, Environmental Biology, Agarwal, K.C, Nidi Publ. Ltd. Bikaner,\n    2001\n 3  The Biodiversity of India, The Biodiversity of India, Bharucha Erach, Mapin Publishing\n     Pvt. Ltd., Ahmedabad:380 013, India, , 2002\n 4  Hazardous Waste Incineration, Hazardous Waste Incineration, Brunner R.C, McGraw Hill\n     Inc, 1989\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         20.00         30.00         15.00         10.00          5.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "f3525ee62826d01b4c0d23f5443bc4faaa28fbb0e494a2bba16467d0eaecfb48",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "24000422010301",
+      "subject_name": "FUNDAMENTALS OF ACCOUNTING",
+      "course_id": "bba-digital-marketing-",
+      "course_name": "BBA ( Digital Marketing )",
+      "semester": 1,
+      "subject_code": "04BB0103",
+      "course_code_evidence": [
+        "04BB0103",
+        "04BB0104",
+        "04BB0106",
+        "04BB0107",
+        "04BB0110"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FA.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FA.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FUNDAMENTALS OF ACCOUNTING [6a21a798f6b3].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FUNDAMENTALS OF ACCOUNTING [6a21a798f6b3].pdf",
+      "expected_pdf_sha256": "ec4aedc1568c4f4e2bdff7a620797b2d5d006fb3d947567d95ce7d2ef127a06b",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "FUNDAMENTALS OF ACCOUNTING",
+        "course_code": "04BB0103",
+        "semester_label": "1",
+        "credits": 4,
+        "prerequisite": "N/A"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Analyze business transactions and will be able to prepare the Financial Statements",
+        "Apply the process of accounting",
+        "Understand and apply preparation of final accounts",
+        "Evaluate methods of depreciation",
+        "Understand methods of valuation of inventory Pre-requisite of course:N/A"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basics of Book – keeping and Accounting, Accounting Concepts",
+            "contact_hours": 8,
+            "topic_lines": [
+              "and Conventions",
+              "Introduction to Book Keeping and Accounting – Branches of",
+              "Accounting – Systems of Accounting – Basis of Accounting –",
+              "Characteristics of Accounting Information – Users of Accounting",
+              "Information – Basic Accounting Terms – Classification of Accounts",
+              "and its Rules – Accounting Equation, Accounting Principles:",
+              "Accounting Concepts and Conventions – Fundamental Accounting",
+              "Assumptions – Introduction to Ind AS – Applicability of Ind AS"
+            ],
+            "topics_text": "and Conventions Introduction to Book Keeping and Accounting – Branches of Accounting – Systems of Accounting – Basis of Accounting – Characteristics of Accounting Information – Users of Accounting Information – Basic Accounting Terms – Classification of Accounts and its Rules – Accounting Equation, Accounting Principles: Accounting Concepts and Conventions – Fundamental Accounting Assumptions – Introduction to Ind AS – Applicability of Ind AS",
+            "topics": [
+              "and Conventions",
+              "Introduction to Book Keeping and Accounting – Branches of",
+              "Accounting – Systems of Accounting – Basis of Accounting –",
+              "Characteristics of Accounting Information – Users of Accounting",
+              "Information – Basic Accounting Terms – Classification of Accounts",
+              "and its Rules – Accounting Equation, Accounting Principles:",
+              "Accounting Concepts and Conventions – Fundamental Accounting",
+              "Assumptions – Introduction to Ind AS – Applicability of Ind AS"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Process of Accounting",
+            "contact_hours": 16,
+            "topic_lines": [
+              "Books of Original Entry – Journalizing (including GST) –",
+              "Difference between Cash Discount and Trade Discount, Ledger –",
+              "Preparation, Posting and Overview of Electronic Ledgers under",
+              "GST: Electronic Cash, Credit and Liability Ledger – Practical",
+              "problems on Journal and Ledger, Preparation of Trial Balance –",
+              "Redrafting of Trial Balance, Errors and their Rectification"
+            ],
+            "topics_text": "Books of Original Entry – Journalizing (including GST) – Difference between Cash Discount and Trade Discount, Ledger – Preparation, Posting and Overview of Electronic Ledgers under GST: Electronic Cash, Credit and Liability Ledger – Practical problems on Journal and Ledger, Preparation of Trial Balance – Redrafting of Trial Balance, Errors and their Rectification",
+            "topics": [
+              "Books of Original Entry – Journalizing (including GST) –",
+              "Difference between Cash Discount and Trade Discount, Ledger –",
+              "Preparation, Posting and Overview of Electronic Ledgers under",
+              "GST: Electronic Cash, Credit and Liability Ledger – Practical",
+              "problems on Journal and Ledger, Preparation of Trial Balance –",
+              "Redrafting of Trial Balance, Errors and their Rectification"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Final Accounts",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Types of Expenditure and Income – Meaning of Deferred Revenue",
+              "Expenditure – Classification of Assets and Liabilities under",
+              "different head – Contingent Asset and Contingent Liability –",
+              "Distinguish between Provisions and Reserves – Types of Reserves,",
+              "Preparation of Financial Statements of sole proprietorship – Impact",
+              "of GST on Financial Statements – Format of Companies Financial",
+              "Statements as per Companies Act, 2013"
+            ],
+            "topics_text": "Types of Expenditure and Income – Meaning of Deferred Revenue Expenditure – Classification of Assets and Liabilities under different head – Contingent Asset and Contingent Liability – Distinguish between Provisions and Reserves – Types of Reserves, Preparation of Financial Statements of sole proprietorship – Impact of GST on Financial Statements – Format of Companies Financial Statements as per Companies Act, 2013",
+            "topics": [
+              "Types of Expenditure and Income – Meaning of Deferred Revenue",
+              "Expenditure – Classification of Assets and Liabilities under",
+              "different head – Contingent Asset and Contingent Liability –",
+              "Distinguish between Provisions and Reserves – Types of Reserves,",
+              "Preparation of Financial Statements of sole proprietorship – Impact",
+              "of GST on Financial Statements – Format of Companies Financial",
+              "Statements as per Companies Act, 2013"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Depreciation",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Meaning and difference between Depreciation, Depletion and",
+              "Amortization – Need of Depreciation – Depreciation methods",
+              "(Straight Line Method and Written Down Value Method), Method",
+              "of recording Depreciation (Charging to Asset Account and Creating",
+              "provision for Depreciation/ Accumulated Depreciation) – Treatment",
+              "of Disposal of Fixed assets"
+            ],
+            "topics_text": "Meaning and difference between Depreciation, Depletion and Amortization – Need of Depreciation – Depreciation methods (Straight Line Method and Written Down Value Method), Method of recording Depreciation (Charging to Asset Account and Creating provision for Depreciation/ Accumulated Depreciation) – Treatment of Disposal of Fixed assets",
+            "topics": [
+              "Meaning and difference between Depreciation, Depletion and",
+              "Amortization – Need of Depreciation – Depreciation methods",
+              "(Straight Line Method and Written Down Value Method), Method",
+              "of recording Depreciation (Charging to Asset Account and Creating",
+              "provision for Depreciation/ Accumulated Depreciation) – Treatment",
+              "of Disposal of Fixed assets"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Valuation of Inventory",
+            "contact_hours": 4,
+            "topic_lines": [
+              "Meaning of Inventory - Inventory Record Systems: Periodic and",
+              "Perpetual - Methods of Stock Valuation: FIFO, Weighted Average",
+              "and LIFO",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Financial Accounting , P.C.Tulsian , Pearson Education India , 2015",
+              "2 Financial Accounting for Management, Dr. S. N. Maheshwari , Vikas Publishing House,",
+              "2018",
+              "3 Financial Accounting , Ambrish Gupta , Tata McGraw, Hill Publishing Co. Ltd. New",
+              "Delhi, 0"
+            ],
+            "topics_text": "Meaning of Inventory - Inventory Record Systems: Periodic and Perpetual - Methods of Stock Valuation: FIFO, Weighted Average and LIFO Total Hours 48 Textbook : 1 Financial Accounting , P.C.Tulsian , Pearson Education India , 2015 2 Financial Accounting for Management, Dr. S. N. Maheshwari , Vikas Publishing House, 2018 3 Financial Accounting , Ambrish Gupta , Tata McGraw, Hill Publishing Co. Ltd. New Delhi, 0",
+            "topics": [
+              "Meaning of Inventory - Inventory Record Systems: Periodic and",
+              "Perpetual - Methods of Stock Valuation: FIFO, Weighted Average",
+              "and LIFO",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Financial Accounting , P.C.Tulsian , Pearson Education India , 2015",
+              "2 Financial Accounting for Management, Dr. S. N. Maheshwari , Vikas Publishing House,",
+              "2018",
+              "3 Financial Accounting , Ambrish Gupta , Tata McGraw, Hill Publishing Co. Ltd. New",
+              "Delhi, 0"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Financial Accounting., Financial Accounting., Jain, S.P. and K.L. Narang., Kalyani Publishers, 2017",
+          "Introduction to Financial Accounting, Introduction to Financial Accounting, Charles T. Horngren and Donna Philbrick, Pearson, 2022",
+          "Financial Accounting , Financial Accounting , Deepak Sehgal , Vikas Publishing H House, 2014"
+        ],
+        "textbooks": [
+          "Financial Accounting , P.C.Tulsian , Pearson Education India , 2015",
+          "Financial Accounting for Management, Dr. S. N. Maheshwari , Vikas Publishing House, 2018",
+          "Financial Accounting , Ambrish Gupta , Tata McGraw, Hill Publishing Co. Ltd. New Delhi, 0"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.icai.org/post/intermediate-course",
+          "mca.gov.in"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5653,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         1\nCOURSE TITLE   FUNDAMENTALS OF ACCOUNTING\nCOURSE CODE     04BB0103\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Analyze business transactions and will be able to prepare the Financial Statements\n 2  Apply the process of accounting\n 3  Understand and apply preparation of final accounts\n 4  Evaluate methods of depreciation\n 5  Understand methods of valuation of inventory\n\n\nPre-requisite of course:N/A\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Basics of Book – keeping and Accounting, Accounting Concepts 8\n           and Conventions\n               Introduction to Book Keeping and Accounting – Branches of\n             Accounting – Systems of Accounting – Basis of Accounting –\n               Characteristics of Accounting Information – Users of Accounting\n              Information – Basic Accounting Terms – Classification of Accounts\n            and its Rules – Accounting Equation, Accounting Principles:\n             Accounting Concepts and Conventions – Fundamental Accounting\n             Assumptions – Introduction to Ind AS – Applicability of Ind AS\n     2      Process of Accounting                                     16\n            Books of Original Entry – Journalizing (including GST) –\n              Difference between Cash Discount and Trade Discount, Ledger –\n               Preparation, Posting and Overview of Electronic Ledgers under\n           GST: Electronic Cash, Credit and Liability Ledger – Practical\n             problems on Journal and Ledger, Preparation of Trial Balance –\n              Redrafting of Trial Balance, Errors and their Rectification\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3       Final Accounts                                           14\n            Types of Expenditure and Income – Meaning of Deferred Revenue\n             Expenditure – Classification of Assets and Liabilities under\n                different head – Contingent Asset and Contingent Liability –\n              Distinguish between Provisions and Reserves – Types of Reserves,\n              Preparation of Financial Statements of sole proprietorship – Impact\n              of GST on Financial Statements – Format of Companies Financial\n              Statements as per Companies Act, 2013\n     4      Depreciation                                             6\n            Meaning and difference between Depreciation, Depletion and\n             Amortization – Need of Depreciation – Depreciation methods\n               (Straight Line Method and Written Down Value Method), Method\n              of recording Depreciation (Charging to Asset Account and Creating\n              provision for Depreciation/ Accumulated Depreciation) – Treatment\n              of Disposal of Fixed assets\n     5      Valuation of Inventory                                    4\n            Meaning of Inventory - Inventory Record Systems: Periodic and\n              Perpetual - Methods of Stock Valuation: FIFO, Weighted Average\n            and LIFO\n                               Total Hours                       48\n\n\nTextbook :\n 1  Financial Accounting , P.C.Tulsian , Pearson Education India , 2015\n 2  Financial Accounting for Management, Dr. S. N. Maheshwari , Vikas Publishing House,\n    2018\n 3  Financial Accounting , Ambrish Gupta , Tata McGraw, Hill Publishing Co. Ltd. New\n     Delhi, 0\n\nReferences:\n 1  Financial Accounting., Financial Accounting., Jain, S.P. and K.L. Narang., Kalyani\n     Publishers, 2017\n 2  Introduction to Financial Accounting, Introduction to Financial Accounting, Charles T.\n    Horngren and Donna Philbrick, Pearson, 2022\n 3  Financial Accounting , Financial Accounting , Deepak Sehgal , Vikas Publishing H House,\n    2014\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00\n\nInstructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1  https://www.icai.org/post/intermediate-course\n 2  mca.gov.in\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "ec4aedc1568c4f4e2bdff7a620797b2d5d006fb3d947567d95ce7d2ef127a06b",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "24004413010101",
+      "subject_name": "INTRODUCTION TO DIGITAL MARKETING",
+      "course_id": "bba-digital-marketing-",
+      "course_name": "BBA ( Digital Marketing )",
+      "semester": 1,
+      "subject_code": "04DM0101",
+      "course_code_evidence": [
+        "04BB0103",
+        "04BB0104",
+        "04BB0106",
+        "04DM0101"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/INTRODUCTION-TO-DIGITAL-MARKETING.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/INTRODUCTION-TO-DIGITAL-MARKETING.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTRODUCTION TO DIGITAL MARKETING [6d9e3c134c8b].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTRODUCTION TO DIGITAL MARKETING [6d9e3c134c8b].pdf",
+      "expected_pdf_sha256": "b5c3febb308a32d588de863e1345e837434eb14d2662d36bb3535f5f9df86428",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INTRODUCTION TO DIGITAL MARKETING",
+        "course_code": "04DM0101",
+        "semester_label": null,
+        "credits": 3,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "To understand the fundamentals of digital marketing for business applications.",
+        "To comprehend the tools of digital marketing for application for business strategies.",
+        "To create the solutions to business marketing situations using digital marketing fundamentals. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 3 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Digital Strategy",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Components of Digital Marketing Strategy, Six C Framework,",
+              "company strategy, customer experience, clicking with AI, content",
+              "creation, channel promotions, check-back analysis, Communicating",
+              "your mission, Mission Statement, Establish Goals, Develop KPIs,",
+              "Culture of Content (CoC), reputation management, User Experience",
+              "(UX), Product Habits."
+            ],
+            "topics_text": "Components of Digital Marketing Strategy, Six C Framework, company strategy, customer experience, clicking with AI, content creation, channel promotions, check-back analysis, Communicating your mission, Mission Statement, Establish Goals, Develop KPIs, Culture of Content (CoC), reputation management, User Experience (UX), Product Habits.",
+            "topics": [
+              "Components of Digital Marketing Strategy, Six C Framework,",
+              "company strategy, customer experience, clicking with AI, content",
+              "creation, channel promotions, check-back analysis, Communicating",
+              "your mission, Mission Statement, Establish Goals, Develop KPIs,",
+              "Culture of Content (CoC), reputation management, User Experience",
+              "(UX), Product Habits."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Grab Customer Attention / Business Model and Brand",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Seeking Customer Attention, Attention Triggers, Improve",
+              "readability of content, Reading in patterns, F and Z patterns, Design",
+              "elements and typography, Deploy interacting content , Business",
+              "Model vs Brand, What role your business plays in the life of",
+              "consumer, Jobs to be Done (JTBD), Popular online business",
+              "models, Affiliate Model, membership model, peer-to-peer",
+              "ecommerce site model, online retail model, service model,",
+              "subscription model, freemium model, Analyze business model,",
+              "Discover your brand, Position your brand, Differentiation, Brand",
+              "positioning map, Establish the look of the brand, design components"
+            ],
+            "topics_text": "Seeking Customer Attention, Attention Triggers, Improve readability of content, Reading in patterns, F and Z patterns, Design elements and typography, Deploy interacting content , Business Model vs Brand, What role your business plays in the life of consumer, Jobs to be Done (JTBD), Popular online business models, Affiliate Model, membership model, peer-to-peer ecommerce site model, online retail model, service model, subscription model, freemium model, Analyze business model, Discover your brand, Position your brand, Differentiation, Brand positioning map, Establish the look of the brand, design components",
+            "topics": [
+              "Seeking Customer Attention, Attention Triggers, Improve",
+              "readability of content, Reading in patterns, F and Z patterns, Design",
+              "elements and typography, Deploy interacting content , Business",
+              "Model vs Brand, What role your business plays in the life of",
+              "consumer, Jobs to be Done (JTBD), Popular online business",
+              "models, Affiliate Model, membership model, peer-to-peer",
+              "ecommerce site model, online retail model, service model,",
+              "subscription model, freemium model, Analyze business model,",
+              "Discover your brand, Position your brand, Differentiation, Brand",
+              "positioning map, Establish the look of the brand, design components"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Design Marketing Campaigns",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Establish Marketing Objectives, Define Digital Marketing",
+              "Campaign, Major types of campaigns, Acquisition, Monetization,",
+              "Engagement, and Relevancy Campaigns, Balance the marketing",
+              "campaign, Choosing your campaign"
+            ],
+            "topics_text": "Establish Marketing Objectives, Define Digital Marketing Campaign, Major types of campaigns, Acquisition, Monetization, Engagement, and Relevancy Campaigns, Balance the marketing campaign, Choosing your campaign",
+            "topics": [
+              "Establish Marketing Objectives, Define Digital Marketing",
+              "Campaign, Major types of campaigns, Acquisition, Monetization,",
+              "Engagement, and Relevancy Campaigns, Balance the marketing",
+              "campaign, Choosing your campaign"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Create Offers",
+            "contact_hours": 12,
+            "topic_lines": [
+              "How to build trust and lead with value, Entry Point Offers (EPO),",
+              "Type of EPO, Ungated, gated, deep discount, Design Ungated",
+              "Offer, Design Gated Offer, Aspects of high converting gated offers,",
+              "A promise, An example, A shortcut, A solution, A discount,",
+              "Generating lead with educational content, Generating leads with",
+              "tools, Design Deep Discount offer, Physical premiums, Physical",
+              "Book, Webinar, Software, Splintering, Deep Discount offer",
+              "checklist, Maximizing Profit, Upsell or cross sell offer, bundles and",
+              "kits, Slack Adjusters, Recurring Billing",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Digital Marketing, Seema Gupta, TMH, 2020",
+              "2 Fundamentals of Digital Marketing, Punit Bhatia, Pearson, 2019",
+              "3 Digital Marketing - Strategy & Tactics, Jeremy Kagan & Siddharth Shekhar Singh, Wiley,",
+              "2020"
+            ],
+            "topics_text": "How to build trust and lead with value, Entry Point Offers (EPO), Type of EPO, Ungated, gated, deep discount, Design Ungated Offer, Design Gated Offer, Aspects of high converting gated offers, A promise, An example, A shortcut, A solution, A discount, Generating lead with educational content, Generating leads with tools, Design Deep Discount offer, Physical premiums, Physical Book, Webinar, Software, Splintering, Deep Discount offer checklist, Maximizing Profit, Upsell or cross sell offer, bundles and kits, Slack Adjusters, Recurring Billing Total Hours 45 Textbook : 1 Digital Marketing, Seema Gupta, TMH, 2020 2 Fundamentals of Digital Marketing, Punit Bhatia, Pearson, 2019 3 Digital Marketing - Strategy & Tactics, Jeremy Kagan & Siddharth Shekhar Singh, Wiley, 2020",
+            "topics": [
+              "How to build trust and lead with value, Entry Point Offers (EPO),",
+              "Type of EPO, Ungated, gated, deep discount, Design Ungated",
+              "Offer, Design Gated Offer, Aspects of high converting gated offers,",
+              "A promise, An example, A shortcut, A solution, A discount,",
+              "Generating lead with educational content, Generating leads with",
+              "tools, Design Deep Discount offer, Physical premiums, Physical",
+              "Book, Webinar, Software, Splintering, Deep Discount offer",
+              "checklist, Maximizing Profit, Upsell or cross sell offer, bundles and",
+              "kits, Slack Adjusters, Recurring Billing",
+              "Total Hours 45",
+              "Textbook :",
+              "1 Digital Marketing, Seema Gupta, TMH, 2020",
+              "2 Fundamentals of Digital Marketing, Punit Bhatia, Pearson, 2019",
+              "3 Digital Marketing - Strategy & Tactics, Jeremy Kagan & Siddharth Shekhar Singh, Wiley,",
+              "2020"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "Digital Marketing, Seema Gupta, TMH, 2020",
+          "Fundamentals of Digital Marketing, Punit Bhatia, Pearson, 2019",
+          "Digital Marketing - Strategy & Tactics, Jeremy Kagan & Siddharth Shekhar Singh, Wiley, 2020"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4864,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    INTRODUCTION TO DIGITAL MARKETING\nCOURSE CODE     04DM0101\nCOURSE CREDITS  3\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To understand the fundamentals of digital marketing for business applications.\n 2  To comprehend the tools of digital marketing for application for business strategies.\n 3  To create the solutions to business marketing situations using digital marketing\n     fundamentals.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     3            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Digital Strategy                                          10\n            Components of Digital Marketing Strategy, Six C Framework,\n           company strategy, customer experience, clicking with AI, content\n                creation, channel promotions, check-back analysis, Communicating\n             your mission, Mission Statement, Establish Goals, Develop KPIs,\n              Culture of Content (CoC), reputation management, User Experience\n             (UX), Product Habits.\n     2     Grab Customer Attention / Business Model and Brand         12\n             Seeking Customer Attention, Attention Triggers, Improve\n               readability of content, Reading in patterns, F and Z patterns, Design\n             elements and typography, Deploy interacting content , Business\n           Model vs Brand, What role your business plays in the life of\n             consumer, Jobs to be Done (JTBD), Popular online business\n             models, Affiliate Model, membership model, peer-to-peer\n            ecommerce site model, online retail model, service model,\n               subscription model, freemium model, Analyze business model,\n             Discover your brand, Position your brand, Differentiation, Brand\n               positioning map, Establish the look of the brand, design components\n     3      Design Marketing Campaigns                              11\n               Establish Marketing Objectives, Define Digital Marketing\n            Campaign, Major types of campaigns, Acquisition, Monetization,\n             Engagement, and Relevancy Campaigns, Balance the marketing\n             campaign, Choosing your campaign\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Create Offers                                            12\n         How to build trust and lead with value, Entry Point Offers (EPO),\n            Type of EPO, Ungated, gated, deep discount, Design Ungated\n               Offer, Design Gated Offer, Aspects of high converting gated offers,\n        A promise, An example, A shortcut, A solution, A discount,\n             Generating lead with educational content, Generating leads with\n                tools, Design Deep Discount offer, Physical premiums, Physical\n            Book, Webinar, Software, Splintering, Deep Discount offer\n                checklist, Maximizing Profit, Upsell or cross sell offer, bundles and\n                  kits, Slack Adjusters, Recurring Billing\n                               Total Hours                       45\n\n\nTextbook :\n 1  Digital Marketing, Seema Gupta, TMH, 2020\n 2  Fundamentals of Digital Marketing, Punit Bhatia, Pearson, 2019\n 3  Digital Marketing - Strategy & Tactics, Jeremy Kagan & Siddharth Shekhar Singh, Wiley,\n    2020\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "b5c3febb308a32d588de863e1345e837434eb14d2662d36bb3535f5f9df86428",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "24000422010801",
+      "subject_name": "JEWELLERY DESIGNING",
+      "course_id": "bba-digital-marketing-",
+      "course_name": "BBA ( Digital Marketing )",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    },
+    {
+      "subject_id": "24000422010601",
+      "subject_name": "MATHEMATICS FOR BUSINESS",
+      "course_id": "bba-digital-marketing-",
+      "course_name": "BBA ( Digital Marketing )",
+      "semester": 1,
+      "subject_code": "04BB0106",
+      "course_code_evidence": [
+        "04BB0106",
+        "04BB0107",
+        "04BB0109",
+        "04BB0110"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/MB-04BB0106.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/MB-04BB0106.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MATHEMATICS FOR BUSINESS [0104b987b366].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MATHEMATICS FOR BUSINESS [0104b987b366].pdf",
+      "expected_pdf_sha256": "7cc2ff58d1ac596bbe4b8b28202dfc1d53b55015f36d18f192e250ec29c21391",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MATHEMATICS FOR BUSINESS",
+        "course_code": "04BB0106",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "• To improve logic and reasoning ability, problem structuring and analytical skills • To enable students to gain understanding of mathematical applications in business • To understand calculation and applications of Interest, annuity and loan amortization • To understand the applications of matrices and functions in business • To understand the use of derivatives in business"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Calculate simple and compound interest on investments",
+        "Understand repayments of loan using EMIs",
+        "Understand the concept of Determinant and solve problem using determinant",
+        "Structure and solve problems using matrices",
+        "Understand and establish relationship between variables using functions to determine equilibrium",
+        "Determine minimum and maximum (optimum) value of cost and profit Pre-requisite of course:• To improve logic and reasoning ability, problem structuring and analytical skills • To enable students to gain understanding of mathematical applications in business • To understand calculation and applications of Interest, annuity and loan amortization • To understand the applications of matrices and functions in business • To understand the use of derivatives in business"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "MATHEMATICS OF FINANCE",
+            "contact_hours": 13,
+            "topic_lines": [
+              "Introduction, Simple Interest and Compound Interest – Concept and",
+              "problem solution, Future Value (FV) - Annuity: Amount of ordinary",
+              "annuity, Amount of annuity due, Present Value (PV) - ordinary",
+              "annuity and annuity due, Loan Amortization and Equated Monthly",
+              "Installments (EMIs) - Reducing balance and flat rate of interest Use",
+              "of MS Excel"
+            ],
+            "topics_text": "Introduction, Simple Interest and Compound Interest – Concept and problem solution, Future Value (FV) - Annuity: Amount of ordinary annuity, Amount of annuity due, Present Value (PV) - ordinary annuity and annuity due, Loan Amortization and Equated Monthly Installments (EMIs) - Reducing balance and flat rate of interest Use of MS Excel",
+            "topics": [
+              "Introduction, Simple Interest and Compound Interest – Concept and",
+              "problem solution, Future Value (FV) - Annuity: Amount of ordinary",
+              "annuity, Amount of annuity due, Present Value (PV) - ordinary",
+              "annuity and annuity due, Loan Amortization and Equated Monthly",
+              "Installments (EMIs) - Reducing balance and flat rate of interest Use",
+              "of MS Excel"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "FUNCTIONS",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction, Constants, Variables, Types of functions – Linear",
+              "function and Polynomial functions, Functions in Business: Cost",
+              "function, Revenue function and Profit function, construction of cost",
+              "functions, Profit function and Break-Even Point (BEP)"
+            ],
+            "topics_text": "Introduction, Constants, Variables, Types of functions – Linear function and Polynomial functions, Functions in Business: Cost function, Revenue function and Profit function, construction of cost functions, Profit function and Break-Even Point (BEP)",
+            "topics": [
+              "Introduction, Constants, Variables, Types of functions – Linear",
+              "function and Polynomial functions, Functions in Business: Cost",
+              "function, Revenue function and Profit function, construction of cost",
+              "functions, Profit function and Break-Even Point (BEP)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "DIFFERENTIATION AND APPLICATIONS OF",
+            "contact_hours": 14,
+            "topic_lines": [
+              "DERIVATIVE",
+              "Limit of a function, important results, differentiation of algebraic",
+              "functions – formulae (no derivation), Derivative of function of one",
+              "variable, derivative of sum, difference, product and quotient of two",
+              "functions (no derivation), chain rule, Differentiation of implicit",
+              "function, price elasticity of demand, Second order derivative,",
+              "Application of derivatives – Marginal cost, Marginal revenue,",
+              "Marginal Profit, Maxima and Minima"
+            ],
+            "topics_text": "DERIVATIVE Limit of a function, important results, differentiation of algebraic functions – formulae (no derivation), Derivative of function of one variable, derivative of sum, difference, product and quotient of two functions (no derivation), chain rule, Differentiation of implicit function, price elasticity of demand, Second order derivative, Application of derivatives – Marginal cost, Marginal revenue, Marginal Profit, Maxima and Minima",
+            "topics": [
+              "DERIVATIVE",
+              "Limit of a function, important results, differentiation of algebraic",
+              "functions – formulae (no derivation), Derivative of function of one",
+              "variable, derivative of sum, difference, product and quotient of two",
+              "functions (no derivation), chain rule, Differentiation of implicit",
+              "function, price elasticity of demand, Second order derivative,",
+              "Application of derivatives – Marginal cost, Marginal revenue,",
+              "Marginal Profit, Maxima and Minima"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "DETERMINANTS",
+            "contact_hours": 9,
+            "topic_lines": [
+              "Determinant of second order and of third order, Minor of an element",
+              "Expansion of determinant, Properties of determinant, Use of",
+              "determinants in solving simultaneous linear equations – Cramer’s",
+              "Rule for two and three linear equations Use of MS Excel to",
+              "calculate determinant"
+            ],
+            "topics_text": "Determinant of second order and of third order, Minor of an element Expansion of determinant, Properties of determinant, Use of determinants in solving simultaneous linear equations – Cramer’s Rule for two and three linear equations Use of MS Excel to calculate determinant",
+            "topics": [
+              "Determinant of second order and of third order, Minor of an element",
+              "Expansion of determinant, Properties of determinant, Use of",
+              "determinants in solving simultaneous linear equations – Cramer’s",
+              "Rule for two and three linear equations Use of MS Excel to",
+              "calculate determinant"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "MATRICES AND APPLICATIONS",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction, Definition, Types of matrices, Algebra of matrices",
+              "(Addition and Subtraction), Additive Inverse of a matrix, Structure",
+              "problems in matrix form, Multiplication of matrices (Max 3X3),",
+              "Minor, cofactor, adjoint and Inverse of Matrix, Solution of system",
+              "of linear equations using inverse of coefficient matrix (Max 3)",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Business Mathematics, D C Sancheti and V K Kapoor, Sultan Chand and Sons, 2014"
+            ],
+            "topics_text": "Introduction, Definition, Types of matrices, Algebra of matrices (Addition and Subtraction), Additive Inverse of a matrix, Structure problems in matrix form, Multiplication of matrices (Max 3X3), Minor, cofactor, adjoint and Inverse of Matrix, Solution of system of linear equations using inverse of coefficient matrix (Max 3) Total Hours 60 Textbook : 1 Business Mathematics, D C Sancheti and V K Kapoor, Sultan Chand and Sons, 2014",
+            "topics": [
+              "Introduction, Definition, Types of matrices, Algebra of matrices",
+              "(Addition and Subtraction), Additive Inverse of a matrix, Structure",
+              "problems in matrix form, Multiplication of matrices (Max 3X3),",
+              "Minor, cofactor, adjoint and Inverse of Matrix, Solution of system",
+              "of linear equations using inverse of coefficient matrix (Max 3)",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Business Mathematics, D C Sancheti and V K Kapoor, Sultan Chand and Sons, 2014"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "2. Business Mathematics , 2. Business Mathematics , Zamarudeen and Qazi, Vikas Publishing, 2009"
+        ],
+        "textbooks": [
+          "Business Mathematics, D C Sancheti and V K Kapoor, Sultan Chand and Sons, 2014"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 5208,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   MATHEMATICS FOR BUSINESS\nCOURSE CODE     04BB0106\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Calculate simple and compound interest on investments\n 2  Understand repayments of loan using EMIs\n 3  Understand the concept of Determinant and solve problem using determinant\n 4  Structure and solve problems using matrices\n 5  Understand and establish relationship between variables using functions to determine\n     equilibrium\n 6  Determine minimum and maximum (optimum) value of cost and profit\n\n\nPre-requisite of course:• To improve logic and reasoning ability, problem structuring and\nanalytical skills • To enable students to gain understanding of mathematical applications in\nbusiness • To understand calculation and applications of Interest, annuity and loan amortization\n• To understand the applications of matrices and functions in business • To understand the use of\nderivatives in business\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n                                       50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    MATHEMATICS OF FINANCE                           13\n               Introduction, Simple Interest and Compound Interest – Concept and\n             problem solution, Future Value (FV) - Annuity: Amount of ordinary\n               annuity, Amount of annuity due, Present Value (PV) - ordinary\n              annuity and annuity due, Loan Amortization and Equated Monthly\n               Installments (EMIs) - Reducing balance and flat rate of interest Use\n              of MS Excel\n     2    FUNCTIONS                                            12\n               Introduction, Constants, Variables, Types of functions – Linear\n              function and Polynomial functions, Functions in Business: Cost\n               function, Revenue function and Profit function, construction of cost\n               functions, Profit function and Break-Even Point (BEP)\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3     DIFFERENTIATION AND APPLICATIONS OF             14\n         DERIVATIVE\n             Limit of a function, important results, differentiation of algebraic\n              functions – formulae (no derivation), Derivative of function of one\n                variable, derivative of sum, difference, product and quotient of two\n              functions (no derivation), chain rule, Differentiation of implicit\n               function, price elasticity of demand, Second order derivative,\n              Application of derivatives – Marginal cost, Marginal revenue,\n             Marginal Profit, Maxima and Minima\n     4    DETERMINANTS                                       9\n             Determinant of second order and of third order, Minor of an element\n             Expansion of determinant, Properties of determinant, Use of\n              determinants in solving simultaneous linear equations – Cramer’s\n             Rule for two and three linear equations Use of MS Excel to\n               calculate determinant\n     5    MATRICES AND APPLICATIONS                        12\n               Introduction, Definition, Types of matrices, Algebra of matrices\n              (Addition and Subtraction), Additive Inverse of a matrix, Structure\n             problems in matrix form, Multiplication of matrices (Max 3X3),\n             Minor, cofactor, adjoint and Inverse of Matrix, Solution of system\n              of linear equations using inverse of coefficient matrix (Max 3)\n                               Total Hours                       60\n\n\nTextbook :\n 1  Business Mathematics, D C Sancheti and V K Kapoor, Sultan Chand and Sons, 2014\n\nReferences:\n 1   2. Business Mathematics , 2. Business Mathematics , Zamarudeen and Qazi, Vikas\n     Publishing, 2009\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "7cc2ff58d1ac596bbe4b8b28202dfc1d53b55015f36d18f192e250ec29c21391",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "24000422110201",
+      "subject_name": "MICRO ECONOMICS",
+      "course_id": "bba-digital-marketing-",
+      "course_name": "BBA ( Digital Marketing )",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0103",
+        "04BB0104",
+        "04BB1102",
+        "04DM0101"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/Micro-Eco.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MICRO ECONOMICS [e27f9ddfb836].pdf",
+      "expected_pdf_sha256": "6bf41531c25abe9c821556563bfd5c53a3d4a409b53b641770b0496e73e5e6c4",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0102"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "24000422110101",
+      "subject_name": "PRINCIPLES OF MANAGEMENT",
+      "course_id": "bba-digital-marketing-",
+      "course_name": "BBA ( Digital Marketing )",
+      "semester": 1,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0103",
+        "04BB1101",
+        "04BB1102",
+        "04DM0101"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/POM.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/PRINCIPLES OF MANAGEMENT [98a3d54a9272].pdf",
+      "expected_pdf_sha256": "b717530bd8466a6bc0b4a7aca1b1896fc61e6191c17ea28951598d3f6028821a",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0101"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "24000422010701",
+      "subject_name": "TALLY PRIME",
+      "course_id": "bba-digital-marketing-",
+      "course_name": "BBA ( Digital Marketing )",
+      "semester": 1,
+      "subject_code": "04BB0107",
+      "course_code_evidence": [
+        "04BB0107",
+        "04BB0109"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/TP-04BB0107.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/TP-04BB0107.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/TALLY PRIME [c7673a4ae434].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/TALLY PRIME [c7673a4ae434].pdf",
+      "expected_pdf_sha256": "30d21b72438510d4e3873772b3a550f650754833c182e026587d1eaa94e3857f",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "TALLY PRIME",
+        "course_code": "04BB0107",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Gain insights of Tally Prime software, theoretically as well as practically.",
+        "Generate various reports and statements using Tally Prime.",
+        "Record and Maintain Accounting Transactions using Tally Prime Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 100 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Computerized Accounting Systems using Tally Prime",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Fundamentals of Tally Prime - Introduction to Tally Prime – Tally",
+              "Prime Education mode & License version – Components of",
+              "Gateway of Tally – Keyboard Conventions – Create, Select, Alter &",
+              "Shut a Company – Highlights of Features and Configurations,",
+              "Maintaining Chart of Accounts: Accounting Masters: Creation of",
+              "Accounting Ledgers and Groups – Altering, Displaying and",
+              "Deleting Ledgers and Groups – Defining Ledger opening balance in",
+              "Tally Prime Inventory Masters: Meaning of Inventory – Inventory",
+              "Master Creation in Tally Prime: Creation of Stock Group, Stock",
+              "Item, Godown and Unit of Measurement – Defining stock opening",
+              "balance in Tally Prime"
+            ],
+            "topics_text": "Fundamentals of Tally Prime - Introduction to Tally Prime – Tally Prime Education mode & License version – Components of Gateway of Tally – Keyboard Conventions – Create, Select, Alter & Shut a Company – Highlights of Features and Configurations, Maintaining Chart of Accounts: Accounting Masters: Creation of Accounting Ledgers and Groups – Altering, Displaying and Deleting Ledgers and Groups – Defining Ledger opening balance in Tally Prime Inventory Masters: Meaning of Inventory – Inventory Master Creation in Tally Prime: Creation of Stock Group, Stock Item, Godown and Unit of Measurement – Defining stock opening balance in Tally Prime",
+            "topics": [
+              "Fundamentals of Tally Prime - Introduction to Tally Prime – Tally",
+              "Prime Education mode & License version – Components of",
+              "Gateway of Tally – Keyboard Conventions – Create, Select, Alter &",
+              "Shut a Company – Highlights of Features and Configurations,",
+              "Maintaining Chart of Accounts: Accounting Masters: Creation of",
+              "Accounting Ledgers and Groups – Altering, Displaying and",
+              "Deleting Ledgers and Groups – Defining Ledger opening balance in",
+              "Tally Prime Inventory Masters: Meaning of Inventory – Inventory",
+              "Master Creation in Tally Prime: Creation of Stock Group, Stock",
+              "Item, Godown and Unit of Measurement – Defining stock opening",
+              "balance in Tally Prime"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Recording and Maintaining Accounting Transactions in Tally",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Prime",
+              "Accounting Vouchers: Contra Voucher, Payment Voucher, Receipt",
+              "Voucher, Purchase Voucher, Sales Voucher, Credit Note Voucher,",
+              "Debit Note Voucher, and Journal Voucher – Inventory Vouchers:",
+              "Stock Journal and Physical Stock.",
+              "3 (A) Getting started with GST in Tally Prime (B) Generating 10",
+              "Financial Statements & MIS Reports in Tally Prime:",
+              "Introduction – Enabling GST and Defining Tax Details –",
+              "Accounting of Supply of Goods: Intrastate Inward and Outward",
+              "Supply of Goods, Interstate Inward and Outward Supply of Goods,",
+              "Purchase and Sales Return of Goods – Accounting of Supply of",
+              "Services: Intrastate Inward and Outward Supply of Services and",
+              "Interstate Inward and Outward Supply of Services., Accounting",
+              "Reports - Statements: Trial Balance, Profit and Loss Account,",
+              "Balance Sheet, Cash Flow Statement and Fund Flow Statement –",
+              "Books and Registers: Day Book, Receipts and Payments, Purchase",
+              "Register and Sales Register, Inventory Reports - Inventory Books,",
+              "Stock Summary, Stock Transfer & Ageing Analysis, Movement",
+              "Analysis: Stock group and Stock Item Analysis, GST Reports -",
+              "Generating GSTR - 1 and GSTR - 2 Report in Tally Prime",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Official Guide to Financial Accounting using Tally Prime, Tally Education Pvt. Ltd., BPB",
+              "Publications, 2021",
+              "2 Tally Essential Level 1, 2 &amp; 3, Tally Education Pvt. Ltd., Sahaj Enterprises, 2021"
+            ],
+            "topics_text": "Prime Accounting Vouchers: Contra Voucher, Payment Voucher, Receipt Voucher, Purchase Voucher, Sales Voucher, Credit Note Voucher, Debit Note Voucher, and Journal Voucher – Inventory Vouchers: Stock Journal and Physical Stock. 3 (A) Getting started with GST in Tally Prime (B) Generating 10 Financial Statements & MIS Reports in Tally Prime: Introduction – Enabling GST and Defining Tax Details – Accounting of Supply of Goods: Intrastate Inward and Outward Supply of Goods, Interstate Inward and Outward Supply of Goods, Purchase and Sales Return of Goods – Accounting of Supply of Services: Intrastate Inward and Outward Supply of Services and Interstate Inward and Outward Supply of Services., Accounting Reports - Statements: Trial Balance, Profit and Loss Account, Balance Sheet, Cash Flow Statement and Fund Flow Statement – Books and Registers: Day Book, Receipts and Payments, Purchase Register and Sales Register, Inventory Reports - Inventory Books, Stock Summary, Stock Transfer & Ageing Analysis, Movement Analysis: Stock group and Stock Item Analysis, GST Reports - Generating GSTR - 1 and GSTR - 2 Report in Tally Prime Total Hours 30 Textbook : 1 Official Guide to Financial Accounting using Tally Prime, Tally Education Pvt. Ltd., BPB Publications, 2021 2 Tally Essential Level 1, 2 &amp; 3, Tally Education Pvt. Ltd., Sahaj Enterprises, 2021",
+            "topics": [
+              "Prime",
+              "Accounting Vouchers: Contra Voucher, Payment Voucher, Receipt",
+              "Voucher, Purchase Voucher, Sales Voucher, Credit Note Voucher,",
+              "Debit Note Voucher, and Journal Voucher – Inventory Vouchers:",
+              "Stock Journal and Physical Stock.",
+              "3 (A) Getting started with GST in Tally Prime (B) Generating 10",
+              "Financial Statements & MIS Reports in Tally Prime:",
+              "Introduction – Enabling GST and Defining Tax Details –",
+              "Accounting of Supply of Goods: Intrastate Inward and Outward",
+              "Supply of Goods, Interstate Inward and Outward Supply of Goods,",
+              "Purchase and Sales Return of Goods – Accounting of Supply of",
+              "Services: Intrastate Inward and Outward Supply of Services and",
+              "Interstate Inward and Outward Supply of Services., Accounting",
+              "Reports - Statements: Trial Balance, Profit and Loss Account,",
+              "Balance Sheet, Cash Flow Statement and Fund Flow Statement –",
+              "Books and Registers: Day Book, Receipts and Payments, Purchase",
+              "Register and Sales Register, Inventory Reports - Inventory Books,",
+              "Stock Summary, Stock Transfer & Ageing Analysis, Movement",
+              "Analysis: Stock group and Stock Item Analysis, GST Reports",
+              "Generating GSTR - 1 and GSTR - 2 Report in Tally Prime",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Official Guide to Financial Accounting using Tally Prime, Tally Education Pvt. Ltd., BPB",
+              "Publications, 2021",
+              "2 Tally Essential Level 1, 2 &amp",
+              "3, Tally Education Pvt. Ltd., Sahaj Enterprises, 2021"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Learn Tally Prime : with All New Features, Learn Tally Prime : with All New Features, Rajesh U. Chheda, Ane Books Pvt. Ltd., 2020",
+          "Mastering Tally Prime: Training, Certification & Job, Mastering Tally Prime: Training, Certification & Job, Asok K. Nadhani, BPB Publications , 2021"
+        ],
+        "textbooks": [
+          "Official Guide to Financial Accounting using Tally Prime, Tally Education Pvt. Ltd., BPB Publications, 2021",
+          "Tally Essential Level 1, 2 &amp; 3, Tally Education Pvt. Ltd., Sahaj Enterprises, 2021"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4948,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    TALLY PRIME\nCOURSE CODE     04BB0107\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Gain insights of Tally Prime software, theoretically as well as practically.\n 2  Generate various reports and statements using Tally Prime.\n 3  Record and Maintain Accounting Transactions using Tally Prime\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        100     0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Computerized Accounting Systems using Tally Prime          12\n             Fundamentals of Tally Prime - Introduction to Tally Prime – Tally\n             Prime Education mode & License version – Components of\n            Gateway of Tally – Keyboard Conventions – Create, Select, Alter &\n             Shut a Company – Highlights of Features and Configurations,\n             Maintaining Chart of Accounts: Accounting Masters: Creation of\n             Accounting Ledgers and Groups – Altering, Displaying and\n              Deleting Ledgers and Groups – Defining Ledger opening balance in\n              Tally Prime Inventory Masters: Meaning of Inventory – Inventory\n             Master Creation in Tally Prime: Creation of Stock Group, Stock\n              Item, Godown and Unit of Measurement – Defining stock opening\n              balance in Tally Prime\n     2      Recording and Maintaining Accounting Transactions in Tally   8\n           Prime\n             Accounting Vouchers: Contra Voucher, Payment Voucher, Receipt\n             Voucher, Purchase Voucher, Sales Voucher, Credit Note Voucher,\n             Debit Note Voucher, and Journal Voucher – Inventory Vouchers:\n             Stock Journal and Physical Stock.\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      (A) Getting started with GST in Tally Prime (B) Generating    10\n             Financial Statements & MIS Reports in Tally Prime:\n               Introduction – Enabling GST and Defining Tax Details –\n             Accounting of Supply of Goods: Intrastate Inward and Outward\n             Supply of Goods, Interstate Inward and Outward Supply of Goods,\n             Purchase and Sales Return of Goods – Accounting of Supply of\n               Services: Intrastate Inward and Outward Supply of Services and\n                Interstate Inward and Outward Supply of Services., Accounting\n             Reports - Statements: Trial Balance, Profit and Loss Account,\n             Balance Sheet, Cash Flow Statement and Fund Flow Statement –\n            Books and Registers: Day Book, Receipts and Payments, Purchase\n              Register and Sales Register, Inventory Reports - Inventory Books,\n             Stock Summary, Stock Transfer & Ageing Analysis, Movement\n              Analysis: Stock group and Stock Item Analysis, GST Reports -\n             Generating GSTR - 1 and GSTR - 2 Report in Tally Prime\n                               Total Hours                       30\n\n\nTextbook :\n 1  Official Guide to Financial Accounting using Tally Prime, Tally Education Pvt. Ltd., BPB\n     Publications, 2021\n 2  Tally Essential Level 1, 2 &amp; 3, Tally Education Pvt. Ltd., Sahaj Enterprises, 2021\n\nReferences:\n 1  Learn Tally Prime : with All New Features, Learn Tally Prime : with All New Features,\n    Rajesh U. Chheda, Ane Books Pvt. Ltd., 2020\n 2  Mastering Tally Prime: Training, Certification & Job, Mastering Tally Prime: Training,\n     Certification & Job, Asok K. Nadhani, BPB Publications , 2021\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "30d21b72438510d4e3873772b3a550f650754833c182e026587d1eaa94e3857f",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 7,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 3,
+    "extraction_errors": 0
+  }
+}

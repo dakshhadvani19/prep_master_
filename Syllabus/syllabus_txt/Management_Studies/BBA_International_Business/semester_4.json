@@ -1,0 +1,1087 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "bba-international-business-",
+    "course_name": "BBA ( International Business)",
+    "output_slug": "BBA_International_Business"
+  },
+  "semester": 4,
+  "subject_count": 11,
+  "subjects": [
+    {
+      "subject_id": "25000422041201",
+      "subject_name": "BUSINESS ANALYTICS",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "04BB0412",
+      "course_code_evidence": [
+        "04BB0412",
+        "04BB0413",
+        "04BB0414",
+        "04BB0415",
+        "04BB0416"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/BUSINESS-ANALYTICS.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/BUSINESS-ANALYTICS.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS ANALYTICS [2a214599945b].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS ANALYTICS [2a214599945b].pdf",
+      "expected_pdf_sha256": "e2e7963dc771c25c3075a21d2b178e08049c3024c487c2d475afe48e5bc5cddb",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BUSINESS ANALYTICS",
+        "course_code": "04BB0412",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply foundational concepts of business analytics to make data-driven decisions.",
+        "Differentiate between types of digital data and recognize their business applications.",
+        "Apply tools and techniques of BI and statistical analysis for interpreting data.",
+        "Analyze industry and functional use-cases using analytics tools and dashboards",
+        "Evaluate ethical, legal, and future trends of analytics in business contexts. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Foundations of Business Analytics",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction to Business Analytics, Role of Analytics in Decision",
+              "Making, Analytics Lifecycle and Capability Building Roadmap",
+              "Types of Analytics: Descriptive, Diagnostic, Predictive,",
+              "Prescriptive, Big Data and Modern Data Architectures, Key Tools &",
+              "Platforms Overview (Excel, Power BI, Tableau, Python)"
+            ],
+            "topics_text": "Introduction to Business Analytics, Role of Analytics in Decision Making, Analytics Lifecycle and Capability Building Roadmap Types of Analytics: Descriptive, Diagnostic, Predictive, Prescriptive, Big Data and Modern Data Architectures, Key Tools & Platforms Overview (Excel, Power BI, Tableau, Python)",
+            "topics": [
+              "Introduction to Business Analytics, Role of Analytics in Decision",
+              "Making, Analytics Lifecycle and Capability Building Roadmap",
+              "Types of Analytics: Descriptive, Diagnostic, Predictive,",
+              "Prescriptive, Big Data and Modern Data Architectures, Key Tools &",
+              "Platforms Overview (Excel, Power BI, Tableau, Python)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Types and Sources of Digital Data",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Structured, Semi-Structured, and Unstructured Data, ources:",
+              "Internal, External, Web, Social Media, Sensor Data, Data Quality,",
+              "Cleansing, and Transformation, Data Warehousing and ETL",
+              "Concepts, Metadata and Data Cataloguing, Introduction to SQL for",
+              "Business Queries"
+            ],
+            "topics_text": "Structured, Semi-Structured, and Unstructured Data, ources: Internal, External, Web, Social Media, Sensor Data, Data Quality, Cleansing, and Transformation, Data Warehousing and ETL Concepts, Metadata and Data Cataloguing, Introduction to SQL for Business Queries",
+            "topics": [
+              "Structured, Semi-Structured, and Unstructured Data, ources:",
+              "Internal, External, Web, Social Media, Sensor Data, Data Quality,",
+              "Cleansing, and Transformation, Data Warehousing and ETL",
+              "Concepts, Metadata and Data Cataloguing, Introduction to SQL for",
+              "Business Queries"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Business Intelligence and Data Analysis Techniques",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Business Intelligence Concepts and Value, Dashboards and Data",
+              "Visualization (Power BI/Tableau), OLAP and Reporting, Statistical",
+              "Analysis: Correlation, Regression, Exploratory Data Analysis and",
+              "Interpretation, Real-time Analytics and Stream Processing Basics"
+            ],
+            "topics_text": "Business Intelligence Concepts and Value, Dashboards and Data Visualization (Power BI/Tableau), OLAP and Reporting, Statistical Analysis: Correlation, Regression, Exploratory Data Analysis and Interpretation, Real-time Analytics and Stream Processing Basics",
+            "topics": [
+              "Business Intelligence Concepts and Value, Dashboards and Data",
+              "Visualization (Power BI/Tableau), OLAP and Reporting, Statistical",
+              "Analysis: Correlation, Regression, Exploratory Data Analysis and",
+              "Interpretation, Real-time Analytics and Stream Processing Basics"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Applications of Business Analytics",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Functional Areas: HR, Marketing, Operations, Finance, Industry",
+              "Use Cases: Retail, Healthcare, BFSI, E-commerce, Logistics;",
+              "Emerging Trends: IoT Analytics, Location-Based Analytics;",
+              "Generative AI in Business (ChatGPT, Copilot), Social Media &",
+              "Web Analytics; Analytics in Startups and MSMEs"
+            ],
+            "topics_text": "Functional Areas: HR, Marketing, Operations, Finance, Industry Use Cases: Retail, Healthcare, BFSI, E-commerce, Logistics; Emerging Trends: IoT Analytics, Location-Based Analytics; Generative AI in Business (ChatGPT, Copilot), Social Media & Web Analytics; Analytics in Startups and MSMEs",
+            "topics": [
+              "Functional Areas: HR, Marketing, Operations, Finance, Industry",
+              "Use Cases: Retail, Healthcare, BFSI, E-commerce, Logistics",
+              "Emerging Trends: IoT Analytics, Location-Based Analytics",
+              "Generative AI in Business (ChatGPT, Copilot), Social Media &",
+              "Web Analytics",
+              "Analytics in Startups and MSMEs"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Ethics, Governance and Future of Analytics",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Ethical Use of Data and Bias in Algorithms, Privacy Laws: GDPR,",
+              "India DPDP Act, Data Localization, Responsible AI and Explain",
+              "ability, Role of Citizen Data Scientists, Career Roles: Analyst, Data",
+              "Scientist, Data Engineer, Future Trends: Augmented Analytics,",
+              "AutoML, Embedded AI",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Business Analytics: The Science of Data-Driven Decision Making, U Dinesh Kumar,",
+              "Wiley, 2020"
+            ],
+            "topics_text": "Ethical Use of Data and Bias in Algorithms, Privacy Laws: GDPR, India DPDP Act, Data Localization, Responsible AI and Explain ability, Role of Citizen Data Scientists, Career Roles: Analyst, Data Scientist, Data Engineer, Future Trends: Augmented Analytics, AutoML, Embedded AI Total Hours 60 Textbook : 1 Business Analytics: The Science of Data-Driven Decision Making, U Dinesh Kumar, Wiley, 2020",
+            "topics": [
+              "Ethical Use of Data and Bias in Algorithms, Privacy Laws: GDPR,",
+              "India DPDP Act, Data Localization, Responsible AI and Explain",
+              "ability, Role of Citizen Data Scientists, Career Roles: Analyst, Data",
+              "Scientist, Data Engineer, Future Trends: Augmented Analytics,",
+              "AutoML, Embedded AI",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Business Analytics: The Science of Data-Driven Decision Making, U Dinesh Kumar,",
+              "Wiley, 2020"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Fundamentals of Business Analytics, Fundamentals of Business Analytics, R.N. Prasad & Seema Acharya, Wiley, 2011"
+        ],
+        "textbooks": [
+          "Business Analytics: The Science of Data-Driven Decision Making, U Dinesh Kumar, Wiley, 2020"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4735,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    BUSINESS ANALYTICS\nCOURSE CODE     04BB0412\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply foundational concepts of business analytics to make data-driven decisions.\n 2  Differentiate between types of digital data and recognize their business applications.\n 3  Apply tools and techniques of BI and statistical analysis for interpreting data.\n 4  Analyze industry and functional use-cases using analytics tools and dashboards\n 5  Evaluate ethical, legal, and future trends of analytics in business contexts.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Foundations of Business Analytics                          12\n               Introduction to Business Analytics, Role of Analytics in Decision\n            Making, Analytics Lifecycle and Capability Building Roadmap\n            Types of Analytics: Descriptive, Diagnostic, Predictive,\n               Prescriptive, Big Data and Modern Data Architectures, Key Tools &\n              Platforms Overview (Excel, Power BI, Tableau, Python)\n     2      Types and Sources of Digital Data                           12\n               Structured, Semi-Structured, and Unstructured Data, ources:\n                Internal, External, Web, Social Media, Sensor Data, Data Quality,\n              Cleansing, and Transformation, Data Warehousing and ETL\n              Concepts, Metadata and Data Cataloguing, Introduction to SQL for\n             Business Queries\n     3      Business Intelligence and Data Analysis Techniques            12\n             Business Intelligence Concepts and Value, Dashboards and Data\n               Visualization (Power BI/Tableau), OLAP and Reporting, Statistical\n              Analysis: Correlation, Regression, Exploratory Data Analysis and\n                Interpretation, Real-time Analytics and Stream Processing Basics\n     4      Applications of Business Analytics                          12\n              Functional Areas: HR, Marketing, Operations, Finance, Industry\n            Use Cases: Retail, Healthcare, BFSI, E-commerce, Logistics;\n            Emerging Trends: IoT Analytics, Location-Based Analytics;\n              Generative AI in Business (ChatGPT, Copilot), Social Media &\n          Web Analytics; Analytics in Startups and MSMEs\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     5       Ethics, Governance and Future of Analytics                  12\n               Ethical Use of Data and Bias in Algorithms, Privacy Laws: GDPR,\n               India DPDP Act, Data Localization, Responsible AI and Explain\n                 ability, Role of Citizen Data Scientists, Career Roles: Analyst, Data\n                Scientist, Data Engineer, Future Trends: Augmented Analytics,\n           AutoML, Embedded AI\n                               Total Hours                       60\n\n\nTextbook :\n 1  Business Analytics: The Science of Data-Driven Decision Making, U Dinesh Kumar,\n     Wiley, 2020\n\nReferences:\n 1  Fundamentals of Business Analytics, Fundamentals of Business Analytics, R.N. Prasad &\n    Seema Acharya, Wiley, 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "e2e7963dc771c25c3075a21d2b178e08049c3024c487c2d475afe48e5bc5cddb",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "25000422041401",
+      "subject_name": "CORPORATE ETIQUETTE",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "04BB0414",
+      "course_code_evidence": [
+        "04BB0414",
+        "04BB0415",
+        "04BB0416",
+        "04BB0417"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/CORPORATE-ETIQUETTE.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/CORPORATE-ETIQUETTE.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CORPORATE ETIQUETTE [7eb0ce26bc8d].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CORPORATE ETIQUETTE [7eb0ce26bc8d].pdf",
+      "expected_pdf_sha256": "2990b00ac90ed63d7162bd3c4f22ab728da8bc166de62d7ff7748d87d63b088c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CORPORATE ETIQUETTE",
+        "course_code": "04BB0414",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply corporate etiquette and professional behavior appropriately in various workplace scenarios.",
+        "Exhibit appropriate business communication and interpersonal skills required for corporate environments.",
+        "Apply personal grooming and dressing standards to create a professional image.",
+        "Display confidence in social and dining etiquettes, facilitating effective networking and professional interactions.",
+        "Implement digital professionalism and virtual workplace etiquette effectively. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamentals of Corporate Etiquette",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Corporate Etiquette Definition and Importance in Professional Life",
+              "Difference Between Social & Corporate Etiquette, Workplace",
+              "Behavior & Ethics: Punctuality, Accountability, and Integrity, Code",
+              "of Conduct & Organizational Culture, Handling Ethical Dilemmas,",
+              "Business Communication Etiquette: Verbal & Non-Verbal",
+              "Communication, Email and Telephone Etiquette, Business",
+              "Correspondence (Memos, Reports, etc.)"
+            ],
+            "topics_text": "Corporate Etiquette Definition and Importance in Professional Life Difference Between Social & Corporate Etiquette, Workplace Behavior & Ethics: Punctuality, Accountability, and Integrity, Code of Conduct & Organizational Culture, Handling Ethical Dilemmas, Business Communication Etiquette: Verbal & Non-Verbal Communication, Email and Telephone Etiquette, Business Correspondence (Memos, Reports, etc.)",
+            "topics": [
+              "Corporate Etiquette Definition and Importance in Professional Life",
+              "Difference Between Social & Corporate Etiquette, Workplace",
+              "Behavior & Ethics: Punctuality, Accountability, and Integrity, Code",
+              "of Conduct & Organizational Culture, Handling Ethical Dilemmas,",
+              "Business Communication Etiquette: Verbal & Non-Verbal",
+              "Communication, Email and Telephone Etiquette, Business",
+              "Correspondence (Memos, Reports, etc.)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Professional Grooming & Business Social Skills Personal",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Grooming & Dressing for Success",
+              "Formal vs. Business Casual Attire Grooming & Hygiene in",
+              "Corporate Life, Dining & Business Meal Etiquette: Table Manners",
+              "& Do¶s and Don¶ts in Business Meals Understanding Global Dining",
+              "Cultures , Workplace Interactions & Networking: Proper",
+              "Handshakes & Introductions, Business Card Exchange & First",
+              "Impressions, Attending Corporate Meetings & Conferences"
+            ],
+            "topics_text": "Grooming & Dressing for Success Formal vs. Business Casual Attire Grooming & Hygiene in Corporate Life, Dining & Business Meal Etiquette: Table Manners & Do¶s and Don¶ts in Business Meals Understanding Global Dining Cultures , Workplace Interactions & Networking: Proper Handshakes & Introductions, Business Card Exchange & First Impressions, Attending Corporate Meetings & Conferences",
+            "topics": [
+              "Grooming & Dressing for Success",
+              "Formal vs. Business Casual Attire Grooming & Hygiene in",
+              "Corporate Life, Dining & Business Meal Etiquette: Table Manners",
+              "& Do¶s and Don¶ts in Business Meals Understanding Global Dining",
+              "Cultures , Workplace Interactions & Networking: Proper",
+              "Handshakes & Introductions, Business Card Exchange & First",
+              "Impressions, Attending Corporate Meetings & Conferences"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Leadership and Communication: Corporate Meetings &",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Presentation Etiquette",
+              "Corporate Meetings & Presentation Etiquette: Conducting &",
+              "Attending Meetings, Presentation & Public Speaking Manners ,",
+              "Cross-Cultural Business Etiquette: Understanding Cultural",
+              "Differences in Business, International Business Communication &",
+              "Sensitivity, Digital & Virtual Workplace Etiquette: Professional Use",
+              "of social media, Virtual Meeting Manners (Zoom, MS Teams, etc.),",
+              "Email Writing, & Cybersecurity Awareness",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Business Etiquette: A Guide for the Indian Professional, Shital Kakkar Mehra,",
+              "HarperCollins India, 2012",
+              "2 The Etiquette Advantage in Business: Personal Skills for Professional Success, Peggy Post",
+              "& Peter Post, Harper Business, 1999"
+            ],
+            "topics_text": "Presentation Etiquette Corporate Meetings & Presentation Etiquette: Conducting & Attending Meetings, Presentation & Public Speaking Manners , Cross-Cultural Business Etiquette: Understanding Cultural Differences in Business, International Business Communication & Sensitivity, Digital & Virtual Workplace Etiquette: Professional Use of social media, Virtual Meeting Manners (Zoom, MS Teams, etc.), Email Writing, & Cybersecurity Awareness Total Hours 30 Textbook : 1 Business Etiquette: A Guide for the Indian Professional, Shital Kakkar Mehra, HarperCollins India, 2012 2 The Etiquette Advantage in Business: Personal Skills for Professional Success, Peggy Post & Peter Post, Harper Business, 1999",
+            "topics": [
+              "Presentation Etiquette",
+              "Corporate Meetings & Presentation Etiquette: Conducting &",
+              "Attending Meetings, Presentation & Public Speaking Manners ,",
+              "Cross-Cultural Business Etiquette: Understanding Cultural",
+              "Differences in Business, International Business Communication &",
+              "Sensitivity, Digital & Virtual Workplace Etiquette: Professional Use",
+              "of social media, Virtual Meeting Manners (Zoom, MS Teams, etc.),",
+              "Email Writing, & Cybersecurity Awareness",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Business Etiquette: A Guide for the Indian Professional, Shital Kakkar Mehra,",
+              "HarperCollins India, 2012",
+              "2 The Etiquette Advantage in Business: Personal Skills for Professional Success, Peggy Post",
+              "& Peter Post, Harper Business, 1999"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "The Essentials of Business Etiquette: How to Greet, Eat, and Tweet Your Way to Success, The Essentials of Business Etiquette: How to Greet, Eat, and Tweet Your Way to Success, Barbara Pachter , McGraw Hill, 2013",
+          "Corporate Grooming & Etiquette, Corporate Grooming & Etiquette, Sonal Ambani, Jaico Publishing House, 2011"
+        ],
+        "textbooks": [
+          "Business Etiquette: A Guide for the Indian Professional, Shital Kakkar Mehra, HarperCollins India, 2012",
+          "The Etiquette Advantage in Business: Personal Skills for Professional Success, Peggy Post & Peter Post, Harper Business, 1999"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4827,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   CORPORATE ETIQUETTE\nCOURSE CODE     04BB0414\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply corporate etiquette and professional behavior appropriately in various workplace\n     scenarios.\n 2  Exhibit appropriate business communication and interpersonal skills required for corporate\n     environments.\n 3  Apply personal grooming and dressing standards to create a professional image.\n 4  Display confidence in social and dining etiquettes, facilitating effective networking and\n     professional interactions.\n 5  Implement digital professionalism and virtual workplace etiquette effectively.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fundamentals of Corporate Etiquette                       10\n             Corporate Etiquette Definition and Importance in Professional Life\n              Difference Between Social & Corporate Etiquette, Workplace\n             Behavior & Ethics: Punctuality, Accountability, and Integrity, Code\n              of Conduct & Organizational Culture, Handling Ethical Dilemmas,\n             Business Communication Etiquette: Verbal & Non-Verbal\n             Communication, Email and Telephone Etiquette, Business\n             Correspondence (Memos, Reports, etc.)\n     2       Professional Grooming & Business Social Skills Personal       10\n           Grooming & Dressing for Success\n            Formal vs. Business Casual Attire Grooming & Hygiene in\n             Corporate Life, Dining & Business Meal Etiquette: Table Manners\n        & Do¶s and Don¶ts in Business Meals Understanding Global Dining\n              Cultures , Workplace Interactions & Networking: Proper\n            Handshakes & Introductions, Business Card Exchange & First\n              Impressions, Attending Corporate Meetings & Conferences\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Leadership and Communication: Corporate Meetings &       10\n             Presentation Etiquette\n             Corporate Meetings & Presentation Etiquette: Conducting &\n             Attending Meetings, Presentation & Public Speaking Manners ,\n              Cross-Cultural Business Etiquette: Understanding Cultural\n              Differences in Business, International Business Communication &\n                Sensitivity, Digital & Virtual Workplace Etiquette: Professional Use\n              of social media, Virtual Meeting Manners (Zoom, MS Teams, etc.),\n             Email Writing, & Cybersecurity Awareness\n                               Total Hours                       30\n\n\nTextbook :\n 1  Business Etiquette: A Guide for the Indian Professional, Shital Kakkar Mehra,\n     HarperCollins India, 2012\n 2  The Etiquette Advantage in Business: Personal Skills for Professional Success, Peggy Post\n   & Peter Post, Harper Business, 1999\n\nReferences:\n 1  The Essentials of Business Etiquette: How to Greet, Eat, and Tweet Your Way to Success,\n    The Essentials of Business Etiquette: How to Greet, Eat, and Tweet Your Way to Success,\n    Barbara Pachter , McGraw Hill, 2013\n 2  Corporate Grooming & Etiquette, Corporate Grooming & Etiquette, Sonal Ambani, Jaico\n     Publishing House, 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "2990b00ac90ed63d7162bd3c4f22ab728da8bc166de62d7ff7748d87d63b088c",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "25000422041301",
+      "subject_name": "COST ACCOUNTING",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0413",
+        "04BB0414",
+        "04BB0415",
+        "04BB0416",
+        "04BB0417"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CA.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/COST ACCOUNTING [b2e354d6d278].pdf",
+      "expected_pdf_sha256": "e55725b1ab431b330e559e1244051af84c3ed4b655be8f2a8008f6d0c9b5d540",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0309"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "25000422041701",
+      "subject_name": "COURSE)",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB1101",
+        "04BB1102"
+      ],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    },
+    {
+      "subject_id": "25000422041801",
+      "subject_name": "DIGITAL MARKETING",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "04BB0418",
+      "course_code_evidence": [
+        "04BB0412",
+        "04BB0413",
+        "04BB0414",
+        "04BB0415",
+        "04BB0416",
+        "04BB0418"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/DIGITAL-MARKETING.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/DIGITAL-MARKETING.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/DIGITAL MARKETING [db66d114f1a1].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/DIGITAL MARKETING [db66d114f1a1].pdf",
+      "expected_pdf_sha256": "26e60fd858e28a7b4b4af1187b875d70351e90dd8d975d70cd7d15edf4ada82a",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "DIGITAL MARKETING",
+        "course_code": "04BB0418",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Analyze the core concepts and structure of the digital marketing ecosystem to interpret the interrelationship between its components.",
+        "Explore key channels including SEO, SEM, SMM, Email, Influencer, and Affiliate marketing",
+        "Design effective digital content that aligns with brand identity and addresses the expectations of the target audience.",
+        "Utilize tools and techniques for campaign management and performance analysis.",
+        "Identify career pathways and agency roles in digital marketing.Identify career pathways and agency roles in digital marketing. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Digital Marketing Foundations & Strategy",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Introduction to the concept and evolution of digital marketing,",
+              "Comparison of traditional marketing with digital marketing",
+              "methods, Understanding the customer journey in the digital",
+              "environment, Exploring the AIDA model: Awareness, Interest,",
+              "Desire, Action, Learning STP (Segmentation, Targeting,",
+              "Positioning) in digital campaigns, Creating and applying buyer",
+              "personas for personalized marketing, Overview of digital marketing",
+              "channels: SEO, SEM, email, social media, content marketing."
+            ],
+            "topics_text": "Introduction to the concept and evolution of digital marketing, Comparison of traditional marketing with digital marketing methods, Understanding the customer journey in the digital environment, Exploring the AIDA model: Awareness, Interest, Desire, Action, Learning STP (Segmentation, Targeting, Positioning) in digital campaigns, Creating and applying buyer personas for personalized marketing, Overview of digital marketing channels: SEO, SEM, email, social media, content marketing.",
+            "topics": [
+              "Introduction to the concept and evolution of digital marketing,",
+              "Comparison of traditional marketing with digital marketing",
+              "methods, Understanding the customer journey in the digital",
+              "environment, Exploring the AIDA model: Awareness, Interest,",
+              "Desire, Action, Learning STP (Segmentation, Targeting,",
+              "Positioning) in digital campaigns, Creating and applying buyer",
+              "personas for personalized marketing, Overview of digital marketing",
+              "channels: SEO, SEM, email, social media, content marketing."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Core Digital Channels",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Understanding Search Engine Optimization (SEO): on-page, off-",
+              "page, and technical SEO,, Introduction to Search Engine Marketing",
+              "(SEM), Google Ads, and PPC campaign structure,, Exploring",
+              "display advertising and retargeting strategies for conversions,,",
+              "Learning effective email marketing techniques: campaign setup,",
+              "tools like Mailchimp, segmentation, Understanding mobile",
+              "marketing: mobile-friendly landing pages, SMS campaigns, push",
+              "notifications"
+            ],
+            "topics_text": "Understanding Search Engine Optimization (SEO): on-page, off- page, and technical SEO,, Introduction to Search Engine Marketing (SEM), Google Ads, and PPC campaign structure,, Exploring display advertising and retargeting strategies for conversions,, Learning effective email marketing techniques: campaign setup, tools like Mailchimp, segmentation, Understanding mobile marketing: mobile-friendly landing pages, SMS campaigns, push notifications",
+            "topics": [
+              "Understanding Search Engine Optimization (SEO): on-page, off",
+              "page, and technical SEO,, Introduction to Search Engine Marketing",
+              "(SEM), Google Ads, and PPC campaign structure,, Exploring",
+              "display advertising and retargeting strategies for conversions,,",
+              "Learning effective email marketing techniques: campaign setup,",
+              "tools like Mailchimp, segmentation, Understanding mobile",
+              "marketing: mobile-friendly landing pages, SMS campaigns, push",
+              "notifications"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Content & Social Media Marketing",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Developing various types of content: text, video, audio, and motion",
+              "graphics, Storytelling techniques and how to create impactful brand",
+              "narratives, Understanding content alignment with the customer",
+              "journey (TOFU, MOFU, BOFU), Creating content calendars and",
+              "planning campaigns for various platforms, Platform-specific",
+              "strategies for Instagram, YouTube, LinkedIn, Using tools like",
+              "Buffer, Hootsuite, and Meta Suite for scheduling and engagement."
+            ],
+            "topics_text": "Developing various types of content: text, video, audio, and motion graphics, Storytelling techniques and how to create impactful brand narratives, Understanding content alignment with the customer journey (TOFU, MOFU, BOFU), Creating content calendars and planning campaigns for various platforms, Platform-specific strategies for Instagram, YouTube, LinkedIn, Using tools like Buffer, Hootsuite, and Meta Suite for scheduling and engagement.",
+            "topics": [
+              "Developing various types of content: text, video, audio, and motion",
+              "graphics, Storytelling techniques and how to create impactful brand",
+              "narratives, Understanding content alignment with the customer",
+              "journey (TOFU, MOFU, BOFU), Creating content calendars and",
+              "planning campaigns for various platforms, Platform-specific",
+              "strategies for Instagram, YouTube, LinkedIn, Using tools like",
+              "Buffer, Hootsuite, and Meta Suite for scheduling and engagement."
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Design Principles & Marketing Automation",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Understanding design elements: color theory, typography, visual",
+              "hierarchy, layout, , Creating brand identities using logos, brand kits,",
+              "and mood boards, Using Canva and Figma for designing marketing",
+              "creative, Introduction to marketing automation and its importance in",
+              "modern marketing,, Learning tools like HubSpot, Zoho CRM, and",
+              "Mailchimp for CRM and lead nurturing, Designing automated",
+              "customer journeys and workflows."
+            ],
+            "topics_text": "Understanding design elements: color theory, typography, visual hierarchy, layout, , Creating brand identities using logos, brand kits, and mood boards, Using Canva and Figma for designing marketing creative, Introduction to marketing automation and its importance in modern marketing,, Learning tools like HubSpot, Zoho CRM, and Mailchimp for CRM and lead nurturing, Designing automated customer journeys and workflows.",
+            "topics": [
+              "Understanding design elements: color theory, typography, visual",
+              "hierarchy, layout, , Creating brand identities using logos, brand kits,",
+              "and mood boards, Using Canva and Figma for designing marketing",
+              "creative, Introduction to marketing automation and its importance in",
+              "modern marketing,, Learning tools like HubSpot, Zoho CRM, and",
+              "Mailchimp for CRM and lead nurturing, Designing automated",
+              "customer journeys and workflows."
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Analytics, Metrics & Career Pathways",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Setting up and using Google Analytics to track digital marketing",
+              "effectiveness, Understanding key metrics: CTR, CPA, CPC, ROAS,",
+              "bounce rate, conversion rate, Learning A/B testing techniques for",
+              "campaign optimization,, Overview of digital marketing job roles:",
+              "strategist, analyst, content creator, campaign manager., Exploring",
+              "pathways in freelancing, agency work, and in-house marketing",
+              "teams, Building personal portfolios and LinkedIn profiles, Earning",
+              "industry-recognized certifications (e.g., Google Ads, HubSpot,",
+              "Meta).",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Digital Marketing for Dummies, Ryan Deiss, Russ Henneberry , Wiley, 2020",
+              "2 Fundamentals of Digital Marketing, Punit Bhatia , Pearson, 2019",
+              "3 Digital Marketing, Seema Gupta, TMH, 2020"
+            ],
+            "topics_text": "Setting up and using Google Analytics to track digital marketing effectiveness, Understanding key metrics: CTR, CPA, CPC, ROAS, bounce rate, conversion rate, Learning A/B testing techniques for campaign optimization,, Overview of digital marketing job roles: strategist, analyst, content creator, campaign manager., Exploring pathways in freelancing, agency work, and in-house marketing teams, Building personal portfolios and LinkedIn profiles, Earning industry-recognized certifications (e.g., Google Ads, HubSpot, Meta). Total Hours 60 Textbook : 1 Digital Marketing for Dummies, Ryan Deiss, Russ Henneberry , Wiley, 2020 2 Fundamentals of Digital Marketing, Punit Bhatia , Pearson, 2019 3 Digital Marketing, Seema Gupta, TMH, 2020",
+            "topics": [
+              "Setting up and using Google Analytics to track digital marketing",
+              "effectiveness, Understanding key metrics: CTR, CPA, CPC, ROAS,",
+              "bounce rate, conversion rate, Learning A/B testing techniques for",
+              "campaign optimization,, Overview of digital marketing job roles:",
+              "strategist, analyst, content creator, campaign manager., Exploring",
+              "pathways in freelancing, agency work, and in-house marketing",
+              "teams, Building personal portfolios and LinkedIn profiles, Earning",
+              "industry-recognized certifications (e.g., Google Ads, HubSpot,",
+              "Meta).",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Digital Marketing for Dummies, Ryan Deiss, Russ Henneberry , Wiley, 2020",
+              "2 Fundamentals of Digital Marketing, Punit Bhatia , Pearson, 2019",
+              "3 Digital Marketing, Seema Gupta, TMH, 2020"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "The Art of Social Media, The Art of Social Media, Guy Kawasaki, Peg Fitzpatrick,, Portfolio, 2015"
+        ],
+        "textbooks": [
+          "Digital Marketing for Dummies, Ryan Deiss, Russ Henneberry , Wiley, 2020",
+          "Fundamentals of Digital Marketing, Punit Bhatia , Pearson, 2019",
+          "Digital Marketing, Seema Gupta, TMH, 2020"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.uws.ac.uk/study/postgraduate/postgraduate-course-search/digital-marketing/",
+          "https://www.une.edu.au/study/courses/bachelor-of-digital-marketing",
+          "https://www.liverpool.ac.uk/courses/digital-marketing-and-analytics-msc",
+          "https://blog.hubspot.com/"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6595,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    DIGITAL MARKETING\nCOURSE CODE     04BB0418\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Analyze the core concepts and structure of the digital marketing ecosystem to interpret the\n     interrelationship between its components.\n 2  Explore key channels including SEO, SEM, SMM, Email, Influencer, and Affiliate\n    marketing\n 3  Design effective digital content that aligns with brand identity and addresses the\n     expectations of the target audience.\n 4  Utilize tools and techniques for campaign management and performance analysis.\n 5  Identify career pathways and agency roles in digital marketing.Identify career pathways\n    and agency roles in digital marketing.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Digital Marketing Foundations & Strategy                   12\n               Introduction to the concept and evolution of digital marketing,\n            Comparison of traditional marketing with digital marketing\n             methods, Understanding the customer journey in the digital\n              environment, Exploring the AIDA model: Awareness, Interest,\n               Desire, Action, Learning STP (Segmentation, Targeting,\n               Positioning) in digital campaigns, Creating and applying buyer\n              personas for personalized marketing, Overview of digital marketing\n              channels: SEO, SEM, email, social media, content marketing.\n     2      Core Digital Channels                                     12\n             Understanding Search Engine Optimization (SEO): on-page, off-\n              page, and technical SEO,, Introduction to Search Engine Marketing\n            (SEM), Google Ads, and PPC campaign structure,, Exploring\n              display advertising and retargeting strategies for conversions,,\n             Learning effective email marketing techniques: campaign setup,\n               tools like Mailchimp, segmentation, Understanding mobile\n              marketing: mobile-friendly landing pages, SMS campaigns, push\n                notifications\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Content & Social Media Marketing                         12\n             Developing various types of content: text, video, audio, and motion\n               graphics, Storytelling techniques and how to create impactful brand\n                narratives, Understanding content alignment with the customer\n              journey (TOFU, MOFU, BOFU), Creating content calendars and\n              planning campaigns for various platforms, Platform-specific\n                strategies for Instagram, YouTube, LinkedIn, Using tools like\n               Buffer, Hootsuite, and Meta Suite for scheduling and engagement.\n     4      Design Principles & Marketing Automation                  12\n             Understanding design elements: color theory, typography, visual\n               hierarchy, layout, , Creating brand identities using logos, brand kits,\n            and mood boards, Using Canva and Figma for designing marketing\n                creative, Introduction to marketing automation and its importance in\n            modern marketing,, Learning tools like HubSpot, Zoho CRM, and\n            Mailchimp for CRM and lead nurturing, Designing automated\n             customer journeys and workflows.\n     5       Analytics, Metrics & Career Pathways                       12\n               Setting up and using Google Analytics to track digital marketing\n               effectiveness, Understanding key metrics: CTR, CPA, CPC, ROAS,\n            bounce rate, conversion rate, Learning A/B testing techniques for\n            campaign optimization,, Overview of digital marketing job roles:\n                 strategist, analyst, content creator, campaign manager., Exploring\n             pathways in freelancing, agency work, and in-house marketing\n              teams, Building personal portfolios and LinkedIn profiles, Earning\n              industry-recognized certifications (e.g., Google Ads, HubSpot,\n              Meta).\n                               Total Hours                       60\n\n\nTextbook :\n 1  Digital Marketing for Dummies, Ryan Deiss, Russ Henneberry , Wiley, 2020\n 2  Fundamentals of Digital Marketing, Punit Bhatia , Pearson, 2019\n 3  Digital Marketing, Seema Gupta, TMH, 2020\n\nReferences:\n 1  The Art of Social Media, The Art of Social Media, Guy Kawasaki, Peg Fitzpatrick,,\n     Portfolio, 2015\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1  https://www.uws.ac.uk/study/postgraduate/postgraduate-course-search/digital-marketing/\n 2  https://www.une.edu.au/study/courses/bachelor-of-digital-marketing\n 3  https://www.liverpool.ac.uk/courses/digital-marketing-and-analytics-msc\n 4  https://blog.hubspot.com/\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "26e60fd858e28a7b4b4af1187b875d70351e90dd8d975d70cd7d15edf4ada82a",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "25000422041601",
+      "subject_name": "FINANCIAL STATEMENT ANALYSIS",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0416",
+        "04BB0417"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/04MB0305-Financial-statement-Analysis.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FINANCIAL STATEMENT ANALYSIS [a8b597d770b3].pdf",
+      "expected_pdf_sha256": "fc6e1918ea0d9acd99213d6232f651704c07c087b051ca11c82c1a4b06fbb627",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04MB0305"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "25000422140401",
+      "subject_name": "INDIAN FINANCIAL SYSTEM",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0418",
+        "04BB1401",
+        "04BB1404",
+        "04BB1419",
+        "04IB0401"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/IFS.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INDIAN FINANCIAL SYSTEM [1805fe117fae].pdf",
+      "expected_pdf_sha256": "ccb3afc946089696ce1c0679703a9a594865e1a710a8099ffbc6d1748fafb3f4",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0308"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "25000492040101",
+      "subject_name": "INTERNATIONAL MARKETING",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0412",
+        "04BB0413",
+        "04BB0414",
+        "04BB0415",
+        "04BB0418",
+        "04IB0401"
+      ],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    },
+    {
+      "subject_id": "25000422140101",
+      "subject_name": "MANAGEMENT",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    },
+    {
+      "subject_id": "25000422041501",
+      "subject_name": "MUTUAL FUNDS",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "04BB0415",
+      "course_code_evidence": [
+        "04BB0415",
+        "04BB0416",
+        "04BB0417"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/MUTUAL-FUNDS.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/MUTUAL-FUNDS.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MUTUAL FUNDS [5b1fcd7cb96f].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MUTUAL FUNDS [5b1fcd7cb96f].pdf",
+      "expected_pdf_sha256": "370d64a0884e392de4d4a3c79cac0f7fbff825da9313a346f1c089cc50043351",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MUTUAL FUNDS",
+        "course_code": "04BB0415",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply key concepts, terminologies, and structures of mutual funds to understand their functioning and relevance in investment decisions.",
+        "Analyse the regulatory framework, roles of market participants, and investment process in mutual funds.",
+        "Apply NAV calculation, SIP planning, and portfolio evaluation methods to real-life investment scenarios.",
+        "Analyze the performance of different mutual fund schemes using tools such as Sharpe Ratio, Alpha, and Beta.",
+        "Evaluate mutual fund options based on risk-return profiles to recommend suitable investment strategies for various investor types. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 100 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Foundation of Mutual Funds",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Structure of Mutual Funds; Key Constituents of Mutual Funds,",
+              "AMC; Role and Function of AMFI; Saving and Investment;",
+              "Different Asset Classes; Diversification, Role of MFs in Financial",
+              "Goals; Systematic Investment (SIP-SWP-STP), Classification of",
+              "MFs; Fund Categories; New Fund Offer; Expense Ratio; Entry-Exit",
+              "Load, Portfolio Turnover; Competitive Investment Products (PMS,",
+              "AIF, NPS, ULIP and REIT)"
+            ],
+            "topics_text": "Structure of Mutual Funds; Key Constituents of Mutual Funds, AMC; Role and Function of AMFI; Saving and Investment; Different Asset Classes; Diversification, Role of MFs in Financial Goals; Systematic Investment (SIP-SWP-STP), Classification of MFs; Fund Categories; New Fund Offer; Expense Ratio; Entry-Exit Load, Portfolio Turnover; Competitive Investment Products (PMS, AIF, NPS, ULIP and REIT)",
+            "topics": [
+              "Structure of Mutual Funds",
+              "Key Constituents of Mutual Funds,",
+              "AMC",
+              "Role and Function of AMFI",
+              "Saving and Investment",
+              "Different Asset Classes",
+              "Diversification, Role of MFs in Financial",
+              "Goals",
+              "Systematic Investment (SIP-SWP-STP), Classification of",
+              "MFs",
+              "Fund Categories",
+              "New Fund Offer",
+              "Expense Ratio",
+              "Entry-Exit",
+              "Load, Portfolio Turnover",
+              "Competitive Investment Products (PMS,",
+              "AIF, NPS, ULIP and REIT)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Valuation and Regulatory Framework",
+            "contact_hours": 10,
+            "topic_lines": [
+              "SEBI¶s Fair Valuation Principles; Expenses in MF Schemes,",
+              "Computation of Net Assets of MFs and NAV (Theory and",
+              "Numerical), Legal Framework: Regulations pertaining to",
+              "(investment norms ± Borrowings by MFs ± Real Estate MFs)"
+            ],
+            "topics_text": "SEBI¶s Fair Valuation Principles; Expenses in MF Schemes, Computation of Net Assets of MFs and NAV (Theory and Numerical), Legal Framework: Regulations pertaining to (investment norms ± Borrowings by MFs ± Real Estate MFs)",
+            "topics": [
+              "SEBI¶s Fair Valuation Principles",
+              "Expenses in MF Schemes,",
+              "Computation of Net Assets of MFs and NAV (Theory and",
+              "Numerical), Legal Framework: Regulations pertaining to",
+              "(investment norms ± Borrowings by MFs ± Real Estate MFs)"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Performance Evaluation and Taxation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Performance Evaluation: Measurement of Risk (Alpha ± Beta ±",
+              "Standard Deviation ± Risk O Meter of Scheme), Performance",
+              "Evaluation (Sharpe Ratio - Treynor¶s Ratio - Sortino Ratio -",
+              "Tracking error - Information Ratio - Capture Ratio) (Theory &",
+              "Numerical) , Taxation: Tax on Income earned by MFs; Taxability",
+              "on Dividends and Capital Gains for investors, Deductions and",
+              "Exemptions under Income Tax Act; Securities Transaction Tax",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Mutual fund foundations, NISM, National Institute of Securities Markets, 2025"
+            ],
+            "topics_text": "Performance Evaluation: Measurement of Risk (Alpha ± Beta ± Standard Deviation ± Risk O Meter of Scheme), Performance Evaluation (Sharpe Ratio - Treynor¶s Ratio - Sortino Ratio - Tracking error - Information Ratio - Capture Ratio) (Theory & Numerical) , Taxation: Tax on Income earned by MFs; Taxability on Dividends and Capital Gains for investors, Deductions and Exemptions under Income Tax Act; Securities Transaction Tax Total Hours 30 Textbook : 1 Mutual fund foundations, NISM, National Institute of Securities Markets, 2025",
+            "topics": [
+              "Performance Evaluation: Measurement of Risk (Alpha ± Beta ±",
+              "Standard Deviation ± Risk O Meter of Scheme), Performance",
+              "Evaluation (Sharpe Ratio - Treynor¶s Ratio - Sortino Ratio",
+              "Tracking error - Information Ratio - Capture Ratio) (Theory &",
+              "Numerical) , Taxation: Tax on Income earned by MFs",
+              "Taxability",
+              "on Dividends and Capital Gains for investors, Deductions and",
+              "Exemptions under Income Tax Act",
+              "Securities Transaction Tax",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Mutual fund foundations, NISM, National Institute of Securities Markets, 2025"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "ndian mutual funds handbook: A guide for industry professionals and intelligent investors (5th ed.). , ndian mutual funds handbook: A guide for industry professionals and intelligent investors (5th ed.). , Sankaran, S., Vision Books, 2018",
+          "Mutual fund management , Mutual fund management , Sathe, A. A., & Aggarwal, P. S., Vipul Prakashan., 2023"
+        ],
+        "textbooks": [
+          "Mutual fund foundations, NISM, National Institute of Securities Markets, 2025"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4558,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   MUTUAL FUNDS\nCOURSE CODE     04BB0415\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply key concepts, terminologies, and structures of mutual funds to understand their\n     functioning and relevance in investment decisions.\n 2  Analyse the regulatory framework, roles of market participants, and investment process in\n    mutual funds.\n 3  Apply NAV calculation, SIP planning, and portfolio evaluation methods to real-life\n     investment scenarios.\n 4  Analyze the performance of different mutual fund schemes using tools such as Sharpe\n     Ratio, Alpha, and Beta.\n 5  Evaluate mutual fund options based on risk-return profiles to recommend suitable\n     investment strategies for various investor types.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        100     0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Foundation of Mutual Funds                               10\n               Structure of Mutual Funds; Key Constituents of Mutual Funds,\n         AMC; Role and Function of AMFI; Saving and Investment;\n               Different Asset Classes; Diversification, Role of MFs in Financial\n              Goals; Systematic Investment (SIP-SWP-STP), Classification of\n           MFs; Fund Categories; New Fund Offer; Expense Ratio; Entry-Exit\n             Load, Portfolio Turnover; Competitive Investment Products (PMS,\n             AIF, NPS, ULIP and REIT)\n     2      Valuation and Regulatory Framework                       10\n            SEBI¶s Fair Valuation Principles; Expenses in MF Schemes,\n             Computation of Net Assets of MFs and NAV (Theory and\n              Numerical), Legal Framework: Regulations pertaining to\n              (investment norms ± Borrowings by MFs ± Real Estate MFs)\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Performance Evaluation and Taxation                       10\n             Performance Evaluation: Measurement of Risk (Alpha ± Beta ±\n             Standard Deviation ± Risk O Meter of Scheme), Performance\n              Evaluation (Sharpe Ratio - Treynor¶s Ratio - Sortino Ratio -\n             Tracking error - Information Ratio - Capture Ratio) (Theory &\n             Numerical) , Taxation: Tax on Income earned by MFs; Taxability\n            on Dividends and Capital Gains for investors, Deductions and\n             Exemptions under Income Tax Act; Securities Transaction Tax\n                               Total Hours                       30\n\n\nTextbook :\n 1  Mutual fund foundations, NISM, National Institute of Securities Markets, 2025\n\nReferences:\n 1  ndian mutual funds handbook: A guide for industry professionals and intelligent investors\n     (5th ed.). , ndian mutual funds handbook: A guide for industry professionals and intelligent\n     investors (5th ed.). , Sankaran, S., Vision Books, 2018\n 2  Mutual fund management , Mutual fund management , Sathe, A. A., & Aggarwal, P. S.,\n    Vipul Prakashan., 2023\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  therory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "370d64a0884e392de4d4a3c79cac0f7fbff825da9313a346f1c089cc50043351",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "25000422141901",
+      "subject_name": "RESEARCH METHODOLOGY",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 4,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0412",
+        "04BB0418",
+        "04BB1401",
+        "04BB1419",
+        "04IB0401"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/RM.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/RESEARCH METHODOLOGY [ed6c06c9e2ec].pdf",
+      "expected_pdf_sha256": "51f76473fd006a1fb339519de4e41539671e70ed2599113a4e8eb1479c86c9e0",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB1304"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 4,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 7,
+    "extraction_errors": 0
+  }
+}

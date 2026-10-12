@@ -1,0 +1,1519 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "bba-business-analytics-",
+    "course_name": "BBA ( Business Analytics )",
+    "output_slug": "BBA_Business_Analytics"
+  },
+  "semester": 5,
+  "subject_count": 15,
+  "subjects": [
+    {
+      "subject_id": "23000422053501",
+      "subject_name": "AI AND ML IN MANAGEMENT",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "04BB0535",
+      "course_code_evidence": [
+        "04BB0532",
+        "04BB0533",
+        "04BB0535"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/AI-ML-IN-MANAGEMENT.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/AI-ML-IN-MANAGEMENT.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/AI AND ML IN MANAGEMENT [7eb88015ef3e].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/AI AND ML IN MANAGEMENT [7eb88015ef3e].pdf",
+      "expected_pdf_sha256": "8ae92e4e4aa02adb8ad3aa068ea36e946169b71367134c6a074bffeb451c073c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "AI & ML IN MANAGEMENT",
+        "course_code": "04BB0535",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "Basic knowledge of statistical concepts"
+      },
+      "objectives": [
+        "N/A"
+      ],
+      "course_outcomes": [
+        "Define and explain the fundamental concepts of Artificial Intelligence and Machine Learning relevant to business management",
+        "Classify and interpret business data sets for informed managerial decision-making using basic AI/ML concepts",
+        "Demonstrate the application of AI and ML tools in solving functional business problems across marketing, HR, finance, and operations",
+        "Evaluate real-world use cases of AI/ML in management and propose appropriate solutions based on organisational needs",
+        "Apply suitable machine learning algorithms to forecast product demand using historical sales and market data Pre-requisite of course:Basic knowledge of statistical concepts"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 100 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to AI, ML and Business Data Ecosystem",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Evolution and definitions of AI and ML, Differences between AI,",
+              "ML, and deep learning, Types of Machine Learning: Supervised,",
+              "Unsupervised, Reinforcement Learning, AI applications in the",
+              "business ecosystem, Ethics and biases in AI, Role of data in AI and",
+              "ML, Business data sources (CRM, ERP, Social Media), Basics of",
+              "data cleaning and preprocessing, Introduction to data visualization",
+              "tools: Tableau, Power BI (demo only), Case examples from retail",
+              "and BFSI sectors"
+            ],
+            "topics_text": "Evolution and definitions of AI and ML, Differences between AI, ML, and deep learning, Types of Machine Learning: Supervised, Unsupervised, Reinforcement Learning, AI applications in the business ecosystem, Ethics and biases in AI, Role of data in AI and ML, Business data sources (CRM, ERP, Social Media), Basics of data cleaning and preprocessing, Introduction to data visualization tools: Tableau, Power BI (demo only), Case examples from retail and BFSI sectors",
+            "topics": [
+              "Evolution and definitions of AI and ML, Differences between AI,",
+              "ML, and deep learning, Types of Machine Learning: Supervised,",
+              "Unsupervised, Reinforcement Learning, AI applications in the",
+              "business ecosystem, Ethics and biases in AI, Role of data in AI and",
+              "ML, Business data sources (CRM, ERP, Social Media), Basics of",
+              "data cleaning and preprocessing, Introduction to data visualization",
+              "tools: Tableau, Power BI (demo only), Case examples from retail",
+              "and BFSI sectors"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Functional and Technical Applications in Business",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Customer segmentation, Predictive analytics in marketing",
+              "campaigns, Chatbots and recommendation systems, Fraud detection,",
+              "Credit scoring using ML, Algorithmic trading (conceptual), AI in",
+              "recruitment and screening, Predicting employee attrition, Sentiment",
+              "analysis in feedback, Demand forecasting, Inventory optimization,",
+              "Intelligent logistics and route planning"
+            ],
+            "topics_text": "Customer segmentation, Predictive analytics in marketing campaigns, Chatbots and recommendation systems, Fraud detection, Credit scoring using ML, Algorithmic trading (conceptual), AI in recruitment and screening, Predicting employee attrition, Sentiment analysis in feedback, Demand forecasting, Inventory optimization, Intelligent logistics and route planning",
+            "topics": [
+              "Customer segmentation, Predictive analytics in marketing",
+              "campaigns, Chatbots and recommendation systems, Fraud detection,",
+              "Credit scoring using ML, Algorithmic trading (conceptual), AI in",
+              "recruitment and screening, Predicting employee attrition, Sentiment",
+              "analysis in feedback, Demand forecasting, Inventory optimization,",
+              "Intelligent logistics and route planning"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "ML Tools, Industry Use Cases and Project Work",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Hands-on with Excel and Google Colab, Introduction to Jupyter",
+              "Notebook / Colab, Linear regression using Excel, Basics of",
+              "classification models using Scikit-learn (e.g., Decision Trees),",
+              "Reading and interpreting ML outputs, Ethics in AI usage and data",
+              "privacy, Industry case studies (e.g., Netflix, Amazon, Zomato), Mini",
+              "project: business problem identification, AI/ML solution design,",
+              "Presentations and reflections",
+              "Total Hours 32",
+              "Textbook :",
+              "1 Artificial Intelligence and Machine Learning, C. S. R. Prabhu, PHI Learning, 0000"
+            ],
+            "topics_text": "Hands-on with Excel and Google Colab, Introduction to Jupyter Notebook / Colab, Linear regression using Excel, Basics of classification models using Scikit-learn (e.g., Decision Trees), Reading and interpreting ML outputs, Ethics in AI usage and data privacy, Industry case studies (e.g., Netflix, Amazon, Zomato), Mini project: business problem identification, AI/ML solution design, Presentations and reflections Total Hours 32 Textbook : 1 Artificial Intelligence and Machine Learning, C. S. R. Prabhu, PHI Learning, 0000",
+            "topics": [
+              "Hands-on with Excel and Google Colab, Introduction to Jupyter",
+              "Notebook / Colab, Linear regression using Excel, Basics of",
+              "classification models using Scikit-learn (e.g., Decision Trees),",
+              "Reading and interpreting ML outputs, Ethics in AI usage and data",
+              "privacy, Industry case studies (e.g., Netflix, Amazon, Zomato), Mini",
+              "project: business problem identification, AI/ML solution design,",
+              "Presentations and reflections",
+              "Total Hours 32",
+              "Textbook :",
+              "1 Artificial Intelligence and Machine Learning, C. S. R. Prabhu, PHI Learning, 0000"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Artificial Intelligence, Artificial Intelligence, Padhy N.P. , Oxford University Press, 0000",
+          "Machine Learning for Business Analytics, Machine Learning for Business Analytics, Galit Shmueli, Peter Bruce, Inbal Yahav, Nitin Patel , Wiley India Edition, 0000"
+        ],
+        "textbooks": [
+          "Artificial Intelligence and Machine Learning, C. S. R. Prabhu, PHI Learning, 0000"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.britannica.com/science/statistics/Random-variables-and-probability- distributions",
+          "https://machinelearningmastery.com/statistical-hypothesis-tests/",
+          "https://www.questionpro.com/features/correlation-analysis.html",
+          "https://www.sciencedirect.com/topics/medicine-and-dentistry/regression-analysis",
+          "https://www.aptech.com/blog/introduction-to-the-fundamentals-of-time-series-data-and- analysis/"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 5254,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    AI & ML IN MANAGEMENT\nCOURSE CODE     04BB0535\nCOURSE CREDITS  2\n\nObjective:\n 1 N/A\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Define and explain the fundamental concepts of Artificial Intelligence and Machine\n    Learning relevant to business management\n 2  Classify and interpret business data sets for informed managerial decision-making using\n     basic AI/ML concepts\n 3  Demonstrate the application of AI and ML tools in solving functional business problems\n     across marketing, HR, finance, and operations\n 4  Evaluate real-world use cases of AI/ML in management and propose appropriate solutions\n    based on organisational needs\n 5  Apply suitable machine learning algorithms to forecast product demand using historical\n     sales and market data\n\n\nPre-requisite of course:Basic knowledge of statistical concepts\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        100     0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to AI, ML and Business Data Ecosystem          12\n              Evolution and definitions of AI and ML, Differences between AI,\n          ML, and deep learning, Types of Machine Learning: Supervised,\n              Unsupervised, Reinforcement Learning, AI applications in the\n              business ecosystem, Ethics and biases in AI, Role of data in AI and\n          ML, Business data sources (CRM, ERP, Social Media), Basics of\n              data cleaning and preprocessing, Introduction to data visualization\n                tools: Tableau, Power BI (demo only), Case examples from retail\n            and BFSI sectors\n     2      Functional and Technical Applications in Business             12\n            Customer segmentation, Predictive analytics in marketing\n             campaigns, Chatbots and recommendation systems, Fraud detection,\n              Credit scoring using ML, Algorithmic trading (conceptual), AI in\n              recruitment and screening, Predicting employee attrition, Sentiment\n               analysis in feedback, Demand forecasting, Inventory optimization,\n                Intelligent logistics and route planning\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3    ML Tools, Industry Use Cases and Project Work              8\n            Hands-on with Excel and Google Colab, Introduction to Jupyter\n            Notebook / Colab, Linear regression using Excel, Basics of\n                classification models using Scikit-learn (e.g., Decision Trees),\n             Reading and interpreting ML outputs, Ethics in AI usage and data\n               privacy, Industry case studies (e.g., Netflix, Amazon, Zomato), Mini\n                project: business problem identification, AI/ML solution design,\n               Presentations and reflections\n                               Total Hours                       32\n\n\nTextbook :\n 1   Artificial Intelligence and Machine Learning, C. S. R. Prabhu, PHI Learning, 0000\n\nReferences:\n 1   Artificial Intelligence, Artificial Intelligence, Padhy N.P. , Oxford University Press, 0000\n 2  Machine Learning for Business Analytics, Machine Learning for Business Analytics, Galit\n     Shmueli, Peter Bruce, Inbal Yahav, Nitin Patel , Wiley India Edition, 0000\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  Theory\n 2  Case study\n\nSupplementary Resources:\n 1  https://www.britannica.com/science/statistics/Random-variables-and-probability-\n     distributions\n 2  https://machinelearningmastery.com/statistical-hypothesis-tests/\n 3  https://www.questionpro.com/features/correlation-analysis.html\n 4  https://www.sciencedirect.com/topics/medicine-and-dentistry/regression-analysis\n 5  https://www.aptech.com/blog/introduction-to-the-fundamentals-of-time-series-data-and-\n     analysis/\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8ae92e4e4aa02adb8ad3aa068ea36e946169b71367134c6a074bffeb451c073c",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000422053201",
+      "subject_name": "BLOCK CHAIN TECHNOLOGY",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "04BB0532",
+      "course_code_evidence": [
+        "04BB0532",
+        "04BB0533"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/BLOCK-CHAIN-TECHNOLOGY.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/BLOCK-CHAIN-TECHNOLOGY.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BLOCK CHAIN TECHNOLOGY [a257d8e2df46].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BLOCK CHAIN TECHNOLOGY [a257d8e2df46].pdf",
+      "expected_pdf_sha256": "f1e1aeabf253b648d0505c10c0dfbd8039e85d381396c33fec12fe8e5d392651",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BLOCK CHAIN TECHNOLOGY",
+        "course_code": "04BB0532",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "none"
+      },
+      "objectives": [
+        "N/A"
+      ],
+      "course_outcomes": [
+        "Build an understanding of the requirements of the fundamentals of Blockchain",
+        "Identify and apply the concept of Bitcoin",
+        "Recognize the underlying technology of transactions, blocks, and proof-of-work",
+        "Gain a profound insight into the Bitcoin network, Bitcoin miners, and Bitcoin transactions",
+        "Design and explore the applications of Blockchain Pre-requisite of course:none"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 100 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Fundamentals and Structure of Blockchain",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Definition and importance of blockchain, Key features of",
+              "blockchain, Types of Blockchain: Public, Private, Consortium, ,",
+              "Layers of Blockchain: Application, Execution, Consensus,",
+              "Blockchain Components and Concepts, Block structure and",
+              "identification, Linking blocks and block validation, Mining basics ,",
+              "consensus mechanisms, Challenges in governance and",
+              "implementation"
+            ],
+            "topics_text": "Definition and importance of blockchain, Key features of blockchain, Types of Blockchain: Public, Private, Consortium, , Layers of Blockchain: Application, Execution, Consensus, Blockchain Components and Concepts, Block structure and identification, Linking blocks and block validation, Mining basics , consensus mechanisms, Challenges in governance and implementation",
+            "topics": [
+              "Definition and importance of blockchain, Key features of",
+              "blockchain, Types of Blockchain: Public, Private, Consortium, ,",
+              "Layers of Blockchain: Application, Execution, Consensus,",
+              "Blockchain Components and Concepts, Block structure and",
+              "identification, Linking blocks and block validation, Mining basics ,",
+              "consensus mechanisms, Challenges in governance and",
+              "implementation"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Bitcoin and Blockchain Security",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Bitcoin transactions: Lifecycle, Structure, Inputs and Outputs,",
+              "Bitcoin network overview and block propagation, Proof of Work",
+              "(PoW) and consensus in Bitcoin, Bitcoin addresses and wallets,",
+              "Introduction to Bitcoin Core and APIs, Security principles in",
+              "Blockchain, Risks and vulnerabilities, , Privacy attacks and",
+              "mitigation strategies, User security practices, Wallet types,",
+              "multisignature, Risk diversification"
+            ],
+            "topics_text": "Bitcoin transactions: Lifecycle, Structure, Inputs and Outputs, Bitcoin network overview and block propagation, Proof of Work (PoW) and consensus in Bitcoin, Bitcoin addresses and wallets, Introduction to Bitcoin Core and APIs, Security principles in Blockchain, Risks and vulnerabilities, , Privacy attacks and mitigation strategies, User security practices, Wallet types, multisignature, Risk diversification",
+            "topics": [
+              "Bitcoin transactions: Lifecycle, Structure, Inputs and Outputs,",
+              "Bitcoin network overview and block propagation, Proof of Work",
+              "(PoW) and consensus in Bitcoin, Bitcoin addresses and wallets,",
+              "Introduction to Bitcoin Core and APIs, Security principles in",
+              "Blockchain, Risks and vulnerabilities, , Privacy attacks and",
+              "mitigation strategies, User security practices, Wallet types,",
+              "multisignature, Risk diversification"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Applications and Use Cases of Blockchain",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Blockchain application design basics, Overview of Ethereum and",
+              "Solidity, Sample decentralized application: Betting or Tokenization,",
+              "Blockchain in finance and digital supply chains, Use cases: Land",
+              "record management, Medical records, Royalty tracking, Content",
+              "publishing, Logistic, Advertising insights",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Beginning Blockchain, A Beginner¶s Guide to Building Blockchain Solutions,,",
+              "Bikramaditya Singhal, Gautam Dhameja, Priyansu Sekhar Panda, Apress, New York, 2018",
+              "2 Blockchain: a practical guide to developing business, law and technology solutions, Joseph",
+              "J. Bambara, Paul R. Allen, McGraw-Hill publication, 2018"
+            ],
+            "topics_text": "Blockchain application design basics, Overview of Ethereum and Solidity, Sample decentralized application: Betting or Tokenization, Blockchain in finance and digital supply chains, Use cases: Land record management, Medical records, Royalty tracking, Content publishing, Logistic, Advertising insights Total Hours 30 Textbook : 1 Beginning Blockchain, A Beginner¶s Guide to Building Blockchain Solutions,, Bikramaditya Singhal, Gautam Dhameja, Priyansu Sekhar Panda, Apress, New York, 2018 2 Blockchain: a practical guide to developing business, law and technology solutions, Joseph J. Bambara, Paul R. Allen, McGraw-Hill publication, 2018",
+            "topics": [
+              "Blockchain application design basics, Overview of Ethereum and",
+              "Solidity, Sample decentralized application: Betting or Tokenization,",
+              "Blockchain in finance and digital supply chains, Use cases: Land",
+              "record management, Medical records, Royalty tracking, Content",
+              "publishing, Logistic, Advertising insights",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Beginning Blockchain, A Beginner¶s Guide to Building Blockchain Solutions,,",
+              "Bikramaditya Singhal, Gautam Dhameja, Priyansu Sekhar Panda, Apress, New York, 2018",
+              "2 Blockchain: a practical guide to developing business, law and technology solutions, Joseph",
+              "J. Bambara, Paul R. Allen, McGraw-Hill publication, 2018"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [
+          "Beginning Blockchain, A Beginner¶s Guide to Building Blockchain Solutions,, Bikramaditya Singhal, Gautam Dhameja, Priyansu Sekhar Panda, Apress, New York, 2018",
+          "Blockchain: a practical guide to developing business, law and technology solutions, Joseph J. Bambara, Paul R. Allen, McGraw-Hill publication, 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.britannica.com/science/statistics/Random-variables-and-probability- distributions",
+          "https://www.aptech.com/blog/introduction-to-the-fundamentals-of-time-series-data-and- analysis"
+        ]
+      },
+      "page_count": 2,
+      "extracted_character_count": 4504,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   BLOCK CHAIN TECHNOLOGY\nCOURSE CODE     04BB0532\nCOURSE CREDITS  2\n\nObjective:\n 1 N/A\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Build an understanding of the requirements of the fundamentals of Blockchain\n 2  Identify and apply the concept of Bitcoin\n 3  Recognize the underlying technology of transactions, blocks, and proof-of-work\n 4  Gain a profound insight into the Bitcoin network, Bitcoin miners, and Bitcoin transactions\n 5  Design and explore the applications of Blockchain\n\n\nPre-requisite of course:none\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        100     0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Fundamentals and Structure of Blockchain                   10\n               Definition and importance of blockchain, Key features of\n              blockchain, Types of Blockchain: Public, Private, Consortium, ,\n             Layers of Blockchain: Application, Execution, Consensus,\n             Blockchain Components and Concepts, Block structure and\n                identification, Linking blocks and block validation, Mining basics ,\n             consensus mechanisms, Challenges in governance and\n             implementation\n     2       Bitcoin and Blockchain Security                            10\n              Bitcoin transactions: Lifecycle, Structure, Inputs and Outputs,\n              Bitcoin network overview and block propagation, Proof of Work\n           (PoW) and consensus in Bitcoin, Bitcoin addresses and wallets,\n               Introduction to Bitcoin Core and APIs, Security principles in\n              Blockchain, Risks and vulnerabilities, , Privacy attacks and\n               mitigation strategies, User security practices, Wallet types,\n               multisignature, Risk diversification\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3      Applications and Use Cases of Blockchain                    10\n             Blockchain application design basics, Overview of Ethereum and\n                Solidity, Sample decentralized application: Betting or Tokenization,\n             Blockchain in finance and digital supply chains, Use cases: Land\n              record management, Medical records, Royalty tracking, Content\n               publishing, Logistic, Advertising insights\n                               Total Hours                       30\n\n\nTextbook :\n 1  Beginning Blockchain, A Beginner¶s Guide to Building Blockchain Solutions,,\n    Bikramaditya Singhal, Gautam Dhameja, Priyansu Sekhar Panda, Apress, New York, 2018\n 2  Blockchain: a practical guide to developing business, law and technology solutions, Joseph\n      J. Bambara, Paul R. Allen, McGraw-Hill publication, 2018\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  Theory\n 2  Case study\n\nSupplementary Resources:\n 1  https://www.britannica.com/science/statistics/Random-variables-and-probability-\n     distributions\n 2  https://www.aptech.com/blog/introduction-to-the-fundamentals-of-time-series-data-and-\n     analysis\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "f1e1aeabf253b648d0505c10c0dfbd8039e85d381396c33fec12fe8e5d392651",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000421050101",
+      "subject_name": "BUSINESS",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    },
+    {
+      "subject_id": "23000422251201",
+      "subject_name": "COMPENSATION MANAGEMENT",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0532",
+        "04BB0533",
+        "04BB0534",
+        "04BB0535",
+        "04BB2512"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/04MB0317-Compensation-Management.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/COMPENSATION MANAGEMENT [8ffb8c493f5b].pdf",
+      "expected_pdf_sha256": "8cc0020e9b6cc39b29b9bd004264a70f09f32884ca99800fe1076ec28f32c6b9",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04MB0317"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "23000422150901",
+      "subject_name": "CONSUMER BEHAVIOUR",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB1507",
+        "04BB1509",
+        "04BB1510",
+        "04BB1529",
+        "04BB1530"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CB.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CONSUMER BEHAVIOUR [228ce31332d7].pdf",
+      "expected_pdf_sha256": "5a41127a600100cf115190fe3076359f61f3e7e16fa1adbc7308d73826c84c3c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0509"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "23000422053301",
+      "subject_name": "CYBER SECURITY",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "04BB0533",
+      "course_code_evidence": [
+        "04BB0533",
+        "04BB1602"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/CYBER-SECURITY.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/CYBER-SECURITY.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CYBER SECURITY [ac4ec747f6a1].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/CYBER SECURITY [ac4ec747f6a1].pdf",
+      "expected_pdf_sha256": "a84822191c40b70935aed9fb14ba8ebf0d2a14ed9f5d8d9a02f06aeab63800ea",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "CYBER SECURITY",
+        "course_code": "04BB0533",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "Basic knowledge of statistical concepts."
+      },
+      "objectives": [
+        "N/A"
+      ],
+      "course_outcomes": [
+        "Demonstrate understanding of basic concepts in cybersecurity",
+        "Analyze threats and risks within the context of the cybersecurity architecture.",
+        "Examine the performance and troubleshoot Network and cybersecurity systems.",
+        "Make use of various tools and methods used in cybercrime",
+        "Evaluate cyber activities that are considered crimes as per the IT Act. Pre-requisite of course:Basic knowledge of statistical concepts."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 100 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Cyber Security",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Cybercrime and origins of the world, Cybercrime and information",
+              "security, Classifications of cybercrime, Cybercrime and the Indian",
+              "ITA- 2000, A global Perspective on cybercrimes"
+            ],
+            "topics_text": "Cybercrime and origins of the world, Cybercrime and information security, Classifications of cybercrime, Cybercrime and the Indian ITA- 2000, A global Perspective on cybercrimes",
+            "topics": [
+              "Cybercrime and origins of the world, Cybercrime and information",
+              "security, Classifications of cybercrime, Cybercrime and the Indian",
+              "ITA- 2000, A global Perspective on cybercrimes"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Phishing and Identity Theft",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction, , Phishing: Methods of Phishing, Phishing Techniques,",
+              ", Spear Phishing, Types of Phishing Scams, , Phishing Toolkits and",
+              "Spy Phishing, Phishing Countermeasures, Identity Theft (ID Theft):",
+              "Personally, Identifiable Information (PII), Types of Identity Theft,",
+              "Techniques of ID Theft, , Identity Theft Countermeasures."
+            ],
+            "topics_text": "Introduction, , Phishing: Methods of Phishing, Phishing Techniques, , Spear Phishing, Types of Phishing Scams, , Phishing Toolkits and Spy Phishing, Phishing Countermeasures, Identity Theft (ID Theft): Personally, Identifiable Information (PII), Types of Identity Theft, Techniques of ID Theft, , Identity Theft Countermeasures.",
+            "topics": [
+              "Introduction, , Phishing: Methods of Phishing, Phishing Techniques,",
+              ", Spear Phishing, Types of Phishing Scams, , Phishing Toolkits and",
+              "Spy Phishing, Phishing Countermeasures, Identity Theft (ID Theft):",
+              "Personally, Identifiable Information (PII), Types of Identity Theft,",
+              "Techniques of ID Theft, , Identity Theft Countermeasures."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Tools and Methods Used in Cybercrime",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Proxy Servers and Anonymizers, Password Cracking, Keyloggers, ,",
+              "Virus and Worms,, Trojan Horses and Backdoors, Steganography,,",
+              "DoS and DDoS Attacks, , SQL Injection, Cyberlaws: The Indian",
+              "Context, The Indian IT Act, , Challenges to Indian Law and",
+              "Cybercrime Scenario in India, Consequences of Not Addressing the",
+              "Weakness in Information Technology Act, Amendments to the",
+              "Indian IT Act, Cybercrime and Punishment. , Digital Personal Data",
+              "Protection (DPDP) Act, 2023 Salient Features",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Cyber Security Understanding Cyber Crimes, Nina Godbole and Sunit Belpure,, Wiley",
+              "Publication,, 0000",
+              "2 Anti-Hacker Tool Kit, Mike Shema, Mc. Graw Hill Publication,, 0000"
+            ],
+            "topics_text": "Proxy Servers and Anonymizers, Password Cracking, Keyloggers, , Virus and Worms,, Trojan Horses and Backdoors, Steganography,, DoS and DDoS Attacks, , SQL Injection, Cyberlaws: The Indian Context, The Indian IT Act, , Challenges to Indian Law and Cybercrime Scenario in India, Consequences of Not Addressing the Weakness in Information Technology Act, Amendments to the Indian IT Act, Cybercrime and Punishment. , Digital Personal Data Protection (DPDP) Act, 2023 Salient Features Total Hours 30 Textbook : 1 Cyber Security Understanding Cyber Crimes, Nina Godbole and Sunit Belpure,, Wiley Publication,, 0000 2 Anti-Hacker Tool Kit, Mike Shema, Mc. Graw Hill Publication,, 0000",
+            "topics": [
+              "Proxy Servers and Anonymizers, Password Cracking, Keyloggers, ,",
+              "Virus and Worms,, Trojan Horses and Backdoors, Steganography,,",
+              "DoS and DDoS Attacks, , SQL Injection, Cyberlaws: The Indian",
+              "Context, The Indian IT Act, , Challenges to Indian Law and",
+              "Cybercrime Scenario in India, Consequences of Not Addressing the",
+              "Weakness in Information Technology Act, Amendments to the",
+              "Indian IT Act, Cybercrime and Punishment. , Digital Personal Data",
+              "Protection (DPDP) Act, 2023 Salient Features",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Cyber Security Understanding Cyber Crimes, Nina Godbole and Sunit Belpure,, Wiley",
+              "Publication,, 0000",
+              "2 Anti-Hacker Tool Kit, Mike Shema, Mc. Graw Hill Publication,, 0000"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Cyber Security Essentials, Cyber Security Essentials, James Graham, Richar Howard, Ryan Olson,, Taylor &amp; Francis Group, 0000",
+          "Cyber Security and Global Information Assurance:, Cyber Security and Global Information Assurance:, Kenneth J. Knapp, IGI Global, IGI Global, 2019"
+        ],
+        "textbooks": [
+          "Cyber Security Understanding Cyber Crimes, Nina Godbole and Sunit Belpure,, Wiley Publication,, 0000",
+          "Anti-Hacker Tool Kit, Mike Shema, Mc. Graw Hill Publication,, 0000"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4113,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    CYBER SECURITY\nCOURSE CODE     04BB0533\nCOURSE CREDITS  2\n\nObjective:\n 1 N/A\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Demonstrate understanding of basic concepts in cybersecurity\n 2  Analyze threats and risks within the context of the cybersecurity architecture.\n 3  Examine the performance and troubleshoot Network and cybersecurity systems.\n 4  Make use of various tools and methods used in cybercrime\n 5  Evaluate cyber activities that are considered crimes as per the IT Act.\n\n\nPre-requisite of course:Basic knowledge of statistical concepts.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        100     0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Cyber Security                             8\n             Cybercrime and origins of the world, Cybercrime and information\n                security, Classifications of cybercrime, Cybercrime and the Indian\n            ITA- 2000, A global Perspective on cybercrimes\n     2      Phishing and Identity Theft                                10\n               Introduction, , Phishing: Methods of Phishing, Phishing Techniques,\n                        , Spear Phishing, Types of Phishing Scams, , Phishing Toolkits and\n            Spy Phishing, Phishing Countermeasures, Identity Theft (ID Theft):\n               Personally, Identifiable Information (PII), Types of Identity Theft,\n             Techniques of ID Theft, , Identity Theft Countermeasures.\n     3      Tools and Methods Used in Cybercrime                      12\n             Proxy Servers and Anonymizers, Password Cracking, Keyloggers, ,\n             Virus and Worms,, Trojan Horses and Backdoors, Steganography,,\n          DoS and DDoS Attacks, , SQL Injection, Cyberlaws: The Indian\n              Context, The Indian IT Act, , Challenges to Indian Law and\n             Cybercrime Scenario in India, Consequences of Not Addressing the\n            Weakness in Information Technology Act, Amendments to the\n              Indian IT Act, Cybercrime and Punishment. , Digital Personal Data\n               Protection (DPDP) Act, 2023 Salient Features\n                               Total Hours                       30\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 1  Cyber Security Understanding Cyber Crimes, Nina Godbole and Sunit Belpure,, Wiley\n     Publication,, 0000\n 2  Anti-Hacker Tool Kit, Mike Shema, Mc. Graw Hill Publication,, 0000\n\nReferences:\n 1  Cyber Security Essentials, Cyber Security Essentials, James Graham, Richar Howard, Ryan\n     Olson,, Taylor &amp; Francis Group, 0000\n 2  Cyber Security and Global Information Assurance:, Cyber Security and Global Information\n     Assurance:, Kenneth J. Knapp, IGI Global, IGI Global, 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "a84822191c40b70935aed9fb14ba8ebf0d2a14ed9f5d8d9a02f06aeab63800ea",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000422152901",
+      "subject_name": "FUNDAMENTALS OF BANKING",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0532",
+        "04BB0533",
+        "04BB0534",
+        "04BB0535",
+        "04BB1529",
+        "04BB2512"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/FB.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/FUNDAMENTALS OF BANKING [0730131c483c].pdf",
+      "expected_pdf_sha256": "cec3ae21b01bf833ce95b03d67d58c02d7d174cc0b93caa4647fa383176ef69c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0529"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "23000422053101",
+      "subject_name": "INCOME TAX - LAW AND PRACTICES",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BA0501",
+        "04BA0502",
+        "04BB0531",
+        "04BB1509"
+      ],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    },
+    {
+      "subject_id": "23000422050601",
+      "subject_name": "INTERNSHIP",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "04BB0506",
+      "course_code_evidence": [
+        "04BA0501",
+        "04BA0502",
+        "04BB0506",
+        "04BB0531",
+        "04BB1509"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/INTERNSHIP.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/INTERNSHIP.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTERNSHIP [d543318b08ce].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTERNSHIP [d543318b08ce].pdf",
+      "expected_pdf_sha256": "4fe003d49aa2f448222ed9b7113d4a128af7e2e28632cb035db2ca5c04bb09e1",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_CONTENTS_NEED_MANUAL_REVIEW",
+      "official_document_metadata": {
+        "course_title": "INTERNSHIP",
+        "course_code": "04BB0506",
+        "semester_label": "5",
+        "credits": 4,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply business concepts and theories to real world decision making",
+        "Apply scientific knowledge and appropriate workplace behaviors in a professional setting",
+        "Apply various soft skills such as time management, positive attitude and communication skills during performance of the tasks assigned in internship organization",
+        "Demonstrate openness, inclusiveness, sensitivity, and the ability to interact respectfully with all people and understand individuals’ differences. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 0 50 0 50 0",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 2534,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         5\nCOURSE TITLE    INTERNSHIP\nCOURSE CODE     04BB0506\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply business concepts and theories to real world decision making\n 2  Apply scientific knowledge and appropriate workplace behaviors in a professional setting\n 3  Apply various soft skills such as time management, positive attitude and communication\n      skills during performance of the tasks assigned in internship organization\n 4  Demonstrate openness, inclusiveness, sensitivity, and the ability to interact respectfully\n     with all people and understand individuals’ differences.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n                                        0      50       0        50         0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\nSuggested List of Experiments:\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n                               Total Hours\n\n\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    10.00         20.00         25.00         25.00         10.00         10.00\n\nInstructional Method:\n 1  Project\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [
+        "PDF text was extracted, but unit/topic structure could not be confidently parsed."
+      ],
+      "actual_pdf_sha256": "4fe003d49aa2f448222ed9b7113d4a128af7e2e28632cb035db2ca5c04bb09e1",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000422153001",
+      "subject_name": "LABOUR WELFARE AND SOCIAL SECURITIES",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "04BB1530",
+      "course_code_evidence": [
+        "04BB0534",
+        "04BB1510",
+        "04BB1529",
+        "04BB1530",
+        "04BB2512"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/LABOUR-WELFARE-SOCIAL-SECURITIES.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/LABOUR-WELFARE-SOCIAL-SECURITIES.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/LABOUR WELFARE AND SOCIAL SECURITIES [fe11d5e0be5e].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/LABOUR WELFARE AND SOCIAL SECURITIES [fe11d5e0be5e].pdf",
+      "expected_pdf_sha256": "58ea9ae132ef76f122dec23a2b91e30b93ab302dd611835e1f81489c6c616acd",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "LABOUR WELFARE & SOCIAL SECURITIES",
+        "course_code": "04BB1530",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [
+        "N/A"
+      ],
+      "course_outcomes": [
+        "Analyse the evolution and strategic relevance of labour welfare theories and policies in shaping labour relations in India.",
+        "Evaluate welfare challenges and policy interventions for vulnerable and emerging labour segments across sectors.",
+        "Critically assess the design, implementation, and impact of social security mechanisms, including the latest legislative reforms.",
+        "Compare and critique national and international frameworks for labour welfare and social security, including ILO conventions.",
+        "Develop strategic and policy-level insights into integrated welfare models through case studies and legislative analysis. Pre-requisite of course: NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Strategic Foundations of Labour Welfare",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Conceptual overview: Labour welfare in industrial and social",
+              "contexts., Conceptual overview;Objectives, scope, and evolving role",
+              "in policy frameworks , Comparative analysis of theories: Police,",
+              "Religious, Philanthropic, Trusteeship., Comparative analysis of",
+              "theories: Placating, Public Relations, and Functional Role and",
+              "accountability of Welfare Officers in modern organisations.,",
+              "Contemporary welfare policy frameworks in India"
+            ],
+            "topics_text": "Conceptual overview: Labour welfare in industrial and social contexts., Conceptual overview;Objectives, scope, and evolving role in policy frameworks , Comparative analysis of theories: Police, Religious, Philanthropic, Trusteeship., Comparative analysis of theories: Placating, Public Relations, and Functional Role and accountability of Welfare Officers in modern organisations., Contemporary welfare policy frameworks in India",
+            "topics": [
+              "Conceptual overview: Labour welfare in industrial and social",
+              "contexts., Conceptual overview",
+              "Objectives, scope, and evolving role",
+              "in policy frameworks , Comparative analysis of theories: Police,",
+              "Religious, Philanthropic, Trusteeship., Comparative analysis of",
+              "theories: Placating, Public Relations, and Functional Role and",
+              "accountability of Welfare Officers in modern organisations.,",
+              "Contemporary welfare policy frameworks in India"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Inclusive Welfare: Sectoral and Special Labour Groups",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Analytical review",
+              "Inclusive Welfare: Sectoral and Special Labour Groups Analytical",
+              "review: Child labour, female labour, , contract and construction",
+              "workers, agricultural labour, , Welfare issues in gig economy:",
+              "BPOs, KPOs, platform workers, Evaluation of state and non-state",
+              "agencies: Central/State governments, employers, Evaluation of state",
+              "and non-state agencies: trade unions, Welfare audits and policy gaps",
+              "for special groups"
+            ],
+            "topics_text": "Analytical review Inclusive Welfare: Sectoral and Special Labour Groups Analytical review: Child labour, female labour, , contract and construction workers, agricultural labour, , Welfare issues in gig economy: BPOs, KPOs, platform workers, Evaluation of state and non-state agencies: Central/State governments, employers, Evaluation of state and non-state agencies: trade unions, Welfare audits and policy gaps for special groups",
+            "topics": [
+              "Analytical review",
+              "Inclusive Welfare: Sectoral and Special Labour Groups Analytical",
+              "review: Child labour, female labour, , contract and construction",
+              "workers, agricultural labour, , Welfare issues in gig economy:",
+              "BPOs, KPOs, platform workers, Evaluation of state and non-state",
+              "agencies: Central/State governments, employers, Evaluation of state",
+              "and non-state agencies: trade unions, Welfare audits and policy gaps",
+              "for special groups"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Social Security: Concepts, Challenges, and Reforms",
+            "contact_hours": 12,
+            "topic_lines": [
+              "| Social security: Definitions, objectives, and global evolution, ,",
+              "social insurance vs. social assistance: Comparative framework.,",
+              "Institutional challenges and employer¶s liability, , Deep dive: Code",
+              "on Social Security, 2020 ± critical analysis and implications,,",
+              "Financing models and policy design issues"
+            ],
+            "topics_text": "| Social security: Definitions, objectives, and global evolution, , social insurance vs. social assistance: Comparative framework., Institutional challenges and employer¶s liability, , Deep dive: Code on Social Security, 2020 ± critical analysis and implications,, Financing models and policy design issues",
+            "topics": [
+              "| Social security: Definitions, objectives, and global evolution, ,",
+              "social insurance vs. social assistance: Comparative framework.,",
+              "Institutional challenges and employer¶s liability, , Deep dive: Code",
+              "on Social Security, 2020 ± critical analysis and implications,,",
+              "Financing models and policy design issues"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "International Labour Organisation & Social Security",
+            "contact_hours": 12,
+            "topic_lines": [
+              "International norms on social security for Labour: the ILO",
+              "Conventions., Recommendations on Social Security,, Comparison",
+              "of minimum standards of ILO, Recommendations on Social",
+              "Security,, Law and Practices in Comparative Perspectives In India,",
+              "UK and USA"
+            ],
+            "topics_text": "International norms on social security for Labour: the ILO Conventions., Recommendations on Social Security,, Comparison of minimum standards of ILO, Recommendations on Social Security,, Law and Practices in Comparative Perspectives In India, UK and USA",
+            "topics": [
+              "International norms on social security for Labour: the ILO",
+              "Conventions., Recommendations on Social Security,, Comparison",
+              "of minimum standards of ILO, Recommendations on Social",
+              "Security,, Law and Practices in Comparative Perspectives In India,",
+              "UK and USA"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Social Security Legislation in India",
+            "contact_hours": 12,
+            "topic_lines": [
+              "The Industrial Relations Code 2020, , Overview of Employee¶s",
+              "Compensation Act 1923,, Employees State Insurance Act, 1948, ,",
+              "Maternity Benefit Act, 1961, Factories Act, 1948, , Employee¶s",
+              "Provident Fund Act of 1952, Payment of Gratuity Act, 1972.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Social Security and Labour Welfare. , Sarma, A.M. , Himalaya Publishing House, 2021",
+              "2 Labour and Industrial Laws. , Padhi, P.K. , PHI Learning, 2019",
+              "3 Human Resource Management, Sinha, P.R.N., Shekhar, S.P., & Indu Bala. , Cengage",
+              "Learning., 2016"
+            ],
+            "topics_text": "The Industrial Relations Code 2020, , Overview of Employee¶s Compensation Act 1923,, Employees State Insurance Act, 1948, , Maternity Benefit Act, 1961, Factories Act, 1948, , Employee¶s Provident Fund Act of 1952, Payment of Gratuity Act, 1972. Total Hours 60 Textbook : 1 Social Security and Labour Welfare. , Sarma, A.M. , Himalaya Publishing House, 2021 2 Labour and Industrial Laws. , Padhi, P.K. , PHI Learning, 2019 3 Human Resource Management, Sinha, P.R.N., Shekhar, S.P., & Indu Bala. , Cengage Learning., 2016",
+            "topics": [
+              "The Industrial Relations Code 2020, , Overview of Employee¶s",
+              "Compensation Act 1923,, Employees State Insurance Act, 1948, ,",
+              "Maternity Benefit Act, 1961, Factories Act, 1948, , Employee¶s",
+              "Provident Fund Act of 1952, Payment of Gratuity Act, 1972.",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Social Security and Labour Welfare. , Sarma, A.M. , Himalaya Publishing House, 2021",
+              "2 Labour and Industrial Laws. , Padhi, P.K. , PHI Learning, 2019",
+              "3 Human Resource Management, Sinha, P.R.N., Shekhar, S.P., & Indu Bala. , Cengage",
+              "Learning., 2016"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Industrial Relations , Industrial Relations , C.S. Venkata Ratnam, Oxford University Press , 2017"
+        ],
+        "textbooks": [
+          "Social Security and Labour Welfare. , Sarma, A.M. , Himalaya Publishing House, 2021",
+          "Labour and Industrial Laws. , Padhi, P.K. , PHI Learning, 2019",
+          "Human Resource Management, Sinha, P.R.N., Shekhar, S.P., & Indu Bala. , Cengage Learning., 2016"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "New Labour Codes in India : Part I | Unacademy Live NTA UGC NET by Priyashi Barthwal (youtube.com)"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5842,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   LABOUR WELFARE & SOCIAL SECURITIES\nCOURSE CODE     04BB1530\nCOURSE CREDITS  4\n\nObjective:\n 1 N/A\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Analyse the evolution and strategic relevance of labour welfare theories and policies in\n     shaping labour relations in India.\n 2  Evaluate welfare challenges and policy interventions for vulnerable and emerging labour\n    segments across sectors.\n 3   Critically assess the design, implementation, and impact of social security mechanisms,\n     including the latest legislative reforms.\n 4  Compare and critique national and international frameworks for labour welfare and social\n     security, including ILO conventions.\n 5  Develop strategic and policy-level insights into integrated welfare models through case\n     studies and legislative analysis.\n\n\nPre-requisite of course: NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1       Strategic Foundations of Labour Welfare                    12\n             Conceptual overview: Labour welfare in industrial and social\n                contexts., Conceptual overview;Objectives, scope, and evolving role\n               in policy frameworks , Comparative analysis of theories: Police,\n               Religious, Philanthropic, Trusteeship., Comparative analysis of\n                theories: Placating, Public Relations, and Functional Role and\n               accountability of Welfare Officers in modern organisations.,\n            Contemporary welfare policy frameworks in India\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2       Inclusive Welfare: Sectoral and Special Labour Groups        12\n              Analytical review\n               Inclusive Welfare: Sectoral and Special Labour Groups Analytical\n              review: Child labour, female labour, , contract and construction\n              workers, agricultural labour, , Welfare issues in gig economy:\n            BPOs, KPOs, platform workers, Evaluation of state and non-state\n              agencies: Central/State governments, employers, Evaluation of state\n            and non-state agencies: trade unions, Welfare audits and policy gaps\n               for special groups\n     3       Social Security: Concepts, Challenges, and Reforms           12\n                              | Social security: Definitions, objectives, and global evolution, ,\n               social insurance vs. social assistance: Comparative framework.,\n                Institutional challenges and employer¶s liability, , Deep dive: Code\n            on Social Security, 2020 ± critical analysis and implications,,\n             Financing models and policy design issues\n     4       International Labour Organisation & Social Security          12\n               International norms on social security for Labour: the ILO\n              Conventions., Recommendations on Social Security,, Comparison\n              of minimum standards of ILO, Recommendations on Social\n                Security,, Law and Practices in Comparative Perspectives In India,\n        UK and USA\n     5       Social Security Legislation in India                          12\n            The Industrial Relations Code 2020, , Overview of Employee¶s\n            Compensation Act 1923,, Employees State Insurance Act, 1948, ,\n              Maternity Benefit Act, 1961, Factories Act, 1948, , Employee¶s\n              Provident Fund Act of 1952, Payment of Gratuity Act, 1972.\n                               Total Hours                       60\n\n\nTextbook :\n 1  Social Security and Labour Welfare. , Sarma, A.M. , Himalaya Publishing House, 2021\n 2  Labour and Industrial Laws. , Padhi, P.K. , PHI Learning, 2019\n 3  Human Resource Management, Sinha, P.R.N., Shekhar, S.P., & Indu Bala. , Cengage\n     Learning., 2016\n\nReferences:\n 1  Industrial Relations , Industrial Relations , C.S. Venkata Ratnam, Oxford University Press ,\n    2017\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1 THEORY\n\nSupplementary Resources:\n 1 New Labour Codes in India : Part I | Unacademy Live NTA UGC NET by Priyashi\n    Barthwal (youtube.com)\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "58ea9ae132ef76f122dec23a2b91e30b93ab302dd611835e1f81489c6c616acd",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000422150701",
+      "subject_name": "MANAGEMENT OF FINANCIAL MARKETS",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB1507",
+        "04BB1510",
+        "04BB1529",
+        "04BB1530",
+        "04BB2512"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MFM.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MANAGEMENT OF FINANCIAL MARKETS [115ac29ad6a9].pdf",
+      "expected_pdf_sha256": "f0fe58a1818ba5f6c3ba19ff38422de19c9ff404a0575b962dad7102e2bd2035",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0507"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "23000422151001",
+      "subject_name": "RETAIL MARKETING",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0532",
+        "04BB0534",
+        "04BB0535",
+        "04BB1510",
+        "04BB1529",
+        "04BB2512"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/RET-MKTNG.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/RETAIL MARKETING [cb5281f1f40b].pdf",
+      "expected_pdf_sha256": "72637f7c061dab32d52f9cac701add3ce3a9ef09268ba8ff2d4a2efa05cd2926",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0510"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "23000421050201",
+      "subject_name": "RISK AND FRAUD ANALYTICS",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "04BA0502",
+      "course_code_evidence": [
+        "04BA0502",
+        "04BB1507",
+        "04BB1509",
+        "04BB1510",
+        "04BB1530"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/RISK-AND-FRAUD-ANALYTICS.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/RISK-AND-FRAUD-ANALYTICS.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/RISK AND FRAUD ANALYTICS [874f39829e55].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/RISK AND FRAUD ANALYTICS [874f39829e55].pdf",
+      "expected_pdf_sha256": "f94bec43d8de51afbbe8e03a0be40caf319a2ab0a04c8928dd5ef000267d7c78",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "RISK AND FRAUD ANALYTICS",
+        "course_code": "04BA0502",
+        "semester_label": null,
+        "credits": 4,
+        "prerequisite": "NONE"
+      },
+      "objectives": [
+        "N/A"
+      ],
+      "course_outcomes": [
+        "Construct an understanding of the fundamentals of fraud, its various types, and associated risks",
+        "Differentiate between anomalies and fraudulent activities within datasets",
+        "Apply data analysis techniques to detect and prevent fraudulent activities",
+        "Utilise analytical tools and methodologies for fraud detection in billing and payroll systems",
+        "Interpret results from various fraud detection tests and make informed decisions Pre-requisite of course:NONE"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Fraud and Risk Analytics",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Definition and types of fraud, Understanding anomalies vs. fraud,",
+              "The risk associated with fraudulent activities, Fraud detection",
+              "methodologies, Recognizing fraud patterns, Introduction to data",
+              "analytical software tools, Data inclusions and deletions in fraud",
+              "analysis"
+            ],
+            "topics_text": "Definition and types of fraud, Understanding anomalies vs. fraud, The risk associated with fraudulent activities, Fraud detection methodologies, Recognizing fraud patterns, Introduction to data analytical software tools, Data inclusions and deletions in fraud analysis",
+            "topics": [
+              "Definition and types of fraud, Understanding anomalies vs. fraud,",
+              "The risk associated with fraudulent activities, Fraud detection",
+              "methodologies, Recognizing fraud patterns, Introduction to data",
+              "analytical software tools, Data inclusions and deletions in fraud",
+              "analysis"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Data Preparation for Fraud Analysis",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Evaluation and analysis of data, Obtaining and handling data files,",
+              "Understanding different file formats, Data preparation and cleaning",
+              "techniques,, Organizing and arranging data for analysis"
+            ],
+            "topics_text": "Evaluation and analysis of data, Obtaining and handling data files, Understanding different file formats, Data preparation and cleaning techniques,, Organizing and arranging data for analysis",
+            "topics": [
+              "Evaluation and analysis of data, Obtaining and handling data files,",
+              "Understanding different file formats, Data preparation and cleaning",
+              "techniques,, Organizing and arranging data for analysis"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Data Analysis Tests for Fraud Detection",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Benford¶s Law, , Number duplication test, Z-score analysis, ,",
+              "Relative size factor test, , Same-same-same test, , Same-same-",
+              "different test, Even amounts analysis, Correlation and trend analysis"
+            ],
+            "topics_text": "Benford¶s Law, , Number duplication test, Z-score analysis, , Relative size factor test, , Same-same-same test, , Same-same- different test, Even amounts analysis, Correlation and trend analysis",
+            "topics": [
+              "Benford¶s Law, , Number duplication test, Z-score analysis, ,",
+              "Relative size factor test, , Same-same-same test, , Same-same",
+              "different test, Even amounts analysis, Correlation and trend analysis"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Detecting Billing Scheme Frauds",
+            "contact_hours": 14,
+            "topic_lines": [
+              "Data familiarization techniques, Application of Benford¶s Law in",
+              "billing, , Relative size factor and z-score tests in billing data, ,",
+              "Detection of even dollar amounts, , Same-same-same and same-",
+              "same-different tests in billing,, Identifying payments without",
+              "purchase orders, , Analyzing time gaps between invoice and",
+              "payment dates, , Detecting post office box addresses and matching",
+              "employee addresses to suppliers, Identifying duplicate addresses in",
+              "vendor master files, Detecting payments to vendors not in the",
+              "master list, Gap detection in check number sequence"
+            ],
+            "topics_text": "Data familiarization techniques, Application of Benford¶s Law in billing, , Relative size factor and z-score tests in billing data, , Detection of even dollar amounts, , Same-same-same and same- same-different tests in billing,, Identifying payments without purchase orders, , Analyzing time gaps between invoice and payment dates, , Detecting post office box addresses and matching employee addresses to suppliers, Identifying duplicate addresses in vendor master files, Detecting payments to vendors not in the master list, Gap detection in check number sequence",
+            "topics": [
+              "Data familiarization techniques, Application of Benford¶s Law in",
+              "billing, , Relative size factor and z-score tests in billing data, ,",
+              "Detection of even dollar amounts, , Same-same-same and same",
+              "same-different tests in billing,, Identifying payments without",
+              "purchase orders, , Analyzing time gaps between invoice and",
+              "payment dates, , Detecting post office box addresses and matching",
+              "employee addresses to suppliers, Identifying duplicate addresses in",
+              "vendor master files, Detecting payments to vendors not in the",
+              "master list, Gap detection in check number sequence"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Payroll and Expense Reimbursement Fraud Analytics",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Understanding payroll fraud mechanisms, , Data analysis in payroll",
+              "systems, , Analyzing payroll registers and master files, ,",
+              "Commission tests and their applications, Detecting anomalies in",
+              "expense reimbursements",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Fraud Analytics Using Descriptive, Predictive, and Social Network Techniques: A Guide to",
+              "Data Science for Fraud Detection, Baesens, B., Van Vlasselaer, V., & Verbeke, W. ,",
+              "WILLEY, 2015",
+              "2 Fraud Analytics: Strategies and Methods for Detection and Prevention. , Spann, D. D. ,",
+              "WILEY, 2014"
+            ],
+            "topics_text": "Understanding payroll fraud mechanisms, , Data analysis in payroll systems, , Analyzing payroll registers and master files, , Commission tests and their applications, Detecting anomalies in expense reimbursements Total Hours 60 Textbook : 1 Fraud Analytics Using Descriptive, Predictive, and Social Network Techniques: A Guide to Data Science for Fraud Detection, Baesens, B., Van Vlasselaer, V., & Verbeke, W. , WILLEY, 2015 2 Fraud Analytics: Strategies and Methods for Detection and Prevention. , Spann, D. D. , WILEY, 2014",
+            "topics": [
+              "Understanding payroll fraud mechanisms, , Data analysis in payroll",
+              "systems, , Analyzing payroll registers and master files, ,",
+              "Commission tests and their applications, Detecting anomalies in",
+              "expense reimbursements",
+              "Total Hours 60",
+              "Textbook :",
+              "1 Fraud Analytics Using Descriptive, Predictive, and Social Network Techniques: A Guide to",
+              "Data Science for Fraud Detection, Baesens, B., Van Vlasselaer, V., & Verbeke, W. ,",
+              "WILLEY, 2015",
+              "2 Fraud Analytics: Strategies and Methods for Detection and Prevention. , Spann, D. D. ,",
+              "WILEY, 2014"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Mitra, S. (2019). Data Mining and Business Intelligence. Oxford University Press, Mitra, S. (2019). Data Mining and Business Intelligence. Oxford University Press, Mitra, S., Oxford University Press, 2019"
+        ],
+        "textbooks": [
+          "Fraud Analytics Using Descriptive, Predictive, and Social Network Techniques: A Guide to Data Science for Fraud Detection, Baesens, B., Van Vlasselaer, V., & Verbeke, W. , WILLEY, 2015",
+          "Fraud Analytics: Strategies and Methods for Detection and Prevention. , Spann, D. D. , WILEY, 2014"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.britannica.com/science/statistics/Random-variables-and-probability- distributions"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5441,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    RISK AND FRAUD ANALYTICS\nCOURSE CODE     04BA0502\nCOURSE CREDITS  4\n\nObjective:\n 1 N/A\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Construct an understanding of the fundamentals of fraud, its various types, and associated\n     risks\n 2  Differentiate between anomalies and fraudulent activities within datasets\n 3  Apply data analysis techniques to detect and prevent fraudulent activities\n 4   Utilise analytical tools and methodologies for fraud detection in billing and payroll systems\n 5  Interpret results from various fraud detection tests and make informed decisions\n\n\nPre-requisite of course:NONE\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Fraud and Risk Analytics                    12\n               Definition and types of fraud, Understanding anomalies vs. fraud,\n            The risk associated with fraudulent activities, Fraud detection\n              methodologies, Recognizing fraud patterns, Introduction to data\n               analytical software tools, Data inclusions and deletions in fraud\n               analysis\n     2      Data Preparation for Fraud Analysis                        10\n              Evaluation and analysis of data, Obtaining and handling data files,\n             Understanding different file formats, Data preparation and cleaning\n               techniques,, Organizing and arranging data for analysis\n     3      Data Analysis Tests for Fraud Detection                     14\n             Benford¶s Law, , Number duplication test, Z-score analysis, ,\n              Relative size factor test, , Same-same-same test, , Same-same-\n                different test, Even amounts analysis, Correlation and trend analysis\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     4      Detecting Billing Scheme Frauds                            14\n             Data familiarization techniques, Application of Benford¶s Law in\n                 billing, , Relative size factor and z-score tests in billing data, ,\n              Detection of even dollar amounts, , Same-same-same and same-\n              same-different tests in billing,, Identifying payments without\n             purchase orders, , Analyzing time gaps between invoice and\n            payment dates, , Detecting post office box addresses and matching\n            employee addresses to suppliers, Identifying duplicate addresses in\n             vendor master files, Detecting payments to vendors not in the\n             master list, Gap detection in check number sequence\n     5       Payroll and Expense Reimbursement Fraud Analytics          10\n             Understanding payroll fraud mechanisms, , Data analysis in payroll\n              systems, , Analyzing payroll registers and master files, ,\n            Commission tests and their applications, Detecting anomalies in\n             expense reimbursements\n                               Total Hours                       60\n\n\nTextbook :\n 1  Fraud Analytics Using Descriptive, Predictive, and Social Network Techniques: A Guide to\n    Data Science for Fraud Detection, Baesens, B., Van Vlasselaer, V., & Verbeke, W. ,\n   WILLEY, 2015\n 2  Fraud Analytics: Strategies and Methods for Detection and Prevention. , Spann, D. D. ,\n   WILEY, 2014\n\nReferences:\n 1  Mitra, S. (2019). Data Mining and Business Intelligence. Oxford University Press, Mitra, S.\n     (2019). Data Mining and Business Intelligence. Oxford University Press, Mitra, S., Oxford\n     University Press, 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Supplementary Resources:\n 1  https://www.britannica.com/science/statistics/Random-variables-and-probability-\n     distributions\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "f94bec43d8de51afbbe8e03a0be40caf319a2ab0a04c8928dd5ef000267d7c78",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000422053401",
+      "subject_name": "SPSS",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "04BB0534",
+      "course_code_evidence": [
+        "04BB0532",
+        "04BB0533",
+        "04BB0534",
+        "04BB0535"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/SPSS.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/SPSS.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/SPSS [d3afff85134d].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/SPSS [d3afff85134d].pdf",
+      "expected_pdf_sha256": "23a8841ca8fa7c4ec6767ef980b37e37de7ddc4be7d75de0bdf423fec973566c",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "SPSS",
+        "course_code": "04BB0534",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "1. The students must be aware about spreadsheet applications and basic operations of spreadsheets. 2. The students must be aware about basic statistical calculations. 3. The students must be aware about basic concepts of research methodology."
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Apply software knowledge to manage data and perform visual and descriptive analyses",
+        "Analyze data using bivariate and multivariate statistical tools in SPSS software and interpret the results",
+        "Apply parametric and non-parametric tests to draw meaningful inferences from the data using SPSS software",
+        "Explain the basic concepts of statistical analysis and the purpose of using SPSS in data- driven decision-making.",
+        "Diagnose data quality issues such as missing values or outliers in datasets and use SPSS tools to clean and prepare data for analysis. Pre-requisite of course:1. The students must be aware about spreadsheet applications and basic operations of spreadsheets. 2. The students must be aware about basic statistical calculations. 3. The students must be aware about basic concepts of research methodology."
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 0 100 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Creating and Editing a Data file in SPSS:",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to SPSS, S interface, Data view Vs Variable view,",
+              "Measurement scales (nominal, ordinal, scale),, , Entering data (by",
+              "variable and by case/record), importing data (from excel/csv),,",
+              "Editing data (inserting a new variable or case, copy-pasting data), ,",
+              "Graphs and Charts Introduction to Chart Builder, Bar graphs, Line",
+              "graphs, Pie charts, Box plots, Histograms, Scatterplots, , editing the",
+              "charts (adding title, changing font, changing axis values etc.),",
+              "printing the output, Descriptive Statistics Frequencies,, Visual",
+              "display of frequencies (bar chart, histogram),, Measures of Central",
+              "Tendency, Measures of Variability, Skewness, and Kurtosis."
+            ],
+            "topics_text": "Introduction to SPSS, S interface, Data view Vs Variable view, Measurement scales (nominal, ordinal, scale),, , Entering data (by variable and by case/record), importing data (from excel/csv),, Editing data (inserting a new variable or case, copy-pasting data), , Graphs and Charts Introduction to Chart Builder, Bar graphs, Line graphs, Pie charts, Box plots, Histograms, Scatterplots, , editing the charts (adding title, changing font, changing axis values etc.), printing the output, Descriptive Statistics Frequencies,, Visual display of frequencies (bar chart, histogram),, Measures of Central Tendency, Measures of Variability, Skewness, and Kurtosis.",
+            "topics": [
+              "Introduction to SPSS, S interface, Data view Vs Variable view,",
+              "Measurement scales (nominal, ordinal, scale),, , Entering data (by",
+              "variable and by case/record), importing data (from excel/csv),,",
+              "Editing data (inserting a new variable or case, copy-pasting data), ,",
+              "Graphs and Charts Introduction to Chart Builder, Bar graphs, Line",
+              "graphs, Pie charts, Box plots, Histograms, Scatterplots, , editing the",
+              "charts (adding title, changing font, changing axis values etc.),",
+              "printing the output, Descriptive Statistics Frequencies,, Visual",
+              "display of frequencies (bar chart, histogram),, Measures of Central",
+              "Tendency, Measures of Variability, Skewness, and Kurtosis."
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Managing Data using SPSS:",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Case summaries, Replacing missing values, Computing new",
+              "variables, Recoding variables, Select cases, Sort cases, Merging",
+              "files (adding cases, adding variables), , Correlation: Product-",
+              "moment correlation coefficient, linear Vs curvilinear correlation,",
+              "partial correlation., , Simple Linear Regression: Simple linear",
+              "regression equation and predicted values, amount of variance",
+              "explained, testing for a curvilinear relationship., , Multiple",
+              "Regression Analysis: Multiple regression equation, Different",
+              "methods of entering independent variables, (Enter, Stepwise,",
+              "Remove, Forward, Backward), , R squared and variance explained,",
+              "Residual plot, Predicted values."
+            ],
+            "topics_text": "Case summaries, Replacing missing values, Computing new variables, Recoding variables, Select cases, Sort cases, Merging files (adding cases, adding variables), , Correlation: Product- moment correlation coefficient, linear Vs curvilinear correlation, partial correlation., , Simple Linear Regression: Simple linear regression equation and predicted values, amount of variance explained, testing for a curvilinear relationship., , Multiple Regression Analysis: Multiple regression equation, Different methods of entering independent variables, (Enter, Stepwise, Remove, Forward, Backward), , R squared and variance explained, Residual plot, Predicted values.",
+            "topics": [
+              "Case summaries, Replacing missing values, Computing new",
+              "variables, Recoding variables, Select cases, Sort cases, Merging",
+              "files (adding cases, adding variables), , Correlation: Product",
+              "moment correlation coefficient, linear Vs curvilinear correlation,",
+              "partial correlation., , Simple Linear Regression: Simple linear",
+              "regression equation and predicted values, amount of variance",
+              "explained, testing for a curvilinear relationship., , Multiple",
+              "Regression Analysis: Multiple regression equation, Different",
+              "methods of entering independent variables, (Enter, Stepwise,",
+              "Remove, Forward, Backward), , R squared and variance explained,",
+              "Residual plot, Predicted values."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Inferential Statistics using SPSS:",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Parametric tests: One sample t-test, independent-samples t-test,",
+              "Paired-samples t test., One-way ANOVA and post-hoc analysis, ,",
+              "non-parametric tests: Chi-square test for independence of attributes,,",
+              "Chi-square test for goodness of fit, independent samples: Mann-",
+              "Whitney U test, , Multiple Independent-samples: Kruskal± Wallis",
+              "Test, Paired-samples: Wilcoxon Signed-rank test",
+              "Total Hours 30",
+              "Textbook :",
+              "1 IBM SPSS Statistics 26 Step by Step: A Simple Guide and Reference, , Darren George and",
+              "Paul Mallery, Routledge (Taylor and Francis), , 2022",
+              "2 SPSS Data Analysis for Univariate, Bivariate, and Multivariate Statistics, Daniel J. Denis,",
+              "John Wiley & Sons, , 2019"
+            ],
+            "topics_text": "Parametric tests: One sample t-test, independent-samples t-test, Paired-samples t test., One-way ANOVA and post-hoc analysis, , non-parametric tests: Chi-square test for independence of attributes,, Chi-square test for goodness of fit, independent samples: Mann- Whitney U test, , Multiple Independent-samples: Kruskal± Wallis Test, Paired-samples: Wilcoxon Signed-rank test Total Hours 30 Textbook : 1 IBM SPSS Statistics 26 Step by Step: A Simple Guide and Reference, , Darren George and Paul Mallery, Routledge (Taylor and Francis), , 2022 2 SPSS Data Analysis for Univariate, Bivariate, and Multivariate Statistics, Daniel J. Denis, John Wiley & Sons, , 2019",
+            "topics": [
+              "Parametric tests: One sample t-test, independent-samples t-test,",
+              "Paired-samples t test., One-way ANOVA and post-hoc analysis, ,",
+              "non-parametric tests: Chi-square test for independence of attributes,,",
+              "Chi-square test for goodness of fit, independent samples: Mann",
+              "Whitney U test, , Multiple Independent-samples: Kruskal± Wallis",
+              "Test, Paired-samples: Wilcoxon Signed-rank test",
+              "Total Hours 30",
+              "Textbook :",
+              "1 IBM SPSS Statistics 26 Step by Step: A Simple Guide and Reference, , Darren George and",
+              "Paul Mallery, Routledge (Taylor and Francis), , 2022",
+              "2 SPSS Data Analysis for Univariate, Bivariate, and Multivariate Statistics, Daniel J. Denis,",
+              "John Wiley & Sons, , 2019"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Using IBM SPSS Statistics: An Interactive Hands-on Approach, Using IBM SPSS Statistics: An Interactive Hands-on Approach, , Using IBM SPSS Statistics: An Interactive Hands-on Approach, Using IBM SPSS Statistics: An Interactive Hands-on Approach, , James O Aldrich and James B Cunningham, Sage Publications, Inc., , 2016"
+        ],
+        "textbooks": [
+          "IBM SPSS Statistics 26 Step by Step: A Simple Guide and Reference, , Darren George and Paul Mallery, Routledge (Taylor and Francis), , 2022",
+          "SPSS Data Analysis for Univariate, Bivariate, and Multivariate Statistics, Daniel J. Denis, John Wiley & Sons, , 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.ibm.com/spss"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 5949,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    SPSS\nCOURSE CODE     04BB0534\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Apply software knowledge to manage data and perform visual and descriptive analyses\n 2  Analyze data using bivariate and multivariate statistical tools in SPSS software and\n     interpret the results\n 3  Apply parametric and non-parametric tests to draw meaningful inferences from the data\n     using SPSS software\n 4  Explain the basic concepts of statistical analysis and the purpose of using SPSS in data-\n     driven decision-making.\n 5  Diagnose data quality issues such as missing values or outliers in datasets and use SPSS\n     tools to clean and prepare data for analysis.\n\n\nPre-requisite of course:1. The students must be aware about spreadsheet applications and basic\noperations of spreadsheets. 2. The students must be aware about basic statistical calculations. 3.\nThe students must be aware about basic concepts of research methodology.\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0         0     100      0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Creating and Editing a Data file in SPSS:                    7\n               Introduction to SPSS, S interface, Data view Vs Variable view,\n            Measurement scales (nominal, ordinal, scale),, , Entering data (by\n               variable and by case/record), importing data (from excel/csv),,\n              Editing data (inserting a new variable or case, copy-pasting data), ,\n            Graphs and Charts Introduction to Chart Builder, Bar graphs, Line\n              graphs, Pie charts, Box plots, Histograms, Scatterplots, , editing the\n               charts (adding title, changing font, changing axis values etc.),\n               printing the output, Descriptive Statistics Frequencies,, Visual\n              display of frequencies (bar chart, histogram),, Measures of Central\n             Tendency, Measures of Variability, Skewness, and Kurtosis.\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     2     Managing Data using SPSS:                                12\n            Case summaries, Replacing missing values, Computing new\n               variables, Recoding variables, Select cases, Sort cases, Merging\n                 files (adding cases, adding variables), , Correlation: Product-\n           moment correlation coefficient, linear Vs curvilinear correlation,\n                partial correlation., , Simple Linear Regression: Simple linear\n               regression equation and predicted values, amount of variance\n              explained, testing for a curvilinear relationship., , Multiple\n             Regression Analysis: Multiple regression equation, Different\n            methods of entering independent variables, (Enter, Stepwise,\n            Remove, Forward, Backward), , R squared and variance explained,\n              Residual plot, Predicted values.\n     3       Inferential Statistics using SPSS:                            11\n              Parametric tests: One sample t-test, independent-samples t-test,\n              Paired-samples t test., One-way ANOVA and post-hoc analysis, ,\n              non-parametric tests: Chi-square test for independence of attributes,,\n              Chi-square test for goodness of fit, independent samples: Mann-\n            Whitney U test, , Multiple Independent-samples: Kruskal± Wallis\n               Test, Paired-samples: Wilcoxon Signed-rank test\n                               Total Hours                       30\n\n\nTextbook :\n 1 IBM SPSS Statistics 26 Step by Step: A Simple Guide and Reference, , Darren George and\n     Paul Mallery, Routledge (Taylor and Francis), , 2022\n 2  SPSS Data Analysis for Univariate, Bivariate, and Multivariate Statistics, Daniel J. Denis,\n    John Wiley & Sons, , 2019\n\nReferences:\n 1  Using IBM SPSS Statistics: An Interactive Hands-on Approach, Using IBM SPSS\n      Statistics: An Interactive Hands-on Approach, , Using IBM SPSS Statistics: An Interactive\n    Hands-on Approach, Using IBM SPSS Statistics: An Interactive Hands-on Approach, ,\n    James O Aldrich and James B Cunningham, Sage Publications, Inc., , 2016\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom¶s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                        Thinking /\n                                                                         Creative\n     0.00           0.00          35.00         35.00         30.00          0.00\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 1 THEORY\n\nSupplementary Resources:\n 1  https://www.ibm.com/spss\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                                 DR. SANJEET SINGH\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "23a8841ca8fa7c4ec6767ef980b37e37de7ddc4be7d75de0bdf423fec973566c",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "23000422250201",
+      "subject_name": "STRATEGIC MANAGEMENT",
+      "course_id": "bba-business-analytics-",
+      "course_name": "BBA ( Business Analytics )",
+      "semester": 5,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BA0501",
+        "04BA0502",
+        "04BB0506",
+        "04BB0531",
+        "04BB2502"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/04MB0301-Strategic-Management-2.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/STRATEGIC MANAGEMENT [6324c54dc820].pdf",
+      "expected_pdf_sha256": "2dfe0c6a49a5643cc52840087ded89247b7ed9084a4d31f935b4499f3d2ccf1b",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04MB0301"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 6,
+    "manual_review": 1,
+    "ocr_review": 0,
+    "missing_pdf": 8,
+    "extraction_errors": 0
+  }
+}

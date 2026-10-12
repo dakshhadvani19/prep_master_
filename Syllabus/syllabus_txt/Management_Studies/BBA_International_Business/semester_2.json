@@ -1,0 +1,1189 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-12T13:02:17+00:00",
+  "extraction_method": "PyMuPDF text-layer extraction from PDFs checked into this repository. Unit/topic parsing is a readable index; source_text_by_page preserves the extracted page text for auditing. Scanned PDFs are flagged for OCR review.",
+  "source_catalog": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/subject_occurrence_report.csv",
+  "course": {
+    "course_id": "bba-international-business-",
+    "course_name": "BBA ( International Business)",
+    "output_slug": "BBA_International_Business"
+  },
+  "semester": 2,
+  "subject_count": 9,
+  "subjects": [
+    {
+      "subject_id": "25000422020601",
+      "subject_name": "ADVANCED SPREADSHEET APPLICATIONS",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 2,
+      "subject_code": "04BB0206",
+      "course_code_evidence": [
+        "04BB0206",
+        "04BB0208",
+        "04BB1301"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/ASA-04BB0206.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/ASA-04BB0206.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ADVANCED SPREADSHEET APPLICATIONS [d8be4f2cf8cb].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ADVANCED SPREADSHEET APPLICATIONS [d8be4f2cf8cb].pdf",
+      "expected_pdf_sha256": "3b99d3a717d1eb4bc90302cf0714cc6e7fcc001f884364239adcd77176cd1904",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ADVANCED SPREADSHEET APPLICATIONS",
+        "course_code": "04BB0206",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "Basic Understanding of Spreadsheet Applications"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand & implement complex data operations using Spreadsheet",
+        "Protect files and worksheets properly",
+        "Tackle complex data analysis with ease",
+        "Create interactive KPI dashboard from scratch",
+        "Convert raw Excel data into information that can be used to create reports Pre-requisite of course:Basic Understanding of Spreadsheet Applications"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 100 0 0 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "IMPORTANT SPREADSHEET FUNCTIONS & UTILITIES",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Creating Table – Sort & Unsort Data – Filter Data – Text to Column",
+              "– Data Validation – Conditional Formatting– Adding Hyperlinks,",
+              "Text Functions (TRIM, PROPER, UPPER, LOWER, CONCAT,",
+              "LEFT, RIGHT, TEXT JOIN), Statistical Functions (COUNT,",
+              "COUNTA, COUNTBLANK, AVERAGE, MIN, MAX, COUNTIF,",
+              "COUNTIFS, AVERAGEIF, AVERAGEIFS, MAXIFS, MINIFS) ,",
+              "Logical Functions (IF, NESTED IF, OR, AND, TRUE, FALSE),",
+              "Math Functions (SUM, SUMIF, SUMIFS) Lookup Functions",
+              "(VLOOKUP, HLOOKUP, INDEX, MATCH) – New Office 365",
+              "Functions (XLOOKUP, FILTER, SORT, UNIQUE)"
+            ],
+            "topics_text": "Creating Table – Sort & Unsort Data – Filter Data – Text to Column – Data Validation – Conditional Formatting– Adding Hyperlinks, Text Functions (TRIM, PROPER, UPPER, LOWER, CONCAT, LEFT, RIGHT, TEXT JOIN), Statistical Functions (COUNT, COUNTA, COUNTBLANK, AVERAGE, MIN, MAX, COUNTIF, COUNTIFS, AVERAGEIF, AVERAGEIFS, MAXIFS, MINIFS) , Logical Functions (IF, NESTED IF, OR, AND, TRUE, FALSE), Math Functions (SUM, SUMIF, SUMIFS) Lookup Functions (VLOOKUP, HLOOKUP, INDEX, MATCH) – New Office 365 Functions (XLOOKUP, FILTER, SORT, UNIQUE)",
+            "topics": [
+              "Creating Table – Sort & Unsort Data – Filter Data – Text to Column",
+              "– Data Validation – Conditional Formatting– Adding Hyperlinks,",
+              "Text Functions (TRIM, PROPER, UPPER, LOWER, CONCAT,",
+              "LEFT, RIGHT, TEXT JOIN), Statistical Functions (COUNT,",
+              "COUNTA, COUNTBLANK, AVERAGE, MIN, MAX, COUNTIF,",
+              "COUNTIFS, AVERAGEIF, AVERAGEIFS, MAXIFS, MINIFS) ,",
+              "Logical Functions (IF, NESTED IF, OR, AND, TRUE, FALSE),",
+              "Math Functions (SUM, SUMIF, SUMIFS) Lookup Functions",
+              "(VLOOKUP, HLOOKUP, INDEX, MATCH) – New Office 365",
+              "Functions (XLOOKUP, FILTER, SORT, UNIQUE)"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "DATA VISUALIZATION USING SPREADSHEET",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Chart Elements – Creating Dynamic Charts (Column Chart, Map",
+              "Chart, Bar Chart, Pie Chart, Doughnut Chart, Stacked Chart, Line",
+              "Chart, Histogram Chart, Tree Chart, Sunburst Chart, Funnel Chart,",
+              "Scatter &Bubble Chart),, Inserting Pivot Table – Using Slicers &",
+              "Timeline – Creating Pivot Charts – Building Catchy Dashboards"
+            ],
+            "topics_text": "Chart Elements – Creating Dynamic Charts (Column Chart, Map Chart, Bar Chart, Pie Chart, Doughnut Chart, Stacked Chart, Line Chart, Histogram Chart, Tree Chart, Sunburst Chart, Funnel Chart, Scatter &Bubble Chart),, Inserting Pivot Table – Using Slicers & Timeline – Creating Pivot Charts – Building Catchy Dashboards",
+            "topics": [
+              "Chart Elements – Creating Dynamic Charts (Column Chart, Map",
+              "Chart, Bar Chart, Pie Chart, Doughnut Chart, Stacked Chart, Line",
+              "Chart, Histogram Chart, Tree Chart, Sunburst Chart, Funnel Chart,",
+              "Scatter &Bubble Chart),, Inserting Pivot Table – Using Slicers &",
+              "Timeline – Creating Pivot Charts – Building Catchy Dashboards"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "ADVANCE UTILITIES IN SPREADSHEET",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Solve problems with Goal Seek & Scenario Manger – Import Text,",
+              "CSV & Web Data – Introduction to Power Query – Introduction to",
+              "Macros & VBE – Recording Macro – Difference between Macros &",
+              "VBA",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Excel 2019 Bible, Michael Alexander, Wiley, 2019",
+              "2 Learn Excel 2016 Essential Skills with the Smart Method: Courseware Tutorial for Self-",
+              "Instruction to Beginner and Intermediate Level 2016, Mike Smart, The Smart Method Ltd ,",
+              "2016",
+              "3 Microsoft Excel 2019 Formulas and Functions, Paul McFedries, Pearson, 2019"
+            ],
+            "topics_text": "Solve problems with Goal Seek & Scenario Manger – Import Text, CSV & Web Data – Introduction to Power Query – Introduction to Macros & VBE – Recording Macro – Difference between Macros & VBA Total Hours 30 Textbook : 1 Excel 2019 Bible, Michael Alexander, Wiley, 2019 2 Learn Excel 2016 Essential Skills with the Smart Method: Courseware Tutorial for Self- Instruction to Beginner and Intermediate Level 2016, Mike Smart, The Smart Method Ltd , 2016 3 Microsoft Excel 2019 Formulas and Functions, Paul McFedries, Pearson, 2019",
+            "topics": [
+              "Solve problems with Goal Seek & Scenario Manger – Import Text,",
+              "CSV & Web Data – Introduction to Power Query – Introduction to",
+              "Macros & VBE – Recording Macro – Difference between Macros &",
+              "VBA",
+              "Total Hours 30",
+              "Textbook :",
+              "1 Excel 2019 Bible, Michael Alexander, Wiley, 2019",
+              "2 Learn Excel 2016 Essential Skills with the Smart Method: Courseware Tutorial for Self",
+              "Instruction to Beginner and Intermediate Level 2016, Mike Smart, The Smart Method Ltd ,",
+              "2016",
+              "3 Microsoft Excel 2019 Formulas and Functions, Paul McFedries, Pearson, 2019"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Microsoft Excel 2019 Data Analysis and Business Modeling (Business Skills), Microsoft Excel 2019 Data Analysis and Business Modeling (Business Skills), Microsoft Excel 2019 Data Analysis and Business Modeling (Business Skills), Microsoft Excel 2019 Data Analysis and Business Modeling (Business Skills), Wayne Winston, Microsoft Press, 2019"
+        ],
+        "textbooks": [
+          "Excel 2019 Bible, Michael Alexander, Wiley, 2019",
+          "Learn Excel 2016 Essential Skills with the Smart Method: Courseware Tutorial for Self- Instruction to Beginner and Intermediate Level 2016, Mike Smart, The Smart Method Ltd , 2016",
+          "Microsoft Excel 2019 Formulas and Functions, Paul McFedries, Pearson, 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4182,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE   ADVANCED SPREADSHEET APPLICATIONS\nCOURSE CODE     04BB0206\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand & implement complex data operations using Spreadsheet\n 2  Protect files and worksheets properly\n 3  Tackle complex data analysis with ease\n 4  Create interactive KPI dashboard from scratch\n 5  Convert raw Excel data into information that can be used to create reports\n\n\nPre-requisite of course:Basic Understanding of Spreadsheet Applications\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        100     0       0         0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    IMPORTANT SPREADSHEET FUNCTIONS & UTILITIES   11\n              Creating Table – Sort & Unsort Data – Filter Data – Text to Column\n            – Data Validation – Conditional Formatting– Adding Hyperlinks,\n             Text Functions (TRIM, PROPER, UPPER, LOWER, CONCAT,\n           LEFT, RIGHT, TEXT JOIN), Statistical Functions (COUNT,\n         COUNTA, COUNTBLANK, AVERAGE, MIN, MAX, COUNTIF,\n          COUNTIFS, AVERAGEIF, AVERAGEIFS, MAXIFS, MINIFS) ,\n              Logical Functions (IF, NESTED IF, OR, AND, TRUE, FALSE),\n           Math Functions (SUM, SUMIF, SUMIFS) Lookup Functions\n          (VLOOKUP, HLOOKUP, INDEX, MATCH) – New Office 365\n              Functions (XLOOKUP, FILTER, SORT, UNIQUE)\n     2    DATA VISUALIZATION USING SPREADSHEET           12\n             Chart Elements – Creating Dynamic Charts (Column Chart, Map\n               Chart, Bar Chart, Pie Chart, Doughnut Chart, Stacked Chart, Line\n               Chart, Histogram Chart, Tree Chart, Sunburst Chart, Funnel Chart,\n               Scatter &Bubble Chart),, Inserting Pivot Table – Using Slicers &\n             Timeline – Creating Pivot Charts – Building Catchy Dashboards\n     3    ADVANCE UTILITIES IN SPREADSHEET                 7\n             Solve problems with Goal Seek & Scenario Manger – Import Text,\n         CSV & Web Data – Introduction to Power Query – Introduction to\n            Macros & VBE – Recording Macro – Difference between Macros &\n        VBA\n                               Total Hours                       30\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 1  Excel 2019 Bible, Michael Alexander, Wiley, 2019\n 2  Learn Excel 2016 Essential Skills with the Smart Method: Courseware Tutorial for Self-\n     Instruction to Beginner and Intermediate Level 2016, Mike Smart, The Smart Method Ltd ,\n    2016\n 3  Microsoft Excel 2019 Formulas and Functions, Paul McFedries, Pearson, 2019\n\nReferences:\n 1  Microsoft Excel 2019 Data Analysis and Business Modeling (Business Skills), Microsoft\n    Excel 2019 Data Analysis and Business Modeling (Business Skills), Microsoft Excel 2019\n    Data Analysis and Business Modeling (Business Skills), Microsoft Excel 2019 Data\n     Analysis and Business Modeling (Business Skills), Wayne Winston, Microsoft Press, 2019\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "3b99d3a717d1eb4bc90302cf0714cc6e7fcc001f884364239adcd77176cd1904",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "25000422020901",
+      "subject_name": "BUSINESS COMMUNICATION",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 2,
+      "subject_code": "04BB0209",
+      "course_code_evidence": [
+        "04BB0206",
+        "04BB0208",
+        "04BB0209"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/BC-04BB0209.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/BC-04BB0209.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS COMMUNICATION [45b0343ca03b].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS COMMUNICATION [45b0343ca03b].pdf",
+      "expected_pdf_sha256": "8bec1bd5c7897d4efdb5e2f8b8e201aae5c4f6a48979fd3ee8cc621a437200e8",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BUSINESS COMMUNICATION",
+        "course_code": "04BB0209",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Communicate with the peers and colleagues in English Language.",
+        "Learn basics structure of spoken and written English language.",
+        "Expand their vocabulary in English.",
+        "Learn the basics of grammar in English through text.",
+        "Learn LSRW skills through text. Audio-visual aids. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Basic Language Skills:",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Articles, Subject-Verb Agreement, Uses of Adjectives"
+            ],
+            "topics_text": "Articles, Subject-Verb Agreement, Uses of Adjectives",
+            "topics": [
+              "Articles, Subject-Verb Agreement, Uses of Adjectives"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Theories of Communication:",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Importance of Communication,, Communication Process, Types of",
+              "Communication,, Types of Networks in Communication, Channel,,",
+              "Feedback, Barriers to Effective Communication,, Ways to overcome",
+              "the barriers to communication."
+            ],
+            "topics_text": "Importance of Communication,, Communication Process, Types of Communication,, Types of Networks in Communication, Channel,, Feedback, Barriers to Effective Communication,, Ways to overcome the barriers to communication.",
+            "topics": [
+              "Importance of Communication,, Communication Process, Types of",
+              "Communication,, Types of Networks in Communication, Channel,,",
+              "Feedback, Barriers to Effective Communication,, Ways to overcome",
+              "the barriers to communication."
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Business Writing:",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Business Letters: Enquiry, Quotation, Order, Complaint, Sales",
+              "Letter, Credit Letters etc., Business Reports: Types of Reports,",
+              "Layout and Structure of Report, Writing Effective Reports, Proposal",
+              "Writing: Types, Functions, Layout How to write Minutes of",
+              "Meeting , The Importance of Business English Listening"
+            ],
+            "topics_text": "Business Letters: Enquiry, Quotation, Order, Complaint, Sales Letter, Credit Letters etc., Business Reports: Types of Reports, Layout and Structure of Report, Writing Effective Reports, Proposal Writing: Types, Functions, Layout How to write Minutes of Meeting , The Importance of Business English Listening",
+            "topics": [
+              "Business Letters: Enquiry, Quotation, Order, Complaint, Sales",
+              "Letter, Credit Letters etc., Business Reports: Types of Reports,",
+              "Layout and Structure of Report, Writing Effective Reports, Proposal",
+              "Writing: Types, Functions, Layout How to write Minutes of",
+              "Meeting , The Importance of Business English Listening"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Speaking Skills:",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Making Effective Presentations,, Delivery of Presentation,",
+              "Strategies, Public Speaking, Debate,, Elocution, Group Discussion",
+              "Total Hours 30",
+              "Textbook :",
+              "1 English Conversation Practice, Taylor, Grant, McGraw Hall Publication., 2001"
+            ],
+            "topics_text": "Making Effective Presentations,, Delivery of Presentation, Strategies, Public Speaking, Debate,, Elocution, Group Discussion Total Hours 30 Textbook : 1 English Conversation Practice, Taylor, Grant, McGraw Hall Publication., 2001",
+            "topics": [
+              "Making Effective Presentations,, Delivery of Presentation,",
+              "Strategies, Public Speaking, Debate,, Elocution, Group Discussion",
+              "Total Hours 30",
+              "Textbook :",
+              "1 English Conversation Practice, Taylor, Grant, McGraw Hall Publication., 2001"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Essential English Grammar., Essential English Grammar., Murphy, Raymond, Cambridge University Press., 2024",
+          "English Vocabulary in Use., English Vocabulary in Use., Michael McCarthy and Felicity O'Dell, Cambridge University Press. India, 2024"
+        ],
+        "textbooks": [
+          "English Conversation Practice, Taylor, Grant, McGraw Hall Publication., 2001"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 4045,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    BUSINESS COMMUNICATION\nCOURSE CODE     04BB0209\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Communicate with the peers and colleagues in English Language.\n 2  Learn basics structure of spoken and written English language.\n 3  Expand their vocabulary in English.\n 4  Learn the basics of grammar in English through text.\n 5  Learn LSRW skills through text. Audio-visual aids.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Basic Language Skills:                                    6\n                Articles, Subject-Verb Agreement, Uses of Adjectives\n     2      Theories of Communication:                               10\n             Importance of Communication,, Communication Process, Types of\n             Communication,, Types of Networks in Communication, Channel,,\n             Feedback, Barriers to Effective Communication,, Ways to overcome\n               the barriers to communication.\n     3      Business Writing:                                        8\n             Business Letters: Enquiry, Quotation, Order, Complaint, Sales\n                Letter, Credit Letters etc., Business Reports: Types of Reports,\n             Layout and Structure of Report, Writing Effective Reports, Proposal\n              Writing: Types, Functions, Layout How to write Minutes of\n             Meeting , The Importance of Business English Listening\n     4      Speaking Skills:                                          6\n            Making Effective Presentations,, Delivery of Presentation,\n                Strategies, Public Speaking, Debate,, Elocution, Group Discussion\n                               Total Hours                       30\n\n\nTextbook :\n 1  English Conversation Practice, Taylor, Grant, McGraw Hall Publication., 2001\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "References:\n 1  Essential English Grammar., Essential English Grammar., Murphy, Raymond, Cambridge\n     University Press., 2024\n 2  English Vocabulary in Use., English Vocabulary in Use., Michael McCarthy and Felicity\n     O'Dell, Cambridge University Press. India, 2024\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  The course delivery method will depend upon the requirement of content and need of\n     students. The teacher in addition to conventional teaching method by black board, may also\n     use any of tools such as demonstration, role play, Quiz, brainstorming, etc.\n 2  The internal evaluation will be done on the basis of continuous evaluation of students in the\n     class-room in the form of attendance, assignments, verbal interactions etc.\n 3  Students will use supplementary resources such as online videos, NPTEL videos, e-\n     courses, Virtual Laboratory.\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "8bec1bd5c7897d4efdb5e2f8b8e201aae5c4f6a48979fd3ee8cc621a437200e8",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "25000422020501",
+      "subject_name": "BUSINESS ENVIRONMENT",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 2,
+      "subject_code": "04BB0205",
+      "course_code_evidence": [
+        "04BB0201",
+        "04BB0202",
+        "04BB0205",
+        "04BB1203",
+        "04IB0201"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/BE-1.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/BE-1.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS ENVIRONMENT [3c698d046dbb].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/BUSINESS ENVIRONMENT [3c698d046dbb].pdf",
+      "expected_pdf_sha256": "2fd0fb79d26a0cc389fe5941b36f78a7f4896de968125f5ba4e191f1f4aef505",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "BUSINESS ENVIRONMENT",
+        "course_code": "04BB0205",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand the meaning and relationship of environment and business",
+        "Know the characteristics of modern business",
+        "Explain the competitive structure of an industry",
+        "To scan various social, political, legal, economic and other factors that influence business in India.",
+        "To foresee the impact of socio-economic changes at the national and international level on its stability. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION TO BUSINESS ENVIRONMENT",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Introduction to Business environment - salient features – importance",
+              "- internal & external environment, Macro & Micro Factors(SWOT",
+              "Analysis- Firm Specific) environment scanning: features - process",
+              "& techniques -Social and Cultural Factors, Business Environment",
+              "with reference to global integration, ecological environment",
+              "protection Act"
+            ],
+            "topics_text": "Introduction to Business environment - salient features – importance - internal & external environment, Macro & Micro Factors(SWOT Analysis- Firm Specific) environment scanning: features - process & techniques -Social and Cultural Factors, Business Environment with reference to global integration, ecological environment protection Act",
+            "topics": [
+              "Introduction to Business environment - salient features – importance",
+              "internal & external environment, Macro & Micro Factors(SWOT",
+              "Analysis- Firm Specific) environment scanning: features - process",
+              "& techniques -Social and Cultural Factors, Business Environment",
+              "with reference to global integration, ecological environment",
+              "protection Act"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "ECONOMIC ENVIRONMENT & POLITICAL",
+            "contact_hours": 10,
+            "topic_lines": [
+              "ENVIRONMENT",
+              "Political structure: Legislature institutions – executive institutions –",
+              "judiciary institutions - Economic systems: capitalism, socialism;",
+              "mixed economy, mixed economy of India, LPG - Liberalization,",
+              "Privatization & Globalization and its impacts –Highlights of New",
+              "industrial policy & its implication in India –Fundamentals of fiscal",
+              "policy"
+            ],
+            "topics_text": "ENVIRONMENT Political structure: Legislature institutions – executive institutions – judiciary institutions - Economic systems: capitalism, socialism; mixed economy, mixed economy of India, LPG - Liberalization, Privatization & Globalization and its impacts –Highlights of New industrial policy & its implication in India –Fundamentals of fiscal policy",
+            "topics": [
+              "ENVIRONMENT",
+              "Political structure: Legislature institutions – executive institutions –",
+              "judiciary institutions - Economic systems: capitalism, socialism",
+              "mixed economy, mixed economy of India, LPG - Liberalization,",
+              "Privatization & Globalization and its impacts –Highlights of New",
+              "industrial policy & its implication in India –Fundamentals of fiscal",
+              "policy"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "TECHNOLOGICAL & LEGAL FRAMEWORK",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Impact of Technology on Business –Overview of Technological",
+              "Policies- ISO standards- Bureau Of Indian Standards–Important",
+              "features of Intellectual property rights – Trademarks, The",
+              "Competition Act 2002: Basics of Foreign Exchange Management",
+              "Act 1999 (FEMA): Features – objectives - application of the Act -",
+              "FEMA Vs FERA"
+            ],
+            "topics_text": "Impact of Technology on Business –Overview of Technological Policies- ISO standards- Bureau Of Indian Standards–Important features of Intellectual property rights – Trademarks, The Competition Act 2002: Basics of Foreign Exchange Management Act 1999 (FEMA): Features – objectives - application of the Act - FEMA Vs FERA",
+            "topics": [
+              "Impact of Technology on Business –Overview of Technological",
+              "Policies- ISO standards- Bureau Of Indian Standards–Important",
+              "features of Intellectual property rights – Trademarks, The",
+              "Competition Act 2002: Basics of Foreign Exchange Management",
+              "Act 1999 (FEMA): Features – objectives - application of the Act",
+              "FEMA Vs FERA"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "SOCIAL ENVIRONMENT",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Business and Society, Changing Concepts and objectives of",
+              "Business, Interdependence of business and society, technological",
+              "development and social change, Consumers’ rights & consumerism,",
+              "Consumer protection Act; corporate governance"
+            ],
+            "topics_text": "Business and Society, Changing Concepts and objectives of Business, Interdependence of business and society, technological development and social change, Consumers’ rights & consumerism, Consumer protection Act; corporate governance",
+            "topics": [
+              "Business and Society, Changing Concepts and objectives of",
+              "Business, Interdependence of business and society, technological",
+              "development and social change, Consumers’ rights & consumerism,",
+              "Consumer protection Act",
+              "corporate governance"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "INTERNATIONAL BUSINESS ENVIRONMENT",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Importance of International Business, Types of International",
+              "Business, Protectionism, EXIM policy, EPZs, EOUs, SEZ, WTO,",
+              "regional blocks",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Environment Business For, Francis Cherunilam, Himalaya Publishing House, 2011"
+            ],
+            "topics_text": "Importance of International Business, Types of International Business, Protectionism, EXIM policy, EPZs, EOUs, SEZ, WTO, regional blocks Total Hours 48 Textbook : 1 Environment Business For, Francis Cherunilam, Himalaya Publishing House, 2011",
+            "topics": [
+              "Importance of International Business, Types of International",
+              "Business, Protectionism, EXIM policy, EPZs, EOUs, SEZ, WTO,",
+              "regional blocks",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Environment Business For, Francis Cherunilam, Himalaya Publishing House, 2011"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Economic Environment of Business, Economic Environment of Business, Mishra, S.K. and Puri V.K, Himalaya Publishing House, 2011",
+          "Business Environment-Text and Cases , Business Environment-Text and Cases , Paul Justin, TATA McGraw Hill Publishing, 2010",
+          "Business Environment, Business Environment, Vivek Mittall, Excel Books, 2010",
+          "Business Environment, Business Environment, Raj Agarwal, Excel Books, 2002",
+          "Business Environment, Text & Cases, Business Environment, Text & Cases, Francis Cherunilam, Himalaya Publishing House, 2016",
+          "Essentials of Business Environment, Essentials of Business Environment, Aswathappa K, Himalaya Publishing House, 2016",
+          "The International Business Environment, The International Business Environment, Morrison J, Palgrave, 2006",
+          "An Introduction to Positive Economics, An Introduction to Positive Economics, Richard G. Lipsey, ELBS, Oxford, 1989"
+        ],
+        "textbooks": [
+          "Environment Business For, Francis Cherunilam, Himalaya Publishing House, 2011"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://www.inderscience.com/jhome.php?jcode=ijbe",
+          "https://www.researchgate.net/publication/331076052_The_PESTEL_Environment_and_Its _Impact_on_the_Value_Created",
+          "https://www.iioa.org/conferences/15th/pdf/dasguptachakraborty.pdf",
+          "https://bizfluent.com/info-7950023-impact-technology-business-environment.html",
+          "https://smallbusiness.chron.com/impact-technological-change-business-activity-2191.html",
+          "https://bizfluent.com/info-7950023-impact-technology-business-environment.html"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6181,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         2\nCOURSE TITLE    BUSINESS ENVIRONMENT\nCOURSE CODE     04BB0205\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the meaning and relationship of environment and business\n 2  Know the characteristics of modern business\n 3  Explain the competitive structure of an industry\n 4  To scan various social, political, legal, economic and other factors that influence business\n     in India.\n 5  To foresee the impact of socio-economic changes at the national and international level on\n      its stability.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    INTRODUCTION TO BUSINESS ENVIRONMENT          10\n               Introduction to Business environment - salient features – importance\n                  - internal & external environment, Macro & Micro Factors(SWOT\n              Analysis- Firm Specific) environment scanning: features - process\n        & techniques -Social and Cultural Factors, Business Environment\n             with reference to global integration, ecological environment\n               protection Act\n     2    ECONOMIC ENVIRONMENT & POLITICAL              10\n         ENVIRONMENT\n                Political structure: Legislature institutions – executive institutions –\n               judiciary institutions - Economic systems: capitalism, socialism;\n            mixed economy, mixed economy of India, LPG - Liberalization,\n               Privatization & Globalization and its impacts –Highlights of New\n                industrial policy & its implication in India –Fundamentals of fiscal\n              policy\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3    TECHNOLOGICAL & LEGAL FRAMEWORK             10\n             Impact of Technology on Business –Overview of Technological\n               Policies- ISO standards- Bureau Of Indian Standards–Important\n               features of Intellectual property rights – Trademarks, The\n             Competition Act 2002: Basics of Foreign Exchange Management\n            Act 1999 (FEMA): Features – objectives - application of the Act -\n         FEMA Vs FERA\n     4     SOCIAL ENVIRONMENT                                10\n             Business and Society, Changing Concepts and objectives of\n              Business, Interdependence of business and society, technological\n             development and social change, Consumers’ rights & consumerism,\n            Consumer protection Act; corporate governance\n     5    INTERNATIONAL BUSINESS ENVIRONMENT            8\n             Importance of International Business, Types of International\n              Business, Protectionism, EXIM policy, EPZs, EOUs, SEZ, WTO,\n               regional blocks\n                               Total Hours                       48\n\n\nTextbook :\n 1  Environment Business For, Francis Cherunilam, Himalaya Publishing House, 2011\n\nReferences:\n 1  Economic Environment of Business, Economic Environment of Business, Mishra, S.K. and\n     Puri V.K, Himalaya Publishing House, 2011\n 2  Business Environment-Text and Cases , Business Environment-Text and Cases , Paul\n     Justin, TATA McGraw Hill Publishing, 2010\n 3  Business Environment, Business Environment, Vivek Mittall, Excel Books, 2010\n 4  Business Environment, Business Environment, Raj Agarwal, Excel Books, 2002\n 5  Business Environment, Text & Cases, Business Environment, Text & Cases, Francis\n    Cherunilam, Himalaya Publishing House, 2016\n 6  Essentials of Business Environment, Essentials of Business Environment, Aswathappa K,\n    Himalaya Publishing House, 2016\n 7  The International Business Environment, The International Business Environment,\n    Morrison J, Palgrave, 2006\n 8  An Introduction to Positive Economics, An Introduction to Positive Economics, Richard G.\n     Lipsey, ELBS, Oxford, 1989\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1  https://www.inderscience.com/jhome.php?jcode=ijbe\n 2  https://www.researchgate.net/publication/331076052_The_PESTEL_Environment_and_Its\n    _Impact_on_the_Value_Created\n 3  https://www.iioa.org/conferences/15th/pdf/dasguptachakraborty.pdf\n 4  https://bizfluent.com/info-7950023-impact-technology-business-environment.html\n 5  https://smallbusiness.chron.com/impact-technological-change-business-activity-2191.html\n 6  https://bizfluent.com/info-7950023-impact-technology-business-environment.html\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "2fd0fb79d26a0cc389fe5941b36f78a7f4896de968125f5ba4e191f1f4aef505",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "25000422020701",
+      "subject_name": "FASHION DESIGNING",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 2,
+      "subject_code": "",
+      "course_code_evidence": [],
+      "catalog_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "catalog_action": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "source_pdf_url": null,
+      "candidate_pdf_url": null,
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": null,
+      "expected_pdf_sha256": null,
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "No course-title-matched syllabus PDF was found in the searched official sources. This is a search result, not proof of global non-existence."
+      ],
+      "pdf_verification_status": "FAILED_NO_MATCHING_OFFICIAL_PDF",
+      "question_generation_use": "NO_FAILED_NO_MATCHING_OFFICIAL_PDF"
+    },
+    {
+      "subject_id": "25016132001101",
+      "subject_name": "INDIAN BUSINESS HISTORY",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 2,
+      "subject_code": "04BB0208",
+      "course_code_evidence": [
+        "04BB0208",
+        "04BB1301",
+        "04BB1305"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/IBH-04BB0208.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/12/IBH-04BB0208.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INDIAN BUSINESS HISTORY [a8d8b87bd0da].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INDIAN BUSINESS HISTORY [a8d8b87bd0da].pdf",
+      "expected_pdf_sha256": "1e291584e9855a4e068d620c414d628b0ba587c4336d9b47c51d2d1d3ec42883",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "INDIAN BUSINESS HISTORY",
+        "course_code": "04BB0208",
+        "semester_label": null,
+        "credits": 2,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Understand the historical context and significance of businesses in India.",
+        "Analyze the ancient Indian business practices.",
+        "Understand the nature of business practices in medieval India.",
+        "Examine the impact of foreign invasion on Indian businesses.",
+        "Evaluate the role of entrepreneurs and business communities in India. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 2 3 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Indian Business History",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Historical foundations of Indian business,, Key concepts,, and",
+              "theories in business history, Ancient Indian Trade and Commerce,",
+              "Indus Valley Civilization and trade networks,, Trade routes and",
+              "connections with the Roman Empire., Guilds,, markets,, and",
+              "economic organization"
+            ],
+            "topics_text": "Historical foundations of Indian business,, Key concepts,, and theories in business history, Ancient Indian Trade and Commerce, Indus Valley Civilization and trade networks,, Trade routes and connections with the Roman Empire., Guilds,, markets,, and economic organization",
+            "topics": [
+              "Historical foundations of Indian business,, Key concepts,, and",
+              "theories in business history, Ancient Indian Trade and Commerce,",
+              "Indus Valley Civilization and trade networks,, Trade routes and",
+              "connections with the Roman Empire., Guilds,, markets,, and",
+              "economic organization"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Medieval India and the Arrival of Europeans Indian",
+            "contact_hours": 12,
+            "topic_lines": [
+              "Ocean trade and the Arab connection,, Impact of European trading",
+              "companies,, Emergence of regional business centers, Colonial Rule",
+              "and Indian Business, East India Company and the establishment of",
+              "British rule,, Impact of colonial policies on Indian businesses"
+            ],
+            "topics_text": "Ocean trade and the Arab connection,, Impact of European trading companies,, Emergence of regional business centers, Colonial Rule and Indian Business, East India Company and the establishment of British rule,, Impact of colonial policies on Indian businesses",
+            "topics": [
+              "Ocean trade and the Arab connection,, Impact of European trading",
+              "companies,, Emergence of regional business centers, Colonial Rule",
+              "and Indian Business, East India Company and the establishment of",
+              "British rule,, Impact of colonial policies on Indian businesses"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Business Communities and Entrepreneurship",
+            "contact_hours": 6,
+            "topic_lines": [
+              "Marwadis,, Parsis,, and other prominent business communities,,",
+              "Contribution of Indian entrepreneurs",
+              "Total Hours 30",
+              "Textbook :",
+              "1 The Oxford India anthology of business history, Kudaisya, M., Oxford University Press,,",
+              "Kudaisya, M.,, Oxford University Press,, 2011",
+              "Textbook :",
+              "2 A business history of India: Enterprise and the emergence of capitalism from 1700, Roy, T,",
+              "Cambridge University Press, 2018, Roy, T,, Cambridge University Press,, 2018"
+            ],
+            "topics_text": "Marwadis,, Parsis,, and other prominent business communities,, Contribution of Indian entrepreneurs Total Hours 30 Textbook : 1 The Oxford India anthology of business history, Kudaisya, M., Oxford University Press,, Kudaisya, M.,, Oxford University Press,, 2011 Textbook : 2 A business history of India: Enterprise and the emergence of capitalism from 1700, Roy, T, Cambridge University Press, 2018, Roy, T,, Cambridge University Press,, 2018",
+            "topics": [
+              "Marwadis,, Parsis,, and other prominent business communities,,",
+              "Contribution of Indian entrepreneurs",
+              "Total Hours 30",
+              "Textbook :",
+              "1 The Oxford India anthology of business history, Kudaisya, M., Oxford University Press,,",
+              "Kudaisya, M.,, Oxford University Press,, 2011",
+              "Textbook :",
+              "2 A business history of India: Enterprise and the emergence of capitalism from 1700, Roy, T,",
+              "Cambridge University Press, 2018, Roy, T,, Cambridge University Press,, 2018"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "The economic history of India1857-1947,, The economic history of India1857-1947,, Roy, T, Oxford;, Roy, T, Oxford;, 2011",
+          "The economy of modern India, 1860-1970, The economy of modern India, 1860-1970, Tomlinson, B. R,, Cambridge University Press,, 1996"
+        ],
+        "textbooks": [
+          "The Oxford India anthology of business history, Kudaisya, M., Oxford University Press,, Kudaisya, M.,, Oxford University Press,, 2011 Textbook :",
+          "A business history of India: Enterprise and the emergence of capitalism from 1700, Roy, T, Cambridge University Press, 2018, Roy, T,, Cambridge University Press,, 2018"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 2,
+      "extracted_character_count": 3649,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "COURSE TITLE    INDIAN BUSINESS HISTORY\nCOURSE CODE     04BB0208\nCOURSE CREDITS  2\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Understand the historical context and significance of businesses in India.\n 2  Analyze the ancient Indian business practices.\n 3  Understand the nature of business practices in medieval India.\n 4  Examine the impact of foreign invasion on Indian businesses.\n 5  Evaluate the role of entrepreneurs and business communities in India.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     2            3            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Indian Business History                      12\n               Historical foundations of Indian business,, Key concepts,, and\n               theories in business history, Ancient Indian Trade and Commerce,\n             Indus Valley Civilization and trade networks,, Trade routes and\n              connections with the Roman Empire., Guilds,, markets,, and\n            economic organization\n     2      Medieval India and the Arrival of Europeans Indian           12\n            Ocean trade and the Arab connection,, Impact of European trading\n              companies,, Emergence of regional business centers, Colonial Rule\n            and Indian Business, East India Company and the establishment of\n               British rule,, Impact of colonial policies on Indian businesses\n     3      Business Communities and Entrepreneurship                 6\n             Marwadis,, Parsis,, and other prominent business communities,,\n              Contribution of Indian entrepreneurs\n                               Total Hours                       30\n\n\nTextbook :\n 1  The Oxford India anthology of business history, Kudaisya, M., Oxford University Press,,\n     Kudaisya, M.,, Oxford University Press,, 2011\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Textbook :\n 2 A business history of India: Enterprise and the emergence of capitalism from 1700, Roy, T,\n    Cambridge University Press, 2018, Roy, T,, Cambridge University Press,, 2018\n\nReferences:\n 1  The economic history of India1857-1947,, The economic history of India1857-1947,, Roy,\n     T, Oxford;, Roy, T, Oxford;, 2011\n 2  The economy of modern India, 1860-1970, The economy of modern India, 1860-1970,\n    Tomlinson, B. R,, Cambridge University Press,, 1996\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00          0.00\n\nInstructional Method:\n 1 THEORY\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "1e291584e9855a4e068d620c414d628b0ba587c4336d9b47c51d2d1d3ec42883",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "25000492020101",
+      "subject_name": "INTERNATIONAL BUSINESS PROCEDURES",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 2,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0201",
+        "04BB0206",
+        "04BB0209",
+        "04BB1203",
+        "04IB0201"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/IBP.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/INTERNATIONAL BUSINESS PROCEDURES [da358b93fb8a].pdf",
+      "expected_pdf_sha256": "7fd08be84cb44e0c3302c34834d974ae70648b6fb2c85e04287a93e22710f650",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BH0506"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    },
+    {
+      "subject_id": "25000422020101",
+      "subject_name": "MACROECONOMICS",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 2,
+      "subject_code": "04BB0201",
+      "course_code_evidence": [
+        "04BB0201",
+        "04BB0206",
+        "04BB0208",
+        "04BB0209"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/Macro-Eco.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/Macro-Eco.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MACROECONOMICS [b796673d3ffd].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/MACROECONOMICS [b796673d3ffd].pdf",
+      "expected_pdf_sha256": "39b9414f7a1259aadd23b7909e9b4da8fafec99793b1b5173c4247cf5913c689",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "MACROECONOMICS",
+        "course_code": "04BB0201",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "To explain the concept of macroeconomics and apply the circular flow of income and expenditure.",
+        "To identify with the basics of national income accounting",
+        "To analyze the income determination through classical and Keynesian economics",
+        "To comprehend why household, business, government and global behavior determine the aggregate demand for goods and services.",
+        "Learn the important concepts in money, banking and exchange and their significance in day to day life.",
+        "To relate open economic interpretation to understand the operation of an economy Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "Introduction to Macroeconomics & National Income",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Nature and Scope of Macroeconomics, Circular Flow of Income and",
+              "National Income Accounting, Concepts of GDP and NDP- Sectoral",
+              "Composition of National Income - GDP measured at Factor Price",
+              "and Constant Prices, Concept of GNP and NNP, Factor Cost and",
+              "National Income-Per Capita income, Disposable Income and",
+              "Personal Disposable Income- Measurement of National Income -",
+              "Difficulties in measuring National Income"
+            ],
+            "topics_text": "Nature and Scope of Macroeconomics, Circular Flow of Income and National Income Accounting, Concepts of GDP and NDP- Sectoral Composition of National Income - GDP measured at Factor Price and Constant Prices, Concept of GNP and NNP, Factor Cost and National Income-Per Capita income, Disposable Income and Personal Disposable Income- Measurement of National Income - Difficulties in measuring National Income",
+            "topics": [
+              "Nature and Scope of Macroeconomics, Circular Flow of Income and",
+              "National Income Accounting, Concepts of GDP and NDP- Sectoral",
+              "Composition of National Income - GDP measured at Factor Price",
+              "and Constant Prices, Concept of GNP and NNP, Factor Cost and",
+              "National Income-Per Capita income, Disposable Income and",
+              "Personal Disposable Income- Measurement of National Income",
+              "Difficulties in measuring National Income"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "Keynesian Economic Theory",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Say’s Law of Market and its criticism by Keynes. Simple Keynes",
+              "Model of Income Determination. Concepts of Consumption",
+              "Function, Saving Function and Investment Function, Average",
+              "Propensity to consume, Marginal Propensity to Consume,",
+              "Investment Multiplier–Marginal Efficiency of Capital and factors",
+              "affecting MEC"
+            ],
+            "topics_text": "Say’s Law of Market and its criticism by Keynes. Simple Keynes Model of Income Determination. Concepts of Consumption Function, Saving Function and Investment Function, Average Propensity to consume, Marginal Propensity to Consume, Investment Multiplier–Marginal Efficiency of Capital and factors affecting MEC",
+            "topics": [
+              "Say’s Law of Market and its criticism by Keynes. Simple Keynes",
+              "Model of Income Determination. Concepts of Consumption",
+              "Function, Saving Function and Investment Function, Average",
+              "Propensity to consume, Marginal Propensity to Consume,",
+              "Investment Multiplier–Marginal Efficiency of Capital and factors",
+              "affecting MEC"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "Money Supply and Central Bank",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Meaning and Evolution of Money- Definition of Money- Functions",
+              "of Money – Demand for Money - Quantity Theory of Money,",
+              "Fisher’s Equation of Exchange-Cambridge Theory. Supply of",
+              "Money – Determinants of Money Supply- Components of Money",
+              "Supply- RBI’s Approach-M1, M2, M3, M4"
+            ],
+            "topics_text": "Meaning and Evolution of Money- Definition of Money- Functions of Money – Demand for Money - Quantity Theory of Money, Fisher’s Equation of Exchange-Cambridge Theory. Supply of Money – Determinants of Money Supply- Components of Money Supply- RBI’s Approach-M1, M2, M3, M4",
+            "topics": [
+              "Meaning and Evolution of Money- Definition of Money- Functions",
+              "of Money – Demand for Money - Quantity Theory of Money,",
+              "Fisher’s Equation of Exchange-Cambridge Theory. Supply of",
+              "Money – Determinants of Money Supply- Components of Money",
+              "Supply- RBI’s Approach-M1, M2, M3, M4"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "Business Cycle & Inflation",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Concepts of Business cycle – Four phases of Business Cycle –",
+              "Interest rate –Loanable fund Theory and Liquidity preference theory",
+              "- Motives for liquidity preference, Transaction Motive, Precaution",
+              "Motive, Speculative Motive. Factors affecting interest Rate,",
+              "Inflation-Meaning, Types, Causes, Effects-Inflation and Investment"
+            ],
+            "topics_text": "Concepts of Business cycle – Four phases of Business Cycle – Interest rate –Loanable fund Theory and Liquidity preference theory - Motives for liquidity preference, Transaction Motive, Precaution Motive, Speculative Motive. Factors affecting interest Rate, Inflation-Meaning, Types, Causes, Effects-Inflation and Investment",
+            "topics": [
+              "Concepts of Business cycle – Four phases of Business Cycle –",
+              "Interest rate –Loanable fund Theory and Liquidity preference theory",
+              "Motives for liquidity preference, Transaction Motive, Precaution",
+              "Motive, Speculative Motive. Factors affecting interest Rate,",
+              "Inflation-Meaning, Types, Causes, Effects-Inflation and Investment"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "Open Economy Macroeconomics",
+            "contact_hours": 8,
+            "topic_lines": [
+              "Balance of Payments –Meaning and assessment, Balance of",
+              "payment and disequilibrium causes and remedies, Introduction to",
+              "Foreign Exchange Rates-Fixed V/s Flexible foreign exchange rates.",
+              "Exchange rate determination",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Macro Economics, H.L.Ahuja, S Chand Publishing, 2019"
+            ],
+            "topics_text": "Balance of Payments –Meaning and assessment, Balance of payment and disequilibrium causes and remedies, Introduction to Foreign Exchange Rates-Fixed V/s Flexible foreign exchange rates. Exchange rate determination Total Hours 48 Textbook : 1 Macro Economics, H.L.Ahuja, S Chand Publishing, 2019",
+            "topics": [
+              "Balance of Payments –Meaning and assessment, Balance of",
+              "payment and disequilibrium causes and remedies, Introduction to",
+              "Foreign Exchange Rates-Fixed V/s Flexible foreign exchange rates.",
+              "Exchange rate determination",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Macro Economics, H.L.Ahuja, S Chand Publishing, 2019"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Macroeconomics, Macroeconomics, Dornbusch, Fisher, Startz (2005), Tata Mcgraw Hill; Publishing Company Ltd New Delhi, 2005",
+          "Macroeconomics Theory and policy, Macroeconomics Theory and policy, D. N. Dwivedi, Tata Mcgraw Hill, 2018",
+          "Principles of Economics, Principles of Economics, R.G. Lipsey and K.A. Chrystal, Oxford University Press, 1999",
+          "Macro-Economic Theory, Macro-Economic Theory, Ackley, G., Macmillan, New York, 2016",
+          "Macroeconomic Analysis, Macroeconomic Analysis, Shapiro, E, Galgotia Publication, New Delhi, 2013"
+        ],
+        "textbooks": [
+          "Macro Economics, H.L.Ahuja, S Chand Publishing, 2019"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": [
+          "https://byjus.com/commerce/national-income-accounting",
+          "http://ppup.ac.in/download/econtent/pdf/keynesiantheoryofincomedetermination- 140303110359-phpapp02.pdf",
+          "https://www.richmondfed.org/~/media/richmondfedorg/publications/research/economic_re view/1974/pdf/er600301.pdf",
+          "https://www.imf.org/external/pubs/ft/fandd/basics/30-inflation.htm#:~:text=Inflation% 20is%20typically%20a%20broad,as%20a%20haircut%2C%20for%20example.",
+          "https://economictimes.indiatimes.com/definition/macroeconomics",
+          "2) https://www.uh.edu/~bsorense/Macro_Lecture_Notes.pdf",
+          "3) https://www.worldbank.org/en/topic/macroeconomics"
+        ]
+      },
+      "page_count": 3,
+      "extracted_character_count": 6311,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         2\nCOURSE TITLE   MACROECONOMICS\nCOURSE CODE     04BB0201\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  To explain the concept of macroeconomics and apply the circular flow of income and\n     expenditure.\n 2  To identify with the basics of national income accounting\n 3  To analyze the income determination through classical and Keynesian economics\n 4  To comprehend why household, business, government and global behavior determine the\n     aggregate demand for goods and services.\n 5  Learn the important concepts in money, banking and exchange and their significance in day\n     to day life.\n 6  To relate open economic interpretation to understand the operation of an economy\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1      Introduction to Macroeconomics & National Income           10\n             Nature and Scope of Macroeconomics, Circular Flow of Income and\n              National Income Accounting, Concepts of GDP and NDP- Sectoral\n             Composition of National Income - GDP measured at Factor Price\n            and Constant Prices, Concept of GNP and NNP, Factor Cost and\n              National Income-Per Capita income, Disposable Income and\n              Personal Disposable Income- Measurement of National Income -\n                Difficulties in measuring National Income\n     2      Keynesian Economic Theory                               10\n             Say’s Law of Market and its criticism by Keynes. Simple Keynes\n           Model of Income Determination. Concepts of Consumption\n              Function, Saving Function and Investment Function, Average\n              Propensity to consume, Marginal Propensity to Consume,\n             Investment Multiplier–Marginal Efficiency of Capital and factors\n               affecting MEC\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3     Money Supply and Central Bank                           10\n            Meaning and Evolution of Money- Definition of Money- Functions\n              of Money – Demand for Money - Quantity Theory of Money,\n               Fisher’s Equation of Exchange-Cambridge Theory. Supply of\n           Money – Determinants of Money Supply- Components of Money\n             Supply- RBI’s Approach-M1, M2, M3, M4\n     4      Business Cycle & Inflation                                 10\n             Concepts of Business cycle – Four phases of Business Cycle –\n                Interest rate –Loanable fund Theory and Liquidity preference theory\n                  - Motives for liquidity preference, Transaction Motive, Precaution\n             Motive, Speculative Motive. Factors affecting interest Rate,\n              Inflation-Meaning, Types, Causes, Effects-Inflation and Investment\n     5     Open Economy Macroeconomics                            8\n             Balance of Payments –Meaning and assessment, Balance of\n            payment and disequilibrium causes and remedies, Introduction to\n             Foreign Exchange Rates-Fixed V/s Flexible foreign exchange rates.\n            Exchange rate determination\n                               Total Hours                       48\n\n\nTextbook :\n 1  Macro Economics, H.L.Ahuja, S Chand Publishing, 2019\n\nReferences:\n 1  Macroeconomics, Macroeconomics, Dornbusch, Fisher, Startz (2005), Tata Mcgraw  Hill;\n     Publishing Company Ltd New Delhi, 2005\n 2  Macroeconomics Theory and policy, Macroeconomics Theory and policy, D. N. Dwivedi,\n     Tata Mcgraw Hill, 2018\n 3  Principles of Economics, Principles of Economics, R.G. Lipsey and K.A. Chrystal,\n    Oxford University Press, 1999\n 4  Macro-Economic Theory, Macro-Economic Theory, Ackley, G., Macmillan, New York,\n    2016\n 5  Macroeconomic Analysis, Macroeconomic Analysis, Shapiro, E, Galgotia Publication,\n   New Delhi, 2013\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "Instructional Method:\n 1  Theory\n\nSupplementary Resources:\n 1  https://byjus.com/commerce/national-income-accounting\n 2  http://ppup.ac.in/download/econtent/pdf/keynesiantheoryofincomedetermination-\n    140303110359-phpapp02.pdf\n 3  https://www.richmondfed.org/~/media/richmondfedorg/publications/research/economic_re\n     view/1974/pdf/er600301.pdf\n 4  https://www.imf.org/external/pubs/ft/fandd/basics/30-inflation.htm#:~:text=Inflation%\n    20is%20typically%20a%20broad,as%20a%20haircut%2C%20for%20example.\n 5  https://economictimes.indiatimes.com/definition/macroeconomics\n 6   2) https://www.uh.edu/~bsorense/Macro_Lecture_Notes.pdf\n 7   3) https://www.worldbank.org/en/topic/macroeconomics\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "39b9414f7a1259aadd23b7909e9b4da8fafec99793b1b5173c4247cf5913c689",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "25000422020201",
+      "subject_name": "ORGANIZATIONAL BEHAVIOR",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 2,
+      "subject_code": "04BB0202",
+      "course_code_evidence": [
+        "04BB0201",
+        "04BB0202",
+        "04BB0209",
+        "04BB1203",
+        "04IB0201"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "VERIFIED_MARWADI",
+      "source_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/OB.pdf",
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/OB.pdf",
+      "source_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ORGANIZATIONAL BEHAVIOR [6364312017ce].pdf",
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/ORGANIZATIONAL BEHAVIOR [6364312017ce].pdf",
+      "expected_pdf_sha256": "06b83f594c29b49bf3be15a691f7a9baada45cf30b77a4ef09dfed2f405538f5",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "TEXT_EXTRACTED_AND_STRUCTURED",
+      "official_document_metadata": {
+        "course_title": "ORGANIZATIONAL BEHAVIOR",
+        "course_code": "04BB0202",
+        "semester_label": "2",
+        "credits": 4,
+        "prerequisite": "None"
+      },
+      "objectives": [],
+      "course_outcomes": [
+        "Analyze individual and group behavior and understand the implications of organizational behaviour on the process of management.",
+        "Identify different motivational theories and evaluate motivational strategies used in a variety of organizational settings.",
+        "Understand individual differences and utilize them effectively in making groups to achieve organizational objectives.",
+        "Evaluate the appropriateness of various leadership styles and conflict management strategies used in organizations",
+        "Describe and assess the basic design elements of organizational structure and evaluate their impact on employees. Pre-requisite of course:None"
+      ],
+      "teaching_and_examination_scheme_text": "Theory Tutorial Practical ESE IA CSE Viva Term Hours Hours Hours Work 4 0 0 50 30 20 0 0",
+      "contents": {
+        "theory_units": [
+          {
+            "unit_number": 1,
+            "title": "INTRODUCTION TO ORGANIZATIONAL BEHAVIOUR",
+            "contact_hours": 7,
+            "topic_lines": [
+              "Introduction to OB- Meaning, Definition, Scope, Contributing",
+              "disciplines, Determinants of OB, Evolution of OB, challenges and",
+              "Opportunities for Organization Behavior"
+            ],
+            "topics_text": "Introduction to OB- Meaning, Definition, Scope, Contributing disciplines, Determinants of OB, Evolution of OB, challenges and Opportunities for Organization Behavior",
+            "topics": [
+              "Introduction to OB- Meaning, Definition, Scope, Contributing",
+              "disciplines, Determinants of OB, Evolution of OB, challenges and",
+              "Opportunities for Organization Behavior"
+            ]
+          },
+          {
+            "unit_number": 2,
+            "title": "UNDERSTANDING INDIVIDUAL BEHAVIOR",
+            "contact_hours": 11,
+            "topic_lines": [
+              "Understanding Personality; Meaning, Types, Determinants,",
+              "Personality Attribute influences Organizational behavior Perception:",
+              "Meaning, factors, link between perception and Individual decision",
+              "making, Attitude: Meaning, components, Types of attitude,",
+              "Formation of attitude, Attitude, and workforce diversity. Values:",
+              "Meaning, Types and Importance of values"
+            ],
+            "topics_text": "Understanding Personality; Meaning, Types, Determinants, Personality Attribute influences Organizational behavior Perception: Meaning, factors, link between perception and Individual decision making, Attitude: Meaning, components, Types of attitude, Formation of attitude, Attitude, and workforce diversity. Values: Meaning, Types and Importance of values",
+            "topics": [
+              "Understanding Personality",
+              "Meaning, Types, Determinants,",
+              "Personality Attribute influences Organizational behavior Perception:",
+              "Meaning, factors, link between perception and Individual decision",
+              "making, Attitude: Meaning, components, Types of attitude,",
+              "Formation of attitude, Attitude, and workforce diversity. Values:",
+              "Meaning, Types and Importance of values"
+            ]
+          },
+          {
+            "unit_number": 3,
+            "title": "INDIVIDUAL MOTIVATION AND GROUP BEHAVIORS",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Motivation: Meaning, Types and Theories- Hierarchy of Needs",
+              "Theory, Theory X and Theory Y, Two-Factor Theory, carrot, and",
+              "stick Approach to Motivation, Learning: Meaning and Various",
+              "Approaches of Learning Group; Meaning, classification of Group,",
+              "stages of Group formation. Understanding teams; Meaning,",
+              "Difference Between Group and Team, Types of Team"
+            ],
+            "topics_text": "Motivation: Meaning, Types and Theories- Hierarchy of Needs Theory, Theory X and Theory Y, Two-Factor Theory, carrot, and stick Approach to Motivation, Learning: Meaning and Various Approaches of Learning Group; Meaning, classification of Group, stages of Group formation. Understanding teams; Meaning, Difference Between Group and Team, Types of Team",
+            "topics": [
+              "Motivation: Meaning, Types and Theories- Hierarchy of Needs",
+              "Theory, Theory X and Theory Y, Two-Factor Theory, carrot, and",
+              "stick Approach to Motivation, Learning: Meaning and Various",
+              "Approaches of Learning Group",
+              "Meaning, classification of Group,",
+              "stages of Group formation. Understanding teams",
+              "Meaning,",
+              "Difference Between Group and Team, Types of Team"
+            ]
+          },
+          {
+            "unit_number": 4,
+            "title": "LEADERSHIP AND ORGANIZATION STRUCTURE",
+            "contact_hours": 10,
+            "topic_lines": [
+              "Leadership: Meaning of leadership, leadership styles, traits,",
+              "Theories; Trait Theory Organization Structure: Work Specialization,",
+              "Departmentalization, Chain of Command, Span of Control,",
+              "Centralization and Decentralization, Formalization Organizational",
+              "Designs: Simple Structure, Bureaucracy, Matrix Structure, Virtual",
+              "Organization, Boundaryless Organization"
+            ],
+            "topics_text": "Leadership: Meaning of leadership, leadership styles, traits, Theories; Trait Theory Organization Structure: Work Specialization, Departmentalization, Chain of Command, Span of Control, Centralization and Decentralization, Formalization Organizational Designs: Simple Structure, Bureaucracy, Matrix Structure, Virtual Organization, Boundaryless Organization",
+            "topics": [
+              "Leadership: Meaning of leadership, leadership styles, traits,",
+              "Theories",
+              "Trait Theory Organization Structure: Work Specialization,",
+              "Departmentalization, Chain of Command, Span of Control,",
+              "Centralization and Decentralization, Formalization Organizational",
+              "Designs: Simple Structure, Bureaucracy, Matrix Structure, Virtual",
+              "Organization, Boundaryless Organization"
+            ]
+          },
+          {
+            "unit_number": 5,
+            "title": "ORGANIZATION CULTURE AND CONFLICT",
+            "contact_hours": 10,
+            "topic_lines": [
+              "MANAGEMENT",
+              "Organization Culture –Meaning, Definition, Features, Importance of",
+              "Culture. Conflict Management: Meaning – types of conflict –factors",
+              "affecting conflict in organization",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Organizational Behaviour, Robbins, Prentice Hall, 2016",
+              "2 Organizational Behaviour, K. Aswathappa, HPH, 2017",
+              "3 Organizational Behavior, P.G. Aquinas, Excel Books, 2007"
+            ],
+            "topics_text": "MANAGEMENT Organization Culture –Meaning, Definition, Features, Importance of Culture. Conflict Management: Meaning – types of conflict –factors affecting conflict in organization Total Hours 48 Textbook : 1 Organizational Behaviour, Robbins, Prentice Hall, 2016 2 Organizational Behaviour, K. Aswathappa, HPH, 2017 3 Organizational Behavior, P.G. Aquinas, Excel Books, 2007",
+            "topics": [
+              "MANAGEMENT",
+              "Organization Culture –Meaning, Definition, Features, Importance of",
+              "Culture. Conflict Management: Meaning – types of conflict –factors",
+              "affecting conflict in organization",
+              "Total Hours 48",
+              "Textbook :",
+              "1 Organizational Behaviour, Robbins, Prentice Hall, 2016",
+              "2 Organizational Behaviour, K. Aswathappa, HPH, 2017",
+              "3 Organizational Behavior, P.G. Aquinas, Excel Books, 2007"
+            ]
+          }
+        ],
+        "practical_units": []
+      },
+      "references": {
+        "references": [
+          "Organizational Behaviour, Organizational Behaviour, John W. Newstrom & Kieth Davis, McGraw Hill, 2001",
+          "Organizational Behaviour, Organizational Behaviour, Fred Luthans, McGraw Hill, 2011"
+        ],
+        "textbooks": [
+          "Organizational Behaviour, Robbins, Prentice Hall, 2016",
+          "Organizational Behaviour, K. Aswathappa, HPH, 2017",
+          "Organizational Behavior, P.G. Aquinas, Excel Books, 2007"
+        ],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 3,
+      "extracted_character_count": 5269,
+      "source_text_by_page": [
+        {
+          "page": 1,
+          "text": "INSTITUTE       FACULTY OF MANAGEMENT STUDIES\nPROGRAM       BACHELOR OF BUSINESS ADMINISTRATION (HONS.)\nSEMESTER         2\nCOURSE TITLE    ORGANIZATIONAL BEHAVIOR\nCOURSE CODE     04BB0202\nCOURSE CREDITS  4\n\n\nCourse Outcomes: After completion of this course, student will be able to:\n 1  Analyze individual and group behavior and understand the implications of organizational\n     behaviour on the process of management.\n 2  Identify different motivational theories and evaluate motivational strategies used in a\n     variety of organizational settings.\n 3  Understand individual differences and utilize them effectively in making groups to achieve\n     organizational objectives.\n 4  Evaluate the appropriateness of various leadership styles and conflict management\n     strategies used in organizations\n 5  Describe and assess the basic design elements of organizational structure and evaluate their\n    impact on employees.\n\n\nPre-requisite of course:None\n\n                        Teaching and Examination Scheme\n Theory      Tutorial      Practical   ESE    IA    CSE     Viva     Term\n  Hours      Hours       Hours                               Work\n     4            0            0        50     30      20        0          0\n\n Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     1    INTRODUCTION TO ORGANIZATIONAL BEHAVIOUR    7\n               Introduction to OB- Meaning, Definition, Scope, Contributing\n                disciplines, Determinants of OB, Evolution of OB, challenges and\n              Opportunities for Organization Behavior\n     2    UNDERSTANDING INDIVIDUAL BEHAVIOR              11\n             Understanding Personality; Meaning, Types, Determinants,\n               Personality Attribute influences Organizational behavior Perception:\n             Meaning, factors, link between perception and Individual decision\n             making, Attitude: Meaning, components, Types of attitude,\n             Formation of attitude, Attitude, and workforce diversity. Values:\n             Meaning, Types and Importance of values\n\n\n\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 2,
+          "text": "Contents :                                                             Contact                                       Topics    Unit                                                          Hours\n     3     INDIVIDUAL MOTIVATION AND GROUP BEHAVIORS    10\n              Motivation: Meaning, Types and Theories- Hierarchy of Needs\n             Theory, Theory X and Theory Y, Two-Factor Theory, carrot, and\n                stick Approach to Motivation, Learning: Meaning and Various\n             Approaches of Learning Group; Meaning, classification of Group,\n               stages of Group formation. Understanding teams; Meaning,\n              Difference Between Group and Team, Types of Team\n     4    LEADERSHIP AND ORGANIZATION STRUCTURE        10\n              Leadership: Meaning of leadership, leadership styles, traits,\n              Theories; Trait Theory Organization Structure: Work Specialization,\n              Departmentalization, Chain of Command, Span of Control,\n               Centralization and Decentralization, Formalization Organizational\n              Designs: Simple Structure, Bureaucracy, Matrix Structure, Virtual\n              Organization, Boundaryless Organization\n     5    ORGANIZATION CULTURE AND CONFLICT             10\n        MANAGEMENT\n              Organization Culture –Meaning, Definition, Features, Importance of\n               Culture. Conflict Management: Meaning – types of conflict –factors\n               affecting conflict in organization\n                               Total Hours                       48\n\n\nTextbook :\n 1  Organizational Behaviour, Robbins, Prentice Hall, 2016\n 2  Organizational Behaviour, K. Aswathappa, HPH, 2017\n 3  Organizational Behavior, P.G. Aquinas, Excel Books, 2007\n\nReferences:\n 1  Organizational Behaviour, Organizational Behaviour, John W. Newstrom & Kieth Davis,\n   McGraw Hill, 2001\n 2  Organizational Behaviour, Organizational Behaviour, Fred Luthans, McGraw Hill, 2011\n\nSuggested Theory Distribution:\nThe suggested theory distribution as per Bloom’s taxonomy is as follows. This distribution\nserves as guidelines for teachers and students to achieve effective teaching-learning process\n\n                   Distribution of Theory for course delivery and evaluation\n\n Remember /   Understand     Apply       Analyze      Evaluate   Higher order\n Knowledge                                                         Thinking\n    20.00         30.00         25.00         15.00         10.00\n\nInstructional Method:\n 1  Theory\n\n\nMR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        },
+        {
+          "page": 3,
+          "text": "MR. PARAS CHANDULAL RUGHANI                         DR. SUNIL KUMAR JAKHORIA\nDigitally signed by (Name of HOD)                         Digitally signed by (Name of Dean/ Principal)"
+        }
+      ],
+      "warnings": [],
+      "actual_pdf_sha256": "06b83f594c29b49bf3be15a691f7a9baada45cf30b77a4ef09dfed2f405538f5",
+      "pdf_verification_status": "VERIFIED_MARWADI",
+      "question_generation_use": "YES_VERIFIED_MARWADI_OCCURRENCE"
+    },
+    {
+      "subject_id": "25000422120301",
+      "subject_name": "STATISTICS FOR BUSINESS",
+      "course_id": "bba-international-business-",
+      "course_name": "BBA ( International Business)",
+      "semester": 2,
+      "subject_code": "",
+      "course_code_evidence": [
+        "04BB0201",
+        "04BB0206",
+        "04BB0208",
+        "04BB0209",
+        "04BB1203"
+      ],
+      "catalog_status": "VERIFIED_MARWADI",
+      "catalog_action": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "source_pdf_url": null,
+      "candidate_pdf_url": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/SB.pdf",
+      "source_pdf_repo_path": null,
+      "candidate_pdf_repo_path": "Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/STATISTICS FOR BUSINESS [1eb66ddba3ae].pdf",
+      "expected_pdf_sha256": "86172109c8e1babc4ecbbb9def75af7099d888bf86afc7042dda89c9bab74f51",
+      "extraction_method": "PyMuPDF native PDF text-layer extraction; no OCR",
+      "extraction_status": "PDF_NOT_FOUND",
+      "official_document_metadata": {
+        "course_title": null,
+        "course_code": null,
+        "semester_label": null,
+        "credits": null,
+        "prerequisite": null
+      },
+      "objectives": [],
+      "course_outcomes": [],
+      "teaching_and_examination_scheme_text": "",
+      "contents": {
+        "theory_units": [],
+        "practical_units": []
+      },
+      "references": {
+        "references": [],
+        "textbooks": [],
+        "recommended_books": [],
+        "supplementary_resources": []
+      },
+      "page_count": 0,
+      "extracted_character_count": 0,
+      "source_text_by_page": [],
+      "warnings": [
+        "Title and syllabus content verified in official Marwadi PDF; code match: 04BB0203"
+      ],
+      "pdf_verification_status": "DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE",
+      "question_generation_use": "NO_DUPLICATE_TITLE_PDF_DOES_NOT_MATCH_THIS_COURSE_CODE"
+    }
+  ],
+  "build_summary": {
+    "extracted": 6,
+    "manual_review": 0,
+    "ocr_review": 0,
+    "missing_pdf": 3,
+    "extraction_errors": 0
+  }
+}
