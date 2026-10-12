@@ -284,7 +284,7 @@ def merge_collection() -> dict:
     missing_rows = read_csv(MANIFEST_DIR / "missing_marwadi_pdfs.csv")
     links = read_csv(MANIFEST_DIR / "discovered_course_links.csv")
     status_by_program = {r.get("program_name", ""): r for r in source_status_rows}
-for program in programs:
+    for program in programs:
         program_name = program.get("program_name", "")
         if program_name not in status_by_program:
             status_by_program[program_name] = {
@@ -320,7 +320,7 @@ for program in programs:
             "",
             "Source PDFs are stored once in the shared PDF library. The links below point to the stored original PDF; duplicate content across programs reuses the same file.",
             "", "## Generated JSON", "",
-            "- [Program JSON index](../../../syllabus_txt.B.Tech/index.json)".replace("syllabus_txt.B.Tech", "syllabus_txt/B.Tech"),
+            "- [Program JSON index](../../../syllabus_txt/B.Tech/index.json)",
         ]
         for sem in range(1, 9):
             out.append(f"- [Semester {sem} JSON](../../../syllabus_txt/B.Tech/{slug}/semester_{sem}.json)")
