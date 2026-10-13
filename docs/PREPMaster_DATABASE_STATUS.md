@@ -171,3 +171,19 @@ The B.Tech PDF catalog and the live database Course catalog are separate sources
 - Do not claim a source syllabus is unavailable everywhere merely because it is missing from the checked-in collection.
 - Archive source records before destructive catalog removal and verify the post-delete database state.
 - Reconcile static ID mappings when adding or removing catalog records; avoid restoring a record until the course, subject IDs, semester and official source are verified.
+
+## 10. BCA/MCA catalog reconciliation — 2026-10-13
+
+The Computer Applications catalog was reconciled against `Syllabus/Computer_Applications_1/Computer_Applications_Batch_Runner/output/subject_inventory.csv`.
+
+| CourseId | CourseName | Current subjects | Semesters |
+|---:|---|---:|---|
+| 18 | BCA | 48 | 1–8 |
+| 19 | MCA | 29 | 1–4 |
+| **Total** | | **77** | |
+
+The existing CourseIds were retained to avoid breaking references. Course names were normalized to `BCA` and `MCA`, and `Courses.Sems` was updated to match the inventory. All 77 subject records were upserted and then verified by reading the live rows. No stale BCA/MCA rows outside the current inventory remained to delete.
+
+SubjectIds follow `docs/primary_key_rules.md`: actual CourseId prefix, official subject code letter/digit encoding, and two-digit occurrence suffix; no rule exception or arbitrary IDs were introduced. The `subjectIdBridge.json` and `subjectSemesterMap.json` compatibility maps were synchronized to the same 77 records, replacing 56 old BCA/MCA mapping entries. The primary-key rules document did not require a deviation note.
+
+The inventory includes some rows without an attached PDF URL and should be treated as the current subject inventory, not as proof that every syllabus PDF has been text-verified.
