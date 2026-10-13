@@ -36,10 +36,11 @@ A question may be challenging or intentionally misconception-sensitive, but it m
 First build an internal topic/learning-outcome map from the available source:
 
 - Identify units, important concepts, stated outcomes, formulas, methods, examples, and constraints.
-- Estimate importance using the course outcome, source emphasis, unit weighting/official exam blueprint when available, recurrence in approved material, and prerequisite value.
+- Estimate importance using the course outcome, source emphasis, any verified official exam blueprint/unit weightage, recurrence in approved material, and prerequisite value.
+- When an official university/board blueprint or unit weightage is available, use it as the **main distribution anchor**, not as an inflexible exact quota. Small deviations are acceptable for variation, question quality, source coverage, and test length; avoid large deviations that make the set feel unlike the actual exam.
+- When no official weightage is available, use a balanced, explicitly labelled provisional blueprint. Never describe an invented distribution as official.
 - Cover the important concepts across the full relevant material. Do not generate most of a test from whichever topic happens to appear first in the text.
 - Allocate questions across distinct topics and learning outcomes. Do not over-sample one easy concept just because it is easy for the model to phrase.
-- Avoid imposing a specific unit weight when no official weighting exists. Use a balanced, explicitly labelled provisional blueprint instead of claiming an unofficial distribution is official.
 
 **Source-window warning:** The current `geminiQuestions.js` implementation truncates input after 6,000 characters. If source material is longer, do not treat only the visible beginning as the complete syllabus. The future generation workflow should chunk or summarize the source with traceable topic coverage, or state the limitation and avoid making “not mentioned” questions from text that was never supplied to the model.
 
@@ -74,16 +75,19 @@ Use distractors that a student with a real, diagnosable misconception might sele
 
 **“Confusing” rule:** Create productive cognitive difficulty by comparing similar concepts, conditions, exceptions, assumptions, or outcomes. Never rely on unclear grammar, double negatives, hidden assumptions, irrelevant verbosity, misleading punctuation, or an underspecified scenario.
 
-### 3.3 “Not mentioned”, “not true”, and negative stems
+### 3.3 Surface-plausible, off-topic distractors and negative stems
 
-These are distinct question types and must not be treated as interchangeable:
+The requested extra confusion technique is primarily an **option-writing technique**, not the same thing as a question asking “which fact is not mentioned?”
 
-- **Not mentioned / not stated:** Ask what the specified source does *not explicitly provide*. This is appropriate only for source-bounded comprehension or documentation questions. Confirm the source was supplied in full for the relevant topic; an absent passage caused by truncation is not proof of absence.
-- **Not true / incorrect:** Ask which statement conflicts with verified facts or the defined conditions. The keyed choice must be demonstrably false in that context.
-- **Except / NOT:** Use a negative stem sparingly and make the negative word visually unmistakable in the rendered UI (for example, uppercase `NOT`). Avoid stacking multiple negatives.
-- **Insufficient information:** Use only when recognizing missing input is the skill being tested. State the known facts and ask what additional information is needed or what conclusion can validly be drawn.
+- **Surface-plausible off-topic distractor:** In a carefully selected MCQ, one distractor may be technically unrelated to the exact concept being tested while sounding superficially relevant because it shares vocabulary, a neighbouring topic, a familiar method, or the scenario's context. It should briefly tempt a student who reads too quickly or confuses adjacent concepts, then be clearly irrelevant to the actual task when examined carefully.
+- Use this technique **selectively**, not as a mandatory option in every MCQ. Prefer three meaningful, topic-grounded distractors and add one superficially relevant but non-responsive distractor where it improves the question. Avoid a completely random or absurd option: it makes the answer obvious rather than testing understanding.
+- The stem must contain enough context to show why the off-topic option does not answer the question. Never make the answer depend on hidden examiner intent, wordplay, or a vague relationship between concepts.
+- **Partially correct distractor:** May be true in another context or incomplete for the exact task, but it must fail a clearly stated condition.
+- **Not true / incorrect:** Ask which statement conflicts with verified facts or the supplied conditions; the keyed choice must be demonstrably incorrect in that context.
+- **Except / NOT:** Use negative stems sparingly, make the negative word unmistakable (for example, uppercase `NOT`), and avoid stacking negatives.
+- **Source-not-mentioned question:** This is a separate format. Use it only when the task explicitly concerns a specified, complete source. Input truncation, retrieval failure, or a model's lack of knowledge must never be treated as evidence that the source does not mention something.
 
-Do not mark an option “not mentioned” merely because it is absent from the model's memory or from a truncated source excerpt. Do not treat “not mentioned” as “false in the real world.”
+The objective is productive exam-like discrimination, not confusion caused by unclear writing. A student who carefully applies the concepts and reads the stem should be able to determine one best answer.
 
 ### 3.4 “All of the above”, “none of the above”, and multi-select
 
@@ -248,7 +252,7 @@ For current theory questions:
 - Explain internally why each distractor fails.
 - Check definitions, units, code syntax/behavior, formula conditions, exceptions, and assumptions.
 - Confirm one-best-answer validity; regenerate if two answers are plausible under the written stem.
-- Check that a “not mentioned” item is genuinely absent from the complete specified source, rather than an artifact of clipping or retrieval failure.
+- If a source-bounded “not mentioned” question is deliberately included, verify absence against the complete specified source rather than an artifact of clipping/retrieval failure. For off-topic distractors, verify that the option is non-responsive to the stem but superficially plausible—not randomly absurd.
 
 ### Gate D — Quality, difficulty, and fairness
 
@@ -300,13 +304,37 @@ The code review found that the current AI prompt already asks for four MCQ optio
 
 Do not assume these gaps are fixed by adding this document. When implementation begins, update prompts, validation, error/retry behavior, tests, and any affected data contract together. Preserve the current exam routes and unrelated protected features.
 
-## 10. Decisions to confirm before implementation
+## 10. Confirmed policy decisions (2026-10-13)
 
-This document can serve as the initial standard now. Before coding it into the live generator, confirm these policy choices with the project owner:
+The project owner has confirmed the following target policies. They are requirements for future implementation; the current generator/review UI does not yet enforce all of them.
 
-1. **Visible explanations:** Should students see the correct answer and explanation immediately after an attempt, only in review mode, or never for timed exams?
-2. **Exam blueprint:** Should official university/board question patterns and unit weightages take precedence whenever available, with the suggested proportions above used only when no official blueprint exists?
-3. **Source boundaries:** Should “not mentioned/not stated” MCQs be allowed only when the student is explicitly told the supplied passage/material is the complete source, or in regular subject MCQs too?
-4. **Theory scoring:** Should generated theory questions include a structured marking rubric for future manual/AI evaluation, even if the current UI does not yet display that rubric?
+### 10.1 Answer explanations: review mode only, no database dependency for now
 
-Until these are decided and implemented, keep them as documented target behavior rather than claiming the live generator enforces them.
+- Do **not** reveal answers, explanations, or marking rubrics during the timed attempt.
+- After submission, show the correct MCQ answer with a concise explanation in the existing exam-review flow.
+- For each MCQ, retain the verified correct answer and its rationale; retain a brief rationale for each distractor where generated and validated. These explanations are also part of the internal quality-check process, even if only the correct-answer explanation is shown to the student initially.
+- For subjective questions, generate a structured marking rubric / expected-answer points so the question can support later manual or AI-assisted evaluation. Do not present a rubric as an automatically awarded score unless an evaluation feature is implemented and validated.
+- A database table is **not required for this initial version**. The current app stores exam history in browser-local storage through `src/utils/examHistoryStorage.js`, and `ReviewPage.jsx` reads that snapshot. The future implementation can carry explanation/rubric metadata with the question object during the attempt, then include it in the existing local history snapshot on submission.
+- This approach supports review in the same browser/profile while the local history remains available. It does **not** provide cross-device sync or server-side backup; clearing browser storage, using another browser/device, or losing the local record can remove the explanation along with the review record. The current history store also limits retained records. If durable/cross-device history becomes a requirement, design a Supabase schema later rather than quietly adding a database dependency now.
+- Do not add fake or generic explanations to fill missing metadata. If an explanation or rubric is required but generation/validation fails, regenerate the item or exclude the unsupported metadata/question.
+
+### 10.2 Official exam blueprint: preserve the real-exam feel
+
+- Use verified university/board patterns and unit weightages as the main anchor when available, but allow modest deviations so generated sets have useful topic variety and do not become mechanically repetitive.
+- Do not diverge so much that the distribution of units, question types, difficulty, or cognitive demand stops resembling the target examination.
+- When the source provides no official blueprint, use a provisional distribution and do not label it official. The suggested percentage mixes earlier in this document are starting heuristics, not fixed requirements.
+
+### 10.3 Confusing options: include a selective, superficially relevant off-topic distractor
+
+- The owner's “not mentioned” clarification means a distractor option that is not actually responsive to the question but initially looks plausible—not necessarily a stem asking what a source does not mention.
+- Apply this selectively, especially where it tests quick reading or confusion between neighbouring concepts. Avoid random, absurd, or obviously unrelated choices.
+- The option must be clearly non-responsive under the exact stem, so there remains only one defensible correct answer. Keep this distinct from “partially correct,” “not true,” and source-bounded “not mentioned” question formats.
+
+### 10.4 Theory marking rubrics
+
+- Include a structured marking rubric / key expected answer points for every generated subjective question as target internal metadata.
+- Rubrics should scale to the marks and task verb (for example, explain, implement, differentiate, analyze, evaluate, design). Include valid steps, evidence/calculations/code/diagrams where relevant, and acceptable alternatives where appropriate.
+- Store the rubric in the same browser-local history snapshot for review in the initial version if it is needed after submission; no database write is needed for this phase.
+- Keep the rubric hidden while the timed exam is active. Showing it or a model answer is a post-submission review behavior, not an in-exam hint.
+
+Do not claim the confirmed behavior is live until implementation, validation, and relevant tests are completed.
