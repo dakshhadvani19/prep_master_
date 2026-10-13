@@ -1,0 +1,38 @@
+name: Audit Computer Applications departmental subject flags
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Syllabus/computer_applications_departmental_audit/**'
+      - 'Syllabus/Computer_Applications_1/Computer_Applications_Batch_Runner/output/PDFs/**'
+      - '.github/workflows/audit-computer-applications-departmental-flags.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF text extractor
+        run: python -m pip install --upgrade pip pymupdf
+      - name: Build read-only ESE audit
+        run: python Syllabus/computer_applications_departmental_audit/audit_computer_applications_flags.py
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: computer-applications-departmental-subject-audit
+          path: |
+            Syllabus/computer_applications_departmental_audit/computer_applications_audit_report.csv
+            Syllabus/computer_applications_departmental_audit/computer_applications_audit_summary.json
+          if-no-files-found: error
+          retention-days: 30
