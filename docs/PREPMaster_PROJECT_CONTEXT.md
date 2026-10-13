@@ -318,3 +318,7 @@ This is a source-evidence cleanup, not a claim that the underlying degrees or su
 The six active Diploma course IDs `44–49` still have 241 current Subject rows. The internal `public.temp_subjects_removed` archive contains 96 superseded Diploma subject rows; RLS is enabled and `anon`/`authenticated` have no SELECT privilege. The same live snapshot had no null subject semesters, blank subject names, or orphan CourseIds. CourseId 30 remains a known exception with an empty semester list and no subject rows.
 
 For full exact database counts, table columns and FK details, see `docs/PREPMaster_DATABASE_STATUS.md`. Historical counts in older notes describe earlier catalog states and must not be treated as live counts.
+
+## BCA/MCA catalog update (2026-10-13)
+
+The live Supabase catalog now uses the normalized course names `BCA` (CourseId 18) and `MCA` (CourseId 19). The current GitHub subject inventory is synchronized: 48 BCA subjects across semesters 1–8 and 29 MCA subjects across semesters 1–4. Existing CourseIds were retained. All 77 SubjectIds were calculated using `docs/primary_key_rules.md`; no primary-key rule was broken. The compatibility files `subjectIdBridge.json` and `subjectSemesterMap.json` were synchronized to the same set. See `docs/PREPMaster_DATABASE_STATUS.md` for the reconciliation record.
