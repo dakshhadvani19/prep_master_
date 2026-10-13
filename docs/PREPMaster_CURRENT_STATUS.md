@@ -214,3 +214,14 @@ Checked directly in Supabase on 2026-10-13 at 06:22 UTC:
 - RLS is enabled on all inspected public tables; the Diploma archive is not readable by `anon` or `authenticated`.
 
 The PDF-to-JSON index and the live Supabase catalog are separate sources. Generated JSON output is not proof that a Course row is active, and removing a Course row does not automatically remove historical source mappings or generated files. Restore/reconcile a course only after official course mapping and subject-level source PDFs are validated.
+
+## BCA/MCA catalog update — 2026-10-13
+
+- CourseId 18 is named `BCA`; its semester options are 1–8 and it has 48 current subject rows.
+- CourseId 19 is named `MCA`; its semester options are 1–4 and it has 29 current subject rows.
+- The 77 subjects match the current Computer Applications `subject_inventory.csv` source list.
+- SubjectIds follow `docs/primary_key_rules.md`; no arbitrary IDs or exceptions were used.
+- `subjectIdBridge.json` and `subjectSemesterMap.json` were synchronized to the new inventory.
+- The inventory's missing PDF URLs mean not every subject has a linked PDF available in this source manifest; inventory inclusion alone does not claim PDF-text verification.
+
+See `docs/PREPMaster_DATABASE_STATUS.md` for details.
