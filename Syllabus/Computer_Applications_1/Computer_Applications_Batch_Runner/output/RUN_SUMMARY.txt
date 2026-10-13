@@ -1,0 +1,20 @@
+PREPMASTER — COMPUTER APPLICATIONS BATCH RUNNER
+====================================================
+Run started: 2026-10-13 08:41:16 UTC
+Subject inventory entries: 77 (unique course + subject code)
+BCA inventory entries: 48
+MCA inventory entries: 29
+Master programme PDFs valid: 2/2
+
+INDIVIDUAL PDF RESULT COUNTS
+- NO_INDIVIDUAL_PDF_FOUND: 24
+- REVIEW_CODE_OR_TITLE_MISMATCH: 7
+- VERIFIED_CODE_AND_TITLE: 46
+
+Interpretation:
+- The programme-level PDFs are retained separately as coverage backups.
+- VERIFIED_CODE_AND_TITLE means the expected code and title evidence were found in extracted PDF text; it is not a guarantee of curriculum-year equivalence.
+- REVIEW_* means the PDF downloaded but needs human verification.
+- NO_INDIVIDUAL_PDF_FOUND means no public individual PDF was found via the configured official page/media search; it does not mean the subject is absent.
+- Check subject_inventory.csv for the complete coded course outline and download_report.csv for per-subject outcomes.
+- This run does not modify GitHub or Supabase.
