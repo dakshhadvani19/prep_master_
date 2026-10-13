@@ -1,0 +1,38 @@
+name: Audit Law and Arts departmental subject flags
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Syllabus/law_arts_departmental_audit/**'
+      - 'Syllabus/Law_Arts_Recovery_Kit_1/Law_Arts_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/**'
+      - '.github/workflows/audit-law-arts-departmental-flags.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF text extractor
+        run: python -m pip install --upgrade pip pymupdf
+      - name: Build read-only ESE audit
+        run: python Syllabus/law_arts_departmental_audit/audit_law_arts_flags.py
+      - name: Upload audited report
+        uses: actions/upload-artifact@v4
+        with:
+          name: law-arts-departmental-subject-audit
+          path: |
+            Syllabus/law_arts_departmental_audit/law_arts_audit_report.csv
+            Syllabus/law_arts_departmental_audit/law_arts_audit_summary.json
+          if-no-files-found: error
+          retention-days: 30
