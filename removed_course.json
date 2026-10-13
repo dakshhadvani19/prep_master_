@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
-  "generated_at_utc": "2026-10-13T00:00:00Z",
-  "purpose": "Audit record for B.Tech courses removed from Supabase because detailed PDF-text-to-JSON conversion could not be completed from checked-in, mapped syllabus PDFs.",
+  "generated_at_utc": "2026-10-13T05:45:00Z",
+  "purpose": "Audit and recovery record for B.Tech course records removed from Supabase because the repository's verified, mapped syllabus PDF sources were insufficient for complete PDF-text-to-JSON conversion.",
   "source_check": {
     "repository": "https://github.com/dakshhadvani19/prep_master_",
     "pdf_library_path": "Syllabus/B.Tech programs/_PDF_Library/",
     "program_catalog_path": "Syllabus/B.Tech programs/_Catalogs/program_catalog.csv",
     "program_course_map_path": "Syllabus/B.Tech programs/_Catalogs/program_course_map.csv",
-    "finding": "The 8 listed courses have no mapped subject-level syllabus PDF assets in the repository's current B.Tech source catalog. Official program pages show course outlines, but that is not a substitute for the detailed source PDFs required for the same conversion process."
+    "finding": "Nine B.Tech course records lacked a complete mapped subject-level PDF set: eight had zero mapped PDF assets, and Mechanical Engineering AI/ML had only one mapped subject PDF for 38 listed subjects."
   },
   "database_action": {
     "tables": [
@@ -15,8 +15,8 @@
       "public.Subjects"
     ],
     "operation": "DELETE",
-    "course_rows_to_remove": 8,
-    "subject_rows_to_remove": 516,
+    "course_rows_to_remove": 9,
+    "subject_rows_to_remove": 554,
     "archived_here_before_deletion": true,
     "note": "Each removed course includes its child subject IDs, names, and semester numbers in this JSON so the catalog data can be restored if needed."
   },
@@ -2435,6 +2435,256 @@
           "id": 13016138000201,
           "subject_id": 13016138000201,
           "name": "Prog.Elec.6",
+          "semester": 8
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "course_id": 14,
+      "name": "B.Tech - Mechanical Engineering & Ai/ML",
+      "department": "Mechanical Engineering - Artificial Intelligence and Machine Learning",
+      "semester_list": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "subject_count": 38,
+      "official_program_url": "https://www.marwadiuniversity.ac.in/mechanical-ai-ml/",
+      "source_pdf_assets_linked_in_repository": 1,
+      "removal_reason": "Only one verified subject-level PDF (01ML0503 - Machine Learning) is mapped to this program in the repository catalog, while 38 subjects are listed in Supabase. The available source set is insufficient for a complete course-level PDF-text-to-JSON conversion.",
+      "subjects": [
+        {
+          "id": 14000135010101,
+          "subject_id": 14000135010101,
+          "name": "Computer Programming",
+          "semester": 1
+        },
+        {
+          "id": 14001131210101,
+          "subject_id": 14001131210101,
+          "name": "Differential and Integral Calculus",
+          "semester": 1
+        },
+        {
+          "id": 14001135110101,
+          "subject_id": 14001135110101,
+          "name": "Elements of Mechanical Engineering",
+          "semester": 1
+        },
+        {
+          "id": 14001318010501,
+          "subject_id": 14001318010501,
+          "name": "Verbal Ability - 1",
+          "semester": 1
+        },
+        {
+          "id": 14001318110301,
+          "subject_id": 14001318110301,
+          "name": "Value Education",
+          "semester": 1
+        },
+        {
+          "id": 14001514110101,
+          "subject_id": 14001514110101,
+          "name": "Basics of Environmental Studies",
+          "semester": 1
+        },
+        {
+          "id": 14001719010301,
+          "subject_id": 14001719010301,
+          "name": "Indian Constitution",
+          "semester": 1
+        },
+        {
+          "id": 14001719210101,
+          "subject_id": 14001719210101,
+          "name": "Engineering Physics",
+          "semester": 1
+        },
+        {
+          "id": 14011912110401,
+          "subject_id": 14011912110401,
+          "name": "Professional Communication",
+          "semester": 1
+        },
+        {
+          "id": 14000155210101,
+          "subject_id": 14000155210101,
+          "name": "Basic Electrical and Electronics Engineering",
+          "semester": 2
+        },
+        {
+          "id": 14001131010301,
+          "subject_id": 14001131010301,
+          "name": "Matrix Algebra and Vector Space",
+          "semester": 2
+        },
+        {
+          "id": 14001135110201,
+          "subject_id": 14001135110201,
+          "name": "Engineering Graphics",
+          "semester": 2
+        },
+        {
+          "id": 14001135110401,
+          "subject_id": 14001135110401,
+          "name": "Mechanical Workshop",
+          "semester": 2
+        },
+        {
+          "id": 14001318010601,
+          "subject_id": 14001318010601,
+          "name": "Verbal Ability – 2",
+          "semester": 2
+        },
+        {
+          "id": 14011312010101,
+          "subject_id": 14011312010101,
+          "name": "Python Programming",
+          "semester": 2
+        },
+        {
+          "id": 14011312020201,
+          "subject_id": 14011312020201,
+          "name": "Fundamental of AI & ML",
+          "semester": 2
+        },
+        {
+          "id": 14001131130101,
+          "subject_id": 14001131130101,
+          "name": "Applied Differential Equations",
+          "semester": 3
+        },
+        {
+          "id": 14001135130501,
+          "subject_id": 14001135130501,
+          "name": "Fundamental of Machine Design",
+          "semester": 3
+        },
+        {
+          "id": 14001135230201,
+          "subject_id": 14001135230201,
+          "name": "Kinematics of Machines",
+          "semester": 3
+        },
+        {
+          "id": 14001318030201,
+          "subject_id": 14001318030201,
+          "name": "Quantitative & Logical Ability - 1",
+          "semester": 3
+        },
+        {
+          "id": 14009135230201,
+          "subject_id": 14009135230201,
+          "name": "Fluid Mechanics & Hydraulic Machines",
+          "semester": 3
+        },
+        {
+          "id": 14011312030101,
+          "subject_id": 14011312030101,
+          "name": "Manufacturing Technolgy",
+          "semester": 3
+        },
+        {
+          "id": 14016133000101,
+          "subject_id": 14016133000101,
+          "name": "Python Programming for AI & ML",
+          "semester": 3
+        },
+        {
+          "id": 14001131140101,
+          "subject_id": 14001131140101,
+          "name": "Complex Variable & Numerical Analysis",
+          "semester": 4
+        },
+        {
+          "id": 14001135040601,
+          "subject_id": 14001135040601,
+          "name": "Creativity, Problem Solving and Innovation",
+          "semester": 4
+        },
+        {
+          "id": 14001135140401,
+          "subject_id": 14001135140401,
+          "name": "Engineering Thermodynamics",
+          "semester": 4
+        },
+        {
+          "id": 14001135240301,
+          "subject_id": 14001135240301,
+          "name": "Material Science and Metallurgy",
+          "semester": 4
+        },
+        {
+          "id": 14001318040201,
+          "subject_id": 14001318040201,
+          "name": "Quantitative & Logical Ability - 2",
+          "semester": 4
+        },
+        {
+          "id": 14011312040101,
+          "subject_id": 14011312040101,
+          "name": "Data Science",
+          "semester": 4
+        },
+        {
+          "id": 14011312240101,
+          "subject_id": 14011312240101,
+          "name": "Machine Design & Industrial Drafting",
+          "semester": 4
+        },
+        {
+          "id": 14001135050401,
+          "subject_id": 14001135050401,
+          "name": "Metrology",
+          "semester": 5
+        },
+        {
+          "id": 14001318050301,
+          "subject_id": 14001318050301,
+          "name": "Quantitative & Logical Ability - 3",
+          "semester": 5
+        },
+        {
+          "id": 14011312050101,
+          "subject_id": 14011312050101,
+          "name": "Dynamics of Machine",
+          "semester": 5
+        },
+        {
+          "id": 14011312050201,
+          "subject_id": 14011312050201,
+          "name": "Machine Design",
+          "semester": 5
+        },
+        {
+          "id": 14001135061201,
+          "subject_id": 14001135061201,
+          "name": "Basics of Pneumatics and Hydraulics",
+          "semester": 6
+        },
+        {
+          "id": 14001135160201,
+          "subject_id": 14001135160201,
+          "name": "Heat Transfer",
+          "semester": 6
+        },
+        {
+          "id": 14001318060201,
+          "subject_id": 14001318060201,
+          "name": "Quantitative Aptitude and Verbal Ability",
+          "semester": 6
+        },
+        {
+          "id": 14011312080101,
+          "subject_id": 14011312080101,
+          "name": "Internship/Project",
           "semester": 8
         }
       ]
