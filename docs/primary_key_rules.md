@@ -102,10 +102,45 @@ The checked-in bridge currently contains more entries than the live Subjects tab
 - Do not place identity-generation assumptions into future SQL unless the current contract explicitly calls for them.
 - Keep RLS enabled and retain least-privilege grants for exposed tables. Primary-key correctness does not replace access-control rules.
 
-## 5. Future TestsData / TestAttempts relationship
+## 5. TestsData TestId rule: SubjectId + test occurrence
 
-- Current `public."TestsData".TestId` is a manually supplied `BIGINT` primary key; inserts must include it. Do not add `IDENTITY` or a default unless the requirement is deliberately changed.
-- In the ER diagram, `TestsData` and `TestAttempts` both label a field `TestId`. If multiple students or repeated attempts can refer to one reusable test, `TestsData.TestId` should identify the reusable test, while `TestAttempts` needs its own per-attempt primary key (for example, a separately chosen `TestAttemptId`) plus a `TestId` foreign key. Confirm the intended relationship before creating `TestAttempts`; that table was not present in the live schema during this review.
+`public."TestsData".TestId` is a manually supplied `BIGINT` primary key. It is **not** an identity/auto-increment value. Its value identifies both:
+1. the subject the test belongs to, by starting with that subject's existing numeric `SubjectId`; and
+2. the occurrence number of a test set created/stored for that subject, appended to the end.
+
+### Construction rule
+
+```text
+TestId = decimal-string(SubjectId) + decimal-string(test_occurrence)
+```
+
+This is **string concatenation, not arithmetic addition**. After concatenating the strings, convert the result to a `BIGINT` for insertion.
+
+For example, if the existing subject is `44000935310201`:
+
+| SubjectId | Test occurrence | TestId to insert |
+| --- | ---: | ---: |
+| `44000935310201` | 1 | `440009353102011` |
+| `44000935310201` | 2 | `440009353102012` |
+| `44000935310201` | 3 | `440009353102013` |
+| `44000935310201` | 4 | `440009353102014` |
+
+### Rules when generating test IDs
+
+- Always start from the **actual, active SubjectId in Supabase**. Do not use a legacy source ID such as `ce101`, a syllabus filename, or an unverified bridge-map entry.
+- Start the occurrence sequence at `1` for the first test set associated with that subject, then use `2`, `3`, and so on for further distinct test sets.
+- Choose the next occurrence by checking existing `TestsData` rows for that subject's TestId pattern, or use a separately maintained reliable mapping. Do not assume a number is unused just because it is the next number in application memory.
+- Do not regenerate an existing TestId when a test's questions or metadata are edited. Reuse the existing ID for that test set; allocate the next occurrence only when creating a distinct test set.
+- TestId must be unique across the entire `TestsData` table. If a candidate conflicts with an existing TestId, stop and resolve the collision rather than overwriting another test.
+- Keep the final concatenated value within PostgreSQL's signed `BIGINT` range (`-9223372036854775808` through `9223372036854775807`). Validate this before inserting.
+- The occurrence suffix has no separator. Therefore, **do not try to recover SubjectId by blindly removing the final digit(s)**: use the subject association known when generating the ID. If robust SQL lookups must retrieve all tests for one subject, storing a separate `SubjectId` column with a foreign key to `public."Subjects"("SubjectId")` would make that relationship explicit, but that would be an additional column beyond the four currently listed in the SRS. Confirm before changing the SRS/table shape.
+- The rule describes occurrence of a **test set for a subject**, not the occurrence of an individual question inside a set. Question IDs remain question-level identifiers inside the `Questions` array/data.
+
+### Relationship to TestAttempts
+
+- In the ER diagram, `TestsData` and `TestAttempts` both label a field `TestId`. Under this rule, `TestsData.TestId` identifies the subject-specific test set.
+- If multiple students can attempt the same test or one student can retry it, `TestAttempts` must have its own per-attempt primary key (for example, a separately designed `TestAttemptId`) and a `TestId` foreign key to `TestsData.TestId`. Reusing the test's TestId as the attempt table's primary key would prevent multiple attempts from referencing the same test.
+- `TestAttempts` was not present in the live schema during this review, so its final keys and foreign-key rules must be established before creating it.
 
 ## 6. Safe insert checklist
 
