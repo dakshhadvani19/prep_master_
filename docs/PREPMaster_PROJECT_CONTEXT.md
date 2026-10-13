@@ -105,13 +105,11 @@ Runtime database sources:
 - public.Subjects -> SubjectId, SubjectName, CourseId, Semester
 
 Current verified facts:
-- Courses: 49 rows
-- Subjects: 2492 rows after the 2026-10-11 catalog exclusions and the 96-row Diploma cleanup on 2026-10-12
-- All Subjects rows have non-null Semester
-- No blank subject names
-- No orphan CourseIds
-- RLS enabled
-- Browser SELECT works for the catalog
+- Courses: **40 rows** at the 2026-10-13 direct-SQL snapshot
+- Subjects: **1,938 rows** at the same snapshot
+- All Subjects rows have a non-null Semester; no blank SubjectName values; no orphan CourseIds
+- RLS is enabled on all inspected public tables
+- The current B.Tech removals are recorded in root-level `removed_course.json`; details are in `docs/PREPMaster_DATABASE_STATUS.md`
 
 Course semester options come from Courses.Sems.
 Subject semester values come from Subjects.Semester.
@@ -295,3 +293,28 @@ For Diploma CourseIds 44–49, synchronize against the current official Marwadi 
 - Ninety-six superseded/unverified previous rows were archived in `public.temp_subjects_removed` and the checked-in CSV archive before deletion. Keep RLS enabled; do not grant browser `anon` or `authenticated` read/write access to this internal archive.
 - Keep `subjectIdBridge.json`, `subjectSemesterMap.json`, and static Diploma subject arrays synchronized to the **241 active IDs**, excluding the four unresolved targets.
 - Active catalog and semester-coverage reports distinguish missing validated PDFs from proof that a subject does not exist. Network, source-code, or semester uncertainty is not evidence of absence.
+
+
+## B.Tech syllabus PDF-to-JSON state and Supabase cleanup (verified 2026-10-13)
+
+The source PDF collection and the runtime Supabase course catalog are separate:
+
+- PDF library: `Syllabus/B.Tech programs/_PDF_Library/`.
+- Program catalog: `Syllabus/B.Tech programs/_Catalogs/program_catalog.csv` (20 program entries).
+- Program/PDF map: `Syllabus/B.Tech programs/_Catalogs/program_course_map.csv` (313 associations; 157 unique referenced PDF paths).
+- Builder: `Syllabus/build_btech_syllabus_txt.py`.
+- Generated JSON: `Syllabus/syllabus_txt/B.Tech/`; index: `Syllabus/syllabus_txt/B.Tech/index.json`.
+
+The generated index at 2026-10-13 05:30:45 UTC lists 9 program outputs and 11 programs with no verified syllabus JSON. Of 313 mapped program/PDF associations, 303 were classified as structured and 10 were flagged for manual review of content sections. The builder uses PyMuPDF native text extraction, does not run OCR, and preserves the text extracted from each page. “Structured” means the parser found units/topics; it is not a guarantee that all content is correct. The 10 review-needed items must be inspected against the source PDFs.
+
+### Live Supabase catalog snapshot after the B.Tech cleanup
+
+Direct SQL verification on 2026-10-13 at 06:22 UTC returned 40 rows in `public.Courses` and 1,938 rows in `public.Subjects`. The live B.Tech IDs are now `1, 2, 4, 5, 7, 8, 9, 10`, representing 424 subject rows.
+
+On 2026-10-13, course IDs `3, 6, 11, 12, 13, 14, 15, 16, 17` were deleted along with 554 linked Subject rows because their mapped source-PDF sets were insufficient to fully convert their listed syllabi. Post-delete queries verified zero of those Course IDs and zero linked subjects remain live. The full recovery snapshot is the root-level [`removed_course.json`](../removed_course.json), containing the removed IDs, department/course names, reason and SubjectId/title/semester details.
+
+This is a source-evidence cleanup, not a claim that the underlying degrees or subjects do not exist. The JSON converter has 9 program outputs and its output includes the one mapped Machine Learning PDF for Mechanical Engineering AI/ML even though CourseId 14 was removed from the live catalog; generated output is not authority for whether a Supabase course row exists. ECE Robotics, VLSI and IoT catalog entries had no distinct matching Supabase IDs and were noted as `id: null`, not counted among deletions.
+
+The six active Diploma course IDs `44–49` still have 241 current Subject rows. The internal `public.temp_subjects_removed` archive contains 96 superseded Diploma subject rows; RLS is enabled and `anon`/`authenticated` have no SELECT privilege. The same live snapshot had no null subject semesters, blank subject names, or orphan CourseIds. CourseId 30 remains a known exception with an empty semester list and no subject rows.
+
+For full exact database counts, table columns and FK details, see `docs/PREPMaster_DATABASE_STATUS.md`. Historical counts in older notes describe earlier catalog states and must not be treated as live counts.
