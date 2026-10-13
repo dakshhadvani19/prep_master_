@@ -1,0 +1,39 @@
+name: Audit B.Tech departmental subject flags
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Syllabus/btech_departmental_audit/**'
+      - '.github/workflows/audit-btech-departmental-flags.yml'
+      - 'Syllabus/B.Tech programs/_Catalogs/program_course_map.csv'
+      - 'Syllabus/B.Tech programs/_PDF_Library/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF text extractor
+        run: python -m pip install --upgrade pip pymupdf
+      - name: Build read-only subject-by-subject ESE audit
+        run: python Syllabus/btech_departmental_audit/audit_btech_flags.py
+      - name: Upload audited report
+        uses: actions/upload-artifact@v4
+        with:
+          name: btech-departmental-subject-audit
+          path: |
+            Syllabus/btech_departmental_audit/audit_report.csv
+            Syllabus/btech_departmental_audit/audit_summary.json
+          if-no-files-found: error
+          retention-days: 30
