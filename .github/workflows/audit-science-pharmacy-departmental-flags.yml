@@ -1,0 +1,31 @@
+name: Audit Science and Pharmacy departmental subject flags
+on:
+  push:
+    paths:
+      - 'Syllabus/science_pharmacy_departmental_audit/**'
+      - 'Syllabus/Science_Pharmacy_Recovery_Kit_1/Science_Pharmacy_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/**'
+      - '.github/workflows/audit-science-pharmacy-departmental-flags.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF parser
+        run: pip install pymupdf
+      - name: Run read-only audit
+        run: python Syllabus/science_pharmacy_departmental_audit/audit_science_pharmacy_flags.py
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: science-pharmacy-departmental-subject-audit
+          path: |
+            Syllabus/science_pharmacy_departmental_audit/science_pharmacy_audit_report.csv
+            Syllabus/science_pharmacy_departmental_audit/science_pharmacy_audit_summary.json
+          if-no-files-found: error
