@@ -1,67 +1,173 @@
 # PrepMaster — Database Status
 
-This file is the dedicated reference for PrepMaster's database design, database decisions,
-relationships, migration status, and live-verification status.
+_Last live verification: 2026-10-13 06:22 UTC (11:52 IST)_
 
-For general project architecture, read:
-- `docs/PREPMaster_PROJECT_CONTEXT.md`
-- `docs/PREPMaster_CURRENT_STATUS.md`
+This document records the current live Supabase database state and the most recent catalog changes. Live row counts are a snapshot and can change when users register or submit data.
 
----
+For application architecture, see:
+- [Current Status](PREPMaster_CURRENT_STATUS.md)
+- [Project Context](PREPMaster_PROJECT_CONTEXT.md)
 
-## 1. Database Platform
+## 1. Live Supabase project
 
-PrepMaster uses **Supabase PostgreSQL** for the new persistent database layer.
-
-The database design follows the SRS and ER diagram.
-
-### SRS → PostgreSQL type mapping
-
-| SRS type | PostgreSQL type |
+| Property | Value |
 |---|---|
-| Long 64 | BIGINT |
-| String N | VARCHAR(N) |
-| Boolean | BOOLEAN |
-| Array | PostgreSQL ARRAY where appropriate |
-| Timestamp | TIMESTAMPTZ / TIMESTAMP where explicitly decided |
+| Project | `prepmaster` |
+| Project ref | `llqwtgwjlwgrftihtern` |
+| Region | `ap-south-1` |
+| Database | Supabase PostgreSQL |
+| Schema | `public` |
+| Current repository branch | `main` |
 
-Important rule:
+Row counts below were checked with direct SQL queries against the live project, not inferred from older docs or the catalog JSON files.
 
-**Do not invent additional columns just because they may be useful in the application.**
+## 2. Current live row counts
 
-The SRS/ER structure and explicit owner decisions are the authority.
+| Table | Rows at verification | Notes |
+|---|---:|---|
+| `public.Courses` | **40** | Course catalog |
+| `public.Subjects` | **1,938** | Subject catalog |
+| `public.Students` | 7 | Student-profile rows; not a count of all Auth users |
+| `public.Admins` | 1 | Admin-profile row |
+| `public.Feedbacks` | 0 | Persistent feedback table is empty |
+| `public.Leaderboards` | 0 | No persistent leaderboard rows |
+| `public.exam_history` | 0 | No persistent exam-history rows; app history currently uses browser-local storage |
+| `public.auth_otp` | 1 | Short-lived OTP-challenge table; this count is transient |
+| `public.temp_subjects_removed` | **96** | Internal recovery archive for the Diploma cleanup |
 
----
+The totals of 40 Courses and 1,938 Subjects are the current catalog baseline as of the timestamp above. Older figures in historical notes (49 Courses or earlier Subject totals) predate later exclusions/removals and are not the current database state.
 
-# 2. Database Naming Rule
+## 3. Current B.Tech catalog state
 
-For the new database tables, identifiers should match the SRS exactly.
+The live B.Tech Course records remaining in Supabase are:
 
-Examples:
+| CourseId | CourseName | Live Subjects |
+|---:|---|---:|
+| 1 | B.Tech - Computer Engineering | 61 |
+| 2 | B.Tech - IT | 26 |
+| 4 | B.Tech - AI/ML | 16 |
+| 5 | B.Tech - AI/Data science | 63 |
+| 7 | B.Tech - ICT | 73 |
+| 8 | B.Tech - CSE | 64 |
+| 9 | B.Tech - CSE & Cyber Security | 63 |
+| 10 | B.Tech - CSE & AI | 58 |
+| **Total** | **8 active B.Tech course records** | **424** |
 
-```text
-"Courses"
-"CourseId"
-"Sems"
-"CourseName"
+### B.Tech course removals recorded on 2026-10-13
 
-"Subjects"
-"SubjectId"
-"SubjectName"
-"CourseId"
+Nine Course records and their subject rows were removed after the source audit found insufficient verified, mapped subject-level syllabus PDFs to complete the requested PDF-text-to-JSON conversion.
 
-"Feedbacks"
-"FeedbackId"
-"Description"
-"Type"
-"isSpam"
-"isBookmark"
-"isSeen"
-"StudentId"
+| CourseId | Course | Subject rows removed |
+|---:|---|---:|
+| 3 | B.Tech - Electrical Engineering | 78 |
+| 6 | B.Tech - BioInformatics | 54 |
+| 11 | B.Tech - Chemical Engineering | 61 |
+| 12 | B.Tech - Civil Engineering | 106 |
+| 13 | B.Tech - Mechanical Engineering | 86 |
+| 14 | B.Tech - Mechanical Engineering & Ai/ML | 38 |
+| 15 | B.Tech - Mechanical Engineering Robotics & Automation | 32 |
+| 16 | B.Tech - Electronics & Communication | 49 |
+| 17 | B.Tech - Electronics and Communication Engineering - AI | 50 |
+| **Total** | **9 Course records** | **554 subject rows** |
 
-"Leaderboards"
-"LeaderboardId"
-"StudentId"
-"Points"
-"SubjectId"
-"TotalTests"
+Post-delete verification returned **0 live Course rows and 0 live Subject rows** for CourseIds `3, 6, 11, 12, 13, 14, 15, 16, 17`.
+
+Recovery source: repository-root [`removed_course.json`](../removed_course.json). It stores each removed course's ID, name, department, source-coverage reason, semester list, and the full child-subject snapshot (SubjectId, title, semester). This is a recovery/audit archive, not a live source of catalog data.
+
+**Interpretation:** These rows were removed because the checked-in verified source set was incomplete for full conversion. Removal is not proof that a degree program or subject does not exist. Re-add a course only after its authoritative course/subject mapping is verified and the source syllabus PDFs are obtained and reviewed.
+
+Three B.Tech specialization catalog entries—ECE Robotics, ECE VLSI Design and Technology, and ECE Internet of Things—had no separate matching row in `public.Courses`; they are noted with `id: null` in the archive and were not counted as database deletions.
+
+## 4. Current Diploma catalog state
+
+The six active Diploma course rows are CourseIds `44–49`:
+
+| CourseId | Diploma program | Live Subjects |
+|---:|---|---:|
+| 44 | Computer Engineering | 39 |
+| 45 | Mechanical Engineering | 38 |
+| 46 | Chemical Engineering | 38 |
+| 47 | Electrical Engineering | 42 |
+| 48 | Civil Engineering | 41 |
+| 49 | Information and Communication Technology | 43 |
+| **Total** | **6 active Diploma programs** | **241** |
+
+The 241 active Diploma subject IDs were synchronized against the current official Marwadi syllabus manifest. Four intended targets remain excluded pending semester/code/title evidence:
+- Applied Chemistry (`09GS3102`) in Computer Engineering and Electrical Engineering: the PDF specifies Semester I/II without an unambiguous program-specific semester.
+- Computer Fundamental Skill (`09CE2101`) in Mechanical Engineering: source-code/title match needs review.
+- Advance Design of Structures (`09CI0616`) in Civil Engineering: source-code/title match needs review.
+
+The previous 96 Diploma subject rows were archived to `public.temp_subjects_removed` before deletion. RLS is enabled on that table and direct checks confirm `anon` and `authenticated` do **not** have table-level SELECT privileges. It is an internal recovery table, not a browser-facing catalog.
+
+## 5. Current data-integrity checks
+
+The following checks returned zero at the verification timestamp:
+
+- Subject rows with null `Semester`: **0**
+- Subject rows with blank `SubjectName`: **0**
+- Subject rows whose `CourseId` has no matching Course: **0**
+- Removed B.Tech course IDs still live in `public.Courses`: **0**
+- Subject rows for those removed B.Tech IDs still live in `public.Subjects`: **0**
+
+Known catalog exception: CourseId `30`, `Master In Global Business Management`, is still present with an empty `Sems` array and zero Subjects. It was not changed during the B.Tech cleanup.
+
+## 6. Schema and relationships
+
+All listed application tables in the exposed `public` schema currently have Row Level Security (RLS) enabled.
+
+| Table | Primary key | Important columns / relationships |
+|---|---|---|
+| `public.Courses` | `CourseId` BIGINT identity | `CourseName`, `Sems` INTEGER[] |
+| `public.Subjects` | `SubjectId` BIGINT identity | `SubjectName`, `CourseId` → `Courses.CourseId`, `Semester` INTEGER |
+| `public.Students` | `StudentId` BIGINT identity | `auth_uid` → `auth.users.id`, `FullName`, unique lowercase `Email`, `IsSpam`, `role`, `created_at` |
+| `public.Admins` | `AdminId` BIGINT identity | `auth_uid` → `auth.users.id`, `FullName`, unique lowercase `Email`, `isSuperAdmin`, `created_at` |
+| `public.Feedbacks` | `FeedbackId` BIGINT identity | `Description`, `Type`, `isSpam`, `isBookmark`, `isSeen`, `StudentId` → `Students.StudentId` |
+| `public.Leaderboards` | `LeaderboardId` BIGINT | `StudentId` BIGINT[], `Points` BIGINT[], `SubjectId` → `Subjects.SubjectId`, `TotalTests` BIGINT[] |
+| `public.exam_history` | `id` BIGINT | `auth_uid` → `auth.users.id`, exam metadata, score, question snapshot and user answers in JSONB |
+| `public.auth_otp` | `email` TEXT | OTP digest, nonce, attempt count, creation and expiry times; short-lived auth support data |
+| `public.temp_subjects_removed` | `SubjectId` BIGINT | Internal Diploma recovery archive with original course/title/semester data, source code, reason, replacement data, restorable flag and source JSONB |
+
+There is intentionally **no `Departments` table**. Department selection is frontend-static in `global-exam-prep/src/data/catalogDomains.js`.
+
+## 7. Application data-source contract
+
+- Departments: `global-exam-prep/src/data/catalogDomains.js` (static).
+- Runtime Courses and semester options: `public.Courses`.
+- Runtime Subjects and each subject's semester: `public.Subjects`.
+- `src/data/courseMapping.json`: department scoping and source CourseId compatibility only.
+- `src/data/subjectIdBridge.json`: numeric subject ID compatibility for the exam path.
+- `src/data/subjectSemesterMap.json`: legacy ExamPortal compatibility only.
+- Do not infer semesters from SubjectId digits, and do not treat syllabus JSON as the runtime Supabase catalog.
+
+## 8. B.Tech PDF-to-JSON generation state
+
+| Item | Current verified state |
+|---|---|
+| Source PDF library | `Syllabus/B.Tech programs/_PDF_Library/` |
+| Program catalog | `Syllabus/B.Tech programs/_Catalogs/program_catalog.csv` |
+| Program-to-PDF/semester map | `Syllabus/B.Tech programs/_Catalogs/program_course_map.csv` |
+| PDF inventory | `Syllabus/B.Tech programs/_Catalogs/pdf_library_index.csv` |
+| Generator | `Syllabus/build_btech_syllabus_txt.py` |
+| Generated output | `Syllabus/syllabus_txt/B.Tech/` |
+| Generated index timestamp | 2026-10-13 05:30:45 UTC |
+| Program catalog entries | 20 |
+| Program entries with JSON output | 9 |
+| Programs without verified JSON output | 11 |
+| Program-course/PDF associations | 313 |
+| Unique referenced PDF files | 157 |
+| Native-text extraction status | 303 structured; 10 content sections need manual review |
+
+The builder uses PyMuPDF native text-layer extraction; it does not run OCR. JSON preserves extracted text by page and records extraction warnings. Unit/topic parsing is best-effort. The 10 review-needed associations must not be described as fully structured without manual inspection.
+
+The B.Tech PDF catalog and the live database Course catalog are separate sources. In particular, the generated output currently includes a one-PDF output for Mechanical Engineering AI/ML even though live CourseId 14 was removed for incomplete coverage. Do not reinsert the corresponding database course merely because an output folder exists.
+
+## 9. Database safety and change rules
+
+- Never expose `service_role` or secret credentials to browser code.
+- Keep RLS enabled.
+- Do not grant `anon` or `authenticated` access to internal recovery archives.
+- Do not use localStorage/sessionStorage as an authorization source.
+- Do not create a Departments table.
+- Do not claim a source syllabus is unavailable everywhere merely because it is missing from the checked-in collection.
+- Archive source records before destructive catalog removal and verify the post-delete database state.
+- Reconcile static ID mappings when adding or removing catalog records; avoid restoring a record until the course, subject IDs, semester and official source are verified.
