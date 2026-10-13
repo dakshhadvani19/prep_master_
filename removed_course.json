@@ -1,0 +1,3315 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-10-13T00:00:00Z",
+  "purpose": "Audit record for B.Tech courses removed from Supabase because detailed PDF-text-to-JSON conversion could not be completed from checked-in, mapped syllabus PDFs.",
+  "source_check": {
+    "repository": "https://github.com/dakshhadvani19/prep_master_",
+    "pdf_library_path": "Syllabus/B.Tech programs/_PDF_Library/",
+    "program_catalog_path": "Syllabus/B.Tech programs/_Catalogs/program_catalog.csv",
+    "program_course_map_path": "Syllabus/B.Tech programs/_Catalogs/program_course_map.csv",
+    "finding": "The 8 listed courses have no mapped subject-level syllabus PDF assets in the repository's current B.Tech source catalog. Official program pages show course outlines, but that is not a substitute for the detailed source PDFs required for the same conversion process."
+  },
+  "database_action": {
+    "tables": [
+      "public.Courses",
+      "public.Subjects"
+    ],
+    "operation": "DELETE",
+    "course_rows_to_remove": 8,
+    "subject_rows_to_remove": 516,
+    "archived_here_before_deletion": true,
+    "note": "Each removed course includes its child subject IDs, names, and semester numbers in this JSON so the catalog data can be restored if needed."
+  },
+  "removed_courses": [
+    {
+      "id": 3,
+      "course_id": 3,
+      "name": "B.Tech - Electrical Engineering",
+      "department": "Electrical Engineering",
+      "semester_list": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "subject_count": 78,
+      "official_program_url": "https://www.marwadiuniversity.ac.in/b-tech-in-electrical-engineering-fees/",
+      "source_pdf_assets_linked_in_repository": 0,
+      "removal_reason": "No mapped course-level PDF assets were available in the repository B.Tech PDF library/catalog to perform detailed PDF-text-to-JSON conversion. Public course-outline pages may list subject names, but the source set lacks validated subject-level syllabus PDFs for this program.",
+      "subjects": [
+        {
+          "id": 3000121000101,
+          "subject_id": 3000121000101,
+          "name": "NATIONAL CADET CORPS",
+          "semester": 1
+        },
+        {
+          "id": 3000135110101,
+          "subject_id": 3000135110101,
+          "name": "COMPUTER PROGRAMMING",
+          "semester": 1
+        },
+        {
+          "id": 3000155111101,
+          "subject_id": 3000155111101,
+          "name": "BASICS OF ELECTRICAL ENGINEERING",
+          "semester": 1
+        },
+        {
+          "id": 3000155111301,
+          "subject_id": 3000155111301,
+          "name": "ELECTRICAL WORKSHOP",
+          "semester": 1
+        },
+        {
+          "id": 3001131010601,
+          "subject_id": 3001131010601,
+          "name": "CALCULUS",
+          "semester": 1
+        },
+        {
+          "id": 3001318010501,
+          "subject_id": 3001318010501,
+          "name": "VERBAL ABILITY – 1",
+          "semester": 1
+        },
+        {
+          "id": 3001318110301,
+          "subject_id": 3001318110301,
+          "name": "VALUE EDUCATION",
+          "semester": 1
+        },
+        {
+          "id": 3001719010301,
+          "subject_id": 3001719010301,
+          "name": "INDIAN CONSTITUTION",
+          "semester": 1
+        },
+        {
+          "id": 3001719110101,
+          "subject_id": 3001719110101,
+          "name": "ENGINEERING PHYSICS",
+          "semester": 1
+        },
+        {
+          "id": 3000155111201,
+          "subject_id": 3000155111201,
+          "name": "BASIC ELECTRONICS",
+          "semester": 2
+        },
+        {
+          "id": 3001121010201,
+          "subject_id": 3001121010201,
+          "name": "NATIONAL CADET CORPS -2",
+          "semester": 2
+        },
+        {
+          "id": 3001131010401,
+          "subject_id": 3001131010401,
+          "name": "LINEAR ALGEBRA",
+          "semester": 2
+        },
+        {
+          "id": 3001135110301,
+          "subject_id": 3001135110301,
+          "name": "ENGINEERING DRAWING",
+          "semester": 2
+        },
+        {
+          "id": 3001318010401,
+          "subject_id": 3001318010401,
+          "name": "PROFESSIONAL ETHICS",
+          "semester": 2
+        },
+        {
+          "id": 3001318010601,
+          "subject_id": 3001318010601,
+          "name": "VERBAL ABILITY – 2",
+          "semester": 2
+        },
+        {
+          "id": 3001514110101,
+          "subject_id": 3001514110101,
+          "name": "BASICS OF ENVIRONMENTAL STUDIES",
+          "semester": 2
+        },
+        {
+          "id": 3011912010201,
+          "subject_id": 3011912010201,
+          "name": "READING & WRITING FOR TECHNOLOGY*",
+          "semester": 2
+        },
+        {
+          "id": 3011912010301,
+          "subject_id": 3011912010301,
+          "name": "SPEAKING & PRESENTATION SKILLS*",
+          "semester": 2
+        },
+        {
+          "id": 3016132000301,
+          "subject_id": 3016132000301,
+          "name": "BASICS OF MECHANICAL ENGINEERING",
+          "semester": 2
+        },
+        {
+          "id": 3000155130101,
+          "subject_id": 3000155130101,
+          "name": "Electrical Circuit Analysis",
+          "semester": 3
+        },
+        {
+          "id": 3000155130201,
+          "subject_id": 3000155130201,
+          "name": "Analog and Digital Electronics",
+          "semester": 3
+        },
+        {
+          "id": 3000155130301,
+          "subject_id": 3000155130301,
+          "name": "Electrical Machines-I",
+          "semester": 3
+        },
+        {
+          "id": 3000155130401,
+          "subject_id": 3000155130401,
+          "name": "Electrical and Electronic Instruments",
+          "semester": 3
+        },
+        {
+          "id": 3000155130501,
+          "subject_id": 3000155130501,
+          "name": "Design Thinking and Problem Solving Skills",
+          "semester": 3
+        },
+        {
+          "id": 3001131130301,
+          "subject_id": 3001131130301,
+          "name": "Applied Mathematics for Electrical Engineering",
+          "semester": 3
+        },
+        {
+          "id": 3001318030301,
+          "subject_id": 3001318030301,
+          "name": "Quantitative & Logical Ability – 1",
+          "semester": 3
+        },
+        {
+          "id": 3011912140101,
+          "subject_id": 3011912140101,
+          "name": "Communication Skill for Engineers",
+          "semester": 3
+        },
+        {
+          "id": 3000155040801,
+          "subject_id": 3000155040801,
+          "name": "Creativity, Problem Solving and Innovation",
+          "semester": 4
+        },
+        {
+          "id": 3000155140101,
+          "subject_id": 3000155140101,
+          "name": "Power System-I",
+          "semester": 4
+        },
+        {
+          "id": 3000155140201,
+          "subject_id": 3000155140201,
+          "name": "Power Electronics",
+          "semester": 4
+        },
+        {
+          "id": 3000155140301,
+          "subject_id": 3000155140301,
+          "name": "Control System Engineering",
+          "semester": 4
+        },
+        {
+          "id": 3000155140401,
+          "subject_id": 3000155140401,
+          "name": "Field Theory",
+          "semester": 4
+        },
+        {
+          "id": 3000155140501,
+          "subject_id": 3000155140501,
+          "name": "Field Theory Lab",
+          "semester": 4
+        },
+        {
+          "id": 3001318040201,
+          "subject_id": 3001318040201,
+          "name": "Quantitative & Logical Ability – 2",
+          "semester": 4
+        },
+        {
+          "id": 3000155040802,
+          "subject_id": 3000155040802,
+          "name": "Creativity, Problem Solving and Innovation",
+          "semester": 5
+        },
+        {
+          "id": 3000155140102,
+          "subject_id": 3000155140102,
+          "name": "Power System-I",
+          "semester": 5
+        },
+        {
+          "id": 3000155140202,
+          "subject_id": 3000155140202,
+          "name": "Power Electronics",
+          "semester": 5
+        },
+        {
+          "id": 3000155140302,
+          "subject_id": 3000155140302,
+          "name": "Control System Engineering",
+          "semester": 5
+        },
+        {
+          "id": 3000155140402,
+          "subject_id": 3000155140402,
+          "name": "Field Theory",
+          "semester": 5
+        },
+        {
+          "id": 3000155140502,
+          "subject_id": 3000155140502,
+          "name": "Field Theory Lab",
+          "semester": 5
+        },
+        {
+          "id": 3001318040202,
+          "subject_id": 3001318040202,
+          "name": "Quantitative & Logical Ability – 2",
+          "semester": 5
+        },
+        {
+          "id": 3000135053101,
+          "subject_id": 3000135053101,
+          "name": "Python Programming",
+          "semester": 6
+        },
+        {
+          "id": 3000135053201,
+          "subject_id": 3000135053201,
+          "name": "Data Structure and Algorithms",
+          "semester": 6
+        },
+        {
+          "id": 3000135063101,
+          "subject_id": 3000135063101,
+          "name": "Aritificial Intelligence",
+          "semester": 6
+        },
+        {
+          "id": 3000135063201,
+          "subject_id": 3000135063201,
+          "name": "Big Data Analysis",
+          "semester": 6
+        },
+        {
+          "id": 3000155160101,
+          "subject_id": 3000155160101,
+          "name": "Solid State Drives",
+          "semester": 6
+        },
+        {
+          "id": 3000155160201,
+          "subject_id": 3000155160201,
+          "name": "Microcontroller & Embedded Systems",
+          "semester": 6
+        },
+        {
+          "id": 3000155160301,
+          "subject_id": 3000155160301,
+          "name": "Interconnected Power Systems",
+          "semester": 6
+        },
+        {
+          "id": 3000155160401,
+          "subject_id": 3000155160401,
+          "name": "MOOC/ SEMINAR",
+          "semester": 6
+        },
+        {
+          "id": 3000155160501,
+          "subject_id": 3000155160501,
+          "name": "Batteries and Battery Management Systems",
+          "semester": 6
+        },
+        {
+          "id": 3000155160601,
+          "subject_id": 3000155160601,
+          "name": "Distributed Energy Resources and Energy Storage Systems",
+          "semester": 6
+        },
+        {
+          "id": 3000155160701,
+          "subject_id": 3000155160701,
+          "name": "Switch Mode Power Supplies",
+          "semester": 6
+        },
+        {
+          "id": 3000155160801,
+          "subject_id": 3000155160801,
+          "name": "Power System Practice and Design",
+          "semester": 6
+        },
+        {
+          "id": 3001318060201,
+          "subject_id": 3001318060201,
+          "name": "Quantitative Aptitude and Verbal Ability",
+          "semester": 6
+        },
+        {
+          "id": 3001320052101,
+          "subject_id": 3001320052101,
+          "name": "Introduction to HDL",
+          "semester": 6
+        },
+        {
+          "id": 3001320052201,
+          "subject_id": 3001320052201,
+          "name": "Analog & Digital Communication",
+          "semester": 6
+        },
+        {
+          "id": 3001320062001,
+          "subject_id": 3001320062001,
+          "name": "Internet of Things",
+          "semester": 6
+        },
+        {
+          "id": 3000155170101,
+          "subject_id": 3000155170101,
+          "name": "Summer Internship",
+          "semester": 7
+        },
+        {
+          "id": 3000155170201,
+          "subject_id": 3000155170201,
+          "name": "Mini Project",
+          "semester": 7
+        },
+        {
+          "id": 3000155170301,
+          "subject_id": 3000155170301,
+          "name": "Switchgear and Protection",
+          "semester": 7
+        },
+        {
+          "id": 3000155170401,
+          "subject_id": 3000155170401,
+          "name": "Electrical Machine Design",
+          "semester": 7
+        },
+        {
+          "id": 3000155170501,
+          "subject_id": 3000155170501,
+          "name": "Electrical Machine Design Laboratory",
+          "semester": 7
+        },
+        {
+          "id": 3000155170601,
+          "subject_id": 3000155170601,
+          "name": "Battery Chargers for Electric Vehicles",
+          "semester": 7
+        },
+        {
+          "id": 3000155170701,
+          "subject_id": 3000155170701,
+          "name": "Power Electronic Converters for RES",
+          "semester": 7
+        },
+        {
+          "id": 3000155170801,
+          "subject_id": 3000155170801,
+          "name": "Converter Control",
+          "semester": 7
+        },
+        {
+          "id": 3000155170901,
+          "subject_id": 3000155170901,
+          "name": "Power System Operation and Control",
+          "semester": 7
+        },
+        {
+          "id": 3000155171001,
+          "subject_id": 3000155171001,
+          "name": "Power Quality Management",
+          "semester": 7
+        },
+        {
+          "id": 3000155171101,
+          "subject_id": 3000155171101,
+          "name": "DSP based control of Power Electronic Systems",
+          "semester": 7
+        },
+        {
+          "id": 3000155171201,
+          "subject_id": 3000155171201,
+          "name": "Special Machines for Elecric Vehicles",
+          "semester": 7
+        },
+        {
+          "id": 3000155171301,
+          "subject_id": 3000155171301,
+          "name": "Control Algorithms for PV and Wind Energy Systems",
+          "semester": 7
+        },
+        {
+          "id": 3000155171401,
+          "subject_id": 3000155171401,
+          "name": "High Power Converter and Semiconductor Devices",
+          "semester": 7
+        },
+        {
+          "id": 3000155171501,
+          "subject_id": 3000155171501,
+          "name": "FACTS & HVDC",
+          "semester": 7
+        },
+        {
+          "id": 3000155171601,
+          "subject_id": 3000155171601,
+          "name": "Smart Grid",
+          "semester": 7
+        },
+        {
+          "id": 3000155171701,
+          "subject_id": 3000155171701,
+          "name": "Industrial Automation",
+          "semester": 7
+        },
+        {
+          "id": 3000155171801,
+          "subject_id": 3000155171801,
+          "name": "Advance control system",
+          "semester": 7
+        },
+        {
+          "id": 3000155171901,
+          "subject_id": 3000155171901,
+          "name": "Energy Audit",
+          "semester": 7
+        },
+        {
+          "id": 3016137000101,
+          "subject_id": 3016137000101,
+          "name": "Restructured Power System",
+          "semester": 7
+        },
+        {
+          "id": 3000155180101,
+          "subject_id": 3000155180101,
+          "name": "Project",
+          "semester": 8
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "course_id": 6,
+      "name": "B.Tech - BioInformatics",
+      "department": "Bioinformatics Engineering",
+      "semester_list": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "subject_count": 54,
+      "official_program_url": "https://www.marwadiuniversity.ac.in/btech-bioinformatics-colleges/",
+      "source_pdf_assets_linked_in_repository": 0,
+      "removal_reason": "No mapped course-level PDF assets were available in the repository B.Tech PDF library/catalog to perform detailed PDF-text-to-JSON conversion. Public course-outline pages may list subject names, but the source set lacks validated subject-level syllabus PDFs for this program.",
+      "subjects": [
+        {
+          "id": 6000132010101,
+          "subject_id": 6000132010101,
+          "name": "Fundamentals of biology",
+          "semester": 1
+        },
+        {
+          "id": 6000135110101,
+          "subject_id": 6000135110101,
+          "name": "Computer programming",
+          "semester": 1
+        },
+        {
+          "id": 6000135110201,
+          "subject_id": 6000135110201,
+          "name": "Computer workshop",
+          "semester": 1
+        },
+        {
+          "id": 6000155110101,
+          "subject_id": 6000155110101,
+          "name": "Basic of Electrical & Electronics Engineering",
+          "semester": 1
+        },
+        {
+          "id": 6001131010601,
+          "subject_id": 6001131010601,
+          "name": "Calculus",
+          "semester": 1
+        },
+        {
+          "id": 6001318010501,
+          "subject_id": 6001318010501,
+          "name": "Verbal ability-1",
+          "semester": 1
+        },
+        {
+          "id": 6001318110301,
+          "subject_id": 6001318110301,
+          "name": "Value Education",
+          "semester": 1
+        },
+        {
+          "id": 6001719010301,
+          "subject_id": 6001719010301,
+          "name": "Indian constitution",
+          "semester": 1
+        },
+        {
+          "id": 6000132010201,
+          "subject_id": 6000132010201,
+          "name": "Analytical Bioinformatics",
+          "semester": 2
+        },
+        {
+          "id": 6000135010401,
+          "subject_id": 6000135010401,
+          "name": "Object Oriented Programming",
+          "semester": 2
+        },
+        {
+          "id": 6000153010201,
+          "subject_id": 6000153010201,
+          "name": "Digital Electronics",
+          "semester": 2
+        },
+        {
+          "id": 6001131010401,
+          "subject_id": 6001131010401,
+          "name": "Linear Algebra",
+          "semester": 2
+        },
+        {
+          "id": 6001318010401,
+          "subject_id": 6001318010401,
+          "name": "Professional Ethics",
+          "semester": 2
+        },
+        {
+          "id": 6001318010601,
+          "subject_id": 6001318010601,
+          "name": "Verbal Ability-2",
+          "semester": 2
+        },
+        {
+          "id": 6001320010601,
+          "subject_id": 6001320010601,
+          "name": "Basics of Environmental Studies",
+          "semester": 2
+        },
+        {
+          "id": 6011912010401,
+          "subject_id": 6011912010401,
+          "name": "Professional Communication",
+          "semester": 2
+        },
+        {
+          "id": 6000132030101,
+          "subject_id": 6000132030101,
+          "name": "Computational Analysis of Biomolecular Sequence & Structures",
+          "semester": 3
+        },
+        {
+          "id": 6000132030201,
+          "subject_id": 6000132030201,
+          "name": "Python for Biologist",
+          "semester": 3
+        },
+        {
+          "id": 6000135030601,
+          "subject_id": 6000135030601,
+          "name": "Web Technology",
+          "semester": 3
+        },
+        {
+          "id": 6000135030901,
+          "subject_id": 6000135030901,
+          "name": "Probability and statistics",
+          "semester": 3
+        },
+        {
+          "id": 6000135130101,
+          "subject_id": 6000135130101,
+          "name": "Data structure",
+          "semester": 3
+        },
+        {
+          "id": 6000135130401,
+          "subject_id": 6000135130401,
+          "name": "Design Thinking and Problem Solving Skills",
+          "semester": 3
+        },
+        {
+          "id": 6000135130501,
+          "subject_id": 6000135130501,
+          "name": "Programming with Python",
+          "semester": 3
+        },
+        {
+          "id": 6000135230201,
+          "subject_id": 6000135230201,
+          "name": "Database Management System",
+          "semester": 3
+        },
+        {
+          "id": 6000132040101,
+          "subject_id": 6000132040101,
+          "name": "Fundamentals of Microbiology & Immunology",
+          "semester": 4
+        },
+        {
+          "id": 6000132040201,
+          "subject_id": 6000132040201,
+          "name": "Fundamentals of Genomics and Proteomics",
+          "semester": 4
+        },
+        {
+          "id": 6000132040301,
+          "subject_id": 6000132040301,
+          "name": "Introduction to Structural & System Biology",
+          "semester": 4
+        },
+        {
+          "id": 6000135040801,
+          "subject_id": 6000135040801,
+          "name": "Creativity, Problem Solving and Innovation",
+          "semester": 4
+        },
+        {
+          "id": 6000135040901,
+          "subject_id": 6000135040901,
+          "name": "Discrete Mathematics",
+          "semester": 4
+        },
+        {
+          "id": 6000135140101,
+          "subject_id": 6000135140101,
+          "name": "Operating System",
+          "semester": 4
+        },
+        {
+          "id": 6000132050201,
+          "subject_id": 6000132050201,
+          "name": "Immuno -Informatics",
+          "semester": 5
+        },
+        {
+          "id": 6000132050301,
+          "subject_id": 6000132050301,
+          "name": "Metabolomics",
+          "semester": 5
+        },
+        {
+          "id": 6000132050401,
+          "subject_id": 6000132050401,
+          "name": "Biological Network Analysis",
+          "semester": 5
+        },
+        {
+          "id": 6000132050501,
+          "subject_id": 6000132050501,
+          "name": "Transcriptomics",
+          "semester": 5
+        },
+        {
+          "id": 6000132050601,
+          "subject_id": 6000132050601,
+          "name": "Advances in Genomics",
+          "semester": 5
+        },
+        {
+          "id": 6000135051401,
+          "subject_id": 6000135051401,
+          "name": "Cloud Computing Essentials",
+          "semester": 5
+        },
+        {
+          "id": 6000135051501,
+          "subject_id": 6000135051501,
+          "name": "Data Mining and Information Retrieval",
+          "semester": 5
+        },
+        {
+          "id": 6000135051601,
+          "subject_id": 6000135051601,
+          "name": "Cyber Security",
+          "semester": 5
+        },
+        {
+          "id": 6000135051701,
+          "subject_id": 6000135051701,
+          "name": "Data Science Essentials",
+          "semester": 5
+        },
+        {
+          "id": 6000135052301,
+          "subject_id": 6000135052301,
+          "name": ".NET Technologies",
+          "semester": 5
+        },
+        {
+          "id": 6000135150301,
+          "subject_id": 6000135150301,
+          "name": "Design and Analysis of Algorithms",
+          "semester": 5
+        },
+        {
+          "id": 6016135000101,
+          "subject_id": 6016135000101,
+          "name": "Computer Aided Drug Designing",
+          "semester": 5
+        },
+        {
+          "id": 6000132060101,
+          "subject_id": 6000132060101,
+          "name": "Agro-Informatics",
+          "semester": 6
+        },
+        {
+          "id": 6000132060201,
+          "subject_id": 6000132060201,
+          "name": "Phylo-Informatics",
+          "semester": 6
+        },
+        {
+          "id": 6000132060301,
+          "subject_id": 6000132060301,
+          "name": "Biological Databases",
+          "semester": 6
+        },
+        {
+          "id": 6000132060401,
+          "subject_id": 6000132060401,
+          "name": "Data management and Data warehousing",
+          "semester": 6
+        },
+        {
+          "id": 6000132060501,
+          "subject_id": 6000132060501,
+          "name": "Nano-Informatics",
+          "semester": 6
+        },
+        {
+          "id": 6000132060601,
+          "subject_id": 6000132060601,
+          "name": "ChemInformatics",
+          "semester": 6
+        },
+        {
+          "id": 6000135060701,
+          "subject_id": 6000135060701,
+          "name": "Software Engineering",
+          "semester": 6
+        },
+        {
+          "id": 6000135061001,
+          "subject_id": 6000135061001,
+          "name": "App Development using Flutter",
+          "semester": 6
+        },
+        {
+          "id": 6000135061101,
+          "subject_id": 6000135061101,
+          "name": "Web Development with PHP",
+          "semester": 6
+        },
+        {
+          "id": 6000135061301,
+          "subject_id": 6000135061301,
+          "name": "Information and Network Security",
+          "semester": 6
+        },
+        {
+          "id": 6000135061401,
+          "subject_id": 6000135061401,
+          "name": "Data Visualization",
+          "semester": 6
+        },
+        {
+          "id": 6000135061601,
+          "subject_id": 6000135061601,
+          "name": "Artificial Intelligence",
+          "semester": 6
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "course_id": 11,
+      "name": "B.Tech - Chemical Engineering",
+      "department": "Chemical Engineering",
+      "semester_list": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "subject_count": 61,
+      "official_program_url": "https://www.marwadiuniversity.ac.in/btech-chemical-engineering-colleges/",
+      "source_pdf_assets_linked_in_repository": 0,
+      "removal_reason": "No mapped course-level PDF assets were available in the repository B.Tech PDF library/catalog to perform detailed PDF-text-to-JSON conversion. Public course-outline pages may list subject names, but the source set lacks validated subject-level syllabus PDFs for this program.",
+      "subjects": [
+        {
+          "id": 11000121000101,
+          "subject_id": 11000121000101,
+          "name": "National Cadet Corps -1",
+          "semester": 1
+        },
+        {
+          "id": 11000138110101,
+          "subject_id": 11000138110101,
+          "name": "Engineering Chemistry – I",
+          "semester": 1
+        },
+        {
+          "id": 11000139110101,
+          "subject_id": 11000139110101,
+          "name": "Elements of Civil Engineering",
+          "semester": 1
+        },
+        {
+          "id": 11001131210101,
+          "subject_id": 11001131210101,
+          "name": "Differential and Integral Calculus",
+          "semester": 1
+        },
+        {
+          "id": 11001135110101,
+          "subject_id": 11001135110101,
+          "name": "Elements of Mechanical Engineering",
+          "semester": 1
+        },
+        {
+          "id": 11001318010501,
+          "subject_id": 11001318010501,
+          "name": "Verbal Ability – 1",
+          "semester": 1
+        },
+        {
+          "id": 11001318110301,
+          "subject_id": 11001318110301,
+          "name": "Value Education",
+          "semester": 1
+        },
+        {
+          "id": 11001514110101,
+          "subject_id": 11001514110101,
+          "name": "Basics of Environmental Studies",
+          "semester": 1
+        },
+        {
+          "id": 11001719010301,
+          "subject_id": 11001719010301,
+          "name": "Indian Constitution",
+          "semester": 1
+        },
+        {
+          "id": 11011912010201,
+          "subject_id": 11011912010201,
+          "name": "Reading & Writing for Technology",
+          "semester": 1
+        },
+        {
+          "id": 11011912010301,
+          "subject_id": 11011912010301,
+          "name": "Speaking & Presentation Skills",
+          "semester": 1
+        },
+        {
+          "id": 11000121000201,
+          "subject_id": 11000121000201,
+          "name": "National Cadet Corps-2",
+          "semester": 2
+        },
+        {
+          "id": 11000135110101,
+          "subject_id": 11000135110101,
+          "name": "Computer Programming",
+          "semester": 2
+        },
+        {
+          "id": 11000155110101,
+          "subject_id": 11000155110101,
+          "name": "Basics of Electrical and Electronics Engineering",
+          "semester": 2
+        },
+        {
+          "id": 11001131010301,
+          "subject_id": 11001131010301,
+          "name": "Matrix Algebra and Vector Space",
+          "semester": 2
+        },
+        {
+          "id": 11001135110201,
+          "subject_id": 11001135110201,
+          "name": "Engineering Graphics",
+          "semester": 2
+        },
+        {
+          "id": 11001135110401,
+          "subject_id": 11001135110401,
+          "name": "Mechanical Workshop",
+          "semester": 2
+        },
+        {
+          "id": 11001318010601,
+          "subject_id": 11001318010601,
+          "name": "Verbal Ability – 2",
+          "semester": 2
+        },
+        {
+          "id": 11011625010101,
+          "subject_id": 11011625010101,
+          "name": "Physical Education/Sports/Yoga",
+          "semester": 2
+        },
+        {
+          "id": 11000138130101,
+          "subject_id": 11000138130101,
+          "name": "Fluid Mechanics",
+          "semester": 3
+        },
+        {
+          "id": 11000138130201,
+          "subject_id": 11000138130201,
+          "name": "Chemical Process Calculation",
+          "semester": 3
+        },
+        {
+          "id": 11000138130301,
+          "subject_id": 11000138130301,
+          "name": "Mechanical Operations",
+          "semester": 3
+        },
+        {
+          "id": 11000138130601,
+          "subject_id": 11000138130601,
+          "name": "Engineering Chemistry II",
+          "semester": 3
+        },
+        {
+          "id": 11001131030401,
+          "subject_id": 11001131030401,
+          "name": "Applied Mathematics in Chemical Engineering",
+          "semester": 3
+        },
+        {
+          "id": 11001318010401,
+          "subject_id": 11001318010401,
+          "name": "Professional Ethics",
+          "semester": 3
+        },
+        {
+          "id": 11001318030301,
+          "subject_id": 11001318030301,
+          "name": "Quantitative & Logical Ability – 1",
+          "semester": 3
+        },
+        {
+          "id": 11000138040801,
+          "subject_id": 11000138040801,
+          "name": "Energy Technology",
+          "semester": 4
+        },
+        {
+          "id": 11000138040901,
+          "subject_id": 11000138040901,
+          "name": "Introduction to Membrane Technology",
+          "semester": 4
+        },
+        {
+          "id": 11000138140101,
+          "subject_id": 11000138140101,
+          "name": "Chemical Engineering Thermodynamics- I",
+          "semester": 4
+        },
+        {
+          "id": 11000138140201,
+          "subject_id": 11000138140201,
+          "name": "Material Science and Engineering",
+          "semester": 4
+        },
+        {
+          "id": 11000138140601,
+          "subject_id": 11000138140601,
+          "name": "Mass Transfer-I",
+          "semester": 4
+        },
+        {
+          "id": 11001131040101,
+          "subject_id": 11001131040101,
+          "name": "Numerical Methods in Chemical Engineering",
+          "semester": 4
+        },
+        {
+          "id": 11001135160201,
+          "subject_id": 11001135160201,
+          "name": "Heat Transfer",
+          "semester": 4
+        },
+        {
+          "id": 11000138050201,
+          "subject_id": 11000138050201,
+          "name": "Cleaner Production",
+          "semester": 5
+        },
+        {
+          "id": 11000138050301,
+          "subject_id": 11000138050301,
+          "name": "Chemical Engineering Thermodynamics-II",
+          "semester": 5
+        },
+        {
+          "id": 11000138050401,
+          "subject_id": 11000138050401,
+          "name": "Instrumentation & Process Control",
+          "semester": 5
+        },
+        {
+          "id": 11000138050501,
+          "subject_id": 11000138050501,
+          "name": "Safety in Chemical Industries",
+          "semester": 5
+        },
+        {
+          "id": 11000138050701,
+          "subject_id": 11000138050701,
+          "name": "Mass Transfer-II",
+          "semester": 5
+        },
+        {
+          "id": 11000138150601,
+          "subject_id": 11000138150601,
+          "name": "Chemical Engineers & Society-III",
+          "semester": 5
+        },
+        {
+          "id": 11001318050101,
+          "subject_id": 11001318050101,
+          "name": "Business Benchmark",
+          "semester": 5
+        },
+        {
+          "id": 11000138060201,
+          "subject_id": 11000138060201,
+          "name": "Chemical Reaction Engineering-I",
+          "semester": 6
+        },
+        {
+          "id": 11000138060301,
+          "subject_id": 11000138060301,
+          "name": "Process Equipment Design-I",
+          "semester": 6
+        },
+        {
+          "id": 11000138060501,
+          "subject_id": 11000138060501,
+          "name": "industries",
+          "semester": 6
+        },
+        {
+          "id": 11000138060601,
+          "subject_id": 11000138060601,
+          "name": "Biochemical Engineering",
+          "semester": 6
+        },
+        {
+          "id": 11000138060901,
+          "subject_id": 11000138060901,
+          "name": "Chemical Engineers & Society-IV",
+          "semester": 6
+        },
+        {
+          "id": 11000138160401,
+          "subject_id": 11000138160401,
+          "name": "Unit operations and Processes",
+          "semester": 6
+        },
+        {
+          "id": 11001519060101,
+          "subject_id": 11001519060101,
+          "name": "Renewable Energy Resources",
+          "semester": 6
+        },
+        {
+          "id": 11016136000601,
+          "subject_id": 11016136000601,
+          "name": "Chemical Technology",
+          "semester": 6
+        },
+        {
+          "id": 11000138070101,
+          "subject_id": 11000138070101,
+          "name": "Process Modelling & Simulation",
+          "semester": 7
+        },
+        {
+          "id": 11000138070201,
+          "subject_id": 11000138070201,
+          "name": "Chermical Reaction Engineering-II",
+          "semester": 7
+        },
+        {
+          "id": 11000138070301,
+          "subject_id": 11000138070301,
+          "name": "Process Equipment & Design-II",
+          "semester": 7
+        },
+        {
+          "id": 11000138070401,
+          "subject_id": 11000138070401,
+          "name": "Plant Design & Project Engineering",
+          "semester": 7
+        },
+        {
+          "id": 11000138070501,
+          "subject_id": 11000138070501,
+          "name": "Project I",
+          "semester": 7
+        },
+        {
+          "id": 11000138070601,
+          "subject_id": 11000138070601,
+          "name": "Food Technology",
+          "semester": 7
+        },
+        {
+          "id": 11000138070701,
+          "subject_id": 11000138070701,
+          "name": "Advanced Separation Techniques",
+          "semester": 7
+        },
+        {
+          "id": 11000138080101,
+          "subject_id": 11000138080101,
+          "name": "Optimization in chemical engineering",
+          "semester": 8
+        },
+        {
+          "id": 11000138080201,
+          "subject_id": 11000138080201,
+          "name": "Transport Phenomena",
+          "semester": 8
+        },
+        {
+          "id": 11000138080301,
+          "subject_id": 11000138080301,
+          "name": "Petroleum Refining & Petrochemicals",
+          "semester": 8
+        },
+        {
+          "id": 11000138080401,
+          "subject_id": 11000138080401,
+          "name": "Project II",
+          "semester": 8
+        },
+        {
+          "id": 11000138080501,
+          "subject_id": 11000138080501,
+          "name": "Polymer & Nanotechnology",
+          "semester": 8
+        },
+        {
+          "id": 11000938150701,
+          "subject_id": 11000938150701,
+          "name": "Fertilizer Technology",
+          "semester": 8
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "course_id": 12,
+      "name": "B.Tech - Civil Engineering",
+      "department": "Civil Engineering",
+      "semester_list": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "subject_count": 106,
+      "official_program_url": "https://www.marwadiuniversity.ac.in/btech-civil-engineering-colleges/",
+      "source_pdf_assets_linked_in_repository": 0,
+      "removal_reason": "No mapped course-level PDF assets were available in the repository B.Tech PDF library/catalog to perform detailed PDF-text-to-JSON conversion. Public course-outline pages may list subject names, but the source set lacks validated subject-level syllabus PDFs for this program.",
+      "subjects": [
+        {
+          "id": 12000139110101,
+          "subject_id": 12000139110101,
+          "name": "Elements of Civil Engineering",
+          "semester": 1
+        },
+        {
+          "id": 12001121010101,
+          "subject_id": 12001121010101,
+          "name": "N.C.C.-1",
+          "semester": 1
+        },
+        {
+          "id": 12001131210101,
+          "subject_id": 12001131210101,
+          "name": "Differential and Integral Calculus",
+          "semester": 1
+        },
+        {
+          "id": 12001135110101,
+          "subject_id": 12001135110101,
+          "name": "Elements of Mechanical Engineering",
+          "semester": 1
+        },
+        {
+          "id": 12001318010501,
+          "subject_id": 12001318010501,
+          "name": "Verbal Ability – 1",
+          "semester": 1
+        },
+        {
+          "id": 12001318110301,
+          "subject_id": 12001318110301,
+          "name": "Value Education",
+          "semester": 1
+        },
+        {
+          "id": 12001514110101,
+          "subject_id": 12001514110101,
+          "name": "Basics of Environmental Studies",
+          "semester": 1
+        },
+        {
+          "id": 12001719010301,
+          "subject_id": 12001719010301,
+          "name": "Indian Constitution",
+          "semester": 1
+        },
+        {
+          "id": 12011912010201,
+          "subject_id": 12011912010201,
+          "name": "Reading & Writing for Technology",
+          "semester": 1
+        },
+        {
+          "id": 12011912010301,
+          "subject_id": 12011912010301,
+          "name": "Speaking & Presentation Skills",
+          "semester": 1
+        },
+        {
+          "id": 12016131000301,
+          "subject_id": 12016131000301,
+          "name": "Engineering Physics / Chemistry",
+          "semester": 1
+        },
+        {
+          "id": 12000135110101,
+          "subject_id": 12000135110101,
+          "name": "Computer Programming",
+          "semester": 2
+        },
+        {
+          "id": 12000139020101,
+          "subject_id": 12000139020101,
+          "name": "Quality Assurance Technician",
+          "semester": 2
+        },
+        {
+          "id": 12000155110101,
+          "subject_id": 12000155110101,
+          "name": "Basics of Electrical & Electronics Engineering",
+          "semester": 2
+        },
+        {
+          "id": 12001121010201,
+          "subject_id": 12001121010201,
+          "name": "NCC – 2",
+          "semester": 2
+        },
+        {
+          "id": 12001131010301,
+          "subject_id": 12001131010301,
+          "name": "Matrix Algebra and Vector Space",
+          "semester": 2
+        },
+        {
+          "id": 12001135110201,
+          "subject_id": 12001135110201,
+          "name": "Engineering Graphics",
+          "semester": 2
+        },
+        {
+          "id": 12001135110401,
+          "subject_id": 12001135110401,
+          "name": "Workshop",
+          "semester": 2
+        },
+        {
+          "id": 12001318010601,
+          "subject_id": 12001318010601,
+          "name": "Verbal Ability – 2",
+          "semester": 2
+        },
+        {
+          "id": 12011625010101,
+          "subject_id": 12011625010101,
+          "name": "Physical Education/Sports/Yoga",
+          "semester": 2
+        },
+        {
+          "id": 12000138130101,
+          "subject_id": 12000138130101,
+          "name": "Fluid Mechanics",
+          "semester": 3
+        },
+        {
+          "id": 12000139030701,
+          "subject_id": 12000139030701,
+          "name": "Principles of Economics & Management",
+          "semester": 3
+        },
+        {
+          "id": 12000139030801,
+          "subject_id": 12000139030801,
+          "name": "Land Surveying Techniques",
+          "semester": 3
+        },
+        {
+          "id": 12000139130101,
+          "subject_id": 12000139130101,
+          "name": "Mechanics of Solids",
+          "semester": 3
+        },
+        {
+          "id": 12000139130201,
+          "subject_id": 12000139130201,
+          "name": "Building Planning & Drawing",
+          "semester": 3
+        },
+        {
+          "id": 12000139130301,
+          "subject_id": 12000139130301,
+          "name": "Surveying",
+          "semester": 3
+        },
+        {
+          "id": 12000139130501,
+          "subject_id": 12000139130501,
+          "name": "Computer Applications in Civil Engineering – I",
+          "semester": 3
+        },
+        {
+          "id": 12001121030101,
+          "subject_id": 12001121030101,
+          "name": "N.C.C.-3",
+          "semester": 3
+        },
+        {
+          "id": 12001131130101,
+          "subject_id": 12001131130101,
+          "name": "Applied Differential Equations",
+          "semester": 3
+        },
+        {
+          "id": 12001318030301,
+          "subject_id": 12001318030301,
+          "name": "Quantitative & Logical Ability – 1",
+          "semester": 3
+        },
+        {
+          "id": 12000139040801,
+          "subject_id": 12000139040801,
+          "name": "Creativity, Problem Solving and Innovation",
+          "semester": 4
+        },
+        {
+          "id": 12000139040901,
+          "subject_id": 12000139040901,
+          "name": "Building Construction Technology",
+          "semester": 4
+        },
+        {
+          "id": 12000139041001,
+          "subject_id": 12000139041001,
+          "name": "Assistant Surveyor: Roads",
+          "semester": 4
+        },
+        {
+          "id": 12000139140301,
+          "subject_id": 12000139140301,
+          "name": "Basics of Geology & Geotechnical Engineering",
+          "semester": 4
+        },
+        {
+          "id": 12000139240101,
+          "subject_id": 12000139240101,
+          "name": "Materials, Testing & Evaluation",
+          "semester": 4
+        },
+        {
+          "id": 12000139240501,
+          "subject_id": 12000139240501,
+          "name": "Computer Applications in Civil Engineering – II",
+          "semester": 4
+        },
+        {
+          "id": 12001121040101,
+          "subject_id": 12001121040101,
+          "name": "N.C.C.-4",
+          "semester": 4
+        },
+        {
+          "id": 12001131140101,
+          "subject_id": 12001131140101,
+          "name": "Complex Variable & Numerical Analysis",
+          "semester": 4
+        },
+        {
+          "id": 12001318040101,
+          "subject_id": 12001318040101,
+          "name": "Professional Ethics",
+          "semester": 4
+        },
+        {
+          "id": 12001318040201,
+          "subject_id": 12001318040201,
+          "name": "Quantitative & Logical Ability – 2",
+          "semester": 4
+        },
+        {
+          "id": 12016134000201,
+          "subject_id": 12016134000201,
+          "name": "Structural Analysis-1",
+          "semester": 4
+        },
+        {
+          "id": 12000139051101,
+          "subject_id": 12000139051101,
+          "name": "Repair and Maintenance of Structure",
+          "semester": 5
+        },
+        {
+          "id": 12000139051201,
+          "subject_id": 12000139051201,
+          "name": "Railway, Bridge and Tunnel Engineering",
+          "semester": 5
+        },
+        {
+          "id": 12000139051301,
+          "subject_id": 12000139051301,
+          "name": "Applied Fluid Mechanics in Civil Engineering",
+          "semester": 5
+        },
+        {
+          "id": 12000139051501,
+          "subject_id": 12000139051501,
+          "name": "Advanced Surveying",
+          "semester": 5
+        },
+        {
+          "id": 12000139051601,
+          "subject_id": 12000139051601,
+          "name": "Introduction to Programming",
+          "semester": 5
+        },
+        {
+          "id": 12000139051801,
+          "subject_id": 12000139051801,
+          "name": "Design & Maintenance Skills for Pavements",
+          "semester": 5
+        },
+        {
+          "id": 12000139150101,
+          "subject_id": 12000139150101,
+          "name": "Hydrology and Water Resource Management",
+          "semester": 5
+        },
+        {
+          "id": 12000139150201,
+          "subject_id": 12000139150201,
+          "name": "Structural Analysis – 2",
+          "semester": 5
+        },
+        {
+          "id": 12000139150301,
+          "subject_id": 12000139150301,
+          "name": "Highway Engineering",
+          "semester": 5
+        },
+        {
+          "id": 12000139150401,
+          "subject_id": 12000139150401,
+          "name": "Environmental Engineering",
+          "semester": 5
+        },
+        {
+          "id": 12000139150501,
+          "subject_id": 12000139150501,
+          "name": "Computer Applications in Civil Engineering – III",
+          "semester": 5
+        },
+        {
+          "id": 12000139150701,
+          "subject_id": 12000139150701,
+          "name": "Environmental Pollution",
+          "semester": 5
+        },
+        {
+          "id": 12000139151001,
+          "subject_id": 12000139151001,
+          "name": "Advanced Geotechnical Engineering",
+          "semester": 5
+        },
+        {
+          "id": 12001121050101,
+          "subject_id": 12001121050101,
+          "name": "N.C.C.-5",
+          "semester": 5
+        },
+        {
+          "id": 12001318050101,
+          "subject_id": 12001318050101,
+          "name": "Business Benchmark",
+          "semester": 5
+        },
+        {
+          "id": 12001318050301,
+          "subject_id": 12001318050301,
+          "name": "Quantitative & Logical Ability – 3",
+          "semester": 5
+        },
+        {
+          "id": 12016135000401,
+          "subject_id": 12016135000401,
+          "name": "Construction Equipment and Automation",
+          "semester": 5
+        },
+        {
+          "id": 12000121000601,
+          "subject_id": 12000121000601,
+          "name": "N.C.C.-6",
+          "semester": 6
+        },
+        {
+          "id": 12000139060901,
+          "subject_id": 12000139060901,
+          "name": "Foundation Engineering",
+          "semester": 6
+        },
+        {
+          "id": 12000139061001,
+          "subject_id": 12000139061001,
+          "name": "Construction Supervision for Roads and Runways",
+          "semester": 6
+        },
+        {
+          "id": 12000139061101,
+          "subject_id": 12000139061101,
+          "name": "Advanced Structural Analysis",
+          "semester": 6
+        },
+        {
+          "id": 12000139061201,
+          "subject_id": 12000139061201,
+          "name": "Traffic Engineering and Road Safety",
+          "semester": 6
+        },
+        {
+          "id": 12000139061301,
+          "subject_id": 12000139061301,
+          "name": "Open Channel Flow",
+          "semester": 6
+        },
+        {
+          "id": 12000139061401,
+          "subject_id": 12000139061401,
+          "name": "Advanced Construction Technology",
+          "semester": 6
+        },
+        {
+          "id": 12000139061601,
+          "subject_id": 12000139061601,
+          "name": "Remote Sensing",
+          "semester": 6
+        },
+        {
+          "id": 12000139061701,
+          "subject_id": 12000139061701,
+          "name": "Soft Computing Techniques",
+          "semester": 6
+        },
+        {
+          "id": 12000139061801,
+          "subject_id": 12000139061801,
+          "name": "Earthquake Engineering",
+          "semester": 6
+        },
+        {
+          "id": 12000139061901,
+          "subject_id": 12000139061901,
+          "name": "Pavement Engineering",
+          "semester": 6
+        },
+        {
+          "id": 12000139062001,
+          "subject_id": 12000139062001,
+          "name": "Irrigation Engineering",
+          "semester": 6
+        },
+        {
+          "id": 12000139062101,
+          "subject_id": 12000139062101,
+          "name": "Tender and Contract Management",
+          "semester": 6
+        },
+        {
+          "id": 12000139062201,
+          "subject_id": 12000139062201,
+          "name": "Water and Wastewater Engineering",
+          "semester": 6
+        },
+        {
+          "id": 12000139062301,
+          "subject_id": 12000139062301,
+          "name": "Geographic Information System",
+          "semester": 6
+        },
+        {
+          "id": 12000139062401,
+          "subject_id": 12000139062401,
+          "name": "Introduction to Python Programming",
+          "semester": 6
+        },
+        {
+          "id": 12000139160201,
+          "subject_id": 12000139160201,
+          "name": "Elementary Design of Structures",
+          "semester": 6
+        },
+        {
+          "id": 12000139160401,
+          "subject_id": 12000139160401,
+          "name": "Professional Practice and Valuation",
+          "semester": 6
+        },
+        {
+          "id": 12000139160601,
+          "subject_id": 12000139160601,
+          "name": "Computer Applications in Civil Engineering – IV",
+          "semester": 6
+        },
+        {
+          "id": 12016136000701,
+          "subject_id": 12016136000701,
+          "name": "Environmental Impact Assessment",
+          "semester": 6
+        },
+        {
+          "id": 12000131070901,
+          "subject_id": 12000131070901,
+          "name": "Skilling the Construction Site Supervision",
+          "semester": 7
+        },
+        {
+          "id": 12000131071001,
+          "subject_id": 12000131071001,
+          "name": "Summer Internship",
+          "semester": 7
+        },
+        {
+          "id": 12000131071101,
+          "subject_id": 12000131071101,
+          "name": "Design of Hydraulic Structures",
+          "semester": 7
+        },
+        {
+          "id": 12000131071201,
+          "subject_id": 12000131071201,
+          "name": "Disaster Mitigation and Management",
+          "semester": 7
+        },
+        {
+          "id": 12000131071701,
+          "subject_id": 12000131071701,
+          "name": "Airport Engineering",
+          "semester": 7
+        },
+        {
+          "id": 12000131071901,
+          "subject_id": 12000131071901,
+          "name": "Building System, Safety and Services",
+          "semester": 7
+        },
+        {
+          "id": 12000131072101,
+          "subject_id": 12000131072101,
+          "name": "Geospatial Techniques in Civil Engineering",
+          "semester": 7
+        },
+        {
+          "id": 12000131072201,
+          "subject_id": 12000131072201,
+          "name": "Cyber Laws and Ethics",
+          "semester": 7
+        },
+        {
+          "id": 12000139071401,
+          "subject_id": 12000139071401,
+          "name": "Application of GIS and GPS in Civil Engincering",
+          "semester": 7
+        },
+        {
+          "id": 12000139071501,
+          "subject_id": 12000139071501,
+          "name": "Engineering",
+          "semester": 7
+        },
+        {
+          "id": 12000139071601,
+          "subject_id": 12000139071601,
+          "name": "Design of Steel Structures",
+          "semester": 7
+        },
+        {
+          "id": 12000139071801,
+          "subject_id": 12000139071801,
+          "name": "Engineering",
+          "semester": 7
+        },
+        {
+          "id": 12000139072001,
+          "subject_id": 12000139072001,
+          "name": "Sustainable Design Strategies",
+          "semester": 7
+        },
+        {
+          "id": 12000139170101,
+          "subject_id": 12000139170101,
+          "name": "Design of Concrete Structures",
+          "semester": 7
+        },
+        {
+          "id": 12000139170301,
+          "subject_id": 12000139170301,
+          "name": "Construction Project Management",
+          "semester": 7
+        },
+        {
+          "id": 12000139170401,
+          "subject_id": 12000139170401,
+          "name": "Minor Project",
+          "semester": 7
+        },
+        {
+          "id": 12000139970701,
+          "subject_id": 12000139970701,
+          "name": "Modern Transportation System",
+          "semester": 7
+        },
+        {
+          "id": 12016137000501,
+          "subject_id": 12016137000501,
+          "name": "Air pollution and Control",
+          "semester": 7
+        },
+        {
+          "id": 12000139081301,
+          "subject_id": 12000139081301,
+          "name": "Safety",
+          "semester": 8
+        },
+        {
+          "id": 12000139081401,
+          "subject_id": 12000139081401,
+          "name": "Port & Harbour Engineering",
+          "semester": 8
+        },
+        {
+          "id": 12000139081501,
+          "subject_id": 12000139081501,
+          "name": "Pipeline Engineering",
+          "semester": 8
+        },
+        {
+          "id": 12000139081601,
+          "subject_id": 12000139081601,
+          "name": "Digital Photogrammetry & Image Processing",
+          "semester": 8
+        },
+        {
+          "id": 12000139081701,
+          "subject_id": 12000139081701,
+          "name": "Python for Data Analysis",
+          "semester": 8
+        },
+        {
+          "id": 12000139180301,
+          "subject_id": 12000139180301,
+          "name": "Major Project",
+          "semester": 8
+        },
+        {
+          "id": 12000139180701,
+          "subject_id": 12000139180701,
+          "name": "Municipal Solid Waste Management",
+          "semester": 8
+        },
+        {
+          "id": 12000139180801,
+          "subject_id": 12000139180801,
+          "name": "Sustainable Building Technology",
+          "semester": 8
+        },
+        {
+          "id": 12000139180901,
+          "subject_id": 12000139180901,
+          "name": "Design of Prestressed Concrete Structures",
+          "semester": 8
+        },
+        {
+          "id": 12000139181001,
+          "subject_id": 12000139181001,
+          "name": "Infrastructure Engineering and Management",
+          "semester": 8
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "course_id": 13,
+      "name": "B.Tech - Mechanical Engineering",
+      "department": "Mechanical Engineering",
+      "semester_list": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "subject_count": 86,
+      "official_program_url": "https://www.marwadiuniversity.ac.in/b-tech-mechanical-engineering-fees/",
+      "source_pdf_assets_linked_in_repository": 0,
+      "removal_reason": "No mapped course-level PDF assets were available in the repository B.Tech PDF library/catalog to perform detailed PDF-text-to-JSON conversion. Public course-outline pages may list subject names, but the source set lacks validated subject-level syllabus PDFs for this program.",
+      "subjects": [
+        {
+          "id": 13000139110101,
+          "subject_id": 13000139110101,
+          "name": "Elements of Civil Engineering",
+          "semester": 1
+        },
+        {
+          "id": 13001121000101,
+          "subject_id": 13001121000101,
+          "name": "NATIONAL CADET CORPS-1",
+          "semester": 1
+        },
+        {
+          "id": 13001131210101,
+          "subject_id": 13001131210101,
+          "name": "Differential and Integral Calculus",
+          "semester": 1
+        },
+        {
+          "id": 13001135110101,
+          "subject_id": 13001135110101,
+          "name": "Elements of Mechanical Engineering",
+          "semester": 1
+        },
+        {
+          "id": 13001318010501,
+          "subject_id": 13001318010501,
+          "name": "Verbal Ability-1",
+          "semester": 1
+        },
+        {
+          "id": 13001318110301,
+          "subject_id": 13001318110301,
+          "name": "Value Education",
+          "semester": 1
+        },
+        {
+          "id": 13001514110101,
+          "subject_id": 13001514110101,
+          "name": "Basics of Environmental Studies",
+          "semester": 1
+        },
+        {
+          "id": 13001719010301,
+          "subject_id": 13001719010301,
+          "name": "Indian Constitution",
+          "semester": 1
+        },
+        {
+          "id": 13001719210101,
+          "subject_id": 13001719210101,
+          "name": "Physics",
+          "semester": 1
+        },
+        {
+          "id": 13011912010201,
+          "subject_id": 13011912010201,
+          "name": "Reading & Writing for Technology",
+          "semester": 1
+        },
+        {
+          "id": 13011912010301,
+          "subject_id": 13011912010301,
+          "name": "Speaking & Presentation Skills",
+          "semester": 1
+        },
+        {
+          "id": 13000135110101,
+          "subject_id": 13000135110101,
+          "name": "Computer Programming",
+          "semester": 2
+        },
+        {
+          "id": 13000155110101,
+          "subject_id": 13000155110101,
+          "name": "Basic Electrical and Electronics Engineering",
+          "semester": 2
+        },
+        {
+          "id": 13001121000201,
+          "subject_id": 13001121000201,
+          "name": "NATIONAL CADET CORPS-2",
+          "semester": 2
+        },
+        {
+          "id": 13001131115101,
+          "subject_id": 13001131115101,
+          "name": "Matrix algebra and vector calculus",
+          "semester": 2
+        },
+        {
+          "id": 13001135020101,
+          "subject_id": 13001135020101,
+          "name": "Computer Aided Modelling",
+          "semester": 2
+        },
+        {
+          "id": 13001135110201,
+          "subject_id": 13001135110201,
+          "name": "Engineering Graphics",
+          "semester": 2
+        },
+        {
+          "id": 13001135110401,
+          "subject_id": 13001135110401,
+          "name": "Mechanical Workshop",
+          "semester": 2
+        },
+        {
+          "id": 13001318010601,
+          "subject_id": 13001318010601,
+          "name": "Verbal Ability – 2",
+          "semester": 2
+        },
+        {
+          "id": 13011625010101,
+          "subject_id": 13011625010101,
+          "name": "Physical Education/Sports/Yoga",
+          "semester": 2
+        },
+        {
+          "id": 13001121000301,
+          "subject_id": 13001121000301,
+          "name": "NATIONAL CADET CORPS-3",
+          "semester": 3
+        },
+        {
+          "id": 13001131130101,
+          "subject_id": 13001131130101,
+          "name": "Applied Differential Equations",
+          "semester": 3
+        },
+        {
+          "id": 13001135130501,
+          "subject_id": 13001135130501,
+          "name": "Fundamental of Machine Design",
+          "semester": 3
+        },
+        {
+          "id": 13001135230101,
+          "subject_id": 13001135230101,
+          "name": "Fluid Mechanics",
+          "semester": 3
+        },
+        {
+          "id": 13001135230201,
+          "subject_id": 13001135230201,
+          "name": "Kinematics of Machines",
+          "semester": 3
+        },
+        {
+          "id": 13001135230301,
+          "subject_id": 13001135230301,
+          "name": "Manufacturing Processes I",
+          "semester": 3
+        },
+        {
+          "id": 13001135230401,
+          "subject_id": 13001135230401,
+          "name": "Design Thinking and Problem Solving Skills",
+          "semester": 3
+        },
+        {
+          "id": 13001318010401,
+          "subject_id": 13001318010401,
+          "name": "Professional Ethics",
+          "semester": 3
+        },
+        {
+          "id": 13001318030301,
+          "subject_id": 13001318030301,
+          "name": "Quantitative & Logical Ability – 1",
+          "semester": 3
+        },
+        {
+          "id": 13001131140101,
+          "subject_id": 13001131140101,
+          "name": "Complex Variable & Numerical Analysis",
+          "semester": 4
+        },
+        {
+          "id": 13001135040601,
+          "subject_id": 13001135040601,
+          "name": "Creativity, Problem Solving and Innovation",
+          "semester": 4
+        },
+        {
+          "id": 13001135040701,
+          "subject_id": 13001135040701,
+          "name": "Computer Aided Design Laboratory",
+          "semester": 4
+        },
+        {
+          "id": 13001135040801,
+          "subject_id": 13001135040801,
+          "name": "Advance Welding Technology",
+          "semester": 4
+        },
+        {
+          "id": 13001135140401,
+          "subject_id": 13001135140401,
+          "name": "Engineering Thermodynamics",
+          "semester": 4
+        },
+        {
+          "id": 13001135240101,
+          "subject_id": 13001135240101,
+          "name": "Machine Design & Industrial Drafting",
+          "semester": 4
+        },
+        {
+          "id": 13001135240201,
+          "subject_id": 13001135240201,
+          "name": "Manufacturing Processes II",
+          "semester": 4
+        },
+        {
+          "id": 13001135240301,
+          "subject_id": 13001135240301,
+          "name": "Material Science and Metallurgy",
+          "semester": 4
+        },
+        {
+          "id": 13001121000501,
+          "subject_id": 13001121000501,
+          "name": "NATIONAL CADET CORPS-5",
+          "semester": 5
+        },
+        {
+          "id": 13001135050401,
+          "subject_id": 13001135050401,
+          "name": "Metrology",
+          "semester": 5
+        },
+        {
+          "id": 13001135050601,
+          "subject_id": 13001135050601,
+          "name": "Computer Graphics",
+          "semester": 5
+        },
+        {
+          "id": 13001135050701,
+          "subject_id": 13001135050701,
+          "name": "Design for Manufacturing",
+          "semester": 5
+        },
+        {
+          "id": 13001135050901,
+          "subject_id": 13001135050901,
+          "name": "Python for Mechanical Engineering",
+          "semester": 5
+        },
+        {
+          "id": 13001135051101,
+          "subject_id": 13001135051101,
+          "name": "Mechatronics",
+          "semester": 5
+        },
+        {
+          "id": 13001135150101,
+          "subject_id": 13001135150101,
+          "name": "Dynamics of Machine-I",
+          "semester": 5
+        },
+        {
+          "id": 13001135150201,
+          "subject_id": 13001135150201,
+          "name": "Fluid Power Engineering",
+          "semester": 5
+        },
+        {
+          "id": 13001135150301,
+          "subject_id": 13001135150301,
+          "name": "Machine Design-1",
+          "semester": 5
+        },
+        {
+          "id": 13001135150501,
+          "subject_id": 13001135150501,
+          "name": "Power Plant Engineering",
+          "semester": 5
+        },
+        {
+          "id": 13001318050101,
+          "subject_id": 13001318050101,
+          "name": "Business Benchmark",
+          "semester": 5
+        },
+        {
+          "id": 13001135060401,
+          "subject_id": 13001135060401,
+          "name": "Operation Research",
+          "semester": 6
+        },
+        {
+          "id": 13001135060501,
+          "subject_id": 13001135060501,
+          "name": "IC Engines & Automobiles",
+          "semester": 6
+        },
+        {
+          "id": 13001135060601,
+          "subject_id": 13001135060601,
+          "name": "Design of Material Handling Equipments",
+          "semester": 6
+        },
+        {
+          "id": 13001135060901,
+          "subject_id": 13001135060901,
+          "name": "Basic & Electro Hydraulics",
+          "semester": 6
+        },
+        {
+          "id": 13001135061001,
+          "subject_id": 13001135061001,
+          "name": "Design Engineering & Project Management",
+          "semester": 6
+        },
+        {
+          "id": 13001135061101,
+          "subject_id": 13001135061101,
+          "name": "Computer Programming for Robotics",
+          "semester": 6
+        },
+        {
+          "id": 13001135160101,
+          "subject_id": 13001135160101,
+          "name": "Dynamics of Machine –II",
+          "semester": 6
+        },
+        {
+          "id": 13001135160201,
+          "subject_id": 13001135160201,
+          "name": "Heat Transfer",
+          "semester": 6
+        },
+        {
+          "id": 13001135160301,
+          "subject_id": 13001135160301,
+          "name": "Machine Design-II",
+          "semester": 6
+        },
+        {
+          "id": 13001135160701,
+          "subject_id": 13001135160701,
+          "name": "Advance Manufacturing processes",
+          "semester": 6
+        },
+        {
+          "id": 13001135070201,
+          "subject_id": 13001135070201,
+          "name": "Project-1",
+          "semester": 7
+        },
+        {
+          "id": 13001135070301,
+          "subject_id": 13001135070301,
+          "name": "Rapid Casting: I",
+          "semester": 7
+        },
+        {
+          "id": 13001135070501,
+          "subject_id": 13001135070501,
+          "name": "CNC Programmer",
+          "semester": 7
+        },
+        {
+          "id": 13001135071101,
+          "subject_id": 13001135071101,
+          "name": "Advanced Machine Design",
+          "semester": 7
+        },
+        {
+          "id": 13001135071201,
+          "subject_id": 13001135071201,
+          "name": "Design and synthesis of Robot",
+          "semester": 7
+        },
+        {
+          "id": 13001135072101,
+          "subject_id": 13001135072101,
+          "name": "Computer Aided Process Management",
+          "semester": 7
+        },
+        {
+          "id": 13001135073101,
+          "subject_id": 13001135073101,
+          "name": "Ref. & Air conditioning",
+          "semester": 7
+        },
+        {
+          "id": 13001135073201,
+          "subject_id": 13001135073201,
+          "name": "Renewable Energy Engineering",
+          "semester": 7
+        },
+        {
+          "id": 13001135074101,
+          "subject_id": 13001135074101,
+          "name": "Pneumatic and Hydraulic control",
+          "semester": 7
+        },
+        {
+          "id": 13001135074201,
+          "subject_id": 13001135074201,
+          "name": "Sensorics",
+          "semester": 7
+        },
+        {
+          "id": 13001135170101,
+          "subject_id": 13001135170101,
+          "name": "Finite Elements Method",
+          "semester": 7
+        },
+        {
+          "id": 13001135172201,
+          "subject_id": 13001135172201,
+          "name": "Datamining and Analysis",
+          "semester": 7
+        },
+        {
+          "id": 13016137000601,
+          "subject_id": 13016137000601,
+          "name": "Prog.Elec.3",
+          "semester": 7
+        },
+        {
+          "id": 13016137000701,
+          "subject_id": 13016137000701,
+          "name": "Prog.Elec.4",
+          "semester": 7
+        },
+        {
+          "id": 13001135080101,
+          "subject_id": 13001135080101,
+          "name": "Production Technology",
+          "semester": 8
+        },
+        {
+          "id": 13001135080301,
+          "subject_id": 13001135080301,
+          "name": "Rapid Casting: II",
+          "semester": 8
+        },
+        {
+          "id": 13001135081101,
+          "subject_id": 13001135081101,
+          "name": "Design of Pressure vessels",
+          "semester": 8
+        },
+        {
+          "id": 13001135081201,
+          "subject_id": 13001135081201,
+          "name": "Machine Tool Design",
+          "semester": 8
+        },
+        {
+          "id": 13001135081301,
+          "subject_id": 13001135081301,
+          "name": "Design of composite materials",
+          "semester": 8
+        },
+        {
+          "id": 13001135082101,
+          "subject_id": 13001135082101,
+          "name": "Computer Integrated Mfg.",
+          "semester": 8
+        },
+        {
+          "id": 13001135083101,
+          "subject_id": 13001135083101,
+          "name": "Steam and Gas Turbine",
+          "semester": 8
+        },
+        {
+          "id": 13001135083201,
+          "subject_id": 13001135083201,
+          "name": "Computational Fluid Dynamics",
+          "semester": 8
+        },
+        {
+          "id": 13001135084101,
+          "subject_id": 13001135084101,
+          "name": "Robotics & FMS",
+          "semester": 8
+        },
+        {
+          "id": 13001135084201,
+          "subject_id": 13001135084201,
+          "name": "Artificial Intelligence",
+          "semester": 8
+        },
+        {
+          "id": 13001135180201,
+          "subject_id": 13001135180201,
+          "name": "Project-II",
+          "semester": 8
+        },
+        {
+          "id": 13001135182201,
+          "subject_id": 13001135182201,
+          "name": "IoT for Manufacturing",
+          "semester": 8
+        },
+        {
+          "id": 13016138000101,
+          "subject_id": 13016138000101,
+          "name": "Prog.Elec.5",
+          "semester": 8
+        },
+        {
+          "id": 13016138000201,
+          "subject_id": 13016138000201,
+          "name": "Prog.Elec.6",
+          "semester": 8
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "course_id": 15,
+      "name": "B.Tech - Mechanical Engineering Robotics & Automation",
+      "department": "Mechanical Engineering - Robotics and Automation",
+      "semester_list": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "subject_count": 32,
+      "official_program_url": "https://www.marwadiuniversity.ac.in/mechanical-engineering-robotics-automation/",
+      "source_pdf_assets_linked_in_repository": 0,
+      "removal_reason": "No mapped course-level PDF assets were available in the repository B.Tech PDF library/catalog to perform detailed PDF-text-to-JSON conversion. Public course-outline pages may list subject names, but the source set lacks validated subject-level syllabus PDFs for this program.",
+      "subjects": [
+        {
+          "id": 15000135010101,
+          "subject_id": 15000135010101,
+          "name": "Computer Programming",
+          "semester": 1
+        },
+        {
+          "id": 15001131210101,
+          "subject_id": 15001131210101,
+          "name": "Differential and Integral Calculus",
+          "semester": 1
+        },
+        {
+          "id": 15001135110101,
+          "subject_id": 15001135110101,
+          "name": "Elements of Mechanical Engineering",
+          "semester": 1
+        },
+        {
+          "id": 15001318010501,
+          "subject_id": 15001318010501,
+          "name": "Verbal Ability - 1",
+          "semester": 1
+        },
+        {
+          "id": 15001318110301,
+          "subject_id": 15001318110301,
+          "name": "Value Education",
+          "semester": 1
+        },
+        {
+          "id": 15001514110101,
+          "subject_id": 15001514110101,
+          "name": "Basics of Environmental Studies",
+          "semester": 1
+        },
+        {
+          "id": 15001719010301,
+          "subject_id": 15001719010301,
+          "name": "Indian Constitution",
+          "semester": 1
+        },
+        {
+          "id": 15001719210101,
+          "subject_id": 15001719210101,
+          "name": "Engineering Physics",
+          "semester": 1
+        },
+        {
+          "id": 15011912110401,
+          "subject_id": 15011912110401,
+          "name": "Professional Communication",
+          "semester": 1
+        },
+        {
+          "id": 15000155210101,
+          "subject_id": 15000155210101,
+          "name": "Basic Electrical and Electronics Engineering",
+          "semester": 2
+        },
+        {
+          "id": 15001131010301,
+          "subject_id": 15001131010301,
+          "name": "Matrix Algebra and Vector Space",
+          "semester": 2
+        },
+        {
+          "id": 15001135110201,
+          "subject_id": 15001135110201,
+          "name": "Engineering Graphics",
+          "semester": 2
+        },
+        {
+          "id": 15001135110401,
+          "subject_id": 15001135110401,
+          "name": "Mechanical Workshop",
+          "semester": 2
+        },
+        {
+          "id": 15001318010601,
+          "subject_id": 15001318010601,
+          "name": "Verbal Ability – 2",
+          "semester": 2
+        },
+        {
+          "id": 15011312010101,
+          "subject_id": 15011312010101,
+          "name": "Python Programming",
+          "semester": 2
+        },
+        {
+          "id": 15011312020201,
+          "subject_id": 15011312020201,
+          "name": "Fundamental of AI & ML",
+          "semester": 2
+        },
+        {
+          "id": 15001131130101,
+          "subject_id": 15001131130101,
+          "name": "Applied Differential Equations",
+          "semester": 3
+        },
+        {
+          "id": 15001135130501,
+          "subject_id": 15001135130501,
+          "name": "Fundamental of Machine Design",
+          "semester": 3
+        },
+        {
+          "id": 15001318030201,
+          "subject_id": 15001318030201,
+          "name": "Quantitative & Logical Ability - 1",
+          "semester": 3
+        },
+        {
+          "id": 15011312030101,
+          "subject_id": 15011312030101,
+          "name": "Manufacturing Technolgy",
+          "semester": 3
+        },
+        {
+          "id": 15011318030101,
+          "subject_id": 15011318030101,
+          "name": "Thermo-Fluids Engineering",
+          "semester": 3
+        },
+        {
+          "id": 15011318030201,
+          "subject_id": 15011318030201,
+          "name": "Kinematics and Dynamics of Robots",
+          "semester": 3
+        },
+        {
+          "id": 15016133000201,
+          "subject_id": 15016133000201,
+          "name": "Fundamentals of Robotics and Drives",
+          "semester": 3
+        },
+        {
+          "id": 15001131140101,
+          "subject_id": 15001131140101,
+          "name": "Complex Variable & Numerical Analysis",
+          "semester": 4
+        },
+        {
+          "id": 15001135040601,
+          "subject_id": 15001135040601,
+          "name": "Creativity, Problem Solving and Innovation",
+          "semester": 4
+        },
+        {
+          "id": 15001135240301,
+          "subject_id": 15001135240301,
+          "name": "Material Science and Metallurgy",
+          "semester": 4
+        },
+        {
+          "id": 15001318040201,
+          "subject_id": 15001318040201,
+          "name": "Quantitative & Logical Ability - 2",
+          "semester": 4
+        },
+        {
+          "id": 15011312240101,
+          "subject_id": 15011312240101,
+          "name": "Machine Design & Industrial Drafting",
+          "semester": 4
+        },
+        {
+          "id": 15011318040101,
+          "subject_id": 15011318040101,
+          "name": "Intsrumentation and Measurement",
+          "semester": 4
+        },
+        {
+          "id": 15011318040201,
+          "subject_id": 15011318040201,
+          "name": "Microcontrollers and Embedded Systems",
+          "semester": 4
+        },
+        {
+          "id": 15016135000501,
+          "subject_id": 15016135000501,
+          "name": "Quantitative & Logical Ability -3",
+          "semester": 5
+        },
+        {
+          "id": 15001318060201,
+          "subject_id": 15001318060201,
+          "name": "Quantitative Aptitude and Verbal Ability",
+          "semester": 6
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "course_id": 16,
+      "name": "B.Tech - Electronics & Communication",
+      "department": "Electronics and Communication Engineering",
+      "semester_list": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "subject_count": 49,
+      "official_program_url": "https://www.marwadiuniversity.ac.in/electronics-and-communication-engineering-btech/",
+      "source_pdf_assets_linked_in_repository": 0,
+      "removal_reason": "No mapped course-level PDF assets were available in the repository B.Tech PDF library/catalog to perform detailed PDF-text-to-JSON conversion. Public course-outline pages may list subject names, but the source set lacks validated subject-level syllabus PDFs for this program.",
+      "subjects": [
+        {
+          "id": 16000121000101,
+          "subject_id": 16000121000101,
+          "name": "NATIONAL CADET CORPS-1",
+          "semester": 1
+        },
+        {
+          "id": 16000153011001,
+          "subject_id": 16000153011001,
+          "name": "ELECTRONIC DEVICES AND CIRCUITS",
+          "semester": 1
+        },
+        {
+          "id": 16000153011101,
+          "subject_id": 16000153011101,
+          "name": "ENGINEERING PHYSICS",
+          "semester": 1
+        },
+        {
+          "id": 16000153011401,
+          "subject_id": 16000153011401,
+          "name": "SOLVING",
+          "semester": 1
+        },
+        {
+          "id": 16000153011701,
+          "subject_id": 16000153011701,
+          "name": "CALCULUS AND LINEAR ALGEBRA",
+          "semester": 1
+        },
+        {
+          "id": 16000153011901,
+          "subject_id": 16000153011901,
+          "name": "DESIGN ENGINEERING",
+          "semester": 1
+        },
+        {
+          "id": 16000153110301,
+          "subject_id": 16000153110301,
+          "name": "ELECTRONIC WORKSHOP",
+          "semester": 1
+        },
+        {
+          "id": 16001514110101,
+          "subject_id": 16001514110101,
+          "name": "BASICS OF ENVIRONMENTAL STUDIES",
+          "semester": 1
+        },
+        {
+          "id": 16001911000101,
+          "subject_id": 16001911000101,
+          "name": "(IKS)",
+          "semester": 1
+        },
+        {
+          "id": 16011912010201,
+          "subject_id": 16011912010201,
+          "name": "READING AND WRITING FOR TECHNOLOGY",
+          "semester": 1
+        },
+        {
+          "id": 16000121000201,
+          "subject_id": 16000121000201,
+          "name": "NATIONAL CADET CORPS-2",
+          "semester": 2
+        },
+        {
+          "id": 16000153011201,
+          "subject_id": 16000153011201,
+          "name": "ANALOG CIRCUITS",
+          "semester": 2
+        },
+        {
+          "id": 16000153011301,
+          "subject_id": 16000153011301,
+          "name": "DIGITAL CIRCUITS",
+          "semester": 2
+        },
+        {
+          "id": 16000153011501,
+          "subject_id": 16000153011501,
+          "name": "PYTHON PROGRAMMING & APPLICATIONS",
+          "semester": 2
+        },
+        {
+          "id": 16000153011601,
+          "subject_id": 16000153011601,
+          "name": "DATA STRUCTURE AND ALGORITHM ",
+          "semester": 2
+        },
+        {
+          "id": 16000153011801,
+          "subject_id": 16000153011801,
+          "name": "DIFFERENTIAL EQUATIONS AND TRANSFORMS",
+          "semester": 2
+        },
+        {
+          "id": 16001135110501,
+          "subject_id": 16001135110501,
+          "name": "DESIGN",
+          "semester": 2
+        },
+        {
+          "id": 16001719010301,
+          "subject_id": 16001719010301,
+          "name": "INDIAN CONSTITUTION",
+          "semester": 2
+        },
+        {
+          "id": 16000121000301,
+          "subject_id": 16000121000301,
+          "name": "NATIONAL CADET CORPS-3",
+          "semester": 3
+        },
+        {
+          "id": 16016133000301,
+          "subject_id": 16016133000301,
+          "name": "CIRCUIT AND NETWORKS",
+          "semester": 3
+        },
+        {
+          "id": 16016133000401,
+          "subject_id": 16016133000401,
+          "name": "CONTROL SYSTEM",
+          "semester": 3
+        },
+        {
+          "id": 16016133000501,
+          "subject_id": 16016133000501,
+          "name": "INTERFACING",
+          "semester": 3
+        },
+        {
+          "id": 16016133000601,
+          "subject_id": 16016133000601,
+          "name": "NUMERICAL METHODS AND OPTIMIZATION",
+          "semester": 3
+        },
+        {
+          "id": 16016133000701,
+          "subject_id": 16016133000701,
+          "name": "LANGUAGES",
+          "semester": 3
+        },
+        {
+          "id": 16016133000801,
+          "subject_id": 16016133000801,
+          "name": "HDL FOR DIGITAL DESIGN & VERIFICATION",
+          "semester": 3
+        },
+        {
+          "id": 16016133001001,
+          "subject_id": 16016133001001,
+          "name": "INTERFACES",
+          "semester": 3
+        },
+        {
+          "id": 16000121000401,
+          "subject_id": 16000121000401,
+          "name": "NATIONAL CADET CORPS-4",
+          "semester": 4
+        },
+        {
+          "id": 16001320030201,
+          "subject_id": 16001320030201,
+          "name": "SIGNALS AND SYSTEMS",
+          "semester": 4
+        },
+        {
+          "id": 16001320050601,
+          "subject_id": 16001320050601,
+          "name": "HUMAN CENTERED DESIGN",
+          "semester": 4
+        },
+        {
+          "id": 16009320060301,
+          "subject_id": 16009320060301,
+          "name": "EMBEDDED SYSTEMS",
+          "semester": 4
+        },
+        {
+          "id": 16016134000401,
+          "subject_id": 16016134000401,
+          "name": "CMOS VLSI DESIGN",
+          "semester": 4
+        },
+        {
+          "id": 16016134000501,
+          "subject_id": 16016134000501,
+          "name": "ITRODUCTION TO ROBOTICS",
+          "semester": 4
+        },
+        {
+          "id": 16000121000501,
+          "subject_id": 16000121000501,
+          "name": "NATIONAL CADET CORPS-5",
+          "semester": 5
+        },
+        {
+          "id": 16001320060101,
+          "subject_id": 16001320060101,
+          "name": "DIGITAL SIGNAL PROCESSING",
+          "semester": 5
+        },
+        {
+          "id": 16016135000601,
+          "subject_id": 16016135000601,
+          "name": "DIGITAL COMMUNICATION",
+          "semester": 5
+        },
+        {
+          "id": 16016135000801,
+          "subject_id": 16016135000801,
+          "name": "IPR & ENTREPRENEURSHIP FOR ENGINEERS",
+          "semester": 5
+        },
+        {
+          "id": 16016135000901,
+          "subject_id": 16016135000901,
+          "name": "DRONE AND UNMANNED AERIAL VEHICLE",
+          "semester": 5
+        },
+        {
+          "id": 16016135001001,
+          "subject_id": 16016135001001,
+          "name": "IoT APPLICATIONS",
+          "semester": 5
+        },
+        {
+          "id": 16000121000601,
+          "subject_id": 16000121000601,
+          "name": "NATIONAL CADET CORPS-6",
+          "semester": 6
+        },
+        {
+          "id": 16000139170401,
+          "subject_id": 16000139170401,
+          "name": "MINOR PROJECT",
+          "semester": 6
+        },
+        {
+          "id": 16016136000801,
+          "subject_id": 16016136000801,
+          "name": "ANTENNA DESIGN",
+          "semester": 6
+        },
+        {
+          "id": 16016136000901,
+          "subject_id": 16016136000901,
+          "name": "OPTICAL FIBER COMMUNICATION",
+          "semester": 6
+        },
+        {
+          "id": 16016136001001,
+          "subject_id": 16016136001001,
+          "name": "WIRELESS & MOBILE COMMUNICATION",
+          "semester": 6
+        },
+        {
+          "id": 16016136001101,
+          "subject_id": 16016136001101,
+          "name": "SYSTEM ON CHIP",
+          "semester": 6
+        },
+        {
+          "id": 16000139180301,
+          "subject_id": 16000139180301,
+          "name": "MAJOR PROJECT",
+          "semester": 7
+        },
+        {
+          "id": 16016137000901,
+          "subject_id": 16016137000901,
+          "name": "DATA COMM. AND NETWORKING",
+          "semester": 7
+        },
+        {
+          "id": 16016137001001,
+          "subject_id": 16016137001001,
+          "name": "HUMAN VALUES & PROFESSIONAL ETHICS",
+          "semester": 7
+        },
+        {
+          "id": 16016137001101,
+          "subject_id": 16016137001101,
+          "name": "MICROWAVE & RADAR ENGINEERING",
+          "semester": 7
+        },
+        {
+          "id": 16011312080101,
+          "subject_id": 16011312080101,
+          "name": "INTERNSHIP/ PROJECT",
+          "semester": 8
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "course_id": 17,
+      "name": "B.Tech - Electronics and Communication Engineering - AI",
+      "department": "Electronics and Communication Engineering - Artificial Intelligence",
+      "semester_list": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "subject_count": 50,
+      "official_program_url": "https://www.marwadiuniversity.ac.in/electronics-and-communication-engineering-ai-mlbtech/",
+      "source_pdf_assets_linked_in_repository": 0,
+      "removal_reason": "No mapped course-level PDF assets were available in the repository B.Tech PDF library/catalog to perform detailed PDF-text-to-JSON conversion. Public course-outline pages may list subject names, but the source set lacks validated subject-level syllabus PDFs for this program.",
+      "subjects": [
+        {
+          "id": 17000121000101,
+          "subject_id": 17000121000101,
+          "name": "NATIONAL CADET CORPS-1",
+          "semester": 1
+        },
+        {
+          "id": 17000153011001,
+          "subject_id": 17000153011001,
+          "name": "ELECTRONIC DEVICES AND CIRCUITS",
+          "semester": 1
+        },
+        {
+          "id": 17000153011101,
+          "subject_id": 17000153011101,
+          "name": "ENGINEERING PHYSICS",
+          "semester": 1
+        },
+        {
+          "id": 17000153011401,
+          "subject_id": 17000153011401,
+          "name": "SOLVING",
+          "semester": 1
+        },
+        {
+          "id": 17000153011701,
+          "subject_id": 17000153011701,
+          "name": "CALCULUS AND LINEAR ALGEBRA",
+          "semester": 1
+        },
+        {
+          "id": 17000153011901,
+          "subject_id": 17000153011901,
+          "name": "DESIGN ENGINEERING",
+          "semester": 1
+        },
+        {
+          "id": 17000153110301,
+          "subject_id": 17000153110301,
+          "name": "ELECTRONIC WORKSHOP",
+          "semester": 1
+        },
+        {
+          "id": 17001514110101,
+          "subject_id": 17001514110101,
+          "name": "BASICS OF ENVIRONMENTAL STUDIES",
+          "semester": 1
+        },
+        {
+          "id": 17001911000101,
+          "subject_id": 17001911000101,
+          "name": "(IKS)",
+          "semester": 1
+        },
+        {
+          "id": 17011912010201,
+          "subject_id": 17011912010201,
+          "name": "READING AND WRITING FOR TECHNOLOGY",
+          "semester": 1
+        },
+        {
+          "id": 17000121000201,
+          "subject_id": 17000121000201,
+          "name": "NATIONAL CADET CORPS-2",
+          "semester": 2
+        },
+        {
+          "id": 17000153011201,
+          "subject_id": 17000153011201,
+          "name": "ANALOG CIRCUITS",
+          "semester": 2
+        },
+        {
+          "id": 17000153011301,
+          "subject_id": 17000153011301,
+          "name": "DIGITAL CIRCUITS",
+          "semester": 2
+        },
+        {
+          "id": 17000153011501,
+          "subject_id": 17000153011501,
+          "name": "PYTHON PROGRAMMING & APPLICATIONS",
+          "semester": 2
+        },
+        {
+          "id": 17000153011601,
+          "subject_id": 17000153011601,
+          "name": "DATA STRUCTURE AND ALGORITHM ",
+          "semester": 2
+        },
+        {
+          "id": 17000153011801,
+          "subject_id": 17000153011801,
+          "name": "DIFFERENTIAL EQUATIONS AND TRANSFORMS",
+          "semester": 2
+        },
+        {
+          "id": 17001135110501,
+          "subject_id": 17001135110501,
+          "name": "DESIGN",
+          "semester": 2
+        },
+        {
+          "id": 17001719010301,
+          "subject_id": 17001719010301,
+          "name": "INDIAN CONSTITUTION",
+          "semester": 2
+        },
+        {
+          "id": 17000121000301,
+          "subject_id": 17000121000301,
+          "name": "NATIONAL CADET CORPS-3",
+          "semester": 3
+        },
+        {
+          "id": 17001913120101,
+          "subject_id": 17001913120101,
+          "name": "LEARNING",
+          "semester": 3
+        },
+        {
+          "id": 17016133000301,
+          "subject_id": 17016133000301,
+          "name": "CIRCUIT AND NETWORKS",
+          "semester": 3
+        },
+        {
+          "id": 17016133000401,
+          "subject_id": 17016133000401,
+          "name": "CONTROL SYSTEM",
+          "semester": 3
+        },
+        {
+          "id": 17016133000501,
+          "subject_id": 17016133000501,
+          "name": "INTERFACING",
+          "semester": 3
+        },
+        {
+          "id": 17016133000601,
+          "subject_id": 17016133000601,
+          "name": "NUMERICAL METHODS AND OPTIMIZATION",
+          "semester": 3
+        },
+        {
+          "id": 17016133000701,
+          "subject_id": 17016133000701,
+          "name": "LANGUAGES",
+          "semester": 3
+        },
+        {
+          "id": 17016133000801,
+          "subject_id": 17016133000801,
+          "name": "HDL FOR DIGITAL DESIGN & VERIFICATION",
+          "semester": 3
+        },
+        {
+          "id": 17000121000401,
+          "subject_id": 17000121000401,
+          "name": "NATIONAL CADET CORPS-4",
+          "semester": 4
+        },
+        {
+          "id": 17001320030201,
+          "subject_id": 17001320030201,
+          "name": "SIGNALS AND SYSTEMS",
+          "semester": 4
+        },
+        {
+          "id": 17001320050601,
+          "subject_id": 17001320050601,
+          "name": "HUMAN CENTERED DESIGN",
+          "semester": 4
+        },
+        {
+          "id": 17001913120201,
+          "subject_id": 17001913120201,
+          "name": "INTRODUCTION TO DATA ANALYTICS",
+          "semester": 4
+        },
+        {
+          "id": 17009320060301,
+          "subject_id": 17009320060301,
+          "name": "EMBEDDED SYSTEMS",
+          "semester": 4
+        },
+        {
+          "id": 17016134000401,
+          "subject_id": 17016134000401,
+          "name": "CMOS VLSI DESIGN",
+          "semester": 4
+        },
+        {
+          "id": 17016134000601,
+          "subject_id": 17016134000601,
+          "name": "PROBLEM BASED LEARNING",
+          "semester": 4
+        },
+        {
+          "id": 17000121000501,
+          "subject_id": 17000121000501,
+          "name": "NATIONAL CADET CORPS-5",
+          "semester": 5
+        },
+        {
+          "id": 17001320060101,
+          "subject_id": 17001320060101,
+          "name": "DIGITAL SIGNAL PROCESSING",
+          "semester": 5
+        },
+        {
+          "id": 17016135000601,
+          "subject_id": 17016135000601,
+          "name": "DIGITAL COMMUNICATION",
+          "semester": 5
+        },
+        {
+          "id": 17016135000801,
+          "subject_id": 17016135000801,
+          "name": "IPR & ENTREPRENEURSHIP FOR ENGINEERS",
+          "semester": 5
+        },
+        {
+          "id": 17016135000901,
+          "subject_id": 17016135000901,
+          "name": "DRONE AND UNMANNED AERIAL VEHICLE",
+          "semester": 5
+        },
+        {
+          "id": 17000121000601,
+          "subject_id": 17000121000601,
+          "name": "NATIONAL CADET CORPS-6",
+          "semester": 6
+        },
+        {
+          "id": 17000139170401,
+          "subject_id": 17000139170401,
+          "name": "MINOR PROJECT",
+          "semester": 6
+        },
+        {
+          "id": 17001913120401,
+          "subject_id": 17001913120401,
+          "name": "SPECIAL TOPICS IN ARTIFICIAL INTELLEGIENCE",
+          "semester": 6
+        },
+        {
+          "id": 17016136000801,
+          "subject_id": 17016136000801,
+          "name": "ANTENNA DESIGN",
+          "semester": 6
+        },
+        {
+          "id": 17016136000901,
+          "subject_id": 17016136000901,
+          "name": "OPTICAL FIBER COMMUNICATION",
+          "semester": 6
+        },
+        {
+          "id": 17016136001101,
+          "subject_id": 17016136001101,
+          "name": "SYSTEM ON CHIP",
+          "semester": 6
+        },
+        {
+          "id": 17000139180301,
+          "subject_id": 17000139180301,
+          "name": "MAJOR PROJECT",
+          "semester": 7
+        },
+        {
+          "id": 17001318010401,
+          "subject_id": 17001318010401,
+          "name": "PROFESSIONAL ETHICS",
+          "semester": 7
+        },
+        {
+          "id": 17001913120501,
+          "subject_id": 17001913120501,
+          "name": "APPLICATIONS OF AI",
+          "semester": 7
+        },
+        {
+          "id": 17016137000901,
+          "subject_id": 17016137000901,
+          "name": "DATA COMM. AND NETWORKING",
+          "semester": 7
+        },
+        {
+          "id": 17016137001201,
+          "subject_id": 17016137001201,
+          "name": "AI & ML MAKER LAB",
+          "semester": 7
+        },
+        {
+          "id": 17011312080101,
+          "subject_id": 17011312080101,
+          "name": "INTERNSHIP/ PROJECT",
+          "semester": 8
+        }
+      ]
+    }
+  ],
+  "not_removed_from_supabase": [
+    {
+      "department": "Electronics and Communication Engineering - Robotics",
+      "name": "B.Tech ECE Robotics",
+      "id": null,
+      "reason": "No separate matching row exists in public.Courses; there is no Supabase course ID to delete."
+    },
+    {
+      "department": "Electronics and Communication Engineering - VLSI",
+      "name": "B.Tech ECE VLSI Design and Technology",
+      "id": null,
+      "reason": "No separate matching row exists in public.Courses; there is no Supabase course ID to delete."
+    },
+    {
+      "department": "Electronics and Communication Engineering - Internet of Things",
+      "name": "B.Tech ECE Internet of Things",
+      "id": null,
+      "reason": "No separate matching row exists in public.Courses; there is no Supabase course ID to delete."
+    }
+  ]
+}
