@@ -54,6 +54,9 @@ def main():
     for p in pdfs:
         name=re.sub(r"\s+\[[0-9a-fA-F]{8,}\]$","",p.stem).strip()
         byname[norm(name)].append(p); cache[p]=evidence(p)
+    with (OUT/"management_studies_subject_snapshot.csv").open(encoding="utf-8-sig",newline="") as sf:
+        db_rows=list(csv.DictReader(sf))
+    db_by_id={(str(r.get("CourseId","")),str(r.get("SubjectId",""))):r for r in db_rows}
     report=[]
     for course in index.get("courses",[]):
         for jf in course.get("semester_files",[]):
@@ -70,13 +73,18 @@ def main():
                     if st=="ESE_MARKS_0": proposed="true"
                     elif st=="ESE_MARKS_POSITIVE": proposed="false"
                 status=("CLASSIFIED_NO_ESE" if proposed=="true" else "CLASSIFIED_HAS_ESE" if proposed=="false" else "UNRESOLVED_NO_EXACT_PDF" if not matches else "UNRESOLVED_PDF_EVIDENCE")
-                report.append({"CourseId":int(str(sub.get("subject_id",""))[:2]) if str(sub.get("subject_id","")).isdigit() and len(str(sub.get("subject_id","")))>=2 else "","CourseName":sub.get("course_name",course.get("course_name","")),"Semester":sub.get("semester",""),"SubjectId":sub.get("subject_id",""),"SubjectName":sub.get("subject_name",""),"SubjectCode":sub.get("subject_code",""),"ESEMarks":"|".join(sorted(marks)),"ProposedIsDepartmentalSubject":proposed,"AuditStatus":status,"Reason":"; ".join(f'{p.name}: {x["status"]} marks={x["marks"]} {x["evidence"]}' for p,x in zip(matches,ev)) if matches else "No exact-name Tier 1 PDF found","SourceJSON":jf,"SourcePDF":" | ".join(p.name for p in matches)})
+                cid=int(str(sub.get("subject_id",""))[:2]) if str(sub.get("subject_id","")).isdigit() and len(str(sub.get("subject_id","")))>=2 else ""
+                sid=str(sub.get("subject_id",""))
+                db=db_by_id.get((str(cid),sid),{})
+                current=str(db.get("isDepartmentalSubject","")).lower()
+                mismatch=("yes" if proposed and current!=proposed else "no" if proposed and current==proposed else "")
+                report.append({"CourseId":cid,"CourseName":sub.get("course_name",course.get("course_name","")),"Semester":sub.get("semester",""),"SubjectId":sid,"SubjectName":sub.get("subject_name",""),"SubjectCode":sub.get("subject_code",""),"ESEMarks":"|".join(sorted(marks)),"current_isDepartmentalSubject":current,"ProposedIsDepartmentalSubject":proposed,"flag_mismatch":mismatch,"AuditStatus":status,"Reason":"; ".join(f'{p.name}: {x["status"]} marks={x["marks"]} {x["evidence"]}' for p,x in zip(matches,ev)) if matches else "No exact-name Tier 1 PDF found","SourceJSON":jf,"SourcePDF":" | ".join(p.name for p in matches)})
     report_path=OUT/"management_studies_ese_audit.csv"
     with report_path.open("w",encoding="utf-8-sig",newline="") as f:
         w=csv.DictWriter(f,fieldnames=list(report[0].keys()) if report else ["CourseId","CourseName","Semester","SubjectId","SubjectName","SubjectCode","ESEMarks","ProposedIsDepartmentalSubject","AuditStatus","Reason","SourceJSON","SourcePDF"])
         w.writeheader();w.writerows(report)
     classified=[r for r in report if r["ProposedIsDepartmentalSubject"] in ("true","false")]
-    summary={"subjects_in_syllabus_index":len(report),"tier1_pdfs_found":len(pdfs),"classified_no_ese_true":sum(r["ProposedIsDepartmentalSubject"]=="true" for r in classified),"classified_has_ese_false":sum(r["ProposedIsDepartmentalSubject"]=="false" for r in classified),"unresolved":len(report)-len(classified),"database_updates_performed":0,"note":"Read-only report. Do not update Supabase from subject names alone; reconcile these rows against public.Subjects and verify ambiguous PDF table extraction first."}
+    summary={"subjects_in_syllabus_index":len(report),"tier1_pdfs_found":len(pdfs),"classified_no_ese_true":sum(r["ProposedIsDepartmentalSubject"]=="true" for r in classified),"classified_has_ese_false":sum(r["ProposedIsDepartmentalSubject"]=="false" for r in classified),"unresolved":len(report)-len(classified),"matched_to_supabase":sum(bool(r["current_isDepartmentalSubject"]) for r in report),"confirmed_mismatches":sum(r["flag_mismatch"]=="yes" for r in report),"database_updates_performed":0,"note":"Read-only report reconciles exact SubjectId+CourseId to a current Supabase snapshot. No DB writes are performed by this workflow."}
     (OUT/"management_studies_ese_audit_summary.json").write_text(json.dumps(summary,indent=2)+"\n",encoding="utf-8")
     print(json.dumps(summary,indent=2))
 if __name__=="__main__": main()
