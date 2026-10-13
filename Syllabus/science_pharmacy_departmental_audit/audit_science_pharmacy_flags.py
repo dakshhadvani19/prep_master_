@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evidence-based ESE audit for Science & Pharmacy subject flags; read-only."""
+"""Evidence-based ESE audit for Science & Pharmacy subject flags; read-only. Does not write to Supabase."""
 from __future__ import annotations
 import csv, json, re, unicodedata
 from collections import defaultdict
