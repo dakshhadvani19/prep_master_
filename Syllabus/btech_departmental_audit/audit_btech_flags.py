@@ -156,11 +156,20 @@ def main():
     pdf_cache={}; report=[]
     for s in subjects:
         course=s["CourseName"]; aliases=ALIASES.get(course,[])
-        matches=[m for m in source_map if m.get("program_name") in aliases and m["_title_key"]==norm(s["SubjectName"])]
+        title_key=norm(s["SubjectName"])
+        matches=[m for m in source_map if m.get("program_name") in aliases and m["_title_key"]==title_key]
+        match_method="EXACT_PROGRAM_TITLE" if matches else ""
+        # Conservative fallback: use the shared B.Tech collection only for an exact title
+        # match, and later require every matching PDF to yield the same explicit ESE marks.
+        if not matches:
+            matches=[m for m in source_map if m["_title_key"]==title_key]
+            if matches:
+                match_method="GLOBAL_EXACT_TITLE_UNANIMOUS"
         row={"SubjectId":s["SubjectId"],"SubjectName":s["SubjectName"],"CourseId":s["CourseId"],
              "CourseName":course,"Semester":s["Semester"],
              "current_isDepartmentalSubject":s["isDepartmentalSubject"],
-             "matched_program_names":"; ".join(aliases),"matched_course_codes":"","matched_pdf_paths":"",
+             "matched_program_names":"; ".join(aliases),"match_method":match_method,
+             "matched_course_codes":"","matched_pdf_paths":"",
              "pdf_sha_verified":"","ese_status":"","ese_marks":"","proposed_isDepartmentalSubject":"",
              "audit_status":"","evidence":"","source_excerpt":""}
         if not aliases:
@@ -168,7 +177,7 @@ def main():
             report.append(row); continue
         if not matches:
             row.update(audit_status="UNRESOLVED_NO_EXACT_TITLE_MATCH",ese_status="UNRESOLVED",
-                evidence="No exact normalized title match in this course's verified program-to-PDF map.")
+                evidence="No exact normalized title match in its own program or the shared verified B.Tech PDF collection.")
             report.append(row); continue
         evidence=[]
         for m in matches:
