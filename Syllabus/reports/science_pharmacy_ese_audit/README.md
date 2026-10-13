@@ -22,7 +22,7 @@ The audit uses the extracted syllabus records under `Syllabus/syllabus_txt/Scien
 | M.Pharm Pharmaceutics | 20 | 20 | 4 | 0 | 4 | 16 |
 | M.Pharm Pharmaceutical Quality Assurence | 21 | 21 | 9 | 1 | 8 | 12 |
 | M.Pharm Regulatory Affairs | 17 | 19 | 7 | 1 | 6 | 12 |
-| **Total** | **304** | **305** | **70** | **9** | **61** | **236** |
+| **Total** | **304** | **306** | **70** | **9** | **61** | **236** |
 
 The source occurrence count is larger than the database count for M.Pharm Regulatory Affairs because the extracted semester inventory contains 19 rows while Supabase has 17 subject rows; two records therefore need catalog reconciliation.
 
