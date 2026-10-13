@@ -87,6 +87,10 @@ def main():
         title = s["SubjectName"]
         key = norm(title)
         matches = list(dict.fromkeys(by_title.get(key, []) + by_title.get(ALIASES.get(key, ""), [])))
+        # Never reuse another programme's syllabus as evidence, even when subject titles match.
+        expected_program = "BCA" if str(s["CourseId"]) == "18" else "MCA" if str(s["CourseId"]) == "19" else ""
+        if expected_program:
+            matches = [p for p in matches if p.relative_to(PDF_DIR).parts[0].upper() == expected_program]
         evidence = [evidence_by_path[p] for p in matches]
         proposed, marks = "", ""
         if not matches:
