@@ -1,0 +1,31 @@
+name: Audit Management Studies ESE flags
+on:
+  push:
+    paths:
+      - 'Syllabus/management_studies_departmental_audit/**'
+      - 'Syllabus/syllabus_txt/Management_Studies/**'
+      - 'Syllabus/Management_Studies_Recovery_Kit_1/Management_Studies_Syllabus_Recovery_Kit/Output/Verified_PDFs/Tier_1/**'
+      - '.github/workflows/audit-management-studies-departmental-flags.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install PDF parser
+        run: pip install pymupdf
+      - name: Run read-only audit
+        run: python Syllabus/management_studies_departmental_audit/audit_management_studies_flags.py
+      - name: Upload audit report
+        uses: actions/upload-artifact@v4
+        with:
+          name: management-studies-ese-audit
+          path: |
+            Syllabus/management_studies_departmental_audit/management_studies_ese_audit.csv
+            Syllabus/management_studies_departmental_audit/management_studies_ese_audit_summary.json
+          if-no-files-found: error
