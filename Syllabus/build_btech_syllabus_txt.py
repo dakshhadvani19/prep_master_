@@ -502,6 +502,48 @@ def main() -> int:
     else:
         mapped_rows = verified_rows
 
+    # Keep a durable root-level audit of every course association removed because
+    # its source PDF was absent, invalid, or failed hash verification.
+    removed_path = ROOT / "removed_courses.json"
+    prior_removed = []
+    if removed_path.is_file():
+        try:
+            prior_data = json.loads(removed_path.read_text(encoding="utf-8"))
+            if isinstance(prior_data, list):
+                prior_removed = prior_data
+            elif isinstance(prior_data, dict):
+                prior_removed = prior_data.get("removed_courses", [])
+        except (OSError, json.JSONDecodeError):
+            prior_removed = []
+    removed_by_key = {}
+    for old in prior_removed:
+        if isinstance(old, dict):
+            key = (str(old.get("course_id", "")), str(old.get("department", "")), str(old.get("course_name", "")))
+            removed_by_key[key] = old
+    for row in rejected_rows:
+        item = {
+            "course_name": row.get("course_title", "") or row.get("course_code", ""),
+            "course_id": row.get("course_code", ""),
+            "department": row.get("program_name", "") or row.get("program_folder", ""),
+            "program_folder": row.get("program_folder", ""),
+            "semester": row.get("semester", "Unknown") or "Unknown",
+            "source_pdf_path": row.get("library_file", ""),
+            "source_pdf_url": row.get("source_url", ""),
+            "reason": row.get("prune_reason", "Source PDF unavailable or unverifiable"),
+            "removed_from": ["Syllabus/B.Tech programs/_Catalogs/program_course_map.csv",
+                             "Syllabus/syllabus_txt/B.Tech generated JSON"],
+            "status": "removed_pending_source_recovery",
+        }
+        key = (str(item["course_id"]), str(item["department"]), str(item["course_name"]))
+        removed_by_key[key] = item
+    removed_payload = {
+        "schema_version": "1.0",
+        "description": "B.Tech course associations excluded from active syllabus JSON because a verified source PDF was unavailable. Records are retained for recovery and audit.",
+        "removed_count": len(removed_by_key),
+        "removed_courses": sorted(removed_by_key.values(), key=lambda x: (str(x.get("department", "")), str(x.get("course_id", "")), str(x.get("course_name", "")))),
+    }
+    removed_path.write_text(json.dumps(removed_payload, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     summary_programs: list[dict[str, Any]] = []
     excluded_programs: list[dict[str, str]] = []
