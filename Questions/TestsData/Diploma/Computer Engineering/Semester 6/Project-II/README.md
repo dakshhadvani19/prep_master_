@@ -3,10 +3,10 @@
 **SubjectId:** `44000935160201`  
 **isDepartmentalSubject:** `true`  
 **Canonical bank:** [../exam-bank-v2.json](../exam-bank-v2.json)  
-**Canonical seed:** [../seed-all-v2.sql](../seed-all-v2.sql)
+**Canonical SQL seed:** [../seed-all-v2.sql](../seed-all-v2.sql)
 
-Filter `test_index` by SubjectId `44000935160201`. Mid 1 and Mid 2 have 30 MCQs each; no ESE is generated.
+Filter the JSON `test_index` by SubjectId `44000935160201`. Mid 1 and Mid 2 each contain 30 MCQs; ESE is not generated.
 
-**Mid 1 scope:** undefined
+**Mid 1 syllabus scope:** First 50% by ordered syllabus/contact hours: Project/Problem Identification; Project Analysis, Requirement Gathering; Project Design / Prototype Development; Implementation of Project/Solution.
 
-Use semester-level v2 files as canonical. Academic review is required before production.
+Each available exam type has 12 variants: four Easy, four Medium and four Hard. The semester-level v2 JSON and SQL are canonical. Academic review is required before production insertion.
