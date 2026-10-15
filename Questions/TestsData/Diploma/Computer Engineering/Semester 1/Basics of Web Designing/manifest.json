@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "target_table": "public.\"TestsData\"",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "subject": {
+    "SubjectId": "44000935310201",
+    "SubjectName": "Basics of Web Designing",
+    "Semester": 1
+  },
+  "id_rule": "TestId is decimal SubjectId concatenated with decimal test occurrence, no separator, then cast to BIGINT.",
+  "row_shape": {
+    "TestId": "BIGINT",
+    "Questions": "jsonb[] one JSON string/question",
+    "Options": "jsonb[] four JSON strings/question flattened A-D",
+    "Answers": "jsonb[] one JSON number/question; 0=A,1=B,2=C,3=D"
+  },
+  "tests": [
+    {
+      "occurrence": 1,
+      "TestId": "440009353102011",
+      "difficulty": "easy",
+      "name": "Easy 1",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-01-easy.json"
+    },
+    {
+      "occurrence": 2,
+      "TestId": "440009353102012",
+      "difficulty": "easy",
+      "name": "Easy 2",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-02-easy.json"
+    },
+    {
+      "occurrence": 3,
+      "TestId": "440009353102013",
+      "difficulty": "easy",
+      "name": "Easy 3",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-03-easy.json"
+    },
+    {
+      "occurrence": 4,
+      "TestId": "440009353102014",
+      "difficulty": "easy",
+      "name": "Easy 4",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-04-easy.json"
+    },
+    {
+      "occurrence": 5,
+      "TestId": "440009353102015",
+      "difficulty": "medium",
+      "name": "Medium 1",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-05-medium.json"
+    },
+    {
+      "occurrence": 6,
+      "TestId": "440009353102016",
+      "difficulty": "medium",
+      "name": "Medium 2",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-06-medium.json"
+    },
+    {
+      "occurrence": 7,
+      "TestId": "440009353102017",
+      "difficulty": "medium",
+      "name": "Medium 3",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-07-medium.json"
+    },
+    {
+      "occurrence": 8,
+      "TestId": "440009353102018",
+      "difficulty": "medium",
+      "name": "Medium 4",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-08-medium.json"
+    },
+    {
+      "occurrence": 9,
+      "TestId": "440009353102019",
+      "difficulty": "hard",
+      "name": "Hard 1",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-09-hard.json"
+    },
+    {
+      "occurrence": 10,
+      "TestId": "4400093531020110",
+      "difficulty": "hard",
+      "name": "Hard 2",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-10-hard.json"
+    },
+    {
+      "occurrence": 11,
+      "TestId": "4400093531020111",
+      "difficulty": "hard",
+      "name": "Hard 3",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-11-hard.json"
+    },
+    {
+      "occurrence": 12,
+      "TestId": "4400093531020112",
+      "difficulty": "hard",
+      "name": "Hard 4",
+      "question_count": 10,
+      "option_count": 40,
+      "answer_count": 10,
+      "file": "tests/test-12-hard.json"
+    }
+  ],
+  "source": {
+    "syllabus_path": "Syllabus/syllabus_txt/Diploma/Computer_Engineering/semester_1.json",
+    "official_pdf": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3102_BWD.pdf",
+    "subject_code": "09CE3102"
+  }
+}
