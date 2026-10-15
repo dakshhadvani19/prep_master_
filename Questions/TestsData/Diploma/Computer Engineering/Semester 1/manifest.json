@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Insert-ready Semester 1 Diploma Computer Engineering MCQ bank for public.\"TestsData\".",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 1,
+  "totals": {
+    "subjects": 8,
+    "tests": 96,
+    "questions": 960,
+    "options": 3840,
+    "answers": 960
+  },
+  "database_contract": {
+    "table": "public.\"TestsData\"",
+    "columns": [
+      "TestId BIGINT PRIMARY KEY",
+      "Questions jsonb[] (one JSON string element per question)",
+      "Options jsonb[] (four JSON string elements per question, flattened A-D)",
+      "Answers jsonb[] (one JSON numeric element per question, zero-based option index)"
+    ],
+    "limits": {
+      "Questions": 50,
+      "Options": 200,
+      "Answers": 50
+    },
+    "answer_map": {
+      "0": "A",
+      "1": "B",
+      "2": "C",
+      "3": "D"
+    }
+  },
+  "test_design": {
+    "tests_per_subject": 12,
+    "questions_per_test": 10,
+    "difficulty_groups": {
+      "easy": {
+        "occurrences": "1-4",
+        "tests": 4
+      },
+      "medium": {
+        "occurrences": "5-8",
+        "tests": 4
+      },
+      "hard": {
+        "occurrences": "9-12",
+        "tests": 4
+      }
+    },
+    "answer_position_balance": "Each test has two or three correct answers at each A-D position; option order, answer keys, review files and SQL files have been remapped together."
+  },
+  "test_id_rule": "TestId = decimal SubjectId concatenated with decimal test occurrence number (no separator), cast to BIGINT.",
+  "seed_sql": "seed-all.sql",
+  "subjects": [
+    {
+      "name": "Basics of Web Designing",
+      "SubjectId": "44000935310201",
+      "subject_code": "09CE3102",
+      "tests": 12,
+      "questions": 120,
+      "folder": "Basics of Web Designing",
+      "manifest": "Basics of Web Designing/manifest.json",
+      "answer_review": "Basics of Web Designing/answer-review.json",
+      "seed_sql": "Basics of Web Designing/seed.sql",
+      "syllabus_source": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3102_BWD.pdf"
+    },
+    {
+      "name": "Bharatiya Knowledge System",
+      "SubjectId": "44009911010101",
+      "subject_code": "09IK0101",
+      "tests": 12,
+      "questions": 120,
+      "folder": "Bharatiya Knowledge System",
+      "manifest": "Bharatiya Knowledge System/manifest.json",
+      "answer_review": "Bharatiya Knowledge System/answer-review.json",
+      "seed_sql": "Bharatiya Knowledge System/seed.sql",
+      "syllabus_source": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/9IK0101_BKS.pdf"
+    },
+    {
+      "name": "Communication Skills-I",
+      "SubjectId": "44091912010301",
+      "subject_code": "09SL0103",
+      "tests": 12,
+      "questions": 120,
+      "folder": "Communication Skills-I",
+      "manifest": "Communication Skills-I/manifest.json",
+      "answer_review": "Communication Skills-I/answer-review.json",
+      "seed_sql": "Communication Skills-I/seed.sql",
+      "syllabus_source": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CS-1.pdf"
+    },
+    {
+      "name": "Computer Fundamental Skill",
+      "SubjectId": "44000935210101",
+      "subject_code": "09CE2101",
+      "tests": 12,
+      "questions": 120,
+      "folder": "Computer Fundamental Skill",
+      "manifest": "Computer Fundamental Skill/manifest.json",
+      "answer_review": "Computer Fundamental Skill/answer-review.json",
+      "seed_sql": "Computer Fundamental Skill/seed.sql",
+      "syllabus_source": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CFS.pdf"
+    },
+    {
+      "name": "Computer Hardware Skill",
+      "SubjectId": "44000935210301",
+      "subject_code": "09CE2103",
+      "tests": 12,
+      "questions": 120,
+      "folder": "Computer Hardware Skill",
+      "manifest": "Computer Hardware Skill/manifest.json",
+      "answer_review": "Computer Hardware Skill/answer-review.json",
+      "seed_sql": "Computer Hardware Skill/seed.sql",
+      "syllabus_source": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CHS.pdf"
+    },
+    {
+      "name": "Engineering Drawing",
+      "SubjectId": "44009135110101",
+      "subject_code": "09ME1101",
+      "tests": 12,
+      "questions": 120,
+      "folder": "Engineering Drawing",
+      "manifest": "Engineering Drawing/manifest.json",
+      "answer_review": "Engineering Drawing/answer-review.json",
+      "seed_sql": "Engineering Drawing/seed.sql",
+      "syllabus_source": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/ED-1.pdf"
+    },
+    {
+      "name": "Indian Constitution",
+      "SubjectId": "44009121010101",
+      "subject_code": "09AU0101",
+      "tests": 12,
+      "questions": 120,
+      "folder": "Indian Constitution",
+      "manifest": "Indian Constitution/manifest.json",
+      "answer_review": "Indian Constitution/answer-review.json",
+      "seed_sql": "Indian Constitution/seed.sql",
+      "syllabus_source": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09AU0101_IC.pdf"
+    },
+    {
+      "name": "Mathematics-I",
+      "SubjectId": "44009131210101",
+      "subject_code": "09MA2101",
+      "tests": 12,
+      "questions": 120,
+      "folder": "Mathematics-I",
+      "manifest": "Mathematics-I/manifest.json",
+      "answer_review": "Mathematics-I/answer-review.json",
+      "seed_sql": "Mathematics-I/seed.sql",
+      "syllabus_source": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-1.pdf"
+    }
+  ],
+  "cautions": [
+    "The live database has not been modified; this is a staged export.",
+    "Structural validation and balanced answer positions do not by themselves prove every factual answer or distractor is exam-quality. Review each subject's answer-review.json before production insertion.",
+    "The 12×10 count and 4/4/4 difficulty mix are a provisional bank design, not a claimed official exam blueprint."
+  ]
+}
