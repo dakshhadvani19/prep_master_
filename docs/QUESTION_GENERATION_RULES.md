@@ -428,3 +428,16 @@ For generated question-bank files under `Questions/Diploma/<Course>/<Semester>/<
 - Every MCQ needs a verified key and a specific internal explanation for the key and each distractor. These explanations are QA evidence and should not be persisted in compact student-facing JSON unless explicitly requested.
 - Review for giveaway clues, answer-position bias, repeated stems/concepts, duplicate options, unsupported syllabus claims, and difficulty inflation caused only by longer wording. Reject weak items rather than retaining them to meet a count.
 - If no official question-count or difficulty distribution is available, identify counts and the easy/medium/hard mix as a provisional bank design, not as the official board pattern.
+
+## 14. Supabase `TestsData` export contract
+
+When a bank is specifically prepared for the current live `public."TestsData"` table, keep the source/review bank separate from the database-row export. The live table has only `TestId BIGINT`, `Questions jsonb[]`, `Options jsonb[]`, and `Answers jsonb[]`; it has no separate `SubjectId` or `Difficulty` column.
+
+- Store **one difficulty-pure test per row**. The current Diploma bank batch uses 12 tests per subject as a provisional bank design: occurrences 1–4 Easy, 5–8 Medium, and 9–12 Hard, with 10 questions in each test. Do not describe this as an official exam blueprint unless an official source verifies it.
+- Allocate `TestId` by concatenating the decimal active `SubjectId` with the decimal test occurrence, without a separator, then casting to `BIGINT`. Check the live table for collisions before creating the insert script. Never silently overwrite or skip a collision.
+- Use one JSON string element per question in `Questions`; store four JSON string elements per question in `Options`, flattened question-by-question in A, B, C, D order; store one JSON number in `Answers` per question, using the frontend's zero-based index (0=A, 1=B, 2=C, 3=D).
+- Enforce `cardinality(Questions) = cardinality(Answers)`, `cardinality(Options) = 4 × cardinality(Questions)`, and the live per-column limits (50 questions, 200 options, 50 answers). Every answer index must be an integer from 0 through 3, and each four-option group must contain four non-empty, distinct options.
+- Because the table does not persist subject or difficulty metadata, ship a companion manifest that maps each `TestId` to its subject, occurrence, difficulty, source syllabus, and file path. Keep internal QA material in a separate review file; never insert the manifest or review document as a TestsData row.
+- Keep a separate insert SQL file whose statements explicitly cast every array element to `jsonb`. It must use the exact live column names and must not contain an upsert/overwrite clause by default.
+- Before the owner inserts a generated batch, complete the mathematical answer-key check and distractor-by-distractor review. Structural validation alone does not prove factual correctness, realistic difficulty, or that every distractor is technically plausible. Do not mark a batch fully exam-audited until those checks are completed.
+
