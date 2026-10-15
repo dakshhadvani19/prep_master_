@@ -1,0 +1,30 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "name": "Java Programming",
+    "SubjectId": "44000935140301",
+    "semester": 4,
+    "isDepartmentalSubject": true,
+    "subject_code": "09CE1403",
+    "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/JAVA.pdf"
+  },
+  "canonical_bank": "../exam-bank-v2.json",
+  "canonical_seed_sql": "../seed-all-v2.sql",
+  "filter": {
+    "SubjectId": "44000935140301"
+  },
+  "examTypes": [
+    {
+      "examType": "Mid 1",
+      "format": "mcq",
+      "tests": 12,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2; Unit 3."
+    },
+    {
+      "examType": "Mid 2",
+      "format": "mcq",
+      "tests": 12,
+      "syllabusScope": "Full Semester 4 syllabus practice bank."
+    }
+  ]
+}
