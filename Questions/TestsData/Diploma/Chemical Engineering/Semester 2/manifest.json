@@ -1,0 +1,305 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 2,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "answer_review": "answer-review-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 2,
+    "subjects": 7,
+    "nonDepartmentalSubjects": 4,
+    "departmentalSubjects": 3,
+    "examTypeBanks": 18,
+    "totalTests": 216,
+    "mcqTests": 120,
+    "theoryTests": 96,
+    "mcqQuestions": 3600,
+    "theoryQuestions": 384,
+    "mcqOptionEntries": 14400,
+    "answerEntries": 3984,
+    "reusedSubjects": 4,
+    "newSubjectBanks": 3
+  },
+  "exam_rules": {
+    "nonDepartmental": {
+      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "12 theory variants × 4 questions × 8 marks"
+    },
+    "departmental": {
+      "Mid1": "12 MCQ variants × 30; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "not generated"
+    },
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "Non-departmental: occurrences 1–12 Mid 1, 13–24 Mid 2, 25–36 ESE. Departmental: occurrences 1–12 Mid 1, 13–24 Mid 2."
+  },
+  "subjects": [
+    {
+      "name": "ELECTRICAL PUMPS AND VALVES OPERATION SKILL",
+      "SubjectId": "46000938210301",
+      "subject_code": "09CH2103",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2103.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Pumps; Valves; Flow measurement."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "ENGINEERING DRAWING",
+      "SubjectId": "46009135110101",
+      "subject_code": "09ME1101",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME1101.pdf",
+      "reuseDecision": "REUSED_VERIFIED_SYLLABUS",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44009135110101",
+        "SubjectName": "Engineering Drawing",
+        "sourceSemester": 1,
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 1/exam-bank-v2.json",
+        "syllabusVerification": {
+          "unitCounts": [
+            6,
+            6
+          ],
+          "titleScore": 1,
+          "topicTokenJaccard": 1
+        }
+      },
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First three units: engineering curves, projection of points/lines and projection of planes."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 1 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
+      "SubjectId": "46009121010201",
+      "subject_code": "09AU0102",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0102.pdf",
+      "reuseDecision": "REUSED_VERIFIED_SYLLABUS",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44009121010201",
+        "SubjectName": "Enviornment Conservation & Disater Management",
+        "sourceSemester": 2,
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 2/exam-bank-v2.json",
+        "syllabusVerification": {
+          "unitCounts": [
+            4,
+            4
+          ],
+          "titleScore": 1,
+          "topicTokenJaccard": 1
+        }
+      },
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First 50% by ordered units/contact hours: Introduction of Environmental Science; Types of pollution with their causes, effects and remedial; Renewable Sources of Energy."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "GENERATIVE AI & PROMPT ENGINEERING",
+      "SubjectId": "46000935030501",
+      "subject_code": "09CE0305",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE0305.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: AI IN ENGINEERING PRACTICE; SMART USE OF AI TOOLS; PROMPT DESIGN FUNDAMENTALS."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-I",
+      "SubjectId": "46009164010101",
+      "subject_code": "09PD0101",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09PD0101.pdf",
+      "reuseDecision": "REUSED_VERIFIED_SYLLABUS",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44009164010101",
+        "SubjectName": "Integrated Personality Development Course-I",
+        "sourceSemester": 2,
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 2/exam-bank-v2.json",
+        "syllabusVerification": {
+          "unitCounts": [
+            15,
+            15
+          ],
+          "titleScore": 1,
+          "topicTokenJaccard": 1
+        }
+      },
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by ordered units/contact hours: Remaking Yourself Restructuring Yourself; Remaking Yourself Power of Habit; Learning from Legends- Tendulkar & Tata; From House to Home Listening & Understanding; Facing Failures Welcoming Challenges; Facing Failures Significance of Failures; My India My Pride Glorious Past Part-1; My India My Pride Glorious Past Part-2."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "MATHEMATICS-II",
+      "SubjectId": "46009131210201",
+      "subject_code": "09MA2102",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2102.pdf",
+      "reuseDecision": "REUSED_VERIFIED_SYLLABUS",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44009131210201",
+        "SubjectName": "Mathematics-II",
+        "sourceSemester": 2,
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 2/exam-bank-v2.json",
+        "syllabusVerification": {
+          "unitCounts": [
+            5,
+            5
+          ],
+          "titleScore": 1,
+          "topicTokenJaccard": 1
+        }
+      },
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by ordered units/contact hours: Determinants and Matrices; Equations."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "UNIT OPERATION-I",
+      "SubjectId": "46000938210201",
+      "subject_code": "09CH2102",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2102.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Particulate Solids; Size Reduction and Screening; Filtration, Sedimentation and Centrifugal Separation."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Existing payloads are reused verbatim only when course code, unit/topic alignment and departmental flag match.",
+    "Same-title subjects with different syllabus content are not blindly reused; inspect reuseDecisions.",
+    "Mid 1 scope is recorded from the first half of the ordered syllabus units; confirm against the official exam blueprint.",
+    "Generated question pools and theory answers are drafts requiring academic review.",
+    "TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.",
+    "Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats."
+  ]
+}
