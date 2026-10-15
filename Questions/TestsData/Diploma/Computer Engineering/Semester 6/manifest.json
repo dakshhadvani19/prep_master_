@@ -25,13 +25,13 @@
   },
   "exam_rules": {
     "nonDepartmental": {
-      "Mid1": "12 theory variants × 4 × 8 marks, first-half scope",
-      "Mid2": "12 MCQ variants × 30",
-      "ESE": "12 theory variants × 4 × 8 marks"
+      "Mid1": "12 theory variants × 4 questions × 8 marks; first-half syllabus",
+      "Mid2": "12 MCQ variants × 30 questions",
+      "ESE": "12 theory variants × 4 questions × 8 marks"
     },
     "departmental": {
-      "Mid1": "12 MCQ variants × 30, first-half scope",
-      "Mid2": "12 MCQ variants × 30",
+      "Mid1": "12 MCQ variants × 30 questions; first-half syllabus",
+      "Mid2": "12 MCQ variants × 30 questions",
       "ESE": "not generated"
     },
     "difficulty": {
@@ -39,7 +39,7 @@
       "medium": 4,
       "hard": 4
     },
-    "testIdRule": "Non-departmental occurrences 1-12 Mid 1, 13-24 Mid 2, 25-36 ESE; departmental occurrences 1-12 Mid 1, 13-24 Mid 2."
+    "testIdRule": "For non-departmental subjects: occurrence 1–12 Mid 1, 13–24 Mid 2, 25–36 ESE. For departmental subjects: occurrence 1–12 Mid 1, 13–24 Mid 2."
   },
   "subjects": [
     {
@@ -53,7 +53,7 @@
           "examType": "Mid 1",
           "format": "mcq",
           "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2; Unit 3."
+          "scope": "First 50% by ordered syllabus/contact hours: Unit 1; Unit 2; Unit 3."
         },
         {
           "examType": "Mid 2",
@@ -74,7 +74,7 @@
           "examType": "Mid 1",
           "format": "theory",
           "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2."
+          "scope": "First 50% by ordered syllabus/contact hours: Unit 1; Unit 2."
         },
         {
           "examType": "Mid 2",
@@ -101,7 +101,7 @@
           "examType": "Mid 1",
           "format": "theory",
           "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2; Unit 3."
+          "scope": "First 50% by ordered syllabus/contact hours: Unit 1; Unit 2; Unit 3."
         },
         {
           "examType": "Mid 2",
@@ -128,7 +128,7 @@
           "examType": "Mid 1",
           "format": "theory",
           "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2; Unit 3."
+          "scope": "First 50% by ordered syllabus/contact hours: Unit 1; Unit 2; Unit 3."
         },
         {
           "examType": "Mid 2",
@@ -155,7 +155,7 @@
           "examType": "Mid 1",
           "format": "mcq",
           "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Project/Problem Identification; Project Analysis, Requirement Gathering; Project Design / Prototype Development; Implementation of Project/Solution."
+          "scope": "First 50% by ordered syllabus/contact hours: Project/Problem Identification; Project Analysis, Requirement Gathering; Project Design / Prototype Development; Implementation of Project/Solution."
         },
         {
           "examType": "Mid 2",
@@ -167,9 +167,9 @@
     }
   ],
   "cautions": [
-    "Mid 1 is restricted to the first half of ordered syllabus units.",
-    "Subject/exam/difficulty metadata is stored in test_index.",
-    "Theory rows have Options=[] and model answers in Answers, and require reader support.",
-    "Syllabus-derived content is a draft and requires academic review."
+    "Mid 1 is scoped to the first 50% of ordered syllabus units; exact unit scope is in test_index and subject_index.",
+    "TestsData contains no SubjectId, ExamType, Difficulty or marks columns; use test_index metadata.",
+    "Theory rows use Options=[] and Answers contains four model answers; consuming software must support both formats.",
+    "The items are syllabus-derived draft content and require expert review of every stem, distractor, key and model answer before production."
   ]
 }
