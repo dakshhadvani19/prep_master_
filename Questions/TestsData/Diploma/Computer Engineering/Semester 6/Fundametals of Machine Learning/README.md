@@ -9,4 +9,4 @@ Filter the JSON `test_index` by SubjectId `44000935160601`. Mid 1 and ESE each c
 
 **Mid 1 syllabus scope:** First 50% by ordered syllabus/contact hours: Unit 1; Unit 2; Unit 3.
 
-Each generated exam type has 12 variants: four Easy, four Medium and four Hard. The semester-level v2 JSON and SQL are canonical. Subject-matter review is required before production.
+Each available exam type has 12 variants: four Easy, four Medium and four Hard. The semester-level v2 JSON and SQL are canonical. Academic review is required before production insertion.
