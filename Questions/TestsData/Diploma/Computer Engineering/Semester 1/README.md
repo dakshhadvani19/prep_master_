@@ -1,44 +1,50 @@
-# Diploma Computer Engineering — Semester 1 Test Bank
+# Diploma Computer Engineering — Semester 1 Exam Bank (v2)
 
-This folder contains the complete Semester 1 test bank for all **8 active subjects** currently listed in Supabase for CourseId 44.
+This is the **exam-type-aware** bank for the eight active Semester 1 subjects in Supabase (CourseId = 44). Use the v2 export files below as the canonical bank.
 
-## Bank size
+## Canonical files
+
+- [exam-bank-v2.json](./exam-bank-v2.json): 252 TestId-wise rows plus test_index metadata mapping each row to its subject, exam type, difficulty, format, question count and syllabus scope.
+- [seed-all-v2.sql](./seed-all-v2.sql): one transaction containing the 252 INSERT statements for public."TestsData".
+- [manifest.json](./manifest.json): counts and the per-subject exam policy.
+
+## Exam rules implemented
+
+| isDepartmentalSubject | Exam type | Paper format | Tests per type |
+|---|---|---|---:|
+| false | Mid 1 | 4 theory questions × 8 marks, with model answers | 12 |
+| false | Mid 2 | 30 MCQs, four options each, with answer keys | 12 |
+| false | ESE | 4 theory questions × 8 marks, with model answers | 12 |
+| true | Mid 1 | 30 MCQs, four options each, with answer keys | 12 |
+| true | Mid 2 | 30 MCQs, four options each, with answer keys | 12 |
+| true | ESE | Not generated | 0 |
+
+Each exam type has **4 Easy, 4 Medium and 4 Hard variants**. Mid 1 is restricted to the first 50% of the ordered syllabus; the scope applied to each subject is stated in test_index and subject_index in the v2 JSON.
+
+## Size and data shape
 
 | Measure | Count |
 |---|---:|
-| Subjects | 8 |
-| Tests per subject | 12 |
-| Easy / Medium / Hard tests per subject | 4 / 4 / 4 |
-| Questions per test | 10 |
-| Total tests | 96 |
-| Total MCQs | 960 |
-| Total option entries | 3,840 |
-| Total answer-key entries | 960 |
+| Active subjects | 8 |
+| Non-departmental / departmental subjects | 5 / 3 |
+| Exam-type banks | 21 |
+| Test rows | 252 |
+| MCQ test rows | 132 |
+| Theory test rows | 120 |
+| MCQ question entries | 3,960 |
+| Theory question entries with model answers | 480 |
+| MCQ option entries | 15,840 |
 
-## Files and insertion
+The live table has only TestId, Questions, Options and Answers columns, so subject/exam/difficulty/mark metadata is stored in the JSON test_index, not added to database rows.
 
-- `seed-all.sql`: inserts all 96 tests into the existing `public."TestsData"` table in a single transaction. It does not change the database schema and does not overwrite colliding TestIds.
-- `manifest.json`: subject list, SubjectIds, sources, TestId rule, database mapping and counts.
-- Each subject folder contains 12 test-row JSON files under `tests/`, a `manifest.json`, `answer-review.json` and an individual `seed.sql`.
-- Every test-row JSON has only the four live columns: `TestId`, `Questions`, `Options`, `Answers`.
+- **MCQ row:** 30 question strings, 120 flattened option strings in A–D order, and 30 zero-based answer indexes (0=A, 1=B, 2=C, 3=D).
+- **Theory row:** 4 question strings prefixed [8 marks], an empty Options array, and 4 model-answer strings in Answers. Each theory paper is 32 marks.
+- **TestId:** decimal SubjectId followed by a per-subject occurrence. For non-departmental subjects, occurrences 1–12 = Mid 1, 13–24 = Mid 2, 25–36 = ESE. For departmental subjects, 1–12 = Mid 1 and 13–24 = Mid 2.
 
-## Data mapping
+## Before insertion
 
-`Questions` contains one JSON string per question. `Options` contains four JSON string entries per question, flattened question-by-question in A, B, C, D order. `Answers` contains the zero-based correct-option index for each question: 0=A, 1=B, 2=C, 3=D. For question number n, its choices occupy indexes `4 × (n−1)` through `4 × n−1`.
+The live public."TestsData" table was checked and had zero rows at the time of preparation; this task has **not inserted or changed any database rows**. Check for ID collisions again immediately before running the v2 SQL.
 
-Each test has 10 questions, 40 options and 10 answer keys. Correct-answer positions are balanced at two or three appearances per letter A–D per test, with option order and answer keys remapped together.
+The previous seed-all.sql and each subject's seed.sql have been retired as insert scripts so they cannot seed the obsolete 10-MCQ-per-row structure. The old tests/test-XX-*.json files and answer-review.json files are retained as source/review material; they are **not** the current executable export.
 
-## Before production insert
-
-The live `TestsData` table was checked and is currently empty; none of these rows has been inserted. The planned TestIds were checked for collisions and are unique across all 96 planned rows. Run another collision check immediately before executing the SQL. **Structural validation and key balance do not substitute for full subject-matter review**: read each subject's `answer-review.json`, particularly calculations, legal details and distractor plausibility, before production use.
-
-## Subjects
-
-- [Basics of Web Designing](./Basics of Web Designing/README.md) — SubjectId `44000935310201`, code `09CE3102`; [source syllabus](https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3102_BWD.pdf)
-- [Bharatiya Knowledge System](./Bharatiya Knowledge System/README.md) — SubjectId `44009911010101`, code `09IK0101`; [source syllabus](https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/9IK0101_BKS.pdf)
-- [Communication Skills-I](./Communication Skills-I/README.md) — SubjectId `44091912010301`, code `09SL0103`; [source syllabus](https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CS-1.pdf)
-- [Computer Fundamental Skill](./Computer Fundamental Skill/README.md) — SubjectId `44000935210101`, code `09CE2101`; [source syllabus](https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CFS.pdf)
-- [Computer Hardware Skill](./Computer Hardware Skill/README.md) — SubjectId `44000935210301`, code `09CE2103`; [source syllabus](https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CHS.pdf)
-- [Engineering Drawing](./Engineering Drawing/README.md) — SubjectId `44009135110101`, code `09ME1101`; [source syllabus](https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/ED-1.pdf)
-- [Indian Constitution](./Indian Constitution/README.md) — SubjectId `44009121010101`, code `09AU0101`; [source syllabus](https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09AU0101_IC.pdf)
-- [Mathematics-I](./Mathematics-I/README.md) — SubjectId `44009131210101`, code `09MA2101`; [source syllabus](https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-1.pdf)
+**Quality note:** the objective variants are assembled from the existing draft MCQ pool, with question selection and answer positions rebalanced. Structural validation does not certify every answer or distractor. The theory answers are model-answer outlines, not an independently examiner-approved marking scheme. Review factual correctness, syllabus coverage and distractor quality before production use. The current MCQ-specific frontend must detect Options=[] before attempting to render a theory row.
