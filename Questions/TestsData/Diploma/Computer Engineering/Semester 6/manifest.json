@@ -1,0 +1,175 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 6,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 6,
+    "subjects": 5,
+    "nonDepartmentalSubjects": 3,
+    "departmentalSubjects": 2,
+    "examTypeBanks": 13,
+    "totalTests": 156,
+    "mcqTests": 84,
+    "theoryTests": 72,
+    "mcqQuestions": 2520,
+    "theoryQuestions": 288,
+    "mcqOptionEntries": 10080,
+    "answerEntries": 2808
+  },
+  "exam_rules": {
+    "nonDepartmental": {
+      "Mid1": "12 theory variants × 4 × 8 marks, first-half scope",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "12 theory variants × 4 × 8 marks"
+    },
+    "departmental": {
+      "Mid1": "12 MCQ variants × 30, first-half scope",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "not generated"
+    },
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "Non-departmental occurrences 1-12 Mid 1, 13-24 Mid 2, 25-36 ESE; departmental occurrences 1-12 Mid 1, 13-24 Mid 2."
+  },
+  "subjects": [
+    {
+      "name": ".NET",
+      "SubjectId": "44000935160301",
+      "subject_code": "09CE1603",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1603_.NET_.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2; Unit 3."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 6 syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Entrepreneurship Development",
+      "SubjectId": "44000935160701",
+      "subject_code": "09CE1607",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1607_ED.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 6 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 6 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Fundametals of Machine Learning",
+      "SubjectId": "44000935160601",
+      "subject_code": "09CE1606",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1606_FML.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2; Unit 3."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 6 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 6 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Multimedia and Animation Tools",
+      "SubjectId": "44000935160101",
+      "subject_code": "09CE1601",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1601_MAT.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2; Unit 3."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 6 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 6 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Project-II",
+      "SubjectId": "44000935160201",
+      "subject_code": "09CE1602",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1602_Project-II.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Project/Problem Identification; Project Analysis, Requirement Gathering; Project Design / Prototype Development; Implementation of Project/Solution."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 6 syllabus practice bank."
+        }
+      ]
+    }
+  ],
+  "cautions": [
+    "Mid 1 is restricted to the first half of ordered syllabus units.",
+    "Subject/exam/difficulty metadata is stored in test_index.",
+    "Theory rows have Options=[] and model answers in Answers, and require reader support.",
+    "Syllabus-derived content is a draft and requires academic review."
+  ]
+}
