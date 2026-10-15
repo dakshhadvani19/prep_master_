@@ -393,3 +393,23 @@ Before accepting an MCQ, verify each point:
 - Across a test, cover distinct syllabus units/outcomes and avoid near-duplicates. Answer positions should be reasonably balanced without an obvious pattern.
 - If the model cannot produce a complete valid set, return a clear retryable error. An incomplete or weak set is not better than a rejected set.
 
+
+
+## 12. Anti-wrapper rule and difficulty evidence — mandatory
+
+A generic scenario prefix/suffix does not increase difficulty. The following are invalid transformations when the underlying task remains unchanged:
+
+- “Which is X?” → “During a practical, which is X?”
+- “Find Y” → “Case review: find Y. Which option is fully defensible?”
+- Adding a trainee's irrelevant suggestion before a direct recall question.
+- Appending “justify the answer”, “under the exact condition”, or “which option best satisfies the requirement” without adding a condition that affects the solution.
+
+**Medium items** must require an actual application, comparison, interpretation, troubleshooting choice, or linked reasoning steps. The decisive detail must be in the stem and must materially determine which option is best.
+
+**Hard items** must contain observable evidence of at least two meaningful reasoning demands: multiple explicit constraints, a calculation followed by interpretation, diagnosis from symptoms/output, a design choice with trade-offs, or a valid rule whose assumptions must be checked. A long stem or obscure fact is not sufficient.
+
+**Question-set acceptance gate:** Before saving a batch, compare each medium/hard item with its simplest underlying recall question. If removing the scenario wording leaves essentially the same task, reject and regenerate it. Also compare all stems across the full batch and prior batches; changing names, numbers, or a generic prefix alone does not make a genuinely new question.
+
+**Distractor acceptance gate:** At least two options should be initially plausible at easy level; two or three should be competitive at medium level; and all three distractors should be technically credible at hard level. For each distractor, the reviewer must be able to name (a) the misconception or partial truth that makes it tempting and (b) the exact stem condition it fails. If this cannot be done, reject the item rather than filling the option slot with an unrelated subject term.
+
+**Existing-bank remediation:** These rules apply to manually authored/generated JSON banks as well as live AI generation. Do not label a bank compliant solely because the live generator's prompt has been updated. Run a separate audit over saved banks for generic wrappers, duplicate concepts, weak option families, answer-key correctness, difficulty fit, exact counts, and mark totals before replacing production files.
