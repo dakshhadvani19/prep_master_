@@ -1,0 +1,36 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "name": "Computer Organization",
+    "SubjectId": "44000935240101",
+    "semester": 4,
+    "isDepartmentalSubject": false,
+    "subject_code": "09CE2401",
+    "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CO.pdf"
+  },
+  "canonical_bank": "../exam-bank-v2.json",
+  "canonical_seed_sql": "../seed-all-v2.sql",
+  "filter": {
+    "SubjectId": "44000935240101"
+  },
+  "examTypes": [
+    {
+      "examType": "Mid 1",
+      "format": "theory",
+      "tests": 12,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Computer Data Representation & Register Transfer and Micro; Basic Computer Organization and Design; Programming Basic Computer."
+    },
+    {
+      "examType": "Mid 2",
+      "format": "mcq",
+      "tests": 12,
+      "syllabusScope": "Full Semester 4 syllabus practice bank."
+    },
+    {
+      "examType": "ESE",
+      "format": "theory",
+      "tests": 12,
+      "syllabusScope": "Full Semester 4 syllabus."
+    }
+  ]
+}
