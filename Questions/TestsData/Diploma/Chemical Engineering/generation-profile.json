@@ -565,6 +565,348 @@
       "family": "project-work",
       "cue": "a factual record explains the workplace/context, assigned activities, methods, outcomes, skills learned and reflection",
       "explanation": "An internship report records context, tasks, tools/methods, outcomes and learning. It should be factual and supported by appropriate evidence."
+    },
+    {
+      "pattern": "lathe",
+      "family": "workshop",
+      "cue": "a workpiece rotates while a cutting tool removes material to produce cylindrical features",
+      "explanation": "A lathe commonly rotates the workpiece against a cutting tool to produce cylindrical surfaces, tapers, threads and related features."
+    },
+    {
+      "pattern": "drilling machine|drilling",
+      "family": "workshop",
+      "cue": "a rotating drill produces or enlarges a hole along its axis",
+      "explanation": "Drilling produces a round hole with a rotating cutting tool; speed, feed, tool condition and workholding affect quality and safety."
+    },
+    {
+      "pattern": "welding",
+      "family": "workshop",
+      "cue": "permanent joining is formed by heat, pressure or both, with or without filler material",
+      "explanation": "Welding creates a permanent joint using heat, pressure or both, with or without filler material."
+    },
+    {
+      "pattern": "arc welding",
+      "family": "workshop",
+      "cue": "an electric arc supplies heat to melt and join metal surfaces",
+      "explanation": "Arc welding uses heat from an electric arc to form a fused joint; electrical protection, shielding and weld quality control are important."
+    },
+    {
+      "pattern": "vernier caliper",
+      "family": "workshop",
+      "cue": "external, internal or depth dimensions are read using a main scale and vernier scale",
+      "explanation": "A vernier caliper measures external/internal dimensions and depth by comparing a main scale with a vernier scale."
+    },
+    {
+      "pattern": "micrometer",
+      "family": "workshop",
+      "cue": "small dimensions are measured accurately using a calibrated screw mechanism",
+      "explanation": "A micrometer uses a precision screw and calibrated scale to measure small dimensions; zero error and appropriate measuring force must be checked."
+    },
+    {
+      "pattern": "personal protective equipment|ppe",
+      "family": "safety",
+      "cue": "protective clothing or equipment reduces exposure to specified workplace hazards",
+      "explanation": "PPE reduces exposure to identified hazards but does not replace elimination, engineering controls or safe procedures."
+    },
+    {
+      "pattern": "filing",
+      "family": "workshop",
+      "cue": "a hand file removes small amounts of material to finish a surface or dimension",
+      "explanation": "Filing removes small amounts of material for shaping or finishing; correct file selection and workholding are important."
+    },
+    {
+      "pattern": "tapping",
+      "family": "workshop",
+      "cue": "internal screw threads are cut in a drilled hole using a tap",
+      "explanation": "Tapping creates internal threads; correct drill size, alignment, lubrication and chip removal help prevent tap breakage."
+    },
+    {
+      "pattern": "die cutting|threading with a die",
+      "family": "workshop",
+      "cue": "external screw threads are formed on a rod using a die",
+      "explanation": "A die forms external threads on a cylindrical workpiece; alignment and lubrication affect thread quality."
+    },
+    {
+      "pattern": "flash point",
+      "family": "chemistry",
+      "cue": "the lowest specified test temperature at which vapour momentarily ignites under a test flame",
+      "explanation": "Flash point is a test-dependent temperature at which a liquid's vapour can ignite momentarily; it is a key indicator for flammable-liquid handling."
+    },
+    {
+      "pattern": "fire point",
+      "family": "chemistry",
+      "cue": "the test temperature at which vapour continues to burn for a specified time after ignition",
+      "explanation": "Fire point differs from flash point because sustained burning is required under the specified test method."
+    },
+    {
+      "pattern": "calorific value|heating value",
+      "family": "chemistry",
+      "cue": "the heat released by complete combustion of a unit quantity of fuel under specified conditions",
+      "explanation": "Calorific value measures energy released by complete combustion of a given amount of fuel, with higher/lower heating-value conventions affecting water-vapour treatment."
+    },
+    {
+      "pattern": "lubricant|lubrication",
+      "family": "chemistry",
+      "cue": "a substance placed between moving surfaces to reduce friction, wear or heat generation",
+      "explanation": "Lubricants form a separating film between surfaces and reduce friction, wear and heat; viscosity and operating conditions affect suitability."
+    },
+    {
+      "pattern": "electroplating",
+      "family": "chemistry",
+      "cue": "a metal coating is deposited on a conductive object using an electrolytic process",
+      "explanation": "Electroplating deposits a metal layer by electrochemical reduction, commonly to improve corrosion resistance, appearance or surface properties."
+    },
+    {
+      "pattern": "titration",
+      "family": "chemistry",
+      "cue": "an analyte concentration is determined from a measured amount of a standard reagent at the equivalence endpoint",
+      "explanation": "Titration determines concentration from reaction stoichiometry and a measured titrant volume; the endpoint indicator must suit the reaction."
+    },
+    {
+      "pattern": "indicator|acid-base indicator",
+      "family": "chemistry",
+      "cue": "a substance changes colour over a defined range to signal a solution condition such as a titration endpoint",
+      "explanation": "An acid-base indicator changes colour over a pH transition range; indicator choice depends on the equivalence-point pH."
+    },
+    {
+      "pattern": "shell thickness|wall thickness",
+      "family": "equipment-design",
+      "cue": "the required thickness of a pressure-containing wall is calculated from loading, geometry, material allowables and code assumptions",
+      "explanation": "Pressure-vessel wall thickness depends on design pressure, radius/diameter, allowable material stress, joint efficiency, corrosion allowance and the applicable design code."
+    },
+    {
+      "pattern": "flange",
+      "family": "equipment-design",
+      "cue": "a bolted connection joins pipe or equipment components and uses a gasket where required to seal the joint",
+      "explanation": "A flange is a bolted connection for piping/equipment; gasket selection, bolt load, facing and pressure-temperature rating affect sealing."
+    },
+    {
+      "pattern": "gasket",
+      "family": "equipment-design",
+      "cue": "a compressible sealing element is compressed between joint faces to prevent fluid leakage",
+      "explanation": "A gasket fills small surface irregularities between mating faces; material compatibility and compression conditions influence leakage performance."
+    },
+    {
+      "pattern": "pipe schedule",
+      "family": "equipment-design",
+      "cue": "a standardized designation relates pipe nominal size to wall-thickness series",
+      "explanation": "Pipe schedule denotes a standardized wall-thickness series for a nominal pipe size; actual dimensions must be obtained from the applicable standard."
+    },
+    {
+      "pattern": "latent heat",
+      "family": "heat-transfer",
+      "cue": "energy required for a phase change at specified conditions without a temperature change during the idealized phase change",
+      "explanation": "Latent heat is energy associated with a phase change at specified conditions, distinguished from sensible heat that changes temperature."
+    },
+    {
+      "pattern": "log mean temperature difference|lmtd",
+      "family": "heat-transfer",
+      "cue": "a mean driving temperature difference for a heat exchanger with changing end temperature differences",
+      "explanation": "LMTD is the logarithmic mean of the terminal temperature differences and is used in exchanger duty relations when the method assumptions apply."
+    },
+    {
+      "pattern": "overall heat transfer coefficient|overall heat-transfer coefficient",
+      "family": "heat-transfer",
+      "cue": "a lumped coefficient combines the major thermal resistances between the two streams",
+      "explanation": "The overall heat-transfer coefficient combines individual film, wall and fouling resistances into a single design parameter."
+    },
+    {
+      "pattern": "thermal conductivity",
+      "family": "heat-transfer",
+      "cue": "a material property relating conductive heat flux to a temperature gradient",
+      "explanation": "Thermal conductivity quantifies how readily a material conducts heat and appears in Fourier's law."
+    },
+    {
+      "pattern": "residence time",
+      "family": "reaction-engineering",
+      "cue": "the characteristic time material spends inside a reactor under stated flow and volume assumptions",
+      "explanation": "Residence time relates reactor volume to volumetric flow under the stated assumptions and affects reaction progress."
+    },
+    {
+      "pattern": "reaction order",
+      "family": "reaction-engineering",
+      "cue": "the exponents in an experimentally or theoretically specified rate law determine how rate depends on species concentrations",
+      "explanation": "Reaction order describes concentration dependence in the rate law; it must be inferred or specified and does not generally equal stoichiometric coefficients."
+    },
+    {
+      "pattern": "arrhenius equation|activation energy",
+      "family": "reaction-engineering",
+      "cue": "the temperature dependence of a rate constant follows an exponential relationship involving activation energy",
+      "explanation": "The Arrhenius relation describes how the reaction rate constant varies with absolute temperature and activation energy."
+    },
+    {
+      "pattern": "cstr|continuous stirred tank reactor",
+      "family": "reaction-engineering",
+      "cue": "a continuously fed reactor is assumed ideally well mixed, with outlet composition equal to the reactor contents",
+      "explanation": "An ideal CSTR is continuously fed and well mixed; its bulk and outlet composition are equal under the ideal-mixing assumption."
+    },
+    {
+      "pattern": "pfr|plug flow reactor",
+      "family": "reaction-engineering",
+      "cue": "a tubular ideal reactor has axial progression with negligible back-mixing under the plug-flow model",
+      "explanation": "An ideal PFR models fluid elements moving along a reactor with negligible axial mixing; composition changes along its length."
+    },
+    {
+      "pattern": "catalyst",
+      "family": "reaction-engineering",
+      "cue": "a substance changes reaction rate by providing a pathway with different kinetics without being consumed stoichiometrically overall",
+      "explanation": "A catalyst alters reaction kinetics by providing an alternative pathway and is regenerated overall, though it can deactivate."
+    },
+    {
+      "pattern": "chemical equilibrium|equilibrium constant",
+      "family": "thermodynamics",
+      "cue": "forward and reverse reaction rates balance under equilibrium conditions, with composition related to thermodynamic conditions",
+      "explanation": "Chemical equilibrium is a dynamic balance of forward and reverse reaction rates; equilibrium composition depends on conditions and thermodynamics."
+    },
+    {
+      "pattern": "gibbs free energy",
+      "family": "thermodynamics",
+      "cue": "a thermodynamic potential used to evaluate spontaneity/equilibrium at constant temperature and pressure",
+      "explanation": "Gibbs free-energy change helps assess spontaneity at constant temperature and pressure; equilibrium corresponds to the appropriate constrained minimum."
+    },
+    {
+      "pattern": "enthalpy",
+      "family": "thermodynamics",
+      "cue": "a state property defined as internal energy plus pressure-volume product and useful for many flow-process energy balances",
+      "explanation": "Enthalpy is H=U+PV and is useful in energy balances, especially for flow systems."
+    },
+    {
+      "pattern": "le chatelier",
+      "family": "thermodynamics",
+      "cue": "an equilibrium system responds to an imposed change in a way that opposes the disturbance's effect",
+      "explanation": "Le Chatelier's principle predicts qualitative equilibrium shifts after a change in concentration, pressure or temperature, subject to the system's actual chemistry."
+    },
+    {
+      "pattern": "dap|diammonium phosphate",
+      "family": "fertilizers",
+      "cue": "a phosphorus-and-nitrogen fertilizer formed by reacting phosphoric acid with ammonia",
+      "explanation": "Diammonium phosphate supplies nitrogen and phosphorus and is produced by neutralizing phosphoric acid with ammonia."
+    },
+    {
+      "pattern": "npk",
+      "family": "fertilizers",
+      "cue": "a fertilizer grade indicating the declared nitrogen, phosphate and potash nutrient contents",
+      "explanation": "N-P-K grades express declared nutrient contents for nitrogen, phosphate and potash using standardized fertilizer conventions."
+    },
+    {
+      "pattern": "contact process",
+      "family": "chemical-technology",
+      "cue": "sulfur dioxide is catalytically oxidized to sulfur trioxide before absorption to produce sulfuric acid",
+      "explanation": "The Contact Process oxidizes sulfur dioxide to sulfur trioxide using a catalyst and absorbs it to produce sulfuric acid through controlled stages."
+    },
+    {
+      "pattern": "solvay process",
+      "family": "chemical-technology",
+      "cue": "sodium carbonate is produced using brine, ammonia and carbon dioxide with recovery of process materials",
+      "explanation": "The Solvay process produces sodium carbonate from brine and limestone-derived carbon dioxide with ammonia recovery."
+    },
+    {
+      "pattern": "chlor-alkali",
+      "family": "chemical-technology",
+      "cue": "electrolysis of brine produces chlorine and sodium hydroxide, with hydrogen also formed depending on the cell process",
+      "explanation": "The chlor-alkali process electrolyzes brine to produce chlorine and caustic soda, with hydrogen formed at the cathode in conventional cells."
+    },
+    {
+      "pattern": "deaeration|deaerator",
+      "family": "boiler-operations",
+      "cue": "dissolved gases such as oxygen and carbon dioxide are removed from boiler feedwater to reduce corrosion",
+      "explanation": "Deaeration removes dissolved gases from boiler feedwater and helps reduce corrosion in boilers and associated equipment."
+    },
+    {
+      "pattern": "boiler blowdown",
+      "family": "boiler-operations",
+      "cue": "a controlled portion of boiler water is discharged to limit dissolved-solids concentration",
+      "explanation": "Blowdown removes part of boiler water to control dissolved solids and sludge, balancing water quality against heat and water losses."
+    },
+    {
+      "pattern": "water hammer",
+      "family": "pumps-and-piping",
+      "cue": "a transient pressure surge occurs when fluid velocity changes rapidly, such as with abrupt valve closure",
+      "explanation": "Water hammer is a pressure transient caused by rapid velocity changes; valve operation, line design and surge protection can limit it."
+    },
+    {
+      "pattern": "pump curve",
+      "family": "pumps",
+      "cue": "a performance graph relates pump head, flow and often efficiency or power at a stated speed/impeller condition",
+      "explanation": "A pump curve relates head and flow for specified operating conditions; the operating point depends on the pump and system curves."
+    },
+    {
+      "pattern": "npsh|net positive suction head",
+      "family": "pumps",
+      "cue": "the suction pressure head above the liquid vapour-pressure head, expressed according to the specified NPSH definition",
+      "explanation": "NPSH measures the margin between suction conditions and vapour pressure; available NPSH should exceed required NPSH with an appropriate margin."
+    },
+    {
+      "pattern": "calibration",
+      "family": "instrumentation",
+      "cue": "an instrument's indication is compared with a traceable reference to determine error or establish a correction",
+      "explanation": "Calibration compares an instrument with a reference and documents error/correction; it is distinct from adjustment or repair."
+    },
+    {
+      "pattern": "sensor|transducer",
+      "family": "instrumentation",
+      "cue": "a device responds to a physical quantity and converts it into a usable signal",
+      "explanation": "A sensor/transducer responds to a physical quantity and converts it into a signal; the measured variable and output type must be specified."
+    },
+    {
+      "pattern": "transmitter",
+      "family": "instrumentation",
+      "cue": "a field device conditions and sends a measurement signal to a control or monitoring system",
+      "explanation": "A transmitter converts a measured variable into a standardized signal for control/monitoring equipment."
+    },
+    {
+      "pattern": "actuator",
+      "family": "instrumentation",
+      "cue": "a device converts a control signal into mechanical movement or another physical action",
+      "explanation": "An actuator converts a control signal into physical movement/action, such as changing a control-valve opening."
+    },
+    {
+      "pattern": "hmi|human machine interface",
+      "family": "control",
+      "cue": "an operator-facing interface displays process status, trends, alarms and control functions",
+      "explanation": "An HMI provides the operator interface for process status, trends, alarms and supported command actions."
+    },
+    {
+      "pattern": "alarm management",
+      "family": "control",
+      "cue": "alarm settings and response procedures prioritize abnormal conditions and limit nuisance or missed alarms",
+      "explanation": "Alarm management maintains useful, prioritized alarms with clear operator responses while reducing nuisance alarms and alarm flooding."
+    },
+    {
+      "pattern": "sensitivity analysis",
+      "family": "process-software",
+      "cue": "a model is recalculated after changing inputs or parameters to see their effect on selected outputs",
+      "explanation": "Sensitivity analysis varies model inputs to measure their influence on selected outputs and identify important assumptions."
+    },
+    {
+      "pattern": "design pressure",
+      "family": "equipment-design",
+      "cue": "the specified pressure basis used for pressure-containing equipment design, accounting for applicable operating and upset conditions",
+      "explanation": "Design pressure is a specified design basis for pressure-containing equipment and is not always identical to normal operating pressure."
+    },
+    {
+      "pattern": "design temperature",
+      "family": "equipment-design",
+      "cue": "the specified temperature basis for selecting materials and mechanical design conditions",
+      "explanation": "Design temperature is used with the design pressure and material properties to select equipment and allowable stresses."
+    },
+    {
+      "pattern": "capital cost",
+      "family": "economics",
+      "cue": "the initial investment required to acquire or construct a plant or major process assets",
+      "explanation": "Capital cost covers investment in plant/equipment and construction, distinct from recurring operating expenses."
+    },
+    {
+      "pattern": "operating cost",
+      "family": "economics",
+      "cue": "recurring resources consumed while running a plant, including utilities, raw materials, labour and maintenance",
+      "explanation": "Operating costs recur during production and include items such as feedstock, utilities, labour and maintenance."
+    },
+    {
+      "pattern": "capacity utilization",
+      "family": "economics",
+      "cue": "actual output expressed relative to a defined available or rated production capacity",
+      "explanation": "Capacity utilization compares actual output with the relevant available/rated capacity and must use a consistent time and basis."
     }
   ]
 }
