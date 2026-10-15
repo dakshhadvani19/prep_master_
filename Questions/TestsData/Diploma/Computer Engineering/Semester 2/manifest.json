@@ -1,0 +1,230 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 2,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 2,
+    "subjects": 7,
+    "nonDepartmentalSubjects": 5,
+    "departmentalSubjects": 2,
+    "examTypeBanks": 19,
+    "totalTests": 228,
+    "mcqTests": 108,
+    "theoryTests": 120,
+    "mcqQuestions": 3240,
+    "theoryQuestions": 480,
+    "mcqOptionEntries": 12960,
+    "answerEntries": 3720
+  },
+  "exam_rules": {
+    "nonDepartmental": {
+      "Mid1": "12 theory variants × 4 questions × 8 marks; first half syllabus",
+      "Mid2": "12 MCQ variants × 30 questions",
+      "ESE": "12 theory variants × 4 questions × 8 marks"
+    },
+    "departmental": {
+      "Mid1": "12 MCQ variants × 30 questions; first half syllabus",
+      "Mid2": "12 MCQ variants × 30 questions",
+      "ESE": "not generated"
+    },
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "TestId = decimal SubjectId concatenated with the per-subject test occurrence. For isDepartmentalSubject=false: 1-12 Mid 1, 13-24 Mid 2, 25-36 ESE. For true: 1-12 Mid 1, 13-24 Mid 2."
+  },
+  "subjects": [
+    {
+      "name": "Applied Physics",
+      "SubjectId": "44009719210101",
+      "subject_code": "09GS2101",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09GS2101_AP.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "count": 12,
+          "scope": "First 50% of the syllabus by ordered units/contact hours: Units, Dimensions and Measurements; Laws of Motion; Properties of Matter."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Basic Electronics",
+      "SubjectId": "44000955210301",
+      "subject_code": "09EE2103",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/BE.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "count": 12,
+          "scope": "First 50% of the syllabus by ordered units/contact hours: Diode characteristics and its applications; Transistor characteristics and applications."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Computer Network Skills",
+      "SubjectId": "44000935210501",
+      "subject_code": "09CE2105",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE2105_CNS.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "count": 12,
+          "scope": "First 50% of the syllabus by ordered units/contact hours: Introduction; Cabling; Types of network & Topology."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Computer Programming",
+      "SubjectId": "44000935210401",
+      "subject_code": "09CE2104",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE2104_CP.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "count": 12,
+          "scope": "First 50% of the syllabus by ordered units/contact hours: Flowchart & Algorithm; Fundamentals of C; Decision statements & looping."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Enviornment Conservation & Disater Management",
+      "SubjectId": "44009121010201",
+      "subject_code": "09AU0102",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/ECDM-1.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "count": 12,
+          "scope": "First 50% of the syllabus by ordered units/contact hours: Introduction of Environmental Science; Types of pollution with their causes, effects and remedial; Renewable Sources of Energy."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Integrated Personality Development Course-I",
+      "SubjectId": "44009164010101",
+      "subject_code": "09PD0101",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/IPDC-1.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "count": 12,
+          "scope": "First 50% of the syllabus by ordered units/contact hours: Remaking Yourself Restructuring Yourself; Remaking Yourself Power of Habit; Learning from Legends- Tendulkar & Tata; From House to Home Listening & Understanding; Facing Failures Welcoming Challenges; Facing Failures Significance of Failures; My India My Pride Glorious Past Part-1; My India My Pride Glorious Past Part-2."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Mathematics-II",
+      "SubjectId": "44009131210201",
+      "subject_code": "09MA2102",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-2.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "count": 12,
+          "scope": "First 50% of the syllabus by ordered units/contact hours: Determinants and Matrices; Equations."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "count": 12,
+          "scope": "Full Semester 2 syllabus."
+        }
+      ]
+    }
+  ],
+  "cautions": [
+    "Mid 1 is scoped to the first half of ordered syllabus units as recorded in test_index/subject_index.",
+    "TestsData does not contain subject, exam type, difficulty or marks columns; use test_index.",
+    "Theory rows use Options=[] and Answers contains matching model answers. The consumer must support theory rows explicitly.",
+    "Generated source items are syllabus-topic-derived drafting items; content review is required before production.",
+    "Variants differ by sampled questions/options within each difficulty; some source concepts recur across variants."
+  ]
+}
