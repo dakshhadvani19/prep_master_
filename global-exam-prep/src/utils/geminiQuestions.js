@@ -53,6 +53,41 @@ function parseModelQuestions(cleaned) {
     throw new Error('AI response must be a JSON object containing a questions array.');
 }
 
+const GENERIC_DIFFICULTY_WRAPPERS = [
+    /^(case review|case study|a case review|a trainee suggests|during a .* exercise|in a .* case|for a short viva|a worked problem requires|a student must distinguish|a solution review checks)\\b/i,
+    /which option (is fully defensible|best satisfies the requirement|is best in this case)\\??$/i,
+];
+
+function validateDifficultySubstance(questions, difficulty) {
+    questions.forEach((q, index) => {
+        const stem = String(q?.text ?? '').trim();
+        if (GENERIC_DIFFICULTY_WRAPPERS.some(pattern => pattern.test(stem))) {
+            throw new Error(`Question quality check failed at question ${index + 1}: generic difficulty wrapper detected. The stem must create real reasoning, not merely label a recall question as a case. Please retry.`);
+        }
+        if (difficulty === 'medium' || difficulty === 'hard') {
+            const lower = normalizeText(stem);
+            const genericLead = /^(during|in|for|a student|a trainee|case review|case study|a design review|a worked problem)/i.test(stem);
+            const substantiveCue = /\\b(if|when|given|because|although|however|must|requires|constraint|result|output|error|debug|compare|choose|select|calculate|determine|interpret|recommend|design|diagnose|under which|provided that|only if|whereas|instead)\\b/i.test(lower)
+                || /[=<>≤≥+*/]/.test(stem)
+                || /\\b\\d+\\b/.test(stem);
+            if (genericLead && !substantiveCue) {
+                throw new Error(`Question quality check failed at question ${index + 1}: scenario wording adds no usable condition. Please retry with a decision, data, constraint, or real application.`);
+            }
+        }
+        if (difficulty === 'hard') {
+            const reasoningCueCount = [
+                /\\b(if|when|given|provided that|only if|unless)\\b/i.test(stem),
+                /\\b(compare|evaluate|diagnose|design|justify|recommend|determine|interpret|debug|optimize)\\b/i.test(stem),
+                /\\b(constraint|requirement|limitation|trade.?off|edge case|error|output|result|condition)\\b/i.test(stem),
+                /\\b\\d+\\b|[=<>≤≥+*/]/.test(stem),
+            ].filter(Boolean).length;
+            if (reasoningCueCount < 2) {
+                throw new Error(`Question quality check failed at question ${index + 1}: hard difficulty needs observable multi-step reasoning, a constraint, data, or a meaningful diagnosis/design task. Please retry.`);
+            }
+        }
+    });
+}
+
 function validateCommonQuestions(questions, count) {
     if (!Array.isArray(questions) || questions.length !== count) {
         throw new Error(`Question quality check failed: expected exactly ${count} questions, received ${Array.isArray(questions) ? questions.length : 0}. Please retry.`);
@@ -171,7 +206,7 @@ MANDATORY ITEM RULES
 10. Do not use placeholders, fake technical language, "all/none of the above", "true/false" as a shortcut, invented facts, copied questions, or clues that reveal the key.
 11. Cover different topics from across the visible material. Do not write multiple near-identical questions just to reach the count.
 12. If the source excerpt is marked truncated, stay within the visible evidence. Do not treat missing excerpt text as proof a topic is absent.
-13. Before responding, silently audit the full set for correctness, ambiguity, distractor plausibility, answer-position variety, duplicate or near-duplicate stems, and difficulty fit. Revise failed items rather than returning them.
+13. Before responding, silently audit the full set for correctness, ambiguity, distractor plausibility, answer-position variety, duplicate or near-duplicate stems, and difficulty fit. Revise failed items rather than returning them.\n14. HARD REJECTION: Do not add a generic prefix or suffix to a recall question to make it appear medium/hard. Phrases such as ‘For a short viva’, ‘Case review’, ‘A trainee suggests’, ‘Which option is fully defensible’, and ‘During a practical’ are not difficulty by themselves. Each medium/hard item must contain a real scenario, a decision, data, an explicit constraint, an interpretation, or a multi-step operation that changes how the answer is determined.
 
 Required JSON shape:
 {
