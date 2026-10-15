@@ -63,7 +63,7 @@
    out.push({itemId:`${s.id}-${exam.replace(/\s/g,"")}-${diff}-${out.length+1}`,text:stem,options:opt,topic:term,unit,rationale:explain(term,unit,s),distractorRationale:`The alternative choices are separate syllabus concepts and do not match the defining condition (${r?r.cue:`the stated focus of ${unit}`}); manually check their plausibility.`});
   }
   if(out.length<30)throw Error(`Less than 30 unique MCQs for ${s.name}/${exam}/${diff}`);
-  reviewPools.push({SubjectId:s.id,SubjectName:s.name,examType:exam,difficulty,syllabusScope:scope,items:out.map(q=>({itemId:q.itemId,question:q.text,correctAnswer:q.options[0],options:q.options.map((text,i)=>({label:String.fromCharCode(65+i),text,isCorrect:i===0})),rationale:q.rationale,distractorRationale:q.distractorRationale,sourceTopic:q.topic,sourceUnit:q.unit}))});
+  reviewPools.push({SubjectId:s.id,SubjectName:s.name,examType:exam,difficulty:diff,syllabusScope:scope,items:out.map(q=>({itemId:q.itemId,question:q.text,correctAnswer:q.options[0],options:q.options.map((text,i)=>({label:String.fromCharCode(65+i),text,isCorrect:i===0})),rationale:q.rationale,distractorRationale:q.distractorRationale,sourceTopic:q.topic,sourceUnit:q.unit}))});
   poolCache.set(cacheKey,out);return out;
  }
  function cardsFor(s,terms){const cards=[];for(const u of s.units){const x=terms.find(t=>norm(t.unit)===norm(u.title));if(x&&!cards.some(c=>norm(c.term)===norm(x.term)))cards.push(x);}for(const x of terms){if(cards.length>=10)break;if(!cards.some(c=>norm(c.term)===norm(x.term)))cards.push(x);}while(cards.length<8&&terms.length){const t=terms[cards.length%terms.length],x={...t,term:`Application/check of ${t.term}`};if(!cards.some(c=>norm(c.term)===norm(x.term)))cards.push(x);}return cards.slice(0,10);}
