@@ -14,27 +14,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Communicate technical shape, size and details in a standard visual form",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Decorate a report without dimensions",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Replace all physical measurements with colour",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Record only the cost of a component",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Decorate a report without dimensions",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Communicate technical shape, size and details in a standard visual form",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Engineering drawing communicates technical geometry and specifications."
         },
         {
@@ -48,17 +48,17 @@
             },
             {
               "label": "B",
-              "text": "Dashed thin line",
+              "text": "Freehand break line only",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Chain thin line",
+              "text": "Dashed thin line",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Freehand break line only",
+              "text": "Chain thin line",
               "is_correct": false
             }
           ],
@@ -101,27 +101,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Chain thin line",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Continuous thick object line",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Dimension line with arrowheads",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Freehand border",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Chain thin line",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Continuous thick object line",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Centre lines are commonly thin chain lines."
         },
         {
@@ -135,17 +135,17 @@
             },
             {
               "label": "B",
-              "text": "Represent every hidden edge",
+              "text": "Separate the title from the sheet",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Indicate a surface's material colour",
+              "text": "Represent every hidden edge",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Separate the title from the sheet",
+              "text": "Indicate a surface's material colour",
               "is_correct": false
             }
           ],
@@ -159,18 +159,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Drawing length divided by actual length in the same units",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Actual length divided by drawing length in different units",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Drawing area divided by actual area",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Drawing length divided by actual length in the same units",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -178,8 +178,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "RF is drawing length divided by actual length using consistent units."
         },
         {
@@ -188,27 +188,27 @@
           "options": [
             {
               "label": "A",
-              "text": "1:2",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "1:1",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "2:1",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "10:1",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "1:2",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "1:1",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Full size represents the object with equal drawing and actual lengths."
         },
         {
@@ -217,27 +217,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Isometric scale",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Front view/elevation",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Top view/plan",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Right side view only",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Isometric scale",
+              "text": "Right side view only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The front elevation shows front-facing dimensions such as width and height."
         },
         {
@@ -251,13 +251,13 @@
             },
             {
               "label": "B",
-              "text": "Top view/plan",
-              "is_correct": true
+              "text": "Auxiliary view only",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Auxiliary view only",
-              "is_correct": false
+              "text": "Top view/plan",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -265,8 +265,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The plan shows the object's footprint, including width and depth."
         },
         {
@@ -280,17 +280,17 @@
             },
             {
               "label": "B",
-              "text": "Only a front elevation",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Only hidden edges",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "A list of dimensions without geometry",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Only a front elevation",
               "is_correct": false
             }
           ],
@@ -316,17 +316,17 @@
             },
             {
               "label": "B",
-              "text": "Circle",
+              "text": "Archimedean spiral",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Ellipse by definition",
+              "text": "Circle",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Archimedean spiral",
+              "text": "Ellipse by definition",
               "is_correct": false
             }
           ],
@@ -340,13 +340,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Ellipse",
-              "is_correct": true
+              "text": "Parabola",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Parabola",
-              "is_correct": false
+              "text": "Ellipse",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -359,8 +359,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "An ellipse is a closed conic with two foci."
         },
         {
@@ -369,12 +369,12 @@
           "options": [
             {
               "label": "A",
-              "text": "Circle",
+              "text": "Ellipse",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Ellipse",
+              "text": "Cycloid",
               "is_correct": false
             },
             {
@@ -384,7 +384,7 @@
             },
             {
               "label": "D",
-              "text": "Cycloid",
+              "text": "Circle",
               "is_correct": false
             }
           ],
@@ -398,8 +398,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Concentric-circle method",
-              "is_correct": true
+              "text": "Involute method",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -413,12 +413,12 @@
             },
             {
               "label": "D",
-              "text": "Involute method",
-              "is_correct": false
+              "text": "Concentric-circle method",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The concentric-circle method uses circles sharing a centre."
         },
         {
@@ -427,13 +427,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Cycloid",
-              "is_correct": true
+              "text": "Ellipse",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Ellipse",
-              "is_correct": false
+              "text": "Cycloid",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -446,8 +446,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A cycloid is generated by a point on a rolling circle."
         },
         {
@@ -456,27 +456,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Hypocycloid",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Epicycloid",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Cycloid on a straight line",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Involute",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Hypocycloid",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Epicycloid",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "An epicycloid is generated by rolling externally on a fixed circle."
         },
         {
@@ -485,27 +485,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Epicycloid",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Hypocycloid",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "Archimedean spiral",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "Cycloid on a straight line",
+              "text": "Epicycloid",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Archimedean spiral",
+              "text": "Cycloid on a straight line",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "A hypocycloid is generated by rolling inside a fixed circle."
         },
         {
@@ -514,18 +514,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Involute",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Parabola",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Ellipse",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Involute",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -533,8 +533,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "An involute is traced by a taut unwinding string end."
         },
         {
@@ -543,27 +543,27 @@
           "options": [
             {
               "label": "A",
-              "text": "A line that gives the curve's local direction at that point",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "A line always parallel to the drawing border",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "A line showing the hidden part only",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "A dimension line with units",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "A line always parallel to the drawing border",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "A line that gives the curve's local direction at that point",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A tangent represents the curve's instantaneous direction at the contact point."
         },
         {
@@ -572,27 +572,27 @@
           "options": [
             {
               "label": "A",
+              "text": "A scale bar",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "A line perpendicular to the tangent at that point",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "A line parallel to the tangent",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "A projection ray only",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "A scale bar",
+              "text": "A projection ray only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The normal is perpendicular to the tangent."
         }
       ]
@@ -608,13 +608,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Below it",
-              "is_correct": true
+              "text": "Above it",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Above it",
-              "is_correct": false
+              "text": "Below it",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -627,8 +627,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The top view is unfolded below the front view in first-angle projection."
         },
         {
@@ -637,27 +637,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Below it",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Above it",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Directly over the front view",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Only in a separate sheet",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Above it",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Below it",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Third-angle places the plan above the front elevation."
         },
         {
@@ -666,8 +666,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Front, top and side",
-              "is_correct": true
+              "text": "Top, title and scale only",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -681,12 +681,12 @@
             },
             {
               "label": "D",
-              "text": "Top, title and scale only",
-              "is_correct": false
+              "text": "Front, top and side",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Front, top and side views are the principal orthographic views."
         },
         {
@@ -724,27 +724,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Its true shape and size",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Only its edge view",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Always a circle",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Only the hidden boundaries",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Its true shape and size",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Only its edge view",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A parallel plane projects without foreshortening."
         },
         {
@@ -758,17 +758,17 @@
             },
             {
               "label": "B",
-              "text": "Only external colour",
+              "text": "A curve's focus",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Only title-block dimensions",
+              "text": "Only external colour",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "A curve's focus",
+              "text": "Only title-block dimensions",
               "is_correct": false
             }
           ],
@@ -782,13 +782,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Showing true shape or length when a feature is inclined to principal planes",
-              "is_correct": true
+              "text": "Replacing all dimension lines",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Replacing all dimension lines",
-              "is_correct": false
+              "text": "Showing true shape or length when a feature is inclined to principal planes",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -801,8 +801,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Auxiliary projection can reveal true geometry of inclined features."
         },
         {
@@ -811,27 +811,27 @@
           "options": [
             {
               "label": "A",
-              "text": "One unit on the drawing represents five units on the object",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Five units on the drawing represent one on the object",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "The drawing is enlarged five times",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "The scale contains five views",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Five units on the drawing represent one on the object",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "One unit on the drawing represents five units on the object",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "RF 1:5 is a reduction scale."
         },
         {
@@ -845,17 +845,17 @@
             },
             {
               "label": "B",
-              "text": "Set square only",
+              "text": "Divider used as a ruler",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "French curve only",
+              "text": "Set square only",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Divider used as a ruler",
+              "text": "French curve only",
               "is_correct": false
             }
           ],
@@ -869,18 +869,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Bureau of Indian Standards",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Basic Isometric Scale",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "British Isometric System",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Bureau of Indian Standards",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -888,8 +888,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "BIS is the Bureau of Indian Standards."
         }
       ]
@@ -905,27 +905,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Reducing scale",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Full-size scale",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Enlarging scale",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Angular scale only",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Reducing scale",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Full-size scale",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A reducing scale has RF less than 1."
         },
         {
@@ -934,27 +934,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Reducing scale",
+              "text": "Plain line only",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Full-size scale",
+              "text": "Reducing scale",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Enlarging scale",
-              "is_correct": true
+              "text": "Full-size scale",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Plain line only",
-              "is_correct": false
+              "text": "Enlarging scale",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "An enlarging scale has RF greater than 1."
         },
         {
@@ -963,13 +963,13 @@
           "options": [
             {
               "label": "A",
-              "text": "1:2",
-              "is_correct": false
+              "text": "1:5",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "1:5",
-              "is_correct": true
+              "text": "1:2",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -982,8 +982,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "RF=20/100=1/5."
         },
         {
@@ -992,27 +992,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Plan/top view",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Front elevation",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Right side elevation",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Plan/top view",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Isometric scale",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Front elevation",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The plan shows the top-view footprint."
         },
         {
@@ -1021,8 +1021,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Use consistent dimension/extension lines with clear values",
-              "is_correct": true
+              "text": "Omit units and scale",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1036,12 +1036,12 @@
             },
             {
               "label": "D",
-              "text": "Omit units and scale",
-              "is_correct": false
+              "text": "Use consistent dimension/extension lines with clear values",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Consistent dimensioning supports interpretation."
         },
         {
@@ -1050,13 +1050,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Visible object line",
-              "is_correct": true
+              "text": "Hidden line",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Hidden line",
-              "is_correct": false
+              "text": "Visible object line",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1069,8 +1069,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Visible edges use continuous thick object lines."
         },
         {
@@ -1079,12 +1079,12 @@
           "options": [
             {
               "label": "A",
-              "text": "60°",
+              "text": "90°",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "90°",
+              "text": "180°",
               "is_correct": false
             },
             {
@@ -1094,7 +1094,7 @@
             },
             {
               "label": "D",
-              "text": "180°",
+              "text": "60°",
               "is_correct": false
             }
           ],
@@ -1113,17 +1113,17 @@
             },
             {
               "label": "B",
-              "text": "It converts every circle into a straight line",
+              "text": "It shows only hidden edges",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "It is always the same as RF",
+              "text": "It converts every circle into a straight line",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "It shows only hidden edges",
+              "text": "It is always the same as RF",
               "is_correct": false
             }
           ],
@@ -1137,13 +1137,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Oblong method",
-              "is_correct": true
+              "text": "Involute of a square only",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Involute of a square only",
-              "is_correct": false
+              "text": "Oblong method",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1156,8 +1156,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The syllabus includes the oblong method for ellipse construction."
         },
         {
@@ -1166,27 +1166,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Cycloidal curves",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Only page borders",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Only title lettering",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Only a dimension scale",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Only page borders",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Cycloidal curves",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Cycloidal curves are constructed with tangents and normals in the syllabus."
         }
       ]
@@ -1202,13 +1202,13 @@
           "options": [
             {
               "label": "A",
-              "text": "15 mm",
+              "text": "750 mm",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "30 mm",
-              "is_correct": true
+              "text": "15 mm",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -1217,12 +1217,12 @@
             },
             {
               "label": "D",
-              "text": "750 mm",
-              "is_correct": false
+              "text": "30 mm",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Drawing length=150×1/5=30 mm."
         },
         {
@@ -1231,18 +1231,18 @@
           "options": [
             {
               "label": "A",
+              "text": "2:1 enlarging",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "1:2 reducing",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "1:1 full size",
               "is_correct": false
-            },
-            {
-              "label": "C",
-              "text": "2:1 enlarging",
-              "is_correct": true
             },
             {
               "label": "D",
@@ -1250,8 +1250,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "RF=60/30=2, so the scale is 2:1."
         },
         {
@@ -1260,27 +1260,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Front elevation on VP",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Top view on HP only",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Section hatch",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Front elevation on VP",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Title block",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Top view on HP only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A line parallel to VP appears at true length in elevation."
         },
         {
@@ -1289,8 +1289,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Front view on VP",
-              "is_correct": true
+              "text": "Only the isometric view",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1299,17 +1299,17 @@
             },
             {
               "label": "C",
-              "text": "A side view in every case",
-              "is_correct": false
+              "text": "Front view on VP",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Only the isometric view",
+              "text": "A side view in every case",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A surface parallel to VP is shown in true shape in elevation."
         },
         {
@@ -1347,27 +1347,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Relative placement of object, observer and projection plane",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Number of dimensions shown",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Number of line types",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Whether colour is used",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Relative placement of object, observer and projection plane",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Number of dimensions shown",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The methods differ in the relative object/observer/plane positions."
         },
         {
@@ -1376,8 +1376,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Left of the front view",
-              "is_correct": true
+              "text": "Below the plan only",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1391,12 +1391,12 @@
             },
             {
               "label": "D",
-              "text": "Below the plan only",
-              "is_correct": false
+              "text": "Left of the front view",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The right-side view appears left of the front view in first-angle projection."
         },
         {
@@ -1434,27 +1434,27 @@
           "options": [
             {
               "label": "A",
-              "text": "1:10",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "1:20",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "1:200",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "2:1",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "1:20",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "1:10",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "2.4 m=2400 mm; RF=120/2400=1/20."
         },
         {
@@ -1468,17 +1468,17 @@
             },
             {
               "label": "B",
-              "text": "Cycloid construction",
+              "text": "Thread notation",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Isometric projection",
+              "text": "Cycloid construction",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Thread notation",
+              "text": "Isometric projection",
               "is_correct": false
             }
           ],
@@ -1528,7 +1528,7 @@
           "options": [
             {
               "label": "A",
-              "text": "1:5,000",
+              "text": "1:500,000",
               "is_correct": false
             },
             {
@@ -1538,12 +1538,12 @@
             },
             {
               "label": "C",
-              "text": "1:500,000",
+              "text": "5:1",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "5:1",
+              "text": "1:5,000",
               "is_correct": false
             }
           ],
@@ -1557,8 +1557,8 @@
           "options": [
             {
               "label": "A",
-              "text": "On HP and in front of VP",
-              "is_correct": true
+              "text": "Above HP and in front of VP",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1567,17 +1567,17 @@
             },
             {
               "label": "C",
-              "text": "Below HP and behind VP",
-              "is_correct": false
+              "text": "On HP and in front of VP",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Above HP and in front of VP",
+              "text": "Below HP and behind VP",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Zero height places the point on HP."
         },
         {
@@ -1586,27 +1586,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Front elevation",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Top view only",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Section hatch",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Title-block view",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Front elevation",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Because the line is parallel to VP, the front view gives true length and inclination to HP."
         },
         {
@@ -1615,27 +1615,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Top view/plan",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Front view",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Right-side view always",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Top view/plan",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Only an isometric drawing",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Front view",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A surface parallel to HP shows true shape in plan."
         },
         {
@@ -1644,8 +1644,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Sectional view",
-              "is_correct": true
+              "text": "Centre line only",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1659,12 +1659,12 @@
             },
             {
               "label": "D",
-              "text": "Centre line only",
-              "is_correct": false
+              "text": "Sectional view",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A section reveals internal features."
         },
         {
@@ -1702,27 +1702,27 @@
           "options": [
             {
               "label": "A",
-              "text": "A point on the circle rolling without slipping along a straight line",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "A point rotating about a fixed centre only",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "A line parallel to the directrix",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "A cone cut by a plane",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "A point on the circle rolling without slipping along a straight line",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "A point rotating about a fixed centre only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Rolling along a straight line generates a cycloid."
         },
         {
@@ -1731,8 +1731,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Epicycloid",
-              "is_correct": true
+              "text": "Rectangular hyperbola",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1746,12 +1746,12 @@
             },
             {
               "label": "D",
-              "text": "Rectangular hyperbola",
-              "is_correct": false
+              "text": "Epicycloid",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "External rolling generates an epicycloid."
         },
         {
@@ -1760,13 +1760,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Along the radius through the point of contact",
-              "is_correct": true
+              "text": "Along the tangent through the point",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Along the tangent through the point",
-              "is_correct": false
+              "text": "Along the radius through the point of contact",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1779,8 +1779,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The radius at the contact point is perpendicular to the tangent."
         }
       ]
@@ -1796,13 +1796,13 @@
           "options": [
             {
               "label": "A",
-              "text": "31.25 mm",
+              "text": "125 mm",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "125 mm",
-              "is_correct": false
+              "text": "500 mm",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1811,12 +1811,12 @@
             },
             {
               "label": "D",
-              "text": "500 mm",
-              "is_correct": true
+              "text": "31.25 mm",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "An enlarging scale multiplies the actual length by 4: 500 mm."
         },
         {
@@ -1825,12 +1825,12 @@
           "options": [
             {
               "label": "A",
-              "text": "2.1 mm",
+              "text": "21,000 mm",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "210 mm",
+              "text": "2.1 mm",
               "is_correct": false
             },
             {
@@ -1840,7 +1840,7 @@
             },
             {
               "label": "D",
-              "text": "21,000 mm",
+              "text": "210 mm",
               "is_correct": false
             }
           ],
@@ -1854,27 +1854,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Use projection construction/auxiliary views or successive rotations as required",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Assume either projection equals true length",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Take the shorter projection as true length",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Replace both projections by an isometric scale",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Use projection construction/auxiliary views or successive rotations as required",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A line inclined to both principal planes is foreshortened in both views."
         },
         {
@@ -1888,17 +1888,17 @@
             },
             {
               "label": "B",
-              "text": "Use hidden lines only",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Set every dimension to 1:1",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Replace its boundary with a centre line",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Use hidden lines only",
               "is_correct": false
             }
           ],
@@ -1912,27 +1912,27 @@
           "options": [
             {
               "label": "A",
-              "text": "First",
+              "text": "Fourth",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "First",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "Second",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "Third",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Fourth",
+              "text": "Third",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Above HP and behind VP identifies the second quadrant."
         },
         {
@@ -1941,27 +1941,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Fourth",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "First",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Second",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "D",
               "text": "Third",
               "is_correct": false
-            },
-            {
-              "label": "D",
-              "text": "Fourth",
-              "is_correct": true
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Below HP and in front of VP identifies the fourth quadrant."
         },
         {
@@ -1970,27 +1970,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Corresponding edges and dimensions can be related across views",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "It makes scale unnecessary",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "It replaces all dimensions",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Corresponding edges and dimensions can be related across views",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "It converts orthographic projection into perspective",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "It makes scale unnecessary",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Alignment links corresponding dimensions and edges."
         },
         {
@@ -1999,8 +1999,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Material intersected by the cutting plane",
-              "is_correct": true
+              "text": "The RF",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2014,12 +2014,12 @@
             },
             {
               "label": "D",
-              "text": "The RF",
-              "is_correct": false
+              "text": "Material intersected by the cutting plane",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Section lines identify the cut material."
         },
         {
@@ -2057,27 +2057,27 @@
           "options": [
             {
               "label": "A",
-              "text": "They are perpendicular at that point",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "They are parallel",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "They meet only at a focus",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Both must be centre lines",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "They are perpendicular at that point",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "They are parallel",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The normal is perpendicular to the tangent."
         }
       ]
@@ -2093,27 +2093,27 @@
           "options": [
             {
               "label": "A",
-              "text": "1:12",
+              "text": "12:1",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "1:12",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "1:83.33 approximately",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "1:350",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "12:1",
+              "text": "1:350",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "3.5 m=3500 mm; 42/3500=0.012, approximately 1:83.33."
         },
         {
@@ -2132,17 +2132,17 @@
             },
             {
               "label": "C",
-              "text": "90 mm",
-              "is_correct": true
+              "text": "180 mm",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "180 mm",
-              "is_correct": false
+              "text": "90 mm",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Drawing length=5×18=90 mm."
         },
         {
@@ -2156,17 +2156,17 @@
             },
             {
               "label": "B",
-              "text": "It is parallel to both HP and VP",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "It lies on both principal planes",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "The drawing is necessarily wrong",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "It is parallel to both HP and VP",
               "is_correct": false
             }
           ],
@@ -2180,27 +2180,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Plan below title block regardless of elevation",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Plan above front view, right-side view to the right",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Plan below front view, right-side view left",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "All views stacked without alignment",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Plan below title block regardless of elevation",
+              "text": "All views stacked without alignment",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Third-angle places plan above and the right-side view to the right."
         },
         {
@@ -2209,27 +2209,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Rectangle method or method of tangents (triangle method)",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Concentric-circle ellipse method only",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Involute method",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Isometric scale method",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Rectangle method or method of tangents (triangle method)",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Both rectangle and tangent/triangle methods are listed for parabolas."
         },
         {
@@ -2238,27 +2238,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Focus-directrix method",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Concentric-circle ellipse method only",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Cycloid rolling method",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Focus-directrix method",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Third-angle projection",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Concentric-circle ellipse method only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The syllabus includes directrix-focus methods for conics."
         },
         {
@@ -2267,8 +2267,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Accurate curve-generation points and rolling-circle geometry",
-              "is_correct": true
+              "text": "A table of storage capacities",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2277,17 +2277,17 @@
             },
             {
               "label": "C",
-              "text": "An unrelated auxiliary plane",
-              "is_correct": false
+              "text": "Accurate curve-generation points and rolling-circle geometry",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "A table of storage capacities",
+              "text": "An unrelated auxiliary plane",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Tangent construction depends on correctly locating the curve."
         },
         {
@@ -2325,27 +2325,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Projection foreshortens dimensions when the circle is inclined to the projection plane",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "The real circle changes shape",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "All circles always draw as ellipses",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Projection foreshortens dimensions when the circle is inclined to the projection plane",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "The scale ratio changes non-uniformly in every view",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The real circle changes shape",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "An inclined circle projects as a foreshortened ellipse."
         },
         {
@@ -2354,8 +2354,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Use continuous thick object lines for visible edges and dashed lines for hidden edges",
-              "is_correct": true
+              "text": "Remove all line distinctions",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2369,12 +2369,12 @@
             },
             {
               "label": "D",
-              "text": "Remove all line distinctions",
-              "is_correct": false
+              "text": "Use continuous thick object lines for visible edges and dashed lines for hidden edges",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Line conventions distinguish visible from hidden geometry."
         }
       ]
@@ -2390,27 +2390,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Yes, because 3,600/40=90 mm",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "No, because it should be 9 mm",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "No, because it should be 144 mm",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "No, because RF must be 40:1",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Yes, because 3,600/40=90 mm",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "3.6 m=3600 mm; 3600/40=90 mm."
         },
         {
@@ -2419,27 +2419,27 @@
           "options": [
             {
               "label": "A",
-              "text": "First quadrant; elevation above XY and plan below XY",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Second quadrant; both projections above XY",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Third quadrant; both projections below XY",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Fourth quadrant; elevation above and plan below",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "First quadrant; elevation above XY and plan below XY",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Above HP and behind VP is second quadrant; both projections lie above XY."
         },
         {
@@ -2448,27 +2448,27 @@
           "options": [
             {
               "label": "A",
+              "text": "0 mm because it is inclined to HP",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "100 mm long and inclined 30° to XY",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "50 mm long because every projection is half",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "86.6 mm long because it is parallel to VP",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "0 mm because it is inclined to HP",
+              "text": "86.6 mm long because it is parallel to VP",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Parallelism to VP preserves true length in elevation."
         },
         {
@@ -2477,18 +2477,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Front view, because the lamina is parallel to VP",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Top view, because every plane appears true in plan",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Side view regardless of orientation",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Front view, because the lamina is parallel to VP",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -2496,8 +2496,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A plane parallel to VP shows true shape in elevation."
         },
         {
@@ -2506,27 +2506,27 @@
           "options": [
             {
               "label": "A",
-              "text": "144 mm",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "288 mm",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "96 mm",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "80 mm",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "144 mm",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "First drawing=240×3/5=144 mm; doubled gives 288 mm."
         },
         {
@@ -2535,8 +2535,8 @@
           "options": [
             {
               "label": "A",
-              "text": "An appropriate sectional view with conventional section lining",
-              "is_correct": true
+              "text": "Isometric scale without cutting plane",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2545,17 +2545,17 @@
             },
             {
               "label": "C",
-              "text": "A hidden line for every interior surface regardless of view",
-              "is_correct": false
+              "text": "An appropriate sectional view with conventional section lining",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Isometric scale without cutting plane",
+              "text": "A hidden line for every interior surface regardless of view",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A section reveals internal detail."
         },
         {
@@ -2564,27 +2564,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Epicycloid",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Hypocycloid",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Straight-line cycloid",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Ellipse by rectangle method",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Epicycloid",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "External rolling generates an epicycloid."
         },
         {
@@ -2593,27 +2593,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Construct an auxiliary view parallel to the surface or use a change-of-plane method",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Assume the shorter view is the true shape",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Use a larger title block",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Construct an auxiliary view parallel to the surface or use a change-of-plane method",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Replace the boundary with hidden lines",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Assume the shorter view is the true shape",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A view parallel to the surface avoids foreshortening."
         },
         {
@@ -2622,8 +2622,8 @@
           "options": [
             {
               "label": "A",
-              "text": "24 mm",
-              "is_correct": true
+              "text": "108 mm",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2632,17 +2632,17 @@
             },
             {
               "label": "C",
-              "text": "48 mm",
-              "is_correct": false
+              "text": "24 mm",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "108 mm",
+              "text": "48 mm",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Original actual=72÷1.5=48 mm; one-third=16 mm; drawing length=16×1.5=24 mm."
         },
         {
@@ -2687,8 +2687,8 @@
           "options": [
             {
               "label": "A",
-              "text": "96 mm",
-              "is_correct": false
+              "text": "384 mm",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -2697,17 +2697,17 @@
             },
             {
               "label": "C",
-              "text": "384 mm",
-              "is_correct": true
+              "text": "600 mm",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "600 mm",
+              "text": "96 mm",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Main view=2400/25=96 mm; 4× enlargement=384 mm."
         },
         {
@@ -2716,27 +2716,27 @@
           "options": [
             {
               "label": "A",
-              "text": "90 mm",
+              "text": "160 mm",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "120 mm",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "144 mm",
               "is_correct": true
             },
             {
+              "label": "C",
+              "text": "90 mm",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "160 mm",
+              "text": "120 mm",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "RF=90/1500=0.06; 2400×0.06=144 mm."
         },
         {
@@ -2745,18 +2745,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Third quadrant; elevation below XY and plan above XY",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Fourth quadrant; both below XY",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "First quadrant; elevation above and plan below",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Third quadrant; elevation below XY and plan above XY",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -2764,8 +2764,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Below HP and behind VP defines the third quadrant."
         },
         {
@@ -2774,27 +2774,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Top view/plan",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Front elevation",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Only the right-side view always",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Section lines",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Front elevation",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Top view/plan",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A line parallel to HP is true length in plan."
         },
         {
@@ -2803,27 +2803,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Cycloid",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Ellipse",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Parabola",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Hyperbola",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Cycloid",
+              "text": "Hyperbola",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "An ellipse has a constant sum of focal distances."
         },
         {
@@ -2832,27 +2832,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Isometric projection",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "First-angle orthographic projection",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Sectional front view",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Auxiliary projection only",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Isometric projection",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Isometric projection equally foreshortens its principal axes."
         },
         {
@@ -2866,17 +2866,17 @@
             },
             {
               "label": "B",
-              "text": "Isometric view to CSS properties",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Conic to dimension line",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Hidden-line conversion only",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Isometric view to CSS properties",
               "is_correct": false
             }
           ],
@@ -2890,8 +2890,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Its plane is perpendicular to that projection plane",
-              "is_correct": true
+              "text": "The object is necessarily spherical",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2900,17 +2900,17 @@
             },
             {
               "label": "C",
-              "text": "The view must be true shape",
-              "is_correct": false
+              "text": "Its plane is perpendicular to that projection plane",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "The object is necessarily spherical",
+              "text": "The view must be true shape",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A plane perpendicular to the projection plane projects edge-on."
         },
         {
@@ -2929,17 +2929,17 @@
             },
             {
               "label": "C",
-              "text": "17.5 mm",
-              "is_correct": true
+              "text": "5 mm",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "5 mm",
-              "is_correct": false
+              "text": "17.5 mm",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Actual length=35/2=17.5 mm."
         },
         {
@@ -2948,27 +2948,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Projection alignment, view orientation and whether the same feature is being compared",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "The colour of the sheet",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Pencil type for the title only",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Projection alignment, view orientation and whether the same feature is being compared",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Whether the object has a domain name",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The colour of the sheet",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Corresponding dimensions should align between correctly arranged views."
         }
       ]
@@ -2984,27 +2984,27 @@
           "options": [
             {
               "label": "A",
-              "text": "80 mm",
+              "text": "480 mm",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "240 mm",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "400 mm",
               "is_correct": true
             },
             {
+              "label": "C",
+              "text": "80 mm",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "480 mm",
+              "text": "240 mm",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Main drawing=4800/60=80 mm; 5× detail=400 mm."
         },
         {
@@ -3013,18 +3013,18 @@
           "options": [
             {
               "label": "A",
-              "text": "An auxiliary view parallel to the plane or equivalent change-of-plane method",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Only a new page border",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Title-line weight",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "An auxiliary view parallel to the plane or equivalent change-of-plane method",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -3032,8 +3032,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A view parallel to the plane shows its true shape."
         },
         {
@@ -3042,27 +3042,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The view placement may follow third-angle rather than first-angle convention",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Object colour is incorrect",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Scale must always be 1:1",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Title font is bold",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Object colour is incorrect",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The view placement may follow third-angle rather than first-angle convention",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "First-angle places the right-side view to the left of the front view."
         },
         {
@@ -3071,27 +3071,27 @@
           "options": [
             {
               "label": "A",
-              "text": "120 mm",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "180 mm",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "300 mm",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "270 mm",
+              "text": "120 mm",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "300 mm",
+              "text": "270 mm",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "First drawing=180×2/3=120 mm; 150% of 120 mm is 180 mm."
         },
         {
@@ -3100,18 +3100,18 @@
           "options": [
             {
               "label": "A",
-              "text": "It passes through the circle's centre and P, perpendicular to the tangent",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "It is parallel to the tangent and avoids the centre",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "It is a chord not passing through P",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "It passes through the circle's centre and P, perpendicular to the tangent",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -3119,8 +3119,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The radius to P is the normal and is perpendicular to the tangent."
         },
         {
@@ -3134,17 +3134,17 @@
             },
             {
               "label": "B",
-              "text": "The RF changes automatically",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "The view becomes third-angle",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "The object becomes a hyperbola",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The RF changes automatically",
               "is_correct": false
             }
           ],
@@ -3158,27 +3158,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Involute",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Hypocycloid",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Epicycloid",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Cycloid",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Involute",
+              "text": "Cycloid",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Internal rolling generates a hypocycloid."
         },
         {
@@ -3187,27 +3187,27 @@
           "options": [
             {
               "label": "A",
-              "text": "1:25 reduction",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "1:4 enlargement",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "4:1 enlargement",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "1:250 reduction",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "1:25 reduction",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "1.3 m=1300 mm; 52/1300=1/25."
         },
         {
@@ -3221,17 +3221,17 @@
             },
             {
               "label": "B",
-              "text": "Choose the shorter view as true length",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Average the projected lengths",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Use dimension-line length",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Choose the shorter view as true length",
               "is_correct": false
             }
           ],
@@ -3245,8 +3245,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Distance to focus equals perpendicular distance to directrix",
-              "is_correct": true
+              "text": "A circle rolls outside another circle",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3255,17 +3255,17 @@
             },
             {
               "label": "C",
-              "text": "Points lie on two concentric circles only",
-              "is_correct": false
+              "text": "Distance to focus equals perpendicular distance to directrix",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "A circle rolls outside another circle",
+              "text": "Points lie on two concentric circles only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Equal focus and directrix distances define a parabola."
         }
       ]
@@ -3310,27 +3310,27 @@
           "options": [
             {
               "label": "A",
-              "text": "120 mm and 35°",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "120 cos 35° and 35°",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "120 sin 35° and 55°",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "0 mm and 35°",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "120 cos 35° and 35°",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "120 mm and 35°",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Parallel to VP preserves true length in elevation."
         },
         {
@@ -3344,17 +3344,17 @@
             },
             {
               "label": "B",
-              "text": "Only the front projection's length",
+              "text": "Only its line thickness",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Zero length in plan",
+              "text": "Only the front projection's length",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Only its line thickness",
+              "text": "Zero length in plan",
               "is_correct": false
             }
           ],
@@ -3368,13 +3368,13 @@
           "options": [
             {
               "label": "A",
-              "text": "True shape and size",
-              "is_correct": true
+              "text": "An edge only",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "An edge only",
-              "is_correct": false
+              "text": "True shape and size",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -3387,8 +3387,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Parallelism to VP preserves true shape in elevation."
         },
         {
@@ -3397,27 +3397,27 @@
           "options": [
             {
               "label": "A",
-              "text": "An isometric drawing generally uses true lengths; isometric projection uses foreshortened lengths",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Isometric projection uses perspective only",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Both must use 1:1 on every diagonal",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "An isometric drawing cannot show 3D",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Isometric projection uses perspective only",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "An isometric drawing generally uses true lengths; isometric projection uses foreshortened lengths",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The distinction is true lengths versus reduced isometric lengths."
         },
         {
@@ -3426,27 +3426,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Inside the title block",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Above the front view",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Below the front view",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "To the left only",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Inside the title block",
+              "text": "To the left only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Third-angle places the plan above the front view."
         },
         {
@@ -3455,18 +3455,18 @@
           "options": [
             {
               "label": "A",
-              "text": "The target ellipse geometry, although the construction steps differ",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "The ellipse necessarily becomes a different conic",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "The RF changes automatically",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "The target ellipse geometry, although the construction steps differ",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -3474,8 +3474,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Construction methods are alternatives for locating points on the same ellipse."
         },
         {
@@ -3484,27 +3484,27 @@
           "options": [
             {
               "label": "A",
-              "text": "80 mm",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "160 mm",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "240 mm",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "320 mm",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "80 mm",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "At 1:75, 6000/75=80 mm; doubling yields 160 mm."
         },
         {
@@ -3513,27 +3513,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Line conventions become unnecessary",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Actual sizes may not be determined reliably",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "It automatically becomes perspective",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "The object becomes a hyperbola",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Line conventions become unnecessary",
+              "text": "The object becomes a hyperbola",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Dimensions and scale help communicate actual size."
         },
         {
@@ -3542,27 +3542,27 @@
           "options": [
             {
               "label": "A",
-              "text": "A correctly indicated sectional view with hatching",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Only hidden-line lengths",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Title block without views",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "An isometric scale alone",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "A correctly indicated sectional view with hatching",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A section reveals internal details and maintains external outlines."
         }
       ]
