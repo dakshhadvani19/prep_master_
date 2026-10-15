@@ -14,27 +14,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Power button",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "CPU",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Monitor",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Keyboard",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Power button",
+              "text": "Keyboard",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The CPU executes instructions."
         },
         {
@@ -48,13 +48,13 @@
             },
             {
               "label": "B",
-              "text": "Motherboard",
-              "is_correct": true
+              "text": "Printer ribbon",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Printer ribbon",
-              "is_correct": false
+              "text": "Motherboard",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -62,8 +62,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The motherboard provides the main interconnection platform."
         },
         {
@@ -72,27 +72,27 @@
           "options": [
             {
               "label": "A",
-              "text": "ROM",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "RAM",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Optical disc",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Hard disk",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "ROM",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "RAM",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "RAM normally loses contents when power is removed."
         },
         {
@@ -101,27 +101,27 @@
           "options": [
             {
               "label": "A",
-              "text": "SSD",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "RAM module",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Hard disk drive",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "DVD-ROM",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "SSD",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "RAM module",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "An HDD records data magnetically on rotating platters."
         },
         {
@@ -130,18 +130,18 @@
           "options": [
             {
               "label": "A",
-              "text": "HDMI",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "PS/2",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Serial COM",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "HDMI",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -149,8 +149,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "HDMI carries digital audio/video."
         },
         {
@@ -159,8 +159,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Monitor",
-              "is_correct": false
+              "text": "Keyboard",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -169,17 +169,17 @@
             },
             {
               "label": "C",
-              "text": "Keyboard",
-              "is_correct": true
+              "text": "Projector",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Projector",
+              "text": "Monitor",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "A keyboard sends user input to the computer."
         },
         {
@@ -188,27 +188,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Mouse",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Microphone",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Scanner",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Monitor",
               "is_correct": true
+            },
+            {
+              "label": "C",
+              "text": "Mouse",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Microphone",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A monitor displays visual output."
         },
         {
@@ -217,27 +217,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Convert mains power into suitable DC outputs for components",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Store application files",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Execute spreadsheet formulas",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Control mouse pointer movement",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Convert mains power into suitable DC outputs for components",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The PSU provides regulated DC power to internal components."
         },
         {
@@ -246,27 +246,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Print documents",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Initialize hardware and begin the boot process",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Store all user documents permanently",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Display web pages",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Print documents",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "BIOS firmware initializes platform hardware and starts booting."
         },
         {
@@ -275,8 +275,8 @@
           "options": [
             {
               "label": "A",
-              "text": "USB",
-              "is_correct": true
+              "text": "PSU fan outlet",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -285,17 +285,17 @@
             },
             {
               "label": "C",
-              "text": "RJ-11 telephone line only",
-              "is_correct": false
+              "text": "USB",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "PSU fan outlet",
+              "text": "RJ-11 telephone line only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "USB is a common interface for many peripherals."
         }
       ]
@@ -316,13 +316,13 @@
             },
             {
               "label": "B",
-              "text": "Mechanical",
-              "is_correct": true
+              "text": "Rubber dome only",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Rubber dome only",
-              "is_correct": false
+              "text": "Mechanical",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -330,8 +330,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Mechanical keyboards use discrete mechanical switches."
         },
         {
@@ -340,27 +340,27 @@
           "options": [
             {
               "label": "A",
-              "text": "LCD",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "LED-backlit LCD",
               "is_correct": false
             },
             {
+              "label": "B",
+              "text": "OLED only",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "CRT",
-              "is_correct": true
+              "text": "LCD",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "OLED only",
-              "is_correct": false
+              "text": "CRT",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "CRT uses an electron beam and phosphor screen."
         },
         {
@@ -369,27 +369,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Inkjet",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Laser",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Dot-matrix",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Thermal non-impact",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Inkjet",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Laser",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "A dot-matrix printer strikes an ink ribbon against paper."
         },
         {
@@ -427,27 +427,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Optical mouse",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Mechanical ball mouse only",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Keyboard track lock",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Dot-matrix sensor",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Mechanical ball mouse only",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Optical mouse",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "An optical mouse uses optical sensing rather than a rolling ball."
         },
         {
@@ -456,7 +456,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Speaker",
+              "text": "Projector",
               "is_correct": false
             },
             {
@@ -466,12 +466,12 @@
             },
             {
               "label": "C",
-              "text": "Monitor",
+              "text": "Speaker",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Projector",
+              "text": "Monitor",
               "is_correct": false
             }
           ],
@@ -490,13 +490,13 @@
             },
             {
               "label": "B",
-              "text": "Optical disc",
-              "is_correct": true
+              "text": "RAM",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "RAM",
-              "is_correct": false
+              "text": "Optical disc",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -504,8 +504,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "CDs and DVDs are optical storage media."
         },
         {
@@ -519,17 +519,17 @@
             },
             {
               "label": "B",
-              "text": "CRT tube",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Dot-matrix ribbon",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Mechanical switch",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "CRT tube",
               "is_correct": false
             }
           ],
@@ -543,7 +543,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Access time",
+              "text": "Resolution",
               "is_correct": false
             },
             {
@@ -553,12 +553,12 @@
             },
             {
               "label": "C",
-              "text": "Refresh rate",
+              "text": "Access time",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Resolution",
+              "text": "Refresh rate",
               "is_correct": false
             }
           ],
@@ -572,27 +572,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Access time",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Screen size",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Keyboard rollover",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Printer duty cycle only",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Access time",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Access time measures the delay before data access."
         }
       ]
@@ -608,27 +608,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Expansion card",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Paper tray",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Keyboard keycap",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Power socket cover",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Paper tray",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Expansion card",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Expansion cards fit compatible motherboard expansion slots."
         },
         {
@@ -637,27 +637,27 @@
           "options": [
             {
               "label": "A",
-              "text": "HDMI",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "PS/2",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "Audio line-out",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "SATA data",
+              "text": "HDMI",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Audio line-out",
+              "text": "SATA data",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "PS/2 is a legacy keyboard/mouse interface."
         },
         {
@@ -666,13 +666,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Serial COM port",
-              "is_correct": true
+              "text": "USB-C",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "USB-C",
-              "is_correct": false
+              "text": "Serial COM port",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -685,8 +685,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Legacy serial COM interfaces commonly used a DE-9 connector."
         },
         {
@@ -695,27 +695,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Parallel port",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Serial port",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Microphone jack",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "DisplayPort",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Parallel port",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Serial port",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A parallel port transfers multiple bits across separate data lines."
         },
         {
@@ -724,27 +724,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Increase storage capacity",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Move air to help remove heat",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "Improve keyboard layout",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "Format the hard drive",
+              "text": "Increase storage capacity",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Improve keyboard layout",
+              "text": "Format the hard drive",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "The fan supports cooling by moving air through the system."
         },
         {
@@ -758,13 +758,13 @@
             },
             {
               "label": "B",
-              "text": "Battery",
-              "is_correct": true
+              "text": "Ethernet port",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Ethernet port",
-              "is_correct": false
+              "text": "Battery",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -772,8 +772,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The battery supplies energy when external power is absent."
         },
         {
@@ -782,27 +782,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Visual/image processing and display output",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Keyboard cleaning",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Magnetic disk partitioning",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Changing the AC socket",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Keyboard cleaning",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Visual/image processing and display output",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A graphics card processes graphics and provides display output."
         },
         {
@@ -811,27 +811,27 @@
           "options": [
             {
               "label": "A",
+              "text": "A display pixel",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "A logical division of a storage device",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "A keyboard switch type",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "An audio port",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "A display pixel",
+              "text": "An audio port",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Partitions divide a physical storage device into logical regions."
         },
         {
@@ -840,18 +840,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Prepare a file system on it",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Increase monitor resolution",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Clean a mouse ball",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Prepare a file system on it",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -859,8 +859,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Formatting creates file-system structures for data storage."
         },
         {
@@ -869,27 +869,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Delete every partition",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Back up the files and verify the intended disk",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Disable the monitor",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Remove RAM while powered on",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Delete every partition",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Partitioning can destroy data; a backup and target check reduce risk."
         }
       ]
@@ -910,17 +910,17 @@
             },
             {
               "label": "B",
-              "text": "CPU card only",
+              "text": "Parallel print card",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "CRT card",
+              "text": "CPU card only",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Parallel print card",
+              "text": "CRT card",
               "is_correct": false
             }
           ],
@@ -934,13 +934,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Printer",
-              "is_correct": true
+              "text": "Microphone",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Microphone",
-              "is_correct": false
+              "text": "Printer",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -953,8 +953,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A printer produces hard-copy output."
         },
         {
@@ -963,27 +963,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Display/video port",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Microphone input only",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "PS/2 keyboard port only",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Power button header only",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Display/video port",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Microphone input only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Video interfaces carry visual output to a display."
         },
         {
@@ -992,8 +992,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Motherboard",
-              "is_correct": true
+              "text": "Mouse wheel",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1007,12 +1007,12 @@
             },
             {
               "label": "D",
-              "text": "Mouse wheel",
-              "is_correct": false
+              "text": "Motherboard",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The motherboard contains sockets/slots for core components."
         },
         {
@@ -1021,13 +1021,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Speaker",
-              "is_correct": true
+              "text": "Microphone",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Microphone",
-              "is_correct": false
+              "text": "Speaker",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1040,8 +1040,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A speaker outputs audio."
         },
         {
@@ -1050,27 +1050,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Scanner",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Speaker",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Power supply",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Projector",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Speaker",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Scanner",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A scanner digitizes documents or images."
         },
         {
@@ -1084,17 +1084,17 @@
             },
             {
               "label": "B",
-              "text": "Monitor",
+              "text": "Optical disc tray",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Keyboard connector",
+              "text": "Monitor",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Optical disc tray",
+              "text": "Keyboard connector",
               "is_correct": false
             }
           ],
@@ -1108,18 +1108,18 @@
           "options": [
             {
               "label": "A",
-              "text": "DVD",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Magnetic hard disk",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "RAM",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "DVD",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1127,8 +1127,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A DVD is an optical disc."
         },
         {
@@ -1137,27 +1137,27 @@
           "options": [
             {
               "label": "A",
-              "text": "RAM module",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "USB printer",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "External speaker",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Monitor",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "USB printer",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "RAM module",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "RAM modules are installed internally on the motherboard."
         },
         {
@@ -1166,27 +1166,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Remove components before saving work",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Shut down and disconnect power, then follow anti-static precautions",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Keep the system plugged in and running",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Touch the motherboard pins with metal tools",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Remove components before saving work",
+              "text": "Touch the motherboard pins with metal tools",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Disconnecting power and using anti-static precautions lowers electrical and component risks."
         }
       ]
@@ -1202,13 +1202,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Check monitor power, selected input and video cable seating",
-              "is_correct": true
+              "text": "Reformat the disk immediately",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Reformat the disk immediately",
-              "is_correct": false
+              "text": "Check monitor power, selected input and video cable seating",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1221,8 +1221,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Power/input/cable checks can identify basic display connection problems."
         },
         {
@@ -1231,27 +1231,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Install a compatible graphics expansion card",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Connect the monitor to the microphone jack",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Place the card in a RAM slot",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Replace the power socket with a serial port",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Install a compatible graphics expansion card",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Connect the monitor to the microphone jack",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A compatible graphics card uses an appropriate motherboard expansion slot."
         },
         {
@@ -1260,8 +1260,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Install a second hard drive after checking compatibility and power/data connections",
-              "is_correct": true
+              "text": "Replace monitor resolution",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1275,12 +1275,12 @@
             },
             {
               "label": "D",
-              "text": "Replace monitor resolution",
-              "is_correct": false
+              "text": "Install a second hard drive after checking compatibility and power/data connections",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The syllabus includes installation of a second hard drive."
         },
         {
@@ -1318,27 +1318,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Dot-matrix impact printer",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Inkjet printer",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Flat-panel monitor",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Optical disc drive",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Dot-matrix impact printer",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Inkjet printer",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Dot-matrix printers use impact through an ink ribbon."
         },
         {
@@ -1352,17 +1352,17 @@
             },
             {
               "label": "B",
-              "text": "Change the mouse interface",
+              "text": "Swap the CPU socket",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Change the HDD partition label",
+              "text": "Change the mouse interface",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Swap the CPU socket",
+              "text": "Change the HDD partition label",
               "is_correct": false
             }
           ],
@@ -1376,13 +1376,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Disconnect power, inspect/clean according to the keyboard design, then reassemble and test",
-              "is_correct": true
+              "text": "Pour liquid into the keyboard while connected",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Pour liquid into the keyboard while connected",
-              "is_correct": false
+              "text": "Disconnect power, inspect/clean according to the keyboard design, then reassemble and test",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1395,8 +1395,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Safe cleaning starts with disconnection and uses the appropriate procedure."
         },
         {
@@ -1405,27 +1405,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Move it to a hard, unobstructed surface and check ventilation",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Increase CPU load further",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Cover the remaining vents",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Format the storage drive",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Increase CPU load further",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Move it to a hard, unobstructed surface and check ventilation",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Unblocking air intake/exhaust helps restore cooling."
         },
         {
@@ -1439,17 +1439,17 @@
             },
             {
               "label": "B",
-              "text": "Display resolution",
+              "text": "Speaker impedance only",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Keyboard switch travel",
+              "text": "Display resolution",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Speaker impedance only",
+              "text": "Keyboard switch travel",
               "is_correct": false
             }
           ],
@@ -1463,18 +1463,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Back up and verify the target drive and partition before making changes",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Format every drive first",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Delete the backup to avoid confusion",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Back up and verify the target drive and partition before making changes",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1482,8 +1482,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Backup and target verification reduce the risk of destructive mistakes."
         }
       ]
@@ -1499,27 +1499,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Verify the adapter, charging connector and battery condition using the device's service guidance",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Change the desktop wallpaper",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Clean the printer ribbon",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Change screen resolution only",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Verify the adapter, charging connector and battery condition using the device's service guidance",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Change the desktop wallpaper",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Power adapter, connector and battery checks can isolate common charging faults."
         },
         {
@@ -1528,8 +1528,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Check device/BIOS detection and then confirm disk initialization, partitioning and formatting as appropriate",
-              "is_correct": true
+              "text": "Change the desktop theme",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1543,12 +1543,12 @@
             },
             {
               "label": "D",
-              "text": "Change the desktop theme",
-              "is_correct": false
+              "text": "Check device/BIOS detection and then confirm disk initialization, partitioning and formatting as appropriate",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A detected drive may still need initialization or a usable partition/file system."
         },
         {
@@ -1586,27 +1586,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Compatibility, disk space, backups and boot configuration for both OS installations",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Formatting without identifying the disk",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Removing the power supply fan",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Compatibility, disk space, backups and boot configuration for both OS installations",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Changing the mouse buttons",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Formatting without identifying the disk",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Dual installation requires planning partitions, compatibility and boot choices."
         },
         {
@@ -1615,8 +1615,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Select a supported resolution suitable for the display and verify cable/input settings",
-              "is_correct": true
+              "text": "Repartition the SSD",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1630,12 +1630,12 @@
             },
             {
               "label": "D",
-              "text": "Repartition the SSD",
-              "is_correct": false
+              "text": "Select a supported resolution suitable for the display and verify cable/input settings",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A supported display mode often restores clear output."
         },
         {
@@ -1644,13 +1644,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Clean the sensor area and test on a suitable surface",
-              "is_correct": true
+              "text": "Reformat the computer's main disk",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Reformat the computer's main disk",
-              "is_correct": false
+              "text": "Clean the sensor area and test on a suitable surface",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1663,8 +1663,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Optical sensing can be disrupted by dirt or unsuitable surfaces."
         },
         {
@@ -1673,27 +1673,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Change mouse-button settings in the operating system",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Reverse power-supply connectors",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Format the drive",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Change printer impact mechanism",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Change mouse-button settings in the operating system",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Reverse power-supply connectors",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Mouse buttons can usually be swapped in OS settings."
         },
         {
@@ -1707,17 +1707,17 @@
             },
             {
               "label": "B",
-              "text": "Daisy-wheel impact printer",
+              "text": "Mechanical keyboard",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Dot-matrix impact printer",
+              "text": "Daisy-wheel impact printer",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Mechanical keyboard",
+              "text": "Dot-matrix impact printer",
               "is_correct": false
             }
           ],
@@ -1731,13 +1731,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Confirm the intended boot device and whether key hardware is detected",
-              "is_correct": true
+              "text": "Change page margins",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Change page margins",
-              "is_correct": false
+              "text": "Confirm the intended boot device and whether key hardware is detected",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1750,8 +1750,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Boot-device order and hardware detection affect startup."
         },
         {
@@ -1760,27 +1760,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Check cable/connector seating and firmware detection, then examine OS disk initialization",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Replace the monitor first",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Reinstall every application",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Change keyboard keycaps",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Replace the monitor first",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Check cable/connector seating and firmware detection, then examine OS disk initialization",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Physical/firmware detection should be checked before OS configuration."
         }
       ]
@@ -1796,8 +1796,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Connector/interface and system compatibility",
-              "is_correct": true
+              "text": "Whether the printer uses a ribbon",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1811,12 +1811,12 @@
             },
             {
               "label": "D",
-              "text": "Whether the printer uses a ribbon",
-              "is_correct": false
+              "text": "Connector/interface and system compatibility",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Legacy keyboard types and interfaces may differ."
         },
         {
@@ -1854,27 +1854,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Restricted cooling can lead to overheating and protective shutdown",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "A dusty fan automatically increases disk capacity",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "The parallel port changes CPU instructions",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Restricted cooling can lead to overheating and protective shutdown",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "The hard disk is converted to optical storage",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "A dusty fan automatically increases disk capacity",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Cooling failure can raise temperatures and lead to thermal shutdown."
         },
         {
@@ -1883,8 +1883,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Stop and verify ownership/contents and backup before initializing or formatting",
-              "is_correct": true
+              "text": "Create new partitions without checking",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1893,17 +1893,17 @@
             },
             {
               "label": "C",
-              "text": "Delete every partition",
-              "is_correct": false
+              "text": "Stop and verify ownership/contents and backup before initializing or formatting",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Create new partitions without checking",
+              "text": "Delete every partition",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Initialization or formatting may overwrite existing metadata or make data harder to recover."
         },
         {
@@ -1941,27 +1941,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Impact printing can make impressions through multi-part forms",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "It uses no contact with paper",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "It is a type of optical storage",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "It produces output by changing monitor pixels",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Impact printing can make impressions through multi-part forms",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "It uses no contact with paper",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Impact printers can strike through multi-part forms."
         },
         {
@@ -1970,8 +1970,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Inspect the internal display brightness/output selection and panel connection with appropriate service precautions",
-              "is_correct": true
+              "text": "Install a second HDD",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1985,12 +1985,12 @@
             },
             {
               "label": "D",
-              "text": "Install a second HDD",
-              "is_correct": false
+              "text": "Inspect the internal display brightness/output selection and panel connection with appropriate service precautions",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The evidence points toward the internal display path rather than all graphics output."
         },
         {
@@ -1999,13 +1999,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Access time",
-              "is_correct": true
+              "text": "Monitor size",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Monitor size",
-              "is_correct": false
+              "text": "Access time",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -2018,8 +2018,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Access time influences delay before requested data becomes available."
         },
         {
@@ -2028,27 +2028,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Drive form factor, connector/interface, bay and power compatibility",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Wallpaper resolution",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Mouse sensor type",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Printer cartridge colour",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Drive form factor, connector/interface, bay and power compatibility",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Wallpaper resolution",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Physical size and interface compatibility determine whether a drive can be installed."
         },
         {
@@ -2062,17 +2062,17 @@
             },
             {
               "label": "B",
-              "text": "Keyboard switch type",
+              "text": "Optical-disc label",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Printer ribbon",
+              "text": "Keyboard switch type",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Optical-disc label",
+              "text": "Printer ribbon",
               "is_correct": false
             }
           ],
@@ -2122,27 +2122,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Loose or damaged video cable/connector",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Incorrect document margins",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Full optical disc",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Loose or damaged video cable/connector",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Wrong keyboard layout",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Incorrect document margins",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The symptom changes with connector movement, indicating a connection issue."
         },
         {
@@ -2151,8 +2151,8 @@
           "options": [
             {
               "label": "A",
-              "text": "An HDD uses magnetic storage; a flash drive uses flash memory",
-              "is_correct": true
+              "text": "An HDD is an input peripheral",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2161,17 +2161,17 @@
             },
             {
               "label": "C",
-              "text": "A flash drive is a display technology",
-              "is_correct": false
+              "text": "An HDD uses magnetic storage; a flash drive uses flash memory",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "An HDD is an input peripheral",
+              "text": "A flash drive is a display technology",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The devices use different storage technologies."
         },
         {
@@ -2180,27 +2180,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Shut down, disconnect power and follow the device's service procedure before handling drives",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Hot-swap any drive regardless of support",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Touch contacts with a wet cloth",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Force connectors until they fit",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Shut down, disconnect power and follow the device's service procedure before handling drives",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Safe shutdown and correct handling reduce damage and electrical risk."
         },
         {
@@ -2209,27 +2209,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Partitions divide the disk logically; formatting establishes a file system on a partition",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Formatting increases the physical number of platters",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "A partition is the same as a keyboard connector",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Partitions divide the disk logically; formatting establishes a file system on a partition",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "The BIOS is a printer interface",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Formatting increases the physical number of platters",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Partitioning and formatting are different operations."
         },
         {
@@ -2238,8 +2238,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Impact printing with formed characters on a wheel",
-              "is_correct": true
+              "text": "Display of pixels on a panel",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2253,12 +2253,12 @@
             },
             {
               "label": "D",
-              "text": "Display of pixels on a panel",
-              "is_correct": false
+              "text": "Impact printing with formed characters on a wheel",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A daisy-wheel printer is a character-based impact printer."
         },
         {
@@ -2296,27 +2296,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Battery",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Graphics card",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Keyboard controller",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Optical drive tray",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Battery",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Graphics card",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The battery supplies portable energy."
         },
         {
@@ -2325,8 +2325,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Check for damage/connection issues and test the affected port with a known-good device",
-              "is_correct": true
+              "text": "Swap the printer ink type",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2340,12 +2340,12 @@
             },
             {
               "label": "D",
-              "text": "Swap the printer ink type",
-              "is_correct": false
+              "text": "Check for damage/connection issues and test the affected port with a known-good device",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A known-good device helps distinguish port issues from a device problem."
         },
         {
@@ -2354,13 +2354,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Disconnect again, inspect correct reassembly and connectors, then test before replacing parts",
-              "is_correct": true
+              "text": "Keep typing harder",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Keep typing harder",
-              "is_correct": false
+              "text": "Disconnect again, inspect correct reassembly and connectors, then test before replacing parts",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -2373,8 +2373,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Incorrect reassembly or a connector issue can cause the failure."
         }
       ]
@@ -2390,27 +2390,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Restricted airflow may cause overheating; power down safely and inspect ventilation/fan operation before further load testing",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "The hard disk capacity is too large; format it",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "The monitor resolution causes storage failure",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Restricted airflow may cause overheating; power down safely and inspect ventilation/fan operation before further load testing",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "A printer ribbon needs replacement",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The hard disk capacity is too large; format it",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The heat and obstructed airflow indicate a cooling problem; safely remove the obstruction and inspect cooling."
         },
         {
@@ -2419,8 +2419,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Back up important data, confirm compatibility and connectors, install safely, detect the drive, then partition/format only the intended new disk",
-              "is_correct": true
+              "text": "Connect the drive while power is on regardless of support",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2429,17 +2429,17 @@
             },
             {
               "label": "C",
-              "text": "Delete all partitions on both drives before shutdown",
-              "is_correct": false
+              "text": "Back up important data, confirm compatibility and connectors, install safely, detect the drive, then partition/format only the intended new disk",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Connect the drive while power is on regardless of support",
+              "text": "Delete all partitions on both drives before shutdown",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Backup, compatibility and target verification should precede destructive operations."
         },
         {
@@ -2448,27 +2448,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Impact printing supports multipart copies but generally makes more mechanical noise than non-impact inkjet printing",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Inkjet requires a striking ribbon",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "A monitor can print duplicate forms",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "An optical disc is an impact printer",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Impact printing supports multipart copies but generally makes more mechanical noise than non-impact inkjet printing",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Impact mechanism supports multi-part forms, but creates mechanical contact/noise."
         },
         {
@@ -2482,17 +2482,17 @@
             },
             {
               "label": "B",
-              "text": "Hard-drive partition count",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Printer access time",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Keyboard switch type",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Hard-drive partition count",
               "is_correct": false
             }
           ],
@@ -2506,8 +2506,8 @@
           "options": [
             {
               "label": "A",
-              "text": "The drive may be physically detected but lack a recognized partition; verify contents before creating one",
-              "is_correct": true
+              "text": "Unallocated status proves a failed monitor",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2516,17 +2516,17 @@
             },
             {
               "label": "C",
-              "text": "The BIOS becomes a keyboard port",
-              "is_correct": false
+              "text": "The drive may be physically detected but lack a recognized partition; verify contents before creating one",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Unallocated status proves a failed monitor",
+              "text": "The BIOS becomes a keyboard port",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Unallocated does not guarantee the drive contains no recoverable data."
         },
         {
@@ -2564,27 +2564,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Card compatibility and power requirements against the PSU's supported outputs before installation",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Whether the keyboard has a num-lock key",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Whether the screen is landscape",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Card compatibility and power requirements against the PSU's supported outputs before installation",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Whether the HDD has a short file name",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Whether the keyboard has a num-lock key",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Physical fit alone does not establish electrical/power compatibility."
         },
         {
@@ -2593,8 +2593,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Storage capacity increased, but measured data transfer rate did not necessarily improve",
-              "is_correct": true
+              "text": "Access time and storage capacity are identical",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2608,12 +2608,12 @@
             },
             {
               "label": "D",
-              "text": "Access time and storage capacity are identical",
-              "is_correct": false
+              "text": "Storage capacity increased, but measured data transfer rate did not necessarily improve",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Capacity and transfer rate are separate properties."
         },
         {
@@ -2651,27 +2651,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Shut down and disconnect power, use anti-static precautions, then check module compatibility and seating",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Pull the module out while running",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Short the memory contacts",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Reformat the storage drive",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Shut down and disconnect power, use anti-static precautions, then check module compatibility and seating",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Pull the module out while running",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Memory handling should be performed with power removed and anti-static care."
         }
       ]
@@ -2687,8 +2687,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Measure access time and transfer rate separately and compare them with the workload and drive specifications",
-              "is_correct": true
+              "text": "Use printer resolution to estimate drive speed",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2697,17 +2697,17 @@
             },
             {
               "label": "C",
-              "text": "Replace the monitor first",
-              "is_correct": false
+              "text": "Measure access time and transfer rate separately and compare them with the workload and drive specifications",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Use printer resolution to estimate drive speed",
+              "text": "Replace the monitor first",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Access latency and sustained transfer rate are different dimensions of storage performance."
         },
         {
@@ -2716,27 +2716,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Check whether a compatible parallel-to-USB interface and required driver are supported",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Connect the parallel plug into HDMI",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Assume every legacy interface is natively supported",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Replace RAM with a printer adapter",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Check whether a compatible parallel-to-USB interface and required driver are supported",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A suitable supported adapter may bridge the interfaces."
         },
         {
@@ -2750,17 +2750,17 @@
             },
             {
               "label": "B",
-              "text": "Delete all partitions without reviewing the disk",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Install both systems to the same partition without checking support",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Disable all boot security permanently as the first step",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Delete all partitions without reviewing the disk",
               "is_correct": false
             }
           ],
@@ -2774,27 +2774,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Ink droplets form each image",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "An electron beam excites phosphor on the screen",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Liquid crystals modulate light",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "A flash-memory cell stores every pixel permanently",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Ink droplets form each image",
+              "text": "A flash-memory cell stores every pixel permanently",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "CRT displays use an electron beam and phosphor."
         },
         {
@@ -2803,27 +2803,27 @@
           "options": [
             {
               "label": "A",
-              "text": "A problem with that front-panel port, its cable or connection, rather than a complete keyboard failure",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Every keyboard key is defective",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "The hard drive must be partitioned",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "The monitor uses the wrong resolution",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "A problem with that front-panel port, its cable or connection, rather than a complete keyboard failure",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Working keyboard on other ports narrows the issue to the affected port path."
         },
         {
@@ -2832,27 +2832,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Power down and inspect fan mounting/obstruction or seek service if the noise persists",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Increase processor load until noise stops",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Block the fan outlet",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Power down and inspect fan mounting/obstruction or seek service if the noise persists",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Format the drive to fix sound",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Increase processor load until noise stops",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Persistent mechanical noise after cleaning may indicate a fan or mounting issue."
         },
         {
@@ -2861,8 +2861,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Initialize/partition the intended disk as required, format each intended partition with a file system, then assign/use them",
-              "is_correct": true
+              "text": "Install a printer cartridge to create a file system",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2871,17 +2871,17 @@
             },
             {
               "label": "C",
-              "text": "Change the monitor input, then create partitions",
-              "is_correct": false
+              "text": "Initialize/partition the intended disk as required, format each intended partition with a file system, then assign/use them",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Install a printer cartridge to create a file system",
+              "text": "Change the monitor input, then create partitions",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The storage layout is planned before formatting and use."
         },
         {
@@ -2919,27 +2919,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Incorrect or mismatched power connections can damage components and create safety risks",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Connector shape changes file names",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "It changes the display's pixel count",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Incorrect or mismatched power connections can damage components and create safety risks",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "It alters the keyboard language automatically",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Connector shape changes file names",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Connector matching is necessary for electrical safety and hardware compatibility."
         },
         {
@@ -2948,8 +2948,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Design and upgrade options depend on the particular laptop; a discrete card is not automatically user-replaceable",
-              "is_correct": true
+              "text": "A graphics subsystem changes hard-drive formatting",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2963,12 +2963,12 @@
             },
             {
               "label": "D",
-              "text": "A graphics subsystem changes hard-drive formatting",
-              "is_correct": false
+              "text": "Design and upgrade options depend on the particular laptop; a discrete card is not automatically user-replaceable",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Laptop upgradeability is model-specific, especially for graphics hardware."
         }
       ]
@@ -2984,27 +2984,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The disk may have additional unallocated space that has not been assigned to a partition/volume",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "The remaining space is definitely CPU cache",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "The monitor limits disk capacity",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "The printer has hidden the other partitions",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The disk may have additional unallocated space that has not been assigned to a partition/volume",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Unallocated capacity is not presented as a usable volume until partitioned and formatted."
         },
         {
@@ -3018,17 +3018,17 @@
             },
             {
               "label": "B",
-              "text": "Format the old hard drive first",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Replace every peripheral at once",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Change document page margins",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Format the old hard drive first",
               "is_correct": false
             }
           ],
@@ -3042,27 +3042,27 @@
           "options": [
             {
               "label": "A",
+              "text": "CRT monitor and microphone",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Inkjet for quiet non-impact output; dot-matrix for impact multi-part forms",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Dot-matrix for both because it is non-impact",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Inkjet for multipart impact forms; HDD for paper output",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "CRT monitor and microphone",
+              "text": "Inkjet for multipart impact forms; HDD for paper output",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The two printer mechanisms serve different output constraints."
         },
         {
@@ -3071,18 +3071,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Confirm the disk identity, backup status and whether data recovery is needed before any destructive action",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Assume unreadable means empty",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Format all connected drives to test them",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Confirm the disk identity, backup status and whether data recovery is needed before any destructive action",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -3090,8 +3090,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "An unreadable partition can still contain valuable data."
         },
         {
@@ -3105,17 +3105,17 @@
             },
             {
               "label": "B",
-              "text": "HDMI carries only keyboard commands",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "HDMI is a magnetic storage format",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "HDMI is used only for printer ribbons",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "HDMI carries only keyboard commands",
               "is_correct": false
             }
           ],
@@ -3129,8 +3129,8 @@
           "options": [
             {
               "label": "A",
-              "text": "RTC/CMOS battery and firmware configuration retention",
-              "is_correct": true
+              "text": "Optical drive tray",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3139,17 +3139,17 @@
             },
             {
               "label": "C",
-              "text": "Printer nozzle",
-              "is_correct": false
+              "text": "RTC/CMOS battery and firmware configuration retention",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Optical drive tray",
+              "text": "Printer nozzle",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The motherboard's timekeeping/configuration battery may cause settings loss."
         },
         {
@@ -3158,27 +3158,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Capacity is the amount that can be stored; access time is the delay to retrieve/access data",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Both measure the screen size",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Access time is the number of USB ports",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Capacity is the speed at which a mouse moves",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Capacity is the amount that can be stored; access time is the delay to retrieve/access data",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The terms measure storage quantity and latency, respectively."
         },
         {
@@ -3187,27 +3187,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Drive support/compatibility, disc condition and the correct driver or connection path",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "CPU arithmetic logic",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Keyboard layout",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Drive support/compatibility, disc condition and the correct driver or connection path",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "PSU outlet gender only",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "CPU arithmetic logic",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Disc format support and disc/drive condition are targeted checks."
         },
         {
@@ -3216,8 +3216,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Compatible drive bay/mounting, data interface connection and suitable power connection",
-              "is_correct": true
+              "text": "A display-resolution menu only",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3226,17 +3226,17 @@
             },
             {
               "label": "C",
-              "text": "A printer ribbon and speaker grille",
-              "is_correct": false
+              "text": "Compatible drive bay/mounting, data interface connection and suitable power connection",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "A display-resolution menu only",
+              "text": "A printer ribbon and speaker grille",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The drive requires physical mounting and data/power connections."
         },
         {
@@ -3286,17 +3286,17 @@
             },
             {
               "label": "B",
-              "text": "The drive only needs a file-system label",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "The display cable is definitely at fault",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "The keyboard must be reinstalled",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The drive only needs a file-system label",
               "is_correct": false
             }
           ],
@@ -3310,27 +3310,27 @@
           "options": [
             {
               "label": "A",
+              "text": "The keyboard changes the CPU's instruction set",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "The blanket may obstruct intake/exhaust airflow, reducing cooling",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "The hard table doubles RAM capacity",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "The screen resolution changes battery chemistry",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "The keyboard changes the CPU's instruction set",
+              "text": "The screen resolution changes battery chemistry",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Blocked vents can impair cooling and raise system temperatures."
         },
         {
@@ -3339,18 +3339,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Back up data, verify the new drive/interface, install with power disconnected, detect it, then partition/format only the new disk if required",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Format the current drive before testing the new one",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Disconnect the old disk while the computer is running regardless of support",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Back up data, verify the new drive/interface, install with power disconnected, detect it, then partition/format only the new disk if required",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -3358,8 +3358,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The sequence protects data and avoids unnecessary destructive changes."
         },
         {
@@ -3368,27 +3368,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Return to a supported resolution and verify input/cable compatibility",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Format the HDD",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Replace the keyboard switches",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Use a dot-matrix driver",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Format the HDD",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Return to a supported resolution and verify input/cable compatibility",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A mode beyond display/cable support can prevent a usable image."
         },
         {
@@ -3397,27 +3397,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Choose only by connector colour",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Match each peripheral's interface with a supported computer port/adapter and driver",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Any connector can carry any data if forced",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Use the monitor port for serial data",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Choose only by connector colour",
+              "text": "Use the monitor port for serial data",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Interface standards are not interchangeable without supported hardware."
         },
         {
@@ -3426,27 +3426,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Required graphics workload, compatibility, physical fit, power and cooling capacity",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Whether the mouse is wireless",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Whether the printer uses impact dots",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "How many partitions are on the hard disk",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Required graphics workload, compatibility, physical fit, power and cooling capacity",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Graphics choice must account for workload and system limits."
         },
         {
@@ -3460,17 +3460,17 @@
             },
             {
               "label": "B",
-              "text": "HDD—optical; DVD—flash; USB drive—magnetic platter",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "RAM—optical; HDD—CPU cache; DVD—magnetic card",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "USB drive—CRT; DVD—RAM; HDD—keyboard",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "HDD—optical; DVD—flash; USB drive—magnetic platter",
               "is_correct": false
             }
           ],
@@ -3484,8 +3484,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Access time",
-              "is_correct": true
+              "text": "Keyboard switch force",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3494,17 +3494,17 @@
             },
             {
               "label": "C",
-              "text": "Speaker frequency",
-              "is_correct": false
+              "text": "Access time",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Keyboard switch force",
+              "text": "Speaker frequency",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Access time helps characterize response latency for requests."
         },
         {
@@ -3513,27 +3513,27 @@
           "options": [
             {
               "label": "A",
-              "text": "PS/2 port/device support, port condition and firmware settings",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Disk capacity",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Printer paper tray",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Optical disc colour",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "PS/2 port/device support, port condition and firmware settings",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Evidence narrows the issue to the legacy PS/2 path or support."
         },
         {
@@ -3542,27 +3542,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Power down and reconnect/verify the fan, then test cooling and stability",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Leave it disconnected if the PC starts",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Run a long stress test while overheated",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Power down and reconnect/verify the fan, then test cooling and stability",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Format user files",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Leave it disconnected if the PC starts",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Correct fan operation is important for safe and stable cooling."
         }
       ]
