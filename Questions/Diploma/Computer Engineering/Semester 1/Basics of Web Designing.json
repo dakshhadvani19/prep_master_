@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "course_id": 44,
+  "course_name": "Diploma Computer Engineering",
+  "semester": 1,
+  "subject_id": "44000935310201",
+  "subject_name": "Basics of Web Designing",
+  "questions": [
+    {
+      "id": "44000935310201_sem1_001",
+      "subject_id": "44000935310201",
+      "text": "A page must load the same visual rules across 20 HTML files. Which change best minimizes duplicated styling while keeping later updates consistent?",
+      "options": [
+        "Put a style attribute on each element",
+        "Add one linked external stylesheet and reference it from each page",
+        "Repeat a style block in every page's head",
+        "Use the deprecated font tag throughout"
+      ],
+      "answer": 1,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "easy"
+    },
+    {
+      "id": "44000935310201_sem1_002",
+      "subject_id": "44000935310201",
+      "text": "A user types a domain name, but the browser needs the destination IP address. Which service resolves that name before the connection is made?",
+      "options": [
+        "HTTP",
+        "FTP",
+        "DNS",
+        "CSS"
+      ],
+      "answer": 2,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "easy"
+    },
+    {
+      "id": "44000935310201_sem1_003",
+      "subject_id": "44000935310201",
+      "text": "A page contains an image that conveys information. Which implementation best preserves that information for a user who cannot see the image?",
+      "options": [
+        "Use a descriptive alt value conveying the image's meaning",
+        "Set the image width and height explicitly",
+        "Put the filename in the title attribute only",
+        "Use CSS background-image with no accompanying text"
+      ],
+      "answer": 0,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "easy"
+    },
+    {
+      "id": "44000935310201_sem1_004",
+      "subject_id": "44000935310201",
+      "text": "A form must allow exactly one answer from three mutually exclusive choices, while also allowing several independent preferences to be checked. Which pairing is appropriate?",
+      "options": [
+        "Checkboxes for the single answer; radio buttons for preferences",
+        "Select elements for both, regardless of interaction",
+        "Radio buttons sharing a name for the single answer; checkboxes for preferences",
+        "Text inputs for both to preserve flexibility"
+      ],
+      "answer": 2,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium"
+    },
+    {
+      "id": "44000935310201_sem1_005",
+      "subject_id": "44000935310201",
+      "text": "A table has a heading cell that should span three columns. A developer uses rowspan=\"3\". What is the actual issue and correction?",
+      "options": [
+        "rowspan is valid only on headings; replace it with scope",
+        "rowspan spans rows, so use colspan=\"3\"",
+        "rowspan requires CSS grid; use display: table",
+        "No issue: rowspan and colspan are interchangeable"
+      ],
+      "answer": 1,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium"
+    },
+    {
+      "id": "44000935310201_sem1_006",
+      "subject_id": "44000935310201",
+      "text": "A stylesheet rule `.notice { color: blue; }` should affect only the element whose id is `notice`. Which change most directly matches the requirement?",
+      "options": [
+        "Change `.notice` to `#notice` and assign id=\"notice\"",
+        "Keep `.notice` and assign class=\"notice\"",
+        "Change color to background-color",
+        "Move the rule into an inline style without changing the selector"
+      ],
+      "answer": 0,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium"
+    },
+    {
+      "id": "44000935310201_sem1_007",
+      "subject_id": "44000935310201",
+      "text": "A registration page needs (1) styles shared by all pages, (2) one page-specific layout rule, and (3) one urgent single-element override. Which strategy is most maintainable while satisfying all three?",
+      "options": [
+        "Put every rule inline so precedence is predictable",
+        "Use a linked stylesheet for shared rules, an internal style block for page-specific rules, and inline styling only for the exceptional element",
+        "Use only an internal style block and copy it to each page",
+        "Use deprecated HTML presentation tags for shared rules and CSS for the rest"
+      ],
+      "answer": 1,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "hard"
+    },
+    {
+      "id": "44000935310201_sem1_008",
+      "subject_id": "44000935310201",
+      "text": "A student says a form's `method=\"get\"` is preferable because the form contains a password and GET is easier to debug. Which response best identifies the decisive security issue?",
+      "options": [
+        "GET always encrypts values in transit, so it is preferable",
+        "GET prevents values from appearing in browser history",
+        "GET commonly places submitted values in the URL; use HTTPS and a suitable POST flow, while recognizing POST alone is not encryption",
+        "POST makes the form secure even over unencrypted HTTP"
+      ],
+      "answer": 2,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "hard"
+    },
+    {
+      "id": "44000935310201_sem1_009",
+      "subject_id": "44000935310201",
+      "text": "An image is purely decorative, a nearby caption already gives the same information, and a screen reader is announcing the filename as duplicate content. Which is the best fix?",
+      "options": [
+        "Remove the image so the layout is simpler",
+        "Use an empty alt attribute for the decorative image",
+        "Repeat the caption in alt text so both are available",
+        "Move the filename to the image title attribute"
+      ],
+      "answer": 1,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "hard"
+    },
+    {
+      "id": "44000935310201_sem1_010",
+      "subject_id": "44000935310201",
+      "text": "A layout works on desktop but its fixed-width content overflows on a narrow phone. Which change best addresses the cause without discarding the layout rules?",
+      "options": [
+        "Set a larger fixed width so the browser scales it",
+        "Replace every class selector with an id selector",
+        "Add a viewport meta tag only; fixed-width content will then always fit",
+        "Use responsive sizing and a media query at an appropriate viewport width, and ensure the viewport is configured"
+      ],
+      "answer": 3,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "hard"
+    }
+  ]
+}
