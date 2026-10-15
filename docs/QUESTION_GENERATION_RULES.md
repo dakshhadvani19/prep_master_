@@ -338,3 +338,58 @@ The project owner has confirmed the following target policies. They are requirem
 - Keep the rubric hidden while the timed exam is active. Showing it or a model answer is a post-submission review behavior, not an in-exam hint.
 
 Do not claim the confirmed behavior is live until implementation, validation, and relevant tests are completed.
+
+
+## 11. Difficulty calibration v2 — mandatory generation contract
+
+This section supersedes any weaker earlier wording about difficulty. It is the rule to use for new question-bank generation and AI question prompts. Difficulty is measured by the reasoning needed to choose the answer, not by obscure vocabulary, long stems, or deliberately confusing grammar.
+
+### 11.1 Easy — foundational, not giveaway-level
+
+- Test a central fact, definition, purpose, distinction, or one-step application from the selected syllabus.
+- Use four options from the **same conceptual family** whenever the syllabus supports it. For example, distinguish nearby protocols, related HTML attributes, similar spreadsheet functions, related constitutional Articles, or similar projection conventions.
+- At least two wrong options must be believable near-misses for a student who has learned the topic imperfectly. The stem should make the correct answer clearly best after applying the basic concept, not immediately obvious because the other options are unrelated or absurd.
+- Avoid giveaway patterns: one option that is the only technical phrase, a much longer answer, an option copied word-for-word from the stem, grammatical agreement found only in the key, or three choices from unrelated topics.
+
+### 11.2 Medium — competing interpretations resolved by a decisive condition
+
+- Prefer a realistic scenario, output interpretation, comparison, short calculation, troubleshooting choice, or two linked steps.
+- At least two—and preferably all three—distractors should look plausible before the decisive condition is applied. Use neighbouring concepts, common wrong intermediate steps, near-correct formulas, incomplete procedures, or a valid method applied in the wrong situation.
+- The stem must provide the deciding detail explicitly. The student should have to check the choices against that detail, not guess what the examiner intended.
+- Do not convert an easy recall question into a medium question merely by adding names, background, or extra words.
+
+### 11.3 Hard — multi-step reasoning and partially correct traps
+
+- Require at least two meaningful reasoning steps or a choice under multiple explicit constraints. Good forms include diagnosis, design trade-offs, edge conditions, calculations with intermediate steps, interpreting a result, or identifying which proposed solution satisfies a full brief.
+- All three distractors should be technically credible. Where appropriate, each should be **partially correct in another context** or satisfy part of the requirement while failing one stated condition.
+- Strong hard distractors can embody: a correct rule used outside its assumptions; a correct but incomplete answer; a misread constraint; a wrong intermediate calculation; a procedure that omits a necessary safety/check step; or a plausible solution with a consequential trade-off.
+- The key must be the only option that satisfies **all** explicit conditions. Do not use “full confusion” as permission for ambiguity. If two options remain defensible after careful reading, the item is invalid and must be rewritten.
+- State required units, assumptions, inputs, constraints and any rounding or convention needed to solve the item fairly. Do not hide a decisive condition outside the stem.
+
+### 11.4 Option-quality gate — required at all difficulties
+
+Before accepting an MCQ, verify each point:
+
+1. The stem passes the **cover-the-options test**: a knowledgeable student can state what kind of answer is required before reading choices.
+2. The options are mutually distinct, grammatically parallel, roughly similar in specificity and not conspicuously different in length.
+3. Each distractor has a named reason why an imperfect but reasonable student could select it, and a precise reason it fails under this stem.
+4. No choice is random, absurd, from an unrelated subject, or included merely to reach four options.
+5. The key is not signalled by option length, detail, terminology, grammar, answer-position patterns, or repeated words from the stem.
+6. There is exactly one defensible best answer. For a partially correct trap, the exact missing condition or invalid assumption must be explicit and explainable.
+7. No generic filler such as “The rigorous definition of…”, “all of the above”, “none of the above”, or patched-in True/False choices may be used to satisfy the schema.
+8. Randomize option order only after the key has been checked, and remap the answer index after shuffling.
+
+### 11.5 Internal review metadata and persisted schema
+
+- MCQ generation must internally record why the key is correct, why **each of the three individual distractors** is tempting but wrong, and why only one option satisfies the exact stem. Reject an item if these explanations are generic, contradictory, or repeat the same reason.
+- This review metadata is for quality control. Do **not** persist it in compact student-facing question-bank JSON unless the consumer explicitly needs it.
+- Student-facing MCQs need only the agreed fields such as `id`, `subject_id`, `text`, `options`, `answer`, `type`, and `marks` (plus requested bank/batch metadata). Theory questions need their identifiers, subject linkage, text, question type and mark value. Do not add full syllabus copies, explanation blobs, unused tags, or duplicate metadata.
+- Theory questions follow the same progression: easy asks a focused foundation; medium applies or compares; hard requires reasoned multi-step analysis/design/diagnosis. Marks indicate the expected depth and breadth, but mark value alone does not define difficulty.
+
+### 11.6 Set-level validation — do not silently repair bad questions
+
+- Validate exact question count, option count, answer index, duplicate stems, duplicate options, valid subject IDs, allowed mark values, and exact total marks before publishing a batch.
+- Reject the entire invalid item instead of silently adding generic options or defaulting its answer to option A.
+- Across a test, cover distinct syllabus units/outcomes and avoid near-duplicates. Answer positions should be reasonably balanced without an obvious pattern.
+- If the model cannot produce a complete valid set, return a clear retryable error. An incomplete or weak set is not better than a rejected set.
+
