@@ -1,0 +1,217 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 5,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 5,
+    "subjects": 7,
+    "nonDepartmentalSubjects": 3,
+    "departmentalSubjects": 4,
+    "examTypeBanks": 17,
+    "totalTests": 204,
+    "mcqTests": 132,
+    "theoryTests": 72,
+    "mcqQuestions": 3960,
+    "theoryQuestions": 288,
+    "mcqOptionEntries": 15840,
+    "answerEntries": 4248
+  },
+  "exam_rules": {
+    "nonDepartmental": {
+      "Mid1": "12 theory variants × 4 questions × 8 marks, first-half scope",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "12 theory variants × 4 questions × 8 marks"
+    },
+    "departmental": {
+      "Mid1": "12 MCQ variants × 30, first-half scope",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "not generated"
+    },
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "Non-departmental: occurrences 1-12 Mid 1, 13-24 Mid 2, 25-36 ESE; departmental: 1-12 Mid 1, 13-24 Mid 2."
+  },
+  "subjects": [
+    {
+      "name": "Advance Database Management System",
+      "SubjectId": "44000935150201",
+      "subject_code": "09CE1502",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1502-_ADBMS.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Functional Dependency and Decomposition; Normalization; Transaction and Concurrency."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 5 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 5 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Advance Java Programming",
+      "SubjectId": "44000935150401",
+      "subject_code": "09CE1504",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1504_AJP.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: JAVA Applets; AWT(Abstract Window Toolkit); JDBC Programming; Servlet API and Overview."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 5 syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Advance Web Technology",
+      "SubjectId": "44000935150301",
+      "subject_code": "09CE1503",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1503_AWT.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Web Design; Advance CSS & HTML; Responsive Web Design; Responsive Web Design using Bootstrap."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 5 syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Fundamentals Of IOT With Python",
+      "SubjectId": "44000935150601",
+      "subject_code": "09CE1506",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1506_FIOT.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Introduction to IoT; IoT & M2M; Domain and Challenges in IoT."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 5 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 5 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Mobile Computing",
+      "SubjectId": "44000935150101",
+      "subject_code": "09CE1501",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1501_MC.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: What is Mobile Computing; Wireless Transmission Fundamentals; GSM / GPRS Communication."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 5 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 5 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Project-I",
+      "SubjectId": "44000935150501",
+      "subject_code": "09CE1505",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1505_Project-I.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Project/Problem Identification; Project Analysis, Requirement Gathering; Project Design / Prototype Development."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 5 syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Summer Internship",
+      "SubjectId": "44000935050901",
+      "subject_code": "09CE0509",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE0509_SI.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Offline Internship in Industry."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 5 syllabus practice bank."
+        }
+      ]
+    }
+  ],
+  "cautions": [
+    "Mid 1 scope is the first half of ordered syllabus units, stored in metadata.",
+    "Other subject/exam/difficulty metadata is stored in test_index.",
+    "Theory rows use Options=[] and model answers in Answers; consumers must branch by format.",
+    "Bank content is a syllabus-derived draft and requires academic review."
+  ]
+}
