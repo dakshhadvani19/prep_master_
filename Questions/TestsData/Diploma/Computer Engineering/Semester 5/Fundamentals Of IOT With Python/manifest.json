@@ -1,0 +1,36 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "name": "Fundamentals Of IOT With Python",
+    "SubjectId": "44000935150601",
+    "semester": 5,
+    "isDepartmentalSubject": false,
+    "subject_code": "09CE1506",
+    "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1506_FIOT.pdf"
+  },
+  "canonical_bank": "../exam-bank-v2.json",
+  "canonical_seed_sql": "../seed-all-v2.sql",
+  "filter": {
+    "SubjectId": "44000935150601"
+  },
+  "examTypes": [
+    {
+      "examType": "Mid 1",
+      "format": "theory",
+      "tests": 12,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Introduction to IoT; IoT & M2M; Domain and Challenges in IoT."
+    },
+    {
+      "examType": "Mid 2",
+      "format": "mcq",
+      "tests": 12,
+      "syllabusScope": "Full Semester 5 syllabus practice bank."
+    },
+    {
+      "examType": "ESE",
+      "format": "theory",
+      "tests": 12,
+      "syllabusScope": "Full Semester 5 syllabus."
+    }
+  ]
+}
