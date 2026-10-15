@@ -14,8 +14,8 @@
           "options": [
             {
               "label": "A",
-              "text": "CPU",
-              "is_correct": true
+              "text": "SSD",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -24,17 +24,17 @@
             },
             {
               "label": "C",
-              "text": "Keyboard",
-              "is_correct": false
+              "text": "CPU",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "SSD",
+              "text": "Keyboard",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The CPU executes program instructions."
         },
         {
@@ -48,22 +48,22 @@
             },
             {
               "label": "B",
-              "text": "RAM",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "SSD",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Optical disc",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "RAM",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "RAM is volatile working memory."
         },
         {
@@ -72,8 +72,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Word processor",
-              "is_correct": false
+              "text": "Operating system",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -82,17 +82,17 @@
             },
             {
               "label": "C",
-              "text": "Operating system",
-              "is_correct": true
+              "text": "Spreadsheet",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Spreadsheet",
+              "text": "Word processor",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "The operating system manages hardware and application execution."
         },
         {
@@ -101,27 +101,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Speaker",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Keyboard",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Monitor",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Projector",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Speaker",
+              "text": "Projector",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A keyboard is an input device."
         },
         {
@@ -159,7 +159,7 @@
           "options": [
             {
               "label": "A",
-              "text": "ls",
+              "text": "cd",
               "is_correct": false
             },
             {
@@ -169,12 +169,12 @@
             },
             {
               "label": "C",
-              "text": "cd",
+              "text": "mkdir",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "mkdir",
+              "text": "ls",
               "is_correct": false
             }
           ],
@@ -188,8 +188,8 @@
           "options": [
             {
               "label": "A",
-              "text": "i",
-              "is_correct": true
+              "text": "Esc",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -198,17 +198,17 @@
             },
             {
               "label": "C",
-              "text": ":q",
-              "is_correct": false
+              "text": "i",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Esc",
+              "text": ":q",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Press i to insert text at the cursor."
         },
         {
@@ -217,18 +217,18 @@
           "options": [
             {
               "label": "A",
+              "text": "mkdir",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "rmdir",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "cd",
               "is_correct": false
-            },
-            {
-              "label": "C",
-              "text": "mkdir",
-              "is_correct": true
             },
             {
               "label": "D",
@@ -236,8 +236,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "mkdir creates a directory."
         },
         {
@@ -246,7 +246,7 @@
           "options": [
             {
               "label": "A",
-              "text": "It is immediately overwritten",
+              "text": "It is automatically emailed",
               "is_correct": false
             },
             {
@@ -256,12 +256,12 @@
             },
             {
               "label": "C",
-              "text": "It is automatically emailed",
+              "text": "Only its shortcut is removed",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Only its shortcut is removed",
+              "text": "It is immediately overwritten",
               "is_correct": false
             }
           ],
@@ -275,17 +275,17 @@
           "options": [
             {
               "label": "A",
-              "text": "Mouse",
+              "text": "Microphone",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Keyboard",
+              "text": "Mouse",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Microphone",
+              "text": "Keyboard",
               "is_correct": false
             },
             {
@@ -321,17 +321,17 @@
             },
             {
               "label": "C",
-              "text": "Justify",
-              "is_correct": true
+              "text": "Right",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Right",
-              "is_correct": false
+              "text": "Justify",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Justify aligns text to both margins."
         },
         {
@@ -345,17 +345,17 @@
             },
             {
               "label": "B",
-              "text": "Mail Merge",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Track Changes",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Word Count",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Mail Merge",
               "is_correct": false
             }
           ],
@@ -369,7 +369,7 @@
           "options": [
             {
               "label": "A",
-              "text": "At the bottom of the page",
+              "text": "Only on the cover page",
               "is_correct": false
             },
             {
@@ -379,12 +379,12 @@
             },
             {
               "label": "C",
-              "text": "Inside each table cell only",
+              "text": "At the bottom of the page",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Only on the cover page",
+              "text": "Inside each table cell only",
               "is_correct": false
             }
           ],
@@ -427,27 +427,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Page border",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Watermark",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Footnote",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Caption",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Page border",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "A watermark can place faint text or an image behind content."
         },
         {
@@ -456,27 +456,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Page orientation",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Margins",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Paper size",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Page orientation",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "Line spacing",
               "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Margins",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Line spacing sets the distance between lines."
         },
         {
@@ -485,27 +485,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Columns",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Hanging indent",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Track changes",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Page colour",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Columns",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Columns create side-by-side vertical text blocks."
         },
         {
@@ -514,7 +514,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Hide all headers",
+              "text": "Use spell check",
               "is_correct": false
             },
             {
@@ -524,12 +524,12 @@
             },
             {
               "label": "C",
-              "text": "Use spell check",
+              "text": "Insert a text box",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Insert a text box",
+              "text": "Hide all headers",
               "is_correct": false
             }
           ],
@@ -543,12 +543,12 @@
           "options": [
             {
               "label": "A",
-              "text": "Draft only",
+              "text": "Clipboard",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Outline only",
+              "text": "Draft only",
               "is_correct": false
             },
             {
@@ -558,7 +558,7 @@
             },
             {
               "label": "D",
-              "text": "Clipboard",
+              "text": "Outline only",
               "is_correct": false
             }
           ],
@@ -572,27 +572,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Font Size box",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "Zoom slider only",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Page borders",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "D",
               "text": "Header settings",
               "is_correct": false
-            },
-            {
-              "label": "D",
-              "text": "Font Size box",
-              "is_correct": true
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "The Font Size control changes the selected text size."
         }
       ]
@@ -608,27 +608,27 @@
           "options": [
             {
               "label": "A",
-              "text": "=COUNT(B2:B6)",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "=SUM(B2:B6)",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "=AVERAGE(B2:B6)",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "=MAX(B2:B6)",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "=COUNT(B2:B6)",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "SUM adds values in the range."
         },
         {
@@ -637,27 +637,27 @@
           "options": [
             {
               "label": "A",
-              "text": "=SUM(C2:C7)",
+              "text": "=MIN(C2:C7)",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "=COUNT(C2:C7)",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "=AVERAGE(C2:C7)",
               "is_correct": true
             },
             {
+              "label": "C",
+              "text": "=SUM(C2:C7)",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "=MIN(C2:C7)",
+              "text": "=COUNT(C2:C7)",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "AVERAGE returns the arithmetic mean."
         },
         {
@@ -695,27 +695,27 @@
           "options": [
             {
               "label": "A",
-              "text": "NOW()",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "TODAY()",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "DATEVALUE()",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "TIME()",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "NOW()",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "TODAY()",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "TODAY returns the current date."
         },
         {
@@ -724,27 +724,27 @@
           "options": [
             {
               "label": "A",
+              "text": "DAY()",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "NOW()",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "TODAY()",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "YEAR()",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "DAY()",
+              "text": "YEAR()",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "NOW returns current date and time."
         },
         {
@@ -758,22 +758,22 @@
             },
             {
               "label": "B",
-              "text": "Freeze Panes",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Merge Cells",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Conditional Formatting",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Freeze Panes",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Freeze Panes keeps selected rows or columns visible."
         },
         {
@@ -782,27 +782,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Filter",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Sort A to Z",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Freeze Panes",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Data Validation",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Filter",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Sort A to Z orders text alphabetically."
         },
         {
@@ -811,8 +811,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Filter",
-              "is_correct": true
+              "text": "Freeze Panes",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -821,17 +821,17 @@
             },
             {
               "label": "C",
-              "text": "Format Painter",
-              "is_correct": false
+              "text": "Filter",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Freeze Panes",
+              "text": "Format Painter",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A filter hides rows that do not meet the criteria."
         },
         {
@@ -845,22 +845,22 @@
             },
             {
               "label": "B",
-              "text": "Bar or column chart",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Scatter plot without labels",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Screenshot of the table",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Bar or column chart",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Bar and column charts compare values across categories."
         },
         {
@@ -869,27 +869,27 @@
           "options": [
             {
               "label": "A",
-              "text": "SUMIF",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "COUNTBLANK",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "NOW",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "SUMIF",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "ROUND",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "COUNTBLANK",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "SUMIF adds values that meet a specified condition."
         }
       ]
@@ -905,7 +905,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Slide Sorter",
+              "text": "Notes Page",
               "is_correct": false
             },
             {
@@ -915,12 +915,12 @@
             },
             {
               "label": "C",
-              "text": "Animation Pane",
+              "text": "Slide Sorter",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Notes Page",
+              "text": "Animation Pane",
               "is_correct": false
             }
           ],
@@ -963,27 +963,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Animation",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Page margin",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Freeze Panes",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Spell check",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Page margin",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Animation",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Animations control effects on slide objects."
         },
         {
@@ -992,27 +992,27 @@
           "options": [
             {
               "label": "A",
-              "text": "To",
-              "is_correct": false
+              "text": "BCC",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "CC",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Subject",
               "is_correct": false
             },
             {
+              "label": "C",
+              "text": "To",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "BCC",
-              "is_correct": true
+              "text": "CC",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "BCC recipients are not shown to other recipients."
         },
         {
@@ -1021,18 +1021,18 @@
           "options": [
             {
               "label": "A",
-              "text": "CC",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "BCC",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Attachment",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "CC",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1040,8 +1040,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "CC adds visible copy recipients."
         },
         {
@@ -1050,27 +1050,27 @@
           "options": [
             {
               "label": "A",
-              "text": "A saved contact group",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "A file sent with the message",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "The subject line",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "A hidden recipient field",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "A saved contact group",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "An attachment is a file included with an email."
         },
         {
@@ -1079,27 +1079,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Encrypts every attachment",
+              "text": "Changes message priority",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Hides the recipient list",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Adds saved sender details to messages",
               "is_correct": true
             },
             {
+              "label": "C",
+              "text": "Encrypts every attachment",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "Changes message priority",
+              "text": "Hides the recipient list",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A signature appends saved contact or sign-off text."
         },
         {
@@ -1113,22 +1113,22 @@
             },
             {
               "label": "B",
-              "text": "<p>",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "<img>",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "<br> only",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "<p>",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The p element represents a paragraph."
         },
         {
@@ -1137,8 +1137,8 @@
           "options": [
             {
               "label": "A",
-              "text": "font-style",
-              "is_correct": false
+              "text": "background-color",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -1147,17 +1147,17 @@
             },
             {
               "label": "C",
-              "text": "background-color",
-              "is_correct": true
+              "text": "list-style",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "list-style",
+              "text": "font-style",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "background-color controls background colour."
         },
         {
@@ -1166,8 +1166,8 @@
           "options": [
             {
               "label": "A",
-              "text": "To locate relevant pages using keywords",
-              "is_correct": true
+              "text": "To change spreadsheet formulas",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1176,17 +1176,17 @@
             },
             {
               "label": "C",
-              "text": "To format a Word footer",
-              "is_correct": false
+              "text": "To locate relevant pages using keywords",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "To change spreadsheet formulas",
+              "text": "To format a Word footer",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Search queries help locate relevant webpages."
         }
       ]
@@ -1207,13 +1207,13 @@
             },
             {
               "label": "B",
-              "text": "Recycle Bin",
-              "is_correct": true
+              "text": "Taskbar settings",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Taskbar settings",
-              "is_correct": false
+              "text": "Recycle Bin",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1221,8 +1221,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Normally deleted items are often recoverable from the Recycle Bin."
         },
         {
@@ -1231,27 +1231,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Hold Ctrl while clicking each file",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Hold Shift and click the first and last",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Press Esc between clicks",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Use Print Preview",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Hold Shift and click the first and last",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Hold Ctrl while clicking each file",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Ctrl-click selects separate items individually."
         },
         {
@@ -1260,27 +1260,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Shortcuts duplicate all file data",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "The original was encrypted",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Deleting the shortcut usually removes only the link",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "The document moves to RAM",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Shortcuts duplicate all file data",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The original was encrypted",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "A shortcut points to the original item rather than containing its full data."
         },
         {
@@ -1318,17 +1318,17 @@
           "options": [
             {
               "label": "A",
-              "text": "pwd",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "cd -a",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "vi -l",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "pwd",
               "is_correct": false
             },
             {
@@ -1347,7 +1347,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Delete all partitions immediately",
+              "text": "Rename personal files only",
               "is_correct": false
             },
             {
@@ -1357,12 +1357,12 @@
             },
             {
               "label": "C",
-              "text": "Disable every security feature",
+              "text": "Delete all partitions immediately",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Rename personal files only",
+              "text": "Disable every security feature",
               "is_correct": false
             }
           ],
@@ -1376,18 +1376,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Display settings",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Email signature settings",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Recycle Bin properties",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Display settings",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1395,8 +1395,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Display resolution is configured in display settings."
         },
         {
@@ -1405,8 +1405,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Disable updates permanently",
-              "is_correct": false
+              "text": "Install trusted security updates",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -1415,17 +1415,17 @@
             },
             {
               "label": "C",
-              "text": "Install trusted security updates",
-              "is_correct": true
+              "text": "Turn off screen locking",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Turn off screen locking",
+              "text": "Disable updates permanently",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Trusted security updates patch known vulnerabilities."
         },
         {
@@ -1434,7 +1434,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Slide Master",
+              "text": "Freeze Panes",
               "is_correct": false
             },
             {
@@ -1444,12 +1444,12 @@
             },
             {
               "label": "C",
-              "text": "Mail Merge",
+              "text": "Slide Master",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Freeze Panes",
+              "text": "Mail Merge",
               "is_correct": false
             }
           ],
@@ -1499,27 +1499,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Apply columns to the body and keep the title in a separate heading area",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Put every paragraph inside a screenshot",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Use a different font for each line",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Replace text with WordArt",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Put every paragraph inside a screenshot",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Apply columns to the body and keep the title in a separate heading area",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Separate title and body formatting so columns affect the newsletter text."
         },
         {
@@ -1528,27 +1528,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Turn off all footers",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Use Different First Page, then add numbering to later-page footers",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "Put page numbers in every paragraph",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "Delete all page breaks",
+              "text": "Turn off all footers",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Put page numbers in every paragraph",
+              "text": "Delete all page breaks",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Different First Page allows the first-page footer to differ."
         },
         {
@@ -1586,12 +1586,12 @@
           "options": [
             {
               "label": "A",
-              "text": "Print all pages portrait, then page 1 only",
+              "text": "Change font to landscape, then export a screenshot",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Change font to landscape, then export a screenshot",
+              "text": "Delete all pages after page 1",
               "is_correct": false
             },
             {
@@ -1601,7 +1601,7 @@
             },
             {
               "label": "D",
-              "text": "Delete all pages after page 1",
+              "text": "Print all pages portrait, then page 1 only",
               "is_correct": false
             }
           ],
@@ -1620,17 +1620,17 @@
             },
             {
               "label": "B",
-              "text": "Mail Merge",
+              "text": "Page Break",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Find and Replace",
+              "text": "Mail Merge",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Page Break",
+              "text": "Find and Replace",
               "is_correct": false
             }
           ],
@@ -1673,27 +1673,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The full table by its sales column",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Only the sales cells independently",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "The page colour",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "The paragraph line spacing",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Only the sales cells independently",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The full table by its sales column",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Sorting complete rows preserves each product's corresponding data."
         },
         {
@@ -1702,7 +1702,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Footnote",
+              "text": "Caption",
               "is_correct": false
             },
             {
@@ -1712,12 +1712,12 @@
             },
             {
               "label": "C",
-              "text": "Page number",
+              "text": "Footnote",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Caption",
+              "text": "Page number",
               "is_correct": false
             }
           ],
@@ -1765,17 +1765,17 @@
             },
             {
               "label": "B",
-              "text": "A footnote after every paragraph",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "A text box at the end",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "The clipboard",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "A footnote after every paragraph",
               "is_correct": false
             }
           ],
@@ -1796,27 +1796,27 @@
           "options": [
             {
               "label": "A",
-              "text": "B1",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "B$2",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "$B$1",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "$D$2",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "B1",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "B$2",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "$B$1 fixes both the column and row."
         },
         {
@@ -1825,13 +1825,13 @@
           "options": [
             {
               "label": "A",
-              "text": "=SUM(B2:G2)/600*100",
-              "is_correct": true
+              "text": "=AVERAGE(B2:G2)/100",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "=AVERAGE(B2:G2)/100",
-              "is_correct": false
+              "text": "=SUM(B2:G2)/600*100",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1844,8 +1844,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Divide total marks by the 600 possible marks and multiply by 100."
         },
         {
@@ -1854,27 +1854,27 @@
           "options": [
             {
               "label": "A",
-              "text": "=COUNT(A:A)",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "=SUMIF(A:A,\"IT\",B:B)",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "=NOW()",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "=MAX(A:A)",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "=SUMIF(A:A,\"IT\",B:B)",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "=COUNT(A:A)",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "SUMIF matches IT in A and adds matching values in B."
         },
         {
@@ -1883,8 +1883,8 @@
           "options": [
             {
               "label": "A",
-              "text": "=SUM(B2:G2)",
-              "is_correct": true
+              "text": "=TODAY()",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1898,12 +1898,12 @@
             },
             {
               "label": "D",
-              "text": "=TODAY()",
-              "is_correct": false
+              "text": "=SUM(B2:G2)",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "SUM adds the six marks."
         },
         {
@@ -1941,27 +1941,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Distinction",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "First Class",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Second Class",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Pass",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Distinction",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "First Class",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "68% is at least 60% and below 70%."
         },
         {
@@ -1975,17 +1975,17 @@
             },
             {
               "label": "B",
-              "text": "Freeze the bottom row",
+              "text": "Merge columns A and B",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Turn on Filter",
+              "text": "Freeze the bottom row",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Merge columns A and B",
+              "text": "Turn on Filter",
               "is_correct": false
             }
           ],
@@ -2004,13 +2004,13 @@
             },
             {
               "label": "B",
-              "text": "Filter by the Hire Date condition",
-              "is_correct": true
+              "text": "Delete older records",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Delete older records",
-              "is_correct": false
+              "text": "Filter by the Hire Date condition",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -2018,8 +2018,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Filtering hides nonmatching rows without deleting them."
         },
         {
@@ -2028,27 +2028,27 @@
           "options": [
             {
               "label": "A",
-              "text": "3-D pie chart with repeated slices",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Column chart with labelled subjects",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Unlabelled scatter chart",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Decorative image",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "3-D pie chart with repeated slices",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Column chart with labelled subjects",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Column charts compare values across discrete categories."
         },
         {
@@ -2057,7 +2057,7 @@
           "options": [
             {
               "label": "A",
-              "text": "TODAY()",
+              "text": "DATE()",
               "is_correct": false
             },
             {
@@ -2067,12 +2067,12 @@
             },
             {
               "label": "C",
-              "text": "DAY()",
+              "text": "TODAY()",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "DATE()",
+              "text": "DAY()",
               "is_correct": false
             }
           ],
@@ -2093,13 +2093,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Set CSS background-color and background-image on the page body",
-              "is_correct": true
+              "text": "Put both values in the page title",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Put both values in the page title",
-              "is_correct": false
+              "text": "Set CSS background-color and background-image on the page body",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -2112,8 +2112,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "CSS can set both background colour and image."
         },
         {
@@ -2122,27 +2122,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Separately pasted only on the first slide",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Slide Master or a shared layout",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Animation Pane",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Speaker notes",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Slide Master or a shared layout",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Separately pasted only on the first slide",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Slide Master and layouts manage shared elements."
         },
         {
@@ -2151,27 +2151,27 @@
           "options": [
             {
               "label": "A",
-              "text": "An animation delay only",
+              "text": "A footer",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "A page border",
+              "text": "An animation delay only",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "A hyperlink",
-              "is_correct": true
+              "text": "A page border",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "A footer",
-              "is_correct": false
+              "text": "A hyperlink",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A hyperlink associates the image with a destination."
         },
         {
@@ -2180,27 +2180,27 @@
           "options": [
             {
               "label": "A",
+              "text": "BCC",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "To",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "CC",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "D",
               "text": "Subject",
               "is_correct": false
-            },
-            {
-              "label": "D",
-              "text": "BCC",
-              "is_correct": true
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "BCC hides that recipient from other recipients."
         },
         {
@@ -2209,27 +2209,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Attach the map document and verify it is attached",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Put the file path only in the subject",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Add the map to the signature but send no file",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Use CC as a file upload",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Attach the map document and verify it is attached",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Put the file path only in the subject",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The document must be attached to the email."
         },
         {
@@ -2238,27 +2238,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Search one vague word only",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Use specific service keywords and check relevant official domains",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "Turn off browser history",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "Click the first result without checking its domain",
+              "text": "Search one vague word only",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Turn off browser history",
+              "text": "Click the first result without checking its domain",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Specific search terms and domain checks improve relevance."
         },
         {
@@ -2272,13 +2272,13 @@
             },
             {
               "label": "B",
-              "text": "Read receipt",
-              "is_correct": false
+              "text": "Saved signature",
+              "is_correct": true
             },
             {
               "label": "C",
-              "text": "Saved signature",
-              "is_correct": true
+              "text": "Read receipt",
+              "is_correct": false
             },
             {
               "label": "D",
@@ -2286,8 +2286,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A saved signature can be appended to outgoing messages."
         },
         {
@@ -2296,17 +2296,17 @@
           "options": [
             {
               "label": "A",
-              "text": "Everyone gets owner access",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Public access is enabled for all",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "The workbook has no header row",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Everyone gets owner access",
               "is_correct": false
             },
             {
@@ -2330,17 +2330,17 @@
             },
             {
               "label": "B",
-              "text": "<table>",
+              "text": "<strong>",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "<title>",
+              "text": "<table>",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "<strong>",
+              "text": "<title>",
               "is_correct": false
             }
           ],
@@ -2359,13 +2359,13 @@
             },
             {
               "label": "B",
-              "text": "The site's URL or domain",
-              "is_correct": true
+              "text": "A Word watermark",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "A Word watermark",
-              "is_correct": false
+              "text": "The site's URL or domain",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -2373,8 +2373,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The URL or domain directs the browser to that site."
         }
       ]
@@ -2390,27 +2390,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Delete the largest folder",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Open Task Manager and compare process CPU/memory usage",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Disable the firewall",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Clear the Recycle Bin repeatedly",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Open Task Manager and compare process CPU/memory usage",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Delete the largest folder",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Task Manager can identify resource-heavy processes before changes are made."
         },
         {
@@ -2419,27 +2419,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Continue because setup always protects files",
+              "text": "Rename the partition",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Choose a random partition",
+              "text": "Continue because setup always protects files",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Stop, verify the target disk and back up files before formatting",
-              "is_correct": true
+              "text": "Choose a random partition",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Rename the partition",
-              "is_correct": false
+              "text": "Stop, verify the target disk and back up files before formatting",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Formatting can destroy data; confirm the target and backups first."
         },
         {
@@ -2448,13 +2448,13 @@
           "options": [
             {
               "label": "A",
-              "text": "It is guaranteed to be easily restored from the bin",
-              "is_correct": false
+              "text": "Emptying the bin removes the normal restore path; recovery may require backups or recovery tools",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "Emptying the bin removes the normal restore path; recovery may require backups or recovery tools",
-              "is_correct": true
+              "text": "It is guaranteed to be easily restored from the bin",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2467,8 +2467,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Emptying the bin removes the simple restore path; recovery is not guaranteed."
         },
         {
@@ -2477,27 +2477,27 @@
           "options": [
             {
               "label": "A",
-              "text": "cd project files",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "cd project; files",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "cd 'project files'",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "pwd project files",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "cd project files",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Quoting the path prevents shell argument splitting at the space."
         },
         {
@@ -2506,8 +2506,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Press Esc, type :q!, then Enter",
-              "is_correct": true
+              "text": "Type :q and save",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2521,12 +2521,12 @@
             },
             {
               "label": "D",
-              "text": "Type :q and save",
-              "is_correct": false
+              "text": "Press Esc, type :q!, then Enter",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": ":q! exits without saving unsaved changes."
         },
         {
@@ -2540,22 +2540,22 @@
             },
             {
               "label": "B",
+              "text": "Use separate accounts with least privilege and screen locking",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Give all users full administrator rights",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "D",
               "text": "Disable account passwords",
               "is_correct": false
-            },
-            {
-              "label": "D",
-              "text": "Use separate accounts with least privilege and screen locking",
-              "is_correct": true
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Separate accounts and least privilege limit unintended access."
         },
         {
@@ -2564,27 +2564,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Download it because the pop-up says urgent",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Close it and use trusted OS/vendor update channels",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Disable antivirus to proceed",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Forward it to classmates",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Close it and use trusted OS/vendor update channels",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Download it because the pop-up says urgent",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Use trusted update sources, not unsolicited pop-ups."
         },
         {
@@ -2598,17 +2598,17 @@
             },
             {
               "label": "B",
-              "text": "rm -rf",
+              "text": "cd .. only",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "vi -w",
+              "text": "rm -rf",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "cd .. only",
+              "text": "vi -w",
               "is_correct": false
             }
           ],
@@ -2627,13 +2627,13 @@
             },
             {
               "label": "B",
-              "text": "Format the disk",
-              "is_correct": false
+              "text": "Use display recovery/safe mode or revert to a supported resolution",
+              "is_correct": true
             },
             {
               "label": "C",
-              "text": "Use display recovery/safe mode or revert to a supported resolution",
-              "is_correct": true
+              "text": "Format the disk",
+              "is_correct": false
             },
             {
               "label": "D",
@@ -2641,8 +2641,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Reverting to a supported display mode addresses the configuration problem."
         },
         {
@@ -2651,17 +2651,17 @@
           "options": [
             {
               "label": "A",
-              "text": "Make everyone an owner",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Use an unrestricted public link",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Send the account password",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Make everyone an owner",
               "is_correct": false
             },
             {
@@ -2687,8 +2687,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Use a heading for the title, columns for the body, Different First Page, then number later-page footers",
-              "is_correct": true
+              "text": "Put every requirement in the title",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2702,12 +2702,12 @@
             },
             {
               "label": "D",
-              "text": "Put every requirement in the title",
-              "is_correct": false
+              "text": "Use a heading for the title, columns for the body, Different First Page, then number later-page footers",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "These features address title/body layout and distinct first-page header/footer behavior."
         },
         {
@@ -2716,13 +2716,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Different First Page only",
-              "is_correct": false
+              "text": "Different Odd & Even Pages plus footer page numbering",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "Different Odd & Even Pages plus footer page numbering",
-              "is_correct": true
+              "text": "Different First Page only",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2735,8 +2735,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Odd/even headers and footer numbering meet the requirements."
         },
         {
@@ -2745,27 +2745,27 @@
           "options": [
             {
               "label": "A",
-              "text": "That every paragraph is centred",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "That all pages but page 1 are deleted",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Print range 1 first, then All pages with landscape orientation",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "That the filename is uppercase",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "That every paragraph is centred",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Print range and orientation are separate settings."
         },
         {
@@ -2774,27 +2774,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Format each heading with random settings",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Insert page breaks between words",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Copy the whole first page repeatedly",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Format each heading with random settings",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "Apply a shared heading style and modify that style when needed",
               "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Insert page breaks between words",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Styles maintain consistent formatting across headings."
         },
         {
@@ -2832,27 +2832,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Sort the total cells independently",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Select the whole table and sort by the total field",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Copy totals into a new document",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Sort only the first column",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Select the whole table and sort by the total field",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Sort the total cells independently",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Sorting the whole table preserves each row's relationship."
         },
         {
@@ -2861,27 +2861,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Set all text to 8 pt",
+              "text": "Replace text with a screenshot",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Remove all headers",
+              "text": "Set all text to 8 pt",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Check page/section breaks, paragraph spacing and margins",
-              "is_correct": true
+              "text": "Remove all headers",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Replace text with a screenshot",
-              "is_correct": false
+              "text": "Check page/section breaks, paragraph spacing and margins",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Breaks and spacing can change pagination."
         },
         {
@@ -2890,13 +2890,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Different First Page, with title and author in the regular header",
-              "is_correct": true
+              "text": "Page colour",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Page colour",
-              "is_correct": false
+              "text": "Different First Page, with title and author in the regular header",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -2909,8 +2909,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The regular header then serves subsequent pages."
         },
         {
@@ -2919,27 +2919,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Put the title in every paragraph",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Keep the title in its heading/section and apply columns to the body area",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Convert the title to a footer",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Apply columns to every character",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Keep the title in its heading/section and apply columns to the body area",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Put the title in every paragraph",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Separate title and body layout so the title spans the page."
         },
         {
@@ -2948,27 +2948,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Slide animations and BCC",
-              "is_correct": false
+              "text": "Print Preview, margins, paper size and printer printable area",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "Spreadsheet cell colours",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Browser cookies only",
               "is_correct": false
             },
             {
+              "label": "C",
+              "text": "Slide animations and BCC",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "Print Preview, margins, paper size and printer printable area",
-              "is_correct": true
+              "text": "Spreadsheet cell colours",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Layout and printer settings determine print output."
         }
       ]
@@ -3013,27 +3013,27 @@
           "options": [
             {
               "label": "A",
-              "text": "=IF(H2>=70%,\"Distinction\",IF(H2>=60%,\"First Class\",IF(H2>=50%,\"Second Class\",IF(H2>=35%,\"Pass\",\"Fail\"))))",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "=IF(H2>=35%,\"Fail\",\"Pass\")",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "=SUM(H2)",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "=IF(H2>=70%,\"Distinction\",IF(H2>=60%,\"First Class\",IF(H2>=50%,\"Second Class\",IF(H2>=35%,\"Pass\",\"Fail\"))))",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "=COUNT(H2)",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "=IF(H2>=35%,\"Fail\",\"Pass\")",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Descending thresholds preserve the required bands."
         },
         {
@@ -3042,27 +3042,27 @@
           "options": [
             {
               "label": "A",
-              "text": "=C2*B1",
+              "text": "=SUM(C2:B1)",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "=C2*B1",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "=C2*$B$1",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "=$C$2*B1",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "=SUM(C2:B1)",
+              "text": "=$C$2*B1",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "$B$1 fixes the tax-rate cell as the formula moves."
         },
         {
@@ -3071,27 +3071,27 @@
           "options": [
             {
               "label": "A",
-              "text": "=SUMIF(A:A,\"CE\",F:F)",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "=COUNTIF(F:F,\"CE\")",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "=SUM(A:A)",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "=AVERAGEIF(F:F,\"CE\")",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "=SUMIF(A:A,\"CE\",F:F)",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "SUMIF matches CE in A and sums corresponding values in F."
         },
         {
@@ -3100,7 +3100,7 @@
           "options": [
             {
               "label": "A",
-              "text": "The formula is necessarily wrong",
+              "text": "It means 0.68 marks",
               "is_correct": false
             },
             {
@@ -3110,12 +3110,12 @@
             },
             {
               "label": "C",
-              "text": "It means 0.68 marks",
+              "text": "The worksheet has been filtered",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "The worksheet has been filtered",
+              "text": "The formula is necessarily wrong",
               "is_correct": false
             }
           ],
@@ -3129,13 +3129,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Font colour",
+              "text": "Whether the sheet has a chart",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Condition order and threshold values in the nested IF",
-              "is_correct": true
+              "text": "Font colour",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -3144,12 +3144,12 @@
             },
             {
               "label": "D",
-              "text": "Whether the sheet has a chart",
-              "is_correct": false
+              "text": "Condition order and threshold values in the nested IF",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A wrongly ordered or typed threshold may misclassify the value."
         },
         {
@@ -3158,13 +3158,13 @@
           "options": [
             {
               "label": "A",
-              "text": "In the first row only",
-              "is_correct": false
+              "text": "In C1 or an appropriate cell to the right of column B",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "In C1 or an appropriate cell to the right of column B",
-              "is_correct": true
+              "text": "In the first row only",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -3177,8 +3177,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Freeze Panes locks columns to the left of the selected cell."
         },
         {
@@ -3187,27 +3187,27 @@
           "options": [
             {
               "label": "A",
-              "text": "A bar/column chart with labelled subjects",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "A line chart implying continuous time",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "An unlabelled pie chart",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "A screenshot",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "A bar/column chart with labelled subjects",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "A line chart implying continuous time",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Bars compare discrete categories without implying a time sequence."
         },
         {
@@ -3216,13 +3216,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Move date cells manually",
+              "text": "Convert dates to arbitrary text",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Use table sort/filter controls on the full records",
-              "is_correct": true
+              "text": "Move date cells manually",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -3231,12 +3231,12 @@
             },
             {
               "label": "D",
-              "text": "Convert dates to arbitrary text",
-              "is_correct": false
+              "text": "Use table sort/filter controls on the full records",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Sorting and filtering complete records preserve employee fields."
         },
         {
@@ -3245,13 +3245,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Whether a row reference was accidentally made absolute",
-              "is_correct": true
+              "text": "Whether the sheet has a watermark",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Whether the sheet has a watermark",
-              "is_correct": false
+              "text": "Whether a row reference was accidentally made absolute",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -3264,8 +3264,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "An unintended absolute row reference can keep the formula tied to one candidate."
         }
       ]
@@ -3281,7 +3281,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Publish an editable link to anyone",
+              "text": "Send the owner's password",
               "is_correct": false
             },
             {
@@ -3291,12 +3291,12 @@
             },
             {
               "label": "C",
-              "text": "Send the owner's password",
+              "text": "Make every member an account owner",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Make every member an account owner",
+              "text": "Publish an editable link to anyone",
               "is_correct": false
             }
           ],
@@ -3310,27 +3310,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Manually recreate every footer and animate all text",
+              "text": "Use slide transitions instead of object animations",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "Manually recreate every footer and animate all text",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "Use Slide Master/shared layouts and animate only the four specified images",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "Put logo in speaker notes",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Use slide transitions instead of object animations",
+              "text": "Put logo in speaker notes",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Master layouts manage repeated design; object animations control selected images."
         },
         {
@@ -3339,27 +3339,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Friends in To, faculty in CC, coordinator in BCC, route file attached",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Everyone in To, no attachment",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Coordinator in CC, faculty in BCC, route only in subject",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Route document in signature, all recipients in BCC",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Friends in To, faculty in CC, coordinator in BCC, route file attached",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "To, CC, BCC and attachment fields each meet one requirement."
         },
         {
@@ -3368,27 +3368,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Place image markup after closing the HTML document",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Set the background image in CSS and keep text contrast readable",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Use the image as the only text content",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Set the document title to the image URL",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Place image markup after closing the HTML document",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "CSS background imagery preserves text content; contrast must remain sufficient."
         },
         {
@@ -3397,12 +3397,12 @@
           "options": [
             {
               "label": "A",
-              "text": "That its title is colourful",
+              "text": "That browser history is empty",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "That it loads quickly",
+              "text": "That its title is colourful",
               "is_correct": false
             },
             {
@@ -3412,7 +3412,7 @@
             },
             {
               "label": "D",
-              "text": "That browser history is empty",
+              "text": "That it loads quickly",
               "is_correct": false
             }
           ],
@@ -3455,27 +3455,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Create a hyperlink to the target slide",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Add a spell-check flag",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Change only the slide master font",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Create a hyperlink to the target slide",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Set printer to landscape",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Add a spell-check flag",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A hyperlink can point to a location within the presentation."
         },
         {
@@ -3484,17 +3484,17 @@
           "options": [
             {
               "label": "A",
-              "text": "Open because urgent email is trusted",
+              "text": "Disable security software",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Forward it to all contacts",
+              "text": "Open because urgent email is trusted",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Disable security software",
+              "text": "Forward it to all contacts",
               "is_correct": false
             },
             {
@@ -3513,13 +3513,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Editor",
-              "is_correct": false
+              "text": "Viewer",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "Viewer",
-              "is_correct": true
+              "text": "Editor",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -3532,8 +3532,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Viewer access allows inspection without editing."
         },
         {
@@ -3542,12 +3542,12 @@
           "options": [
             {
               "label": "A",
-              "text": "Copy first result without checking",
+              "text": "Use only search snippets",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Use only search snippets",
+              "text": "Assume all results are official",
               "is_correct": false
             },
             {
@@ -3557,7 +3557,7 @@
             },
             {
               "label": "D",
-              "text": "Assume all results are official",
+              "text": "Copy first result without checking",
               "is_correct": false
             }
           ],
