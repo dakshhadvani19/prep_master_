@@ -1,147 +1,45 @@
 {
-  "schema_version": "1.0",
-  "target_table": "public.\"TestsData\"",
-  "course": {
-    "CourseId": 44,
-    "CourseName": "Diploma Computer Engineering"
-  },
+  "schema_version": "2.0",
+  "status": "canonical-v2-subject-pointer",
   "subject": {
+    "name": "Engineering Drawing",
     "SubjectId": "44009135110101",
-    "SubjectName": "Engineering Drawing",
-    "Semester": 1
+    "isDepartmentalSubject": false
   },
-  "id_rule": "TestId is decimal SubjectId concatenated with decimal test occurrence, no separator, then cast to BIGINT.",
-  "row_shape": {
-    "TestId": "BIGINT",
-    "Questions": "jsonb[] one JSON string/question",
-    "Options": "jsonb[] four JSON strings/question flattened A-D",
-    "Answers": "jsonb[] one JSON number/question, 0=A,1=B,2=C,3=D"
+  "canonical_bank": "../exam-bank-v2.json",
+  "canonical_seed_sql": "../seed-all-v2.sql",
+  "filter": {
+    "SubjectId": "44009135110101"
   },
-  "tests": [
-    {
-      "occurrence": 1,
-      "TestId": "440091351101011",
-      "difficulty": "easy",
-      "name": "Easy 1",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-01-easy.json"
+  "exam_types": {
+    "Mid 1": {
+      "format": "theory",
+      "tests": 12,
+      "questions_per_test": 4,
+      "marks_per_question": 8
     },
-    {
-      "occurrence": 2,
-      "TestId": "440091351101012",
-      "difficulty": "easy",
-      "name": "Easy 2",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-02-easy.json"
+    "Mid 2": {
+      "format": "mcq",
+      "tests": 12,
+      "questions_per_test": 30
     },
-    {
-      "occurrence": 3,
-      "TestId": "440091351101013",
-      "difficulty": "easy",
-      "name": "Easy 3",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-03-easy.json"
-    },
-    {
-      "occurrence": 4,
-      "TestId": "440091351101014",
-      "difficulty": "easy",
-      "name": "Easy 4",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-04-easy.json"
-    },
-    {
-      "occurrence": 5,
-      "TestId": "440091351101015",
-      "difficulty": "medium",
-      "name": "Medium 1",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-05-medium.json"
-    },
-    {
-      "occurrence": 6,
-      "TestId": "440091351101016",
-      "difficulty": "medium",
-      "name": "Medium 2",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-06-medium.json"
-    },
-    {
-      "occurrence": 7,
-      "TestId": "440091351101017",
-      "difficulty": "medium",
-      "name": "Medium 3",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-07-medium.json"
-    },
-    {
-      "occurrence": 8,
-      "TestId": "440091351101018",
-      "difficulty": "medium",
-      "name": "Medium 4",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-08-medium.json"
-    },
-    {
-      "occurrence": 9,
-      "TestId": "440091351101019",
-      "difficulty": "hard",
-      "name": "Hard 1",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-09-hard.json"
-    },
-    {
-      "occurrence": 10,
-      "TestId": "4400913511010110",
-      "difficulty": "hard",
-      "name": "Hard 2",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-10-hard.json"
-    },
-    {
-      "occurrence": 11,
-      "TestId": "4400913511010111",
-      "difficulty": "hard",
-      "name": "Hard 3",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-11-hard.json"
-    },
-    {
-      "occurrence": 12,
-      "TestId": "4400913511010112",
-      "difficulty": "hard",
-      "name": "Hard 4",
-      "question_count": 10,
-      "option_count": 40,
-      "answer_count": 10,
-      "file": "tests/test-12-hard.json"
+    "ESE": {
+      "format": "theory",
+      "tests": 12,
+      "questions_per_test": 4,
+      "marks_per_question": 8
     }
-  ],
-  "source": {
-    "syllabus_path": "Syllabus/syllabus_txt/Diploma/Computer_Engineering/semester_1.json",
-    "official_pdf": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/ED-1.pdf",
-    "subject_code": "09ME1101"
-  }
+  },
+  "difficulty_variants": {
+    "easy": 4,
+    "medium": 4,
+    "hard": 4
+  },
+  "mid1_syllabus_scope": "Mid 1 (first 50%): engineering curves, projections of points and lines, and introductory projection of planes.",
+  "legacy_files": {
+    "tests": "tests/",
+    "answer_review": "answer-review.json",
+    "seed_sql": "seed.sql"
+  },
+  "note": "Legacy test files are retained as reference only. seed.sql is retired and performs no INSERT. Use the v2 bank and seed."
 }
