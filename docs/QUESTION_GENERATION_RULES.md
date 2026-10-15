@@ -413,3 +413,18 @@ A generic scenario prefix/suffix does not increase difficulty. The following are
 **Distractor acceptance gate:** At least two options should be initially plausible at easy level; two or three should be competitive at medium level; and all three distractors should be technically credible at hard level. For each distractor, the reviewer must be able to name (a) the misconception or partial truth that makes it tempting and (b) the exact stem condition it fails. If this cannot be done, reject the item rather than filling the option slot with an unrelated subject term.
 
 **Existing-bank remediation:** These rules apply to manually authored/generated JSON banks as well as live AI generation. Do not label a bank compliant solely because the live generator's prompt has been updated. Run a separate audit over saved banks for generic wrappers, duplicate concepts, weak option families, answer-key correctness, difficulty fit, exact counts, and mark totals before replacing production files.
+
+
+## 13. Subject-wise diploma bank generation contract (2026-10-15)
+
+For generated question-bank files under `Questions/Diploma/<Course>/<Semester>/<Full Subject Name>.json`:
+
+- Generate one file per subject, with only that subject's verified `subject_id` and the compact question fields required by the consumer. Do not combine all subjects into a semester-level monolith when the owner requests subject-wise files.
+- Before generation, resolve the subject's exact course, semester, subject ID/code, and syllabus source. Build a topic map from the complete available syllabus; if the source cannot be verified or is incomplete, report the limitation rather than inventing coverage.
+- For MCQs, label difficulty explicitly as `easy`, `medium`, or `hard` if the consumer schema supports it. If the persisted schema cannot accept difficulty metadata, use the difficulty mix in the generation/review process without adding unsupported fields.
+- Easy: two distractors must be credible near-misses in the same conceptual family; do not use three unrelated options.
+- Medium: require actual application, interpretation, comparison, or at least two linked steps. Two or three distractors must appear competitive until the stem's decisive condition is applied.
+- Hard: require at least two meaningful reasoning demands. All distractors must be technically credible; where suitable, use partially true but incomplete or misapplied options that fail a stated constraint.
+- Every MCQ needs a verified key and a specific internal explanation for the key and each distractor. These explanations are QA evidence and should not be persisted in compact student-facing JSON unless explicitly requested.
+- Review for giveaway clues, answer-position bias, repeated stems/concepts, duplicate options, unsupported syllabus claims, and difficulty inflation caused only by longer wording. Reject weak items rather than retaining them to meet a count.
+- If no official question-count or difficulty distribution is available, identify counts and the easy/medium/hard mix as a provisional bank design, not as the official board pattern.
