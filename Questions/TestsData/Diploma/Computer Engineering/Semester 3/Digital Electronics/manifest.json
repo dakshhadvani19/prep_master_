@@ -1,0 +1,36 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "name": "Digital Electronics",
+    "SubjectId": "44009320130101",
+    "semester": 3,
+    "isDepartmentalSubject": false,
+    "subject_code": "09CT1301",
+    "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/DE.pdf"
+  },
+  "canonical_bank": "../exam-bank-v2.json",
+  "canonical_seed_sql": "../seed-all-v2.sql",
+  "filter": {
+    "SubjectId": "44009320130101"
+  },
+  "examTypes": [
+    {
+      "examType": "Mid 1",
+      "format": "theory",
+      "tests": 12,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Module-1 Introduction; Module-2 Number systems and binary codes; Module-3 Logic Gates & Boolean Algebra."
+    },
+    {
+      "examType": "Mid 2",
+      "format": "mcq",
+      "tests": 12,
+      "syllabusScope": "Full Semester 3 syllabus practice bank."
+    },
+    {
+      "examType": "ESE",
+      "format": "theory",
+      "tests": 12,
+      "syllabusScope": "Full Semester 3 syllabus."
+    }
+  ]
+}
