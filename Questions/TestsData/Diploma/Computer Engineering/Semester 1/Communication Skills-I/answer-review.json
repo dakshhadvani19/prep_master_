@@ -14,27 +14,27 @@
           "options": [
             {
               "label": "A",
-              "text": "technician",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "repaired",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "computer",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "the",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "technician",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Repaired expresses the action."
         },
         {
@@ -43,27 +43,27 @@
           "options": [
             {
               "label": "A",
-              "text": "student",
+              "text": "result",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "checked",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "careful",
               "is_correct": true
             },
             {
+              "label": "C",
+              "text": "student",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "result",
+              "text": "checked",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Careful describes the noun student."
         },
         {
@@ -77,13 +77,13 @@
             },
             {
               "label": "B",
-              "text": "they",
-              "is_correct": true
+              "text": "bright",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "bright",
-              "is_correct": false
+              "text": "they",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -91,8 +91,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "They stands in place of a noun phrase."
         },
         {
@@ -101,27 +101,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The lab opens at nine.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Please close the window.",
               "is_correct": false
             },
             {
+              "label": "B",
+              "text": "What a useful book!",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "What time does the lab open?",
-              "is_correct": true
+              "text": "The lab opens at nine.",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "What a useful book!",
-              "is_correct": false
+              "text": "What time does the lab open?",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "An interrogative sentence asks a question."
         },
         {
@@ -130,7 +130,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Where is the key?",
+              "text": "What a difficult task!",
               "is_correct": false
             },
             {
@@ -140,12 +140,12 @@
             },
             {
               "label": "C",
-              "text": "The assignment is ready.",
+              "text": "Where is the key?",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "What a difficult task!",
+              "text": "The assignment is ready.",
               "is_correct": false
             }
           ],
@@ -164,22 +164,22 @@
             },
             {
               "label": "B",
-              "text": "goes",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "going",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "gone",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "goes",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Third-person singular takes goes in the simple present."
         },
         {
@@ -188,27 +188,27 @@
           "options": [
             {
               "label": "A",
-              "text": "visit",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "visited",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "visits",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "visiting",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "visit",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Yesterday signals a completed past event."
         },
         {
@@ -217,27 +217,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The list of items are ready.",
+              "text": "The list of items be ready.",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "The list of items are ready.",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "The list of items is ready.",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "The list of items were ready.",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "The list of items be ready.",
+              "text": "The list of items were ready.",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The subject is singular list; the phrase of items does not change its number."
         },
         {
@@ -251,22 +251,22 @@
             },
             {
               "label": "B",
-              "text": "could",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "should",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "may",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "could",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Could expresses past ability."
         },
         {
@@ -275,7 +275,7 @@
           "options": [
             {
               "label": "A",
-              "text": "The report files the clerk.",
+              "text": "The clerk was filed by the report.",
               "is_correct": false
             },
             {
@@ -285,12 +285,12 @@
             },
             {
               "label": "C",
-              "text": "The clerk was filed by the report.",
+              "text": "The report has filing the clerk.",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "The report has filing the clerk.",
+              "text": "The report files the clerk.",
               "is_correct": false
             }
           ],
@@ -311,7 +311,7 @@
           "options": [
             {
               "label": "A",
-              "text": "a",
+              "text": "no article always required",
               "is_correct": false
             },
             {
@@ -321,12 +321,12 @@
             },
             {
               "label": "C",
-              "text": "the only",
+              "text": "a",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "no article always required",
+              "text": "the only",
               "is_correct": false
             }
           ],
@@ -340,18 +340,18 @@
           "options": [
             {
               "label": "A",
-              "text": "at",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "in",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "on",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "at",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -359,8 +359,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "At is used for a specific time."
         },
         {
@@ -369,27 +369,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Because the server was down.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "When the bell rang.",
               "is_correct": false
             },
             {
+              "label": "B",
+              "text": "Although the road was wet.",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "The students completed the exercise.",
-              "is_correct": true
+              "text": "Because the server was down.",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Although the road was wet.",
-              "is_correct": false
+              "text": "The students completed the exercise.",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The third option contains a complete independent clause."
         },
         {
@@ -398,27 +398,27 @@
           "options": [
             {
               "label": "A",
-              "text": "They are discuss the plan.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "They discussing the plan.",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "They are discussing the plan.",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "They has discussing the plan.",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "They are discuss the plan.",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "They discussing the plan.",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Present continuous is formed with am/is/are + -ing."
         },
         {
@@ -461,17 +461,17 @@
             },
             {
               "label": "B",
-              "text": "mustn't",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "can not have",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "will have",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "mustn't",
               "is_correct": false
             }
           ],
@@ -485,7 +485,7 @@
           "options": [
             {
               "label": "A",
-              "text": "The slides prepared the team.",
+              "text": "The slides were prepare by the team.",
               "is_correct": false
             },
             {
@@ -495,12 +495,12 @@
             },
             {
               "label": "C",
-              "text": "The team is prepared by the slides.",
+              "text": "The slides prepared the team.",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "The slides were prepare by the team.",
+              "text": "The team is prepared by the slides.",
               "is_correct": false
             }
           ],
@@ -524,17 +524,17 @@
             },
             {
               "label": "C",
-              "text": "Question mark",
-              "is_correct": true
+              "text": "Apostrophe",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Apostrophe",
-              "is_correct": false
+              "text": "Question mark",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A direct question normally ends with a question mark."
         },
         {
@@ -543,8 +543,8 @@
           "options": [
             {
               "label": "A",
-              "text": "speaker",
-              "is_correct": false
+              "text": "clearly",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -558,12 +558,12 @@
             },
             {
               "label": "D",
-              "text": "clearly",
-              "is_correct": true
+              "text": "speaker",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Clearly modifies how the speaker explained."
         },
         {
@@ -572,27 +572,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The device is new.",
+              "text": "A very new device.",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "The device is new.",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "The device is new but inexpensive.",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "The new device.",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "A very new device.",
+              "text": "The new device.",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "But joins two contrasting ideas."
         }
       ]
@@ -608,18 +608,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Scanning",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Skimming",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Memorising",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Scanning",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -627,8 +627,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Scanning searches for a specific detail such as a date."
         },
         {
@@ -637,27 +637,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Scanning every number",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Skimming headings and opening lines",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Reading only the last word of each line",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Copying the first paragraph",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Scanning every number",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Skimming headings and opening lines",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Skimming gives a rapid overview of main ideas."
         },
         {
@@ -666,27 +666,27 @@
           "options": [
             {
               "label": "A",
-              "text": "To list every reference",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "To state the paragraph's central idea",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "To provide only the final conclusion",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "To replace punctuation",
+              "text": "To list every reference",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "To provide only the final conclusion",
+              "text": "To replace punctuation",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "A topic sentence signals the paragraph's main point."
         },
         {
@@ -724,27 +724,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Event report",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Recipe only",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Dictionary entry",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Advertisement slogan",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Recipe only",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Event report",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "An event report documents what happened and relevant outcomes."
         },
         {
@@ -753,7 +753,7 @@
           "options": [
             {
               "label": "A",
-              "text": "A social-media caption",
+              "text": "A product review",
               "is_correct": false
             },
             {
@@ -763,12 +763,12 @@
             },
             {
               "label": "C",
-              "text": "An informal chat full of abbreviations",
+              "text": "A social-media caption",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "A product review",
+              "text": "An informal chat full of abbreviations",
               "is_correct": false
             }
           ],
@@ -787,13 +787,13 @@
             },
             {
               "label": "B",
-              "text": "Dear Professor Patel,",
-              "is_correct": true
+              "text": "Yo!",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Yo!",
-              "is_correct": false
+              "text": "Dear Professor Patel,",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -801,8 +801,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A respectful salutation suits formal communication."
         },
         {
@@ -816,17 +816,17 @@
             },
             {
               "label": "B",
-              "text": "Several unrelated attachments",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "An empty subject",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "A long signature alone",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Several unrelated attachments",
               "is_correct": false
             }
           ],
@@ -840,27 +840,27 @@
           "options": [
             {
               "label": "A",
+              "text": "“Listen up, everyone!”",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "“Hi, I am [name], from [department].”",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "“You all know me, so no introduction.”",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "“I have no idea why I am here.”",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "“Listen up, everyone!”",
+              "text": "“I have no idea why I am here.”",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A brief respectful introduction identifies the speaker."
         },
         {
@@ -879,17 +879,17 @@
             },
             {
               "label": "C",
-              "text": "Using clear speech and looking at the audience periodically",
-              "is_correct": true
+              "text": "Turning away during every key point",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Turning away during every key point",
-              "is_correct": false
+              "text": "Using clear speech and looking at the audience periodically",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Clear speech and audience engagement improve communication."
         }
       ]
@@ -905,27 +905,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Lets begin the meeting.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Let's begin the meeting.",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Lets' begin the meeting.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Lets begin, the meeting.",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Lets begin the meeting.",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Let's begin the meeting.",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Let's is the contraction of let us."
         },
         {
@@ -939,17 +939,17 @@
             },
             {
               "label": "B",
-              "text": "equipments",
+              "text": "equipment's",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "piece of equipment",
+              "text": "equipments",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "equipment's",
+              "text": "piece of equipment",
               "is_correct": false
             }
           ],
@@ -968,13 +968,13 @@
             },
             {
               "label": "B",
-              "text": "clearest",
-              "is_correct": false
+              "text": "clearer",
+              "is_correct": true
             },
             {
               "label": "C",
-              "text": "clearer",
-              "is_correct": true
+              "text": "clearest",
+              "is_correct": false
             },
             {
               "label": "D",
@@ -982,8 +982,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Clearer is the standard comparative form."
         },
         {
@@ -992,27 +992,27 @@
           "options": [
             {
               "label": "A",
-              "text": "review",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "reviews",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "reviewing",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "reviewed",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "review",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "reviews",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The base verb follows please in this request."
         },
         {
@@ -1021,27 +1021,27 @@
           "options": [
             {
               "label": "A",
-              "text": "When Rina met Meera, she was late.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "The student told the teacher that they were wrong.",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Rina submitted the file after Rina checked the figures.",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "After speaking to Meera, she left.",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "When Rina met Meera, she was late.",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The student told the teacher that they were wrong.",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Repeating Rina avoids uncertainty about who performed the action."
         },
         {
@@ -1055,13 +1055,13 @@
             },
             {
               "label": "B",
-              "text": "I request leave for two days due to illness.",
-              "is_correct": true
+              "text": "Give me off, please.",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Give me off, please.",
-              "is_correct": false
+              "text": "I request leave for two days due to illness.",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1069,8 +1069,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "It is respectful and states the request clearly."
         },
         {
@@ -1079,27 +1079,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Subject line and opening sentence",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "A random line in the signature",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Only the attachment filename",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "The final punctuation mark",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "A random line in the signature",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Subject line and opening sentence",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The subject and opening establish the purpose."
         },
         {
@@ -1108,7 +1108,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Only personal opinions",
+              "text": "An unrelated biography",
               "is_correct": false
             },
             {
@@ -1118,12 +1118,12 @@
             },
             {
               "label": "C",
-              "text": "Only the writer's favourite moment",
+              "text": "Only personal opinions",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "An unrelated biography",
+              "text": "Only the writer's favourite moment",
               "is_correct": false
             }
           ],
@@ -1171,17 +1171,17 @@
             },
             {
               "label": "B",
-              "text": "Speak faster whenever a term is unfamiliar",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Avoid all pauses",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Read silently only",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Speak faster whenever a term is unfamiliar",
               "is_correct": false
             }
           ],
@@ -1202,27 +1202,27 @@
           "options": [
             {
               "label": "A",
-              "text": "have",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "has",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "were have",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "are having",
+              "text": "have",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "were have",
+              "text": "are having",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Each is singular and takes has."
         },
         {
@@ -1236,13 +1236,13 @@
             },
             {
               "label": "B",
-              "text": "completed",
-              "is_correct": false
+              "text": "had completed",
+              "is_correct": true
             },
             {
               "label": "C",
-              "text": "had completed",
-              "is_correct": true
+              "text": "completed",
+              "is_correct": false
             },
             {
               "label": "D",
@@ -1250,8 +1250,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Past perfect marks completion before another past event."
         },
         {
@@ -1260,27 +1260,27 @@
           "options": [
             {
               "label": "A",
-              "text": "ought to",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "might not have",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "can to",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "would to",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "ought to",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "might not have",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Ought to expresses strong advice in this context."
         },
         {
@@ -1289,8 +1289,8 @@
           "options": [
             {
               "label": "A",
-              "text": "The timetable will be published tomorrow.",
-              "is_correct": true
+              "text": "The timetable has publish tomorrow.",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1304,12 +1304,12 @@
             },
             {
               "label": "D",
-              "text": "The timetable has publish tomorrow.",
-              "is_correct": false
+              "text": "The timetable will be published tomorrow.",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Future passive uses will be + past participle."
         },
         {
@@ -1347,27 +1347,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The quality of these components are high.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "The quality of these components is high.",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "The quality of these components have high.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "The quality of these components were high.",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "The quality of these components are high.",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The quality of these components is high.",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The head noun quality is singular."
         },
         {
@@ -1376,27 +1376,27 @@
           "options": [
             {
               "label": "A",
-              "text": "which",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "who",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "whose only",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "where",
+              "text": "which",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "whose only",
+              "text": "where",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Who refers to a person acting as the subject."
         },
         {
@@ -1405,18 +1405,18 @@
           "options": [
             {
               "label": "A",
-              "text": "If the file is saved, we can close the program.",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "If the file will save, we can closed it.",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "If saved the file, we can closing.",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "If the file is saved, we can close the program.",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1424,8 +1424,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The first conditional uses present simple in the if-clause and can/will in the result."
         },
         {
@@ -1434,27 +1434,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Walking into the lab, the lights looked bright.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Walking into the lab, I noticed the bright lights.",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Walking into the lab, the bright lights were noticed.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "The lights, walking into the lab, looked bright.",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Walking into the lab, the lights looked bright.",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Walking into the lab, I noticed the bright lights.",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The person walking is the subject of the main clause."
         },
         {
@@ -1463,27 +1463,27 @@
           "options": [
             {
               "label": "A",
-              "text": "are",
+              "text": "have",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "were",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "is",
               "is_correct": true
             },
             {
+              "label": "C",
+              "text": "are",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "have",
+              "text": "were",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The head noun list is singular; along with does not make it plural."
         }
       ]
@@ -1528,12 +1528,12 @@
           "options": [
             {
               "label": "A",
-              "text": "20",
+              "text": "25",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "25",
+              "text": "35",
               "is_correct": false
             },
             {
@@ -1543,7 +1543,7 @@
             },
             {
               "label": "D",
-              "text": "35",
+              "text": "20",
               "is_correct": false
             }
           ],
@@ -1557,13 +1557,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Copy the title without reading",
+              "text": "Assume every example proves the claim",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Identify the claim and compare each example with it",
-              "is_correct": true
+              "text": "Copy the title without reading",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -1572,12 +1572,12 @@
             },
             {
               "label": "D",
-              "text": "Assume every example proves the claim",
-              "is_correct": false
+              "text": "Identify the claim and compare each example with it",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Evaluation requires comparing supporting details with the main claim."
         },
         {
@@ -1586,13 +1586,13 @@
           "options": [
             {
               "label": "A",
-              "text": "The sender's font choice",
-              "is_correct": false
+              "text": "The deadline for replying",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "The deadline for replying",
-              "is_correct": true
+              "text": "The sender's font choice",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -1605,8 +1605,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "The reply deadline is the action-critical detail."
         },
         {
@@ -1615,27 +1615,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Hello",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Request for Approval: Industrial Visit on 12 November",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Urgent!!!",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Industrial visit, and also several unrelated matters",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Request for Approval: Industrial Visit on 12 November",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Hello",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The subject states the purpose and relevant date."
         },
         {
@@ -1644,27 +1644,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Send me the approval today.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "I'd be grateful if you could approve the attached plan by Friday.",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "Approval or whatever is fine.",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "You must do it because I said so.",
+              "text": "Send me the approval today.",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Approval or whatever is fine.",
+              "text": "You must do it because I said so.",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "It uses a polite request and a specific deadline."
         },
         {
@@ -1678,13 +1678,13 @@
             },
             {
               "label": "B",
-              "text": "Everyone loved every speech.",
-              "is_correct": false
+              "text": "The seminar began at 10 a.m. and had 85 registered attendees.",
+              "is_correct": true
             },
             {
               "label": "C",
-              "text": "The seminar began at 10 a.m. and had 85 registered attendees.",
-              "is_correct": true
+              "text": "Everyone loved every speech.",
+              "is_correct": false
             },
             {
               "label": "D",
@@ -1692,8 +1692,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Time and attendance can be verified; the other statements are evaluative."
         },
         {
@@ -1702,27 +1702,27 @@
           "options": [
             {
               "label": "A",
-              "text": "State the recommendation, give three ordered reasons with evidence, then conclude",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "List unrelated definitions and stop",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Put the conclusion first, omit reasons",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Use a single paragraph of run-on sentences",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "List unrelated definitions and stop",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "State the recommendation, give three ordered reasons with evidence, then conclude",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A clear claim-reasons-evidence-conclusion structure improves coherence."
         },
         {
@@ -1731,27 +1731,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Repeat the same sentence more loudly without checking understanding",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Pause, restate the point in simpler words, and check whether it is clear",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "Tell the audience the question is irrelevant",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "Ignore the question until the end",
+              "text": "Repeat the same sentence more loudly without checking understanding",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Tell the audience the question is irrelevant",
+              "text": "Ignore the question until the end",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Clarifying and checking comprehension responds directly to the need."
         },
         {
@@ -1765,13 +1765,13 @@
             },
             {
               "label": "B",
-              "text": "Define essential terms briefly and use examples at the audience's level",
-              "is_correct": true
+              "text": "Increase speaking speed",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Increase speaking speed",
-              "is_correct": false
+              "text": "Define essential terms briefly and use examples at the audience's level",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1779,8 +1779,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Audience-appropriate explanation supports understanding."
         }
       ]
@@ -1796,27 +1796,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The server may restart tonight.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Users must log out before maintenance.",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "The upload could finish soon.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "The file might be corrupted.",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Users must log out before maintenance.",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "The server may restart tonight.",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Must expresses an obligation or requirement."
         },
         {
@@ -1825,27 +1825,27 @@
           "options": [
             {
               "label": "A",
-              "text": "are",
+              "text": "have",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "were",
+              "text": "are",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "is",
-              "is_correct": true
+              "text": "were",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "have",
-              "is_correct": false
+              "text": "is",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "With neither/nor, the verb usually agrees with the nearer subject; lab assistant is singular."
         },
         {
@@ -1883,7 +1883,7 @@
           "options": [
             {
               "label": "A",
-              "text": "The role requires planning, testing and to document results.",
+              "text": "The role requires to plan, testing and documentation.",
               "is_correct": false
             },
             {
@@ -1893,12 +1893,12 @@
             },
             {
               "label": "C",
-              "text": "The role requires to plan, testing and documentation.",
+              "text": "The role requires planning, to test and documentation results.",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "The role requires planning, to test and documentation results.",
+              "text": "The role requires planning, testing and to document results.",
               "is_correct": false
             }
           ],
@@ -1912,13 +1912,13 @@
           "options": [
             {
               "label": "A",
-              "text": "10 minutes",
+              "text": "25 minutes",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "15 minutes",
-              "is_correct": true
+              "text": "10 minutes",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -1927,12 +1927,12 @@
             },
             {
               "label": "D",
-              "text": "25 minutes",
-              "is_correct": false
+              "text": "15 minutes",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "50 − 35 = 15 minutes."
         },
         {
@@ -1970,27 +1970,27 @@
           "options": [
             {
               "label": "A",
-              "text": "This is about something I need.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "I request leave from 14 to 16 December because of a scheduled medical appointment.",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Hey, I won't be there.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "You know why I am writing.",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "I request leave from 14 to 16 December because of a scheduled medical appointment.",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "This is about something I need.",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "It states the request, dates and reason concisely."
         },
         {
@@ -2004,17 +2004,17 @@
             },
             {
               "label": "B",
-              "text": "Due to the device overheating, therefore the test was stopped by us.",
+              "text": "Because of the reason that the test stopped.",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "The device overheated, because therefore we stopped.",
+              "text": "Due to the device overheating, therefore the test was stopped by us.",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Because of the reason that the test stopped.",
+              "text": "The device overheated, because therefore we stopped.",
               "is_correct": false
             }
           ],
@@ -2057,27 +2057,27 @@
           "options": [
             {
               "label": "A",
-              "text": "That is all, and I do not know what to add.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "To conclude, the trial met the stated criteria; I recommend a monitored rollout and review after one month.",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "My slides are finished.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "The topic is complicated, so no decision is possible.",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "That is all, and I do not know what to add.",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "To conclude, the trial met the stated criteria; I recommend a monitored rollout and review after one month.",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "It summarizes evidence and states a specific next step."
         }
       ]
@@ -2093,13 +2093,13 @@
           "options": [
             {
               "label": "A",
-              "text": "At this point in time, we are currently reviewing the request.",
+              "text": "The request review, it is taking place.",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "We are reviewing the request.",
-              "is_correct": true
+              "text": "At this point in time, we are currently reviewing the request.",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2108,12 +2108,12 @@
             },
             {
               "label": "D",
-              "text": "The request review, it is taking place.",
-              "is_correct": false
+              "text": "We are reviewing the request.",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The sentence removes redundant wording."
         },
         {
@@ -2122,13 +2122,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Send the data sometime.",
-              "is_correct": false
+              "text": "Please send the attendance totals for 1–10 October by 3 p.m. Thursday so I can finish the report.",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "Please send the attendance totals for 1–10 October by 3 p.m. Thursday so I can finish the report.",
-              "is_correct": true
+              "text": "Send the data sometime.",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2141,8 +2141,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "It specifies the data, period, deadline and purpose."
         },
         {
@@ -2151,27 +2151,27 @@
           "options": [
             {
               "label": "A",
-              "text": "It prioritizes verifiable reporting over subjective praise",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "It makes the report impossible to read",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "It removes all useful detail",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "It prioritizes verifiable reporting over subjective praise",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "It converts the report into an informal message",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "It makes the report impossible to read",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Objective detail supports a credible report."
         },
         {
@@ -2180,27 +2180,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Increase sentences to twelve",
+              "text": "Add multiple animations to every sentence",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "Increase sentences to twelve",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "Turn the content into a clear heading and a few concise points, then explain details orally",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "Remove the heading and shrink the type",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Add multiple animations to every sentence",
+              "text": "Remove the heading and shrink the type",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Concise key points reduce visual load and support the speaker's explanation."
         },
         {
@@ -2209,13 +2209,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Proceed faster",
-              "is_correct": false
+              "text": "Give a short example or analogy and invite a clarification question",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "Give a short example or analogy and invite a clarification question",
-              "is_correct": true
+              "text": "Proceed faster",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2228,8 +2228,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "An example can make an abstract definition more accessible."
         },
         {
@@ -2238,27 +2238,27 @@
           "options": [
             {
               "label": "A",
-              "text": "“Yours sincerely” — a formal message to a named recipient",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "“See ya” — a formal job application",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "“Whatever” — a request to the principal",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "“Later!!!” — a report to a department head",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "“Yours sincerely” — a formal message to a named recipient",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "“See ya” — a formal job application",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Yours sincerely is appropriate in many formal letters to a named recipient."
         },
         {
@@ -2267,13 +2267,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Future perfect only",
+              "text": "Present continuous only",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Simple past",
-              "is_correct": true
+              "text": "Future perfect only",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2282,12 +2282,12 @@
             },
             {
               "label": "D",
-              "text": "Present continuous only",
-              "is_correct": false
+              "text": "Simple past",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Completed event activities are normally described in the past tense."
         },
         {
@@ -2325,27 +2325,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Turn toward the screen and speak into it",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Project the voice clearly toward the audience and check audibility",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Speak faster",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Remove the microphone without checking",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Project the voice clearly toward the audience and check audibility",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Turn toward the screen and speak into it",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Clear projection toward the audience directly addresses audibility."
         },
         {
@@ -2354,27 +2354,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Answer only the easiest part",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Briefly restate the two parts, answer each in turn, and check if anything remains",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "Ask the audience to leave",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "Change to an unrelated slide",
+              "text": "Answer only the easiest part",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Ask the audience to leave",
+              "text": "Change to an unrelated slide",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Separating and answering each part makes the response complete."
         }
       ]
@@ -2419,7 +2419,7 @@
           "options": [
             {
               "label": "A",
-              "text": "After she completed the test, Asha spoke to Nita.",
+              "text": "Asha and Nita spoke after she did it.",
               "is_correct": false
             },
             {
@@ -2429,12 +2429,12 @@
             },
             {
               "label": "C",
-              "text": "Asha and Nita spoke after she did it.",
+              "text": "She spoke to her after completing the test.",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "She spoke to her after completing the test.",
+              "text": "After she completed the test, Asha spoke to Nita.",
               "is_correct": false
             }
           ],
@@ -2448,8 +2448,8 @@
           "options": [
             {
               "label": "A",
-              "text": "First disconnect power, then remove the cover, inspect the cable, and reconnect power only after refitting the cover.",
-              "is_correct": true
+              "text": "Inspect and disconnect whenever convenient.",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2458,17 +2458,17 @@
             },
             {
               "label": "C",
-              "text": "Reconnect power before removing the cover, unless it is not needed.",
-              "is_correct": false
+              "text": "First disconnect power, then remove the cover, inspect the cable, and reconnect power only after refitting the cover.",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Inspect and disconnect whenever convenient.",
+              "text": "Reconnect power before removing the cover, unless it is not needed.",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The sequence is explicit and preserves a safety-critical ordering."
         },
         {
@@ -2482,22 +2482,22 @@
             },
             {
               "label": "B",
-              "text": "Each of the reports contains a summary.",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Each reports contains summaries.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Each of the report contain summary.",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Each of the reports contains a summary.",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Each is singular and takes contains."
         },
         {
@@ -2506,7 +2506,7 @@
           "options": [
             {
               "label": "A",
-              "text": "20%",
+              "text": "30%",
               "is_correct": false
             },
             {
@@ -2516,12 +2516,12 @@
             },
             {
               "label": "C",
-              "text": "30%",
+              "text": "33⅓%",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "33⅓%",
+              "text": "20%",
               "is_correct": false
             }
           ],
@@ -2535,27 +2535,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Attendance definitely increased.",
+              "text": "The library has always been open longer in March.",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "The survey proves every user supported the change.",
+              "text": "Attendance definitely increased.",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "The library expanded hours after a user survey.",
-              "is_correct": true
+              "text": "The survey proves every user supported the change.",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "The library has always been open longer in March.",
-              "is_correct": false
+              "text": "The library expanded hours after a user survey.",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Only the action and timing are stated; outcomes are not given."
         },
         {
@@ -2593,27 +2593,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The project aims to reduce delays, improving accuracy and fewer errors.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "The project aims to reduce delays, improve accuracy and reduce errors.",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "The project aims at reducing delays, accuracy improved and errors.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "The project aims to reduce delays, accuracy and to be fewer errors.",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "The project aims to reduce delays, improve accuracy and reduce errors.",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "The project aims to reduce delays, improving accuracy and fewer errors.",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Each objective uses the same verb structure."
         },
         {
@@ -2622,13 +2622,13 @@
           "options": [
             {
               "label": "A",
-              "text": "The method will succeed for every department.",
+              "text": "The results are invalid because the group is not enormous.",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "The pilot suggests the method may help in similar settings, but a larger trial is needed.",
-              "is_correct": true
+              "text": "The method will succeed for every department.",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2637,12 +2637,12 @@
             },
             {
               "label": "D",
-              "text": "The results are invalid because the group is not enormous.",
-              "is_correct": false
+              "text": "The pilot suggests the method may help in similar settings, but a larger trial is needed.",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The conclusion acknowledges a promising result and the limitation of a small pilot."
         },
         {
@@ -2687,27 +2687,27 @@
           "options": [
             {
               "label": "A",
-              "text": "After reviewing the data, the analyst changed the conclusion because the earlier analysis was incomplete.",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "After reviewing the data, the conclusion reviewed the analyst.",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "The data was reviewing, so the conclusion changed it.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "After reviewing the data, the analyst changed the conclusion because the earlier analysis was incomplete.",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "The analyst, after data, changed because incomplete.",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "After reviewing the data, the conclusion reviewed the analyst.",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The revision gives the reviewing action a clear subject and clarifies the reason."
         },
         {
@@ -2716,8 +2716,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Use the conclusion to synthesize the findings and lead logically to the recommendation",
-              "is_correct": true
+              "text": "Repeat every paragraph verbatim",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2726,17 +2726,17 @@
             },
             {
               "label": "C",
-              "text": "Add unrelated background facts",
-              "is_correct": false
+              "text": "Use the conclusion to synthesize the findings and lead logically to the recommendation",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Repeat every paragraph verbatim",
+              "text": "Add unrelated background facts",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A conclusion should synthesize rather than duplicate the opening."
         },
         {
@@ -2750,22 +2750,22 @@
             },
             {
               "label": "B",
-              "text": "15%",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "20%",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "25%",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "15%",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "45/300 × 100 = 15%."
         },
         {
@@ -2774,27 +2774,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The approach is proven effective at every campus.",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "The text expresses a possibility, not a universal conclusion.",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "The trial happened at every campus.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "The wording proves the approach failed.",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The approach is proven effective at every campus.",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "May signals cautious possibility rather than certainty."
         },
         {
@@ -2803,8 +2803,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Because the server was unavailable, the team postponed the demo.",
-              "is_correct": true
+              "text": "The server was unavailable, the team and demo.",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2813,17 +2813,17 @@
             },
             {
               "label": "C",
-              "text": "The team postponed the demo unless the server was unavailable.",
-              "is_correct": false
+              "text": "Because the server was unavailable, the team postponed the demo.",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "The server was unavailable, the team and demo.",
+              "text": "The team postponed the demo unless the server was unavailable.",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Because expresses the cause-effect relationship."
         },
         {
@@ -2832,13 +2832,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Copy the abstract and read it aloud unchanged",
-              "is_correct": false
+              "text": "Identify one purpose, select essential findings, define key terms, use a simple visual and rehearse to time",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "Identify one purpose, select essential findings, define key terms, use a simple visual and rehearse to time",
-              "is_correct": true
+              "text": "Copy the abstract and read it aloud unchanged",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2851,8 +2851,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Audience adaptation, prioritization and rehearsal are all needed."
         },
         {
@@ -2861,27 +2861,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Add a clear request and relevant dates near the beginning",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Add more adjectives",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Make every sentence passive",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Add a clear request and relevant dates near the beginning",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Move the request to a hidden footnote",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Add more adjectives",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The recipient needs to identify the requested action immediately."
         },
         {
@@ -2890,13 +2890,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Dismiss the question as irrelevant",
+              "text": "Switch topics without replying",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Acknowledge the concern, identify the figure/source and clarify what it does and does not show",
-              "is_correct": true
+              "text": "Dismiss the question as irrelevant",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2905,12 +2905,12 @@
             },
             {
               "label": "D",
-              "text": "Switch topics without replying",
-              "is_correct": false
+              "text": "Acknowledge the concern, identify the figure/source and clarify what it does and does not show",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The presenter should address the evidence directly and candidly."
         },
         {
@@ -2919,13 +2919,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Treat all three as equally explicit facts",
-              "is_correct": false
+              "text": "Mark verifiable statements as facts, evaluative claims as opinions and reasoned but unstated conclusions as inferences",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "Mark verifiable statements as facts, evaluative claims as opinions and reasoned but unstated conclusions as inferences",
-              "is_correct": true
+              "text": "Treat all three as equally explicit facts",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2938,8 +2938,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "These labels distinguish evidence from viewpoint and derived conclusion."
         },
         {
@@ -2948,27 +2948,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Background/purpose, chronological activities, outcomes and concise conclusion",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Outcome first, random anecdotes and no dates",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Only personal reaction",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "A list of adjectives followed by the title",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Background/purpose, chronological activities, outcomes and concise conclusion",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Outcome first, random anecdotes and no dates",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Chronological organization helps readers follow events and outcomes."
         }
       ]
@@ -2984,8 +2984,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Subject: Review Request — Project Proposal; Dear Professor, could you review the attached proposal by Thursday?",
-              "is_correct": true
+              "text": "Subject: Proposal; no greeting, no request, no deadline",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2994,17 +2994,17 @@
             },
             {
               "label": "C",
-              "text": "Subject: hi; I sent a thing.",
-              "is_correct": false
+              "text": "Subject: Review Request — Project Proposal; Dear Professor, could you review the attached proposal by Thursday?",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Subject: Proposal; no greeting, no request, no deadline",
+              "text": "Subject: hi; I sent a thing.",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "It identifies purpose, attachment, recipient and deadline."
         },
         {
@@ -3013,27 +3013,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Attendance increased by 15 at each successive session in the recorded data.",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Every future session will increase by 15.",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "The program doubled attendance.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Attendance was unchanged.",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Attendance increased by 15 at each successive session in the recorded data.",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The data shows two increments of 15, not a guaranteed future trend."
         },
         {
@@ -3047,17 +3047,17 @@
             },
             {
               "label": "B",
-              "text": "A long description of unrelated hobbies",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Only a greeting",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "An anonymous statement without dates",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "A long description of unrelated hobbies",
               "is_correct": false
             }
           ],
@@ -3071,7 +3071,7 @@
           "options": [
             {
               "label": "A",
-              "text": "The process is faster because it is good.",
+              "text": "The process is the fastest in the world.",
               "is_correct": false
             },
             {
@@ -3081,12 +3081,12 @@
             },
             {
               "label": "C",
-              "text": "The team always works faster now.",
+              "text": "The process is faster because it is good.",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "The process is the fastest in the world.",
+              "text": "The team always works faster now.",
               "is_correct": false
             }
           ],
@@ -3100,27 +3100,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Define each important term briefly, then use the same term consistently",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Use unexplained abbreviations throughout",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Avoid all technical terms even when needed",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Use a different synonym every time",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Define each important term briefly, then use the same term consistently",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Brief definitions and consistent terminology serve a mixed audience."
         },
         {
@@ -3129,7 +3129,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Memorize every word and never use notes",
+              "text": "Remove all headings from slides",
               "is_correct": false
             },
             {
@@ -3139,12 +3139,12 @@
             },
             {
               "label": "C",
-              "text": "Remove all headings from slides",
+              "text": "End the session as soon as someone asks a question",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "End the session as soon as someone asks a question",
+              "text": "Memorize every word and never use notes",
               "is_correct": false
             }
           ],
@@ -3158,27 +3158,27 @@
           "options": [
             {
               "label": "A",
-              "text": "All participants found the workshop useful.",
+              "text": "The response rate proves the event failed.",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "All participants found the workshop useful.",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "Four respondents submitted feedback; conclusions about all attendees cannot be drawn from those responses alone.",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "No one found it useful.",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "The response rate proves the event failed.",
+              "text": "No one found it useful.",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "A 20% response rate cannot represent all attendees without further evidence."
         },
         {
@@ -3216,7 +3216,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Invent a source on the spot",
+              "text": "Insist the number must be right",
               "is_correct": false
             },
             {
@@ -3226,12 +3226,12 @@
             },
             {
               "label": "C",
-              "text": "Insist the number must be right",
+              "text": "Ignore the question and change the slide",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Ignore the question and change the slide",
+              "text": "Invent a source on the spot",
               "is_correct": false
             }
           ],
@@ -3245,27 +3245,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The approach is inexpensive",
+              "text": "The benefit proves cost is irrelevant",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "The approach is expensive",
+              "text": "The approach is inexpensive",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "The passage does not establish the cost",
-              "is_correct": true
+              "text": "The approach is expensive",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "The benefit proves cost is irrelevant",
-              "is_correct": false
+              "text": "The passage does not establish the cost",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A benefit example gives no evidence about cost."
         }
       ]
@@ -3286,22 +3286,22 @@
             },
             {
               "label": "B",
-              "text": "The pilot showed fewer failures, so a larger controlled rollout is recommended before broad deployment.",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "No decision can ever be made.",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "The data is irrelevant because ten devices were used.",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The pilot showed fewer failures, so a larger controlled rollout is recommended before broad deployment.",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "It uses the observed result but acknowledges the sample-size limit."
         },
         {
@@ -3310,27 +3310,27 @@
           "options": [
             {
               "label": "A",
-              "text": "State the cause as fact because the rise is visible",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Report the increase and note that the available data does not establish its cause",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Delete the attendance figures",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Claim that every participant gave the same reason",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "State the cause as fact because the rise is visible",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "The data supports the trend, not an unmeasured cause."
         },
         {
@@ -3339,7 +3339,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Send an angry reminder",
+              "text": "Remove the subject line",
               "is_correct": false
             },
             {
@@ -3349,12 +3349,12 @@
             },
             {
               "label": "C",
-              "text": "Copy every person in the organization immediately",
+              "text": "Send an angry reminder",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Remove the subject line",
+              "text": "Copy every person in the organization immediately",
               "is_correct": false
             }
           ],
@@ -3373,13 +3373,13 @@
             },
             {
               "label": "B",
-              "text": "The planned testing phase is complete, while post-test monitoring is still ongoing.",
-              "is_correct": true
+              "text": "No work has been completed.",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "No work has been completed.",
-              "is_correct": false
+              "text": "The planned testing phase is complete, while post-test monitoring is still ongoing.",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -3387,8 +3387,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The answer preserves the distinction stated in the report."
         },
         {
@@ -3397,27 +3397,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Copy the first 80 words",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Identify the thesis, select two findings, remove examples and repetition, then check the word count",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Retain all minor details and reduce font size",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Write a personal response instead of a summary",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Copy the first 80 words",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "A summary prioritizes the central idea and essential evidence."
         },
         {
@@ -3426,27 +3426,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Combine all measurements as directly comparable without qualification",
+              "text": "Pick whichever number supports the preferred conclusion",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "Combine all measurements as directly comparable without qualification",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "Report the comparable measurements and explain the differing condition before using the third value",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "Delete the methods from the report",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Pick whichever number supports the preferred conclusion",
+              "text": "Delete the methods from the report",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Differences in conditions affect valid comparison and should be disclosed."
         },
         {
@@ -3460,22 +3460,22 @@
             },
             {
               "label": "B",
-              "text": "Give the accepted term, explain it in plain language and provide a relevant example",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Replace the term with an unrelated word",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Avoid answering further questions",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Give the accepted term, explain it in plain language and provide a relevant example",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Plain-language explanation and an example retain the concept while improving understanding."
         },
         {
@@ -3484,27 +3484,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Use consistent past tense for completed events while retaining present tense for current conclusions or general facts",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Change every verb to future tense",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Remove all verbs",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Use consistent past tense for completed events while retaining present tense for current conclusions or general facts",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Use a different tense in every paragraph",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Change every verb to future tense",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Consistent tense clarifies when events occurred."
         },
         {
@@ -3513,8 +3513,8 @@
           "options": [
             {
               "label": "A",
-              "text": "State a recommendation, show relevant evidence and limits, address a likely objection, then give a specific next step",
-              "is_correct": true
+              "text": "Add unrelated statistics",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3523,17 +3523,17 @@
             },
             {
               "label": "C",
-              "text": "Hide limitations",
-              "is_correct": false
+              "text": "State a recommendation, show relevant evidence and limits, address a likely objection, then give a specific next step",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Add unrelated statistics",
+              "text": "Hide limitations",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Evidence, caveats and a clear action form a credible argument."
         },
         {
@@ -3542,18 +3542,18 @@
           "options": [
             {
               "label": "A",
+              "text": "The college is considering the timetable, but approval is not yet established.",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "The timetable has been implemented.",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "The timetable will definitely be used.",
               "is_correct": false
-            },
-            {
-              "label": "C",
-              "text": "The college is considering the timetable, but approval is not yet established.",
-              "is_correct": true
             },
             {
               "label": "D",
@@ -3561,8 +3561,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Considering a proposal does not establish approval or rejection."
         }
       ]
