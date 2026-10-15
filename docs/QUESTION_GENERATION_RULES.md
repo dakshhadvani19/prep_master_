@@ -431,13 +431,29 @@ For generated question-bank files under `Questions/Diploma/<Course>/<Semester>/<
 
 ## 14. Supabase `TestsData` export contract
 
-When a bank is specifically prepared for the current live `public."TestsData"` table, keep the source/review bank separate from the database-row export. The live table has only `TestId BIGINT`, `Questions jsonb[]`, `Options jsonb[]`, and `Answers jsonb[]`; it has no separate `SubjectId` or `Difficulty` column.
+The live `public."TestsData"` table has only `TestId BIGINT`, `Questions jsonb[]`, `Options jsonb[]`, and `Answers jsonb[]`. It has **no** separate `SubjectId`, `ExamType`, `Difficulty`, or marks column. For the exam-type-aware Semester 1 Diploma Computer Engineering bank, use `Questions/TestsData/Diploma/Computer Engineering/Semester 1/exam-bank-v2.json` as the canonical metadata-and-payload bundle and `seed-all-v2.sql` as the staged insert script.
 
-- Store **one difficulty-pure test per row**. The current Diploma bank batch uses 12 tests per subject as a provisional bank design: occurrences 1–4 Easy, 5–8 Medium, and 9–12 Hard, with 10 questions in each test. Do not describe this as an official exam blueprint unless an official source verifies it.
-- Allocate `TestId` by concatenating the decimal active `SubjectId` with the decimal test occurrence, without a separator, then casting to `BIGINT`. Check the live table for collisions before creating the insert script. Never silently overwrite or skip a collision.
-- Use one JSON string element per question in `Questions`; store four JSON string elements per question in `Options`, flattened question-by-question in A, B, C, D order; store one JSON number in `Answers` per question, using the frontend's zero-based index (0=A, 1=B, 2=C, 3=D).
-- Enforce `cardinality(Questions) = cardinality(Answers)`, `cardinality(Options) = 4 × cardinality(Questions)`, and the live per-column limits (50 questions, 200 options, 50 answers). Every answer index must be an integer from 0 through 3, and each four-option group must contain four non-empty, distinct options.
-- Because the table does not persist subject or difficulty metadata, ship a companion manifest that maps each `TestId` to its subject, occurrence, difficulty, source syllabus, and file path. Keep internal QA material in a separate review file; never insert the manifest or review document as a TestsData row.
-- Keep a separate insert SQL file whose statements explicitly cast every array element to `jsonb`. It must use the exact live column names and must not contain an upsert/overwrite clause by default.
-- Before the owner inserts a generated batch, complete the mathematical answer-key check and distractor-by-distractor review. Structural validation alone does not prove factual correctness, realistic difficulty, or that every distractor is technically plausible. Do not mark a batch fully exam-audited until those checks are completed.
+### Exam format rules
 
+- Read the current `Subjects.isDepartmentalSubject` value from Supabase. Do not infer it from the subject title or its department.
+- For `isDepartmentalSubject = false`, generate **Mid 1**, **Mid 2**, and **ESE**. Mid 1 and ESE are theory: each paper contains four distinct 8-mark questions and four corresponding model-answer strings. Mid 2 is objective: exactly 30 MCQs per test, each with four options and one zero-based answer index.
+- For `isDepartmentalSubject = true`, generate **Mid 1** and **Mid 2** only. Each paper contains exactly 30 MCQs, each with four options and one zero-based answer index. Do not create ESE rows for these subjects.
+- For every exam type that exists for the subject, create **12 variants**: four Easy, four Medium, and four Hard. Treat these as test-set variants, not an official board count unless independently confirmed by an official blueprint.
+- **Mid 1 must cover only the first 50% of the subject syllabus.** Use the official syllabus order and, when available, contact-hour weights to define that half before writing items. Save the precise per-subject scope in the manifest. Do not include later-unit facts merely to reach a question quota.
+- Mid 2 and ESE may cover the full relevant syllabus unless an official subject/exam blueprint narrows the scope.
+
+### Payload encoding
+
+- **MCQ row:** `Questions` contains 30 JSON string elements; `Options` contains 120 JSON string elements flattened question-by-question in A, B, C, D order; `Answers` contains 30 JSON numeric elements using the frontend's zero-based index (0=A, 1=B, 2=C, 3=D).
+- **Theory row:** `Questions` contains four question strings prefixed with `[8 marks]`; `Options` is an empty `jsonb[]`; `Answers` contains four JSON string elements, each a model answer corresponding to the question at the same array index. Each theory paper therefore totals 32 marks.
+- The v2 occurrence allocation is per subject and does not reset at each exam type: for non-departmental subjects, occurrences 1–12 = Mid 1, 13–24 = Mid 2, and 25–36 = ESE; for departmental subjects, occurrences 1–12 = Mid 1 and 13–24 = Mid 2. Always use the explicit mapping in the JSON `test_index`; do not infer exam type by stripping digits from `TestId`.
+- For MCQ rows, enforce `cardinality(Questions) = cardinality(Answers)` and `cardinality(Options) = 4 × cardinality(Questions)`. For theory rows, enforce exactly four questions, zero options, and four answer strings. All columns must stay under live limits (50 questions, 200 options, 50 answers).
+- Shuffle answer positions so there is no predictable pattern, and update `Options` and `Answers` together. Each MCQ option group must contain four non-empty, distinct choices and exactly one defensible key.
+
+### Metadata, SQL, and review
+
+- Companion metadata must map every `TestId` to the subject, exam type, difficulty, format, syllabus scope, counts and source information. Do not attempt to add those fields to `TestsData` without an approved schema change.
+- Every SQL array element must be explicitly cast to `jsonb`; use the exact live column names. The staged seed uses a transaction and no upsert/overwrite clause. Check candidate IDs against the live table immediately before insertion.
+- A consumer that reads from `TestsData` must branch on format: an empty `Options` array identifies a theory row in this export, so it must not render that row as a four-option MCQ. Model answers live in `Answers` for these theory rows; this payload convention must be handled explicitly by the reading/scoring UI.
+- Keep review metadata outside the four-column database row. Before production, verify factual answers, mathematical calculations, legal details, plausible distractors, syllabus alignment and theory-answer correctness. Structural validation and balanced answer positions do not constitute an academic audit.
+- The v2 variants reuse source questions across different tests when the approved source pool is smaller than the total bank demand. Distinct test variants do not imply every question is unique across the full bank.
