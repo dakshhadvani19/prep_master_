@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "course_id": 44,
+  "course_name": "Diploma Computer Engineering",
+  "semester": 1,
+  "subject_id": "44000935210301",
+  "subject_name": "Computer Hardware Skill",
+  "questions": [
+    {
+      "id": "44000935210301_sem1_001",
+      "subject_id": "44000935210301",
+      "text": "Which component loses its stored contents when power is removed?",
+      "options": [
+        "RAM",
+        "SSD",
+        "DVD-ROM",
+        "USB flash drive"
+      ],
+      "answer": 0,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "easy"
+    },
+    {
+      "id": "44000935210301_sem1_002",
+      "subject_id": "44000935210301",
+      "text": "Which connector is normally used for wired Ethernet?",
+      "options": [
+        "VGA",
+        "RJ-45",
+        "SATA",
+        "PS/2"
+      ],
+      "answer": 1,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "easy"
+    },
+    {
+      "id": "44000935210301_sem1_003",
+      "subject_id": "44000935210301",
+      "text": "Which storage device uses rotating magnetic platters?",
+      "options": [
+        "SD card",
+        "SSD",
+        "HDD",
+        "Blu-ray ROM"
+      ],
+      "answer": 2,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "easy"
+    },
+    {
+      "id": "44000935210301_sem1_004",
+      "subject_id": "44000935210301",
+      "text": "A PC powers on but shows no image. What should be checked first before opening the case?",
+      "options": [
+        "Format the disk",
+        "Replace the CPU",
+        "Change the printer driver",
+        "Check monitor power, selected input and display cable"
+      ],
+      "answer": 3,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium"
+    },
+    {
+      "id": "44000935210301_sem1_005",
+      "subject_id": "44000935210301",
+      "text": "A new SATA drive is visible in firmware but not in File Explorer. What is a reasonable next check?",
+      "options": [
+        "Inspect Disk Management for initialization, partition and file-system status before making changes",
+        "Replace the monitor cable",
+        "Change the keyboard layout",
+        "Assume the drive is dead despite firmware detection"
+      ],
+      "answer": 0,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium"
+    },
+    {
+      "id": "44000935210301_sem1_006",
+      "subject_id": "44000935210301",
+      "text": "Which printer mechanism uses pins striking an ink ribbon?",
+      "options": [
+        "Inkjet",
+        "Dot-matrix",
+        "Laser",
+        "Thermal photo"
+      ],
+      "answer": 1,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "medium"
+    },
+    {
+      "id": "44000935210301_sem1_007",
+      "subject_id": "44000935210301",
+      "text": "A laptop shuts down under sustained load and works again after cooling. Which first response best matches the evidence?",
+      "options": [
+        "Disable thermal protection",
+        "Format the SSD",
+        "Inspect ventilation, fan operation and temperatures, then service safely as needed",
+        "Replace the keyboard"
+      ],
+      "answer": 2,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "hard"
+    },
+    {
+      "id": "44000935210301_sem1_008",
+      "subject_id": "44000935210301",
+      "text": "Before reseating RAM, which procedure best reduces electrical and handling risks?",
+      "options": [
+        "Leave power connected for grounding",
+        "Touch the contacts to remove dust",
+        "Move the module while running",
+        "Shut down, disconnect power, use ESD precautions, reseat correctly and retest"
+      ],
+      "answer": 3,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "hard"
+    },
+    {
+      "id": "44000935210301_sem1_009",
+      "subject_id": "44000935210301",
+      "text": "A technician installs a second SATA drive. Which sequence is most complete?",
+      "options": [
+        "Connect data to the motherboard and power from PSU, then verify detection and configure storage as needed",
+        "Connect only the SATA data cable; drives do not need power",
+        "Connect the drive to VGA and then partition it",
+        "Format the system drive before checking the new disk"
+      ],
+      "answer": 0,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "hard"
+    },
+    {
+      "id": "44000935210301_sem1_010",
+      "subject_id": "44000935210301",
+      "text": "Two devices accept memory cards, but one supports SDXC only up to a specified capacity and the other uses a different slot. What should guide purchase?",
+      "options": [
+        "Choose the largest card available",
+        "Check each device's supported card format, capacity and speed before buying",
+        "Assume all cards fit all slots",
+        "Choose by brand alone"
+      ],
+      "answer": 1,
+      "type": "mcq",
+      "marks": 1,
+      "difficulty": "hard"
+    }
+  ]
+}
