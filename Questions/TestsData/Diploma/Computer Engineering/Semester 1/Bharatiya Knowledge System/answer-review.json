@@ -19,22 +19,22 @@
             },
             {
               "label": "B",
-              "text": "A broad body of Indian knowledge traditions across disciplines and periods",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Only temple construction methods",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Only oral stories without classification",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "A broad body of Indian knowledge traditions across disciplines and periods",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "BKS encompasses diverse knowledge traditions, disciplines and historical periods."
         },
         {
@@ -43,8 +43,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Two",
-              "is_correct": false
+              "text": "Four",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -53,17 +53,17 @@
             },
             {
               "label": "C",
-              "text": "Four",
-              "is_correct": true
+              "text": "Six",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Six",
+              "text": "Two",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "The Vedic corpus comprises four Vedas."
         },
         {
@@ -72,27 +72,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Atharvaveda",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Rigveda",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Samaveda",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Yajurveda",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Atharvaveda",
+              "text": "Yajurveda",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The Rigveda is principally a collection of hymns."
         },
         {
@@ -106,13 +106,13 @@
             },
             {
               "label": "B",
-              "text": "Samaveda",
-              "is_correct": true
+              "text": "Yajurveda",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Yajurveda",
-              "is_correct": false
+              "text": "Samaveda",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -120,8 +120,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The Samaveda is associated with chants and melodies."
         },
         {
@@ -130,8 +130,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Kalpa",
-              "is_correct": false
+              "text": "Shiksha",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -140,36 +140,7 @@
             },
             {
               "label": "C",
-              "text": "Shiksha",
-              "is_correct": true
-            },
-            {
-              "label": "D",
               "text": "Chandas",
-              "is_correct": false
-            }
-          ],
-          "answer_index": 2,
-          "answer_label": "C",
-          "rationale": "Shiksha concerns phonetics and correct articulation."
-        },
-        {
-          "question_number": 6,
-          "text": "Which Vedanga concerns metre in verse?",
-          "options": [
-            {
-              "label": "A",
-              "text": "Nirukta",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Chandas",
-              "is_correct": true
-            },
-            {
-              "label": "C",
-              "text": "Jyotisha",
               "is_correct": false
             },
             {
@@ -178,8 +149,37 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
+          "rationale": "Shiksha concerns phonetics and correct articulation."
+        },
+        {
+          "question_number": 6,
+          "text": "Which Vedanga concerns metre in verse?",
+          "options": [
+            {
+              "label": "A",
+              "text": "Kalpa",
+              "is_correct": false
+            },
+            {
+              "label": "B",
+              "text": "Nirukta",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Chandas",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Jyotisha",
+              "is_correct": false
+            }
+          ],
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Chandas studies poetic metre."
         },
         {
@@ -193,22 +193,22 @@
             },
             {
               "label": "B",
-              "text": "Ramayana and Mahabharata",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Rigveda and Samaveda",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Nyaya and Mimamsa",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Ramayana and Mahabharata",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The Ramayana and Mahabharata are the two major Itihasa epics."
         },
         {
@@ -217,27 +217,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Moksha",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Vastu",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Jyotisha",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Moksha",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Chandas",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Vastu",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Moksha is one of the four goals of human life."
         },
         {
@@ -246,12 +246,12 @@
           "options": [
             {
               "label": "A",
-              "text": "Vanaprastha",
+              "text": "Grihastha",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Sannyasa",
+              "text": "Vanaprastha",
               "is_correct": false
             },
             {
@@ -261,7 +261,7 @@
             },
             {
               "label": "D",
-              "text": "Grihastha",
+              "text": "Sannyasa",
               "is_correct": false
             }
           ],
@@ -275,13 +275,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Artha",
-              "is_correct": false
+              "text": "Moksha",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "Moksha",
-              "is_correct": true
+              "text": "Artha",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -294,8 +294,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Moksha is understood as liberation."
         }
       ]
@@ -316,17 +316,17 @@
             },
             {
               "label": "B",
-              "text": "Nirukta",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Chandas",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Shiksha",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Nirukta",
               "is_correct": false
             }
           ],
@@ -340,27 +340,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Jyotisha",
+              "text": "Chandas",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Kalpa",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Nirukta",
               "is_correct": true
             },
             {
+              "label": "C",
+              "text": "Jyotisha",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "Chandas",
+              "text": "Kalpa",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Nirukta concerns etymology and word explanation."
         },
         {
@@ -369,18 +369,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Kalpa",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Shiksha",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Vyakarana",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Kalpa",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -388,8 +388,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Kalpa addresses ritual procedures and related rules."
         },
         {
@@ -398,27 +398,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Chandas",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Jyotisha",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Vyakarana",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Nirukta",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Chandas",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Jyotisha",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Jyotisha is associated with astronomical observations and timing."
         },
         {
@@ -427,27 +427,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Irrigation engineering",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Language sciences",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Temple architecture",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Textile dyeing",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Irrigation engineering",
+              "text": "Textile dyeing",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Language sciences include Sanskrit and NLP in the syllabus."
         },
         {
@@ -461,22 +461,22 @@
             },
             {
               "label": "B",
-              "text": "The Purana literary tradition as a class of works",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Only a geometry diagram",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "A machine-tool catalogue",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "The Purana literary tradition as a class of works",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The syllabus presents Puranas as encyclopaedic works; it does not name one single manual."
         },
         {
@@ -485,8 +485,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Kama",
-              "is_correct": false
+              "text": "Dharma",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -495,17 +495,17 @@
             },
             {
               "label": "C",
-              "text": "Dharma",
-              "is_correct": true
+              "text": "Moksha",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Moksha",
+              "text": "Kama",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Dharma concerns duty, ethical order and right conduct."
         },
         {
@@ -514,8 +514,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Artha",
-              "is_correct": true
+              "text": "Brahmacharya",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -524,17 +524,17 @@
             },
             {
               "label": "C",
-              "text": "Chandas",
-              "is_correct": false
+              "text": "Artha",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Brahmacharya",
+              "text": "Chandas",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Artha refers to material means and prosperity."
         },
         {
@@ -548,22 +548,22 @@
             },
             {
               "label": "B",
-              "text": "Grihastha",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Vanaprastha",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Sannyasa",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Grihastha",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Grihastha is the householder stage."
         },
         {
@@ -572,27 +572,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Karma",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Kalpa",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Vastu",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Karma",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Chandas",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Kalpa",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Karma concerns actions and their consequences."
         }
       ]
@@ -608,7 +608,7 @@
           "options": [
             {
               "label": "A",
-              "text": "Rigveda",
+              "text": "Atharvaveda",
               "is_correct": false
             },
             {
@@ -618,12 +618,12 @@
             },
             {
               "label": "C",
-              "text": "Samaveda",
+              "text": "Rigveda",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Atharvaveda",
+              "text": "Samaveda",
               "is_correct": false
             }
           ],
@@ -637,18 +637,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Atharvaveda",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Samaveda",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Yajurveda",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Atharvaveda",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -656,8 +656,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The Atharvaveda contains varied hymns and material including domestic concerns."
         },
         {
@@ -666,27 +666,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Only differential equations",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Arithmetic, geometry, trigonometry and algebra",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Only calculus of variations",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Only statistical regression",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Only differential equations",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Arithmetic, geometry, trigonometry and algebra",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The syllabus lists these four areas in ancient Indian mathematics."
         },
         {
@@ -695,27 +695,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Temperature, voltage and resistance only",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Time, distance and weight",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "Only chemical pH",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "Only internet bandwidth",
+              "text": "Temperature, voltage and resistance only",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Only chemical pH",
+              "text": "Only internet bandwidth",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "The unit covers measurement of time, distance and weight."
         },
         {
@@ -724,18 +724,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Timing rituals and developing calendrical knowledge",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Formatting HTML tables",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Repairing computer printers",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Timing rituals and developing calendrical knowledge",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -743,8 +743,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Jyotisha supports timekeeping and calendrical calculation in traditional contexts."
         },
         {
@@ -753,27 +753,27 @@
           "options": [
             {
               "label": "A",
-              "text": "A classification of poetic metres",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "A rainwater harvesting system",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "A word etymology exercise",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "A list of grammatical cases",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "A classification of poetic metres",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Rainwater harvesting is explicitly included in the technology unit."
         },
         {
@@ -782,27 +782,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Satellite propulsion only",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Iron and steel technology",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Semiconductor lithography only",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Synthetic polymers only",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Satellite propulsion only",
+              "text": "Synthetic polymers only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The syllabus names iron and steel technology."
         },
         {
@@ -811,27 +811,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Textile and dyeing",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Mobile app testing",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Cloud orchestration",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Video compression",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Textile and dyeing",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Textile and dyeing technology are explicitly listed."
         },
         {
@@ -845,17 +845,17 @@
             },
             {
               "label": "B",
-              "text": "Cloud architecture only",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "CPU pipeline architecture",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Compiler architecture",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Cloud architecture only",
               "is_correct": false
             }
           ],
@@ -869,27 +869,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Sannyasa",
+              "text": "Moksha",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "Sannyasa",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "Vanaprastha",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "Brahmacharya",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Moksha",
+              "text": "Brahmacharya",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The typical sequence is Brahmacharya, Grihastha, Vanaprastha, Sannyasa."
         }
       ]
@@ -905,18 +905,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Four goals of human life",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Four Vedas",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Four types of metals",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Four goals of human life",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -924,8 +924,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Purusharthas are the four goals of human life."
         },
         {
@@ -934,27 +934,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Rig, Sama, Yajur, Atharva",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Dharma, Artha, Kama, Moksha",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Shiksha, Kalpa, Chandas, Nirukta",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Brahmacharya, Grihastha, Veda, Purana",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Rig, Sama, Yajur, Atharva",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Dharma, Artha, Kama, Moksha",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The four aims are Dharma, Artha, Kama and Moksha."
         },
         {
@@ -963,27 +963,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Grihastha",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Brahmacharya",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Vanaprastha",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Kalpa",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Grihastha",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Brahmacharya",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Vanaprastha is conventionally the forest-dweller/withdrawal stage."
         },
         {
@@ -992,13 +992,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Sannyasa",
-              "is_correct": true
+              "text": "Grihastha",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Grihastha",
-              "is_correct": false
+              "text": "Sannyasa",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1011,8 +1011,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Sannyasa is the renunciant stage."
         },
         {
@@ -1021,27 +1021,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Puranas",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "CSS stylesheets",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Device drivers",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Spreadsheet formulas",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "CSS stylesheets",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Puranas",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Purana literature contains broad narrative and traditional knowledge."
         },
         {
@@ -1050,27 +1050,27 @@
           "options": [
             {
               "label": "A",
+              "text": "A hardware diagnostic command",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "A source of cultural and ethical wisdom through epic narrative",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "A modern web protocol",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "A single unit of weight",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "A hardware diagnostic command",
+              "text": "A single unit of weight",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The syllabus describes Itihasa as a source of wisdom."
         },
         {
@@ -1084,13 +1084,13 @@
             },
             {
               "label": "B",
-              "text": "Vyakarana—grammar",
-              "is_correct": true
+              "text": "Nirukta—astronomy",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Nirukta—astronomy",
-              "is_correct": false
+              "text": "Vyakarana—grammar",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1098,8 +1098,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Vyakarana is the Vedanga of grammar."
         },
         {
@@ -1113,17 +1113,17 @@
             },
             {
               "label": "B",
-              "text": "Shiksha—town planning",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Kalpa—textile dyeing",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Nirukta—computer networks",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Shiksha—town planning",
               "is_correct": false
             }
           ],
@@ -1137,27 +1137,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Email CC",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Vedanga Jyotish",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "CSS gradients",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "Printer resolution",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Email CC",
+              "text": "Printer resolution",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The astronomy topic covers measuring time and calendars."
         },
         {
@@ -1166,27 +1166,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Sacred ecology and environment",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Nested HTML lists",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Absolute spreadsheet reference",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Slide transitions",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Sacred ecology and environment",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Sacred ecology and environmental management is an explicit unit theme."
         }
       ]
@@ -1202,27 +1202,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Language sciences",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Water management",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Temple construction",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Transportation",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Water management",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Language sciences",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Language sciences include grammar and Sanskrit's linguistic role."
         },
         {
@@ -1236,17 +1236,17 @@
             },
             {
               "label": "B",
-              "text": "Chandas—articulation; Kalpa—grammar",
+              "text": "Vastu—articulation; Artha—grammar",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Jyotisha—articulation; Nirukta—grammar",
+              "text": "Chandas—articulation; Kalpa—grammar",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Vastu—articulation; Artha—grammar",
+              "text": "Jyotisha—articulation; Nirukta—grammar",
               "is_correct": false
             }
           ],
@@ -1260,13 +1260,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Vedanga Jyotish",
-              "is_correct": true
+              "text": "Textile dyeing",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Textile dyeing",
-              "is_correct": false
+              "text": "Vedanga Jyotish",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1279,8 +1279,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Vedanga Jyotish is the course topic tied to time and calendars."
         },
         {
@@ -1289,27 +1289,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Engineering, Technology and Architecture in Ancient Bharat",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Concepts of Life in Ancient Bharat",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "HTML5 fundamentals",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Introduction to Reading Skills",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Engineering, Technology and Architecture in Ancient Bharat",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Concepts of Life in Ancient Bharat",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Water management, including Gujarat, appears in the engineering/technology unit."
         },
         {
@@ -1323,17 +1323,17 @@
             },
             {
               "label": "B",
-              "text": "Both are Vedangas for metre",
+              "text": "Puranas refer only to measurements and Itihasa only to grammar",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Both are modern scientific journals",
+              "text": "Both are Vedangas for metre",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Puranas refer only to measurements and Itihasa only to grammar",
+              "text": "Both are modern scientific journals",
               "is_correct": false
             }
           ],
@@ -1347,18 +1347,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Number system and units of measurement",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "CSS positioning systems",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Vedic schools of philosophy only",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Number system and units of measurement",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1366,8 +1366,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Those units are explicitly listed under measurement."
         },
         {
@@ -1376,27 +1376,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Irrigation and water management; rainwater harvesting",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Chandas; natural language processing",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Ashramas; metal casting",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Vastu; email signatures",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Chandas; natural language processing",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Irrigation and water management; rainwater harvesting",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Both topics are named in the water-management section."
         },
         {
@@ -1405,27 +1405,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Measurement of weight only",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Purusharthas and Moksha",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Serial and parallel ports",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "CSS box model",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Measurement of weight only",
+              "text": "CSS box model",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The life-concepts unit covers Purusharthas, ethical life and Moksha."
         },
         {
@@ -1439,13 +1439,13 @@
             },
             {
               "label": "B",
-              "text": "Brahmacharya then Grihastha",
-              "is_correct": true
+              "text": "Sannyasa then Vanaprastha",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "Sannyasa then Vanaprastha",
-              "is_correct": false
+              "text": "Brahmacharya then Grihastha",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1453,8 +1453,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The conventional sequence begins with Brahmacharya and then Grihastha."
         },
         {
@@ -1463,27 +1463,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Science and Mathematics only",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Engineering, Technology and Architecture in Ancient Bharat",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Concepts of Life only",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Reading Skills",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Science and Mathematics only",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "The technologies are grouped in the engineering/technology unit."
         }
       ]
@@ -1504,17 +1504,17 @@
             },
             {
               "label": "B",
-              "text": "The syllabus treats Sanskrit only as a metalworking method",
+              "text": "It concerns only the measurement of weight",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "NLP is listed under temple floor plans",
+              "text": "The syllabus treats Sanskrit only as a metalworking method",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "It concerns only the measurement of weight",
+              "text": "NLP is listed under temple floor plans",
               "is_correct": false
             }
           ],
@@ -1528,13 +1528,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Shiksha—phonetics; Kalpa—ritual procedures; Vyakarana—grammar",
-              "is_correct": true
+              "text": "Shiksha—metre; Kalpa—astronomy; Vyakarana—dyeing",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Shiksha—metre; Kalpa—astronomy; Vyakarana—dyeing",
-              "is_correct": false
+              "text": "Shiksha—phonetics; Kalpa—ritual procedures; Vyakarana—grammar",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1547,8 +1547,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "These three Vedanga-field matches are accurate."
         },
         {
@@ -1557,27 +1557,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Mathematics in Science and Mathematics in Ancient Bharat",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Transportation and trading techniques",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Sacred ecology",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Four Ashramas",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Mathematics in Science and Mathematics in Ancient Bharat",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Transportation and trading techniques",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Arithmetic and geometry are listed under mathematics."
         },
         {
@@ -1586,8 +1586,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Vedanga Jyotish and measuring time/calendar",
-              "is_correct": true
+              "text": "Purusharthas and printer technology",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1601,12 +1601,12 @@
             },
             {
               "label": "D",
-              "text": "Purusharthas and printer technology",
-              "is_correct": false
+              "text": "Vedanga Jyotish and measuring time/calendar",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Both are named together under astronomy."
         },
         {
@@ -1615,13 +1615,13 @@
           "options": [
             {
               "label": "A",
-              "text": "How it collects, stores or distributes water under local conditions",
-              "is_correct": true
+              "text": "Whether its name can be written in bold",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Whether its name can be written in bold",
-              "is_correct": false
+              "text": "How it collects, stores or distributes water under local conditions",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1634,8 +1634,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The syllabus focuses on irrigation, water management and rainwater harvesting."
         },
         {
@@ -1644,27 +1644,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Vastu Shastra / science of architecture",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Chandas",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Mail merge",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Vedanga grammar",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Chandas",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Vastu Shastra / science of architecture",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Vastu Shastra includes town planning and temple architecture."
         },
         {
@@ -1678,17 +1678,17 @@
             },
             {
               "label": "B",
-              "text": "They are both CSS positioning properties",
+              "text": "They refer to ports on a motherboard",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "They name two Vedas",
+              "text": "They are both CSS positioning properties",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "They refer to ports on a motherboard",
+              "text": "They name two Vedas",
               "is_correct": false
             }
           ],
@@ -1702,18 +1702,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Describe the specific example and available evidence, separating documented detail from generalization",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Assume one example proves all regions used the same method",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Replace historical evidence with a modern slogan",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Describe the specific example and available evidence, separating documented detail from generalization",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -1721,8 +1721,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Careful scope and evidence avoid overgeneralizing historical practices."
         },
         {
@@ -1731,27 +1731,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Transportation and development of trading techniques",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Vedic phonetics",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Purusharthas only",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "CSS text effects",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Vedic phonetics",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Transportation and development of trading techniques",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Transportation and trading techniques are explicit technology-unit topics."
         },
         {
@@ -1760,27 +1760,27 @@
           "options": [
             {
               "label": "A",
+              "text": "HTML forms",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Nakshatrara Gyaan and agriculture",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "Word processor headers",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "USB connectors",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "HTML forms",
+              "text": "USB connectors",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The syllabus lists Nakshatrara Gyaan and agriculture under sacred ecology/environment."
         }
       ]
@@ -1796,13 +1796,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Rigveda, Samaveda, Yajurveda, Atharvaveda",
-              "is_correct": true
+              "text": "Rigveda, Purana, Kalpa, Atharvaveda",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Rigveda, Purana, Kalpa, Atharvaveda",
-              "is_correct": false
+              "text": "Rigveda, Samaveda, Yajurveda, Atharvaveda",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1815,8 +1815,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The four Vedas are Rig, Sama, Yajur and Atharva."
         },
         {
@@ -1825,27 +1825,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Four Vedas + six Vedangas + four other knowledge branches",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Four Ashramas only",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Four Purusharthas + four Vedas only",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Four technical materials only",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Four Vedas + six Vedangas + four other knowledge branches",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Four Ashramas only",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The conventional grouping is 4 Vedas, 6 Vedangas and 4 additional branches."
         },
         {
@@ -1854,8 +1854,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Nirukta focuses on word etymology/explanation; Vyakarana focuses on grammar",
-              "is_correct": true
+              "text": "Both refer only to poetic metre",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1869,12 +1869,12 @@
             },
             {
               "label": "D",
-              "text": "Both refer only to poetic metre",
-              "is_correct": false
+              "text": "Nirukta focuses on word etymology/explanation; Vyakarana focuses on grammar",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Nirukta and Vyakarana have distinct word-explanation and grammatical roles."
         },
         {
@@ -1912,27 +1912,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Science and Mathematics in Ancient Bharat",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Concepts of Life",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "CSS3",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Communication Skills",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Science and Mathematics in Ancient Bharat",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Concepts of Life",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Number system and measurement are included in that unit."
         },
         {
@@ -1946,17 +1946,17 @@
             },
             {
               "label": "B",
-              "text": "Assume modern and historical systems are identical",
+              "text": "Judge them by unrelated grammatical categories",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Compare their names only",
+              "text": "Assume modern and historical systems are identical",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Judge them by unrelated grammatical categories",
+              "text": "Compare their names only",
               "is_correct": false
             }
           ],
@@ -1970,13 +1970,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Kama concerns desire/enjoyment; Artha concerns material means/prosperity",
-              "is_correct": true
+              "text": "Kama concerns grammar; Artha concerns metre",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Kama concerns grammar; Artha concerns metre",
-              "is_correct": false
+              "text": "Kama concerns desire/enjoyment; Artha concerns material means/prosperity",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1989,8 +1989,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Kama and Artha represent different aims in the four-goal framework."
         },
         {
@@ -1999,27 +1999,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Brahmacharya, Grihastha, Vanaprastha, Sannyasa",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Grihastha, Sannyasa, Brahmacharya, Vanaprastha",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Vanaprastha, Brahmacharya, Moksha, Artha",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Dharma, Artha, Kama, Moksha",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Grihastha, Sannyasa, Brahmacharya, Vanaprastha",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Brahmacharya, Grihastha, Vanaprastha, Sannyasa",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The four stages are conventionally listed in that sequence."
         },
         {
@@ -2033,17 +2033,17 @@
             },
             {
               "label": "B",
-              "text": "Language components",
+              "text": "Word formatting",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Number system and units",
+              "text": "Language components",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Word formatting",
+              "text": "Number system and units",
               "is_correct": false
             }
           ],
@@ -2057,18 +2057,18 @@
           "options": [
             {
               "label": "A",
-              "text": "Engineering, Technology and Architecture in Ancient Bharat",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Introduction to BKS only",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Concepts of Life",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Engineering, Technology and Architecture in Ancient Bharat",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -2076,8 +2076,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Metallurgy and textile technology are listed in that unit."
         }
       ]
@@ -2093,27 +2093,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Chandas is metre; Vyakarana is grammar",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Chandas is astronomy; Vyakarana is architecture",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Both are ritual procedures",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Chandas is etymology; Vyakarana is language pronunciation",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Chandas is metre; Vyakarana is grammar",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Chandas is astronomy; Vyakarana is architecture",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Chandas covers metre; Vyakarana covers grammar."
         },
         {
@@ -2122,8 +2122,8 @@
           "options": [
             {
               "label": "A",
-              "text": "It covers technology and mathematics as well as Karma, Ashramas and Purusharthas",
-              "is_correct": true
+              "text": "It excludes historical and philosophical topics",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2137,12 +2137,12 @@
             },
             {
               "label": "D",
-              "text": "It excludes historical and philosophical topics",
-              "is_correct": false
+              "text": "It covers technology and mathematics as well as Karma, Ashramas and Purusharthas",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The syllabus spans technological, scientific and philosophical areas."
         },
         {
@@ -2180,27 +2180,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Moksha rather than Artha",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Artha rather than Moksha",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Kama rather than Chandas",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Moksha rather than Artha",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Dharma rather than Jyotisha",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Artha rather than Moksha",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Moksha concerns liberation; Artha concerns material means."
         },
         {
@@ -2209,8 +2209,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Town planning, civil architecture and temple architecture",
-              "is_correct": true
+              "text": "Email attachments, CC and BCC",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2224,12 +2224,12 @@
             },
             {
               "label": "D",
-              "text": "Email attachments, CC and BCC",
-              "is_correct": false
+              "text": "Town planning, civil architecture and temple architecture",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "These three architecture subtopics are listed."
         },
         {
@@ -2238,13 +2238,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Study Vedanga Jyotish/calendar concepts alongside Nakshatrara Gyaan and agriculture",
-              "is_correct": true
+              "text": "Study only HTML input elements",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Study only HTML input elements",
-              "is_correct": false
+              "text": "Study Vedanga Jyotish/calendar concepts alongside Nakshatrara Gyaan and agriculture",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -2257,8 +2257,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The syllabus separately includes calendrical astronomy and Nakshatra-related agricultural knowledge."
         },
         {
@@ -2267,27 +2267,27 @@
           "options": [
             {
               "label": "A",
-              "text": "It fits the syllabus description of Puranas",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "It confuses Puranas with CSS sheets",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "It treats a Vedanga as a storage device",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "It contradicts the provided unit title",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "It fits the syllabus description of Puranas",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "It confuses Puranas with CSS sheets",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Puranas are described in the syllabus as encyclopaedical works."
         },
         {
@@ -2301,17 +2301,17 @@
             },
             {
               "label": "B",
-              "text": "Both belong exclusively to grammar",
+              "text": "Neither appears in the provided syllabus",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Both are Ashramas",
+              "text": "Both belong exclusively to grammar",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Neither appears in the provided syllabus",
+              "text": "Both are Ashramas",
               "is_correct": false
             }
           ],
@@ -2325,13 +2325,13 @@
           "options": [
             {
               "label": "A",
-              "text": "They are related philosophical concepts but named as separate topics",
-              "is_correct": true
+              "text": "They are identical Vedas",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "They are identical Vedas",
-              "is_correct": false
+              "text": "They are related philosophical concepts but named as separate topics",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -2344,8 +2344,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The syllabus lists Karma and rebirth as related, distinct topics."
         },
         {
@@ -2354,27 +2354,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Language components, Sanskrit and language-science concepts",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Water management, irrigation and architecture",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Textile dyeing and trading techniques",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Ashramas and Moksha only",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Water management, irrigation and architecture",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Language components, Sanskrit and language-science concepts",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Those items are in the language-sciences subunit."
         }
       ]
@@ -2390,8 +2390,8 @@
           "options": [
             {
               "label": "A",
-              "text": "The syllabus provides a basis to compare water-management approaches; effectiveness of a specific design still requires case evidence",
-              "is_correct": true
+              "text": "Water systems are covered only as philosophical symbols",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2405,12 +2405,12 @@
             },
             {
               "label": "D",
-              "text": "Water systems are covered only as philosophical symbols",
-              "is_correct": false
+              "text": "The syllabus provides a basis to compare water-management approaches; effectiveness of a specific design still requires case evidence",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A comparison topic does not establish universal performance claims."
         },
         {
@@ -2448,27 +2448,27 @@
           "options": [
             {
               "label": "A",
-              "text": "It extrapolates from one example to a universal historical claim without sufficient evidence",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "It defines geometry too precisely",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "It cites the number system",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "It extrapolates from one example to a universal historical claim without sufficient evidence",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "It distinguishes source and interpretation",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "It defines geometry too precisely",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A single example cannot establish a universal origin claim."
         },
         {
@@ -2477,8 +2477,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Explain the stated relationship between Sanskrit and natural language processing",
-              "is_correct": true
+              "text": "Discuss only the mechanical keyboard",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2487,17 +2487,17 @@
             },
             {
               "label": "C",
-              "text": "Replace language analysis with a calendar chart",
-              "is_correct": false
+              "text": "Explain the stated relationship between Sanskrit and natural language processing",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Discuss only the mechanical keyboard",
+              "text": "Replace language analysis with a calendar chart",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Sanskrit's role in NLP is specifically named."
         },
         {
@@ -2535,27 +2535,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Nakshatrara Gyaan and agriculture; forest management and urban planning",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Only Vedic pronunciation and metre",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Only algebraic identities",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Only word-processing margins",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Nakshatrara Gyaan and agriculture; forest management and urban planning",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Only Vedic pronunciation and metre",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Both agricultural knowledge and planning/environment are listed."
         },
         {
@@ -2564,8 +2564,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Purusharthas",
-              "is_correct": true
+              "text": "Forms of HTML",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2579,12 +2579,12 @@
             },
             {
               "label": "D",
-              "text": "Forms of HTML",
-              "is_correct": false
+              "text": "Purusharthas",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The scenario matches the four aims of life."
         },
         {
@@ -2593,13 +2593,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Brahmacharya is the student stage and conventionally comes first; Vanaprastha follows Grihastha",
-              "is_correct": true
+              "text": "Brahmacharya is a Veda",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Brahmacharya is a Veda",
-              "is_correct": false
+              "text": "Brahmacharya is the student stage and conventionally comes first; Vanaprastha follows Grihastha",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -2612,8 +2612,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The conventional sequence places Brahmacharya before Grihastha and Vanaprastha."
         },
         {
@@ -2622,27 +2622,27 @@
           "options": [
             {
               "label": "A",
-              "text": "The Vedas form a core corpus; Puranas are described as encyclopaedic; Itihasa is a source of wisdom",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "All three are names of Vedangas",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Puranas are CSS properties",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Itihasa is a unit of distance",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "The Vedas form a core corpus; Puranas are described as encyclopaedic; Itihasa is a source of wisdom",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "All three are names of Vedangas",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The unit introduces these traditions in distinct roles."
         },
         {
@@ -2656,17 +2656,17 @@
             },
             {
               "label": "B",
-              "text": "Assume the outline proves it for every site",
+              "text": "Replace evidence with a philosophical term",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "Use the title of the unit as the sole evidence",
+              "text": "Assume the outline proves it for every site",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Replace evidence with a philosophical term",
+              "text": "Use the title of the unit as the sole evidence",
               "is_correct": false
             }
           ],
@@ -2716,27 +2716,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Caturdaśa-Vidyāsthāna is a 14-part knowledge classification; the four Ashramas are life stages",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Both mean the four goals of life",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Caturdaśa refers only to four Vedas",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Caturdaśa-Vidyāsthāna is a 14-part knowledge classification; the four Ashramas are life stages",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Ashramas are six Vedangas",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Both mean the four goals of life",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The terms refer to different classifications: knowledge branches versus stages of life."
         },
         {
@@ -2745,8 +2745,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Language sciences/Sanskrit and astronomy/Vedanga Jyotish",
-              "is_correct": true
+              "text": "Itihasa and spreadsheet formulas",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2755,17 +2755,17 @@
             },
             {
               "label": "C",
-              "text": "Purusharthas and hardware ports",
-              "is_correct": false
+              "text": "Language sciences/Sanskrit and astronomy/Vedanga Jyotish",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Itihasa and spreadsheet formulas",
+              "text": "Purusharthas and hardware ports",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Language science and calendrical astronomy are separate syllabus areas."
         },
         {
@@ -2774,27 +2774,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Design suitability depends on local conditions; compare storage, supply and maintenance evidence",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "One system must be superior everywhere",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "The syllabus gives no permission to discuss water systems",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Only their names matter",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Design suitability depends on local conditions; compare storage, supply and maintenance evidence",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The source encourages study of varied historical water-management systems; contextual performance needs evidence."
         },
         {
@@ -2803,27 +2803,27 @@
           "options": [
             {
               "label": "A",
-              "text": "They are the Purusharthas, or goals of human life, not architecture tools",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "They are six Vedangas",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "They are the four Vedas",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "They are the Purusharthas, or goals of human life, not architecture tools",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "They are measurement units",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "They are six Vedangas",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The four concepts are goals of life."
         },
         {
@@ -2832,8 +2832,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Describe the specific textile/dyeing process using credible evidence and distinguish it from a general course-level theme",
-              "is_correct": true
+              "text": "Infer all details from the word 'speciality'",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2847,12 +2847,12 @@
             },
             {
               "label": "D",
-              "text": "Infer all details from the word 'speciality'",
-              "is_correct": false
+              "text": "Describe the specific textile/dyeing process using credible evidence and distinguish it from a general course-level theme",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A specific technology claim needs evidence beyond the topic heading."
         },
         {
@@ -2890,27 +2890,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Discuss the narrative's cultural/ethical lessons separately from empirical engineering evidence",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Treat every narrative detail as a modern engineering specification",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Assume an epic is a computer manual",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Ignore context and use it as a measurement standard",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Discuss the narrative's cultural/ethical lessons separately from empirical engineering evidence",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Treat every narrative detail as a modern engineering specification",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The syllabus frames Itihasa as wisdom literature; engineering claims require their own evidence."
         },
         {
@@ -2919,8 +2919,8 @@
           "options": [
             {
               "label": "A",
-              "text": "The course includes arithmetic, geometry, trigonometry and algebra in ancient texts",
-              "is_correct": true
+              "text": "A specific date is certain even though no evidence is supplied",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2934,12 +2934,12 @@
             },
             {
               "label": "D",
-              "text": "A specific date is certain even though no evidence is supplied",
-              "is_correct": false
+              "text": "The course includes arithmetic, geometry, trigonometry and algebra in ancient texts",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The listed mathematical fields are explicit; sweeping origin claims are not."
         },
         {
@@ -2948,13 +2948,13 @@
           "options": [
             {
               "label": "A",
-              "text": "Analyse the specified environmental practice and settlement/forest-management context with evidence",
-              "is_correct": true
+              "text": "Classify the study as CSS animation",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "Classify the study as CSS animation",
-              "is_correct": false
+              "text": "Analyse the specified environmental practice and settlement/forest-management context with evidence",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -2967,8 +2967,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Forest management and urban planning are both listed within the environmental theme."
         }
       ]
@@ -2984,27 +2984,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Four Vedas, six Vedangas, and four additional branches such as Mimamsa, Nyaya, Purana and Dharmashastra",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Four Ashramas, four Purusharthas and six metals",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Four Vedas plus ten types of architecture only",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Four Vedas, six Vedangas, and four additional branches such as Mimamsa, Nyaya, Purana and Dharmashastra",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Four forms of HTML and ten CSS selectors",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Four Ashramas, four Purusharthas and six metals",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The conventional 14-fold classification groups 4+6+4 knowledge branches."
         },
         {
@@ -3013,8 +3013,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Water management and architecture/planning within the technology unit",
-              "is_correct": true
+              "text": "Only astronomy calendars",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3023,17 +3023,17 @@
             },
             {
               "label": "C",
-              "text": "Only the Purusharthas",
-              "is_correct": false
+              "text": "Water management and architecture/planning within the technology unit",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Only astronomy calendars",
+              "text": "Only the Purusharthas",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "These themes sit under engineering, technology and architecture."
         },
         {
@@ -3042,27 +3042,27 @@
           "options": [
             {
               "label": "A",
-              "text": "It aligns with the syllabus topic, but a specific computational performance claim still needs evidence",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "It proves every NLP system requires Sanskrit",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "It is unrelated because computation never uses language structure",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "It establishes a metalworking technique",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "It aligns with the syllabus topic, but a specific computational performance claim still needs evidence",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Syllabus alignment supports the topic, not all stronger performance claims."
         },
         {
@@ -3076,17 +3076,17 @@
             },
             {
               "label": "B",
-              "text": "They are all names for poetic metre",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Moksha is a measurement of weight",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Karma is a computer peripheral",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "They are all names for poetic metre",
               "is_correct": false
             }
           ],
@@ -3100,8 +3100,8 @@
           "options": [
             {
               "label": "A",
-              "text": "State what the examined calendar demonstrates and avoid claiming it represents every tradition or period",
-              "is_correct": true
+              "text": "Classify the calendar as a Veda",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3110,17 +3110,17 @@
             },
             {
               "label": "C",
-              "text": "Remove the evidence and assert universality",
-              "is_correct": false
+              "text": "State what the examined calendar demonstrates and avoid claiming it represents every tradition or period",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Classify the calendar as a Veda",
+              "text": "Remove the evidence and assert universality",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Limit claims to the evidence actually examined."
         },
         {
@@ -3158,27 +3158,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Irrigation/water management and transportation/trading techniques",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Shiksha and Chandas",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Brahmacharya and Sannyasa",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Irrigation/water management and transportation/trading techniques",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Inline and external CSS",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Shiksha and Chandas",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The syllabus includes both water systems and trading/transportation themes."
         },
         {
@@ -3187,8 +3187,8 @@
           "options": [
             {
               "label": "A",
-              "text": "The evidence is insufficient to support a detailed historical interpretation",
-              "is_correct": true
+              "text": "A photograph alone gives all design rules",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3202,12 +3202,12 @@
             },
             {
               "label": "D",
-              "text": "A photograph alone gives all design rules",
-              "is_correct": false
+              "text": "The evidence is insufficient to support a detailed historical interpretation",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "A photograph without context cannot support precise historical conclusions."
         },
         {
@@ -3245,27 +3245,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Jyotisha relates to astronomy/timekeeping; Chandas studies metre",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Jyotisha is grammar; Chandas is metalworking",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Jyotisha is a Veda; Chandas is a Purana",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Both concern CSS positioning",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Jyotisha relates to astronomy/timekeeping; Chandas studies metre",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "Jyotisha is grammar; Chandas is metalworking",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Jyotisha and Chandas have distinct fields."
         }
       ]
@@ -3281,8 +3281,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Combine site-specific records or credible studies with analysis of storage, supply and setting",
-              "is_correct": true
+              "text": "Infer details solely from the general syllabus",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3291,17 +3291,17 @@
             },
             {
               "label": "C",
-              "text": "Assume every reservoir belongs to the same tradition",
-              "is_correct": false
+              "text": "Combine site-specific records or credible studies with analysis of storage, supply and setting",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Infer details solely from the general syllabus",
+              "text": "Assume every reservoir belongs to the same tradition",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Specific claims require case-specific evidence and analysis."
         },
         {
@@ -3310,27 +3310,27 @@
           "options": [
             {
               "label": "A",
-              "text": "4+6+4=14",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "4+4+4=12",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "6+6+4=16",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "4×6=24",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "4+6+4=14",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The conventional grouping totals fourteen knowledge branches."
         },
         {
@@ -3344,17 +3344,17 @@
             },
             {
               "label": "B",
-              "text": "Treat every historical unit as exactly one modern unit without evidence",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Ignore whether units measure time, distance or weight",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Use only a calendar illustration",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Treat every historical unit as exactly one modern unit without evidence",
               "is_correct": false
             }
           ],
@@ -3368,27 +3368,27 @@
           "options": [
             {
               "label": "A",
+              "text": "Recycle Bin and shell commands",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "Vastu Shastra, civil architecture and temple architecture",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "NLP, HTML forms and email signatures",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "HCF, LCM and polynomial identities",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "Recycle Bin and shell commands",
+              "text": "HCF, LCM and polynomial identities",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The architecture unit names Vastu, civil architecture and temple architecture."
         },
         {
@@ -3397,27 +3397,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Moksha refers to liberation; Artha is the Purushartha associated with material means",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "Moksha is grammar and Artha is metre",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Both are Vedas",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "Both are units of distance",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Moksha refers to liberation; Artha is the Purushartha associated with material means",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Moksha and Artha denote distinct aims."
         },
         {
@@ -3426,27 +3426,27 @@
           "options": [
             {
               "label": "A",
-              "text": "This site provides an example of textile dyeing practice; broader prevalence needs additional evidence",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "All places used precisely the same technique",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "The site proves a universal rule",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "This site provides an example of textile dyeing practice; broader prevalence needs additional evidence",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Textile dyeing is a Purushartha",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "All places used precisely the same technique",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "A specific case should not be generalized beyond its evidence."
         },
         {
@@ -3455,8 +3455,8 @@
           "options": [
             {
               "label": "A",
-              "text": "Those are Purusharthas; Ashramas are Brahmacharya, Grihastha, Vanaprastha and Sannyasa",
-              "is_correct": true
+              "text": "Ashramas name the four Vedas",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3465,17 +3465,17 @@
             },
             {
               "label": "C",
-              "text": "The two lists are identical",
-              "is_correct": false
+              "text": "Those are Purusharthas; Ashramas are Brahmacharya, Grihastha, Vanaprastha and Sannyasa",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "Ashramas name the four Vedas",
+              "text": "The two lists are identical",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Purusharthas are aims; Ashramas are life stages."
         },
         {
@@ -3513,27 +3513,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Label the syllabus fact clearly and cite independent, case-specific evidence for the hypothesis",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "Treat every hypothesis as verified because it fits the theme",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "Remove all source notes",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "Label the syllabus fact clearly and cite independent, case-specific evidence for the hypothesis",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "Use confidence of wording as evidence",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Treat every hypothesis as verified because it fits the theme",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The course outline indicates coverage but doesn't verify every particular historical claim."
         },
         {
@@ -3542,8 +3542,8 @@
           "options": [
             {
               "label": "A",
-              "text": "It spans textual and philosophical traditions, science/mathematics and technology/architecture",
-              "is_correct": true
+              "text": "It is only a language grammar course",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3557,12 +3557,12 @@
             },
             {
               "label": "D",
-              "text": "It is only a language grammar course",
-              "is_correct": false
+              "text": "It spans textual and philosophical traditions, science/mathematics and technology/architecture",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The verified source covers all those broad knowledge areas."
         }
       ]
