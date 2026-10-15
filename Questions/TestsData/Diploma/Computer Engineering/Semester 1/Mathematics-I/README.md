@@ -1,11 +1,28 @@
-# Mathematics-I — TestsData-ready bank
+# Mathematics-I — Semester 1 Exam Bank v2
 
-- CourseId 44; SubjectId 44009131210101; Semester 1.
-- 12 tests × 10 MCQs = 120 questions. Tests 01–04 are Easy, 05–08 Medium, 09–12 Hard.
-- Each test JSON has exactly the live table's four columns: `TestId`, `Questions`, `Options`, `Answers`.
-- Questions has one JSON string per item; Options contains A,B,C,D flattened in question order (four entries per question); Answers contains the zero-based correct-option index per question (0=A, 1=B, 2=C, 3=D). For question n, its options are at indices 4(n−1) through 4n−1.
-- manifest.json maps difficulty and occurrence, since TestsData has no SubjectId/difficulty column. IDs follow docs/primary_key_rules.md.
-- answer-review.json is review-only; never insert it. seed.sql is an all-row transaction and has no ON CONFLICT clause, so duplicate IDs must be investigated.
-- Source scope: the official Semester 1 syllabus for number sets and indices, HCF/LCM of integers/fractions/decimals, polynomials and identities, 2D area/perimeter, 3D surface area/volume, trigonometric ratios, angles, unit-circle and multiple-angle identities.
+**Canonical source:** [Semester 1 exam bank v2](../exam-bank-v2.json)  
+**SubjectId:** `44009131210101`  
+**isDepartmentalSubject:** `false`
 
-Structural validation: 12 unique IDs, 4 tests per difficulty, 10 questions/40 options/10 answers per test, unique non-empty options, valid answer indexes, unique question stems and BIGINT-safe IDs. The live database has not been changed. Human mathematical review is recommended before insertion.
+This folder contains legacy question-source and review files from the earlier 12 × 10 MCQ draft. Those files are retained for reference; they are **not** the current database export.
+
+## Current exam design
+
+- **Mid 1:** 12 theory variants; 4 questions per paper, 8 marks each, each with a model answer.
+- **Mid 2:** 12 MCQ variants; 30 questions each.
+- **ESE:** 12 theory variants; 4 questions per paper, 8 marks each, each with a model answer.
+
+Each exam type has 4 Easy, 4 Medium and 4 Hard variants.
+
+**Mid 1 syllabus scope:** Mid 1 (first 50% by ordered teaching hours): number sets/indices, HCF/LCM, polynomials/identities and introductory 2D mensuration.
+
+## Files
+
+- [Canonical JSON bank](../exam-bank-v2.json): filter its `test_index` by `SubjectId = 44009131210101` and the desired `examType`.
+- [Canonical seed SQL](../seed-all-v2.sql): complete 252-row staged transaction.
+- `tests/`, `answer-review.json`: prior draft source/review material, not the v2 INSERT payload.
+- `seed.sql`: deliberately retired placeholder; it contains no INSERT statements. Do not use as a database seed.
+
+The live `public."TestsData"` table has only `TestId`, `Questions`, `Options`, and `Answers`. Exam metadata is maintained in the v2 JSON bank. Theory rows use an empty `Options` array and store model answers in `Answers`; consuming code must detect this format instead of rendering it as an MCQ.
+
+The generated content is a draft and requires subject-matter review before production use.
