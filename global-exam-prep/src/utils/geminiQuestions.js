@@ -105,7 +105,7 @@ function validateMCQs(questions) {
         }
 
         const bannedPatterns = [
-            /rigorous definition\\s*\\/\\s*mechanism/i,
+            /rigorous definition\s*\/\s*mechanism/i,
             /highly plausible edge.case/i,
             /standard misconception related to/i,
             /common failure state of/i,
@@ -147,7 +147,7 @@ export async function generateQuestionsFromText({
         : text;
 
     const systemMessage = isObjective
-        ? `You are a rigorous exam setter and item reviewer for diploma/university assessments. Return only valid JSON: { "questions": [...] }. Each MCQ must contain "id" (string), "text" (string), "options" (exactly 4 distinct strings), "answer" (integer 0-3), and internal "review": {"correctReason": string, "distractorReasons": [string,string,string], "singleBestAnswerCheck": string}. The review field is internal QC and will be stripped before the question reaches the exam UI. Never add markdown or extra prose.`
+        ? `You are a rigorous exam setter and item reviewer for diploma/university assessments. Return only valid JSON: { "questions": [...] }. Each MCQ must contain "id" (string), "text" (string), "options" (exactly 4 distinct strings), "answer" (integer 0-3), and internal "review": {"correctReason": string, "distractorReasons": [string,string,string], "singleBestAnswerCheck": string, "difficultyEvidence": string}. The review field is internal QC and will be stripped before the question reaches the exam UI. Never add markdown or extra prose.`
         : `You are a rigorous diploma/university exam setter. Return only valid JSON: { "questions": [...] }. Each theory question must contain "id" (string) and "text" (string). Do not provide an answer or marking scheme in the question text. Never add markdown or extra prose.`;
 
     let userPrompt;
