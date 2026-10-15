@@ -1,0 +1,30 @@
+{
+  "schema_version": "2.0",
+  "subject": {
+    "name": "Advance Java Programming",
+    "SubjectId": "44000935150401",
+    "semester": 5,
+    "isDepartmentalSubject": true,
+    "subject_code": "09CE1504",
+    "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE1504_AJP.pdf"
+  },
+  "canonical_bank": "../exam-bank-v2.json",
+  "canonical_seed_sql": "../seed-all-v2.sql",
+  "filter": {
+    "SubjectId": "44000935150401"
+  },
+  "examTypes": [
+    {
+      "examType": "Mid 1",
+      "format": "mcq",
+      "tests": 12,
+      "syllabusScope": "First 50% by syllabus order/contact hours: JAVA Applets; AWT(Abstract Window Toolkit); JDBC Programming; Servlet API and Overview."
+    },
+    {
+      "examType": "Mid 2",
+      "format": "mcq",
+      "tests": 12,
+      "syllabusScope": "Full Semester 5 syllabus practice bank."
+    }
+  ]
+}
