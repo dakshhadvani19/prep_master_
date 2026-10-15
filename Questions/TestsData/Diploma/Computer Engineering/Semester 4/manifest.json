@@ -1,0 +1,202 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 4,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 4,
+    "subjects": 6,
+    "nonDepartmentalSubjects": 4,
+    "departmentalSubjects": 2,
+    "examTypeBanks": 16,
+    "totalTests": 192,
+    "mcqTests": 96,
+    "theoryTests": 96,
+    "mcqQuestions": 2880,
+    "theoryQuestions": 384,
+    "mcqOptionEntries": 11520,
+    "answerEntries": 3264
+  },
+  "exam_rules": {
+    "nonDepartmental": {
+      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "12 theory variants × 4 questions × 8 marks"
+    },
+    "departmental": {
+      "Mid1": "12 MCQ variants × 30; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "not generated"
+    },
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "Non-departmental: occurrences 1-12 Mid 1, 13-24 Mid 2, 25-36 ESE; departmental: 1-12 Mid 1, 13-24 Mid 2."
+  },
+  "subjects": [
+    {
+      "name": "Computer Organization",
+      "SubjectId": "44000935240101",
+      "subject_code": "09CE2401",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CO.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Computer Data Representation & Register Transfer and Micro; Basic Computer Organization and Design; Programming Basic Computer."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Java Programming",
+      "SubjectId": "44000935140301",
+      "subject_code": "09CE1403",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/JAVA.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2; Unit 3."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Mathematics-IV",
+      "SubjectId": "44009131040201",
+      "subject_code": "09MA0402",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-4.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Complex Number; Co-ordinate Geometry."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Operating System",
+      "SubjectId": "44000935340501",
+      "subject_code": "09CE3405",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3405_OS_Syllabus.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Linux; Operating System; Process Management."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Software Engineering",
+      "SubjectId": "44000935340201",
+      "subject_code": "09CE3402",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3402_SE_Syllabus.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Introduction to Software Engineering; Project Management Concepts, Requirement Engineering &; Project Planning Scheduling & Tracking."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Web Technology",
+      "SubjectId": "44000935340401",
+      "subject_code": "09CE3404",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3404_WT_Syllabus.pdf",
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Modern Web Architecture & Hosting; Advanced HTML & Responsive CSS; JavaScript And jQuery."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus practice bank."
+        }
+      ]
+    }
+  ],
+  "cautions": [
+    "Mid 1 scope is first-half syllabus as recorded in metadata.",
+    "Subject/exam/difficulty metadata is in test_index.",
+    "Theory rows have Options=[] and model answers in Answers; consumer must branch by format.",
+    "Question bank is drafted from syllabus topics and requires academic review."
+  ]
+}
