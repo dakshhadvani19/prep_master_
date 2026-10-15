@@ -15,27 +15,27 @@
           "options": [
             {
               "label": "A",
-              "text": "Natural number",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "Integer",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "Irrational number",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "Positive whole number",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Natural number",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "Integer",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "−8 is an integer."
         },
         {
@@ -45,27 +45,27 @@
           "options": [
             {
               "label": "A",
-              "text": "2",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "8",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "4",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "16",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "2",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "8",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Net exponent is 3+4−5=2; value 4."
         },
         {
@@ -75,13 +75,13 @@
           "options": [
             {
               "label": "A",
-              "text": "1",
-              "is_correct": true
+              "text": "0",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "0",
-              "is_correct": false
+              "text": "1",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -94,8 +94,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Any non-zero base to the zero power is 1."
         },
         {
@@ -105,12 +105,12 @@
           "options": [
             {
               "label": "A",
-              "text": "2/9",
+              "text": "5/12",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "5/12",
+              "text": "4/27",
               "is_correct": false
             },
             {
@@ -120,7 +120,7 @@
             },
             {
               "label": "D",
-              "text": "4/27",
+              "text": "2/9",
               "is_correct": false
             }
           ],
@@ -140,17 +140,17 @@
             },
             {
               "label": "B",
-              "text": "3x+8",
+              "text": "2x−2",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "x−2",
+              "text": "3x+8",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "2x−2",
+              "text": "x−2",
               "is_correct": false
             }
           ],
@@ -170,13 +170,13 @@
             },
             {
               "label": "B",
-              "text": "a²+2ab+b²",
-              "is_correct": true
+              "text": "a²−2ab+b²",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "a²−2ab+b²",
-              "is_correct": false
+              "text": "a²+2ab+b²",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -184,8 +184,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Square of a sum includes +2ab."
         },
         {
@@ -195,27 +195,27 @@
           "options": [
             {
               "label": "A",
-              "text": "2",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "3",
               "is_correct": false
             },
             {
+              "label": "B",
+              "text": "7",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "4",
-              "is_correct": true
+              "text": "2",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "7",
-              "is_correct": false
+              "text": "4",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The highest exponent is 4."
         },
         {
@@ -225,27 +225,27 @@
           "options": [
             {
               "label": "A",
-              "text": "3",
+              "text": "36",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "9",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "6",
               "is_correct": true
             },
             {
+              "label": "C",
+              "text": "3",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "36",
+              "text": "9",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "The greatest common divisor is 6."
         },
         {
@@ -255,18 +255,18 @@
           "options": [
             {
               "label": "A",
-              "text": "40",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "13",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "20",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "40",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -274,8 +274,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Coprime numbers have LCM 5×8."
         },
         {
@@ -285,8 +285,8 @@
           "options": [
             {
               "label": "A",
-              "text": "√3/2",
-              "is_correct": false
+              "text": "1/2",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -300,12 +300,12 @@
             },
             {
               "label": "D",
-              "text": "1/2",
-              "is_correct": true
+              "text": "√3/2",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "sin 30°=1/2."
         }
       ]
@@ -322,27 +322,27 @@
           "options": [
             {
               "label": "A",
-              "text": "10",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "12",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "72",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "14",
+              "text": "10",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "72",
+              "text": "14",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "12²=144."
         },
         {
@@ -382,27 +382,27 @@
           "options": [
             {
               "label": "A",
-              "text": "0.25",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "√5",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "7/8",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "−3",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "√5",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "0.25",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "√5 is irrational."
         },
         {
@@ -412,27 +412,27 @@
           "options": [
             {
               "label": "A",
-              "text": "0.06",
+              "text": "1.2",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "0.3",
+              "text": "0.06",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "0.6",
-              "is_correct": true
+              "text": "0.3",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "1.2",
-              "is_correct": false
+              "text": "0.6",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "1.2=2×0.6 and 1.8=3×0.6."
         },
         {
@@ -447,13 +447,13 @@
             },
             {
               "label": "B",
-              "text": "1/2",
-              "is_correct": false
+              "text": "1",
+              "is_correct": true
             },
             {
               "label": "C",
-              "text": "1",
-              "is_correct": true
+              "text": "1/2",
+              "is_correct": false
             },
             {
               "label": "D",
@@ -461,8 +461,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "1 is 2×1/2 and 3×1/3."
         },
         {
@@ -472,27 +472,27 @@
           "options": [
             {
               "label": "A",
-              "text": "x²+25",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "x²−10x+25",
               "is_correct": false
             },
             {
+              "label": "B",
+              "text": "x²+10x+25",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "x²−25",
-              "is_correct": true
+              "text": "x²+25",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "x²+10x+25",
-              "is_correct": false
+              "text": "x²−25",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Difference of squares gives x²−25."
         },
         {
@@ -502,27 +502,27 @@
           "options": [
             {
               "label": "A",
-              "text": "4x and 4y",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "3x² and −7x²",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "x and x²",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "2 and 2x",
+              "text": "4x and 4y",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "x and x²",
+              "text": "2 and 2x",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Both terms have x²."
         },
         {
@@ -562,17 +562,17 @@
           "options": [
             {
               "label": "A",
-              "text": "Adjacent/hypotenuse",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "Opposite/adjacent",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "Hypotenuse/opposite",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "Adjacent/hypotenuse",
               "is_correct": false
             },
             {
@@ -592,7 +592,7 @@
           "options": [
             {
               "label": "A",
-              "text": "0",
+              "text": "Undefined",
               "is_correct": false
             },
             {
@@ -602,12 +602,12 @@
             },
             {
               "label": "C",
-              "text": "−1",
+              "text": "0",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "Undefined",
+              "text": "−1",
               "is_correct": false
             }
           ],
@@ -659,27 +659,27 @@
           "options": [
             {
               "label": "A",
-              "text": "60 cm²",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "30 cm²",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "16 cm²",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "32 cm²",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "30 cm²",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "60 cm²",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Half of 10×6 is 30."
         },
         {
@@ -689,13 +689,13 @@
           "options": [
             {
               "label": "A",
-              "text": "22 cm",
+              "text": "49 cm",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "44 cm",
-              "is_correct": true
+              "text": "22 cm",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -704,12 +704,12 @@
             },
             {
               "label": "D",
-              "text": "49 cm",
-              "is_correct": false
+              "text": "44 cm",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "2πr=44 cm."
         },
         {
@@ -719,18 +719,18 @@
           "options": [
             {
               "label": "A",
+              "text": "64 cm³",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "16 cm³",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "48 cm³",
               "is_correct": false
-            },
-            {
-              "label": "C",
-              "text": "64 cm³",
-              "is_correct": true
             },
             {
               "label": "D",
@@ -738,8 +738,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "4³=64 cm³."
         },
         {
@@ -749,12 +749,12 @@
           "options": [
             {
               "label": "A",
-              "text": "10 cm³",
+              "text": "15 cm³",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "15 cm³",
+              "text": "60 cm³",
               "is_correct": false
             },
             {
@@ -764,7 +764,7 @@
             },
             {
               "label": "D",
-              "text": "60 cm³",
+              "text": "10 cm³",
               "is_correct": false
             }
           ],
@@ -779,27 +779,27 @@
           "options": [
             {
               "label": "A",
-              "text": "πr²h",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "2πrh",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "πrh²",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "2πr²",
+              "text": "πr²h",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "πrh²",
+              "text": "2πr²",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Circumference×height=2πrh."
         },
         {
@@ -839,17 +839,17 @@
           "options": [
             {
               "label": "A",
-              "text": "0",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "1/2",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "√3",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "0",
               "is_correct": false
             },
             {
@@ -869,27 +869,27 @@
           "options": [
             {
               "label": "A",
-              "text": "π/2",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "π",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "π/4",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "2π",
+              "text": "π/2",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "π/4",
+              "text": "2π",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "180°=π radians."
         },
         {
@@ -936,27 +936,27 @@
           "options": [
             {
               "label": "A",
-              "text": "−8",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "8",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "−6",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "6",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "−8",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "8",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "An odd power retains the negative sign."
         },
         {
@@ -966,27 +966,27 @@
           "options": [
             {
               "label": "A",
-              "text": "5a⁵",
+              "text": "5a⁶",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "6a⁶",
+              "text": "5a⁵",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "6a⁵",
-              "is_correct": true
+              "text": "6a⁶",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "5a⁶",
-              "is_correct": false
+              "text": "6a⁵",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Multiply coefficients; add exponents."
         },
         {
@@ -996,18 +996,18 @@
           "options": [
             {
               "label": "A",
+              "text": "3x²−4x+1",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "1/x+2",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "√x+1",
               "is_correct": false
-            },
-            {
-              "label": "C",
-              "text": "3x²−4x+1",
-              "is_correct": true
             },
             {
               "label": "D",
@@ -1015,8 +1015,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Polynomial exponents are non-negative integers."
         },
         {
@@ -1026,7 +1026,7 @@
           "options": [
             {
               "label": "A",
-              "text": "6",
+              "text": "18",
               "is_correct": false
             },
             {
@@ -1036,12 +1036,12 @@
             },
             {
               "label": "C",
-              "text": "18",
+              "text": "72",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "72",
+              "text": "6",
               "is_correct": false
             }
           ],
@@ -1056,27 +1056,27 @@
           "options": [
             {
               "label": "A",
-              "text": "15",
+              "text": "90",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "21",
+              "text": "15",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "30",
-              "is_correct": true
+              "text": "21",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "90",
-              "is_correct": false
+              "text": "30",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "LCM is 30."
         },
         {
@@ -1116,12 +1116,12 @@
           "options": [
             {
               "label": "A",
-              "text": "17 cm²",
+              "text": "30 cm²",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "30 cm²",
+              "text": "120 cm²",
               "is_correct": false
             },
             {
@@ -1131,7 +1131,7 @@
             },
             {
               "label": "D",
-              "text": "120 cm²",
+              "text": "17 cm²",
               "is_correct": false
             }
           ],
@@ -1146,27 +1146,27 @@
           "options": [
             {
               "label": "A",
-              "text": "9 cm²",
-              "is_correct": false
+              "text": "54 cm²",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "18 cm²",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "27 cm²",
               "is_correct": false
             },
             {
+              "label": "C",
+              "text": "9 cm²",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "54 cm²",
-              "is_correct": true
+              "text": "18 cm²",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Six faces × 9 cm² = 54 cm²."
         },
         {
@@ -1176,13 +1176,13 @@
           "options": [
             {
               "label": "A",
-              "text": "3:5",
-              "is_correct": true
+              "text": "4:5",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "4:5",
-              "is_correct": false
+              "text": "3:5",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1195,8 +1195,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Sine is opposite/hypotenuse."
         },
         {
@@ -1206,27 +1206,27 @@
           "options": [
             {
               "label": "A",
-              "text": "0",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "1/2",
               "is_correct": false
             },
             {
+              "label": "B",
+              "text": "Undefined",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "1",
-              "is_correct": true
+              "text": "0",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "Undefined",
-              "is_correct": false
+              "text": "1",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Unit-circle y-coordinate at 90° is 1."
         }
       ]
@@ -1243,8 +1243,8 @@
           "options": [
             {
               "label": "A",
-              "text": "1",
-              "is_correct": true
+              "text": "8",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -1258,12 +1258,12 @@
             },
             {
               "label": "D",
-              "text": "8",
-              "is_correct": false
+              "text": "1",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Exponent 3−1−2=0, so value 1."
         },
         {
@@ -1273,18 +1273,18 @@
           "options": [
             {
               "label": "A",
+              "text": "60 min",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "30 min",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "45 min",
               "is_correct": false
-            },
-            {
-              "label": "C",
-              "text": "60 min",
-              "is_correct": true
             },
             {
               "label": "D",
@@ -1292,8 +1292,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "LCM(12,15,20)=60."
         },
         {
@@ -1303,27 +1303,27 @@
           "options": [
             {
               "label": "A",
-              "text": "3/20",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "3/2",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "9/4",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "3/20",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "1/20",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "3/2",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "HCF numerators divided by LCM denominators = 3/20."
         },
         {
@@ -1333,27 +1333,27 @@
           "options": [
             {
               "label": "A",
-              "text": "4x",
+              "text": "2x²−8",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "4x",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "8x",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "2x²+8",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "2x²−8",
+              "text": "2x²+8",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The difference simplifies to 8x."
         },
         {
@@ -1363,18 +1363,18 @@
           "options": [
             {
               "label": "A",
+              "text": "(x−3)(x−4)",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "(x−2)(x−6)",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "(x+3)(x+4)",
               "is_correct": false
-            },
-            {
-              "label": "C",
-              "text": "(x−3)(x−4)",
-              "is_correct": true
             },
             {
               "label": "D",
@@ -1382,8 +1382,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "−3 and −4 multiply to 12 and add to −7."
         },
         {
@@ -1393,27 +1393,27 @@
           "options": [
             {
               "label": "A",
-              "text": "35 cm²",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "55 cm²",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "70 cm²",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "110 cm²",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "55 cm²",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "35 cm²",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Area=(8+14)×5/2=55 cm²."
         },
         {
@@ -1423,27 +1423,27 @@
           "options": [
             {
               "label": "A",
-              "text": "21π cm³",
+              "text": "126π cm³",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "42π cm³",
+              "text": "21π cm³",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "63π cm³",
-              "is_correct": true
+              "text": "42π cm³",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "126π cm³",
-              "is_correct": false
+              "text": "63π cm³",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "πr²h=63π cm³."
         },
         {
@@ -1458,22 +1458,22 @@
             },
             {
               "label": "B",
+              "text": "13/12",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "12/13",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "D",
               "text": "13/5",
               "is_correct": false
-            },
-            {
-              "label": "D",
-              "text": "13/12",
-              "is_correct": true
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Hypotenuse=13; sec=13/12."
         },
         {
@@ -1483,27 +1483,27 @@
           "options": [
             {
               "label": "A",
-              "text": "30°",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "45°",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "60°",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "90°",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "30°",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "45°",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The acute angle is 30°."
         },
         {
@@ -1513,27 +1513,27 @@
           "options": [
             {
               "label": "A",
-              "text": "4/3",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "3/4",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "5/4",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "3/5",
+              "text": "4/3",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "5/4",
+              "text": "3/5",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "3-4-5 triangle gives tan θ=3/4."
         }
       ]
@@ -1580,7 +1580,7 @@
           "options": [
             {
               "label": "A",
-              "text": "0.6 m",
+              "text": "1.6 m",
               "is_correct": false
             },
             {
@@ -1590,12 +1590,12 @@
             },
             {
               "label": "C",
-              "text": "1.6 m",
+              "text": "2.4 m",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "2.4 m",
+              "text": "0.6 m",
               "is_correct": false
             }
           ],
@@ -1610,12 +1610,12 @@
           "options": [
             {
               "label": "A",
-              "text": "0.03",
+              "text": "0.18",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "0.06",
+              "text": "0.03",
               "is_correct": false
             },
             {
@@ -1625,7 +1625,7 @@
             },
             {
               "label": "D",
-              "text": "0.18",
+              "text": "0.06",
               "is_correct": false
             }
           ],
@@ -1640,27 +1640,27 @@
           "options": [
             {
               "label": "A",
-              "text": "3x²+10x−8",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "3x²+12x−2",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "3x²−14x−8",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "3x²+8x−2",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "3x²+10x−8",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Expansion gives 3x²+12x−2x−8."
         },
         {
@@ -1670,27 +1670,27 @@
           "options": [
             {
               "label": "A",
-              "text": "(9x−4)(x+4)",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "(3x−4)²",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "(3x−4)(3x+4)",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "(9x−16)(x+1)",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "(9x−4)(x+4)",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Difference of squares: (3x−4)(3x+4)."
         },
         {
@@ -1700,13 +1700,13 @@
           "options": [
             {
               "label": "A",
-              "text": "60 cm²",
+              "text": "34 cm²",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "120 cm²",
-              "is_correct": true
+              "text": "60 cm²",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -1715,12 +1715,12 @@
             },
             {
               "label": "D",
-              "text": "34 cm²",
-              "is_correct": false
+              "text": "120 cm²",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Area=10×24/2=120 cm²."
         },
         {
@@ -1730,27 +1730,27 @@
           "options": [
             {
               "label": "A",
+              "text": "36π cm³",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "9π cm³",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "18π cm³",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "D",
               "text": "27π cm³",
               "is_correct": false
-            },
-            {
-              "label": "D",
-              "text": "36π cm³",
-              "is_correct": true
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "4/3π×3³=36π cm³."
         },
         {
@@ -1760,27 +1760,27 @@
           "options": [
             {
               "label": "A",
-              "text": "3/5",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "4/5",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "3/4",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "5/4",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "3/5",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "4/5",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "3-4-5 triangle gives sin θ=3/5."
         },
         {
@@ -1790,27 +1790,27 @@
           "options": [
             {
               "label": "A",
-              "text": "2cos θ",
+              "text": "cos² θ+1",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "1−2cos² θ",
+              "text": "2cos θ",
               "is_correct": false
             },
             {
               "label": "C",
-              "text": "2cos² θ−1",
-              "is_correct": true
+              "text": "1−2cos² θ",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "cos² θ+1",
-              "is_correct": false
+              "text": "2cos² θ−1",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "cos 2θ=2cos²θ−1."
         },
         {
@@ -1820,13 +1820,13 @@
           "options": [
             {
               "label": "A",
-              "text": "7/25",
-              "is_correct": true
+              "text": "−7/25",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "−7/25",
-              "is_correct": false
+              "text": "7/25",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -1839,8 +1839,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "cos 2θ=1−2(9/25)=7/25."
         }
       ]
@@ -1857,27 +1857,27 @@
           "options": [
             {
               "label": "A",
-              "text": "5",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "25",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "125",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "5",
+              "is_correct": true
+            },
+            {
+              "label": "C",
               "text": "625",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "25",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Net exponent 4−2−1=1."
         },
         {
@@ -1887,27 +1887,27 @@
           "options": [
             {
               "label": "A",
-              "text": "120 min",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "180 min",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "240 min",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
+              "text": "120 min",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "360 min",
               "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "180 min",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "LCM(18,24,30)=360."
         },
         {
@@ -1927,17 +1927,17 @@
             },
             {
               "label": "C",
-              "text": "1.2",
-              "is_correct": true
+              "text": "1.8",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "1.8",
-              "is_correct": false
+              "text": "1.2",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "HCF(240,360)=120; scale back to 1.2."
         },
         {
@@ -1947,8 +1947,8 @@
           "options": [
             {
               "label": "A",
-              "text": "3",
-              "is_correct": false
+              "text": "15",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -1962,12 +1962,12 @@
             },
             {
               "label": "D",
-              "text": "15",
-              "is_correct": true
+              "text": "3",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "8+6+1=15."
         },
         {
@@ -1977,27 +1977,27 @@
           "options": [
             {
               "label": "A",
-              "text": "6x",
+              "text": "18",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "6x",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "12x",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "2x²+18",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "18",
+              "text": "2x²+18",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "The difference is 12x."
         },
         {
@@ -2007,13 +2007,13 @@
           "options": [
             {
               "label": "A",
-              "text": "12π cm²",
-              "is_correct": false
+              "text": "24π cm²",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "24π cm²",
-              "is_correct": true
+              "text": "12π cm²",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2026,8 +2026,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "π(7²−5²)=24π cm²."
         },
         {
@@ -2037,7 +2037,7 @@
           "options": [
             {
               "label": "A",
-              "text": "8 cm",
+              "text": "14 cm",
               "is_correct": false
             },
             {
@@ -2047,12 +2047,12 @@
             },
             {
               "label": "C",
-              "text": "14 cm",
+              "text": "100 cm",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "100 cm",
+              "text": "8 cm",
               "is_correct": false
             }
           ],
@@ -2067,8 +2067,8 @@
           "options": [
             {
               "label": "A",
-              "text": "5/12",
-              "is_correct": true
+              "text": "13/12",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2082,12 +2082,12 @@
             },
             {
               "label": "D",
-              "text": "13/12",
-              "is_correct": false
+              "text": "5/12",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Other leg is 12 in the 5-12-13 triangle."
         },
         {
@@ -2097,18 +2097,18 @@
           "options": [
             {
               "label": "A",
+              "text": "24/25",
+              "is_correct": true
+            },
+            {
+              "label": "B",
               "text": "7/25",
               "is_correct": false
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "12/25",
               "is_correct": false
-            },
-            {
-              "label": "C",
-              "text": "24/25",
-              "is_correct": true
             },
             {
               "label": "D",
@@ -2116,8 +2116,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "2sinθcosθ=24/25."
         },
         {
@@ -2127,27 +2127,27 @@
           "options": [
             {
               "label": "A",
-              "text": "(√3/2,1/2)",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "(−√3/2,1/2)",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "(−1/2,√3/2)",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "(1/2,−√3/2)",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "(−√3/2,1/2)",
+              "is_correct": true
+            },
+            {
+              "label": "D",
+              "text": "(√3/2,1/2)",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Quadrant II makes cosine negative and sine positive."
         }
       ]
@@ -2164,8 +2164,8 @@
           "options": [
             {
               "label": "A",
-              "text": "−6x³y⁴",
-              "is_correct": true
+              "text": "−5x³y⁴",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -2174,17 +2174,17 @@
             },
             {
               "label": "C",
-              "text": "6x³y⁴",
-              "is_correct": false
+              "text": "−6x³y⁴",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "−5x³y⁴",
+              "text": "6x³y⁴",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Multiply coefficients and add exponents."
         },
         {
@@ -2204,17 +2204,17 @@
             },
             {
               "label": "C",
-              "text": "36",
-              "is_correct": true
+              "text": "42",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "42",
-              "is_correct": false
+              "text": "36",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Product=1080; other integer=1080/30=36."
         },
         {
@@ -2229,17 +2229,17 @@
             },
             {
               "label": "B",
-              "text": "375/100",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "5/8",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "37/100",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "375/100",
               "is_correct": false
             }
           ],
@@ -2254,27 +2254,27 @@
           "options": [
             {
               "label": "A",
+              "text": "(2x−1)(x−3)",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "(2x+1)(x+3)",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "(2x+3)(x+1)",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "(x+1)(x+3)",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "(2x−1)(x−3)",
+              "text": "(x+1)(x+3)",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Expansion returns 2x²+7x+3."
         },
         {
@@ -2284,27 +2284,27 @@
           "options": [
             {
               "label": "A",
-              "text": "53",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "67",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "81",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "95",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "53",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "(x+y)²−2xy=81−28=53."
         },
         {
@@ -2314,7 +2314,7 @@
           "options": [
             {
               "label": "A",
-              "text": "20π cm³",
+              "text": "80π cm³",
               "is_correct": false
             },
             {
@@ -2324,12 +2324,12 @@
             },
             {
               "label": "C",
-              "text": "80π cm³",
+              "text": "100π cm³",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "100π cm³",
+              "text": "20π cm³",
               "is_correct": false
             }
           ],
@@ -2344,27 +2344,27 @@
           "options": [
             {
               "label": "A",
-              "text": "248 cm²",
+              "text": "496 cm²",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "248 cm²",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "376 cm²",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "480 cm²",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "496 cm²",
+              "text": "480 cm²",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "2(80+60+48)=376 cm²."
         },
         {
@@ -2404,7 +2404,7 @@
           "options": [
             {
               "label": "A",
-              "text": "1/2",
+              "text": "1",
               "is_correct": false
             },
             {
@@ -2414,12 +2414,12 @@
             },
             {
               "label": "C",
-              "text": "1",
+              "text": "√3/4",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "√3/4",
+              "text": "1/2",
               "is_correct": false
             }
           ],
@@ -2434,13 +2434,13 @@
           "options": [
             {
               "label": "A",
-              "text": "1/2",
+              "text": "0",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "√3/2",
-              "is_correct": true
+              "text": "1/2",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2449,12 +2449,12 @@
             },
             {
               "label": "D",
-              "text": "0",
-              "is_correct": false
+              "text": "√3/2",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "θ=60°, so sin120°=√3/2."
         }
       ]
@@ -2476,22 +2476,22 @@
             },
             {
               "label": "B",
-              "text": "4",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "8",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "16",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "4",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "8×4÷8=4."
         },
         {
@@ -2506,17 +2506,17 @@
             },
             {
               "label": "B",
-              "text": "18",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "24",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "36",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "18",
               "is_correct": false
             }
           ],
@@ -2531,7 +2531,7 @@
           "options": [
             {
               "label": "A",
-              "text": "103",
+              "text": "343",
               "is_correct": false
             },
             {
@@ -2541,12 +2541,12 @@
             },
             {
               "label": "C",
-              "text": "163",
+              "text": "103",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "343",
+              "text": "163",
               "is_correct": false
             }
           ],
@@ -2566,13 +2566,13 @@
             },
             {
               "label": "B",
-              "text": "a²",
-              "is_correct": true
+              "text": "a⁶",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "a⁶",
-              "is_correct": false
+              "text": "a²",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -2580,8 +2580,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "a³ squared then divided by a⁴ leaves a²."
         },
         {
@@ -2591,8 +2591,8 @@
           "options": [
             {
               "label": "A",
-              "text": "32 cm³",
-              "is_correct": false
+              "text": "64 cm³",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -2601,17 +2601,17 @@
             },
             {
               "label": "C",
-              "text": "64 cm³",
-              "is_correct": true
+              "text": "80 cm³",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "80 cm³",
+              "text": "32 cm³",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Base is 8×4 cm and height is 2 cm, giving 64 cm³."
         },
         {
@@ -2621,12 +2621,12 @@
           "options": [
             {
               "label": "A",
-              "text": "Half",
+              "text": "Four times",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "Equal",
+              "text": "Half",
               "is_correct": false
             },
             {
@@ -2636,7 +2636,7 @@
             },
             {
               "label": "D",
-              "text": "Four times",
+              "text": "Equal",
               "is_correct": false
             }
           ],
@@ -2651,27 +2651,27 @@
           "options": [
             {
               "label": "A",
-              "text": "(7/25,7/24)",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "(24/25,24/7)",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "(7/25,24/25)",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "(7/24,7/25)",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "(7/25,7/24)",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Other leg is 24; sine=7/25 and tangent=7/24."
         },
         {
@@ -2681,27 +2681,27 @@
           "options": [
             {
               "label": "A",
-              "text": "7/25",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "12/25",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "24/25",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "1",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "7/25",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "sinθ=3/5, cosθ=4/5, so sin2θ=24/25."
         },
         {
@@ -2711,12 +2711,12 @@
           "options": [
             {
               "label": "A",
-              "text": "36",
+              "text": "256",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "108",
+              "text": "36",
               "is_correct": false
             },
             {
@@ -2726,7 +2726,7 @@
             },
             {
               "label": "D",
-              "text": "256",
+              "text": "108",
               "is_correct": false
             }
           ],
@@ -2741,13 +2741,13 @@
           "options": [
             {
               "label": "A",
-              "text": "30π cm³",
-              "is_correct": false
+              "text": "90π cm³",
+              "is_correct": true
             },
             {
               "label": "B",
-              "text": "90π cm³",
-              "is_correct": true
+              "text": "30π cm³",
+              "is_correct": false
             },
             {
               "label": "C",
@@ -2760,8 +2760,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Cone volume is one-third of cylinder volume."
         }
       ]
@@ -2783,17 +2783,17 @@
             },
             {
               "label": "B",
-              "text": "88π m²",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "176π m²",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "352π m²",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "88π m²",
               "is_correct": false
             }
           ],
@@ -2808,27 +2808,27 @@
           "options": [
             {
               "label": "A",
+              "text": "0",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "1",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "(x−3)/(x+3)",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "(x+3)/(x−3)",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "0",
+              "text": "(x+3)/(x−3)",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Factoring and cancelling valid factors leaves 1."
         },
         {
@@ -2868,27 +2868,27 @@
           "options": [
             {
               "label": "A",
-              "text": "21π cm²",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "42π cm²",
               "is_correct": false
             },
             {
+              "label": "B",
+              "text": "63π cm²",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "60π cm²",
-              "is_correct": true
+              "text": "21π cm²",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "63π cm²",
-              "is_correct": false
+              "text": "60π cm²",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "TSA=2πr(h+r)=60π cm²."
         },
         {
@@ -2898,27 +2898,27 @@
           "options": [
             {
               "label": "A",
-              "text": "−119/169",
+              "text": "144/169",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "−25/169",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "119/169",
               "is_correct": true
             },
             {
+              "label": "C",
+              "text": "−119/169",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "144/169",
+              "text": "−25/169",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "cos2θ=1−2(25/169)=119/169."
         },
         {
@@ -2938,17 +2938,17 @@
             },
             {
               "label": "C",
-              "text": "65",
-              "is_correct": true
+              "text": "121",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "121",
-              "is_correct": false
+              "text": "65",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "a=7 and b=4; squares sum to 65."
         },
         {
@@ -2958,8 +2958,8 @@
           "options": [
             {
               "label": "A",
-              "text": "2 and 2",
-              "is_correct": false
+              "text": "8 and 4",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -2968,17 +2968,17 @@
             },
             {
               "label": "C",
-              "text": "8 and 4",
-              "is_correct": true
+              "text": "8 and 8",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "8 and 8",
+              "text": "2 and 2",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Doubling side length multiplies volume by 2³=8 and surface area by 2²=4."
         },
         {
@@ -2988,27 +2988,27 @@
           "options": [
             {
               "label": "A",
-              "text": "32",
+              "text": "64",
               "is_correct": false
             },
             {
               "label": "B",
+              "text": "32",
+              "is_correct": false
+            },
+            {
+              "label": "C",
               "text": "40",
               "is_correct": true
             },
             {
-              "label": "C",
-              "text": "48",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "64",
+              "text": "48",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Product=8×240=1920; 1920/48=40."
         },
         {
@@ -3028,17 +3028,17 @@
             },
             {
               "label": "C",
-              "text": "1",
-              "is_correct": true
+              "text": "2",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "2",
-              "is_correct": false
+              "text": "1",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Numerator and denominator both equal 1."
         },
         {
@@ -3048,27 +3048,27 @@
           "options": [
             {
               "label": "A",
-              "text": "144π cm³",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "216π cm³",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "288π cm³",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "864π cm³",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "144π cm³",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "4/3π×6³=288π cm³."
         }
       ]
@@ -3085,27 +3085,27 @@
           "options": [
             {
               "label": "A",
+              "text": "0",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "1",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "(x−4)/(x+4)",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "(x+4)/(x−4)",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "0",
+              "text": "(x+4)/(x−4)",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Factor and cancel valid terms to obtain 1."
         },
         {
@@ -3120,13 +3120,13 @@
             },
             {
               "label": "B",
-              "text": "36π cm³",
-              "is_correct": true
+              "text": "54π cm³",
+              "is_correct": false
             },
             {
               "label": "C",
-              "text": "54π cm³",
-              "is_correct": false
+              "text": "36π cm³",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -3134,8 +3134,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Cone volume is one-third of the cylinder's."
         },
         {
@@ -3145,27 +3145,27 @@
           "options": [
             {
               "label": "A",
-              "text": "36π cm² and 36π cm³",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "9π cm² and 36π cm³",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "36π cm² and 18π cm³",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "18π cm² and 27π cm³",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "9π cm² and 36π cm³",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "36π cm² and 36π cm³",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Surface area=36π; volume=36π."
         },
         {
@@ -3175,27 +3175,27 @@
           "options": [
             {
               "label": "A",
-              "text": "12",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "24",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "35",
               "is_correct": true
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "70",
+              "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "12",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "24",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Side=HCF(84,60)=12 m; number=7×5=35."
         },
         {
@@ -3205,18 +3205,18 @@
           "options": [
             {
               "label": "A",
-              "text": "15",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "17",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "31",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "15",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -3224,8 +3224,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "64=34+2xy, so xy=15."
         },
         {
@@ -3235,27 +3235,27 @@
           "options": [
             {
               "label": "A",
-              "text": "7π m³",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "14π m³",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "21π m³",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "28π m³",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "7π m³",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "πr²h=π×4×3.5=14π m³."
         },
         {
@@ -3265,27 +3265,27 @@
           "options": [
             {
               "label": "A",
+              "text": "17/15",
+              "is_correct": false
+            },
+            {
+              "label": "B",
               "text": "8/15",
               "is_correct": true
             },
             {
-              "label": "B",
+              "label": "C",
               "text": "15/8",
               "is_correct": false
             },
             {
-              "label": "C",
-              "text": "8/17",
-              "is_correct": false
-            },
-            {
               "label": "D",
-              "text": "17/15",
+              "text": "8/17",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Adjacent=15 by Pythagoras; tan=8/15."
         },
         {
@@ -3300,22 +3300,22 @@
             },
             {
               "label": "B",
-              "text": "2",
-              "is_correct": true
-            },
-            {
-              "label": "C",
               "text": "5/4",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "7/4",
               "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "2",
+              "is_correct": true
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "With sin θ=3/5, the 3-4-5 triangle gives tan θ=3/4 and sec θ=5/4; their sum is 2."
         },
         {
@@ -3325,8 +3325,8 @@
           "options": [
             {
               "label": "A",
-              "text": "24",
-              "is_correct": false
+              "text": "48",
+              "is_correct": true
             },
             {
               "label": "B",
@@ -3340,12 +3340,12 @@
             },
             {
               "label": "D",
-              "text": "48",
-              "is_correct": true
+              "text": "24",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Edge-interior count=4[(8−2)+(6−2)+(4−2)]=48."
         },
         {
@@ -3355,8 +3355,8 @@
           "options": [
             {
               "label": "A",
-              "text": "3x²−12x+18",
-              "is_correct": true
+              "text": "3x²+12x",
+              "is_correct": false
             },
             {
               "label": "B",
@@ -3365,17 +3365,17 @@
             },
             {
               "label": "C",
-              "text": "x²−12x+18",
-              "is_correct": false
+              "text": "3x²−12x+18",
+              "is_correct": true
             },
             {
               "label": "D",
-              "text": "3x²+12x",
+              "text": "x²−12x+18",
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "4x²−12x+9−(x²−9)=3x²−12x+18."
         }
       ]
@@ -3392,18 +3392,18 @@
           "options": [
             {
               "label": "A",
-              "text": "13π m²",
-              "is_correct": true
-            },
-            {
-              "label": "B",
               "text": "12π m²",
               "is_correct": false
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "36π m²",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "13π m²",
+              "is_correct": true
             },
             {
               "label": "D",
@@ -3411,8 +3411,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 2,
+          "answer_label": "C",
           "rationale": "Ring area=π(7²−6²)=13π m²."
         },
         {
@@ -3422,27 +3422,27 @@
           "options": [
             {
               "label": "A",
-              "text": "5 cm; 236 cm²",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "5 cm; 244 cm²",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "4 cm; 208 cm²",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "6 cm; 264 cm²",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "5 cm; 244 cm²",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "5 cm; 236 cm²",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Height=5; TSA=2(48+40+30)=236 cm²."
         },
         {
@@ -3452,27 +3452,27 @@
           "options": [
             {
               "label": "A",
-              "text": "1",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "2",
               "is_correct": true
             },
             {
+              "label": "B",
+              "text": "4",
+              "is_correct": false
+            },
+            {
               "label": "C",
-              "text": "3",
+              "text": "1",
               "is_correct": false
             },
             {
               "label": "D",
-              "text": "4",
+              "text": "3",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "2³ˣ=2⁶, so x=2."
         },
         {
@@ -3482,13 +3482,13 @@
           "options": [
             {
               "label": "A",
-              "text": "119/169",
-              "is_correct": true
+              "text": "−119/169",
+              "is_correct": false
             },
             {
               "label": "B",
-              "text": "−119/169",
-              "is_correct": false
+              "text": "119/169",
+              "is_correct": true
             },
             {
               "label": "C",
@@ -3501,8 +3501,8 @@
               "is_correct": false
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "cos2θ=(12²−5²)/(13²)=119/169."
         },
         {
@@ -3512,27 +3512,27 @@
           "options": [
             {
               "label": "A",
-              "text": "(x−2)³(x+2)",
-              "is_correct": true
-            },
-            {
-              "label": "B",
-              "text": "(x−2)²(x+2)²",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "(x−4)²(x+1)",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "(x−2)(x+2)",
               "is_correct": false
+            },
+            {
+              "label": "C",
+              "text": "(x−2)²(x+2)²",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "(x−2)³(x+2)",
+              "is_correct": true
             }
           ],
-          "answer_index": 0,
-          "answer_label": "A",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "Product is (x−2)²(x−2)(x+2)."
         },
         {
@@ -3542,27 +3542,27 @@
           "options": [
             {
               "label": "A",
-              "text": "3",
-              "is_correct": false
-            },
-            {
-              "label": "B",
-              "text": "9",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "18",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "B",
               "text": "27",
               "is_correct": true
+            },
+            {
+              "label": "C",
+              "text": "3",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "9",
+              "is_correct": false
             }
           ],
-          "answer_index": 3,
-          "answer_label": "D",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "Volume ratio=(3/1)³=27."
         },
         {
@@ -3602,27 +3602,27 @@
           "options": [
             {
               "label": "A",
-              "text": "5/12",
-              "is_correct": false
-            },
-            {
-              "label": "B",
               "text": "12/5",
               "is_correct": true
             },
             {
-              "label": "C",
+              "label": "B",
               "text": "12/13",
               "is_correct": false
             },
             {
-              "label": "D",
+              "label": "C",
               "text": "13/5",
+              "is_correct": false
+            },
+            {
+              "label": "D",
+              "text": "5/12",
               "is_correct": false
             }
           ],
-          "answer_index": 1,
-          "answer_label": "B",
+          "answer_index": 0,
+          "answer_label": "A",
           "rationale": "Adjacent=5 in a 5-12-13 triangle; tan=12/5."
         },
         {
@@ -3632,27 +3632,27 @@
           "options": [
             {
               "label": "A",
-              "text": "40π cm³",
+              "text": "160π cm³",
               "is_correct": false
             },
             {
               "label": "B",
-              "text": "80π cm³",
-              "is_correct": false
-            },
-            {
-              "label": "C",
               "text": "120π cm³",
               "is_correct": true
             },
             {
+              "label": "C",
+              "text": "40π cm³",
+              "is_correct": false
+            },
+            {
               "label": "D",
-              "text": "160π cm³",
+              "text": "80π cm³",
               "is_correct": false
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 1,
+          "answer_label": "B",
           "rationale": "V+V/3=160π so V=120π."
         },
         {
@@ -3672,17 +3672,17 @@
             },
             {
               "label": "C",
-              "text": "160 cm²",
-              "is_correct": true
+              "text": "180 cm²",
+              "is_correct": false
             },
             {
               "label": "D",
-              "text": "180 cm²",
-              "is_correct": false
+              "text": "160 cm²",
+              "is_correct": true
             }
           ],
-          "answer_index": 2,
-          "answer_label": "C",
+          "answer_index": 3,
+          "answer_label": "D",
           "rationale": "The inside rectangle is 16×10=160 cm²."
         }
       ]
