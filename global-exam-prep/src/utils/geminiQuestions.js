@@ -94,8 +94,26 @@ function validateMCQs(questions) {
         if (!review || typeof review.correctReason !== 'string' || review.correctReason.trim().length < 12 ||
             !Array.isArray(review.distractorReasons) || review.distractorReasons.length !== 3 ||
             review.distractorReasons.some(reason => typeof reason !== 'string' || reason.trim().length < 10) ||
-            typeof review.singleBestAnswerCheck !== 'string' || !/only one|single best|one best|unique/i.test(review.singleBestAnswerCheck)) {
+            typeof review.singleBestAnswerCheck !== 'string' || !/only one|single best|one best|unique/i.test(review.singleBestAnswerCheck) ||
+            typeof review.difficultyEvidence !== 'string' || review.difficultyEvidence.trim().length < 20) {
             throw new Error(`MCQ quality check failed at question ${index + 1}: answer and all three distractors need a meaningful internal review. Please retry.`);
+        }
+
+        const reviewReasons = [review.correctReason, ...review.distractorReasons].map(normalizeText);
+        if (new Set(reviewReasons).size !== reviewReasons.length) {
+            throw new Error(`MCQ quality check failed at question ${index + 1}: review reasons must be specific to the key and each distractor. Please retry.`);
+        }
+
+        const bannedPatterns = [
+            /rigorous definition\\s*\\/\\s*mechanism/i,
+            /highly plausible edge.case/i,
+            /standard misconception related to/i,
+            /common failure state of/i,
+            /technically accurate but theoretically irrelevant/i,
+            /inverse or corrupted boundary of/i,
+        ];
+        if ([q.text, ...q.options].some(value => bannedPatterns.some(pattern => pattern.test(value)))) {
+            throw new Error(`MCQ quality check failed at question ${index + 1}: generic placeholder content is not allowed. Please retry.`);
         }
 
         // Reject conspicuous length giveaways. This is a screening check, not a substitute for content review.
@@ -148,11 +166,12 @@ MANDATORY ITEM RULES
 5. Exactly one option must be the best answer given the written stem. Do not rely on unstated assumptions, examiner intention, or ambiguous words such as "normally" without context. Do not stack negatives.
 6. Hard questions should require at least two meaningful reasoning steps or the evaluation of multiple explicit constraints. Distractors may represent a correct rule under the wrong condition, an omitted requirement, an invalid intermediate step, or a solution that satisfies only part of the brief.
 7. For every item, write internal review metadata: explain why the key is correct, explain separately why each of the three distractors could attract a student and the precise reason it fails under the stem, and explicitly confirm that only one answer satisfies the stated conditions. This review must reflect the actual choices, not generic text.
-8. The "answer" index must point to the correct option before options are randomized. Use varied answer positions; do not create a predictable answer-key pattern.
-9. Do not use placeholders, fake technical language, "all/none of the above", "true/false" as a shortcut, invented facts, copied questions, or clues that reveal the key.
-10. Cover different topics from across the visible material. Do not write multiple near-identical questions just to reach the count.
-11. If the source excerpt is marked truncated, stay within the visible evidence. Do not treat missing excerpt text as proof a topic is absent.
-12. Before responding, silently audit the full set for correctness, ambiguity, distractor plausibility, answer-position variety, duplicate or near-duplicate stems, and difficulty fit. Revise failed items rather than returning them.
+8. For medium/hard items, the stem itself must provide the decisive application/constraint. Do not turn a direct recall item into a medium/hard item by adding generic wrappers such as "Case review", "Which option is fully defensible", or unrelated narrative. If the source concept cannot support the claimed difficulty, generate a different syllabus-grounded item.
+9. The "answer" index must point to the correct option before options are randomized. Use varied answer positions; do not create a predictable answer-key pattern.
+10. Do not use placeholders, fake technical language, "all/none of the above", "true/false" as a shortcut, invented facts, copied questions, or clues that reveal the key.
+11. Cover different topics from across the visible material. Do not write multiple near-identical questions just to reach the count.
+12. If the source excerpt is marked truncated, stay within the visible evidence. Do not treat missing excerpt text as proof a topic is absent.
+13. Before responding, silently audit the full set for correctness, ambiguity, distractor plausibility, answer-position variety, duplicate or near-duplicate stems, and difficulty fit. Revise failed items rather than returning them.
 
 Required JSON shape:
 {
@@ -169,7 +188,8 @@ Required JSON shape:
           "Why option B is tempting and the precise condition it fails.",
           "Why option D is tempting and the precise condition it fails."
         ],
-        "singleBestAnswerCheck": "Only one option satisfies every stated condition."
+        "singleBestAnswerCheck": "Only one option satisfies every stated condition.",
+        "difficultyEvidence": "The student must apply the case condition and eliminate the alternatives that fail it."
       }
     }
   ]
@@ -255,6 +275,7 @@ ${source}
                     options: randomized.options,
                     answer: randomized.answer,
                     type: 'mcq',
+                    difficulty: requestedDifficulty,
                 };
             }
 
@@ -263,6 +284,7 @@ ${source}
                 text,
                 marks: Number.isInteger(q.marks) && q.marks > 0 ? q.marks : (count > 5 ? 14 : 7),
                 type: 'subjective',
+                difficulty: requestedDifficulty,
             };
         });
     } catch (error) {
