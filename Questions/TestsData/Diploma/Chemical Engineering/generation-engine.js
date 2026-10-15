@@ -57,7 +57,7 @@
    let k=norm(stem),j=0;while(seen.has(k)&&j<suffix.length){stem=stem.replace(/\?$/,"")+`, ${suffix[(i+j)%suffix.length]}?`;k=norm(stem);j++;}if(seen.has(k))continue;seen.add(k);
    const local=terms.filter(x=>norm(x.unit)===norm(unit)&&norm(short(x.term))!==norm(term)),fallback=terms.filter(x=>norm(short(x.term))!==norm(term));
    const opt=[term];for(const d of shuffle(local.length>=3?local:fallback,hash(s.id+term+i))){const v=short(d.term);if(v.length>2&&!opt.some(x=>norm(x)===norm(v)))opt.push(v);if(opt.length===4)break;}
-   for(const d of shuffle(fallback,hash(s.id+"f"+i))){const v=short(d.term);if(v.length>2&&!opt.some(x=>norm(x)===norm(v)))opt.push(v);if(opt.length===4)break;}
+   for(const d of shuffle(fallback,hash(s.id+"f"+i))){if(opt.length===4)break;const v=short(d.term);if(v.length>2&&!opt.some(x=>norm(x)===norm(v)))opt.push(v);if(opt.length===4)break;}
    if(opt.length<4)continue;
    const r=ruleFor(term);
    out.push({itemId:`${s.id}-${exam.replace(/\s/g,"")}-${diff}-${out.length+1}`,text:stem,options:opt,topic:term,unit,rationale:explain(term,unit,s),distractorRationale:`The alternative choices are separate syllabus concepts and do not match the defining condition (${r?r.cue:`the stated focus of ${unit}`}); manually check their plausibility.`});
