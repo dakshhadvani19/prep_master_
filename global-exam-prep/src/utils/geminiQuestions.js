@@ -23,7 +23,7 @@ const DIFFICULTY_BLUEPRINT = {
 };
 
 function normalizeText(value) {
-    return String(value ?? '').trim().replace(/\\s+/g, ' ').toLocaleLowerCase();
+    return String(value ?? '').trim().replace(/\s+/g, ' ').toLocaleLowerCase();
 }
 
 function shuffleWithAnswer(options, answerIndex) {
@@ -43,7 +43,7 @@ function parseModelQuestions(cleaned) {
     try {
         parsed = JSON.parse(cleaned);
     } catch {
-        const match = cleaned.match(/\\{[\\s\\S]*\\}/);
+        const match = cleaned.match(/\{[\s\S]*\}/);
         if (!match) throw new Error('AI returned invalid JSON. Please retry question generation.');
         parsed = JSON.parse(match[0]);
     }
@@ -234,7 +234,7 @@ ${source}
 
         let cleaned = rawContent.trim();
         if (cleaned.includes('```')) {
-            const match = cleaned.match(/```(?:json)?\\s*([\\s\\S]*?)\\s*```/);
+            const match = cleaned.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
             if (match?.[1]) cleaned = match[1].trim();
         }
 
