@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { examPrompts, domains } from '../data/mockData';
 import { findSubjectContext } from '../utils/subjectResolver';
-import { generateExamQuestions } from '../data/questionGenerator';
 import { universitySyllabus } from '../data/universitySyllabus';
 import { pdfSyllabus } from '../data/pdfSyllabus';
 import { extractTextFromFile } from '../utils/fileParser';
@@ -668,7 +667,7 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
     const [currentQ, setCurrentQ] = useState(0);
     const [answers, setAnswers] = useState({});
 
-    const [questions] = useState(() => aiQuestions || generateExamQuestions(subjectId, examType, difficulty));
+    const [questions] = useState(() => Array.isArray(aiQuestions) ? aiQuestions : []);
 
     // Auto-submit when timer expires (forceSubmit set by parent)
     useEffect(() => {
@@ -676,6 +675,15 @@ function ActiveExamInterface({ examType, examInfo, subjectId, difficulty, timeLe
             onSubmit(answers, questions);
         }
     }, [forceSubmit]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    if (!questions.length) {
+        return (
+            <div className="container" style={{ textAlign: 'center', marginTop: '4rem' }}>
+                <h2>Validated question set unavailable</h2>
+                <p>The exam cannot start with template-only questions. Return to setup and generate the question set again.</p>
+            </div>
+        );
+    }
 
     const q = questions[currentQ];
 
