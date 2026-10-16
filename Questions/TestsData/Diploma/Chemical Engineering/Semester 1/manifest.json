@@ -12,8 +12,8 @@
   "counts": {
     "semester": 1,
     "subjects": 8,
-    "reusedSubjects": 0,
-    "newDraftSubjects": 8,
+    "reusedSubjects": 5,
+    "newDraftSubjects": 3,
     "nonDepartmentalSubjects": 5,
     "departmentalSubjects": 3,
     "examTypeBanks": 21,
@@ -72,15 +72,17 @@
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09IK0101.pdf",
       "reuse": {
-        "reuse": false,
+        "name": "BHARATIYA KNOWLEDGE SYSTEM",
+        "SubjectId": "46009911010101",
         "sourceName": "Bharatiya Knowledge System",
-        "sourceId": "44009911010101",
+        "sourceSubjectId": "44009911010101",
         "sourceSemester": 1,
-        "unitMatches": 0,
+        "unitMatches": 4,
         "maxUnits": 4,
-        "unitTitleRatio": 0,
-        "topicOverlap": 0,
-        "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+        "unitTitleRatio": 1,
+        "topicJaccard": 0.833,
+        "reuse": true,
+        "reason": "Verified unit-title/topic match; existing payload reused verbatim."
       },
       "examTypes": [
         {
@@ -139,15 +141,17 @@
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09SL0103.pdf",
       "reuse": {
-        "reuse": false,
+        "name": "COMMUNICATION SKILLS",
+        "SubjectId": "46091912010301",
         "sourceName": "Communication Skills-I",
-        "sourceId": "44091912010301",
+        "sourceSubjectId": "44091912010301",
         "sourceSemester": 1,
-        "unitMatches": 0,
+        "unitMatches": 2,
         "maxUnits": 2,
-        "unitTitleRatio": 0,
-        "topicOverlap": 0,
-        "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+        "unitTitleRatio": 1,
+        "topicJaccard": 1,
+        "reuse": true,
+        "reason": "Verified unit-title/topic match; existing payload reused verbatim."
       },
       "examTypes": [
         {
@@ -176,15 +180,17 @@
       "isDepartmentalSubject": true,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE2101.pdf",
       "reuse": {
-        "reuse": false,
+        "name": "COMPUTER FUNDAMENTAL SKILL",
+        "SubjectId": "46000935210101",
         "sourceName": "Computer Fundamental Skill",
-        "sourceId": "44000935210101",
+        "sourceSubjectId": "44000935210101",
         "sourceSemester": 1,
-        "unitMatches": 0,
+        "unitMatches": 7,
         "maxUnits": 7,
-        "unitTitleRatio": 0,
-        "topicOverlap": 0,
-        "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+        "unitTitleRatio": 1,
+        "topicJaccard": 1,
+        "reuse": true,
+        "reason": "Verified unit-title/topic match; existing payload reused verbatim."
       },
       "examTypes": [
         {
@@ -207,15 +213,17 @@
       "isDepartmentalSubject": true,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0101.pdf",
       "reuse": {
-        "reuse": false,
+        "name": "INDIAN CONSTITUTION",
+        "SubjectId": "46009121010101",
         "sourceName": "Indian Constitution",
-        "sourceId": "44009121010101",
+        "sourceSubjectId": "44009121010101",
         "sourceSemester": 1,
-        "unitMatches": 0,
+        "unitMatches": 5,
         "maxUnits": 5,
-        "unitTitleRatio": 0,
-        "topicOverlap": 0,
-        "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+        "unitTitleRatio": 1,
+        "topicJaccard": 1,
+        "reuse": true,
+        "reason": "Verified unit-title/topic match; existing payload reused verbatim."
       },
       "examTypes": [
         {
@@ -238,15 +246,17 @@
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2101.pdf",
       "reuse": {
-        "reuse": false,
+        "name": "MATHEMATICS-I",
+        "SubjectId": "46009131210101",
         "sourceName": "Mathematics-I",
-        "sourceId": "44009131210101",
+        "sourceSubjectId": "44009131210101",
         "sourceSemester": 1,
-        "unitMatches": 0,
+        "unitMatches": 5,
         "maxUnits": 5,
-        "unitTitleRatio": 0,
-        "topicOverlap": 0,
-        "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+        "unitTitleRatio": 1,
+        "topicJaccard": 1,
+        "reuse": true,
+        "reason": "Verified unit-title/topic match; existing payload reused verbatim."
       },
       "examTypes": [
         {
@@ -296,87 +306,69 @@
   ],
   "reuseAudit": [
     {
-      "name": "APPLIED CHEMISTRY",
-      "SubjectId": "46009719310201",
-      "reuse": false,
-      "reason": "No same-name candidate bank."
-    },
-    {
       "name": "BHARATIYA KNOWLEDGE SYSTEM",
       "SubjectId": "46009911010101",
-      "reuse": false,
       "sourceName": "Bharatiya Knowledge System",
-      "sourceId": "44009911010101",
+      "sourceSubjectId": "44009911010101",
       "sourceSemester": 1,
-      "unitMatches": 0,
+      "unitMatches": 4,
       "maxUnits": 4,
-      "unitTitleRatio": 0,
-      "topicOverlap": 0,
-      "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
-    },
-    {
-      "name": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
-      "SubjectId": "46000938210101",
-      "reuse": false,
-      "reason": "No same-name candidate bank."
+      "unitTitleRatio": 1,
+      "topicJaccard": 0.833,
+      "reuse": true,
+      "reason": "Verified unit-title/topic match; existing payload reused verbatim."
     },
     {
       "name": "COMMUNICATION SKILLS",
       "SubjectId": "46091912010301",
-      "reuse": false,
       "sourceName": "Communication Skills-I",
-      "sourceId": "44091912010301",
+      "sourceSubjectId": "44091912010301",
       "sourceSemester": 1,
-      "unitMatches": 0,
+      "unitMatches": 2,
       "maxUnits": 2,
-      "unitTitleRatio": 0,
-      "topicOverlap": 0,
-      "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+      "unitTitleRatio": 1,
+      "topicJaccard": 1,
+      "reuse": true,
+      "reason": "Verified unit-title/topic match; existing payload reused verbatim."
     },
     {
       "name": "COMPUTER FUNDAMENTAL SKILL",
       "SubjectId": "46000935210101",
-      "reuse": false,
       "sourceName": "Computer Fundamental Skill",
-      "sourceId": "44000935210101",
+      "sourceSubjectId": "44000935210101",
       "sourceSemester": 1,
-      "unitMatches": 0,
+      "unitMatches": 7,
       "maxUnits": 7,
-      "unitTitleRatio": 0,
-      "topicOverlap": 0,
-      "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+      "unitTitleRatio": 1,
+      "topicJaccard": 1,
+      "reuse": true,
+      "reason": "Verified unit-title/topic match; existing payload reused verbatim."
     },
     {
       "name": "INDIAN CONSTITUTION",
       "SubjectId": "46009121010101",
-      "reuse": false,
       "sourceName": "Indian Constitution",
-      "sourceId": "44009121010101",
+      "sourceSubjectId": "44009121010101",
       "sourceSemester": 1,
-      "unitMatches": 0,
+      "unitMatches": 5,
       "maxUnits": 5,
-      "unitTitleRatio": 0,
-      "topicOverlap": 0,
-      "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+      "unitTitleRatio": 1,
+      "topicJaccard": 1,
+      "reuse": true,
+      "reason": "Verified unit-title/topic match; existing payload reused verbatim."
     },
     {
       "name": "MATHEMATICS-I",
       "SubjectId": "46009131210101",
-      "reuse": false,
       "sourceName": "Mathematics-I",
-      "sourceId": "44009131210101",
+      "sourceSubjectId": "44009131210101",
       "sourceSemester": 1,
-      "unitMatches": 0,
+      "unitMatches": 5,
       "maxUnits": 5,
-      "unitTitleRatio": 0,
-      "topicOverlap": 0,
-      "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
-    },
-    {
-      "name": "MECHANICAL WORKSHOP",
-      "SubjectId": "46009135210201",
-      "reuse": false,
-      "reason": "No same-name candidate bank."
+      "unitTitleRatio": 1,
+      "topicJaccard": 1,
+      "reuse": true,
+      "reason": "Verified unit-title/topic match; existing payload reused verbatim."
     }
   ],
   "notes": [
