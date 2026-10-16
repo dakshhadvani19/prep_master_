@@ -1,0 +1,258 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 4,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 4,
+    "subjects": 6,
+    "reusedSubjects": 1,
+    "newDraftSubjects": 5,
+    "nonDepartmentalSubjects": 4,
+    "departmentalSubjects": 2,
+    "examTypeBanks": 16,
+    "totalTests": 192,
+    "mcqTests": 96,
+    "theoryTests": 96,
+    "mcqQuestions": 2880,
+    "theoryQuestions": 384,
+    "mcqOptionEntries": 11520,
+    "answerEntries": 3264
+  },
+  "exam_rules": {
+    "nonDepartmental": "Mid1/ESE 4 theory × 8 marks; Mid1 first half; Mid2 30 MCQs.",
+    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE.",
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    }
+  },
+  "subjects": [
+    {
+      "name": "CHEMICAL PROCESS SOFTWARE",
+      "SubjectId": "46000938240401",
+      "isDepartmentalSubject": true,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name source."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half: Experiment 1; Experiment 2; Experiment 3; Experiment 4; Experiment 5; Experiment 6; Experiment 7"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "GENERAL CHEMICAL TECHNOLOGY",
+      "SubjectId": "46000938240501",
+      "isDepartmentalSubject": true,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name source."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half: Tutorial 1; Tutorial 2; Tutorial 3; Tutorial 4; Tutorial 5; Tutorial 6; Tutorial 7"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "MATHEMATICS-IV",
+      "SubjectId": "46009131040201",
+      "isDepartmentalSubject": false,
+      "reuse": {
+        "reuse": true,
+        "sourceName": "Mathematics-IV",
+        "sourceSubjectId": "44009131040201",
+        "sourceSemester": 4,
+        "unitMatches": 4,
+        "maxUnits": 4,
+        "unitTitleRatio": 1,
+        "topicJaccard": 1,
+        "reason": "Syllabus verified; source payload reused verbatim."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half: Complex Number; Co-ordinate Geometry"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "PLANT UTILIZATION AND INSTRUMENTATION",
+      "SubjectId": "46000938240301",
+      "isDepartmentalSubject": false,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name source."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half: Basic Utility; Steam, Air & Inert Gases; Refrigeration; Basics of Instrumentation"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "PROCESS HEAT TRANSFER",
+      "SubjectId": "46000938240201",
+      "isDepartmentalSubject": false,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name source."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half: Introduction to Heat Transfer; Heat Transfer by Conduction.; Heat Transfer by Convection.; Heat exchangers"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "UNIT OPERATION - III",
+      "SubjectId": "46000938240101",
+      "isDepartmentalSubject": false,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name source."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half: Introduction to Mass Transfer Operation; Molecular Diffusion in Fluids"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    }
+  ],
+  "reuseAudit": [
+    {
+      "name": "CHEMICAL PROCESS SOFTWARE",
+      "SubjectId": "46000938240401",
+      "reuse": false,
+      "reason": "No same-name source."
+    },
+    {
+      "name": "GENERAL CHEMICAL TECHNOLOGY",
+      "SubjectId": "46000938240501",
+      "reuse": false,
+      "reason": "No same-name source."
+    },
+    {
+      "name": "MATHEMATICS-IV",
+      "SubjectId": "46009131040201",
+      "reuse": true,
+      "sourceName": "Mathematics-IV",
+      "sourceSubjectId": "44009131040201",
+      "sourceSemester": 4,
+      "unitMatches": 4,
+      "maxUnits": 4,
+      "unitTitleRatio": 1,
+      "topicJaccard": 1,
+      "reason": "Syllabus verified; source payload reused verbatim."
+    },
+    {
+      "name": "PLANT UTILIZATION AND INSTRUMENTATION",
+      "SubjectId": "46000938240301",
+      "reuse": false,
+      "reason": "No same-name source."
+    },
+    {
+      "name": "PROCESS HEAT TRANSFER",
+      "SubjectId": "46000938240201",
+      "reuse": false,
+      "reason": "No same-name source."
+    },
+    {
+      "name": "UNIT OPERATION - III",
+      "SubjectId": "46000938240101",
+      "reuse": false,
+      "reason": "No same-name source."
+    }
+  ],
+  "notes": [
+    "Mid1 is first half of ordered syllabus, weighted by hours where supplied.",
+    "Metadata is in test_index; TestsData has four columns.",
+    "Theory rows have Options=[]; new content requires review."
+  ]
+}
