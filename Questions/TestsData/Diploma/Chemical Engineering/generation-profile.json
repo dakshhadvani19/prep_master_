@@ -908,5 +908,13 @@
       "cue": "actual output expressed relative to a defined available or rated production capacity",
       "explanation": "Capacity utilization compares actual output with the relevant available/rated capacity and must use a consistent time and basis."
     }
-  ]
+  ],
+  "same_name_reuse_policy": {
+    "priority": "before course-code or syllabus-similarity selection",
+    "normalized_name": "Normalize case and Unicode, remove punctuation and spaces, then compare subject titles",
+    "exact_match_behavior": "If a normalized exact subject-name match exists and isDepartmentalSubject matches, copy Questions, Options, and Answers verbatim for each matching examType/difficulty/occurrence. Do not regenerate the test payload because syllabus wording differs.",
+    "syllabus_difference": "Record the source and mark syllabusDifferenceOverride=true for review. Do not rewrite the reused payload to fit another syllabus.",
+    "incompatible_exam_format": "If an exact same-name source exists but isDepartmentalSubject differs, stop with an explicit error. Do not silently draft replacement questions.",
+    "non_name_match": "Only when no exact normalized name exists, the existing course-code and unit/topic similarity rules may select a source bank."
+  }
 }
