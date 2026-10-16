@@ -1,0 +1,284 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 5,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 5,
+    "subjects": 8,
+    "reusedSubjects": 0,
+    "newDraftSubjects": 8,
+    "nonDepartmentalSubjects": 5,
+    "departmentalSubjects": 3,
+    "examTypeBanks": 21,
+    "totalTests": 252,
+    "mcqTests": 132,
+    "theoryTests": 120,
+    "mcqQuestions": 3960,
+    "theoryQuestions": 480,
+    "mcqOptionEntries": 15840,
+    "answerEntries": 4440
+  },
+  "exam_rules": {
+    "nonDepartmental": "Mid1/ESE four 8-mark theory questions; Mid1 first half; Mid2 30 MCQs",
+    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE",
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "False subjects: occurrences 1-12 Mid1, 13-24 Mid2, 25-36 ESE. True subjects: 1-12 Mid1, 13-24 Mid2."
+  },
+  "subjects": [
+    {
+      "name": "CHEMICAL REACTION ENGINEERING & THERMODYNAMICS",
+      "SubjectId": "46000938250201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "First half: Introduction to Chemical Reaction Engineering; Types of Reactors & Characteristics; Kinetics of Homogeneous Reactions; Introduction & Basic concept of thermodynamics"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "DCS & SCADA",
+      "SubjectId": "46000938250501",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "First half: Introduction to DCS - History & Development"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "FERTILIZER TECHNOLOGY",
+      "SubjectId": "46000938250701",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "First half: INTRODUCTION TO FERTILZERS; NITROGENOUS FERTILIZERS; POTASSIUM FERTILIZERS"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "PERTOLEUM REFINING & PETROCHEMICALS",
+      "SubjectId": "46000938250301",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "First half: Basics of Petroleum and Refinery; Properties of Crude and Petroleum Products; Processing of Petroleum"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "POLYMER TECHNOLOGY",
+      "SubjectId": "46000938250601",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "First half: Properties of Polymers; Rubbers; Plastics"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "PROJECT - I",
+      "SubjectId": "46000938250401",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "First half: Manufacturing of any one of products from below mentioned"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "SUMMER INTERNSHIP",
+      "SubjectId": "46000938050801",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "First half: Offline internship in industry; Online Internship"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "UNIT OPERATION - IV",
+      "SubjectId": "46000938250101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "First half: Equipments for Gas-Liquid Operations; Adsorption; Humidification; Crystallization"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    }
+  ],
+  "reuseAudit": [
+    {
+      "name": "CHEMICAL REACTION ENGINEERING & THERMODYNAMICS",
+      "SubjectId": "46000938250201",
+      "reuse": false,
+      "reason": "No same-name source selected."
+    },
+    {
+      "name": "DCS & SCADA",
+      "SubjectId": "46000938250501",
+      "reuse": false,
+      "reason": "No same-name source selected."
+    },
+    {
+      "name": "FERTILIZER TECHNOLOGY",
+      "SubjectId": "46000938250701",
+      "reuse": false,
+      "reason": "No same-name source selected."
+    },
+    {
+      "name": "PERTOLEUM REFINING & PETROCHEMICALS",
+      "SubjectId": "46000938250301",
+      "reuse": false,
+      "reason": "No same-name source selected."
+    },
+    {
+      "name": "POLYMER TECHNOLOGY",
+      "SubjectId": "46000938250601",
+      "reuse": false,
+      "reason": "No same-name source selected."
+    },
+    {
+      "name": "PROJECT - I",
+      "SubjectId": "46000938250401",
+      "reuse": false,
+      "sourceName": "Project-I",
+      "sourceId": "44000935150501",
+      "unitTitleOverlap": "0/6",
+      "reason": "Rejected after verification: CE syllabus covers project lifecycle phases, while Chemical Engineering focuses on manufacturing a selected chemical-industry product and report."
+    },
+    {
+      "name": "SUMMER INTERNSHIP",
+      "SubjectId": "46000938050801",
+      "reuse": false,
+      "sourceName": "Summer Internship",
+      "sourceId": "44000935050901",
+      "unitTitleOverlap": "2/3",
+      "reason": "Rejected for whole-bank reuse: Chemical syllabus includes an Online Internship unit absent from CE and uses different internship/project-report details."
+    },
+    {
+      "name": "UNIT OPERATION - IV",
+      "SubjectId": "46000938250101",
+      "reuse": false,
+      "reason": "No same-name source selected."
+    }
+  ],
+  "notes": [
+    "Mid1 uses first-half syllabus by unit hours when available.",
+    "Metadata is in test_index; TestsData has four columns only.",
+    "Theory rows have Options=[] and model answers in Answers.",
+    "Question content is a syllabus-derived draft requiring academic review."
+  ]
+}
