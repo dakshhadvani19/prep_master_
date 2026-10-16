@@ -12,8 +12,8 @@
   "counts": {
     "semester": 5,
     "subjects": 8,
-    "reusedSubjects": 0,
-    "newDraftSubjects": 8,
+    "reusedSubjects": 2,
+    "newDraftSubjects": 6,
     "nonDepartmentalSubjects": 5,
     "departmentalSubjects": 3,
     "examTypeBanks": 21,
@@ -172,7 +172,21 @@
           "tests": 12,
           "syllabusScope": "Full semester"
         }
-      ]
+      ],
+      "reuse": {
+        "reuse": true,
+        "sourceName": "Project-I",
+        "sourceSubjectId": "44000935150501",
+        "sourceId": "44000935150501",
+        "sourceSemester": 5,
+        "normalizedNameMatch": true,
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "reusedVariants": 24,
+        "expectedVariants": 24,
+        "allVariantsCopiedVerbatim": true,
+        "syllabusDifferenceOverride": true,
+        "reason": "Exact normalized subject-name match; existing payload reused verbatim per user instruction despite syllabus wording differences."
+      }
     },
     {
       "name": "SUMMER INTERNSHIP",
@@ -191,7 +205,21 @@
           "tests": 12,
           "syllabusScope": "Full semester"
         }
-      ]
+      ],
+      "reuse": {
+        "reuse": true,
+        "sourceName": "Summer Internship",
+        "sourceSubjectId": "44000935050901",
+        "sourceId": "44000935050901",
+        "sourceSemester": 5,
+        "normalizedNameMatch": true,
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "reusedVariants": 24,
+        "expectedVariants": 24,
+        "allVariantsCopiedVerbatim": true,
+        "syllabusDifferenceOverride": true,
+        "reason": "Exact normalized subject-name match; existing payload reused verbatim per user instruction despite syllabus wording differences."
+      }
     },
     {
       "name": "UNIT OPERATION - IV",
@@ -253,20 +281,34 @@
     {
       "name": "PROJECT - I",
       "SubjectId": "46000938250401",
-      "reuse": false,
+      "reuse": true,
       "sourceName": "Project-I",
       "sourceId": "44000935150501",
       "unitTitleOverlap": "0/6",
-      "reason": "Rejected after verification: CE syllabus covers project lifecycle phases, while Chemical Engineering focuses on manufacturing a selected chemical-industry product and report."
+      "reason": "Exact normalized subject-name match. Per user instruction, copied the existing Computer Engineering Questions/Options/Answers payloads verbatim even though the syllabus descriptions differ.",
+      "sourceSemester": 5,
+      "normalizedNameMatch": true,
+      "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+      "reusedVariants": 24,
+      "expectedVariants": 24,
+      "allVariantsCopiedVerbatim": true,
+      "syllabusDifferenceOverride": true
     },
     {
       "name": "SUMMER INTERNSHIP",
       "SubjectId": "46000938050801",
-      "reuse": false,
+      "reuse": true,
       "sourceName": "Summer Internship",
       "sourceId": "44000935050901",
       "unitTitleOverlap": "2/3",
-      "reason": "Rejected for whole-bank reuse: Chemical syllabus includes an Online Internship unit absent from CE and uses different internship/project-report details."
+      "reason": "Exact normalized subject-name match. Per user instruction, copied the existing Computer Engineering Questions/Options/Answers payloads verbatim even though the syllabus descriptions differ.",
+      "sourceSemester": 5,
+      "normalizedNameMatch": true,
+      "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+      "reusedVariants": 24,
+      "expectedVariants": 24,
+      "allVariantsCopiedVerbatim": true,
+      "syllabusDifferenceOverride": true
     },
     {
       "name": "UNIT OPERATION - IV",
@@ -279,6 +321,29 @@
     "Mid1 uses first-half syllabus by unit hours when available.",
     "Metadata is in test_index; TestsData has four columns only.",
     "Theory rows have Options=[] and model answers in Answers.",
-    "Question content is a syllabus-derived draft requiring academic review."
-  ]
+    "Question content is a syllabus-derived draft requiring academic review.",
+    "Per user instruction, normalized exact subject-name matches take priority over syllabus wording differences. Existing Questions/Options/Answers payloads are copied verbatim; mismatch details are retained in reuseAudit for academic review."
+  ],
+  "reuseVerification": {
+    "verifiedAt": "2026-10-16",
+    "reusedVariants": 48,
+    "newlyCorrectedSubjects": [
+      {
+        "name": "PROJECT - I",
+        "sourceName": "Project-I",
+        "variants": 24,
+        "payloadsCopiedVerbatim": true,
+        "syllabusDifferenceOverride": true
+      },
+      {
+        "name": "SUMMER INTERNSHIP",
+        "sourceName": "Summer Internship",
+        "variants": 24,
+        "payloadsCopiedVerbatim": true,
+        "syllabusDifferenceOverride": true
+      }
+    ],
+    "method": "Matched normalized exact subject name, exam type, difficulty and occurrence; copied Questions, Options and Answers verbatim while preserving Chemical Engineering TestIds and metadata.",
+    "allMarkedReuseSubjectsFullyCopied": true
+  }
 }
