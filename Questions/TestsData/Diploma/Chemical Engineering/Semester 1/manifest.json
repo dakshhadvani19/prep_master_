@@ -82,7 +82,10 @@
         "unitTitleRatio": 1,
         "topicJaccard": 0.833,
         "reuse": true,
-        "reason": "Verified unit-title/topic match; existing payload reused verbatim."
+        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
+        "reusedVariants": 36,
+        "expectedVariants": 36,
+        "allVariantsCopiedVerbatim": true
       },
       "examTypes": [
         {
@@ -151,7 +154,10 @@
         "unitTitleRatio": 1,
         "topicJaccard": 1,
         "reuse": true,
-        "reason": "Verified unit-title/topic match; existing payload reused verbatim."
+        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
+        "reusedVariants": 36,
+        "expectedVariants": 36,
+        "allVariantsCopiedVerbatim": true
       },
       "examTypes": [
         {
@@ -190,7 +196,10 @@
         "unitTitleRatio": 1,
         "topicJaccard": 1,
         "reuse": true,
-        "reason": "Verified unit-title/topic match; existing payload reused verbatim."
+        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
+        "reusedVariants": 24,
+        "expectedVariants": 24,
+        "allVariantsCopiedVerbatim": true
       },
       "examTypes": [
         {
@@ -223,7 +232,10 @@
         "unitTitleRatio": 1,
         "topicJaccard": 1,
         "reuse": true,
-        "reason": "Verified unit-title/topic match; existing payload reused verbatim."
+        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
+        "reusedVariants": 24,
+        "expectedVariants": 24,
+        "allVariantsCopiedVerbatim": true
       },
       "examTypes": [
         {
@@ -256,7 +268,10 @@
         "unitTitleRatio": 1,
         "topicJaccard": 1,
         "reuse": true,
-        "reason": "Verified unit-title/topic match; existing payload reused verbatim."
+        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
+        "reusedVariants": 36,
+        "expectedVariants": 36,
+        "allVariantsCopiedVerbatim": true
       },
       "examTypes": [
         {
@@ -316,7 +331,10 @@
       "unitTitleRatio": 1,
       "topicJaccard": 0.833,
       "reuse": true,
-      "reason": "Verified unit-title/topic match; existing payload reused verbatim."
+      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
+      "reusedVariants": 36,
+      "expectedVariants": 36,
+      "allVariantsCopiedVerbatim": true
     },
     {
       "name": "COMMUNICATION SKILLS",
@@ -329,7 +347,10 @@
       "unitTitleRatio": 1,
       "topicJaccard": 1,
       "reuse": true,
-      "reason": "Verified unit-title/topic match; existing payload reused verbatim."
+      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
+      "reusedVariants": 36,
+      "expectedVariants": 36,
+      "allVariantsCopiedVerbatim": true
     },
     {
       "name": "COMPUTER FUNDAMENTAL SKILL",
@@ -342,7 +363,10 @@
       "unitTitleRatio": 1,
       "topicJaccard": 1,
       "reuse": true,
-      "reason": "Verified unit-title/topic match; existing payload reused verbatim."
+      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
+      "reusedVariants": 24,
+      "expectedVariants": 24,
+      "allVariantsCopiedVerbatim": true
     },
     {
       "name": "INDIAN CONSTITUTION",
@@ -355,7 +379,10 @@
       "unitTitleRatio": 1,
       "topicJaccard": 1,
       "reuse": true,
-      "reason": "Verified unit-title/topic match; existing payload reused verbatim."
+      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
+      "reusedVariants": 24,
+      "expectedVariants": 24,
+      "allVariantsCopiedVerbatim": true
     },
     {
       "name": "MATHEMATICS-I",
@@ -368,13 +395,24 @@
       "unitTitleRatio": 1,
       "topicJaccard": 1,
       "reuse": true,
-      "reason": "Verified unit-title/topic match; existing payload reused verbatim."
+      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
+      "reusedVariants": 36,
+      "expectedVariants": 36,
+      "allVariantsCopiedVerbatim": true
     }
   ],
   "notes": [
     "Mid1 is restricted to first 50% of ordered syllabus; use unit hours where present.",
     "TestsData has only TestId, Questions, Options and Answers; other metadata is in test_index.",
     "Theory rows use Options=[] and model answers in Answers.",
-    "New draft content needs subject matter review; source bank QA limitations carry over to reused questions."
-  ]
+    "New draft content needs subject matter review; source bank QA limitations carry over to reused questions.",
+    "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim."
+  ],
+  "reuseVerification": {
+    "verifiedAt": "2026-10-16",
+    "reusedVariants": 156,
+    "previouslyMismatchedPayloadsCorrected": 117,
+    "method": "Matched target and source rows by subject, exam type, difficulty and occurrence, then compared Questions, Options and Answers exactly. Chemical Engineering TestIds and metadata were preserved.",
+    "allMarkedReuseSubjectsFullyCopied": true
+  }
 }
