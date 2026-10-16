@@ -74,7 +74,10 @@
         "maxUnits": 6,
         "unitTitleRatio": 1,
         "topicJaccard": 1,
-        "reason": "Verified syllabus match; exact source payloads copied."
+        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
+        "reusedVariants": 36,
+        "expectedVariants": 36,
+        "allVariantsCopiedVerbatim": true
       },
       "examTypes": [
         {
@@ -111,7 +114,10 @@
         "maxUnits": 4,
         "unitTitleRatio": 1,
         "topicJaccard": 1,
-        "reason": "Verified syllabus match; exact source payloads copied."
+        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
+        "reusedVariants": 24,
+        "expectedVariants": 24,
+        "allVariantsCopiedVerbatim": true
       },
       "examTypes": [
         {
@@ -166,7 +172,10 @@
         "maxUnits": 15,
         "unitTitleRatio": 1,
         "topicJaccard": 1,
-        "reason": "Verified syllabus match; exact source payloads copied."
+        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
+        "reusedVariants": 36,
+        "expectedVariants": 36,
+        "allVariantsCopiedVerbatim": true
       },
       "examTypes": [
         {
@@ -203,7 +212,10 @@
         "maxUnits": 5,
         "unitTitleRatio": 1,
         "topicJaccard": 1,
-        "reason": "Verified syllabus match; exact source payloads copied."
+        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
+        "reusedVariants": 36,
+        "expectedVariants": 36,
+        "allVariantsCopiedVerbatim": true
       },
       "examTypes": [
         {
@@ -275,7 +287,10 @@
       "maxUnits": 6,
       "unitTitleRatio": 1,
       "topicJaccard": 1,
-      "reason": "Verified syllabus match; exact source payloads copied."
+      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
+      "reusedVariants": 36,
+      "expectedVariants": 36,
+      "allVariantsCopiedVerbatim": true
     },
     {
       "name": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
@@ -288,7 +303,10 @@
       "maxUnits": 4,
       "unitTitleRatio": 1,
       "topicJaccard": 1,
-      "reason": "Verified syllabus match; exact source payloads copied."
+      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
+      "reusedVariants": 24,
+      "expectedVariants": 24,
+      "allVariantsCopiedVerbatim": true
     },
     {
       "name": "GENERATIVE AI & PROMPT ENGINEERING",
@@ -307,7 +325,10 @@
       "maxUnits": 15,
       "unitTitleRatio": 1,
       "topicJaccard": 1,
-      "reason": "Verified syllabus match; exact source payloads copied."
+      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
+      "reusedVariants": 36,
+      "expectedVariants": 36,
+      "allVariantsCopiedVerbatim": true
     },
     {
       "name": "MATHEMATICS-II",
@@ -320,7 +341,10 @@
       "maxUnits": 5,
       "unitTitleRatio": 1,
       "topicJaccard": 1,
-      "reason": "Verified syllabus match; exact source payloads copied."
+      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
+      "reusedVariants": 36,
+      "expectedVariants": 36,
+      "allVariantsCopiedVerbatim": true
     },
     {
       "name": "UNIT OPERATION-I",
@@ -333,6 +357,14 @@
     "Mid1 uses the first half of ordered syllabus units, weighted by contact hours when available.",
     "TestsData has four columns only; metadata is in test_index.",
     "Theory rows use Options=[] and model answers in Answers; consumer must branch on format.",
-    "New items are syllabus-derived draft content and need academic review."
-  ]
+    "New items are syllabus-derived draft content and need academic review.",
+    "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim."
+  ],
+  "reuseVerification": {
+    "verifiedAt": "2026-10-16",
+    "reusedVariants": 132,
+    "previouslyMismatchedPayloadsCorrected": 99,
+    "method": "Matched target and source rows by subject, exam type, difficulty and occurrence, then compared Questions, Options and Answers exactly. Chemical Engineering TestIds and metadata were preserved.",
+    "allMarkedReuseSubjectsFullyCopied": true
+  }
 }
