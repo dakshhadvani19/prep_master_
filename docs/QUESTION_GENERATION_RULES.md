@@ -457,3 +457,14 @@ The live `public."TestsData"` table has only `TestId BIGINT`, `Questions jsonb[]
 - A consumer that reads from `TestsData` must branch on format: an empty `Options` array identifies a theory row in this export, so it must not render that row as a four-option MCQ. Model answers live in `Answers` for these theory rows; this payload convention must be handled explicitly by the reading/scoring UI.
 - Keep review metadata outside the four-column database row. Before production, verify factual answers, mathematical calculations, legal details, plausible distractors, syllabus alignment and theory-answer correctness. Structural validation and balanced answer positions do not constitute an academic audit.
 - The v2 variants reuse source questions across different tests when the approved source pool is smaller than the total bank demand. Distinct test variants do not imply every question is unique across the full bank.
+
+## 15. Cross-course exact subject-name reuse
+
+- Before generating a new subject bank, search the existing question banks across all available courses and semesters for a **normalized exact subject-name match**. Compare names case-insensitively after Unicode normalization, ignoring punctuation and spacing differences. Examples include `Project-I` and `PROJECT - I`.
+- If an exact-name source exists and its `isDepartmentalSubject` flag is compatible with the target subject, reuse the existing `Questions`, `Options`, and `Answers` payload arrays verbatim for each corresponding exam type, difficulty, and occurrence. **Do not regenerate those questions merely because the target syllabus differs or is worded differently.**
+- Preserve the target subject's own `SubjectId`, `TestId`, course, semester, exam-type mapping, difficulty, occurrence, and syllabus metadata. Only the question/option/answer payload comes from the source bank. Record source course, source subject ID/name, source semester/path, source TestId, and the match method in companion metadata.
+- An exact-name match is a reuse instruction, **not proof that the source questions fit the target syllabus**. Flag any known syllabus difference explicitly in the reuse audit; do not silently edit copied payloads to appear syllabus-specific. Require human review before using mismatched material for formal assessment.
+- If the exact-name source has an incompatible departmental/exam-format flag, do not silently generate a new bank under that same name. Stop and flag the conflict for review.
+- Use syllabus-code or unit/topic similarity only when no normalized exact-name source exists. For non-name matches, retain the existing syllabus-alignment checks.
+- Regenerate the staged SQL seed after copying payloads so its inserted values exactly match the canonical JSON bank. Do not execute the seed as part of question generation; check TestId collisions against the live database immediately before insertion.
+
