@@ -583,7 +583,10 @@
     "mcqQuestions": 18360,
     "theoryQuestions": 2400,
     "mcqOptionEntries": 73440,
-    "answerEntries": 20760
+    "answerEntries": 20760,
+    "reusedTestVariants": 468,
+    "exactNameReuseSubjects": 4,
+    "exactNameReuseVariants": 108
   },
   "examRules": {
     "nonDepartmental": "Mid 1: four 8-mark theory questions and model answers, limited to the first 50% of ordered syllabus; Mid 2: 30 MCQs; ESE: four 8-mark theory questions and model answers.",
@@ -646,5 +649,38 @@
       "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
       "syllabusDifferenceOverride": true
     }
-  ]
+  ],
+  "reuseAuditSummary": {
+    "reusedSubjectBanks": 15,
+    "reusedTestPayloadVariants": 468,
+    "exactNameOverrideSubjects": 4,
+    "exactNameOverrideVariants": 108,
+    "bySemester": [
+      {
+        "semester": 1,
+        "reusedVariants": 156
+      },
+      {
+        "semester": 2,
+        "reusedVariants": 132
+      },
+      {
+        "semester": 3,
+        "reusedVariants": 36
+      },
+      {
+        "semester": 4,
+        "reusedVariants": 36
+      },
+      {
+        "semester": 5,
+        "reusedVariants": 48
+      },
+      {
+        "semester": 6,
+        "reusedVariants": 60
+      }
+    ],
+    "verification": "Reused arrays were copied from existing source bank rows and verified by source/target subject, exam type, difficulty, and occurrence. The four explicit name-overrides were separately compared for exact Questions/Options/Answers equality."
+  }
 }
