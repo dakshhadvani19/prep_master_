@@ -13,7 +13,7 @@ CourseId 46; 8 active subjects.
 - Each existing exam type has 12 variants: 4 Easy, 4 Medium, 4 Hard.
 
 ## Reuse policy
-Existing Computer Engineering question payloads are copied unchanged only when unit titles and syllabus topics pass the match test; only TestIds and metadata are remapped. Same-name or near-name candidates that fail syllabus verification are newly drafted. See reuseAudit in the JSON.
+Verified CE source payloads have now been copied verbatim where matched syllabus units/topics meet the threshold; only the target TestId and metadata are remapped. 5 subjects were reused; rejected candidates were drafted against their own syllabus. See reuseAudit in the JSON.
 
 ## Counts
 - semester: 1
