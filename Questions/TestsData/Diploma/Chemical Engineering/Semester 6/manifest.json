@@ -12,8 +12,8 @@
   "counts": {
     "semester": 6,
     "subjects": 4,
-    "reusedSubjects": 0,
-    "newDraftSubjects": 4,
+    "reusedSubjects": 2,
+    "newDraftSubjects": 2,
     "nonDepartmentalSubjects": 3,
     "departmentalSubjects": 1,
     "examTypeBanks": 11,
@@ -109,7 +109,21 @@
           "tests": 12,
           "syllabusScope": "Full semester"
         }
-      ]
+      ],
+      "reuse": {
+        "reuse": true,
+        "sourceName": "Entrepreneurship Development",
+        "sourceSubjectId": "44000935160701",
+        "sourceId": "44000935160701",
+        "sourceSemester": 6,
+        "normalizedNameMatch": true,
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "reusedVariants": 36,
+        "expectedVariants": 36,
+        "allVariantsCopiedVerbatim": true,
+        "syllabusDifferenceOverride": true,
+        "reason": "Exact normalized subject-name match; existing payload reused verbatim per user instruction despite syllabus wording differences."
+      }
     },
     {
       "name": "PROJECT-II",
@@ -128,7 +142,21 @@
           "tests": 12,
           "syllabusScope": "Full semester"
         }
-      ]
+      ],
+      "reuse": {
+        "reuse": true,
+        "sourceName": "Project-II",
+        "sourceSubjectId": "44000935160201",
+        "sourceId": "44000935160201",
+        "sourceSemester": 6,
+        "normalizedNameMatch": true,
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "reusedVariants": 24,
+        "expectedVariants": 24,
+        "allVariantsCopiedVerbatim": true,
+        "syllabusDifferenceOverride": true,
+        "reason": "Exact normalized subject-name match; existing payload reused verbatim per user instruction despite syllabus wording differences."
+      }
     }
   ],
   "reuseAudit": [
@@ -147,26 +175,61 @@
     {
       "name": "ENTREPRENEURSHIP DEVELOPMENT",
       "SubjectId": "46000938260401",
-      "reuse": false,
+      "reuse": true,
       "sourceName": "Entrepreneurship Development",
       "sourceId": "44000935160701",
       "sourceSemester": 6,
-      "reason": "Rejected after syllabus check: Chemical syllabus covers self-employment, support agencies, setup/proposal planning and enterprise risk; CE syllabus outline has generic entrepreneurship, support, costs and operations content without matching units."
+      "reason": "Exact normalized subject-name match. Per user instruction, copied the existing Computer Engineering Questions/Options/Answers payloads verbatim even though the syllabus descriptions differ.",
+      "normalizedNameMatch": true,
+      "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+      "reusedVariants": 36,
+      "expectedVariants": 36,
+      "allVariantsCopiedVerbatim": true,
+      "syllabusDifferenceOverride": true
     },
     {
       "name": "PROJECT-II",
       "SubjectId": "46000938260301",
-      "reuse": false,
+      "reuse": true,
       "sourceName": "Project-II",
       "sourceId": "44000935160201",
       "sourceSemester": 6,
-      "reason": "Rejected after syllabus check: Chemical syllabus units focus on manufacturing a selected product and project-report content; CE syllabus focuses on the standard project lifecycle phases."
+      "reason": "Exact normalized subject-name match. Per user instruction, copied the existing Computer Engineering Questions/Options/Answers payloads verbatim even though the syllabus descriptions differ.",
+      "normalizedNameMatch": true,
+      "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+      "reusedVariants": 24,
+      "expectedVariants": 24,
+      "allVariantsCopiedVerbatim": true,
+      "syllabusDifferenceOverride": true
     }
   ],
   "notes": [
     "Mid1 is first-half syllabus, using unit contact hours where available.",
     "TestsData stores four columns only; metadata is in test_index.",
     "Theory rows have Options=[] and model answers in Answers.",
-    "All content is syllabus-derived draft material requiring subject-matter review."
-  ]
+    "All content is syllabus-derived draft material requiring subject-matter review.",
+    "Per user instruction, normalized exact subject-name matches take priority over syllabus wording differences. Existing Questions/Options/Answers payloads are copied verbatim; mismatch details are retained in reuseAudit for academic review."
+  ],
+  "reuseVerification": {
+    "verifiedAt": "2026-10-16",
+    "reusedVariants": 60,
+    "newlyCorrectedSubjects": [
+      {
+        "name": "ENTREPRENEURSHIP DEVELOPMENT",
+        "sourceName": "Entrepreneurship Development",
+        "variants": 36,
+        "payloadsCopiedVerbatim": true,
+        "syllabusDifferenceOverride": true
+      },
+      {
+        "name": "PROJECT-II",
+        "sourceName": "Project-II",
+        "variants": 24,
+        "payloadsCopiedVerbatim": true,
+        "syllabusDifferenceOverride": true
+      }
+    ],
+    "method": "Matched normalized exact subject name, exam type, difficulty and occurrence; copied Questions, Options and Answers verbatim while preserving Chemical Engineering TestIds and metadata.",
+    "allMarkedReuseSubjectsFullyCopied": true
+  }
 }
