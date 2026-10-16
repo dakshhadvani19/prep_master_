@@ -2,18 +2,26 @@
 
 CourseId 46; 8 subjects.
 
-- [exam-bank-v2.json](./exam-bank-v2.json): canonical payloads and syllabus mapping.
-- [seed-all-v2.sql](./seed-all-v2.sql): staged transaction.
-- [manifest.json](./manifest.json): counts and rules.
+- [exam-bank-v2.json](./exam-bank-v2.json): canonical question payloads and metadata.
+- [seed-all-v2.sql](./seed-all-v2.sql): staged transaction with 252 INSERT statements.
+- [manifest.json](./manifest.json): counts, exam rules, and reuse audit.
 
-Non-departmental subjects: Mid1/ESE have four theory questions × 8 marks and answers; Mid2 has 30 MCQs. Departmental subjects: Mid1/Mid2 have 30 MCQs; no ESE. Mid1 covers first-half syllabus. Every exam type has 12 variants (4 Easy, 4 Medium, 4 Hard). Same-name Project-I and Summer Internship candidates were not reused because their Chemical Engineering syllabi differ materially.
+## Exam structure
 
-Database remains unchanged. Draft content requires academic review. Theory rows are marked by `Options=[]`.
+- Non-departmental subjects: Mid 1 = four 8-mark theory questions and model answers, scoped to the first 50% of syllabus; Mid 2 = 30 MCQs; ESE = four 8-mark theory questions and model answers.
+- Departmental subjects: Mid 1 and Mid 2 = 30 MCQs; no ESE.
+- Each exam type has 12 variants: 4 Easy, 4 Medium, 4 Hard.
+
+## Same-name reuse
+
+Per the requested rule, existing Computer Engineering payloads were copied verbatim for **Project-I** and **Summer Internship**. Questions, options, and answers were not regenerated. Their different syllabus descriptions are recorded in the manifest and bank metadata for review.
+
+## Counts
 
 - semester: 5
 - subjects: 8
-- reusedSubjects: 0
-- newDraftSubjects: 8
+- reusedSubjects: 2
+- newDraftSubjects: 6
 - nonDepartmentalSubjects: 5
 - departmentalSubjects: 3
 - examTypeBanks: 21
@@ -24,3 +32,5 @@ Database remains unchanged. Draft content requires academic review. Theory rows 
 - theoryQuestions: 480
 - mcqOptionEntries: 15840
 - answerEntries: 4440
+
+The seed has not been executed against Supabase. The existing TestsData schema is unchanged. Theory rows use `Options=[]` and model answers in `Answers`; the application must support both row formats. New content still requires academic review, and the two same-name reused subjects should be checked against the Chemical Engineering syllabus before formal assessment use.
