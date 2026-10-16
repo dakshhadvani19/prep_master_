@@ -1,0 +1,229 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 3,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 3,
+    "subjects": 5,
+    "reusedSubjects": 1,
+    "newDraftSubjects": 4,
+    "nonDepartmentalSubjects": 4,
+    "departmentalSubjects": 1,
+    "examTypeBanks": 14,
+    "totalTests": 168,
+    "mcqTests": 72,
+    "theoryTests": 96,
+    "mcqQuestions": 2160,
+    "theoryQuestions": 384,
+    "mcqOptionEntries": 8640,
+    "answerEntries": 2544
+  },
+  "exam_rules": {
+    "nonDepartmental": "Mid1/ESE 4 theory × 8 marks; Mid1 first half; Mid2 30 MCQs.",
+    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE.",
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    }
+  },
+  "subjects": [
+    {
+      "name": "INDUSTRIAL STOICHIOMETRY",
+      "SubjectId": "46000938230201",
+      "isDepartmentalSubject": false,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name source."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half: Introduction; Basic Chemical Calculations; Material Balance In Process Without Chemical Reactions"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "MATHEMATICS-III",
+      "SubjectId": "46009131030201",
+      "isDepartmentalSubject": false,
+      "reuse": {
+        "reuse": true,
+        "sourceName": "Mathematics-III",
+        "sourceSubjectId": "44009131030201",
+        "sourceSemester": 3,
+        "unitMatches": 5,
+        "maxUnits": 5,
+        "unitTitleRatio": 1,
+        "topicJaccard": 1,
+        "reason": "Syllabus verified; source payload reused verbatim."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half: Permutation and Combination; Probability; Binomial Theorem; Differentiation"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "REACTOR & BOILER OPERATION SKILL",
+      "SubjectId": "46000938230401",
+      "isDepartmentalSubject": true,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name source."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half: Generation of steam; Basic of Boiler; Types of boiler and their working and construction"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "SAFETY & POLLUTION MEASURES",
+      "SubjectId": "46000938230301",
+      "isDepartmentalSubject": false,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name source."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half: Safety, Safety codes and standards, PPE; Hazard Identification and control Techaniques; Control of Chemical Hazards"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "UNIT OPERATION - II",
+      "SubjectId": "46000938230101",
+      "isDepartmentalSubject": false,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name source."
+      },
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half: Fluid Statics and its Applications; Fluid–Flow Phenomena; Basic Equations of Fluid Flow"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    }
+  ],
+  "reuseAudit": [
+    {
+      "name": "INDUSTRIAL STOICHIOMETRY",
+      "SubjectId": "46000938230201",
+      "reuse": false,
+      "reason": "No same-name source."
+    },
+    {
+      "name": "MATHEMATICS-III",
+      "SubjectId": "46009131030201",
+      "reuse": true,
+      "sourceName": "Mathematics-III",
+      "sourceSubjectId": "44009131030201",
+      "sourceSemester": 3,
+      "unitMatches": 5,
+      "maxUnits": 5,
+      "unitTitleRatio": 1,
+      "topicJaccard": 1,
+      "reason": "Syllabus verified; source payload reused verbatim."
+    },
+    {
+      "name": "REACTOR & BOILER OPERATION SKILL",
+      "SubjectId": "46000938230401",
+      "reuse": false,
+      "reason": "No same-name source."
+    },
+    {
+      "name": "SAFETY & POLLUTION MEASURES",
+      "SubjectId": "46000938230301",
+      "reuse": false,
+      "reason": "No same-name source."
+    },
+    {
+      "name": "UNIT OPERATION - II",
+      "SubjectId": "46000938230101",
+      "reuse": false,
+      "reason": "No same-name source."
+    }
+  ],
+  "notes": [
+    "Mid1 is the first half of ordered syllabus units, weighted by hours where available.",
+    "Metadata is in test_index; TestsData has four columns.",
+    "Theory rows have Options=[]; new content requires review."
+  ]
+}
