@@ -1,0 +1,172 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 6,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 6,
+    "subjects": 4,
+    "reusedSubjects": 0,
+    "newDraftSubjects": 4,
+    "nonDepartmentalSubjects": 3,
+    "departmentalSubjects": 1,
+    "examTypeBanks": 11,
+    "totalTests": 132,
+    "mcqTests": 60,
+    "theoryTests": 72,
+    "mcqQuestions": 1800,
+    "theoryQuestions": 288,
+    "mcqOptionEntries": 7200,
+    "answerEntries": 2088
+  },
+  "exam_rules": {
+    "nonDepartmental": "Mid1/ESE four 8-mark theory questions; Mid1 first half; Mid2 30 MCQs",
+    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE",
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "False subjects: occurrences 1-12 Mid1, 13-24 Mid2, 25-36 ESE; true subjects: 1-12 Mid1,13-24 Mid2."
+  },
+  "subjects": [
+    {
+      "name": "CHEMICAL ENGINEERING PLANT ECONOMICS",
+      "SubjectId": "46000938260201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "First half: Introduction; Project Development; Process Design; Selection Process Equipment and materials"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "CHEMICAL PROCESS EQUIPMENT DESIGN",
+      "SubjectId": "46000938260101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "First half: Basic Considerations in Process Equipment Design; Design Consideration; Pressure Vessels; Reaction Vessels"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "ENTREPRENEURSHIP DEVELOPMENT",
+      "SubjectId": "46000938260401",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "First half: Introduction To Self-Employment And Entrepreneurship; Entrepreneurial Support Agencies; Project Set Up Planning"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "PROJECT-II",
+      "SubjectId": "46000938260301",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "First half: Manufacturing of any one of products from below mentioned"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "syllabusScope": "Full semester"
+        }
+      ]
+    }
+  ],
+  "reuseAudit": [
+    {
+      "name": "CHEMICAL ENGINEERING PLANT ECONOMICS",
+      "SubjectId": "46000938260201",
+      "reuse": false,
+      "reason": "No same-name source selected."
+    },
+    {
+      "name": "CHEMICAL PROCESS EQUIPMENT DESIGN",
+      "SubjectId": "46000938260101",
+      "reuse": false,
+      "reason": "No same-name source selected."
+    },
+    {
+      "name": "ENTREPRENEURSHIP DEVELOPMENT",
+      "SubjectId": "46000938260401",
+      "reuse": false,
+      "sourceName": "Entrepreneurship Development",
+      "sourceId": "44000935160701",
+      "sourceSemester": 6,
+      "reason": "Rejected after syllabus check: Chemical syllabus covers self-employment, support agencies, setup/proposal planning and enterprise risk; CE syllabus outline has generic entrepreneurship, support, costs and operations content without matching units."
+    },
+    {
+      "name": "PROJECT-II",
+      "SubjectId": "46000938260301",
+      "reuse": false,
+      "sourceName": "Project-II",
+      "sourceId": "44000935160201",
+      "sourceSemester": 6,
+      "reason": "Rejected after syllabus check: Chemical syllabus units focus on manufacturing a selected product and project-report content; CE syllabus focuses on the standard project lifecycle phases."
+    }
+  ],
+  "notes": [
+    "Mid1 is first-half syllabus, using unit contact hours where available.",
+    "TestsData stores four columns only; metadata is in test_index.",
+    "Theory rows have Options=[] and model answers in Answers.",
+    "All content is syllabus-derived draft material requiring subject-matter review."
+  ]
+}
