@@ -29,3 +29,14 @@ Existing CE rows are copied without rewriting Questions/Options/Answers only whe
 - theoryQuestions: 384
 - mcqOptionEntries: 14400
 - answerEntries: 3984
+
+
+## Reuse verification update (2026-10-16)
+
+All marked-reuse subjects have now been compared against the corresponding Computer Engineering source bank by exam type, difficulty and occurrence. **Every matching variant now reuses the source Questions, Options and Answers arrays verbatim**; Chemical Engineering TestIds and subject metadata remain intact.
+
+- Verified copied variants in this semester: 132
+- Existing payloads corrected to exact source copies: 99
+- Syllabus-matched subjects: ENGINEERING DRAWING; ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT; INTEGRATED PERSONALITY DEVELOPMENT COURSE-I; MATHEMATICS-II
+
+Same-name subjects with materially different syllabi remain Chemical Engineering-specific drafts instead of being copied wholesale. The database is unchanged; the SQL is a staged export.
