@@ -1,20 +1,24 @@
 # Diploma Chemical Engineering — Semester 2 Exam Bank v2
 
-- [exam-bank-v2.json](./exam-bank-v2.json): canonical TestId-wise payload and metadata.
-- [answer-review-v2.json](./answer-review-v2.json): review-only MCQ rationales and reuse decisions.
-- [seed-all-v2.sql](./seed-all-v2.sql): staged transaction (216 INSERT statements).
-- [manifest.json](./manifest.json): counts, rules and syllabus reuse outcomes.
+CourseId 46; 7 active subjects.
 
-## Exam design
+- [exam-bank-v2.json](./exam-bank-v2.json): question data, mappings and reuse audit.
+- [seed-all-v2.sql](./seed-all-v2.sql): staged TestsData insert transaction.
+- [manifest.json](./manifest.json): counts and exam rules.
 
-- `isDepartmentalSubject=false`: Mid 1 = four 8-mark theory questions with model answers (first half syllabus); Mid 2 = 30 MCQs; ESE = four 8-mark theory questions with model answers.
-- `isDepartmentalSubject=true`: Mid 1 = 30 MCQs (first half syllabus); Mid 2 = 30 MCQs; no ESE.
-- Every available exam type has 12 variants: 4 Easy, 4 Medium, 4 Hard.
+## Structure
+- `isDepartmentalSubject=false`: Mid1: four 8-mark theory questions with answers (first half syllabus); Mid2: 30 MCQs; ESE: four 8-mark theory questions with answers.
+- `isDepartmentalSubject=true`: Mid1 and Mid2: 30 MCQs each; no ESE. Mid1 covers first half only.
+- Every exam type has 12 variants: 4 Easy, 4 Medium, 4 Hard.
+
+## Reuse
+Existing CE rows are copied without rewriting Questions/Options/Answers only when syllabus topic alignment passes verification. See `reuseAudit` in the JSON. The table remains unchanged; review fresh draft questions before running SQL. Theory is identified by `Options=[]`.
 
 ## Counts
-
 - semester: 2
 - subjects: 7
+- reusedSubjects: 4
+- newDraftSubjects: 3
 - nonDepartmentalSubjects: 4
 - departmentalSubjects: 3
 - examTypeBanks: 18
@@ -25,7 +29,3 @@
 - theoryQuestions: 384
 - mcqOptionEntries: 14400
 - answerEntries: 3984
-- reusedSubjects: 4
-- newSubjectBanks: 3
-
-Same-title subjects are reused only when their syllabus aligns. The live table has only TestId, Questions, Options and Answers; subject/exam/difficulty mappings are in test_index. Theory uses Options=[] and model answers in Answers, so the consuming application must support both row formats. No database rows are inserted by file generation. This bank remains a draft pending academic review.
