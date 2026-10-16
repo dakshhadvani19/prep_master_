@@ -7,12 +7,13 @@
   "semester": 1,
   "canonical_files": {
     "test_bank": "exam-bank-v2.json",
-    "answer_review": "answer-review-v2.json",
     "seed_sql": "seed-all-v2.sql"
   },
   "counts": {
     "semester": 1,
     "subjects": 8,
+    "reusedSubjects": 0,
+    "newDraftSubjects": 8,
     "nonDepartmentalSubjects": 5,
     "departmentalSubjects": 3,
     "examTypeBanks": 21,
@@ -22,328 +23,366 @@
     "mcqQuestions": 3960,
     "theoryQuestions": 480,
     "mcqOptionEntries": 15840,
-    "answerEntries": 4440,
-    "reusedSubjects": 5,
-    "newSubjectBanks": 3
+    "answerEntries": 4440
   },
   "exam_rules": {
-    "nonDepartmental": {
-      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
-      "Mid2": "12 MCQ variants × 30",
-      "ESE": "12 theory variants × 4 questions × 8 marks"
-    },
-    "departmental": {
-      "Mid1": "12 MCQ variants × 30; first half",
-      "Mid2": "12 MCQ variants × 30",
-      "ESE": "not generated"
-    },
+    "nonDepartmental": "Mid1/ESE 4 theory questions × 8 marks; Mid1 first half; Mid2 30 MCQs.",
+    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE.",
     "difficulty": {
       "easy": 4,
       "medium": 4,
       "hard": 4
     },
-    "testIdRule": "Non-departmental: occurrences 1–12 Mid 1, 13–24 Mid 2, 25–36 ESE. Departmental: occurrences 1–12 Mid 1, 13–24 Mid 2."
+    "testIdRule": "SubjectId concatenated with occurrence. False subjects: 1-12 Mid1, 13-24 Mid2, 25-36 ESE. True subjects: 1-12 Mid1, 13-24 Mid2."
   },
   "subjects": [
     {
       "name": "APPLIED CHEMISTRY",
       "SubjectId": "46009719310201",
-      "subject_code": "09GS3102",
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09GS3102.pdf",
-      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
-      "reusedFrom": null,
-      "syllabusVerification": null,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name candidate bank."
+      },
       "examTypes": [
         {
           "examType": "Mid 1",
           "format": "theory",
           "tests": 12,
-          "scope": "First half of ordered syllabus units: Basic Concepts of Chemistry; General Organic Chemistry."
+          "scope": "First 50% syllabus: Basic Concepts of Chemistry; General Organic Chemistry"
         },
         {
           "examType": "Mid 2",
           "format": "mcq",
           "tests": 12,
-          "scope": "Full semester syllabus practice bank."
+          "scope": "Full semester syllabus"
         },
         {
           "examType": "ESE",
           "format": "theory",
           "tests": 12,
-          "scope": "Full semester syllabus."
+          "scope": "Full semester syllabus"
         }
       ]
     },
     {
       "name": "BHARATIYA KNOWLEDGE SYSTEM",
       "SubjectId": "46009911010101",
-      "subject_code": "09IK0101",
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09IK0101.pdf",
-      "reuseDecision": "REUSED_VERIFIED_SYLLABUS",
-      "reusedFrom": {
-        "CourseId": 44,
-        "SubjectId": "44009911010101",
-        "SubjectName": "Bharatiya Knowledge System",
+      "reuse": {
+        "reuse": false,
+        "sourceName": "Bharatiya Knowledge System",
+        "sourceId": "44009911010101",
         "sourceSemester": 1,
-        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 1/exam-bank-v2.json",
-        "syllabusVerification": {
-          "unitCounts": [
-            4,
-            4
-          ],
-          "titleScore": 1,
-          "topicTokenJaccard": 0.889
-        }
+        "unitMatches": 0,
+        "maxUnits": 4,
+        "unitTitleRatio": 0,
+        "topicOverlap": 0,
+        "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
       },
-      "syllabusVerification": null,
       "examTypes": [
         {
           "examType": "Mid 1",
           "format": "theory",
           "tests": 12,
-          "scope": "First two syllabus units: foundations of BKS and science/mathematics in ancient Bharat."
+          "scope": "First 50% syllabus: Introduction to Bharatiya Knowledge Systems (BKS); Science and Mathematics in Ancient Bharat"
         },
         {
           "examType": "Mid 2",
           "format": "mcq",
           "tests": 12,
-          "scope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+          "scope": "Full semester syllabus"
         },
         {
           "examType": "ESE",
           "format": "theory",
           "tests": 12,
-          "scope": "Full Semester 1 syllabus."
+          "scope": "Full semester syllabus"
         }
       ]
     },
     {
       "name": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
       "SubjectId": "46000938210101",
-      "subject_code": "09CH2101",
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2101.pdf",
-      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
-      "reusedFrom": null,
-      "syllabusVerification": null,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name candidate bank."
+      },
       "examTypes": [
         {
           "examType": "Mid 1",
           "format": "theory",
           "tests": 12,
-          "scope": "First half of ordered syllabus units: Various laboratory equipment and devices; Block Diagram and Flow diagram; Storage vessels and Pressure vessel; Reaction Vessel."
+          "scope": "First 50% syllabus: Various laboratory equipment and devices; Block Diagram and Flow diagram; Storage vessels and Pressure vessel; Reaction Vessel"
         },
         {
           "examType": "Mid 2",
           "format": "mcq",
           "tests": 12,
-          "scope": "Full semester syllabus practice bank."
+          "scope": "Full semester syllabus"
         },
         {
           "examType": "ESE",
           "format": "theory",
           "tests": 12,
-          "scope": "Full semester syllabus."
+          "scope": "Full semester syllabus"
         }
       ]
     },
     {
       "name": "COMMUNICATION SKILLS",
       "SubjectId": "46091912010301",
-      "subject_code": "09SL0103",
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09SL0103.pdf",
-      "reuseDecision": "REUSED_VERIFIED_SYLLABUS",
-      "reusedFrom": {
-        "CourseId": 44,
-        "SubjectId": "44091912010301",
-        "SubjectName": "Communication Skills-I",
+      "reuse": {
+        "reuse": false,
+        "sourceName": "Communication Skills-I",
+        "sourceId": "44091912010301",
         "sourceSemester": 1,
-        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 1/exam-bank-v2.json",
-        "syllabusVerification": {
-          "unitCounts": [
-            2,
-            2
-          ],
-          "titleScore": 1,
-          "topicTokenJaccard": 1
-        }
+        "unitMatches": 0,
+        "maxUnits": 2,
+        "unitTitleRatio": 0,
+        "topicOverlap": 0,
+        "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
       },
-      "syllabusVerification": null,
       "examTypes": [
         {
           "examType": "Mid 1",
           "format": "theory",
           "tests": 12,
-          "scope": "First unit only: reading strategies, comprehension and the listed grammar topics."
+          "scope": "First 50% syllabus: Introduction to Reading Skills"
         },
         {
           "examType": "Mid 2",
           "format": "mcq",
           "tests": 12,
-          "scope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+          "scope": "Full semester syllabus"
         },
         {
           "examType": "ESE",
           "format": "theory",
           "tests": 12,
-          "scope": "Full Semester 1 syllabus."
+          "scope": "Full semester syllabus"
         }
       ]
     },
     {
       "name": "COMPUTER FUNDAMENTAL SKILL",
       "SubjectId": "46000935210101",
-      "subject_code": "09CE2101",
       "isDepartmentalSubject": true,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE2101.pdf",
-      "reuseDecision": "REUSED_VERIFIED_SYLLABUS",
-      "reusedFrom": {
-        "CourseId": 44,
-        "SubjectId": "44000935210101",
-        "SubjectName": "Computer Fundamental Skill",
+      "reuse": {
+        "reuse": false,
+        "sourceName": "Computer Fundamental Skill",
+        "sourceId": "44000935210101",
         "sourceSemester": 1,
-        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 1/exam-bank-v2.json",
-        "syllabusVerification": {
-          "unitCounts": [
-            7,
-            7
-          ],
-          "titleScore": 1,
-          "topicTokenJaccard": 0.996
-        }
+        "unitMatches": 0,
+        "maxUnits": 7,
+        "unitTitleRatio": 0,
+        "topicOverlap": 0,
+        "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
       },
-      "syllabusVerification": null,
       "examTypes": [
         {
           "examType": "Mid 1",
           "format": "mcq",
           "tests": 12,
-          "scope": "First 50% of the ordered practical syllabus: computer fundamentals, OS/file operations and introductory productivity/web tasks."
+          "scope": "First 50% syllabus: FUNDAMENTALS OF COMPUTER SYSTEM; Practical list"
         },
         {
           "examType": "Mid 2",
           "format": "mcq",
           "tests": 12,
-          "scope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+          "scope": "Full semester syllabus"
         }
       ]
     },
     {
       "name": "INDIAN CONSTITUTION",
       "SubjectId": "46009121010101",
-      "subject_code": "09AU0101",
       "isDepartmentalSubject": true,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0101.pdf",
-      "reuseDecision": "REUSED_VERIFIED_SYLLABUS",
-      "reusedFrom": {
-        "CourseId": 44,
-        "SubjectId": "44009121010101",
-        "SubjectName": "Indian Constitution",
+      "reuse": {
+        "reuse": false,
+        "sourceName": "Indian Constitution",
+        "sourceId": "44009121010101",
         "sourceSemester": 1,
-        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 1/exam-bank-v2.json",
-        "syllabusVerification": {
-          "unitCounts": [
-            5,
-            5
-          ],
-          "titleScore": 1,
-          "topicTokenJaccard": 1
-        }
+        "unitMatches": 0,
+        "maxUnits": 5,
+        "unitTitleRatio": 0,
+        "topicOverlap": 0,
+        "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
       },
-      "syllabusVerification": null,
       "examTypes": [
         {
           "examType": "Mid 1",
           "format": "mcq",
           "tests": 12,
-          "scope": "First 50% of the ordered syllabus, primarily Unit 1: Constitution-making, Preamble, basic structure, features, Fundamental Rights/Duties, Articles 14/19/21 and Directive Principles."
+          "scope": "First 50% syllabus: The Constitution – Introduction"
         },
         {
           "examType": "Mid 2",
           "format": "mcq",
           "tests": 12,
-          "scope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+          "scope": "Full semester syllabus"
         }
       ]
     },
     {
       "name": "MATHEMATICS-I",
       "SubjectId": "46009131210101",
-      "subject_code": "09MA2101",
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2101.pdf",
-      "reuseDecision": "REUSED_VERIFIED_SYLLABUS",
-      "reusedFrom": {
-        "CourseId": 44,
-        "SubjectId": "44009131210101",
-        "SubjectName": "Mathematics-I",
+      "reuse": {
+        "reuse": false,
+        "sourceName": "Mathematics-I",
+        "sourceId": "44009131210101",
         "sourceSemester": 1,
-        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 1/exam-bank-v2.json",
-        "syllabusVerification": {
-          "unitCounts": [
-            5,
-            5
-          ],
-          "titleScore": 1,
-          "topicTokenJaccard": 1
-        }
+        "unitMatches": 0,
+        "maxUnits": 5,
+        "unitTitleRatio": 0,
+        "topicOverlap": 0,
+        "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
       },
-      "syllabusVerification": null,
       "examTypes": [
         {
           "examType": "Mid 1",
           "format": "theory",
           "tests": 12,
-          "scope": "First half by ordered syllabus hours: number sets/indices, HCF/LCM, polynomials/identities and introductory 2D mensuration."
+          "scope": "First 50% syllabus: Basic calculation; HCF and LCM of numbers; Polynomials; Mensuration"
         },
         {
           "examType": "Mid 2",
           "format": "mcq",
           "tests": 12,
-          "scope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+          "scope": "Full semester syllabus"
         },
         {
           "examType": "ESE",
           "format": "theory",
           "tests": 12,
-          "scope": "Full Semester 1 syllabus."
+          "scope": "Full semester syllabus"
         }
       ]
     },
     {
       "name": "MECHANICAL WORKSHOP",
       "SubjectId": "46009135210201",
-      "subject_code": "09ME2102",
       "isDepartmentalSubject": true,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME2102.pdf",
-      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
-      "reusedFrom": null,
-      "syllabusVerification": null,
+      "reuse": {
+        "reuse": false,
+        "reason": "No same-name candidate bank."
+      },
       "examTypes": [
         {
           "examType": "Mid 1",
           "format": "mcq",
           "tests": 12,
-          "scope": "First half of ordered syllabus units: To know and gain worth of mechanical engineering in diverse; To prepare plant layout for workshop.; To prepare job a by using files and hacksaw.; Hands on practice of punch and hammer.; Demonstration of carpentry tools.; To prepare carpentry job (wood material) as per given diagram.."
+          "scope": "First 50% syllabus: To know and gain worth of mechanical engineering in diverse; To prepare plant layout for workshop.; To prepare job a by using files and hacksaw.; Hands on practice of punch and hammer.; Demonstration of carpentry tools.; To prepare carpentry job (wood material) as per given diagram."
         },
         {
           "examType": "Mid 2",
           "format": "mcq",
           "tests": 12,
-          "scope": "Full semester syllabus practice bank."
+          "scope": "Full semester syllabus"
         }
       ]
     }
   ],
+  "reuseAudit": [
+    {
+      "name": "APPLIED CHEMISTRY",
+      "SubjectId": "46009719310201",
+      "reuse": false,
+      "reason": "No same-name candidate bank."
+    },
+    {
+      "name": "BHARATIYA KNOWLEDGE SYSTEM",
+      "SubjectId": "46009911010101",
+      "reuse": false,
+      "sourceName": "Bharatiya Knowledge System",
+      "sourceId": "44009911010101",
+      "sourceSemester": 1,
+      "unitMatches": 0,
+      "maxUnits": 4,
+      "unitTitleRatio": 0,
+      "topicOverlap": 0,
+      "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+    },
+    {
+      "name": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
+      "SubjectId": "46000938210101",
+      "reuse": false,
+      "reason": "No same-name candidate bank."
+    },
+    {
+      "name": "COMMUNICATION SKILLS",
+      "SubjectId": "46091912010301",
+      "reuse": false,
+      "sourceName": "Communication Skills-I",
+      "sourceId": "44091912010301",
+      "sourceSemester": 1,
+      "unitMatches": 0,
+      "maxUnits": 2,
+      "unitTitleRatio": 0,
+      "topicOverlap": 0,
+      "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+    },
+    {
+      "name": "COMPUTER FUNDAMENTAL SKILL",
+      "SubjectId": "46000935210101",
+      "reuse": false,
+      "sourceName": "Computer Fundamental Skill",
+      "sourceId": "44000935210101",
+      "sourceSemester": 1,
+      "unitMatches": 0,
+      "maxUnits": 7,
+      "unitTitleRatio": 0,
+      "topicOverlap": 0,
+      "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+    },
+    {
+      "name": "INDIAN CONSTITUTION",
+      "SubjectId": "46009121010101",
+      "reuse": false,
+      "sourceName": "Indian Constitution",
+      "sourceId": "44009121010101",
+      "sourceSemester": 1,
+      "unitMatches": 0,
+      "maxUnits": 5,
+      "unitTitleRatio": 0,
+      "topicOverlap": 0,
+      "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+    },
+    {
+      "name": "MATHEMATICS-I",
+      "SubjectId": "46009131210101",
+      "reuse": false,
+      "sourceName": "Mathematics-I",
+      "sourceId": "44009131210101",
+      "sourceSemester": 1,
+      "unitMatches": 0,
+      "maxUnits": 5,
+      "unitTitleRatio": 0,
+      "topicOverlap": 0,
+      "reason": "Name match candidate rejected: syllabus topic overlap insufficient."
+    },
+    {
+      "name": "MECHANICAL WORKSHOP",
+      "SubjectId": "46009135210201",
+      "reuse": false,
+      "reason": "No same-name candidate bank."
+    }
+  ],
   "notes": [
-    "Existing payloads are reused verbatim only when course code, unit/topic alignment and departmental flag match.",
-    "Same-title subjects with different syllabus content are not blindly reused; inspect reuseDecisions.",
-    "Mid 1 scope is recorded from the first half of the ordered syllabus units; confirm against the official exam blueprint.",
-    "Generated question pools and theory answers are drafts requiring academic review.",
-    "TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.",
-    "Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats."
+    "Mid1 is restricted to first 50% of ordered syllabus; use unit hours where present.",
+    "TestsData has only TestId, Questions, Options and Answers; other metadata is in test_index.",
+    "Theory rows use Options=[] and model answers in Answers.",
+    "New draft content needs subject matter review; source bank QA limitations carry over to reused questions."
   ]
 }
