@@ -32,3 +32,14 @@ Verified CE source payloads have now been copied verbatim where matched syllabus
 - answerEntries: 4440
 
 The database is unchanged. Recheck TestId collisions before running SQL. New draft questions and answers need a content QA pass. Theory rows are indicated by `Options=[]`.
+
+
+## Reuse verification update (2026-10-16)
+
+All marked-reuse subjects have now been compared against the corresponding Computer Engineering source bank by exam type, difficulty and occurrence. **Every matching variant now reuses the source Questions, Options and Answers arrays verbatim**; Chemical Engineering TestIds and subject metadata remain intact.
+
+- Verified copied variants in this semester: 156
+- Existing payloads corrected to exact source copies: 117
+- Syllabus-matched subjects: BHARATIYA KNOWLEDGE SYSTEM; COMMUNICATION SKILLS; COMPUTER FUNDAMENTAL SKILL; INDIAN CONSTITUTION; MATHEMATICS-I
+
+Same-name subjects with materially different syllabi remain Chemical Engineering-specific drafts instead of being copied wholesale. The database is unchanged; the SQL is a staged export.
