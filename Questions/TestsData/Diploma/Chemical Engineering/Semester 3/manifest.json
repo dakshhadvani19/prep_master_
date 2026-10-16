@@ -77,7 +77,10 @@
         "maxUnits": 5,
         "unitTitleRatio": 1,
         "topicJaccard": 1,
-        "reason": "Syllabus verified; source payload reused verbatim."
+        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
+        "reusedVariants": 36,
+        "expectedVariants": 36,
+        "allVariantsCopiedVerbatim": true
       },
       "examTypes": [
         {
@@ -200,7 +203,10 @@
       "maxUnits": 5,
       "unitTitleRatio": 1,
       "topicJaccard": 1,
-      "reason": "Syllabus verified; source payload reused verbatim."
+      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
+      "reusedVariants": 36,
+      "expectedVariants": 36,
+      "allVariantsCopiedVerbatim": true
     },
     {
       "name": "REACTOR & BOILER OPERATION SKILL",
@@ -224,6 +230,14 @@
   "notes": [
     "Mid1 is the first half of ordered syllabus units, weighted by hours where available.",
     "Metadata is in test_index; TestsData has four columns.",
-    "Theory rows have Options=[]; new content requires review."
-  ]
+    "Theory rows have Options=[]; new content requires review.",
+    "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim."
+  ],
+  "reuseVerification": {
+    "verifiedAt": "2026-10-16",
+    "reusedVariants": 36,
+    "previouslyMismatchedPayloadsCorrected": 27,
+    "method": "Matched target and source rows by subject, exam type, difficulty and occurrence, then compared Questions, Options and Answers exactly. Chemical Engineering TestIds and metadata were preserved.",
+    "allMarkedReuseSubjectsFullyCopied": true
+  }
 }
