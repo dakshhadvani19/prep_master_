@@ -1,20 +1,25 @@
 # Diploma Chemical Engineering — Semester 1 Exam Bank v2
 
-- [exam-bank-v2.json](./exam-bank-v2.json): canonical TestId-wise payload and metadata.
-- [answer-review-v2.json](./answer-review-v2.json): review-only MCQ rationales and reuse decisions.
-- [seed-all-v2.sql](./seed-all-v2.sql): staged transaction (252 INSERT statements).
-- [manifest.json](./manifest.json): counts, rules and syllabus reuse outcomes.
+CourseId 46; 8 active subjects.
 
-## Exam design
+## Canonical files
+- [exam-bank-v2.json](./exam-bank-v2.json): payloads, exam mapping, source-syllabus match audit.
+- [seed-all-v2.sql](./seed-all-v2.sql): staged TestsData transaction.
+- [manifest.json](./manifest.json): counts and rules.
 
-- `isDepartmentalSubject=false`: Mid 1 = four 8-mark theory questions with model answers (first half syllabus); Mid 2 = 30 MCQs; ESE = four 8-mark theory questions with model answers.
-- `isDepartmentalSubject=true`: Mid 1 = 30 MCQs (first half syllabus); Mid 2 = 30 MCQs; no ESE.
-- Every available exam type has 12 variants: 4 Easy, 4 Medium, 4 Hard.
+## Exam rules
+- `isDepartmentalSubject=false`: Mid1 = four 8-mark theory questions and answers, first half syllabus only; Mid2 = 30 MCQs; ESE = four 8-mark theory questions and answers.
+- `isDepartmentalSubject=true`: Mid1/Mid2 = 30 MCQs; Mid1 only first half; no ESE.
+- Each existing exam type has 12 variants: 4 Easy, 4 Medium, 4 Hard.
+
+## Reuse policy
+Existing Computer Engineering question payloads are copied unchanged only when unit titles and syllabus topics pass the match test; only TestIds and metadata are remapped. Same-name or near-name candidates that fail syllabus verification are newly drafted. See reuseAudit in the JSON.
 
 ## Counts
-
 - semester: 1
 - subjects: 8
+- reusedSubjects: 0
+- newDraftSubjects: 8
 - nonDepartmentalSubjects: 5
 - departmentalSubjects: 3
 - examTypeBanks: 21
@@ -25,7 +30,5 @@
 - theoryQuestions: 480
 - mcqOptionEntries: 15840
 - answerEntries: 4440
-- reusedSubjects: 5
-- newSubjectBanks: 3
 
-Same-title subjects are reused only when their syllabus aligns. The live table has only TestId, Questions, Options and Answers; subject/exam/difficulty mappings are in test_index. Theory uses Options=[] and model answers in Answers, so the consuming application must support both row formats. No database rows are inserted by file generation. This bank remains a draft pending academic review.
+The database is unchanged. Recheck TestId collisions before running SQL. New draft questions and answers need a content QA pass. Theory rows are indicated by `Options=[]`.
