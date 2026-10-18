@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "Mathematics-I",
+    "SubjectId": "49009131110101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4900913111010113",
+      "4900913111010114",
+      "4900913111010115",
+      "4900913111010116"
+    ],
+    "medium": [
+      "4900913111010117",
+      "4900913111010118",
+      "4900913111010119",
+      "4900913111010120"
+    ],
+    "hard": [
+      "4900913111010121",
+      "4900913111010122",
+      "4900913111010123",
+      "4900913111010124"
+    ]
+  },
+  "testIds": [
+    "4900913111010113",
+    "4900913111010114",
+    "4900913111010115",
+    "4900913111010116",
+    "4900913111010117",
+    "4900913111010118",
+    "4900913111010119",
+    "4900913111010120",
+    "4900913111010121",
+    "4900913111010122",
+    "4900913111010123",
+    "4900913111010124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009131110101",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants and does not duplicate payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs are strings."
+}

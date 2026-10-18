@@ -1,0 +1,219 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 1,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "answer_review": "answer-review-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 1,
+    "subjects": 4,
+    "nonDepartmentalSubjects": 3,
+    "departmentalSubjects": 1,
+    "examTypeBanks": 11,
+    "totalTests": 132,
+    "mcqTests": 60,
+    "theoryTests": 72,
+    "mcqQuestions": 1800,
+    "theoryQuestions": 288,
+    "mcqOptionEntries": 7200,
+    "answerEntries": 2088,
+    "reusedSubjects": 2,
+    "newSubjectBanks": 2,
+    "excludedProjectSubjects": 0,
+    "blockedDuplicateSubjects": 1
+  },
+  "exam_rules": {
+    "nonDepartmental": {
+      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "12 theory variants × 4 questions × 8 marks"
+    },
+    "departmental": {
+      "Mid1": "12 MCQ variants × 30; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "not generated"
+    },
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "Non-departmental: occurrences 1–12 Mid 1, 13–24 Mid 2, 25–36 ESE. Departmental: occurrences 1–12 Mid 1, 13–24 Mid 2."
+  },
+  "subjects": [
+    {
+      "name": "Applied Physics",
+      "SubjectId": "49009719110101",
+      "subject_code": "09GS1101",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09gs1101-4.pdf",
+      "reuseDecision": "REUSED_SAME_NAME",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44009719210101",
+        "SubjectName": "Applied Physics",
+        "sourceSemester": 2,
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 2/exam-bank-v2.json",
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "syllabusDifferenceOverride": true,
+        "syllabusVerification": {
+          "unitCounts": [
+            0,
+            5
+          ],
+          "titleScore": 0,
+          "topicTokenJaccard": 0
+        }
+      },
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by ordered units/contact hours: Units, Dimensions and Measurements; Laws of Motion; Properties of Matter."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Basics of Electronics Engineering",
+      "SubjectId": "49009320010301",
+      "subject_code": "09CT0103",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0103.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Semiconductor diode characteristics and its Applications 5.5; Transistor characteristics and biasing 10."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Electronic Practice",
+      "SubjectId": "49009320010201",
+      "subject_code": "09CT0102",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0102.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Electronic Components: 4; Various Sources & Measuring Instruments: 10; Cables, Connectors & Relays: 6; Introduction to IC and SMD & Datasheet Interpretation : 6."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Mathematics-I",
+      "SubjectId": "49009131110101",
+      "subject_code": "09MA1101",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ma1101-5.pdf",
+      "reuseDecision": "REUSED_SAME_NAME",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44009131210101",
+        "SubjectName": "Mathematics-I",
+        "sourceSemester": 1,
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 1/exam-bank-v2.json",
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "syllabusDifferenceOverride": true,
+        "syllabusVerification": {
+          "unitCounts": [
+            4,
+            0
+          ],
+          "titleScore": 0,
+          "topicTokenJaccard": 0
+        }
+      },
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half by ordered syllabus hours: number sets/indices, HCF/LCM, polynomials/identities and introductory 2D mensuration."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 1 syllabus."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Exact normalized subject-name matches with the same departmental flag are reused verbatim even if syllabus descriptions differ, per user instruction.",
+    "For non-name matches, reuse still requires departmental-flag and unit/topic alignment. An exact-name match with an incompatible departmental flag raises an error rather than silently generating a replacement bank.",
+    "Mid 1 scope is recorded from the first half of the ordered syllabus units; confirm against the official exam blueprint.",
+    "Generated question pools and theory answers are drafts requiring academic review.",
+    "TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.",
+    "Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats.",
+    "ICT-specific owner rule: project subjects have no exams.",
+    "ICT-specific duplicate policy: exact-name compatible source payloads copied verbatim; flag mismatches blocked.",
+    "New question pools and model answers are template-generated drafts pending academic QA."
+  ],
+  "excludedSubjects": [],
+  "blockedDuplicateSubjects": [
+    {
+      "subjectId": "49091912110101",
+      "name": "Communication Skills-I",
+      "semester": 1,
+      "sourceCourse": "Diploma Computer Engineering",
+      "sourceSubjectId": "44091912010301",
+      "reason": "Exact-name source exists, but its isDepartmentalSubject=false requires theory Mid 1/ESE while ICT isDepartmentalSubject=true requires MCQ-only Mid 1/Mid 2. As the source and target exam types do not align, generation is blocked rather than making replacement questions or silently changing format."
+    }
+  ]
+}

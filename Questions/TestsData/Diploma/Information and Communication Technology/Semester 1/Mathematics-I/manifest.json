@@ -1,0 +1,52 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "Mathematics-I",
+    "SubjectId": "49009131110101",
+    "isDepartmentalSubject": false
+  },
+  "examTypes": [
+    {
+      "name": "Mid 1",
+      "format": "theory",
+      "tests": 12,
+      "scope": "First half by ordered syllabus hours: number sets/indices, HCF/LCM, polynomials/identities and introductory 2D mensuration."
+    },
+    {
+      "name": "Mid 2",
+      "format": "mcq",
+      "tests": 12,
+      "scope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+    },
+    {
+      "name": "ESE",
+      "format": "theory",
+      "tests": 12,
+      "scope": "Full Semester 1 syllabus."
+    }
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "reuseDecision": "REUSED_SAME_NAME",
+  "reusedFrom": {
+    "CourseId": 44,
+    "SubjectId": "44009131210101",
+    "SubjectName": "Mathematics-I",
+    "sourceSemester": 1,
+    "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 1/exam-bank-v2.json",
+    "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+    "syllabusDifferenceOverride": true,
+    "syllabusVerification": {
+      "unitCounts": [
+        4,
+        0
+      ],
+      "titleScore": 0,
+      "topicTokenJaccard": 0
+    }
+  }
+}

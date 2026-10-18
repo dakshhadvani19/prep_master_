@@ -1,0 +1,131 @@
+(function ictBankV2(input) {
+ const sem=input.semester, sy=input.syllabus, profile=input.profile, live=input.liveSubjects||[], sourceBanks=input.sourceBanks||[], duplicateNotes=input.duplicateNameNotes||[];
+ const clean=s=>String(s||"").replace(/[¶µ±]/g," ").replace(/\s+/g," ").trim();
+ const norm=s=>clean(s).toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim();
+ const key=s=>norm(s).replace(/\s/g,""), short=s=>clean(s).slice(0,88);
+ const hash=s=>{let h=2166136261;for(const c of String(s)){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;};
+ const rng=seed=>{let x=seed>>>0;return()=>{x=(Math.imul(1664525,x)+1013904223)>>>0;return x/4294967296;};};
+ const shuffle=(a,seed)=>{const b=a.slice(),r=rng(seed);for(let i=b.length-1;i>0;i--){const j=Math.floor(r()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;};
+ const rules=profile.rules||[];
+ const fallbackUnits=profile.fallbackUnits||{};
+ const excludedSubjectIds=new Set((profile.excludeSubjectIds||[]).map(String));
+ const ruleFor=t=>rules.find(r=>{try{return new RegExp(r.pattern,"i").test(t);}catch{return false;}});
+ function termsFrom(units,extra=[]) {
+  const out=[];
+  for(const u of units){
+   const unit=clean(u.title)||`Unit ${u.unit_number}`;
+   for(let t of clean(u.topics_text||"").replace(/Total Hours\s*\d*/ig,"").split(/[,;•\n]+/)){
+    t=clean(t).replace(/^[\d.\s-]+/,"").replace(/^[|:–—-]+/,"").trim();
+    if(t.length<3||/^(and|or|with|without|etc|introduction|overview|basics)$/i.test(t)||/^[\d\s().±-]+$/.test(t))continue;
+    if(!out.some(x=>norm(x.term)===norm(t)))out.push({term:t,unit,title:unit});
+   }
+   if(!out.some(x=>norm(x.term)===norm(unit)))out.push({term:unit,unit,title:unit});
+  }
+  for(const t of extra)if(clean(t).length>7&&!out.some(x=>norm(x.term)===norm(t)))out.push({term:clean(t),unit:"Course outcome",title:"Course outcome"});
+  return out;
+ }
+ function compareSyllabus(target, src) {
+  const A=(target.contents?.theory_units?.length?target.contents.theory_units:(target.contents?.practical_units||[])).map(u=>({title:key(u.title),text:norm(u.topics_text||"")}));
+  const B=(src.allSyllabusUnits||[]).map(u=>({title:key(u.title),text:norm(u.topics||"")}));
+  const matches=A.filter(a=>B.some(b=>a.title===b.title)).length;
+  const titleScore=matches/Math.max(1,A.length,B.length);
+  const tokA=new Set(A.map(x=>x.title+" "+x.text).join(" ").split(" ").filter(Boolean));
+  const tokB=new Set(B.map(x=>x.title+" "+x.text).join(" ").split(" ").filter(Boolean));
+  const j=[...tokA].filter(x=>tokB.has(x)).length/Math.max(1,new Set([...tokA,...tokB]).size);
+  return {unitCounts:[A.length,B.length],titleScore:+titleScore.toFixed(3),topicTokenJaccard:+j.toFixed(3)};
+ }
+ const dbMap=new Map(live.map(x=>[String(x.SubjectId),x]));
+ const subjects=(sy.subjects||[]).filter(s=>!excludedSubjectIds.has(String(s.subject_id))&&!/project/i.test(s.subject_name||s.name||'')).map(s=>{
+  const db=dbMap.get(String(s.subject_id));if(!db)throw Error(`Subject ${s.subject_name}/${s.subject_id} missing from the live table`);
+  const units=fallbackUnits[s.subject_name]?.length?fallbackUnits[s.subject_name]:(s.contents?.theory_units?.length?s.contents.theory_units:(s.contents?.practical_units||[]));
+  let weights=units.map(u=>Number(u.contact_hours)||0);if(!weights.reduce((a,b)=>a+b,0))weights=units.map(()=>1);
+  const half=[];let sum=0,total=weights.reduce((a,b)=>a+b,0);for(let i=0;i<units.length;i++){if(sum<total/2)half.push(units[i]);sum+=weights[i];}
+  const outcomes=(s.course_outcomes||[]).map(clean), objective=clean((s.objectives||[]).join(" "));
+  const allTerms=termsFrom(units,[...outcomes,...objective.split(/[.;]+/).map(clean)]),firstTerms=termsFrom(half);
+  if(allTerms.length<8)allTerms.push(...termsFrom([], [`Core principles of ${s.subject_name}`,`Application of ${s.subject_name}`,`Safety and quality checks for ${s.subject_name}`]));
+  if(firstTerms.length<6)firstTerms.push(...termsFrom([],half.map(u=>`${u.title} practical application`)));
+  return {id:String(db.SubjectId),name:db.SubjectName,dept:db.isDepartmentalSubject,code:s.subject_code||"",source:s.source_pdf_url||"",status:s.extraction_status||"",objective,outcomes,units,firstUnits:half,allTerms,firstTerms,raw:s};
+ });
+ function cue(term,unit,subj){const r=ruleFor(term);if(r)return r.cue;if(/project|internship/i.test(subj.name))return`the project/internship report component concerned with ${term.toLowerCase()}`;if(/equipment|instrumentation|pump|valve|workshop/i.test(subj.name))return`the equipment or workshop requirement involving ${term.toLowerCase()} in ${unit}`;return`the syllabus topic ${term.toLowerCase()} as applied within ${unit}`;}
+ function explain(term,unit,subj){const r=ruleFor(term);if(r)return r.explanation;const related=subj.allTerms.filter(x=>norm(x.unit)===norm(unit)&&norm(x.term)!==norm(term)).slice(0,4).map(x=>x.term);return`${term} appears in “${unit}”. Define its role and features, relate it to ${related.join(", ")||subj.name}, provide a practical example and state one process/design check or limitation. Confirm the details against official teaching material.`;}
+ const poolCache=new Map(),reviewPools=[];
+ function poolFor(s,terms,diff,exam,scope){
+  const cacheKey=[s.id,exam,diff,scope].join("|");if(poolCache.has(cacheKey))return poolCache.get(cacheKey);
+  const suffix=["under stated operating conditions","when choosing equipment","during design review","while checking the material balance","during process troubleshooting","under the stated safety constraint","when selecting operating parameters","when comparing process alternatives","before accepting a calculation","for the given product requirement","while reviewing a technical report","when checking an operating limit"];
+  const out=[],seen=new Set();
+  for(let i=0;i<60&&out.length<54;i++){
+   const t=terms[(i*7+Math.floor(i/Math.max(1,terms.length)))%terms.length],term=short(t.term),unit=t.unit||t.title,c=cue(term,unit,s);
+   let stem=diff==="easy"?`Which concept is described by this function or condition: ${c}?`:diff==="medium"?`In a practical task in “${unit}”, the requirement is: ${c}. Which concept is the most direct match?`:`During a technical review of “${unit}”, the decisive requirement is: ${c}. Which concept addresses it rather than only a related outcome?`;
+   let k=norm(stem),j=0;while(seen.has(k)&&j<suffix.length){stem=stem.replace(/\?$/,"")+`, ${suffix[(i+j)%suffix.length]}?`;k=norm(stem);j++;}if(seen.has(k))continue;seen.add(k);
+   const local=terms.filter(x=>norm(x.unit)===norm(unit)&&norm(short(x.term))!==norm(term)),fallback=terms.filter(x=>norm(short(x.term))!==norm(term));
+   const opt=[term];for(const d of shuffle(local.length>=3?local:fallback,hash(s.id+term+i))){const v=short(d.term);if(v.length>2&&!opt.some(x=>norm(x)===norm(v)))opt.push(v);if(opt.length===4)break;}
+   for(const d of shuffle(fallback,hash(s.id+"f"+i))){if(opt.length===4)break;const v=short(d.term);if(v.length>2&&!opt.some(x=>norm(x)===norm(v)))opt.push(v);if(opt.length===4)break;}
+   if(opt.length<4)continue;
+   const r=ruleFor(term);
+   out.push({itemId:`${s.id}-${exam.replace(/\s/g,"")}-${diff}-${out.length+1}`,text:stem,options:opt,topic:term,unit,rationale:explain(term,unit,s),distractorRationale:`The alternative choices are separate syllabus concepts and do not match the defining condition (${r?r.cue:`the stated focus of ${unit}`}); manually check their plausibility.`});
+  }
+  if(out.length<30)throw Error(`Less than 30 unique MCQs for ${s.name}/${exam}/${diff}`);
+  reviewPools.push({SubjectId:s.id,SubjectName:s.name,examType:exam,difficulty:diff,syllabusScope:scope,items:out.map(q=>({itemId:q.itemId,question:q.text,correctAnswer:q.options[0],options:q.options.map((text,i)=>({label:String.fromCharCode(65+i),text,isCorrect:i===0})),rationale:q.rationale,distractorRationale:q.distractorRationale,sourceTopic:q.topic,sourceUnit:q.unit}))});
+  poolCache.set(cacheKey,out);return out;
+ }
+ function cardsFor(s,terms){const cards=[];for(const u of s.units){const x=terms.find(t=>norm(t.unit)===norm(u.title));if(x&&!cards.some(c=>norm(c.term)===norm(x.term)))cards.push(x);}for(const x of terms){if(cards.length>=10)break;if(!cards.some(c=>norm(c.term)===norm(x.term)))cards.push(x);}while(cards.length<8&&terms.length){const t=terms[cards.length%terms.length],x={...t,term:`Application/check of ${t.term}`};if(!cards.some(c=>norm(c.term)===norm(x.term)))cards.push(x);}return cards.slice(0,10);}
+ function tq(c,s,d){const t=short(c.term),u=c.unit||c.title;return d==="easy"?`[8 marks] Explain ${t} in the context of ${u}. Define it, describe the key principles or steps, and give one relevant practical example.`:d==="medium"?`[8 marks] A practical problem in ${s.name} involves ${cue(t,u,s)}. Explain how ${t} applies, outline the steps and justify the result with an example.`:`[8 marks] Analyze a realistic task involving ${t} in ${s.name}. Explain the governing principle, justify the method or selection, and include a verification check and limitation.`;}
+ function ta(c,s){const t=short(c.term),u=c.unit||c.title,rel=s.allTerms.filter(x=>norm(x.unit)===norm(u)&&norm(x.term)!==norm(t)).slice(0,5).map(x=>x.term);return`Model answer (8 marks)\n\n**Meaning and purpose (2 marks):** ${explain(t,u,s)}\n\n**Principles/procedure (3 marks):** Explain the concept in logical order and relate it to ${rel.join(", ")||u}. Include the relevant conditions, components, operating variables or formulas.\n\n**Application/example (2 marks):** Apply it to a concrete ${s.name} task and describe the expected result.\n\n**Verification/conclusion (1 mark):** Check against the stated objective and mention a limitation, error source or safety/design trade-off.\n\nMarking guide: meaning 2; principles/steps 3; application 2; verification 1. Confirm against official teaching material before use.`;}
+ function arrJson(a){return a.length?`ARRAY[${a.map(v=>"'"+JSON.stringify(v).replace(/'/g,"''")+"'::jsonb").join(", ")}]::jsonb[]`:"ARRAY[]::jsonb[]";}
+ const sourceCandidates=sourceBanks.flatMap(b=>(b.bank.subjects||[]).map(s=>({subject:s,bank:b.bank,path:b.path,semester:b.semester})));
+ const rows=[],test_index=[],subject_index=[],reuseDecisions=[];
+ for(const s of subjects){
+  const code=s.code.toLowerCase().trim();
+  // Exact normalized subject-name matches take priority over syllabus similarity.
+  const exactNameCandidates=sourceCandidates.filter(x=>key(x.subject.name)===key(s.name));
+  const codeCandidates=sourceCandidates.filter(x=>code&&String(x.subject.subject_code||"").toLowerCase().trim()===code);
+  const candidates=exactNameCandidates.length?exactNameCandidates:codeCandidates;
+  let picked=null,verification=null,decision="NO_VERIFIED_EXISTING_MATCH";
+  for(const c of candidates){
+   const v=compareSyllabus(s.raw,c.subject);
+   const exactSameName=key(c.subject.name)===key(s.name);
+   if(exactSameName){
+    if(c.subject.isDepartmentalSubject===s.dept){
+     picked={...c,verification:v,sameNameOverride:true};verification=v;decision="REUSED_SAME_NAME";break;
+    }
+    if(!verification||v.topicTokenJaccard>verification.topicTokenJaccard)verification=v;
+    continue;
+   }
+   if(c.subject.isDepartmentalSubject===s.dept&&v.unitCounts[0]===v.unitCounts[1]&&v.titleScore===1&&v.topicTokenJaccard>=0.78){
+    picked={...c,verification:v,sameNameOverride:false};verification=v;decision="REUSED_VERIFIED_SYLLABUS";break;
+   }
+   if(!verification||v.topicTokenJaccard>verification.topicTokenJaccard)verification=v;
+  }
+  if(!picked&&exactNameCandidates.length){
+   throw Error(`An exact-name source bank exists for ${s.name}, but its isDepartmentalSubject flag differs. Refusing to generate a replacement bank until the exam-format mismatch is resolved.`);
+  }
+  if(!picked&&verification)decision="NOT_REUSED_SYLLABUS_OR_FLAG_MISMATCH";
+  if(!picked&&duplicateNotes.some(n=>key(n.subject)===key(s.name))){const note=duplicateNotes.find(n=>key(n.subject)===key(s.name));decision="SAME_NAME_BUT_SYLLABUS_MISMATCH";verification=note.verification||verification;}
+  const subExams=[];
+  if(picked){
+   const sm=picked.bank.test_index.filter(x=>String(x.SubjectId)===String(picked.subject.SubjectId)),oldRows=new Map(picked.bank.rows.map(x=>[String(x.TestId),x])),byKey=new Map(sm.map(x=>[`${x.examType}|${x.occurrence}`,x])),names=s.dept?["Mid 1","Mid 2"]:["Mid 1","Mid 2","ESE"];
+   for(const exam of names){const tests=[],offset=exam==="Mid 1"?0:exam==="Mid 2"?12:24;for(let i=0;i<12;i++){const occurrence=offset+i+1,m=byKey.get(`${exam}|${occurrence}`);if(!m)throw Error(`Missing reusable test ${picked.subject.name}/${exam}/${occurrence}`);const old=oldRows.get(String(m.TestId));if(!old)throw Error(`Missing reusable payload ${m.TestId}`);const id=Number(BigInt(s.id+String(occurrence))),row={TestId:id,Questions:old.Questions,Options:old.Options,Answers:old.Answers};rows.push(row);const meta={TestId:String(id),SubjectId:s.id,SubjectName:s.name,CourseId:49,Semester:sem,isDepartmentalSubject:s.dept,examType:exam,difficulty:m.difficulty,format:m.format,occurrence,questionCount:row.Questions.length,optionCount:row.Options.length,answerCount:row.Answers.length,marksPerQuestion:m.marksPerQuestion??null,totalMarks:m.totalMarks??null,syllabusScope:m.syllabusScope,sourceSyllabus:s.source,reused:true,reusedFrom:{CourseId:picked.bank.course.CourseId,SubjectId:String(picked.subject.SubjectId),SubjectName:picked.subject.name,sourceTestId:String(m.TestId),sourceBank:picked.path,sourceSemester:picked.semester,matchType:picked.sameNameOverride?"EXACT_NORMALIZED_SUBJECT_NAME":"VERIFIED_SYLLABUS",syllabusDifferenceOverride:!!picked.sameNameOverride,syllabusVerification:picked.verification}};test_index.push(meta);tests.push({TestId:meta.TestId,difficulty:meta.difficulty,occurrence});}subExams.push({examType:exam,format:sm.find(x=>x.examType===exam)?.format,syllabusScope:sm.find(x=>x.examType===exam)?.syllabusScope,tests});}
+   subject_index.push({name:s.name,SubjectId:s.id,subject_code:s.code,isDepartmentalSubject:s.dept,source_syllabus:s.source,syllabus_status:s.status,reuseDecision:picked.sameNameOverride?"REUSED_SAME_NAME":"REUSED_VERIFIED_SYLLABUS",reusedFrom:{CourseId:picked.bank.course.CourseId,SubjectId:String(picked.subject.SubjectId),SubjectName:picked.subject.name,sourceSemester:picked.semester,sourceBank:picked.path,matchType:picked.sameNameOverride?"EXACT_NORMALIZED_SUBJECT_NAME":"VERIFIED_SYLLABUS",syllabusDifferenceOverride:!!picked.sameNameOverride,syllabusVerification:picked.verification},firstHalfUnits:s.firstUnits.map(u=>({unit:u.unit_number,title:u.title,contact_hours:u.contact_hours})),examTypes:subExams});
+   reuseDecisions.push({subject:s.name,SubjectId:s.id,decision:"REUSED",matchType:picked.sameNameOverride?"EXACT_NORMALIZED_SUBJECT_NAME":"VERIFIED_SYLLABUS",sameNameOverride:!!picked.sameNameOverride,sourceSubject:picked.subject.name,sourceSubjectId:String(picked.subject.SubjectId),sourceSemester:picked.semester,sourceBank:picked.path,verification:picked.verification});
+  }else{
+   const cfg=s.dept?[{name:"Mid 1",format:"mcq",terms:s.firstTerms,offset:0,scope:`First half of ordered syllabus units: ${s.firstUnits.map(u=>u.title).join("; ")}.`},{name:"Mid 2",format:"mcq",terms:s.allTerms,offset:12,scope:"Full semester syllabus practice bank."}]:[{name:"Mid 1",format:"theory",terms:s.firstTerms,offset:0,scope:`First half of ordered syllabus units: ${s.firstUnits.map(u=>u.title).join("; ")}.`},{name:"Mid 2",format:"mcq",terms:s.allTerms,offset:12,scope:"Full semester syllabus practice bank."},{name:"ESE",format:"theory",terms:s.allTerms,offset:24,scope:"Full semester syllabus."}];
+   for(const ex of cfg){const tests=[];for(let i=0;i<12;i++){const difficulty=i<4?"easy":i<8?"medium":"hard",local=i%4,occurrence=ex.offset+i+1;let row,refs;if(ex.format==="mcq"){const pool=poolFor(s,ex.terms,difficulty,ex.name,ex.scope),selected=shuffle(pool,hash(s.id+ex.name+difficulty+local)).slice(0,30),pos=shuffle([...Array(8).fill(0),...Array(8).fill(1),...Array(7).fill(2),...Array(7).fill(3)],hash(s.id+ex.name+difficulty+local+"keys"));const Q=[],O=[],A=[];refs=[];selected.forEach((q,j)=>{const wrong=shuffle(q.options.slice(1),hash(s.id+occurrence+j));wrong.splice(pos[j],0,q.options[0]);Q.push(q.text);O.push(...wrong);A.push(pos[j]);refs.push(q.itemId);});if(Q.length!==30||O.length!==120||new Set(Q.map(norm)).size!==30)throw Error(`MCQ row failed ${s.name}/${occurrence}: Q=${Q.length}, O=${O.length}, unique=${new Set(Q.map(norm)).size}, pool=${pool.length}, selected=${selected.length}, lens=${selected.slice(0,4).map(q=>q.options.length).join(",")}, first=${String(selected[0].options[0]).slice(0,20)}, ans=${pos.slice(0,5).join(",")}`);row={TestId:Number(BigInt(s.id+String(occurrence))),Questions:Q,Options:O,Answers:A};}else{const cards=cardsFor(s,ex.terms),combos=[[0,1,2,3],[2,3,4,5],[0,1,6,7],[4,5,6,7]],sel=combos[local].map(j=>cards[j%cards.length]);row={TestId:Number(BigInt(s.id+String(occurrence))),Questions:sel.map(c=>tq(c,s,difficulty)),Options:[],Answers:sel.map(c=>ta(c,s))};refs=sel.map(c=>`${s.id}-${difficulty}-theory-${key(c.term)}`);}
+    rows.push(row);const meta={TestId:String(row.TestId),SubjectId:s.id,SubjectName:s.name,CourseId:49,Semester:sem,isDepartmentalSubject:s.dept,examType:ex.name,difficulty,format:ex.format,occurrence,questionCount:row.Questions.length,optionCount:row.Options.length,answerCount:row.Answers.length,marksPerQuestion:ex.format==="theory"?8:null,totalMarks:ex.format==="theory"?32:null,syllabusScope:ex.scope,sourceSyllabus:s.source,reused:false,questionReviewRefs:refs};test_index.push(meta);tests.push({TestId:meta.TestId,difficulty,occurrence});}subExams.push({examType:ex.name,format:ex.format,syllabusScope:ex.scope,tests});}
+   subject_index.push({name:s.name,SubjectId:s.id,subject_code:s.code,isDepartmentalSubject:s.dept,source_syllabus:s.source,syllabus_status:s.status,objective:s.objective,course_outcomes:s.outcomes,firstHalfUnits:s.firstUnits.map(u=>({unit:u.unit_number,title:u.title,contact_hours:u.contact_hours})),allSyllabusUnits:s.units.map(u=>({unit:u.unit_number,title:u.title,contact_hours:u.contact_hours,topics:clean(u.topics_text||"").slice(0,1500)})),reuseDecision:decision,syllabusVerification:verification,examTypes:subExams});
+   reuseDecisions.push({subject:s.name,SubjectId:s.id,decision,possibleMatch:candidates[0]?.subject?.name||duplicateNotes.find(n=>key(n.subject)===key(s.name))?.subject||null,verification,notes:duplicateNotes.find(n=>key(n.subject)===key(s.name))?.note||null});
+  }
+ }
+ const ids=rows.map(r=>String(r.TestId));if(rows.length!==subjects.reduce((n,s)=>n+(s.dept?24:36),0)||new Set(ids).size!==rows.length)throw Error(`Test count/ID uniqueness failure: ${rows.length}/${new Set(ids).size}`);
+ for(const r of rows){if(!Number.isSafeInteger(r.TestId)||r.Questions.length>50||r.Options.length>200||r.Answers.length>50)throw Error(`DB cardinality failure ${r.TestId}`);if(r.Options.length){if(!(r.Questions.length===30&&r.Options.length===120&&r.Answers.length===30&&r.Answers.every(a=>Number.isInteger(a)&&a>=0&&a<=3)))throw Error(`MCQ row shape failure ${r.TestId}`);}else if(!(r.Questions.length===4&&r.Answers.length===4&&r.Answers.every(a=>typeof a==="string")&&r.Questions.every(q=>q.startsWith("[8 marks]"))))throw Error(`Theory row shape failure ${r.TestId}`);}
+ const counts={semester:sem,subjects:subjects.length,nonDepartmentalSubjects:subjects.filter(s=>!s.dept).length,departmentalSubjects:subjects.filter(s=>s.dept).length,examTypeBanks:test_index.length/12,totalTests:rows.length,mcqTests:rows.filter(r=>r.Options.length).length,theoryTests:rows.filter(r=>!r.Options.length).length,mcqQuestions:rows.filter(r=>r.Options.length).reduce((n,r)=>n+r.Questions.length,0),theoryQuestions:rows.filter(r=>!r.Options.length).reduce((n,r)=>n+r.Questions.length,0),mcqOptionEntries:rows.reduce((n,r)=>n+r.Options.length,0),answerEntries:rows.reduce((n,r)=>n+r.Answers.length,0),reusedSubjects:reuseDecisions.filter(x=>x.decision==="REUSED").length,newSubjectBanks:reuseDecisions.filter(x=>x.decision!=="REUSED").length};
+ const testIdRule="Non-departmental: occurrences 1–12 Mid 1, 13–24 Mid 2, 25–36 ESE. Departmental: occurrences 1–12 Mid 1, 13–24 Mid 2.";
+ const notes=["Exact normalized subject-name matches with the same departmental flag are reused verbatim even if syllabus descriptions differ, per user instruction.","For non-name matches, reuse still requires departmental-flag and unit/topic alignment. An exact-name match with an incompatible departmental flag raises an error rather than silently generating a replacement bank.","Mid 1 scope is recorded from the first half of the ordered syllabus units; confirm against the official exam blueprint.","Generated question pools and theory answers are drafts requiring academic review.","TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.","Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats."];
+ const bank={schema_version:"2.0",purpose:`Semester ${sem} exam bank for Diploma Information and Communication Technology`,course:{CourseId:49,CourseName:"Diploma Information and Communication Technology"},semester:sem,counts,tableContract:{table:'public."TestsData"',columns:["TestId","Questions","Options","Answers"],mcq:{Questions:"30 strings",Options:"120 flattened A-D strings",Answers:"30 zero-based indexes 0=A, 1=B, 2=C, 3=D"},theory:{Questions:"4 strings prefixed [8 marks]",Options:"empty jsonb[]",Answers:"4 model answers"}},difficultyVariants:{easy:4,medium:4,hard:4},testIdRule,reuseDecisions,notes,subjects:subject_index,test_index,rows};
+ const review={schema_version:"1.0",semester:sem,course:"Diploma Information and Communication Technology",note:"Review companion only; never insert it into TestsData.",reusedSubjects:reuseDecisions.filter(x=>x.decision==="REUSED"),generatedMCQItemPools:reviewPools,theoryMarkingGuidance:"Model answers use a 2+3+2+1 allocation for meaning, principles/procedure, application and verification; check against official teaching notes."};
+ let sql=`-- Diploma Information and Communication Technology Semester ${sem}, staged TestsData seed v2.\n-- ${rows.length} insert statements. Use exam-bank-v2.json for metadata.\n-- Not executed against Supabase; recheck TestId collisions and review content before using.\nBEGIN;\n\n`;
+ for(const meta of test_index){const row=rows.find(r=>String(r.TestId)===meta.TestId);sql+=`-- ${meta.SubjectName} | ${meta.examType} | ${meta.difficulty} | ${meta.TestId} | ${meta.format}${meta.reused?` | reused from ${meta.reusedFrom.SubjectName} (${meta.reusedFrom.sourceTestId})`:""}\nINSERT INTO public."TestsData" ("TestId", "Questions", "Options", "Answers")\nVALUES (${row.TestId}, ${arrJson(row.Questions)}, ${arrJson(row.Options)}, ${arrJson(row.Answers)});\n\n`;}
+ sql+="COMMIT;\n";
+ const readme=`# Diploma Information and Communication Technology — Semester ${sem} Exam Bank v2\n\n- [exam-bank-v2.json](./exam-bank-v2.json): canonical TestId-wise payload and metadata.\n- [answer-review-v2.json](./answer-review-v2.json): review-only MCQ rationales and reuse decisions.\n- [seed-all-v2.sql](./seed-all-v2.sql): staged transaction (${rows.length} INSERT statements).\n- [manifest.json](./manifest.json): counts, rules and syllabus reuse outcomes.\n\n## Exam design\n\n- \`isDepartmentalSubject=false\`: Mid 1 = four 8-mark theory questions with model answers (first half syllabus); Mid 2 = 30 MCQs; ESE = four 8-mark theory questions with model answers.\n- \`isDepartmentalSubject=true\`: Mid 1 = 30 MCQs (first half syllabus); Mid 2 = 30 MCQs; no ESE.\n- Every available exam type has 12 variants: 4 Easy, 4 Medium, 4 Hard.\n\n## Counts\n\n${Object.entries(counts).map(([k,v])=>`- ${k}: ${v}`).join("\n")}\n\nSame-title subjects are reused only when their syllabus aligns. The live table has only TestId, Questions, Options and Answers; subject/exam/difficulty mappings are in test_index. Theory uses Options=[] and model answers in Answers, so the consuming application must support both row formats. No database rows are inserted by file generation. This bank remains a draft pending academic review.\n`;
+ const manifest={schema_version:"2.0",course:{CourseId:49,CourseName:"Diploma Information and Communication Technology"},semester:sem,canonical_files:{test_bank:"exam-bank-v2.json",answer_review:"answer-review-v2.json",seed_sql:"seed-all-v2.sql"},counts,exam_rules:{nonDepartmental:{Mid1:"12 theory variants × 4 questions × 8 marks; first half",Mid2:"12 MCQ variants × 30",ESE:"12 theory variants × 4 questions × 8 marks"},departmental:{Mid1:"12 MCQ variants × 30; first half",Mid2:"12 MCQ variants × 30",ESE:"not generated"},difficulty:{easy:4,medium:4,hard:4},testIdRule},subjects:subject_index.map(s=>({name:s.name,SubjectId:s.SubjectId,subject_code:s.subject_code,isDepartmentalSubject:s.isDepartmentalSubject,source_syllabus:s.source_syllabus,reuseDecision:s.reuseDecision,reusedFrom:s.reusedFrom||null,syllabusVerification:s.syllabusVerification||null,examTypes:s.examTypes.map(e=>({examType:e.examType,format:e.format,tests:12,scope:e.syllabusScope}))})),notes};
+ return {bank:JSON.stringify(bank,null,2)+"\n",review:JSON.stringify(review,null,2)+"\n",sql,readme,manifest:JSON.stringify(manifest,null,2)+"\n",counts,reuseDecisions,subjects:manifest.subjects};
+})

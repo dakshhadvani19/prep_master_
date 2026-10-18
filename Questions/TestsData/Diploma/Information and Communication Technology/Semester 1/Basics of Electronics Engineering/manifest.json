@@ -1,0 +1,36 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "Basics of Electronics Engineering",
+    "SubjectId": "49009320010301",
+    "isDepartmentalSubject": false
+  },
+  "examTypes": [
+    {
+      "name": "Mid 1",
+      "format": "theory",
+      "tests": 12,
+      "scope": "First half of ordered syllabus units: Semiconductor diode characteristics and its Applications 5.5; Transistor characteristics and biasing 10."
+    },
+    {
+      "name": "Mid 2",
+      "format": "mcq",
+      "tests": 12,
+      "scope": "Full semester syllabus practice bank."
+    },
+    {
+      "name": "ESE",
+      "format": "theory",
+      "tests": 12,
+      "scope": "Full semester syllabus."
+    }
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+  "reusedFrom": null
+}

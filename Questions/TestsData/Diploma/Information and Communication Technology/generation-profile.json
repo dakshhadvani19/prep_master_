@@ -1,0 +1,520 @@
+{
+  "schema_version": "1.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "rules": [],
+  "fallbackUnits": {
+    "Communication Skills-II": [
+      {
+        "unit_number": 1,
+        "title": "Speaking and Interacting in an Academic Context",
+        "contact_hours": 1,
+        "topics_text": "Greetings, introducing self and peers, asking and sharing information, expressing likes and dislikes and preferences, describing events experiences and objects, discussions, expressing views, facing viva voce"
+      },
+      {
+        "unit_number": 2,
+        "title": "Effective Presentation Skills",
+        "contact_hours": 1,
+        "topics_text": "Introduction to effective presentation skills, collecting data and information, exploring a topic, using ICT in a presentation, preparing for a presentation, effective body language, effective pronunciation, interacting with audience questions and answers, practice with video recording, feedback and suggestions"
+      }
+    ],
+    "Data Structure and Algorithm design": [
+      {
+        "unit_number": 1,
+        "title": "Introduction to Data Structures",
+        "contact_hours": 8,
+        "topics_text": "Types of data structures, arrays, strings, recursion, files, algorithm design approaches, time complexity, space complexity, Big O notation, best case average case and worst case"
+      },
+      {
+        "unit_number": 2,
+        "title": "Linked Lists",
+        "contact_hours": 8,
+        "topics_text": "Introduction to linked lists, hierarchy of linked lists, doubly linked lists, linked list methods and operations, linked lists versus arrays, polynomial applications"
+      },
+      {
+        "unit_number": 3,
+        "title": "Stacks",
+        "contact_hours": 8,
+        "topics_text": "Introduction to stacks, basic stack features, stack implementation, PUSH operation, POP operation, PEEP operation, recursion application, Polish notation"
+      },
+      {
+        "unit_number": 4,
+        "title": "Queues",
+        "contact_hours": 8,
+        "topics_text": "Introduction to queues, queue implementation, simple queue, circular queue, double ended queue or deque, insertion and deletion operations, queue applications"
+      },
+      {
+        "unit_number": 5,
+        "title": "Trees",
+        "contact_hours": 8,
+        "topics_text": "Basic tree concepts, binary tree representation, binary tree operations, inorder traversal, preorder traversal, postorder traversal, binary search tree implementation"
+      },
+      {
+        "unit_number": 6,
+        "title": "Sorting Algorithms",
+        "contact_hours": 8,
+        "topics_text": "Bubble sort, selection sort, insertion sort, quick sort, merge sort, comparison of sorting methods, operation counts"
+      },
+      {
+        "unit_number": 7,
+        "title": "Searching and Hashing",
+        "contact_hours": 8,
+        "topics_text": "Linear search, sequential search, binary search, hash tables, hash function construction, collision handling, collision resolution techniques, applications of hashing"
+      }
+    ],
+    "Linux Administrator": [
+      {
+        "unit_number": 1,
+        "title": "Basics of Linux",
+        "contact_hours": 3,
+        "topics_text": "History of GNU Linux, installing Linux, updating software, managing packages, Red Hat repositories, yum package repositories"
+      },
+      {
+        "unit_number": 2,
+        "title": "Linux Commands",
+        "contact_hours": 4,
+        "topics_text": "pwd, cd, ls, who, whoami, cp, mv, rm, mkdir, touch, hostname, cat, mount, umount, wget, shutdown, reboot, uname, date, uptime, su"
+      },
+      {
+        "unit_number": 3,
+        "title": "Managing Files from the Command Line",
+        "contact_hours": 5,
+        "topics_text": "BASH introduction, command line shortcuts, file types, file ownership, file permissions, file management and manipulation, moving files and directories, text editors"
+      },
+      {
+        "unit_number": 4,
+        "title": "Managing Users and Groups",
+        "contact_hours": 6,
+        "topics_text": "Creating users, managing users, user management tools, creating groups, access permissions, editing group attributes, Pluggable Authentication Modules PAM"
+      },
+      {
+        "unit_number": 5,
+        "title": "Shell Processing and Task Scheduling",
+        "contact_hours": 6,
+        "topics_text": "Output redirection, input and output redirection, pipelines, editing text files from shell, cron scheduling, task automation"
+      },
+      {
+        "unit_number": 6,
+        "title": "Linux Boot Process",
+        "contact_hours": 4,
+        "topics_text": "Boot loaders, init process, rc scripts, enabling services, disabling services, booting in recovery mode"
+      },
+      {
+        "unit_number": 7,
+        "title": "Core System Services",
+        "contact_hours": 5,
+        "topics_text": "init daemon, xinetd, inetd, logging daemon, configuring logs, CRON program"
+      },
+      {
+        "unit_number": 8,
+        "title": "Compiling the Linux Kernel",
+        "contact_hours": 4,
+        "topics_text": "Kernel concepts, locating kernel source code, building the Linux kernel, patching the kernel"
+      },
+      {
+        "unit_number": 9,
+        "title": "Apache Web Server",
+        "contact_hours": 5,
+        "topics_text": "HTTP protocol, installing Apache HTTP Server, starting Apache, stopping Apache, testing installation, configuring Apache, troubleshooting Apache"
+      }
+    ],
+    "Network Routing and Switching": [
+      {
+        "unit_number": 1,
+        "title": "Introduction to Networks",
+        "contact_hours": 4,
+        "topics_text": "Networking history, types of networks, OSI reference model, TCP IP model, Ethernet technologies, cabling, Cisco three layer model"
+      },
+      {
+        "unit_number": 2,
+        "title": "IP Addressing and Subnetting",
+        "contact_hours": 10,
+        "topics_text": "IP address composition, IP address types and classes, private IP addresses, public IP addresses, subnetting, variable length subnet masks VLSM, route summarization, troubleshooting IP addressing"
+      },
+      {
+        "unit_number": 3,
+        "title": "Routers, Switches and Cisco IOS",
+        "contact_hours": 12,
+        "topics_text": "Cisco routers, switches, IOS and boot process, command line interface CLI, router basic configuration, switch basic configuration, configuring router interfaces, verifying configuration, DNS, Telnet, DHCP, backup and restore IOS files, password recovery, Cisco Discovery Protocol CDP"
+      },
+      {
+        "unit_number": 4,
+        "title": "IP Routing",
+        "contact_hours": 8,
+        "topics_text": "IP routing, static routing, default routing, dynamic routing, administrative distance, routing metrics, classes of routing protocols, routing loops, route redistribution"
+      },
+      {
+        "unit_number": 5,
+        "title": "Routing Protocols",
+        "contact_hours": 10,
+        "topics_text": "Enhanced Interior Gateway Routing Protocol EIGRP, Open Shortest Path First OSPF, RIPv1, RIPv2, configuring routing protocols, verifying EIGRP, verifying OSPF, verifying RIP, troubleshooting routing protocols"
+      },
+      {
+        "unit_number": 6,
+        "title": "Access Lists and VLANs",
+        "contact_hours": 5,
+        "topics_text": "Access lists, standard access lists, extended access lists, remote access, switch ports, MAC address table, Virtual LAN VLANs, VLAN Trunking Protocol VTP, modifying switch port settings"
+      }
+    ],
+    "Probability and Statistics": [
+      {
+        "unit_number": 1,
+        "title": "Statistics and Descriptive Methods",
+        "contact_hours": 2,
+        "topics_text": "Types of statistics, applications of statistical analysis, population, sample, statistical inference"
+      },
+      {
+        "unit_number": 2,
+        "title": "Graphical and Tabular Descriptive Techniques",
+        "contact_hours": 4,
+        "topics_text": "Data, frequency distribution, data representation, pie charts, bar charts, histograms, line charts, scatter plots"
+      },
+      {
+        "unit_number": 3,
+        "title": "Numerical Descriptive Techniques",
+        "contact_hours": 4,
+        "topics_text": "Mean, median, mode, averages, variance, standard deviation, measures of relative standing, box plots, linear relationship"
+      },
+      {
+        "unit_number": 4,
+        "title": "Data Collection and Sampling",
+        "contact_hours": 3,
+        "topics_text": "Methods of data collection, sampling, sampling plans, sampling errors, non-sampling errors, sampling distribution of the mean"
+      },
+      {
+        "unit_number": 5,
+        "title": "Probability",
+        "contact_hours": 3,
+        "topics_text": "Assigning probability to events, joint probability, marginal probability, conditional probability, probability rules, probability trees, probability theorems"
+      },
+      {
+        "unit_number": 6,
+        "title": "Random Variables and Probability Distributions",
+        "contact_hours": 5,
+        "topics_text": "Discrete random variables, continuous random variables, probability distributions, binomial distribution, Poisson distribution, probability density functions, normal distribution"
+      },
+      {
+        "unit_number": 7,
+        "title": "Hypothesis Testing",
+        "contact_hours": 5,
+        "topics_text": "Testing hypotheses, Type I errors, Type II errors, one tailed tests, two tailed tests, significance of difference between two means, tests of significance for proportions"
+      },
+      {
+        "unit_number": 8,
+        "title": "Correlation Analysis",
+        "contact_hours": 2,
+        "topics_text": "Types of correlation, methods of studying correlation, scatter diagrams, correlation interpretation"
+      }
+    ],
+    "Programming with Application Development (Android)": [
+      {
+        "unit_number": 1,
+        "title": "Kotlin Programming",
+        "contact_hours": 6,
+        "topics_text": "Kotlin basics, operations and priorities, decision making, loop control, collections and data structures, functions, object oriented programming, inheritance, abstract classes, interfaces, super and this, visibility modifiers"
+      },
+      {
+        "unit_number": 2,
+        "title": "Android and User Interface",
+        "contact_hours": 10,
+        "topics_text": "Android SDK features, development tools, Android applications, application manifest, externalized resources, application lifecycle, Android activities, Button, TextView, ImageView, ProgressBar, ListView, EditText, calendar widgets, intents"
+      },
+      {
+        "unit_number": 3,
+        "title": "Android Storage",
+        "contact_hours": 10,
+        "topics_text": "Files, shared preferences, saving data, retrieving shared preferences, static resources, file system, Android databases, content values, cursors, SQLite databases, content providers"
+      },
+      {
+        "unit_number": 4,
+        "title": "User Experience, Maps and Sensors",
+        "contact_hours": 12,
+        "topics_text": "Material design, RecyclerView, CardView, TabLayout, ViewPager, menus, dialogs, drawables, gradients, location based services, selecting a location provider, finding current location, map based activities, hardware sensors, sensor manager, movement and orientation"
+      },
+      {
+        "unit_number": 5,
+        "title": "Audio, Video and Device Connectivity",
+        "contact_hours": 6,
+        "topics_text": "Playing audio, playing video, raw audio manipulation, camera pictures, recording video, MediaStore, Bluetooth management, Wi-Fi monitoring and management"
+      },
+      {
+        "unit_number": 6,
+        "title": "Telephony and App Distribution",
+        "contact_hours": 10,
+        "topics_text": "Telephony hardware support, telephony APIs, sending SMS, receiving SMS, signing applications, publishing applications, monetizing applications, distributing applications"
+      },
+      {
+        "unit_number": 7,
+        "title": "Other Mobile Development Frameworks",
+        "contact_hours": 2,
+        "topics_text": "iOS development framework, Flutter framework"
+      }
+    ],
+    "Engineering Electromagnetics": [
+      {
+        "unit_number": 1,
+        "title": "Vector Calculus and Coordinate Systems",
+        "contact_hours": 4,
+        "topics_text": "Cylindrical coordinate systems, spherical coordinate systems, gradient, divergence, curl, vector field interpretation"
+      },
+      {
+        "unit_number": 2,
+        "title": "Coulomb's Law and Electric Field",
+        "contact_hours": 5,
+        "topics_text": "Coulomb's law, electric field intensity, electric field due to charge distributions, line charge distribution, surface charge distribution"
+      },
+      {
+        "unit_number": 3,
+        "title": "Electric Flux Density and Gauss's Law",
+        "contact_hours": 5,
+        "topics_text": "Electric flux density, Faraday experiment, relation between electric flux density and electric field, Gauss's law, divergence theorem, Maxwell first equation, applications of Gauss's law"
+      },
+      {
+        "unit_number": 4,
+        "title": "Energy and Electric Potential",
+        "contact_hours": 6,
+        "topics_text": "Electric potential, Maxwell second equation, relation between electric potential and electric field, energy in electric fields, capacitance"
+      },
+      {
+        "unit_number": 5,
+        "title": "Magnetic Fields and Electromagnetic Waves",
+        "contact_hours": 8,
+        "topics_text": "Biot Savart law, Ampere's circuital law, magnetic field, Maxwell equations, electromagnetic wave propagation in free space, dielectrics, conductors"
+      }
+    ],
+    "Game Development": [
+      {
+        "unit_number": 1,
+        "title": "Unity and Game Development Fundamentals",
+        "contact_hours": 4,
+        "topics_text": "Game design and development concepts, game mechanics, Unity game engine concepts, development tools, installing Unity, IDE basics, Unity editor, game project setup"
+      },
+      {
+        "unit_number": 2,
+        "title": "C# Scripting Fundamentals",
+        "contact_hours": 5,
+        "topics_text": "C# language concepts, coding fundamentals, scripting, loops, functions, sprites, script attachment to game objects"
+      },
+      {
+        "unit_number": 3,
+        "title": "Movement, Input and 2D Physics",
+        "contact_hours": 5,
+        "topics_text": "Simple movement, simple rotation, scaling, input handling in Unity, 2D physics, Rigidbody component, collision behavior, game controls"
+      },
+      {
+        "unit_number": 4,
+        "title": "Game Architecture and Interactive Game Creation",
+        "contact_hours": 6,
+        "topics_text": "Core game programming architecture, game programming platforms, frameworks and engines, testing interactive behavior, game development processes, applying mechanics, creating games with Unity and C#"
+      }
+    ],
+    "Optical and Satellite Communication": [
+      {
+        "unit_number": 1,
+        "title": "Optical Fiber Communication Fundamentals",
+        "contact_hours": 7,
+        "topics_text": "Blocks of optical fiber communication system, functions of system blocks, optical fiber transmission characteristics, losses in optical fiber links, bending losses"
+      },
+      {
+        "unit_number": 2,
+        "title": "Optical Sources and Detectors",
+        "contact_hours": 7,
+        "topics_text": "Optical sources, optical detectors, optical transmitter circuit, optical receiver circuit"
+      },
+      {
+        "unit_number": 3,
+        "title": "Optical System Design",
+        "contact_hours": 10,
+        "topics_text": "Optical system design considerations, component choice, multiplexing, analog optical systems, digital optical systems"
+      },
+      {
+        "unit_number": 4,
+        "title": "Satellite System and Orbits",
+        "contact_hours": 8,
+        "topics_text": "Basic satellite system, satellite frequency bands, frequency allocation, satellite orbit types, Kepler's law, apogee height, perigee height, orbit perturbations, non spherical Earth effects, atmospheric drag"
+      },
+      {
+        "unit_number": 5,
+        "title": "Satellite Earth Stations and Link Operations",
+        "contact_hours": 10,
+        "topics_text": "Satellite Earth station block diagram, antenna subsystem, low noise amplifier, power subsystem, TTAC, attitude control, spinning satellite stabilization, momentum wheel stabilization, satellite link failure detection, re establishing a satellite link"
+      }
+    ],
+    "Advance Java": [
+      {
+        "unit_number": 1,
+        "title": "JDBC Programming",
+        "contact_hours": 6,
+        "topics_text": "JDBC connectivity model, connecting to databases, creating SQL queries, retrieving query results, updating database data, error checking, SQLException, SQLWarning, Statement interface, PreparedStatement, CallableStatement, ResultSet interface, updatable ResultSets, JDBC types"
+      },
+      {
+        "unit_number": 2,
+        "title": "J2EE Architecture, Servlets and JSP",
+        "contact_hours": 6,
+        "topics_text": "J2EE architecture, multi tier applications, MVC framework, network protocols, Servlet API, JSP API, web containers, application deployment"
+      },
+      {
+        "unit_number": 3,
+        "title": "Enterprise Web Components",
+        "contact_hours": 6,
+        "topics_text": "Sessions, filters, JSTL, JavaBeans, servlet processing, JSP pages, web application state management"
+      },
+      {
+        "unit_number": 4,
+        "title": "Java Networking and Remote Method Invocation",
+        "contact_hours": 5,
+        "topics_text": "Java networking, network protocols, remote method invocation RMI, client server communication"
+      },
+      {
+        "unit_number": 5,
+        "title": "Java Web Frameworks and ORM",
+        "contact_hours": 7,
+        "topics_text": "Java Server Faces JSF, Spring framework, Hibernate, JDBC, object relational mapping ORM tools, dynamic web applications"
+      }
+    ],
+    "Big Data Analytics": [
+      {
+        "unit_number": 1,
+        "title": "Big Data and Hadoop Foundations",
+        "contact_hours": 8,
+        "topics_text": "Traditional distributed file systems, Big Data software, Big Data applications, Hadoop architecture, how Hadoop works, Hadoop ecosystem, basic Hadoop commands, HDFS"
+      },
+      {
+        "unit_number": 2,
+        "title": "MapReduce and Hadoop Ecosystem Tools",
+        "contact_hours": 8,
+        "topics_text": "MapReduce programming, input formats, output formats, key value pairs, Pig Latin structures, Pig statements, Pig functions, loading and storing data in Pig, HiveQL, Hive tables, HBase, ZooKeeper services"
+      },
+      {
+        "unit_number": 3,
+        "title": "Apache Spark and Distributed Analytics",
+        "contact_hours": 8,
+        "topics_text": "Apache Spark, PySpark, Resilient Distributed Datasets RDD, key value pairs, loading data, saving data, Spark machine learning library, distributed data analytics"
+      }
+    ],
+    "Computer Graphics & Animation": [
+      {
+        "unit_number": 1,
+        "title": "Introduction to Computer Graphics",
+        "contact_hours": 10,
+        "topics_text": "Overview of computer graphics, computer graphics applications, graphics software, graphics devices, input devices, active and passive graphics devices, display technologies, storage tube displays, calligraphic refresh displays, raster refresh displays, CRT basics, color CRT raster scan, video controller, LCD displays"
+      },
+      {
+        "unit_number": 2,
+        "title": "Scan Conversion and Clipping",
+        "contact_hours": 8,
+        "topics_text": "Digital Differential Analyzer DDA line drawing, Bresenham line drawing, Bresenham circle drawing, midpoint circle algorithm, midpoint ellipse algorithm, aliasing, endpoint ordering, Cohen Sutherland clipping, Cyrus Beck clipping, Liang Barsky clipping, polygon clipping"
+      },
+      {
+        "unit_number": 3,
+        "title": "2D and 3D Transformations, Viewing and Rendering",
+        "contact_hours": 8,
+        "topics_text": "2D transformations, transformation matrices, homogeneous coordinates, translation, rotation, reflection, scaling, combined transformations, 3D scaling, shearing, rotation, reflection, translation, perspective transformations, orthographic projections, axonometric projections, oblique projections, 3D viewing, lighting, color, z buffer, scan line, painter's algorithm, BSP trees, ray tracing"
+      },
+      {
+        "unit_number": 4,
+        "title": "Curves and Surfaces",
+        "contact_hours": 6,
+        "topics_text": "Curve representation, non parametric curves, parametric curves, circle representation, ellipse representation, parabola representation, hyperbola representation, space curves, cubic splines, Bezier curves, B spline curves, quadric surfaces, Bezier surfaces"
+      },
+      {
+        "unit_number": 5,
+        "title": "Computer Animation and Image Processing",
+        "contact_hours": 10,
+        "topics_text": "Principles of animation, key framing, deformations, character animation, physics based animation, procedural techniques, groups of objects, digital image formats, JPEG compression, image enhancement, contrast stretching, histogram equalization, smoothing filters, median filtering"
+      }
+    ],
+    "Fundamental of Data Mining": [
+      {
+        "unit_number": 1,
+        "title": "Data Mining and Data Processing",
+        "contact_hours": 6,
+        "topics_text": "Data mining concepts, data processing, data preprocessing, data processing systems, data preparation, data quality, data mining tools"
+      },
+      {
+        "unit_number": 2,
+        "title": "Data Mining Techniques",
+        "contact_hours": 8,
+        "topics_text": "Association rules, classification, regression, clustering, neural networks, predictive modeling, mining technique selection"
+      },
+      {
+        "unit_number": 3,
+        "title": "Clustering Methods",
+        "contact_hours": 7,
+        "topics_text": "Cluster analysis, K means clustering, hierarchical clustering, agglomerative clustering, divisive clustering, cluster evaluation, segmentation software"
+      },
+      {
+        "unit_number": 4,
+        "title": "Applications of Data Mining",
+        "contact_hours": 7,
+        "topics_text": "Data mining applications, business applications, risk management, targeted marketing, customer profiles, prediction, evaluating data mining results"
+      }
+    ],
+    "Management Information System": [
+      {
+        "unit_number": 1,
+        "title": "Information Systems and MIS Fundamentals",
+        "contact_hours": 6,
+        "topics_text": "Information systems and their roles, classify information, management information systems, benefits of MIS, limitations of MIS"
+      },
+      {
+        "unit_number": 2,
+        "title": "MIS Development and Design",
+        "contact_hours": 5,
+        "topics_text": "Systems analysts, tools used by system analysts, MIS development life cycle, MIS development models, MIS design"
+      },
+      {
+        "unit_number": 3,
+        "title": "Decision Support Systems and Business Intelligence",
+        "contact_hours": 6,
+        "topics_text": "Decision support systems DSS, management and decision making, types of decisions, analytics, business intelligence, BI techniques"
+      },
+      {
+        "unit_number": 4,
+        "title": "Managing the IT Function",
+        "contact_hours": 5,
+        "topics_text": "Challenges of managing IT functions, modern IT environment, centralization, decentralization, IT security, technology selection, vendor management, vendor selection, vendor contracts, service levels, relationship management"
+      },
+      {
+        "unit_number": 5,
+        "title": "Integration of Information Systems",
+        "contact_hours": 6,
+        "topics_text": "MIS integration with business functions, enterprise resource planning ERP, business process outsourcing BPO, electronic commerce"
+      }
+    ]
+  },
+  "excludeSubjectIds": [
+    "49091912110101"
+  ],
+  "excludeSubjectNotes": [
+    {
+      "subjectId": "49091912110101",
+      "name": "Communication Skills-I",
+      "semester": 1,
+      "sourceCourse": "Diploma Computer Engineering",
+      "sourceSubjectId": "44091912010301",
+      "reason": "Exact-name source exists, but its isDepartmentalSubject=false requires theory Mid 1/ESE while ICT isDepartmentalSubject=true requires MCQ-only Mid 1/Mid 2. As the source and target exam types do not align, generation is blocked rather than making replacement questions or silently changing format."
+    }
+  ],
+  "excludedProjects": [
+    {
+      "subjectId": "49009320050401",
+      "name": "Project I",
+      "semester": 5
+    },
+    {
+      "subjectId": "49009320060201",
+      "name": "Project-II",
+      "semester": 6
+    }
+  ],
+  "globalRules": [
+    "Do not create any exam variants or TestIds for subjects with Project in the subject title, including Project I and Project-II.",
+    "For exact normalized subject-name duplicates, copy the existing source questions/options/answers verbatim; do not regenerate them when exam formats are compatible.",
+    "Use the live public.Subjects.isDepartmentalSubject flag to determine exam formats.",
+    "When an exact-name duplicate has an incompatible flag, block it for review rather than generating replacement questions or silently reformatting theory as MCQ.",
+    "Keep Supabase writes disabled; generated SQL is staged only."
+  ]
+}

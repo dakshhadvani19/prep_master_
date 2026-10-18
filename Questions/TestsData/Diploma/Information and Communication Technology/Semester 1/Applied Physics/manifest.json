@@ -1,0 +1,52 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "Applied Physics",
+    "SubjectId": "49009719110101",
+    "isDepartmentalSubject": false
+  },
+  "examTypes": [
+    {
+      "name": "Mid 1",
+      "format": "theory",
+      "tests": 12,
+      "scope": "First 50% by ordered units/contact hours: Units, Dimensions and Measurements; Laws of Motion; Properties of Matter."
+    },
+    {
+      "name": "Mid 2",
+      "format": "mcq",
+      "tests": 12,
+      "scope": "Full Semester 2 syllabus practice bank."
+    },
+    {
+      "name": "ESE",
+      "format": "theory",
+      "tests": 12,
+      "scope": "Full Semester 2 syllabus."
+    }
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "reuseDecision": "REUSED_SAME_NAME",
+  "reusedFrom": {
+    "CourseId": 44,
+    "SubjectId": "44009719210101",
+    "SubjectName": "Applied Physics",
+    "sourceSemester": 2,
+    "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 2/exam-bank-v2.json",
+    "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+    "syllabusDifferenceOverride": true,
+    "syllabusVerification": {
+      "unitCounts": [
+        0,
+        5
+      ],
+      "titleScore": 0,
+      "topicTokenJaccard": 0
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "Applied Physics",
+    "SubjectId": "49009719110101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "Full Semester 2 syllabus practice bank."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4900971911010113",
+      "4900971911010114",
+      "4900971911010115",
+      "4900971911010116"
+    ],
+    "medium": [
+      "4900971911010117",
+      "4900971911010118",
+      "4900971911010119",
+      "4900971911010120"
+    ],
+    "hard": [
+      "4900971911010121",
+      "4900971911010122",
+      "4900971911010123",
+      "4900971911010124"
+    ]
+  },
+  "testIds": [
+    "4900971911010113",
+    "4900971911010114",
+    "4900971911010115",
+    "4900971911010116",
+    "4900971911010117",
+    "4900971911010118",
+    "4900971911010119",
+    "4900971911010120",
+    "4900971911010121",
+    "4900971911010122",
+    "4900971911010123",
+    "4900971911010124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009719110101",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants and does not duplicate payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs are strings."
+}
