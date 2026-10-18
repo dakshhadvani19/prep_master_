@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "Bharatiya Knowledge System",
+    "SubjectId": "44009911010101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "Full syllabus"
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400991101010113",
+      "4400991101010114",
+      "4400991101010115",
+      "4400991101010116"
+    ],
+    "medium": [
+      "4400991101010117",
+      "4400991101010118",
+      "4400991101010119",
+      "4400991101010120"
+    ],
+    "hard": [
+      "4400991101010121",
+      "4400991101010122",
+      "4400991101010123",
+      "4400991101010124"
+    ]
+  },
+  "testIds": [
+    "4400991101010113",
+    "4400991101010114",
+    "4400991101010115",
+    "4400991101010116",
+    "4400991101010117",
+    "4400991101010118",
+    "4400991101010119",
+    "4400991101010120",
+    "4400991101010121",
+    "4400991101010122",
+    "4400991101010123",
+    "4400991101010124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44009911010101",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes this exam's 12 variants and avoids duplicating questions.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
