@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "MATHEMATICS-I",
+    "SubjectId": "46009131210101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "ESE",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600913121010125",
+      "4600913121010126",
+      "4600913121010127",
+      "4600913121010128"
+    ],
+    "medium": [
+      "4600913121010129",
+      "4600913121010130",
+      "4600913121010131",
+      "4600913121010132"
+    ],
+    "hard": [
+      "4600913121010133",
+      "4600913121010134",
+      "4600913121010135",
+      "4600913121010136"
+    ]
+  },
+  "testIds": [
+    "4600913121010125",
+    "4600913121010126",
+    "4600913121010127",
+    "4600913121010128",
+    "4600913121010129",
+    "4600913121010130",
+    "4600913121010131",
+    "4600913121010132",
+    "4600913121010133",
+    "4600913121010134",
+    "4600913121010135",
+    "4600913121010136"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46009131210101",
+    "examType": "ESE"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
