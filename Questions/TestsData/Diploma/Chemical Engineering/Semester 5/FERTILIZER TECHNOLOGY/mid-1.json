@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 5,
+  "subject": {
+    "name": "FERTILIZER TECHNOLOGY",
+    "SubjectId": "46000938250701",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "460009382507011",
+      "460009382507012",
+      "460009382507013",
+      "460009382507014"
+    ],
+    "medium": [
+      "460009382507015",
+      "460009382507016",
+      "460009382507017",
+      "460009382507018"
+    ],
+    "hard": [
+      "460009382507019",
+      "4600093825070110",
+      "4600093825070111",
+      "4600093825070112"
+    ]
+  },
+  "testIds": [
+    "460009382507011",
+    "460009382507012",
+    "460009382507013",
+    "460009382507014",
+    "460009382507015",
+    "460009382507016",
+    "460009382507017",
+    "460009382507018",
+    "460009382507019",
+    "4600093825070110",
+    "4600093825070111",
+    "4600093825070112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46000938250701",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
