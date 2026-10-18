@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 5,
+  "subject": {
+    "name": "VLSI",
+    "SubjectId": "49009320051001",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32,
+    "syllabusScope": "First half of ordered syllabus units: Introduction to VLSI Design; MOS Inverters 07 characteristics, MOSFET scaling, MOSFET capacitance; Combinational MOS logic circuits; Sequential MOS logic circuits."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "490093200510011",
+      "490093200510012",
+      "490093200510013",
+      "490093200510014"
+    ],
+    "medium": [
+      "490093200510015",
+      "490093200510016",
+      "490093200510017",
+      "490093200510018"
+    ],
+    "hard": [
+      "490093200510019",
+      "4900932005100110",
+      "4900932005100111",
+      "4900932005100112"
+    ]
+  },
+  "testIds": [
+    "490093200510011",
+    "490093200510012",
+    "490093200510013",
+    "490093200510014",
+    "490093200510015",
+    "490093200510016",
+    "490093200510017",
+    "490093200510018",
+    "490093200510019",
+    "4900932005100110",
+    "4900932005100111",
+    "4900932005100112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320051001",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

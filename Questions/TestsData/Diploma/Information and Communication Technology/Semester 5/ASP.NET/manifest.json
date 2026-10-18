@@ -1,0 +1,30 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 5,
+  "subject": {
+    "name": "ASP.NET",
+    "SubjectId": "49009320050201",
+    "isDepartmentalSubject": true
+  },
+  "examTypes": [
+    {
+      "name": "Mid 1",
+      "format": "mcq",
+      "tests": 12,
+      "scope": "First half of ordered syllabus units: Web Project (ASP.NET), Opening an Existing Web Site, Building Web Sites, set up of work; Checkbox list, Radio Button, Link Button, List Box, Drop Down List, Image, Hyperlink,."
+    },
+    {
+      "name": "Mid 2",
+      "format": "mcq",
+      "tests": 12,
+      "scope": "Full semester syllabus practice bank."
+    }
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+  "reusedFrom": null
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 5,
+  "subject": {
+    "name": "ASP.NET",
+    "SubjectId": "49009320050201",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "First half of ordered syllabus units: Web Project (ASP.NET), Opening an Existing Web Site, Building Web Sites, set up of work; Checkbox list, Radio Button, Link Button, List Box, Drop Down List, Image, Hyperlink,."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "490093200502011",
+      "490093200502012",
+      "490093200502013",
+      "490093200502014"
+    ],
+    "medium": [
+      "490093200502015",
+      "490093200502016",
+      "490093200502017",
+      "490093200502018"
+    ],
+    "hard": [
+      "490093200502019",
+      "4900932005020110",
+      "4900932005020111",
+      "4900932005020112"
+    ]
+  },
+  "testIds": [
+    "490093200502011",
+    "490093200502012",
+    "490093200502013",
+    "490093200502014",
+    "490093200502015",
+    "490093200502016",
+    "490093200502017",
+    "490093200502018",
+    "490093200502019",
+    "4900932005020110",
+    "4900932005020111",
+    "4900932005020112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320050201",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

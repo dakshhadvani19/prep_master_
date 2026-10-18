@@ -1,0 +1,453 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 5,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "answer_review": "answer-review-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 5,
+    "subjects": 13,
+    "nonDepartmentalSubjects": 12,
+    "departmentalSubjects": 1,
+    "examTypeBanks": 38,
+    "totalTests": 456,
+    "mcqTests": 168,
+    "theoryTests": 288,
+    "mcqQuestions": 5040,
+    "theoryQuestions": 1152,
+    "mcqOptionEntries": 20160,
+    "answerEntries": 6192,
+    "reusedSubjects": 0,
+    "newSubjectBanks": 13,
+    "excludedProjectSubjects": 1,
+    "blockedDuplicateSubjects": 0
+  },
+  "exam_rules": {
+    "nonDepartmental": {
+      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "12 theory variants × 4 questions × 8 marks"
+    },
+    "departmental": {
+      "Mid1": "12 MCQ variants × 30; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "not generated"
+    },
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "Non-departmental: occurrences 1–12 Mid 1, 13–24 Mid 2, 25–36 ESE. Departmental: occurrences 1–12 Mid 1, 13–24 Mid 2."
+  },
+  "subjects": [
+    {
+      "name": "ASP.NET",
+      "SubjectId": "49009320050201",
+      "subject_code": "09CT0502",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/asp.net_.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Web Project (ASP.NET), Opening an Existing Web Site, Building Web Sites, set up of work; Checkbox list, Radio Button, Link Button, List Box, Drop Down List, Image, Hyperlink,."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Cryptography and Network Security",
+      "SubjectId": "49009320050301",
+      "subject_code": "09CT0503",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/cryptography-and-network-security.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Security in Computing Environment; Basics of Cryptography; Symmetric Key Encryption; Public Key Encryption."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Data Analytics and Visualization",
+      "SubjectId": "49009320050801",
+      "subject_code": "09CT0508",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/dst-1-data-analytics-and-visualization.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to Data Analytics and Visualization; Getting Started with interface; Creating Basic Visualizations plots; Creating Data maps; Manipulating Data."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Engineering Electromagnetics",
+      "SubjectId": "49009320051101",
+      "subject_code": "09CT0511",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e2-engineering-electrodynamics-.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Vector Calculus and Coordinate Systems; Coulomb's Law and Electric Field; Electric Flux Density and Gauss's Law."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Game Development",
+      "SubjectId": "49009320051401",
+      "subject_code": "09CT0514",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e2-game-development.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Unity and Game Development Fundamentals; C# Scripting Fundamentals; Movement, Input and 2D Physics."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Linux Administrator",
+      "SubjectId": "49009320051201",
+      "subject_code": "09CT0512",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e2-linux-administration.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Basics of Linux; Linux Commands; Managing Files from the Command Line; Managing Users and Groups; Shell Processing and Task Scheduling."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Machine Learning using Python",
+      "SubjectId": "49009320051301",
+      "subject_code": "09CT0513",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/machine-learning-using-python_dst-2.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to Python; Data types in python; Conditional and Decision Making Statements; String manipulations; Lists, tuples, and dictionaries; Functions, Scoping and Abstraction; Basics of Python Libraries; Cleaning and Processing the Data; Machine Learning using Python."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Microcontroller and Interfacing",
+      "SubjectId": "49009320050501",
+      "subject_code": "09CT0505",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/microcontroller-and-interfacing-syllabus.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to Microcontroller; Interfacing with 8051 Microcontroller."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Network Routing and Switching",
+      "SubjectId": "49009320050701",
+      "subject_code": "09CT0507",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e1-network-routing-and-switching.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to Networks; IP Addressing and Subnetting; Routers, Switches and Cisco IOS."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Optical and Satellite Communication",
+      "SubjectId": "49009320050601",
+      "subject_code": "09CT0506",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/e1-optical-and-satellite-communication.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Optical Fiber Communication Fundamentals; Optical Sources and Detectors; Optical System Design."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Probability and Statistics",
+      "SubjectId": "49009320050101",
+      "subject_code": "09CT0501",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/probability-and-statistics-syllabus.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Statistics and Descriptive Methods; Graphical and Tabular Descriptive Techniques; Numerical Descriptive Techniques; Data Collection and Sampling; Probability."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Programming with Application Development (Android)",
+      "SubjectId": "49009320050901",
+      "subject_code": "09CT0509",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0509_programming-with-application-developement-android.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Kotlin Programming; Android and User Interface; Android Storage; User Experience, Maps and Sensors."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "VLSI",
+      "SubjectId": "49009320051001",
+      "subject_code": "09CT0510",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/vlsi_syllabus.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to VLSI Design; MOS Inverters 07 characteristics, MOSFET scaling, MOSFET capacitance; Combinational MOS logic circuits; Sequential MOS logic circuits."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Exact normalized subject-name matches with the same departmental flag are reused verbatim even if syllabus descriptions differ, per user instruction.",
+    "For non-name matches, reuse still requires departmental-flag and unit/topic alignment. An exact-name match with an incompatible departmental flag raises an error rather than silently generating a replacement bank.",
+    "Mid 1 scope is recorded from the first half of the ordered syllabus units; confirm against the official exam blueprint.",
+    "Generated question pools and theory answers are drafts requiring academic review.",
+    "TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.",
+    "Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats.",
+    "Project subjects are excluded completely.",
+    "Template-generated content pending academic QA."
+  ],
+  "excludedSubjects": [
+    {
+      "name": "Project I",
+      "SubjectId": "49009320050401",
+      "reason": "Excluded entirely from exam generation by explicit instruction."
+    }
+  ],
+  "blockedDuplicateSubjects": []
+}

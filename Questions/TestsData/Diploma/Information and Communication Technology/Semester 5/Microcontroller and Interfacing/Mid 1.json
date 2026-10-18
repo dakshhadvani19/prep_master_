@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 5,
+  "subject": {
+    "name": "Microcontroller and Interfacing",
+    "SubjectId": "49009320050501",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32,
+    "syllabusScope": "First half of ordered syllabus units: Introduction to Microcontroller; Interfacing with 8051 Microcontroller."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "490093200505011",
+      "490093200505012",
+      "490093200505013",
+      "490093200505014"
+    ],
+    "medium": [
+      "490093200505015",
+      "490093200505016",
+      "490093200505017",
+      "490093200505018"
+    ],
+    "hard": [
+      "490093200505019",
+      "4900932005050110",
+      "4900932005050111",
+      "4900932005050112"
+    ]
+  },
+  "testIds": [
+    "490093200505011",
+    "490093200505012",
+    "490093200505013",
+    "490093200505014",
+    "490093200505015",
+    "490093200505016",
+    "490093200505017",
+    "490093200505018",
+    "490093200505019",
+    "4900932005050110",
+    "4900932005050111",
+    "4900932005050112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320050501",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 5,
+  "subject": {
+    "name": "Cryptography and Network Security",
+    "SubjectId": "49009320050301",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32,
+    "syllabusScope": "First half of ordered syllabus units: Security in Computing Environment; Basics of Cryptography; Symmetric Key Encryption; Public Key Encryption."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "490093200503011",
+      "490093200503012",
+      "490093200503013",
+      "490093200503014"
+    ],
+    "medium": [
+      "490093200503015",
+      "490093200503016",
+      "490093200503017",
+      "490093200503018"
+    ],
+    "hard": [
+      "490093200503019",
+      "4900932005030110",
+      "4900932005030111",
+      "4900932005030112"
+    ]
+  },
+  "testIds": [
+    "490093200503011",
+    "490093200503012",
+    "490093200503013",
+    "490093200503014",
+    "490093200503015",
+    "490093200503016",
+    "490093200503017",
+    "490093200503018",
+    "490093200503019",
+    "4900932005030110",
+    "4900932005030111",
+    "4900932005030112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320050301",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
