@@ -225,3 +225,10 @@ The PDF-to-JSON index and the live Supabase catalog are separate sources. Genera
 - The inventory's missing PDF URLs mean not every subject has a linked PDF available in this source manifest; inventory inclusion alone does not claim PDF-text verification.
 
 See `docs/PREPMaster_DATABASE_STATUS.md` for details.
+
+
+## Active task — Diploma exam-bank file structure (2026-10-18)
+
+The immediate task is **GitHub-only**: verify and complete the subject-folder exam JSON layout for Diploma Computer Engineering and Diploma Chemical Engineering, Semesters 1–6. The user explicitly excluded Supabase work for this task. Read [DIPLOMA_EXAM_BANK_HANDOFF.md](DIPLOMA_EXAM_BANK_HANDOFF.md) for the exact target tree, exam rules, existing v2 counts, verified progress, gaps, validation checklist, and a paste-ready prompt for a new ChatGPT conversation.
+
+Current truth: course- and semester-level v2 banks are documented in the repository, and some subject folders exist. The full inventory of the requested `Mid 1.json`, `Mid 2.json`, and conditionally `ESE.json` files across all 12 semesters is **not yet verified**. Do not claim the requested layout is complete until every subject is checked. Do not query/change Supabase or run staged SQL.
