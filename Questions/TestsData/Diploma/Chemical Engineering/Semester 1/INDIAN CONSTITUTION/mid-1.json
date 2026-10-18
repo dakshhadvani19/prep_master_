@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "INDIAN CONSTITUTION",
+    "SubjectId": "46009121010101",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "460091210101011",
+      "460091210101012",
+      "460091210101013",
+      "460091210101014"
+    ],
+    "medium": [
+      "460091210101015",
+      "460091210101016",
+      "460091210101017",
+      "460091210101018"
+    ],
+    "hard": [
+      "460091210101019",
+      "4600912101010110",
+      "4600912101010111",
+      "4600912101010112"
+    ]
+  },
+  "testIds": [
+    "460091210101011",
+    "460091210101012",
+    "460091210101013",
+    "460091210101014",
+    "460091210101015",
+    "460091210101016",
+    "460091210101017",
+    "460091210101018",
+    "460091210101019",
+    "4600912101010110",
+    "4600912101010111",
+    "4600912101010112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46009121010101",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
