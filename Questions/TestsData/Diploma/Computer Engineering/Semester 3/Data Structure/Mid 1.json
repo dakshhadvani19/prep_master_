@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 3,
+  "subject": {
+    "name": "Data Structure",
+    "SubjectId": "44000935330301",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "440009353303011",
+      "440009353303012",
+      "440009353303013",
+      "440009353303014"
+    ],
+    "medium": [
+      "440009353303015",
+      "440009353303016",
+      "440009353303017",
+      "440009353303018"
+    ],
+    "hard": [
+      "440009353303019",
+      "4400093533030110",
+      "4400093533030111",
+      "4400093533030112"
+    ]
+  },
+  "testIds": [
+    "440009353303011",
+    "440009353303012",
+    "440009353303013",
+    "440009353303014",
+    "440009353303015",
+    "440009353303016",
+    "440009353303017",
+    "440009353303018",
+    "440009353303019",
+    "4400093533030110",
+    "4400093533030111",
+    "4400093533030112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44000935330301",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

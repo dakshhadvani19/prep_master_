@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 2,
+  "subject": {
+    "name": "MATHEMATICS-II",
+    "SubjectId": "46009131210201",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600913121020113",
+      "4600913121020114",
+      "4600913121020115",
+      "4600913121020116"
+    ],
+    "medium": [
+      "4600913121020117",
+      "4600913121020118",
+      "4600913121020119",
+      "4600913121020120"
+    ],
+    "hard": [
+      "4600913121020121",
+      "4600913121020122",
+      "4600913121020123",
+      "4600913121020124"
+    ]
+  },
+  "testIds": [
+    "4600913121020113",
+    "4600913121020114",
+    "4600913121020115",
+    "4600913121020116",
+    "4600913121020117",
+    "4600913121020118",
+    "4600913121020119",
+    "4600913121020120",
+    "4600913121020121",
+    "4600913121020122",
+    "4600913121020123",
+    "4600913121020124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46009131210201",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

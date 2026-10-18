@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 2,
+  "subject": {
+    "name": "Applied Physics",
+    "SubjectId": "44009719210101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400971921010113",
+      "4400971921010114",
+      "4400971921010115",
+      "4400971921010116"
+    ],
+    "medium": [
+      "4400971921010117",
+      "4400971921010118",
+      "4400971921010119",
+      "4400971921010120"
+    ],
+    "hard": [
+      "4400971921010121",
+      "4400971921010122",
+      "4400971921010123",
+      "4400971921010124"
+    ]
+  },
+  "testIds": [
+    "4400971921010113",
+    "4400971921010114",
+    "4400971921010115",
+    "4400971921010116",
+    "4400971921010117",
+    "4400971921010118",
+    "4400971921010119",
+    "4400971921010120",
+    "4400971921010121",
+    "4400971921010122",
+    "4400971921010123",
+    "4400971921010124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44009719210101",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

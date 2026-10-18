@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 2,
+  "subject": {
+    "name": "Enviornment Conservation & Disater Management",
+    "SubjectId": "44009121010201",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400912101020113",
+      "4400912101020114",
+      "4400912101020115",
+      "4400912101020116"
+    ],
+    "medium": [
+      "4400912101020117",
+      "4400912101020118",
+      "4400912101020119",
+      "4400912101020120"
+    ],
+    "hard": [
+      "4400912101020121",
+      "4400912101020122",
+      "4400912101020123",
+      "4400912101020124"
+    ]
+  },
+  "testIds": [
+    "4400912101020113",
+    "4400912101020114",
+    "4400912101020115",
+    "4400912101020116",
+    "4400912101020117",
+    "4400912101020118",
+    "4400912101020119",
+    "4400912101020120",
+    "4400912101020121",
+    "4400912101020122",
+    "4400912101020123",
+    "4400912101020124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44009121010201",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

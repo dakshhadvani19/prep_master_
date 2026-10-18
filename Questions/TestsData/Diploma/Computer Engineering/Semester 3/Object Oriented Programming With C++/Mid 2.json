@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 3,
+  "subject": {
+    "name": "Object Oriented Programming With C++",
+    "SubjectId": "44000935330101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400093533010113",
+      "4400093533010114",
+      "4400093533010115",
+      "4400093533010116"
+    ],
+    "medium": [
+      "4400093533010117",
+      "4400093533010118",
+      "4400093533010119",
+      "4400093533010120"
+    ],
+    "hard": [
+      "4400093533010121",
+      "4400093533010122",
+      "4400093533010123",
+      "4400093533010124"
+    ]
+  },
+  "testIds": [
+    "4400093533010113",
+    "4400093533010114",
+    "4400093533010115",
+    "4400093533010116",
+    "4400093533010117",
+    "4400093533010118",
+    "4400093533010119",
+    "4400093533010120",
+    "4400093533010121",
+    "4400093533010122",
+    "4400093533010123",
+    "4400093533010124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44000935330101",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

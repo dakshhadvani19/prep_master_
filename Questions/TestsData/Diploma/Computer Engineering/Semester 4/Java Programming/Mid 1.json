@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 4,
+  "subject": {
+    "name": "Java Programming",
+    "SubjectId": "44000935140301",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "440009351403011",
+      "440009351403012",
+      "440009351403013",
+      "440009351403014"
+    ],
+    "medium": [
+      "440009351403015",
+      "440009351403016",
+      "440009351403017",
+      "440009351403018"
+    ],
+    "hard": [
+      "440009351403019",
+      "4400093514030110",
+      "4400093514030111",
+      "4400093514030112"
+    ]
+  },
+  "testIds": [
+    "440009351403011",
+    "440009351403012",
+    "440009351403013",
+    "440009351403014",
+    "440009351403015",
+    "440009351403016",
+    "440009351403017",
+    "440009351403018",
+    "440009351403019",
+    "4400093514030110",
+    "4400093514030111",
+    "4400093514030112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44000935140301",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

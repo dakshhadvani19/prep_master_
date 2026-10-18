@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 3,
+  "subject": {
+    "name": "Mathematics-III",
+    "SubjectId": "44009131030201",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "440091310302011",
+      "440091310302012",
+      "440091310302013",
+      "440091310302014"
+    ],
+    "medium": [
+      "440091310302015",
+      "440091310302016",
+      "440091310302017",
+      "440091310302018"
+    ],
+    "hard": [
+      "440091310302019",
+      "4400913103020110",
+      "4400913103020111",
+      "4400913103020112"
+    ]
+  },
+  "testIds": [
+    "440091310302011",
+    "440091310302012",
+    "440091310302013",
+    "440091310302014",
+    "440091310302015",
+    "440091310302016",
+    "440091310302017",
+    "440091310302018",
+    "440091310302019",
+    "4400913103020110",
+    "4400913103020111",
+    "4400913103020112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44009131030201",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

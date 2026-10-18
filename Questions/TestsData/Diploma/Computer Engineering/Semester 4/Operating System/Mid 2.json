@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 4,
+  "subject": {
+    "name": "Operating System",
+    "SubjectId": "44000935340501",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400093534050113",
+      "4400093534050114",
+      "4400093534050115",
+      "4400093534050116"
+    ],
+    "medium": [
+      "4400093534050117",
+      "4400093534050118",
+      "4400093534050119",
+      "4400093534050120"
+    ],
+    "hard": [
+      "4400093534050121",
+      "4400093534050122",
+      "4400093534050123",
+      "4400093534050124"
+    ]
+  },
+  "testIds": [
+    "4400093534050113",
+    "4400093534050114",
+    "4400093534050115",
+    "4400093534050116",
+    "4400093534050117",
+    "4400093534050118",
+    "4400093534050119",
+    "4400093534050120",
+    "4400093534050121",
+    "4400093534050122",
+    "4400093534050123",
+    "4400093534050124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44000935340501",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

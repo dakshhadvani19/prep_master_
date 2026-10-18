@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 3,
+  "subject": {
+    "name": "REACTOR & BOILER OPERATION SKILL",
+    "SubjectId": "46000938230401",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600093823040113",
+      "4600093823040114",
+      "4600093823040115",
+      "4600093823040116"
+    ],
+    "medium": [
+      "4600093823040117",
+      "4600093823040118",
+      "4600093823040119",
+      "4600093823040120"
+    ],
+    "hard": [
+      "4600093823040121",
+      "4600093823040122",
+      "4600093823040123",
+      "4600093823040124"
+    ]
+  },
+  "testIds": [
+    "4600093823040113",
+    "4600093823040114",
+    "4600093823040115",
+    "4600093823040116",
+    "4600093823040117",
+    "4600093823040118",
+    "4600093823040119",
+    "4600093823040120",
+    "4600093823040121",
+    "4600093823040122",
+    "4600093823040123",
+    "4600093823040124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46000938230401",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

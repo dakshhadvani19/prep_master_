@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "BHARATIYA KNOWLEDGE SYSTEM",
+    "SubjectId": "46009911010101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "460099110101011",
+      "460099110101012",
+      "460099110101013",
+      "460099110101014"
+    ],
+    "medium": [
+      "460099110101015",
+      "460099110101016",
+      "460099110101017",
+      "460099110101018"
+    ],
+    "hard": [
+      "460099110101019",
+      "4600991101010110",
+      "4600991101010111",
+      "4600991101010112"
+    ]
+  },
+  "testIds": [
+    "460099110101011",
+    "460099110101012",
+    "460099110101013",
+    "460099110101014",
+    "460099110101015",
+    "460099110101016",
+    "460099110101017",
+    "460099110101018",
+    "460099110101019",
+    "4600991101010110",
+    "4600991101010111",
+    "4600991101010112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46009911010101",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

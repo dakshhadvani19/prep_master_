@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 2,
+  "subject": {
+    "name": "Applied Physics",
+    "SubjectId": "44009719210101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "ESE",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400971921010125",
+      "4400971921010126",
+      "4400971921010127",
+      "4400971921010128"
+    ],
+    "medium": [
+      "4400971921010129",
+      "4400971921010130",
+      "4400971921010131",
+      "4400971921010132"
+    ],
+    "hard": [
+      "4400971921010133",
+      "4400971921010134",
+      "4400971921010135",
+      "4400971921010136"
+    ]
+  },
+  "testIds": [
+    "4400971921010125",
+    "4400971921010126",
+    "4400971921010127",
+    "4400971921010128",
+    "4400971921010129",
+    "4400971921010130",
+    "4400971921010131",
+    "4400971921010132",
+    "4400971921010133",
+    "4400971921010134",
+    "4400971921010135",
+    "4400971921010136"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44009719210101",
+    "examType": "ESE"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

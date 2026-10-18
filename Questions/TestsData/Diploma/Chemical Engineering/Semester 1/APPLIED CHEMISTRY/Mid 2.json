@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "APPLIED CHEMISTRY",
+    "SubjectId": "46009719310201",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600971931020113",
+      "4600971931020114",
+      "4600971931020115",
+      "4600971931020116"
+    ],
+    "medium": [
+      "4600971931020117",
+      "4600971931020118",
+      "4600971931020119",
+      "4600971931020120"
+    ],
+    "hard": [
+      "4600971931020121",
+      "4600971931020122",
+      "4600971931020123",
+      "4600971931020124"
+    ]
+  },
+  "testIds": [
+    "4600971931020113",
+    "4600971931020114",
+    "4600971931020115",
+    "4600971931020116",
+    "4600971931020117",
+    "4600971931020118",
+    "4600971931020119",
+    "4600971931020120",
+    "4600971931020121",
+    "4600971931020122",
+    "4600971931020123",
+    "4600971931020124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46009719310201",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

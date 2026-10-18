@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "COMMUNICATION SKILLS",
+    "SubjectId": "46091912010301",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4609191201030113",
+      "4609191201030114",
+      "4609191201030115",
+      "4609191201030116"
+    ],
+    "medium": [
+      "4609191201030117",
+      "4609191201030118",
+      "4609191201030119",
+      "4609191201030120"
+    ],
+    "hard": [
+      "4609191201030121",
+      "4609191201030122",
+      "4609191201030123",
+      "4609191201030124"
+    ]
+  },
+  "testIds": [
+    "4609191201030113",
+    "4609191201030114",
+    "4609191201030115",
+    "4609191201030116",
+    "4609191201030117",
+    "4609191201030118",
+    "4609191201030119",
+    "4609191201030120",
+    "4609191201030121",
+    "4609191201030122",
+    "4609191201030123",
+    "4609191201030124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46091912010301",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

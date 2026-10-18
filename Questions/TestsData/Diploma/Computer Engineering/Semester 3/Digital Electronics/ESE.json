@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 3,
+  "subject": {
+    "name": "Digital Electronics",
+    "SubjectId": "44009320130101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "ESE",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400932013010125",
+      "4400932013010126",
+      "4400932013010127",
+      "4400932013010128"
+    ],
+    "medium": [
+      "4400932013010129",
+      "4400932013010130",
+      "4400932013010131",
+      "4400932013010132"
+    ],
+    "hard": [
+      "4400932013010133",
+      "4400932013010134",
+      "4400932013010135",
+      "4400932013010136"
+    ]
+  },
+  "testIds": [
+    "4400932013010125",
+    "4400932013010126",
+    "4400932013010127",
+    "4400932013010128",
+    "4400932013010129",
+    "4400932013010130",
+    "4400932013010131",
+    "4400932013010132",
+    "4400932013010133",
+    "4400932013010134",
+    "4400932013010135",
+    "4400932013010136"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44009320130101",
+    "examType": "ESE"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

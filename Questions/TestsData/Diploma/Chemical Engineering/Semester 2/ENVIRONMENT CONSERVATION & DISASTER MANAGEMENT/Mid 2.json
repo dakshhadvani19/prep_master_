@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 2,
+  "subject": {
+    "name": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
+    "SubjectId": "46009121010201",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600912101020113",
+      "4600912101020114",
+      "4600912101020115",
+      "4600912101020116"
+    ],
+    "medium": [
+      "4600912101020117",
+      "4600912101020118",
+      "4600912101020119",
+      "4600912101020120"
+    ],
+    "hard": [
+      "4600912101020121",
+      "4600912101020122",
+      "4600912101020123",
+      "4600912101020124"
+    ]
+  },
+  "testIds": [
+    "4600912101020113",
+    "4600912101020114",
+    "4600912101020115",
+    "4600912101020116",
+    "4600912101020117",
+    "4600912101020118",
+    "4600912101020119",
+    "4600912101020120",
+    "4600912101020121",
+    "4600912101020122",
+    "4600912101020123",
+    "4600912101020124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46009121010201",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 5,
+  "subject": {
+    "name": "Advance Web Technology",
+    "SubjectId": "44000935150301",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "440009351503011",
+      "440009351503012",
+      "440009351503013",
+      "440009351503014"
+    ],
+    "medium": [
+      "440009351503015",
+      "440009351503016",
+      "440009351503017",
+      "440009351503018"
+    ],
+    "hard": [
+      "440009351503019",
+      "4400093515030110",
+      "4400093515030111",
+      "4400093515030112"
+    ]
+  },
+  "testIds": [
+    "440009351503011",
+    "440009351503012",
+    "440009351503013",
+    "440009351503014",
+    "440009351503015",
+    "440009351503016",
+    "440009351503017",
+    "440009351503018",
+    "440009351503019",
+    "4400093515030110",
+    "4400093515030111",
+    "4400093515030112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44000935150301",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

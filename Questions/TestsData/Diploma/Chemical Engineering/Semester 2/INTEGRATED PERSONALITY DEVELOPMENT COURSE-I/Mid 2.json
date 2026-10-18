@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 2,
+  "subject": {
+    "name": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-I",
+    "SubjectId": "46009164010101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600916401010113",
+      "4600916401010114",
+      "4600916401010115",
+      "4600916401010116"
+    ],
+    "medium": [
+      "4600916401010117",
+      "4600916401010118",
+      "4600916401010119",
+      "4600916401010120"
+    ],
+    "hard": [
+      "4600916401010121",
+      "4600916401010122",
+      "4600916401010123",
+      "4600916401010124"
+    ]
+  },
+  "testIds": [
+    "4600916401010113",
+    "4600916401010114",
+    "4600916401010115",
+    "4600916401010116",
+    "4600916401010117",
+    "4600916401010118",
+    "4600916401010119",
+    "4600916401010120",
+    "4600916401010121",
+    "4600916401010122",
+    "4600916401010123",
+    "4600916401010124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46009164010101",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
