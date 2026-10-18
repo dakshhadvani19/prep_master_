@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 6,
+  "subject": {
+    "name": "ENTREPRENEURSHIP DEVELOPMENT",
+    "SubjectId": "46000938260401",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600093826040113",
+      "4600093826040114",
+      "4600093826040115",
+      "4600093826040116"
+    ],
+    "medium": [
+      "4600093826040117",
+      "4600093826040118",
+      "4600093826040119",
+      "4600093826040120"
+    ],
+    "hard": [
+      "4600093826040121",
+      "4600093826040122",
+      "4600093826040123",
+      "4600093826040124"
+    ]
+  },
+  "testIds": [
+    "4600093826040113",
+    "4600093826040114",
+    "4600093826040115",
+    "4600093826040116",
+    "4600093826040117",
+    "4600093826040118",
+    "4600093826040119",
+    "4600093826040120",
+    "4600093826040121",
+    "4600093826040122",
+    "4600093826040123",
+    "4600093826040124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46000938260401",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
