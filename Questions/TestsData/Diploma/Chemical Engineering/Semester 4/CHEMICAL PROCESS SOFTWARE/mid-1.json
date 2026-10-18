@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 4,
+  "subject": {
+    "name": "CHEMICAL PROCESS SOFTWARE",
+    "SubjectId": "46000938240401",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "460009382404011",
+      "460009382404012",
+      "460009382404013",
+      "460009382404014"
+    ],
+    "medium": [
+      "460009382404015",
+      "460009382404016",
+      "460009382404017",
+      "460009382404018"
+    ],
+    "hard": [
+      "460009382404019",
+      "4600093824040110",
+      "4600093824040111",
+      "4600093824040112"
+    ]
+  },
+  "testIds": [
+    "460009382404011",
+    "460009382404012",
+    "460009382404013",
+    "460009382404014",
+    "460009382404015",
+    "460009382404016",
+    "460009382404017",
+    "460009382404018",
+    "460009382404019",
+    "4600093824040110",
+    "4600093824040111",
+    "4600093824040112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46000938240401",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
