@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 5,
+  "subject": {
+    "name": "Mobile Computing",
+    "SubjectId": "44000935150101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "ESE",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400093515010125",
+      "4400093515010126",
+      "4400093515010127",
+      "4400093515010128"
+    ],
+    "medium": [
+      "4400093515010129",
+      "4400093515010130",
+      "4400093515010131",
+      "4400093515010132"
+    ],
+    "hard": [
+      "4400093515010133",
+      "4400093515010134",
+      "4400093515010135",
+      "4400093515010136"
+    ]
+  },
+  "testIds": [
+    "4400093515010125",
+    "4400093515010126",
+    "4400093515010127",
+    "4400093515010128",
+    "4400093515010129",
+    "4400093515010130",
+    "4400093515010131",
+    "4400093515010132",
+    "4400093515010133",
+    "4400093515010134",
+    "4400093515010135",
+    "4400093515010136"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44000935150101",
+    "examType": "ESE"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
