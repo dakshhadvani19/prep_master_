@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "Communication Skills-I",
+    "SubjectId": "44091912010301",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "Full syllabus"
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4409191201030113",
+      "4409191201030114",
+      "4409191201030115",
+      "4409191201030116"
+    ],
+    "medium": [
+      "4409191201030117",
+      "4409191201030118",
+      "4409191201030119",
+      "4409191201030120"
+    ],
+    "hard": [
+      "4409191201030121",
+      "4409191201030122",
+      "4409191201030123",
+      "4409191201030124"
+    ]
+  },
+  "testIds": [
+    "4409191201030113",
+    "4409191201030114",
+    "4409191201030115",
+    "4409191201030116",
+    "4409191201030117",
+    "4409191201030118",
+    "4409191201030119",
+    "4409191201030120",
+    "4409191201030121",
+    "4409191201030122",
+    "4409191201030123",
+    "4409191201030124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44091912010301",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes this exam's 12 variants and avoids duplicating questions.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
