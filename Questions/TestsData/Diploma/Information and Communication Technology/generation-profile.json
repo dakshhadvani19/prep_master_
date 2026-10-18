@@ -485,19 +485,8 @@
       }
     ]
   },
-  "excludeSubjectIds": [
-    "49091912110101"
-  ],
-  "excludeSubjectNotes": [
-    {
-      "subjectId": "49091912110101",
-      "name": "Communication Skills-I",
-      "semester": 1,
-      "sourceCourse": "Diploma Computer Engineering",
-      "sourceSubjectId": "44091912010301",
-      "reason": "Exact-name source exists, but its isDepartmentalSubject=false requires theory Mid 1/ESE while ICT isDepartmentalSubject=true requires MCQ-only Mid 1/Mid 2. As the source and target exam types do not align, generation is blocked rather than making replacement questions or silently changing format."
-    }
-  ],
+  "excludeSubjectIds": [],
+  "excludeSubjectNotes": [],
   "excludedProjects": [
     {
       "subjectId": "49009320050401",
@@ -516,5 +505,19 @@
     "Use the live public.Subjects.isDepartmentalSubject flag to determine exam formats.",
     "When an exact-name duplicate has an incompatible flag, block it for review rather than generating replacement questions or silently reformatting theory as MCQ.",
     "Keep Supabase writes disabled; generated SQL is staged only."
+  ],
+  "reuseFormatExceptions": [
+    {
+      "subjectId": "49091912110101",
+      "name": "Communication Skills-I",
+      "sourceCourseId": 44,
+      "sourceSubjectId": "44091912010301",
+      "sourceExamType": "Mid 2",
+      "targetExamTypes": [
+        "Mid 1",
+        "Mid 2"
+      ],
+      "policy": "Copy the source Mid 2 MCQ payloads verbatim into both ICT departmental MCQ exam types. No new question generation. Mark Mid 1 first-half scope unverified."
+    }
   ]
 }
