@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 6,
+  "subject": {
+    "name": "CHEMICAL ENGINEERING PLANT ECONOMICS",
+    "SubjectId": "46000938260201",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "ESE",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600093826020125",
+      "4600093826020126",
+      "4600093826020127",
+      "4600093826020128"
+    ],
+    "medium": [
+      "4600093826020129",
+      "4600093826020130",
+      "4600093826020131",
+      "4600093826020132"
+    ],
+    "hard": [
+      "4600093826020133",
+      "4600093826020134",
+      "4600093826020135",
+      "4600093826020136"
+    ]
+  },
+  "testIds": [
+    "4600093826020125",
+    "4600093826020126",
+    "4600093826020127",
+    "4600093826020128",
+    "4600093826020129",
+    "4600093826020130",
+    "4600093826020131",
+    "4600093826020132",
+    "4600093826020133",
+    "4600093826020134",
+    "4600093826020135",
+    "4600093826020136"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46000938260201",
+    "examType": "ESE"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
