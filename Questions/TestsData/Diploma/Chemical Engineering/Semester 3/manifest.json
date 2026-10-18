@@ -239,5 +239,13 @@
     "previouslyMismatchedPayloadsCorrected": 27,
     "method": "Matched target and source rows by subject, exam type, difficulty and occurrence, then compared Questions, Options and Answers exactly. Chemical Engineering TestIds and metadata were preserved.",
     "allMarkedReuseSubjectsFullyCopied": true
+  },
+  "qualityCorrections": {
+    "mid1TheoryScopeRepair": {
+      "updatedAt": "2026-10-18",
+      "rowsRebuilt": 36,
+      "questionsRebuilt": 144,
+      "rule": "Rebuilt Mid1 theory prompts and model answers from the first-half unit/topic set only; reused payloads preserved."
+    }
   }
 }
