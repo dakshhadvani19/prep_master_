@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 4,
+  "subject": {
+    "name": "Web Technology",
+    "SubjectId": "49009320040501",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "First 50% by syllabus order/contact hours: Modern Web Architecture & Hosting; Advanced HTML & Responsive CSS; JavaScript And jQuery."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "490093200405011",
+      "490093200405012",
+      "490093200405013",
+      "490093200405014"
+    ],
+    "medium": [
+      "490093200405015",
+      "490093200405016",
+      "490093200405017",
+      "490093200405018"
+    ],
+    "hard": [
+      "490093200405019",
+      "4900932004050110",
+      "4900932004050111",
+      "4900932004050112"
+    ]
+  },
+  "testIds": [
+    "490093200405011",
+    "490093200405012",
+    "490093200405013",
+    "490093200405014",
+    "490093200405015",
+    "490093200405016",
+    "490093200405017",
+    "490093200405018",
+    "490093200405019",
+    "4900932004050110",
+    "4900932004050111",
+    "4900932004050112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320040501",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants and does not duplicate payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs are strings."
+}

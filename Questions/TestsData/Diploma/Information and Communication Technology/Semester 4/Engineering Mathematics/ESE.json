@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 4,
+  "subject": {
+    "name": "Engineering Mathematics",
+    "SubjectId": "49009131140101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "ESE",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32,
+    "syllabusScope": "Full semester syllabus."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4900913114010125",
+      "4900913114010126",
+      "4900913114010127",
+      "4900913114010128"
+    ],
+    "medium": [
+      "4900913114010129",
+      "4900913114010130",
+      "4900913114010131",
+      "4900913114010132"
+    ],
+    "hard": [
+      "4900913114010133",
+      "4900913114010134",
+      "4900913114010135",
+      "4900913114010136"
+    ]
+  },
+  "testIds": [
+    "4900913114010125",
+    "4900913114010126",
+    "4900913114010127",
+    "4900913114010128",
+    "4900913114010129",
+    "4900913114010130",
+    "4900913114010131",
+    "4900913114010132",
+    "4900913114010133",
+    "4900913114010134",
+    "4900913114010135",
+    "4900913114010136"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009131140101",
+    "examType": "ESE"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants and does not duplicate payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs are strings."
+}

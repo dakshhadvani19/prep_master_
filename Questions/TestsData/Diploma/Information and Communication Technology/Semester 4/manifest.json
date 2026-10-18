@@ -1,0 +1,242 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 4,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "answer_review": "answer-review-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 4,
+    "subjects": 6,
+    "nonDepartmentalSubjects": 3,
+    "departmentalSubjects": 3,
+    "examTypeBanks": 15,
+    "totalTests": 180,
+    "mcqTests": 108,
+    "theoryTests": 72,
+    "mcqQuestions": 3240,
+    "theoryQuestions": 288,
+    "mcqOptionEntries": 12960,
+    "answerEntries": 3528,
+    "reusedSubjects": 1,
+    "newSubjectBanks": 5,
+    "excludedProjectSubjects": 0,
+    "blockedDuplicateSubjects": 0
+  },
+  "exam_rules": {
+    "nonDepartmental": {
+      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "12 theory variants × 4 questions × 8 marks"
+    },
+    "departmental": {
+      "Mid1": "12 MCQ variants × 30; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "not generated"
+    },
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "Non-departmental: occurrences 1–12 Mid 1, 13–24 Mid 2, 25–36 ESE. Departmental: occurrences 1–12 Mid 1, 13–24 Mid 2."
+  },
+  "subjects": [
+    {
+      "name": "Data Communication and Networking",
+      "SubjectId": "49009320040401",
+      "subject_code": "09CT0404",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0404.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: History of Internet, Protocols aand Standards, different types of networks, OSSI Layers,; Introduction to link layer servicees, error detection and correction techniques, Floww Control,; Different transport service, Basicss of Transport protocol, User datagram protocol, Traansmission."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Data Structure and Algorithm design",
+      "SubjectId": "49009320040301",
+      "subject_code": "09CT0403",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0403_dsa_data-structure-and-algorithms.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to Data Structures; Linked Lists; Stacks; Queues."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Engineering Mathematics",
+      "SubjectId": "49009131140101",
+      "subject_code": "09MA1401",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ma1401-3.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Determinants and Matrrices 6; Co-ordinate Geometry 6; Differential Equations ((First Order First degree) 5."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Foundation of Data science Tools",
+      "SubjectId": "49009320040101",
+      "subject_code": "09CT0401",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0401.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to data analytics; Data analytics with ExcelE; Introduction to R andd R Studio; Basics of R language; Operators in R; R-Decision and Contrrol Loop Statements; Flavors in R."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Microprocessor and Assembly Language Programming",
+      "SubjectId": "49009320040201",
+      "subject_code": "09CT0402",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0402.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Evolution of Microprocessors, Microprocessor Bus organization, Operations of; Instruction Set."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Web Technology",
+      "SubjectId": "49009320040501",
+      "subject_code": "09CT0405",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0405.pdf",
+      "reuseDecision": "REUSED_SAME_NAME",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44000935340401",
+        "SubjectName": "Web Technology",
+        "sourceSemester": 4,
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 4/exam-bank-v2.json",
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "syllabusDifferenceOverride": true,
+        "syllabusVerification": {
+          "unitCounts": [
+            5,
+            6
+          ],
+          "titleScore": 0,
+          "topicTokenJaccard": 0.163
+        }
+      },
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First 50% by syllabus order/contact hours: Modern Web Architecture & Hosting; Advanced HTML & Responsive CSS; JavaScript And jQuery."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 4 syllabus practice bank."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Exact normalized subject-name matches with the same departmental flag are reused verbatim even if syllabus descriptions differ, per user instruction.",
+    "For non-name matches, reuse still requires departmental-flag and unit/topic alignment. An exact-name match with an incompatible departmental flag raises an error rather than silently generating a replacement bank.",
+    "Mid 1 scope is recorded from the first half of the ordered syllabus units; confirm against the official exam blueprint.",
+    "Generated question pools and theory answers are drafts requiring academic review.",
+    "TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.",
+    "Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats.",
+    "Project subjects are excluded completely.",
+    "Compatible exact-name duplicates reuse source payloads verbatim.",
+    "New question pools and model answers are template-generated drafts pending academic QA."
+  ],
+  "excludedSubjects": [],
+  "blockedDuplicateSubjects": []
+}

@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 4,
+  "subject": {
+    "name": "Foundation of Data science Tools",
+    "SubjectId": "49009320040101",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "First half of ordered syllabus units: Introduction to data analytics; Data analytics with ExcelE; Introduction to R andd R Studio; Basics of R language; Operators in R; R-Decision and Contrrol Loop Statements; Flavors in R."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "490093200401011",
+      "490093200401012",
+      "490093200401013",
+      "490093200401014"
+    ],
+    "medium": [
+      "490093200401015",
+      "490093200401016",
+      "490093200401017",
+      "490093200401018"
+    ],
+    "hard": [
+      "490093200401019",
+      "4900932004010110",
+      "4900932004010111",
+      "4900932004010112"
+    ]
+  },
+  "testIds": [
+    "490093200401011",
+    "490093200401012",
+    "490093200401013",
+    "490093200401014",
+    "490093200401015",
+    "490093200401016",
+    "490093200401017",
+    "490093200401018",
+    "490093200401019",
+    "4900932004010110",
+    "4900932004010111",
+    "4900932004010112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320040101",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants and does not duplicate payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs are strings."
+}

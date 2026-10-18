@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 4,
+  "subject": {
+    "name": "Foundation of Data science Tools",
+    "SubjectId": "49009320040101",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "Full semester syllabus practice bank."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4900932004010113",
+      "4900932004010114",
+      "4900932004010115",
+      "4900932004010116"
+    ],
+    "medium": [
+      "4900932004010117",
+      "4900932004010118",
+      "4900932004010119",
+      "4900932004010120"
+    ],
+    "hard": [
+      "4900932004010121",
+      "4900932004010122",
+      "4900932004010123",
+      "4900932004010124"
+    ]
+  },
+  "testIds": [
+    "4900932004010113",
+    "4900932004010114",
+    "4900932004010115",
+    "4900932004010116",
+    "4900932004010117",
+    "4900932004010118",
+    "4900932004010119",
+    "4900932004010120",
+    "4900932004010121",
+    "4900932004010122",
+    "4900932004010123",
+    "4900932004010124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320040101",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants and does not duplicate payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs are strings."
+}

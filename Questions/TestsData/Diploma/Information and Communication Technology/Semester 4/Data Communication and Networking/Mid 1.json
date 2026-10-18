@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 4,
+  "subject": {
+    "name": "Data Communication and Networking",
+    "SubjectId": "49009320040401",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32,
+    "syllabusScope": "First half of ordered syllabus units: History of Internet, Protocols aand Standards, different types of networks, OSSI Layers,; Introduction to link layer servicees, error detection and correction techniques, Floww Control,; Different transport service, Basicss of Transport protocol, User datagram protocol, Traansmission."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "490093200404011",
+      "490093200404012",
+      "490093200404013",
+      "490093200404014"
+    ],
+    "medium": [
+      "490093200404015",
+      "490093200404016",
+      "490093200404017",
+      "490093200404018"
+    ],
+    "hard": [
+      "490093200404019",
+      "4900932004040110",
+      "4900932004040111",
+      "4900932004040112"
+    ]
+  },
+  "testIds": [
+    "490093200404011",
+    "490093200404012",
+    "490093200404013",
+    "490093200404014",
+    "490093200404015",
+    "490093200404016",
+    "490093200404017",
+    "490093200404018",
+    "490093200404019",
+    "4900932004040110",
+    "4900932004040111",
+    "4900932004040112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320040401",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants and does not duplicate payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs are strings."
+}
