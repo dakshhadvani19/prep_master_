@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 3,
+  "subject": {
+    "name": "INDUSTRIAL STOICHIOMETRY",
+    "SubjectId": "46000938230201",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600093823020113",
+      "4600093823020114",
+      "4600093823020115",
+      "4600093823020116"
+    ],
+    "medium": [
+      "4600093823020117",
+      "4600093823020118",
+      "4600093823020119",
+      "4600093823020120"
+    ],
+    "hard": [
+      "4600093823020121",
+      "4600093823020122",
+      "4600093823020123",
+      "4600093823020124"
+    ]
+  },
+  "testIds": [
+    "4600093823020113",
+    "4600093823020114",
+    "4600093823020115",
+    "4600093823020116",
+    "4600093823020117",
+    "4600093823020118",
+    "4600093823020119",
+    "4600093823020120",
+    "4600093823020121",
+    "4600093823020122",
+    "4600093823020123",
+    "4600093823020124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46000938230201",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
