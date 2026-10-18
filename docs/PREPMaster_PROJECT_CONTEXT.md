@@ -322,3 +322,8 @@ For full exact database counts, table columns and FK details, see `docs/PREPMast
 ## BCA/MCA catalog update (2026-10-13)
 
 The live Supabase catalog now uses the normalized course names `BCA` (CourseId 18) and `MCA` (CourseId 19). The current GitHub subject inventory is synchronized: 48 BCA subjects across semesters 1–8 and 29 MCA subjects across semesters 1–4. Existing CourseIds were retained. All 77 SubjectIds were calculated using `docs/primary_key_rules.md`; no primary-key rule was broken. The compatibility files `subjectIdBridge.json` and `subjectSemesterMap.json` were synchronized to the same set. See `docs/PREPMaster_DATABASE_STATUS.md` for the reconciliation record.
+
+
+## Active work handoff — Diploma test-bank restructuring
+
+The current active repository task is tracked in [docs/DIPLOMA_EXAM_BANK_HANDOFF.md](DIPLOMA_EXAM_BANK_HANDOFF.md). It covers the requested exam-specific JSON layout for Diploma Computer Engineering and Chemical Engineering, Semesters 1–6, including exact exam-type rules, current documented v2-bank counts, open verification gaps, file validation, and the next-chat prompt. The user explicitly scoped this current task to GitHub repository files only; do not access or change Supabase for it.
