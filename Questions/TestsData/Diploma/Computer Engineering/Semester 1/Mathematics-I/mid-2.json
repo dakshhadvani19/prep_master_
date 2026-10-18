@@ -1,0 +1,59 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "Mathematics-I",
+    "SubjectId": "44009131210101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "syllabusScope": "Full semester syllabus"
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400913121010113",
+      "4400913121010114",
+      "4400913121010115",
+      "4400913121010116"
+    ],
+    "medium": [
+      "4400913121010117",
+      "4400913121010118",
+      "4400913121010119",
+      "4400913121010120"
+    ],
+    "hard": [
+      "4400913121010121",
+      "4400913121010122",
+      "4400913121010123",
+      "4400913121010124"
+    ]
+  },
+  "testIds": [
+    "4400913121010113",
+    "4400913121010114",
+    "4400913121010115",
+    "4400913121010116",
+    "4400913121010117",
+    "4400913121010118",
+    "4400913121010119",
+    "4400913121010120",
+    "4400913121010121",
+    "4400913121010122",
+    "4400913121010123",
+    "4400913121010124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44009131210101",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes this exam's 12 variants and avoids duplicating questions.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
