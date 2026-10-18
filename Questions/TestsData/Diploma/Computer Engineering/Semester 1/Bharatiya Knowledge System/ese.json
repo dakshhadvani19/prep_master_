@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 1,
+  "subject": {
+    "name": "Bharatiya Knowledge System",
+    "SubjectId": "44009911010101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "ESE",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32,
+    "syllabusScope": "Full syllabus"
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400991101010125",
+      "4400991101010126",
+      "4400991101010127",
+      "4400991101010128"
+    ],
+    "medium": [
+      "4400991101010129",
+      "4400991101010130",
+      "4400991101010131",
+      "4400991101010132"
+    ],
+    "hard": [
+      "4400991101010133",
+      "4400991101010134",
+      "4400991101010135",
+      "4400991101010136"
+    ]
+  },
+  "testIds": [
+    "4400991101010125",
+    "4400991101010126",
+    "4400991101010127",
+    "4400991101010128",
+    "4400991101010129",
+    "4400991101010130",
+    "4400991101010131",
+    "4400991101010132",
+    "4400991101010133",
+    "4400991101010134",
+    "4400991101010135",
+    "4400991101010136"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44009911010101",
+    "examType": "ESE"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes this exam's 12 variants and avoids duplicating questions.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
