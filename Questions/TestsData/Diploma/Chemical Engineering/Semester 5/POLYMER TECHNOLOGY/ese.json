@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 5,
+  "subject": {
+    "name": "POLYMER TECHNOLOGY",
+    "SubjectId": "46000938250601",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "ESE",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600093825060125",
+      "4600093825060126",
+      "4600093825060127",
+      "4600093825060128"
+    ],
+    "medium": [
+      "4600093825060129",
+      "4600093825060130",
+      "4600093825060131",
+      "4600093825060132"
+    ],
+    "hard": [
+      "4600093825060133",
+      "4600093825060134",
+      "4600093825060135",
+      "4600093825060136"
+    ]
+  },
+  "testIds": [
+    "4600093825060125",
+    "4600093825060126",
+    "4600093825060127",
+    "4600093825060128",
+    "4600093825060129",
+    "4600093825060130",
+    "4600093825060131",
+    "4600093825060132",
+    "4600093825060133",
+    "4600093825060134",
+    "4600093825060135",
+    "4600093825060136"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46000938250601",
+    "examType": "ESE"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
