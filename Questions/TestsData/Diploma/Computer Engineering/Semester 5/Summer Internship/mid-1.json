@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 5,
+  "subject": {
+    "name": "Summer Internship",
+    "SubjectId": "44000935050901",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "440009350509011",
+      "440009350509012",
+      "440009350509013",
+      "440009350509014"
+    ],
+    "medium": [
+      "440009350509015",
+      "440009350509016",
+      "440009350509017",
+      "440009350509018"
+    ],
+    "hard": [
+      "440009350509019",
+      "4400093505090110",
+      "4400093505090111",
+      "4400093505090112"
+    ]
+  },
+  "testIds": [
+    "440009350509011",
+    "440009350509012",
+    "440009350509013",
+    "440009350509014",
+    "440009350509015",
+    "440009350509016",
+    "440009350509017",
+    "440009350509018",
+    "440009350509019",
+    "4400093505090110",
+    "4400093505090111",
+    "4400093505090112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44000935050901",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
