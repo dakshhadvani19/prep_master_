@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 6,
+  "subject": {
+    "name": ".NET",
+    "SubjectId": "44000935160301",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "440009351603011",
+      "440009351603012",
+      "440009351603013",
+      "440009351603014"
+    ],
+    "medium": [
+      "440009351603015",
+      "440009351603016",
+      "440009351603017",
+      "440009351603018"
+    ],
+    "hard": [
+      "440009351603019",
+      "4400093516030110",
+      "4400093516030111",
+      "4400093516030112"
+    ]
+  },
+  "testIds": [
+    "440009351603011",
+    "440009351603012",
+    "440009351603013",
+    "440009351603014",
+    "440009351603015",
+    "440009351603016",
+    "440009351603017",
+    "440009351603018",
+    "440009351603019",
+    "4400093516030110",
+    "4400093516030111",
+    "4400093516030112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44000935160301",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
