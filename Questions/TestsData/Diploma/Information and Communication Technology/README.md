@@ -9,3 +9,15 @@
 - Communication Skills-I is blocked pending review because ICT's departmental flag conflicts with the existing same-name source exam formats.
 - New question pools/model answers are deterministic template-generated drafts and require academic QA before production.
 - `seed-all-v2.sql` files are staged only; no Supabase inserts or schema changes are performed.
+
+## Current coverage (2026-10-18)
+
+- Semester 1: 4 banked subjects; 1 exact-name duplicate conflict (`Communication Skills-I`) is blocked from regeneration and documented in its manifest.
+- Semester 2: 6 banked subjects.
+- Semester 3: no active subjects; an empty bank and manifest document this catalog state.
+- Semester 4: 6 banked subjects.
+- Semester 5: 13 banked subjects; `Project I` excluded.
+- Semester 6: 11 banked subjects; `Project-II` excluded.
+- Total: 40 subjects banked, 112 exam-type banks and 1,344 test rows.
+- Compatible exact-name duplicate subjects copy question, option and answer payloads verbatim; new content is template-generated draft material requiring academic review.
+- Seed SQL is staged only; no Supabase records or schema were modified.
