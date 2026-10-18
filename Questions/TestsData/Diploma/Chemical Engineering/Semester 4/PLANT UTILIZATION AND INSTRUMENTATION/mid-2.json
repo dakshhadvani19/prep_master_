@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 4,
+  "subject": {
+    "name": "PLANT UTILIZATION AND INSTRUMENTATION",
+    "SubjectId": "46000938240301",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4600093824030113",
+      "4600093824030114",
+      "4600093824030115",
+      "4600093824030116"
+    ],
+    "medium": [
+      "4600093824030117",
+      "4600093824030118",
+      "4600093824030119",
+      "4600093824030120"
+    ],
+    "hard": [
+      "4600093824030121",
+      "4600093824030122",
+      "4600093824030123",
+      "4600093824030124"
+    ]
+  },
+  "testIds": [
+    "4600093824030113",
+    "4600093824030114",
+    "4600093824030115",
+    "4600093824030116",
+    "4600093824030117",
+    "4600093824030118",
+    "4600093824030119",
+    "4600093824030120",
+    "4600093824030121",
+    "4600093824030122",
+    "4600093824030123",
+    "4600093824030124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46000938240301",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
