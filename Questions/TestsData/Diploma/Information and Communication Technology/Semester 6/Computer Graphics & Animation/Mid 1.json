@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 6,
+  "subject": {
+    "name": "Computer Graphics & Animation",
+    "SubjectId": "49009320061201",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32,
+    "syllabusScope": "First half of ordered syllabus units: Introduction to Computer Graphics; Scan Conversion and Clipping; 2D and 3D Transformations, Viewing and Rendering."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "490093200612011",
+      "490093200612012",
+      "490093200612013",
+      "490093200612014"
+    ],
+    "medium": [
+      "490093200612015",
+      "490093200612016",
+      "490093200612017",
+      "490093200612018"
+    ],
+    "hard": [
+      "490093200612019",
+      "4900932006120110",
+      "4900932006120111",
+      "4900932006120112"
+    ]
+  },
+  "testIds": [
+    "490093200612011",
+    "490093200612012",
+    "490093200612013",
+    "490093200612014",
+    "490093200612015",
+    "490093200612016",
+    "490093200612017",
+    "490093200612018",
+    "490093200612019",
+    "4900932006120110",
+    "4900932006120111",
+    "4900932006120112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320061201",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

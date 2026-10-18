@@ -1,0 +1,36 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 6,
+  "subject": {
+    "name": "Embedded Systems",
+    "SubjectId": "49009320060301",
+    "isDepartmentalSubject": false
+  },
+  "examTypes": [
+    {
+      "name": "Mid 1",
+      "format": "theory",
+      "tests": 12,
+      "scope": "First half of ordered syllabus units: Introduction to Embedded Systems; AVR microcontroller-History and Features; AVR Microcontroller Architecture and assembly language."
+    },
+    {
+      "name": "Mid 2",
+      "format": "mcq",
+      "tests": 12,
+      "scope": "Full semester syllabus practice bank."
+    },
+    {
+      "name": "ESE",
+      "format": "theory",
+      "tests": 12,
+      "scope": "Full semester syllabus."
+    }
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+  "reusedFrom": null
+}

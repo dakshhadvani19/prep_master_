@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 6,
+  "subject": {
+    "name": "Embedded Systems",
+    "SubjectId": "49009320060301",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "ESE",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32,
+    "syllabusScope": "Full semester syllabus."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4900932006030125",
+      "4900932006030126",
+      "4900932006030127",
+      "4900932006030128"
+    ],
+    "medium": [
+      "4900932006030129",
+      "4900932006030130",
+      "4900932006030131",
+      "4900932006030132"
+    ],
+    "hard": [
+      "4900932006030133",
+      "4900932006030134",
+      "4900932006030135",
+      "4900932006030136"
+    ]
+  },
+  "testIds": [
+    "4900932006030125",
+    "4900932006030126",
+    "4900932006030127",
+    "4900932006030128",
+    "4900932006030129",
+    "4900932006030130",
+    "4900932006030131",
+    "4900932006030132",
+    "4900932006030133",
+    "4900932006030134",
+    "4900932006030135",
+    "4900932006030136"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320060301",
+    "examType": "ESE"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

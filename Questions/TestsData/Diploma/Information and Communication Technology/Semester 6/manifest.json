@@ -1,0 +1,399 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 6,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "answer_review": "answer-review-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 6,
+    "subjects": 11,
+    "nonDepartmentalSubjects": 11,
+    "departmentalSubjects": 0,
+    "examTypeBanks": 33,
+    "totalTests": 396,
+    "mcqTests": 132,
+    "theoryTests": 264,
+    "mcqQuestions": 3960,
+    "theoryQuestions": 1056,
+    "mcqOptionEntries": 15840,
+    "answerEntries": 5016,
+    "reusedSubjects": 0,
+    "newSubjectBanks": 11,
+    "excludedProjectSubjects": 1,
+    "blockedDuplicateSubjects": 0
+  },
+  "exam_rules": {
+    "nonDepartmental": {
+      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "12 theory variants × 4 questions × 8 marks"
+    },
+    "departmental": {
+      "Mid1": "12 MCQ variants × 30; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "not generated"
+    },
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "Non-departmental: occurrences 1–12 Mid 1, 13–24 Mid 2, 25–36 ESE. Departmental: occurrences 1–12 Mid 1, 13–24 Mid 2."
+  },
+  "subjects": [
+    {
+      "name": "Advance Java",
+      "SubjectId": "49009320060701",
+      "subject_code": "09CT0607",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MU_Diploma_AJT_syllabus.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: JDBC Programming; J2EE Architecture, Servlets and JSP; Enterprise Web Components."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Big Data Analytics",
+      "SubjectId": "49009320060601",
+      "subject_code": "09CT0606",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E3-Big-Data-Analytics-_DST31.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Big Data and Hadoop Foundations; MapReduce and Hadoop Ecosystem Tools."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Cloud Computing",
+      "SubjectId": "49009320060501",
+      "subject_code": "09CT0605",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E3-Cloud-Computin.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction of Cloud & Amazon Web Service; Identity & Access Management; Elastic Cloud Computing (EC2)."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Computer Graphics & Animation",
+      "SubjectId": "49009320061201",
+      "subject_code": "09CT0612",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E4-Computer-Graphics-and-Animation.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to Computer Graphics; Scan Conversion and Clipping; 2D and 3D Transformations, Viewing and Rendering."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Cyber Security",
+      "SubjectId": "49009320061001",
+      "subject_code": "09CT0610",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E4-Cyber-Security.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction and Security Threats; Organizational Security; IP Security."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Embedded Systems",
+      "SubjectId": "49009320060301",
+      "subject_code": "09CT0603",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E3-Embedded-System.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to Embedded Systems; AVR microcontroller-History and Features; AVR Microcontroller Architecture and assembly language."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Fundamental of Data Mining",
+      "SubjectId": "49009320061101",
+      "subject_code": "09CT0611",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E4-Fundamentals-of-Data-Mining-Techniques.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Data Mining and Data Processing; Data Mining Techniques."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Management Information System",
+      "SubjectId": "49009320060101",
+      "subject_code": "09CT0601",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09CT0601-MIS.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Information Systems and MIS Fundamentals; MIS Development and Design; Decision Support Systems and Business Intelligence."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "RF and Microwave Communication",
+      "SubjectId": "49009320060401",
+      "subject_code": "09CT0604",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E3-RF-and-Microwave-Communication.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to Microwaves; Mathematical model of Microwave Transmission; Analysis of Microwave Transmission Lines and Waveguides."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Sensor and IoT (SIoT)",
+      "SubjectId": "49009320060801",
+      "subject_code": "09CT0608",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/E4-Sensors-and-IoT1.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to Internet of Things; Sensors; Communication devices and protocols."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Wireless Technologies",
+      "SubjectId": "49009320060901",
+      "subject_code": "09CT0609",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/Wireless-Technologies.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction to Cellular Communication; Global System for Mobile Communications (GSM); CDMA."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Exact normalized subject-name matches with the same departmental flag are reused verbatim even if syllabus descriptions differ, per user instruction.",
+    "For non-name matches, reuse still requires departmental-flag and unit/topic alignment. An exact-name match with an incompatible departmental flag raises an error rather than silently generating a replacement bank.",
+    "Mid 1 scope is recorded from the first half of the ordered syllabus units; confirm against the official exam blueprint.",
+    "Generated question pools and theory answers are drafts requiring academic review.",
+    "TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.",
+    "Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats.",
+    "Project subjects are excluded completely.",
+    "Template-generated content pending academic QA."
+  ],
+  "excludedSubjects": [
+    {
+      "name": "Project-II",
+      "SubjectId": "49009320060201",
+      "reason": "Excluded entirely from exam generation by explicit instruction."
+    }
+  ],
+  "blockedDuplicateSubjects": []
+}

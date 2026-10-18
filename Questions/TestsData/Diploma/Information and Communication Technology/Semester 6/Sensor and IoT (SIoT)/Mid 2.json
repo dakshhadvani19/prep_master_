@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 6,
+  "subject": {
+    "name": "Sensor and IoT (SIoT)",
+    "SubjectId": "49009320060801",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "Full semester syllabus practice bank."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4900932006080113",
+      "4900932006080114",
+      "4900932006080115",
+      "4900932006080116"
+    ],
+    "medium": [
+      "4900932006080117",
+      "4900932006080118",
+      "4900932006080119",
+      "4900932006080120"
+    ],
+    "hard": [
+      "4900932006080121",
+      "4900932006080122",
+      "4900932006080123",
+      "4900932006080124"
+    ]
+  },
+  "testIds": [
+    "4900932006080113",
+    "4900932006080114",
+    "4900932006080115",
+    "4900932006080116",
+    "4900932006080117",
+    "4900932006080118",
+    "4900932006080119",
+    "4900932006080120",
+    "4900932006080121",
+    "4900932006080122",
+    "4900932006080123",
+    "4900932006080124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320060801",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

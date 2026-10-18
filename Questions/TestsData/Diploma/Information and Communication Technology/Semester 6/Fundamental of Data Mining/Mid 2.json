@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 6,
+  "subject": {
+    "name": "Fundamental of Data Mining",
+    "SubjectId": "49009320061101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 2",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "Full semester syllabus practice bank."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4900932006110113",
+      "4900932006110114",
+      "4900932006110115",
+      "4900932006110116"
+    ],
+    "medium": [
+      "4900932006110117",
+      "4900932006110118",
+      "4900932006110119",
+      "4900932006110120"
+    ],
+    "hard": [
+      "4900932006110121",
+      "4900932006110122",
+      "4900932006110123",
+      "4900932006110124"
+    ]
+  },
+  "testIds": [
+    "4900932006110113",
+    "4900932006110114",
+    "4900932006110115",
+    "4900932006110116",
+    "4900932006110117",
+    "4900932006110118",
+    "4900932006110119",
+    "4900932006110120",
+    "4900932006110121",
+    "4900932006110122",
+    "4900932006110123",
+    "4900932006110124"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320061101",
+    "examType": "Mid 2"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}

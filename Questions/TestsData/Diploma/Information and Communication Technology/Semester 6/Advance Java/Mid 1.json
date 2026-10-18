@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 6,
+  "subject": {
+    "name": "Advance Java",
+    "SubjectId": "49009320060701",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32,
+    "syllabusScope": "First half of ordered syllabus units: JDBC Programming; J2EE Architecture, Servlets and JSP; Enterprise Web Components."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "490093200607011",
+      "490093200607012",
+      "490093200607013",
+      "490093200607014"
+    ],
+    "medium": [
+      "490093200607015",
+      "490093200607016",
+      "490093200607017",
+      "490093200607018"
+    ],
+    "hard": [
+      "490093200607019",
+      "4900932006070110",
+      "4900932006070111",
+      "4900932006070112"
+    ]
+  },
+  "testIds": [
+    "490093200607011",
+    "490093200607012",
+    "490093200607013",
+    "490093200607014",
+    "490093200607015",
+    "490093200607016",
+    "490093200607017",
+    "490093200607018",
+    "490093200607019",
+    "4900932006070110",
+    "4900932006070111",
+    "4900932006070112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320060701",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
