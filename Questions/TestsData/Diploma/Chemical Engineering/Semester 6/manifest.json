@@ -231,5 +231,13 @@
     ],
     "method": "Matched normalized exact subject name, exam type, difficulty and occurrence; copied Questions, Options and Answers verbatim while preserving Chemical Engineering TestIds and metadata.",
     "allMarkedReuseSubjectsFullyCopied": true
+  },
+  "qualityCorrections": {
+    "mid1TheoryScopeRepair": {
+      "updatedAt": "2026-10-18",
+      "rowsRebuilt": 24,
+      "questionsRebuilt": 96,
+      "rule": "New-draft Mid1 theory prompts/model answers rebuilt from first-half unit/topic set; reused payloads preserved."
+    }
   }
 }
