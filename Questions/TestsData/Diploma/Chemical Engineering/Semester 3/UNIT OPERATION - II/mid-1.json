@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 3,
+  "subject": {
+    "name": "UNIT OPERATION - II",
+    "SubjectId": "46000938230101",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "460009382301011",
+      "460009382301012",
+      "460009382301013",
+      "460009382301014"
+    ],
+    "medium": [
+      "460009382301015",
+      "460009382301016",
+      "460009382301017",
+      "460009382301018"
+    ],
+    "hard": [
+      "460009382301019",
+      "4600093823010110",
+      "4600093823010111",
+      "4600093823010112"
+    ]
+  },
+  "testIds": [
+    "460009382301011",
+    "460009382301012",
+    "460009382301013",
+    "460009382301014",
+    "460009382301015",
+    "460009382301016",
+    "460009382301017",
+    "460009382301018",
+    "460009382301019",
+    "4600093823010110",
+    "4600093823010111",
+    "4600093823010112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46000938230101",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
