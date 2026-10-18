@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 44,
+    "CourseName": "Diploma Computer Engineering"
+  },
+  "semester": 6,
+  "subject": {
+    "name": "Fundametals of Machine Learning",
+    "SubjectId": "44000935160601",
+    "isDepartmentalSubject": false
+  },
+  "exam": {
+    "name": "ESE",
+    "format": "theory",
+    "questionsPerTest": 4,
+    "marksPerQuestion": 8,
+    "totalMarks": 32
+  },
+  "difficultyVariants": {
+    "easy": [
+      "4400093516060125",
+      "4400093516060126",
+      "4400093516060127",
+      "4400093516060128"
+    ],
+    "medium": [
+      "4400093516060129",
+      "4400093516060130",
+      "4400093516060131",
+      "4400093516060132"
+    ],
+    "hard": [
+      "4400093516060133",
+      "4400093516060134",
+      "4400093516060135",
+      "4400093516060136"
+    ]
+  },
+  "testIds": [
+    "4400093516060125",
+    "4400093516060126",
+    "4400093516060127",
+    "4400093516060128",
+    "4400093516060129",
+    "4400093516060130",
+    "4400093516060131",
+    "4400093516060132",
+    "4400093516060133",
+    "4400093516060134",
+    "4400093516060135",
+    "4400093516060136"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "44000935160601",
+    "examType": "ESE"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
