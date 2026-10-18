@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 46,
+    "CourseName": "Diploma Chemical Engineering"
+  },
+  "semester": 2,
+  "subject": {
+    "name": "GENERATIVE AI & PROMPT ENGINEERING",
+    "SubjectId": "46000935030501",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null
+  },
+  "difficultyVariants": {
+    "easy": [
+      "460009350305011",
+      "460009350305012",
+      "460009350305013",
+      "460009350305014"
+    ],
+    "medium": [
+      "460009350305015",
+      "460009350305016",
+      "460009350305017",
+      "460009350305018"
+    ],
+    "hard": [
+      "460009350305019",
+      "4600093503050110",
+      "4600093503050111",
+      "4600093503050112"
+    ]
+  },
+  "testIds": [
+    "460009350305011",
+    "460009350305012",
+    "460009350305013",
+    "460009350305014",
+    "460009350305015",
+    "460009350305016",
+    "460009350305017",
+    "460009350305018",
+    "460009350305019",
+    "4600093503050110",
+    "4600093503050111",
+    "4600093503050112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "46000935030501",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+}
