@@ -1,0 +1,62 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 2,
+  "subject": {
+    "name": "ICT Workshop",
+    "SubjectId": "49009320010501",
+    "isDepartmentalSubject": true
+  },
+  "exam": {
+    "name": "Mid 1",
+    "format": "mcq",
+    "questionsPerTest": 30,
+    "marksPerQuestion": null,
+    "totalMarks": null,
+    "syllabusScope": "First half of ordered syllabus units: Introduction and Assembling of computer 8; Introduction to various network components 10; PCB Design Process 13; Installation of operating system 10."
+  },
+  "difficultyVariants": {
+    "easy": [
+      "490093200105011",
+      "490093200105012",
+      "490093200105013",
+      "490093200105014"
+    ],
+    "medium": [
+      "490093200105015",
+      "490093200105016",
+      "490093200105017",
+      "490093200105018"
+    ],
+    "hard": [
+      "490093200105019",
+      "4900932001050110",
+      "4900932001050111",
+      "4900932001050112"
+    ]
+  },
+  "testIds": [
+    "490093200105011",
+    "490093200105012",
+    "490093200105013",
+    "490093200105014",
+    "490093200105015",
+    "490093200105016",
+    "490093200105017",
+    "490093200105018",
+    "490093200105019",
+    "4900932001050110",
+    "4900932001050111",
+    "4900932001050112"
+  ],
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalBankFilter": {
+    "SubjectId": "49009320010501",
+    "examType": "Mid 1"
+  },
+  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants and does not duplicate payloads.",
+  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs are strings."
+}

@@ -1,0 +1,274 @@
+{
+  "schema_version": "2.0",
+  "course": {
+    "CourseId": 49,
+    "CourseName": "Diploma Information and Communication Technology"
+  },
+  "semester": 2,
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "answer_review": "answer-review-v2.json",
+    "seed_sql": "seed-all-v2.sql"
+  },
+  "counts": {
+    "semester": 2,
+    "subjects": 6,
+    "nonDepartmentalSubjects": 3,
+    "departmentalSubjects": 3,
+    "examTypeBanks": 15,
+    "totalTests": 180,
+    "mcqTests": 108,
+    "theoryTests": 72,
+    "mcqQuestions": 3240,
+    "theoryQuestions": 288,
+    "mcqOptionEntries": 12960,
+    "answerEntries": 3528,
+    "reusedSubjects": 3,
+    "newSubjectBanks": 3,
+    "excludedProjectSubjects": 0,
+    "blockedDuplicateSubjects": 0
+  },
+  "exam_rules": {
+    "nonDepartmental": {
+      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "12 theory variants × 4 questions × 8 marks"
+    },
+    "departmental": {
+      "Mid1": "12 MCQ variants × 30; first half",
+      "Mid2": "12 MCQ variants × 30",
+      "ESE": "not generated"
+    },
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "Non-departmental: occurrences 1–12 Mid 1, 13–24 Mid 2, 25–36 ESE. Departmental: occurrences 1–12 Mid 1, 13–24 Mid 2."
+  },
+  "subjects": [
+    {
+      "name": "Communication Skills-II",
+      "SubjectId": "49091912110201",
+      "subject_code": "09SL1102",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09sl1102-6.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Speaking and Interacting in an Academic Context."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Computer Programming",
+      "SubjectId": "49000935110401",
+      "subject_code": "09CE1104",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ce1104-2.pdf",
+      "reuseDecision": "REUSED_SAME_NAME",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44000935210401",
+        "SubjectName": "Computer Programming",
+        "sourceSemester": 2,
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 2/exam-bank-v2.json",
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "syllabusDifferenceOverride": true,
+        "syllabusVerification": {
+          "unitCounts": [
+            8,
+            7
+          ],
+          "titleScore": 0.5,
+          "topicTokenJaccard": 0.891
+        }
+      },
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by ordered units/contact hours: Flowchart & Algorithm; Fundamentals of C; Decision statements & looping."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Digital Logic and Design",
+      "SubjectId": "49009320010401",
+      "subject_code": "09CT0104",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0104-1.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction: 1; Number systems and binary codes : 6; Logic Gates & Boolean Algebra 7; Combinational logic design: 7.5."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full semester syllabus."
+        }
+      ]
+    },
+    {
+      "name": "Environment Conservation & Disaster Management",
+      "SubjectId": "49000939110201",
+      "subject_code": "09CI1102",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ci1102-6.pdf",
+      "reuseDecision": "REUSED_SAME_NAME",
+      "reusedFrom": {
+        "CourseId": 46,
+        "SubjectId": "46009121010201",
+        "SubjectName": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
+        "sourceSemester": 2,
+        "sourceBank": "Questions/TestsData/Diploma/Chemical Engineering/Semester 2/exam-bank-v2.json",
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "syllabusDifferenceOverride": true,
+        "syllabusVerification": {
+          "unitCounts": [
+            7,
+            4
+          ],
+          "titleScore": 0,
+          "topicTokenJaccard": 0.23
+        }
+      },
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half: Introduction of Environmental Science; Types of pollution with their causes, effects and remedial; Renewable Sources of Energy"
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester"
+        }
+      ]
+    },
+    {
+      "name": "ICT Workshop",
+      "SubjectId": "49009320010501",
+      "subject_code": "09CT0105",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ct0105_ictw.pdf",
+      "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
+      "reusedFrom": null,
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "First half of ordered syllabus units: Introduction and Assembling of computer 8; Introduction to various network components 10; PCB Design Process 13; Installation of operating system 10."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full semester syllabus practice bank."
+        }
+      ]
+    },
+    {
+      "name": "Mathematics II",
+      "SubjectId": "49009131110201",
+      "subject_code": "09MA1102",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/09ma1102-6.pdf",
+      "reuseDecision": "REUSED_SAME_NAME",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44009131210201",
+        "SubjectName": "Mathematics-II",
+        "sourceSemester": 2,
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 2/exam-bank-v2.json",
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "syllabusDifferenceOverride": true,
+        "syllabusVerification": {
+          "unitCounts": [
+            3,
+            5
+          ],
+          "titleScore": 0,
+          "topicTokenJaccard": 0.118
+        }
+      },
+      "syllabusVerification": null,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "tests": 12,
+          "scope": "First 50% by ordered units/contact hours: Determinants and Matrices; Equations."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus practice bank."
+        },
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "tests": 12,
+          "scope": "Full Semester 2 syllabus."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Exact normalized subject-name matches with the same departmental flag are reused verbatim even if syllabus descriptions differ, per user instruction.",
+    "For non-name matches, reuse still requires departmental-flag and unit/topic alignment. An exact-name match with an incompatible departmental flag raises an error rather than silently generating a replacement bank.",
+    "Mid 1 scope is recorded from the first half of the ordered syllabus units; confirm against the official exam blueprint.",
+    "Generated question pools and theory answers are drafts requiring academic review.",
+    "TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.",
+    "Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats.",
+    "Project subjects are excluded completely.",
+    "Compatible exact-name duplicates reuse source payloads verbatim.",
+    "New question pools and model answers are template-generated drafts pending academic QA."
+  ],
+  "excludedSubjects": [],
+  "blockedDuplicateSubjects": []
+}
