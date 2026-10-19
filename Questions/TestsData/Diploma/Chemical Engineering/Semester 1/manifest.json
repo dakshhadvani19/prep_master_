@@ -1,14 +1,12 @@
 {
   "schema_version": "2.0",
+  "archive_status": "COMPACT_REFERENCE_SAMPLE",
+  "purpose": "One representative test per subject/exam type; not a complete production bank.",
   "course": {
     "CourseId": 46,
     "CourseName": "Diploma Chemical Engineering"
   },
   "semester": 1,
-  "canonical_files": {
-    "test_bank": "exam-bank-v2.json",
-    "seed_sql": "seed-all-v2.sql"
-  },
   "counts": {
     "semester": 1,
     "subjects": 8,
@@ -17,410 +15,573 @@
     "nonDepartmentalSubjects": 5,
     "departmentalSubjects": 3,
     "examTypeBanks": 21,
-    "totalTests": 252,
+    "totalTests": 21,
     "mcqTests": 132,
-    "theoryTests": 120,
-    "mcqQuestions": 3960,
-    "theoryQuestions": 480,
-    "mcqOptionEntries": 15840,
-    "answerEntries": 4440
+    "theoryTests": 10,
+    "mcqQuestions": 330,
+    "theoryQuestions": 40,
+    "mcqOptionEntries": 1320,
+    "answerEntries": 4440,
+    "testsPerExamType": 1,
+    "easyTestsPerExamType": 0,
+    "mediumTestsPerExamType": 1,
+    "hardTestsPerExamType": 0,
+    "objectiveTests": 11,
+    "theoryOptionEntries": 0,
+    "totalAnswerEntries": 370,
+    "totalQuestionPrompts": 370
   },
-  "exam_rules": {
-    "nonDepartmental": "Mid1/ESE 4 theory questions × 8 marks; Mid1 first half; Mid2 30 MCQs.",
-    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE.",
-    "difficulty": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
-    },
-    "testIdRule": "SubjectId concatenated with occurrence. False subjects: 1-12 Mid1, 13-24 Mid2, 25-36 ESE. True subjects: 1-12 Mid1, 13-24 Mid2."
-  },
-  "subjects": [
+  "test_index": [
     {
-      "name": "APPLIED CHEMISTRY",
-      "SubjectId": "46009719310201",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09GS3102.pdf",
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name candidate bank."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% syllabus: Basic Concepts of Chemistry; General Organic Chemistry"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        }
-      ]
-    },
-    {
-      "name": "BHARATIYA KNOWLEDGE SYSTEM",
-      "SubjectId": "46009911010101",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09IK0101.pdf",
-      "reuse": {
-        "name": "BHARATIYA KNOWLEDGE SYSTEM",
-        "SubjectId": "46009911010101",
-        "sourceName": "Bharatiya Knowledge System",
-        "sourceSubjectId": "44009911010101",
-        "sourceSemester": 1,
-        "unitMatches": 4,
-        "maxUnits": 4,
-        "unitTitleRatio": 1,
-        "topicJaccard": 0.833,
-        "reuse": true,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 36,
-        "expectedVariants": 36,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% syllabus: Introduction to Bharatiya Knowledge Systems (BKS); Science and Mathematics in Ancient Bharat"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        }
-      ]
-    },
-    {
-      "name": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
-      "SubjectId": "46000938210101",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2101.pdf",
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name candidate bank."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% syllabus: Various laboratory equipment and devices; Block Diagram and Flow diagram; Storage vessels and Pressure vessel; Reaction Vessel"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        }
-      ]
-    },
-    {
-      "name": "COMMUNICATION SKILLS",
-      "SubjectId": "46091912010301",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09SL0103.pdf",
-      "reuse": {
-        "name": "COMMUNICATION SKILLS",
-        "SubjectId": "46091912010301",
-        "sourceName": "Communication Skills-I",
-        "sourceSubjectId": "44091912010301",
-        "sourceSemester": 1,
-        "unitMatches": 2,
-        "maxUnits": 2,
-        "unitTitleRatio": 1,
-        "topicJaccard": 1,
-        "reuse": true,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 36,
-        "expectedVariants": 36,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% syllabus: Introduction to Reading Skills"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        }
-      ]
-    },
-    {
-      "name": "COMPUTER FUNDAMENTAL SKILL",
+      "TestId": "460009352101015",
       "SubjectId": "46000935210101",
+      "SubjectName": "COMPUTER FUNDAMENTAL SKILL",
+      "CourseId": 46,
+      "Semester": 1,
       "isDepartmentalSubject": true,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE2101.pdf",
-      "reuse": {
-        "name": "COMPUTER FUNDAMENTAL SKILL",
-        "SubjectId": "46000935210101",
-        "sourceName": "Computer Fundamental Skill",
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First 50% syllabus: FUNDAMENTALS OF COMPUTER SYSTEM; Practical list",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE2101.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
         "sourceSubjectId": "44000935210101",
-        "sourceSemester": 1,
-        "unitMatches": 7,
-        "maxUnits": 7,
-        "unitTitleRatio": 1,
-        "topicJaccard": 1,
-        "reuse": true,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 24,
-        "expectedVariants": 24,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First 50% syllabus: FUNDAMENTALS OF COMPUTER SYSTEM; Practical list"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        }
-      ]
+        "sourceTestId": "440009352101015",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
     },
     {
-      "name": "INDIAN CONSTITUTION",
-      "SubjectId": "46009121010101",
-      "isDepartmentalSubject": true,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0101.pdf",
-      "reuse": {
-        "name": "INDIAN CONSTITUTION",
-        "SubjectId": "46009121010101",
-        "sourceName": "Indian Constitution",
-        "sourceSubjectId": "44009121010101",
-        "sourceSemester": 1,
-        "unitMatches": 5,
-        "maxUnits": 5,
-        "unitTitleRatio": 1,
-        "topicJaccard": 1,
-        "reuse": true,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 24,
-        "expectedVariants": 24,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First 50% syllabus: The Constitution – Introduction"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        }
-      ]
-    },
-    {
-      "name": "MATHEMATICS-I",
-      "SubjectId": "46009131210101",
+      "TestId": "460009382101015",
+      "SubjectId": "46000938210101",
+      "SubjectName": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
+      "CourseId": 46,
+      "Semester": 1,
       "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2101.pdf",
-      "reuse": {
-        "name": "MATHEMATICS-I",
-        "SubjectId": "46009131210101",
-        "sourceName": "Mathematics-I",
-        "sourceSubjectId": "44009131210101",
-        "sourceSemester": 1,
-        "unitMatches": 5,
-        "maxUnits": 5,
-        "unitTitleRatio": 1,
-        "topicJaccard": 1,
-        "reuse": true,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 36,
-        "expectedVariants": 36,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% syllabus: Basic calculation; HCF and LCM of numbers; Polynomials; Mensuration"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        }
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% syllabus: Various laboratory equipment and devices; Block Diagram and Flow diagram; Storage vessels and Pressure vessel; Reaction Vessel",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2101.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
     },
     {
-      "name": "MECHANICAL WORKSHOP",
-      "SubjectId": "46009135210201",
-      "isDepartmentalSubject": true,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME2102.pdf",
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name candidate bank."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First 50% syllabus: To know and gain worth of mechanical engineering in diverse; To prepare plant layout for workshop.; To prepare job a by using files and hacksaw.; Hands on practice of punch and hammer.; Demonstration of carpentry tools.; To prepare carpentry job (wood material) as per given diagram."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester syllabus"
-        }
-      ]
-    }
-  ],
-  "reuseAudit": [
-    {
-      "name": "BHARATIYA KNOWLEDGE SYSTEM",
-      "SubjectId": "46009911010101",
-      "sourceName": "Bharatiya Knowledge System",
-      "sourceSubjectId": "44009911010101",
-      "sourceSemester": 1,
-      "unitMatches": 4,
-      "maxUnits": 4,
-      "unitTitleRatio": 1,
-      "topicJaccard": 0.833,
-      "reuse": true,
-      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
-      "reusedVariants": 36,
-      "expectedVariants": 36,
-      "allVariantsCopiedVerbatim": true
-    },
-    {
-      "name": "COMMUNICATION SKILLS",
-      "SubjectId": "46091912010301",
-      "sourceName": "Communication Skills-I",
-      "sourceSubjectId": "44091912010301",
-      "sourceSemester": 1,
-      "unitMatches": 2,
-      "maxUnits": 2,
-      "unitTitleRatio": 1,
-      "topicJaccard": 1,
-      "reuse": true,
-      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
-      "reusedVariants": 36,
-      "expectedVariants": 36,
-      "allVariantsCopiedVerbatim": true
-    },
-    {
-      "name": "COMPUTER FUNDAMENTAL SKILL",
-      "SubjectId": "46000935210101",
-      "sourceName": "Computer Fundamental Skill",
-      "sourceSubjectId": "44000935210101",
-      "sourceSemester": 1,
-      "unitMatches": 7,
-      "maxUnits": 7,
-      "unitTitleRatio": 1,
-      "topicJaccard": 1,
-      "reuse": true,
-      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
-      "reusedVariants": 24,
-      "expectedVariants": 24,
-      "allVariantsCopiedVerbatim": true
-    },
-    {
-      "name": "INDIAN CONSTITUTION",
+      "TestId": "460091210101015",
       "SubjectId": "46009121010101",
-      "sourceName": "Indian Constitution",
-      "sourceSubjectId": "44009121010101",
-      "sourceSemester": 1,
-      "unitMatches": 5,
-      "maxUnits": 5,
-      "unitTitleRatio": 1,
-      "topicJaccard": 1,
-      "reuse": true,
-      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
-      "reusedVariants": 24,
-      "expectedVariants": 24,
-      "allVariantsCopiedVerbatim": true
+      "SubjectName": "INDIAN CONSTITUTION",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First 50% syllabus: The Constitution – Introduction",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0101.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44009121010101",
+        "sourceTestId": "440091210101015",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
     },
     {
-      "name": "MATHEMATICS-I",
+      "TestId": "460091312101015",
       "SubjectId": "46009131210101",
-      "sourceName": "Mathematics-I",
-      "sourceSubjectId": "44009131210101",
-      "sourceSemester": 1,
-      "unitMatches": 5,
-      "maxUnits": 5,
-      "unitTitleRatio": 1,
-      "topicJaccard": 1,
-      "reuse": true,
-      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
-      "reusedVariants": 36,
-      "expectedVariants": 36,
-      "allVariantsCopiedVerbatim": true
+      "SubjectName": "MATHEMATICS-I",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% syllabus: Basic calculation; HCF and LCM of numbers; Polynomials; Mensuration",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2101.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44009131210101",
+        "sourceTestId": "440091312101015",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
+    },
+    {
+      "TestId": "460091352102015",
+      "SubjectId": "46009135210201",
+      "SubjectName": "MECHANICAL WORKSHOP",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First 50% syllabus: To know and gain worth of mechanical engineering in diverse; To prepare plant layout for workshop.; To prepare job a by using files and hacksaw.; Hands on practice of punch and hammer.; Demonstration of carpentry tools.; To prepare carpentry job (wood material) as per given diagram.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME2102.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null,
+      "questionReviewRefs": [
+        "46009135210201-Mid1-medium-34",
+        "46009135210201-Mid1-medium-23",
+        "46009135210201-Mid1-medium-43",
+        "46009135210201-Mid1-medium-39",
+        "46009135210201-Mid1-medium-27",
+        "46009135210201-Mid1-medium-51",
+        "46009135210201-Mid1-medium-26",
+        "46009135210201-Mid1-medium-6",
+        "46009135210201-Mid1-medium-18",
+        "46009135210201-Mid1-medium-19",
+        "46009135210201-Mid1-medium-5",
+        "46009135210201-Mid1-medium-1",
+        "46009135210201-Mid1-medium-9",
+        "46009135210201-Mid1-medium-48",
+        "46009135210201-Mid1-medium-35",
+        "46009135210201-Mid1-medium-40",
+        "46009135210201-Mid1-medium-53",
+        "46009135210201-Mid1-medium-2",
+        "46009135210201-Mid1-medium-13",
+        "46009135210201-Mid1-medium-29",
+        "46009135210201-Mid1-medium-31",
+        "46009135210201-Mid1-medium-14",
+        "46009135210201-Mid1-medium-36",
+        "46009135210201-Mid1-medium-49",
+        "46009135210201-Mid1-medium-32",
+        "46009135210201-Mid1-medium-7",
+        "46009135210201-Mid1-medium-37",
+        "46009135210201-Mid1-medium-38",
+        "46009135210201-Mid1-medium-4",
+        "46009135210201-Mid1-medium-52"
+      ]
+    },
+    {
+      "TestId": "460097193102015",
+      "SubjectId": "46009719310201",
+      "SubjectName": "APPLIED CHEMISTRY",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% syllabus: Basic Concepts of Chemistry; General Organic Chemistry",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09GS3102.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "460099110101015",
+      "SubjectId": "46009911010101",
+      "SubjectName": "BHARATIYA KNOWLEDGE SYSTEM",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% syllabus: Introduction to Bharatiya Knowledge Systems (BKS); Science and Mathematics in Ancient Bharat",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09IK0101.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44009911010101",
+        "sourceTestId": "440099110101015",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
+    },
+    {
+      "TestId": "460919120103015",
+      "SubjectId": "46091912010301",
+      "SubjectName": "COMMUNICATION SKILLS",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% syllabus: Introduction to Reading Skills",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09SL0103.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44091912010301",
+        "sourceTestId": "440919120103015",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
+    },
+    {
+      "TestId": "4600093521010117",
+      "SubjectId": "46000935210101",
+      "SubjectName": "COMPUTER FUNDAMENTAL SKILL",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE2101.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44000935210101",
+        "sourceTestId": "4400093521010117",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
+    },
+    {
+      "TestId": "4600093821010117",
+      "SubjectId": "46000938210101",
+      "SubjectName": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2101.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "4600093821010129",
+      "SubjectId": "46000938210101",
+      "SubjectName": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2101.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "4600912101010117",
+      "SubjectId": "46009121010101",
+      "SubjectName": "INDIAN CONSTITUTION",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0101.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44009121010101",
+        "sourceTestId": "4400912101010117",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
+    },
+    {
+      "TestId": "4600913121010117",
+      "SubjectId": "46009131210101",
+      "SubjectName": "MATHEMATICS-I",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2101.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44009131210101",
+        "sourceTestId": "4400913121010117",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
+    },
+    {
+      "TestId": "4600913121010129",
+      "SubjectId": "46009131210101",
+      "SubjectName": "MATHEMATICS-I",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2101.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44009131210101",
+        "sourceTestId": "4400913121010129",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
+    },
+    {
+      "TestId": "4600913521020117",
+      "SubjectId": "46009135210201",
+      "SubjectName": "MECHANICAL WORKSHOP",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME2102.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "4600971931020117",
+      "SubjectId": "46009719310201",
+      "SubjectName": "APPLIED CHEMISTRY",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09GS3102.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "4600971931020129",
+      "SubjectId": "46009719310201",
+      "SubjectName": "APPLIED CHEMISTRY",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09GS3102.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "4600991101010117",
+      "SubjectId": "46009911010101",
+      "SubjectName": "BHARATIYA KNOWLEDGE SYSTEM",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09IK0101.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44009911010101",
+        "sourceTestId": "4400991101010117",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
+    },
+    {
+      "TestId": "4600991101010129",
+      "SubjectId": "46009911010101",
+      "SubjectName": "BHARATIYA KNOWLEDGE SYSTEM",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09IK0101.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44009911010101",
+        "sourceTestId": "4400991101010129",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
+    },
+    {
+      "TestId": "4609191201030117",
+      "SubjectId": "46091912010301",
+      "SubjectName": "COMMUNICATION SKILLS",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09SL0103.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44091912010301",
+        "sourceTestId": "4409191201030117",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
+    },
+    {
+      "TestId": "4609191201030129",
+      "SubjectId": "46091912010301",
+      "SubjectName": "COMMUNICATION SKILLS",
+      "CourseId": 46,
+      "Semester": 1,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester syllabus",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09SL0103.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 1,
+        "sourceSubjectId": "44091912010301",
+        "sourceTestId": "4409191201030129",
+        "copyMethod": "Questions/Options/Answers copied verbatim; only TestId remapped."
+      }
     }
-  ],
-  "notes": [
-    "Mid1 is restricted to first 50% of ordered syllabus; use unit hours where present.",
-    "TestsData has only TestId, Questions, Options and Answers; other metadata is in test_index.",
-    "Theory rows use Options=[] and model answers in Answers.",
-    "New draft content needs subject matter review; source bank QA limitations carry over to reused questions.",
-    "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim."
-  ],
-  "reuseVerification": {
-    "verifiedAt": "2026-10-16",
-    "reusedVariants": 156,
-    "previouslyMismatchedPayloadsCorrected": 117,
-    "method": "Matched target and source rows by subject, exam type, difficulty and occurrence, then compared Questions, Options and Answers exactly. Chemical Engineering TestIds and metadata were preserved.",
-    "allMarkedReuseSubjectsFullyCopied": true
-  },
-  "qualityCorrections": {
-    "mid1TheoryScopeRepair": {
-      "rowsRebuilt": 24,
-      "questionsRebuilt": 96,
-      "updatedAt": "2026-10-18",
-      "note": "New-draft Mid 1 theory prompts and model answers rebuilt only from the first half of the ordered syllabus. Reused source payloads left unchanged."
-    }
-  }
+  ]
 }
