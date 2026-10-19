@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "semester": 3,
   "course": "Diploma Chemical Engineering",
-  "note": "QA review companion only; never insert into TestsData. These pools cover newly drafted departmental Mid 1 repairs. Other content is mapped through exam-bank-v2.json.",
+  "note": "QA review companion only; never insert into TestsData. These pools cover newly drafted departmental Mid 1 repairs. Other content is mapped through exam-bank-v2.json. Trimmed to a small reference subset on 2026-10-19; not an academically approved question bank.",
   "scopeRepairs": [
     {
       "date": "2026-10-18",
@@ -5047,5 +5047,13 @@
       ],
       "rule": "No reused subject payload was changed."
     }
-  ]
+  ],
+  "referenceOnly": true,
+  "referenceSamplePolicy": {
+    "originalGeneratedItems": 0,
+    "retainedReviewItems": 0,
+    "retainedPercent": 0,
+    "productionReady": false
+  },
+  "markingSpecification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
 }
