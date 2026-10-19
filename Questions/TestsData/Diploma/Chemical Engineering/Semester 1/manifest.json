@@ -8,104 +8,299 @@
   "canonical_files": {
     "test_bank": "exam-bank-v2.json",
     "seed_sql": "seed-all-v2.sql",
-    "reference_map": "../REFERENCE_SAMPLE_MAP.json"
+    "reference_map": "../../../REFERENCE_SAMPLE_MAP.json",
+    "marking_specification": "../../../../../docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   },
   "counts": {
-    "subjects": 0,
-    "nonDepartmentalSubjects": 0,
-    "departmentalSubjects": 0,
-    "examTypeBanks": 0,
-    "retainedReferenceTests": 0,
-    "mcqTests": 0,
-    "theoryTests": 0,
-    "mcqQuestions": 0,
-    "theoryQuestions": 0,
-    "mcqOptionEntries": 0,
-    "answerEntries": 0,
-    "originalGeneratedTests": 0,
-    "semester": 1
+    "semester": 1,
+    "subjects": 8,
+    "nonDepartmentalSubjects": 5,
+    "departmentalSubjects": 3,
+    "examTypeBanks": 21,
+    "retainedReferenceTests": 21,
+    "mcqTests": 11,
+    "theoryTests": 10,
+    "mcqQuestions": 330,
+    "theoryQuestions": 40,
+    "mcqOptionEntries": 1320,
+    "answerEntries": 370,
+    "originalGeneratedTests": 252
   },
   "exam_rules": {
-    "departmental": "Departmental subjects normally have MCQ Mid 1 and Mid 2; no ESE unless explicitly approved.",
-    "nonDepartmental": "Non-departmental subjects normally have theory Mid 1 and ESE, plus MCQ Mid 2.",
-    "MCQ": "Exactly 30 questions, four options each, answer index 0=A, 1=B, 2=C, 3=D.",
-    "theoryMid1": "30 marks: two 1-mark questions; 4-/8-mark questions make up the remaining 28.",
-    "theoryESE": "60 marks: two 1-mark questions, one 2-mark question, and 4-/8-mark questions totaling 56. If 2-mark questions are prohibited, resolve the marks conflict before generation.",
-    "difficulty": "Requested difficulty is generated at runtime. A single reference sample is retained for each available subject/exam type.",
-    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
+    "departmental": "Departmental subjects normally use MCQ Mid 1 and Mid 2; no ESE unless explicitly approved.",
+    "nonDepartmental": "Non-departmental subjects normally use theory Mid 1 and ESE, plus MCQ Mid 2.",
+    "MCQ": "Exactly 30 questions, four options each, zero-based answer index 0=A, 1=B, 2=C, 3=D.",
+    "theoryMid1": "30 marks: two 1-mark questions and 4-/8-mark questions totalling 28.",
+    "theoryESE": "60 marks: two 1-mark questions, one 2-mark question, and 4-/8-mark questions totalling 56; resolve the blueprint if 2-mark questions are prohibited.",
+    "retention": "One reference test per available subject/exam type. Generate requested difficulty at runtime.",
+    "specification": "../../../../../docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   },
   "subjects": [
     {
-      "name": "APPLIED CHEMISTRY",
-      "SubjectId": "46009719310201",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09GS3102.pdf",
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
-    },
-    {
-      "name": "BHARATIYA KNOWLEDGE SYSTEM",
-      "SubjectId": "46009911010101",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09IK0101.pdf",
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
+      "name": "COMPUTER FUNDAMENTAL SKILL",
+      "SubjectId": "46000935210101",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460009352101011",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093521010121",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
     },
     {
       "name": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
       "SubjectId": "46000938210101",
       "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2101.pdf",
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
-    },
-    {
-      "name": "COMMUNICATION SKILLS",
-      "SubjectId": "46091912010301",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09SL0103.pdf",
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
-    },
-    {
-      "name": "COMPUTER FUNDAMENTAL SKILL",
-      "SubjectId": "46000935210101",
-      "isDepartmentalSubject": true,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE2101.pdf",
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093821010136",
+          "difficulty": "hard",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382101011",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093821010118",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
     },
     {
       "name": "INDIAN CONSTITUTION",
       "SubjectId": "46009121010101",
       "isDepartmentalSubject": true,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0101.pdf",
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "4600912101010111",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600912101010116",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
     },
     {
       "name": "MATHEMATICS-I",
       "SubjectId": "46009131210101",
       "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2101.pdf",
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600913121010129",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "4600913121010110",
+          "difficulty": "hard",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600913121010115",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
     },
     {
       "name": "MECHANICAL WORKSHOP",
       "SubjectId": "46009135210201",
       "isDepartmentalSubject": true,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME2102.pdf",
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460091352102018",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600913521020121",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "APPLIED CHEMISTRY",
+      "SubjectId": "46009719310201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600971931020126",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460097193102017",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600971931020124",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "BHARATIYA KNOWLEDGE SYSTEM",
+      "SubjectId": "46009911010101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600991101010125",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460099110101016",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600991101010123",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "COMMUNICATION SKILLS",
+      "SubjectId": "46091912010301",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4609191201030128",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460919120103015",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4609191201030117",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
     }
   ],
   "reuseAudit": [
@@ -196,7 +391,8 @@
     "Theory rows use Options=[] and model answers in Answers.",
     "New draft content needs subject matter review; source bank QA limitations carry over to reused questions.",
     "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim.",
-    "Updated 2026-10-19: counts now reflect retained reference samples; full-bank counts are retained in historicalFullBankCounts or historicalFullBankTotals. Not a production-approved bank."
+    "Updated 2026-10-19: counts now reflect retained reference samples; full-bank counts are retained in historicalFullBankCounts or historicalFullBankTotals. Not a production-approved bank.",
+    "Updated 2026-10-19: these are retained reference samples, not an academically approved production bank. Prior full-bank counts remain under historicalFullBankCounts."
   ],
   "reuseVerification": {
     "verifiedAt": "2026-10-16",
@@ -298,39 +494,38 @@
     }
   ],
   "totals": {
-    "subjects": 0,
-    "nonDepartmentalSubjects": 0,
-    "departmentalSubjects": 0,
-    "examTypeBanks": 0,
-    "retainedReferenceTests": 0,
-    "mcqTests": 0,
-    "theoryTests": 0,
-    "mcqQuestions": 0,
-    "theoryQuestions": 0,
-    "mcqOptionEntries": 0,
-    "answerEntries": 0,
-    "originalGeneratedTests": 0,
-    "semester": 1
+    "semester": 1,
+    "subjects": 8,
+    "nonDepartmentalSubjects": 5,
+    "departmentalSubjects": 3,
+    "examTypeBanks": 21,
+    "retainedReferenceTests": 21,
+    "mcqTests": 11,
+    "theoryTests": 10,
+    "mcqQuestions": 330,
+    "theoryQuestions": 40,
+    "mcqOptionEntries": 1320,
+    "answerEntries": 370,
+    "originalGeneratedTests": 252
   },
   "referenceSampleStatus": {
     "status": "REFERENCE_SAMPLES_ONLY",
     "productionReady": false,
-    "scope": "semester",
     "counts": {
-      "subjects": 0,
-      "nonDepartmentalSubjects": 0,
-      "departmentalSubjects": 0,
-      "examTypeBanks": 0,
-      "retainedReferenceTests": 0,
-      "mcqTests": 0,
-      "theoryTests": 0,
-      "mcqQuestions": 0,
-      "theoryQuestions": 0,
-      "mcqOptionEntries": 0,
-      "answerEntries": 0,
-      "originalGeneratedTests": 0,
-      "semester": 1
+      "semester": 1,
+      "subjects": 8,
+      "nonDepartmentalSubjects": 5,
+      "departmentalSubjects": 3,
+      "examTypeBanks": 21,
+      "retainedReferenceTests": 21,
+      "mcqTests": 11,
+      "theoryTests": 10,
+      "mcqQuestions": 330,
+      "theoryQuestions": 40,
+      "mcqOptionEntries": 1320,
+      "answerEntries": 370,
+      "originalGeneratedTests": 252
     },
-    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
+    "specification": "../../../../../docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   }
 }
