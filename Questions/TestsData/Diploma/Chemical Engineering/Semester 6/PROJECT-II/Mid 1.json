@@ -1,1 +1,12 @@
-{"schema_version":"2.0","course":{"CourseId":46,"CourseName":"Diploma Chemical Engineering"},"semester":6,"subject":{"name":"PROJECT-II","SubjectId":"46000938260301","isDepartmentalSubject":true},"exam":{"name":"Mid 1","format":"mcq","questionsPerTest":30,"marksPerQuestion":null,"totalMarks":null,"syllabusScope":"First 50% syllabus"},"difficultyVariants":{"easy":["460009382603011","460009382603012","460009382603013","460009382603014"],"medium":["460009382603015","460009382603016","460009382603017","460009382603018"],"hard":["460009382603019","4600093826030110","4600093826030111","4600093826030112"]},"testIds":["460009382603011","460009382603012","460009382603013","460009382603014","460009382603015","460009382603016","460009382603017","460009382603018","460009382603019","4600093826030110","4600093826030111","4600093826030112"],"canonicalBank":"../exam-bank-v2.json","canonicalBankFilter":{"SubjectId":"46000938260301","examType":"Mid 1"},"contentPolicy":"Index into the semester-level canonical bank; questions are not duplicated.","testIdRule":"SubjectId decimal string concatenated with the per-subject test occurrence; IDs remain strings."}
+{
+  "schema_version": "2.0",
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
+  },
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
+}

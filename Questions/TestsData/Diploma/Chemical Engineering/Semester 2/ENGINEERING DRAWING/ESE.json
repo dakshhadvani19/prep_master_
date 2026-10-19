@@ -1,61 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 46,
-    "CourseName": "Diploma Chemical Engineering"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 2,
-  "subject": {
-    "name": "ENGINEERING DRAWING",
-    "SubjectId": "46009135110101",
-    "isDepartmentalSubject": false
-  },
-  "exam": {
-    "name": "ESE",
-    "format": "theory",
-    "questionsPerTest": 4,
-    "marksPerQuestion": 8,
-    "totalMarks": 32
-  },
-  "difficultyVariants": {
-    "easy": [
-      "4600913511010125",
-      "4600913511010126",
-      "4600913511010127",
-      "4600913511010128"
-    ],
-    "medium": [
-      "4600913511010129",
-      "4600913511010130",
-      "4600913511010131",
-      "4600913511010132"
-    ],
-    "hard": [
-      "4600913511010133",
-      "4600913511010134",
-      "4600913511010135",
-      "4600913511010136"
-    ]
-  },
-  "testIds": [
-    "4600913511010125",
-    "4600913511010126",
-    "4600913511010127",
-    "4600913511010128",
-    "4600913511010129",
-    "4600913511010130",
-    "4600913511010131",
-    "4600913511010132",
-    "4600913511010133",
-    "4600913511010134",
-    "4600913511010135",
-    "4600913511010136"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "46009135110101",
-    "examType": "ESE"
-  },
-  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }

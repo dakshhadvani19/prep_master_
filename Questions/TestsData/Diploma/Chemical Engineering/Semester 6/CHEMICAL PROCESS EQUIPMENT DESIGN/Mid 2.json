@@ -1,61 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 46,
-    "CourseName": "Diploma Chemical Engineering"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 6,
-  "subject": {
-    "name": "CHEMICAL PROCESS EQUIPMENT DESIGN",
-    "SubjectId": "46000938260101",
-    "isDepartmentalSubject": false
-  },
-  "exam": {
-    "name": "Mid 2",
-    "format": "mcq",
-    "questionsPerTest": 30,
-    "marksPerQuestion": null,
-    "totalMarks": null
-  },
-  "difficultyVariants": {
-    "easy": [
-      "4600093826010113",
-      "4600093826010114",
-      "4600093826010115",
-      "4600093826010116"
-    ],
-    "medium": [
-      "4600093826010117",
-      "4600093826010118",
-      "4600093826010119",
-      "4600093826010120"
-    ],
-    "hard": [
-      "4600093826010121",
-      "4600093826010122",
-      "4600093826010123",
-      "4600093826010124"
-    ]
-  },
-  "testIds": [
-    "4600093826010113",
-    "4600093826010114",
-    "4600093826010115",
-    "4600093826010116",
-    "4600093826010117",
-    "4600093826010118",
-    "4600093826010119",
-    "4600093826010120",
-    "4600093826010121",
-    "4600093826010122",
-    "4600093826010123",
-    "4600093826010124"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "46000938260101",
-    "examType": "Mid 2"
-  },
-  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }

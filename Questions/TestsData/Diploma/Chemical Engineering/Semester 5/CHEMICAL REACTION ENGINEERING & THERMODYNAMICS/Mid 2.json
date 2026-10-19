@@ -1,61 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 46,
-    "CourseName": "Diploma Chemical Engineering"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 5,
-  "subject": {
-    "name": "CHEMICAL REACTION ENGINEERING & THERMODYNAMICS",
-    "SubjectId": "46000938250201",
-    "isDepartmentalSubject": false
-  },
-  "exam": {
-    "name": "Mid 2",
-    "format": "mcq",
-    "questionsPerTest": 30,
-    "marksPerQuestion": null,
-    "totalMarks": null
-  },
-  "difficultyVariants": {
-    "easy": [
-      "4600093825020113",
-      "4600093825020114",
-      "4600093825020115",
-      "4600093825020116"
-    ],
-    "medium": [
-      "4600093825020117",
-      "4600093825020118",
-      "4600093825020119",
-      "4600093825020120"
-    ],
-    "hard": [
-      "4600093825020121",
-      "4600093825020122",
-      "4600093825020123",
-      "4600093825020124"
-    ]
-  },
-  "testIds": [
-    "4600093825020113",
-    "4600093825020114",
-    "4600093825020115",
-    "4600093825020116",
-    "4600093825020117",
-    "4600093825020118",
-    "4600093825020119",
-    "4600093825020120",
-    "4600093825020121",
-    "4600093825020122",
-    "4600093825020123",
-    "4600093825020124"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "46000938250201",
-    "examType": "Mid 2"
-  },
-  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }

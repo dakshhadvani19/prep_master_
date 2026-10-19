@@ -1,61 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 46,
-    "CourseName": "Diploma Chemical Engineering"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 2,
-  "subject": {
-    "name": "MATHEMATICS-II",
-    "SubjectId": "46009131210201",
-    "isDepartmentalSubject": false
-  },
-  "exam": {
-    "name": "Mid 1",
-    "format": "theory",
-    "questionsPerTest": 4,
-    "marksPerQuestion": 8,
-    "totalMarks": 32
-  },
-  "difficultyVariants": {
-    "easy": [
-      "460091312102011",
-      "460091312102012",
-      "460091312102013",
-      "460091312102014"
-    ],
-    "medium": [
-      "460091312102015",
-      "460091312102016",
-      "460091312102017",
-      "460091312102018"
-    ],
-    "hard": [
-      "460091312102019",
-      "4600913121020110",
-      "4600913121020111",
-      "4600913121020112"
-    ]
-  },
-  "testIds": [
-    "460091312102011",
-    "460091312102012",
-    "460091312102013",
-    "460091312102014",
-    "460091312102015",
-    "460091312102016",
-    "460091312102017",
-    "460091312102018",
-    "460091312102019",
-    "4600913121020110",
-    "4600913121020111",
-    "4600913121020112"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "46009131210201",
-    "examType": "Mid 1"
-  },
-  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }

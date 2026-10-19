@@ -1,61 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 46,
-    "CourseName": "Diploma Chemical Engineering"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 5,
-  "subject": {
-    "name": "SUMMER INTERNSHIP",
-    "SubjectId": "46000938050801",
-    "isDepartmentalSubject": true
-  },
-  "exam": {
-    "name": "Mid 2",
-    "format": "mcq",
-    "questionsPerTest": 30,
-    "marksPerQuestion": null,
-    "totalMarks": null
-  },
-  "difficultyVariants": {
-    "easy": [
-      "4600093805080113",
-      "4600093805080114",
-      "4600093805080115",
-      "4600093805080116"
-    ],
-    "medium": [
-      "4600093805080117",
-      "4600093805080118",
-      "4600093805080119",
-      "4600093805080120"
-    ],
-    "hard": [
-      "4600093805080121",
-      "4600093805080122",
-      "4600093805080123",
-      "4600093805080124"
-    ]
-  },
-  "testIds": [
-    "4600093805080113",
-    "4600093805080114",
-    "4600093805080115",
-    "4600093805080116",
-    "4600093805080117",
-    "4600093805080118",
-    "4600093805080119",
-    "4600093805080120",
-    "4600093805080121",
-    "4600093805080122",
-    "4600093805080123",
-    "4600093805080124"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "46000938050801",
-    "examType": "Mid 2"
-  },
-  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }
