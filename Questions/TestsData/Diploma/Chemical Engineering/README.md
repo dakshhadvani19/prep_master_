@@ -1,4 +1,6 @@
-# Diploma Chemical Engineering — Complete Question Bank v2
+> **Archive status (2026-10-19):** The semester banks now retain one representative test per subject/exam type (about 8.3% of the former test variants) to keep repository context compact for future Groq generation. These are examples only, not complete production banks or academically approved answer keys. See [the generation instructions](../../../../docs/EXAM_QUESTION_GENERATION_INSTRUCTIONS.md). Any inventory counts below describe the pre-compaction bank; use each semester's `manifest.json` for retained counts.
+
+# Chemical Engineering — Compact Reference Question Archive
 
 This folder contains the staged exam-question bank for all six semesters of Diploma Chemical Engineering (CourseId 46).
 
