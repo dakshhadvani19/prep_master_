@@ -8,77 +8,209 @@
   "canonical_files": {
     "test_bank": "exam-bank-v2.json",
     "seed_sql": "seed-all-v2.sql",
-    "reference_map": "../REFERENCE_SAMPLE_MAP.json"
+    "reference_map": "../../../REFERENCE_SAMPLE_MAP.json",
+    "marking_specification": "../../../../../docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   },
   "counts": {
-    "subjects": 0,
-    "nonDepartmentalSubjects": 0,
-    "departmentalSubjects": 0,
-    "examTypeBanks": 0,
-    "retainedReferenceTests": 0,
-    "mcqTests": 0,
-    "theoryTests": 0,
-    "mcqQuestions": 0,
-    "theoryQuestions": 0,
-    "mcqOptionEntries": 0,
-    "answerEntries": 0,
-    "originalGeneratedTests": 0,
+    "subjects": 5,
+    "nonDepartmentalSubjects": 4,
+    "departmentalSubjects": 1,
+    "examTypeBanks": 14,
+    "retainedReferenceTests": 14,
+    "mcqTests": 6,
+    "theoryTests": 8,
+    "mcqQuestions": 180,
+    "theoryQuestions": 32,
+    "mcqOptionEntries": 720,
+    "answerEntries": 212,
+    "originalGeneratedTests": 168,
+    "originalQuestionEntries": 2544,
     "semester": 3
   },
   "exam_rules": {
-    "departmental": "Departmental subjects normally have MCQ Mid 1 and Mid 2; no ESE unless explicitly approved.",
-    "nonDepartmental": "Non-departmental subjects normally have theory Mid 1 and ESE, plus MCQ Mid 2.",
+    "departmental": "Departmental subjects normally use MCQ Mid 1 and Mid 2; no ESE unless explicitly approved.",
+    "nonDepartmental": "Non-departmental subjects normally use theory Mid 1 and ESE, plus MCQ Mid 2.",
     "MCQ": "Exactly 30 questions, four options each, answer index 0=A, 1=B, 2=C, 3=D.",
-    "theoryMid1": "30 marks: two 1-mark questions; 4-/8-mark questions make up the remaining 28.",
-    "theoryESE": "60 marks: two 1-mark questions, one 2-mark question, and 4-/8-mark questions totaling 56. If 2-mark questions are prohibited, resolve the marks conflict before generation.",
-    "difficulty": "Requested difficulty is generated at runtime. A single reference sample is retained for each available subject/exam type.",
+    "theoryMid1": "30 marks: two 1-mark questions and 4-/8-mark questions totalling 28.",
+    "theoryESE": "60 marks: two 1-mark questions, one 2-mark question, and 4-/8-mark questions totalling 56; resolve the blueprint if 2-mark questions are prohibited.",
+    "retention": "One reference test per available subject/exam type; generate requested difficulty at runtime.",
     "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   },
   "subjects": [
     {
+      "name": "UNIT OPERATION - II",
+      "SubjectId": "46000938230101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093823010126",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382301017",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093823010124",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
       "name": "INDUSTRIAL STOICHIOMETRY",
       "SubjectId": "46000938230201",
       "isDepartmentalSubject": false,
-      "source_syllabus": null,
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
-    },
-    {
-      "name": "MATHEMATICS-III",
-      "SubjectId": "46009131030201",
-      "isDepartmentalSubject": false,
-      "source_syllabus": null,
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
-    },
-    {
-      "name": "REACTOR & BOILER OPERATION SKILL",
-      "SubjectId": "46000938230401",
-      "isDepartmentalSubject": true,
-      "source_syllabus": null,
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093823020125",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382302016",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093823020123",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
     },
     {
       "name": "SAFETY & POLLUTION MEASURES",
       "SubjectId": "46000938230301",
       "isDepartmentalSubject": false,
-      "source_syllabus": null,
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093823030128",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382303015",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093823030122",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
     },
     {
-      "name": "UNIT OPERATION - II",
-      "SubjectId": "46000938230101",
+      "name": "REACTOR & BOILER OPERATION SKILL",
+      "SubjectId": "46000938230401",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460009382304013",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093823040120",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "MATHEMATICS-III",
+      "SubjectId": "46009131030201",
       "isDepartmentalSubject": false,
-      "source_syllabus": null,
-      "status": "no-sample-retained",
-      "examTypes": [],
-      "referenceOnly": true
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600913103020133",
+          "difficulty": "hard",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460091310302012",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600913103020119",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
     }
   ],
   "reuseAudit": [
@@ -128,7 +260,8 @@
     "Metadata is in test_index; TestsData has four columns.",
     "Theory rows have Options=[]; new content requires review.",
     "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim.",
-    "Updated 2026-10-19: counts now reflect retained reference samples; full-bank counts are retained in historicalFullBankCounts or historicalFullBankTotals. Not a production-approved bank."
+    "Updated 2026-10-19: counts now reflect retained reference samples; full-bank counts are retained in historicalFullBankCounts or historicalFullBankTotals. Not a production-approved bank.",
+    "Updated 2026-10-19: counts reflect retained reference samples only. Prior full-bank counts remain labelled historical; these items are not production-approved."
   ],
   "reuseVerification": {
     "verifiedAt": "2026-10-16",
@@ -208,6 +341,44 @@
     }
   ],
   "totals": {
+    "subjects": 5,
+    "nonDepartmentalSubjects": 4,
+    "departmentalSubjects": 1,
+    "examTypeBanks": 14,
+    "retainedReferenceTests": 14,
+    "mcqTests": 6,
+    "theoryTests": 8,
+    "mcqQuestions": 180,
+    "theoryQuestions": 32,
+    "mcqOptionEntries": 720,
+    "answerEntries": 212,
+    "originalGeneratedTests": 168,
+    "originalQuestionEntries": 2544,
+    "semester": 3
+  },
+  "referenceSampleStatus": {
+    "status": "REFERENCE_SAMPLES_ONLY",
+    "productionReady": false,
+    "scope": "semester",
+    "counts": {
+      "subjects": 5,
+      "nonDepartmentalSubjects": 4,
+      "departmentalSubjects": 1,
+      "examTypeBanks": 14,
+      "retainedReferenceTests": 14,
+      "mcqTests": 6,
+      "theoryTests": 8,
+      "mcqQuestions": 180,
+      "theoryQuestions": 32,
+      "mcqOptionEntries": 720,
+      "answerEntries": 212,
+      "originalGeneratedTests": 168,
+      "originalQuestionEntries": 2544,
+      "semester": 3
+    },
+    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
+  },
+  "historicalFullBankTotals": {
     "subjects": 0,
     "nonDepartmentalSubjects": 0,
     "departmentalSubjects": 0,
@@ -221,26 +392,5 @@
     "answerEntries": 0,
     "originalGeneratedTests": 0,
     "semester": 3
-  },
-  "referenceSampleStatus": {
-    "status": "REFERENCE_SAMPLES_ONLY",
-    "productionReady": false,
-    "scope": "semester",
-    "counts": {
-      "subjects": 0,
-      "nonDepartmentalSubjects": 0,
-      "departmentalSubjects": 0,
-      "examTypeBanks": 0,
-      "retainedReferenceTests": 0,
-      "mcqTests": 0,
-      "theoryTests": 0,
-      "mcqQuestions": 0,
-      "theoryQuestions": 0,
-      "mcqOptionEntries": 0,
-      "answerEntries": 0,
-      "originalGeneratedTests": 0,
-      "semester": 3
-    },
-    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   }
 }
