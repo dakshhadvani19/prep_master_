@@ -1,59 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 44,
-    "CourseName": "Diploma Computer Engineering"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 1,
-  "subject": {
-    "name": "Computer Fundamental Skill",
-    "SubjectId": "44000935210101",
-    "isDepartmentalSubject": true
-  },
-  "exam": {
-    "name": "Mid 1",
-    "format": "mcq",
-    "syllabusScope": "First 50% of syllabus"
-  },
-  "difficultyVariants": {
-    "easy": [
-      "440009352101011",
-      "440009352101012",
-      "440009352101013",
-      "440009352101014"
-    ],
-    "medium": [
-      "440009352101015",
-      "440009352101016",
-      "440009352101017",
-      "440009352101018"
-    ],
-    "hard": [
-      "440009352101019",
-      "4400093521010110",
-      "4400093521010111",
-      "4400093521010112"
-    ]
-  },
-  "testIds": [
-    "440009352101011",
-    "440009352101012",
-    "440009352101013",
-    "440009352101014",
-    "440009352101015",
-    "440009352101016",
-    "440009352101017",
-    "440009352101018",
-    "440009352101019",
-    "4400093521010110",
-    "4400093521010111",
-    "4400093521010112"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "44000935210101",
-    "examType": "Mid 1"
-  },
-  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes this exam's 12 variants and avoids duplicating questions.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }

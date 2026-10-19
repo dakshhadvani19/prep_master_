@@ -1,12 +1,9 @@
-# Project-I — Semester 5 Exam Bank v2
+# Reference sample pointer
 
-**SubjectId:** `44000935150501`  
-**isDepartmentalSubject:** `true`  
-**Canonical bank:** [../exam-bank-v2.json](../exam-bank-v2.json)  
-**Canonical seed:** [../seed-all-v2.sql](../seed-all-v2.sql)
+This folder no longer stores a full set of generated exams. It points to the retained reference samples only.
 
-Filter `test_index` by SubjectId `44000935150501`. Mid 1 and Mid 2 are 30-MCQ tests; ESE is not generated.
+- Canonical questions and subject metadata: `../exam-bank-v2.json`
+- Retained reference index: [`REFERENCE_SAMPLE_MAP.json`](../../../../REFERENCE_SAMPLE_MAP.json)
+- Current format and marking scheme: [`EXAM_FORMAT_AND_MARKING_RULES.md`](../../../../../../docs/EXAM_FORMAT_AND_MARKING_RULES.md)
 
-**Mid 1 scope:** First 50% by syllabus order/contact hours: Project/Problem Identification; Project Analysis, Requirement Gathering; Project Design / Prototype Development.
-
-Use the semester-level v2 files as canonical. Academic review is required before production.
+Generate new exams at runtime using the current marking specification. The remaining sample payloads are not academically approved for production.

@@ -1,36 +1,9 @@
 {
   "schema_version": "2.0",
-  "subject": {
-    "name": "Basic Electronics",
-    "SubjectId": "44000955210301",
-    "semester": 2,
-    "isDepartmentalSubject": false,
-    "subject_code": "09EE2103",
-    "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/BE.pdf"
-  },
-  "canonical_bank": "../exam-bank-v2.json",
-  "canonical_seed_sql": "../seed-all-v2.sql",
-  "filter": {
-    "SubjectId": "44000955210301"
-  },
-  "examTypes": [
-    {
-      "examType": "Mid 1",
-      "format": "theory",
-      "tests": 12,
-      "syllabusScope": "First 50% of the syllabus by ordered units/contact hours: Diode characteristics and its applications; Transistor characteristics and applications."
-    },
-    {
-      "examType": "Mid 2",
-      "format": "mcq",
-      "tests": 12,
-      "syllabusScope": "Full Semester 2 syllabus practice bank."
-    },
-    {
-      "examType": "ESE",
-      "format": "theory",
-      "tests": 12,
-      "syllabusScope": "Full Semester 2 syllabus."
-    }
-  ]
+  "status": "reference-only-pointer",
+  "referenceOnly": true,
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "currentMarkingSpecification": "../../../../../../docs/EXAM_FORMAT_AND_MARKING_RULES.md",
+  "note": "This manifest has been minimized because the repository retains reference samples only. Resolve course/semester/subject metadata from the canonical semester bank and REFERENCE_SAMPLE_MAP.json."
 }

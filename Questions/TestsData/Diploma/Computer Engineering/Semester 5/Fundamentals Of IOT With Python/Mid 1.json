@@ -1,61 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 44,
-    "CourseName": "Diploma Computer Engineering"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 5,
-  "subject": {
-    "name": "Fundamentals Of IOT With Python",
-    "SubjectId": "44000935150601",
-    "isDepartmentalSubject": false
-  },
-  "exam": {
-    "name": "Mid 1",
-    "format": "theory",
-    "questionsPerTest": 4,
-    "marksPerQuestion": 8,
-    "totalMarks": 32
-  },
-  "difficultyVariants": {
-    "easy": [
-      "440009351506011",
-      "440009351506012",
-      "440009351506013",
-      "440009351506014"
-    ],
-    "medium": [
-      "440009351506015",
-      "440009351506016",
-      "440009351506017",
-      "440009351506018"
-    ],
-    "hard": [
-      "440009351506019",
-      "4400093515060110",
-      "4400093515060111",
-      "4400093515060112"
-    ]
-  },
-  "testIds": [
-    "440009351506011",
-    "440009351506012",
-    "440009351506013",
-    "440009351506014",
-    "440009351506015",
-    "440009351506016",
-    "440009351506017",
-    "440009351506018",
-    "440009351506019",
-    "4400093515060110",
-    "4400093515060111",
-    "4400093515060112"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "44000935150601",
-    "examType": "Mid 1"
-  },
-  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }

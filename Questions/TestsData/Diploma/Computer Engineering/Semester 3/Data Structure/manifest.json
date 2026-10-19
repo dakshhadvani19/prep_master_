@@ -1,36 +1,9 @@
 {
   "schema_version": "2.0",
-  "subject": {
-    "name": "Data Structure",
-    "SubjectId": "44000935330301",
-    "semester": 3,
-    "isDepartmentalSubject": false,
-    "subject_code": "09CE3303",
-    "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3303_DS_Syllabus.pdf"
-  },
-  "canonical_bank": "../exam-bank-v2.json",
-  "canonical_seed_sql": "../seed-all-v2.sql",
-  "filter": {
-    "SubjectId": "44000935330301"
-  },
-  "examTypes": [
-    {
-      "examType": "Mid 1",
-      "format": "theory",
-      "tests": 12,
-      "syllabusScope": "First 50% by syllabus order/contact hours: Introduction to Basics of Data Structure; Array & Stack; Queue & Link List."
-    },
-    {
-      "examType": "Mid 2",
-      "format": "mcq",
-      "tests": 12,
-      "syllabusScope": "Full Semester 3 syllabus practice bank."
-    },
-    {
-      "examType": "ESE",
-      "format": "theory",
-      "tests": 12,
-      "syllabusScope": "Full Semester 3 syllabus."
-    }
-  ]
+  "status": "reference-only-pointer",
+  "referenceOnly": true,
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "currentMarkingSpecification": "../../../../../../docs/EXAM_FORMAT_AND_MARKING_RULES.md",
+  "note": "This manifest has been minimized because the repository retains reference samples only. Resolve course/semester/subject metadata from the canonical semester bank and REFERENCE_SAMPLE_MAP.json."
 }

@@ -1,61 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 44,
-    "CourseName": "Diploma Computer Engineering"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 6,
-  "subject": {
-    "name": "Entrepreneurship Development",
-    "SubjectId": "44000935160701",
-    "isDepartmentalSubject": false
-  },
-  "exam": {
-    "name": "ESE",
-    "format": "theory",
-    "questionsPerTest": 4,
-    "marksPerQuestion": 8,
-    "totalMarks": 32
-  },
-  "difficultyVariants": {
-    "easy": [
-      "4400093516070125",
-      "4400093516070126",
-      "4400093516070127",
-      "4400093516070128"
-    ],
-    "medium": [
-      "4400093516070129",
-      "4400093516070130",
-      "4400093516070131",
-      "4400093516070132"
-    ],
-    "hard": [
-      "4400093516070133",
-      "4400093516070134",
-      "4400093516070135",
-      "4400093516070136"
-    ]
-  },
-  "testIds": [
-    "4400093516070125",
-    "4400093516070126",
-    "4400093516070127",
-    "4400093516070128",
-    "4400093516070129",
-    "4400093516070130",
-    "4400093516070131",
-    "4400093516070132",
-    "4400093516070133",
-    "4400093516070134",
-    "4400093516070135",
-    "4400093516070136"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "44000935160701",
-    "examType": "ESE"
-  },
-  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }

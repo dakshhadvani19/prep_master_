@@ -1,45 +1,9 @@
 {
   "schema_version": "2.0",
-  "status": "canonical-v2-subject-pointer",
-  "subject": {
-    "name": "Basics of Web Designing",
-    "SubjectId": "44000935310201",
-    "isDepartmentalSubject": false
-  },
-  "canonical_bank": "../exam-bank-v2.json",
-  "canonical_seed_sql": "../seed-all-v2.sql",
-  "filter": {
-    "SubjectId": "44000935310201"
-  },
-  "exam_types": {
-    "Mid 1": {
-      "format": "theory",
-      "tests": 12,
-      "questions_per_test": 4,
-      "marks_per_question": 8
-    },
-    "Mid 2": {
-      "format": "mcq",
-      "tests": 12,
-      "questions_per_test": 30
-    },
-    "ESE": {
-      "format": "theory",
-      "tests": 12,
-      "questions_per_test": 4,
-      "marks_per_question": 8
-    }
-  },
-  "difficulty_variants": {
-    "easy": 4,
-    "medium": 4,
-    "hard": 4
-  },
-  "mid1_syllabus_scope": "Mid 1 (first 50%): Internet/WWW and HTML5 fundamentals; only introductory adjacent HTML topics where needed.",
-  "legacy_files": {
-    "tests": "tests/",
-    "answer_review": "answer-review.json",
-    "seed_sql": "seed.sql"
-  },
-  "note": "Legacy test files are retained as reference only. seed.sql is retired and performs no INSERT. Use the v2 bank and seed."
+  "status": "reference-only-pointer",
+  "referenceOnly": true,
+  "canonicalBank": "../exam-bank-v2.json",
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "currentMarkingSpecification": "../../../../../../docs/EXAM_FORMAT_AND_MARKING_RULES.md",
+  "note": "This manifest has been minimized because the repository retains reference samples only. Resolve course/semester/subject metadata from the canonical semester bank and REFERENCE_SAMPLE_MAP.json."
 }

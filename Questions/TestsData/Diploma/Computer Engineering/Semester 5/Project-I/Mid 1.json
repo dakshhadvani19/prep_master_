@@ -1,61 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 44,
-    "CourseName": "Diploma Computer Engineering"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 5,
-  "subject": {
-    "name": "Project-I",
-    "SubjectId": "44000935150501",
-    "isDepartmentalSubject": true
-  },
-  "exam": {
-    "name": "Mid 1",
-    "format": "mcq",
-    "questionsPerTest": 30,
-    "marksPerQuestion": null,
-    "totalMarks": null
-  },
-  "difficultyVariants": {
-    "easy": [
-      "440009351505011",
-      "440009351505012",
-      "440009351505013",
-      "440009351505014"
-    ],
-    "medium": [
-      "440009351505015",
-      "440009351505016",
-      "440009351505017",
-      "440009351505018"
-    ],
-    "hard": [
-      "440009351505019",
-      "4400093515050110",
-      "4400093515050111",
-      "4400093515050112"
-    ]
-  },
-  "testIds": [
-    "440009351505011",
-    "440009351505012",
-    "440009351505013",
-    "440009351505014",
-    "440009351505015",
-    "440009351505016",
-    "440009351505017",
-    "440009351505018",
-    "440009351505019",
-    "4400093515050110",
-    "4400093515050111",
-    "4400093515050112"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "44000935150501",
-    "examType": "Mid 1"
-  },
-  "contentPolicy": "Index into the semester-level canonical bank; questions are not duplicated.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }
