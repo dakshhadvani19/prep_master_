@@ -571,18 +571,19 @@
     }
   ],
   "totals": {
-    "subjects": 0,
-    "nonDepartmentalSubjects": 0,
-    "departmentalSubjects": 0,
-    "examTypeBanks": 0,
-    "retainedReferenceTests": 0,
-    "mcqTests": 0,
-    "theoryTests": 0,
-    "mcqQuestions": 0,
-    "theoryQuestions": 0,
-    "mcqOptionEntries": 0,
-    "answerEntries": 0,
-    "originalGeneratedTests": 0
+    "subjects": 35,
+    "nonDepartmentalSubjects": 25,
+    "departmentalSubjects": 10,
+    "examTypeBanks": 95,
+    "retainedReferenceTests": 95,
+    "mcqTests": 45,
+    "theoryTests": 50,
+    "mcqQuestions": 1350,
+    "theoryQuestions": 200,
+    "mcqOptionEntries": 5400,
+    "answerEntries": 1550,
+    "originalGeneratedTests": 1212,
+    "originalQuestionEntries": 20760
   },
   "examRules": {
     "nonDepartmental": "Mid 1: four 8-mark theory questions and model answers, limited to the first 50% of ordered syllabus; Mid 2: 30 MCQs; ESE: four 8-mark theory questions and model answers.",
@@ -697,8 +698,1259 @@
     "exactNameReuseSubjects": 4,
     "exactNameReuseVariants": 108
   },
-  "subjects": [],
+  "subjects": [
+    {
+      "name": "COMPUTER FUNDAMENTAL SKILL",
+      "SubjectId": "46000935210101",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460009352101011",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093521010121",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "CHEMICAL ENGINEERING EQUIPMENT DESIGN",
+      "SubjectId": "46000938210101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093821010136",
+          "difficulty": "hard",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382101011",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093821010118",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "INDIAN CONSTITUTION",
+      "SubjectId": "46009121010101",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "4600912101010111",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600912101010116",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "MATHEMATICS-I",
+      "SubjectId": "46009131210101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600913121010129",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "4600913121010110",
+          "difficulty": "hard",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600913121010115",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "MECHANICAL WORKSHOP",
+      "SubjectId": "46009135210201",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460091352102018",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600913521020121",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "APPLIED CHEMISTRY",
+      "SubjectId": "46009719310201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600971931020126",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460097193102017",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600971931020124",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "BHARATIYA KNOWLEDGE SYSTEM",
+      "SubjectId": "46009911010101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600991101010125",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460099110101016",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600991101010123",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "COMMUNICATION SKILLS",
+      "SubjectId": "46091912010301",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4609191201030128",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460919120103015",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy four 8-mark questions (32 total); do not use as current exam blueprint."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4609191201030117",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "GENERATIVE AI & PROMPT ENGINEERING",
+      "SubjectId": "46000935030501",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460009350305012",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093503050119",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "UNIT OPERATION-I",
+      "SubjectId": "46000938210201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093821020136",
+          "difficulty": "hard",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total); reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382102011",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total); reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093821020118",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "ELECTRICAL PUMPS AND VALVES OPERATION SKILL",
+      "SubjectId": "46000938210301",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "4600093821030111",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093821030116",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
+      "SubjectId": "46009121010201",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460091210102015",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600912101020122",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "MATHEMATICS-II",
+      "SubjectId": "46009131210201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600913121020127",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total); reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460091312102018",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total); reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600913121020121",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "ENGINEERING DRAWING",
+      "SubjectId": "46009135110101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600913511010126",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total); reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460091351101017",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total); reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600913511010124",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-I",
+      "SubjectId": "46009164010101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600916401010125",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total); reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460091640101016",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total); reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600916401010123",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "UNIT OPERATION - II",
+      "SubjectId": "46000938230101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093823010126",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382301017",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093823010124",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "INDUSTRIAL STOICHIOMETRY",
+      "SubjectId": "46000938230201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093823020125",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382302016",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093823020123",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "SAFETY & POLLUTION MEASURES",
+      "SubjectId": "46000938230301",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093823030128",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382303015",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093823030122",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "REACTOR & BOILER OPERATION SKILL",
+      "SubjectId": "46000938230401",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460009382304013",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093823040120",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "MATHEMATICS-III",
+      "SubjectId": "46009131030201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600913103020133",
+          "difficulty": "hard",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460091310302012",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600913103020119",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "UNIT OPERATION - III",
+      "SubjectId": "46000938240101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093824010126",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382401017",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093824010124",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "PROCESS HEAT TRANSFER",
+      "SubjectId": "46000938240201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093824020125",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382402016",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093824020123",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "PLANT UTILIZATION AND INSTRUMENTATION",
+      "SubjectId": "46000938240301",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093824030128",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382403015",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093824030122",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "CHEMICAL PROCESS SOFTWARE",
+      "SubjectId": "46000938240401",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460009382404011",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093824040120",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "GENERAL CHEMICAL TECHNOLOGY",
+      "SubjectId": "46000938240501",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460009382405019",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093824050114",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "MATHEMATICS-IV",
+      "SubjectId": "46009131040201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600913104020131",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "4600913104020112",
+          "difficulty": "hard",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy sample is four 8-mark questions (32 total), not the current format."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600913104020113",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "UNIT OPERATION - IV",
+      "SubjectId": "46000938250101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093825010126",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382501017",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093825010124",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "CHEMICAL REACTION ENGINEERING & THERMODYNAMICS",
+      "SubjectId": "46000938250201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093825020125",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382502016",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093825020123",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "PERTOLEUM REFINING & PETROCHEMICALS",
+      "SubjectId": "46000938250301",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093825030128",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382503015",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093825030122",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "DCS & SCADA",
+      "SubjectId": "46000938250501",
+      "isDepartmentalSubject": true,
+      "examTypes": [
+        {
+          "examType": "Mid 1",
+          "format": "mcq",
+          "referenceTestId": "460009382505011",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093825050113",
+          "difficulty": "easy",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "POLYMER TECHNOLOGY",
+      "SubjectId": "46000938250601",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093825060133",
+          "difficulty": "hard",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382506012",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093825060119",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "FERTILIZER TECHNOLOGY",
+      "SubjectId": "46000938250701",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093825070136",
+          "difficulty": "hard",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382507011",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093825070118",
+          "difficulty": "medium",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "CHEMICAL PROCESS EQUIPMENT DESIGN",
+      "SubjectId": "46000938260101",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093826010126",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382601017",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093826010124",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "CHEMICAL ENGINEERING PLANT ECONOMICS",
+      "SubjectId": "46000938260201",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093826020125",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382602016",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093826020123",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    },
+    {
+      "name": "ENTREPRENEURSHIP DEVELOPMENT",
+      "SubjectId": "46000938260401",
+      "isDepartmentalSubject": false,
+      "examTypes": [
+        {
+          "examType": "ESE",
+          "format": "theory",
+          "referenceTestId": "4600093826040128",
+          "difficulty": "easy",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 1",
+          "format": "theory",
+          "referenceTestId": "460009382604015",
+          "difficulty": "medium",
+          "questionCount": 4,
+          "optionCount": 0,
+          "answerCount": 4,
+          "legacyTheoryFormatWarning": "Legacy 4 × 8 = 32 marks; reference only."
+        },
+        {
+          "examType": "Mid 2",
+          "format": "mcq",
+          "referenceTestId": "4600093826040122",
+          "difficulty": "hard",
+          "questionCount": 30,
+          "optionCount": 120,
+          "answerCount": 30,
+          "legacyTheoryFormatWarning": null
+        }
+      ]
+    }
+  ],
   "counts": {
+    "subjects": 35,
+    "nonDepartmentalSubjects": 25,
+    "departmentalSubjects": 10,
+    "examTypeBanks": 95,
+    "retainedReferenceTests": 95,
+    "mcqTests": 45,
+    "theoryTests": 50,
+    "mcqQuestions": 1350,
+    "theoryQuestions": 200,
+    "mcqOptionEntries": 5400,
+    "answerEntries": 1550,
+    "originalGeneratedTests": 1212,
+    "originalQuestionEntries": 20760
+  },
+  "exam_rules": {
+    "departmental": "Departmental subjects normally use MCQ Mid 1 and Mid 2; no ESE unless explicitly approved.",
+    "nonDepartmental": "Non-departmental subjects normally use theory Mid 1 and ESE, plus MCQ Mid 2.",
+    "MCQ": "Exactly 30 questions, four options each, answer index 0=A, 1=B, 2=C, 3=D.",
+    "theoryMid1": "30 marks: two 1-mark questions and 4-/8-mark questions totalling 28.",
+    "theoryESE": "60 marks: two 1-mark questions, one 2-mark question, and 4-/8-mark questions totalling 56; resolve the blueprint if 2-mark questions are prohibited.",
+    "retention": "One reference test per available subject/exam type; generate requested difficulty at runtime.",
+    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
+  },
+  "referenceSampleStatus": {
+    "status": "REFERENCE_SAMPLES_ONLY",
+    "productionReady": false,
+    "scope": "course aggregate",
+    "counts": {
+      "subjects": 35,
+      "nonDepartmentalSubjects": 25,
+      "departmentalSubjects": 10,
+      "examTypeBanks": 95,
+      "retainedReferenceTests": 95,
+      "mcqTests": 45,
+      "theoryTests": 50,
+      "mcqQuestions": 1350,
+      "theoryQuestions": 200,
+      "mcqOptionEntries": 5400,
+      "answerEntries": 1550,
+      "originalGeneratedTests": 1212,
+      "originalQuestionEntries": 20760
+    },
+    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
+  },
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "seed_sql": "seed-all-v2.sql",
+    "reference_map": "../../REFERENCE_SAMPLE_MAP.json",
+    "marking_specification": "../../../../docs/EXAM_FORMAT_AND_MARKING_RULES.md"
+  },
+  "notes": [
+    "Updated 2026-10-19: reference samples only; not approved for production.",
+    "Updated 2026-10-19: counts reflect retained reference samples only. Prior full-bank counts remain labelled historical; these items are not production-approved."
+  ],
+  "historicalFullBankCounts": {
     "subjects": 0,
     "nonDepartmentalSubjects": 0,
     "departmentalSubjects": 0,
@@ -712,7 +1964,7 @@
     "answerEntries": 0,
     "originalGeneratedTests": 0
   },
-  "exam_rules": {
+  "historicalExamRules": {
     "departmental": "Departmental subjects normally have MCQ Mid 1 and Mid 2; no ESE unless explicitly approved.",
     "nonDepartmental": "Non-departmental subjects normally have theory Mid 1 and ESE, plus MCQ Mid 2.",
     "MCQ": "Exactly 30 questions, four options each, answer index 0=A, 1=B, 2=C, 3=D.",
@@ -720,33 +1972,5 @@
     "theoryESE": "60 marks: two 1-mark questions, one 2-mark question, and 4-/8-mark questions totaling 56. If 2-mark questions are prohibited, resolve the marks conflict before generation.",
     "difficulty": "Requested difficulty is generated at runtime. A single reference sample is retained for each available subject/exam type.",
     "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
-  },
-  "referenceSampleStatus": {
-    "status": "REFERENCE_SAMPLES_ONLY",
-    "productionReady": false,
-    "scope": "course aggregate",
-    "counts": {
-      "subjects": 0,
-      "nonDepartmentalSubjects": 0,
-      "departmentalSubjects": 0,
-      "examTypeBanks": 0,
-      "retainedReferenceTests": 0,
-      "mcqTests": 0,
-      "theoryTests": 0,
-      "mcqQuestions": 0,
-      "theoryQuestions": 0,
-      "mcqOptionEntries": 0,
-      "answerEntries": 0,
-      "originalGeneratedTests": 0
-    },
-    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
-  },
-  "canonical_files": {
-    "test_bank": "exam-bank-v2.json",
-    "seed_sql": "seed-all-v2.sql",
-    "reference_map": "../REFERENCE_SAMPLE_MAP.json"
-  },
-  "notes": [
-    "Updated 2026-10-19: reference samples only; not approved for production."
-  ]
+  }
 }
