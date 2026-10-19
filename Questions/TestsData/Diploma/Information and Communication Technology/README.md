@@ -1,4 +1,6 @@
-# Diploma Information and Communication Technology — Exam Bank
+> **Archive status (2026-10-19):** The semester banks now retain one representative test per subject/exam type (about 8.3% of the former test variants) to keep repository context compact for future Groq generation. These are examples only, not complete production banks or academically approved answer keys. See [the generation instructions](../../../../docs/EXAM_QUESTION_GENERATION_INSTRUCTIONS.md). Any inventory counts below describe the pre-compaction bank; use each semester's `manifest.json` for retained counts.
+
+# Information and Communication Technology — Compact Reference Question Archive
 
 - One canonical `exam-bank-v2.json` per semester stores all TestsData row payloads and the `test_index` metadata.
 - Per-subject folders contain `Mid 1.json`, `Mid 2.json`, and (for non-departmental subjects only) `ESE.json` files that index the 12 variants in the canonical bank.
