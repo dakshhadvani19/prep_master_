@@ -1,14 +1,12 @@
 {
   "schema_version": "2.0",
+  "archive_status": "COMPACT_REFERENCE_SAMPLE",
+  "purpose": "One representative test per subject/exam type; not a complete production bank.",
   "course": {
     "CourseId": 46,
     "CourseName": "Diploma Chemical Engineering"
   },
   "semester": 6,
-  "canonical_files": {
-    "test_bank": "exam-bank-v2.json",
-    "seed_sql": "seed-all-v2.sql"
-  },
   "counts": {
     "semester": 6,
     "subjects": 4,
@@ -17,227 +15,302 @@
     "nonDepartmentalSubjects": 3,
     "departmentalSubjects": 1,
     "examTypeBanks": 11,
-    "totalTests": 132,
+    "totalTests": 11,
     "mcqTests": 60,
-    "theoryTests": 72,
-    "mcqQuestions": 1800,
-    "theoryQuestions": 288,
-    "mcqOptionEntries": 7200,
-    "answerEntries": 2088
+    "theoryTests": 6,
+    "mcqQuestions": 150,
+    "theoryQuestions": 24,
+    "mcqOptionEntries": 600,
+    "answerEntries": 2088,
+    "testsPerExamType": 1,
+    "easyTestsPerExamType": 0,
+    "mediumTestsPerExamType": 1,
+    "hardTestsPerExamType": 0,
+    "objectiveTests": 5,
+    "theoryOptionEntries": 0,
+    "totalAnswerEntries": 174,
+    "totalQuestionPrompts": 174
   },
-  "exam_rules": {
-    "nonDepartmental": "Mid1/ESE four 8-mark theory questions; Mid1 first half; Mid2 30 MCQs",
-    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE",
-    "difficulty": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
-    },
-    "testIdRule": "False subjects: occurrences 1-12 Mid1, 13-24 Mid2, 25-36 ESE; true subjects: 1-12 Mid1,13-24 Mid2."
-  },
-  "subjects": [
+  "test_index": [
     {
-      "name": "CHEMICAL ENGINEERING PLANT ECONOMICS",
-      "SubjectId": "46000938260201",
-      "isDepartmentalSubject": false,
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "syllabusScope": "First half: Introduction; Project Development; Process Design; Selection Process Equipment and materials"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "syllabusScope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "syllabusScope": "Full semester"
-        }
-      ]
-    },
-    {
-      "name": "CHEMICAL PROCESS EQUIPMENT DESIGN",
+      "TestId": "460009382601015",
       "SubjectId": "46000938260101",
+      "SubjectName": "CHEMICAL PROCESS EQUIPMENT DESIGN",
+      "CourseId": 46,
+      "Semester": 6,
       "isDepartmentalSubject": false,
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "syllabusScope": "First half: Basic Considerations in Process Equipment Design; Design Consideration; Pressure Vessels; Reaction Vessels"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "syllabusScope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "syllabusScope": "Full semester"
-        }
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First half: Basic Considerations in Process Equipment Design; Design Consideration; Pressure Vessels; Reaction Vessels",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2601.pdf",
+      "contentOrigin": "new-syllabus-draft"
     },
     {
-      "name": "ENTREPRENEURSHIP DEVELOPMENT",
-      "SubjectId": "46000938260401",
+      "TestId": "460009382602015",
+      "SubjectId": "46000938260201",
+      "SubjectName": "CHEMICAL ENGINEERING PLANT ECONOMICS",
+      "CourseId": 46,
+      "Semester": 6,
       "isDepartmentalSubject": false,
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "syllabusScope": "First half: Introduction To Self-Employment And Entrepreneurship; Entrepreneurial Support Agencies; Project Set Up Planning"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "syllabusScope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "syllabusScope": "Full semester"
-        }
-      ],
-      "reuse": {
-        "reuse": true,
-        "sourceName": "Entrepreneurship Development",
-        "sourceSubjectId": "44000935160701",
-        "sourceId": "44000935160701",
-        "sourceSemester": 6,
-        "normalizedNameMatch": true,
-        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
-        "reusedVariants": 36,
-        "expectedVariants": 36,
-        "allVariantsCopiedVerbatim": true,
-        "syllabusDifferenceOverride": true,
-        "reason": "Exact normalized subject-name match; existing payload reused verbatim per user instruction despite syllabus wording differences."
-      }
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First half: Introduction; Project Development; Process Design; Selection Process Equipment and materials",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2602.pdf",
+      "contentOrigin": "new-syllabus-draft"
     },
     {
-      "name": "PROJECT-II",
+      "TestId": "460009382603015",
       "SubjectId": "46000938260301",
+      "SubjectName": "PROJECT-II",
+      "CourseId": 46,
+      "Semester": 6,
       "isDepartmentalSubject": true,
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "syllabusScope": "First half: Manufacturing of any one of products from below mentioned"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "syllabusScope": "Full semester"
-        }
-      ],
-      "reuse": {
-        "reuse": true,
-        "sourceName": "Project-II",
-        "sourceSubjectId": "44000935160201",
-        "sourceId": "44000935160201",
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First half: Manufacturing of any one of products from below mentioned",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2603.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reused": true,
+      "reuseMethod": "normalized-exact-subject-name",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44000935160201",
+        "SubjectName": "Project-II",
+        "sourceTestId": "440009351602015",
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 6/exam-bank-v2.json",
         "sourceSemester": 6,
-        "normalizedNameMatch": true,
         "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
-        "reusedVariants": 24,
-        "expectedVariants": 24,
-        "allVariantsCopiedVerbatim": true,
-        "syllabusDifferenceOverride": true,
-        "reason": "Exact normalized subject-name match; existing payload reused verbatim per user instruction despite syllabus wording differences."
+        "syllabusDifferenceOverride": true
       }
-    }
-  ],
-  "reuseAudit": [
-    {
-      "name": "CHEMICAL ENGINEERING PLANT ECONOMICS",
-      "SubjectId": "46000938260201",
-      "reuse": false,
-      "reason": "No same-name source selected."
     },
     {
-      "name": "CHEMICAL PROCESS EQUIPMENT DESIGN",
-      "SubjectId": "46000938260101",
-      "reuse": false,
-      "reason": "No same-name source selected."
-    },
-    {
-      "name": "ENTREPRENEURSHIP DEVELOPMENT",
+      "TestId": "460009382604015",
       "SubjectId": "46000938260401",
-      "reuse": true,
-      "sourceName": "Entrepreneurship Development",
-      "sourceId": "44000935160701",
-      "sourceSemester": 6,
-      "reason": "Exact normalized subject-name match. Per user instruction, copied the existing Computer Engineering Questions/Options/Answers payloads verbatim even though the syllabus descriptions differ.",
-      "normalizedNameMatch": true,
-      "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
-      "reusedVariants": 36,
-      "expectedVariants": 36,
-      "allVariantsCopiedVerbatim": true,
-      "syllabusDifferenceOverride": true
-    },
-    {
-      "name": "PROJECT-II",
-      "SubjectId": "46000938260301",
-      "reuse": true,
-      "sourceName": "Project-II",
-      "sourceId": "44000935160201",
-      "sourceSemester": 6,
-      "reason": "Exact normalized subject-name match. Per user instruction, copied the existing Computer Engineering Questions/Options/Answers payloads verbatim even though the syllabus descriptions differ.",
-      "normalizedNameMatch": true,
-      "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
-      "reusedVariants": 24,
-      "expectedVariants": 24,
-      "allVariantsCopiedVerbatim": true,
-      "syllabusDifferenceOverride": true
-    }
-  ],
-  "notes": [
-    "Mid1 is first-half syllabus, using unit contact hours where available.",
-    "TestsData stores four columns only; metadata is in test_index.",
-    "Theory rows have Options=[] and model answers in Answers.",
-    "All content is syllabus-derived draft material requiring subject-matter review.",
-    "Per user instruction, normalized exact subject-name matches take priority over syllabus wording differences. Existing Questions/Options/Answers payloads are copied verbatim; mismatch details are retained in reuseAudit for academic review."
-  ],
-  "reuseVerification": {
-    "verifiedAt": "2026-10-16",
-    "reusedVariants": 60,
-    "newlyCorrectedSubjects": [
-      {
-        "name": "ENTREPRENEURSHIP DEVELOPMENT",
-        "sourceName": "Entrepreneurship Development",
-        "variants": 36,
-        "payloadsCopiedVerbatim": true,
-        "syllabusDifferenceOverride": true
-      },
-      {
-        "name": "PROJECT-II",
-        "sourceName": "Project-II",
-        "variants": 24,
-        "payloadsCopiedVerbatim": true,
+      "SubjectName": "ENTREPRENEURSHIP DEVELOPMENT",
+      "CourseId": 46,
+      "Semester": 6,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First half: Introduction To Self-Employment And Entrepreneurship; Entrepreneurial Support Agencies; Project Set Up Planning",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2604.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reused": true,
+      "reuseMethod": "normalized-exact-subject-name",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44000935160701",
+        "SubjectName": "Entrepreneurship Development",
+        "sourceTestId": "440009351607015",
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 6/exam-bank-v2.json",
+        "sourceSemester": 6,
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
         "syllabusDifferenceOverride": true
       }
-    ],
-    "method": "Matched normalized exact subject name, exam type, difficulty and occurrence; copied Questions, Options and Answers verbatim while preserving Chemical Engineering TestIds and metadata.",
-    "allMarkedReuseSubjectsFullyCopied": true
-  },
-  "qualityCorrections": {
-    "mid1TheoryScopeRepair": {
-      "updatedAt": "2026-10-18",
-      "rowsRebuilt": 24,
-      "questionsRebuilt": 96,
-      "rule": "New-draft Mid1 theory prompts/model answers rebuilt from first-half unit/topic set; reused payloads preserved."
+    },
+    {
+      "TestId": "4600093826010117",
+      "SubjectId": "46000938260101",
+      "SubjectName": "CHEMICAL PROCESS EQUIPMENT DESIGN",
+      "CourseId": 46,
+      "Semester": 6,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2601.pdf",
+      "contentOrigin": "new-syllabus-draft"
+    },
+    {
+      "TestId": "4600093826010129",
+      "SubjectId": "46000938260101",
+      "SubjectName": "CHEMICAL PROCESS EQUIPMENT DESIGN",
+      "CourseId": 46,
+      "Semester": 6,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2601.pdf",
+      "contentOrigin": "new-syllabus-draft"
+    },
+    {
+      "TestId": "4600093826020117",
+      "SubjectId": "46000938260201",
+      "SubjectName": "CHEMICAL ENGINEERING PLANT ECONOMICS",
+      "CourseId": 46,
+      "Semester": 6,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2602.pdf",
+      "contentOrigin": "new-syllabus-draft"
+    },
+    {
+      "TestId": "4600093826020129",
+      "SubjectId": "46000938260201",
+      "SubjectName": "CHEMICAL ENGINEERING PLANT ECONOMICS",
+      "CourseId": 46,
+      "Semester": 6,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2602.pdf",
+      "contentOrigin": "new-syllabus-draft"
+    },
+    {
+      "TestId": "4600093826030117",
+      "SubjectId": "46000938260301",
+      "SubjectName": "PROJECT-II",
+      "CourseId": 46,
+      "Semester": 6,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2603.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reused": true,
+      "reuseMethod": "normalized-exact-subject-name",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44000935160201",
+        "SubjectName": "Project-II",
+        "sourceTestId": "4400093516020117",
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 6/exam-bank-v2.json",
+        "sourceSemester": 6,
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "syllabusDifferenceOverride": true
+      }
+    },
+    {
+      "TestId": "4600093826040117",
+      "SubjectId": "46000938260401",
+      "SubjectName": "ENTREPRENEURSHIP DEVELOPMENT",
+      "CourseId": 46,
+      "Semester": 6,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2604.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reused": true,
+      "reuseMethod": "normalized-exact-subject-name",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44000935160701",
+        "SubjectName": "Entrepreneurship Development",
+        "sourceTestId": "4400093516070117",
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 6/exam-bank-v2.json",
+        "sourceSemester": 6,
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "syllabusDifferenceOverride": true
+      }
+    },
+    {
+      "TestId": "4600093826040129",
+      "SubjectId": "46000938260401",
+      "SubjectName": "ENTREPRENEURSHIP DEVELOPMENT",
+      "CourseId": 46,
+      "Semester": 6,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2604.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reused": true,
+      "reuseMethod": "normalized-exact-subject-name",
+      "reusedFrom": {
+        "CourseId": 44,
+        "SubjectId": "44000935160701",
+        "SubjectName": "Entrepreneurship Development",
+        "sourceTestId": "4400093516070129",
+        "sourceBank": "Questions/TestsData/Diploma/Computer Engineering/Semester 6/exam-bank-v2.json",
+        "sourceSemester": 6,
+        "matchType": "EXACT_NORMALIZED_SUBJECT_NAME",
+        "syllabusDifferenceOverride": true
+      }
     }
-  }
+  ]
 }
