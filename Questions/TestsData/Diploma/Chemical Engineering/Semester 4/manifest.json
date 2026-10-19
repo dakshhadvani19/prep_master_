@@ -1,14 +1,12 @@
 {
   "schema_version": "2.0",
+  "archive_status": "COMPACT_REFERENCE_SAMPLE",
+  "purpose": "One representative test per subject/exam type; not a complete production bank.",
   "course": {
     "CourseId": 46,
     "CourseName": "Diploma Chemical Engineering"
   },
   "semester": 4,
-  "canonical_files": {
-    "test_bank": "exam-bank-v2.json",
-    "seed_sql": "seed-all-v2.sql"
-  },
   "counts": {
     "semester": 4,
     "subjects": 6,
@@ -17,264 +15,440 @@
     "nonDepartmentalSubjects": 4,
     "departmentalSubjects": 2,
     "examTypeBanks": 16,
-    "totalTests": 192,
+    "totalTests": 16,
     "mcqTests": 96,
-    "theoryTests": 96,
-    "mcqQuestions": 2880,
-    "theoryQuestions": 384,
-    "mcqOptionEntries": 11520,
-    "answerEntries": 3264
+    "theoryTests": 8,
+    "mcqQuestions": 240,
+    "theoryQuestions": 32,
+    "mcqOptionEntries": 960,
+    "answerEntries": 3264,
+    "testsPerExamType": 1,
+    "easyTestsPerExamType": 0,
+    "mediumTestsPerExamType": 1,
+    "hardTestsPerExamType": 0,
+    "objectiveTests": 8,
+    "theoryOptionEntries": 0,
+    "totalAnswerEntries": 272,
+    "totalQuestionPrompts": 272
   },
-  "exam_rules": {
-    "nonDepartmental": "Mid1/ESE 4 theory × 8 marks; Mid1 first half; Mid2 30 MCQs.",
-    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE.",
-    "difficulty": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
-    }
-  },
-  "subjects": [
+  "test_index": [
     {
-      "name": "CHEMICAL PROCESS SOFTWARE",
-      "SubjectId": "46000938240401",
-      "isDepartmentalSubject": true,
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First half: Experiment 1; Experiment 2; Experiment 3; Experiment 4; Experiment 5; Experiment 6; Experiment 7"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
-    },
-    {
-      "name": "GENERAL CHEMICAL TECHNOLOGY",
-      "SubjectId": "46000938240501",
-      "isDepartmentalSubject": true,
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First half: Tutorial 1; Tutorial 2; Tutorial 3; Tutorial 4; Tutorial 5; Tutorial 6; Tutorial 7"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
-    },
-    {
-      "name": "MATHEMATICS-IV",
-      "SubjectId": "46009131040201",
+      "TestId": "460009382401015",
+      "SubjectId": "46000938240101",
+      "SubjectName": "UNIT OPERATION - III",
+      "CourseId": 46,
+      "Semester": 4,
       "isDepartmentalSubject": false,
-      "reuse": {
-        "reuse": true,
-        "sourceName": "Mathematics-IV",
-        "sourceSubjectId": "44009131040201",
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First half: Introduction to Mass Transfer Operation; Molecular Diffusion in Fluids",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2401.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "460009382402015",
+      "SubjectId": "46000938240201",
+      "SubjectName": "PROCESS HEAT TRANSFER",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First half: Introduction to Heat Transfer; Heat Transfer by Conduction.; Heat Transfer by Convection.; Heat exchangers",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2402.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "460009382403015",
+      "SubjectId": "46000938240301",
+      "SubjectName": "PLANT UTILIZATION AND INSTRUMENTATION",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First half: Basic Utility; Steam, Air & Inert Gases; Refrigeration; Basics of Instrumentation",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2403.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "460009382404015",
+      "SubjectId": "46000938240401",
+      "SubjectName": "CHEMICAL PROCESS SOFTWARE",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First half: Experiment 1; Experiment 2; Experiment 3; Experiment 4; Experiment 5; Experiment 6; Experiment 7",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2404.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null,
+      "questionReviewRefs": [
+        "46000938240401-Mid1-medium-1",
+        "46000938240401-Mid1-medium-35",
+        "46000938240401-Mid1-medium-26",
+        "46000938240401-Mid1-medium-39",
+        "46000938240401-Mid1-medium-41",
+        "46000938240401-Mid1-medium-23",
+        "46000938240401-Mid1-medium-47",
+        "46000938240401-Mid1-medium-46",
+        "46000938240401-Mid1-medium-12",
+        "46000938240401-Mid1-medium-6",
+        "46000938240401-Mid1-medium-40",
+        "46000938240401-Mid1-medium-32",
+        "46000938240401-Mid1-medium-28",
+        "46000938240401-Mid1-medium-24",
+        "46000938240401-Mid1-medium-10",
+        "46000938240401-Mid1-medium-45",
+        "46000938240401-Mid1-medium-20",
+        "46000938240401-Mid1-medium-50",
+        "46000938240401-Mid1-medium-36",
+        "46000938240401-Mid1-medium-7",
+        "46000938240401-Mid1-medium-18",
+        "46000938240401-Mid1-medium-9",
+        "46000938240401-Mid1-medium-17",
+        "46000938240401-Mid1-medium-31",
+        "46000938240401-Mid1-medium-4",
+        "46000938240401-Mid1-medium-51",
+        "46000938240401-Mid1-medium-53",
+        "46000938240401-Mid1-medium-15",
+        "46000938240401-Mid1-medium-22",
+        "46000938240401-Mid1-medium-14"
+      ]
+    },
+    {
+      "TestId": "460009382405015",
+      "SubjectId": "46000938240501",
+      "SubjectName": "GENERAL CHEMICAL TECHNOLOGY",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First half: Tutorial 1; Tutorial 2; Tutorial 3; Tutorial 4; Tutorial 5; Tutorial 6; Tutorial 7",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2405.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null,
+      "questionReviewRefs": [
+        "46000938240501-Mid1-medium-29",
+        "46000938240501-Mid1-medium-12",
+        "46000938240501-Mid1-medium-34",
+        "46000938240501-Mid1-medium-50",
+        "46000938240501-Mid1-medium-32",
+        "46000938240501-Mid1-medium-10",
+        "46000938240501-Mid1-medium-13",
+        "46000938240501-Mid1-medium-51",
+        "46000938240501-Mid1-medium-8",
+        "46000938240501-Mid1-medium-35",
+        "46000938240501-Mid1-medium-39",
+        "46000938240501-Mid1-medium-9",
+        "46000938240501-Mid1-medium-11",
+        "46000938240501-Mid1-medium-27",
+        "46000938240501-Mid1-medium-53",
+        "46000938240501-Mid1-medium-48",
+        "46000938240501-Mid1-medium-25",
+        "46000938240501-Mid1-medium-42",
+        "46000938240501-Mid1-medium-23",
+        "46000938240501-Mid1-medium-20",
+        "46000938240501-Mid1-medium-18",
+        "46000938240501-Mid1-medium-19",
+        "46000938240501-Mid1-medium-37",
+        "46000938240501-Mid1-medium-36",
+        "46000938240501-Mid1-medium-33",
+        "46000938240501-Mid1-medium-1",
+        "46000938240501-Mid1-medium-6",
+        "46000938240501-Mid1-medium-45",
+        "46000938240501-Mid1-medium-21",
+        "46000938240501-Mid1-medium-3"
+      ]
+    },
+    {
+      "TestId": "460091310402015",
+      "SubjectId": "46009131040201",
+      "SubjectName": "MATHEMATICS-IV",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First half: Complex Number; Co-ordinate Geometry",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA0402-1.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
         "sourceSemester": 4,
-        "unitMatches": 4,
-        "maxUnits": 4,
-        "unitTitleRatio": 1,
-        "topicJaccard": 1,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 36,
-        "expectedVariants": 36,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Complex Number; Co-ordinate Geometry"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+        "sourceSubjectId": "44009131040201",
+        "sourceTestId": "440091310402015",
+        "copy": "verbatim payload; TestId remapped"
+      }
     },
     {
-      "name": "PLANT UTILIZATION AND INSTRUMENTATION",
-      "SubjectId": "46000938240301",
-      "isDepartmentalSubject": false,
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Basic Utility; Steam, Air & Inert Gases; Refrigeration; Basics of Instrumentation"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
-    },
-    {
-      "name": "PROCESS HEAT TRANSFER",
-      "SubjectId": "46000938240201",
-      "isDepartmentalSubject": false,
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Introduction to Heat Transfer; Heat Transfer by Conduction.; Heat Transfer by Convection.; Heat exchangers"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
-    },
-    {
-      "name": "UNIT OPERATION - III",
+      "TestId": "4600093824010117",
       "SubjectId": "46000938240101",
+      "SubjectName": "UNIT OPERATION - III",
+      "CourseId": 46,
+      "Semester": 4,
       "isDepartmentalSubject": false,
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Introduction to Mass Transfer Operation; Molecular Diffusion in Fluids"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
-    }
-  ],
-  "reuseAudit": [
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2401.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
     {
-      "name": "CHEMICAL PROCESS SOFTWARE",
+      "TestId": "4600093824010129",
+      "SubjectId": "46000938240101",
+      "SubjectName": "UNIT OPERATION - III",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2401.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "4600093824020117",
+      "SubjectId": "46000938240201",
+      "SubjectName": "PROCESS HEAT TRANSFER",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2402.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "4600093824020129",
+      "SubjectId": "46000938240201",
+      "SubjectName": "PROCESS HEAT TRANSFER",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2402.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "4600093824030117",
+      "SubjectId": "46000938240301",
+      "SubjectName": "PLANT UTILIZATION AND INSTRUMENTATION",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2403.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "4600093824030129",
+      "SubjectId": "46000938240301",
+      "SubjectName": "PLANT UTILIZATION AND INSTRUMENTATION",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09Ch2403.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
+    },
+    {
+      "TestId": "4600093824040117",
       "SubjectId": "46000938240401",
-      "reuse": false,
-      "reason": "No same-name source."
+      "SubjectName": "CHEMICAL PROCESS SOFTWARE",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2404.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
     },
     {
-      "name": "GENERAL CHEMICAL TECHNOLOGY",
+      "TestId": "4600093824050117",
       "SubjectId": "46000938240501",
-      "reuse": false,
-      "reason": "No same-name source."
+      "SubjectName": "GENERAL CHEMICAL TECHNOLOGY",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2405.pdf",
+      "contentOrigin": "new-syllabus-draft",
+      "reuseSource": null
     },
     {
-      "name": "MATHEMATICS-IV",
+      "TestId": "4600913104020117",
       "SubjectId": "46009131040201",
-      "reuse": true,
-      "sourceName": "Mathematics-IV",
-      "sourceSubjectId": "44009131040201",
-      "sourceSemester": 4,
-      "unitMatches": 4,
-      "maxUnits": 4,
-      "unitTitleRatio": 1,
-      "topicJaccard": 1,
-      "reason": "Verified unit-title/topic match; every test payload was copied verbatim from the existing CE bank.",
-      "reusedVariants": 36,
-      "expectedVariants": 36,
-      "allVariantsCopiedVerbatim": true
+      "SubjectName": "MATHEMATICS-IV",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA0402-1.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 4,
+        "sourceSubjectId": "44009131040201",
+        "sourceTestId": "4400913104020117",
+        "copy": "verbatim payload; TestId remapped"
+      }
     },
     {
-      "name": "PLANT UTILIZATION AND INSTRUMENTATION",
-      "SubjectId": "46000938240301",
-      "reuse": false,
-      "reason": "No same-name source."
-    },
-    {
-      "name": "PROCESS HEAT TRANSFER",
-      "SubjectId": "46000938240201",
-      "reuse": false,
-      "reason": "No same-name source."
-    },
-    {
-      "name": "UNIT OPERATION - III",
-      "SubjectId": "46000938240101",
-      "reuse": false,
-      "reason": "No same-name source."
+      "TestId": "4600913104020129",
+      "SubjectId": "46009131040201",
+      "SubjectName": "MATHEMATICS-IV",
+      "CourseId": 46,
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full semester",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA0402-1.pdf",
+      "contentOrigin": "reused-existing-bank",
+      "reuseSource": {
+        "sourceCourse": "Diploma Computer Engineering",
+        "sourceSemester": 4,
+        "sourceSubjectId": "44009131040201",
+        "sourceTestId": "4400913104020129",
+        "copy": "verbatim payload; TestId remapped"
+      }
     }
-  ],
-  "notes": [
-    "Mid1 is first half of ordered syllabus, weighted by hours where supplied.",
-    "Metadata is in test_index; TestsData has four columns.",
-    "Theory rows have Options=[]; new content requires review.",
-    "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim."
-  ],
-  "reuseVerification": {
-    "verifiedAt": "2026-10-16",
-    "reusedVariants": 36,
-    "previouslyMismatchedPayloadsCorrected": 27,
-    "method": "Matched target and source rows by subject, exam type, difficulty and occurrence, then compared Questions, Options and Answers exactly. Chemical Engineering TestIds and metadata were preserved.",
-    "allMarkedReuseSubjectsFullyCopied": true
-  },
-  "qualityCorrections": {
-    "mid1TheoryScopeRepair": {
-      "updatedAt": "2026-10-18",
-      "rowsRebuilt": 36,
-      "questionsRebuilt": 144,
-      "rule": "Rebuilt new-draft Mid1 theory papers from first-half unit/topic set; source-reused payloads are unchanged."
-    }
-  }
+  ]
 }
