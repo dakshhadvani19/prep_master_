@@ -1,30 +1,9 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 49,
-    "CourseName": "Diploma Information and Communication Technology"
-  },
-  "semester": 2,
-  "subject": {
-    "name": "ICT Workshop",
-    "SubjectId": "49009320010501",
-    "isDepartmentalSubject": true
-  },
-  "examTypes": [
-    {
-      "name": "Mid 1",
-      "format": "mcq",
-      "tests": 12,
-      "scope": "First half of ordered syllabus units: Introduction and Assembling of computer 8; Introduction to various network components 10; PCB Design Process 13; Installation of operating system 10."
-    },
-    {
-      "name": "Mid 2",
-      "format": "mcq",
-      "tests": 12,
-      "scope": "Full semester syllabus practice bank."
-    }
-  ],
+  "status": "reference-only-pointer",
+  "referenceOnly": true,
   "canonicalBank": "../exam-bank-v2.json",
-  "reuseDecision": "NO_VERIFIED_EXISTING_MATCH",
-  "reusedFrom": null
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "currentMarkingSpecification": "../../../../../../docs/EXAM_FORMAT_AND_MARKING_RULES.md",
+  "note": "This manifest has been minimized because the repository retains reference samples only. Resolve course/semester/subject metadata from the canonical semester bank and REFERENCE_SAMPLE_MAP.json."
 }

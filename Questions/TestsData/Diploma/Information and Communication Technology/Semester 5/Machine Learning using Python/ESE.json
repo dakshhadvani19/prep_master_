@@ -1,62 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 49,
-    "CourseName": "Diploma Information and Communication Technology"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 5,
-  "subject": {
-    "name": "Machine Learning using Python",
-    "SubjectId": "49009320051301",
-    "isDepartmentalSubject": false
-  },
-  "exam": {
-    "name": "ESE",
-    "format": "theory",
-    "questionsPerTest": 4,
-    "marksPerQuestion": 8,
-    "totalMarks": 32,
-    "syllabusScope": "Full semester syllabus."
-  },
-  "difficultyVariants": {
-    "easy": [
-      "4900932005130125",
-      "4900932005130126",
-      "4900932005130127",
-      "4900932005130128"
-    ],
-    "medium": [
-      "4900932005130129",
-      "4900932005130130",
-      "4900932005130131",
-      "4900932005130132"
-    ],
-    "hard": [
-      "4900932005130133",
-      "4900932005130134",
-      "4900932005130135",
-      "4900932005130136"
-    ]
-  },
-  "testIds": [
-    "4900932005130125",
-    "4900932005130126",
-    "4900932005130127",
-    "4900932005130128",
-    "4900932005130129",
-    "4900932005130130",
-    "4900932005130131",
-    "4900932005130132",
-    "4900932005130133",
-    "4900932005130134",
-    "4900932005130135",
-    "4900932005130136"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "49009320051301",
-    "examType": "ESE"
-  },
-  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }

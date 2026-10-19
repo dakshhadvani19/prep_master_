@@ -1,62 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 49,
-    "CourseName": "Diploma Information and Communication Technology"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 6,
-  "subject": {
-    "name": "Wireless Technologies",
-    "SubjectId": "49009320060901",
-    "isDepartmentalSubject": false
-  },
-  "exam": {
-    "name": "ESE",
-    "format": "theory",
-    "questionsPerTest": 4,
-    "marksPerQuestion": 8,
-    "totalMarks": 32,
-    "syllabusScope": "Full semester syllabus."
-  },
-  "difficultyVariants": {
-    "easy": [
-      "4900932006090125",
-      "4900932006090126",
-      "4900932006090127",
-      "4900932006090128"
-    ],
-    "medium": [
-      "4900932006090129",
-      "4900932006090130",
-      "4900932006090131",
-      "4900932006090132"
-    ],
-    "hard": [
-      "4900932006090133",
-      "4900932006090134",
-      "4900932006090135",
-      "4900932006090136"
-    ]
-  },
-  "testIds": [
-    "4900932006090125",
-    "4900932006090126",
-    "4900932006090127",
-    "4900932006090128",
-    "4900932006090129",
-    "4900932006090130",
-    "4900932006090131",
-    "4900932006090132",
-    "4900932006090133",
-    "4900932006090134",
-    "4900932006090135",
-    "4900932006090136"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "49009320060901",
-    "examType": "ESE"
-  },
-  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }

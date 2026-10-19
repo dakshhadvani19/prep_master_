@@ -1,62 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 49,
-    "CourseName": "Diploma Information and Communication Technology"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 5,
-  "subject": {
-    "name": "Probability and Statistics",
-    "SubjectId": "49009320050101",
-    "isDepartmentalSubject": false
-  },
-  "exam": {
-    "name": "Mid 1",
-    "format": "theory",
-    "questionsPerTest": 4,
-    "marksPerQuestion": 8,
-    "totalMarks": 32,
-    "syllabusScope": "First half of ordered syllabus units: Statistics and Descriptive Methods; Graphical and Tabular Descriptive Techniques; Numerical Descriptive Techniques; Data Collection and Sampling; Probability."
-  },
-  "difficultyVariants": {
-    "easy": [
-      "490093200501011",
-      "490093200501012",
-      "490093200501013",
-      "490093200501014"
-    ],
-    "medium": [
-      "490093200501015",
-      "490093200501016",
-      "490093200501017",
-      "490093200501018"
-    ],
-    "hard": [
-      "490093200501019",
-      "4900932005010110",
-      "4900932005010111",
-      "4900932005010112"
-    ]
-  },
-  "testIds": [
-    "490093200501011",
-    "490093200501012",
-    "490093200501013",
-    "490093200501014",
-    "490093200501015",
-    "490093200501016",
-    "490093200501017",
-    "490093200501018",
-    "490093200501019",
-    "4900932005010110",
-    "4900932005010111",
-    "4900932005010112"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "49009320050101",
-    "examType": "Mid 1"
-  },
-  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants without duplicating payloads.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs remain strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }

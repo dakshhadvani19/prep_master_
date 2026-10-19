@@ -1,62 +1,12 @@
 {
   "schema_version": "2.0",
-  "course": {
-    "CourseId": 49,
-    "CourseName": "Diploma Information and Communication Technology"
+  "referenceOnly": true,
+  "canonicalReferenceMap": "../../../../REFERENCE_SAMPLE_MAP.json",
+  "resolution": {
+    "course": "enclosing course folder",
+    "semester": "enclosing Semester folder",
+    "subject": "enclosing subject folder",
+    "examType": "this filename without .json"
   },
-  "semester": 2,
-  "subject": {
-    "name": "Environment Conservation & Disaster Management",
-    "SubjectId": "49000939110201",
-    "isDepartmentalSubject": true
-  },
-  "exam": {
-    "name": "Mid 2",
-    "format": "mcq",
-    "questionsPerTest": 30,
-    "marksPerQuestion": null,
-    "totalMarks": null,
-    "syllabusScope": "Full semester"
-  },
-  "difficultyVariants": {
-    "easy": [
-      "4900093911020113",
-      "4900093911020114",
-      "4900093911020115",
-      "4900093911020116"
-    ],
-    "medium": [
-      "4900093911020117",
-      "4900093911020118",
-      "4900093911020119",
-      "4900093911020120"
-    ],
-    "hard": [
-      "4900093911020121",
-      "4900093911020122",
-      "4900093911020123",
-      "4900093911020124"
-    ]
-  },
-  "testIds": [
-    "4900093911020113",
-    "4900093911020114",
-    "4900093911020115",
-    "4900093911020116",
-    "4900093911020117",
-    "4900093911020118",
-    "4900093911020119",
-    "4900093911020120",
-    "4900093911020121",
-    "4900093911020122",
-    "4900093911020123",
-    "4900093911020124"
-  ],
-  "canonicalBank": "../exam-bank-v2.json",
-  "canonicalBankFilter": {
-    "SubjectId": "49000939110201",
-    "examType": "Mid 2"
-  },
-  "contentPolicy": "The semester-level exam-bank-v2.json is the single source of question content; this file indexes the 12 variants and does not duplicate payloads.",
-  "testIdRule": "SubjectId decimal string concatenated with occurrence number; IDs are strings."
+  "contentPolicy": "Pointer only; full test payload is not duplicated in this file. Use docs/EXAM_FORMAT_AND_MARKING_RULES.md for runtime generation."
 }
