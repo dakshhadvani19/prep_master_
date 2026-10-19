@@ -1,156 +1,367 @@
 {
   "schema_version": "2.0",
-  "purpose": "Exam-type-aware Semester 1 bank for public.\"TestsData\".",
+  "archive_status": "COMPACT_REFERENCE_SAMPLE",
+  "purpose": "One representative test per subject/exam type; not a complete production bank.",
   "course": {
     "CourseId": 44,
     "CourseName": "Diploma Computer Engineering"
   },
   "semester": 1,
-  "canonical_files": {
-    "test_bank": "exam-bank-v2.json",
-    "seed_sql": "seed-all-v2.sql"
-  },
-  "totals": {
+  "counts": {
     "subjects": 8,
     "nonDepartmentalSubjects": 5,
     "departmentalSubjects": 3,
     "examTypeBanks": 21,
-    "tests": 252,
-    "mcqTests": 132,
-    "theoryTests": 120,
-    "mcqQuestions": 3960,
-    "theoryQuestions": 480,
-    "mcqOptions": 15840
+    "testsPerExamType": 1,
+    "easyTestsPerExamType": 0,
+    "mediumTestsPerExamType": 1,
+    "hardTestsPerExamType": 0,
+    "totalTests": 21,
+    "objectiveTests": 11,
+    "theoryTests": 10,
+    "mcqQuestions": 330,
+    "theoryQuestions": 40,
+    "totalQuestionPrompts": 370,
+    "mcqOptionEntries": 1320,
+    "theoryOptionEntries": 0,
+    "totalAnswerEntries": 370
   },
-  "rules": {
-    "nonDepartmental": {
-      "isDepartmentalSubject": false,
-      "examTypes": {
-        "Mid 1": {
-          "format": "theory",
-          "tests": 12,
-          "questionsPerTest": 4,
-          "marksPerQuestion": 8
-        },
-        "Mid 2": {
-          "format": "mcq",
-          "tests": 12,
-          "questionsPerTest": 30
-        },
-        "ESE": {
-          "format": "theory",
-          "tests": 12,
-          "questionsPerTest": 4,
-          "marksPerQuestion": 8
-        }
-      }
-    },
-    "departmental": {
-      "isDepartmentalSubject": true,
-      "examTypes": {
-        "Mid 1": {
-          "format": "mcq",
-          "tests": 12,
-          "questionsPerTest": 30
-        },
-        "Mid 2": {
-          "format": "mcq",
-          "tests": 12,
-          "questionsPerTest": 30
-        },
-        "ESE": null
-      }
-    },
-    "difficulties": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
-    },
-    "mid1": "First 50% of the ordered syllabus; the applied per-subject scope is available in exam-bank-v2.json test_index.",
-    "testIdRule": "decimal SubjectId concatenated with per-subject occurrence, cast to BIGINT"
-  },
-  "subjects": [
+  "test_index": [
     {
-      "name": "Basics of Web Designing",
-      "SubjectId": "44000935310201",
-      "isDepartmentalSubject": false,
-      "examTypes": [
-        "Mid 1",
-        "Mid 2",
-        "ESE"
-      ]
-    },
-    {
-      "name": "Bharatiya Knowledge System",
-      "SubjectId": "44009911010101",
-      "isDepartmentalSubject": false,
-      "examTypes": [
-        "Mid 1",
-        "Mid 2",
-        "ESE"
-      ]
-    },
-    {
-      "name": "Communication Skills-I",
-      "SubjectId": "44091912010301",
-      "isDepartmentalSubject": false,
-      "examTypes": [
-        "Mid 1",
-        "Mid 2",
-        "ESE"
-      ]
-    },
-    {
-      "name": "Computer Fundamental Skill",
+      "TestId": "440009352101015",
       "SubjectId": "44000935210101",
+      "SubjectName": "Computer Fundamental Skill",
       "isDepartmentalSubject": true,
-      "examTypes": [
-        "Mid 1",
-        "Mid 2"
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First 50% of the ordered practical syllabus: computer fundamentals, OS/file operations and introductory productivity/web tasks."
     },
     {
-      "name": "Computer Hardware Skill",
+      "TestId": "440009352103015",
       "SubjectId": "44000935210301",
+      "SubjectName": "Computer Hardware Skill",
       "isDepartmentalSubject": true,
-      "examTypes": [
-        "Mid 1",
-        "Mid 2"
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First 50% of the ordered syllabus: computer organization and introductory peripherals, ports, keyboard/mouse/monitor/printer basics; later storage and laptop topics excluded."
     },
     {
-      "name": "Engineering Drawing",
-      "SubjectId": "44009135110101",
+      "TestId": "440009353102015",
+      "SubjectId": "44000935310201",
+      "SubjectName": "Basics of Web Designing",
       "isDepartmentalSubject": false,
-      "examTypes": [
-        "Mid 1",
-        "Mid 2",
-        "ESE"
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First half: Internet/WWW and HTML5 fundamentals, with introductory hyperlink/table/form concepts only where needed."
     },
     {
-      "name": "Indian Constitution",
+      "TestId": "440091210101015",
       "SubjectId": "44009121010101",
+      "SubjectName": "Indian Constitution",
       "isDepartmentalSubject": true,
-      "examTypes": [
-        "Mid 1",
-        "Mid 2"
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First 50% of the ordered syllabus, primarily Unit 1: Constitution-making, Preamble, basic structure, features, Fundamental Rights/Duties, Articles 14/19/21 and Directive Principles."
     },
     {
-      "name": "Mathematics-I",
+      "TestId": "440091312101015",
       "SubjectId": "44009131210101",
+      "SubjectName": "Mathematics-I",
       "isDepartmentalSubject": false,
-      "examTypes": [
-        "Mid 1",
-        "Mid 2",
-        "ESE"
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First half by ordered syllabus hours: number sets/indices, HCF/LCM, polynomials/identities and introductory 2D mensuration."
+    },
+    {
+      "TestId": "440091351101015",
+      "SubjectId": "44009135110101",
+      "SubjectName": "Engineering Drawing",
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First three units: engineering curves, projection of points/lines and projection of planes."
+    },
+    {
+      "TestId": "440099110101015",
+      "SubjectId": "44009911010101",
+      "SubjectName": "Bharatiya Knowledge System",
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First two syllabus units: foundations of BKS and science/mathematics in ancient Bharat."
+    },
+    {
+      "TestId": "440919120103015",
+      "SubjectId": "44091912010301",
+      "SubjectName": "Communication Skills-I",
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First unit only: reading strategies, comprehension and the listed grammar topics."
+    },
+    {
+      "TestId": "4400093521010117",
+      "SubjectId": "44000935210101",
+      "SubjectName": "Computer Fundamental Skill",
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+    },
+    {
+      "TestId": "4400093521030117",
+      "SubjectId": "44000935210301",
+      "SubjectName": "Computer Hardware Skill",
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+    },
+    {
+      "TestId": "4400093531020117",
+      "SubjectId": "44000935310201",
+      "SubjectName": "Basics of Web Designing",
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+    },
+    {
+      "TestId": "4400093531020129",
+      "SubjectId": "44000935310201",
+      "SubjectName": "Basics of Web Designing",
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 1 syllabus."
+    },
+    {
+      "TestId": "4400912101010117",
+      "SubjectId": "44009121010101",
+      "SubjectName": "Indian Constitution",
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+    },
+    {
+      "TestId": "4400913121010117",
+      "SubjectId": "44009131210101",
+      "SubjectName": "Mathematics-I",
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+    },
+    {
+      "TestId": "4400913121010129",
+      "SubjectId": "44009131210101",
+      "SubjectName": "Mathematics-I",
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 1 syllabus."
+    },
+    {
+      "TestId": "4400913511010117",
+      "SubjectId": "44009135110101",
+      "SubjectName": "Engineering Drawing",
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+    },
+    {
+      "TestId": "4400913511010129",
+      "SubjectId": "44009135110101",
+      "SubjectName": "Engineering Drawing",
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 1 syllabus."
+    },
+    {
+      "TestId": "4400991101010117",
+      "SubjectId": "44009911010101",
+      "SubjectName": "Bharatiya Knowledge System",
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+    },
+    {
+      "TestId": "4400991101010129",
+      "SubjectId": "44009911010101",
+      "SubjectName": "Bharatiya Knowledge System",
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 1 syllabus."
+    },
+    {
+      "TestId": "4409191201030117",
+      "SubjectId": "44091912010301",
+      "SubjectName": "Communication Skills-I",
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full syllabus practice bank for Mid 2; Mid 1 is the only exam constrained to the first half."
+    },
+    {
+      "TestId": "4409191201030129",
+      "SubjectId": "44091912010301",
+      "SubjectName": "Communication Skills-I",
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 1 syllabus."
     }
-  ],
-  "cautions": [
-    "The database was not modified; run v2 SQL manually only after checking TestId collisions.",
-    "Theory rows are represented by an empty Options array and text values in Answers; consumer logic must branch on row format.",
-    "The source MCQ bank and generated theory outlines still require human subject-matter review."
   ]
 }

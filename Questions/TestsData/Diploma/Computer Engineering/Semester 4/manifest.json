@@ -1,202 +1,322 @@
 {
   "schema_version": "2.0",
+  "archive_status": "COMPACT_REFERENCE_SAMPLE",
+  "purpose": "One representative test per subject/exam type; not a complete production bank.",
   "course": {
     "CourseId": 44,
     "CourseName": "Diploma Computer Engineering"
   },
   "semester": 4,
-  "canonical_files": {
-    "test_bank": "exam-bank-v2.json",
-    "seed_sql": "seed-all-v2.sql"
-  },
   "counts": {
     "semester": 4,
     "subjects": 6,
     "nonDepartmentalSubjects": 4,
     "departmentalSubjects": 2,
     "examTypeBanks": 16,
-    "totalTests": 192,
+    "totalTests": 16,
     "mcqTests": 96,
-    "theoryTests": 96,
-    "mcqQuestions": 2880,
-    "theoryQuestions": 384,
-    "mcqOptionEntries": 11520,
-    "answerEntries": 3264
+    "theoryTests": 8,
+    "mcqQuestions": 240,
+    "theoryQuestions": 32,
+    "mcqOptionEntries": 960,
+    "answerEntries": 3264,
+    "testsPerExamType": 1,
+    "easyTestsPerExamType": 0,
+    "mediumTestsPerExamType": 1,
+    "hardTestsPerExamType": 0,
+    "objectiveTests": 8,
+    "theoryOptionEntries": 0,
+    "totalAnswerEntries": 272,
+    "totalQuestionPrompts": 272
   },
-  "exam_rules": {
-    "nonDepartmental": {
-      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
-      "Mid2": "12 MCQ variants × 30",
-      "ESE": "12 theory variants × 4 questions × 8 marks"
-    },
-    "departmental": {
-      "Mid1": "12 MCQ variants × 30; first half",
-      "Mid2": "12 MCQ variants × 30",
-      "ESE": "not generated"
-    },
-    "difficulty": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
-    },
-    "testIdRule": "Non-departmental: occurrences 1-12 Mid 1, 13-24 Mid 2, 25-36 ESE; departmental: 1-12 Mid 1, 13-24 Mid 2."
-  },
-  "subjects": [
+  "test_index": [
     {
-      "name": "Computer Organization",
-      "SubjectId": "44000935240101",
-      "subject_code": "09CE2401",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CO.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Computer Data Representation & Register Transfer and Micro; Basic Computer Organization and Design; Programming Basic Computer."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 4 syllabus practice bank."
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full Semester 4 syllabus."
-        }
-      ]
-    },
-    {
-      "name": "Java Programming",
+      "TestId": "440009351403015",
       "SubjectId": "44000935140301",
-      "subject_code": "09CE1403",
+      "SubjectName": "Java Programming",
+      "Semester": 4,
       "isDepartmentalSubject": true,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/JAVA.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2; Unit 3."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 4 syllabus practice bank."
-        }
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Unit 1; Unit 2; Unit 3.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/JAVA.pdf"
     },
     {
-      "name": "Mathematics-IV",
-      "SubjectId": "44009131040201",
-      "subject_code": "09MA0402",
+      "TestId": "440009352401015",
+      "SubjectId": "44000935240101",
+      "SubjectName": "Computer Organization",
+      "Semester": 4,
       "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-4.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Complex Number; Co-ordinate Geometry."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 4 syllabus practice bank."
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full Semester 4 syllabus."
-        }
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Computer Data Representation & Register Transfer and Micro; Basic Computer Organization and Design; Programming Basic Computer.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CO.pdf"
     },
     {
-      "name": "Operating System",
-      "SubjectId": "44000935340501",
-      "subject_code": "09CE3405",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3405_OS_Syllabus.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Linux; Operating System; Process Management."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 4 syllabus practice bank."
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full Semester 4 syllabus."
-        }
-      ]
-    },
-    {
-      "name": "Software Engineering",
+      "TestId": "440009353402015",
       "SubjectId": "44000935340201",
-      "subject_code": "09CE3402",
+      "SubjectName": "Software Engineering",
+      "Semester": 4,
       "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3402_SE_Syllabus.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Introduction to Software Engineering; Project Management Concepts, Requirement Engineering &; Project Planning Scheduling & Tracking."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 4 syllabus practice bank."
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full Semester 4 syllabus."
-        }
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Introduction to Software Engineering; Project Management Concepts, Requirement Engineering &; Project Planning Scheduling & Tracking.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3402_SE_Syllabus.pdf"
     },
     {
-      "name": "Web Technology",
+      "TestId": "440009353404015",
       "SubjectId": "44000935340401",
-      "subject_code": "09CE3404",
+      "SubjectName": "Web Technology",
+      "Semester": 4,
       "isDepartmentalSubject": true,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3404_WT_Syllabus.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Modern Web Architecture & Hosting; Advanced HTML & Responsive CSS; JavaScript And jQuery."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 4 syllabus practice bank."
-        }
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Modern Web Architecture & Hosting; Advanced HTML & Responsive CSS; JavaScript And jQuery.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3404_WT_Syllabus.pdf"
+    },
+    {
+      "TestId": "440009353405015",
+      "SubjectId": "44000935340501",
+      "SubjectName": "Operating System",
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Linux; Operating System; Process Management.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3405_OS_Syllabus.pdf"
+    },
+    {
+      "TestId": "440091310402015",
+      "SubjectId": "44009131040201",
+      "SubjectName": "Mathematics-IV",
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Complex Number; Co-ordinate Geometry.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-4.pdf"
+    },
+    {
+      "TestId": "4400093514030117",
+      "SubjectId": "44000935140301",
+      "SubjectName": "Java Programming",
+      "Semester": 4,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 4 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/JAVA.pdf"
+    },
+    {
+      "TestId": "4400093524010117",
+      "SubjectId": "44000935240101",
+      "SubjectName": "Computer Organization",
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 4 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CO.pdf"
+    },
+    {
+      "TestId": "4400093524010129",
+      "SubjectId": "44000935240101",
+      "SubjectName": "Computer Organization",
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 4 syllabus.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/CO.pdf"
+    },
+    {
+      "TestId": "4400093534020117",
+      "SubjectId": "44000935340201",
+      "SubjectName": "Software Engineering",
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 4 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3402_SE_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400093534020129",
+      "SubjectId": "44000935340201",
+      "SubjectName": "Software Engineering",
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 4 syllabus.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3402_SE_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400093534040117",
+      "SubjectId": "44000935340401",
+      "SubjectName": "Web Technology",
+      "Semester": 4,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 4 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3404_WT_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400093534050117",
+      "SubjectId": "44000935340501",
+      "SubjectName": "Operating System",
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 4 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3405_OS_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400093534050129",
+      "SubjectId": "44000935340501",
+      "SubjectName": "Operating System",
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 4 syllabus.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3405_OS_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400913104020117",
+      "SubjectId": "44009131040201",
+      "SubjectName": "Mathematics-IV",
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 4 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-4.pdf"
+    },
+    {
+      "TestId": "4400913104020129",
+      "SubjectId": "44009131040201",
+      "SubjectName": "Mathematics-IV",
+      "Semester": 4,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 4 syllabus.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-4.pdf"
     }
-  ],
-  "cautions": [
-    "Mid 1 scope is first-half syllabus as recorded in metadata.",
-    "Subject/exam/difficulty metadata is in test_index.",
-    "Theory rows have Options=[] and model answers in Answers; consumer must branch by format.",
-    "Question bank is drafted from syllabus topics and requires academic review."
   ]
 }

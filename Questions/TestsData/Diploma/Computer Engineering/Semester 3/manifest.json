@@ -1,208 +1,340 @@
 {
   "schema_version": "2.0",
+  "archive_status": "COMPACT_REFERENCE_SAMPLE",
+  "purpose": "One representative test per subject/exam type; not a complete production bank.",
   "course": {
     "CourseId": 44,
     "CourseName": "Diploma Computer Engineering"
   },
   "semester": 3,
-  "canonical_files": {
-    "test_bank": "exam-bank-v2.json",
-    "seed_sql": "seed-all-v2.sql"
-  },
   "counts": {
     "semester": 3,
     "subjects": 6,
     "nonDepartmentalSubjects": 5,
     "departmentalSubjects": 1,
     "examTypeBanks": 17,
-    "totalTests": 204,
+    "totalTests": 17,
     "mcqTests": 84,
-    "theoryTests": 120,
-    "mcqQuestions": 2520,
-    "theoryQuestions": 480,
-    "mcqOptionEntries": 10080,
-    "answerEntries": 3000
+    "theoryTests": 10,
+    "mcqQuestions": 210,
+    "theoryQuestions": 40,
+    "mcqOptionEntries": 840,
+    "answerEntries": 3000,
+    "testsPerExamType": 1,
+    "easyTestsPerExamType": 0,
+    "mediumTestsPerExamType": 1,
+    "hardTestsPerExamType": 0,
+    "objectiveTests": 7,
+    "theoryOptionEntries": 0,
+    "totalAnswerEntries": 250,
+    "totalQuestionPrompts": 250
   },
-  "exam_rules": {
-    "nonDepartmental": {
-      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
-      "Mid2": "12 MCQ variants × 30",
-      "ESE": "12 theory variants × 4 questions × 8 marks"
-    },
-    "departmental": {
-      "Mid1": "12 MCQ variants × 30; first half",
-      "Mid2": "12 MCQ variants × 30",
-      "ESE": "not generated"
-    },
-    "difficulty": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
-    },
-    "testIdRule": "Non-departmental occurrences 1-12 Mid 1, 13-24 Mid 2, 25-36 ESE; departmental occurrences 1-12 Mid 1, 13-24 Mid 2."
-  },
-  "subjects": [
+  "test_index": [
     {
-      "name": "Data Structure",
-      "SubjectId": "44000935330301",
-      "subject_code": "09CE3303",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3303_DS_Syllabus.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Introduction to Basics of Data Structure; Array & Stack; Queue & Link List."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus practice bank."
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus."
-        }
-      ]
-    },
-    {
-      "name": "Database Management System",
-      "SubjectId": "44000935230201",
-      "subject_code": "09CE2302",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE2302_DMS_Syllabus.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Database Systems Data Models; Relational Data Model; Entity Relationship Model."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus practice bank."
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus."
-        }
-      ]
-    },
-    {
-      "name": "Digital Electronics",
-      "SubjectId": "44009320130101",
-      "subject_code": "09CT1301",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/DE.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Module-1 Introduction; Module-2 Number systems and binary codes; Module-3 Logic Gates & Boolean Algebra."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus practice bank."
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus."
-        }
-      ]
-    },
-    {
-      "name": "Mathematics-III",
-      "SubjectId": "44009131030201",
-      "subject_code": "09MA0302",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-3.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Permutation and Combination; Probability; Binomial Theorem; Differentiation."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus practice bank."
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus."
-        }
-      ]
-    },
-    {
-      "name": "Object Oriented Programming With C++",
-      "SubjectId": "44000935330101",
-      "subject_code": "09CE3301",
-      "isDepartmentalSubject": false,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3301_C_Syllabus.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: Introduction to Object Oriented Concepts; Programming Basics; Classes, Objects and Functions; Constructor and Destructor."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus practice bank."
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus."
-        }
-      ]
-    },
-    {
-      "name": "Python Programming and Prompt Engineering",
+      "TestId": "440009350304015",
       "SubjectId": "44000935030401",
-      "subject_code": "09CE0304",
+      "SubjectName": "Python Programming and Prompt Engineering",
+      "Semester": 3,
       "isDepartmentalSubject": true,
-      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE0304_PPPE_Syllabus.pdf",
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First 50% by syllabus order/contact hours: INTRODUCTION TO PYTHON & AI FUNDAMENTALS; CONTROL FLOW AND DATA STRUCTURES IN PYTHON; FUNCTIONS, MODULES AND FILE HANDLING."
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full Semester 3 syllabus practice bank."
-        }
-      ]
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 5,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "First 50% by syllabus order/contact hours: INTRODUCTION TO PYTHON & AI FUNDAMENTALS; CONTROL FLOW AND DATA STRUCTURES IN PYTHON; FUNCTIONS, MODULES AND FILE HANDLING.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE0304_PPPE_Syllabus.pdf"
+    },
+    {
+      "TestId": "440009352302015",
+      "SubjectId": "44000935230201",
+      "SubjectName": "Database Management System",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Database Systems Data Models; Relational Data Model; Entity Relationship Model.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE2302_DMS_Syllabus.pdf"
+    },
+    {
+      "TestId": "440009353301015",
+      "SubjectId": "44000935330101",
+      "SubjectName": "Object Oriented Programming With C++",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Introduction to Object Oriented Concepts; Programming Basics; Classes, Objects and Functions; Constructor and Destructor.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3301_C_Syllabus.pdf"
+    },
+    {
+      "TestId": "440009353303015",
+      "SubjectId": "44000935330301",
+      "SubjectName": "Data Structure",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Introduction to Basics of Data Structure; Array & Stack; Queue & Link List.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3303_DS_Syllabus.pdf"
+    },
+    {
+      "TestId": "440091310302015",
+      "SubjectId": "44009131030201",
+      "SubjectName": "Mathematics-III",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Permutation and Combination; Probability; Binomial Theorem; Differentiation.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-3.pdf"
+    },
+    {
+      "TestId": "440093201301015",
+      "SubjectId": "44009320130101",
+      "SubjectName": "Digital Electronics",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 1",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 5,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "First 50% by syllabus order/contact hours: Module-1 Introduction; Module-2 Number systems and binary codes; Module-3 Logic Gates & Boolean Algebra.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/DE.pdf"
+    },
+    {
+      "TestId": "4400093503040117",
+      "SubjectId": "44000935030401",
+      "SubjectName": "Python Programming and Prompt Engineering",
+      "Semester": 3,
+      "isDepartmentalSubject": true,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 3 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE0304_PPPE_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400093523020117",
+      "SubjectId": "44000935230201",
+      "SubjectName": "Database Management System",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 3 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE2302_DMS_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400093523020129",
+      "SubjectId": "44000935230201",
+      "SubjectName": "Database Management System",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 3 syllabus.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE2302_DMS_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400093533010117",
+      "SubjectId": "44000935330101",
+      "SubjectName": "Object Oriented Programming With C++",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 3 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3301_C_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400093533010129",
+      "SubjectId": "44000935330101",
+      "SubjectName": "Object Oriented Programming With C++",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 3 syllabus.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3301_C_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400093533030117",
+      "SubjectId": "44000935330301",
+      "SubjectName": "Data Structure",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 3 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3303_DS_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400093533030129",
+      "SubjectId": "44000935330301",
+      "SubjectName": "Data Structure",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 3 syllabus.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/05/09CE3303_DS_Syllabus.pdf"
+    },
+    {
+      "TestId": "4400913103020117",
+      "SubjectId": "44009131030201",
+      "SubjectName": "Mathematics-III",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 3 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-3.pdf"
+    },
+    {
+      "TestId": "4400913103020129",
+      "SubjectId": "44009131030201",
+      "SubjectName": "Mathematics-III",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 3 syllabus.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/MATH-3.pdf"
+    },
+    {
+      "TestId": "4400932013010117",
+      "SubjectId": "44009320130101",
+      "SubjectName": "Digital Electronics",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "Mid 2",
+      "difficulty": "medium",
+      "format": "mcq",
+      "occurrence": 17,
+      "questionCount": 30,
+      "optionCount": 120,
+      "answerCount": 30,
+      "marksPerQuestion": null,
+      "totalMarks": null,
+      "syllabusScope": "Full Semester 3 syllabus practice bank.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/DE.pdf"
+    },
+    {
+      "TestId": "4400932013010129",
+      "SubjectId": "44009320130101",
+      "SubjectName": "Digital Electronics",
+      "Semester": 3,
+      "isDepartmentalSubject": false,
+      "examType": "ESE",
+      "difficulty": "medium",
+      "format": "theory",
+      "occurrence": 29,
+      "questionCount": 4,
+      "optionCount": 0,
+      "answerCount": 4,
+      "marksPerQuestion": 8,
+      "totalMarks": 32,
+      "syllabusScope": "Full Semester 3 syllabus.",
+      "sourceSyllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2025/04/DE.pdf"
     }
-  ],
-  "cautions": [
-    "Mid 1 uses first-half syllabus scope stored in metadata.",
-    "TestsData has no subject/exam/difficulty columns; use test_index.",
-    "Theory rows have Options=[]; consuming UI must branch by format.",
-    "Syllabus-derived content is a draft and requires academic review."
   ]
 }
