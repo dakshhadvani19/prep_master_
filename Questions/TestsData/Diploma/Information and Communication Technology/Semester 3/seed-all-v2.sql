@@ -1,4 +1,2 @@
--- Diploma ICT Semester 3: empty staged seed.
--- There are no active subjects/test rows in the current Semester 3 syllabus catalog.
-BEGIN;
-COMMIT;
+-- RETIRED: reference-only sample bank; intentionally contains no INSERT statements.
+-- Current generation and marking rules: docs/EXAM_FORMAT_AND_MARKING_RULES.md

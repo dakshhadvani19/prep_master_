@@ -1,26 +1,26 @@
 {
   "schema_version": "2.0",
-  "purpose": "Semester 3 exam bank for Diploma Information and Communication Technology",
+  "purpose": "REFERENCE-ONLY sample bank; one representative test per available non-project subject/exam type. Not approved for production.",
   "course": {
     "CourseId": 49,
     "CourseName": "Diploma Information and Communication Technology"
   },
   "semester": 3,
   "counts": {
-    "semester": 3,
     "subjects": 0,
     "nonDepartmentalSubjects": 0,
     "departmentalSubjects": 0,
     "examTypeBanks": 0,
+    "testsPerExamType": 1,
     "totalTests": 0,
-    "mcqTests": 0,
+    "objectiveTests": 0,
     "theoryTests": 0,
     "mcqQuestions": 0,
     "theoryQuestions": 0,
+    "totalQuestionPrompts": 0,
     "mcqOptionEntries": 0,
-    "answerEntries": 0,
-    "reusedSubjects": 0,
-    "newSubjectBanks": 0
+    "theoryOptionEntries": 0,
+    "totalAnswerEntries": 0
   },
   "tableContract": {
     "table": "public.\"TestsData\"",
@@ -39,7 +39,9 @@
       "Questions": "4 strings prefixed [8 marks]",
       "Options": "empty jsonb[]",
       "Answers": "4 model answers"
-    }
+    },
+    "referenceOnly": true,
+    "markingSpecification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   },
   "difficultyVariants": {
     "easy": 4,
@@ -55,9 +57,40 @@
     "Generated question pools and theory answers are drafts requiring academic review.",
     "TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.",
     "Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats.",
-    "No ICT subjects are active in the syllabus JSON for Semester 3 at the time this bank was generated. No placeholder subjects or TestIds were invented."
+    "No ICT subjects are active in the syllabus JSON for Semester 3 at the time this bank was generated. No placeholder subjects or TestIds were invented.",
+    "Trimmed on 2026-10-19 to one reference variant per available non-project subject/exam type.",
+    "Retained question content is reference-only and not academically approved.",
+    "Legacy 4 × 8 theory samples are 32 marks and do not match the current scheme.",
+    "Project/internship question rows are excluded."
   ],
   "subjects": [],
   "test_index": [],
-  "rows": []
+  "rows": [],
+  "originalGeneratedCounts": {
+    "semester": 3,
+    "subjects": 0,
+    "nonDepartmentalSubjects": 0,
+    "departmentalSubjects": 0,
+    "examTypeBanks": 0,
+    "totalTests": 0,
+    "mcqTests": 0,
+    "theoryTests": 0,
+    "mcqQuestions": 0,
+    "theoryQuestions": 0,
+    "mcqOptionEntries": 0,
+    "answerEntries": 0,
+    "reusedSubjects": 0,
+    "newSubjectBanks": 0
+  },
+  "referenceSamplePolicy": {
+    "status": "REFERENCE_SAMPLES_ONLY",
+    "originalVariantsPerSubjectExamType": 12,
+    "retainedVariantsPerSubjectExamType": 1,
+    "approximateVariantRetention": "8.3%",
+    "productionReady": false,
+    "markingSpecification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
+  },
+  "difficultyGroups": {
+    "policy": "One reference test per exam type; generate requested difficulty at runtime."
+  }
 }
