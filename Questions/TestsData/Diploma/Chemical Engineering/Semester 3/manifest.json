@@ -7,182 +7,78 @@
   "semester": 3,
   "canonical_files": {
     "test_bank": "exam-bank-v2.json",
-    "seed_sql": "seed-all-v2.sql"
+    "seed_sql": "seed-all-v2.sql",
+    "reference_map": "../REFERENCE_SAMPLE_MAP.json"
   },
   "counts": {
-    "semester": 3,
-    "subjects": 5,
-    "reusedSubjects": 1,
-    "newDraftSubjects": 4,
-    "nonDepartmentalSubjects": 4,
-    "departmentalSubjects": 1,
-    "examTypeBanks": 14,
-    "totalTests": 168,
-    "mcqTests": 72,
-    "theoryTests": 96,
-    "mcqQuestions": 2160,
-    "theoryQuestions": 384,
-    "mcqOptionEntries": 8640,
-    "answerEntries": 2544
+    "subjects": 0,
+    "nonDepartmentalSubjects": 0,
+    "departmentalSubjects": 0,
+    "examTypeBanks": 0,
+    "retainedReferenceTests": 0,
+    "mcqTests": 0,
+    "theoryTests": 0,
+    "mcqQuestions": 0,
+    "theoryQuestions": 0,
+    "mcqOptionEntries": 0,
+    "answerEntries": 0,
+    "originalGeneratedTests": 0,
+    "semester": 3
   },
   "exam_rules": {
-    "nonDepartmental": "Mid1/ESE 4 theory × 8 marks; Mid1 first half; Mid2 30 MCQs.",
-    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE.",
-    "difficulty": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
-    }
+    "departmental": "Departmental subjects normally have MCQ Mid 1 and Mid 2; no ESE unless explicitly approved.",
+    "nonDepartmental": "Non-departmental subjects normally have theory Mid 1 and ESE, plus MCQ Mid 2.",
+    "MCQ": "Exactly 30 questions, four options each, answer index 0=A, 1=B, 2=C, 3=D.",
+    "theoryMid1": "30 marks: two 1-mark questions; 4-/8-mark questions make up the remaining 28.",
+    "theoryESE": "60 marks: two 1-mark questions, one 2-mark question, and 4-/8-mark questions totaling 56. If 2-mark questions are prohibited, resolve the marks conflict before generation.",
+    "difficulty": "Requested difficulty is generated at runtime. A single reference sample is retained for each available subject/exam type.",
+    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   },
   "subjects": [
     {
       "name": "INDUSTRIAL STOICHIOMETRY",
       "SubjectId": "46000938230201",
       "isDepartmentalSubject": false,
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Introduction; Basic Chemical Calculations; Material Balance In Process Without Chemical Reactions"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "source_syllabus": null,
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     },
     {
       "name": "MATHEMATICS-III",
       "SubjectId": "46009131030201",
       "isDepartmentalSubject": false,
-      "reuse": {
-        "reuse": true,
-        "sourceName": "Mathematics-III",
-        "sourceSubjectId": "44009131030201",
-        "sourceSemester": 3,
-        "unitMatches": 5,
-        "maxUnits": 5,
-        "unitTitleRatio": 1,
-        "topicJaccard": 1,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 36,
-        "expectedVariants": 36,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Permutation and Combination; Probability; Binomial Theorem; Differentiation"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "source_syllabus": null,
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     },
     {
       "name": "REACTOR & BOILER OPERATION SKILL",
       "SubjectId": "46000938230401",
       "isDepartmentalSubject": true,
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First half: Generation of steam; Basic of Boiler; Types of boiler and their working and construction"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "source_syllabus": null,
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     },
     {
       "name": "SAFETY & POLLUTION MEASURES",
       "SubjectId": "46000938230301",
       "isDepartmentalSubject": false,
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Safety, Safety codes and standards, PPE; Hazard Identification and control Techaniques; Control of Chemical Hazards"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "source_syllabus": null,
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     },
     {
       "name": "UNIT OPERATION - II",
       "SubjectId": "46000938230101",
       "isDepartmentalSubject": false,
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Fluid Statics and its Applications; Fluid–Flow Phenomena; Basic Equations of Fluid Flow"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "source_syllabus": null,
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     }
   ],
   "reuseAudit": [
@@ -231,7 +127,8 @@
     "Mid1 is the first half of ordered syllabus units, weighted by hours where available.",
     "Metadata is in test_index; TestsData has four columns.",
     "Theory rows have Options=[]; new content requires review.",
-    "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim."
+    "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim.",
+    "Updated 2026-10-19: counts now reflect retained reference samples; full-bank counts are retained in historicalFullBankCounts or historicalFullBankTotals. Not a production-approved bank."
   ],
   "reuseVerification": {
     "verifiedAt": "2026-10-16",
@@ -247,5 +144,103 @@
       "questionsRebuilt": 144,
       "rule": "Rebuilt Mid1 theory prompts and model answers from the first-half unit/topic set only; reused payloads preserved."
     }
+  },
+  "historicalFullBankCounts": {
+    "semester": 3,
+    "subjects": 5,
+    "reusedSubjects": 1,
+    "newDraftSubjects": 4,
+    "nonDepartmentalSubjects": 4,
+    "departmentalSubjects": 1,
+    "examTypeBanks": 14,
+    "totalTests": 168,
+    "mcqTests": 72,
+    "theoryTests": 96,
+    "mcqQuestions": 2160,
+    "theoryQuestions": 384,
+    "mcqOptionEntries": 8640,
+    "answerEntries": 2544
+  },
+  "historicalExamRules": {
+    "nonDepartmental": "Mid1/ESE 4 theory × 8 marks; Mid1 first half; Mid2 30 MCQs.",
+    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE.",
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    }
+  },
+  "historicalSubjectMetadata": [
+    {
+      "name": "INDUSTRIAL STOICHIOMETRY",
+      "SubjectId": "46000938230201",
+      "isDepartmentalSubject": false,
+      "source_syllabus": null,
+      "reuseDecision": "No same-name source."
+    },
+    {
+      "name": "MATHEMATICS-III",
+      "SubjectId": "46009131030201",
+      "isDepartmentalSubject": false,
+      "source_syllabus": null,
+      "reuseDecision": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank."
+    },
+    {
+      "name": "REACTOR & BOILER OPERATION SKILL",
+      "SubjectId": "46000938230401",
+      "isDepartmentalSubject": true,
+      "source_syllabus": null,
+      "reuseDecision": "No same-name source."
+    },
+    {
+      "name": "SAFETY & POLLUTION MEASURES",
+      "SubjectId": "46000938230301",
+      "isDepartmentalSubject": false,
+      "source_syllabus": null,
+      "reuseDecision": "No same-name source."
+    },
+    {
+      "name": "UNIT OPERATION - II",
+      "SubjectId": "46000938230101",
+      "isDepartmentalSubject": false,
+      "source_syllabus": null,
+      "reuseDecision": "No same-name source."
+    }
+  ],
+  "totals": {
+    "subjects": 0,
+    "nonDepartmentalSubjects": 0,
+    "departmentalSubjects": 0,
+    "examTypeBanks": 0,
+    "retainedReferenceTests": 0,
+    "mcqTests": 0,
+    "theoryTests": 0,
+    "mcqQuestions": 0,
+    "theoryQuestions": 0,
+    "mcqOptionEntries": 0,
+    "answerEntries": 0,
+    "originalGeneratedTests": 0,
+    "semester": 3
+  },
+  "referenceSampleStatus": {
+    "status": "REFERENCE_SAMPLES_ONLY",
+    "productionReady": false,
+    "scope": "semester",
+    "counts": {
+      "subjects": 0,
+      "nonDepartmentalSubjects": 0,
+      "departmentalSubjects": 0,
+      "examTypeBanks": 0,
+      "retainedReferenceTests": 0,
+      "mcqTests": 0,
+      "theoryTests": 0,
+      "mcqQuestions": 0,
+      "theoryQuestions": 0,
+      "mcqOptionEntries": 0,
+      "answerEntries": 0,
+      "originalGeneratedTests": 0,
+      "semester": 3
+    },
+    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   }
 }

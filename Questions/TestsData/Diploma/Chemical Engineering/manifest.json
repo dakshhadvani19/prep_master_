@@ -571,22 +571,18 @@
     }
   ],
   "totals": {
-    "subjects": 38,
-    "reusedSubjects": 15,
-    "newDraftSubjects": 23,
-    "nonDepartmentalSubjects": 25,
-    "departmentalSubjects": 13,
-    "examTypeBanks": 101,
-    "totalTests": 1212,
-    "mcqTests": 612,
-    "theoryTests": 600,
-    "mcqQuestions": 18360,
-    "theoryQuestions": 2400,
-    "mcqOptionEntries": 73440,
-    "answerEntries": 20760,
-    "reusedTestVariants": 468,
-    "exactNameReuseSubjects": 4,
-    "exactNameReuseVariants": 108
+    "subjects": 0,
+    "nonDepartmentalSubjects": 0,
+    "departmentalSubjects": 0,
+    "examTypeBanks": 0,
+    "retainedReferenceTests": 0,
+    "mcqTests": 0,
+    "theoryTests": 0,
+    "mcqQuestions": 0,
+    "theoryQuestions": 0,
+    "mcqOptionEntries": 0,
+    "answerEntries": 0,
+    "originalGeneratedTests": 0
   },
   "examRules": {
     "nonDepartmental": "Mid 1: four 8-mark theory questions and model answers, limited to the first 50% of ordered syllabus; Mid 2: 30 MCQs; ESE: four 8-mark theory questions and model answers.",
@@ -682,5 +678,75 @@
       }
     ],
     "verification": "Reused arrays were copied from existing source bank rows and verified by source/target subject, exam type, difficulty, and occurrence. The four explicit name-overrides were separately compared for exact Questions/Options/Answers equality."
-  }
+  },
+  "historicalFullBankTotals": {
+    "subjects": 38,
+    "reusedSubjects": 15,
+    "newDraftSubjects": 23,
+    "nonDepartmentalSubjects": 25,
+    "departmentalSubjects": 13,
+    "examTypeBanks": 101,
+    "totalTests": 1212,
+    "mcqTests": 612,
+    "theoryTests": 600,
+    "mcqQuestions": 18360,
+    "theoryQuestions": 2400,
+    "mcqOptionEntries": 73440,
+    "answerEntries": 20760,
+    "reusedTestVariants": 468,
+    "exactNameReuseSubjects": 4,
+    "exactNameReuseVariants": 108
+  },
+  "subjects": [],
+  "counts": {
+    "subjects": 0,
+    "nonDepartmentalSubjects": 0,
+    "departmentalSubjects": 0,
+    "examTypeBanks": 0,
+    "retainedReferenceTests": 0,
+    "mcqTests": 0,
+    "theoryTests": 0,
+    "mcqQuestions": 0,
+    "theoryQuestions": 0,
+    "mcqOptionEntries": 0,
+    "answerEntries": 0,
+    "originalGeneratedTests": 0
+  },
+  "exam_rules": {
+    "departmental": "Departmental subjects normally have MCQ Mid 1 and Mid 2; no ESE unless explicitly approved.",
+    "nonDepartmental": "Non-departmental subjects normally have theory Mid 1 and ESE, plus MCQ Mid 2.",
+    "MCQ": "Exactly 30 questions, four options each, answer index 0=A, 1=B, 2=C, 3=D.",
+    "theoryMid1": "30 marks: two 1-mark questions; 4-/8-mark questions make up the remaining 28.",
+    "theoryESE": "60 marks: two 1-mark questions, one 2-mark question, and 4-/8-mark questions totaling 56. If 2-mark questions are prohibited, resolve the marks conflict before generation.",
+    "difficulty": "Requested difficulty is generated at runtime. A single reference sample is retained for each available subject/exam type.",
+    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
+  },
+  "referenceSampleStatus": {
+    "status": "REFERENCE_SAMPLES_ONLY",
+    "productionReady": false,
+    "scope": "course aggregate",
+    "counts": {
+      "subjects": 0,
+      "nonDepartmentalSubjects": 0,
+      "departmentalSubjects": 0,
+      "examTypeBanks": 0,
+      "retainedReferenceTests": 0,
+      "mcqTests": 0,
+      "theoryTests": 0,
+      "mcqQuestions": 0,
+      "theoryQuestions": 0,
+      "mcqOptionEntries": 0,
+      "answerEntries": 0,
+      "originalGeneratedTests": 0
+    },
+    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
+  },
+  "canonical_files": {
+    "test_bank": "exam-bank-v2.json",
+    "seed_sql": "seed-all-v2.sql",
+    "reference_map": "../REFERENCE_SAMPLE_MAP.json"
+  },
+  "notes": [
+    "Updated 2026-10-19: reference samples only; not approved for production."
+  ]
 }

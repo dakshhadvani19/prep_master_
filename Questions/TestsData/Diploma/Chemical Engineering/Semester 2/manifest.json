@@ -7,33 +7,32 @@
   "semester": 2,
   "canonical_files": {
     "test_bank": "exam-bank-v2.json",
-    "seed_sql": "seed-all-v2.sql"
+    "seed_sql": "seed-all-v2.sql",
+    "reference_map": "../REFERENCE_SAMPLE_MAP.json"
   },
   "counts": {
-    "semester": 2,
-    "subjects": 7,
-    "reusedSubjects": 4,
-    "newDraftSubjects": 3,
-    "nonDepartmentalSubjects": 4,
-    "departmentalSubjects": 3,
-    "examTypeBanks": 18,
-    "totalTests": 216,
-    "mcqTests": 120,
-    "theoryTests": 96,
-    "mcqQuestions": 3600,
-    "theoryQuestions": 384,
-    "mcqOptionEntries": 14400,
-    "answerEntries": 3984
+    "subjects": 0,
+    "nonDepartmentalSubjects": 0,
+    "departmentalSubjects": 0,
+    "examTypeBanks": 0,
+    "retainedReferenceTests": 0,
+    "mcqTests": 0,
+    "theoryTests": 0,
+    "mcqQuestions": 0,
+    "theoryQuestions": 0,
+    "mcqOptionEntries": 0,
+    "answerEntries": 0,
+    "originalGeneratedTests": 0,
+    "semester": 2
   },
   "exam_rules": {
-    "nonDepartmental": "Mid1/ESE 4 theory × 8 marks; Mid1 first half; Mid2 30 MCQs.",
-    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE.",
-    "difficulty": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
-    },
-    "testIdRule": "Nondepartmental: occurrences 1-12 Mid1, 13-24 Mid2, 25-36 ESE; departmental: 1-12 Mid1, 13-24 Mid2."
+    "departmental": "Departmental subjects normally have MCQ Mid 1 and Mid 2; no ESE unless explicitly approved.",
+    "nonDepartmental": "Non-departmental subjects normally have theory Mid 1 and ESE, plus MCQ Mid 2.",
+    "MCQ": "Exactly 30 questions, four options each, answer index 0=A, 1=B, 2=C, 3=D.",
+    "theoryMid1": "30 marks: two 1-mark questions; 4-/8-mark questions make up the remaining 28.",
+    "theoryESE": "60 marks: two 1-mark questions, one 2-mark question, and 4-/8-mark questions totaling 56. If 2-mark questions are prohibited, resolve the marks conflict before generation.",
+    "difficulty": "Requested difficulty is generated at runtime. A single reference sample is retained for each available subject/exam type.",
+    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   },
   "subjects": [
     {
@@ -41,232 +40,63 @@
       "SubjectId": "46000938210301",
       "isDepartmentalSubject": true,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2103.pdf",
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name candidate source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First half: Pumps; Valves; Flow measurement"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     },
     {
       "name": "ENGINEERING DRAWING",
       "SubjectId": "46009135110101",
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME1101.pdf",
-      "reuse": {
-        "reuse": true,
-        "sourceName": "Engineering Drawing",
-        "sourceSubjectId": "44009135110101",
-        "sourceSemester": 1,
-        "unitMatches": 6,
-        "maxUnits": 6,
-        "unitTitleRatio": 1,
-        "topicJaccard": 1,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 36,
-        "expectedVariants": 36,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Engineering Curves; Projection of Points and Lines"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     },
     {
       "name": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
       "SubjectId": "46009121010201",
       "isDepartmentalSubject": true,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0102.pdf",
-      "reuse": {
-        "reuse": true,
-        "sourceName": "Enviornment Conservation & Disater Management",
-        "sourceSubjectId": "44009121010201",
-        "sourceSemester": 2,
-        "unitMatches": 4,
-        "maxUnits": 4,
-        "unitTitleRatio": 1,
-        "topicJaccard": 1,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 24,
-        "expectedVariants": 24,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First half: Introduction of Environmental Science; Types of pollution with their causes, effects and remedial; Renewable Sources of Energy"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     },
     {
       "name": "GENERATIVE AI & PROMPT ENGINEERING",
       "SubjectId": "46000935030501",
       "isDepartmentalSubject": true,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE0305.pdf",
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name candidate source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "First half: AI IN ENGINEERING PRACTICE; SMART USE OF AI TOOLS; PROMPT DESIGN FUNDAMENTALS"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     },
     {
       "name": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-I",
       "SubjectId": "46009164010101",
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09PD0101.pdf",
-      "reuse": {
-        "reuse": true,
-        "sourceName": "Integrated Personality Development Course-I",
-        "sourceSubjectId": "44009164010101",
-        "sourceSemester": 2,
-        "unitMatches": 15,
-        "maxUnits": 15,
-        "unitTitleRatio": 1,
-        "topicJaccard": 1,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 36,
-        "expectedVariants": 36,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Remaking Yourself Restructuring Yourself; Remaking Yourself Power of Habit; Learning from Legends- Tendulkar & Tata; From House to Home Listening & Understanding; Facing Failures Welcoming Challenges; Facing Failures Significance of Failures; My India My Pride Glorious Past Part-1; My India My Pride Glorious Past Part-2"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     },
     {
       "name": "MATHEMATICS-II",
       "SubjectId": "46009131210201",
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2102.pdf",
-      "reuse": {
-        "reuse": true,
-        "sourceName": "Mathematics-II",
-        "sourceSubjectId": "44009131210201",
-        "sourceSemester": 2,
-        "unitMatches": 5,
-        "maxUnits": 5,
-        "unitTitleRatio": 1,
-        "topicJaccard": 1,
-        "reason": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank.",
-        "reusedVariants": 36,
-        "expectedVariants": 36,
-        "allVariantsCopiedVerbatim": true
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Determinants and Matrices; Equations"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     },
     {
       "name": "UNIT OPERATION-I",
       "SubjectId": "46000938210201",
       "isDepartmentalSubject": false,
       "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2102.pdf",
-      "reuse": {
-        "reuse": false,
-        "reason": "No same-name candidate source."
-      },
-      "examTypes": [
-        {
-          "examType": "Mid 1",
-          "format": "theory",
-          "tests": 12,
-          "scope": "First half: Particulate Solids; Size Reduction and Screening; Filtration, Sedimentation and Centrifugal Separation"
-        },
-        {
-          "examType": "Mid 2",
-          "format": "mcq",
-          "tests": 12,
-          "scope": "Full semester"
-        },
-        {
-          "examType": "ESE",
-          "format": "theory",
-          "tests": 12,
-          "scope": "Full semester"
-        }
-      ]
+      "status": "no-sample-retained",
+      "examTypes": [],
+      "referenceOnly": true
     }
   ],
   "reuseAudit": [
@@ -358,7 +188,8 @@
     "TestsData has four columns only; metadata is in test_index.",
     "Theory rows use Options=[] and model answers in Answers; consumer must branch on format.",
     "New items are syllabus-derived draft content and need academic review.",
-    "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim."
+    "All 11 syllabus-verified same-name subjects were checked variant-by-variant against the source CE bank; the reuse flags now mean all variants for those subjects are copied verbatim.",
+    "Updated 2026-10-19: counts now reflect retained reference samples; full-bank counts are retained in historicalFullBankCounts or historicalFullBankTotals. Not a production-approved bank."
   ],
   "reuseVerification": {
     "verifiedAt": "2026-10-16",
@@ -374,5 +205,118 @@
       "updatedAt": "2026-10-18",
       "note": "New-draft Mid 1 theory prompts and model answers rebuilt only from first-half units. Reused source payloads were unchanged."
     }
+  },
+  "historicalFullBankCounts": {
+    "semester": 2,
+    "subjects": 7,
+    "reusedSubjects": 4,
+    "newDraftSubjects": 3,
+    "nonDepartmentalSubjects": 4,
+    "departmentalSubjects": 3,
+    "examTypeBanks": 18,
+    "totalTests": 216,
+    "mcqTests": 120,
+    "theoryTests": 96,
+    "mcqQuestions": 3600,
+    "theoryQuestions": 384,
+    "mcqOptionEntries": 14400,
+    "answerEntries": 3984
+  },
+  "historicalExamRules": {
+    "nonDepartmental": "Mid1/ESE 4 theory × 8 marks; Mid1 first half; Mid2 30 MCQs.",
+    "departmental": "Mid1/Mid2 30 MCQs; Mid1 first half; no ESE.",
+    "difficulty": {
+      "easy": 4,
+      "medium": 4,
+      "hard": 4
+    },
+    "testIdRule": "Nondepartmental: occurrences 1-12 Mid1, 13-24 Mid2, 25-36 ESE; departmental: 1-12 Mid1, 13-24 Mid2."
+  },
+  "historicalSubjectMetadata": [
+    {
+      "name": "ELECTRICAL PUMPS AND VALVES OPERATION SKILL",
+      "SubjectId": "46000938210301",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2103.pdf",
+      "reuseDecision": "No same-name candidate source."
+    },
+    {
+      "name": "ENGINEERING DRAWING",
+      "SubjectId": "46009135110101",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09ME1101.pdf",
+      "reuseDecision": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank."
+    },
+    {
+      "name": "ENVIRONMENT CONSERVATION & DISASTER MANAGEMENT",
+      "SubjectId": "46009121010201",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09AU0102.pdf",
+      "reuseDecision": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank."
+    },
+    {
+      "name": "GENERATIVE AI & PROMPT ENGINEERING",
+      "SubjectId": "46000935030501",
+      "isDepartmentalSubject": true,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CE0305.pdf",
+      "reuseDecision": "No same-name candidate source."
+    },
+    {
+      "name": "INTEGRATED PERSONALITY DEVELOPMENT COURSE-I",
+      "SubjectId": "46009164010101",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09PD0101.pdf",
+      "reuseDecision": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank."
+    },
+    {
+      "name": "MATHEMATICS-II",
+      "SubjectId": "46009131210201",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09MA2102.pdf",
+      "reuseDecision": "Verified unit-title/topic match; all matching test payloads copied verbatim from the existing CE bank."
+    },
+    {
+      "name": "UNIT OPERATION-I",
+      "SubjectId": "46000938210201",
+      "isDepartmentalSubject": false,
+      "source_syllabus": "https://www.marwadiuniversity.ac.in/wp-content/uploads/2026/07/09CH2102.pdf",
+      "reuseDecision": "No same-name candidate source."
+    }
+  ],
+  "totals": {
+    "subjects": 0,
+    "nonDepartmentalSubjects": 0,
+    "departmentalSubjects": 0,
+    "examTypeBanks": 0,
+    "retainedReferenceTests": 0,
+    "mcqTests": 0,
+    "theoryTests": 0,
+    "mcqQuestions": 0,
+    "theoryQuestions": 0,
+    "mcqOptionEntries": 0,
+    "answerEntries": 0,
+    "originalGeneratedTests": 0,
+    "semester": 2
+  },
+  "referenceSampleStatus": {
+    "status": "REFERENCE_SAMPLES_ONLY",
+    "productionReady": false,
+    "scope": "semester",
+    "counts": {
+      "subjects": 0,
+      "nonDepartmentalSubjects": 0,
+      "departmentalSubjects": 0,
+      "examTypeBanks": 0,
+      "retainedReferenceTests": 0,
+      "mcqTests": 0,
+      "theoryTests": 0,
+      "mcqQuestions": 0,
+      "theoryQuestions": 0,
+      "mcqOptionEntries": 0,
+      "answerEntries": 0,
+      "originalGeneratedTests": 0,
+      "semester": 2
+    },
+    "specification": "docs/EXAM_FORMAT_AND_MARKING_RULES.md"
   }
 }
