@@ -682,5 +682,7 @@
       }
     ],
     "verification": "Reused arrays were copied from existing source bank rows and verified by source/target subject, exam type, difficulty, and occurrence. The four explicit name-overrides were separately compared for exact Questions/Options/Answers equality."
-  }
+  },
+  "archive_status": "COMPACT_REFERENCE_SAMPLE",
+  "archive_note": "Semester banks now retain one representative test per subject/exam type (~8.3% of former test variants). See docs/EXAM_QUESTION_GENERATION_INSTRUCTIONS.md. This is not a complete production bank."
 }
