@@ -4,6 +4,8 @@
 **Purpose:** The canonical rules for generating exam questions at runtime and for retaining small reference samples in this repository.  
 **Scope:** Diploma and other mapped courses, subject to each course's verified syllabus, departmental status, and exam types.
 
+**Detailed theory-generation companion:** Follow [`docs/THEORY_QUESTION_GENERATION_GUIDE.md`](./THEORY_QUESTION_GENERATION_GUIDE.md) for question styles, short practical/code questions, model answers, mark-by-mark rubrics, syllabus coverage, validation, and the Groq-ready generation workflow. This guide supplements rather than overrides the rules below.
+
 ## 1. General generation requirements
 
 - Resolve the active course, semester, subject ID, exact subject name, departmental flag, and authoritative syllabus before generating questions.
