@@ -46,7 +46,7 @@ Theory tests contain short-answer and extended-answer questions. Questions must 
 
 - Include exactly **two 1-mark questions** (2 marks total).
 - Important arithmetic constraint: after two 1-mark questions, the remaining 58 marks cannot be made using only 4- and 8-mark questions, because both are multiples of 4.
-- To reach exactly 60 marks while keeping two 1-mark questions, this specification therefore requires **one 2-mark question**, plus 4-/8-mark questions totalling 56 marks. The 56 marks may be any valid combination of 4- and 8-mark questions (for example, seven 8-mark questions; or nine 4-mark questions plus two 8-mark questions).
+- To reach exactly 60 marks while keeping two 1-mark questions, this specification therefore requires **one 2-mark question**, plus 4-/8-mark questions totalling 56 marks. The 56 marks may be any valid combination of 4- and 8-mark questions (for example, seven 8-mark questions; or ten 4-mark questions plus two 8-mark questions).
 - If the university's official ESE blueprint forbids 2-mark questions, treat that as a configuration conflict and ask for an approved alternative before generating; do not silently emit an exam with the wrong total.
 - ESE may cover the full relevant syllabus unless an authoritative blueprint specifies a narrower scope.
 
