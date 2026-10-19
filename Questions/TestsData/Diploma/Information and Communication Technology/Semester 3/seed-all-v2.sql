@@ -1,4 +1,4 @@
--- Diploma ICT Semester 3: empty staged seed.
--- There are no active subjects/test rows in the current Semester 3 syllabus catalog.
+-- Compact reference sample seed: Diploma Information and Communication Technology, Semester 3.
+-- 0 sample tests only; see docs/EXAM_QUESTION_GENERATION_INSTRUCTIONS.md.
 BEGIN;
 COMMIT;

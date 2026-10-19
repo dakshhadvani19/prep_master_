@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0",
-  "purpose": "Semester 3 exam bank for Diploma Information and Communication Technology",
+  "purpose": "Compact reference sample bank for Diploma Information and Communication Technology, Semester 3; retained one test per subject/exam type (~8.3% of variants).",
   "course": {
     "CourseId": 49,
     "CourseName": "Diploma Information and Communication Technology"
@@ -20,7 +20,15 @@
     "mcqOptionEntries": 0,
     "answerEntries": 0,
     "reusedSubjects": 0,
-    "newSubjectBanks": 0
+    "newSubjectBanks": 0,
+    "testsPerExamType": 1,
+    "easyTestsPerExamType": 0,
+    "mediumTestsPerExamType": 1,
+    "hardTestsPerExamType": 0,
+    "objectiveTests": 0,
+    "theoryOptionEntries": 0,
+    "totalAnswerEntries": 0,
+    "totalQuestionPrompts": 0
   },
   "tableContract": {
     "table": "public.\"TestsData\"",
@@ -55,7 +63,8 @@
     "Generated question pools and theory answers are drafts requiring academic review.",
     "TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.",
     "Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats.",
-    "No ICT subjects are active in the syllabus JSON for Semester 3 at the time this bank was generated. No placeholder subjects or TestIds were invented."
+    "No ICT subjects are active in the syllabus JSON for Semester 3 at the time this bank was generated. No placeholder subjects or TestIds were invented.",
+    "ARCHIVE REDUCTION: one representative test per subject/exam type retained (~8.3% of prior test variants). Use docs/EXAM_QUESTION_GENERATION_INSTRUCTIONS.md for future Groq generation."
   ],
   "subjects": [],
   "test_index": [],

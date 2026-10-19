@@ -1,15 +1,12 @@
 {
   "schema_version": "2.0",
+  "archive_status": "COMPACT_REFERENCE_SAMPLE",
+  "purpose": "One representative test per subject/exam type; not a complete production bank.",
   "course": {
     "CourseId": 49,
     "CourseName": "Diploma Information and Communication Technology"
   },
   "semester": 3,
-  "canonical_files": {
-    "test_bank": "exam-bank-v2.json",
-    "answer_review": "answer-review-v2.json",
-    "seed_sql": "seed-all-v2.sql"
-  },
   "counts": {
     "semester": 3,
     "subjects": 0,
@@ -24,34 +21,15 @@
     "mcqOptionEntries": 0,
     "answerEntries": 0,
     "reusedSubjects": 0,
-    "newSubjectBanks": 0
+    "newSubjectBanks": 0,
+    "testsPerExamType": 1,
+    "easyTestsPerExamType": 0,
+    "mediumTestsPerExamType": 1,
+    "hardTestsPerExamType": 0,
+    "objectiveTests": 0,
+    "theoryOptionEntries": 0,
+    "totalAnswerEntries": 0,
+    "totalQuestionPrompts": 0
   },
-  "exam_rules": {
-    "nonDepartmental": {
-      "Mid1": "12 theory variants × 4 questions × 8 marks; first half",
-      "Mid2": "12 MCQ variants × 30",
-      "ESE": "12 theory variants × 4 questions × 8 marks"
-    },
-    "departmental": {
-      "Mid1": "12 MCQ variants × 30; first half",
-      "Mid2": "12 MCQ variants × 30",
-      "ESE": "not generated"
-    },
-    "difficulty": {
-      "easy": 4,
-      "medium": 4,
-      "hard": 4
-    },
-    "testIdRule": "Non-departmental: occurrences 1–12 Mid 1, 13–24 Mid 2, 25–36 ESE. Departmental: occurrences 1–12 Mid 1, 13–24 Mid 2."
-  },
-  "subjects": [],
-  "notes": [
-    "Exact normalized subject-name matches with the same departmental flag are reused verbatim even if syllabus descriptions differ, per user instruction.",
-    "For non-name matches, reuse still requires departmental-flag and unit/topic alignment. An exact-name match with an incompatible departmental flag raises an error rather than silently generating a replacement bank.",
-    "Mid 1 scope is recorded from the first half of the ordered syllabus units; confirm against the official exam blueprint.",
-    "Generated question pools and theory answers are drafts requiring academic review.",
-    "TestsData contains only TestId, Questions, Options and Answers; mappings are held in test_index.",
-    "Theory rows use Options=[] and model answers in Answers; consumers must explicitly support both formats.",
-    "No ICT subjects are active in the syllabus JSON for Semester 3 at the time this bank was generated. No placeholder subjects or TestIds were invented."
-  ]
+  "test_index": []
 }
