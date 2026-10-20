@@ -22,7 +22,7 @@ export default async function handler(req) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: body.model || 'llama-3.1-8b-instant',
+                model: 'openai/gpt-oss-20b',
                 messages: body.messages,
                 response_format: body.response_format,
                 temperature: 0.1 // Keep it deterministic for exams
