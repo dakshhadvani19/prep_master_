@@ -9,6 +9,7 @@ import {
     fitContext,
     MAX_SOURCE_CHARS,
     EXAM_CONFIG,
+    normalizeExamType,
 } from '../src/utils/contextFitter';
 
 const makeRecord = (chapterCount) => ({
@@ -30,6 +31,16 @@ describe('contextFitter', () => {
         expect(EXAM_CONFIG.mid2.totalMarks).toBe(30);
         expect(EXAM_CONFIG.ese.type).toBe('subjective');
         expect(EXAM_CONFIG.ese.totalMarks).toBe(60);
+    });
+
+
+    it('normalizes the legacy route exam names used by ExamPortal', () => {
+        expect(normalizeExamType('mid-1')).toBe('mid1');
+        expect(normalizeExamType('mid-2')).toBe('mid2');
+        expect(normalizeExamType('final')).toBe('ese');
+        expect(fitContext(makeRecord(4), 'mid-1').config.totalMarks).toBe(30);
+        expect(fitContext(makeRecord(4), 'mid-2').config.type).toBe('objective');
+        expect(fitContext(makeRecord(4), 'final').config.totalMarks).toBe(60);
     });
 
     describe('selectScopeChapters', () => {
